@@ -16,7 +16,7 @@ manager: dougeby
 
 # How to deploy to production with Desktop Analytics
 
-After you've [deployed to pilot](/sccm/desktop-analytics/deploy-pilot) and have reviewed the status of your assets, you're ready to update the rest of your production environment.
+After you've [deployed to pilot](deploy-pilot.md) and have reviewed the status of your assets, you're ready to update the rest of your production environment.
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
@@ -72,9 +72,9 @@ Review all apps. Once a given device has a positive upgrade decision for all ass
 
 Configuration Manager uses the data from Desktop Analytics to create a collection for the production deployment. Don't deploy the task sequence using a traditional deployment. Use the following procedure to create a Desktop Analytics-integrated deployment:
 
-If you followed the recommended process to [Deploy to pilot devices](/sccm/desktop-analytics/deploy-pilot#deploy-to-pilot-devices), the Configuration Manager phased deployment is ready. As you mark assets as *ready*, Desktop Analytics automatically synchronizes those devices to Configuration Manager. These devices are then added to the production collection. When the phased deployment moves to the second phase, these production devices receive the upgrade deployment.
+If you followed the recommended process to [Deploy to pilot devices](deploy-pilot.md#deploy-to-pilot-devices), the Configuration Manager phased deployment is ready. As you mark assets as *ready*, Desktop Analytics automatically synchronizes those devices to Configuration Manager. These devices are then added to the production collection. When the phased deployment moves to the second phase, these production devices receive the upgrade deployment.
 
-If you configured the phased deployment to **Manually begin the second phase deployment**, then you need to manually move it to the next phase. For more information, see [Manage and monitor phased deployments](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).
+If you configured the phased deployment to **Manually begin the second phase deployment**, then you need to manually move it to the next phase. For more information, see [Manage and monitor phased deployments](../osd/deploy-use/manage-monitor-phased-deployments.md#bkmk_move).
 
 If you created a Desktop Analytics-integrated single deployment to the pilot collection, then you need to repeat that process to deploy to the production collection.
 
@@ -122,4 +122,4 @@ If you want to look at health for all assets, even those assets with insufficien
 
 3. Select an asset to get more details or change its upgrade decision.  
 
-For more information, see [Health status monitoring](/sccm/desktop-analytics/health-status-monitoring).
+For more information, see [Health status monitoring](health-status-monitoring.md).

@@ -44,6 +44,6 @@ Only a **Global Administrator** can reset the account in the Azure portal.
 
 ## Next steps
 
-After reset, refresh the page, and rerun the onboarding process. For more information, see [How to set up Desktop Analytics](/sccm/desktop-analytics/set-up).
+After reset, refresh the page, and rerun the onboarding process. For more information, see [How to set up Desktop Analytics](set-up.md).
 
 If you have any problems during this process, contact Microsoft Support for further assistance.

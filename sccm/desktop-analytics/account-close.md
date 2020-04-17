@@ -33,7 +33,7 @@ Only a **Global Administrator** can close or reactivate the account in the Azure
 > [!Important]
 > Only continue with the rest of this article after 90 days, or if you won't reactivate.
 >
-> If you want to completely close your account without waiting for 90 days, first [Reset](/sccm/desktop-analytics/account-reset) your account.
+> If you want to completely close your account without waiting for 90 days, first [Reset](account-reset.md) your account.
 
 ## Reactivate
 

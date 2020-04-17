@@ -41,7 +41,7 @@ Skip to 10:00 for an in-depth demo.
 > [!Note]  
 > Desktop Analytics is a successor of Windows Analytics, which retired on January 31, 2020.
 >
-> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](/configmgr/desktop-analytics/faq#existing-windows-analytics-customers).
+> The capabilities of Windows Analytics are combined in the Desktop Analytics service. Desktop Analytics is also more tightly integrated with Configuration Manager. For more information, see the [FAQ for Windows Analytics customers](faq.md#existing-windows-analytics-customers).
 
 ## Benefits
 
@@ -80,9 +80,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) role and [**Owner**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner), or [**Contributor**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) permissions on the resource group where the workspace was created.
 
-- Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+- Configuration Manager, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
-    - [**Full Administrator**](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_Planroles) role in Configuration Manager  
+    - [**Full Administrator**](../core/understand/fundamentals-of-role-based-administration.md#bkmk_Planroles) role in Configuration Manager  
 
     > [!NOTE]
     > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
@@ -92,22 +92,22 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
-    - Install the latest updates. For more information, see [Update devices](/sccm/desktop-analytics/enroll-devices#update-devices).  
+    - Install the latest updates. For more information, see [Update devices](enroll-devices.md#update-devices).  
 
-    - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix).  
+    - Devices also need to have the Configuration Manager client, version 1902 with update rollup (4500571) or later. For more information, see [Update Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
     > Desktop Analytics doesn't support upgrades to Windows 10 long-term servicing channel (LTSC). For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
-    > Desktop Analytics is designed to best support the in-place upgrade scenario. If you need to make major changes, such as from 32-bit to 64-bit architecture, use an imaging scenario. Desktop Analytics insights are still valuable in these classic OS deployment scenarios, but you can ignore the in-place upgrade specific guidance. For more information, see [Scenarios to deploy enterprise operating systems with Configuration Manager](/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems).
+    > Desktop Analytics is designed to best support the in-place upgrade scenario. If you need to make major changes, such as from 32-bit to 64-bit architecture, use an imaging scenario. Desktop Analytics insights are still valuable in these classic OS deployment scenarios, but you can ignore the in-place upgrade specific guidance. For more information, see [Scenarios to deploy enterprise operating systems with Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
 - Windows diagnostics data. For more information, see the following articles:  
 
-    - [Diagnostic data levels](/sccm/desktop-analytics/enable-data-sharing#diagnostic-data-levels)  
+    - [Diagnostic data levels](enable-data-sharing.md#diagnostic-data-levels)  
 
-    - [Desktop Analytics privacy](/sccm/desktop-analytics/privacy)  
+    - [Desktop Analytics privacy](privacy.md)  
 
-- Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](/sccm/desktop-analytics/enable-data-sharing)  
+- Network connectivity from devices to the Microsoft public cloud. For more information, see [How to enable data sharing](enable-data-sharing.md)  
 
 > [!Important]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (EEA and Switzerland):
@@ -122,7 +122,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     > [!NOTE]
     > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](/configmgr/core/understand/product-and-licensing-faq).
+- Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.md).
 
 - Users of the device need one of the following licenses:
 
@@ -140,4 +140,4 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 The following tutorial provides a step-by-step guide to getting started with Desktop Analytics and Configuration Manager:
   
 > [!div class="nextstepaction"]
-> [Deploy Windows 10 to pilot](/sccm/desktop-analytics/tutorial-windows10)
+> [Deploy Windows 10 to pilot](tutorial-windows10.md)

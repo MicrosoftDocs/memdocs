@@ -38,14 +38,14 @@ You can now connect multiple Configuration Manager hierarchies to a single Azure
 
 For more information, see the following articles:
 
-- [Global pilot](/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot)
-- [How to create deployment plans](/configmgr/desktop-analytics/create-deployment-plans)
+- [Global pilot](deploy-pilot.md#bkmk_GlobalPilot)
+- [How to create deployment plans](create-deployment-plans.md)
 
 ### Identify compatibility safeguards
 
 <!-- 5746559 -->
 
-Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or rollback. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update. For more information, see [Compatibility assessment - Safeguards](/configmgr/desktop-analytics/compat-assessment#safeguards).
+Windows compatibility data classifies some apps and drivers with a *safeguard*, which may cause the update to Windows 10 to fail or rollback. Desktop Analytics can now help you to identify these safeguards in advance, so that you can remediate the asset before you deploy the update. For more information, see [Compatibility assessment - Safeguards](compat-assessment.md#safeguards).
 
 ## January 2020
 
@@ -53,13 +53,13 @@ Windows compatibility data classifies some apps and drivers with a *safeguard*, 
 
 <!-- 5533890 -->
 
-When you select an app to see more information, the details pane now includes additional usage information. You can use this data to help understand the breadth of install for an app, as well as devices on which users regularly use the app. For more information, see [About assets - App usage](/configmgr/desktop-analytics/about-assets#usage).
+When you select an app to see more information, the details pane now includes additional usage information. You can use this data to help understand the breadth of install for an app, as well as devices on which users regularly use the app. For more information, see [About assets - App usage](about-assets.md#usage).
 
 ### Provide feedback on Desktop Analytics
 
 <!-- 5451636 -->
 
-To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side. For more information, see [Share product feedback](/configmgr/desktop-analytics/get-support#bkmk_feedback).
+To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side. For more information, see [Share product feedback](get-support.md#bkmk_feedback).
 
 ## October 2019
 
@@ -67,7 +67,7 @@ To share your feedback about Desktop Analytics, select the **Send a Smile** icon
 
 <!-- 3594545 -->
 
-Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application or driver. For more information, see [Compatibility assessment](/sccm/desktop-analytics/compat-assessment#asset-is-removed-during-upgrade).
+Desktop Analytics now provides additional detail when it detects that the Windows upgrade will completely or partially remove an application or driver. For more information, see [Compatibility assessment](compat-assessment.md#asset-is-removed-during-upgrade).
 
 ### Migrate from Windows Analytics to existing tenant
 
@@ -87,7 +87,7 @@ During onboarding, you can now migrate inputs from an existing Windows Analytics
 
 <!-- 4972396 -->
 
-If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](/sccm/desktop-analytics/account-close).
+If you set up Desktop Analytics in your environment, but want to stop using the service, you can now close your account. If you change your mind in 90 days, you can reactivate the account. For more information, see [How to close your account](account-close.md).
 
 ## August 2019
 
@@ -95,7 +95,7 @@ If you set up Desktop Analytics in your environment, but want to stop using the 
 
 <!-- 3733897 -->
 
-If you set up Desktop Analytics in your environment, but want to start over with onboarding and enrollment, you can now reset it. For more information on the process, see [Reset your account](/sccm/desktop-analytics/account-reset).
+If you set up Desktop Analytics in your environment, but want to start over with onboarding and enrollment, you can now reset it. For more information on the process, see [Reset your account](account-reset.md).
 
 ### Automatic upgrade decision of system and store apps
 
@@ -107,12 +107,12 @@ To help reduce your efforts in annotating noteworthy apps, certain types of apps
 
 - Apps managed and updated from the Microsoft Store
 
-For more information, see [Automatic upgrade decision of system and store apps](/sccm/desktop-analytics/about-assets#bkmk_plan-autoapp).
+For more information, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp).
 
 ## What's new in Configuration Manager
 
 The Desktop Analytics docs always refer to functionality in the latest version of Configuration Manager current branch. For more information on the latest changes in Configuration Manager, see the following articles:
 
-<!-- - [What's new in version 1910](/sccm/core/plan-design/changes/whats-new-in-version-1910#bkmk_da) -->
+<!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
-- [What's new in version 1906](/sccm/core/plan-design/changes/whats-new-in-version-1906#bkmk_da)
+- [What's new in version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
