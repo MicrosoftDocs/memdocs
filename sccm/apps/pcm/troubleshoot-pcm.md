@@ -26,7 +26,7 @@ Use the information in this article to help you troubleshoot problems when using
 
 ## SMS Provider
 
-Package Conversion Manager uses the SMS Provider. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).
+Package Conversion Manager uses the SMS Provider. For more information, see [Plan for the SMS Provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md).
 
 If the SMS Provider isn't working properly, the Configuration Manager console including the Package Conversion Manager doesn't work.
 
@@ -98,7 +98,7 @@ If you see one of the following error messages, the **SMSProv.log** file may con
 
 These error messages typically indicate that an error occurred on the site server, and that the error information wasn't sent to the Configuration Manager console.
 
-For more information, see [Technical reference for Package Conversion Manager error messages](/sccm/apps/pcm/error-messages).
+For more information, see [Technical reference for Package Conversion Manager error messages](error-messages.md).
 
 
 
@@ -114,4 +114,4 @@ If you need to make changes to a package after analysis, rerun analysis before c
 
 ## See also
 
-[Technical reference for Package Conversion Manager error messages](/sccm/apps/pcm/error-messages)
+[Technical reference for Package Conversion Manager error messages](error-messages.md)

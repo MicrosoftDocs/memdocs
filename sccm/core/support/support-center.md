@@ -45,7 +45,7 @@ Support Center includes a modern log viewer. This tool replaces CMTrace and prov
 ### Support Center OneTrace (Preview)
 
 <!--3555962-->
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
+Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).
 
 ### PowerShell cmdlets
 
@@ -56,7 +56,7 @@ Support Center also includes [Windows PowerShell cmdlets](https://go.microsoft.c
 
 Install the following components on the server or client computer on which you install Support Center:
 
-- An OS version supported by Configuration Manager. For more information, see [Supported OS versions for clients](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices). Support Center doesn't support mobile devices.  
+- An OS version supported by Configuration Manager. For more information, see [Supported OS versions for clients](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md). Support Center doesn't support mobile devices.  
 
 - .NET Framework 4.5.2 is required on the computer where you run Support Center and its components.  
 
@@ -106,4 +106,4 @@ In Support Center, if you select **Application deployment evaluation** from the 
 
 ## Next steps
 
-[Support Center quickstart](/sccm/core/support/support-center-quickstart)
+[Support Center quickstart](support-center-quickstart.md)

@@ -29,9 +29,9 @@ After you create the deployment, the site sends an associated software update po
 >  If a distribution point isn't available, clients on the intranet can also download software updates from Microsoft Update.  
 
 > [!NOTE]  
->  Unlike other deployment types, software updates are all downloaded to the client cache. This is regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the client cache for Configuration Manager clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
+>  Unlike other deployment types, software updates are all downloaded to the client cache. This is regardless of the maximum cache size setting on the client. For more information about the client cache setting, see [Configure the client cache for Configuration Manager clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
-If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows).  
+If you configure a required software update deployment, the software updates are automatically installed at the scheduled deadline. Alternatively, the user on the client computer can schedule or initiate the software update installation prior to the deadline. After the attempted installation, client computers send state messages back to the site server to report whether the software update installation was successful. For more information about software update deployments, see [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows).  
 
 There are three main scenarios for deploying software updates: 
 - [Manual deployment](#BKMK_ManualDeployment)  

@@ -41,4 +41,4 @@ Microsoft uses available data to improve the product. For example:
 - Microsoft improved the prerequisite checks for installing an update. They removed obsolete rules, accounted for additional cases, and automatically remediated some issues.  
 
 > [!div class="nextstepaction"]
-> [How Configuration Manager collects data](/configmgr/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected)
+> [How Configuration Manager collects data](how-diagnostics-and-usage-data-is-collected.md)

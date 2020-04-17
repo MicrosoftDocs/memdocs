@@ -18,7 +18,7 @@ ms.author: aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Package definition files are scripts to help you automate the creation of [Packages and programs](/sccm/apps/deploy-use/packages-and-programs) in Configuration Manager. They provide all of the information that Configuration Manager needs to create a package and program, except for the location of package source files.
+Package definition files are scripts to help you automate the creation of [Packages and programs](packages-and-programs.md) in Configuration Manager. They provide all of the information that Configuration Manager needs to create a package and program, except for the location of package source files.
 
 ## About the package definition file format
 
@@ -172,4 +172,4 @@ Include a [Program] section for each program that you specify in the **Programs*
 
 ## See also
 
-[Packages and programs](/sccm/apps/deploy-use/packages-and-programs)
+[Packages and programs](packages-and-programs.md)

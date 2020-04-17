@@ -18,7 +18,7 @@ ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers#software-update-point).
+Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point).
 
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
@@ -47,7 +47,7 @@ Add multiple software update points at a Configuration Manager primary site to p
 
 The first software update point that you install on a primary site is the synchronization source for all additional software update points that you add at the primary site. After you add software update points and start synchronization, view the status of the software update points and the synchronization source from the **Software Update Point Synchronization Status** node in the **Monitoring** workspace.  
 
-When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove a site system role](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_role).  
+When there's a failure of the software update point configured as the synchronization source for the site, manually remove the failed role. Then select a new software update point to use as the synchronization source. For more information, see [Remove a site system role](../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#bkmk_role).  
 
 
 ###  <a name="BKMK_SUPList"></a> Software update point list  
@@ -68,7 +68,7 @@ The client randomly selects a software update point from the list. It prioritize
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
 
 > [!NOTE]  
-> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
+> Clients use boundary groups to find a new software update point. If their current software update point is no longer accessible, they also use boundary groups to fallback and find a new one. Add individual software update points to different boundary groups to control which servers a client can find. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
 
 If you have multiple software update points at a site, and one fails or becomes unavailable, clients will connect to a different software update point. With this new server, clients continue to scan for the latest software updates. When a client is first assigned a software update point, it stays assigned to that software update point unless it fails to scan.  
 
@@ -108,7 +108,7 @@ Switch Configuration Manager clients to a new software update point when there a
 > [!IMPORTANT]    
 > When you switch devices to use a new server, the devices use fallback to find that new server. Clients switch to the new software update point during their next software updates scan cycle.<!-- SCCMDocs#1537 -->
 >
-> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points).  
+> Before you start this change, review your boundary group configurations to make sure that your software update points are in the correct boundary groups. For more information, see [Software update points](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
 >
 > Switching to a new software update point generates additional network traffic. The amount of traffic depends on your WSUS configuration settings, for example, the synchronized classifications and products, or use of a shared WSUS database. If you plan to switch multiple devices, consider doing so during maintenance windows. This timing reduces the impact to your network when clients scan with the new software update point.  
 
@@ -133,7 +133,7 @@ For example, you have a primary site in forest A with two software update points
 
 ###  <a name="BKMK_WSUSSyncSource"></a> Use an existing WSUS server as the synchronization source at the top-level site  
 
-Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsSUP-WSUS).  
+Typically, the top-level site in your hierarchy is configured to synchronize software updates metadata with Microsoft Update. When your organizational security policy doesn't allow the top-level site to access to the internet, configure the synchronization source for the top-level site to use an existing WSUS server. This WSUS server isn't in your Configuration Manager hierarchy. For example, you have a WSUS server in an internet-connected network (DMZ), but your top-level site is in an internal network without internet access. Configure the WSUS server in the DMZ as your synchronization source for software updates metadata. Configure the WSUS server in the DMZ to synchronize software updates with the same criteria that you need in Configuration Manager. Otherwise, the top-level site might not synchronize the software updates that you expect. When you install the software update point, configure a WSUS server connection account. This account needs access to the WSUS server in the DMZ. Also confirm that the firewall permits traffic for the appropriate ports. For more information, see the [ports used by the software update point to the synchronization source](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
 
 ###  <a name="BKMK_SUPSecSite"></a> Software update point on a secondary site  
@@ -148,17 +148,17 @@ When you need to manage devices that roam off your network onto the internet, de
 #### Cloud management gateway
 Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service. 
 
-For more information, see [Plan for the cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
 
 #### Internet-based client management
 Place a software update point in an internet-facing network and enable it to allow traffic from internet-based clients. As clients roam onto the internet, they switch to this software update point for scanning. All internet-based clients always get content from the Microsoft Update cloud service.
 
-For more information on the advantages and disadvantages of internet-based client management, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).
+For more information on the advantages and disadvantages of internet-based client management, see [Manage clients on the internet](../../core/clients/manage/manage-clients-internet.md).
 
 #### Windows Update for Business
 Windows Update for Business allows you to keep Windows 10 devices always up-to-date with the latest quality and feature updates. These devices connect directly to the Windows Update cloud service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.
 
-For more information, see [Integration with Windows Update for Business](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10).
+For more information, see [Integration with Windows Update for Business](../deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 
 ### <a name="bkmk_content"></a> Plan software update content
@@ -168,12 +168,12 @@ Clients need to download the content files for software updates in order to inst
 #### Download and distribute content 
 By default, the software update management process in Configuration Manager uses the built-in content management features. These features include the centralized, single-instance store content library, and the distributed design of the distribution point site system role. You use these features when you download and distribute software update deployment packages. 
 
-For more information, see [Download software updates](/sccm/sum/deploy-use/download-software-updates).
+For more information, see [Download software updates](../deploy-use/download-software-updates.md).
 
 #### Manage express installation files for Windows 10
 Configuration Manager supports the use of express installation files for Windows 10 updates. Express update files and supporting technologies such as Delivery Optimization can help reduce the network impact of large content files downloading to clients. 
 
-For more information, see [Optimize Windows 10 update delivery](/sccm/sum/deploy-use/optimize-windows-10-update-delivery).
+For more information, see [Optimize Windows 10 update delivery](../deploy-use/optimize-windows-10-update-delivery.md).
 
 #### Clients download content from the internet
 When you deploy software updates to clients, configure the deployment for clients to download content from the Microsoft Update cloud service. When clients aren't able to download content from another content source, they can still download the content from the internet. 
@@ -189,17 +189,17 @@ Configuration Manager integrates with WSUS, which natively supports software upd
 #### Supersede applications to update
 Use a supersedence relationship with the application management feature in Configuration Manager to upgrade or replace existing applications. When you supersede an application, specify a new deployment type to replace the deployment type of the superseded application. Also decide whether to upgrade or uninstall the superseded application before the superseding application is installed.
 
-For more information, see [Revise and supersede applications](/sccm/apps/deploy-use/revise-and-supersede-applications).
+For more information, see [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md).
 
 #### Third-party software updates
 Starting in version 1806, use the **Third-Party Software Update Catalogs** node in the Configuration Manager console to subscribe to third-party catalogs, publish their updates to your software update point, and then deploy them to clients.<!--1352101-->
 
-For more information, see [Third-party software updates](/sccm/sum/deploy-use/third-party-software-updates).
+For more information, see [Third-party software updates](../deploy-use/third-party-software-updates.md).
 
 #### System Center Updates Publisher
 System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles.
 
-For more information, see [System Center Updates Publisher](/sccm/sum/tools/updates-publisher).
+For more information, see [System Center Updates Publisher](../tools/updates-publisher.md).
 
 
 
@@ -219,7 +219,7 @@ Install the software update point role on a site system that meets the minimum r
 
 -   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
--   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+-   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 
 ###  <a name="BKMK_PlanningForWSUS"></a> Plan for WSUS installation  
@@ -234,7 +234,7 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
   
 For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
-When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](/sccm/sum/plan-design/software-updates-best-practices#bkmk_shared-susdb).  
+When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](software-updates-best-practices.md#bkmk_shared-susdb).  
 
 #### Configuring the WSUS content directory path
 
@@ -278,7 +278,7 @@ The connection to Microsoft Update is always configured to use port 80 for HTTP 
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the active software update point to access internet endpoints. Then WSUS and Automatic Updates can communicate with the Microsoft Update cloud service.
 
-For more information, see [Internet access requirements](/sccm/core/plan-design/network/internet-endpoints#bkmk_sum).
+For more information, see [Internet access requirements](../../core/plan-design/network/internet-endpoints.md#bkmk_sum).
 
 
 ##  <a name="BKMK_SyncSettings"></a> Plan for synchronization settings  
@@ -382,7 +382,7 @@ Consider the following scenarios in which you might need to deploy a superseded 
 -   If a superseding software update wasn't approved for deployment in your production environment.  
 
     > [!NOTE]  
-    > - Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](/sccm/sum/deploy-use/software-updates-maintenance).
+    > - Before Configuration Manager version 1806, when Configuration Manager sets a superseded software update to **Expired**, it doesn't set the update to **Declined** in WSUS. Clients continue to scan for an expired update until the update is declined manually or via a custom script.  After Configuration Manager version 1806, Configuration Manager will also decline the superseded updates in WSUS. For more information about the WSUS cleanup task, see [Software updates maintenance](../deploy-use/software-updates-maintenance.md).
     > - Starting in Configuration Manager version 1810, you can specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**.
 
 ###  <a name="BKMK_UpdateLanguages"></a> Languages  
@@ -436,7 +436,7 @@ Starting in version 1906, you can specify the maximum amount of time a software 
     - Office 365
 
 - These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](/sccm/sum/get-started/manage-settings-for-software-updates#BKMK_SoftwareUpdatesSettings)
+- All other products and classifications are not configurable with this setting. If you need to change the maximum run time of one of these updates, [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings)
 
 > [!NOTE]
 > In version 1906, the maximum runtime isn't available when you install the top-level software update point. After installation, edit the maximum run time on your top-level software update point.
@@ -445,7 +445,7 @@ Starting in version 1906, you can specify the maximum amount of time a software 
 
 Add a maintenance window dedicated for software updates installation. This action lets you configure a general maintenance window and a different maintenance window for software updates. When you configure both a general maintenance window and software updates maintenance window, clients install software updates only during the software updates maintenance window. 
 
-Starting with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+Starting with Configuration Manager version 1810, you can change this behavior and allow software updates to install during a general maintenance window. For more information about this client setting, see [Software updates client settings](../../core/clients/deploy/about-client-settings.md#bkmk_SUMMaint).
 
 For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
@@ -464,4 +464,4 @@ Starting in version 2002, Configuration Manager detects if a servicing stack upd
 ## Next steps
 Once you plan for software updates, see [Prepare for software updates management](../get-started/prepare-for-software-updates-management.md).  
 
-For more information about managing Windows as a service, see [Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service).
+For more information about managing Windows as a service, see [Fundamentals of Configuration Manager as a service and Windows as a service](../../core/understand/configuration-manager-and-windows-as-service.md).

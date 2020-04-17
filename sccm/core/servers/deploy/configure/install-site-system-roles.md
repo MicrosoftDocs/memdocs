@@ -25,13 +25,13 @@ There are two methods in the Configuration Manager console to install site syste
 > [!TIP]
 > When you install a role on a remote computer, Configuration Manager adds the computer account of the remote computer to a local group on the site server.
 >
-> When you install the site on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role doesn't immediately work. The site system server needs to restart, or you refresh the Kerberos ticket for the remote server's computer account. For more information, see [Accounts used](/configmgr/core/plan-design/hierarchy/accounts).
+> When you install the site on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role doesn't immediately work. The site system server needs to restart, or you refresh the Kerberos ticket for the remote server's computer account. For more information, see [Accounts used](../../../plan-design/hierarchy/accounts.md).
 
 Before it installs the site system role, Configuration Manager checks the destination computer to make sure it meets the prerequisites for the selected roles.
 
 By default, when Configuration Manager installs a site system role, it installs files on the first available NTFS-formatted disk drive that has the most available free disk space. To prevent Configuration Manager from installing on specific drives, before you install the site system server, create an empty file named **no_sms_on_drive.sms** in the root of the drive.
 
-Configuration Manager uses the **site system installation account** to install roles. You specify this account when you install the role. By default, this account is the local system account of the site server computer. You can specify a domain user account as the site system installation account. For more information, see [Accounts - Site system installation account](/configmgr/core/plan-design/hierarchy/accounts#site-system-installation-account).
+Configuration Manager uses the **site system installation account** to install roles. You specify this account when you install the role. By default, this account is the local system account of the site server computer. You can specify a domain user account as the site system installation account. For more information, see [Accounts - Site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).
 
 ## <a name="bkmk_addrole"></a> Install roles on an existing site system server
 
@@ -44,11 +44,11 @@ Configuration Manager uses the **site system installation account** to install r
     > [!TIP]
     >  To access the site system role from the internet, make sure that you specify an internet fully qualified domain name (FQDN).
 
-1. On the **Proxy** page, if roles on this server require an internet proxy, then specify settings for a proxy server. For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support).
+1. On the **Proxy** page, if roles on this server require an internet proxy, then specify settings for a proxy server. For more information, see [Proxy server support](../../../plan-design/network/proxy-server-support.md).
 
 1. On the **System Role Selection** page, select the site system roles that you want to add.
 
-1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](/configmgr/core/servers/deploy/configure/configuration-options-for-site-system-roles).
+1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
 > The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
@@ -64,17 +64,17 @@ Configuration Manager uses the **site system installation account** to install r
     > [!TIP]
     > To access the new site system role from the internet, make sure that you specify an internet FQDN.
 
-1. On the **Proxy** page, if roles on this server require an internet proxy, then specify settings for a proxy server. For more information, see [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support).
+1. On the **Proxy** page, if roles on this server require an internet proxy, then specify settings for a proxy server. For more information, see [Proxy server support](../../../plan-design/network/proxy-server-support.md).
 
 1. On the **System Role Selection** page, select the site system roles that you want to add.
 
-1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](/configmgr/core/servers/deploy/configure/configuration-options-for-site-system-roles).
+1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
 > The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
 ## Next steps
 
-- [Configuration options for site system roles](/configmgr/core/servers/deploy/configure/configuration-options-for-site-system-roles)
+- [Configuration options for site system roles](configuration-options-for-site-system-roles.md)
 
-- [Remove role](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_role)
+- [Remove role](../install/uninstall-sites-and-hierarchies.md#bkmk_role)

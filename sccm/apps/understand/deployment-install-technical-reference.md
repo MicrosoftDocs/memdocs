@@ -18,9 +18,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Before you continue, please review [Application deployment client components](/sccm/apps/understand/client-components-technical-reference) to understand DCM and CI Agent job processing.
+Before you continue, please review [Application deployment client components](client-components-technical-reference.md) to understand DCM and CI Agent job processing.
 
-Application installation is performed by DCM Agent and CI Agent components when the deployment is enforced. The enforcement time differs for Available and Required deployments. To understand when the assignment is enforced, see the [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference) or [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference) articles.
+Application installation is performed by DCM Agent and CI Agent components when the deployment is enforced. The enforcement time differs for Available and Required deployments. To understand when the assignment is enforced, see the [Application Deployment to Device Collections](device-deployment-technical-reference.md) or [Application Deployment to User Collections](user-deployment-technical-reference.md) articles.
 
 ## Enforcement Initiation
 
@@ -62,4 +62,4 @@ Finally, after enforcement is complete, CI Agent receives the task complete noti
 
 ## Next Steps
 
-[Troubleshooting application deployments](/sccm/apps/deploy-use/troubleshoot-application-deployment)
+[Troubleshooting application deployments](../deploy-use/troubleshoot-application-deployment.md)

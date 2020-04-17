@@ -64,7 +64,7 @@ When you migrate objects from a System Center 2012 Configuration Manager or Conf
 >  For each package that you migrate, update the package in the destination hierarchy. This action can prevent issues with deploying the package to distribution points in the destination hierarchy. However, when you update a package on the distribution point in the destination hierarchy, clients in that hierarchy will no longer be able to get that package from a shared distribution point. To update a package in the destination hierarchy, in the Configuration Manager console, go to the Software Library, right-click on the package, and then select **Update Distribution Points**. Do this action for each package that you migrate.  
 
 > [!TIP]  
-> Use Package Conversion Manager to convert packages and programs into Configuration Manager applications. For more information, see [Package Conversion Manager](/configmgr/apps/pcm/package-conversion-manager).  
+> Use Package Conversion Manager to convert packages and programs into Configuration Manager applications. For more information, see [Package Conversion Manager](../../apps/pcm/package-conversion-manager.md).  
 
 ### Virtual applications  
 When you migrate App-V packages from a supported Configuration Manager 2007 site, the migration process converts them to applications in the destination hierarchy. Additionally, based on existing advertisements for the App-V package, the following deployment types are created in the destination hierarchy:  
@@ -136,7 +136,7 @@ Configuration Manager does not support the migration of reports. Instead, use SQ
 > [!NOTE]  
 >  Because there are schema changes for reports between Configuration Manager 2007 and Configuration Manager current branch, test each report that you import from a Configuration Manager 2007 hierarchy to ensure that it functions as expected.  
 
-For more about reporting, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+For more about reporting, see [Introduction to reporting](../servers/manage/introduction-to-reporting.md).  
 
 ##  <a name="Plan_Migrate_Org_Folders"></a> Plan to migrate organizational and search folders  
  You can migrate organizational folders and search folders from a supported source hierarchy to a destination hierarchy. In addition, from a System Center 2012 Configuration Manager or Configuration Manager current branch source hierarchy, you can migrate the criteria for a saved search to a destination hierarchy.  

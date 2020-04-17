@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The notifications a user receives for a pending device restart can vary depending on [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart) and which version of Configuration Manager is being used. This article helps admins determine what the user experience is for pending device restart notifications.
+The notifications a user receives for a pending device restart can vary depending on [Computer restart client settings](about-client-settings.md#computer-restart) and which version of Configuration Manager is being used. This article helps admins determine what the user experience is for pending device restart notifications.
 
 >[!NOTE]
 > - This article focuses on client settings found in Configuration Manager version 1902 and version 1906.
@@ -26,11 +26,11 @@ The notifications a user receives for a pending device restart can vary dependin
 
 ## Deployment types for restart notifications
 
-The [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart) change the user experience for all required deployments that require a restart of the following types:
+The [Computer restart client settings](about-client-settings.md#computer-restart) change the user experience for all required deployments that require a restart of the following types:
 
-- [Application](/sccm/apps/deploy-use/deploy-applications)
-- [Task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)
-- [Software update](/sccm/sum/deploy-use/deploy-software-updates)
+- [Application](../../../apps/deploy-use/deploy-applications.md)
+- [Task sequence](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+- [Software update](../../../sum/deploy-use/deploy-software-updates.md)
 
 ## Restart notification types
 
@@ -48,13 +48,13 @@ Software Center final countdown notification that can't be closed by the user. T
 
 ![Software Center final countdown notification](media/3976435-final-restart-countdown.png)
 
-If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify).
+If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
 ![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
 
 - When you don't use toast notifications, the dialog for software marked as **Available** is similar to proactively installed software.
 
-  - For **Available** software, the notification doesn't have a deadline for the restart and the user can choose their own snooze interval. For more information, see [Approval settings](/sccm/apps/deploy-use/deploy-applications#bkmk_approval).
+  - For **Available** software, the notification doesn't have a deadline for the restart and the user can choose their own snooze interval. For more information, see [Approval settings](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
     ![Software marked as "Available" doesn't have a deadline for restart in the notification.](media/3555947-deployment-marked-available-restart.png)
 
@@ -65,7 +65,7 @@ Sometimes users don't see the Windows toast notification about a restart or requ
 
 Starting in version 1902, when software changes are required or deployments need a restart, you have the option of using a more intrusive dialog window.
 
-In the [Computer Restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
+In the [Computer Restart](about-client-settings.md#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
 
 Configuring this client setting changes the user experience for all required deployments that require a restart from toast notifications:
 
@@ -89,7 +89,7 @@ If the user doesn't restart after the temporary notification, they'll be given t
 
 ![Software Center final countdown notification](media/3555947-1902-final-countdown.png)
 
-The following settings must be shorter in duration than the shortest [maintenance window](/sccm/core/clients/manage/collections/use-maintenance-windows) applied to the computer:
+The following settings must be shorter in duration than the shortest [maintenance window](../manage/collections/use-maintenance-windows.md) applied to the computer:
 
 - **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
 - **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
@@ -101,7 +101,7 @@ The following settings must be shorter in duration than the shortest [maintenanc
 <!--3976435-->
 Some admins prefer frequent restart notifications and a short time frame for allowing restarts to be postponed. Other admins allow users to postpone a restart for longer periods of time and want users to be notified of the pending restart infrequently. Configuration Manager version 1906 gives an admin additional control over the timing and frequency of restart notifications. The following items were introduced in 1906 to give the admin greater control:
 
-- **Specify the snooze duration for computer restart countdown notifications (minutes)** was added to [Computer restart client settings](/sccm/core/clients/deploy/about-client-settings#computer-restart).
+- **Specify the snooze duration for computer restart countdown notifications (minutes)** was added to [Computer restart client settings](about-client-settings.md#computer-restart).
 - The maximum value for **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)** increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
 - The user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
 
@@ -129,7 +129,7 @@ When the final countdown is reached, the user is given a notification they can't
 
 ### The user proactively installs before the deadline
 
-If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-ux) and [User notifications for required deployments](/sccm/apps/deploy-use/deploy-applications#bkmk_notify). 
+If the user proactively installs required software that needs restart before the deadline occurs, they'll see a different notification. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify). 
 
 The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment:
 
@@ -139,10 +139,10 @@ Once the deadline for the software is reached, the [Notifications when required 
 
 ## Log files
 
-Use the **RebootCoordinator.log** and **SCNotify.log** for troubleshooting device restarts. You may also have to use additional client [log files](/sccm/core/plan-design/hierarchy/log-files) based on the type of deployment used.
+Use the **RebootCoordinator.log** and **SCNotify.log** for troubleshooting device restarts. You may also have to use additional client [log files](../../plan-design/hierarchy/log-files.md) based on the type of deployment used.
 
 ## Next steps
 
-- [Introduction application management](/sccm/apps/understand/introduction-to-application-management)
-- [Introduction to operating system deployment](/sccm/osd/understand/introduction-to-operating-system-deployment)
-- [Introduction to software updates management](/sccm/sum/understand/software-updates-introduction)
+- [Introduction application management](../../../apps/understand/introduction-to-application-management.md)
+- [Introduction to operating system deployment](../../../osd/understand/introduction-to-operating-system-deployment.md)
+- [Introduction to software updates management](../../../sum/understand/software-updates-introduction.md)

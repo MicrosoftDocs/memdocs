@@ -42,7 +42,7 @@ In the following video, senior program manager Danny Guillory and principal prog
 
 When you use co-management and Autopilot together, you make sure that new devices entering your network end up in the same state of management. In this setup, devices are enrolled in Intune and have a Configuration Manager client.  It allows you to use the new Windows 10 provisioning model, and helps you eliminate the need to create, maintain, and update custom OS images. 
 
-In all of these scenarios, you can automatically [enable co-management](/sccm/comanage/how-to-prepare-win10) by Intune. This automation assists with the provisioning process, and for ongoing management of the device.
+In all of these scenarios, you can automatically [enable co-management](how-to-prepare-Win10.md) by Intune. This automation assists with the provisioning process, and for ongoing management of the device.
 
 With Autopilot, you don't need to worry about images and drivers. Focus on provisioning devices by this automated process using Intune and Configuration Manager via co-management.
 
@@ -94,5 +94,5 @@ For more information, see the following articles:
 
 [Use Intune to create Windows Autopilot profiles](https://docs.microsoft.com/intune/enrollment-autopilot)
 
-[Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence
+[Windows Autopilot for existing devices](../osd/deploy-use/windows-autopilot-for-existing-devices.md) task sequence
 

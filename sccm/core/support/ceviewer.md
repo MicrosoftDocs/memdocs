@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Collection Evaluation Viewer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to view and troubleshoot the collection evaluation process on the primary site server.
+Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.md). Use it to view and troubleshoot the collection evaluation process on the primary site server.
 
 The tool displays the following information:  
 

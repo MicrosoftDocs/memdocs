@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article includes procedures on how to configure boundary groups. Before you begin, make sure you understand boundary group concepts. For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
+This article includes procedures on how to configure boundary groups. Before you begin, make sure you understand boundary group concepts. For more information, see [Boundary groups](boundary-groups.md).
 
 
 
@@ -59,7 +59,7 @@ In the boundary group Properties window, use the **General** tab to modify the b
 
 To modify the site assignment and associated site system server configuration, switch to the **References** tab in the boundary group Properties window.  
 
-- To enable this boundary group for use by clients for site assignment, select **Use this boundary group for site assignment**. Then select a site from the **Assigned site** dropdown list. For more information, see [Site assignment](/sccm/core/servers/deploy/configure/boundary-groups#site-assignment).  
+- To enable this boundary group for use by clients for site assignment, select **Use this boundary group for site assignment**. Then select a site from the **Assigned site** dropdown list. For more information, see [Site assignment](boundary-groups.md#site-assignment).  
 
 - To associate available site system servers with this boundary group, select **Add**. The Add Site Systems window only lists servers that have supported site system roles. Select the check box for one or more servers, and select **OK**. It adds them as associated site system servers for this boundary group.  
 
@@ -94,12 +94,12 @@ To configure fallback behavior, switch to the **Relationships** tab in the bound
  
 - To remove a relationship, select the boundary group in the list, and select **Remove**.  
 
-For more information, see [Fallback](/sccm/core/servers/deploy/configure/boundary-groups#fallback). 
+For more information, see [Fallback](boundary-groups.md#fallback). 
 
 
 ### <a name="bkmk_options"></a> Configure boundary group options
 <!--1356193-->
-Starting in version 1806, to configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+Starting in version 1806, to configure additional options for clients in this boundary group, switch to the **Options** tab. For more information, see [Boundary group options for peer downloads](boundary-groups.md#bkmk_bgoptions).
 
 - **Allow peer downloads in this boundary group**: This option is enabled by default. The management point provides clients a list of content locations that includes peer sources.  
 
@@ -118,12 +118,12 @@ If clients aren't in a boundary group with an assigned site, assign them to this
 
 4.  Select **OK** to save the configuration.  
 
-For more information, see [Site assignment](/sccm/core/servers/deploy/configure/boundary-groups#site-assignment).
+For more information, see [Site assignment](boundary-groups.md#site-assignment).
 
 
 ## <a name="bkmk_proc-prefer"></a> Enable use of preferred management points  
 
-For more information, see [Preferred management points](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_preferred).
+For more information, see [Preferred management points](boundary-groups.md#bkmk_preferred).
 
 1.  In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.  
 

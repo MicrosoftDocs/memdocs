@@ -24,7 +24,7 @@ The current branch is the production-ready build of Configuration Manager that p
 
 ### <a name="bkmk_ltsb"></a> What's the long-term servicing branch (LTSB)?  
 
-The LTSB is a production-ready build of Configuration Manager. It's intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the current branch, the LTSB has [reduced functionality](/sccm/core/understand/introduction-to-the-ltsb#features-that-arent-available). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the current branch of Configuration Manager. Customers who have perpetual license rights to Configuration Manager may then install and use the LTSB build of the Configuration Manager version that's current at the time of expiration.
+The LTSB is a production-ready build of Configuration Manager. It's intended for customers who allow Software Assurance or equivalent subscription rights to expire. When compared to the current branch, the LTSB has [reduced functionality](introduction-to-the-ltsb.md#features-that-arent-available). Customers who allow Software Assurance or equivalent subscription rights to expire must uninstall the current branch of Configuration Manager. Customers who have perpetual license rights to Configuration Manager may then install and use the LTSB build of the Configuration Manager version that's current at the time of expiration.
 
 ### <a name="bkmk_licensing-acronyms"></a> What do the acronyms *SA* and *L&SA* mean in regard to Configuration Manager?
 
@@ -65,7 +65,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 ### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
 
-Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](/configmgr/comanage/overview). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](../../comanage/overview.md). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
 
 A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune licenses to your users.
 
@@ -107,7 +107,7 @@ No. The only way to get rights to use Configuration Manager is to acquire a lice
 
 - For a temporary environment, you can use the [evaluation version](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) for 180 days.
 
-- For a lab environment, you can use the [technical preview branch](/sccm/core/get-started/technical-preview). Technical preview has the same functionality as current branch, but has some limitations in terms of scale and supported platforms.
+- For a lab environment, you can use the [technical preview branch](../get-started/technical-preview.md). Technical preview has the same functionality as current branch, but has some limitations in terms of scale and supported platforms.
 
 ### <a name="bkmk_update-rights"></a> Do I have rights to install any update in the Configuration Manager console?
 

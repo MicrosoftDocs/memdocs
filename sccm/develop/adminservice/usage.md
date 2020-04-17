@@ -16,10 +16,10 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager uses the administration service REST API in several native [scenarios](/configmgr/develop/adminservice/overview#scenarios). You can also use the administration service for your own custom scenarios.
+Configuration Manager uses the administration service REST API in several native [scenarios](overview.md#scenarios). You can also use the administration service for your own custom scenarios.
 
 > [!NOTE]
-> The examples in this article all use the FQDN of the server that hosts the SMS Provider role. If you access the administration service remotely through a CMG, use the CMG endpoint instead of the SMS Provider FQDN. For more information, see [Enable internet access](/configmgr/develop/adminservice/set-up#bkmk_cmg).
+> The examples in this article all use the FQDN of the server that hosts the SMS Provider role. If you access the administration service remotely through a CMG, use the CMG endpoint instead of the SMS Provider FQDN. For more information, see [Enable internet access](set-up.md#bkmk_cmg).
 
 ## Direct query
 
@@ -70,7 +70,7 @@ The output of this command is the specific version of the site: `5.00.8968.1000`
 
 You can use the **Invoke-RestMethod** cmdlet in a PowerShell script from the **Run PowerShell Script** task sequence step. This action lets you query the administration service during a task sequence.
 
-For more information, see [Task sequence steps - Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript).
+For more information, see [Task sequence steps - Run PowerShell Script](../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript).
 
 ## Power BI Desktop
 

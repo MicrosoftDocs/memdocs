@@ -17,7 +17,7 @@ You enable the PXE Service Point role, in Configuration Manager, by getting an i
 
 ### To enable a PXE service point role  
 
-1.  Set up a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information see, [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get an instance of a specific distribution point.  
 
@@ -71,7 +71,7 @@ public void EnablePXE(WqlConnectionManager connection,                      stri
 ## See Also  
  [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
  [PackNALPath Method in Class SMS_NAL_Methods](../../develop/reference/misc/packnalpath-method-in-class-sms_nal_methods.md)   
- [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)
+ [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md)
  [How to Set the Response Delay for a PXE Service Point](../../develop/osd/how-to-set-the-response-delay-for-a-pxe-service-point.md)   
  [How to Set the PXE Service Point Response to All Network Interfaces](../../develop/osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md)   
  [How to Set the PXE Service Point Response to PXE Requests](../../develop/osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md)   

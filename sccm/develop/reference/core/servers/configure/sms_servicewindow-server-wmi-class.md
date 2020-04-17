@@ -170,4 +170,4 @@ Class SMS_ServiceWindow
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
- [About maintenance windows](/sccm/develop/core/servers/configure/about-maintenance-windows)
+ [About maintenance windows](../../../../core/servers/configure/about-maintenance-windows.md)

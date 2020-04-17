@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migration views
 titleSuffix: Configuration Manager
 description: Information about the tasks involved in migrating to a Configuration Manager site.
@@ -18,7 +18,7 @@ manager: dougeby
 
 Migration views contain information about the tasks involved in migrating to a Configuration Manager site.
 
-For more information about migration in Configuration Manager, see [Migrating hierarchies in Configuration Manager](/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration).
+For more information about migration in Configuration Manager, see [Migrating hierarchies in Configuration Manager](../../../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md).
 
 ## Migration views
 

@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Power Viewer tool is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to view the status of the power management feature on a Configuration Manager client.
+The Power Viewer tool is one of the [Configuration Manager tools](tools.md). Use it to view the status of the power management feature on a Configuration Manager client.
 
 Run **PowerVwr.exe** as an administrator. When the tool launches, it displays the power capabilities and power settings of the local computer on the **Power Config** tab. 
 

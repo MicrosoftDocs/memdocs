@@ -23,7 +23,7 @@ In Configuration Manager, you can report user-defined informational, warning, an
 
 ### To report a user defined status message by using WMI  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Call the `SMS_StatusMessage` class method that is appropriate for the type of status message you want to raise.  
 
@@ -101,7 +101,7 @@ public void RaiseErrorStatusMessage(WqlConnectionManager connection)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
+|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
 
 ## Compiling the Code  
  This C# example requires:  
@@ -129,6 +129,6 @@ public void RaiseErrorStatusMessage(WqlConnectionManager connection)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
+ [About status messages](about-configuration-manager-status-messages.md)
  [SMS_StatusMessage Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md)   
  [How To Delete Status Messages](../../../../develop/core/servers/manage/how-to-delete-status-messages.md)

@@ -37,4 +37,4 @@ The site control file describes the current configuration of the site and its co
 
 - [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)  
 
-Classes that are derived from `SMS_SiteControlItem` use the naming convention `SMS_SCI_*`. Use these classes to access and modify the configuration items that are contained in the site control file. For information about managing the site control file and changing component configuration, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
+Classes that are derived from `SMS_SiteControlItem` use the naming convention `SMS_SCI_*`. Use these classes to access and modify the configuration items that are contained in the site control file. For information about managing the site control file and changing component configuration, see [About the site control file](../../../../core/understand/about-the-configuration-manager-site-control-file.md).  

@@ -16,9 +16,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article is a reference for all of the available variables in alphabetical order. Use the browser **Find** function (typically **CTRL** + **F**) to find a specific variable. The variable notes if it's specific to particular step. The article on [task sequence steps](/configmgr/osd/understand/task-sequence-steps) includes the list of variables specific to each step.
+This article is a reference for all of the available variables in alphabetical order. Use the browser **Find** function (typically **CTRL** + **F**) to find a specific variable. The variable notes if it's specific to particular step. The article on [task sequence steps](task-sequence-steps.md) includes the list of variables specific to each step.
 
-For more information, see [Using task sequence variables](/configmgr/osd/understand/using-task-sequence-variables).
+For more information, see [Using task sequence variables](using-task-sequence-variables.md).
 
 ## <a name="bkmk_tsvar"></a> Task sequence variable reference
 
@@ -294,84 +294,84 @@ Specifies if the computer is running as a Windows To Go device.
 ### <a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum memory (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRSPEED"></a> _TS_CRSPEED
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum processor speed (MHz)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRDISK"></a> _TS_CRDISK
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum free disk space (MB)** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Current OS to be refreshed is** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRARCH"></a> _TS_CRARCH
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Architecture of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Maximum OS version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Minimum client version** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Language of current OS** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **AC power plugged in** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter connected** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRWIRED"></a> _TS_CRWIRED
 
 *Starting in version 2002* <!--6005561-->  
-*Applies to the [Check Readiness](/configmgr/osd/understand/task-sequence-steps#BKMK_CheckReadiness) step.*
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter is not wireless** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
 
@@ -614,7 +614,7 @@ Instead of generating a random startup key for the key management option **Start
 
 Specifies a Windows account name that has permissions to store the captured image on a network share ([OSDCaptureDestination](#OSDCaptureDestination)). Also specify the [OSDCaptureAccountPassword](#OSDCaptureAccountPassword).
 
-For more information on the capture OS image account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#capture-os-image-account).
+For more information on the capture OS image account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#capture-os-image-account).
 
 ### <a name="OSDCaptureAccountPassword"></a> OSDCaptureAccountPassword
 
@@ -711,10 +711,10 @@ Specifies the RFC 1779 format name of the organizational unit (OU) that the dest
 ### <a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
-*Applies to the [Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage) step.*
+*Applies to the [Install Package](task-sequence-steps.md#BKMK_InstallPackage) step.*
 
 *Starting in version 1902*  
-*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
 
 (input)
 
@@ -783,7 +783,7 @@ An optional user-defined version number to assign to the captured OS image. This
 ### <a name="OSDInstallDriversAdditionalOptions"></a> OSDInstallDriversAdditionalOptions
 
 <!--516679/2840016-->
-*Applies to the [Apply Driver Package](/configmgr/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage) step.*
+*Applies to the [Apply Driver Package](task-sequence-steps.md#BKMK_ApplyDriverPackage) step.*
 
 (input)
 
@@ -804,7 +804,7 @@ For more information, see [Windows 10 DISM Command-Line Options](https://docs.mi
 
 Specifies the domain user account that's used to add the destination computer to the domain. This variable is required when joining a domain.
 
-For more information on the task sequence domain joining account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
+For more information on the task sequence domain joining account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
 ### <a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
@@ -896,7 +896,7 @@ Specifies the local Administrator account password. If you enable the option to 
 
 <!--3556028-->
 *Starting in version 1902*  
-*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+*Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
 
 (input)
 
@@ -1244,7 +1244,7 @@ For more information, see [Windows Setup Command-Line Options](https://docs.micr
 
 When the computer account fails to connect to the state migration point, this variable specifies whether the task sequence falls back to use the network access account (NAA).
 
-For more information on the network access account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#network-access-account).
+For more information on the network access account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#network-access-account).
 
 #### Valid values
 
@@ -1379,7 +1379,7 @@ Specify either this variable or the [OSDDomainName](#OSDDomainName) variable. Th
 
 ### <a name="SetupCompletePause"></a> SetupCompletePause
 
-*Applies to the [Upgrade Operating System](/configmgr/osd/understand/task-sequence-steps#BKMK_UpgradeOS) step.*
+*Applies to the [Upgrade Operating System](task-sequence-steps.md#BKMK_UpgradeOS) step.*
 
 <!-- 4680263 -->
 
@@ -1412,7 +1412,7 @@ The following log entries are common examples of this issue that you can remedia
 
 Specifies the client installation properties that the task sequence uses when installing the Configuration Manager client.
 
-For more information, see [About client installation parameters and properties](/configmgr/core/clients/deploy/about-client-installation-properties).
+For more information, see [About client installation parameters and properties](../../core/clients/deploy/about-client-installation-properties.md).
 
 ### <a name="SMSConnectNetworkFolderAccount"></a> SMSConnectNetworkFolderAccount
 
@@ -1422,7 +1422,7 @@ For more information, see [About client installation parameters and properties](
 
 Specifies the user account that is used to connect to the network share in [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath). Specify the account password with the [SMSConnectNetworkFolderPassword](#SMSConnectNetworkFolderPassword) value.
 
-For more information on the task sequence network folder connection account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
+For more information on the task sequence network folder connection account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-network-folder-connection-account).
 
 ### <a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 
@@ -1527,7 +1527,7 @@ Set this variable to `true` and the task sequence engine doesn't attempt to send
 When the task sequence restarts, the value of this variable persists. However, the task sequence tries sending an initial status message. This first attempt includes multiple retries. If successful, the task sequence continues sending status regardless of the value of this variable. If status fails to send, the task sequence uses the value of this variable.
 
 > [!NOTE]  
-> [Task sequence status reporting](/configmgr/core/servers/manage/list-of-reports#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. If status messages fail to send, they're not queued. When connectivity is restored to the management point, they're not sent at a later time. This behavior results in task sequence status reporting to be incomplete and missing items.
+> [Task sequence status reporting](../../core/servers/manage/list-of-reports.md#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. If status messages fail to send, they're not queued. When connectivity is restored to the management point, they're not sent at a later time. This behavior results in task sequence status reporting to be incomplete and missing items.
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
@@ -1656,7 +1656,7 @@ Specifies how many seconds to wait before the computer restarts. If this variabl
 ### <a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
 
 <!--4447680-->
-Starting in version 1906, use this variable with the existing [SMSTSRebootDelay](/configmgr/osd/understand/task-sequence-variables#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds.
+Starting in version 1906, use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.md#SMSTSRebootDelay) variable. If you want any later reboots to happen with a different timeout than the first, set SMSTSRebootDelayNext to a different value in seconds.
 
 #### Example
 
@@ -1685,9 +1685,9 @@ Requests a retry after the current task sequence step is completed. If this task
 ### <a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
 *Starting in version 2002* <!-- 5573175 -->  
-*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
 
-Use task sequence variables to configure the user context for the **Run Command Line** step. You don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword) variables.
+Use task sequence variables to configure the user context for the **Run Command Line** step. You don't need to configure the **Run Command Line** step with a placeholder account to use the [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName) and [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword) variables.
 
 Configure `SMSTSRunCommandLineAsUser` with one of the following values:
 
@@ -1697,22 +1697,22 @@ Configure `SMSTSRunCommandLineAsUser` with one of the following values:
 
 ### <a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
 
-*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
 
 (input)
 
 Specifies the account by which the command line is run. The value is a string of the form username or domain\username. Specify the account password with the [SMSTSRunCommandLineUserPassword](#SMSTSRunCommandLineUserPassword) variable.
 
 > [!NOTE]
-> Starting in version 2002, use the [SMSTSRunCommandLineAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) variable with this variable to configure the user context for this step.
+> Starting in version 2002, use the [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) variable with this variable to configure the user context for this step.
 >
 > In version 1910 and earlier, configure the **Run Command Line** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
 
-For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
 ### <a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
 
-*Applies to the [Run Command Line](/configmgr/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step.*
+*Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*
 
 (input)
 
@@ -1721,9 +1721,9 @@ Specifies the password for the account specified by the [SMSTSRunCommandLineUser
 ### <a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
 *Starting in version 2002* <!-- 5573175 -->  
-*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+*Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
 
-Use task sequence variables to configure the user context for the **Run PowerShell Script** step. You don't need to configure the **Run PowerShell Script** step with a placeholder account to use the [SMSTSRunPowerShellUserName](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName) and [SMSTSRunPowerShellUserPassword](/configmgr/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword) variables.
+Use task sequence variables to configure the user context for the **Run PowerShell Script** step. You don't need to configure the **Run PowerShell Script** step with a placeholder account to use the [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) and [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) variables.
 
 Configure `SMSTSRunPowerShellAsUser` with one of the following values:
 
@@ -1733,7 +1733,7 @@ Configure `SMSTSRunPowerShellAsUser` with one of the following values:
 
 ### <a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
-*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+*Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
 
 (input)
 
@@ -1742,11 +1742,11 @@ Specifies the account by which the PowerShell script is run. The value is a stri
 > [!NOTE]
 > To use these variables, configure the **Run PowerShell Script** step with the setting to **Run this step as the following account**. When you enable this option, if you're setting the user name and password with variables, specify any value for the account.
 
-For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
 ### <a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
 
-*Applies to the [Run PowerShell Script](/configmgr/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.*
+*Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
 
 (input)
 
@@ -1762,7 +1762,7 @@ Control the timeout for the software updates scan during this step. For example,
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
-Specifies the primary users of the destination computer by using the following format: `<DomainName>\<UserName>`. Separate multiple users by using a comma (`,`). For more information, see [Associate users with a destination computer](/configmgr/osd/get-started/associate-users-with-a-destination-computer).
+Specifies the primary users of the destination computer by using the following format: `<DomainName>\<UserName>`. Separate multiple users by using a comma (`,`). For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).
 
 #### Example
 
@@ -1788,18 +1788,18 @@ For example, if you set SMSTSWaitForSecondReboot to `600`, the task sequence pau
 <!--3612274-->
 Starting in version 1906, set this variable to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
-For more information, see [Debug a task sequence](/configmgr/osd/deploy-use/debug-task-sequence).
+For more information, see [Debug a task sequence](../deploy-use/debug-task-sequence.md).
 
 ### <a name="TSDebugOnError"></a> TSDebugOnError
 
 <!-- 5012536 -->
-Starting in version 1910, set this variable to `TRUE` to automatically start the [task sequence debugger](/configmgr/osd/deploy-use/debug-task-sequence) when the task sequence returns an error.
+Starting in version 1910, set this variable to `TRUE` to automatically start the [task sequence debugger](../deploy-use/debug-task-sequence.md) when the task sequence returns an error.
 
 Set this variable using:
 
-- The [Set Task Sequence Variable](/configmgr/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step
+- The [Set Task Sequence Variable](task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step
 
-- A collection variable. For more information, see [How to set variables](/configmgr/osd/understand/using-task-sequence-variables#bkmk_set).
+- A collection variable. For more information, see [How to set variables](using-task-sequence-variables.md#bkmk_set).
 
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
@@ -1864,6 +1864,6 @@ The following variables are deprecated:
 
 ## See also
 
-- [Task sequence steps](/configmgr/osd/understand/task-sequence-steps)
-- [Using task sequence variables](/configmgr/osd/understand/using-task-sequence-variables)
-- [Planning considerations for automating tasks](/configmgr/osd/plan-design/planning-considerations-for-automating-tasks)
+- [Task sequence steps](task-sequence-steps.md)
+- [Using task sequence variables](using-task-sequence-variables.md)
+- [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md)

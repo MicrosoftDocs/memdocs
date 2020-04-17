@@ -18,9 +18,9 @@ manager: dougeby
 
 After you create one of the following resource access profiles, deploy it to one or more collections:
 
-- [Wi-Fi](/configmgr/protect/deploy-use/create-wifi-profiles)
-- [VPN](/configmgr/protect/deploy-use/create-vpn-profiles)
-- [Certificate](/configmgr/protect/deploy-use/create-certificate-profiles)
+- [Wi-Fi](create-wifi-profiles.md)
+- [VPN](create-vpn-profiles.md)
+- [Certificate](create-certificate-profiles.md)
 
 When you deploy these profiles, you specify the target collection, and specify how often the client evaluates the profile for compliance.  
 
@@ -51,6 +51,6 @@ If you want to delete a deployment, select it from the list. In the details pane
 
 ## Next steps
 
-[Monitor Wi-Fi and VPN profiles](/configmgr/protect/deploy-use/monitor-wifi-email-vpn-profiles)
+[Monitor Wi-Fi and VPN profiles](monitor-wifi-email-vpn-profiles.md)
 
-[Monitor certificate profiles](/configmgr/protect/deploy-use/monitor-certificate-profiles)
+[Monitor certificate profiles](monitor-certificate-profiles.md)

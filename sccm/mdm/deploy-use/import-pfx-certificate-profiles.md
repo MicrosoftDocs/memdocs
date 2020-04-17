@@ -16,9 +16,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Learn how to create a certificate profile by importing credentials from external certificates. This article highlights specific information about personal information exchange (PFX) certificate profiles. For more information about how to create and configure these profiles, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).
+Learn how to create a certificate profile by importing credentials from external certificates. This article highlights specific information about personal information exchange (PFX) certificate profiles. For more information about how to create and configure these profiles, see [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-Configuration Manager supports different kinds of certificate stores for different devices and OS versions. For example, Windows 10 and Windows 10 Mobile. For more information, see [Certificate profile prerequisites](/configmgr/protect/plan-design/prerequisites-for-certificate-profiles).
+Configuration Manager supports different kinds of certificate stores for different devices and OS versions. For example, Windows 10 and Windows 10 Mobile. For more information, see [Certificate profile prerequisites](../../protect/plan-design/prerequisites-for-certificate-profiles.md).
 
 Use Configuration Manager to import certificate credentials and then provision PFX files to devices. You can use these files to generate user-specific certificates to support encrypted data exchange.
 
@@ -40,7 +40,7 @@ Use Configuration Manager to import certificate credentials and then provision P
 1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Import**. This option imports information from an existing certificate to create a certificate profile.
 
     > [!NOTE]
-    > The **Create** option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). This process then securely delivers the certificate to clients as PFX files. For more information, see [Create PFX certificate profiles using a certificate authority](/configmgr/mdm/deploy-use/create-pfx-certificate-profiles).
+    > The **Create** option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). This process then securely delivers the certificate to clients as PFX files. For more information, see [Create PFX certificate profiles using a certificate authority](create-pfx-certificate-profiles.md).
 
 1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify the device key storage provider (KSP):
 
@@ -55,11 +55,11 @@ Use Configuration Manager to import certificate credentials and then provision P
 
 ## Deploy the profile
 
-After you create and provision a certificate profile, it's now available in the **Certificate Profiles** node. For more information on how to deploy it, see [Deploy resource access profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+After you create and provision a certificate profile, it's now available in the **Certificate Profiles** node. For more information on how to deploy it, see [Deploy resource access profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md).
 
 ## Assign primary users
 
-Assign the target users as primary users on the Windows 10 devices where you need to install the PFX certificates. For more information, see [user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+Assign the target users as primary users on the Windows 10 devices where you need to install the PFX certificates. For more information, see [user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 ## Provision a create PFX script
 
@@ -93,8 +93,8 @@ Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (Conve
 
 ## See also
 
-[Create a new certificate profile](/configmgr/protect/deploy-use/create-certificate-profiles)
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md)
 
-[Create PFX certificate profiles using a certificate authority](/configmgr/mdm/deploy-use/create-pfx-certificate-profiles)
+[Create PFX certificate profiles using a certificate authority](create-pfx-certificate-profiles.md)
 
-[Deploy Wi-Fi, VPN, email, and certificate profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles)
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

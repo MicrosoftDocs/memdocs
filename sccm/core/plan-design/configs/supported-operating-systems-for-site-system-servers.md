@@ -20,9 +20,9 @@ This article details the Windows versions that you can use to host a Configurati
 
 Use the information in this article with the information in the following articles:
 
-- [Recommended hardware for Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware)
-- [Site and site system prerequisites for Configuration Manager](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
-- [Size and scale numbers for Configuration Manager](/sccm/core/plan-design/configs/size-and-scale-numbers)
+- [Recommended hardware for Configuration Manager](recommended-hardware.md)
+- [Site and site system prerequisites for Configuration Manager](site-and-site-system-prerequisites.md)
+- [Size and scale numbers for Configuration Manager](size-and-scale-numbers.md)
 
 ## <a name="bkmk_2019"></a> Windows Server 2019
 
@@ -164,13 +164,13 @@ The following client OS versions are supported for use as a **distribution point
 
 - Windows 10 (x86, x64): Pro and Enterprise
 
-    For more information on supported build versions, see [Support for Windows 10](/configmgr/core/plan-design/configs/support-for-windows-10).
+    For more information on supported build versions, see [Support for Windows 10](support-for-windows-10.md).
 
 - Windows 8.1 (x86, x64): Professional and Enterprise
 
 This support has the following limitation:  
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 ## <a name="bkmk_core"></a> Server core installations
 
@@ -186,13 +186,13 @@ The server core installation of the following server OS versions are supported f
 
 This support has the following limitation:  
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. Starting in version 1806, you can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 ## General notes
 
 ### <a name="bkmk_note1"></a> Note 1: Distribution points
 
-Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### <a name="bkmk_note2"></a> Note 2: Site database servers
 

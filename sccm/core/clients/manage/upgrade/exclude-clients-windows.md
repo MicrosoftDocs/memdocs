@@ -42,7 +42,7 @@ This exclusion applies to the following methods:
 
 ![Settings for automatic upgrade exclusion](media/automatic_upgrade_exclusion.png)
 
-After clients in the excluded collection update policy, they don't automatically install client updates. For more information, see [How to upgrade clients for Windows computers](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers).
+After clients in the excluded collection update policy, they don't automatically install client updates. For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md).
 
 > [!NOTE]
 > Excluded clients still download and run Ccmsetup, but don't upgrade.
@@ -57,12 +57,12 @@ If a device is a member of a collection that you excluded from upgrade, you can 
 
 - **Manual client installation**: Manually upgrade an excluded client by using the following Ccmsetup command-line parameter: **/IgnoreSkipUpgrade**
 
-    If you attempt to manually upgrade a client that's a member of the excluded collection, and don't use this parameter, the client doesn't upgrade. For more information, see [How to install Configuration Manager clients manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+    If you attempt to manually upgrade a client that's a member of the excluded collection, and don't use this parameter, the client doesn't upgrade. For more information, see [How to install Configuration Manager clients manually](../../deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).
 
 ## See also
 
-- [Upgrade clients](/sccm/core/clients/manage/upgrade/upgrade-clients)
+- [Upgrade clients](upgrade-clients.md)
 
-- [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)
+- [How to deploy clients to Windows computers](../../deploy/deploy-clients-to-windows-computers.md)
 
-- [Extended interoperability client](/sccm/core/understand/interoperability-client)
+- [Extended interoperability client](../../../understand/interoperability-client.md)

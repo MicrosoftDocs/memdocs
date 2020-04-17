@@ -20,7 +20,7 @@ manager: dougeby
 You can test a new Configuration Manager client version in a pre-production collection before upgrading the rest of the site with it.  When you do this, only devices that are part of the test collection are upgraded. Once you've had a chance to test the client you can promote the client, which makes the new version of the client software available to the rest of the site.
 
 > [!NOTE]
-> To promote a test client to production, you must be logged in as a user with security role of **full administrator** and a security scope of **All**. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration). You must also be logged into a server connected to the central administration site  or a top-level standalone primary site.
+> To promote a test client to production, you must be logged in as a user with security role of **full administrator** and a security scope of **All**. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md). You must also be logged into a server connected to the central administration site  or a top-level standalone primary site.
 
  There are 3 basic steps to testing clients in pre-production.  
 

@@ -20,13 +20,13 @@ manager: dougeby
 
 ## Policy Creation
 
-When you deploy an application, an instance of [SMS_ApplicationAssignment](/sccm/develop/reference/apps/sms_applicationassignment-server-wmi-class) class is created which represents the assignment of an application to a collection. This activity can be tracked in the **SMSProv.log**.
+When you deploy an application, an instance of [SMS_ApplicationAssignment](../../develop/reference/apps/sms_applicationassignment-server-wmi-class.md) class is created which represents the assignment of an application to a collection. This activity can be tracked in the **SMSProv.log**.
 
 <pre><code class="lang-text">SMS Provider    PutInstanceAsync <b>SMS_ApplicationAssignment</b>~
 SMS Provider    Auditing: User CONTOSO\Admin created an instance of class SMS_ApplicationAssignment.~
 </code></pre>
 
-In the Configuration Manager database, this information is stored in the `CI_CIAssignments` table where `AssignmentType` 2 represents an application deployment. When the assignment is created, SMS Database Monitor component detects a change in the table then notifies Object Replication Manager to process the CI Assignment (CIA) policy. Object Replication Manager component then creates the policy for the application assignment in the database, which is stored in the `Policy` table in the database, and the Policy ID is based on the Application Unique ID. This activity can be tracked in the **objreplmgr.log** by referencing the Assignment Unique ID, which can be obtained from the SQL query referenced in the [Before You Begin](/sccm/apps/understand/app-deployment-technical-reference#before-you-begin) section.
+In the Configuration Manager database, this information is stored in the `CI_CIAssignments` table where `AssignmentType` 2 represents an application deployment. When the assignment is created, SMS Database Monitor component detects a change in the table then notifies Object Replication Manager to process the CI Assignment (CIA) policy. Object Replication Manager component then creates the policy for the application assignment in the database, which is stored in the `Policy` table in the database, and the Policy ID is based on the Application Unique ID. This activity can be tracked in the **objreplmgr.log** by referencing the Assignment Unique ID, which can be obtained from the SQL query referenced in the [Before You Begin](app-deployment-technical-reference.md#before-you-begin) section.
 
 <pre><code class="lang-text">***** Processing Application Assignment {<b>3AC57DFE-3F87-4C59-930B-B9F57CB41B91</b>} *****
 </code></pre>
@@ -52,5 +52,5 @@ After the policy is generated, the Policy Provider component assigns this policy
 
 ## Next Steps
 
-- [Application Deployment to Device Collections](/sccm/apps/understand/device-deployment-technical-reference)
-- [Application Deployment to User Collections](/sccm/apps/understand/user-deployment-technical-reference)
+- [Application Deployment to Device Collections](device-deployment-technical-reference.md)
+- [Application Deployment to User Collections](user-deployment-technical-reference.md)

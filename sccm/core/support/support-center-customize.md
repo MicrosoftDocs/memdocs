@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The [Support Center](/sccm/core/support/support-center) tool includes a configuration file that you can customize. By default, when you install Support Center, this file is in the following path: `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. The configuration file changes the behavior of the program:
+The [Support Center](support-center.md) tool includes a configuration file that you can customize. By default, when you install Support Center, this file is in the following path: `C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`. The configuration file changes the behavior of the program:
 
 - [Customize data collection](#bkmk_datacoll): Edit the sets of registry keys and WMI namespaces that it includes during data collection  
 

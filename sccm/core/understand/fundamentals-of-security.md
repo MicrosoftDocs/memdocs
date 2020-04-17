@@ -65,7 +65,7 @@ The next layer of security is based on access through Windows Management Instrum
 
 Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. <!--1357013-->  
 
-For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).
+For more information, see [Plan for the SMS Provider](../plan-design/hierarchy/plan-for-the-sms-provider.md).
 
 #### <a name="bkmk_layer-db"></a> Site database permissions
 
@@ -83,17 +83,17 @@ The final layer of security is based on permissions to objects in the site datab
 
  The combination of security roles, security scopes, and collections define the objects that an administrative user can view and manage. Configuration Manager installs some default security roles for typical management tasks. Create your own security roles to support your specific business requirements.  
 
- For more information, see [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+ For more information, see [Configure role-based administration](../servers/deploy/configure/configure-role-based-administration.md).  
 
 
 
 ## <a name="bkmk_endpoints"></a> Securing client endpoints  
 
- Configuration Manager secures client communication to site system roles by using either self-signed or PKI certificates, or Azure Active Directory (Azure AD) tokens. Some scenarios require the use of PKI certificates. For example, [internet-based client management](/sccm/core/clients/manage/plan-internet-based-client-management), and for [mobile device clients](/sccm/mdm/plan-design/plan-on-premises-mdm).  
+ Configuration Manager secures client communication to site system roles by using either self-signed or PKI certificates, or Azure Active Directory (Azure AD) tokens. Some scenarios require the use of PKI certificates. For example, [internet-based client management](../clients/manage/plan-internet-based-client-management.md), and for [mobile device clients](../../mdm/plan-design/plan-on-premises-mdm.md).  
 
  You can configure the site system roles to which clients connect for either HTTPS or HTTP client communication. Client computers always communicate by using the most secure method that's available. Client computers only fall back to using the less secure communication method if you have site systems roles that allow HTTP communication.  
 
- For more information, see [Plan for security](/sccm/core/plan-design/security/plan-for-security).
+ For more information, see [Plan for security](../plan-design/security/plan-for-security.md).
 
 
 
@@ -101,7 +101,7 @@ The final layer of security is based on permissions to objects in the site datab
 
  Configuration Manager uses the Local System account for most site operations. Some management tasks might require you to create and maintain additional accounts. Configuration Manager creates several default groups and SQL Server roles during setup. You might have to manually add computer or user accounts to the default groups and SQL Server roles.  
 
- For more information, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
+ For more information, see [Accounts used in Configuration Manager](../plan-design/hierarchy/accounts.md).  
 
 
 
@@ -109,18 +109,18 @@ The final layer of security is based on permissions to objects in the site datab
 
  Before you implement Configuration Manager, consider your privacy requirements. Although enterprise management products offer many advantages because they can effectively manage lots of clients, this software might affect the privacy of users in your organization. Configuration Manager includes many tools to collect data and monitor devices. Some tools might raise privacy concerns in your organization.  
 
- For example, when you install the Configuration Manager client, it enables many management settings by default. This configuration causes the client software to send information to the Configuration Manager site. The site stores client information in the site database. The client information isn't directly sent to Microsoft. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+ For example, when you install the Configuration Manager client, it enables many management settings by default. This configuration causes the client software to send information to the Configuration Manager site. The site stores client information in the site database. The client information isn't directly sent to Microsoft. For more information, see [Diagnostics and usage data](../plan-design/diagnostics/diagnostics-and-usage-data.md).
 
 
 
 ## See also
 
-- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+- [Plan for security](../plan-design/security/plan-for-security.md)  
 
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+- [Security and privacy for Configuration Manager clients](../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
-- [Configure security](/sccm/core/plan-design/security/configure-security)   
+- [Configure security](../plan-design/security/configure-security.md)   
 
-- [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+- [Communication between endpoints](../plan-design/hierarchy/communications-between-endpoints.md)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
+- [Cryptographic controls technical reference](../plan-design/security/cryptographic-controls-technical-reference.md)  

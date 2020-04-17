@@ -46,7 +46,7 @@ You can create rules in two locations in Updates Publisher:
 -   You can also create new rules at the time that you create or edit an update. Rules you create in this way are not saved for future use.
 
 ## Create applicability rule
-The following information is similar to how you create rules from within the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard). But unlike the wizard, you have the option to save your rule sets for future use.
+The following information is similar to how you create rules from within the [Create Update wizard](create-updates-with-updates-publisher.md#use-the-create-update-wizard). But unlike the wizard, you have the option to save your rule sets for future use.
 
 1. In the **Rules Workspace**, choose **Create** to open the **Create Rule** wizard.
 
@@ -80,9 +80,9 @@ The **Edit Rule** wizard displays the current rules for the rule set. You edit r
 
 After you make changes, choose **OK** to save the changes and close the wizard.
 
-For more details about using the rule wizard, see **Step 7**, the applicability page, of the [Create Update wizard](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard).
+For more details about using the rule wizard, see **Step 7**, the applicability page, of the [Create Update wizard](create-updates-with-updates-publisher.md#use-the-create-update-wizard).
 
 ## Delete applicability rules
 To delete a saved applicability rule, in the **Rules Workspace** select the rule or rule set from the **My saved rules** list, and then choose **Delete** from the ribbon. This removes the saved rule or rule set from Updates Publisher.
 
-To delete a rule from a specific update, you must [edit the update](/sccm/sum/tools/manage-updates-with-updates-publisher#edit-updates-and-bundles).
+To delete a rule from a specific update, you must [edit the update](manage-updates-with-updates-publisher.md#edit-updates-and-bundles).

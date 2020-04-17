@@ -86,4 +86,4 @@ By default, each site retries a problem connection two times, with a one-minute 
 
 ## Next steps
 
-[Database replication](/sccm/core/plan-design/hierarchy/database-replication)
+[Database replication](database-replication.md)

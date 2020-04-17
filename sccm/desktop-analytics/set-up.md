@@ -17,7 +17,7 @@ manager: dougeby
 Use this procedure to sign in to Desktop Analytics and configure it in your subscription. This procedure is a one-time process to set up Desktop Analytics for your organization.  
 
 > [!Important]  
-> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+> For information about the general prerequisites for Desktop Analytics with Configuration Manager, see [Prerequisites](overview.md#prerequisites).  
 
 ## Initial onboarding
 
@@ -42,7 +42,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 5. On the page to **Set up your workspace**:  
 
     > [!NOTE]  
-    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](/sccm/desktop-analytics/overview#prerequisites).  
+    > To complete this step, the user needs **Workspace Owner** permissions and additional access to the Azure subscription and Resource Group. For more information, see [prerequisites](overview.md#prerequisites).  
 
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
@@ -64,7 +64,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 7. In the new browser tab, pick an account to use to sign in. Select the option to **Consent on behalf of your organization** and select **Accept**.  
 
     > [!Note]  
-    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](/sccm/desktop-analytics/troubleshooting#bkmk_MALogAnalyticsReader).  
+    > This consent is to assign the MALogAnalyticsReader application the Log Analytics Reader role for the workspace. This application role is required by Desktop Analytics. For more information, see [MALogAnalyticsReader application role](troubleshooting.md#bkmk_MALogAnalyticsReader).  
 
 8. Back on the page to **Set up your workspace**, select **Next**.  
 
@@ -76,4 +76,4 @@ The Azure portal shows the Desktop Analytics **Home** page.
 
 Advance to the next article to connect Configuration Manager with Desktop Analytics.
 > [!div class="nextstepaction"]  
-> [Connect Configuration Manager](/sccm/desktop-analytics/connect-configmgr)  
+> [Connect Configuration Manager](connect-configmgr.md)  

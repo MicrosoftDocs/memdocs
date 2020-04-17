@@ -28,7 +28,7 @@ You can install the portals on an existing site server with IIS, or use a standa
 > [!NOTE]
 > Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
-Before you start, confirm the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for these components.
+Before you start, confirm the [prerequisites](../../plan-design/bitlocker-management.md#prerequisites) for these components.
 
 ## Script usage
 
@@ -107,7 +107,7 @@ After installation, access the portals via the following URLs:
 
 Monitor and troubleshoot using the following logs:
 
-- Windows Event logs under **Microsoft-Windows-MBAM-Web**. For more information, see [About BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs) and [Server event logs](/configmgr/protect/tech-ref/bitlocker/server-event-logs).
+- Windows Event logs under **Microsoft-Windows-MBAM-Web**. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
 
 - Trace logs for each component are in the following default locations:
 
@@ -115,13 +115,13 @@ Monitor and troubleshoot using the following logs:
 
   - Administration and monitoring website: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
 
-For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot).
+For more troubleshooting information, see [Troubleshoot BitLocker](../../tech-ref/bitlocker/troubleshoot.md).
 
 ## Next steps
 
-[Customize the self-service portal](/configmgr/protect/deploy-use/bitlocker/customize-self-service-portal)
+[Customize the self-service portal](customize-self-service-portal.md)
 
 For more information on using the components that you installed, see the following articles:
 
-- [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal)
-- [BitLocker self-service portal](/configmgr/protect/deploy-use/bitlocker/self-service-portal)
+- [BitLocker administration and monitoring website](helpdesk-portal.md)
+- [BitLocker self-service portal](self-service-portal.md)

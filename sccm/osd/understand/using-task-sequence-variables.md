@@ -24,7 +24,7 @@ manager: dougeby
 - Change behaviors for specific steps  
 - Use in scripts for more complex actions  
 
-For a reference of all available task sequence variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).
+For a reference of all available task sequence variables, see [Task sequence variables](task-sequence-variables.md).
 
 ## <a name="bkmk_types"></a> Types of variables
 
@@ -48,7 +48,7 @@ The task sequence evaluates some variables before each step. For example, `_SMST
 
 Task sequence action variables specify configuration settings that a single task sequence step uses. By default, the step initializes its settings before it runs. These settings are available only while the associated task sequence step runs. The task sequence adds the action variable value to the environment before it runs the step. It then removes the value from the environment after the step runs.
 
-For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property as the `WorkingDirectory` variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the `WorkingDirectory` value. After the step completes, the task sequence removes the value of the `WorkingDirectory` variable from the environment. If the task sequence includes another **Run Command Line** step, it initializes a new `WorkingDirectory` variable. At that time, the task sequence sets the variable to the starting value for the current step. For more information, see [WorkingDirectory](/sccm/osd/understand/task-sequence-variables#WorkingDirectory).  
+For example, you add the **Run Command Line** step to a task sequence. This step includes a **Start In** property. The task sequence stores a default value for this property as the `WorkingDirectory` variable. The task sequence initializes this value before it runs the **Run Command Line** step. While this step is running, access the **Start In** property value from the `WorkingDirectory` value. After the step completes, the task sequence removes the value of the `WorkingDirectory` variable from the environment. If the task sequence includes another **Run Command Line** step, it initializes a new `WorkingDirectory` variable. At that time, the task sequence sets the variable to the starting value for the current step. For more information, see [WorkingDirectory](task-sequence-variables.md#WorkingDirectory).  
 
 The *default* value for an action variable is present when the step runs. If you set a *new* value, it's available to multiple steps in the task sequence. If you override a default value, the new value stays in the environment. This new value overrides the default value for other steps in the task sequence. For example, you add a **Set Task Sequence Variable** step as the first step of the task sequence. This step sets the `WorkingDirectory` variable to `C:\`. Any **Run Command Line** step in the task sequence uses the new starting directory value.  
 
@@ -131,13 +131,13 @@ If you set the same variable by different methods, the task sequence engine uses
 
 Use this step in the task sequence to set a single variable to a single value.
 
-For more information, see [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable).
+For more information, see [Set Task Sequence Variable](task-sequence-steps.md#BKMK_SetTaskSequenceVariable).
 
 ### <a name="bkmk_set-dyn-step"></a> Set Dynamic Variables
 
 Use this step in the task sequence to set one or more task sequence variables. You define rules in this step to determine which variables and values to use.
 
-For more information, see [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables).
+For more information, see [Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables).
 
 ### <a name="bkmk_run-ps"></a> Run PowerShell Script
 
@@ -150,7 +150,7 @@ You can specify a script name from a package, or directly enter a PowerShell scr
 For more information on this step, see [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript).
 
 > [!NOTE]
-> You can also use a PowerShell script to set one or more variables with the **TSEnvironment** object. For more information, see [How to use variables in a running task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence) in the Configuration Manager SDK.
+> You can also use a PowerShell script to set one or more variables with the **TSEnvironment** object. For more information, see [How to use variables in a running task sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md) in the Configuration Manager SDK.
 
 #### Example scenario with Run PowerShell Script step
 
@@ -229,13 +229,13 @@ You can manage per-device variables at a primary site or at a central administra
 
 To work with variables from a script, use the **TSEnvironment** object.
 
-For more information, see [How to use variables in a running task sequence](/sccm/develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence) in the Configuration Manager SDK.
+For more information, see [How to use variables in a running task sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md) in the Configuration Manager SDK.
 
 ### <a name="bkmk_set-prestart"></a> Prestart command
 
 The prestart command is a script or executable that runs in Windows PE before the user selects the task sequence. The prestart command can query a variable or prompt the user for information, and then save it in the environment. Use the [TSEnvironment](#bkmk_set-com) COM object to read and write variables from the prestart command.
 
-For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).
+For more information, see [Prestart commands for task sequence media](prestart-commands-for-task-sequence-media.md).
 
 ### <a name="bkmk_set-tswiz"></a> Task Sequence Wizard
 
@@ -255,7 +255,7 @@ Use the media variables in place of per-collection or per-computer variables. If
 > [!TIP]  
 > The task sequence writes the package ID and prestart command line to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. This log file includes the value for any task sequence variables. Review this log file to verify the value for the task sequence variables.  
 
-For more information, see [Create task sequence media](/sccm/osd/deploy-use/create-task-sequence-media).
+For more information, see [Create task sequence media](../deploy-use/create-task-sequence-media.md).
 
 ## <a name="bkmk_access"></a> How to access variables
 
@@ -300,7 +300,7 @@ The three examples above form a common condition to test whether the task sequen
 
 See this condition on the **Capture Files and Settings** group of the default task sequence template to install an existing OS image.
 
-For more information about conditions, see [Task sequence editor - Conditions](/sccm/osd/understand/task-sequence-editor#bkmk_conditions).
+For more information about conditions, see [Task sequence editor - Conditions](task-sequence-editor.md#bkmk_conditions).
 
 ### <a name="bkmk_access-script"></a> Custom script
 
@@ -330,14 +330,14 @@ $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 
 The Windows setup answer file that you supply can have embedded task sequence variables. Use the form `%varname%`, where *varname* is the name of the variable. The **Setup Windows and ConfigMgr** step replaces the variable name string for the actual variable value. These embedded task sequence variables can't be used in numeric-only fields in an unattend.xml answer file.
 
-For more information, see [Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr).
+For more information, see [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).
 
 ## See also
 
-- [Task sequence steps](/sccm/osd/understand/task-sequence-steps)
+- [Task sequence steps](task-sequence-steps.md)
 
-- [Task sequence variables](/sccm/osd/understand/task-sequence-variables)
+- [Task sequence variables](task-sequence-variables.md)
 
-- [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks)
+- [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md)
 
-- [Task sequence editor](/sccm/osd/understand/task-sequence-editor)
+- [Task sequence editor](task-sequence-editor.md)

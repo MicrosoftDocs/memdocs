@@ -36,7 +36,7 @@ Co-management supports the following workloads:
 
 ## Compliance policies
 
-Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. Beginning in Configuration Manager version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](/sccm/compliance/deploy-use/create-configuration-baselines#bkmk_CAbaselines).
+Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. Beginning in Configuration Manager version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
 For more information on the Intune feature, see [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started).  
 
@@ -87,7 +87,7 @@ For more information on the Intune feature, see [Endpoint Protection for Microso
 
 The device configuration workload includes settings that you manage for devices in your organization. Switching this workload also moves the **Resource Access** and **Endpoint Protection** workloads.
 
-You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](/sccm/compliance/deploy-use/create-configuration-baselines). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.  
+You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.  
 
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
 
@@ -114,11 +114,11 @@ Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10
 For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
 
 > [!Tip]  
-> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 2002, it's no longer a pre-release feature.  
+> This feature was first introduced in version 1806 as a [pre-release feature](../core/servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
 >
 > This feature may appear in the list of features as **Mobile apps for co-managed devices**.<!-- 5849669 -->
 
-Starting in version 1910, when you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+Starting in version 1910, when you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache in Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 ## Diagram for app workloads
 
@@ -145,4 +145,4 @@ To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolic
 
 ## Next steps
 
-[How to switch workloads](/sccm/comanage/how-to-switch-workloads)  
+[How to switch workloads](how-to-switch-workloads.md)  

@@ -23,7 +23,7 @@ After the cloud management gateway (CMG) is running and clients are connecting t
 
 ## Monitor clients
 
-Clients connected through the CMG appear in the Configuration Manager console the same way on-premises clients do. For more information, see [how to monitor clients](/sccm/core/clients/manage/monitor-clients).
+Clients connected through the CMG appear in the Configuration Manager console the same way on-premises clients do. For more information, see [how to monitor clients](../monitor-clients.md).
 
 
 ## Monitor traffic in the console
@@ -51,13 +51,13 @@ Outbound traffic alerts help you know when network traffic approaches a 14-day t
 
 ## Monitor logs
 
-The CMG generates entries in a number of log files. For more information, see [Configuration Manager logs](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
+The CMG generates entries in a number of log files. For more information, see [Configuration Manager logs](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 
 ## Cloud management dashboard
 
 <!--1358461-->
-Starting in version 1806, the cloud management dashboard provides a centralized view for CMG usage. When the site is onboarded to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for cloud management, it also displays data about cloud users and devices.  
+Starting in version 1806, the cloud management dashboard provides a centralized view for CMG usage. When the site is onboarded to [Azure services](../../../servers/deploy/configure/azure-services-wizard.md) for cloud management, it also displays data about cloud users and devices.  
 
 The following screenshot is a portion of the cloud management dashboard showing two of the available tiles:  
 ![Cloud management dashboard tiles CMG traffic and Current online clients](media/1358461-cmg-dashboard.png)
@@ -77,7 +77,7 @@ Starting in version 1806, use the CMG connection analyzer for real-time verifica
 
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity signed in to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
-     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth).  
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth).  
 
 4. Select **Start** to start the analysis. The analyzer window displays the results. Select an entry to see more details in the Description field.  
 
@@ -88,7 +88,7 @@ Starting in version 1806, use the CMG connection analyzer for real-time verifica
 Starting in version 1902, Configuration Manager can now stop a CMG service when the total data transfer goes over your limit. Use [alerts](#set-up-outbound-traffic-alerts) to trigger notifications when the usage reaches warning or critical levels. To help reduce any unexpected Azure costs because of a spike in usage, this option turns off the cloud service.
 
 > [!Important]  
-> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [remove the CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).  
+> Even if the service isn't running, there are still costs associated with the cloud service. Stopping the service doesn't eliminate all associated Azure costs. To remove all cost for the cloud service, [remove the CMG](setup-cloud-management-gateway.md#modify-a-cmg).  
 >
 > When the CMG service is stopped, internet-based clients can't communicate with Configuration Manager.  
 
@@ -98,7 +98,7 @@ The total data transfer (egress) includes data from the cloud service and storag
 - CMG to site, including CMG log files  
 - If you enable CMG for content, storage account to client  
 
-For more information on these data flows, see [CMG ports and data flow](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#ports-and-data-flow).
+For more information on these data flows, see [CMG ports and data flow](plan-cloud-management-gateway.md#ports-and-data-flow).
 
 The storage alert threshold is separate. That alert monitors the capacity of your Azure storage instance.
 

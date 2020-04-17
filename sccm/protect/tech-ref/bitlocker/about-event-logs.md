@@ -28,8 +28,8 @@ The BitLocker management agent and web services use Windows event logs to record
 
 For more information about specific messages in these logs, see the following articles:
 
-- [Client event logs](/configmgr/protect/tech-ref/bitlocker/client-event-logs)
-- [Server event logs](/configmgr/protect/tech-ref/bitlocker/server-event-logs)
+- [Client event logs](client-event-logs.md)
+- [Server event logs](server-event-logs.md)
 
 In each node, by default you'll see two log channels: **Admin** and **Operational**. For more detailed troubleshooting information, you can also show [analytics and debug logs](#bkmk_debug).
 

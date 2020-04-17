@@ -37,7 +37,7 @@ Clients use boundary groups to:
 
 Clients that are on the internet or configured as internet-only clients don't use boundary information. These clients can't use automatic site assignment. They can download content from an internet-based distribution point from their assigned site or a cloud-based distribution point.  
 
-Starting in version 1902, you can associate a cloud management gateway (CMG) with a boundary group. For more information, see [CMG hierarchy design](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#hierarchy-design).<!--3640932-->
+Starting in version 1902, you can associate a cloud management gateway (CMG) with a boundary group. For more information, see [CMG hierarchy design](../../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design).<!--3640932-->
 
 
 ## <a name="BKMK_BoundaryBestPractices"></a> Recommendations
@@ -61,6 +61,6 @@ Although each boundary group supports both site assignment and site system refer
 
 ## Next steps
 
-- [Define network locations as boundaries](/sccm/core/servers/deploy/configure/boundaries)
+- [Define network locations as boundaries](boundaries.md)
 
-- [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups)
+- [Configure boundary groups](boundary-groups.md)

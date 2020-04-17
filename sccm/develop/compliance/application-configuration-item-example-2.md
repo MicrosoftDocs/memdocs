@@ -101,4 +101,4 @@ IMPORTANT:  Insert a script here - not just the name of the script, but the actu
 ```  
 
 ## See Also  
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

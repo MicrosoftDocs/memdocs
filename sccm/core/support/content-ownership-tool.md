@@ -18,12 +18,12 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Content Ownership Tool is one of the [Configuration Manager tools](/sccm/core/support/tools). It changes ownership of orphaned packages in Configuration Manager. Orphaned packages don't have an owning site server. Packages can become orphaned by removing the site server while they're still owned by this site server.
+Content Ownership Tool is one of the [Configuration Manager tools](tools.md). It changes ownership of orphaned packages in Configuration Manager. Orphaned packages don't have an owning site server. Packages can become orphaned by removing the site server while they're still owned by this site server.
 
 Run the Content Ownership Tool on any site server in the Configuration Manager hierarchy. Sign in as an administrative user with sufficient package permissions.  
 
 > [!Tip]  
-> Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to *remove* orphaned content from a distribution point. For more information, see [Content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool).  
+> Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to *remove* orphaned content from a distribution point. For more information, see [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md).  
 
 
 
@@ -58,5 +58,5 @@ There are no command-line parameters.
 
 ## See also
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)
-- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Fundamental concepts for content management](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)
+- [The content library](../plan-design/hierarchy/the-content-library.md)

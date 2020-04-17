@@ -21,12 +21,12 @@ manager: dougeby
 To monitor your hierarchy in Configuration Manager, use the **Monitoring** workspace in the Configuration Manager console.  
 
 > [!NOTE]  
-> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to Configuration Manager current branch](/sccm/core/migration/operations-for-migration).  
+> The exception to this location is when migrating sites. Monitored this process in the **Migration** node of the **Administration** workspace. For more information, see [Operations for migrating to Configuration Manager current branch](../../migration/operations-for-migration.md).  
 
 Along with using the Configuration Manager console for monitoring, use the following features:
 
-- [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting)
-- [Log files](/sccm/core/plan-design/hierarchy/log-files).  
+- [Introduction to reporting](introduction-to-reporting.md)
+- [Log files](../../plan-design/hierarchy/log-files.md).  
 
 When you monitor sites, look for signs that indicate problems that require you to take action. For example:  
 
@@ -55,45 +55,45 @@ Configuration Manager provides built-in monitoring from within the Configuration
 
 ### Alerts
 
-For more information, see [Monitor alerts](/sccm/core/servers/manage/use-alerts-and-the-status-system#BKMK_MonitorAlerts).  
+For more information, see [Monitor alerts](use-alerts-and-the-status-system.md#BKMK_MonitorAlerts).  
 
 ### Compliance settings
 
-For more information, see [How to monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings).
+For more information, see [How to monitor compliance settings](../../../compliance/deploy-use/monitor-compliance-settings.md).
 
 ### Content
 
-For general information about monitoring content, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+For general information about monitoring content, see [Manage content and content infrastructure](../deploy/configure/manage-content-and-content-infrastructure.md).  
 
 For more information about monitoring specific types of content:
 
-- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+- [Monitor applications](../../../apps/deploy-use/monitor-applications-from-the-console.md)
 
-- [Monitor packages and programs](/sccm/apps/deploy-use/packages-and-programs#monitor-packages-and-programs)  
+- [Monitor packages and programs](../../../apps/deploy-use/packages-and-programs.md#monitor-packages-and-programs)  
 
-- [Monitor content for software updates](/sccm/sum/deploy-use/monitor-software-updates#BKMK_MonitorContent)
+- [Monitor content for software updates](../../../sum/deploy-use/monitor-software-updates.md#BKMK_MonitorContent)
 
-- [Monitor content for OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments#BKMK_MonitorContent)
+- [Monitor content for OS deployments](../../../osd/deploy-use/monitor-operating-system-deployments.md#BKMK_MonitorContent)
 
 ### Endpoint Protection
 
-For more information, see [How to monitor Endpoint Protection](/sccm/protect/deploy-use/monitor-endpoint-protection).  
+For more information, see [How to monitor Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).  
 
 ### OS deployment
 
-For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
+For more information, see [Monitor OS deployments](../../../osd/deploy-use/monitor-operating-system-deployments.md).
 
 ### Monitor power management
 
-For more information, see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management).  
+For more information, see [How to monitor and plan for power management](../../clients/manage/power/monitor-and-plan-for-power-management.md).  
 
 ### Monitor software metering
 
-For more information, see [Monitor app usage with software metering](/sccm/apps/deploy-use/monitor-app-usage-with-software-metering).  
+For more information, see [Monitor app usage with software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
 
 ### Monitor software updates
 
-For more information, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).  
+For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md).  
 
 
 ## <a name="BKMK_SH_Node"></a> Monitor the site hierarchy
@@ -151,4 +151,4 @@ When you specify a location, you can use the **Location** box to search for a sp
 
 ## Next steps
 
-[Monitor database replication](/sccm/core/servers/manage/monitor-replication)
+[Monitor database replication](monitor-replication.md)

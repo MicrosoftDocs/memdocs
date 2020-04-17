@@ -55,7 +55,7 @@ When using Configuration Manager with Intune, you can now create Windows 10 VPN 
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
 
-In this release, we've updated [Windows Store for Business integration](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) with these new features:
+In this release, we've updated [Windows Store for Business integration](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) with these new features:
 
 **Update:** In the current technical preview release, the immediate synchronization feature is not functional.
 
@@ -74,7 +74,7 @@ In this release, we've updated [Windows Store for Business integration](/sccm/ap
 
 #### Create and deploy a Configuration Manager application from the synchronized app data
 
-The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 
 #### Modify the client secret key from Azure Active Directory
@@ -226,7 +226,7 @@ This preview introduces important changes to boundary groups and how they work w
 
 These improvements replace concepts and behaviors you might be familiar with today (like configuring distribution points to be fast or slow) and replaces them with a new model that should be easier to setup and maintain. These changes are also groundwork for future changes that will improve other site system roles you associate to boundary groups.  
 
-During upgrade to 1609, the upgrade converts your current boundary group configurations to fit the new model so that these changes do not disturb your content distribution configurations (see [Update existing boundary groups to the new model](/sccm/core/get-started/capabilities-in-technical-preview-1609#bkmk_update)).
+During upgrade to 1609, the upgrade converts your current boundary group configurations to fit the new model so that these changes do not disturb your content distribution configurations (see [Update existing boundary groups to the new model](capabilities-in-technical-preview-1609.md#bkmk_update)).
 
 The following sections detail the changes introduced with this preview, how the new model works, and what you can expect when upgrading a site that already has boundary groups configured.
 
@@ -351,12 +351,12 @@ For more information, see [Overview of update channels for Office 365 ProPlus](h
 You can take the following actions on the dashboard:
 - At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
 - On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
-- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
-- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
+- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](../clients/deploy/about-client-settings.md).
 
 
 
-For more information about Office 365 ProPlus updates, see [Manage Office 365 ProPlus updates with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+For more information about Office 365 ProPlus updates, see [Manage Office 365 ProPlus updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## Deploy Office 365 apps to clients
 In this release, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.
@@ -378,12 +378,12 @@ When you have an existing configuration file, enter the location for the file an
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
 7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**.
 If you choose not to deploy the package in the wizard, skip to step 9.
-8. Configure the remainder of the wizard pages as you would for a typical application deployment. For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
+8. Configure the remainder of the wizard pages as you would for a typical application deployment. For more information, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).
 9. Complete the wizard.
 10. You can deploy or edit the application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**.
 
 >[!NOTE]
->After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an ADR for Office 365 apps, click **Create an ADR**, and select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+>After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an ADR for Office 365 apps, click **Create an ADR**, and select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="BKMK_UEFIConversion"></a>Improvements for BIOS to UEFI conversion
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the Restart Computer step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion.

@@ -25,8 +25,8 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 > [!TIP]  
 > Learn more about:  
 >   
-> - [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
-> - [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
+> - [Installing new sites](../../servers/deploy/install/prepare-to-install-sites.md) (using a baseline version like 1511)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (like update 1602)  
 
  The following sections provide details about changes and new capabilities introduced in version 1602 of Configuration Manager.  
 
@@ -95,7 +95,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ## Software updates  
 
 ### Manage Office 365 client updates  
- Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
+ Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## Compliance settings  
 
@@ -128,7 +128,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
  This rule overrides the default rule, which means that even if you set the default rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.   
 
- For the detailed walkthrough, see [Manage email access](/configmgr/mdm/understand/what-happened-to-hybrid).  
+ For the detailed walkthrough, see [Manage email access](../../../mdm/understand/what-happened-to-hybrid.md).  
 
 ## Client management  
 

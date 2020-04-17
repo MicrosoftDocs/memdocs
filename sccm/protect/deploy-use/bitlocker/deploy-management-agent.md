@@ -26,9 +26,9 @@ BitLocker management in Configuration Manager includes the following components:
 
 Before you create and deploy BitLocker management policies:
 
-- Review the [prerequisites](/configmgr/protect/plan-design/bitlocker-management#prerequisites)
+- Review the [prerequisites](../../plan-design/bitlocker-management.md#prerequisites)
 
-- If necessary, [encrypt recovery keys](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data) in the site database
+- If necessary, [encrypt recovery keys](encrypt-recovery-data.md) in the site database
 
 ## Create a policy
 
@@ -62,7 +62,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
 
-    For more information on these and other settings on this page, see [Settings reference - Setup](/configmgr/protect/tech-ref/bitlocker/settings#setup).
+    For more information on these and other settings on this page, see [Settings reference - Setup](../../tech-ref/bitlocker/settings.md#setup).
 
 1. On the **Operating System Drive** page, specify the following settings:  
 
@@ -74,7 +74,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Configure minimum PIN length for startup**: If you require a PIN, this value is the shortest length the user can specify. The user enters this PIN when the computer boots to unlock the drive. By default, the minimum PIN length is `4`.
 
-    For more information on these and other settings on this page, see [Settings reference - OS drive](/configmgr/protect/tech-ref/bitlocker/settings#os-drive).
+    For more information on these and other settings on this page, see [Settings reference - OS drive](../../tech-ref/bitlocker/settings.md#os-drive).
 
 1. On the **Fixed Drive** page, specify the following settings:
 
@@ -82,7 +82,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Configure auto-unlock for fixed data drive**: Allow or require BitLocker to automatically unlock any encrypted data drive. To use auto-unlock, also require BitLocker to encrypt the OS drive.
 
-    For more information on these and other settings on this page, see [Settings reference - Fixed drive](/configmgr/protect/tech-ref/bitlocker/settings#fixed-drive).
+    For more information on these and other settings on this page, see [Settings reference - Fixed drive](../../tech-ref/bitlocker/settings.md#fixed-drive).
 
 1. On the **Removable Drive** page, specify the following settings:
 
@@ -92,7 +92,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Removable data drive password policy**: Use these settings to set the constraints for passwords to unlock BitLocker-protected removable drives.
 
-    For more information on these and other settings on this page, see [Settings reference - Removable drive](/configmgr/protect/tech-ref/bitlocker/settings#removable-drive).
+    For more information on these and other settings on this page, see [Settings reference - Removable drive](../../tech-ref/bitlocker/settings.md#removable-drive).
 
 1. On the **Client Management** page, specify the following settings:
 
@@ -103,9 +103,9 @@ When you create and deploy this policy, the Configuration Manager client enables
 
         - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
 
-        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](encrypt-recovery-data.md).
 
-    For more information on these and other settings on this page, see [Settings reference - Client management](/configmgr/protect/tech-ref/bitlocker/settings#client-management).
+    For more information on these and other settings on this page, see [Settings reference - Client management](../../tech-ref/bitlocker/settings.md#client-management).
 
 1. Complete the wizard.
 
@@ -137,21 +137,21 @@ View basic compliance statistics about the policy deployment in the details pane
 
 Switch to the **Deployments** tab to see compliance percentage and recommended action. Select the deployment, then in the ribbon, select **View Status**. This action switches the view to the **Monitoring** workspace, **Deployments** node. Similar to the deployment of other configuration policy deployments, you can see more detailed compliance status in this view.
 
-To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](/configmgr/protect/tech-ref/bitlocker/non-compliance-codes).
+To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](../../tech-ref/bitlocker/non-compliance-codes.md).
 
-For more troubleshooting information, see [Troubleshoot BitLocker](/configmgr/protect/tech-ref/bitlocker/troubleshoot).
+For more troubleshooting information, see [Troubleshoot BitLocker](../../tech-ref/bitlocker/troubleshoot.md).
 
 Use the following logs to monitor and troubleshoot:
 
 ### Client logs
 
-- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs) and [Client event logs](/configmgr/protect/tech-ref/bitlocker/client-event-logs).
+- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
 
 - **BitlockerMangementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
 ### Management point logs (recovery service)
 
-- Recovery service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web. For more information, see [About BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs) and [Server event logs](/configmgr/protect/tech-ref/bitlocker/server-event-logs).
+- Recovery service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
 
 - Recovery service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
@@ -161,7 +161,7 @@ The BitLocker recovery service is a server component that receives BitLocker rec
 
 Configuration Manager stores the recovery information in the site database. Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text.
 
-For more information, see [Encrypt recovery data](/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data).
+For more information, see [Encrypt recovery data](encrypt-recovery-data.md).
 
 ## Migration considerations
 
@@ -192,4 +192,4 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 ## Next steps
 
-[Set up BitLocker reports and portals](/configmgr/protect/deploy-use/bitlocker/setup-websites)
+[Set up BitLocker reports and portals](setup-websites.md)

@@ -42,9 +42,9 @@ The following illustration shows how diagnostic data flows from individual devic
 
     2. Within 15 minutes, Configuration Manager synchronizes the following data with Desktop Analytics using your tenant ID. It repeats this process every hour.
 
-      - Information about device collections necessary to [create deployment plans](/configmgr/desktop-analytics/create-deployment-plans). This information includes collection ID, hierarchy ID, collection name, and device count. 
-      - Information required to [enroll devices](/configmgr/desktop-analytics/enroll-devices). This information includes collection ID, SMS unique identifier, OS build version, device name, and serial number.
-      - Information from the [monitor connection health](/configmgr/desktop-analytics/monitor-connection-health) dashboard. This information includes the count of devices per health state, and device properties.
+      - Information about device collections necessary to [create deployment plans](create-deployment-plans.md). This information includes collection ID, hierarchy ID, collection name, and device count. 
+      - Information required to [enroll devices](enroll-devices.md). This information includes collection ID, SMS unique identifier, OS build version, device name, and serial number.
+      - Information from the [monitor connection health](monitor-connection-health.md) dashboard. This information includes the count of devices per health state, and device properties.
       - Information about deployment plans, which includes the collection ID, deployment ID, pilot or production deployment type, and count of devices per upgrade decision.
 
     3. Configuration Manager sets the commercial ID, diagnostic data level, and other settings for the devices in the target collection. This configuration specifies the devices to appear in your Desktop Analytics workspace.  
@@ -61,7 +61,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 ## Other resources
 
-For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](/sccm/desktop-analytics/faq#privacy).
+For privacy-related frequently asked questions for Desktop Analytics, see [Privacy FAQ](faq.md#privacy).
 
 For more information about related privacy aspects, see the following articles:
 
@@ -89,4 +89,4 @@ For more information about related privacy aspects, see the following articles:
 
 - [Privacy Shield](https://www.privacyshield.gov/)  
 
-Separate from Desktop Analytics, Configuration Manager sends diagnostic and usage data to Microsoft. Microsoft uses this data to improve the installation experience, quality, and security of future releases of Configuration Manager. For more information, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data).
+Separate from Desktop Analytics, Configuration Manager sends diagnostic and usage data to Microsoft. Microsoft uses this data to improve the installation experience, quality, and security of future releases of Configuration Manager. For more information, see [Diagnostics and usage data for Configuration Manager](../core/plan-design/diagnostics/diagnostics-and-usage-data.md).

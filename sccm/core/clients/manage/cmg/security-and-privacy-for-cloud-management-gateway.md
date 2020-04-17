@@ -18,7 +18,7 @@ ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
 
 *Applies to: Configuration Manager (current branch)*
 
-This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+This article includes security and privacy information for the Configuration Manager cloud management gateway (CMG). For more information, see [Plan for cloud management gateway](plan-cloud-management-gateway.md).
 
 ## CMG security details
 
@@ -60,7 +60,7 @@ The site automatically uploads all published external URLs to the CMG. This beha
 
 ### Publish the certificate revocation list
 
-Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).
+Publish your PKI's certificate revocation list (CRL) for internet-based clients to access. When deploying a CMG using PKI, configure the service to **verify client certificate revocation** on the Settings tab. This setting configures the service to use a published certificate revocation list (CRL). For more information, see [Plan for PKI certificate revocation](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
 
 This CMG option verifies the client authentication certificate.
 
@@ -87,7 +87,7 @@ This subset provides administrators with more control over security. The CTL res
 
 <!-- SCCMDocs-pr#4021 -->
 
-Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).
+Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 
 
 <!--486209-->
@@ -98,7 +98,7 @@ Starting in version 1906, use the CMG setting to **Enforce TLS 1.2**. It only ap
 
 ## Next steps
 
-- [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
-- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)
-- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
-- [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
+- [Plan for cloud management gateway](plan-cloud-management-gateway.md)
+- [Set up cloud management gateway](setup-cloud-management-gateway.md)
+- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)
+- [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md)

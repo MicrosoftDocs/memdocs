@@ -87,7 +87,7 @@ Use the Desktop Analytics portal to review any reported issues with assets that 
 
 6. Repeat this review for other assets.  
 
-For more information to help with this review process, see [Compatibility assessment](/configmgr/desktop-analytics/compat-assessment).
+For more information to help with this review process, see [Compatibility assessment](compat-assessment.md).
 
 ## Create software
 
@@ -104,7 +104,7 @@ Configuration Manager uses the data from Desktop Analytics to create collections
 3. Select **Create Phased Deployment** in the ribbon. This action launches the Create Phased Deployment wizard.
 
     > [!Tip]  
-    > If you want to create a classic task sequence deployment for just the pilot collection, select **Deploy** in the **Pilot status** tile. This action launches the Deploy Software Wizard. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+    > If you want to create a classic task sequence deployment for just the pilot collection, select **Deploy** in the **Pilot status** tile. This action launches the Deploy Software Wizard. For more information, see [Deploy a task sequence](../osd/deploy-use/deploy-a-task-sequence.md).  
 
 4. Enter a name for the deployment, and select the task sequence to use. Use the option to **Automatically create a default two phase deployment**, and then configure the following collections:  
 
@@ -113,17 +113,17 @@ Configuration Manager uses the data from Desktop Analytics to create collections
     - **Second Collection**: Find and select the **Production** collection for this deployment plan. The standard naming convention for this collection is `<deployment plan name> (Production)`.
 
     > [!Note]  
-    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](/sccm/desktop-analytics/troubleshooting#data-latency).<!-- 4984639 -->
+    > With the Desktop Analytics integration, Configuration Manager automatically creates pilot and production collections for the deployment plan. Before you can use them, it can take time for these collections to synchronize. For more information, see [Troubleshoot - Data latency](troubleshooting.md#data-latency).<!-- 4984639 -->
     >
     > These collections are reserved for Desktop Analytics deployment plan devices. Manual changes to these collections aren't supported.<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
+5. Complete the wizard to configure the phased deployment. For more information, see [Create phased deployments](../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
     > [!Note]  
     > Use the default setting to **Automatically begin this phase after a deferral period (in days)**. The following criteria must be met for the second phase to start:
     >
     > 1. The first phase reaches the **deployment success percentage** criteria for success. You configure this setting on the phased deployment.
-    > 1. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*. For more information, see [Review assets that need an upgrade decision](/sccm/desktop-analytics/deploy-prod#bkmk_review).
+    > 1. You need to review and make upgrade decisions in Desktop Analytics to mark important and critical assets as *ready*. For more information, see [Review assets that need an upgrade decision](deploy-prod.md#bkmk_review).
     > 1. Desktop Analytics syncs to the Configuration Manager collections any production devices that meet the *ready* criteria.
 
 > [!Important]  
@@ -141,7 +141,7 @@ Open the deployment plan. The **Preparing upgrade decisions - overall status** t
 
   - Devices with noteworthy assets that are **Ready** or **Ready with remediation**
 
-  - The device state is **Blocked**, [**Replace device**](/sccm/desktop-analytics/about-deployment-plans#plan-assets) or **Reinstall device**
+  - The device state is **Blocked**, [**Replace device**](about-deployment-plans.md#plan-assets) or **Reinstall device**
 
 - **Not reviewed**: Devices with noteworthy assets **Not reviewed** or **Review in progress**
 
@@ -151,7 +151,7 @@ The device status updates in the **Pilot status** and **Production status** tile
 - Devices get upgraded to the target version of Windows
 - Your deployment progresses
 
-You can also use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](/sccm/osd/deploy-use/monitor-operating-system-deployments).
+You can also use Configuration Manager deployment monitoring the same as any other task sequence deployment. For more information, see [Monitor OS deployments](../osd/deploy-use/monitor-operating-system-deployments.md).
 
 ### Desktop Analytics portal
 
@@ -183,4 +183,4 @@ Let the pilot run for a while to collect operational data. Encourage users of pi
 
 When your pilot deployment meets your success criteria, go to the next article to deploy to production.
 > [!div class="nextstepaction"]  
-> [Deploy to production](/sccm/desktop-analytics/deploy-prod)  
+> [Deploy to production](deploy-prod.md)  

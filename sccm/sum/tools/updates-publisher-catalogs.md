@@ -28,7 +28,7 @@ You must add an update catalog to Updates Publisher before you can manage the up
 
 Information about each subscribed catalog is available in the console. Information includes the download URL or location, the name of the company or organization who created the catalog, and when it was last imported or modified.
 
-Updates Publisher can automatically check your subscriptions for changes each time it starts. This is configured as an [Advanced option](/sccm/sum/tools/updates-publisher-options#advanced). When configured, Updates Publisher references the download URL or location information for the subscription and alerts you when there are changes to the catalog that were made since the last time you imported it to the repository.
+Updates Publisher can automatically check your subscriptions for changes each time it starts. This is configured as an [Advanced option](updates-publisher-options.md#advanced). When configured, Updates Publisher references the download URL or location information for the subscription and alerts you when there are changes to the catalog that were made since the last time you imported it to the repository.
 
 To manually check for a catalog update, select the catalog from the **My Software Update Catalogs** list and then choose **Refresh** from the ribbon.
 
@@ -38,7 +38,7 @@ In addition to adding catalogs, and viewing information about subscribed catalog
 -  **Import** updates from a catalog into the Updates Publisher repository. When you import updates, you import all updates contained in that catalog. You can then view the updates in the Updates workspace where you can then select and publish updates to your update server.
 
 > [!NOTE]   
-> Deleting a catalog from Updates Publisher results in the updates in that catalog being removed from your repository. This does not affect the updates you have published to your update server. To remove updates from your update server that are no longer in your repository, see [Expire unreferenced software updates](/sccm/sum/tools/updates-publisher-options#expire-unreferenced-software-updates).
+> Deleting a catalog from Updates Publisher results in the updates in that catalog being removed from your repository. This does not affect the updates you have published to your update server. To remove updates from your update server that are no longer in your repository, see [Expire unreferenced software updates](updates-publisher-options.md#expire-unreferenced-software-updates).
 
 ## Manage update catalogs
 You can view the list catalogs you have imported in the **My Software Update Catalogs** window of the **Catalogs Workspace**. From this workspace you can:
@@ -79,7 +79,7 @@ When you import a catalog, Updates Manager adds the updates from that catalog to
    > 
    >  If you no longer trust a publisher, remove that publisher from the trusted publishers list. To find more information about accepting catalogs, click **Tell Me More** in the **Security Warning – Catalog Validation** dialog box.
 
-   If you choose to always accept catalogs from a publisher, that publisher is added to the [trusted publishers list](/sccm/sum/tools/updates-publisher-options#trusted-publishers). You can review and edit this list as an Updates Publisher option.
+   If you choose to always accept catalogs from a publisher, that publisher is added to the [trusted publishers list](updates-publisher-options.md#trusted-publishers). You can review and edit this list as an Updates Publisher option.
 
 4. Import skips import of an update when the update is already in the repository and one of the following is true:
 
@@ -93,5 +93,5 @@ When you import a catalog, Updates Manager adds the updates from that catalog to
 
 ## Next steps
 After you import updates, common actions include:
--   [Manage updates](/sccm/sum/tools/manage-updates-with-updates-publisher) to bundle, assign, and deploy them your update server.
--   [Create applicability rules](/sccm/sum/tools/updates-publisher-applicability-rules) to help determine when updates deploy to your update server.
+-   [Manage updates](manage-updates-with-updates-publisher.md) to bundle, assign, and deploy them your update server.
+-   [Create applicability rules](updates-publisher-applicability-rules.md) to help determine when updates deploy to your update server.

@@ -27,7 +27,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
-|Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
+|Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
 ### <a name="bkmk_note1"></a> Note 1: Support removed TBD
 
@@ -40,15 +40,15 @@ The following features are no longer supported. In some cases, they're no longer
 |Feature|Deprecation first announced|Support&nbsp;removed|  
 |-----------|---|--------------|  
 | Windows Analytics and Upgrade Readiness integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
-| Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).| July 3, 2019 | Version 1910 |
+| Device health attestation assessment for conditional access compliance policies <!--1235616 aka 3608202--> For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| July 3, 2019 | Version 1910 |
 | The Configuration Manager Company Portal app | May 21, 2019 | Version 1910 |
-| The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat). | May 21, 2019 | Version 1910 |
-|Certificate-based authentication with Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](/sccm/protect/deploy-use/windows-hello-for-business-settings).|December 2017|Version 1910|
+| The application catalog, including both site system roles: the application catalog website point and web service point. For more information, see [Remove the application catalog](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). | May 21, 2019 | Version 1910 |
+|Certificate-based authentication with Windows Hello for Business settings in Configuration Manager<br>For more information, see [Windows Hello for Business settings](../../../../protect/deploy-use/windows-hello-for-business-settings.md).|December 2017|Version 1910|
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).|October 2018|December 31, 2018|
-|On-premises conditional access<br>For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).|January 30, 2019|September 1, 2019|
-|Hybrid mobile device management (MDM)<br>For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
+|On-premises conditional access<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).|January 30, 2019|September 1, 2019|
+|Hybrid mobile device management (MDM)<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
 |Security Content Automation Protocol (SCAP) extensions. <!--3607889--><br>The previous certified version is still available on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48741).|September 2018|Version 1810|
-|The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).<!--1358309-->|August 11, 2017| Version 1806|
+|The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex).<!--1358309-->|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. <br><br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. <br><br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console.  |January 6, 2017 |Version 1710|
 |Task sequences: <br /> - Convert Disk to Dynamic <br /> - Install Deployment Tools |November 18, 2016|Version 1710|
@@ -78,6 +78,6 @@ For network access protection alternatives, see the *Deprecated functionality* s
 
 ## See also
 
-- [Removed and deprecated](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)
+- [Removed and deprecated](removed-and-deprecated.md)
 - [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle)
-- [Support for current branch versions of Configuration Manager](/sccm/core/servers/manage/current-branch-versions-supported)
+- [Support for current branch versions of Configuration Manager](../../../servers/manage/current-branch-versions-supported.md)

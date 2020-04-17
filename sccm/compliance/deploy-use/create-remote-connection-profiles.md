@@ -43,9 +43,9 @@ Configuration Manager creates a security group on clients, **Remote PC Connect**
 
 ### Configuration Manager dependencies  
 
-- In order for a user to connect to a work computer, that computer must be a primary device of the user. For more information, see [Link users and devices with user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+- In order for a user to connect to a work computer, that computer must be a primary device of the user. For more information, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-- To manage remote connection profiles, your user account needs specific permissions in Configuration Manager. The **Compliance Settings Manager** built-in role includes the permissions required to manage these profiles. For more information, see [Configure role-based administration](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
+- To manage remote connection profiles, your user account needs specific permissions in Configuration Manager. The **Compliance Settings Manager** built-in role includes the permissions required to manage these profiles. For more information, see [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Security and privacy considerations
 
@@ -111,7 +111,7 @@ The new profile is displayed in the **Remote Connection Profiles** node in the *
 
     - **Remediate noncompliant rules when supported**: Enable this setting to automatically remediate the profile settings when they're noncompliant on a device. The profile can be non-compliant when it doesn't exist.
 
-    - **Allow remediation outside the maintenance window**: If you configure a maintenance window for the collection to which you deploy the profile, enable this option to let Configuration Manager remediate it outside the maintenance window. For more information, see [How to use maintenance windows](/configmgr/core/clients/manage/collections/use-maintenance-windows).
+    - **Allow remediation outside the maintenance window**: If you configure a maintenance window for the collection to which you deploy the profile, enable this option to let Configuration Manager remediate it outside the maintenance window. For more information, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
 
     - **Generate an alert**: Enable this option to configure a compliance alert.
 
@@ -159,4 +159,4 @@ Configuration Manager includes built-in reports that you can use to monitor info
 > [!IMPORTANT]  
 > Use the wildcard character (`%`) when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
-For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  

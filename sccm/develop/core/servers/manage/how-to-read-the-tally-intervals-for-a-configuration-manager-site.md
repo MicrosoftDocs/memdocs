@@ -19,7 +19,7 @@ In Configuration Manager, you can read the available tally intervals for a site 
 
 ### To read the tally intervals for a site  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Perform a query for the site's SMS_COMPONENT_STATUS_SUMMARIZER property lists  
 
@@ -103,7 +103,7 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
+|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid Configuration Manager site code.|  
 
 ## Compiling the Code  
@@ -132,6 +132,6 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
+ [About status messages](about-configuration-manager-status-messages.md)
  [About Configuration Manager Tally Intervals](../../../../develop/core/servers/manage/about-configuration-manager-tally-intervals.md)   
  [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)   

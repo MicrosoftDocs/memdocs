@@ -23,9 +23,9 @@ Preboot execution environment (PXE)-initiated OS deployments in Configuration Ma
 
 You can use PXE-initiated OS deployments in the following scenarios:
 
-- [Refresh an existing computer with a new version of Windows](/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows)  
+- [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
-- [Install a new version of Windows on a new computer (bare metal)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
 Complete the steps in one of the OS deployment scenarios, and then use the sections in this article to prepare for PXE-initiated deployments.
 
@@ -34,7 +34,7 @@ Complete the steps in one of the OS deployment scenarios, and then use the secti
 
 ## <a name="BKMK_Configure"></a> Configure at least one distribution point to accept PXE requests
 
-To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+To deploy operating systems to Configuration Manager clients that make PXE boot requests, you must configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 > [!NOTE]  
 > When configuring a single PXE enabled distribution point to support multiple subnets it's not supported to use DHCP options. Configure IP helpers on the routers to allow PXE requests to be forwarded to your PXE enabled distribution points.
@@ -53,16 +53,16 @@ To use PXE to deploy an OS, you must have both x86 and x64 PXE-enabled boot imag
 
 - To enable PXE on a boot image, select **Deploy this boot image from the PXE-enabled distribution point** from the **Data Source** tab in the boot image properties.
 
-- If you change the properties for the boot image, update and redistribute the boot image to distribution points. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+- If you change the properties for the boot image, update and redistribute the boot image to distribution points. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ## Manage duplicate hardware identifiers
 
-Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. Mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+Configuration Manager may recognize multiple computers as the same device if they have duplicate SMBIOS attributes or you use a shared network adapter. Mitigate these issues by managing duplicate hardware identifiers in hierarchy settings. For more information, see [Manage duplicate hardware identifiers](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers).
 
 ## <a name="BKMK_PXEExclusionList"></a> Create an exclusion list for PXE deployments
 
 > [!Note]  
-> In some circumstances, the process to [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers) may be easier.<!-- SCCMDocs issue 802 -->
+> In some circumstances, the process to [Manage duplicate hardware identifiers](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers) may be easier.<!-- SCCMDocs issue 802 -->
 >
 > The behaviors of each can cause different results in some scenarios. The exclusion list never boots a client with the listed MAC address, no matter what.
 >
@@ -89,7 +89,7 @@ When you deploy operating systems with PXE, you can create an exclusion list on 
 
 ## <a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP block size and window size
 
-You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_RamDiskTFTP).
+You can customize the RamDisk TFTP block and window sizes for PXE-enabled distribution points. If you've customized your network, a large block or window size could cause the boot image download to fail with a time-out error. The RamDisk TFTP block and window size customizations allow you to optimize TFTP traffic when using PXE to meet your specific network requirements. To determine what configuration is most efficient, test the customized settings in your environment. For more information, see [Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP).
 
 ## Configure deployment settings
 
@@ -103,13 +103,13 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 
 ## <a name="BKMK_Deploy"></a> Deploy the task sequence
 
-Deploy the OS to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
+Deploy the OS to a target collection. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
 
 - **Required deployment**: Required deployments use PXE without any user intervention. The user can't bypass the PXE boot. However, if the user cancels the PXE boot before the distribution point responds, the OS isn't deployed.
 
 - **Available deployment**: Available deployments require that the user is present at the destination computer. A user must press the **F12** key to continue the PXE boot process. If a user isn't present to press **F12**, the computer boots into the current OS, or from the next available boot device.
 
-You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode) or [Manage collections](/sccm/core/clients/manage/collections/manage-collections#bkmk_device). This action resets the status of that deployment and reinstalls the most recent required deployments.
+You can redeploy a required PXE deployment by clearing the status of the last PXE deployment assigned to a Configuration Manager collection or a computer. For more information on the **Clear Required PXE Deployments** action, see [Manage clients](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) or [Manage collections](../../core/clients/manage/collections/manage-collections.md#bkmk_device). This action resets the status of that deployment and reinstalls the most recent required deployments.
 
 > [!IMPORTANT]  
 > The PXE protocol isn't secure. Make sure that the PXE server and the PXE client are located on a physically secure network, such as in a data center to prevent unauthorized access to your site.

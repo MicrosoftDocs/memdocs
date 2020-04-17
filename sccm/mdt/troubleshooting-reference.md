@@ -24,7 +24,7 @@ manager: dougeby
 ## Understanding Logs  
  Before effective troubleshooting of MDT can begin, you must have a clear understanding of the many .log files used during an operating system deployment. When you know which log files to research for what failure condition and at what time, issues that were once mysterious and difficult to understand may become clear and understandable.  
 
- The MDT log file format is designed to be read by [CMTrace](/configmgr/core/support/cmtrace). Use this tool whenever possible to read the log files, because it makes finding errors much easier.  
+ The MDT log file format is designed to be read by [CMTrace](../core/support/cmtrace.md). Use this tool whenever possible to read the log files, because it makes finding errors much easier.  
 
  The rest of this section details the log files created during deployment as well as during Windows Setup. This section also provides examples of when to use the files for troubleshooting.  
 

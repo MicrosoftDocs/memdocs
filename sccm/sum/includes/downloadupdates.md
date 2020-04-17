@@ -34,15 +34,15 @@
 
              -  The computer account of the SMS Provider and the user that's running the wizard to download the software updates must both have **Write** permissions to the download location. Restrict access to the download location. This restriction reduces the risk of attackers tampering with the software update source files.  
 
-        - **Enable binary differential replication**: Enable this setting to minimize network traffic between sites. Binary differential replication (BDR) only updates the content that has changed in the package, instead of updating the entire package contents. For more information, see [Binary differential replication](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication).  
+        - **Enable binary differential replication**: Enable this setting to minimize network traffic between sites. Binary differential replication (BDR) only updates the content that has changed in the package, instead of updating the entire package contents. For more information, see [Binary differential replication](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-4.  On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs). This page is available only when you create a new software update deployment package.  
+4.  On the **Distribution Points** page, specify the distribution points or distribution point groups to host the software update files. For more information about distribution points, see [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs). This page is available only when you create a new software update deployment package.  
 
 5.  The **Distribution Settings** page is available only when you create a new software update deployment package. Specify the following settings:  
 
     -   **Distribution priority**: Use this setting to specify the distribution priority for the deployment package. The distribution priority applies when the deployment package is sent to distribution points at child sites. Deployment packages are sent in priority order: high, medium, or low. Packages with identical priorities are sent in the order in which they were created. If there's no backlog, the package processes immediately regardless of its priority. By default, the site sends packages with **Medium** priority.  
 
-    -   **Enable for on-demand distribution**: Use this setting to enable on-demand content distribution to distribution points configured for this feature and in the client's current boundary group. When you enable this setting, the management point creates a trigger for the distribution manager to distribute the content to all such distribution points when a client requests the content for the package and the content isn't available. For more information, see [On-demand content distribution](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#on-demand-content-distribution).  
+    -   **Enable for on-demand distribution**: Use this setting to enable on-demand content distribution to distribution points configured for this feature and in the client's current boundary group. When you enable this setting, the management point creates a trigger for the distribution manager to distribute the content to all such distribution points when a client requests the content for the package and the content isn't available. For more information, see [On-demand content distribution](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution).  
 
     -   **Prestaged distribution point settings**: Use this setting to specify how you want to distribute content to prestaged distribution points. Choose one of the following options:  
 
@@ -52,7 +52,7 @@
 
         -   **Manually copy the content in this package to the distribution point**: Use this setting to always prestage content on the distribution point. This option is the default.  
 
-        For more information about prestaging content to distribution points, see [Use Prestaged content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage).  
+        For more information about prestaging content to distribution points, see [Use Prestaged content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
 
 
 6.  On the **Download Location** page, specify the location that Configuration Manager uses to download the software update source files. Use one of the following options:  

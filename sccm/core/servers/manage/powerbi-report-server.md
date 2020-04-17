@@ -72,7 +72,7 @@ Only use this process if you don't already have a reporting services point in th
 
 1. Install Power BI Report Server.
 
-2. Add the reporting services point role in Configuration Manager. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+2. Add the reporting services point role in Configuration Manager. For more information, see [Configure reporting](configuring-reporting.md).
 
 ## Configure the Configuration Manager console
 
@@ -92,7 +92,7 @@ Only use this process if you don't already have a reporting services point in th
 
     - In Power BI Desktop, when you connect to a data source, select **DirectQuery** for the Connection settings.
 
-    - Only use supported SQL views in these reports. For more information, see [Creating custom reports by using SQL Server views in Configuration Manager](/configmgr/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views).
+    - Only use supported SQL views in these reports. For more information, see [Creating custom reports by using SQL Server views in Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
 
 1. When the report is ready to save, go to the **File** menu, select **Save as**, then choose **Power BI Report Server**.
 
@@ -111,4 +111,4 @@ After you create a report, use the following actions in the Configuration Manage
 
 - **Edit**: Make changes to the report in Power BI Desktop. For an existing report, use the **Save** option to save changes back to the report server.
 
-For more information on log files to use for reporting, see [Log file reference - Reporting](/configmgr/core/plan-design/hierarchy/log-files#BKMK_ReportLog).
+For more information on log files to use for reporting, see [Log file reference - Reporting](../../plan-design/hierarchy/log-files.md#BKMK_ReportLog).

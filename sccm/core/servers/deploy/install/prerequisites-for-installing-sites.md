@@ -33,7 +33,7 @@ If you're installing a central administration site as part of a hierarchy expans
 
 ### <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a central administration site  
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq)  
 
 - The user account that installs the site must have the following rights:  
 
@@ -57,15 +57,15 @@ If you're installing a central administration site as part of a hierarchy expans
 
     - Role-based administration rights within Configuration Manager that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**  
 
-- Use the correct installation source files, and run setup from that location. For information about the correct source files to use to install different types of sites, see [Options for installing different types of sites](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_options).  
+- Use the correct installation source files, and run setup from that location. For information about the correct source files to use to install different types of sites, see [Options for installing different types of sites](prepare-to-install-sites.md#bkmk_options).  
 
 - The site server must have access to updated setup files from Microsoft, in one of the following ways:  
 
-    - Before you start the install, download and store a copy of these files on your local network. For more information, see [Setup Downloader](/sccm/core/servers/deploy/install/setup-downloader).  
+    - Before you start the install, download and store a copy of these files on your local network. For more information, see [Setup Downloader](setup-downloader.md).  
 
     - If a local copy of these file isn't available, the site server must have internet access. It downloads these files from Microsoft during the installation.  
 
-- The site server and site database server must meet all prerequisite configurations. Before starting Configuration Manager setup, [manually run Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) to identify and fix problems.  
+- The site server and site database server must meet all prerequisite configurations. Before starting Configuration Manager setup, [manually run Prerequisite Checker](prerequisite-checker.md) to identify and fix problems.  
 
 ### <a name="bkmk_expand"></a> Prerequisites to expand a stand-alone primary site
 
@@ -75,7 +75,7 @@ A stand-alone primary site must meet the following prerequisites before you can 
 
 Install the new central administration site using media from a CD.Latest folder that matches the version of the stand-alone primary site. To make sure the versions match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) on the stand-alone primary site.
 
-For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](/sccm/core/servers/deploy/install/prepare-to-install-sites#bkmk_options).  
+For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](prepare-to-install-sites.md#bkmk_options).  
 
 #### Stop active migration from another hierarchy
 
@@ -89,7 +89,7 @@ This configuration is necessary because Configuration Manager migrates data from
 
 After you expand the stand-alone primary site, if you reconfigure migration at the primary site, the central administration site performs the migration operations.
 
-For more information about how to configure migration, see [Configure source hierarchies and source sites for migration](/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration).  
+For more information about how to configure migration, see [Configure source hierarchies and source sites for migration](../../../migration/configuring-source-hierarchies-and-source-sites-for-migration.md).  
 
 #### Computer account as Administrator
 
@@ -103,7 +103,7 @@ The user account that runs Configuration Manager setup to install the new centra
 
 To install a central administration site as part of a site expansion, the user account that runs setup to install the central administration site must be defined in role-based administration at the stand-alone primary site as either a **Full Administrator** or an **Infrastructure Administrator**.
 
-For more information including the complete list of required permissions, see [Site installation account](/sccm/core/plan-design/hierarchy/accounts#site-installation-account).
+For more information including the complete list of required permissions, see [Site installation account](../../../plan-design/hierarchy/accounts.md#site-installation-account).
 
 #### Top-level site roles
 
@@ -128,10 +128,10 @@ To successfully replicate data between a central administration site and a prima
 After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
 - [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
-- [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
+- [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
+- [Cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-On version 1806 and later, renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+On version 1806 and later, renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 
 Alternatively, remove and then recreate the connection to that service:
 
@@ -146,7 +146,7 @@ Alternatively, remove and then recreate the connection to that service:
 
 The following are prerequisites for installing secondary sites:  
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq)  
 
 - The administrator who configures the installation of the secondary site in the Configuration Manager console must have role-based administration rights that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**.  
 
@@ -166,4 +166,4 @@ The following are prerequisites for installing secondary sites:
 
 ## Next steps
 
-After you've confirmed the prerequisites, you're ready to run setup. For more information, see [Use the Setup Wizard to install Configuration Manager sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
+After you've confirmed the prerequisites, you're ready to run setup. For more information, see [Use the Setup Wizard to install Configuration Manager sites](use-the-setup-wizard-to-install-sites.md).

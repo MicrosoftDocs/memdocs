@@ -31,9 +31,9 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 ## Plan
 
-- The hierarchy needs to consist of the CAS and a single child primary site. The primary site can have secondary sites. To remove other child primary sites from the hierarchy, review the planning steps and prerequisites to [Uninstall a primary site](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_primary).
+- The hierarchy needs to consist of the CAS and a single child primary site. The primary site can have secondary sites. To remove other child primary sites from the hierarchy, review the planning steps and prerequisites to [Uninstall a primary site](uninstall-sites-and-hierarchies.md#bkmk_primary).
 
-- Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](/configmgr/core/plan-design/configs/size-and-scale-numbers#bkmk_pri).
+- Make sure your child primary site meets the size and scale requirements for a [stand-alone primary site](../../../plan-design/configs/size-and-scale-numbers.md#bkmk_pri).
 
 - Move or retire any site roles at the CAS, except the service connection point and the software update point. Configuration Manager setup handles these two roles when you remove the CAS.
 
@@ -52,11 +52,11 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 - Configuration Manager automatically handles package source locations for built-in packages, like the Configuration Manager client. Review all other content source locations to make sure they aren't using a share on the CAS.
 
-- Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](/configmgr/core/servers/deploy/install/prerequisites-for-installing-sites#stop-active-migration-from-another-hierarchy).
+- Stop any active migration jobs and remove all configurations for migration. For more information, see [Stop active migration from another hierarchy](prerequisites-for-installing-sites.md#stop-active-migration-from-another-hierarchy).
 
 - If you use automatic deployment rules for software updates, recreate them on the child primary site.
 
-- If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](/configmgr/sum/deploy-use/third-party-software-updates), export the WSUS signing certificate from the software update point on the CAS.
+- If you use Configuration Manager or System Center Updates Publisher to manage [third-party software updates](../../../../sum/deploy-use/third-party-software-updates.md), export the WSUS signing certificate from the software update point on the CAS.
 
   - Before you remove the CAS, wait for the deadlines of any required deployments of third-party software updates. Clients pre-download content for required deployments, and when you change the software update point, the content hash changes with *local publishing* of software updates. (This behavior doesn't impact other content types, only local publishing of third-party software updates.) If you remove the CAS with these required deployments still in-progress, they'll fail on clients with a hash mismatch error.
 
@@ -80,7 +80,7 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
   - **Infrastructure Administrator** or **Full Administrator** security role on the CAS and primary site
 
-- Only one child primary site in the hierarchy. For more information, see [Uninstall a primary site](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies#bkmk_primary).
+- Only one child primary site in the hierarchy. For more information, see [Uninstall a primary site](uninstall-sites-and-hierarchies.md#bkmk_primary).
 
 ## Process
 
@@ -100,7 +100,7 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 1. On the **Reconfiguring Existing Site System Roles** page:
 
-    - **Service Connection Point**: Enter the fully qualified domain name of the site system in the primary site to host this required role. For more information, see [About the service connection point](/configmgr/core/servers/deploy/configure/about-the-service-connection-point).
+    - **Service Connection Point**: Enter the fully qualified domain name of the site system in the primary site to host this required role. For more information, see [About the service connection point](../configure/about-the-service-connection-point.md).
 
     - **Software Update Point**: Select an existing software update point in the primary site. Setup configures this software update point to synchronize the same as the CAS configuration.
 
@@ -108,7 +108,7 @@ Starting in version 2002, if the hierarchy consists of the central administratio
 
 If setup comes across an issue, use the wizard to retry the process.
 
-When setup is complete, it resets the primary site. For more information, see [Run a site reset](/configmgr/core/servers/manage/modify-your-infrastructure#bkmk_reset).
+When setup is complete, it resets the primary site. For more information, see [Run a site reset](../../manage/modify-your-infrastructure.md#bkmk_reset).
 
 ## Monitor and verify
 
@@ -134,11 +134,11 @@ After you remove the CAS, review the following steps as they apply to your envir
 
   - Update OS deployment boot images to include the latest Configuration Manager binaries.
 
-  - Recreate [OS deployment media](/configmgr/osd/deploy-use/create-task-sequence-media).
+  - Recreate [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
 
-- If you connect Configuration Manager with [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](/configmgr/core/servers/deploy/configure/azure-services-wizard#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
+- If you connect Configuration Manager with [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 
-- In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Include Microsoft Surface drivers and firmware updates](/configmgr/sum/get-started/configure-classifications-and-products#bkmk_Surface).<!-- 5728727 -->
+- In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Include Microsoft Surface drivers and firmware updates](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
 
 - If you manage third-party software updates:
 

@@ -24,7 +24,7 @@ Typical problems with application deployments fall into one of the following cat
 
 - Application deployment compliance stuck at 0%
 
-If you experience either of these issues, this article provides some steps you can use to troubleshoot. For more in-depth troubleshooting, see [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference).
+If you experience either of these issues, this article provides some steps you can use to troubleshoot. For more in-depth troubleshooting, see [Troubleshooting application deployment technical reference](../understand/app-deployment-technical-reference.md).
 
 
 ## Download failures
@@ -37,7 +37,7 @@ Application download failures include the following problems:
 
 - The client gets stuck at 0% while downloading the application
 
-The first thing to check when you experience application download failures is for missing or misconfigured boundaries and boundary groups. For example, if the client is on the intranet and not configured for internet-only client management, its network location must be in a configured boundary. There must also be a boundary group assigned to this boundary for the client to download content. For more information, see [Define site boundaries and boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+The first thing to check when you experience application download failures is for missing or misconfigured boundaries and boundary groups. For example, if the client is on the intranet and not configured for internet-only client management, its network location must be in a configured boundary. There must also be a boundary group assigned to this boundary for the client to download content. For more information, see [Define site boundaries and boundary groups](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md).
 
 If you can't configure a boundary for a client, or if a specific boundary group can't be a member of another boundary group:
 
@@ -47,7 +47,7 @@ If you can't configure a boundary for a client, or if a specific boundary group 
 
 1. In the section for using a distribution point from a neighbor boundary group or the default site boundary group, change the **Deployment options** to **Download content from distribution point and run locally**. (By default this setting is **Do not download content**.)
 
-If the client can't download the application content, make sure it's distributed to a distribution point. To verify this configuration, use the in-console features to monitor content distribution to the distribution points. For more information, see [Monitor content you have distributed](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed).  
+If the client can't download the application content, make sure it's distributed to a distribution point. To verify this configuration, use the in-console features to monitor content distribution to the distribution points. For more information, see [Monitor content you have distributed](../../core/servers/deploy/configure/monitor-content-you-have-distributed.md).  
 
 
 ## Compliance stuck at 0%
@@ -58,14 +58,14 @@ When the application's deployment compliance is 0%, check the deployment status 
 
 - **Error**: For more information on how to troubleshoot this problem, see the following blog post: [Tips and Tricks: How to Take Action on Assets That Report a Failed Deployment](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Tips-and-Tricks-How-to-Take-Action-on-Assets-That-Report-a/ba-p/273019)
 
-- **Unknown**: This status usually means that the client hasn't received policy. Manually refresh client policy to see if the client receives it. For more information, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).
+- **Unknown**: This status usually means that the client hasn't received policy. Manually refresh client policy to see if the client receives it. For more information, see [Initiate policy retrieval for a Configuration Manager client](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
   
-If these actions don't resolve the issue, check the client status. There may be a deeper underlying problem with the client. For more information, see [How to monitor clients](/sccm/core/clients/manage/monitor-clients).
+If these actions don't resolve the issue, check the client status. There may be a deeper underlying problem with the client. For more information, see [How to monitor clients](../../core/clients/manage/monitor-clients.md).
 
 
 ## Next steps
 
-- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
-- [Deploy applications](/sccm/apps/deploy-use/deploy-applications)
-- [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
-- [Troubleshooting application deployment technical reference](/sccm/apps/understand/app-deployment-technical-reference)
+- [Monitor applications](monitor-applications-from-the-console.md)
+- [Deploy applications](deploy-applications.md)
+- [Management tasks for applications](management-tasks-applications.md)
+- [Troubleshooting application deployment technical reference](../understand/app-deployment-technical-reference.md)

@@ -26,7 +26,7 @@ This feature brings the following benefits
 - More easily change the hardware or OS of the site server  
 - More easily move your site server to Azure IaaS  
 
-The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this additional site server as part of your overall design for making the Configuration Manager service [highly available](/sccm/core/servers/deploy/configure/high-availability-options).  
+The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this additional site server as part of your overall design for making the Configuration Manager service [highly available](high-availability-options.md).  
 
 A site server in passive mode:
 
@@ -40,7 +40,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 ## Prerequisites
 
-- The site content library must be on a remote network share. Both site servers need Full Control permissions to the share and its contents. For more information, see [Manage content library](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote).<!--1357525-->  
+- The site content library must be on a remote network share. Both site servers need Full Control permissions to the share and its contents. For more information, see [Manage content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).<!--1357525-->  
 
   - The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
 
@@ -51,8 +51,8 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > [!NOTE]
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
-    >   - [Azure virtual machines (for cloud-based infrastructure)](/sccm/core/understand/use-cloud-services#azure-virtual-machines-for-cloud-based-infrastructure)
-    >   - [FAQ for Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure)  
+    >   - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
+    >   - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.md)  
 
 - Both site servers must be joined to the same Active Directory domain.  
 
@@ -64,7 +64,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
   - In version 1806, the database must be remote from each site server. Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode.<!-- SCCMDocs issue 1074 -->  
 
-  - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database), or a [SQL Server Always On availability group](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).  
+  - The SQL Server that hosts the site database can use a default instance, named instance, [SQL Server cluster](use-a-sql-server-cluster-for-the-site-database.md), or a [SQL Server Always On availability group](sql-server-alwayson-for-a-highly-available-site-database.md).  
 
   - Both site servers need the **sysadmin** security role on the instance of SQL Server that hosts the site database. The original site server should already have these roles, so add them for the new site server. For example, the following SQL script adds these roles for the new site server **VM2** in the Contoso domain:  
 
@@ -90,7 +90,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - The site server in passive mode:  
 
-  - Must meet the prerequisites for installing a primary site. For example, .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).<!-- SCCMDocs issue 765 -->  
+  - Must meet the prerequisites for installing a primary site. For example, .NET Framework, Remote Differential Compression, and the Windows ADK. For the complete list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).<!-- SCCMDocs issue 765 -->  
 
   - Must have its computer account in the local Administrators group on the site server in active mode.<!--516036-->
 
@@ -98,11 +98,11 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
   - Can't have a site system role from any site installed on it before you install the site server in passive mode role.  
 
-- Both site servers can run different OS or service pack versions, as long as both are [supported by Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+- Both site servers can run different OS or service pack versions, as long as both are [supported by Configuration Manager](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).  
 
-- Don't host the service connection point role on either site server configured for high availability. If it's currently on the original site server, remove it, and install it on another site system server. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+- Don't host the service connection point role on either site server configured for high availability. If it's currently on the original site server, remove it, and install it on another site system server. For more information, see [About the service connection point](about-the-service-connection-point.md).  
 
-- Permissions for the [site system installation account](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account)  
+- Permissions for the [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account)  
 
   - By default, many customers use the site server's computer account to install new site systems. The requirement is then to add the site server's computer account to the local **Administrators** group on the remote site system. If your environment uses this configuration, make sure to add the computer account of the new site server to this local group on all remote site systems. For example, all remote distribution points.  
 
@@ -130,13 +130,13 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
 
 - For roles like the reporting point that use a database, host the database on a server that's remote from both site servers.  
 
-- When you add the site server in passive mode role, the site doesn't also install the SMS Provider role. Install at least one additional instance of the provider on another server for high availability. If your design includes this role on your site server, install it on the new site server after you add the site server in passive mode role. For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).  
+- When you add the site server in passive mode role, the site doesn't also install the SMS Provider role. Install at least one additional instance of the provider on another server for high availability. If your design includes this role on your site server, install it on the new site server after you add the site server in passive mode role. For more information, see [Plan for the SMS Provider](../../../plan-design/hierarchy/plan-for-the-sms-provider.md).  
 
 - The Configuration Manager console doesn't automatically install on the site server in passive mode.  
 
 ## Add a site server in passive mode
 
-For more information on the general process of adding roles, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles).
+For more information on the general process of adding roles, see [Install site system roles](install-site-system-roles.md).
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select the **Sites** node, and click **Create Site System Server** in the ribbon.
 
@@ -169,7 +169,7 @@ For more information on the general process of adding roles, see [Install site s
 
 For detailed installation status, in the console go to the **Monitoring** workspace, and select the **Site Server Status** node. The state for the site server in passive mode displays as **Installing**. For more detailed information, select the server and click **Show Status**. This action opens the Site Server Installation Status window. When the process is complete, the state shows **OK** for both servers.
 
-For more information on the setup process, see [Flowchart - Set up a site server in passive mode](/sccm/core/servers/deploy/configure/passive-site-server-flowchart).
+For more information on the setup process, see [Flowchart - Set up a site server in passive mode](passive-site-server-flowchart.md).
 
 After you add a site server in passive mode, see both site servers on the **Nodes** tab in the **Sites** node of the console.
 
@@ -208,7 +208,7 @@ Similarly as with backup and recovery, plan and practice your process to change 
 
 ### Process to promote the site server in passive mode to active mode
 
-This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#BKMK_MultiSMSProv).  
+This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#BKMK_MultiSMSProv).  
 
 > [!IMPORTANT]  
 > By default, only the original site server has the SMS Provider role. If this server is offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, the SMS Provider isn't automatically added. Add at least one additional SMS Provider role to your site for a highly available service.  
@@ -225,27 +225,27 @@ For detailed status, go to the **Monitoring** workspace, and select the **Site S
 
 When a site server in active mode switches over to passive mode, only the site system role is made passive. All other site system roles that are installed on that computer remain active and accessible to clients.
 
-For more information on the *planned* promotion process, see [Flowchart - Promote site server (planned)](/sccm/core/servers/deploy/configure/promote-site-server-flowchart).
+For more information on the *planned* promotion process, see [Flowchart - Promote site server (planned)](promote-site-server-flowchart.md).
 
 ### Unplanned failover
 
 If the current site server in active mode is offline, the site server for promotion tries to contact the current site server in active mode for 30 minutes. If the offline server comes back before this time, it's successfully notified, and the change proceeds gracefully. Otherwise the site server for promotion forcibly updates the site configuration for it to be active. If the offline server comes back after this time, it first checks the current state in the site database. It then proceeds with demoting itself to the site server in passive mode.
 
-During this 30-minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](/sccm/core/servers/manage/site-failure-impacts).  
+During this 30-minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](../../manage/site-failure-impacts.md).  
 
 If the offline server is damaged such that it can't return, delete this site server from the console. Then create a new site server in passive mode to restore a highly available service.
 
-For more information on the *unplanned* failover process, see [Flowchart - Promote site server (unplanned)](/sccm/core/servers/deploy/configure/promote-site-server-unplanned-flowchart).
+For more information on the *unplanned* failover process, see [Flowchart - Promote site server (unplanned)](promote-site-server-unplanned-flowchart.md).
 
 ### Additional tasks after site server promotion  
 
-After switching site servers, you don't have to do most of the other tasks as are necessary when [recovering a site](/sccm/core/servers/manage/recover-sites#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
+After switching site servers, you don't have to do most of the other tasks as are necessary when [recovering a site](../../manage/recover-sites.md#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
 
 The following steps may be required if necessary in your environment:  
 
-- If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](/sccm/core/servers/manage/recover-sites#regenerate-the-certificates-for-distribution-points).  
+- If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](../../manage/recover-sites.md#regenerate-the-certificates-for-distribution-points).  
 
-- If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).  
+- If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).  
 
 ## Daily monitoring
 

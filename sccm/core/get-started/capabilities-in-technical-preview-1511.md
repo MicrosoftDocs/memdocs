@@ -18,7 +18,7 @@ ms.author: aaroncz
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1511. This version  is a baseline installation for the  technical preview that you can use install a new technical preview site or to upgrade from an earlier version of the technical preview.   Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.  
 
 The following are new features you can try out with this version.  
 

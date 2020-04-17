@@ -115,4 +115,4 @@ Class SMS_StateInformation : SMS_BaseClass
 
 ## See also
 
-[SMS_StateMigration server WMI class](/sccm/develop/reference/osd/sms_statemigration-server-wmi-class)
+[SMS_StateMigration server WMI class](sms_statemigration-server-wmi-class.md)

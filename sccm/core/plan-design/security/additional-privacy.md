@@ -36,7 +36,7 @@ Configuration Manager collects data only from the site's SQL server database, an
 
 Administrators can change the level of data that's collected by going to the **Usage Data** section of the Configuration Manager console.
 
-For more information about usage data levels and settings, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+For more information about usage data levels and settings, see [Diagnostics and usage data](../diagnostics/diagnostics-and-usage-data.md).
 
 
 
@@ -80,7 +80,7 @@ Microsoft Cloud Protection Service reports are used to improve Microsoft softwar
 
 Microsoft Cloud Protection Service does not intentionally collect personal information. To the extent that Microsoft Cloud Protection Service collects any personal information, Microsoft does not use the information to identify you or contact you.
 
-For more information, see [Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection).
+For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
 
 

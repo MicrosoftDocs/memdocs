@@ -22,9 +22,9 @@ ms.date: 08/23/2019
 
 4. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You can use this command line to install the Configuration Manager client as an app in Intune. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 
-5. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](/sccm/comanage/workloads).  
+5. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](../workloads.md).  
 
-    If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](/sccm/comanage/how-to-switch-workloads).  
+    If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](../how-to-switch-workloads.md).  
 
     The **Pilot Intune** setting switches the associated workload only for the devices in the pilot collection. The **Intune** setting switches the associated workload for all co-managed Windows 10 devices.  
 

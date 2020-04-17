@@ -21,7 +21,7 @@ This article describes how to manage and monitor phased deployments. Management 
 First, you need to create a phased deployment: 
 - [Application](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 - [Software update](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
-- [Task sequence](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Task sequence](create-phased-deployment-for-task-sequence.md)  
 
 
 

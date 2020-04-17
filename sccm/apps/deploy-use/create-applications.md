@@ -56,7 +56,7 @@ Next, automatically detect or manually specify application information:
 
 1. On the **General** page of the Create Application wizard, select **Automatically detect information about this application from installation files**.  
 
-2. In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For more information about the available installation types, see [Deployment types supported by Configuration Manager](/sccm/apps/deploy-use/create-applications#bkmk_deploy-types).  
+2. In the **Type** drop-down list, select the application installation file type that you want to use to detect application information. For more information about the available installation types, see [Deployment types supported by Configuration Manager](create-applications.md#bkmk_deploy-types).  
 
 3. In the **Location** box, specify the application installation file that you want to use to detect application information. This location is either a network path (`\\server\share\filename`) or a store link. You must have access to the network path and any subfolders that include application content.  
 
@@ -79,9 +79,9 @@ Next, automatically detect or manually specify application information:
 
     - **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
 
-    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
+    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
 
-    - **Provision this application for all users on the device**<!--1358310-->: Provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_provision).  
+    - **Provision this application for all users on the device**<!--1358310-->: Provision an application with a Windows app package for all users on the device. For more information, see [Create Windows applications](../get-started/creating-windows-applications.md#bkmk_provision).  
 
        > [!Tip]  
        > If you're modifying an existing application, this setting is on the **User Experience** tab of the Windows app package deployment type properties.  
@@ -166,7 +166,7 @@ If you [automatically detect application information](#bkmk_auto-app), you may n
 > - [Return Codes](#bkmk_dt-return)
 > - [Dependencies](#bkmk_dt-depend)
 >  
-> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](/sccm/apps/deploy-use/deploy-applications#bkmk_exe-check).  
+> For information on the **Install Behavior** tab on the properties of a deployment type, see [Check for running executable files](deploy-applications.md#bkmk_exe-check).  
 
 ### Start the Create Deployment Type wizard  
 
@@ -208,7 +208,7 @@ Then use one of the following procedures to [automatically identify](#bkmk_auto-
 
     - **Install behavior**: Select one of the three options for how Configuration Manager installs this deployment type. For more information on these options, see [User Experience](#bkmk_dt-ux).  
 
-    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](/sccm/protect/deploy-use/vpn-profiles).  
+    - **Use an automatic VPN connection (if configured)**: If you've deployed a VPN profile to the device on which the user launches the app, connect the VPN when the app starts. This option is only for Windows 8.1 and Windows Phone 8.1. On Windows Phone 8.1 devices, if you deploy more than one VPN profile to the device, automatic VPN connections aren't supported. For more information, see [VPN profiles](../../protect/deploy-use/vpn-profiles.md).  
 
 4. Choose **Next**, and then continue to [Deployment type Content options](#bkmk_dt-content).  
 
@@ -268,13 +268,13 @@ When you view the properties of a deployment type, the following options appear 
 
 - **Deployment options**: Specify if clients should download the application when they use a distribution point from a neighbor or the default site boundary groups.  
 
-- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
+- **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache is always enabled on clients. This setting was removed in version 1802, as clients use BranchCache if the distribution point supports it.  
 
 ### <a name="bkmk_dt-ts"></a> Deployment type **Task Sequence** options
 
 <!--3555953-->
 
-For more information on the task sequence deployment type starting in version 2002, see [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+For more information on the task sequence deployment type starting in version 2002, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
 On the **Task Sequence** page, specify the following information:
 
@@ -283,7 +283,7 @@ On the **Task Sequence** page, specify the following information:
 - **Uninstall task sequence** (optional): Select a task sequence that removes this app.
 
 > [!TIP]  
-> If your task sequence doesn't appear in the list, double-check that it doesn't include any OS deployment or OS upgrade steps. Also confirm that it isn't marked as a high-impact task sequence. For more information, review the prerequisites for the [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).
+> If your task sequence doesn't appear in the list, double-check that it doesn't include any OS deployment or OS upgrade steps. Also confirm that it isn't marked as a high-impact task sequence. For more information, review the prerequisites for the [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
 ### <a name="bkmk_dt-detect"></a> Deployment type **Detection Method** options
 
@@ -491,7 +491,7 @@ On the **User Experience** page, specify the following information:
     > [!IMPORTANT]  
     > When you select the **Install for system** behavior, this setting is optional. This change is primarily to allow an end user to interact with the installation during a task sequence. For example, to run a setup process that prompts the end user for various options. Some application installers can't have user prompts silenced, or the installation process may require specific configuration values only known to the user. <!--1356976-->  
     >  
-    > Installing in system context and allowing users to interact with the installation isn't a secure configuration. For more information, see [security and privacy for application management](/sccm/apps/plan-design/security-and-privacy-for-application-management#bkmk_interact).  
+    > Installing in system context and allowing users to interact with the installation isn't a secure configuration. For more information, see [security and privacy for application management](../plan-design/security-and-privacy-for-application-management.md#bkmk_interact).  
 
 - **Maximum allowed run time (minutes)**: Specify the maximum time in minutes that you expect the deployment type to run on the client computer. Specify this setting as a whole number greater than zero. The default value is 120 minutes (two hours).  
 
@@ -528,7 +528,7 @@ Configuration Manager verifies these requirements on devices before installing t
 
 2. In the **Category** drop-down list, select whether this requirement is for a **Device** or a **User**.  
 
-    Select **Custom** to use a previously created global condition. When you select **Custom**, you can also choose **Create** to create a new global condition. For more about global conditions, see [How to create global conditions](/sccm/apps/deploy-use/create-global-conditions).  
+    Select **Custom** to use a previously created global condition. When you select **Custom**, you can also choose **Create** to create a new global condition. For more about global conditions, see [How to create global conditions](create-global-conditions.md).  
 
     > [!IMPORTANT]  
     > If you deploy the application to a device collection, the client ignores any requirement of the category **User** and the condition **Primary Device**.  
@@ -685,7 +685,7 @@ The new application appears in the **Applications** node.
 > [!TIP]  
 > The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
 
-For more information about how to export an application, see [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications).
+For more information about how to export an application, see [Management tasks for applications](management-tasks-applications.md).
 
 ## <a name="bkmk_deploy-types"></a> Supported deployment types  
 
@@ -703,11 +703,11 @@ Configuration Manager supports the following deployment types for applications:
 | **Windows Phone app package (in the Windows Phone Store)** | Specify a link to the app in the Windows Store. |  
 | **Mac OS X** | For macOS computers running the Configuration Manager client. Create a .cmmac file with the **CMAppUtil** tool. |  
 | **Web Application** | Specify a link to a web application. This deployment type installs a shortcut to the web application on the user's device. |  
-| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](/sccm/apps/get-started/creating-windows-applications#bkmk_mdm-msi). |
-| **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt). <!--3555953--> |
+| **Windows Installer through MDM (\*.msi)** | Create and deploy Windows Installer-based apps to Windows 10 devices. For more information, see [Deploy Windows Installer apps to MDM-enrolled Windows 10 devices](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
+| **Task sequence** | Starting in version 2002, install or uninstall complex applications using task sequences. For more information, see [Task sequence deployment type](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]
-> The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](/configmgr/mdm/understand/what-happened-to-hybrid).
+> The Configuration Manager console may display other deployment types, but they are for platforms that are no longer supported. For more information, see [What happened to hybrid?](../../mdm/understand/what-happened-to-hybrid.md).
 
 ### <a name="bkmk_note1"></a> Note 1: Windows app package (in the Windows Store)
 
@@ -720,13 +720,13 @@ Windows clients always evaluate deployment types that use a link to a store befo
 
 ## Next steps
 
-After creating an application in Configuration Manager, the next step is to [deploy the application](/sccm/apps/deploy-use/deploy-applications).
+After creating an application in Configuration Manager, the next step is to [deploy the application](deploy-applications.md).
 
-Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
 
 For more information about creating applications on different OS platforms, see the following articles:  
 
-- [Create Windows applications](/sccm/apps/get-started/creating-windows-applications)
-- [Create Mac applications](/sccm/apps/get-started/creating-mac-computer-applications)
-- [Create Linux and UNIX server applications](/sccm/apps/get-started/creating-linux-and-unix-server-applications)
-- [Create Windows Embedded applications](/sccm/apps/get-started/creating-windows-embedded-applications)
+- [Create Windows applications](../get-started/creating-windows-applications.md)
+- [Create Mac applications](../get-started/creating-mac-computer-applications.md)
+- [Create Linux and UNIX server applications](../get-started/creating-linux-and-unix-server-applications.md)
+- [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md)

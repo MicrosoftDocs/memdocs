@@ -30,18 +30,18 @@ For more information about planning and deploying Reporting Services, see the [I
 
 Install the Reporting Services database on either the default instance or a named instance of a 64-bit SQL Server installation. Colocate the SQL Server instance with the site system server, or configure it on a remote computer.
 
-Configuration Manager supports the same versions of SQL Server for reporting as it does for the site database. For more information, see [Supported SQL Server versions](/configmgr/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions).
+Configuration Manager supports the same versions of SQL Server for reporting as it does for the site database. For more information, see [Supported SQL Server versions](../../plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions).
 
 ## Reporting services point
 
 Before you can use reporting in Configuration Manager, configure the reporting services point site system role.
 
-For more information, see [Site and site system prerequisites](/configmgr/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012RSpoint).
+For more information, see [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012RSpoint).
 
 ## Power BI Report Server
 
-Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information including prerequisites, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information including prerequisites, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
 ## Next steps
 
-[Configure reporting](/configmgr/core/servers/manage/configuring-reporting)
+[Configure reporting](configuring-reporting.md)

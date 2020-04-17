@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Policy Spy is one of the [Configuration Manager tools](/sccm/core/support/tools). It's a tool for viewing and troubleshooting the policy system on Configuration Manager clients. Run **PolicySpy.exe** to open the user interface. For more information on command-line usage, see [Command-line syntax](#bkmk_policyspy-syntax).
+Policy Spy is one of the [Configuration Manager tools](tools.md). It's a tool for viewing and troubleshooting the policy system on Configuration Manager clients. Run **PolicySpy.exe** to open the user interface. For more information on command-line usage, see [Command-line syntax](#bkmk_policyspy-syntax).
 
 > [!Important]  
 > Run Policy Spy as an administrator. If you don't **Run as administrator**, you see the following error in Client Info:  

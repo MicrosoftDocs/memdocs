@@ -21,6 +21,6 @@ The security model for Configuration Manager has changed significantly from prev
 
 ## See also
 
-[Security and privacy for Configuration Manager](/sccm/core/plan-design/security/security-and-privacy)  
+[Security and privacy for Configuration Manager](../../../core/plan-design/security/security-and-privacy.md)  
 
-[Role-based administration overview](/sccm/develop/core/servers/configure/role-based-administration)
+[Role-based administration overview](../servers/configure/role-based-administration.md)

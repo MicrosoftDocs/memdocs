@@ -24,7 +24,7 @@ Configuration Manager provides a driver catalog that you can use to manage the W
 
 ## <a name="BKMK_DriverCategories"></a> Driver categories
 
-When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, set all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) step, specify a category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
+When you import device drivers, you can assign the device drivers to a category. Device driver categories help group similarly used device drivers together in the driver catalog. For example, set all network adapter device drivers to a specific category. Then, when you create a task sequence that includes the [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) step, specify a category of device drivers. Configuration Manager then scans the hardware and selects the applicable drivers from that category to stage on the system for Windows Setup to use.  
 
 
 
@@ -83,7 +83,7 @@ Distributes the driver package to distribution points, distribution point groups
 #### Manage Access Accounts
 Adds, modifies, or removes access accounts for the driver package.
 
-For more information about package access accounts, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).
+For more information about package access accounts, see [Accounts used in Configuration Manager](../../core/plan-design/hierarchy/accounts.md).
 
 #### Move
 Moves the driver package to another folder in the **Driver Packages** node.
@@ -99,7 +99,7 @@ Starting in version 1810, driver packages have metadata fields for **Manufacture
 
 In the **Driver Packages** node, these fields display in the list as the **Driver Manufacturer** and **Driver Model** columns. They can also be used as search criteria.
 
-Starting in version 1906, use these attributes to pre-cache content on a client. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+Starting in version 1906, use these attributes to pre-cache content on a client. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).<!--4224642-->  
 
 
 
@@ -166,7 +166,7 @@ After you import device drivers into the catalog, add them to driver packages or
         > [!IMPORTANT]  
         > If a device driver is causing a problem or you want to suspend the installation of a device driver, disable it during import. You can also disable drivers after you import them.  
 
-    - To assign the device drivers to an administrative category for filtering purposes, such as "Desktops" or "Notebooks", select **Categories**. Then choose an existing category, or create a new category. Use categories to control which device drivers are applied by the [Auto Apply Drivers](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers) task sequence step.  
+    - To assign the device drivers to an administrative category for filtering purposes, such as "Desktops" or "Notebooks", select **Categories**. Then choose an existing category, or create a new category. Use categories to control which device drivers are applied by the [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) task sequence step.  
 
 5. On the **Add Driver to Packages** page, choose whether to add the drivers to a package.  
 
@@ -281,15 +281,15 @@ Opens the **Properties** dialog box. Review and change the properties of the dri
 
 Use task sequences to automate how the OS is deployed. Each step in the task sequence can do a specific action, such as installing a driver. You can use the following two task sequence steps to install device drivers when you deploy an OS:  
 
-- [Auto Apply Drivers](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers): This step lets you automatically match and install device drivers as part of an operating system deployment. You can configure the task sequence step to install only the best matched driver for each detected hardware device. Alternatively, specify that the step installs all compatible drivers for each detected hardware device, and then let Windows Setup choose the best driver. You can also specify a driver category to limit the drivers that are available for this step.  
+- [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): This step lets you automatically match and install device drivers as part of an operating system deployment. You can configure the task sequence step to install only the best matched driver for each detected hardware device. Alternatively, specify that the step installs all compatible drivers for each detected hardware device, and then let Windows Setup choose the best driver. You can also specify a driver category to limit the drivers that are available for this step.  
 
-- [Apply Driver Package](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage): This step lets you make all device drivers in a specific driver package available for Windows Setup. In the specified driver packages, Windows Setup searches for the device drivers that are required. When you create stand-alone media, you must use this step to install device drivers.  
+- [Apply Driver Package](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage): This step lets you make all device drivers in a specific driver package available for Windows Setup. In the specified driver packages, Windows Setup searches for the device drivers that are required. When you create stand-alone media, you must use this step to install device drivers.  
 
-When you use these task sequence steps, you can also specify how the drivers are installed on the computer where you deploy the OS. For more information, see [Manage task sequences to automate tasks](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).  
+When you use these task sequence steps, you can also specify how the drivers are installed on the computer where you deploy the OS. For more information, see [Manage task sequences to automate tasks](../deploy-use/manage-task-sequences-to-automate-tasks.md).  
 
 
 
 ## <a name="BKMK_DriverReports"></a> Driver reports  
 
-You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).
+You can use several reports in the **Driver Management** reports category to determine general information about the device drivers in the driver catalog. For more information about reports, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).
 

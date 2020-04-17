@@ -184,5 +184,5 @@ public void CreateSUMUpdateList(WqlConnectionManager connection,
 
 ## See also
 
-[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+[About software update deployments](about-software-updates-deployments.md)
 [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md)

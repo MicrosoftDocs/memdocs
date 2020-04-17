@@ -107,13 +107,13 @@ With this release, issues with how the Configuration Manager console scales and 
 
 
 ## Peer Cache improvements
-Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](/sccm/core/plan-design/hierarchy/client-peer-cache) to authenticate download requests from peers.
+Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](../plan-design/hierarchy/client-peer-cache.md) to authenticate download requests from peers.
 
 
 ## Improvements for SQL Server Always On Availability Groups  
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
 
-- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
+- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
 
 - This release does not support failover to use the asynchronous commit replica as your site database.
   > [!CAUTION]  
@@ -122,10 +122,10 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 - You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an [availability group you use with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary replicas to availability groups.
+To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary replicas to availability groups.
 
 ### Use the asynchronous replica to recover your site
-Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](/sccm/core/servers/manage/recover-sites#use-a-site-database-that-has-been-manually-recovered).
+Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
 To stop the site, you can use the [hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
 
@@ -196,7 +196,7 @@ You can discover Azure AD users into your site to use in collections, and other 
 
 - You must have an Azure AD tenant.
 - Your devices must run Windows 10 and be Azure AD joined.  Clients can also be domain joined in addition to Azure AD joined).
-- In addition to the [existing prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
+- In addition to the [existing prerequisites](../plan-design/configs/site-and-site-system-prerequisites.md) for the management point site system role, you must additionally ensure that **ASP.NET 4.5** (and any other options that are automatically selected with this) are enabled on the computer that hosts this site system role.
 - To use Microsoft Intune to deploy the Configuration Manager client:
     - You must have a working Intune tenant (Configuration Manager and Intune do not need to be connected).
     - In Intune, you have created and deployed an app containing the Configuration Manager client. For details about how to do this, see How to install clients to Intune MDM-managed Windows devices.
@@ -240,7 +240,7 @@ At this point, you have connected your Configuration Manager site to Azure AD.
 ### Install the CM client from the Internet
 
 Before you start, ensure that the client installation source files are stored locally on the device to which you want to install the client.
-Then, use the instructions in [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) using the following installation command line (replace the values in the example with your own values):
+Then, use the instructions in [How to deploy clients to Windows computers](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) using the following installation command line (replace the values in the example with your own values):
 
 **ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
 
@@ -265,7 +265,7 @@ Prerequisites to configure a connection to OMS are unchanged from those [documen
 
 -   Providing Configuration Manager permission to OMS.
 
--   The OMS connector must be installed on the computer that hosts a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) that is in [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes).
+-   The OMS connector must be installed on the computer that hosts a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) that is in [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
 
 -   You must install a Microsoft Monitoring Agent for OMS installed on the service connection point along with the OMS connector. The Agent and the OMS connector must be configured to use the same **OMS Workspace**. To install the agent, see [Download and install the agent](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent) in the OMS documentation.
 -   After you install the connector and agent, you must configure OMS to use Configuration Manager data. To do so, in the OMS Portal you [Import Configuration Manager collections](/azure/log-analytics/log-analytics-sccm#import-collections).

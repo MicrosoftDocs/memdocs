@@ -146,7 +146,7 @@ The following sections provide more information for completing these steps.
 
 #### Create a custom SSL certificate
 
-You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012) but do the following things differently:
+You can create a custom SSL certificate for Cloud Proxy Service in the same way you would do it for a cloud-based distribution point. Follow the instructions for [Deploying the Service Certificate for Cloud-Based Distribution Points](../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012) but do the following things differently:
 
 * When setting up the new certificate template, give **Read** and **Enroll** permissions to the security group that you set up for Configuration Manager servers.
 
@@ -155,7 +155,7 @@ You can create a custom SSL certificate for Cloud Proxy Service in the same way 
 The easiest way to get export the root of the client certificates used on the network, is to open a client certificate on one of the domain-joined machines that has one and copy it.
 
 >[!NOTE]
->Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012).
+>Client certificates are required on any computer you want to manage with Cloud Proxy Service and on the site system server hosting the cloud proxy connector point. If you need to add a client certificate to any of these machines, see [Deploying the Client Certificate for Windows Computers](../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012).
 
 1. In the Run window, type **mmc** and press Return.
 2. On the File menu in the management console, click **Add/Remove Snap-in...**.

@@ -20,7 +20,7 @@ manager: dougeby
 
 Deploying Configuration Manager clients in your environment has the following external dependencies and dependencies within the product. Additionally, each client deployment method has its own dependencies that must be met for client installations to be successful.  
 
-For more information on the minimum hardware and OS requirements for the Configuration Manager client, see [Supported configurations](/sccm/core/plan-design/configs/supported-configurations).  
+For more information on the minimum hardware and OS requirements for the Configuration Manager client, see [Supported configurations](../../plan-design/configs/supported-configurations.md).  
 
 > [!NOTE]  
 > The software version numbers shown in this article only list the minimum version numbers required.  
@@ -46,10 +46,10 @@ Due to weaknesses in the SHA-1 algorithm and to align to industry standards, Mic
 
 If you don't update these OS versions, you can't install the Configuration Manager client version 1906. This behavior applies to either a new client install or updating it from a previous version.
 
-If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](/sccm/core/understand/interoperability-client).
+If you need to manage a client on a version of Windows that's not updated, or older than the versions listed above, use the Configuration Manager extended interoperability client (EIC) version 1902. For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
 
 > [!Tip]  
-> If you don't use [automatic client update](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
+> If you don't use [automatic client update](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate), and update clients with another mechanism, make sure to update the version of ccmsetup. An older version of ccmsetup may not properly validate the new SHA-2 code signing certificate on the version 1906 client binaries. For example, if you copy ccmsetup.exe to a file share, or use ccmsetup.msi with group policy.<!-- 4963362 -->
 >
 > The following client update mechanisms shouldn't be affected:
 >
@@ -80,8 +80,8 @@ If the client requires these dependencies to complete the installation, it autom
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 >
 > If you're still using the application catalog website user experience, the client requires Microsoft Silverlight 5.1.41212.0. The client doesn't automatically install Silverlight. The primary functionality of the application catalog is now included in Software Center.<!--1356195-->
 
@@ -102,14 +102,14 @@ After .NET Framework 4.5.2 is installed, it may require additional updates. Thes
 
 ### Configuration Manager dependencies  
 
-For more information, see [Determine the site system roles for clients](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients).  
+For more information, see [Determine the site system roles for clients](plan/determine-the-site-system-roles-for-clients.md).  
 
 |Component|Description|  
 |---|---|  
 |Management point|To deploy the Configuration Manager client, you don't require a management point. Clients require a management point to transfer information with the site. Without a management point, you can't manage client computers.|  
 |Distribution point|The distribution point is an optional, but recommended site system role for client deployment and management. All distribution points host the client source files. Clients find the nearest distribution point from which to download the source files during client deployment or update. If the site doesn't have a distribution point, computers download the client source files from their management point.|  
 |Fallback status point|The fallback status point is an optional, but recommended site system role for client deployment. The fallback status point tracks client deployment and enables computers in the Configuration Manager site to send state messages when they can't communicate with a management point.|  
-|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|  
+|Reporting services point|The reporting services point is an optional, but recommended site system role. It displays reports related to client deployment and management. For more information, see [Introduction to reporting](../../servers/manage/introduction-to-reporting.md).|  
 
 ### Installation method dependencies  
 
@@ -141,17 +141,17 @@ The **Infrastructure Administrator** default security role includes the required
 
 #### Software update point-based installation  
 
-- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](deploy-clients-to-windows-computers.md#BKMK_Provision).  
 
 - Publish the Configuration Manager client to the software update point.  
 
 - To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
-For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates](/sccm/sum/plan-design/prerequisites-for-software-updates).  
+For the security permissions required to manage Configuration Manager software updates, see [Prerequisites for software updates](../../../sum/plan-design/prerequisites-for-software-updates.md).  
 
 #### Group policy-based installation  
 
-- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).  
+- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](deploy-clients-to-windows-computers.md#BKMK_Provision).  
 
 - To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
@@ -179,15 +179,15 @@ To download the source files, the client computer needs to communicate with a di
 
 To access resources in the Configuration Manager site server's domain, configure a network access account for the site.  
 
-For more information about how to configure the network access account, see the [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).  
+For more information about how to configure the network access account, see the [Fundamental concepts for content management](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
 #### Software distribution-based installation (for upgrades only)  
 
-- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).
+- If you haven't extended the Active Directory schema, or you're installing clients from another forest, use group policy to provision installation parameters for CCMSetup.exe. For more information, see [How to provision client installation properties](deploy-clients-to-windows-computers.md#BKMK_Provision).
 
 - To download the source files, the client computer needs to communicate with a distribution point or a management point.  
 
-For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](/sccm/apps/plan-design/security-and-privacy-for-application-management).  
+For the security permissions required to upgrade the Configuration Manager client using application management, see [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md).  
 
 #### Automatic client upgrades  
 
@@ -195,7 +195,7 @@ You must be a member of the **Full Administrator** security role to configure au
 
 ### Firewall requirements  
 
-If there's a firewall between the site system servers and the computers onto which you want to install the Configuration Manager client, see [Windows Firewall and port settings for clients](/sccm/core/clients/deploy/windows-firewall-and-port-settings-for-clients).  
+If there's a firewall between the site system servers and the computers onto which you want to install the Configuration Manager client, see [Windows Firewall and port settings for clients](windows-firewall-and-port-settings-for-clients.md).  
 
 
 ## <a name="BKMK_prereqs_mobiledevices"></a> Prerequisites for mobile device clients  
@@ -208,7 +208,7 @@ When you install the Configuration Manager client on mobile devices and enroll t
 
     The issuing CA must automatically approve certificate requests from the mobile device users during the enrollment process.  
 
-    For more information about the certificate requirements, see [Security and privacy for certificate profiles](/sccm/protect/plan-design/security-and-privacy-for-certificate-profiles).  
+    For more information about the certificate requirements, see [Security and privacy for certificate profiles](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md).  
 
 - A security group that contains the users that can enroll their mobile devices.  
 
@@ -220,11 +220,11 @@ When you install the Configuration Manager client on mobile devices and enroll t
 
 - Site system role dependencies for the computers that run the enrollment point and the enrollment proxy point site system roles.  
 
-    For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  
+    For more information, see [Supported operating systems for site system servers](../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).  
 
 ### Configuration Manager dependencies
 
-For more information, see [Determine the site system roles for clients](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients).  
+For more information, see [Determine the site system roles for clients](plan/determine-the-site-system-roles-for-clients.md).  
 
 - Management point that's configured for HTTPS client connections and enabled for mobile devices  
 
@@ -242,7 +242,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 
     The reporting services point is an optional, but recommended site system role that can display reports related to mobile device enrollment and client management.  
 
-    For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+    For more information, see [Introduction to reporting](../../servers/manage/introduction-to-reporting.md).  
 
 - To configure enrollment for mobile devices, you must have the following security permissions:  
 
@@ -264,7 +264,7 @@ For more information, see [Determine the site system roles for clients](/sccm/co
 
     The **Operations Administrator** default security role includes the required permissions to manage mobile devices.  
 
-    For more information about how to configure security permissions, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration) and [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+    For more information about how to configure security permissions, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md).  
 
 ### Firewall requirements
 

@@ -62,5 +62,5 @@ End Sub
 ```  
 
 ## See Also  
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)\
+ [About errors](about-configuration-manager-errors.md)\
  [WMI SDK](/windows/win32/wmisdk/wmi-start-page)

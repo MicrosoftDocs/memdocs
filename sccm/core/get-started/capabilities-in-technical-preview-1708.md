@@ -27,7 +27,7 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 **Known Issues in this Technical Preview:**
-- **Update to preview version 1708 fails when you have a site server in passive mode**. When you run the preview version 1706 or 1707, and have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1708. You can reinstall the passive mode site server after your site runs version 1708.
+- **Update to preview version 1708 fails when you have a site server in passive mode**. When you run the preview version 1706 or 1707, and have a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), you must uninstall the passive mode site server before you can successfully update your preview site to version 1708. You can reinstall the passive mode site server after your site runs version 1708.
 
   To uninstall the passive mode site server:
   1. In the console go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -53,15 +53,15 @@ This article introduces the features that are available in the Technical Preview
 ## Improvements for specifying script parameters when you deploy PowerShell scripts from Configuration Manager
 <!-- 1236459 -->
 
-From Configuration Manager 1706 onwards, you can [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+From Configuration Manager 1706 onwards, you can [Create and run PowerShell scripts from the Configuration Manager console](../../apps/deploy-use/create-deploy-scripts.md).
 
-In [Technical Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager), we expanded on this capability to let Configuration Manager read parameters from the script.
+In [Technical Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager), we expanded on this capability to let Configuration Manager read parameters from the script.
 
 In this Technical Preview, we've expanded the script parameters capability to detect which parameters are mandatory, and which are optional, and prompt you to enter these.
 
 ### Try it out!
 
-1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+1. Follow the instructions to [Create and run PowerShell scripts from the Configuration Manager console](../../apps/deploy-use/create-deploy-scripts.md).
 2. On the new **Script Parameters** page of the **Create Script Wizard**, choose a parameter, and then edit its values.
 The wizard displays which parameters are mandatory, and which are optional.
 4. When you have finished editing parameters, complete the wizard.
@@ -86,7 +86,7 @@ To create the client notification to restart a device:
 1. Locate the device you want to restart in the Devices node of the console.
 2. Right-click on the device, select **Client Notification**, and then select **Reboot**. This opens an information window about the restart. Click **OK** to confirm the restart request.
 
-When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring  [client settings](/sccm/core/clients/deploy/configure-client-settings). Settings for the restart behavior are found on the [Computer restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) tab of the default settings.
+When the notification is received by a client, a **Software Center** notification window opens to inform the user about the restart. By default, the restart occurs after 90 minutes. You can modify the restart time by configuring  [client settings](../clients/deploy/configure-client-settings.md). Settings for the restart behavior are found on the [Computer restart](../clients/deploy/about-client-settings.md#computer-restart) tab of the default settings.
 
 
 ### Try it out!
@@ -122,4 +122,4 @@ To modify Software Center:
 
 ### Next steps
 
-To learn more about application management in Configuration Manager, see [Introduction to application management](/sccm/apps/understand/introduction-to-application-management).
+To learn more about application management in Configuration Manager, see [Introduction to application management](../../apps/understand/introduction-to-application-management.md).

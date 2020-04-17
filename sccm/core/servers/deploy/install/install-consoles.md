@@ -137,6 +137,6 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 ## See also
 
-An administrator sees objects in the console based on the permissions assigned to their user account. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+An administrator sees objects in the console based on the permissions assigned to their user account. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
-For more information on the fundamentals of navigating the Configuration Manager console, see [Using the console](/sccm/core/servers/manage/admin-console).
+For more information on the fundamentals of navigating the Configuration Manager console, see [Using the console](../../manage/admin-console.md).

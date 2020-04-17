@@ -198,5 +198,5 @@ Package definition files are predefined scripts that you can use to help automat
  Specifies whether this program can be advertised to clients. Available values are `True` or `False`. The default value is `False`.  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Software distribution overview](software-distribution-overview.md)
+ [About deployments](about-software-distribution-deployments.md)

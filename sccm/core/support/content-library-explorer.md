@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Content Library Explorer is one of the [Configuration Manager tools](/sccm/core/support/tools). Use the tool for the following activities:  
+Content Library Explorer is one of the [Configuration Manager tools](tools.md). Use the tool for the following activities:  
 
 - Explore the content library on a specific distribution point  
 
@@ -121,5 +121,5 @@ Search for packages using **Edit** > **Find Package**. This action searches for 
 
 ## See also
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)
-- [The content library](/sccm/core/plan-design/hierarchy/the-content-library)
+- [Fundamental concepts for content management](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)
+- [The content library](../plan-design/hierarchy/the-content-library.md)

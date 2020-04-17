@@ -39,7 +39,7 @@ Asset intelligence catalog updates that include newly released software are avai
 
 Asset intelligence software categories are used to widely categorize inventoried software titles and as high-level groupings of more specific software families. For example, a software category could be energy companies, and a software family within that software category could be oil and gas or hydroelectric. Many software categories are predefined in the asset intelligence catalog. You can create user-defined categories to additionally define inventoried software. The validation state for all predefined software categories is always **Validated**. Custom software category information added to the asset intelligence catalog is **User Defined**. 
 
-For more information about how to manage software categories, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+For more information about how to manage software categories, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 > [!NOTE]  
 > Predefined software category information stored in the asset intelligence catalog is read-only. You can't change or delete it. Administrative users can add, modify, or delete user-defined software categories.  
@@ -49,7 +49,7 @@ For more information about how to manage software categories, see [Configuring a
 
 Asset intelligence software families are used to define inventoried software titles within software categories. Many software families are predefined in the asset intelligence catalog. You can create user-defined categories to additionally define inventoried software. The validation state for all predefined software families is always **Validated**. Custom software family information added to the asset intelligence catalog is **User-Defined**. 
 
-For more information about how to manage software families, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+For more information about how to manage software families, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 > [!NOTE]  
 > Predefined software family information is read-only and can't be changed. Administrative users can add, modify, or delete user-defined software families.  
@@ -59,7 +59,7 @@ For more information about how to manage software families, see [Configuring ass
 
 Asset intelligence custom software labels let you create filters to group software titles and to view them in asset intelligence reports. Use software labels to create user-defined groups of software titles that share a common attribute. For example, you could create a software label called Shareware, associate it with inventoried shareware titles, and run a report to display all software titles with that label. There are no predefined labels. The validation state for software labels is always **User Defined**. 
 
-For more information about how to manage software labels, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+For more information about how to manage software labels, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 
 ### <a name="BKMK_HardwareRequirements"></a> Hardware requirements  
@@ -68,7 +68,7 @@ Use the hardware requirements information to verify that computers meet the hard
 
 Many hardware requirements are predefined in the asset intelligence catalog. Create new user-defined hardware requirement information to meet custom requirements. The validation state for all predefined hardware requirements is always **Validated**. User-defined hardware requirements information added to the asset intelligence catalog is **User Defined**. 
 
-For more information about how to manage hardware requirements, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+For more information about how to manage hardware requirements, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 > [!NOTE]  
 > The hardware requirements displayed in the Configuration Manager console are retrieved from the asset intelligence catalog. They aren't based on inventoried software title information from clients. 
@@ -100,7 +100,7 @@ Predefined hardware requirements stored in the asset intelligence catalog are re
 To view inventoried software title information in the Configuration Manager console, go to the **Assets and Compliance** workspace, expand the **Asset Intelligence** node, and select the **Inventoried Software** node. The hardware inventory agent collects the inventoried software information from Configuration Manager clients based on the software titles stored in the asset intelligence catalog.  
 
 > [!Note]  
-> The hardware inventory agent collects inventory based on the asset intelligence hardware inventory reporting classes that you enable. For more information about how to enable the reporting classes, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+> The hardware inventory agent collects inventory based on the asset intelligence hardware inventory reporting classes that you enable. For more information about how to enable the reporting classes, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 By default, the following information is displayed for each inventoried software title:  
 
@@ -133,7 +133,7 @@ While you configure all updates at the top-level site, catalog information is re
 
 After you submit an uncategorized software title, Microsoft doesn't review it until there are at least four categorization requests from customers for the same software title. Then Microsoft researchers identify, categorize, and make the software title categorization information available to all customers who are using the online service. Software titles that represent the most requests for categorization receive the highest priority to categorize. Custom software and line-of-business applications are unlikely to receive a category. Don't send these software titles to Microsoft for categorization.  
 
-An asset intelligence synchronization point is required to connect to the Microsoft cloud. For information about how to install the role, see [Configuring asset intelligence](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
+An asset intelligence synchronization point is required to connect to the Microsoft cloud. For information about how to install the role, see [Configuring asset intelligence](configuring-asset-intelligence.md).  
 
 
 
@@ -169,7 +169,7 @@ The **Asset Intelligence** home page includes the following sections:
 
 ## <a name="BKMK_AssetIntelligenceReports"></a> Asset intelligence reports  
 
-The asset intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, in the **Asset intelligence** folder under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+The asset intelligence reports are located in the Configuration Manager console, in the **Monitoring** workspace, in the **Asset intelligence** folder under the **Reporting** node. The reports provide information about hardware, license management, and software. For more information about reports in Configuration Manager, see [Introduction to reporting](../../../servers/manage/introduction-to-reporting.md).  
 
 > [!NOTE]  
 > The accuracy of the quantity of installed software titles and license information displayed in asset intelligence reports might vary from the actual number of software titles installed or licenses that are used in the environment. This variation is because of the complex dependencies and limitations involved in inventorying software license information for software titles that are installed in enterprise environments. Don't use asset intelligence reports as the sole source for determining purchased software license compliance.  
@@ -258,10 +258,10 @@ Asset intelligence validation states represent the source and current validation
 |**Validated**|Microsoft researchers defined the catalog item|None|Best state|  
 |**User Defined**|Microsoft researchers haven't defined the catalog item|Customize the local catalog information|This state is displayed in asset intelligence reports|  
 |**Pending**|Microsoft researchers haven't defined the catalog item, but you submitted the item to Microsoft for categorization|No further action after requesting categorization|Catalog item remains in this state until Microsoft researchers categorize the item, and you synchronize your asset intelligence catalog|  
-|**Updateable**|A user-defined catalog item has been categorized differently by Microsoft during catalog synchronization.|Use the **Resolve Conflict** action to decide whether to use the new categorization information or the previous user-defined value. For more information about how to resolve conflicts, see [Operations for asset intelligence](/sccm/core/clients/manage/asset-intelligence/operations-for-asset-intelligence).|After you resolve a categorization conflict, the item isn't validated as conflicting again unless later categorization updates introduce new information about the item.|  
-|**Uncategorized**|Catalog item hasn't been defined by Microsoft researchers, the item hasn't been submitted to Microsoft for categorization, and the administrator hasn't assigned a user-defined categorization value.|Request categorization or customize your local catalog information. For more information, see [Operations for asset intelligence](/sccm/core/clients/manage/asset-intelligence/operations-for-asset-intelligence).|None|  
+|**Updateable**|A user-defined catalog item has been categorized differently by Microsoft during catalog synchronization.|Use the **Resolve Conflict** action to decide whether to use the new categorization information or the previous user-defined value. For more information about how to resolve conflicts, see [Operations for asset intelligence](operations-for-asset-intelligence.md).|After you resolve a categorization conflict, the item isn't validated as conflicting again unless later categorization updates introduce new information about the item.|  
+|**Uncategorized**|Catalog item hasn't been defined by Microsoft researchers, the item hasn't been submitted to Microsoft for categorization, and the administrator hasn't assigned a user-defined categorization value.|Request categorization or customize your local catalog information. For more information, see [Operations for asset intelligence](operations-for-asset-intelligence.md).|None|  
 
 > [!NOTE]  
 > Catalog items that you submit to Microsoft for categorization have a validation state of **Pending** on a central administration site, but continue to be displayed with a validation state of **Uncategorized** on child primary sites.  
 
-For examples of when a validation state might transition from one state to another, see [Example validation state transitions for asset intelligence](/sccm/core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence).  
+For examples of when a validation state might transition from one state to another, see [Example validation state transitions for asset intelligence](example-validation-state-transitions-for-asset-intelligence.md).  

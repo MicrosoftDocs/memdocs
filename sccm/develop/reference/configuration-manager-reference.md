@@ -22,4 +22,4 @@ This reference contains detailed information about the following APIs:
 - The Configuration Manager console libraries
 - The managed SMS Provider library
 
-For more information about how to use the SDK, see [Configuration Manager SDK](/sccm/develop/core/misc/system-center-configuration-manager-sdk).
+For more information about how to use the SDK, see [Configuration Manager SDK](../core/misc/system-center-configuration-manager-sdk.md).

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Asset intelligence views
 titleSuffix: Configuration Manager
 description: Information about software applications that are in use throughout the Configuration Manager hierarchy.
@@ -18,9 +18,9 @@ manager: dougeby
 
 The Asset Intelligence views in Configuration Manager contain information about software applications that are in use throughout the Configuration Manager hierarchy, software license management in the enterprise, Asset Intelligence configuration settings, and so on. The Asset Intelligence information is retrieved from clients only after the specific reporting classes have been enabled. By default, the Asset Intelligence reporting classes are disabled, and until the classes are enabled and Configuration Manager clients collect hardware inventory, these views will not contain any information. Other Asset Intelligence views contain information from the Asset Intelligence catalog, summary information, and product licensing information. There are external dependencies and dependencies within the product that should be considered before implementing Asset Intelligence or using the SQL views.
 
-For information about the Asset Intelligence prerequisites, see [Prerequisites for asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/prerequisites-for-asset-intelligence) in the Configuration Manager Documentation Library.
+For information about the Asset Intelligence prerequisites, see [Prerequisites for asset intelligence in Configuration Manager](../../../../core/clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md) in the Configuration Manager Documentation Library.
 
-For the step-by-step procedure for enabling Asset Intelligence, see [Configuring asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence) in the Configuration Manager Documentation Library.
+For the step-by-step procedure for enabling Asset Intelligence, see [Configuring asset intelligence in Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md) in the Configuration Manager Documentation Library.
 
 The following sections provide detailed information about Asset Intelligence views, Asset Intelligence hardware inventory views, and Asset Intelligence status views.
 

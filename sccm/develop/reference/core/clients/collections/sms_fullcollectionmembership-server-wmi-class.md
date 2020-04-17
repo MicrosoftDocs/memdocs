@@ -309,4 +309,4 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
 ## See Also
 
-[Enumerate the members of a collection](/sccm/develop/core/clients/collections/how-to-enumerate-the-members-of-a-collection)
+[Enumerate the members of a collection](../../../../core/clients/collections/how-to-enumerate-the-members-of-a-collection.md)

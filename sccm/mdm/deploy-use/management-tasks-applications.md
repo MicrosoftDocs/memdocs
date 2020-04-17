@@ -23,13 +23,13 @@ When you manage devices with Configuration Manager on-premises mobile device man
 - Windows Installer through MDM
 - Web Application
 
-For more general information about managing Configuration Manager applications and deployment types, see [Management tasks for Configuration Manager applications](/configmgr/apps/deploy-use/management-tasks-applications).
+For more general information about managing Configuration Manager applications and deployment types, see [Management tasks for Configuration Manager applications](../../apps/deploy-use/management-tasks-applications.md).
 
 ## <a name="bkmk_winphone"></a> Create Windows Phone application
 
 A Configuration Manager application has one or more deployment types. The deployment type includes the installation files and information that's required to deploy software to a device. A deployment type also has rules that specify when and how the software is deployed.
 
-For the general steps to create an app and deployment types, see [create an application](/configmgr/apps/deploy-use/create-applications#bkmk_create).
+For the general steps to create an app and deployment types, see [create an application](../../apps/deploy-use/create-applications.md#bkmk_create).
 
 Configuration Manager supports the following app file types For Windows mobile devices:
 
@@ -45,8 +45,8 @@ Deploy Windows Phone apps as **Available** or **Required**. Also use deployments
 
 Deploy and monitor applications for mobile devices in Configuration Manager the same as you do for other devices, such as desktops and servers. For more information, see the following articles:
 
-- [Deploy applications](/configmgr/apps/deploy-use/deploy-applications)
-- [Monitor applications](/configmgr/apps/deploy-use/monitor-applications-from-the-console)
+- [Deploy applications](../../apps/deploy-use/deploy-applications.md)
+- [Monitor applications](../../apps/deploy-use/monitor-applications-from-the-console.md)
 
 Review the following limitations specific to mobile devices:
 
@@ -56,4 +56,4 @@ Review the following limitations specific to mobile devices:
 
 ## Next step
 
-To make changes, uninstall, or replace a deployed application with a new application, manage it the same as any app in Configuration Manager. For more information, see [Update and retire applications](/configmgr/apps/deploy-use/update-and-retire-applications).
+To make changes, uninstall, or replace a deployed application with a new application, manage it the same as any app in Configuration Manager. For more information, see [Update and retire applications](../../apps/deploy-use/update-and-retire-applications.md).

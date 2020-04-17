@@ -47,4 +47,4 @@ Boolean IsOfficeContent (
 
 ## See also
 
-[SMS_Content server WMI class](/sccm/develop/reference/core/servers/configure/sms_content-server-wmi-class)
+[SMS_Content server WMI class](sms_content-server-wmi-class.md)

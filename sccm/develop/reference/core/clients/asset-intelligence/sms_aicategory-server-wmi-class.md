@@ -136,4 +136,4 @@ Class SMS_AICategory : SMS_BaseClass
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
 
 ## See Also  
-[Initiate Asset Intelligence synchronization](/sccm/develop/core/clients/asset-intelligence/how-to-initiate-a-synchronization)
+[Initiate Asset Intelligence synchronization](../../../../core/clients/asset-intelligence/how-to-initiate-a-synchronization.md)

@@ -30,12 +30,12 @@ Starting in version 1906, updated clients automatically use the management point
 
 To deliver a consistent and secure application experience for internet-based clients, use Azure Active Directory and the cloud management gateway.
 
-For more information, see [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex).
+For more information, see [Configure Software Center](plan-for-software-center.md#bkmk_userex).
 
 ### Use HTTPS with the application catalog
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 Configure the application catalog website point and the application catalog web service point to accept HTTPS connections. With this configuration, the server is authenticated to users. The transmitted data is protected from tampering and viewing.
 
@@ -47,14 +47,14 @@ When you don't use HTTPS, don't use the branding configuration options. These se
 ### Use role separation
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 Install the application catalog website point and the application catalog web service point on separate servers. If the website point is compromised, it's separate from the web service point. This design helps to protect the Configuration Manager clients and infrastructure. This configuration is especially important if the website point accepts client connections from the internet. It makes the server more vulnerable to attack.  
 
 ### Close browser windows
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 Educate users to close the browser window when they finish using the application catalog. If users browse to an external website in the same browser window that they used for the application catalog, the browser continues to use the security settings that are suitable for trusted sites in the intranet.  
 
@@ -126,7 +126,7 @@ Even when you configure role-based administration, administrative users who crea
 
 When you configure Microsoft Application Virtualization (App-V) virtual environments, select applications that have the same trust level in the virtual environment. Because applications in an App-V virtual environment can share resources, like the clipboard, configure the virtual environment so that the selected applications have the same trust level.
 
-For more information, see [Create App-V virtual environments](/sccm/apps/deploy-use/create-app-v-virtual-environments).
+For more information, see [Create App-V virtual environments](../deploy-use/create-app-v-virtual-environments.md).
 
 ### Make sure macOS apps are from a trustworthy source
 
@@ -168,7 +168,7 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 ## <a name="BKMK_CertificatesSilverlight5"></a> Certificates for Microsoft Silverlight 5 and elevated trust mode required for the application catalog  
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 Configuration Manager clients version 1710 and earlier require Microsoft Silverlight 5, which must run in elevated trust mode for users to install software from the application catalog. By default, Silverlight applications run in partial trust mode to prevent applications from accessing user data. If it isn't already installed, Configuration Manager automatically installs Microsoft Silverlight 5 on clients. By default, Configuration Manager sets the Computer Agent **Allow Silverlight applications to run in elevated trust mode** client setting to **Yes**. This setting lets signed and trusted Silverlight applications request elevated trust mode.  
 
@@ -190,7 +190,7 @@ Configuration Manager maintains status information about the software deployment
 
 The use of Configuration Manager application installation to remotely, interactively, or silently install software on clients might be subject to software license terms for that software. This use is separate from the Software License Terms for Configuration Manager. Always review and agree to the Software Licensing Terms before you deploy software by using Configuration Manager.  
 
-Configuration Manager collects diagnostics and usage data about applications, which is used by Microsoft to improve future releases. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).
+Configuration Manager collects diagnostics and usage data about applications, which is used by Microsoft to improve future releases. For more information, see [Diagnostics and usage data](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).
 
 Application deployment doesn't happen by default and requires several configuration steps.  
 
@@ -203,7 +203,7 @@ The following features help efficient software deployment:
 - The **application catalog** is a website that lets users request software to install.  
 
     > [!Important]  
-    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 ### <a name="bkmk_privacy-uda"></a> User device affinity privacy information
 
@@ -230,7 +230,7 @@ The following features help efficient software deployment:
 ### Application catalog privacy information
 
 > [!Important]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 - The application catalog isn't installed by default. This installation requires several configuration steps.  
 

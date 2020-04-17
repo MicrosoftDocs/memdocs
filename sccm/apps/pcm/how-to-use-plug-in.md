@@ -26,7 +26,7 @@ The Package Conversion Manager plug-in helps you customize the analysis and conv
 The Package Conversion Manager plug-in runs once for each package. If you analyze or convert multiple packages at one time, the Package Conversion Manager plug-in runs each time.
 
 > [!NOTE]  
-> For more information on the Package Conversion Manager elements in the Configuration Manager configuration file, see [Technical reference for the Package Conversion Manager plug-in configuration XML](/sccm/apps/pcm/plugin-config-xml).
+> For more information on the Package Conversion Manager elements in the Configuration Manager configuration file, see [Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md).
 
 
 
@@ -57,7 +57,7 @@ When you use the plug-in, Package Conversion Manager does the following actions:
 
 3.  Convert the application to XML. Then save the file to disk.  
 
-4.  Run the plug-in script to modify the application XML. For more information, see [Technical reference for the Package Conversion Manager plug-in configuration XML](/sccm/apps/pcm/plugin-config-xml).  
+4.  Run the plug-in script to modify the application XML. For more information, see [Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md).  
 
 5.  Convert the application XML into a Configuration Manager application.  
 
@@ -73,4 +73,4 @@ When you use the plug-in, Package Conversion Manager does the following actions:
 
 ## See also
 
-[Technical reference for the Package Conversion Manager plug-in configuration XML](/sccm/apps/pcm/plugin-config-xml)
+[Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md)

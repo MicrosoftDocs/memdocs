@@ -22,7 +22,7 @@ Use this tutorial when:
 
 - You have an on-premises Active Directory that you can connect to Azure Active Directory (Azure AD) in a hybrid Azure AD configuration.
 
-  If you can't deploy a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for new internet-based Windows 10 devices](/sccm/comanage/tutorial-co-manage-new-devices).
+  If you can't deploy a hybrid Azure Active Directory (AD) that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for new internet-based Windows 10 devices](tutorial-co-manage-new-devices.md).
 - You have existing Configuration Manager clients that you want to cloud-attach.
 
 **In this tutorial you will:**  
@@ -48,7 +48,7 @@ If not already present in your environment, during this tutorial you'll:
 - Configure [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
 
 > [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### On-premises infrastructure
 
@@ -175,6 +175,6 @@ To enable co-management for Configuration Manager version 1902 and earlier, foll
 
 ## Next steps
 
-- Review the status of co-managed devices with the [Co-management dashboard](/sccm/comanage/how-to-monitor)
+- Review the status of co-managed devices with the [Co-management dashboard](how-to-monitor.md)
 - Start getting [immediate value](quickstarts.md#immediate-value) from co-management
 - Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources

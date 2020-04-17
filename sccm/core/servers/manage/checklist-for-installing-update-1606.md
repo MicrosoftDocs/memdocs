@@ -28,7 +28,7 @@ For information about baseline versions, see [Baseline and update versions](../.
 
 As an *update*, 1606 can only be installed at the top-level site of your hierarchy. This means you initiate the installation from your central administration site if you have one, or from your stand-alone primary site.  
 
-- Child primary sites install the update automatically after the central administration site finishes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
+- Child primary sites install the update automatically after the central administration site finishes installing the update. You can use service windows to control when a site installs updates. Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](service-windows.md).  
 
 - You must manually update secondary sites from within the Configuration Manager console after the primary parent site finishes installing the update. Automatic update of secondary site servers is not supported.  
 
@@ -66,7 +66,7 @@ For more information, see [Use alerts and the status system for Configuration Ma
 
 **Review file and data replication between sites:**  Ensure that file and database replication between sites is operational and current. Delays or backlogs in either can prevent a smooth, successful update.    
 
-For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update. For more information, see [About the Replication Link Analyzer](/sccm/core/servers/manage/monitor-replication#BKMK_RLA).  
+For database replication, you can use the Replication Link Analyzer to help resolve issues prior to starting the update. For more information, see [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA).  
 
 
 **Install all applicable critical updates  for operating systems on computers that host the site, the site database server, and remote site system roles:** Before you install an update for Configuration Manager, install any critical updates for each applicable site system. If an update that you install requires a restart, restart the applicable computers before you start the upgrade.  
@@ -101,7 +101,7 @@ Before you update a site, ensure that you have stopped antivirus software on the
 
 **Create a backup of the site database at the central administration site and primary sites:** Before you update a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.   
 
-For more information, see [Backup and recovery for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).  
+For more information, see [Backup and recovery for Configuration Manager](backup-and-recovery.md).  
 
 <!-- Removed from update guidance 6/6/2017
 **Test the database upgrade on a copy of the most recent site database backup:** Before you update a Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
@@ -118,7 +118,7 @@ For more information, see [Backup and recovery for Configuration Manager](/sccm/
 
 Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
 
-Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](install-in-console-updates.md#bkmk_step2) from **Before you install an in-console update**.
 -->
 
 **Plan for client piloting:** When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.   
@@ -129,7 +129,7 @@ To take advantage of this option, before starting the installation of the update
 **Plan to use service windows to control when site servers install updates:** You can use service windows to define a period during which updates to a site server can be installed.
 
 This can help you control when sites in your hierarchy install the update.
-Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](/sccm/core/servers/manage/service-windows).  
+Prior to version 1606, service windows were called maintenance windows. For more information, see [Service windows for site servers](service-windows.md).  
 
 **Run setup prerequisite checker:**  Before you install update 1606, you can run the prerequisite checker independently from the update installation. When you install the update on the site, prerequisite checker runs again.  
 

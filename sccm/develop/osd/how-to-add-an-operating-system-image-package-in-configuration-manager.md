@@ -17,7 +17,7 @@ In Configuration Manager, you add an operating system image package by creating 
 
 ### To create an operating system image package  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Create an instance of SMS_ImagePackage.  
 
@@ -115,4 +115,4 @@ public void AddOSImagePackage(
 
 ## See Also  
  [How to Assign a Package to a Distribution Point](../../develop/core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md)   
- [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)
+ [About image management](about-operating-system-deployment-image-management.md)

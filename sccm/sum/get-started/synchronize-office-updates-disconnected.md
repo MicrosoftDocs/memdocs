@@ -45,7 +45,7 @@ Starting in Configuration Manager version 2002, you can use a tool to import Off
    - Declining unwanted Office 365 updates in WSUS doesn't stop them from being exported during a WsusUtil.exe export, but it does stop the OfflineUpdateExporter tool from downloading the content for them.
    - The OfflineUpdateExporter tool does the download of Office 365 updates for you. Other products will still need to be approved for download if you're exporting updates for them.
     - Create a [new update view in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) to easily see and decline unneeded Office 365 updates in WSUS.
-1. If you're approving other product updates for download and export, wait for the content download to complete before running WsusUtil.exe export and copying the contents of the WSUSContent folder. For more information, see [Synchronize software updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-software-updates-disconnected)
+1. If you're approving other product updates for download and export, wait for the content download to complete before running WsusUtil.exe export and copying the contents of the WSUSContent folder. For more information, see [Synchronize software updates from a disconnected software update point](synchronize-software-updates-disconnected.md)
 
 ## Exporting the Office 365 updates
 
@@ -100,7 +100,7 @@ Starting in Configuration Manager version 2002, you can use a tool to import Off
 1. In the **Configuration Manager** console, navigate to **Administration** > **Site Configuration** > **Sites**.
 1. Right-click on your top-level site, then select **Configure Site Components** > **Software Update Point**.
 1. In the **Classifications** tab, select *Updates*. In the **Products** tab, select *Office 365 Client*.
-1. [Synchronize software updates](/configmgr/sum/get-started/synchronize-software-updates#manually-start-software-updates-synchronization) for Configuration Manager
+1. [Synchronize software updates](synchronize-software-updates.md#manually-start-software-updates-synchronization) for Configuration Manager
 1. When the synchronization completes, use your normal process to deploy Office 365 updates.
 
 ## <a name="bkmk_O365_ki"></a> Proxy configuration
@@ -158,4 +158,4 @@ $component.put()
 
 ## Next steps
 
-[Add software updates to an update group](/configmgr/sum/deploy-use/add-software-updates-to-an-update-group)
+[Add software updates to an update group](../deploy-use/add-software-updates-to-an-update-group.md)

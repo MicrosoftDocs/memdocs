@@ -82,8 +82,8 @@ To access a workspace, use the following keyboard shortcuts:
 ## See also
 
 For more information on the fundamentals of navigating Configuration Manager user interfaces, see the following articles:
-- [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console)  
-- [Software Center user guide](/sccm/core/understand/software-center)
+- [Using the Configuration Manager console](../servers/manage/admin-console.md)  
+- [Software Center user guide](software-center.md)
 
 > [!NOTE]  
 > The information in this article might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](https://go.microsoft.com/fwlink/?LinkId=8431) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
