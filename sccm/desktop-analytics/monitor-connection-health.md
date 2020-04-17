@@ -219,7 +219,7 @@ For more information, review M365AHandler.log on the client.
 <!--18,19,32-->
 The compatibility update (appraiser.dll) isn't installed or out of date on the device. It's older than the minimum requirement for Desktop Analytics, 10.0.17763.
 
-Install the latest compatibility update. For more information, see [Compatibility updates](enroll-devices.md#bkmk_appraiser).
+Install the latest compatibility update. For more information, see [Compatibility updates](enroll-devices.md#update-devices).
 
 ### Appraiser version
 
@@ -243,7 +243,7 @@ If not successful, it might show one of the following errors:
 
 For more information, review M365AHandler.log on the client.
 
-Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](enroll-devices.md#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service.
+Check for the following file: `%windir%\System32\CompatTelRunner.exe`. If it doesn't exist, reinstall the required [compatibility updates](enroll-devices.md#update-devices). Make sure no other system component is removing this file, such as group policy or an antimalware service.
 
 If the M365AHandler.log file on the client includes one of the following errors:
 
@@ -294,7 +294,7 @@ If not successful, it might show one of the following errors:
 
 For more information, review M365AHandler.log on the client.
 
-Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn't exist, reinstall the required [compatibility updates](enroll-devices.md#bkmk_appraiser). Make sure no other system component is removing this file, such as group policy or an antimalware service.
+Check for the following file: `%windir%\System32\DeviceCensus.exe`. If it doesn't exist, reinstall the required [compatibility updates](enroll-devices.md#update-devices). Make sure no other system component is removing this file, such as group policy or an antimalware service.
 
 ### Windows diagnostic endpoint connectivity
 
