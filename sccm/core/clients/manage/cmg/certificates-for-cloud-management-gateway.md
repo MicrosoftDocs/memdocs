@@ -5,7 +5,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -190,6 +190,10 @@ When using the site option to **Use Configuration Manager-generated certificates
 
 > [!Tip]  
 > If you aren't using Enhanced HTTP, and your environment has multiple management points, you don't have to HTTPS-enable them all for CMG. Configure the CMG-enabled management points as **Internet only**. Then your on-premises clients don't try to use them.<!-- SCCMDocs#1676 -->
+
+### Enhanced HTTP certificate for management points
+
+When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**, issued by the root SMS Issuing certificate. The management point adds this certificate to the IIS Default Web site bound to port 443.
 
 ### Management point client connection mode summary
 
