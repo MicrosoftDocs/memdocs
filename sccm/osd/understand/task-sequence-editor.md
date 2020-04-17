@@ -38,7 +38,7 @@ Edit task sequences in the Configuration Manager console by using the **Task Seq
 
 - Search the task sequence to quickly locate steps
 
-Before you can edit a task sequence, you need to create it. For more information, see [Manage and create task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks).
+Before you can edit a task sequence, you need to create it. For more information, see [Manage and create task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md).
 
 ## About the task sequence editor
 
@@ -52,11 +52,11 @@ The task sequence editor includes the following components:
 2. Search. For more information, see [Search](#bkmk_search).
 3. **Properties** for the selected group or step in the sequence
 
-    For more information about the properties and options of a specific step, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps).
+    For more information about the properties and options of a specific step, see [About task sequence steps](task-sequence-steps.md).
 
 4. **Options** for the selected group or step in the sequence
 
-    For more information on general options on all steps, or options of a specific step, see [About task sequence steps](/sccm/osd/understand/task-sequence-steps).
+    For more information on general options on all steps, or options of a specific step, see [About task sequence steps](task-sequence-steps.md).
 
     For more information on how to configure conditions, see [Conditions](#bkmk_conditions).
 
@@ -98,7 +98,7 @@ In this read-only mode, you can't make any changes, including copying a step or 
 To make changes to a task sequence, close the task sequence editor that you have open in read-only mode. Then [Edit](#bkmk_edit) the task sequence.
 
 > [!NOTE]  
-> When you view or edit a task sequence that was created by the Create Task Sequence Wizard, the name of the step can be the action or type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](/sccm/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their *type*, not necessarily by the name of the step that the editor displays.  
+> When you view or edit a task sequence that was created by the Create Task Sequence Wizard, the name of the step can be the action or type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their *type*, not necessarily by the name of the step that the editor displays.  
 
 ## <a name="bkmk_edit"></a> Edit a task sequence
 
@@ -110,7 +110,7 @@ Use the following procedure to modify an existing task sequence:
 
 3. On the **Home** tab of the ribbon, in the **Task Sequence** group, select **Edit**. Then do any of the following actions:  
 
-    - **Add a step**: Select **Add**, select a category, and then select the step to add. For example, to add the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step: select **Add**, choose the **General** category, and then select **Run Command Line**. This action adds the step after the currently selected step.
+    - **Add a step**: Select **Add**, select a category, and then select the step to add. For example, to add the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step: select **Add**, choose the **General** category, and then select **Run Command Line**. This action adds the step after the currently selected step.
 
     - **Add a group**: Select **Add**, and then choose **New Group**. After you add a group, then add steps to it.  
 
@@ -126,7 +126,7 @@ Use the following procedure to modify an existing task sequence:
 
 4. Select **OK** to save your changes and close the window. Select **Cancel** to discard your changes and close the window. Select **Apply** to save your changes and keep the task sequence editor open.  
 
-For a list of the available task sequence steps, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps).  
+For a list of the available task sequence steps, see [Task sequence steps](task-sequence-steps.md).  
 
 > [!IMPORTANT]  
 > If the task sequence has any unassociated references to an object as a result of the edit, the editor requires you fix the reference before it can close. Possible actions include:  
@@ -149,10 +149,10 @@ The following types of conditions are available:
 
 - **If statement**: Use an *if* statement to group conditions. You can evaluate **All conditions**, **Any condition**, or **None**.
 
-- **Task sequence variable**. Evaluate the current value of any built-in, action, custom, or read-only [task sequence variable](/sccm/osd/understand/task-sequence-variables) in the task sequence environment. For more information, see [Step conditions](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition).
+- **Task sequence variable**. Evaluate the current value of any built-in, action, custom, or read-only [task sequence variable](task-sequence-variables.md) in the task sequence environment. For more information, see [Step conditions](using-task-sequence-variables.md#bkmk_access-condition).
 
     > [!NOTE]
-    > You can use an array variable in this condition, but you have to specify the specific array member. For example, `OSDAdapter0EnableDHCP` specifies whether the *first* network adapter enables DHCP. For more information, see [Array variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_array).
+    > You can use an array variable in this condition, but you have to specify the specific array member. For example, `OSDAdapter0EnableDHCP` specifies whether the *first* network adapter enables DHCP. For more information, see [Array variables](using-task-sequence-variables.md#bkmk_array).
 
 - **OS version**: Evaluate the OS version of the device where the task sequence runs. This list is the general OS versions used throughout Configuration Manager. To evaluate a more detailed OS version, such as a specific version of Windows 10, use the **Query WMI** condition.
 
@@ -201,12 +201,12 @@ There are also new options to move conditions up or down the list.
 ## <a name="bkmk_sedo"></a> Reclaim lock for editing
 
 <!--3699337-->
-If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/sccm/develop/core/understand/sedo).
+If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](../../develop/core/understand/sedo.md).
 
 Starting in version 1906, you can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
 > [!TIP]
-> Starting in version 1910, you can clear your lock on any object in the Configuration Manager console. For more information, see [Using the Configuration Manager console](/configmgr/core/servers/manage/admin-console#bkmk_sedo).<!--4786915-->
+> Starting in version 1910, you can clear your lock on any object in the Configuration Manager console. For more information, see [Using the Configuration Manager console](../../core/servers/manage/admin-console.md#bkmk_sedo).<!--4786915-->
 
 ## <a name="bkmk_search"></a> Search
 
@@ -247,10 +247,10 @@ Quickly access these search fields and navigate the search results with the foll
 
 ## See also
 
-- [Manage and create task sequences](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks)
+- [Manage and create task sequences](../deploy-use/manage-task-sequences-to-automate-tasks.md)
 
-- [About task sequence steps](/sccm/osd/understand/task-sequence-steps)
+- [About task sequence steps](task-sequence-steps.md)
 
-- [How to use task sequence variables](/sccm/osd/understand/using-task-sequence-variables)
+- [How to use task sequence variables](using-task-sequence-variables.md)
 
-- [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console)
+- [Using the Configuration Manager console](../../core/servers/manage/admin-console.md)

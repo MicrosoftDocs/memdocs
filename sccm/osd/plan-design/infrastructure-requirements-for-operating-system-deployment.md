@@ -35,7 +35,7 @@ For more information, see the following articles:
     > [!IMPORTANT]
     > Make sure to download both the **Windows ADK for Windows 10** and the **Windows PE add-on for the ADK**.
 
-- [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+- [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md)  
 
 #### Site systems
 The Windows ADK is a prerequisite for the following site systems servers:
@@ -65,7 +65,7 @@ Install the following features of the Windows ADK:
     > [!Important]  
     > Starting with Windows 10 version 1809, Windows PE is a separate installer. Otherwise there's no functional difference.<!--SCCMDocs-pr issue 2908-->  
 
-For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).
 
 
 ### User State Migration Tool (USMT)  
@@ -76,7 +76,7 @@ For more information, see the following articles:
 
 - [Common Migration Scenarios for USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
-- [Manage user state](/sccm/osd/get-started/manage-user-state)  
+- [Manage user state](../get-started/manage-user-state.md)  
 
 
 ### Windows PE  
@@ -84,7 +84,7 @@ For more information, see the following articles:
 Windows PE is used for boot images to start a computer. It's a Windows version with limited services that's used during the pre-installation and deployment of Windows. The following list includes the supported versions of the Windows ADK for Configuration Manager, current branch:  
 
 #### Windows ADK version  
-Windows ADK for Windows 10. For more information, see [Support For Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+Windows ADK for Windows 10. For more information, see [Support For Windows 10](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).
 
 #### Windows PE versions for boot images customizable from the Configuration Manager console  
 Windows PE 10  
@@ -94,17 +94,17 @@ Windows PE 3.1<sup>1</sup> and Windows PE 5
 
 <sup>1</sup> You can only add a boot image to Configuration Manager when it's based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).  
 
-For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that's installed with Windows ADK for Windows 8. Then add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](/sccm/osd/get-started/customize-boot-images). For more information about boot images, see [Manage boot images](/sccm/osd/get-started/manage-boot-images).  
+For example, when you have Configuration Manager, you can customize boot images from Windows ADK for Windows 10 (based on Windows PE 10) from the Configuration Manager console. However, while boot images based on Windows PE 5 are supported, you must customize them from a different computer and use the version of DISM that's installed with Windows ADK for Windows 8. Then add the boot image to the Configuration Manager console. For more information with the steps to customize a boot image (add optional components and drivers), enable command support to the boot image, add the boot image to the Configuration Manager console, and update distribution points with the boot image, see [Customize boot images](../get-started/customize-boot-images.md). For more information about boot images, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 
 ### Windows Server Update Services (WSUS)  
 
-WSUS is required for the software update point, which is required to install software updates during OS deployment. For more information, see [Install a configure a software update point](/sccm/sum/get-started/install-a-software-update-point).
+WSUS is required for the software update point, which is required to install software updates during OS deployment. For more information, see [Install a configure a software update point](../../sum/get-started/install-a-software-update-point.md).
 
 
 ### Internet Information Services (IIS) on the site system servers  
 
-IIS is required for the distribution point, state migration point, and management point. For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+IIS is required for the distribution point, state migration point, and management point. For more information, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 
 ### Windows Deployment Services (WDS)  
@@ -114,7 +114,7 @@ In version 1802 and prior, WDS is needed for PXE deployments. Starting in versio
 
 ### Dynamic Host Configuration Protocol (DHCP)  
 
-DHCP is required for PXE deployments. You must have a functioning DHCP server with an active host to deploy operating systems by using PXE. For more information about PXE deployments, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
+DHCP is required for PXE deployments. You must have a functioning DHCP server with an active host to deploy operating systems by using PXE. For more information about PXE deployments, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
 
 ### Supported operating systems and hard disk configurations  
@@ -124,7 +124,7 @@ For more information about the OS versions and hard disk configurations that are
 
 ### Windows device drivers  
 
-Windows device drivers can be used when you install the OS on the destination computer. They're also used when you run Windows PE in a boot image. For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).  
+Windows device drivers can be used when you install the OS on the destination computer. They're also used when you run Windows PE in a boot image. For more information, see [Manage drivers](../get-started/manage-drivers.md).  
 
 
 
@@ -135,46 +135,46 @@ This section provides information about Configuration Manager OS deployment prer
 
 ### OS image  
 
-OS images in Configuration Manager are stored in the Windows Imaging (WIM) file format. They represent a compressed collection of reference files and folders. These images are required to successfully install and configure an OS on a computer. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).  
+OS images in Configuration Manager are stored in the Windows Imaging (WIM) file format. They represent a compressed collection of reference files and folders. These images are required to successfully install and configure an OS on a computer. For more information, see [Manage OS images](../get-started/manage-operating-system-images.md).  
 
 
 ### Driver catalog  
 
-To deploy a device driver, import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](/sccm/osd/get-started/manage-drivers).  
+To deploy a device driver, import the device driver, enable it, and make it available on a distribution point that the Configuration Manager client can access. For more information about the driver catalog, see [Manage drivers](../get-started/manage-drivers.md).  
 
 
 ### Management point  
 
-Management points transfer information between clients and the Configuration Manager site. The client uses a management point to run the task sequence to complete the OS deployment. For more information about task sequences, see [Planning considerations for automating tasks](/sccm/osd/plan-design/planning-considerations-for-automating-tasks).  
+Management points transfer information between clients and the Configuration Manager site. The client uses a management point to run the task sequence to complete the OS deployment. For more information about task sequences, see [Planning considerations for automating tasks](planning-considerations-for-automating-tasks.md).  
 
 
 ### Distribution point  
 
-Distribution points are used in most deployments to store the data that's used to deploy an OS, such as the image or driver packages. Task sequences typically retrieve data from a distribution point to deploy the OS. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+Distribution points are used in most deployments to store the data that's used to deploy an OS, such as the image or driver packages. Task sequences typically retrieve data from a distribution point to deploy the OS. For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 
 ### PXE-enabled distribution point  
 
-To deploy PXE-initiated deployments, configure a distribution point to accept PXE requests from clients. For more information, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+To deploy PXE-initiated deployments, configure a distribution point to accept PXE requests from clients. For more information, see [Configure a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
 
 ### Multicast-enabled distribution point  
 
-To optimize your OS deployments by using multicast, configure a distribution point to support multicast. For more information, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-multicast).   
+To optimize your OS deployments by using multicast, configure a distribution point to support multicast. For more information, see [Configure a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-multicast).   
 
 
 ### State migration point  
 
 When you capture and restore user state data for side-by-side and refresh deployments, configure a state migration point to store the user state data on another computer.  
 
-For more about how to configure the state migration point, see [State migration point](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_StateMigrationPoints).  
+For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-For more information about how to capture and restore user state, see [Manage user state](/sccm/osd/get-started/manage-user-state).  
+For more information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).  
 
 
 ### Reporting services point  
 
-To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+To use Configuration Manager reports for OS deployments, install and configure a reporting point. For more information, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
 
 
 ### Security permissions for OS deployments  
@@ -193,12 +193,12 @@ The **Operating System Deployment Manager** security role is a built-in role tha
 
 - **Task Sequence Package**: Create, Create Task Sequence Media, Delete, Modify, Modify Folder, Modify Report, Move Object, Read, Run Report, Set Security Scope  
 
-For more information, see [Create custom security roles](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole).  
+For more information, see [Create custom security roles](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole).  
 
 
 ### Security scopes for OS deployments  
 
-Use security scopes to provide administrative users with access to the securable objects used in OS deployments, such as OS and boot images, driver packages, and task sequence packages. For more information, see [Security scopes](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_PlanScope).  
+Use security scopes to provide administrative users with access to the securable objects used in OS deployments, such as OS and boot images, driver packages, and task sequence packages. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).  
 
 
 
@@ -206,7 +206,7 @@ Use security scopes to provide administrative users with access to the securable
 
 In version 1802 and prior, Windows Deployment Services (WDS) must be installed on the same server as the distribution points that you configure to support PXE or multicast. WDS is included in the server OS. For PXE deployments, WDS is the service that performs the PXE boot. When the distribution point is installed and enabled for PXE, Configuration Manager installs a provider into WDS that uses the WDS PXE boot functions.  
 
-Starting in version 1806, you can enable PXE on a distribution point without WDS. For more information, see the **Enable a PXE responder without Windows Deployment Service** option in [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).
+Starting in version 1806, you can enable PXE on a distribution point without WDS. For more information, see the **Enable a PXE responder without Windows Deployment Service** option in [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
 
 > [!NOTE]  
@@ -258,12 +258,12 @@ If you plan to co-host the distribution point on a server running DHCP, consider
 > [!NOTE]
 > In version 1810 and earlier, it's not supported to use the PXE responder without WDS on servers that are also running a DHCP server.
 >
-> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. For more information, see [Configure at least one distribution point to accept PXE requests](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network#BKMK_Configure).
+> Starting in version 1902, when you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. For more information, see [Configure at least one distribution point to accept PXE requests](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
 ##  <a name="BKMK_SupportedOS"></a> Supported operating systems  
 
-All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) are supported for OS deployment.  
+All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for OS deployment.  
 
 
 
@@ -296,5 +296,5 @@ The following table shows an additional hard disk configuration on the reference
 
 ## Next steps
 
-- [Prepare site system roles for OS deployments](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments)
-- [Prepare for OS deployment](/sccm/osd/get-started/prepare-for-operating-system-deployment)
+- [Prepare site system roles for OS deployments](../get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+- [Prepare for OS deployment](../get-started/prepare-for-operating-system-deployment.md)

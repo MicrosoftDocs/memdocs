@@ -30,7 +30,7 @@ Complete the steps in one of the operating system deployment scenarios. Then use
 To make the operating system deployment available in the Software Center, configure the deployment. You may configure the deployment on the **Deployment Settings** page of the Deploy Software Wizard or the **Deployment Settings** tab in the properties for the deployment. For the **Make available to the following** setting, configure either **Only Configuration Manager Clients** or **Configuration Manager clients, media and PXE**. After the system deploys the operating system, the operating system will be displayed in Software Center for members of the target collection.
 
 ##  <a name="BKMK_Deploy"></a> Deploy the task sequence to computers  
-Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence). When you deploy operating systems for Software Center, you may configure whether the deployment is required or available.
+Deploy the operating system to a target collection. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md). When you deploy operating systems for Software Center, you may configure whether the deployment is required or available.
 
 -   **Required deployment**: Required deployments will make the operating system available in Software Center, but it will be automatically started at the configured assignment schedule.
 

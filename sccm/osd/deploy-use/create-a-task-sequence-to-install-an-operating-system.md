@@ -30,15 +30,15 @@ Before you create a task sequence to install an OS, the following requirements m
 
 #### Required
 
-- A [boot image](/sccm/osd/get-started/manage-boot-images)  
+- A [boot image](../get-started/manage-boot-images.md)  
 
-- An [OS image](/sccm/osd/get-started/manage-operating-system-images)  
+- An [OS image](../get-started/manage-operating-system-images.md)  
 
 #### Required (if used)
 
-- Synchronize [software updates](/sccm/sum/get-started/synchronize-software-updates)  
+- Synchronize [software updates](../../sum/get-started/synchronize-software-updates.md)  
 
-- Add [applications](/sccm/apps/deploy-use/create-applications)  
+- Add [applications](../../apps/deploy-use/create-applications.md)  
 
 ### Process to create a task sequence that installs an OS  
 
@@ -54,14 +54,14 @@ Before you create a task sequence to install an OS, the following requirements m
 
     - **Description**: Specify a description of what the task sequence does.  
 
-    - **Boot image**: Specify the boot image that the task sequence uses to install the OS on the destination computer. The boot image contains a version of Windows PE, plus any additional required device drivers. For more information, see [Manage boot images](/sccm/osd/get-started/manage-boot-images).  
+    - **Boot image**: Specify the boot image that the task sequence uses to install the OS on the destination computer. The boot image contains a version of Windows PE, plus any additional required device drivers. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
         > [!IMPORTANT]  
         > The architecture of the boot image must be compatible with the hardware architecture of the destination computer.  
 
 5. On the **Install Windows** page, specify the following settings:  
 
-    - **Image package**: Specify the package that contains the OS image to install. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).  
+    - **Image package**: Specify the package that contains the OS image to install. For more information, see [Manage OS images](../get-started/manage-operating-system-images.md).  
 
     - **Image**: If the OS image package has multiple images, specify the index of the OS image to install.  
 
@@ -97,7 +97,7 @@ Before you create a task sequence to install an OS, the following requirements m
 
 8. On the **State Migration** page, specify the following information:  
 
-    - **Capture user settings**: The task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](/sccm/osd/get-started/manage-user-state).  
+    - **Capture user settings**: The task sequence captures the user state. For more information about how to capture and restore the user state, see [Manage user state](../get-started/manage-user-state.md).  
 
     - **Capture network settings**: The task sequence captures network settings from the destination computer. It captures the membership of the domain or workgroup, also the network adapter settings.  
 
@@ -109,7 +109,7 @@ Before you create a task sequence to install an OS, the following requirements m
 
 11. Complete the wizard.  
 
-You can now deploy the task sequence to a collection of computers. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+You can now deploy the task sequence to a collection of computers. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md).
 
 
 ## Pre-cache content
@@ -117,7 +117,7 @@ You can now deploy the task sequence to a collection of computers. For more info
 <!--4224642-->
 Starting in version 1906, you can enable this type of task sequence to pre-cache content. The pre-cache feature for available deployments of task sequences lets clients download relevant content before a user installs the task sequence.  
 
-For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
+For more information, see [Configure pre-cache content](configure-precache-content.md).
 
 
 ## <a name="BKMK_InstallExistingOSImageTSExample"></a> Example task sequence
