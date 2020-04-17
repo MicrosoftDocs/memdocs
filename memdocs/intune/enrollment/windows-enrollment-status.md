@@ -47,7 +47,7 @@ The Enrollment Status Page helps users understand the status of their device dur
 You can also set the priority order for each profile to account for conflicting profile assignments to the same user.
 
 > [!NOTE]
-> The Enrollment Status Page can only be targeted to a user who belongs to an assigned group and the policy is set on the device at the time of enrollment for all users that use the device.  
+> The Enrollment Status Page can only be targeted to a user who belongs to an assigned group and the policy is set on the device at the time of enrollment for all users that use the device.  Device targeting for Enrollment Status Page profiles is not currently supported.
 
 ## Available settings
 
@@ -102,6 +102,10 @@ You can specify which apps need to be installed before the user can access the d
 4. Choose **Yes** for **Block device use until all apps and profiles are installed**.
 5. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
 6. Choose **Select apps** > choose the apps > **Select** > **Save**.
+
+The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It does not specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
+
+A maximum of 25 apps can be specified.
 
 ## Enrollment Status Page tracking information
 

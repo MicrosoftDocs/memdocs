@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -153,7 +153,7 @@ You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on 
 
 ### Android configuration on managed devices
 
-You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
+You can validate Android configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
 To collect logs from an Android device, you or the end user must download the logs from the device via a USB connection (or the **File Explorer** equivalent on the device). Here are the steps:
 
