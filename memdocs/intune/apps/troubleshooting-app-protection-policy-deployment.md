@@ -37,7 +37,7 @@ Collect the following information:
 - How many users are affected? Are all devices or only some devices affected?
 - How many devices are affected? Are all devices or only some devices affected?
 - Although Intune app protection policy doesn't require a mobile device management (MDM) service, are affected users using Intune or a third-party EMM?
-- Are all managed apps or only specific apps affected? For example, are LOB apps that have [Intune App SDK](../developer/app-sdk-get-started) affected but store apps are not?
+- Are all managed apps or only specific apps affected? For example, are LOB apps that have [Intune App SDK](../developer/app-sdk-get-started.md) affected but store apps are not?
 
 Now, you can start troubleshooting based on the answers to these questions.
 
@@ -60,7 +60,7 @@ Although you can use Intune app protection policies independent of any MDM solut
 
 - If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication (HMA) for Skype for Business and Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
-Intune app protection policies require that the identity of the user is consistent between the app and [Intune App SDK](../developer/app-sdk-get-started). The only way to guarantee this consistency is through modern authentication. There are scenarios in which apps may work in an on-premises configuration without modern authentication. However, the outcomes are not consistent or guaranteed.
+Intune app protection policies require that the identity of the user is consistent between the app and [Intune App SDK](../developer/app-sdk-get-started.md). The only way to guarantee this consistency is through modern authentication. There are scenarios in which apps may work in an on-premises configuration without modern authentication. However, the outcomes are not consistent or guaranteed.
 
 For more information about how to enable HMA for Skype for Business hybrid and on-premises configurations, see the following articles:
 
@@ -83,7 +83,7 @@ To check your app protection status, follow these steps:
 > [!NOTE]
 > App protection policies are applied only when apps are used in the work context. For example, when the user is accessing apps by using a work account.
 
-For more information, see [How to validate your app protection policy setup in Microsoft Intune](../apps/app-protection-policies-validate).
+For more information, see [How to validate your app protection policy setup in Microsoft Intune](../apps/app-protection-policies-validate.md).
 
 ### Verify that user identity is consistent between app and Intune App SDK
 
@@ -128,7 +128,7 @@ For iOS, this practice is important because each version contains fixes that aff
 For Android, this practice isn't as important. However, users must have the latest version of the Company Portal app installed because the Company Portal app works as the policy broker agent.
 
 > [!NOTE]
-> Starting in September 2019, Intune will move to support iOS apps that have Intune App SDK 8.1.1 and later versions. Apps built by using SDK versions that are earlier than 8.1.1 will no longer be supported. For more information, see [Plan for Change: Support for version 8.1.1 and higher of Intune App SDK for iOS](../fundamentals/whats-new.md#plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios-).
+> Starting in September 2019, Intune will move to support iOS apps that have Intune App SDK 8.1.1 and later versions. Apps built by using SDK versions that are earlier than 8.1.1 will no longer be supported. 
 
 ## More information
 
