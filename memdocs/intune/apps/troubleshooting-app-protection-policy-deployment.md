@@ -39,7 +39,7 @@ Collect the following information:
 - Although Intune app protection policy doesn't require a mobile device management (MDM) service, are affected users using Intune or a third-party EMM?
 - Are all managed apps or only specific apps affected? For example, are LOB apps that have [Intune App SDK](https://docs.microsoft.com/intune/app-sdk-get-started) affected but store apps are not?
 
-Now, let's start troubleshooting based on the answers to these questions.
+Now, you can start troubleshooting based on the answers to these questions.
 
 ### Verify prerequisites
 
@@ -55,8 +55,8 @@ Although you can use Intune app protection policies independent of any MDM solut
     - The user must have a managed location that's configured by using the granular **Save as** functionality. This command is located under the **Save Copies of Org Data** application protection policy setting. For example, if the managed location is [OneDrive](https://onedrive.live.com/about/), the OneDrive app should be configured in the user's Word, Excel, or PowerPoint app.
     - If the managed location is OneDrive, the app must be targeted by the app protection policy that's deployed to the user.
 
-> [!NOTE]
-> The Office mobile apps currently support only SharePoint Online and not SharePoint on-premises.
+  > [!NOTE]
+  > The Office mobile apps currently support only SharePoint Online and not SharePoint on-premises.
 
 - If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication (HMA) for Skype for Business and Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
@@ -64,21 +64,21 @@ Intune app protection policies require that the identity of the user is consiste
 
 For more information about how to enable HMA for Skype for Business hybrid and on-premises configurations, see the following articles:
 
-**Hybrid**
+- **Hybrid**<br>
 [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
-**On-premises**
+- **On-premises**<br>
 [Modern Auth for SfB OnPrem with AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### Check app protection policy status
 
 To check your app protection status, follow these steps:
 
-1. Sign in to Intune.
-1. Select **Client apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
-1. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
-1. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting pane, you can see whether the user is licensed for app protection and has a license for O365. You can also see the app status for all the user's devices.
-1. Make a note of such important information as the targeted apps, device types, policies, device check-in status, and last sync time.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
+3. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
+4. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting pane, you can see whether the user is licensed for app protection and has a license for O365. You can also see the app status for all the user's devices.
+5. Make a note of such important information as the targeted apps, device types, policies, device check-in status, and last sync time.
 
 > [!NOTE]
 > App protection policies are applied only when apps are used in the work context. For example, when the user is accessing apps by using a work account.
@@ -99,18 +99,18 @@ Intune app protection policies must be targeted to users. If you don't assign an
 
 To verify that the policy is applied to the targeted user, follow these steps:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-1. Select **Client apps** > **Monitor** > **App protection status**, and then select the **User status** tile (based on device OS platform).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **Monitor** > **App protection status**, and then select the **User status** tile (based on device OS platform).
 On the **App reporting** pane that opens, select **Select user** to search for a user.
-1. Select the user from the list. You can see the details for that user.
+3. Select the user from the list. You can see the details for that user.
 
 When you assign the policy to a user group, make sure that the user is in the user group. To do this, follow these steps:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-1. Select **Groups > All groups**, and then search for and select the group that's used for your app protection policy assignment.
-1. Under **Manage**, select **Members**.
-1. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
-1. Make sure that the affected user isn't in any of the excluded groups for the policy.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Groups > All groups**, and then search for and select the group that's used for your app protection policy assignment.
+3. Under the **Manage** section, select **Members**.
+4. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
+5. Make sure that the affected user isn't in any of the excluded groups for the policy.
 
 > [!IMPORTANT]
 > - The Intune app protection policy must be assigned to user groups and not device groups.
@@ -162,12 +162,12 @@ Additionally, changes and updates to app protection policy can take up to 8 hour
 
 To check app protection status, follow these steps:
 
-1. Sign in to Intune.
-1. Select **Client apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
-1. On the App reporting page, select **Select user** to open a list of users and groups.
-1. Search for and select one of the affected users from the list, then select **Select user**.
-1. Review the policies that are currently applied, including the status and last sync time.
-1. If the status is **Not checked in**, or if the display indicates that there has not been a recent sync, check whether the user has a consistent network connection. For Android users, make sure that they have the latest version of the Company Portal app installed.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
+3. On the App reporting page, select **Select user** to open a list of users and groups.
+4. Search for and select one of the affected users from the list, then select **Select user**.
+5. Review the policies that are currently applied, including the status and last sync time.
+6. If the status is **Not checked in**, or if the display indicates that there has not been a recent sync, check whether the user has a consistent network connection. For Android users, make sure that they have the latest version of the Company Portal app installed.
 
 > [!IMPORTANT]
 > The [Intune App SDK](https://docs.microsoft.com/intune/app-sdk-get-started) checks every 30 minutes for selective wipe. However, changes to existing policy for users who are already signed in may not appear for up to 8 hours. To speed up this process, have the user log out of the app and then log back in or restart their devices.
