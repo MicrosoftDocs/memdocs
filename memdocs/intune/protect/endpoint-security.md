@@ -165,13 +165,13 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the policies found under *Manage* in the Endpoint security node to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.
+As a security admin, use the security policies found under *Manage* in the Endpoint security node to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.
 
-Endpoint security also provides easy access to *Device compliance* and *Conditional access* policies, which are not focused security policies but important tools for managing devices and access to corporate resources.
+Included under *Manage* is access to *Device compliance* and *Conditional access* policies. These policies are important tools for managing devices and access to your corporate resources.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
-To start using security policies, see [Manage device security with endpoint security](../protect/endpoint-security-policy.md)
+To start using security policies, see [Manage device security with endpoint security polices](../protect/endpoint-security-policy.md).
 
 ### About policy conflicts
 
