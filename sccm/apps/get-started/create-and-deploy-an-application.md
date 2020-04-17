@@ -23,18 +23,18 @@ In this topic, you'll jump right in and create an application with Configuration
 
  For specific details that are relevant to each platform, see one of the following topics:  
 
-- [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications)
-- [Create Windows Phone applications](/configmgr/mdm/deploy-use/management-tasks-applications#bkmk_winphone)
-- [Create Mac computer applications](/configmgr/apps/get-started/creating-mac-computer-applications)
-- [Create Linux and UNIX server applications](/configmgr/apps/get-started/creating-linux-and-unix-server-applications)
-- [Create Windows Embedded applications](/configmgr/apps/get-started/creating-windows-embedded-applications)
+- [Create Windows applications](creating-windows-applications.md)
+- [Create Windows Phone applications](../../mdm/deploy-use/management-tasks-applications.md#bkmk_winphone)
+- [Create Mac computer applications](creating-mac-computer-applications.md)
+- [Create Linux and UNIX server applications](creating-linux-and-unix-server-applications.md)
+- [Create Windows Embedded applications](creating-windows-embedded-applications.md)
 
 
 If you are already familiar with Configuration Manager applications, you can skip this topic. However, you might want to review [Create applications](../../apps/deploy-use/create-applications.md) to learn about all the options that are available when you create and deploy applications.  
 
 ## Before you start  
 
-Make sure that you've reviewed the information in [Introduction to application management](/sccm/apps/understand/introduction-to-application-management) so that you have prepared your site to install applications and you understand the terminology that's used in this topic.  
+Make sure that you've reviewed the information in [Introduction to application management](../understand/introduction-to-application-management.md) so that you have prepared your site to install applications and you understand the terminology that's used in this topic.  
 
  Also, make sure that the installation files for the **Contoso.msi** app are in an accessible location on your network.  
 
@@ -54,7 +54,7 @@ Make sure that you've reviewed the information in [Introduction to application m
 
    You'll end up with something that looks like the following screenshot:  
 
-   ![App management wizard general page](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+   ![App management wizard general page](media/App-management-wizard-general-page.png)  
 
 4. Choose **Next**. On the **Import Information** page, you'll see some information about the app and any associated files that were imported to Configuration Manager. Once you are done, choose **Next** again.  
 
@@ -67,13 +67,13 @@ Make sure that you've reviewed the information in [Introduction to application m
 
     You'll end up with a screen that looks similar to the following screenshot:  
 
-    ![App management wizard general information page](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
+    ![App management wizard general information page](media/App-management-wizard-general-information-page.png)  
 
 6. Choose **Next**. On the Summary page, you can confirm your application settings and then complete the wizard.  
 
    You've finished creating the app. To find it, in the **Software Library** workspace, expand **Application Management**, and then choose **Applications**. For this example, you'll see:  
 
-   ![Final app graphic](/sccm/apps/get-started/media/Final-app-graphic.png)  
+   ![Final app graphic](media/Final-app-graphic.png)  
 
 ## Examine the properties of the application and its deployment type  
 
@@ -85,7 +85,7 @@ Now that you've created an application, you can refine the application settings 
 
 You'll see a dialog box like this one:  
 
-![App management app properties page](/sccm/apps/get-started/media/App-management-app-properties-page.png)  
+![App management app properties page](media/App-management-app-properties-page.png)  
 
 ## Add a requirement to the deployment type
 
@@ -109,7 +109,7 @@ You'll see a dialog box like this one:
 
     You'll end up with a dialog box that looks like this:  
 
-    ![App management requirements page](/sccm/apps/get-started/media/App-management-requirements-page.png)  
+    ![App management requirements page](media/App-management-requirements-page.png)  
 
 4. Choose **OK** to close each property page that you opened. Then return to the **Applications** list in the Configuration Manager console.  
 
@@ -192,7 +192,7 @@ Use the information in the following **Monitor the application** section to see 
     - **Unknown**: Configuration Manager was unable to report the status of the deployment. Check back again later.  
 
 > [!TIP]  
-> There are a few ways you can monitor application deployments. For full details, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).
+> There are a few ways you can monitor application deployments. For full details, see [Monitor applications](../deploy-use/monitor-applications-from-the-console.md).
 
 ## End-user experience  
 
@@ -202,4 +202,4 @@ Starting in Configuration Manager version 1906, the **New Software is Available*
 
 ## Next steps
 
-[Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
+[Monitor applications](../deploy-use/monitor-applications-from-the-console.md)

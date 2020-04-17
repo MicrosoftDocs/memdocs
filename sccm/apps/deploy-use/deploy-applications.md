@@ -20,11 +20,11 @@ manager: dougeby
 
 Create or simulate a deployment of an application to a device or user collection in Configuration Manager. This deployment gives instructions to the Configuration Manager client on how and when to install the software.
 
-Before you can deploy an application, create at least one deployment type for the application. For more information, see [Create applications](/sccm/apps/deploy-use/create-applications).
+Before you can deploy an application, create at least one deployment type for the application. For more information, see [Create applications](create-applications.md).
 
-Starting in version 1906, you can create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+Starting in version 1906, you can create a group of applications that you can send to a user or device collection as a single deployment. For more information, see [Create application groups](create-app-groups.md).
 
-You can also simulate an application deployment. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments).
+You can also simulate an application deployment. This simulation tests the applicability of a deployment without installing or uninstalling the application. A simulated deployment evaluates the detection method, requirements, and dependencies for a deployment type and reports the results in the **Deployments** node of the **Monitoring** workspace. For more information, see [Simulate application deployments](simulate-application-deployments.md).
 
 > [!Note]
 > You can only simulate the deployment of required applications, but not packages or software updates.
@@ -101,7 +101,7 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user’s primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
 
-- **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).  
+- **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](../../core/clients/deploy/plan/plan-wake-up-clients.md).  
 
 - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for deployments with a purpose of **Required**.  
 
@@ -121,7 +121,7 @@ The application approval behavior depends upon whether you enable the recommende
 
 - **Require administrator approval if users request this application**: If you don't enable the optional feature, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
 
-For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
+For more information, see [Approve applications](app-approval.md).
 
 
 #### Deployment properties **Deployment Settings**
@@ -149,7 +149,7 @@ If the application you're deploying supersedes another application, set the inst
 
 You might want to give users more time to install required applications *beyond* any deadlines you set. This behavior is typically required when a computer is turned off for a long time, and needs to install many applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments. To help solve this problem, define an enforcement grace period.
 
-- First, configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group. Specify a value between **1** and **120** hours.  
+- First, configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group. Specify a value between **1** and **120** hours.  
 
 - On the **Scheduling** page of a required application deployment, enable the option to **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. The enforcement grace period applies to all deployments with this option enabled and targeted to devices to which you also deployed the client setting.
 
@@ -168,13 +168,13 @@ On the **User Experience** page, specify information about how users can interac
 
 - **User notifications**: Specify whether to display notification in Software Center at the configured available time. This setting also controls whether to notify users on the client computers. For available deployments, you can't select the option to **Hide in Software Center and all notifications**.  
 
-    - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_impact).
+    - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [Plan for Software Center](../plan-design/plan-for-software-center.md#bkmk_impact).
 
-- **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+- **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later.  
 
-    - When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window. For more information about maintenance windows and Windows Embedded devices, see [Create Windows Embedded applications](/sccm/apps/get-started/creating-windows-embedded-applications).  
+    - When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window. For more information about maintenance windows and Windows Embedded devices, see [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md).  
 
 
 ### <a name="bkmk_deploy-alerts"></a> Deployment **Alerts**
@@ -250,7 +250,7 @@ Configure a deployment to check if certain executable files are running on the c
 5. When you deploy the application, select the option to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**. This option is on the **Deployment Settings** tab of the deployment properties.  
 
 > [!Note]
-> If you configure an application to check for running executable files, and include it in the [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication) task sequence step, the task sequence will fail to install it. If you don't configure this task sequence step to continue on error, then the entire task sequence fails.
+> If you configure an application to check for running executable files, and include it in the [Install Application](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) task sequence step, the task sequence will fail to install it. If you don't configure this task sequence step to continue on error, then the entire task sequence fails.
 
 ### Client behaviors and user notifications
 
@@ -260,7 +260,7 @@ After clients receive the deployment, the following behavior applies:
 
 - If you deployed the application as **Required**, and specified to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the client displays a notification. It informs the user that the specified executable files are automatically closed when the application installation deadline is reached.  
 
-    - Schedule these dialogs in the **Computer Agent** group of client settings. For more information, see [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+    - Schedule these dialogs in the **Computer Agent** group of client settings. For more information, see [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
     - If you don’t want the user to see these messages, select the option to **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment's properties. For more information, see [Deployment User Experience settings](#bkmk_deploy-ux).  
 
@@ -277,15 +277,15 @@ If you deploy applications as available to users, they can browse and install th
 
 - Enable HTTPS on the management point  
 
-- Integrate the site with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**  
+- Integrate the site with [Azure AD](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Configure [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+    - Configure [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
 - Deploy an application as available to a collection of users from Azure AD  
 
-- Distribute any application content to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)  
+- Distribute any application content to a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
-- Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group  
+- Enable the client setting **Use new Software Center** in the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group  
 
 - The client OS must be Windows 10, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.  
 
@@ -293,7 +293,7 @@ If you deploy applications as available to users, they can browse and install th
 
     - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway)  
 
-    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group  
+    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../../core/clients/deploy/about-client-settings.md#client-policy) group  
 
 - To support clients on the intranet:  
 
@@ -305,7 +305,7 @@ If you deploy applications as available to users, they can browse and install th
 
 ## Next steps
 
-- [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console)
-- [Troubleshoot application deployments](/sccm/apps/deploy-use/troubleshoot-application-deployment)
-- [Management tasks for applications](/sccm/apps/deploy-use/management-tasks-applications)
-- [Software Center user guide](/sccm/core/understand/software-center)
+- [Monitor applications](monitor-applications-from-the-console.md)
+- [Troubleshoot application deployments](troubleshoot-application-deployment.md)
+- [Management tasks for applications](management-tasks-applications.md)
+- [Software Center user guide](../../core/understand/software-center.md)

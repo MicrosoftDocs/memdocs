@@ -19,7 +19,7 @@ manager: dougeby
 In this article, you'll learn the basics before you start working with Configuration Manager applications.  
 
 > [!TIP]  
-> If you're already familiar with how to manage applications in Configuration Manager, skip this article. Move on to creating a sample application: [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).  
+> If you're already familiar with how to manage applications in Configuration Manager, skip this article. Move on to creating a sample application: [Create and deploy an application](../get-started/create-and-deploy-an-application.md).  
 
 ## What is an application?
 
@@ -41,7 +41,7 @@ For example, your company has a line-of-business application called Astoria. The
 
 You create a single application for Astoria in Configuration Manager. The application defines the high-level metadata about the app that's common across all installation methods and platforms. You then create three deployment types for the available installation methods, and deploy the application to all users. Based on the requirements and other configurations on the deployment types, Configuration Manager determines the right method in each use case.
 
-For more information, see [Create deployment types for the application](/sccm/apps/deploy-use/create-applications#bkmk_create-dt).
+For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).
 
 ### Requirements
 
@@ -51,25 +51,25 @@ For example, specify that an application can only install on devices that run Wi
 
 Configuration Manager evaluates requirements to determine whether it installs an application and any of its deployment types. Then it determines the correct deployment type by which to install an application. Every seven days, by default, the Configuration Manager client reevaluates requirement rules to determine compliance according to the client setting **Schedule re-evaluation for deployments**.
 
-For more information, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application) and [Deployment type Requirements](/sccm/apps/deploy-use/create-applications#bkmk_dt-require).
+For more information, see [Create and deploy an application](../get-started/create-and-deploy-an-application.md) and [Deployment type Requirements](../deploy-use/create-applications.md#bkmk_dt-require).
 
 ### Global conditions
 
 While you use requirements with a specific deployment type in a single application, you can also create *global conditions*. These conditions are a library of predefined requirements that you can use with any application and deployment type. Configuration Manager includes a set of built-in global conditions, or you can create your own.
 
-For more information, see [Create global conditions](/sccm/apps/deploy-use/create-global-conditions).
+For more information, see [Create global conditions](../deploy-use/create-global-conditions.md).
 
 ### Simulated deployment
 
 A *simulated deployment* evaluates the requirements, detection method, and dependencies for an application. A client reports the results without actually installing the application.
 
-For more information, see [Simulate application deployments](/sccm/apps/deploy-use/simulate-application-deployments).  
+For more information, see [Simulate application deployments](../deploy-use/simulate-application-deployments.md).  
 
 ### Deployment action
 
 A *deployment action* specifies whether you want to install or uninstall the application you're deploying. Not all deployment types support the uninstall action.
 
-For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).  
+For more information, see [Deploy applications](../deploy-use/deploy-applications.md).  
 
 ### Deployment purpose
 
@@ -79,7 +79,7 @@ The *deployment purpose* specifies whether the deployment app is **Required** or
 
 - If you deploy the application to a user as *available*, they see it in Software Center, and can request it on demand.  
 
-For more information, see [Deploy applications](/sccm/apps/deploy-use/deploy-applications).  
+For more information, see [Deploy applications](../deploy-use/deploy-applications.md).  
 
 ### Revisions
 
@@ -90,7 +90,7 @@ When you make *revisions* to an application or a deployment type, Configuration 
 - Restore a previous version of an application
 - Delete an old version
 
-For more information, see [Update and retire applications](/sccm/apps/deploy-use/update-and-retire-applications).  
+For more information, see [Update and retire applications](../deploy-use/update-and-retire-applications.md).  
 
 ### Detection method
 
@@ -102,25 +102,25 @@ For more information, see [Deployment type Detection Method options](/sccm/apps/
 
 *Dependencies* define one or more deployment types from another application that the client must install before it installs this deployment type.
 
-For more information, see [Deployment type Dependencies](/sccm/apps/deploy-use/create-applications#bkmk_dt-depend).  
+For more information, see [Deployment type Dependencies](../deploy-use/create-applications.md#bkmk_dt-depend).  
 
 ### Supersedence
 
 Configuration Manager lets you upgrade or replace existing applications by using a *supersedence* relationship. When you supersede an application, you specify a new deployment type to replace the deployment type of the superseded application. You can also decide whether to upgrade or uninstall the superseded application before the client installs the superseding application.
 
-For more information, see [Application supersedence](/sccm/apps/deploy-use/revise-and-supersede-applications#application-supersedence).  
+For more information, see [Application supersedence](../deploy-use/revise-and-supersede-applications.md#application-supersedence).  
 
 ### User-centric management
 
 Configuration Manager applications support *user-centric management*, which lets you associate specific users with specific devices. Instead of having to remember the name of a user's device, deploy apps to the user and to the device. This functionality helps you make sure the most important apps are always available on each of the user's devices. If a user acquires a new computer, Configuration Manager automatically installs their apps on the device before they sign in.
 
-For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+For more information, see [Link users and devices with user device affinity](../deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 ### Application group
 
 Starting in version 1906, create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
-For more information, see [Create application groups](/sccm/apps/deploy-use/create-app-groups).
+For more information, see [Create application groups](../deploy-use/create-app-groups.md).
 
 ## What application types can you deploy?
 
@@ -140,7 +140,7 @@ Configuration Manager lets you deploy the following app types:
 
 - A non-OS deployment task sequence for complex apps
 
-Additionally, when you manage devices through Configuration Manager [on-premises device management](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), manage these further app types:  
+Additionally, when you manage devices through Configuration Manager [on-premises device management](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md), manage these further app types:  
 
 - Windows Phone app package (xap)  
 
@@ -152,7 +152,7 @@ Additionally, when you manage devices through Configuration Manager [on-premises
 
 ## State-based applications  
 
-Configuration Manager applications use state-based monitoring. You can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if you deploy an application to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. Monitor the deployment of all software from the **Monitoring** workspace in the Configuration Manager console. For more information, see [Monitor applications](/sccm/apps/deploy-use/monitor-applications-from-the-console).  
+Configuration Manager applications use state-based monitoring. You can track the last application deployment state for users and devices. The state messages display information about individual devices. For example, if you deploy an application to a collection of users, you can view the compliance state of the deployment and the deployment purpose in the Configuration Manager console. Monitor the deployment of all software from the **Monitoring** workspace in the Configuration Manager console. For more information, see [Monitor applications](../deploy-use/monitor-applications-from-the-console.md).  
 
 The Configuration Manager client regularly reevaluates application deployments. For example:  
 
@@ -160,13 +160,13 @@ The Configuration Manager client regularly reevaluates application deployments. 
 
 - Configuration Manager didn't install an application on a device because it failed to meet the requirements. Later, a change is made to the device and it now meets the requirements. Configuration Manager detects this change, and the client installs the application.  
 
-You can set the re-evaluation interval for application deployments. Use the **Schedule re-evaluation for deployments** client setting in the **Software Deployment** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-deployment).  
+You can set the re-evaluation interval for application deployments. Use the **Schedule re-evaluation for deployments** client setting in the **Software Deployment** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#software-deployment).  
 
 ## Get started creating an application  
 
-If you want to jump right in and create an application, you'll find a walkthrough in the [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application) article.  
+If you want to jump right in and create an application, you'll find a walkthrough in the [Create and deploy an application](../get-started/create-and-deploy-an-application.md) article.  
 
-If you're familiar with the basics and looking for more detailed reference information about all the available options, start to [Create applications](/sccm/apps/deploy-use/create-applications).  
+If you're familiar with the basics and looking for more detailed reference information about all the available options, start to [Create applications](../deploy-use/create-applications.md).  
 
 ## Software Center  
 
@@ -180,23 +180,23 @@ Software Center is a Windows application installed with the Configuration Manage
 
 For more information, see the following articles:  
 
-- [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management)
-- [Plan for Software Center](/sccm/apps/plan-design/plan-for-software-center)
-- [Software Center user guide](/sccm/core/understand/software-center)
+- [Plan for and configure application management](../plan-design/plan-for-and-configure-application-management.md)
+- [Plan for Software Center](../plan-design/plan-for-software-center.md)
+- [Software Center user guide](../../core/understand/software-center.md)
 
 > [!Note]  
-> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+> Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 ## Packages and programs  
 
 Configuration Manager continues to support packages and programs that were used in previous versions of the product.
 
-For more information, see [Packages and programs](/sccm/apps/deploy-use/packages-and-programs).  
+For more information, see [Packages and programs](../deploy-use/packages-and-programs.md).  
 
 ## Next steps
 
 Now that you understand the basic concepts of application management in Configuration Manager, continue to the following articles:
 
-- [Create and deploy an example application](/sccm/apps/get-started/create-and-deploy-an-application)
-- [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management)
-- [Create applications](/sccm/apps/deploy-use/create-applications)
+- [Create and deploy an example application](../get-started/create-and-deploy-an-application.md)
+- [Plan for and configure application management](../plan-design/plan-for-and-configure-application-management.md)
+- [Create applications](../deploy-use/create-applications.md)

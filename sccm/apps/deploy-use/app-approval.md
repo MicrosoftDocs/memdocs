@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-When [deploying an application](/sccm/apps/deploy-use/deploy-applications) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
+When [deploying an application](deploy-applications.md) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
 
 ## <a name="bkmk_approval"></a> Approval settings
 
@@ -27,7 +27,7 @@ The application approval behavior depends upon whether you enable the recommende
 ### <a name="bkmk_opt"></a> An administrator must approve a request for this application on the device
 
 > [!Note]  
-> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 >
 > If you don't enable this feature, you see the [prior experience](#bkmk_prior).  
 
@@ -40,7 +40,7 @@ View **Application Requests** under **Application Management** in the **Software
 
 If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
 
-When you require approval on a deployment to a device collection, the app isn't displayed in Software Center. If you require approval on a deployment to a user collection, the app is displayed in Software Center. You can still hide it from users with the client setting, **Hide unapproved applications in Software Center**. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center).
+When you require approval on a deployment to a device collection, the app isn't displayed in Software Center. If you require approval on a deployment to a user collection, the app is displayed in Software Center. You can still hide it from users with the client setting, **Hide unapproved applications in Software Center**. For more information, see [Software Center client settings](../../core/clients/deploy/about-client-settings.md#software-center).
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
@@ -63,7 +63,7 @@ Starting in version 1906, you can retry the installation of an app that you prev
 1. Deploy an app that requires approval, and approve it.
 
     > [!Tip]  
-    > Alternatively, [Install an application for a device](/sccm/apps/deploy-use/install-app-for-device). It creates an approved request for the app on the device.  
+    > Alternatively, [Install an application for a device](install-app-for-device.md). It creates an approved request for the app on the device.  
 
 If the application doesn't install successfully, or the user uninstalls the app, use the following process to retry:
 
@@ -107,13 +107,13 @@ Users can add a comment to the request from Software Center. This comment shows 
 
 With these prerequisites, recipients receive an email with notification of the request. If they are on the internal network, they can also approve or deny the request from the email.
 
-- Enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/install-in-console-updates.md#bkmk_options) **Approve application requests for users per device**.  
 
-- Configure [email notification for alerts](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts).  
+- Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
 - Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
-    - Enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) (recommended)  
+    - Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) (recommended)  
 
         > [!Note]  
         > When the site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, when responding to an application request, you may see a security warning.  
@@ -128,11 +128,11 @@ With these additional optional prerequisites, recipients can approve or deny the
 
     - The SMS Provider requires **.NET 4.5.2** or later.  
 
-- [Cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)  
+- [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
 
-- Onboard the site to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**  
+- Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Enable [Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+    - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
     - Manually configure settings in Azure AD:  
 
@@ -159,7 +159,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 ### Configure email approval
 
-1. In the Configuration Manager console, [deploy an application](/sccm/apps/deploy-use/deploy-applications) as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter one or more email addresses to receive notification. Separate email addresses with a semi-colon (`;`).  
+1. In the Configuration Manager console, [deploy an application](deploy-applications.md) as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter one or more email addresses to receive notification. Separate email addresses with a semi-colon (`;`).  
 
      > [!Note]  
      > Anyone in your Azure AD organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.  
@@ -178,4 +178,4 @@ Review the **NotiCtrl.log** file on the site server for troubleshooting.
 
 ## Maintenance
 
-Configuration Manager stores the information about the application approval request in the site database. For requests that are canceled or denied, the site deletes the request history after 30 days. You can configure this deletion behavior with the **Delete Aged Application Request Data** [site maintenance task](/sccm/core/servers/manage/maintenance-tasks). The site never deletes any approved or pending application requests.
+Configuration Manager stores the information about the application approval request in the site database. For requests that are canceled or denied, the site deletes the request history after 30 days. You can configure this deletion behavior with the **Delete Aged Application Request Data** [site maintenance task](../../core/servers/manage/maintenance-tasks.md). The site never deletes any approved or pending application requests.

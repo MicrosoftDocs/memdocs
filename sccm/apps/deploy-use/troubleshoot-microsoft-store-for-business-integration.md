@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot MSfB integration
 titleSuffix: Configuration Manager
 description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
@@ -18,7 +18,7 @@ manager: dougeby
 
 This article provides key troubleshooting tips and fixes for some of the top issues that you may have with the Microsoft Store for Business and Education (MSfB) integration with Configuration Manager.
 
-For more information about using the Microsoft Store for Business and Education with Configuration Manager, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more information about using the Microsoft Store for Business and Education with Configuration Manager, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](manage-apps-from-the-windows-store-for-business.md).
 
 ## Monitor
 
@@ -44,7 +44,7 @@ In the Configuration Manager console, go to the **Software Library** workspace, 
 
 This log file is located on the service connection point, under `\Logs` in the Configuration Manager installation directory. It records information about the communication with the cloud service. This information includes metadata, icons, packages, and license file retrieval.
 
-To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOFTWARE\Microsoft\SMS\Tracing\SMS_CLOUDCONNECTION` registry key. For more information, see [Configure logging options](/sccm/core/plan-design/hierarchy/about-log-files#bkmk_reg-site).
+To change the log level, change the `LoggingLevel` value to `0` in the `HKLM\SOFTWARE\Microsoft\SMS\Tracing\SMS_CLOUDCONNECTION` registry key. For more information, see [Configure logging options](../../core/plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
 
 ### SMS_CLOUDCONNECTION.log
 
@@ -111,7 +111,7 @@ This issue can occur if the secret key has expired on the Azure AD app for the M
 
 #### Resolution
 
-Renew the secret key for the Azure AD application. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+Renew the secret key for the Azure AD application. For more information, see [Renew secret key](../../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
 ### <a name="bkmk_fail-symptom3"></a> Error getting application token
 
@@ -129,8 +129,8 @@ Delete and recreate the connection to the Microsoft Store for Business and Educa
 
 Then recreate the connection. For more information, see the following articles:
 
-- [Configure Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard)
-- [Set up Microsoft Store for Business and Education synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup)
+- [Configure Azure Services](../../core/servers/deploy/configure/azure-services-wizard.md)
+- [Set up Microsoft Store for Business and Education synchronization](manage-apps-from-the-windows-store-for-business.md#bkmk_setup)
 
 ### <a name="bkmk_fail-symptom4"></a> Content location does not exist
 
@@ -206,7 +206,7 @@ You can't automatically sync these apps, but you can download the content, and m
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.
 
-1. [Create an application](/sccm/apps/deploy-use/create-applications), manually specifying the application information.
+1. [Create an application](create-applications.md), manually specifying the application information.
 
     1. Create a deployment type for each supported platform that you previously downloaded.
 
@@ -338,4 +338,4 @@ Install the latest version of Windows 10.
 
 ## Next steps
 
-To find additional help, see [Find help for using Configuration Manager](/sccm/core/understand/find-help).
+To find additional help, see [Find help for using Configuration Manager](../../core/understand/find-help.md).

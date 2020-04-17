@@ -21,7 +21,7 @@ manager: dougeby
 When an application is deployed to a Device collection, the policy is targeted to all the devices in the collection regardless of the deployment purpose. This article explains the policy download and deployment processing on the client.
 
 > [!TIP]
-> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](/sccm/apps/understand/app-deployment-technical-reference#before-you-begin) section.
+> All the information necessary to review the client logs can be obtained by running the SQL query referenced in the [Before you begin](app-deployment-technical-reference.md#before-you-begin) section.
 
 ## Policy Download
 
@@ -62,7 +62,7 @@ CDCMAgent::HandleMessage - Message received for machine: '<?xml version='1.0' ?>
 
 Application installation is initiated when the deployment is enforced.
 
-- For **Required** deployments, Scheduler creates a deadline schedule after policy is downloaded to enforce the application at deployment deadline. The deadline schedule isn't randomized by default. Randomization behavior for activation can be controlled by the [Disable deadline randomization](/sccm/core/clients/deploy/about-client-settings#disable-deadline-randomization) client setting.
+- For **Required** deployments, Scheduler creates a deadline schedule after policy is downloaded to enforce the application at deployment deadline. The deadline schedule isn't randomized by default. Randomization behavior for activation can be controlled by the [Disable deadline randomization](../../core/clients/deploy/about-client-settings.md#disable-deadline-randomization) client setting.
 
     <pre><code class="lang-text">SMSTrigger '15EF8C4000080000' for scheduler '<b>Machine/DEADLINE:{5F2FA409-C9B2-4100-8BC8-051820311DE1}</b>' will fire at 08/15/2019 03:05:00 PM without randomization.
     </code></pre>
@@ -85,4 +85,4 @@ Application installation is initiated when the deployment is enforced.
 
 ## Next Steps
 
-- [Understanding application deployment client components](/sccm/apps/understand/client-components-technical-reference)
+- [Understanding application deployment client components](client-components-technical-reference.md)
