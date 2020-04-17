@@ -59,7 +59,7 @@ To get started with this feature, use the following steps:
 
 - Update devices to Windows 10, version 1709 or later  
 
-- [Enable co-management](/sccm/comanage/how-to-enable)  
+- [Enable co-management](how-to-enable.md)  
     - You don't need to switch any workload to Intune  
 
 - Update your Configuration Manager site and clients to *version 1806* or later  
