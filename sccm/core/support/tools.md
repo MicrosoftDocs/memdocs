@@ -87,7 +87,7 @@ These tools are in the `ServerTools` subfolder:
 
 - [Update reset tool](../servers/manage/update-reset-tool.md): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
 
-- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.  
+- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.   
 
 - [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
 
