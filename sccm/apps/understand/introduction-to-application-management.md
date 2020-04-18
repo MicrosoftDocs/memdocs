@@ -96,7 +96,7 @@ For more information, see [Update and retire applications](../deploy-use/update-
 
 Use *detection methods* to discover whether a device has already installed an application. If the detection method indicates the application is installed, Configuration Manager doesn't attempt to install it again.
 
-For more information, see [Deployment type Detection Method options](/sccm/apps/deploy-use/create-applications##bkmk_dt-detect).
+For more information, see [Deployment type Detection Method options](../deploy-use/create-applications.md#bkmk_dt-detect).
 
 ### Dependencies
 

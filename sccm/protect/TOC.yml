@@ -117,7 +117,7 @@
   - name: Deploy Wi-Fi, VPN, email, and certificate profiles
     href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
   - name: Terms and conditions settings
-    href: /configmgr/mdm/understand/what-happened-to-hybrid?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
   - name: Monitor protection
     items:
     - name: Monitor Wi-Fi, email, and VPN profiles

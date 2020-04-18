@@ -167,7 +167,7 @@ Depending on the selected options, you might be asked to specify more informatio
 
 - **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.  
 
-- **Select a client certificate for client authentication**: Select a previously created client SCEP certificate profile to authenticate the VPN connection. For more information, see [Create PFX certificate profiles](/configmgr/protect/deploy-use/create-pfx-certificate-profiles).
+- **Select a client certificate for client authentication**: Select a previously created client SCEP certificate profile to authenticate the VPN connection. For more information, see [Create PFX certificate profiles](create-certificate-profiles.md).
 
 ## Next steps
 

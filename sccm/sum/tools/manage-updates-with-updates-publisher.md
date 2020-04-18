@@ -95,7 +95,7 @@ There are two ways to publish updates and bundles:
 If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
 
 ## Export updates
-You can export updates and bundles from your Updates Publisher repository to create a custom update catalog. Then, you can [add](updates-publisher-catalogs.md#add-software-update-catalogs) and then [import](updates-publisher-catalogs.md#import-updates) that catalog to another instance of Updates Publisher. (You can also [export updates as a publication](/sccm/sum/tools/updates-publisher-publications##export-a-publication).)
+You can export updates and bundles from your Updates Publisher repository to create a custom update catalog. Then, you can [add](updates-publisher-catalogs.md#add-software-update-catalogs) and then [import](updates-publisher-catalogs.md#import-updates) that catalog to another instance of Updates Publisher. (You can also [export updates as a publication](updates-publisher-publications.md#export-a-publication).)
 
 To export directly, go to **Updates Workspace** > **All Software Updates** and select one or more updates and bundles. You cannot export a vendor or product folder, but you can select a folder and then select the updates in that folder for export.
 

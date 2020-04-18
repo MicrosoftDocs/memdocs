@@ -110,9 +110,9 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
 
 > [!TIP]
-> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).
 >
-> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Variables for Apply Driver Package
 
@@ -240,7 +240,7 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 > [!TIP]
 > Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
 >
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 >
 > The **Setup Windows and ConfigMgr** step starts the installation of Windows.
 
@@ -459,7 +459,7 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
 
 > [!TIP]
-> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).
 
 ### Behaviors for Auto Apply Drivers
 
@@ -1360,7 +1360,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Properties for Install Package
 
@@ -2390,7 +2390,7 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 > [!TIP]
 > Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
 >
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Variables for Upgrade OS
 

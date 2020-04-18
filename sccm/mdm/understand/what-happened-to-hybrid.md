@@ -61,7 +61,7 @@ The following note is the original deprecation announcement:
 >     4. Enable co-management
 >     5. Move the compliance policies co-management workload to Intune
 >
->     For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access).
+>     For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
 >
 > **What do I need to do to prepare for this change?**
 >
