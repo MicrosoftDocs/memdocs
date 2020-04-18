@@ -293,4 +293,4 @@ If you need to upgrade your version of SQL Server, use one of the following meth
 
 - Install a new version of SQL Server on a new computer, and then [use the database move option](../../servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
 
-- Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site).
+- Use [backup and recovery](../../servers/manage/backup-and-recovery.md). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](../../servers/manage/recover-sites.md#considerations-before-recovering-a-site).

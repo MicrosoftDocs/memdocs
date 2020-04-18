@@ -88,7 +88,7 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 
 **Synchronization settings** page:   
 - **Data settings:**
-  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
+  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](../plan-design/hierarchy/data-transfers-between-sites.md).
   - **Tables included to synchronize** – Specify the name of each additional table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
   - **Tables excluded to synchronize** - Specify the name of individual tables from replication groups you synchronize. Tables you specify will be excluded from. Separate multiple tables by using a comma.
 - **Synchronization settings:**
@@ -231,7 +231,7 @@ A new Windows 10 notification informs end users that they must take additional a
 ## Windows Store for Business support in Configuration Manager
 
 You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
-For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
 

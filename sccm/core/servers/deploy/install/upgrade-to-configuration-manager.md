@@ -41,7 +41,7 @@ For more information, see [Frequently asked questions for Configuration Manager 
 > When you upgrade from a System Center 2012 Configuration Manager version to current branch, you might be able to streamline your upgrade process. For more information, see the following:  
 >
 > - [Baseline and update versions](../../manage/updates.md#bkmk_Baselines)  
-> - [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder)  
+> - [The CD.Latest folder](../../manage/the-cd.latest-folder.md)  
 
 ### Unsupported paths
 

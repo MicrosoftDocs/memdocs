@@ -138,7 +138,7 @@ In this release, we've added new configuration item settings for Windows 10 devi
   - OpenSearch XML URL
   - Homepages (desktop only)
 
-For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 ### New device compliance policy rules
 

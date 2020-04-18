@@ -40,7 +40,7 @@ If you need to upgrade your version of SQL Server, we recommend the following me
 
 2. Install a new version of SQL Server on a new computer. Then to point your site server at the new SQL Server, [use the database move option](../../../servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) of Configuration Manager setup.  
 
-3. Use [backup and recovery](/sccm/protect/understand/backup-and-recovery).  
+3. Use [backup and recovery](../../../servers/manage/backup-and-recovery.md).  
 
 ## Next steps
 

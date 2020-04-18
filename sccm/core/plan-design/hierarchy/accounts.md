@@ -115,7 +115,7 @@ By default, this group has **Read** permission to the following folder on the si
 
 This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
-For more information, see [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
+For more information, see [Data transfers between sites](data-transfers-between-sites.md).
 
 
 ### ConfigMgr Remote Control Users  

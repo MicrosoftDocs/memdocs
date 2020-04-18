@@ -73,7 +73,7 @@ A stand-alone primary site must meet the following prerequisites before you can 
 
 #### Source file version matches site version
 
-Install the new central administration site using media from a CD.Latest folder that matches the version of the stand-alone primary site. To make sure the versions match, use the source files found in the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) on the stand-alone primary site.
+Install the new central administration site using media from a CD.Latest folder that matches the version of the stand-alone primary site. To make sure the versions match, use the source files found in the [CD.Latest folder](../../manage/the-cd.latest-folder.md) on the stand-alone primary site.
 
 For more information about the correct source files to use to install different sites, see [Options for installing different types of sites](prepare-to-install-sites.md#bkmk_options).  
 
@@ -127,7 +127,7 @@ To successfully replicate data between a central administration site and a prima
 
 After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
-- [Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
+- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 

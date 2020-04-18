@@ -405,7 +405,7 @@ This example requires the client to be on a network location that's configured i
 ## <a name="BKMK_ClientInternet"></a> Internet-based client management  
 
 > [!NOTE]  
-> This section doesn't apply to clients that use a [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
+> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
 
 When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 

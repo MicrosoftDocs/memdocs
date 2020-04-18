@@ -201,7 +201,7 @@ Before you update a site, stop antivirus software on the Configuration Manager s
 
 Before you update a site, back up the site database at the CAS and primary sites. This backup makes sure you have a successful backup to use for disaster recovery.
 
-For more information, see [Backup and recovery](/sccm/protect/understand/backup-and-recovery).
+For more information, see [Backup and recovery](backup-and-recovery.md).
 
 ### Back up customized files
 
@@ -269,7 +269,7 @@ In the Configuration Manager console, go to the following locations to view the 
 
 For more information, see the following articles:  
 
-- [Monitor hierarchy and replication infrastructure](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
+- [Monitor hierarchy and replication infrastructure](monitor-hierarchy.md)
 - [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA)  
 
 ### Update Configuration Manager consoles

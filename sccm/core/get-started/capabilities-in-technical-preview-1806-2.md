@@ -213,7 +213,7 @@ After you transition this workload, any available apps deployed from Intune are 
 
 For more information, see the following articles:  
 
-- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
+- [Co-management for Windows 10 devices](../../comanage/overview.md)  
 
 - [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management)  
 

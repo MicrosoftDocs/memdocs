@@ -349,7 +349,7 @@ You can't use a new database created on the replica. When you configure an avail
 #### Distributed views
 
 <!-- SCCMDocs-pr#3792 -->
-In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
+In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](../../../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
 
 
 ### Setup errors in ConfigMgrSetup.log

@@ -72,7 +72,7 @@ Phased deployments automate a coordinated, sequenced rollout of software without
 
 ## Co-management reporting
 <!-- 1356648 -->
-If you are using the [co-management](/sccm/core/clients/manage/co-management-overview) capabilities, you can now view a dashboard with information about co-management in your environment. In the Configuration Manager console, navigate to the **Monitoring** workspace, expand **Upgrade Readiness**, and select the **Co-management** dashboard. The dashboard includes the following tiles:
+If you are using the [co-management](../../comanage/overview.md) capabilities, you can now view a dashboard with information about co-management in your environment. In the Configuration Manager console, navigate to the **Monitoring** workspace, expand **Upgrade Readiness**, and select the **Co-management** dashboard. The dashboard includes the following tiles:
 - **Co-managed devices**: the percentage of devices in your environment that you enabled for co-management
 - **OS distribution**: the breakdown of operating systems (OS) by version. This chart uses the following groupings:
   - Windows 7 & 8.x

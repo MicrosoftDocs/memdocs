@@ -93,7 +93,7 @@ For more information, see CMG [Performance and scale](../../clients/manage/cmg/p
 For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
 
 > [!NOTE]
-> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](https://docs.microsoft.com/configmgr/core/plan-design/configs/recommended-hardware#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
+> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](recommended-hardware.md#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
 
 ### Distribution point  
 

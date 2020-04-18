@@ -242,11 +242,11 @@ Review the following articles for site-specific configurations:
 
 Consider configurations that span sites and hierarchies  
 
-- [High availability options](/sccm/protect/understand/high-availability-options) for sites and hierarchies
+- [High availability options](../../servers/deploy/configure/high-availability-options.md) for sites and hierarchies
 
 - [Extend the Active Directory schema](../network/extend-the-active-directory-schema.md) and configure sites to [publish site data](../../servers/deploy/configure/publish-site-data.md)  
 
-- [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites)  
+- [Data transfers between sites](data-transfers-between-sites.md)  
 
 - [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md)  
 

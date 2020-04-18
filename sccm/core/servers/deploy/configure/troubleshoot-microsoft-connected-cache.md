@@ -29,7 +29,7 @@ Verify this behavior [on a client](#bkmk_verify-client) or [on the server](#bkmk
 
 ### <a name="bkmk_verify-client"></a> Verify on a client
 
-1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache#verify).
+1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
 
 2. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`
 

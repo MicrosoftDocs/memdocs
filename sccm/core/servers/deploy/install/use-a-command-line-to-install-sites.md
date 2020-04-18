@@ -58,7 +58,7 @@ manager: dougeby
   - Identification  
   - Recovery
 
-For more information, see [Unattended site recovery for Configuration Manager](/sccm/protect/understand/unattended-recovery).  
+For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
 
 For a list of keys and values to use in an unattended installation script file, see [Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 

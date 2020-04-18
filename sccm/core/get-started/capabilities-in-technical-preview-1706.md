@@ -459,7 +459,7 @@ You can configure Entrust as the certification authority when adding a Certifica
 ## Cisco (IPsec) support for iOS VPN profiles
 <!-- 1321367 -->
 
-You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile).
+You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](../../protect/deploy-use/create-vpn-profiles.md#create-a-vpn-profile).
 
 
 ## New Windows configuration item settings

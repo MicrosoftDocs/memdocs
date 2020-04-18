@@ -56,7 +56,7 @@ If you're installing a central administration site as part of a site expansion s
 1. On the computer where you want to install the site, run `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` to start the **Configuration Manager Setup Wizard**.  
 
     > [!NOTE]  
-    > When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, use installation media (source files) that match the version of the existing site or sites. If you've installed in-console updates that have changed the version of the previously installed sites, don't use the original installation media. Instead, use source files from the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) of an updated site. Configuration Manager requires you to use source files that match the version of the existing site that your new site will connect to.  
+    > When you install a central administration site to expand on a stand-alone primary site, or install a new child primary site in an existing hierarchy, use installation media (source files) that match the version of the existing site or sites. If you've installed in-console updates that have changed the version of the previously installed sites, don't use the original installation media. Instead, use source files from the [CD.Latest folder](../../manage/the-cd.latest-folder.md) of an updated site. Configuration Manager requires you to use source files that match the version of the existing site that your new site will connect to.  
 
 2. On the **Before You Begin** page, choose **Next**.  
 

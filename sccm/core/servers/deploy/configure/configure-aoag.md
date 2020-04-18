@@ -34,7 +34,7 @@ Use the following procedure to create an availability group and then move a copy
 
     `preinst.exe /stopsite`
 
-    For more information, see [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+    For more information, see [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 2. Change the backup model for the site database from **SIMPLE** to **FULL**:
 
@@ -149,7 +149,7 @@ For more information, see [Add a secondary replica to an availability group](htt
 
 Use the asynchronous replica to recover your site database.
 
-1. Stop the active primary site to prevent additional writes to the site database. To stop the site, use the [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe): `preinst.exe /stopsite`
+1. Stop the active primary site to prevent additional writes to the site database. To stop the site, use the [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md): `preinst.exe /stopsite`
 
 1. After you stop the site, use the asynchronous replica instead of a [manually recovered database](../../manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
@@ -158,7 +158,7 @@ Use the asynchronous replica to recover your site database.
 
 Use the following procedure when you no longer want to host your site database in an availability group. With this process, you'll move the site database back to a single instance of SQL Server.
 
-1. Stop the Configuration Manager site by using the following command: `preinst.exe /stopsite`. For more information, see [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+1. Stop the Configuration Manager site by using the following command: `preinst.exe /stopsite`. For more information, see [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 2. Use SQL Server to create a full backup of your site database from the primary replica. For more information, see [Create a full database backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 

@@ -142,9 +142,9 @@ Media in the CD.Latest folder is supported for:
 Media in the CD.Latest folder is not supported for:  
 - Installing a central administration site as part of a site expansion scenario.
 
-For more information, see [the CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).
+For more information, see [the CD.Latest folder](../servers/manage/the-cd.latest-folder.md).
 
 ## Backup, recovery, and site maintenance for the LTSB
-To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
+To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](../servers/manage/backup-and-recovery.md).  
 
 Use Configuration Manager Setup from the CD.Latest folder of the backup of your LTSB site.

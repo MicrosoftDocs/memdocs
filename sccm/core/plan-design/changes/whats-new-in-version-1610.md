@@ -99,7 +99,7 @@ You can now request a policy sync for an Intune-enrolled device from the Configu
 
 ## Use compliance settings to configure Windows Defender settings
 You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers by using configuration items in the Configuration Manager console.
-For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 
 
@@ -192,7 +192,7 @@ The Prepare ConfigMgr Client step will now completely remove the Configuration M
 
 
 ## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy).
+You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
@@ -203,7 +203,7 @@ Users of noncompliant iOS devices will be prompted to enroll. They'll be require
 
 ## New compliance settings for configuration items
 There are many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-For details, see [Configuration items for devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
+For details, see [Configuration items for devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 ### New settings for Android devices
 #### Password settings

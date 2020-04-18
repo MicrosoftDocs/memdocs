@@ -42,7 +42,7 @@ When you run the LTSB and are expanding a stand-alone primary site by installing
 
 Although you do not run Setup for site expansion from the CD.Latest folder, you continue to use the CD.Latest folder for site recovery, and to install a new child primary site when your first LTSB site was a central administration site.
 
-For more information about site expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand). For more information about the CD.Latest folder, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).
+For more information about site expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand). For more information about the CD.Latest folder, see [The CD.Latest folder](../servers/manage/the-cd.latest-folder.md).
 
 
 ## Recovery

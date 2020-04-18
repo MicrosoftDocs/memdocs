@@ -55,7 +55,8 @@ Specify the maximum transfer rate that clients can use outside the BITS throttli
 
 ### Configure BranchCache
 
-Set up the client computer for [Windows BranchCache](../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
+Set up the client computer for [Windows BranchCache](../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache
+). To allow BranchCache caching on the client, set **Enable BranchCache** to **Yes**.
 
 - **Enable BranchCache**: Enables BranchCache on client computers.
 
@@ -167,7 +168,7 @@ When you configure Azure Active Directory to support hybrid join, Configuration 
 
 ### Enable clients to use a cloud management gateway
 
-By default, all internet-roaming clients use any available [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
+By default, all internet-roaming clients use any available [cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md). An example of when to configure this setting to **No** is to scope usage of the service, such as during a pilot project or to save costs.
 
 
 

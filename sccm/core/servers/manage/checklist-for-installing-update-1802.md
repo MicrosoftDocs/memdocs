@@ -131,7 +131,7 @@ Before you update a site, ensure that you have stopped antivirus software on the
 **Create a backup of the site database at the central administration site and primary sites:** 
 Before you update a site, back up the site database to ensure that you have a successful backup to use for disaster recovery.
 
-For more information, see [Backup and recovery for Configuration Manager](/sccm/protect/understand/backup-and-recovery).
+For more information, see [Backup and recovery for Configuration Manager](backup-and-recovery.md).
 
 **Plan for client piloting:**   
 When you install an update that updates the client, you can test that new client update in pre-production before it deploys and upgrades all your active clients.
