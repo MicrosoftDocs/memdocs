@@ -89,7 +89,7 @@
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
-    - name: Device Enrollment Program
+    - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-ios.md
     - name: Set up iOS/iPadOS and iPadOS User Enrollment
       href: ios-user-enrollment.md

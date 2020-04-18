@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -50,15 +50,15 @@ Location tokens are also known as Volume Purchase Program (VPP) tokens. These to
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
 
-|   | Device Licensing | User Licensing |
-|-----|------------------|----------------|
-| **App Store sign-in** | Not required. | Each end user must use a unique Apple ID when prompted to sign in to App Store. |
-| **Device configuration blocking access to App Store** | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App Store. If you have set a policy to disable App Store, user licensing for VPP apps will not work. |
-| **Automatic app update** | As configured by Intune admin in Apple VPP token settings where the app's **assignment type** is **required**. <br> <br> If the **assignment type** is **available for enrolled devices**, available app updates can be installed from Company Portal. | As configured by end user in personal App Store settings. This cannot be managed by Intune admin. |
-| **User Enrollment** | Not supported. | Supported using Managed Apple IDs. |
-| **Books** | Not supported. | Supported. |
-| **Licenses used** | 1 license per device. The license is associated with the device. | 1 license for up to 5 devices using the same personal Apple ID. The license is associated with the user. <br> <br> An end user associated with a personal Apple ID and a Managed Apple ID in Intune consumes 2 app licenses.|
-| **License migration** | Apps can migrate silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
+|  | Device Licensing | User Licensing |
+|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
+| Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
+| Automatic   app update | As configured by Intune admin in Apple VPP token   settings where the app's assignment type is required.<p>If the assignment type is available   for enrolled devices, available app updates can be installed from Company   Portal. | As configured by end user in personal App Store   settings. This cannot be managed by Intune admin. |
+| User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
+| Books | Not supported. | Supported. |
+| Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
+| License   migration | Apps can migrate silently from user to device licenses. | Apps cannot migrate from device to user licenses. |
 
 > [!NOTE]  
 > Company Portal does not show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
@@ -162,10 +162,10 @@ The end-user will receive prompts for VPP app installation in a number of scenar
 
 You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) app licenses based on a given device, user, or app.  But there are some differences between iOS/iPadOS and macOS platforms. 
 
-|   | iOS/iPadOS | macOS |
-|-----|------------------|----------------|
-| **Remove app assignment** | When you remove an app that was assigned to a user, Intune reclaims the user or device license and uninstalls the app from the device. | When you remove an app that was assigned to a user, Intune reclaims the user or device license. The app is not uninstalled from the device. |
-| **Revoke app license** | Revoking an app license reclaims the app license from the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from the user or device. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. However, Apple does not provide a means for Intune to remove the app using Uninstall assignment action.
+|  | iOS/iPadOS | macOS |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Remove app assignment | When you remove an app that was assigned to a user,   Intune reclaims the user or device license and uninstalls the app from the   device. | When you remove an app that was assigned to a user,   Intune reclaims the user or device license. The app is not uninstalled from   the device. |
+| Revoke app license | Revoking an app license reclaims the app license from   the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from   the user or device. The macOS app with revoked license remains usable on the   device, but cannot be updated until a license is reassigned to the user or   device. According to Apple, such apps are removed after a 30-day grace   period. However, Apple does not provide a means for Intune to remove the app   using Uninstall assignment action. |
 
 >[!NOTE]
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.

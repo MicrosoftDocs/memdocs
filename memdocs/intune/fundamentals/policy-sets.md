@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -108,7 +108,7 @@ Policy sets, new to 1910, have the following known issues.
 
 - MAM policy types that support policy sets include the following: 
   - MAM WIP( Windows) MDM targeted managed app protection 
-  - MAM iiOS/iPadOSOS targeted managed app protection
+  - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
@@ -125,6 +125,7 @@ Policy sets, new to 1910, have the following known issues.
     If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
 
 - MAM does not support deployment to **All Users** and **All Devices** virtual groups for any policy types.
+- The Device Configuration Profile of type "Administrative Templates" cannot be selected as part of a policy set.
 
 ## Next steps
 

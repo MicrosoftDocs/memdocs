@@ -43,7 +43,7 @@ Devices that you manage in this way are enrolled in Intune without a user accoun
 
 Devices must meet these requirements to be managed as an Android Enterprise dedicated device:
 
-- Android OS version 5.1 and above.
+- Android OS version 6.0 and above.
 - Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 ## Set up Android Enterprise dedicated device management
@@ -96,7 +96,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
 
 Replacing or revoking a token/QR code won't have any effect on devices that are already enrolled.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Coporate-owned dedicated devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
 2. Choose the profile that you want to work with.
 3. Choose **Token**.
 4. To replace the token, choose **Replace token**.
