@@ -175,11 +175,6 @@ Intune now supports the following derived credential providers with Android:
 
 A third provider, DISA Purebred, will be available for Android in a future release.
 
-#### Send push notifications as an action for noncompliance <!-- 1733150    -->
-You can now configure an [action for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) that sends a push notification to a user when their device fails to meet conditions of a compliance policy. The new action is **Send push notification to end user**, and is supported on Android and iOS devices.
-
-When users select the push notification on their device, the Company Portal or Intune app opens to display details about why they are noncompliant. 
-
 #### Microsoft Edge security baseline is now Generally Available<!--6586139 -->
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Edge baseline was in Preview.  The new baseline version ins April 2020 (Edge version 80 and later). 
 
