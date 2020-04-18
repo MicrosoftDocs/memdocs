@@ -204,3 +204,9 @@ For all the latest news, information, and tech tips, go to our official blogs:
 
 - [The Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [The Microsoft Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility)
+
+## Next steps
+
+- For additional Intune troubleshooting information, see [Use the troubleshooting portal to help users at your company](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Freview.docs.microsoft.com%2Fen-us%2Fmem%2Fintune%2Ffundamentals%2Fhelp-desk-operators&data=02%7C01%7Cv-todmc%40microsoft.com%7C627acc33314740459d6608d7e32b2dc9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637227646897057628&sdata=9CHULwLZm6Xkun9lwXvEuOVIBoT3glx%2BAuxB60wnKkc%3D&reserved=0).
+- Learn about any known issues in Microsoft Intune. For more information, see [Intune Customer Success](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Ft5%2FIntune-Customer-Success%2Fbg-p%2FIntuneCustomerSuccess&data=02%7C01%7Cv-todmc%40microsoft.com%7C627acc33314740459d6608d7e32b2dc9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637227646897067621&sdata=uVqxrdg4skwmmHXJ4jq15zxh4wkLLq2T8fKclhLtnJQ%3D&reserved=0).
+- Need extra help? See [How to get support for Microsoft Intune](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Freview.docs.microsoft.com%2Fen-us%2Fmem%2Fintune%2Ffundamentals%2Fget-support&data=02%7C01%7Cv-todmc%40microsoft.com%7C627acc33314740459d6608d7e32b2dc9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637227646897067621&sdata=X3g3EROf6bjjbvVZTdWLRySkutkJL%2FPMvumSIAfEcu0%3D&reserved=0).
