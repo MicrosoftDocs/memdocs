@@ -83,7 +83,7 @@ These tools are in the `ServerTools` subfolder:
 
 - [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md): Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to remove orphaned content from a distribution point.  
 
-- [Hierarchy Maintenance Tool](../../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
+- [Hierarchy Maintenance Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
 
 - [Update reset tool](../servers/manage/update-reset-tool.md): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
 
