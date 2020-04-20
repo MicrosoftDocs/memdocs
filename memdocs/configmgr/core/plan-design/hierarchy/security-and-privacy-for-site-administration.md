@@ -72,7 +72,7 @@ To make sure service continuity and least privileges, don't manually edit these 
 
 If clients can't query the global catalog for Configuration Manager information, they must rely on the trusted root key to authenticate valid management points. The trusted root key is stored in the client registry. It can be set by using group policy or manual configuration.  
 
-If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
+If the client doesn't have a copy of the trusted root key before it contacts a management point for the first time, it trusts the first management point it communicates with. To reduce the risk of an attacker misdirecting clients to an unauthorized management point, you can pre-provision the clients with the trusted root key. For more information, see [Planning for the trusted root key](../security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 ### Use non-default port numbers
 
@@ -109,7 +109,7 @@ Grant administrative access to Configuration Manager only to users that you trus
 
 Periodically audit administrative user assignments and their authorization level to verify required changes.  
 
-For more information, see [Configure role-based administration](/sccm/core/servers/deploy/configure/configure-role-based-administration).  
+For more information, see [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md).  
 
 ### Secure Configuration Manager backups
 
@@ -131,7 +131,7 @@ If a site system isn't uninstalled properly, or stops functioning and can't be r
 
 To remove the peer trust that was originally established with the site system and site system roles, manually remove the Configuration Manager certificates for the failed server in the **Trusted People** certificate store on other site system servers. This action is important if you reuse the server without reformatting it.  
 
-For more information, see [Cryptographic controls for server communication](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#cryptographic-controls-for-server-communication).  
+For more information, see [Cryptographic controls for server communication](../security/cryptographic-controls-technical-reference.md#cryptographic-controls-for-server-communication).  
 
 ### Don't configure internet-based site systems to bridge the perimeter network
 
@@ -162,7 +162,7 @@ If your proxy web server can't support the requirements for SSL bridging, SSL tu
 
 - If you must use subnet-directed broadcasts, configure routers to allow IP-directed broadcasts only from the site server and only on a non-default port number.  
 
-For more information about the different Wake On LAN technologies, see [Planning how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).
+For more information about the different Wake On LAN technologies, see [Planning how to wake up clients](../../clients/deploy/plan/plan-wake-up-clients.md).
 
 ### If you use email notification, configure authenticated access to the SMTP mail server
 
@@ -185,7 +185,7 @@ When you run setup and create a secondary site, don't select the option to copy 
 
 Instead of copying the files over the network, on the secondary site server, copy the source files from media folder to a local folder. Then, when you run setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
 
-For more information, see [Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary).
+For more information, see [Install a secondary site](../../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
 
 ### Site role installation inherits permissions from drive root
 
@@ -234,13 +234,13 @@ Use the following guidance to help you secure the site systems that run IIS.
 
 ### Disable IIS functions that you don't require
 
-Install only the minimum IIS features for the site system role that you install. For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+Install only the minimum IIS features for the site system role that you install. For more information, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).  
 
 ### Configure the site system roles to require HTTPS
 
 When clients connect to a site system by using HTTP rather than by using HTTPS, they use Windows authentication. This behavior might fall back to using NTLM authentication rather than Kerberos authentication. When NTLM authentication is used, clients might connect to a rogue server.  
 
-The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security best practices for content management](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement).  
+The exception to this guidance might be distribution points. Package access accounts don't work when the distribution point is configured for HTTPS. Package access accounts provide authorization to the content, so that you can restrict which users can access the content. For more information, see [Security best practices for content management](security-and-privacy-for-content-management.md#BKMK_Security_ContentManagement).  
 
 ### Configure a certificate trust list (CTL) in IIS for site system roles
 
@@ -291,7 +291,7 @@ For example, remove the following virtual directories for a distribution point:
 
 ### Follow IIS Server security guidance
 
-Identify and follow the general guidance for your version of IIS Server. Take into consideration any requirements that Configuration Manager has for specific site system roles. For more information, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+Identify and follow the general guidance for your version of IIS Server. Take into consideration any requirements that Configuration Manager has for specific site system roles. For more information, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).  
 
 
 ## <a name="BKMK_Security_ManagementPoint"></a> Security guidance for the management point
@@ -311,7 +311,7 @@ If you migrate from an earlier version to Configuration Manager current branch, 
 
 If you install a fallback status point in Configuration Manager, use the following security guidance:
 
-For more information about the security considerations when you install a fallback status point, see [Determine whether you require a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).  
+For more information about the security considerations when you install a fallback status point, see [Determine whether you require a fallback status point](../../clients/deploy/plan/determine-the-site-system-roles-for-clients.md#fallback-status-point).  
 
 ### Don't run any other roles on the same site system
 

@@ -53,7 +53,7 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 - Application Catalog website point  
 
     > [!Important]  
-    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_remove-appcat).  
+    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
 - Configuration Manager Policy Module  
 
@@ -135,7 +135,7 @@ Internet-based client management (sometimes referred to as IBCM) lets you manage
 
 - You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the internet and the internet-based site system servers.  
 
-   For more information about the PKI certificates, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+   For more information about the PKI certificates, see [PKI certificate requirements for Configuration Manager](../../plan-design/network/pki-certificate-requirements.md).  
 
 - The internet fully qualified domain name (FQDN) of site systems that support internet-based client management must be registered as host entries on public DNS servers.  
 

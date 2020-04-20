@@ -71,7 +71,7 @@ You can now deploy PFX certificate profiles you imported to Configuration Manage
 
 ### Try it out
 
-Use the instructions in [How to create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) to import a PFX profile, deploy the profile, and then check if the certificate was installed for the targeted user.
+Use the instructions in [How to create PFX certificate profiles](../../mdm/deploy-use/create-pfx-certificate-profiles.md) to import a PFX profile, deploy the profile, and then check if the certificate was installed for the targeted user.
 
 
 
@@ -80,7 +80,7 @@ Technical preview 1703 introduces the **Configure Azure Services** wizard. This 
 
 With technical preview 1703, only Windows Store for Business (WSfB) is configured by using this wizard.  Other cloud services are configured by using their separate workflows.
 
-- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+- Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 - For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
 
@@ -121,7 +121,7 @@ In Azure Active Directory, register Configuration Manager as a web application o
 7. On the **App Configurations** page, complete the app catalog and language configurations for this service, and then click **Next**.
 8. After the wizard completes, the Configuration Manager console shows that you have configured **Windows Store for Business** as a **Cloud Service Type**.
 
-You can now use the remainder of the [Current Branch content](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business) for managing apps from the WSfB to synchronize, create and deploy, and monitor Windows Store for Business Apps.
+You can now use the remainder of the [Current Branch content](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) for managing apps from the WSfB to synchronize, create and deploy, and monitor Windows Store for Business Apps.
 
 ### Modify a cloud service configuration
 You can view and edit the properties of a cloud service to modify the configuration.
@@ -129,7 +129,7 @@ You can view and edit the properties of a cloud service to modify the configurat
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
 
 ## Convert from BIOS to UEFI during an in-place upgrade
-Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
 
 ## Collapsible task sequence groups
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.

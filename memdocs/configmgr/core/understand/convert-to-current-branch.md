@@ -36,7 +36,7 @@ When your site has converted to the Current Branch, previously unavailable featu
 
 For example, because the LTSB is based on version 1606, you cannot use the baseline 1511 media to convert to the Current Branch. Instead, you run setup from the same version 1606 baseline media that you used to install the LTSB site, and choose the licensing option for the Current Branch.  Alternately, if a later baseline of the Current Branch has been released, you can run setup from that baseline media.
 
-For a list of baseline versions, see **Baseline and update versions** in [Updates for Configuration Manager](/sccm/core/servers/manage/updates).
+For a list of baseline versions, see **Baseline and update versions** in [Updates for Configuration Manager](../servers/manage/updates.md).
 
 ## Use the Configuration Manager console to convert the long-term servicing branch
 If your site runs the LTSB, you can use the following option in the Configuration Manager console to convert to the Current Branch:

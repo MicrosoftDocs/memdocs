@@ -47,7 +47,7 @@ Decide which source path to use:
 When possible, start the console installer from the **ConsoleSetup** folder rather than from the source media.
 
 > [!Important]  
-> Don't install the console using the **CD.Latest** source files. It's an unsupported scenario, and may cause problems with the console installation. For more information, see [The CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder#unsupported-scenarios).<!-- SCCMDocs issue 1359 -->  
+> Don't install the console using the **CD.Latest** source files. It's an unsupported scenario, and may cause problems with the console installation. For more information, see [The CD.Latest folder](../../manage/the-cd.latest-folder.md#unsupported-scenarios).<!-- SCCMDocs issue 1359 -->  
 
 If you create a package for installing the console on other computers, make sure the package includes the following files:<!--3612513-->
 
@@ -137,6 +137,6 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 ## See also
 
-An administrator sees objects in the console based on the permissions assigned to their user account. For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+An administrator sees objects in the console based on the permissions assigned to their user account. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
-For more information on the fundamentals of navigating the Configuration Manager console, see [Using the console](/sccm/core/servers/manage/admin-console).
+For more information on the fundamentals of navigating the Configuration Manager console, see [Using the console](../../manage/admin-console.md).

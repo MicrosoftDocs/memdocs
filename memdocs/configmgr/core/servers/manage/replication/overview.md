@@ -14,17 +14,17 @@ manager: dougeby
 
 # Troubleshoot SQL replication
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 To better understand and help troubleshoot issues with SQL replication, use these diagrams.
 
-- [SQL replication](/sccm/core/servers/manage/replication/sql-replication)
-- [SQL configuration](/sccm/core/servers/manage/replication/sql-configuration)
-- [SQL performance](/sccm/core/servers/manage/replication/sql-performance)
-- [SQL replication reinitialization (reinit)](/sccm/core/servers/manage/replication/sql-replication-reinit)
-- [Global data reinit](/sccm/core/servers/manage/replication/global-data-reinit)
-- [Site data reinit](/sccm/core/servers/manage/replication/site-data-reinit)
-- [Reinit missing message](/sccm/core/servers/manage/replication/reinit-missing-message)
+- [SQL replication](sql-replication.md)
+- [SQL configuration](sql-configuration.md)
+- [SQL performance](sql-performance.md)
+- [SQL replication reinitialization (reinit)](sql-replication-reinit.md)
+- [Global data reinit](global-data-reinit.md)
+- [Site data reinit](site-data-reinit.md)
+- [Reinit missing message](reinit-missing-message.md)
 
 These troubleshooting diagrams are interconnected. Use the following diagram to understand their relationships:
 

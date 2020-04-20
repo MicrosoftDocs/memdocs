@@ -62,7 +62,7 @@ You might want to exclude from power management the following types of computers
 
 - Public computers such as kiosk computers, information displays, or monitoring consoles where the computer and the monitor must always be turned on.  
 
-For more information, see [Configuring power management](/sccm/core/clients/manage/power/configuring-power-management).  
+For more information, see [Configuring power management](configuring-power-management.md).  
 
 ## Apply power plans to a test collection
 
@@ -72,7 +72,7 @@ When you exclude a computer from power management, all power settings revert to 
 
 ## Apply power plan settings individually
 
-Monitor the effect of applying each power setting before you apply the next one. This process makes sure that each setting has the required effect. For more information about power plan settings, see [Available power management plan settings](/sccm/core/clients/manage/power/create-and-apply-power-plans#BKMK_Plans).  
+Monitor the effect of applying each power setting before you apply the next one. This process makes sure that each setting has the required effect. For more information about power plan settings, see [Available power management plan settings](create-and-apply-power-plans.md#BKMK_Plans).  
 
 ## Regularly monitor computers for multiple power plans
 
@@ -84,7 +84,7 @@ If a computer is a member of multiple collections, each applying different power
 
 - **Wakeup time**: If you apply multiple wakeup times to a desktop computer, it uses the time closest to midnight.  
 
-For more information, see [Computers with multiple power plans](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management#BKMK_Multiple).  
+For more information, see [Computers with multiple power plans](monitor-and-plan-for-power-management.md#BKMK_Multiple).  
 
 ## Save or export power management information
 

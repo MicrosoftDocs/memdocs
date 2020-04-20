@@ -183,7 +183,7 @@ Use SMB signing or IPsec between the network location and the site server to pre
 
 ### If you use the task sequence run as account, take additional security precautions
 
-If you use the [task sequence run as account](/sccm/core/plan-design/hierarchy/accounts#task-sequence-run-as-account), take the following precautionary steps:  
+If you use the [task sequence run as account](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account), take the following precautionary steps:  
 
 - Use an account with the least possible permissions.  
 
@@ -203,7 +203,7 @@ Administrative users who are granted the **OS deployment manager** security role
 
 ### Use Enhanced HTTP to reduce the need for a network access account
 
-Starting in version 1806, when you enable [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), several OS deployment scenarios don't require a network access account to download content from a distribution point. For more information, see [Task sequences and the network access account](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSNetworkAccessAccount).<!--1358278--> 
+Starting in version 1806, when you enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md), several OS deployment scenarios don't require a network access account to download content from a distribution point. For more information, see [Task sequences and the network access account](planning-considerations-for-automating-tasks.md#BKMK_TSNetworkAccessAccount).<!--1358278--> 
 
 
 
@@ -255,6 +255,6 @@ Before you configure OS deployment, consider your privacy requirements.
 
 ## See also
 
-[Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)
+[Diagnostics and usage data](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
 
-[Security and privacy for Configuration Manager](/sccm/core/plan-design/security/security-and-privacy)
+[Security and privacy for Configuration Manager](../../core/plan-design/security/security-and-privacy.md)

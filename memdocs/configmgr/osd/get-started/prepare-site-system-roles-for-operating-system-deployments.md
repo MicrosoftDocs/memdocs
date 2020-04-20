@@ -26,7 +26,7 @@ To deploy operating systems in Configuration Manager, first prepare the followin
 
 The distribution point site system role hosts source files for clients to download. This content is for applications, software updates, OS images, boot images, and driver packages. Control content distribution by using bandwidth, throttling, and scheduling options.  
 
-It's important that you have enough distribution points to support the deployment of operating systems to computers. It's also important that you plan for the placement of these distribution points in your hierarchy. For more information, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure). This article includes some additional planning considerations for distribution points specific to OS deployment.  
+It's important that you have enough distribution points to support the deployment of operating systems to computers. It's also important that you plan for the placement of these distribution points in your hierarchy. For more information, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md). This article includes some additional planning considerations for distribution points specific to OS deployment.  
 
 
 ###  <a name="BKMK_AdditionalPlanning"></a> Additional planning considerations for distribution points  
@@ -36,7 +36,7 @@ The following items are additional planning things to consider for distribution 
 #### How can I prevent unwanted OS deployments?  
 Configuration Manager doesn't distinguish site servers from other destination computers in a collection. If you deploy a required task sequence to a collection that includes a site server, it runs the task sequence the same way as any other computer in the collection. Make sure that your OS deployment uses a collection that includes the intended clients.  
 
-Manage the behavior for high-risk task sequence deployments. A high-risk deployment automatically installs on a client and has the potential to cause unwanted results. For example, a task sequence with a purpose of required that deploys an OS. To reduce the risk of an unwanted high-risk deployment, configure deployment verification settings. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).  
+Manage the behavior for high-risk task sequence deployments. A high-risk deployment automatically installs on a client and has the potential to cause unwanted results. For example, a task sequence with a purpose of required that deploys an OS. To reduce the risk of an unwanted high-risk deployment, configure deployment verification settings. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).  
 
 #### How many computers can receive an OS image at one time from a single distribution point?  
 To estimate how many distribution points you need, consider the following variables:  
@@ -57,7 +57,7 @@ You can deploy an OS to a distribution point, but the OS image must be received 
 
 ###  <a name="BKMK_PXEDistributionPoint"></a> Configuring distribution points to accept PXE requests  
 
-To deploy operating systems to Configuration Manager clients that make PXE boot requests, configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe).  
+To deploy operating systems to Configuration Manager clients that make PXE boot requests, configure one or more distribution points to accept PXE requests. Once you configure the distribution point, it responds to PXE boot requests and determines the appropriate deployment action to take. For more information, see [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
 
 
 ###  <a name="BKMK_RamDiskTFTP"></a> Customize the RamDisk TFTP block and window sizes on PXE-enabled distribution points  
@@ -93,9 +93,9 @@ To customize the RamDisk TFTP window size, add the following registry key on PXE
 
 ###  <a name="BKMK_DPMulticast"></a> Configure distribution points to support multicast  
 
-Multicast is a network optimization method. Use it on distribution points when multiple clients are likely to download the same OS image at the same time. When you use multicast, multiple computers can simultaneously download the OS image as it's multicast by the distribution point. Without multicast, the distribution point sends a copy of the data to each client over a separate connection. For more information, see [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network).  
+Multicast is a network optimization method. Use it on distribution points when multiple clients are likely to download the same OS image at the same time. When you use multicast, multiple computers can simultaneously download the OS image as it's multicast by the distribution point. Without multicast, the distribution point sends a copy of the data to each client over a separate connection. For more information, see [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
-Before you deploy the OS, configure a distribution point to support multicast. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-multicast).
+Before you deploy the OS, configure a distribution point to support multicast. For more information, see [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-multicast).
 
 
 
@@ -153,4 +153,4 @@ When you use these wizards, you're prompted to provide the following information
 
 -   Whether the state migration point responds only to requests to restore user state data. When you enable this option, you can't use the state migration point to store user state data.  
 
-For the steps to install a site system role, see [Add site system roles](/sccm/core/servers/deploy/configure/add-site-system-roles).  
+For the steps to install a site system role, see [Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md).  

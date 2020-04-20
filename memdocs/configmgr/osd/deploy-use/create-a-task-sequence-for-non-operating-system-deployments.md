@@ -18,14 +18,14 @@ manager: dougeby
 
 Task sequences in Configuration Manager are used to automate different kinds of tasks within your environment. These tasks are primarily designed and tested for deploying operating systems. Configuration Manager has many other features that should be the primary technology that you use for the following scenarios:
 
-- [Application installation](/sccm/apps/understand/introduction-to-application-management)
+- [Application installation](../../apps/understand/introduction-to-application-management.md)
 
     > [!NOTE]
-    > Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](/configmgr/apps/get-started/creating-windows-applications#bkmk_tsdt).<!-- 3555953 -->
+    > Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).<!-- 3555953 -->
 
-- [Software updates installation](/sccm/sum/understand/software-updates-introduction)
+- [Software updates installation](../../sum/understand/software-updates-introduction.md)
 
-- [Setting configuration](/sccm/compliance/understand/ensure-device-compliance)
+- [Setting configuration](../../compliance/understand/ensure-device-compliance.md)
 
 Also consider other Microsoft System Center automation technologies, such as [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) and [Service Management Automation](https://docs.microsoft.com/system-center/sma/).  
 
@@ -37,26 +37,26 @@ The power of task sequences lies in their flexibility and how you use them. They
 
 The following steps are supported for use in a non-OS deployment custom task sequence:  
 
-- [Check Readiness](/sccm/osd/understand/task-sequence-steps#BKMK_CheckReadiness)  
+- [Check Readiness](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
-- [Connect To Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
+- [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
 
-- [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)  
+- [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
 
-- [Install Application](/sccm/osd/understand/task-sequence-steps#BKMK_InstallApplication)  
+- [Install Application](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
 
-- [Install Package](/sccm/osd/understand/task-sequence-steps#BKMK_InstallPackage)  
+- [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
 
-- [Install Software Updates](/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)  
+- [Install Software Updates](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
-- [Restart Computer](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer)  
+- [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer)  
 
-- [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
+- [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
-- [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)  
+- [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
 
-- [Run Task Sequence](/sccm/osd/understand/task-sequence-steps#child-task-sequence)  
+- [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence)  
 
-- [Set Dynamic Variables](/sccm/osd/understand/task-sequence-steps#BKMK_SetDynamicVariables)  
+- [Set Dynamic Variables](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
-- [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)  
+- [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  

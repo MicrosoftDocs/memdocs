@@ -101,7 +101,7 @@ For more information about the ATP integration, see this blog post [Microsoft De
 
 ## Configure
 
-Conditional access is easy to use when you [enable co-management](/sccm/comanage/how-to-enable). It requires moving the **Compliance Policies** workload to Intune. For more information, see [How to switch Configuration Manager workloads to Intune](/sccm/comanage/how-to-switch-workloads). 
+Conditional access is easy to use when you [enable co-management](how-to-enable.md). It requires moving the **Compliance Policies** workload to Intune. For more information, see [How to switch Configuration Manager workloads to Intune](how-to-switch-workloads.md). 
 
 For more information about using conditional access, see the following articles: 
 

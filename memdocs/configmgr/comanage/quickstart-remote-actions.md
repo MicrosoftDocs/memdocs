@@ -62,7 +62,7 @@ Since the auto-enrollment process is transparent to the user, there's no impact 
 
 ### Available remote actions
 
-Use these remote actions from Intune once you [enable co-management](/sccm/comanage/how-to-enable) in Configuration Manager.
+Use these remote actions from Intune once you [enable co-management](how-to-enable.md) in Configuration Manager.
 
 #### Remove devices
 - **Retire**: This action removes managed apps and data (where applicable), settings, and e-mail profiles that were assigned to that device. The device is then removed from Intune management. This process happens the next time the device checks in and receives the remote retire action. The Retire function leaves the user's personal data on the device.  
@@ -109,7 +109,7 @@ For more information, see [Use TeamViewer to remotely administer Intune devices]
 
 ## Configure
 
-Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](/sccm/comanage/how-to-enable).
+Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](how-to-enable.md).
 
 For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](https://docs.microsoft.com/intune/device-profile-android-teamviewer). 
 

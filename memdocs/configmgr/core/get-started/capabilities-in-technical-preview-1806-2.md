@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1806.2. You can install this version to update and add new capabilities to your technical preview site. 
 
-Review the [Technical Preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [Technical Preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template
@@ -83,7 +83,7 @@ Use the **Site version** property to determine the difference between 1806 and 1
 
 ## <a name="bkmk_pod"></a> Improvements to phased deployments
 
-This release includes the following improvements to [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence):
+This release includes the following improvements to [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md):
 - [Phased deployment status](#bkmk_pod-monitor)
 - [Phased deployment of applications](#bkmk_pod-app)
 - [Gradual rollout during phased deployments](#bkmk_pod-throttle)
@@ -120,7 +120,7 @@ Create phased deployments for applications. Phased deployments allow you to orch
 
 In the Configuration Manager console, go to the **Software Library**, expand **Application Management**, and select **Applications**. Select an application, and then click **Create Phased Deployment** in the ribbon. 
 
-The behavior of an application phased deployment is the same as for task sequences. For more information, see [Create phased deployments for a task sequence](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence).
+The behavior of an application phased deployment is the same as for task sequences. For more information, see [Create phased deployments for a task sequence](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
 #### Prerequisite
 Distribute the content for the application to a distribution point before creating the phased deployment.<!--518293-->
@@ -155,15 +155,15 @@ For how to create a new MSIX app, see [MSIX support introduced in Insider Build 
 ### Try it out!
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
-1. In the Configuration Manager console, [create an application](/sccm/apps/deploy-use/create-applications). 
+1. In the Configuration Manager console, [create an application](../../apps/deploy-use/create-applications.md). 
 2. Select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**.
-3. [Deploy the application](/sccm/apps/deploy-use/deploy-applications) to the client running the latest Windows Insider Preview build.
+3. [Deploy the application](../../apps/deploy-use/deploy-applications.md) to the client running the latest Windows Insider Preview build.
 
 
 
 ## <a name="bkmk_client-push"></a> Improvement to client push security
 <!--1358204-->
-When using the [client push](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
+When using the [client push](../clients/deploy/plan/client-installation-methods.md#client-push-installation) method of installing the Configuration Manager client, the site server creates a remote connection to the client to start the install. Starting in this release, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client. 
 
 Depending on your security policies, your environment may already prefer or require Kerberos over older NTLM authentication. For more information on the security considerations of these authentication protocols, see the [Windows security policy setting to restrict NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
@@ -213,7 +213,7 @@ After you transition this workload, any available apps deployed from Intune are 
 
 For more information, see the following articles:  
 
-- [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview)  
+- [Co-management for Windows 10 devices](../../comanage/overview.md)  
 
 - [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management)  
 
@@ -247,12 +247,12 @@ If the peer source client has more than one IP address (IPv4, IPv6, or both), th
 
 ## <a name="bkmk_3pupdate"></a> Third-party software updates support for custom catalogs
 <!--1358714-->
-This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). [Technical preview version 1806](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate) provided support for *partner catalogs*, which are registered catalogs from software vendors. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. Add custom catalogs in the Configuration Manager console.  
+This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). [Technical preview version 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) provided support for *partner catalogs*, which are registered catalogs from software vendors. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. Add custom catalogs in the Configuration Manager console.  
 
 
 ### Prerequisites 
 
-- Set up [third-party software updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#bkmk-3pupdate). Complete Phase 1: Enable and set up the feature.   
+- Set up [third-party software updates](capabilities-in-technical-preview-1806.md#bkmk-3pupdate). Complete Phase 1: Enable and set up the feature.   
 
 - A digitally signed custom catalog that contains digitally signed software updates.  
 
@@ -283,7 +283,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 3. Complete the wizard. The wizard adds the new catalog in an unsubscribed state.  
 
-4. Subscribe to the custom catalog using the existing **Subscribe to Catalog** action. For more information, see [Phase 2: Subscribe to a third-party catalog and sync updates](/sccm/core/get-started/capabilities-in-technical-preview-1806#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
+4. Subscribe to the custom catalog using the existing **Subscribe to Catalog** action. For more information, see [Phase 2: Subscribe to a third-party catalog and sync updates](capabilities-in-technical-preview-1806.md#phase-2-subscribe-to-a-third-party-catalog-and-sync-updates).  
 
 > [!Note]  
 > You can't add catalogs with the same download URL, and you can't edit catalog properties. If you specify incorrect properties for a custom catalog, delete the catalog before you add it again.  
@@ -310,11 +310,11 @@ This release includes the following improvements:
 
 - The following features now support use of the Azure U.S. Government Cloud:<!--511980-->  
 
-    - Onboarding the site for **Cloud Management** through [Azure Services](/sccm/core/servers/deploy/configure/azure-services-wizard)  
+    - Onboarding the site for **Cloud Management** through [Azure Services](../servers/deploy/configure/azure-services-wizard.md)  
 
-    - Deploying a [cloud management gateway with Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)  
+    - Deploying a [cloud management gateway with Azure Resource Manager](../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)  
 
-    - Deploying a [cloud distribution point with Azure Resource Manager](/sccm/core/get-started/capabilities-in-technical-preview-1805#cloud-distribution-point-support-for-azure-resource-manager)  
+    - Deploying a [cloud distribution point with Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
 - Customers are using Windows AutoPilot to provision Windows 10 on Azure Active Directory-joined devices that are connected to the on-premises network. To install or upgrade the Configuration Manager client on these devices, now you don't need a cloud distribution point or on-premises distribution point configured to **Allow clients to connect anonymously**. Instead, enable the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, which allows a cloud domain-joined client to communicate with an on-premises HTTP-enabled distribution point. For more information, see [Improved secure client communications](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
@@ -335,4 +335,4 @@ The report includes the following parts:
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

@@ -28,7 +28,7 @@ This article provides the following sections with multiple resources to find hel
 
 - [Support options and community resources](#BKMK_SupportOptions)  
 
-For help with product accessibility, see [Accessibility features](/sccm/core/understand/accessibility-features).  
+For help with product accessibility, see [Accessibility features](accessibility-features.md).  
 
 
 
@@ -38,7 +38,7 @@ To access the most current product documentation, start at the [library index](h
 
 <a name="BKMK_SearchTips"></a>  
 
-For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](/sccm/core/understand/use-docs).  
+For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](use-docs.md).  
 
 
 
@@ -80,7 +80,7 @@ Starting in Configuration Manager 2002, when you **Send a smile** or **Send a fr
 
 View status messages from **Monitoring** > **System Status** > **Status Message Queries**. Start with the **All Status Messages** query and select your time frame. When the messages load, click on the **Filter messages** button and filter for Message ID 53900 or 53901.
 
-Status messages aren't created if you [Send feedback that you saved for later submission](/sccm/core/understand/find-help#BKMK_NoInternet).
+Status messages aren't created if you [Send feedback that you saved for later submission](find-help.md#BKMK_NoInternet).
 
 [![Status message for successfully submitting feedback](./media/5891852-send-smile-status-message.png)](./media/5891852-send-smile-status-message.png#lightbox)
 

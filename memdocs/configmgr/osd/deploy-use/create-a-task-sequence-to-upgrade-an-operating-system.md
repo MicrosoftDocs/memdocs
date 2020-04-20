@@ -27,15 +27,15 @@ Before you create the task sequence, the following requirements must be in place
 
 ### Required
 
-- The [OS upgrade package](/sccm/osd/get-started/manage-operating-system-upgrade-packages) must be available in the Configuration Manager console.  
+- The [OS upgrade package](../get-started/manage-operating-system-upgrade-packages.md) must be available in the Configuration Manager console.  
 
 - When upgrading to Windows Server 2016, select the **Ignore any dismissable compatibility messages** setting in the Upgrade Operating System task sequence step. Otherwise the upgrade fails.  
 
 ### Required (if used)  
 
-- [Software updates](/sccm/sum/get-started/synchronize-software-updates) must be synchronized in the Configuration Manager console.  
+- [Software updates](../../sum/get-started/synchronize-software-updates.md) must be synchronized in the Configuration Manager console.  
 
-- [Applications](/sccm/apps/deploy-use/create-applications) must be added to the Configuration Manager console.  
+- [Applications](../../apps/deploy-use/create-applications.md) must be added to the Configuration Manager console.  
 
 
 ## <a name="BKMK_UpgradeOS"></a> Create a task sequence to upgrade an OS  
@@ -56,7 +56,7 @@ To upgrade the OS on clients, create a task sequence and select **Upgrade an ope
 
 5. On the **Upgrade the Windows Operating System** page, specify the following settings:  
 
-    - **Upgrade package**: Specify the upgrade package that contains the OS upgrade source files. Verify that you've selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages).  
+    - **Upgrade package**: Specify the upgrade package that contains the OS upgrade source files. Verify that you've selected the correct upgrade package by looking at the information in the **Properties** pane. For more information, see [Manage OS upgrade packages](../get-started/manage-operating-system-upgrade-packages.md).  
 
     - **Edition index**: If there are multiple OS edition indexes available in the package, select the desired edition index. By default, the wizard selects the first index.  
 
@@ -86,7 +86,7 @@ Starting in version 1806, this task sequence template also includes a group with
 <!--1021244-->
 The pre-cache feature for available deployments of task sequences lets clients download relevant OS upgrade package content before a user installs the task sequence.  
 
-For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).
+For more information, see [Configure pre-cache content](configure-precache-content.md).
 
 
 ## Recommended task sequence steps to prepare for upgrade
@@ -133,11 +133,11 @@ Add steps in this group to remove any drivers that are incompatible with this ve
 
 Add steps in this group to remove or suspend third-party security programs, such as antivirus.  
 
-If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
+If you're using a third-party disk encryption program, provide its encryption driver to Windows Setup with the `/ReflectDrivers` [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#reflectdrivers). Add a [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to `/ReflectDrivers` with the path to the driver. This [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.  
 
 ### Download Package Content task sequence step  
 
-Use the [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step before the **Upgrade Operating System** step in the following scenarios:  
+Use the [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent) step before the **Upgrade Operating System** step in the following scenarios:  
 
 - You use a single upgrade task sequence for both x86 and x64 platforms. Include two **Download Package Content** steps in the **Prepare for Upgrade** group. Set conditions on each step to detect the client architecture. This condition causes the step to download only the appropriate OS upgrade package. Configure each **Download Package Content** step to use the same variable, and use the variable for the media path on the **Upgrade Operating System** step.  
 
@@ -172,7 +172,7 @@ Add steps in this group to set Windows default apps and file associations.
 1. Run the following command line to export:  
     `dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`  
 1. Add the XML file to a package.
-1. Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line:  
+1. Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line:  
     `dism /online /Import-DefaultAppAssociations:DefaultAppAssociations.xml`  
 
 For more information, see [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
@@ -196,9 +196,9 @@ Starting in version 1806, the default task sequence template for Windows 10 in-p
 
 To gather logs from the client, add steps in this group.  
 
-- A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step.  
+- A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) step.  
 
-- To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.  
+- To perform the copy operation, use a custom script or utility with either the [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) or [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step.  
 
 - Files to collect might include the following logs:  
      `%_SMSTSLogPath%\*.log`  
@@ -206,9 +206,9 @@ To gather logs from the client, add steps in this group.
 
 - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).  
 
-- For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).  
+- For more information on Configuration Manager client logs, see [Configuration Manager client logs](../../core/plan-design/hierarchy/log-files.md#BKMK_ClientLogs).  
 
-- For more information on **_SMSTSLogPath** and other useful variables, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables).  
+- For more information on **_SMSTSLogPath** and other useful variables, see [Task sequence variables](../understand/task-sequence-variables.md).  
 
 ### Run diagnostic tools
 
@@ -216,9 +216,9 @@ To run additional diagnostic tools, add steps in this group. Automate these tool
 
 One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful.  
 
-- In Configuration Manager, [create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) for the tool.  
+- In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.  
 
-- Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
+- Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
 
 
@@ -234,7 +234,7 @@ On the default **Check Readiness** step, enable **Ensure minimum free disk space
 
 ### Retry downloading policy
 
-Use the **SMSTSDownloadRetryCount** [task sequence variable](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients aren't on a wired intranet network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it can't download policy.<!--501016--> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.  
+Use the **SMSTSDownloadRetryCount** [task sequence variable](../understand/task-sequence-variables.md#SMSTSDownloadRetryCount) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients aren't on a wired intranet network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it can't download policy.<!--501016--> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.  
 
 ### Perform an inline compatibility assessment
 
@@ -252,18 +252,18 @@ Use the **SMSTSDownloadRetryCount** [task sequence variable](/sccm/osd/understan
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, the task sequence skips this step. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode).
+This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, the task sequence skips this step. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
 
-For more information, see [Upgrade operating system](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).  
+For more information, see [Upgrade operating system](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
 
 ### Convert from BIOS to UEFI
 
-If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
 
 ### Manage BitLocker
 
 <!--SCCMDocs issue #494-->
-If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### Remove default apps
 

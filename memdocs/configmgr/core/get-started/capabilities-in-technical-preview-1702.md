@@ -109,7 +109,7 @@ Additionally, this helps organizations to mitigate data leakage through unsecure
 
 ### Try it out
 
-**Scenario:** Identify apps that might be causing data leakage by sending corporate data outside your company, or that are causing excessive data consumption, then [create a conditional access device compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy) that adds these apps into the non-compliant list of apps. This will block access to corporate resources that support conditional access until the user can remove the blocked app.
+**Scenario:** Identify apps that might be causing data leakage by sending corporate data outside your company, or that are causing excessive data consumption, then [create a conditional access device compliance policy](../../mdm/understand/what-happened-to-hybrid.md) that adds these apps into the non-compliant list of apps. This will block access to corporate resources that support conditional access until the user can remove the blocked app.
 
 ## Antimalware client version alert
 Beginning with this preview version, Configuration Manager Endpoint Protection provides an alert if more than 20% (default) of managed clients are using an expired version of the antimalware client (i.e. Windows Defender or Endpoint Protection client).
@@ -146,13 +146,13 @@ The new policy displays in the **Compliance Policies** node of the **Assets and 
 4. When you are done, click **OK**.
 
 ### Monitor the compliance policy
-After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy).
+After you create the compliance policy, you can monitor the compliance results in the Configuration Manager console. For details, see [Monitor the compliance policy](../../mdm/understand/what-happened-to-hybrid.md).
 
 
 ## Improvements to Software Center settings and notification messages for high-impact task sequences
 This release includes the following improvements to Software Center settings and notification messages for high-impact deployment task sequences:
 
-- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+- In the properties for the task sequence, you can now configure any task sequence, including non-operating system task sequences, as a high-risk deployment. Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](../servers/manage/settings-to-manage-high-risk-deployments.md).
 - In the properties for the task sequence, you can choose to use the default notification message or create your own custom notification message for high-impact deployments.
 - In the properties for the task sequence, you can configure Software Center properties, which include make a restart required, the download size of the task sequence, and the estimated run time.
 - The default high-impact deployment message for in-place upgrades now states that
@@ -161,7 +161,7 @@ your apps, data, and settings are automatically migrated. Previously, the defaul
 ### Set a task sequence as a high-impact task sequence
 Use the following procedure to set a task sequence as high-impact.
 > [!NOTE]
-> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](https://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments).
+> Any task sequence that meets certain conditions is automatically defined as high-impact. For details, see [Manage high-risk deployments](../servers/manage/settings-to-manage-high-risk-deployments.md).
 
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.

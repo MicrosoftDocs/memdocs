@@ -132,6 +132,6 @@ This report returns the deployment errors at the site and a count of computers t
 
 ## Next steps
 
-- [Log files for Software Updates](/configmgr/core/plan-design/hierarchy/log-files#BKMK_SU_NAPLog)
+- [Log files for Software Updates](../../core/plan-design/hierarchy/log-files.md#BKMK_SU_NAPLog)
 
 - [Software Updates management whitepaper](https://www.microsoft.com/download/confirmation.aspx?id=44578)

@@ -28,23 +28,23 @@ Create phased deployments for the following objects:
     - You can't use an automatic deployment rule with a phased deployment
 
 > [!Tip]  
-> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->  
+> The phased deployment feature was first introduced in version 1802 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 1806, it's no longer a pre-release feature.<!--1356837-->  
 
 
 
 ## Prerequisites
 
 #### Security scope
-Deployments created by phased deployments aren't viewable to any administrative user that doesn't have the **All** security scope. For more information, see [Security scopes](/sccm/core/understand/fundamentals-of-role-based-administration#bkmk_PlanScope).
+Deployments created by phased deployments aren't viewable to any administrative user that doesn't have the **All** security scope. For more information, see [Security scopes](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
 
 #### Distribute content
 Before creating a phased deployment, distribute the associated content to a distribution point.<!--518293-->  
 
-- **Application**: Select the target application in the console and use the **Distribute Content** action in the ribbon. For more information, see [Deploy and manage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content).   
+- **Application**: Select the target application in the console and use the **Distribute Content** action in the ribbon. For more information, see [Deploy and manage content](../../core/servers/deploy/configure/deploy-and-manage-content.md).   
 
-- **Task sequence**: You have to create referenced objects like the OS upgrade package before creating the task sequence. Distribute these objects before creating a deployment. Use the **Distribute Content** action on each object, or the task sequence. To view status of all referenced content, select the task sequence, and switch to the **References** tab in the details pane. For more information, see the specific object type in [Prepare for OS deployment](/sccm/osd/get-started/prepare-for-operating-system-deployment).   
+- **Task sequence**: You have to create referenced objects like the OS upgrade package before creating the task sequence. Distribute these objects before creating a deployment. Use the **Distribute Content** action on each object, or the task sequence. To view status of all referenced content, select the task sequence, and switch to the **References** tab in the details pane. For more information, see the specific object type in [Prepare for OS deployment](../get-started/prepare-for-operating-system-deployment.md).   
 
-- **Software update**: create the deployment package and distribute it. Use the Download Software Updates Wizard. For more information, see [Download software updates](/sccm/sum/deploy-use/download-software-updates).  
+- **Software update**: create the deployment package and distribute it. Use the Download Software Updates Wizard. For more information, see [Download software updates](../../sum/deploy-use/download-software-updates.md).  
 
 
 
@@ -63,7 +63,7 @@ These settings are unique to phased deployments. Configure these settings when c
 
 - **Automatically begin this phase after a deferral period (in days)**: Choose the number of days to wait before beginning the second phase after the success of the first. By default, this value is one day.  
 
-- **Manually begin the second phase of deployment**: The site doesn't automatically begin the second phase after the first phase succeeds. This option requires that you manually start the second phase. For more information, see [Move to the next phase](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move).  
+- **Manually begin the second phase of deployment**: The site doesn't automatically begin the second phase after the first phase succeeds. This option requires that you manually start the second phase. For more information, see [Move to the next phase](manage-monitor-phased-deployments.md#bkmk_move).  
 
     > [!Note]  
     > This option isn't available for phased deployments of applications.  
@@ -110,7 +110,7 @@ Include a timeline diagram
 3. Select **Browse** and choose a target collection for both the **First Collection** and **Second Collection** fields. For a task sequence and software updates, select from device collections. For an application, select from user or device collections. Select **Next**.  
 
     > [!Important]  
-    > The Create Phased Deployment wizard doesn't notify you if a deployment is potentially high-risk. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments) and the note when you [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+    > The Create Phased Deployment wizard doesn't notify you if a deployment is potentially high-risk. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md) and the note when you [Deploy a task sequence](deploy-a-task-sequence.md).  
 
 4. On the **Settings** page, choose one option for each of the scheduling settings. For more information, see [Phase settings](#bkmk_settings). Select **Next** when complete.  
 
@@ -186,7 +186,7 @@ After you create a phased deployment, open its properties to make changes:
 ## Next steps
 
 Manage and monitor phased deployments:
-- [Application](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Software update](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
-- [Task sequence](/sccm/osd/deploy-use/manage-monitor-phased-deployments)  
+- [Application](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
+- [Software update](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Task sequence](manage-monitor-phased-deployments.md)  
 

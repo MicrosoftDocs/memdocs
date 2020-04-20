@@ -29,7 +29,7 @@ You're also able to pilot a workload with a separate collection of devices. Pilo
 [View the diagram at full size](media/co-management-overview.svg)
 
 > [!Note]  
-> When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](/sccm/comanage/coexistence).
+> When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](coexistence.md).
 
 ## Paths to co-management
 
@@ -39,7 +39,7 @@ There are two main paths to reach to co-management:
 
 - **New internet-based devices**: You have new Windows 10 devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.  
 
-For more information on the paths, see [Paths to co-management](/sccm/comanage/quickstart-paths).
+For more information on the paths, see [Paths to co-management](quickstart-paths.md).
 
 ## Benefits
 
@@ -57,7 +57,7 @@ When you enroll existing Configuration Manager clients in co-management, you gai
 
 - Remote actions
 
-For more information on this immediate value from co-management, see the quickstarts series to [Cloud connect with co-management](/sccm/comanage/quickstarts).
+For more information on this immediate value from co-management, see the quickstarts series to [Cloud connect with co-management](quickstarts.md).
 
 Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads) section.
 
@@ -84,7 +84,7 @@ Co-management has these prerequisites in the following areas:
     > [!Tip]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".
     >
-    > You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
+    > You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### Configuration Manager
 
@@ -92,7 +92,7 @@ Co-management requires Configuration Manager version 1710 or later.
 
 Starting in Configuration Manager version 1806, you can connect multiple Configuration Manager instances to a single Intune tenant. <!--1357944-->  
 
-Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](/sccm/core/servers/deploy/configure/azure-services-wizard).
+Enabling co-management itself doesn't require that you onboard your site with Azure AD. For the [second path scenario](#paths-to-co-management), internet-based Configuration Manager clients require the [cloud management gateway](../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG). The CMG requires the site is [onboarded to Azure AD for cloud management](../core/servers/deploy/configure/azure-services-wizard.md).
 
 ### Azure AD
 
@@ -110,7 +110,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Windows 10
 
-Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service).
+Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
 
 > [!IMPORTANT]
 > Windows 10 mobile devices don't support co-management.
@@ -127,7 +127,7 @@ Upgrade your devices to Windows 10, version 1709 or later. For more information,
 
 For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
-For more information about Configuration Manager roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+For more information about Configuration Manager roles, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
 
 ## Workloads
 
@@ -149,7 +149,7 @@ Co-management supports the following workloads:
 
 - Client apps  
 
-For more information, see [Workloads](/sccm/comanage/workloads).
+For more information, see [Workloads](workloads.md).
 
 ## Monitor co-management
 
@@ -157,10 +157,10 @@ The co-management dashboard helps you review machines that are co-managed in you
 
 ![Screenshot of the co-management dashboard](media/co-management-dashboard.png)
 
-For more information, see [How to monitor co-management](/sccm/comanage/how-to-monitor).
+For more information, see [How to monitor co-management](how-to-monitor.md).
 
 ## Next steps
 
-- [Learn more about immediate value and getting started with co-management](/sccm/comanage/quickstarts)  
+- [Learn more about immediate value and getting started with co-management](quickstarts.md)  
 
-- [Tutorial: Enable co-management for existing Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients)  
+- [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md)  

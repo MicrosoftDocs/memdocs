@@ -88,7 +88,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
 -   **Conditional access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
 
-    A new compliance rule has been added to the configuration manager console that  allows you to specify if the devices should be allowed or blocked access based on their health status.  To create this rule, open the **Create Compliance Policy Wizard**,  and add a new rule.  Select the **Reported as health by Health Attestation Service** for the  condition, and set the value to **True**.  This will make sure that only devices that are reported as healthy will have access to your company resources. For details about Health Attestation Service and how the health of the devices is reported in Intune, see [Device Health Attestation](/sccm/core/get-started/capabilities-in-technical-preview-1512#bkmk_devicehealth).  
+    A new compliance rule has been added to the configuration manager console that  allows you to specify if the devices should be allowed or blocked access based on their health status.  To create this rule, open the **Create Compliance Policy Wizard**,  and add a new rule.  Select the **Reported as health by Health Attestation Service** for the  condition, and set the value to **True**.  This will make sure that only devices that are reported as healthy will have access to your company resources. For details about Health Attestation Service and how the health of the devices is reported in Intune, see [Device Health Attestation](capabilities-in-technical-preview-1512.md#bkmk_devicehealth).  
 
 -   **New compliance policy settings:** The new compliance policy settings help improve security and protection on devices that are used to access company email and SharePoint services:  
 
@@ -196,18 +196,18 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  To see the new settings, choose **Microsoft Edge** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Compliance settings for Windows 10 Team devices  
  Use these new compliance settings to configure devices that run Windows 10 team, such as Surface Hub Devices.  
 
  To see the new settings, choose **Windows 10 Team** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Android - Kiosk Mode for Samsung KNOX Standard<br />Hybrid  
  Kiosk mode lets you lock a device to only allow certain features to work. For example, you can allow a device to only run one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point of sale device. These settings are not available for Samsung KNOX Standard devices in the **Windows 8.1 and Windows 10** configuration item (settings apply to Windows 10 devices only).  
 
  To see the new settings, choose **Kiosk Mode - Samsung KNOX** from the configuration item **Device Settings** page of the **Create Configuration Item** wizard.  
 
- For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).  
+ For more information, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  

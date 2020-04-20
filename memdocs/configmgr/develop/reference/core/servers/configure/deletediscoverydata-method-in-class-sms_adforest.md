@@ -53,4 +53,4 @@ SInt32 DeleteDiscoveryData(
 
 ## See also
 
-[SMS_ADForest server WMI class](/sccm/develop/reference/core/servers/configure/sms_adforest-server-wmi-class)
+[SMS_ADForest server WMI class](sms_adforest-server-wmi-class.md)

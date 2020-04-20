@@ -71,4 +71,4 @@ For more information about licensing for Configuration Manager branches, see [Co
 
 ## Next Steps
 
-If you decide that the Configuration Manager LTSB is the correct branch for your environment, [install a new LTSB](/sccm/core/understand/install-the-ltsb#install-a-new-site) site as part of a new hierarchy, or [upgrade a System Center 2012 Configuration Manager site](/sccm/core/understand/install-the-ltsb#upgrade-from-system-center-2012-configuration-manager) and hierarchy.
+If you decide that the Configuration Manager LTSB is the correct branch for your environment, [install a new LTSB](install-the-ltsb.md#install-a-new-site) site as part of a new hierarchy, or [upgrade a System Center 2012 Configuration Manager site](install-the-ltsb.md#upgrade-from-system-center-2012-configuration-manager) and hierarchy.

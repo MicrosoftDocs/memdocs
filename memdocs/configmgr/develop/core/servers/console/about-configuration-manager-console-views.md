@@ -26,7 +26,7 @@ Configuration Manager console views are displayed in the results pane of the Con
 
  For more information, see [How to Create Node XML for a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md).  
 
- For more information about node XML, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).  
+ For more information about node XML, see [About console nodes](about-configuration-manager-console-nodes.md).  
 
 ## Help  
 
@@ -50,6 +50,6 @@ Configuration Manager console views are displayed in the results pane of the Con
  You can also display your own .chm outside of the F1 Help system. For example, you can add a button to your form that opens your Help .chm. For more information about opening Help from Windows forms, see the [Help class](/dotnet/api/system.windows.forms.help) in the .NET Framework Class Library.  
 
 ## See Also  
-[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)
+[About console extensions](about-configuration-manager-console-extension.md)
  [How to Create a Configuration Manager Console](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md)   
  [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md)

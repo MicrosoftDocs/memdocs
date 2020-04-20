@@ -19,7 +19,7 @@ In Configuration Manager, you run a `SMS_Query` based query by getting the query
 
 ### To run a query  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
 2.  Get the `SMS_Query` object for the query you want to run.  
 

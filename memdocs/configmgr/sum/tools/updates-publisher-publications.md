@@ -22,7 +22,7 @@ You can use publications to manage groups of updates and bundles as a single obj
 ## Create publications
 Publications are created two ways:
 
--   When you manage updates and bundles in the **Updates Workspace**, you can [assign](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication) them to a new publication that is created at that time.
+-   When you manage updates and bundles in the **Updates Workspace**, you can [assign](manage-updates-with-updates-publisher.md#assign-updates-and-bundles-to-a-publication) them to a new publication that is created at that time.
 
 -   In the **Publications Workspace,** you can use the **Create** button on the **Publication** tab of the ribbon. This method lets you create a publication for future use. Later, when you assign updates, you can use this publication.
 
@@ -42,7 +42,7 @@ From the **Publication Workspace**, you can modify the **publication type** of u
 
 After making a change, you might need to refresh the publication view to see the new values.
 
-For information about the different publication types, see [Assign updates and bundles to a publication](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication).
+For information about the different publication types, see [Assign updates and bundles to a publication](manage-updates-with-updates-publisher.md#assign-updates-and-bundles-to-a-publication).
 
 > [!TIP]    
 > When you set the publication type of a bundle, all the software updates in that bundle are published with the publication type of that bundle.
@@ -55,7 +55,7 @@ After updates are removed from a publication, they remain available in the Updat
 ## Publish publications
 When you publish updates and bundles, Updates Publisher adds information about those updates and bundles (metadata) and possibly the binaries for the updates (full content), to an update server for deployment to devices.
 
-Before you have the option to publish, you must configure the [Update Server](/sccm/sum/tools/updates-publisher-options#update-server) option for Updates Publisher. To open this configuration option, go to **Updates Workspace** &gt; **Overview** and select **Configure WSUS and Signing Certificate.** You can also go to the Update Server page in the Updates Publisher options.
+Before you have the option to publish, you must configure the [Update Server](updates-publisher-options.md#update-server) option for Updates Publisher. To open this configuration option, go to **Updates Workspace** &gt; **Overview** and select **Configure WSUS and Signing Certificate.** You can also go to the Update Server page in the Updates Publisher options.
 
 > [!NOTE]   
 > Updates Publisher can only publish updates that are 375 megabytes (MB) or less in size.
@@ -71,7 +71,7 @@ Before you have the option to publish, you must configure the [Update Server](/s
    If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
 
 ## Export a publication
-You can export a publication from your Updates Publisher repository. Doing so exports the updates and bundles that are assigned to that publication and creates an update catalog. You can then [add](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) and then [import](/sccm/sum/tools/updates-publisher-catalogs#import-updates) that catalog to another instance of Updates Publisher. You can also [export updates](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) that are not part of a publication.
+You can export a publication from your Updates Publisher repository. Doing so exports the updates and bundles that are assigned to that publication and creates an update catalog. You can then [add](updates-publisher-catalogs.md#add-software-update-catalogs) and then [import](updates-publisher-catalogs.md#import-updates) that catalog to another instance of Updates Publisher. You can also [export updates](manage-updates-with-updates-publisher.md#export-updates) that are not part of a publication.
 
 To export a publication, go to the **Publications Workspace** and select the publication that contains updates that you want to export. You can only select one publication at a time.
 

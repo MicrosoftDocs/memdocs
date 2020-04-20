@@ -185,7 +185,7 @@ AND swf.ResourceID = swp.ResourceID
 
 3.  For newly added inventory types, adds entries to the following `Path`, `Subdirectories`, and `Exclude` embedded property lists.  
 
-4.  Updates the site control file. For more information, see [About the site control file](/sccm/develop/core/understand/about-the-configuration-manager-site-control-file).  
+4.  Updates the site control file. For more information, see [About the site control file](../../../../core/understand/about-the-configuration-manager-site-control-file.md).  
 
 > [!NOTE]
 >  Collecting inventory information for some files, for example, DLL files, can generate a large volume of network traffic and substantially increase the size of the Configuration Manager database. For this reason, test any changes you make in a test environment before implementing them in a production environment.  

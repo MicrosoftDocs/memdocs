@@ -19,7 +19,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the technical preview for Configuration Manager, version 1910. Install this version to update and add new features to your technical preview site.
 
-Review the [technical preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
+Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
 The following sections describe the new features to try out in this version:
 
@@ -42,6 +42,6 @@ The following sections describe the new features to try out in this version:
 
 ## Next steps
 
-For more information about installing or updating the technical preview branch, see [Technical preview](/sccm/core/get-started/technical-preview).
+For more information about installing or updating the technical preview branch, see [Technical preview](../technical-preview.md).
 
-For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](/sccm/core/understand/which-branch-should-i-use)
+For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](../../understand/which-branch-should-i-use.md)

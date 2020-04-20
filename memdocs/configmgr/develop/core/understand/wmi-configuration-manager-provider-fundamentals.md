@@ -30,7 +30,7 @@ Windows Script Host-based applications and scripts work in Windows Management In
 >   
 >  `SELECT * FROM SMS_FullCollectionMembership WHERE CollectionID='SMS000FS'`  
 
- For more information about using VBScript and WMI, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).  
+ For more information about using VBScript and WMI, see [Objects overview](configuration-manager-objects-overview.md).  
 
 ## SWbemLocator  
  The [SWbemServices](https://go.microsoft.com/fwlink/?LinkId=276771)object is used to create an authenticated connection to the SMS Provider. You use the [ConnectServer](https://go.microsoft.com/fwlink/?LinkId=276772) method to make the connection to the SMS Provider. This method is particularly useful if you need to pass user credentials to a remote Configuration Manager server during connection. You can also use the Windows Script Host [GetObject](https://go.microsoft.com/fwlink/?LinkId=276773) method to create an authenticated connection. The type of object that is returned by `GetObject` depends on the parameters that are passed to it. See [How to Connect to a Configuration Manager Provider Using Managed Code](../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md) and [How to Connect to a Configuration Manager Provider Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md) for examples that show how to use either `SWbemLocator` or `GetObject` in your connection script.  
@@ -48,5 +48,5 @@ Windows Script Host-based applications and scripts work in Windows Management In
 
 ## See also
 
- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [SMS Provider fundamentals](sms-provider-fundamentals.md)
+ [Objects overview](configuration-manager-objects-overview.md)

@@ -20,10 +20,10 @@ Each Configuration Manager deployment has a maximum number of sites, site system
 
 For more information, see the following articles:
 
-- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
-- [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)  
-- [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)
-- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
+- [Recommended hardware](recommended-hardware.md)
+- [Supported operating systems for site system servers](supported-operating-systems-for-site-system-servers.md)  
+- [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md)
+- [Site and site system prerequisites](site-and-site-system-prerequisites.md)
 
 These support numbers are based on using the recommended hardware for Configuration Manager. They're also based on the default settings for all available Configuration Manager features. When you don't use the recommended hardware or use more aggressive custom settings, the performance of site systems can degrade. The site systems might not meet the stated levels of support. (An example of more aggressive client settings is running hardware or software inventory more frequently than the defaults of once every seven days.)
 
@@ -54,8 +54,8 @@ These support numbers are based on using the recommended hardware for Configurat
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 - You can install multiple instances of the Application Catalog web service point at primary sites.  
 
@@ -66,8 +66,8 @@ These support numbers are based on using the recommended hardware for Configurat
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 - You can install multiple instances of the Application Catalog website point at primary sites.  
 
@@ -82,7 +82,7 @@ These support numbers are based on using the recommended hardware for Configurat
 
   - Each CMG VM instance supports 6,000 simultaneous client connections. When the CMG is under high load due to more than the supported number of clients, it still handles requests but there may be delay.  
 
-For more information, see CMG [Performance and scale](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
 
 ### Cloud management gateway connection point
 
@@ -90,10 +90,10 @@ For more information, see CMG [Performance and scale](/sccm/core/clients/manage/
 
 - One CMG connection point can support a CMG with up to four VM instances. If the CMG has more than four VM instances, add a second CMG connection point for load balancing. A CMG with 16 VM instances should be linked with four CMG connection points.
 
-For more information, see CMG [Performance and scale](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
+For more information, see CMG [Performance and scale](../../clients/manage/cmg/plan-cloud-management-gateway.md#performance-and-scale)
 
 > [!NOTE]
-> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](https://docs.microsoft.com/configmgr/core/plan-design/configs/recommended-hardware#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
+> When considering hardware requirements for the CMG connection point, see [Recommended hardware for remote site system servers](recommended-hardware.md#bkmk_RemoteSiteSystem).<!-- SCCMDocs#2276 -->
 
 ### Distribution point  
 
@@ -153,7 +153,7 @@ The number of supported clients depends on the version of Windows Server Update 
   - Increase the WsusPool Queue Length to 2000
   - Increase the WsusPool Private Memory limit x4 times, or set to 0 (unlimited). For example, if the default limit is 1,843,200 KB, increase it to 7,372,800. For more information, see this [Configuration Manager support team blog post](https://www.phoenixtekk.com/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).  
 
-    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#bkmk_ScaleSieSystems).  
+    For more information about hardware requirements for the software update point, see [Recommended hardware for site systems](recommended-hardware.md#bkmk_ScaleSieSystems).  
 
 #### <a name="bkmk_sum-capacity-obj"></a> Capacity planning for software updates objects  
 
@@ -161,7 +161,7 @@ Use the following capacity information to plan for software updates objects:
 
 - **Limit of 1000 software updates in a deployment** -Limit the number of software updates to 1000 for each software update deployment. When you create an automatic deployment rule (ADR), specify criteria that limits the number of software updates. The ADR fails when the specified criteria returns more than 1000 software updates. Check the status of the ADR from the **Automatic Deployment Rules** node in the Configuration Manager console. When you manually deploy software updates, don't select more than 1000 updates to deploy.  
 
-  Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).
+  Also limit the number of software updates to 1000 in a configuration baseline. For more information, see [Create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md).
 
 - **Limit of 580 security scopes for automatic deployment rules** -<!--ado 4962928-->
 Limit the number of security scopes on automatic deployment rules (ADRs) to less than 580. When you create an ADR, the security scopes that have access to it are automatically added. If there are more than 580 security scopes set, the ADR will fail to run and an error is logged in ruleengine.log.
@@ -172,7 +172,7 @@ Limit the number of security scopes on automatic deployment rules (ADRs) to less
 
 Each instance of the SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.
 
-For more information, see [Plan for the SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md).
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
@@ -219,7 +219,7 @@ For example, a stand-alone primary site that supports 150,000 desktops and 10,00
 
 ### <a name="embedded"></a> Primary sites and Windows Embedded devices
 
-Primary sites support Windows Embedded devices that have File-Based Write Filters (FBWF) enabled. When embedded devices don't have write filters enabled, a primary site can support a number of embedded devices up to the allowed number of devices for that site. When embedded devices have FBWF or Unified Write Filters (UWF) enabled, a primary site can support a maximum of 10,000 Windows embedded devices. These devices must be configured with the exceptions listed in the important note found in the [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices). A primary site supports only 3,000 Windows Embedded devices that have EWF enabled and that are not configured for the exceptions.
+Primary sites support Windows Embedded devices that have File-Based Write Filters (FBWF) enabled. When embedded devices don't have write filters enabled, a primary site can support a number of embedded devices up to the allowed number of devices for that site. When embedded devices have FBWF or Unified Write Filters (UWF) enabled, a primary site can support a maximum of 10,000 Windows embedded devices. These devices must be configured with the exceptions listed in the important note found in the [Planning for client deployment to Windows Embedded devices](../../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md). A primary site supports only 3,000 Windows Embedded devices that have EWF enabled and that are not configured for the exceptions.
 
 ### <a name="bkmk_sec"></a> Secondary sites
 

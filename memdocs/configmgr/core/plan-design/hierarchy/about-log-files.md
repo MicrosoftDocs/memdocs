@@ -20,7 +20,7 @@ manager: dougeby
 
 In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur. By default, Configuration Manager enables logging for client and server components.
 
-This article provides general information about the Configuration Manager log files. It includes tools to use, how to configure the logs, and where to find them. For more information on specific log files, see [Log files reference](/sccm/core/plan-design/hierarchy/log-files).
+This article provides general information about the Configuration Manager log files. It includes tools to use, how to configure the logs, and where to find them. For more information on specific log files, see [Log files reference](log-files.md).
 
 
 ## <a name="BKMK_AboutLogs"></a> How it works
@@ -38,15 +38,15 @@ All Configuration Manager log files are plain text, so you can view them with an
 
 ### CMTrace
 
-To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It's located in the `\SMSSetup\Tools` folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. The CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](/sccm/core/support/cmtrace).
+To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It's located in the `\SMSSetup\Tools` folder of the Configuration Manager source media. The CMTrace tool is added to all boot images that are added to the Software Library. The CMTrace log viewing tool is automatically installed along with the Configuration Manager client.<!--1357971--> For more information, see [CMTrace](../../support/cmtrace.md).
 
 ### OneTrace
 
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
+Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md).
 
 ### Support Center log viewer
 
-**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer reference](/sccm/core/support/support-center-ui-reference#bkmk_log-viewer).
+**Support Center** includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds. For more information, see [Support Center Log Viewer reference](../../support/support-center-ui-reference.md#bkmk_log-viewer).
 
 > [!Note]  
 > Support Center and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.
@@ -71,7 +71,7 @@ You can set the configuration of the client log files during installation. Use t
 - CCMLOGMAXHISTORY
 - CCMLOGMAXSIZE
 
-For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties#clientMsiProps).
+For more information, see [Client installation properties](../../clients/deploy/about-client-installation-properties.md#clientMsiProps).
 
 ### <a name="bkmk_logoptions-sm"></a> Configure logging options by using Configuration Manager Service Manager
 
@@ -227,7 +227,7 @@ Starting in version 1910, enable or disable verbose logging on a client or colle
 
 1. In the ribbon, on the **Home** tab, in the **Device** group, select **Client Diagnostics**. Choose one of the available actions.
 
-For more information, see [Client diagnostics](/sccm/core/clients/manage/client-notification#client-diagnostics).
+For more information, see [Client diagnostics](../../clients/manage/client-notification.md#client-diagnostics).
 
 ## <a name="BKMK_LogLocation"></a> Locating log files
 
@@ -245,22 +245,22 @@ The following locations are the defaults. If you customized the installation dir
 
 The location of the task sequence log file **smsts.log** varies depending upon the phase of the task sequence:
 
-- In Windows PE before [Format and Partition Disk](/sccm/osd/understand/task-sequence-steps#BKMK_FormatandPartitionDisk) step: `X:\Windows\temp\smstslog\smsts.log` (X is the Windows PE RAM drive)
+- In Windows PE before [Format and Partition Disk](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) step: `X:\Windows\temp\smstslog\smsts.log` (X is the Windows PE RAM drive)
 - In Windows PE after **Format and Partition Disk** step: `X:\smstslog\smsts.log`, then copied to `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` when drive is ready
 - In the new Windows OS before the client is installed: `C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - In Windows after the client is installed: `C:\Windows\CCM\Logs\smstslog\smsts.log`
 - In Windows after the task sequence completes: `C:\Windows\CCM\Logs\smsts.log`
 
 > [!Tip]  
-> The read-only task sequence variable [_SMSTSLogPath](/sccm/osd/understand/task-sequence-variables#SMSTSLogPath) always contains the path of the current log file.
+> The read-only task sequence variable [_SMSTSLogPath](../../../osd/understand/task-sequence-variables.md#SMSTSLogPath) always contains the path of the current log file.
 
 
 ## See also
 
-- [Log files reference](/sccm/core/plan-design/hierarchy/log-files)
+- [Log files reference](log-files.md)
 
-- [Support Center OneTrace](/sccm/core/support/support-center-onetrace)
+- [Support Center OneTrace](../../support/support-center-onetrace.md)
 
-- [Support Center log file viewer](/sccm/core/support/support-center#support-center-log-file-viewer)
+- [Support Center log file viewer](../../support/support-center.md#support-center-log-file-viewer)
 
-- [CMTrace](/sccm/core/support/cmtrace)
+- [CMTrace](../../support/cmtrace.md)

@@ -22,15 +22,15 @@ The service connection point is a site system role that provides several importa
 
 - Download updates that apply to your Configuration Manager infrastructure. Only relevant updates for your infrastructure are made available based on usage data you upload.
 
-- Upload usage data from your Configuration Manager infrastructure. You can control the level or amount of detail that you upload. For more information, see [Usage data levels and settings](/configmgr/core/servers/deploy/install/setup-reference#bkmk_usage).
+- Upload usage data from your Configuration Manager infrastructure. You can control the level or amount of detail that you upload. For more information, see [Usage data levels and settings](../install/setup-reference.md#bkmk_usage).
 
-- Deploy a [cloud management gateway](/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) in Azure
+- Deploy a [cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md) in Azure
 
-- Synchronize apps from the [Microsoft Store for Business and Education](/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+- Synchronize apps from the [Microsoft Store for Business and Education](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 
-- Discover users and groups in [Azure Active Directory (Azure AD)](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
+- Discover users and groups in [Azure Active Directory (Azure AD)](about-discovery-methods.md#azureaddisc)
 
-- Use [Desktop Analytics](/configmgr/desktop-analytics/overview) to gain insights on Windows 10 update and app readiness
+- Use [Desktop Analytics](../../../../desktop-analytics/overview.md) to gain insights on Windows 10 update and app readiness
 
 Each hierarchy supports a single instance of this role. It can only be installed at the top-tier site of your hierarchy, which is a central administration site (CAS) or stand-alone primary site. If you expand a stand-alone primary site to a larger hierarchy, uninstall this role from the primary site, and then install it at the CAS.
 
@@ -40,7 +40,7 @@ The service connection point supports two modes of operation:
 
 - **Online**: The service connection point automatically checks every 24 hours for updates. It downloads new updates that are available for your current infrastructure and product version to make them available in the Configuration Manager console.
 
-- **Offline**: The service connection point doesn't connect to the Microsoft cloud service. To manually import available updates, use the [service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
+- **Offline**: The service connection point doesn't connect to the Microsoft cloud service. To manually import available updates, use the [service connection tool](../../manage/use-the-service-connection-tool.md).
 
 ### Change mode
 
@@ -67,39 +67,39 @@ When you install the service connection point on a site system server that's rem
 
 - The computer account of the site server must be a local admin on the computer that hosts a remote service connection point.
 
-- Set up the site system server that hosts this role with a [site system installation account](/configmgr/core/plan-design/hierarchy/accounts#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
+- Set up the site system server that hosts this role with a [site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). The distribution manager on the site server uses the site system installation account to transfer updates from the service connection point.
 
 ## <a name="bkmk_urls"></a> Internet access requirements
 
 If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the service connection point to access internet endpoints.
 
-For more information, see [Internet access requirements](/configmgr/core/plan-design/network/internet-endpoints#bkmk_scp).
+For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_scp).
 
 ## Install
 
 When you run **Setup** to install the top-tier site of a hierarchy, you can install the service connection point.
 
-After setup runs, or if you're reinstalling the role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard. (Only install the service connection point on the top-tier site of your hierarchy.) For more information, see [Install site system roles](/configmgr/core/servers/deploy/configure/install-site-system-roles).
+After setup runs, or if you're reinstalling the role, use the **Add Site System Roles** wizard or the **Create Site System Server** wizard. (Only install the service connection point on the top-tier site of your hierarchy.) For more information, see [Install site system roles](install-site-system-roles.md).
 
 ## <a name="bkmk_move"></a> Move the role
 
 <!-- SCCMDocs#922 -->
 There are several scenarios in which you may need to move the service connection point to another server:
 
-- [Recovery](/configmgr/core/servers/manage/recover-sites)
-- [Site server high availability](/configmgr/core/servers/deploy/configure/site-server-high-availability)
-- [Site expansion](/configmgr/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_expand)
+- [Recovery](../../manage/recover-sites.md)
+- [Site server high availability](site-server-high-availability.md)
+- [Site expansion](../install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)
 
-After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 
 ## Log files
 
-To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](/configmgr/core/plan-design/hierarchy/log-files#BKMK_WITLog).
+To view information about uploads to Microsoft, view the **Dmpuploader.log** on the server that runs the service connection point. For download progress of updates, view the **Dmpdownloader.log**. For the complete list of logs related to the service connection point, see [Log files - Service connection point](../../../plan-design/hierarchy/log-files.md#BKMK_WITLog).
 
 ## Next steps
 
 Use the following flowcharts to understand the process flow and key log entries. This process includes update downloads and replication of updates to other sites.
 
-- [Flowchart - Download updates](/configmgr/core/servers/manage/download-updates-flowchart)
+- [Flowchart - Download updates](../../manage/download-updates-flowchart.md)
 
-- [Flowchart - Update replication](/configmgr/core/servers/manage/update-replication-flowchart)
+- [Flowchart - Update replication](../../manage/update-replication-flowchart.md)

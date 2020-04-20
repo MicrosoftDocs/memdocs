@@ -2493,7 +2493,7 @@ ParameterCondition=OR
 
  When referenced from a custom script, the ZTIUtility script initializes the MDT environment and setup classes. These classes are available:  
 
-- **Logging**. This class provides the logging functionality that all MDT scripts use. It also creates a single log file for each script run during deployment and a consolidated log file of all scripts. These log files are created in a format designed to be read by [CMTrace](/configmgr/core/support/cmtrace).
+- **Logging**. This class provides the logging functionality that all MDT scripts use. It also creates a single log file for each script run during deployment and a consolidated log file of all scripts. These log files are created in a format designed to be read by [CMTrace](../core/support/cmtrace.md).
 
 - **Environment**. This class configures environment variables gathered through WMI and MDT rule processing and allows them to be referenced directly from the script. This allows deployment properties to be read, giving access to all the configuration information used by the ZTI and LTI processes.  
 

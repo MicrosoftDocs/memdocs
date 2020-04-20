@@ -20,7 +20,7 @@ manager: dougeby
 
 <!--3601034-->
 
-After you [install the reports](/configmgr/protect/deploy-use/bitlocker/setup-websites) on the reporting services point, you can view the reports. The reports show BitLocker compliance for the enterprise and for individual devices. They provide tabular information and charts, and have filters that let you view data from different perspectives.
+After you [install the reports](setup-websites.md) on the reporting services point, you can view the reports. The reports show BitLocker compliance for the enterprise and for individual devices. They provide tabular information and charts, and have filters that let you view data from different perspectives.
 
 In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node. The following reports are in the **BitLocker Management** category:
 
@@ -196,7 +196,7 @@ Use this report to show the overall BitLocker compliance across your organizatio
 ## <a name="bkmk-audit"></a> Recovery audit report
 
 > [!NOTE]
-> This report is also available from the [BitLocker administration and monitoring website](/configmgr/protect/deploy-use/bitlocker/helpdesk-portal#reports).
+> This report is also available from the [BitLocker administration and monitoring website](helpdesk-portal.md#reports).
 >
 > To view this report in the Configuration Manager console, go to the **Monitoring** workspace. In the navigation pane, expand the **Reporting** node, expand **Reports**, and then expand the **BitLocker Management** folder. Select the subfolder for the localized version of the report, for example, **en-us**.
 

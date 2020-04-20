@@ -17,7 +17,7 @@ Each month there are new software updates applicable to the image. Before you ca
 - Successfully synchronized software updates  
 - Downloaded the software updates to the content library on the site server  
 
-For more information, see [Deploy software updates](/sccm/sum/deploy-use/deploy-software-updates).  
+For more information, see [Deploy software updates](../../../sum/deploy-use/deploy-software-updates.md).  
 
 Apply applicable software updates to an image on a specified schedule. This process is sometimes called *offline servicing*. On this schedule, Configuration Manager applies the selected software updates to the image. It can then also redistribute the updated image to distribution points.
 
@@ -62,7 +62,7 @@ Select a specific image object, and select **Properties** in the ribbon. The **I
 
 When the status is **In Process**, you can select **Cancel Scheduled Updates** on the ribbon. This action cancels the active servicing process.
 
-To troubleshoot this process, view the **OfflineServicingMgr.log** and **dism.log** files on the site server. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files).
+To troubleshoot this process, view the **OfflineServicingMgr.log** and **dism.log** files on the site server. For more information, see [Log files](../../../core/plan-design/hierarchy/log-files.md).
 
 ### <a name="bkmk_servicing-drive"></a> Specify the drive for offline OS image servicing
 
@@ -92,7 +92,7 @@ When you schedule the site to apply software updates to an OS image, it uses the
 
 - After Configuration Manager commits changes to the image and unmounts it from the file system, it exports the image to another file. This step uses the DISM parameter `/Export-Image`. It removes unneeded files from the image, which reduces the size.  
 
-Microsoft recommends that you regularly apply updates to your offline images. You don't have to use this option every time you service an image. When you do this process each month, this new option provides you the greatest advantage by using it over time. For more information, see [Recommendations for Install Software Updates step](/sccm/osd/understand/install-software-updates#recommendations).
+Microsoft recommends that you regularly apply updates to your offline images. You don't have to use this option every time you service an image. When you do this process each month, this new option provides you the greatest advantage by using it over time. For more information, see [Recommendations for Install Software Updates step](../../understand/install-software-updates.md#recommendations).
 
 While this option helps reduce the overall size of the serviced image, it does take longer to complete the process. Use the wizard to schedule servicing during convenient times. It also requires additional storage on the site server. You can customize the site to use an alternate location. For more information, see [Specify the drive for offline OS image servicing](#bkmk_servicing-drive).
 

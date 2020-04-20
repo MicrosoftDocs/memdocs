@@ -45,7 +45,7 @@ You can use different methods to install the Configuration Manager client softwa
 
 -   You can't cancel client push installation. Configuration Manager tries to install the client on all discovered resources. It retries any failures for up to seven days.  
 
-For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+For more information, see [How to install clients with client push](../deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
 
 
 
@@ -77,7 +77,7 @@ For more information, see [How to install clients with client push](/sccm/core/c
 
 -   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to provision computers with client installation properties.  
 
-For more information, see [How to install clients with software update-based installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
+For more information, see [How to install clients with software update-based installation](../deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
 
 
 
@@ -101,7 +101,7 @@ For more information, see [How to install clients with software update-based ins
 
 -   If the Active Directory schema isn't extended for Configuration Manager, you must use group policy settings to add client installation properties to computers in your site.  
 
-For more information, see [How to install clients with group policy](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP).  
+For more information, see [How to install clients with group policy](../deploy-clients-to-windows-computers.md#BKMK_ClientGP).  
 
 
 
@@ -121,7 +121,7 @@ For more information, see [How to install clients with group policy](/sccm/core/
 
 -   If users don't frequently log on to the network, it can take a long time to install on all client computers.  
 
-For more information, see [How to install clients with logon scripts](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript).  
+For more information, see [How to install clients with logon scripts](../deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
 
 
 
@@ -143,11 +143,11 @@ For more information, see [How to install clients with logon scripts](/sccm/core
 
 For more information about how to manually install the client on each of platform, see the following articles:  
 
--   [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)  
+-   [How to deploy clients to Windows computers](../deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
--   [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)  
+-   [How to deploy clients to UNIX and Linux servers](../deploy-clients-to-unix-and-linux-servers.md)  
 
--   [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+-   [How to deploy clients to Macs](../deploy-clients-to-macs.md)  
 
 
 
@@ -175,7 +175,7 @@ For more information about how to manually install the client on each of platfor
 
 For more information, see the following articles:  
 
--   [How to install clients to Intune MDM-managed Windows devices](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)  
+-   [How to install clients to Intune MDM-managed Windows devices](../deploy-clients-to-windows-computers.md#bkmk_mdm)  
 
--   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+-   [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../deploy-clients-cmg-azure.md)  
 

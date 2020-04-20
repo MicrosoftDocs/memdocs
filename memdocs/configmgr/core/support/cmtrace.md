@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-CMTrace is one of the [Configuration Manager tools](/sccm/core/support/tools). It allows you to view and monitor log files, including the following types:  
+CMTrace is one of the [Configuration Manager tools](tools.md). It allows you to view and monitor log files, including the following types:  
 
 - Log files in Configuration Manager or Client Component Manager (CCM) format  
 
@@ -31,7 +31,7 @@ Starting in version 1806, the CMTrace log viewing tool is automatically installe
 > [!Note]  
 > CMTrace isn't automatically registered with Windows to open the .log file extension. For more information, see [File associations](#file-associations).  
 
-Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
+Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).
 
 ## Usage
 
@@ -245,8 +245,8 @@ The **Last Directory** value in the registry key `HKEY_CURRENT_USER\Software\Mic
 
 ## See also
 
-- [Log files](/sccm/core/plan-design/hierarchy/log-files)
+- [Log files](../plan-design/hierarchy/log-files.md)
 
-- [Support Center log file viewer](/sccm/core/support/support-center#support-center-log-file-viewer)
+- [Support Center log file viewer](support-center.md#support-center-log-file-viewer)
 
-- [Support Center OneTrace](/sccm/core/support/support-center-onetrace)
+- [Support Center OneTrace](support-center-onetrace.md)

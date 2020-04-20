@@ -26,13 +26,13 @@ Update 1706 for Configuration Manager current branch is available as an in-conso
 > Learn more about:    
 > - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
 > - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
 
 The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.  
 
 <!--
 ## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+Learn about support changes before they are implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 Version 1706 drops support for the following products:
 -->
@@ -46,22 +46,22 @@ Beginning with this release, Peer Cache supports distribution of content express
 
 ### Updates for the data warehouse
 <!-- 1277922 -->
-The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always on availability groups, and failover clusters. For more information, see [The Data Warehouse service point](/sccm/core/servers/manage/data-warehouse).
+The data warehouse is no longer a pre-release feature. We have also updated the prerequisites to include support for the database on SQL Server Always on availability groups, and failover clusters. For more information, see [The Data Warehouse service point](../../servers/manage/data-warehouse.md).
 
 ### Accessibility improvements
 <!-- 1253000 -->
-We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](/sccm/core/understand/accessibility-features).
+We have added additional improvements to accessibility for the Configuration Manager console. For details, see [Accessibility features](../../understand/accessibility-features.md).
 
 ### Improvements  for SQL Server Always On Availability Groups
 <!-- 1352094 -->
 With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
-- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
+- Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](../../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
 - This release does not support failover to use the asynchronous commit replica as your site database.
-For more information, see [Prepare to use Always On Availability Groups](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+For more information, see [Prepare to use Always On Availability Groups](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Update reset tool
 <!-- 1324589 -->
-Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use this tool with any version of the current branch that remains in support, to fix issues when in-console updates have problems downloading or replicating. For more information, see [Update reset tool](/sccm/core/servers/manage/update-reset-tool).
+Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use this tool with any version of the current branch that remains in support, to fix issues when in-console updates have problems downloading or replicating. For more information, see [Update reset tool](../../servers/manage/update-reset-tool.md).
 
 ### High DPI console support  
 <!-- 1353476 -->
@@ -74,7 +74,7 @@ This release includes improvements for how software update points work with boun
 - Independent of the fallback configuration, a client attempts to reach the last software update point it used for 120 minutes. After failing to reach that server for 120 minutes, the client then checks its pool of available software update points, so it can find a new one.
 - After failing to reach its original server for two hours, the client switches to a shorter cycle for contacting a new software update point. This means if a client fails to connect with a new server, it quickly selects the next server from its pool of available servers and attempts to contact that one.
 
-For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
+For more information, see [software update points](../../servers/deploy/configure/boundary-groups.md#software-update-points) in the Boundary Groups topic for the Current Branch.
 
 ### Azure AD integration with Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -92,17 +92,17 @@ The improved integration makes the following possible:
     Connect to the on-line store for Windows Store for Business and get apps for your organization that you can deploy with Configuration Manager.
 
 
-  This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](/sccm/core/servers/deploy/configure/azure-services-wizard).
+  This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](../../servers/deploy/configure/azure-services-wizard.md).
 
-- Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
 
-- Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+- Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
 
-- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).
+- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ### Peer cache improvements
 <!-- 1252345 -->
-Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There is one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements).
+Peer cache no longer uses the Network Access Account to authenticate download requests from peers. There is one caveat to this when the account remains required by clients. This remains a requirement for clients that boot in to WinPE and then access content from a peer cache source. For more information, see [requirements and considerations for peer cache](../hierarchy/client-peer-cache.md#requirements).
 
 
 <!-- ## Migration  -->
@@ -138,7 +138,7 @@ In this release, we've added new configuration item settings for Windows 10 devi
   - OpenSearch XML URL
   - Homepages (desktop only)
 
-For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details of all Windows 10 settings, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 ### New device compliance policy rules
 
@@ -181,7 +181,7 @@ In Configuration Manager, you can deploy scripts to client devices using package
 - Run scripts on collections of Windows client PCs, and on-premises managed Windows PCs. You don't deploy scripts, instead, they are run in near real time on client devices.
 - Examine the results returned by the script in the Configuration Manager console.
 
-For more information, see [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts).
+For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../../../apps/deploy-use/create-deploy-scripts.md).
 
 ### New mobile application management policy settings    
 <!--1324760-->
@@ -193,18 +193,18 @@ Beginning with this release, you can use three new mobile application management
 ## Operating system deployment
 
 ### Hardware inventory collects Secure Boot information
-Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](../../clients/manage/inventory/configure-hardware-inventory.md).
 
 ### Collapsible task sequence groups
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.
 
 ### Reload boot images with current Windows PE version
-When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. For more information, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
 ## Software updates
 
 ### Improvements to Express Update download time
-In this release, we have significantly improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates).
+In this release, we have significantly improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->
@@ -217,18 +217,18 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 
 #### To manage Surface driver updates
 
-1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select the **Include Microsoft Surface drivers and firmware updates** checkbox on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates).
-3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](../../../sum/get-started/configure-classifications-and-products.md) and select the **Include Microsoft Surface drivers and firmware updates** checkbox on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize the Microsoft Surface drivers](../../../sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](../../../sum/deploy-use/deploy-software-updates.md)
 
 ### Configure Windows Update for Business deferral policies
 <!-- 1290890 -->
 You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
-For details, see [Integration with Windows Update for Business in Windows 10](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).
+For details, see [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### Improved user notifications for Office 365 updates
-Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates#restart-behavior-and-client-notifications-for-office-365-updates)
+Improvements have been made to leverage the Office Click-to-Run user experience when a client installs an Office 365 update. This includes pop-up and in-app notifications, and a countdown experience. For more information, see [Restart behavior and client notifications for Office 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
 
 ## Reporting
 
@@ -262,4 +262,4 @@ You can now optionally add trust for specific files for folders in a Device Guar
 - Trust line-of-business apps that cannot be deployed with Configuration Manager
 - Trust apps that are included in an operating system deployment image
 
-For more details, see [Device Guard management with Configuration Manager](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager).
+For more details, see [Device Guard management with Configuration Manager](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md).

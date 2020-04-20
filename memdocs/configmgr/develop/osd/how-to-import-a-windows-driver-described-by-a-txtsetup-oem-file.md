@@ -20,7 +20,7 @@ You can import a Windows driver that is described by a Txtsetup.oem file, in Con
 
 ### To import a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Call the [SMS_Driver](../../develop/reference/osd/sms_driver-server-wmi-class.md) class [CreateFromOEM](../../develop/reference/osd/createfromoem-method-in-class-sms_driver.md) method to get a collection of management base objects.  
 
@@ -229,4 +229,4 @@ public string GetDriverName(IResultObject driver)
 
 ## See also
 
-[How to specify the supported platforms for a driver](/sccm/develop/osd/how-to-specify-the-supported-platforms-for-a-driver)
+[How to specify the supported platforms for a driver](how-to-specify-the-supported-platforms-for-a-driver.md)

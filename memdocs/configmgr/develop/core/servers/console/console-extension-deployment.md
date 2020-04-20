@@ -84,15 +84,15 @@ The deployment of a typical Configuration Manager extension has to account for a
 ## Nodes  
 
 ### Installing a Node  
- To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).  
+ To install a node, create a folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> , where \<GUID> is the GUID identifier of the Configuration Manager console parent node. Copy the node XML file to the GUID folder. For more information, see [About console nodes](about-configuration-manager-console-nodes.md).  
 
 ### Removing a Node  
  To remove a node, delete the node XML file from the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\> folder.  
 
 ## See Also  
  [About Configuration Manager Console Extension](../../../../develop/core/servers/console/about-configuration-manager-console-extension.md)   
- [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
- [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
-[About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
- [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
- [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
+ [About Configuration Manager console actions](configuration-manager-actions.md)
+ [About console forms](about-configuration-manager-console-forms.md)
+[About console management classes](about-configuration-manager-console-management-classes.md)
+ [About console nodes](about-configuration-manager-console-nodes.md)
+ [About console views](about-configuration-manager-console-views.md)

@@ -22,22 +22,22 @@ manager: dougeby
 Configuration Manager integrates with Windows Hello for Business. (This feature was formerly known as Microsoft Passport for Work.) Windows Hello for Business is an alternative sign-in method for Windows 10 devices. It uses Active Directory or an Azure Active Directory (Azure AD) account to replace a password, smart card, or virtual smart card. Hello for Business lets you use a *user gesture* to sign in instead of a password. A user gesture might be a PIN, biometric authentication, or an external device such as a fingerprint reader.
 
 > [!Important]  
-> Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Key-based authentication is still valid.
+> Starting in version 1910, certificate-based authentication with Windows Hello for Business settings in Configuration Manager isn't supported. For more information, see [deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Key-based authentication is still valid.
 >
 > Active Directory Federation Services Registration Authority (ADFS RA) deployment is simpler, provides a better user experience, and has a more deterministic certificate enrollment experience. Use ADFS RA for certificate-based authentication with Windows Hello for Business.
 >
-> For co-managed devices, consider moving the [**Resource access policies** workload](/configmgr/comanage/workloads#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](/configmgr/comanage/how-to-switch-workloads).
+> For co-managed devices, consider moving the [**Resource access policies** workload](../../comanage/workloads.md#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
 
 For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 Configuration Manager integrates with Windows Hello for Business in the following ways:  
 
 - Control which gestures users can and can't use to sign in.  
 
-- Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).  
+- Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
 
 - Create and deploy a Windows Hello for Business profile to control its settings on domain-joined Windows 10 devices that run the Configuration Manager client. Starting in version 1910, you can't use certificate-based authentication. When using key-based authentication, you don't need to deploy a certificate profile.
 
@@ -154,4 +154,4 @@ The following screenshot is an example of Windows Hello for Business profile set
 
 ## Next steps
 
-[Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles)
+[Certificate profiles](introduction-to-certificate-profiles.md)

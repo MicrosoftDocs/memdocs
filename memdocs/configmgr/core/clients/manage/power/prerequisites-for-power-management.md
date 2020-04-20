@@ -32,4 +32,4 @@ Power management in Configuration Manager has external dependencies and dependen
 |Dependency|More Information|  
 |----------------|----------------------|  
 |Power management must be enabled before you can create and monitor power plans.|For information about how to enable and configure power management, see [Configuring power management](../../../../core/clients/manage/power/configuring-power-management.md).|  
-|Reporting services point|You must configure a reporting services point before you can view power management reports. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).|  
+|Reporting services point|You must configure a reporting services point before you can view power management reports. For more information, see [Introduction to reporting](../../../servers/manage/introduction-to-reporting.md).|  

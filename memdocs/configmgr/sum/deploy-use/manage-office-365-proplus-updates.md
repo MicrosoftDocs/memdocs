@@ -20,18 +20,18 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
-- [Deploy Office 365 apps](#deploy-office-365-apps): You can start the Office 365 Installer from the [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard) to make the initial Office 365 App installation experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
+- [Deploy Office 365 apps](#deploy-office-365-apps): You can start the Office 365 Installer from the [Office 365 Client Management dashboard](office-365-dashboard.md) to make the initial Office 365 App installation experience easier. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application with the content.
 
 - [Deploy Office 365 updates](#deploy-office-365-updates): You can manage Office 365 client updates by using the software update management workflow. When Microsoft publishes a new Office 365 client update to the Office Content Delivery Network (CDN), Microsoft also publishes an update package to Windows Server Update Services (WSUS). After Configuration Manager synchronizes the Office 365 client update from the WSUS catalog to the site server, the update is available to deploy to clients.
 
    > [!NOTE]
-   > Starting in Configuration Manager version 2002, you can import Office 365 updates into disconnected environments. For more information, see [Synchronize Office 365 updates from a disconnected software update point](/configmgr/sum/get-started/synchronize-office-updates-disconnected).   
+   > Starting in Configuration Manager version 2002, you can import Office 365 updates into disconnected environments. For more information, see [Synchronize Office 365 updates from a disconnected software update point](../get-started/synchronize-office-updates-disconnected.md).   
 
 - [Add languages for Office 365 update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Office 365. Meaning Configuration Manager doesn't have to support the language as long as Office 365 does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Office 365 clients.
 
 - [Change the update channel](#bkmk_channel): You can use group policy to distribute a registry key value change to Office 365 clients to change the update channel.
 
-To review Office 365 client information and start some of these Office 365 management actions, use the [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).
+To review Office 365 client information and start some of these Office 365 management actions, use the [Office 365 Client Management dashboard](office-365-dashboard.md).
 
 ## Deploy Office 365 apps  
 Start the Office 365 Installer from the Office 365 Client Management dashboard for the initial Office 365 App installation. The wizard lets you configure Office 365 installation settings, download files from Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Office 365 is installed on clients and the [Office automatic updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) runs, Office 365 updates aren't applicable. For testing purposes, you can run the update task manually.
@@ -75,13 +75,13 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 5. On the **Client Products** page, select the Office 365 suite that you use. Select the applications that you want to include. Select any additional Office products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
 7. On the **Deployment** page, choose whether to deploy the application, and then click **Next**. <br/>If you choose not to deploy the package in the wizard, skip to step 9.
-8. Configure the rest of the wizard pages as you would for a typical application deployment. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
+8. Configure the rest of the wizard pages as you would for a typical application deployment. For details, see [Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md).
 9. Complete the wizard.
 10. You can deploy or edit the application from **Software Library** > **Overview** > **Application Management** > **Applications**.    
 
 After you create and deploy Office 365 applications using the Office 365 Installer, Configuration Manager won't manage the Office updates by default. To enable Office 365 clients to receive updates from Configuration Manager, see [Deploy Office 365 updates with Configuration Manager](#deploy-office-365-updates).
 
-After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+After you deploy Office 365 apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Office 365 apps, click **Create an ADR** from the [Office 365 Client Management dashboard](office-365-dashboard.md). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](automatically-deploy-software-updates.md).
 
 
 ## Drill through required Office 365 updates
@@ -127,7 +127,7 @@ Use the following steps to deploy Office 365 updates with Configuration Manager:
 >
 > If Office 365 ProPlus was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Office 365 ProPlus is installed. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
 >
-> If Office 365 ProPlus was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequnce, see [Updating Office 365 ProPlus in a task sequence](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-proplus-in-a-task-sequence).
+> If Office 365 ProPlus was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Office 365 ProPlus in a task sequence](manage-office-365-proplus-updates.md#updating-office-365-proplus-in-a-task-sequence).
 
 ## Restart behavior and client notifications for Office 365 updates
 When you deploy an update to an Office 365 client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives an Office 365 update:
@@ -199,7 +199,7 @@ Use the following procedure on the software update point at the central administ
     ![Filenames with additional languages](../media/5-verification.png)
 
 ## Updating Office 365 ProPlus in a task sequence
-When using [Install Software Updates](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates) task sequence step to Install Office 365 updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once (see the note in [Deploy Office 365 updates](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates)). For example, this might happen if Office 365 ProPlus was installed immediately before running this step.
+When using [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step to Install Office 365 updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once (see the note in [Deploy Office 365 updates](manage-office-365-proplus-updates.md#deploy-office-365-updates)). For example, this might happen if Office 365 ProPlus was installed immediately before running this step.
 
 To ensure that the update channel is set so that deployed updates will be properly detected, use one of the following methods:
 
@@ -228,4 +228,4 @@ After deploying Office 365 ProPlus, you can change the update channel with Group
 
 ## Next steps
 
-Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](/sccm/sum/deploy-use/office-365-dashboard).
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For more information, see [Office 365 Client Management dashboard](office-365-dashboard.md).

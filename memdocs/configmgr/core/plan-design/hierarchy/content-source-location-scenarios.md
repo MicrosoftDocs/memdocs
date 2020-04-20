@@ -21,9 +21,9 @@ ROBOTS: NOINDEX
 Prior to version 1610, Configuration Manager supported several settings that combined to define how and where clients find content when they are on a slow network. The possible combinations affect the content location clients use, and whether they can successfully use a fallback location when a preferred source for content is not available.  
 
 > [!IMPORTANT]  
-> **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606) for information that's specific to boundary groups with these versions of Configuration Manager.
+> **If your sites run version 1511, 1602, or 1606**, the information in this topic applies to your infrastructure. Also see [Boundary groups for versions 1511,1602, and 1606](../../servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md) for information that's specific to boundary groups with these versions of Configuration Manager.
 >
-> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for Configuration Manager](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups) to understand how your clients find distribution points that have available content.
+> **If your sites run version 1610 or later**, use the information in [Define site boundaries and boundary groups for Configuration Manager](../../servers/deploy/configure/define-site-boundaries-and-boundary-groups.md) to understand how your clients find distribution points that have available content.
 
 
 

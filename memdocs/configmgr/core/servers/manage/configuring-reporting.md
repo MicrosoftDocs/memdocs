@@ -20,9 +20,9 @@ Before you can create, modify, and run reports in the Configuration Manager cons
 
 Before you install and configure SQL Server Reporting Services in your hierarchy, review the following Configuration Manager reporting articles:  
 
-- [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting)  
+- [Introduction to reporting](introduction-to-reporting.md)  
 
-- [Plan for reporting](/sccm/core/servers/manage/planning-for-reporting)  
+- [Plan for reporting](planning-for-reporting.md)  
 
 ## SQL Server Reporting Services
 
@@ -79,7 +79,7 @@ To manage reports at the site, install the reporting services point. The reporti
 
 ### Requirements and limitations
 
-Before you can view or manage reports in the Configuration Manager console, you need a reporting services point. Configure this site system role on a server with Microsoft SQL Server Reporting Services. For more information, see [Prerequisites for reporting](/sccm/core/servers/manage/prerequisites-for-reporting).  
+Before you can view or manage reports in the Configuration Manager console, you need a reporting services point. Configure this site system role on a server with Microsoft SQL Server Reporting Services. For more information, see [Prerequisites for reporting](prerequisites-for-reporting.md).  
 
 - When you select a site to install the reporting services point, users who will access the reports must be in the same security scope as the site where you install the role.  
 
@@ -89,11 +89,11 @@ Before you can view or manage reports in the Configuration Manager console, you 
 
     If you need to change the report server URL, first remove the existing reporting services point. Change the URL, and then reinstall the reporting services point.  
 
-- When you install a reporting services point, specify a [Reporting services point account](/sccm/core/plan-design/hierarchy/accounts#reporting-services-point-account). For users from a different domain to run a report, create a two-way trust between domains. Otherwise the report fails to run.
+- When you install a reporting services point, specify a [Reporting services point account](../../plan-design/hierarchy/accounts.md#reporting-services-point-account). For users from a different domain to run a report, create a two-way trust between domains. Otherwise the report fails to run.
 
 ### <a name="bkmk_install" /> Install the reporting services point on a site system  
 
-For more information about configuring site systems, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles).  
+For more information about configuring site systems, see [Install site system roles](../deploy/configure/install-site-system-roles.md).  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and then select the  **Servers and Site System Roles** node.  
 
@@ -165,7 +165,7 @@ When Configuration Manager creates report folders and copies reports to the repo
 
 When you install a reporting services point on a site without language packs, the reports are installed in English. If you install a language pack after you install the reporting services point, you must uninstall and reinstall the reporting services point for the reports to be available in the appropriate language pack language.  
 
-For more information, see [Language packs](/sccm/core/servers/deploy/install/language-packs).
+For more information, see [Language packs](../deploy/install/language-packs.md).
 
 ### File installation and report folder security rights
 
@@ -269,7 +269,7 @@ For more information about these settings, see the descriptions in the section t
 
 ## Power BI Report Server
 
-Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information on configuring it, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information on configuring it, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
 ## Upgrade SQL Server
 
@@ -293,4 +293,4 @@ Make sure your computer runs a version of SQL Server Report Builder that matches
 
 ## Next steps
 
-[Operations and maintenance for reporting](/sccm/core/servers/manage/operations-and-maintenance-for-reporting)
+[Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md)

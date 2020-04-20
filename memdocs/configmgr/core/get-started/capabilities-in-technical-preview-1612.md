@@ -65,7 +65,7 @@ In addition to installing and configuring the data warehouse database, several n
 - The database is not supported on a *SQL Server AlwaysOn availability group*.
 
 ### Install the Data Warehouse
-You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
+You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](../servers/deploy/configure/install-site-system-roles.md) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
 
 When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database (as you would do if you [move the data warehouse database to a new SQL Server](#move-the-data-warehouse-database)), Configuration Manager doesn't create a new database but instead uses the one you specify.
 
@@ -88,7 +88,7 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
 
 **Synchronization settings** page:   
 - **Data settings:**
-  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
+  - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](../plan-design/hierarchy/data-transfers-between-sites.md).
   - **Tables included to synchronize** – Specify the name of each additional table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
   - **Tables excluded to synchronize** - Specify the name of individual tables from replication groups you synchronize. Tables you specify will be excluded from. Separate multiple tables by using a comma.
 - **Synchronization settings:**
@@ -231,7 +231,7 @@ A new Windows 10 notification informs end users that they must take additional a
 ## Windows Store for Business support in Configuration Manager
 
 You can now deploy online licensed apps with a deployment purpose of **Available** from the Windows Store for Business to PCs running the Configuration Manager client.
-For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For more details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 Support for this feature is currently only available to PCs running the Windows 10 RS2 preview build.
 
@@ -266,7 +266,7 @@ To enable express installation files support on clients, you must enable express
 
  Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
 
-Data that is currently available in the [Configuration Manager WMI Provider](/sccm/develop/reference/configuration-manager-reference) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
+Data that is currently available in the [Configuration Manager WMI Provider](../../develop/reference/configuration-manager-reference.md) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
 
 ### Try it out
 
@@ -307,7 +307,7 @@ There are several requirements for enabling the creation of user policy in the C
 
 - The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
 - Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
-- You must run [Active Directory User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- You must run [Active Directory User Discovery](../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
 - Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 

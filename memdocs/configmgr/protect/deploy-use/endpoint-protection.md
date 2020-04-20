@@ -56,7 +56,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 
 -   [How to manage antimalware policies and firewall settings for Endpoint Protection](endpoint-antimalware-firewall.md) - Remediate malware found on client computers  
 
--   [Log files for Endpoint Protection](/configmgr/core/plan-design/hierarchy/log-files#BKMK_EPLog)  
+-   [Log files for Endpoint Protection](../../core/plan-design/hierarchy/log-files.md#BKMK_EPLog)  
 
 
 ## Managing Windows Firewall with Endpoint Protection  

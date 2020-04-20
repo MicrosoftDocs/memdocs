@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
- To perform an [unattended recovery](/sccm/protect/understand/recover-sites#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use setup with the **/script** command option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
+ To perform an [unattended recovery](recover-sites.md#site-recovery-procedures) of a Configuration Manager central administration site or primary site, you can create an unattended installation script and then use setup with the **/script** command option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. All values must be specified for the setup keys that apply to the type of recovery you are using.
 
  To use the /script setup command-line option, you must create an initialization file. Then specify this file name after the /script option. The name of the file is unimportant as long as it has the **.ini** file name extension. When you reference the setup initialization file from the command line, you must provide the full path to the file. For example, if your setup initialization file is named *setup.ini*, and it is stored in the *C:\setup folder*, your command line would be:
 

@@ -39,17 +39,17 @@ Before you create a task sequence to install an OS, make sure the following comp
 
 ### Required
 
-- [Boot image](/sccm/osd/get-started/manage-boot-images)
+- [Boot image](../get-started/manage-boot-images.md)
 
-- [OS image](/sccm/osd/get-started/manage-operating-system-images)
+- [OS image](../get-started/manage-operating-system-images.md)
 
 ### Required (if used)
 
-- [Driver packages](/sccm/osd/get-started/manage-drivers) that contain the necessary Windows drivers to support hardware on the reference computer. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](/sccm/osd/get-started/manage-drivers#BKMK_TSDrivers).
+- [Driver packages](../get-started/manage-drivers.md) that contain the necessary Windows drivers to support hardware on the reference computer. For more information about the task sequence steps to manage drivers, see [Use task sequences to install device drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).
 
-- [Software updates](/sccm/sum/get-started/synchronize-software-updates)
+- [Software updates](../../sum/get-started/synchronize-software-updates.md)
 
-- [Applications](/sccm/apps/deploy-use/create-applications)
+- [Applications](../../apps/deploy-use/create-applications.md)
 
 ## <a name="BKMK_CreateBuildCaptureTS"></a> Create a build and capture task sequence
 
@@ -106,7 +106,7 @@ Use the following procedure to use a task sequence to build a reference computer
 
 1. On the **Install Configuration Manager** page, specify the Configuration Manager client package. This package contains the source files to install the Configuration Manager client. Also specify any additional properties needed to install the client.  
 
-    For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).
+    For more information, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).
 
 1. On the **Include Updates** page, specify whether to install required software updates, all software updates, or no software updates. If you specify to install software updates, Configuration Manager installs only those software updates that are targeted to the collections that the destination computer is a member of.  
 
@@ -131,15 +131,15 @@ Use the following procedure to use a task sequence to build a reference computer
 
 1. Complete the wizard.  
 
-To add additional steps to the task sequence, select it, and choose **Edit**. For more information about how to edit a task sequence, see [Use the task sequence editor](/sccm/osd/understand/task-sequence-editor).  
+To add additional steps to the task sequence, select it, and choose **Edit**. For more information about how to edit a task sequence, see [Use the task sequence editor](../understand/task-sequence-editor.md).  
 
 Deploy the task sequence to a reference computer in one of the following ways:  
 
-- If the reference computer is already a Configuration Manager client, deploy the build and capture task sequence to a collection that contains the reference computer. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+- If the reference computer is already a Configuration Manager client, deploy the build and capture task sequence to a collection that contains the reference computer. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md).
 
-- If the reference computer isn't a Configuration Manager client, or if you want to manually run the task sequence on the reference computer, use the **Create Task Sequence Media Wizard** to create bootable media. For more information, see [Create bootable media](/sccm/osd/deploy-use/create-bootable-media).  
+- If the reference computer isn't a Configuration Manager client, or if you want to manually run the task sequence on the reference computer, use the **Create Task Sequence Media Wizard** to create bootable media. For more information, see [Create bootable media](create-bootable-media.md).  
 
-After you capture the image, you can deploy it to other computers. For more information about how to deploy the captured OS image, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).  
+After you capture the image, you can deploy it to other computers. For more information about how to deploy the captured OS image, see [Create a task sequence to install an OS](create-a-task-sequence-to-install-an-operating-system.md).  
 
 ## <a name="BKMK_CaptureExistingRefComputer"></a> Capture from an existing reference computer
 
@@ -155,7 +155,7 @@ Use the following procedure to capture an OS image from an existing reference co
 
 1. On the **Task Sequence Information** page, specify a name for the task sequence. Optionally add a description for the task sequence.  
 
-1. Specify a boot image for the task sequence. Configuration Manager uses this boot image to start the reference computer with Windows PE. For more information, see [Manage boot images](/sccm/osd/get-started/manage-boot-images).  
+1. Specify a boot image for the task sequence. Configuration Manager uses this boot image to start the reference computer with Windows PE. For more information, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 1. Complete the wizard.  
 
@@ -163,14 +163,14 @@ Use the following procedure to capture an OS image from an existing reference co
 
 1. If the Configuration Manager client is installed on the reference computer:
 
-    Go to the **Add** menu, select **Images**, and then choose [Prepare ConfigMgr Client for Capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture). This step generalizes the Configuration Manager client on the reference computer.
+    Go to the **Add** menu, select **Images**, and then choose [Prepare ConfigMgr Client for Capture](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture). This step generalizes the Configuration Manager client on the reference computer.
 
     > [!Note]  
     > The task sequence doesn't support uninstalling the Configuration Manager client.
 
-1. Go to the **Add** menu, select **Images**, and choose [Prepare Windows for Capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture). This step runs Sysprep, and then restarts the computer to the Windows PE boot image specified for the task sequence. For this action to complete successfully, don't join the reference computer to a domain.
+1. Go to the **Add** menu, select **Images**, and choose [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture). This step runs Sysprep, and then restarts the computer to the Windows PE boot image specified for the task sequence. For this action to complete successfully, don't join the reference computer to a domain.
 
-1. Go to the **Add** menu, select **Images**, and choose [Capture Operating System Image](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureOperatingSystemImage). This step only runs from Windows PE to capture the hard drives on the reference computer. Configure the following settings:
+1. Go to the **Add** menu, select **Images**, and choose [Capture Operating System Image](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage). This step only runs from Windows PE to capture the hard drives on the reference computer. Configure the following settings:
 
     - **Name** and **Description**: Optionally, you can change the name of the task sequence step and provide a description.  
 
@@ -184,11 +184,11 @@ Select **OK** to save your changes and close the task sequence editor.
 
 Deploy the task sequence to a reference computer in one of the following ways:  
 
-- If the reference computer is already a Configuration Manager client, deploy the capture task sequence to a collection that contains the reference computer. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).
+- If the reference computer is already a Configuration Manager client, deploy the capture task sequence to a collection that contains the reference computer. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md).
 
-- If the reference computer isn't a Configuration Manager client, or if you want to manually run the task sequence on the reference computer, use the **Create Task Sequence Media Wizard** to create capture media. For more information, see [Create capture media](/sccm/osd/deploy-use/create-capture-media).  
+- If the reference computer isn't a Configuration Manager client, or if you want to manually run the task sequence on the reference computer, use the **Create Task Sequence Media Wizard** to create capture media. For more information, see [Create capture media](create-capture-media.md).  
 
-After you capture the image, you can deploy it to other computers. For more information about how to deploy the captured OS image, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+After you capture the image, you can deploy it to other computers. For more information about how to deploy the captured OS image, see [Create a task sequence to install an OS](create-a-task-sequence-to-install-an-operating-system.md).
 
 ## <a name="BKMK_BuildandCaptureTSExample"></a> Example task sequence
 
@@ -211,9 +211,9 @@ This group contains the actions necessary to build a reference computer.
 |**Apply Operating System**|Install the specified OS image on the destination computer. This step first deletes all files on the volume, other than Configuration Manager-specific control files. It then applies all volume images contained in the WIM file to the corresponding sequential disk volume on the target computer.|
 |**Apply Windows Settings**|Configure the Windows settings for the destination computer.|
 |**Apply Network Settings**|Specify the network or workgroup configuration information for the destination computer.|
-|**Apply Device Drivers**|Match and install drivers as part of this OS deployment. For more information, see [Auto Apply Drivers](/sccm/osd/understand/task-sequence-steps#BKMK_AutoApplyDrivers).<br /><br />This step uses the read-only `_SMSTSMediaType` task sequence variable. If the associated value doesn't equal `FullMedia`, this step doesn't run.|
+|**Apply Device Drivers**|Match and install drivers as part of this OS deployment. For more information, see [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />This step uses the read-only `_SMSTSMediaType` task sequence variable. If the associated value doesn't equal `FullMedia`, this step doesn't run.|
 |**Setup Windows and Configuration Manager**|Install the Configuration Manager client software. Configuration Manager installs and registers the Configuration Manager client GUID. Include any necessary **Installation properties**.|
-|**Install Updates**|Specify how software updates are installed on the destination computer. The destination computer isn't evaluated for applicable software updates until this step runs. At that point, the evaluation is similar to any other Configuration Manager-managed client. For more information, see [Install Software Updates](/sccm/osd/understand/install-software-updates).<br /><br />This step uses the read-only `_SMSTSMediaType` task sequence variable. If the associated value doesn't equal `FullMedia`, this step doesn't run.|
+|**Install Updates**|Specify how software updates are installed on the destination computer. The destination computer isn't evaluated for applicable software updates until this step runs. At that point, the evaluation is similar to any other Configuration Manager-managed client. For more information, see [Install Software Updates](../understand/install-software-updates.md).<br /><br />This step uses the read-only `_SMSTSMediaType` task sequence variable. If the associated value doesn't equal `FullMedia`, this step doesn't run.|
 |**Install Applications**|Specifies any applications to install on the reference computer.|
 
 ### Group: Capture the Reference Machine
@@ -231,4 +231,4 @@ This group contains the necessary steps to prepare and capture a reference compu
 
 ## Next steps
 
-[Methods to deploy enterprise operating systems](/sccm/osd/deploy-use/methods-to-deploy-enterprise-operating-systems)
+[Methods to deploy enterprise operating systems](methods-to-deploy-enterprise-operating-systems.md)

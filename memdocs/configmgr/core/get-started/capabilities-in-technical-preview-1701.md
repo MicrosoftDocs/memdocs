@@ -34,7 +34,7 @@ With this preview, you use the new boundary group behavior to manage which softw
 - Clients that are seeking a new software update point will try to use one that is associated with their current boundary group.
 - When the client fails to reach their current software update point and cannot find one from their current boundary group, the client uses Fallback behavior to expand the available pool of software update points it can use.    
 
-For more information on boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) in the content for the Current Branch.
+For more information on boundary groups, see [Boundary groups](../servers/deploy/configure/boundary-groups.md) in the content for the Current Branch.
 
 However, with this preview, boundary groups for software update points are only partially implemented. You can add software update points and configure neighbor boundary groups that contain software update points, but the fallback time for software update points is not yet supported, and clients will wait two hours before starting fallback.
 
@@ -62,11 +62,11 @@ The following describes the behavior for software update points with this techni
   Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
 
 
-To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](/sccm/core/servers/deploy/configure/boundary-group-procedures), but remember that fallback times you might configure are not yet used for software update points.
+To manage software update points for boundary groups, use the [procedures from the Current Branch documentation](../servers/deploy/configure/boundary-group-procedures.md), but remember that fallback times you might configure are not yet used for software update points.
 
 
 ## Hardware inventory collects UEFI information
-A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory).
+A new hardware inventory class (**SMS_Firmware**) and property (**UEFI**) are available to help you determine whether a computer starts in UEFI mode. When a computer is started in UEFI mode, the **UEFI** property is set to **TRUE**. This is enabled in hardware inventory by default. For more information about hardware inventory, see [How to configure hardware inventory](../clients/manage/inventory/configure-hardware-inventory.md).
 
 ## Improvements to operating system deployment
 We have made the following improvements to operating system deployment, many of which were the result of your user voice feedback.
@@ -84,13 +84,13 @@ We have made the following improvements to operating system deployment, many of 
    - SMSTSDriverRequestReceiveTimeOut
      Default: 480
 - [**Package ID is now displayed in task sequence steps**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): Any task sequence step that references a package, driver package, operating system image, boot image, or operating system upgrade package will now display the package ID of the referenced object. When a task sequence step references an application it will display the object ID.
-- **Windows 10 ADK tracked by build version**: The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](/sccm/osd/get-started/customize-boot-images).
+- **Windows 10 ADK tracked by build version**: The Windows 10 ADK is now tracked by build version to ensure a more supported experience when customizing Windows 10 boot images. For example, if the site uses the Windows ADK for Windows 10, version 1607, only boot images with version 10.0.14393 can be customized in the console. For details about customizing WinPE versions, see [Customize boot images](../../osd/get-started/customize-boot-images.md).
 - **Default boot image source path can no longer be changed**: Default boot images are managed by Configuration Manager and the default boot image source path can no longer be changed in the Configuration Manager console or by using the Configuration Manager SDK. You can continue to configure a custom source path for custom boot images.
 
 ## Host software updates on cloud-based distribution points
 Beginning with this preview version, you can use a cloud-based distribution point to host a software update package. However, because you can configure clients to download software updates directly from Microsoft Update, consider the additional costs that deploying a software update package to a cloud-based distribution point can incur.
 
-For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
+For information about using cloud-based distribution points, see [Use a cloud-based distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) in the content for the Current Branch of Configuration Manager.
 
 ## Validate device health attestation data via management points
 
@@ -133,7 +133,7 @@ To do so, you modify a configuration file to point to the Government cloud, and 
      &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
      &lt;value><https://login.microsoftonline.com/&lt;/value>>
 
-2. After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
+2. After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.
 
 3. After the OMS connector installs, the connection to the Government cloud is available when you use any console that connects to the site.
 

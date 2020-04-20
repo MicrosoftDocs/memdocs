@@ -33,8 +33,8 @@ The following instances are supported:
 
 - The default or named instance of SQL Server.  
 - Multiple instance configurations.  
-- A SQL Server cluster. See [Use a SQL Server cluster to host the site database](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database).
-- A SQL Server AlwaysOn availability group. For more information, see [SQL Server AlwaysOn for a highly available site database](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+- A SQL Server cluster. See [Use a SQL Server cluster to host the site database](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
+- A SQL Server AlwaysOn availability group. For more information, see [SQL Server AlwaysOn for a highly available site database](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Secondary sites
 
@@ -50,7 +50,7 @@ The following configurations aren't supported:
 - A SQL Server cluster on a Cluster Shared Volume (CSV)
 - SQL Server database mirroring technology, and peer-to-peer replication
 
-SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+SQL Server transactional replication is supported only for replicating objects to management points that are configured to use [database replicas](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
 ## <a name="bkmk_SQLVersions"></a> Supported versions of SQL Server
 
@@ -65,7 +65,7 @@ For SQL Server 2016 and prior, support for each SQL version and service pack fol
 Unless specified otherwise, the following versions of SQL Server are supported with all active versions of Configuration Manager. If support for a new SQL Server version is added, the Configuration Manager version that adds that support is noted. Similarly, if support is deprecated, look for details about affected versions of Configuration Manager.
 
 > [!IMPORTANT]  
-> When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers).
+> When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
 
 ### SQL Server 2019: Standard, Enterprise
 
@@ -176,7 +176,7 @@ Configuration Manager requires a 64-bit version of SQL Server to host the site d
 
 At each site, both the instance of SQL Server that's used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.  
 
-Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](/sccm/core/plan-design/hierarchy/international-support).  
+Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](../hierarchy/international-support.md).  
 
 ### Database compatibility level
 
@@ -186,7 +186,7 @@ Configuration Manager requires that the compatibility level for the site databas
 
 Only the **Database Engine Services** feature is required for each site server.  
 
-Configuration Manager database replication doesn't require the **SQL Server replication** feature. However, this SQL Server configuration is required when you use [database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+Configuration Manager database replication doesn't require the **SQL Server replication** feature. However, this SQL Server configuration is required when you use [database replicas for management points](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
 ### Windows authentication
 
@@ -246,7 +246,7 @@ You can configure the SQL Server service to run using:
 
 When the computer running SQL Server doesn't use its local system account to run the SQL Server service, configure the SPN of the account that runs the SQL Server service in Active Directory Domain Services. (When the system account is used, the SPN is automatically registered for you.)
 
-For information about SPNs for the site database, see [Manage the SPN for the site database server](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_SPN).  
+For information about SPNs for the site database, see [Manage the SPN for the site database server](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).  
 
 For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
@@ -289,8 +289,8 @@ For an example of how to configure SQL Server to use a specific port, see [Confi
 
 If you need to upgrade your version of SQL Server, use one of the following methods, from easy to more complex:  
 
-- [Upgrade SQL Server in-place](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#to-upgrade-sql-server-on-the-site-database-server) (recommended)  
+- [Upgrade SQL Server in-place](../../servers/manage/upgrade-on-premises-infrastructure.md#to-upgrade-sql-server-on-the-site-database-server) (recommended)  
 
-- Install a new version of SQL Server on a new computer, and then [use the database move option](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
+- Install a new version of SQL Server on a new computer, and then [use the database move option](../../servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) of Configuration Manager setup to point your site server to the new SQL Server  
 
-- Use [backup and recovery](/sccm/protect/understand/backup-and-recovery). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site).
+- Use [backup and recovery](../../servers/manage/backup-and-recovery.md). Using backup and recovery for a SQL upgrade scenario is supported. You can ignore the SQL versioning requirement when reviewing [Considerations before recovering a site](../../servers/manage/recover-sites.md#considerations-before-recovering-a-site).

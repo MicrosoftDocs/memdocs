@@ -144,7 +144,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 >  The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  
 
 ## Third party updates
-Beginning in Configuration Manager version 1802, you can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option is not available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates) article.
+Beginning in Configuration Manager version 1802, you can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option is not available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
 
 ## Next steps
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this article to install the software update point on child sites.

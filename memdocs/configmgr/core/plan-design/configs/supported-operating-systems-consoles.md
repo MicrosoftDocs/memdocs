@@ -32,6 +32,6 @@ To support the Configuration Manager console, the following OS versions require 
 
 For more information about the Configuration Manager console, see the following articles:
 
-- [Install consoles](/sccm/core/servers/deploy/install/install-consoles)  
+- [Install consoles](../../servers/deploy/install/install-consoles.md)  
 
-- [Using the console](/sccm/core/servers/manage/admin-console)  
+- [Using the console](../../servers/manage/admin-console.md)  

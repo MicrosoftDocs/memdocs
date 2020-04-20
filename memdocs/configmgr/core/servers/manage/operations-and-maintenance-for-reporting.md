@@ -19,13 +19,13 @@ ms.author: aaroncz
 After the infrastructure is in place for reporting in Configuration Manager, there are a number of operations that you typically do to manage reports and report subscriptions.
 
 > [!NOTE]
-> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
 ## Run a report from Reporting Services
 
 Configuration Manager stores its reports in SQL Server Reporting Services. The report retrieves data from the Configuration Manager site database. You can access reports in the Configuration Manager console or by using Report Manager via a web browser. Open reports from a web browser on any computer that can access the reporting services point, and the user has sufficient rights to view the reports. To run reports, you need **Read** rights for the **Site** permission and the **Run Report** permission for specific objects.
 
-When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](/configmgr/core/servers/manage/configuring-reporting#-languages-for-reports).
+When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
 > Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)
@@ -37,7 +37,7 @@ Use the following procedures to run a Configuration Manager report.
 1. In the Configuration Manager console, go to the **Monitoring** workspace. Expand **Reporting**, and then select **Reports**. This node lists the available reports.
 
     > [!TIP]
-    > If this node doesn't list any reports, verify that the reporting services point is installed and configured. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+    > If this node doesn't list any reports, verify that the reporting services point is installed and configured. For more information, see [Configure reporting](configuring-reporting.md).
 
 1. Select the report that you want to run. On the **Home** tab of the ribbon, in the **Report Group** section, select **Run** to open the report.
 
@@ -50,7 +50,7 @@ Use the following procedures to run a Configuration Manager report.
 1. In Report Manager, select the report folder for Configuration Manager, for example, **ConfigMgr_CAS**.
 
     > [!TIP]
-    > If Report Manager doesn't list any reports, verify that the reporting services point is installed and configured. For more information, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+    > If Report Manager doesn't list any reports, verify that the reporting services point is installed and configured. For more information, see [Configure reporting](configuring-reporting.md).
 
 1. Select the report category for the report that you want to run, and then select the specific report. The report opens in Report Manager.
 
@@ -95,7 +95,7 @@ Use the following procedure to edit the properties for a Configuration Manager r
 
 There are two types of reports that you can create:
 
-- A **model-based report** lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Create custom report models for Configuration Manager in SQL Server Reporting Services](/configmgr/core/servers/manage/creating-custom-report-models-in-sql-server-reporting-services).
+- A **model-based report** lets you interactively select the items you want to include in your report. For more information about creating custom report models, see [Create custom report models for Configuration Manager in SQL Server Reporting Services](creating-custom-report-models-in-sql-server-reporting-services.md).
 
 - A **SQL-based report** lets you retrieve data that's based on a report SQL statement.
 
@@ -136,7 +136,7 @@ Use the following procedure to create a model-based Configuration Manager report
 
 ### Create a SQL-based report
 
-When you create an SQL statement for a custom report, don't directly reference SQL Server tables. Always reference supported reporting SQL Server views from the site database. These views have names that start with `v_`. For more information, see [Creating custom reports by using SQL Server views in Configuration Manager](/configmgr/develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views).
+When you create an SQL statement for a custom report, don't directly reference SQL Server tables. Always reference supported reporting SQL Server views from the site database. These views have names that start with `v_`. For more information, see [Creating custom reports by using SQL Server views in Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
 
 You can also reference public stored procedures from the site database. These stored procedures have names that start with `sp_`.
 

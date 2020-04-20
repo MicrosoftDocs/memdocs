@@ -193,12 +193,12 @@ You can install the Configuration Manager client on computers that run Linux or 
  For information about client communication and request ports, see  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP).  
 
 ##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Planning for Communication across Forest Trusts for Linux and UNIX Servers  
- Linux and UNIX servers you manage with Configuration Manager operate as workgroup clients and require similar configurations as Windows-based clients that are in a workgroup. For information about communications from computers that are in workgroups, see [Communications across Active Directory forests](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Plan_Com_X-Forest).  
+ Linux and UNIX servers you manage with Configuration Manager operate as workgroup clients and require similar configurations as Windows-based clients that are in a workgroup. For information about communications from computers that are in workgroups, see [Communications across Active Directory forests](../../../plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest).  
 
 ###  <a name="BKMK_ServiceLocationforLnU"></a> Service Location by the client for Linux and UNIX  
  The task of locating a site system server that provides service to clients is referred to as service location. Unlike a Windows-based client, the client for Linux and UNIX doesn't use Active Directory for service location. Additionally, the Configuration Manager client for Linux and UNIX doesn't support a client property that specifies the domain suffix of a management point. Instead, the client learns about additional site system servers that provide services to clients from a known management point you assign when you install the client software.  
 
- For more information, see [Service Location and how clients determine their assigned management point](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#BKMK_Plan_Service_Location).  
+ For more information, see [Service Location and how clients determine their assigned management point](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location).  
 
 ##  <a name="BKMK_SecurityforLnU"></a> Planning for Security and Certificates for Linux and UNIX Servers  
  For secure and authenticated communications with Configuration Manager sites, the Configuration Manager client for Linux and UNIX uses the same model for communication as the Configuration Manager client for Windows.  
@@ -209,9 +209,9 @@ You can install the Configuration Manager client on computers that run Linux or 
 
  When a Linux or UNIX client uses a PKI certificate, you don't have to approve them. When a client uses a self-signed certificate, review the hierarchy settings for client approval in the Configuration Manager console. If the client approval method is not **Automatically approve all computers (not recommended)**, you must manually approve the client.  
 
- For more information about how to manually approve the client, see [Manage clients from the devices node](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode).  
+ For more information about how to manually approve the client, see [Manage clients from the devices node](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 
- For information about how to use certificates in Configuration Manager, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+ For information about how to use certificates in Configuration Manager, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
 ###  <a name="BKMK_AboutCertsforLnU"></a> About Certificates for use by Linux and UNIX Servers  
  The Configuration Manager client for Linux and UNIX uses a self-signed certificate or an X.509 PKI certificate just like Windows-based clients. There are no changes to the PKI requirements for Configuration Manager site systems when you manage Linux and UNIX clients.  
@@ -244,7 +244,7 @@ You can install the Configuration Manager client on computers that run Linux or 
 
  When the Configuration Manager client for Linux and UNIX installs, the install script checks the operating system version. By default, if the operating system version is identified as having released without a version of OpenSSL that supports SHA-256, the installation of the Configuration Manager client fails.  
 
- To install the Configuration Manager client on Linux and UNIX operating systems that didn't release with a version of OpenSSL that supports SHA-256, you must use the install command-line switch `ignoreSHA256validation`. When you use this command-line option on an applicable Linux or UNIX operating system, the Configuration Manager client will skip SHA-256 validation and after installation, the client won't use SHA-256 to sign data it submits to site systems by using HTTP. For information about configuring Linux and UNIX clients to use certificates, see [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU). For more information about requiring SHA-256, see [Configure signing and encryption](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureSigningEncryption).  
+ To install the Configuration Manager client on Linux and UNIX operating systems that didn't release with a version of OpenSSL that supports SHA-256, you must use the install command-line switch `ignoreSHA256validation`. When you use this command-line option on an applicable Linux or UNIX operating system, the Configuration Manager client will skip SHA-256 validation and after installation, the client won't use SHA-256 to sign data it submits to site systems by using HTTP. For information about configuring Linux and UNIX clients to use certificates, see [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU). For more information about requiring SHA-256, see [Configure signing and encryption](../../../plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption).  
 
 > [!NOTE]  
 >  The command line option `ignoreSHA256validation` is ignored on computers that run a version of Linux and UNIX that released with versions of OpenSSL that support SHA-256.  

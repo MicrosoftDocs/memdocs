@@ -28,10 +28,10 @@ Most configuration options for Configuration Manager site system roles are self-
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
-For more information about how to set up the application catalog website point, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
+For more information about how to set up the application catalog website point, see [Plan for and configure application management](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
 
 ## <a name="BKMK_ApplicationCatalog_WebService"></a> Application catalog web service point  
@@ -41,24 +41,24 @@ For more information about how to set up the application catalog website point, 
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
-For more information about how to set up the Application Catalog web service point, see [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management).  
+For more information about how to set up the Application Catalog web service point, see [Plan for and configure application management](../../../../apps/plan-design/plan-for-and-configure-application-management.md).  
 
 
 ## <a name="BKMK_CertificateRegistrationPoint"></a> Certificate registration point  
 
-For more information about how to set up the certificate registration point, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).  
+For more information about how to set up the certificate registration point, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).  
 
 
 ## <a name="BKMK_Distribution_Point"></a> Distribution point  
 
-For more information about how to set up the distribution point for content deployment, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+For more information about how to set up the distribution point for content deployment, see [Manage content and content infrastructure](manage-content-and-content-infrastructure.md).  
 
-For more information about how to set up the distribution point for PXE deployments, see [Use PXE to deploy Windows over the network](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).  
+For more information about how to set up the distribution point for PXE deployments, see [Use PXE to deploy Windows over the network](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-For more information about how to set up the distribution point for multicast deployments, see [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network).  
+For more information about how to set up the distribution point for multicast deployments, see [Use multicast to deploy Windows over the network](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
 ### Install and configure IIS if required by Configuration Manager
 
@@ -66,27 +66,27 @@ Select this option to let Configuration Manager install and set up IIS on the si
 
 ### Site system installation account
 
-For distribution points that are installed on a site server, only the computer account of the site server is supported for use as the site system installation account. For more information, see [Accounts](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account).  
+For distribution points that are installed on a site server, only the computer account of the site server is supported for use as the site system installation account. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).  
 
 
 ## <a name="BKMK_Enrollment_Point"></a> Enrollment point  
 
 Enrollment points are used to install macOS computers and enroll devices that you manage with on-premises mobile device management. For more information, see the following articles:  
 
-- [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+- [How to deploy clients to Macs](../../../clients/deploy/deploy-clients-to-macs.md)  
 
-- [How users enroll devices with on-premises MDM](/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm)  
+- [How users enroll devices with on-premises MDM](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 ### Allowed connections
 
-The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point, and encryption of data over SSL. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+The HTTPS setting is automatically selected and requires a PKI certificate on the server for server authentication to the enrollment proxy point, and encryption of data over SSL. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
-For an example deployment of the server certificate and information about how to configure it in IIS, see [Deploying the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+For an example deployment of the server certificate and information about how to configure it in IIS, see [Deploying the web server certificate for site systems that run IIS](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
 
 ## <a name="BKMK_Enrollment_Proxy_Point"></a> Enrollment proxy point  
 
-For more information about how to set up an enrollment proxy point for mobile devices, see [How users enroll devices with on-premises MDM](/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm).  
+For more information about how to set up an enrollment proxy point for mobile devices, see [How users enroll devices with on-premises MDM](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md).  
 
 ### Client connections
 
@@ -95,9 +95,9 @@ The HTTPS setting is automatically selected. It requires the following PKI certi
 - For server authentication to mobile devices and Mac computers that you enroll with Configuration Manager
 - For encryption of data over Secure Sockets Layer (SSL)
 
-For more information about the certificate requirements, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+For more information about the certificate requirements, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
-For an example deployment of the server certificate and information about how to configure it in IIS, see [Deploying the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+For an example deployment of the server certificate and information about how to configure it in IIS, see [Deploying the web server certificate for site systems that run IIS](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
 
 ## <a name="BKMK_Fallback_Status_Point"></a> Fallback status point  

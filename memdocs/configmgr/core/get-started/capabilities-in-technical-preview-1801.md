@@ -20,7 +20,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1801. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
 
-Review [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review [Technical Preview for Configuration Manager](technical-preview.md) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template   
@@ -30,7 +30,7 @@ Review [Technical Preview for Configuration Manager](/sccm/core/get-started/tech
 **Known Issues in this Technical Preview:**
 -->
 **Known Issues in this Technical Preview:**
-- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -72,7 +72,7 @@ Phased deployments automate a coordinated, sequenced rollout of software without
 
 ## Co-management reporting
 <!-- 1356648 -->
-If you are using the [co-management](/sccm/core/clients/manage/co-management-overview) capabilities, you can now view a dashboard with information about co-management in your environment. In the Configuration Manager console, navigate to the **Monitoring** workspace, expand **Upgrade Readiness**, and select the **Co-management** dashboard. The dashboard includes the following tiles:
+If you are using the [co-management](../../comanage/overview.md) capabilities, you can now view a dashboard with information about co-management in your environment. In the Configuration Manager console, navigate to the **Monitoring** workspace, expand **Upgrade Readiness**, and select the **Co-management** dashboard. The dashboard includes the following tiles:
 - **Co-managed devices**: the percentage of devices in your environment that you enabled for co-management
 - **OS distribution**: the breakdown of operating systems (OS) by version. This chart uses the following groupings:
   - Windows 7 & 8.x
@@ -169,7 +169,7 @@ In this version of the Technical Preview, improvements have been made for Softwa
 
 ## New settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](/sccm/protect/deploy-use/create-deploy-application-guard-policy). 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](../../protect/deploy-use/create-deploy-application-guard-policy.md). 
 1. Websites can be given access to the host’s virtual graphics processor. 
 2. Files downloaded inside the container can be persisted on the host. </br>
 
@@ -177,7 +177,7 @@ For Windows 10 version 1709 and later devices, there are two new host interactio
 
 ## Improvements to Run Scripts
 <!-- 1236459 -->
-The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now allows you to import and run signed PowerShell scripts. 
+The [**Run Scripts** feature](../../apps/deploy-use/create-deploy-scripts.md) now allows you to import and run signed PowerShell scripts. 
 - To keep the script integrity, signed scripts must be imported rather than using copy/paste. 
 - Imported signed scripts cannot be edited after import.
     
@@ -191,4 +191,4 @@ The [**Run Scripts** feature](/sccm/apps/deploy-use/create-deploy-scripts) now a
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

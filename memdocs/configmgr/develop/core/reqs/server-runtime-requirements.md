@@ -17,7 +17,7 @@ Microsoft Configuration Manager server applications that are developed by using 
 
 ## Managed Code  
 
--   A supported version of Windows Server as defined in [Supported operating systems for Configuration Manager site system servers](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers). For more information, see [General Requirements](#general-requirements).
+-   A supported version of Windows Server as defined in [Supported operating systems for Configuration Manager site system servers](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md). For more information, see [General Requirements](#general-requirements).
 
 -   Installed Configuration Manager site server  
 
@@ -34,7 +34,7 @@ Microsoft Configuration Manager server applications that are developed by using 
 
 - .NET Framework 4.0  
 
-  For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
+  For more information, see [About console extensions](../servers/console/about-configuration-manager-console-extension.md).  
 
 ## VBScript  
 
@@ -48,9 +48,9 @@ Microsoft Configuration Manager server applications that are developed by using 
 ## General Requirements  
 
 > [!IMPORTANT]
->  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations).  
+>  For more information about general Configuration Manager requirements, see [Supported configurations for Configuration Manager](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## See Also  
-[About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension)
+[About console extensions](../servers/console/about-configuration-manager-console-extension.md)
  [Configuration Manager Client Development Requirements](../../../develop/core/reqs/client-development-requirements.md)   
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)

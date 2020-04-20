@@ -38,7 +38,7 @@ The LTSB has limited support for future server and client operating systems and 
 - No support for new major versions of SQL Server.  
 
 ## Site systems and servers
-The LTSB supports the use of the following Windows computer operating systems as site systems.  Each operating system has the same requirements and limitations as the same entry in [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).  For example, the Server Core installation of Windows 2012 R2 must be an x64 version, is only supported to host a distribution point, and does not support PXE or Multicast.
+The LTSB supports the use of the following Windows computer operating systems as site systems.  Each operating system has the same requirements and limitations as the same entry in [Supported operating systems for site system servers](../plan-design/configs/supported-operating-systems-for-site-system-servers.md).  For example, the Server Core installation of Windows 2012 R2 must be an x64 version, is only supported to host a distribution point, and does not support PXE or Multicast.
 
 **Supported operating systems:**
 - Windows Server 2016
@@ -54,7 +54,7 @@ The LTSB supports the use of the following Windows computer operating systems as
 The following sections identify the client operating systems that you can manage with the LTSB. The LTSB does not support the addition of new operating systems as supported clients.
 
 ### Windows computers
-You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+You can use the LTSB to manage the following Windows computer operating systems with the Configuration Manager client software that is included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](../clients/deploy/deploy-clients-to-windows-computers.md).
 
 **Supported operating systems:**
 - Windows Server 2016
@@ -72,7 +72,7 @@ You can use the LTSB to manage the following Windows computer operating systems 
 **(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
 
 ### Windows Embedded
-You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).
+You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
 
 **Requirements and limitations:**  
 
@@ -107,7 +107,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 
 -   The mobile device client requires 0.78 MB of storage space to install the client. A mobile device can require up to 256 KB of additional storage space to sign in.    
 
--   Features for these mobile devices vary by platform and client type. For information about the kind of management functions that Configuration Manager supports for a mobile device legacy client, see [Choose a device management solution for Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   Features for these mobile devices vary by platform and client type. For information about the kind of management functions that Configuration Manager supports for a mobile device legacy client, see [Choose a device management solution for Configuration Manager](../plan-design/choose-a-device-management-solution.md).  
 
 **Supported operating systems:**  
 
@@ -132,7 +132,7 @@ The Mac client installation package is not supplied with the Configuration Manag
 
 Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
-For more information, see [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs).
+For more information, see [How to deploy clients to Macs](../clients/deploy/deploy-clients-to-macs.md).
 
 **Supported versions:**  
 -   Mac OS X 10.9 (Mavericks)  
@@ -148,10 +148,10 @@ Support for Linux and UNIX operating systems is limited to those listed in this 
 
 **Requirements and limitations:**  
 
--   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#BKMK_ClientDeployPrereqforLnU).  
--   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
+-   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
+-   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 -   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.
--   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).
+-   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).
 
 
 **Supported versions:**   
@@ -251,13 +251,13 @@ The following versions are supported by using the indicated .tar file.
 |Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### Exchange Server connector
- The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).
+ The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
  **Requirements and limitations:**  
 
 -   Configuration Manager offers limited management for mobile devices. Limited management is available when you use the Exchange Server connector for Exchange Active Sync (EAS) capable devices that connect to a server running Exchange Server or Exchange Online.  
 
--   For more information about the management functions that Configuration Manager supports for mobile devices that the Exchange Server connector manages, see [Choose a device management solution for Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution).  
+-   For more information about the management functions that Configuration Manager supports for mobile devices that the Exchange Server connector manages, see [Choose a device management solution for Configuration Manager](../plan-design/choose-a-device-management-solution.md).  
 
 **Supported versions of Exchange Server:**  
 -   Exchange Server 2010 SP1  
@@ -281,7 +281,7 @@ The LTSB supports the following operating systems to run the Configuration Manag
 
 
 ## SQL Server versions supported for the site database and reporting point
-The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions) for the Current Branch apply to the LTSB.  This includes the use of a SQL Server Cluster, or a SQL Server AlwaysOn availability group.  
+The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md) for the Current Branch apply to the LTSB.  This includes the use of a SQL Server Cluster, or a SQL Server AlwaysOn availability group.  
 
 **Supported versions:**
 
@@ -296,7 +296,7 @@ The LTSB supports the following versions of SQL Server to host the site database
 - SQL Server 2012 Express SP3
 
 ## Support for Active Directory domains
-All LTSB site systems must be members of a supported Windows Active Directory domain. Support for Active Directory domains has the same requirements and limitations as those that appear in [Support for Active Directory domains](/sccm/core/plan-design/configs/support-for-active-directory-domains), but is limited to the following domain functional levels:
+All LTSB site systems must be members of a supported Windows Active Directory domain. Support for Active Directory domains has the same requirements and limitations as those that appear in [Support for Active Directory domains](../plan-design/configs/support-for-active-directory-domains.md), but is limited to the following domain functional levels:
 
 **Supported levels:**
 - Windows Server 2008
@@ -306,9 +306,9 @@ All LTSB site systems must be members of a supported Windows Active Directory do
 
 ## Additional support topics that apply to the Long-Term Servicing Branch
 The information in the following Current Branch topics apply to the LTSB:
-- [Size and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers)
-- [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
-- [High availability options](/sccm/protect/understand/high-availability-options)
-- [Recommended hardware](/sccm/core/plan-design/configs/recommended-hardware)
-- [Support for Windows features and networks](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
-- [Support for virtualization environments](/sccm/core/plan-design/configs/support-for-virtualization-environments)
+- [Size and scale numbers](../plan-design/configs/size-and-scale-numbers.md)
+- [Site and site system prerequisites](../plan-design/configs/site-and-site-system-prerequisites.md)
+- [High availability options](../servers/deploy/configure/high-availability-options.md)
+- [Recommended hardware](../plan-design/configs/recommended-hardware.md)
+- [Support for Windows features and networks](../plan-design/configs/support-for-windows-features-and-networks.md)
+- [Support for virtualization environments](../plan-design/configs/support-for-virtualization-environments.md)

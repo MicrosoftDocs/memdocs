@@ -36,11 +36,11 @@ The following sections list the advantages and disadvantages of on-premises MDM 
 
 **Less client management functionality**: No orchestration, software metering, third-party integration, task sequencing, or Software Center support.
 
-- **Limited device support**: on-premises MDM doesn't support as many OS versions as the Configuration Manager client. For more information, see [Supported OS versions for clients and devices](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS).
+- **Limited device support**: on-premises MDM doesn't support as many OS versions as the Configuration Manager client. For more information, see [Supported OS versions for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
 ## Next step
 
 Learn about what to consider when setting up the Configuration Manager infrastructure and planning for device enrollment in on-premises MDM.
 
 > [!div class="nextstepaction"]
-> [Plan for on-premises MDM](/configmgr/mdm/plan-design/plan-on-premises-mdm)  
+> [Plan for on-premises MDM](../plan-design/plan-on-premises-mdm.md)  

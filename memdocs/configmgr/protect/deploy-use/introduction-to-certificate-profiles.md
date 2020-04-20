@@ -46,11 +46,11 @@ There are three types of certificate profiles:
 
 - **Personal information exchange (.pfx)**: Request a .pfx (also known as PKCS #12) certificate for a device or user.<!--1321368--> There are two methods to create PFX certificate profiles:
 
-  - [Import credentials](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles) from existing certificates
-  - [Define a certificate](/configmgr/mdm/deploy-use/create-pfx-certificate-profiles) authority to process requests
+  - [Import credentials](../../mdm/deploy-use/import-pfx-certificate-profiles.md) from existing certificates
+  - [Define a certificate](../../mdm/deploy-use/create-pfx-certificate-profiles.md) authority to process requests
 
   > [!Note]  
-  > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+  > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
   You can use Microsoft or Entrust as certificate authorities for **Personal information exchange (.pfx)** certificates.
 
@@ -73,7 +73,7 @@ Depending on the requirements, Configuration Manager supports deploying certific
 - Windows Phone 8.1  
 
 > [!NOTE]  
-> Use Configuration Manager on-premises MDM to manage Windows Phone 8.1 and Windows 10 Mobile. For more information, see [On-premises MDM](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).
+> Use Configuration Manager on-premises MDM to manage Windows Phone 8.1 and Windows 10 Mobile. For more information, see [On-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
 
 A typical scenario for Configuration Manager is to install trusted root CA certificates to authenticate Wi-Fi and VPN servers. Typical connections use the following protocols:
 
@@ -90,11 +90,11 @@ When you deploy a SCEP certificate profile, the Configuration Manager client pro
 
 Deploy certificate profiles to user or device collections. You can specify the destination store for each certificate. Applicability rules determine whether the device can install the certificate.
 
-When you deploy a certificate profile to a user collection, [user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity) determines which of the users' devices install the certificates. When you deploy a certificate profile with a user certificate to a device collection, by default each of the users' primary devices install the certificates. To install the certificate on any of the users' devices, change this behavior on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. If the devices are in a workgroup, Configuration Manager doesn't deploy user certificates.  
+When you deploy a certificate profile to a user collection, [user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md) determines which of the users' devices install the certificates. When you deploy a certificate profile with a user certificate to a device collection, by default each of the users' primary devices install the certificates. To install the certificate on any of the users' devices, change this behavior on the **SCEP Enrollment** page of the **Create Certificate Profile Wizard**. If the devices are in a workgroup, Configuration Manager doesn't deploy user certificates.  
 
 ## Monitor
 
-You can monitor certificate profile deployments by viewing compliance results or reports. For more information, see [How to monitor certificate profiles](/configmgr/protect/deploy-use/monitor-certificate-profiles).
+You can monitor certificate profile deployments by viewing compliance results or reports. For more information, see [How to monitor certificate profiles](monitor-certificate-profiles.md).
 
 ## Automatic revocation
 
@@ -113,6 +113,6 @@ To revoke the certificates, the site server sends a revocation command to the is
 
 ## Next steps
 
-- [Create certificate profiles](/configmgr/protect/deploy-use/create-certificate-profiles)
+- [Create certificate profiles](create-certificate-profiles.md)
 
-- [Configure certificate infrastructure](/configmgr/protect/deploy-use/certificate-infrastructure)
+- [Configure certificate infrastructure](certificate-infrastructure.md)

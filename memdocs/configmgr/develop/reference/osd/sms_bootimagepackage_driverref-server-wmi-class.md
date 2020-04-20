@@ -82,4 +82,4 @@ Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
 
 ## See also
 
-[SMS_BootImagePackage server WMI class](/sccm/develop/reference/osd/sms_bootimagepackage-server-wmi-class)
+[SMS_BootImagePackage server WMI class](sms_bootimagepackage-server-wmi-class.md)

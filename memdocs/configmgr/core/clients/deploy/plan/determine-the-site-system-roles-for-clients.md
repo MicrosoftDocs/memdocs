@@ -20,15 +20,15 @@ manager: dougeby
 
 This article can help you determine the site system roles that you need to deploy Configuration Manager clients.
 
-For more information about where to install these roles in the hierarchy, see [Design a hierarchy of sites](/sccm/core/plan-design/hierarchy/design-a-hierarchy-of-sites).  
+For more information about where to install these roles in the hierarchy, see [Design a hierarchy of sites](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
 
-For more information about how to install and configure these roles, see [Install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles).  
+For more information about how to install and configure these roles, see [Install site system roles](../../../servers/deploy/configure/install-site-system-roles.md).  
 
 ## Management point
 
 By default, all Windows client computers use a distribution point to install the Configuration Manager client. They can fall back to a management point when a distribution point is unavailable. However, you can install Windows clients on computers from an alternative source when you use the CCMSetup command-line property `/source:<Path>`. For example, you might do this action if you install clients on the internet. Another scenario is when you want to avoid sending network packets between the computer and the management point during client installation. This scenario is because a firewall blocks the required ports or because you have a low-bandwidth connection. However, all clients must communicate with a management point to assign to a site and to be managed by Configuration Manager.  
 
-For more information about client command-line properties, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+For more information about client command-line properties, see [About client installation properties](../about-client-installation-properties.md).  
 
 When you install more than one management point in the hierarchy, clients automatically connect to one point based on their forest membership and network location. You can't install more than one management point in a secondary site.  
 
@@ -87,9 +87,9 @@ Configuration Manager requires the enrollment point and the enrollment proxy poi
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 ## Cloud management gateway connector point
 
-You need a cloud management gateway connector point if you're setting up a [cloud management gateway](/sccm/core/clients/manage/setup-cloud-management-gateway) to [manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).
+You need a cloud management gateway connector point if you're setting up a [cloud management gateway](../../manage/cmg/plan-cloud-management-gateway.md) to [manage clients on the internet](../../manage/manage-clients-internet.md).

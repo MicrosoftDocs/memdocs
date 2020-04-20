@@ -58,7 +58,7 @@ manager: dougeby
   - Identification  
   - Recovery
 
-For more information, see [Unattended site recovery for Configuration Manager](/sccm/protect/understand/unattended-recovery).  
+For more information, see [Unattended site recovery for Configuration Manager](../../manage/unattended-recovery.md).  
 
 For a list of keys and values to use in an unattended installation script file, see [Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended).  
 
@@ -81,7 +81,7 @@ When you use media from the CD.Latest folder to run a scripted install of the fo
 - Recover a primary site
 
 This value is not supported for use with installation media that you get from the Microsoft Volume License site.
-See [command-line options](/sccm/core/servers/deploy/install/command-line-options-for-setup) for information on how to use this key name in the script file.
+See [command-line options](command-line-options-for-setup.md) for information on how to use this key name in the script file.
 
 
 

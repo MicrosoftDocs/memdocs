@@ -67,25 +67,25 @@ There are also two tables that compare the management solutions by the following
 
 This option requires installation of the Configuration Manager client on devices. It provides the most features for managing PCs, servers, and other devices in your environment.
 
-For more information, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).  
+For more information, see [Client installation methods](../clients/deploy/plan/client-installation-methods.md).  
 
 ### <a name="bkmk_opmdm"></a> On-premises MDM  
 
 This option uses the device management capabilities built into Windows 10. While not as full-featured as client-based management, on-premises MDM provides a lighter touch approach to management. It uses on-premises Configuration Manager resources to manage devices.  
 
-For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
+For more information, see [Manage mobile devices with on-premises infrastructure](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ### <a name="bkmk_comanage"></a> Co-management with Microsoft Intune
 
 Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality.
 
-For more information, see [What is co-management?](/sccm/comanage/overview).  
+For more information, see [What is co-management?](../../comanage/overview.md).  
 
 ### <a name="bkmk_exchange"></a> Microsoft Exchange  
 
 This option uses the Exchange Server connector to connect multiple Exchange servers to Configuration Manager. It centralizes management of devices that can connect to Exchange ActiveSync. You can configure Exchange mobile device management features from the Configuration Manager console. Example features include remote device wipe and the settings control for multiple Exchange servers.
 
-For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ### <a name="bkmk_comp1"></a> Compare solutions by supported platforms  
 
@@ -102,7 +102,7 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 
 For a complete list of supported platforms, see the following articles:
 
-- [Supported operating systems for clients and devices for Configuration Manager](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)
+- [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
 - [Intune supported configurations](https://docs.microsoft.com/intune/supported-devices-browsers)
 
 Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune).

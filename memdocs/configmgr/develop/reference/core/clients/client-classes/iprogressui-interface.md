@@ -21,13 +21,13 @@ The `IProgressUI` automation interface in Configuration Manager represents the u
 
 |Term|Definition|  
 |----------|----------------|  
-|[IProgressUI::CloseProgressDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--closeprogressdialog-method)|Closes open instances of `IProgressUI`|  
-|[IProgressUI::ShowActionProgress](/sccm/develop/reference/core/clients/client-classes/iprogressui--showactionprogress-method)|Displays custom action progress information in a dialog box while the custom action is running.|  
-|[IProgressUI::ShowErrorDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showerrordialog-method)|Displays customizable error information in a dialog box.|
-|[IProgressUI::ShowMessage](/sccm/develop/reference/core/clients/client-classes/iprogressui--showmessage-method)|Displays customizable dialog box.|
-|[IProgressUI::ShowRebootDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showrebootdialog-method)|Displays customizable reboot warning dialog box.|
-|[IProgressUI::ShowSwapMediaDialog](/sccm/develop/reference/core/clients/client-classes/iprogressui--showswapmediadialog-method)|Displays message box to prompt a user to swap media.|
-|[IProgressUI::ShowTSProgress](/sccm/develop/reference/core/clients/client-classes/iprogressui--showtsprogress-method)|Displays custom task sequence progress information in a dialog box.|
+|[IProgressUI::CloseProgressDialog](iprogressui--closeprogressdialog-method.md)|Closes open instances of `IProgressUI`|  
+|[IProgressUI::ShowActionProgress](iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|  
+|[IProgressUI::ShowErrorDialog](iprogressui--showerrordialog-method.md)|Displays customizable error information in a dialog box.|
+|[IProgressUI::ShowMessage](iprogressui--showmessage-method.md)|Displays customizable dialog box.|
+|[IProgressUI::ShowRebootDialog](iprogressui--showrebootdialog-method.md)|Displays customizable reboot warning dialog box.|
+|[IProgressUI::ShowSwapMediaDialog](iprogressui--showswapmediadialog-method.md)|Displays message box to prompt a user to swap media.|
+|[IProgressUI::ShowTSProgress](iprogressui--showtsprogress-method.md)|Displays custom task sequence progress information in a dialog box.|
 
 ## Remarks
 
@@ -35,8 +35,8 @@ The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.
 
 ## See also
 
-- [OS deployment client COM automation classes](/sccm/develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
 
-- [ProgressUI Class](/sccm/develop/reference/core/clients/client-classes/progressui-client-com-automation-class)  
+- [ProgressUI Class](progressui-client-com-automation-class.md)  
 
-- [About reporting Configuration Manager custom action progress](/sccm/develop/osd/about-reporting-configuration-manager-custom-action-progress)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  

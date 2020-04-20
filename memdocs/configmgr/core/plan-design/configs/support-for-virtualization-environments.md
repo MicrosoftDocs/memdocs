@@ -58,11 +58,11 @@ Configuration Manager can run on virtual machines in Azure just as it runs on-pr
 
 The same Configuration Manager requirements for networks, supported configurations, and hardware requirements that apply to installing it on-premises also apply to installation on Azure virtual machines.  
 
-For more information, see [Configuration Manager on Azure](/sccm/core/understand/configuration-manager-on-azure).
+For more information, see [Configuration Manager on Azure](../../understand/configuration-manager-on-azure.md).
 
 > [!IMPORTANT]  
 > Configuration Manager sites and clients that run on Azure virtual machines are subject to the same license requirements as on-premises installations.  
 
 ## Windows Virtual Desktop
 
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure. For more information, see [Supported operating systems for clients and devices](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
+[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure. For more information, see [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md).

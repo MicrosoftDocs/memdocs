@@ -21,30 +21,30 @@ ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 This process includes the steps required to set up a cloud management gateway (CMG).
 
 > [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 
 ## Before you begin
 
-Start by reading the article [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway). Use that article to determine your CMG design.
+Start by reading the article [Plan for cloud management gateway](plan-cloud-management-gateway.md). Use that article to determine your CMG design.
 
 Use the following checklist to make sure you have the necessary information and prerequisites to create a CMG:  
 
 - The Azure environment to use. For example, the Azure Public Cloud or the Azure US Government Cloud.  
 
-- You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway).  
+- You need one or more certificates for CMG, depending upon your design. For more information, see [Certificates for cloud management gateway](certificates-for-cloud-management-gateway.md).  
 
-- You need the following requirements for an [Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) deployment of CMG:  
+- You need the following requirements for an [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) deployment of CMG:  
 
-    - Integration with [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
+    - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
 
     - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - A subscription admin needs to sign in.  
 
-- A globally unique name for the service. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).  
+- A globally unique name for the service. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
-- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth).
+- If enabling CMG as a cloud distribution point, the same globally unique CMG service name chosen also needs to be available as a globally unique storage account name. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).
 
 - The Azure region for this CMG deployment.  
 
@@ -53,7 +53,7 @@ Use the following checklist to make sure you have the necessary information and 
 - If you still need to use the Azure classic service deployment in Configuration Manager version 1810 or earlier, you need the following requirements:  
 
     > [!Important]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Use Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Use Azure Resource Manager deployments for the cloud management gateway. For more information, see [Plan for CMG](plan-cloud-management-gateway.md#azure-resource-manager).  
     >
     > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway.<!-- 3605704 -->
 
@@ -101,9 +101,9 @@ Do this procedure on the top-level site. That site is either a standalone primar
     >
     > In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.<!-- SCCMDocs-pr#4022 -->
 
-11. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
+11. By default, the wizard enables the option to **Verify Client Certificate Revocation**. A certificate revocation list (CRL) must be publicly published for this verification to work. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
-12. Starting in version 1906, you can **Enforce TLS 1.2**. This setting only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](/sccm/core/plan-design/security/enable-tls-1-2).<!-- SCCMDocs-pr#4021 -->
+12. Starting in version 1906, you can **Enforce TLS 1.2**. This setting only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
 13. Starting in version 1806, by default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.  
 
@@ -114,12 +114,12 @@ Do this procedure on the top-level site. That site is either a standalone primar
 16. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard, it will take between five to 15 minutes to provision the service completely in Azure. Check the **Status** column for the new CMG to determine when the service is ready.  
 
     > [!Note]  
-    > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
+    > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 
 ## Configure primary site for client certificate authentication
 
-If you're using [client authentication certificates](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) for clients to authenticate with the CMG, follow this procedure to configure each primary site.  
+If you're using [client authentication certificates](certificates-for-cloud-management-gateway.md#bkmk_clientauth) for clients to authenticate with the CMG, follow this procedure to configure each primary site.  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**.  
 
@@ -135,12 +135,12 @@ If you're using [client authentication certificates](/sccm/core/clients/manage/c
 
 ## Add the CMG connection point
 
-The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](/sccm/core/servers/deploy/configure/install-site-system-roles). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
+The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
 
 > [!Important]
-> The CMG connection point must have a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth) in some scenarios.
+> The CMG connection point must have a [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth) in some scenarios.
 
-To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
+To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 
 ## Configure client-facing roles for CMG traffic
@@ -153,7 +153,7 @@ Configure the management point and software update point site systems to accept 
 
 3. In the Management point properties sheet under Client Connections, check the box next to **Allow Configuration Manager cloud management gateway traffic**.
 
-    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+    Depending upon your CMG design and Configuration Manager version, you may need to enable the **HTTPS** option. For more information, see [Enable management point for HTTPS](certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 4. Select **OK** to close the management point properties window.  
 
@@ -165,17 +165,17 @@ Repeat these steps for additional management points as needed, and for any softw
 <!--3640932-->
 Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships.
 
-For more information on boundary groups, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
+For more information on boundary groups, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md).
 
-When you [create or configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures), on the **References** tab, add a cloud management gateway. This action associates the CMG with this boundary group.
+When you [create or configure a boundary group](../../../servers/deploy/configure/boundary-group-procedures.md), on the **References** tab, add a cloud management gateway. This action associates the CMG with this boundary group.
 
 
 ## Configure clients for CMG
 
-Once the CMG and site system roles are running, clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.  
+Once the CMG and site system roles are running, clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](../../deploy/deploy-clients-cmg-azure.md). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.  
 
 > [!Note]
-> By default all clients receive CMG policy. Control this behavior with the client setting, [Enable clients to use a cloud management gateway](/sccm/core/clients/deploy/about-client-settings#enable-clients-to-use-a-cloud-management-gateway).
+> By default all clients receive CMG policy. Control this behavior with the client setting, [Enable clients to use a cloud management gateway](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway).
 
 The Configuration Manager client automatically determines whether it’s on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to **Currently intranet**. Otherwise, it switches to **Currently Internet**, and uses the location of the CMG service to communicate with the site.
 
@@ -184,7 +184,7 @@ The Configuration Manager client automatically determines whether it’s on the 
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
 >
-> You can also specify this setting during client installation using the [CCMALWAYSINF](/sccm/core/clients/deploy/about-client-installation-properties#ccmalwaysinf) property.
+> You can also specify this setting during client installation using the [CCMALWAYSINF](../../deploy/about-client-installation-properties.md#ccmalwaysinf) property.
 >
 > This setting will always apply, even if the client roams into a location where boundary group configurations would otherwise leverage local resources.
 
@@ -195,7 +195,7 @@ To verify that clients have the policy specifying the CMG, open a Windows PowerS
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.
 
 > [!Note]  
-> To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway).
+> To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 
 ## Modify a CMG
@@ -214,7 +214,7 @@ After creating a CMG, you can modify some of its settings. Select the CMG in the
 
 - **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.  
 
-- **Verify Client Certificate Revocation**: if you didn't originally enable this setting when creating the CMG, you can enable it afterwards once you publish the CRL. For more information, see [Publish the certificate revocation list](https://docs.microsoft.com/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway#bkmk_crl).  
+- **Verify Client Certificate Revocation**: if you didn't originally enable this setting when creating the CMG, you can enable it afterwards once you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
 - **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: Starting in version 1806, this new option is enabled by default. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.<!--1358651-->  
 
@@ -277,5 +277,5 @@ If you need to delete the CMG, also do so from the Configuration Manager console
 
 ## Next steps
 
-- [Monitor clients for cloud management gateway](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway)
-- [Frequently asked questions about the cloud management gateway](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [Monitor clients for cloud management gateway](monitor-clients-cloud-management-gateway.md)
+- [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)

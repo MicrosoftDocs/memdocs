@@ -99,7 +99,7 @@ Example with the FQDN: `ccmsetup.exe /mp:smsmp01.contoso.com`
 
 This parameter can also specify the URL of a cloud management gateway (CMG). Use this URL to install the client on an internet-based device. To get the value for this parameter, use the following steps:
 
-- Create a CMG. For more information, see [Set up a CMG](/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway).
+- Create a CMG. For more information, see [Set up a CMG](../manage/cmg/setup-cloud-management-gateway.md).
 - On an active client, open a Windows PowerShell command prompt as an administrator.
 - Run the following command:
 
@@ -118,7 +118,7 @@ Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:htt
 
 <!--5686290-->
 
-Starting in version 2002, use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](/configmgr/core/clients/deploy/deploy-clients-cmg-token).
+Starting in version 2002, use this parameter to provide a bulk registration token. An internet-based device uses this token in the registration process through a cloud management gateway (CMG). For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).
 
 When you use this parameter, also include the following parameters and properties:
 
@@ -154,7 +154,7 @@ Example: `ccmsetup.exe /service`
 
 ### /uninstall
 
-Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
+Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#BKMK_UninstalClient).
 
 Example: `ccmsetup.exe /uninstall`  
 
@@ -201,11 +201,11 @@ Example: `CCMSetup.exe /UsePKICert`
 > [!NOTE]
 > In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
 >
-> Also specify this parameter when you install a client for internet-only communication. Use the **CCMALWAYSINF=1** property together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](/configmgr/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).  
+> Also specify this parameter when you install a client for internet-only communication. Use the **CCMALWAYSINF=1** property together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
 ### /NoCRLCheck
 
-Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs).
+Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
 
 Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -233,7 +233,7 @@ Examples:
 
 - `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`
 
-For more information on client prerequisites, see [Windows client prerequisites](/configmgr/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).
+For more information on client prerequisites, see [Windows client prerequisites](prerequisites-for-deploying-clients-to-windows-computers.md).
 
 ### /forceinstall
 
@@ -267,7 +267,7 @@ The following properties can modify the installation behavior of ccmsetup.msi.
 
 ### CCMSETUPCMD
 
-Use this ccmsetup.*msi* property to pass additional command-line parameters and properties to ccmsetup.*exe*. Include other parameters and properties inside quotation marks (`"`). Use this property when you bootstrap the Configuration Manager client with the [Intune MDM installation method](/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
+Use this ccmsetup.*msi* property to pass additional command-line parameters and properties to ccmsetup.*exe*. Include other parameters and properties inside quotation marks (`"`). Use this property when you bootstrap the Configuration Manager client with the [Intune MDM installation method](plan/client-installation-methods.md#microsoft-intune-mdm-installation).
 
 Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -276,17 +276,17 @@ Example: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.co
 
 ## <a name="clientMsiProps"></a> Client.msi properties
 
-The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs. If you use the [client push installation method](/configmgr/core/clients/deploy/plan/client-installation-methods#client-push-installation), specify these properties on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console.
+The following properties can modify the installation behavior of client.msi, which ccmsetup.exe installs. If you use the [client push installation method](plan/client-installation-methods.md#client-push-installation), specify these properties on the **Client** tab of the **Client Push Installation Properties** in the Configuration Manager console.
 
 ### AADCLIENTAPPID
 
-Specifies the Azure Active Directory (Azure AD) client app identifier. You create or import the client app when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the **AADCLIENTAPPID** property, this application ID is for the **Native** application type.
+Specifies the Azure Active Directory (Azure AD) client app identifier. You create or import the client app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the **AADCLIENTAPPID** property, this application ID is for the **Native** application type.
 
 Example: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
 ### AADRESOURCEURI
 
-Specifies the Azure AD server app identifier. You create or import the server app when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. When you create the server app, in the Create Server Application window, this property is the **App ID URI**.
+Specifies the Azure AD server app identifier. You create or import the server app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. When you create the server app, in the Create Server Application window, this property is the **App ID URI**.
 
 An Azure administrator can get the value for this property from the Azure portal. In **Azure Active Directory**, find the server app under **App registrations**. Look for application type **Web app / API**. Open the app, select **Settings**, and then select **Properties**. Use the **App ID URI** value for this **AADRESOURCEURI** client installation property.
 
@@ -294,7 +294,7 @@ Example: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 
 ### AADTENANTID
 
-Specifies the Azure AD tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To get the value for this property, use the following steps:
+Specifies the Azure AD tenant identifier. Configuration Manager links to this tenant when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To get the value for this property, use the following steps:
 
 - On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
@@ -308,7 +308,7 @@ Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 <!-- 
 ### AADTENANTNAME
 
-Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
+Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To obtain the value for this property, use the following steps:
 - On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
 - In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
@@ -337,7 +337,7 @@ To specify that the client is always internet-based and never connects to the in
 
 Use this property with [**CCMHOSTNAME**](#ccmhostname) to specify the FQDN of the internet-based management point. Also use it with the CCMSetup parameter [**/UsePKICert**](#usepkicert) and the site code ([**SMSSITECODE**](#smssitecode)).
 
-For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](/configmgr/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan).
+For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).
 
 Example: `CCMSetup.exe /UsePKICert CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.COM SMSSITECODE=ABC`
 
@@ -352,7 +352,7 @@ Example: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US |
 > [!TIP]
 > Use the value of the **CertificateIssuers** attribute in the **mobileclient.tcf** file for the site. This file is in the `\bin\<platform>` subfolder of the Configuration Manager installation directory on the site server.
 
-For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection).
+For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection).
 
 ### CCMCERTSEL
 
@@ -403,7 +403,7 @@ Supported values:
 
 Example: `CCMSetup.exe CCMDEBUGLOGGING=1`  
 
-For more information, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files).
+For more information, see [About log files](../../plan-design/hierarchy/about-log-files.md).
 
 ### CCMENABLELOGGING
 
@@ -416,7 +416,7 @@ Supported values:
 
 Example: `CCMSetup.exe CCMENABLELOGGING=TRUE`  
 
-For more information, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files).
+For more information, see [About log files](../../plan-design/hierarchy/about-log-files.md).
 
 ### CCMEVALINTERVAL
 
@@ -424,13 +424,13 @@ The frequency in minutes at which the client health evaluation tool (ccmeval.exe
 
 Example: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
-For more information on client health evaluation, see [Monitor clients](/configmgr/core/clients/manage/monitor-clients#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
 
 ### CCMEVALHOUR
 
 The hour during the day when the client health evaluation tool (ccmeval.exe) runs. Specify an integer value from `0` (midnight) to `23` (11:00 PM). By default, ccmeval runs at midnight.
 
-For more information on client health evaluation, see [Monitor clients](/configmgr/core/clients/manage/monitor-clients#bkmk_health).
+For more information on client health evaluation, see [Monitor clients](../manage/monitor-clients.md#bkmk_health).
 
 ### CCMFIRSTCERT
 
@@ -448,7 +448,7 @@ Example: `CCMSetup.exe /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`
 
 This property can specify the address of a cloud management gateway (CMG). To get the value for this property, use the following steps:
 
-- Create a CMG. For more information, see [Set up a CMG](/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway).
+- Create a CMG. For more information, see [Set up a CMG](../manage/cmg/setup-cloud-management-gateway.md).
 - On an active client, open a Windows PowerShell command prompt as an administrator.
 - Run the following command:
 
@@ -497,7 +497,7 @@ Supported values:
 
 Example: `CCMSetup.exe CCMLOGLEVEL=0`
 
-For more information, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files).
+For more information, see [About log files](../../plan-design/hierarchy/about-log-files.md).
 
 ### CCMLOGMAXHISTORY
 
@@ -505,7 +505,7 @@ When a Configuration Manager log file reaches the maximum size, the client renam
 
 Example: `CCMSetup.exe CCMLOGMAXHISTORY=5`
 
-For more information, see [About log files](/configmgr/core/plan-design/hierarchy/about-log-files).
+For more information, see [About log files](../../plan-design/hierarchy/about-log-files.md).
 
 ### CCMLOGMAXSIZE
 
@@ -532,7 +532,7 @@ Specify a DNS domain for clients to locate management points that you publish in
 > [!NOTE]
 > You don't have to specify this property if the client is in the same domain as a published management point. In that case, the client's domain is automatically used to search DNS for management points.
 
-For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](/configmgr/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#BKMK_Plan_Service_Location).
+For more information about DNS publishing as a service location method for Configuration Manager clients, see [Service location and how clients determine their assigned management point](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location).
 
 > [!NOTE]  
 > By default, Configuration Manager doesn't enable DNS publishing.
@@ -543,7 +543,7 @@ Example: `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com`
 
 Specify the fallback status point that receives and processes state messages sent by Configuration Manager clients.
 
-For more information, see [Determine if you need a fallback status point](/configmgr/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point).
+For more information, see [Determine if you need a fallback status point](plan/determine-the-site-system-roles-for-clients.md#fallback-status-point).
 
 Example: `CCMSetup.exe FSP=SMSFP01`  
 
@@ -552,7 +552,7 @@ Example: `CCMSetup.exe FSP=SMSFP01`
 If you set this property to `TRUE`, the client installer doesn't check the minimum required version of Microsoft Application Virtualization (App-V).
 
 > [!IMPORTANT]  
-> If you install the Configuration Manager client without installing App-V, you can't [deploy virtual applications](/configmgr/apps/get-started/deploying-app-v-virtual-applications).
+> If you install the Configuration Manager client without installing App-V, you can't [deploy virtual applications](../../../apps/get-started/deploying-app-v-virtual-applications.md).
 
 Example: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`
 
@@ -574,13 +574,13 @@ For example, you provision a new Windows 10 device with Windows Autopilot, auto-
 
 Use the following process:
 
-1. [Create a non-OS deployment task sequence](/configmgr/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments) to install apps, install software updates, and configure settings.
+1. [Create a non-OS deployment task sequence](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) to install apps, install software updates, and configure settings.
 
-1. [Deploy this task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence) to the new built-in collection, **All Provisioning Devices**. Note the task sequence deployment ID, for example `PRI20001`.
+1. [Deploy this task sequence](../../../osd/deploy-use/deploy-a-task-sequence.md) to the new built-in collection, **All Provisioning Devices**. Note the task sequence deployment ID, for example `PRI20001`.
 
-1. [Install the Configuration Manager client](/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual) on a device, and include the following property: `PROVISIONTS=PRI20001`. Set the value of this property as the task sequence deployment ID.
+1. [Install the Configuration Manager client](deploy-clients-to-windows-computers.md#BKMK_Manual) on a device, and include the following property: `PROVISIONTS=PRI20001`. Set the value of this property as the task sequence deployment ID.
 
-    - If you're installing the client from Intune during co-management enrollment, see [How to prepare internet-based devices for co-management](/configmgr/comanage/how-to-prepare-win10).
+    - If you're installing the client from Intune during co-management enrollment, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md).
 
       > [!NOTE]
       > This method may have additional prerequisites. For example, enrolling the site to Azure Active Directory, or creating a content-enabled cloud management gateway.
@@ -589,7 +589,7 @@ After the client installs and properly registers with the site, it starts the re
 
 ### RESETKEYINFORMATION
 
-If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).
+If a client has the wrong Configuration Manager trusted root key, it can't contact a trusted management point to receive the new trusted root key. Use this property to remove the old trusted root key. This situation may occur when you move a client from one site hierarchy to another. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
 
 Example: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
@@ -655,7 +655,7 @@ Use this property to specify the location and order that the client installer ch
 
 - `R`: Check for configuration settings in the registry.
 
-  For more information, see [Provision client installation properties](/configmgr/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision).
+  For more information, see [Provision client installation properties](deploy-clients-to-windows-computers.md#BKMK_Provision).
 
 - `P`: Check for configuration settings in the installation properties from the command line.
 
@@ -698,16 +698,16 @@ Examples:
 
 ### SMSPUBLICROOTKEY
 
-If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).
+If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
 
 Example: `CCMSetup.exe SMSPUBLICROOTKEY=<keyvalue>`
 
 > [!TIP]
-> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](/configmgr/core/plan-design/security/plan-for-security#bkmk_trk-provision-file).
+> Get the value for the site's trusted root key from the mobileclient.tcf file on the site server. For more information, see [Pre-provision a client with the trusted root key by using a file](../../plan-design/security/plan-for-security.md#bkmk_trk-provision-file).
 
 ### SMSROOTKEYPATH
 
-Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](/configmgr/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).
+Use this property to reinstall the Configuration Manager trusted root key. It specifies the full path and name of a file that contains the trusted root key. This property applies to clients that use HTTP and HTTPS client communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
 
 Example: `CCMSetup.exe SMSROOTKEYPATH=C:\folder\trk`
 

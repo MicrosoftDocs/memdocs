@@ -50,16 +50,16 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
 Previously you had to manually enable the client for wake on LAN in the properties of the network adapter. Configuration Manager 1810 includes a new client setting called **Allow network wake-up**. Configure and deploy this setting instead of modifying the properties of the network adapter.
 
 1. Under **Administration**, go to **Client Settings**.
-1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
-1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#power-management).
+1. Select the client settings you want to edit, or create new custom client settings to deploy. For more information, see [How to configure client settings](configure-client-settings.md).
+1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](about-client-settings.md#power-management).
 
-4. Starting in Configuration Manager 1902, the new version of Wake on LAN honors the custom UDP port you specify for the **Wake On LAN port number (UDP)** [client setting](/sccm/core/clients/deploy/about-client-settings#power-management). This setting is shared by both the new and older version of Wake on LAN.
+4. Starting in Configuration Manager 1902, the new version of Wake on LAN honors the custom UDP port you specify for the **Wake On LAN port number (UDP)** [client setting](about-client-settings.md#power-management). This setting is shared by both the new and older version of Wake on LAN.
  
 <!--3605925-->
 
 ### Wake up a client using client notification starting in 1810
  
-You can wake up a single client or any sleeping clients in a collection. For devices that are already awake in the collection, no action is taken for them. Only clients that are asleep will be sent a Wake on LAN request. For more information on how to notify a client to wake, see [Client notification](/sccm/core/clients/manage/client-notification).
+You can wake up a single client or any sleeping clients in a collection. For devices that are already awake in the collection, no action is taken for them. Only clients that are asleep will be sent a Wake on LAN request. For more information on how to notify a client to wake, see [Client notification](../manage/client-notification.md).
 
 - **To wake up a single client:**
 Right-click on the client, go to **Client Notification**, then select **Wake up**.

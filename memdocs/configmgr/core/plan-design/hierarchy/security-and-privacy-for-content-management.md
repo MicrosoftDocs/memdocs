@@ -32,7 +32,7 @@ For distribution points on the intranet, consider the advantages and disadvantag
 
 -   **When you use HTTP for a distribution point**, you can use package access accounts for authorization, but the content isn't encrypted when it's transferred over the network.  
 
-Starting in version 1806, consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
+Starting in version 1806, consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
 
 #### Protect the client authentication certificate file
 If you use a PKI client authentication certificate rather than a self-signed certificate for the distribution point, protect the certificate file (.pfx) with a strong password. If you store the file on the network, secure the network channel when you import the file into Configuration Manager.
@@ -43,10 +43,10 @@ When you require a password to import the client authentication certificate that
 By default, Configuration Manager setup installs a distribution point on the site server. Clients don't have to communicate directly with the site server. To reduce the attack surface, assign the distribution point role to other site systems and remove it from the site server.  
 
 #### Secure content at the package access level
-The distribution point share allows read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This configuration doesn't apply to cloud distribution points, which don't support package access accounts. For more information, see [Package access accounts](/sccm/core/plan-design/hierarchy/accounts#package-access-account).
+The distribution point share allows read access to all users. To restrict which users can access the content, use package access accounts when the distribution point is configured for HTTP. This configuration doesn't apply to cloud distribution points, which don't support package access accounts. For more information, see [Package access accounts](accounts.md#package-access-account).
 
 #### Configure IIS on the distribution point role
-If Configuration Manager installs IIS when you add a distribution point site system role, remove HTTP redirection or IIS Management Scripts and Tools when the distribution point installation is complete. The distribution point doesn't require HTTP redirection or IIS Management Scripts and Tools. To reduce the attack surface, remove these role services for the web server role.  For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites).  
+If Configuration Manager installs IIS when you add a distribution point site system role, remove HTTP redirection or IIS Management Scripts and Tools when the distribution point installation is complete. The distribution point doesn't require HTTP redirection or IIS Management Scripts and Tools. To reduce the attack surface, remove these role services for the web server role.  For more information about the role services for the web server role for distribution points, see [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md).  
 
 #### Set package access permissions when you create the package
 Because changes to the access accounts on the package files become effective only when you redistribute the package, set the package access permissions carefully when you first create the package. This configuration is important when the package is large or distributed to many distribution points, and when the network bandwidth capacity for content distribution is limited.  
@@ -111,10 +111,10 @@ Consider the following points when planning for content management:
 
 ## See also
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)  
+- [Fundamental concepts for content management](fundamental-concepts-for-content-management.md)  
 
-- [Security and privacy for application management](/sccm/apps/plan-design/security-and-privacy-for-application-management)  
+- [Security and privacy for application management](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
-- [Security and privacy for software updates](/sccm/sum/plan-design/security-and-privacy-for-software-updates)  
+- [Security and privacy for software updates](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
-- [Security and privacy for OS deployment](/sccm/osd/plan-design/security-and-privacy-for-operating-system-deployment)  
+- [Security and privacy for OS deployment](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  

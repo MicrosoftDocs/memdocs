@@ -36,7 +36,7 @@ Use the **Deploy Configuration Baselines** dialog box to define configuration ba
 
     -   **Remediate noncompliant rules when supported** – Automatically remediates any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.  
 
-    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).  
+    -   **Allow remediation outside the maintenance window** – If a maintenance window has been configured for the collection to which you are deploying the configuration baseline, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 6.  **Generate an alert** – Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.  
 
@@ -47,4 +47,4 @@ Use the **Deploy Configuration Baselines** dialog box to define configuration ba
     > [!NOTE]  
     >  If the configuration baseline is deployed to a computer, it is evaluated for compliance within two hours of the start time that you schedule. If it is deployed to a user, it is evaluated for compliance when the user logs on.  
 
-9. Click **OK** to close the **Deploy Configuration Baselines** dialog box and to create the deployment. For more information about how to monitor the deployment, see [Monitor compliance settings](/sccm/compliance/deploy-use/monitor-compliance-settings).  
+9. Click **OK** to close the **Deploy Configuration Baselines** dialog box and to create the deployment. For more information about how to monitor the deployment, see [Monitor compliance settings](monitor-compliance-settings.md).  

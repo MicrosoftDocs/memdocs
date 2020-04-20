@@ -22,7 +22,7 @@ Use the information in this article to configure and manage the availability gro
 
 Before you start:  
 
-- Be familiar with the information from [Prepare to use SQL Server Always On availability groups with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+- Be familiar with the information from [Prepare to use SQL Server Always On availability groups with Configuration Manager](sql-server-alwayson-for-a-highly-available-site-database.md).
 - Be familiar with SQL Server documentation that covers the use of availability groups and related procedures. That information is required to complete the following scenarios.
 
 
@@ -34,7 +34,7 @@ Use the following procedure to create an availability group and then move a copy
 
     `preinst.exe /stopsite`
 
-    For more information, see [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+    For more information, see [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 2. Change the backup model for the site database from **SIMPLE** to **FULL**:
 
@@ -77,7 +77,7 @@ Use the following procedure to create an availability group and then move a copy
 
     1. Make sure the computer account of the site server is a member of the local **Administrators** group on each computer that's a member of the availability group.  
 
-    2. Run the [verification script](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites) to confirm that the site database on each replica is correctly configured.
+    2. Run the [verification script](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) to confirm that the site database on each replica is correctly configured.
 
     3. If it's necessary to set configurations on secondary replicas, before you continue, manually fail over the primary replica to the secondary replica. You can only configure the database of a primary replica. For more information, see [Perform a planned manual failover of an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
 
@@ -109,7 +109,7 @@ It's not supported to install a new site with its database in an availability gr
 
 ## <a name="bkmk_sync"></a> Synchronous replica members  
 
-When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For more information about the supported type and number of replicas, see [Availability group configurations](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#availability-group-configurations).
+When your site database is hosted in an availability group, use the following procedures to add or remove synchronous replica members. For more information about the supported type and number of replicas, see [Availability group configurations](sql-server-alwayson-for-a-highly-available-site-database.md#availability-group-configurations).
 
 ### <a name="bkmk_sync-add"></a> Add a new synchronous replica member
 
@@ -149,16 +149,16 @@ For more information, see [Add a secondary replica to an availability group](htt
 
 Use the asynchronous replica to recover your site database.
 
-1. Stop the active primary site to prevent additional writes to the site database. To stop the site, use the [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe): `preinst.exe /stopsite`
+1. Stop the active primary site to prevent additional writes to the site database. To stop the site, use the [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md): `preinst.exe /stopsite`
 
-1. After you stop the site, use the asynchronous replica instead of a [manually recovered database](/sccm/core/servers/manage/recover-sites#use-a-site-database-that-has-been-manually-recovered).
+1. After you stop the site, use the asynchronous replica instead of a [manually recovered database](../../manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
 
 ## <a name="bkmk_stop"></a> Stop using an availability group
 
 Use the following procedure when you no longer want to host your site database in an availability group. With this process, you'll move the site database back to a single instance of SQL Server.
 
-1. Stop the Configuration Manager site by using the following command: `preinst.exe /stopsite`. For more information, see [Hierarchy maintenance tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+1. Stop the Configuration Manager site by using the following command: `preinst.exe /stopsite`. For more information, see [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 2. Use SQL Server to create a full backup of your site database from the primary replica. For more information, see [Create a full database backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 

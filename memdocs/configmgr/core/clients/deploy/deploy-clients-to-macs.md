@@ -18,11 +18,11 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients).
+This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](prepare-to-deploy-mac-clients.md).
 
 When you install a new client for Mac computers, you might have to also install Configuration Manager updates to reflect the new client information in the Configuration Manager console.
 
-In these procedures, you have two options for installing client certificates. Read more about client certificates for Macs in [Prepare to deploy client software to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements).  
+In these procedures, you have two options for installing client certificates. Read more about client certificates for Macs in [Prepare to deploy client software to Macs](prepare-to-deploy-mac-clients.md#certificate-requirements).  
 
 - Use Configuration Manager enrollment by using the [CMEnroll tool](#bkmk_enroll). The enrollment process doesn't support automatic certificate renewal. Re-enroll the Mac computer before the installed certificate expires.    
 
@@ -35,7 +35,7 @@ In these procedures, you have two options for installing client certificates. Re
 
 ## Configure client settings  
 
-Use the [default client settings](/sccm/core/clients/deploy/about-client-settings) to configure enrollment for Mac computers. You can't use custom client settings. To request and install the certificate, the Configuration Manager client for Mac requires the default client settings.  
+Use the [default client settings](about-client-settings.md) to configure enrollment for Mac computers. You can't use custom client settings. To request and install the certificate, the Configuration Manager client for Mac requires the default client settings.  
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Select the **Client Settings** node, and then select **Default Client Settings**.  
 
@@ -65,15 +65,15 @@ Use the [default client settings](/sccm/core/clients/deploy/about-client-setting
     > [!TIP]  
     > If you want to change the client policy interval, use **Client policy polling interval** in the **Client Policy** client setting group.  
 
-The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
+The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).  
 
 In addition to the enrollment client settings, make sure that you have configured the following client device settings:  
 
-- **Hardware inventory**: Enable and configure this feature if you want to collect hardware inventory from Mac and Windows client computers. For more information, see [How to extend hardware inventory](/sccm/core/clients/manage/inventory/extend-hardware-inventory).  
+- **Hardware inventory**: Enable and configure this feature if you want to collect hardware inventory from Mac and Windows client computers. For more information, see [How to extend hardware inventory](../manage/inventory/extend-hardware-inventory.md).  
 
-- **Compliance settings**: Enable and configure this feature if you want to evaluate and remediate settings on Mac and Windows client computers. For more information, see [Plan for and configure compliance settings](/sccm/compliance/plan-design/plan-for-and-configure-compliance-settings).  
+- **Compliance settings**: Enable and configure this feature if you want to evaluate and remediate settings on Mac and Windows client computers. For more information, see [Plan for and configure compliance settings](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
-For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+For more information, see [How to configure client settings](configure-client-settings.md).  
 
 
 
@@ -260,7 +260,7 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 14. Create a configuration baseline that contains this configuration item. Deploy the baseline to the target collection.  
 
-     For more information, see [How to create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines).  
+     For more information, see [How to create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md).  
 
 15. After you install a new certificate on Mac computers that have the SMSID removed, run the following command to configure the client to use the new certificate:  
 
@@ -272,6 +272,6 @@ This procedure removes the SMSID. The Configuration Manager client for Mac requi
 
 ## See also
 
-[Prepare to deploy clients to Macs](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)
+[Prepare to deploy clients to Macs](prepare-to-deploy-mac-clients.md)
 
-[Maintain Mac clients](/sccm/core/clients/manage/maintain-mac-clients)
+[Maintain Mac clients](../manage/maintain-mac-clients.md)

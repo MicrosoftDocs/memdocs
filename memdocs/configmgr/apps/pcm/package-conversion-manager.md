@@ -23,19 +23,19 @@ manager: dougeby
 Starting in version 1806, Package Conversion Manager helps you convert Configuration Manager legacy packages into applications. Applications have additional benefits such as dependencies, requirement rules, detection methods, and user device affinity.
 
 > [!Tip]  
-> This feature was first introduced in version 1806 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1810, this feature is no longer a pre-release feature.  
+> This feature was first introduced in version 1806 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 1810, this feature is no longer a pre-release feature.  
 
 
 A Configuration Manager application contains files and programs that you deploy to client devices. However, unlike legacy packages and programs, an application provides additional user-centric functionality. For example, an application might contain deployment types for a local installation of a software package, a virtual application package, or a version of the application for mobile devices.
 
 For more information, see the following articles: 
-- [Introduction to application management](/sccm/apps/understand/introduction-to-application-management)  
-- [Packages and programs](/sccm/apps/deploy-use/packages-and-programs)  
+- [Introduction to application management](../understand/introduction-to-application-management.md)  
+- [Packages and programs](../deploy-use/packages-and-programs.md)  
 
 > [!Important]  
 > If you previously installed an older version of Package Conversion Manager, first uninstall it before upgrading your site. This integrated version doesn't require installation, but may conflict with existing versions.  
 
-This integrated version of Package Conversion Manager works on packages in the Configuration Manager current branch site. It's not a standalone tool. If you have packages and programs in an older version of Configuration Manager, first migrate the packages into your current branch site. For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
+This integrated version of Package Conversion Manager works on packages in the Configuration Manager current branch site. It's not a standalone tool. If you have packages and programs in an older version of Configuration Manager, first migrate the packages into your current branch site. For more information, see [Migrate data between hierarchies](../../core/migration/migrate-data-between-hierarchies.md).
 
 <!-- SCCMDocs-pr issue #3357 -->
 Configuration Manager version 1902 includes the following improvements:
@@ -178,7 +178,7 @@ Identify the packages that are appropriate for testing. Then move them to a sepa
 
 #### Analyze packages
 
-To analyze an individual package or a small group, use Package Conversion Manager integrated in the Configuration Manager console. For more information, see [How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert).  
+To analyze an individual package or a small group, use Package Conversion Manager integrated in the Configuration Manager console. For more information, see [How to analyze and convert packages](how-to-analyze-and-convert.md).  
 
 > [!NOTE]  
 > See the **Package Conversion Status** node in the **Monitoring** workspace. It displays summary information about the analysis and conversion processes.  
@@ -197,15 +197,15 @@ After analyzing the test packages, investigate the packages with a readiness sta
 
 For more information, use the following resources:  
 
-- Review the error messages and fixes in [Technical reference for Package Conversion Manager error messages](/sccm/apps/pcm/error-messages)  
+- Review the error messages and fixes in [Technical reference for Package Conversion Manager error messages](error-messages.md)  
 
 - Review the log file **PCMTrace.log**  
 
-- [Troubleshoot Package Conversion Manager](/sccm/apps/pcm/troubleshoot-pcm)  
+- [Troubleshoot Package Conversion Manager](troubleshoot-pcm.md)  
 
 #### Convert the packages
 
-For more information about how to convert packages, see [How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert).
+For more information about how to convert packages, see [How to analyze and convert packages](how-to-analyze-and-convert.md).
 
 > [!NOTE]  
 > See the **Package Conversion Status** node in the **Monitoring** workspace. It displays summary information about the analysis and conversion processes.  
@@ -229,4 +229,4 @@ Test the applications, either in your test environment or your production enviro
 
 ## Next steps
 
-[How to analyze and convert packages](/sccm/apps/pcm/how-to-analyze-and-convert)
+[How to analyze and convert packages](how-to-analyze-and-convert.md)

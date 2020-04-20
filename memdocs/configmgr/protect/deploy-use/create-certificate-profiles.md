@@ -18,12 +18,12 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](/configmgr/protect/deploy-use/certificate-infrastructure).  
+Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](certificate-infrastructure.md).  
 
 > [!TIP]
-> For co-managed devices, consider moving the [**Resource access policies** workload](/configmgr/comanage/workloads#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](/configmgr/comanage/how-to-switch-workloads).
+> For co-managed devices, consider moving the [**Resource access policies** workload](../../comanage/workloads.md#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
 
-This article describes how to create trusted root and Simple Certificate Enrollment Protocol (SCEP) certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](/configmgr/mdm/deploy-use/create-pfx-certificate-profiles).
+This article describes how to create trusted root and Simple Certificate Enrollment Protocol (SCEP) certificate profiles. If you want to create PFX certificate profiles, see [Create PFX certificate profiles](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 To create a certificate profile:
 
@@ -57,9 +57,9 @@ On the **General** page of the Create Certificate Profile Wizard, specify the fo
 
   - **Simple Certificate Enrollment Protocol (SCEP) settings**: Select this type to request a certificate for a user or device with the Simple Certificate Enrollment Protocol and the Network Device Enrollment Service (NDES) role service.
 
-  - **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this option to import a PFX certificate. For more information, see [Import PFX certificate profiles](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles).
+  - **Personal Information Exchange PKCS #12 (PFX) settings - Import**: Select this option to import a PFX certificate. For more information, see [Import PFX certificate profiles](../../mdm/deploy-use/import-pfx-certificate-profiles.md).
 
-  - **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this option to process PFX certificates using a certificate authority. For more information, see [Create PFX certificate profiles](/configmgr/mdm/deploy-use/create-pfx-certificate-profiles).
+  - **Personal Information Exchange PKCS #12 (PFX) settings - Create**: Select this option to process PFX certificates using a certificate authority. For more information, see [Create PFX certificate profiles](../../mdm/deploy-use/create-pfx-certificate-profiles.md).
 
 ## Trusted CA certificate  
 
@@ -156,7 +156,7 @@ On the **Certificate Properties** page of the Create Certificate Profile Wizard,
     > [!TIP]
     > Set a custom validity period with the following command line:
     > `certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
-    > For more information about this command, see [Certificate infrastructure](/configmgr/protect/deploy-use/certificate-infrastructure).  
+    > For more information about this command, see [Certificate infrastructure](certificate-infrastructure.md).  
 
     You can specify a value that's lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year, but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA's certificate.  
 
@@ -190,4 +190,4 @@ On the **Supported Platforms** page of the Create Certificate Profile Wizard, se
 
 ## Next steps
 
-The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace. It's ready for you to deploy to users or devices. For more information, see [How to deploy profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+The new certificate profile appears in the **Certificate Profiles** node in the **Assets and Compliance** workspace. It's ready for you to deploy to users or devices. For more information, see [How to deploy profiles](deploy-wifi-vpn-email-cert-profiles.md).

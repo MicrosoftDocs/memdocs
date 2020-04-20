@@ -32,7 +32,7 @@ SELECT * FROM TEL_TelemetryResults
 
 When the service connection point is in offline mode, use the service connection tool to export the current data to a comma-separated values (CSV) file. Run the service connection tool on the service connection point with the **-Export** parameter.
 
-For more information, see [Use the service connection tool](/configmgr/core/servers/manage/use-the-service-connection-tool).
+For more information, see [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md).
 
 ## <a name="bkmk_hashes"></a> One-way hashes
 
@@ -77,4 +77,4 @@ When you view the raw data, a common hashed value appears in each row of data. T
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Levels of diagnostic usage data](/configmgr/core/plan-design/diagnostics/levels-overview)
+> [Levels of diagnostic usage data](levels-overview.md)

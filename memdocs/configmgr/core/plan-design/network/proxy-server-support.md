@@ -50,7 +50,7 @@ For this configuration, the primary site server:
 
 <!-- 5856396 -->
 
-Starting in version 2002, if you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through an unauthenticated proxy server for internet access. For more information, see [Microsoft Connected Cache](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+Starting in version 2002, if you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through an unauthenticated proxy server for internet access. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
 
 ### Exchange Server connector
 
@@ -85,9 +85,9 @@ These settings are on the **Proxy and Account Settings** tab of the software upd
 
 Starting in Configuration Manager version 2002, the following features use the proxy of the site system that hosts the [service connection point](#service-connection-point) role: <!--5913817-->
 
-- [Azure Active Directory (Azure AD) user discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc)
-- [Azure AD user group discovery](/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_azuregroupdisco)
-- [Synchronizing collection membership results to Azure Active Directory groups](/configmgr/core/clients/manage/collections/create-collections#bkmk_aadcollsync)
+- [Azure Active Directory (Azure AD) user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- [Azure AD user group discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_azuregroupdisco)
+- [Synchronizing collection membership results to Azure Active Directory groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)
 
 ## Configure the proxy for a site system server  
 
@@ -103,6 +103,6 @@ Starting in Configuration Manager version 2002, the following features use the p
 
     - **Port**: Specify the network port on which to communicate with the proxy server. By default, it uses port **80**.  
 
-    - **Use credentials to connect to the proxy server**: Many proxy servers require a user to authenticate. By default, the site system server uses its computer account to connect to the proxy server. If necessary, enable this option, click **Set**, and then choose an **Existing Account** or specify a **New Account**. These credentials are the **site system proxy server account**.  For more information, see [Accounts used in Configuration Manager](/sccm/core/plan-design/hierarchy/accounts).  
+    - **Use credentials to connect to the proxy server**: Many proxy servers require a user to authenticate. By default, the site system server uses its computer account to connect to the proxy server. If necessary, enable this option, click **Set**, and then choose an **Existing Account** or specify a **New Account**. These credentials are the **site system proxy server account**.  For more information, see [Accounts used in Configuration Manager](../hierarchy/accounts.md).  
 
 4. Choose **OK** to save the new proxy server configuration.  

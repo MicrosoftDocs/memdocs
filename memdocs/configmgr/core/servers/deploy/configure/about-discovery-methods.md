@@ -72,7 +72,7 @@ Actions for Active Directory Forest Discovery are recorded in the following logs
 
 -   Active Directory Forest Discovery publishing actions are recorded in the **hman.log** and **sitecomp.log** files in the **&lt;InstallationPath>\Logs** folder on the site server.  
 
-For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADForestDisc).  
+For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigADForestDisc).  
 
 
 
@@ -116,7 +116,7 @@ You can configure the following discovery scopes that control how this method se
 
 Actions for Active Directory Group Discovery are recorded in the file **adsgdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
-For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral).  
+For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigADDiscGeneral).  
 
 
 
@@ -156,7 +156,7 @@ In the **Active Directory System Discovery Properties** dialog box, on the **Act
 
 Actions for Active Directory System Discovery are recorded in the file **adsysdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
-For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral).  
+For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigADDiscGeneral).  
 
 
 
@@ -188,7 +188,7 @@ In the **Active Directory User Discovery Properties** dialog box, on the **Activ
 
 Actions for Active Directory User Discovery are recorded in the file **adusrdis.log** in the **&lt;InstallationPath\>\LOGS** folder on the site server.  
 
-For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral).  
+For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigADDiscGeneral).  
 
 
 
@@ -211,11 +211,11 @@ This method supports full and delta synchronization of user attributes from Azur
 
 Actions for Azure AD user discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy.
 
-To configure Azure AD user discovery, see [Configure Azure Services](/sccm/core/servers/deploy/configure/Azure-services-wizard) for Cloud Management. For information about how to configure this discovery method, see [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc).
+To configure Azure AD user discovery, see [Configure Azure Services](azure-services-wizard.md) for Cloud Management. For information about how to configure this discovery method, see [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc).
 
 ## <a name="bkmk_azuregroupdisco"></a> Azure Active Directory user group discovery
 <!--3611956-->
-*(Introduced as a [pre-release feature](/sccm/core/servers/manage/pre-release-features) in version 1906)*
+*(Introduced as a [pre-release feature](../../manage/pre-release-features.md) in version 1906)*
 
 You can discover user groups and members of those groups from Azure Active directory (Azure AD). Azure AD user group discovery can find the following attributes:
 
@@ -225,7 +225,7 @@ You can discover user groups and members of those groups from Azure Active direc
 - onPremisesSecurityIdentifier
 - AAD tenantID
 
-Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco).
+Actions for Azure AD user group discovery are recorded in the **SMS_AZUREAD_DISCOVERY_AGENT.log** file on the top-tier site server of the hierarchy. For information about how to configure this discovery method, see [Configure Azure AD user group discovery](configure-discovery-methods.md#bkmk_azuregroupdisco).
 
 ##  <a name="bkmk_aboutHeartbeat"></a> Heartbeat Discovery  
 **Configurable:** Yes  
@@ -263,7 +263,7 @@ Actions for Heartbeat Discovery are logged in the following locations:
 
 -   For mobile device clients, Heartbeat Discovery actions are recorded in the **DMPRP.log** file in the *%Program Files%\CCM\Logs* folder of the management point that the mobile device client uses.  
 
-For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigHBDisc).  
+For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigHBDisc).  
 
 
 
@@ -310,7 +310,7 @@ Network Discovery can return several attributes as part of the discovery record 
 
 Network Discovery activity is recorded in the **Netdisc.log** file in *&lt;InstallationPath\>\Logs* on the site server that runs discovery.  
 
- For more information about how to configure this discovery method, see [Configure discovery methods](/sccm/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigNetworkDisc).  
+ For more information about how to configure this discovery method, see [Configure discovery methods](configure-discovery-methods.md#BKMK_ConfigNetworkDisc).  
 
 > [!NOTE]  
 >  Complex networks and low-bandwidth connections can cause Network Discovery to run slowly and generate significant network traffic. As a best practice, run Network Discovery only when the other discovery methods cannot find the resources that you have to discover. For example, use Network Discovery if you must discover workgroup computers. Other discovery methods do not discover workgroup computers.  

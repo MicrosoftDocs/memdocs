@@ -21,11 +21,11 @@ You can determine the overall health or status of a site, in Configuration Manag
 |1|The site has warning conditions.|  
 |2|The site has error conditions.|  
 
- `SMS_SummarizerSiteStatus` is an example of a Configuration Manager summarizer. For more information, see [SMS_SummarizerSiteStatus server WMI class](/sccm/develop/reference/core/servers/manage/sms_summarizersitestatus-server-wmi-class).  
+ `SMS_SummarizerSiteStatus` is an example of a Configuration Manager summarizer. For more information, see [SMS_SummarizerSiteStatus server WMI class](../../../reference/core/servers/manage/sms_summarizersitestatus-server-wmi-class.md).  
 
 ### To determine a site's health  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Get the `SMS_SummarizerSiteStatus` object by using the Configuration Manager site code.  
 
@@ -104,7 +104,7 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).|  
+|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid task Configuration Manager site code|  
 
 ## Compiling the Code  
@@ -133,4 +133,4 @@ public void ShowSiteHealth(WqlConnectionManager connection, string siteCode)
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About status messages](/sccm/develop/core/servers/manage/about-configuration-manager-status-messages)
+ [About status messages](about-configuration-manager-status-messages.md)

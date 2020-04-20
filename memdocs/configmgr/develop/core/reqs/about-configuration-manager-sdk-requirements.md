@@ -34,4 +34,4 @@ Developing applications and scripts for Microsoft Configuration Manager can be d
 ## See Also
 
 [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)
-[About SDK requirements](/sccm/develop/core/reqs/about-configuration-manager-sdk-requirements)
+[About SDK requirements](about-configuration-manager-sdk-requirements.md)

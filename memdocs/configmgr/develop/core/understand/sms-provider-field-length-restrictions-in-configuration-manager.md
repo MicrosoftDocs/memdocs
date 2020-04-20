@@ -56,4 +56,4 @@ The SMS Provider, in Configuration Manager, places restrictions on the width of 
 
 ## See also
 
- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
+ [SMS Provider fundamentals](sms-provider-fundamentals.md)

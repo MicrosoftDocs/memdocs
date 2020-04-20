@@ -20,7 +20,7 @@ manager: dougeby
 
 Users change settings, browse for applications, and install applications from Software Center. When you install the Configuration Manager client on a Windows device, it automatically installs Software Center as well.
 
-For more information on the other features of Software Center, see the [Software Center user guide](/sccm/core/understand/software-center).  
+For more information on the other features of Software Center, see the [Software Center user guide](../../core/understand/software-center.md).  
 
 ## <a name="bkmk_userex"></a> Configure Software Center  
 
@@ -37,24 +37,24 @@ Review the following improvements to Software Center:
 
 ### Starting in version 1802
 
-- The client setting **Use new Software Center** in the **Computer Agent** group is enabled by default. The previous version of Software Center is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).  
+- The client setting **Use new Software Center** in the **Computer Agent** group is enabled by default. The previous version of Software Center is no longer supported. For more information, see [Removed and deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
 
-- Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. For more information, see [Deploy user-available applications on Azure AD-joined devices](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. For more information, see [Deploy user-available applications on Azure AD-joined devices](../deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
 
 ### Starting in version 1806
 
-- Specify the visibility of the application catalog website link on the **Installation Status** tab of Software Center. For more information, see [Software Center](/sccm/core/clients/deploy/about-client-settings#software-center) client settings.  
+- Specify the visibility of the application catalog website link on the **Installation Status** tab of Software Center. For more information, see [Software Center](../../core/clients/deploy/about-client-settings.md#software-center) client settings.  
 
-- Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#management-points).<!--1358309-->  
+- Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../core/servers/deploy/configure/boundary-groups.md#management-points).<!--1358309-->  
 
     > [!Note]  
-    > If you're currently using the application catalog, and update Configuration Manager to version 1806, it continues to work. The application catalog website point and web service point roles are no longer *required*, but still *supported*. The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+    > If you're currently using the application catalog, and update Configuration Manager to version 1806, it continues to work. The application catalog website point and web service point roles are no longer *required*, but still *supported*. The **Silverlight user experience** for the application catalog *website point* is no longer supported. For more information, see [Removed and deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
     >
     > Start planning to remove the application catalog roles from your infrastructure in the future. Take advantage of the Software Center improvements to use the management point, and simplify your Configuration Manager environment.  
 
 ### Starting in version 1902
 
-- Configure user device affinity. For more information, see [Link users and devices with user device affinity](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+- Configure user device affinity. For more information, see [Link users and devices with user device affinity](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 ### Starting in version 1906
 
@@ -66,7 +66,7 @@ Review the following improvements to Software Center:
 
 - You can't add new application catalog roles to the site. Existing roles continue to work. Only existing clients use the application catalog for user-available deployments. Updated clients automatically use the management point for all deployments.
 
-- You can  add up to 5 custom tabs to Software Center. For more information, see [Software Center client settings](/sccm/core/clients/deploy/about-client-settings#software-center). <!--4063773-->
+- You can  add up to 5 custom tabs to Software Center. For more information, see [Software Center client settings](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
 ### Summary of infrastructure requirements per version
 
@@ -92,7 +92,7 @@ Starting in version 1902, when [software changes are required](#software-changes
 
 ### Software changes are required
 
-When you [deploy an application](/sccm/apps/deploy-use/deploy-applications) as required with a deadline in the future, on the **User Experience** page of the Deploy Software Wizard, select the following user notification options:
+When you [deploy an application](../deploy-use/deploy-applications.md) as required with a deadline in the future, on the **User Experience** page of the Deploy Software Wizard, select the following user notification options:
 
 - **Display in Software Center and show all notifications**
 - **When software changes are required, show a dialog window to the user instead of a toast notification**
@@ -110,13 +110,13 @@ To the following dialog window:
 
 ### Restart required
 
-In the [Computer Restart](/sccm/core/clients/deploy/about-client-settings#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
+In the [Computer Restart](../../core/clients/deploy/about-client-settings.md#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
 
 Configuring this client setting changes the user experience for all required deployments that require a restart of the following types:
 
-- [Application](/sccm/apps/deploy-use/deploy-applications)
-- [Task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)
-- [Software update](/sccm/sum/deploy-use/deploy-software-updates)
+- [Application](../deploy-use/deploy-applications.md)
+- [Task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+- [Software update](../../sum/deploy-use/deploy-software-updates.md)
 
 From the following toast notification:
 
@@ -140,16 +140,16 @@ Customize the appearance of Software Center by adding your organization's brandi
 
 For more information, see the following articles:
 
-- [Software Center](/sccm/core/clients/deploy/about-client-settings#software-center) group of client settings  
-- [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings)  
+- [Software Center](../../core/clients/deploy/about-client-settings.md#software-center) group of client settings  
+- [How to configure client settings](../../core/clients/deploy/configure-client-settings.md)  
 
 ### Branding priorities
 
 Configuration Manager applies custom branding for Software Center according to the following priorities:  
 
-1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
+1. **Software Center** client settings. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#software-center).  
 
-2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+2. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 #### Application catalog branding priorities
 
@@ -158,14 +158,14 @@ Configuration Manager applies custom branding for Software Center according to t
 
 If you're using the application catalog, branding follows these priorities:  
 
-1. **Software Center** client settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-center).  
+1. **Software Center** client settings. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#software-center).  
 
-2. The *organization name* and *color* that you specify in the application catalog website point properties. For more information, see [Configuration options for application catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).  
+2. The *organization name* and *color* that you specify in the application catalog website point properties. For more information, see [Configuration options for application catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).  
 
-3. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#computer-agent).  
+3. **Organization name** client setting in **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
 
 ## See also
 
-- [Software Center user guide](/sccm/core/understand/software-center)
-- [Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management)
+- [Software Center user guide](../../core/understand/software-center.md)
+- [Plan for and configure application management](plan-for-and-configure-application-management.md)

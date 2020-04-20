@@ -390,4 +390,4 @@ Build custom reports to view the remediation history by using the public view **
 
 ## Next steps
 
-[Create configuration baselines](/sccm/compliance/deploy-use/create-configuration-baselines)
+[Create configuration baselines](create-configuration-baselines.md)

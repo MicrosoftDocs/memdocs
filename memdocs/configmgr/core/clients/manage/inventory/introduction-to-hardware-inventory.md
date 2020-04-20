@@ -28,7 +28,7 @@ Use hardware inventory in Configuration Manager to collect information about the
 
 - [Create query-based collections that are based on a specific hardware configuration](../../../../core/clients/manage/collections/introduction-to-collections.md). Query-based collection memberships automatically update on a schedule. You can use collections for several tasks, including software deployment.
 
-- [Run reports that display specific details about hardware configurations in your organization](/configmgr/core/servers/manage/introduction-to-reporting).
+- [Run reports that display specific details about hardware configurations in your organization](../../../servers/manage/introduction-to-reporting.md).
 
 - [Use Resource Explorer](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) to view detailed information about the hardware inventory that's collected from client devices.
 

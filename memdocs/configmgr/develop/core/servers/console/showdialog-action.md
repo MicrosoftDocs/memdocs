@@ -43,7 +43,7 @@ The `ShowDialog` action, in Configuration Manager, opens a property sheet or reg
 </ActionDescription>  
 ```  
 
- For more information about creating and showing dialog boxes, see [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms).  
+ For more information about creating and showing dialog boxes, see [About console forms](about-configuration-manager-console-forms.md).  
 
 ## See Also  
  [About Configuration Manager Dialog Boxes](../../../../develop/core/servers/console/about-configuration-manager-console-forms.md)   

@@ -68,6 +68,6 @@ The following diagram shows how the client exits provisioning mode:
 
 ## See also
 
-[Setup Windows and ConfigMgr](/sccm/osd/understand/task-sequence-steps#BKMK_SetupWindowsandConfigMgr)
+[Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)
 
-[Upgrade Operating System](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)
+[Upgrade Operating System](task-sequence-steps.md#BKMK_UpgradeOS)

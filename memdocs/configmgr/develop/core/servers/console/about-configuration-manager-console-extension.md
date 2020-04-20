@@ -30,7 +30,7 @@ The Configuration Manager console has an XML-based architecture that can be easi
  You can integrate your own custom wizards into the Configuration Manager console by using a wizard framework of your choice.  
 
 ## Management Classes  
- You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes).  
+ You can define your own custom classes that can be used by your Configuration Manager console extension. For more information, see [About console management classes](about-configuration-manager-console-management-classes.md).  
 
 ## Unsupported Features  
  The Configuration Manager console does not support the following features:  
@@ -57,8 +57,8 @@ When developing console extensions, they should be based on designs with accessi
 
 ## See Also  
  [Configuration Manager Console Extension Architecture](../../../../develop/core/servers/console/console-extension-architecture.md)   
- [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
- [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
- [About console management classes](/sccm/develop/core/servers/console/about-configuration-manager-console-management-classes)
- [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes)
- [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
+ [About Configuration Manager console actions](configuration-manager-actions.md)
+ [About console forms](about-configuration-manager-console-forms.md)
+ [About console management classes](about-configuration-manager-console-management-classes.md)
+ [About console nodes](about-configuration-manager-console-nodes.md)
+ [About console views](about-configuration-manager-console-views.md)

@@ -32,7 +32,7 @@ Deployment media includes bootable media, stand-alone media, and prestaged media
 
 Capture media allows you to capture an OS image from a reference computer. Capture media contains the boot image that starts the reference computer and the task sequence that captures the OS image.
 
-For more information about how to create capture media, see [Create capture media](/sccm/osd/deploy-use/create-capture-media).  
+For more information about how to create capture media, see [Create capture media](create-capture-media.md).  
 
 
 ## <a name="BKMK_PlanBootableMedia"></a> Bootable media
@@ -40,7 +40,7 @@ For more information about how to create capture media, see [Create capture medi
 Bootable media contains the following components:
 
 - The boot image
-- Optional [prestart commands](/sccm/osd/understand/prestart-commands-for-task-sequence-media) and their required files
+- Optional [prestart commands](../understand/prestart-commands-for-task-sequence-media.md) and their required files
 - Configuration Manager binaries
 
 When the destination computer starts, it connects to the network and retrieves the task sequence, the OS image, and any other required content from the network. Because the task sequence isn't on the media, you can change the task sequence or content without having to recreate the media.  
@@ -48,7 +48,7 @@ When the destination computer starts, it connects to the network and retrieves t
 > [!IMPORTANT]  
 > The packages on bootable media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.  
 
-For more information about how to create bootable media, [Create bootable media](/sccm/osd/deploy-use/create-bootable-media).  
+For more information about how to create bootable media, [Create bootable media](create-bootable-media.md).  
 
 
 ## <a name="BKMK_PlanPrestagedMedia"></a> Prestaged media
@@ -62,14 +62,14 @@ Prestaged media is applied to the hard drive of a new computer before the comput
 > [!IMPORTANT]  
 > The packages on prestaged media aren't encrypted. Take appropriate security measures, such as adding a password to the media, to make sure that the package contents are secured from unauthorized users.  
 
-For more information about how to create prestaged media, see [Create prestaged media](/sccm/osd/deploy-use/create-prestaged-media).  
+For more information about how to create prestaged media, see [Create prestaged media](create-prestaged-media.md).  
 
 
 ## <a name="BKMK_PlanStandaloneMedia"></a> Stand-alone media
 
 Stand-alone media contains everything that's required to deploy the OS. This content includes the task sequence and any other required content. Because everything that's required to deploy the OS is stored on the stand-alone media, the disk space required for stand-alone media is larger than for other types of media.  
 
-For more information about how to create stand-alone media, see [Create stand-alone media](/sccm/osd/deploy-use/create-stand-alone-media).  
+For more information about how to create stand-alone media, see [Create stand-alone media](create-stand-alone-media.md).  
 
 
 ## Considerations when using HTTPS

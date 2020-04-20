@@ -24,7 +24,7 @@ This article explains how to set up power management in Configuration Manager.
 
 This procedure configures the *default client settings* for power management. It applies to all the computers in your hierarchy.
 
-If you want to apply these settings to only some computers, create a *custom device client setting*. Then assign it to a collection that contains the computers for power management. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+If you want to apply these settings to only some computers, create a *custom device client setting*. Then assign it to a collection that contains the computers for power management. For more information, see [How to configure client settings](../../deploy/configure-client-settings.md).  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, select the **Client Settings** node, and select **Default Client Settings**.
 
@@ -34,9 +34,9 @@ If you want to apply these settings to only some computers, create a *custom dev
 
 1. Enable the client setting to **Allow power management of devices**.
 
-1. Configure the additional client settings that you require. For more information, see [About client settings - Power Management](/sccm/core/clients/deploy/about-client-settings#power-management).  
+1. Configure the additional client settings that you require. For more information, see [About client settings - Power Management](../../deploy/about-client-settings.md#power-management).  
 
-Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval).  
+Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../manage-clients.md#BKMK_PolicyRetrieval).  
 
 ## Exclude computers
 
@@ -55,7 +55,7 @@ You might want to exclude computers from power management for the following reas
 > [!NOTE]  
 > If you configure the client setting to **Allow users to exclude their device from power management**, users can exclude their own computers from power management by using Software Center.  
 
-To find out which computers are excluded from power management, run the report **Computers Excluded**. For more information about this report see [How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management#BKMK_Excluded).  
+To find out which computers are excluded from power management, run the report **Computers Excluded**. For more information about this report see [How to monitor and plan for power management](monitor-and-plan-for-power-management.md#BKMK_Excluded).  
 
 > [!IMPORTANT]  
 > Excluding a computer from power management causes all power settings to be reverted to their original values. You cannot revert individual power settings to their original values.  
@@ -70,6 +70,6 @@ To find out which computers are excluded from power management, run the report *
 
 ## Next steps
 
-[How to create and apply power plans](/sccm/core/clients/manage/power/create-and-apply-power-plans)
+[How to create and apply power plans](create-and-apply-power-plans.md)
 
-[How to monitor and plan for power management](/sccm/core/clients/manage/power/monitor-and-plan-for-power-management)
+[How to monitor and plan for power management](monitor-and-plan-for-power-management.md)

@@ -129,4 +129,4 @@ Rules defined against the value of the setting.
 ```  
 
 ## See Also  
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

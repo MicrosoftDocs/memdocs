@@ -37,7 +37,7 @@ Configuration Manager provides the following types of information as client stat
 
      On devices that run Windows 7, client check runs as a scheduled task. On later OS versions, client check runs automatically during the Windows maintenance window.  
 
-     You can configure remediation not to run on specific devices, for example, a business-critical server. If there are additional items that you want to evaluate, use Configuration Manager compliance settings to monitor additional configurations. For more information about compliance settings, see [Plan for and configure compliance settings](/sccm/compliance/plan-design/plan-for-and-configure-compliance-settings).  
+     You can configure remediation not to run on specific devices, for example, a business-critical server. If there are additional items that you want to evaluate, use Configuration Manager compliance settings to monitor additional configurations. For more information about compliance settings, see [Plan for and configure compliance settings](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md).  
 
 - **Decommissioned**: The site has marked the device record for deletion. This behavior can happen when a new registration for same device assigns to the same or a different primary site in a hierarchy. The site deletes these devices the next time it runs the site maintenance task **Delete Aged Discovery Data**.<!-- SCCMDocs issue #1418 -->  
 
@@ -90,7 +90,7 @@ At the top of the dashboard, there's a set of filters to adjust the data display
 
 - **Collection**: By default, the dashboard displays devices in the **All Systems** collection. Select a device collection from the list to scope the view to a subset of devices in a specific collection.  
 
-- **Online/offline**: By default, the dashboard displays only online clients. This state comes from the client notification channel that update a client's status every five minutes. For more information, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).  
+- **Online/offline**: By default, the dashboard displays only online clients. This state comes from the client notification channel that update a client's status every five minutes. For more information, see [About client status](monitor-clients.md#bkmk_about).  
 
 - **Active \# days**: By default, the dashboard displays clients that are active in the last three days.  
 
@@ -109,7 +109,7 @@ A healthy Configuration Manager client has the following properties:
 - Actively sending data  
 - Passes all client health evaluation checks  
 
-For more information, see [About client status](/sccm/core/clients/manage/monitor-clients#bkmk_about).
+For more information, see [About client status](monitor-clients.md#bkmk_about).
 
 A healthy client successfully communicates with the site. It reports all data based on the defined schedules in client settings.
 
@@ -168,7 +168,7 @@ Solution for failure 1 -->
 
 4. Select **Client Check** to see charts showing the status of client checks in your Configuration Manager site.  
 
-    Configure alerts to notify you when client check results or client activity drops below a specified percentage. The site can also alert you when remediation fails on a specified percentage of clients. For more information, see [How to configure client status](/sccm/core/clients/deploy/configure-client-status).  
+    Configure alerts to notify you when client check results or client activity drops below a specified percentage. The site can also alert you when remediation fails on a specified percentage of clients. For more information, see [How to configure client status](../deploy/configure-client-status.md).  
 
 
 ## <a name="BKMK_ClientHealth"></a> Client health checks
@@ -214,4 +214,4 @@ Client check runs the following checks and remediations:
 
 ## Client deployment log files
 
-For more information about the log files used by client deployment and management operations, see [Log files](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs).
+For more information about the log files used by client deployment and management operations, see [Log files](../../plan-design/hierarchy/log-files.md#BKMK_ClientLogs).

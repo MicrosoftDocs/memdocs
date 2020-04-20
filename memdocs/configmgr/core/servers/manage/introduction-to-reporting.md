@@ -40,7 +40,7 @@ For more information, see [What is SQL Server Reporting Services (SSRS)?](https:
 
 <!-- 3721603 -->
 
-Starting in version 2002, integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services. For more information, see [Integrate with Power BI Report Server](/configmgr/core/servers/manage/powerbi-report-server).
+Starting in version 2002, integrate Power BI Report Server with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
 Power BI Report Server is an on-premises report server with a web portal in which you display and manage reports. It includes tools to create Power BI reports, paginated reports, mobile reports, and KPIs. For more information, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
@@ -54,9 +54,9 @@ The reporting services point is a site system role that you add on a server that
 
 For more information about how to plan for and install a reporting services point, see the following articles:
 
-- [Plan for reporting](/configmgr/core/servers/manage/planning-for-reporting)
+- [Plan for reporting](planning-for-reporting.md)
 
-- [Configure reporting](/configmgr/core/servers/manage/configuring-reporting)
+- [Configure reporting](configuring-reporting.md)
 
 ## Configuration Manager reports
 
@@ -68,9 +68,9 @@ Like other Configuration Manager objects, an administrative user must have the a
 
 ### Create and modify reports
 
-For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information, see [Operations and maintenance for reporting](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting).
+For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for model-based and SQL-based reports. When you create or edit a report in the Configuration Manager console, Report Builder opens. For more information, see [Operations and maintenance for reporting](operations-and-maintenance-for-reporting.md).
 
-Starting in version 2002, to create or edit Power BI reports, the console integrates with Power BI Desktop. For more information, see [Create Power BI reports](/configmgr/core/servers/manage/powerbi-report-server#create-power-bi-reports).
+Starting in version 2002, to create or edit Power BI reports, the console integrates with Power BI Desktop. For more information, see [Create Power BI reports](powerbi-report-server.md#create-power-bi-reports).
 
 ### Run reports
 
@@ -111,7 +111,7 @@ A report subscription in Reporting Services is a recurring request to deliver a 
 
 You can manage report subscriptions in the Configuration Manager console. The report server processes the subscriptions. It distributes them by using delivery extensions that are deployed on the server. By default, you can create subscriptions that send reports to a shared folder or to an email address.
 
-For more information, see [Manage report subscriptions](/configmgr/core/servers/manage/operations-and-maintenance-for-reporting#bkmk_subscription).
+For more information, see [Manage report subscriptions](operations-and-maintenance-for-reporting.md#bkmk_subscription).
 
 ## Report Builder
 
@@ -145,8 +145,8 @@ Report models have the following features:
 
 - Secure model elements so that administrative users can see only the data that they have permission to see.
 
-Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Create custom report models](/configmgr/core/servers/manage/creating-custom-report-models-in-sql-server-reporting-services).
+Although Configuration Manager provides sample report models, you can also define report models to meet your own business requirements. For more information about how to create report models, see [Create custom report models](creating-custom-report-models-in-sql-server-reporting-services.md).
 
 ## Next steps
 
-[Plan for reporting](/configmgr/core/servers/manage/planning-for-reporting)
+[Plan for reporting](planning-for-reporting.md)

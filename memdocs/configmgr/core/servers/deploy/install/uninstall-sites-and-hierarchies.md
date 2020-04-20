@@ -60,7 +60,7 @@ When you have more than one software update point at a primary site, and you rem
 
 ## <a name="bkmk_secondary"></a> Secondary site  
 
-Other than when you're [decommissioning a hierarchy](#bkmk_hierarchy), the main reason to remove a secondary site is because of a broader infrastructure change, such as network or physical locations. Also review the reasons to [choose a secondary site](/configmgr/core/plan-design/hierarchy/design-a-hierarchy-of-sites#BKMK_ChooseSecondary).
+Other than when you're [decommissioning a hierarchy](#bkmk_hierarchy), the main reason to remove a secondary site is because of a broader infrastructure change, such as network or physical locations. Also review the reasons to [choose a secondary site](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChooseSecondary).
 
 When you decide you need to remove a secondary site, first consider your answers to the following questions:
 
@@ -70,7 +70,7 @@ When you decide you need to remove a secondary site, first consider your answers
 
 - Are any clients still at the location?
 
-- Have you configured other content management options like [peer caching](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management#peer-caching-technologies)?
+- Have you configured other content management options like [peer caching](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#peer-caching-technologies)?
 
 ### Options to delete secondary sites
 
@@ -93,7 +93,7 @@ Use this option in the following situations:
     This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but doesn't make any changes on the site server.
 
     > [!TIP]
-    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 ### Prerequisites to delete a secondary site
 
@@ -126,15 +126,15 @@ You might want to uninstall a primary site from your hierarchy for the following
 - Consolidate sites to reduce costs and complexity
 - Reconfigure or redesign the sites of the hierarchy
 
-Before you uninstall a child primary site that uses [distributed views](/configmgr/core/plan-design/hierarchy/database-replication#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
+Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
 
 ### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
 
 Before you uninstall a primary site, review the following tasks:
 
-- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups).
+- Review boundaries, boundary groups, and fallback relationships. If you assign clients to a new site, but don't change the boundaries, they may be considered roaming. For more information, see [Define site boundaries and boundary groups](../configure/define-site-boundaries-and-boundary-groups.md).
 
-- Make sure all active clients are reassigned to another primary site in the hierarchy. Otherwise clients will be unmanaged after you uninstall the site. For more information, see [How to assign clients to a site](/configmgr/core/clients/deploy/assign-clients-to-a-site).
+- Make sure all active clients are reassigned to another primary site in the hierarchy. Otherwise clients will be unmanaged after you uninstall the site. For more information, see [How to assign clients to a site](../../../clients/deploy/assign-clients-to-a-site.md).
 
   - Review the list of site roles to make sure the new site provides the same level of service.
 
@@ -148,15 +148,15 @@ Before you uninstall a primary site, review the following tasks:
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 
-- If the hierarchy uses a [fallback site](/configmgr/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback) for automatic site assignment, make sure it doesn't reference this primary site.
+- If the hierarchy uses a [fallback site](../configure/boundary-group-procedures.md#bkmk_site-fallback) for automatic site assignment, make sure it doesn't reference this primary site.
 
-- Reconfigure any [client installation methods](/configmgr/core/clients/deploy/plan/client-installation-methods) that may reference a static site code.
+- Reconfigure any [client installation methods](../../../clients/deploy/plan/client-installation-methods.md) that may reference a static site code.
 
 - If this primary site has any site-specific cloud-attached services, make sure to remove them. If you still need the cloud resources, move them to another primary site in the hierarchy. Remove them from the primary site that you're going to uninstall, and add them to another primary site.
 
-- If this primary site has any [discovery methods](/configmgr/core/servers/deploy/configure/run-discovery) for the hierarchy, move them to another site.
+- If this primary site has any [discovery methods](../configure/run-discovery.md) for the hierarchy, move them to another site.
 
-- Retire any site-based [OS deployment media](/configmgr/osd/deploy-use/create-task-sequence-media).
+- Retire any site-based [OS deployment media](../../../../osd/deploy-use/create-task-sequence-media.md).
 
 - Uninstall all site system roles from the site and the site server. For more information, see [Uninstall site system roles](#bkmk_role). While this preparation step isn't required, it helps identify any additional dependencies before uninstalling the site.
 
@@ -183,7 +183,7 @@ The administrative user that runs Configuration Manager setup needs the followin
 You run Configuration Manager setup to uninstall a primary site that doesn't have an associated secondary site. Use the following procedure to uninstall a primary site:
 
 > [!TIP]
-> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](/configmgr/core/servers/manage/hierarchy-maintenance-tool-preinst.exe).
+> If the primary site server is no longer available, use the Hierarchy Maintenance Tool at the CAS to delete the primary site from the site database. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 1. Start Configuration Manager setup on the primary site server by using one of the following methods:
 
@@ -211,7 +211,7 @@ You run Configuration Manager setup to uninstall a primary site that doesn't hav
 
 1. Before you uninstall a child primary site, turn off distributed views on each link in the hierarchy between the CAS and a primary site.
 
-1. After you turn off distributed views on each link, confirm that the data from the primary site finishes reinitializing at the CAS. To monitor the initialization of data, see [Monitor replication](/configmgr/core/servers/manage/monitor-replication).
+1. After you turn off distributed views on each link, confirm that the data from the primary site finishes reinitializing at the CAS. To monitor the initialization of data, see [Monitor replication](../../manage/monitor-replication.md).
 
 1. After the data successfully reinitializes with the CAS, you can [uninstall the primary site](#bkmk_pri-process).
 
@@ -278,4 +278,4 @@ The administrative user who runs Configuration Manager setup needs the following
 
 Starting in version 2002, if the hierarchy consists of the CAS and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
-For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
+For more information, see [Remove the CAS](remove-central-administration-site.md).

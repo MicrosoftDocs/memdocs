@@ -650,4 +650,4 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 ## See Also  
  [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)   
  [SMS_UpdatesAssignment Server WMI Class](../../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md)   
- [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+ [About software update deployments](../../sum/about-software-updates-deployments.md)

@@ -47,8 +47,8 @@ The only strict requirement is that jobs at a lower priority do not block progre
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager client runtime requirements](/sccm/develop/core/reqs/client-runtime-requirements).  
+For more information, see [Configuration Manager client runtime requirements](../../../../core/reqs/client-runtime-requirements.md).  
 
 ### Development requirements
 
-For more information, see [Configuration Manager client development requirements](/sccm/develop/core/reqs/client-development-requirements).  
+For more information, see [Configuration Manager client development requirements](../../../../core/reqs/client-development-requirements.md).  

@@ -192,5 +192,5 @@ public void EnumerateCollectionMembers(WqlConnectionManager connection)
 ## See Also  
  [SMS_CollectionMember_a Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionmember_a-server-wmi-class.md)   
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Software distribution overview](../../servers/configure/software-distribution-overview.md)
+ [About deployments](../../servers/configure/about-software-distribution-deployments.md)

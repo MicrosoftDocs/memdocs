@@ -21,7 +21,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1805. You can install this version to update and add new capabilities to your technical preview site. 
 
-Review the [Technical Preview](/sccm/core/get-started/technical-preview) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [Technical Preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template
@@ -45,7 +45,7 @@ Steps to workaround, if any.
 
 ## Create a phased deployment with manually configured phases for a task sequence
 <!--1358148-->
-You can now [create a phased deployment](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
+You can now [create a phased deployment](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md) with manually configured phases for a task sequence. You can add up to 10 additional phases from the **Phases** tab of the Create Phased Deployment wizard. 
 
 
 ### Try it out!
@@ -84,7 +84,7 @@ Follow the instructions to create a phased deployment where you manually configu
 
 ## Cloud distribution point support for Azure Resource Manager
 <!--1322209-->
-When creating an instance of the [cloud distribution point](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud distribution point](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
 
@@ -95,9 +95,9 @@ Configuration Manager does not migrate existing classic cloud distribution point
 
 
 ### Prerequisites  
-- Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery is not required.  
+- Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.  
 
-- The same [requirements for a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_requirements), except for the Azure management certificate.  
+- The same [requirements for a cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_requirements), except for the Azure management certificate.  
 
 
 ### Try it out!  
@@ -120,7 +120,7 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 
 ## Take actions based on management insights
 <!--1357930-->
-Some [management insights](/sccm/core/servers/manage/management-insights) now have the option to take an action. Depending upon the rule, this action exhibits one of the following behaviors:  
+Some [management insights](../servers/manage/management-insights.md) now have the option to take an action. Depending upon the rule, this action exhibits one of the following behaviors:  
 
 - Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the Client Settings node. You can take further action by modifying the default or a custom client settings object.  
 
@@ -147,7 +147,7 @@ The following management insight rules have actions in this release:
 
 You can now transition the device configuration workload from Configuration Manager to Intune after enabling co-management. Transitioning this workload lets you use Intune to deploy MDM polices, while continuing to use Configuration Manager for deploying applications. 
 
-To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+To transition this workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For more information, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 > [!Note]  
 > Moving this workload also moves the **Resource Access** and **Endpoint Protection** workloads, which are a subset of the device configuration workload.
@@ -190,9 +190,9 @@ This feature also includes the **CMG connection analyzer** for real-time verific
 
 
 ### Prerequisites
-- An active [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) used by internet-based clients.  
+- An active [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) used by internet-based clients.  
 
-- The site onboarded to [Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for cloud management.  
+- The site onboarded to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for cloud management.  
 
 
 ### Try it out!
@@ -212,7 +212,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
      1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
 
-     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_clientauth).  
+     2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_clientauth).  
 
 4. Click **Start** to start the analysis. The results are displayed in the analyzer window. Select an entry to see more details in the Description field.  
 
@@ -231,7 +231,7 @@ In this screenshot, CMPivot displays two separate BIOS versions with a device co
 
 ![CMPivot window with example query fro BIOSVersion](media/1358456-cmpivot-biosversion.png)
 
-You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode):
+You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode):
 - Run Script
 - Remote Control
 - Resource Explorer
@@ -248,7 +248,7 @@ When right-clicking on a specific device, you can also pivot the view of the spe
 ### Prerequisites
 - The target clients must be updated to the latest version.  
 
-- The Configuration Manager administrator needs permissions to run scripts. For more information, see [Security roles for scripts](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles).  
+- The Configuration Manager administrator needs permissions to run scripts. For more information, see [Security roles for scripts](../../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).  
 
 ### Try it out!
 Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
@@ -284,7 +284,7 @@ The following scenarios benefit from these improvements:
 [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps).  
+> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
@@ -336,11 +336,11 @@ You can see these certificates in the Configuration Manager console. Go to the *
 
 ## Improvements for enabling third-party software update support
 <!--1357605-->
-As a result of your UserVoice feedback on [third-party software update support](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
+As a result of your UserVoice feedback on [third-party software update support](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
 
 In this release, you can enable the Configuration Manager site to automatically configure the certificate. The site communicates with WSUS to generate a certificate for this purpose. Configuration Manager then continues to deploy that certificate to clients. This iteration removes the need to use the SCUP tool to create and manage the certificate. 
 
-For more information on general use of the SCUP tool, see [System Center Updates Publisher](/sccm/sum/tools/updates-publisher).
+For more information on general use of the SCUP tool, see [System Center Updates Publisher](../../sum/tools/updates-publisher.md).
 
 ### Prerequisites
 - Enable and deploy the client setting **Enable third party software updates** in the **Software Updates** group.
@@ -367,19 +367,19 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 
 ### New groups under **Run actions on failure**
 - **Collect logs**: To gather logs from the client, add steps in this group. 
-    - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) step. 
-    - To perform the copy operation, use a custom script or utility with either the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) or [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) step.
+    - A common practice is to copy the log files to a network share. To establish this connection, use the [Connect to Network Folder](../../osd/understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) step. 
+    - To perform the copy operation, use a custom script or utility with either the [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) or [Run PowerShell Script](../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step.
     - Files to collect might include the following logs:  
          `%_SMSTSLogPath%\*.log`   
          `%SystemDrive%\$Windows.~BT\Sources\Panther\setupact.log`  
     - For more information on setupact.log and other Windows Setup logs, see [Windows Setup Log files](/windows/deployment/upgrade/log-files).
-    - For more information on Configuration Manager client logs, see [Configuration Manager client logs](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
-    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-built-in-variables)
+    - For more information on Configuration Manager client logs, see [Configuration Manager client logs](../plan-design/hierarchy/log-files.md#BKMK_ClientLogs)
+    - For more information on _SMSTSLogPath and other useful variables, see [Task sequence built-in variables](../../osd/understand/task-sequence-variables.md)
 
 - **Run diagnostic tools**: To run additional diagnostic tools, add steps in this group. These tools should be automated for collecting additional information from the system as soon after the failure as possible.
     - One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool that you can use to obtain details about why a Windows 10 upgrade was unsuccessful.
-         - In Configuration Manager, [create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program) for the tool.
-         - Add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
+         - In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.
+         - Add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
              `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`
 
 
@@ -398,7 +398,7 @@ The CMTrace log viewing tool is now automatically installed along with the Confi
 <!--1358202-->
 We've made the following improvement to the Configuration Manager console:
 
-- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
+- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](../clients/manage/monitor-clients.md#bkmk_indStatus). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
 
 ### Known issues
 The currently logged on user value is blank in the Devices node or when viewing a device list under the Device Collections node. To work around this issue, download this [SQL script](https://gallery.technet.microsoft.com/ConfigMgr-1805-BgbUpdateLiv-306ff46c). Run sp_BgbUpdateLiveData.sql on the site database server, and then restart the smsexec and sms_notification_server services on the management point.<!--514471-->
@@ -421,7 +421,7 @@ When using **Send a smile** or **Send a frown** from the console on a machine wi
 ## Improvements to PXE-enabled distribution points
 <!--1357580-->
 
-This release includes the following additional improvements when you use the option to [**Enable a PXE responder without Windows Deployment Service**](/sccm/core/get-started/capabilities-in-technical-preview-1802#improvements-to-pxe-enabled-distribution-points) on a distribution point:  
+This release includes the following additional improvements when you use the option to [**Enable a PXE responder without Windows Deployment Service**](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) on a distribution point:  
 
 - Windows Firewall rules are automatically created on the distribution point when you enable this option  
 - Improvements to component logging
@@ -454,10 +454,10 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 ## Improvement to support for CNG certificates
 <!--1357314-->
-In this release, use [CNG certificates](/sccm/core/plan-design/network/cng-certificates-overview) for the following additional HTTPS-enabled server roles:  
+In this release, use [CNG certificates](../plan-design/network/cng-certificates-overview.md) for the following additional HTTPS-enabled server roles:  
 - Certificate registration point, including the NDES server with the Configuration Manager policy module
 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

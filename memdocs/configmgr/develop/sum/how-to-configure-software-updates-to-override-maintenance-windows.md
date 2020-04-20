@@ -117,4 +117,4 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 
 ## See also
 
-[SMS_UpdatesAssignment](/sccm/develop/reference/sum/sms_updatesassignment-server-wmi-class)
+[SMS_UpdatesAssignment](../reference/sum/sms_updatesassignment-server-wmi-class.md)

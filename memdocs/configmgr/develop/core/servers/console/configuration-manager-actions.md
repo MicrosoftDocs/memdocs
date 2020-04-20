@@ -52,7 +52,7 @@ Configuration Manager console actions are tasks or commands that are performed b
 
    For more information, see [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md).  
 
-   For more information about the Configuration Manager console nodes, see [About console nodes](/sccm/develop/core/servers/console/about-configuration-manager-console-nodes).  
+   For more information about the Configuration Manager console nodes, see [About console nodes](about-configuration-manager-console-nodes.md).  
 
 ## Conditional Actions  
  Actions can be made available (displayed) according to specified conditions. The conditions are defined by the following:  
@@ -68,7 +68,7 @@ Configuration Manager console actions are tasks or commands that are performed b
 ## See Also  
  [Configuration Manager Action XML](../../../../develop/core/servers/console/configuration-manager-action-xml.md)   
  [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
- [About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
- [About console forms](/sccm/develop/core/servers/console/about-configuration-manager-console-forms)
- [About console views](/sccm/develop/core/servers/console/about-configuration-manager-console-views)
+ [About Configuration Manager console actions](configuration-manager-actions.md)
+ [About console forms](about-configuration-manager-console-forms.md)
+ [About console views](about-configuration-manager-console-views.md)
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

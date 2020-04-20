@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-After you [deploy a task sequence](/configmgr/osd/deploy-use/deploy-a-task-sequence), depending upon the scenario there are different ways for users to interact with the deployment. This article shows the main user experiences with OS deployments, and how you can configure them:
+After you [deploy a task sequence](../deploy-use/deploy-a-task-sequence.md), depending upon the scenario there are different ways for users to interact with the deployment. This article shows the main user experiences with OS deployments, and how you can configure them:
 
 - Software Center user notification for a high-impact deployment
 - A sample PXE boot experience
@@ -30,16 +30,16 @@ For a high-impact deployment, you can customize the message that Software Center
 
 ![Customized task sequence notification to the end user from Software Center](../media/user-notification-enduser.png)
 
-For more information on how to customize the message in this window, see [Create a custom notification for high-risk deployments](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#create-a-custom-notification-for-high-risk-deployments).
+For more information on how to customize the message in this window, see [Create a custom notification for high-risk deployments](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments).
 
-You can also customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](/configmgr/core/clients/deploy/about-client-settings#computer-agent).
+You can also customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
 <!--
 optional vs required
 **Allow user to interact** on required deployment?
 -->
 
-For more information, see [Use Software Center to deploy Windows over the network](/configmgr/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network).
+For more information, see [Use Software Center to deploy Windows over the network](../deploy-use/use-software-center-to-deploy-windows-over-the-network.md).
 
 ## PXE
 
@@ -51,14 +51,14 @@ The following example shows the Hyper-V Gen1 (BIOS) PXE experience:
 
 After the device successfully boots via PXE, it behaves similarly to bootable media. For more information, see the next section on the [Task sequence wizard](#task-sequence-wizard).
 
-For more information, see [Use PXE to deploy Windows over the network](/configmgr/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network).
+For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
 > [!WARNING]
 > If you use PXE deployments, and configure device hardware with the network adapter as the first boot device, these devices can automatically start an OS deployment task sequence without user interaction. Deployment verification doesn't manage this configuration. While this configuration may simplify the process and reduce user interaction, it puts the device at greater risk for accidental reimage.
 
 ## Task sequence wizard
 
-When you use [task sequence media](/configmgr/osd/deploy-use/create-task-sequence-media), the task sequence wizard runs to guide the process.
+When you use [task sequence media](../deploy-use/create-task-sequence-media.md), the task sequence wizard runs to guide the process.
 
 ### Welcome to the task sequence wizard
 
@@ -94,9 +94,9 @@ The prestart command is a command line that you specify with a script or program
 
 For more information, see the following articles:
 
-- [Prestart commands for task sequence media](/configmgr/osd/understand/prestart-commands-for-task-sequence-media)
-- [Manage boot images](/configmgr/osd/get-started/manage-boot-images#customization)
-- [Task sequence media](/configmgr/osd/deploy-use/create-task-sequence-media)
+- [Prestart commands for task sequence media](prestart-commands-for-task-sequence-media.md)
+- [Manage boot images](../get-started/manage-boot-images.md#customization)
+- [Task sequence media](../deploy-use/create-task-sequence-media.md)
 
 ## Task sequence progress
 
@@ -106,10 +106,10 @@ When the task sequence runs, it displays the **Installation progress** window:
 
 - This window is always on top; you can move it, but you can't close or minimize it.
 
-- You can customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](/configmgr/core/clients/deploy/about-client-settings#computer-agent).
+- You can customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
     > [!TIP]
-    > The task sequence stores this value in the read-only variable [_SMSTSOrgName](/configmgr/osd/understand/task-sequence-variables#SMSTSOrgName).
+    > The task sequence stores this value in the read-only variable [_SMSTSOrgName](task-sequence-variables.md#SMSTSOrgName).
 
 - You can customize the subheading. (The above example shows the default value, `Running: <task sequence name>`.) On the properties of the task sequence, select the option to **Use custom text** for the progress notification text. It allows a maximum of 255 characters.
 
@@ -117,7 +117,7 @@ When the task sequence runs, it displays the **Installation progress** window:
 
 - The second line only shows for some steps that provide more detailed progress.
 
-- Use the task sequence variable [TSDisableProgressUI](/configmgr/osd/understand/task-sequence-variables#TSDisableProgressUI) to control when the task sequence displays progress.
+- Use the task sequence variable [TSDisableProgressUI](task-sequence-variables.md#TSDisableProgressUI) to control when the task sequence displays progress.
 
     To completely disable the progress window, disable the option to **Show Task Sequence progress** on the **User Experience** page of the task sequence deployment.
 
@@ -129,7 +129,7 @@ Starting in version 2002, the task sequence progress window includes the followi
 
 ![Example task sequence progress window](media/2356386-task-sequence-progress.png)
 
-By default, the task sequence progress window uses the existing text. If you make no changes, it continues to work the same as in version 1910 and earlier. To show the new progress information, specify the task sequence variable, [TSProgressInfoLevel](/configmgr/osd/understand/task-sequence-variables#TSProgressInfoLevel).
+By default, the task sequence progress window uses the existing text. If you make no changes, it continues to work the same as in version 1910 and earlier. To show the new progress information, specify the task sequence variable, [TSProgressInfoLevel](task-sequence-variables.md#TSProgressInfoLevel).
 
 The count and percentage completed are intended for general guidance purposes only. These values are based on the total number of steps in the task sequence. For a more complex task sequence with steps that run conditionally based on task sequence logic, the progress may be non-linear.
 
@@ -154,4 +154,4 @@ If the task sequence fails, it displays the **Task Sequence Error** window.
 
 - It displays the name of the task sequence, an error code, and a general message for users. For example: `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
 
-- The window automatically closes after a timeout period. By default, this timeout is 15 minutes. You can customize this value with the task sequence variable [SMSTSErrorDialogTimeout](/configmgr/osd/understand/task-sequence-variables#SMSTSErrorDialogTimeout).
+- The window automatically closes after a timeout period. By default, this timeout is 15 minutes. You can customize this value with the task sequence variable [SMSTSErrorDialogTimeout](task-sequence-variables.md#SMSTSErrorDialogTimeout).

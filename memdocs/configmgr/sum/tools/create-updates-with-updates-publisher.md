@@ -30,7 +30,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path is not required.
 
-       Later, when the update is published to a WSUS server, Updates Publisher downloads the binaries for the update from the indicated source location.  If no path is provided then Update Publisher will search the [local source publishing path](/sccm/sum/tools/updates-publisher-options#advanced) for the update binary.
+       Later, when the update is published to a WSUS server, Updates Publisher downloads the binaries for the update from the indicated source location.  If no path is provided then Update Publisher will search the [local source publishing path](updates-publisher-options.md#advanced) for the update binary.
 
    -   Specify the **Binary language** of the software update.
 

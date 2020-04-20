@@ -22,8 +22,8 @@ Update 1606 for Configuration Manager is available as an in-console update for p
 > [!TIP]  
 > Learn more about:  
 >   
-> - [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
-> - [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602 or 1606)  
+> - [Installing new sites](../../servers/deploy/install/prepare-to-install-sites.md) (using a baseline version like 1511)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (like update 1602 or 1606)  
 
  The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
 
@@ -82,7 +82,7 @@ To navigate between the different nodes of a workspace, you can now enter the fi
 The following are changes to Administration in the Configuration Manager console:
 ### OMS Connector
 
-You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md).
+You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
@@ -138,19 +138,19 @@ When a software update that requires a restart is deployed by using Configuratio
 For details, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#BKMK_RestartOptions).
 
 ### Run software updates compliance scan immediately after a client installs software updates and restarts
-You can now run a compliance scan immediately after a client installs software updates and restarts. To set this up for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard, select **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**. This enables the client to check for additional software updates that become applicable after the client restarts, and then to install them (and become compliant) during the same maintenance window. For details, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [Manually deploy software updates](/sccm/sum/deploy-use/manually-deploy-software-updates).
+You can now run a compliance scan immediately after a client installs software updates and restarts. To set this up for a deployment, on the **User Experience** page of the Deploy Software Updates Wizard, select **If any update in this deployment requires a system restart, run updates deployment evaluation cycle after restart**. This enables the client to check for additional software updates that become applicable after the client restarts, and then to install them (and become compliant) during the same maintenance window. For details, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md) or [Manually deploy software updates](../../../sum/deploy-use/manually-deploy-software-updates.md).
 
 ## Operating system deployment
 
 ### Improvements to the task sequence step: Install Software Updates
 A new setting, **Evaluate software updates from cached scan results**, gives you the option to do a full scan for software updates, instead of using the cached scan results. For details, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates).
 
-Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-variables).
+Also, a new task sequence variable, **SMSTSSoftwareUpdateScanTimeout**, is available. This variable lets you control the timeout for the software updates scan during the Install Software Updates task sequence step. The default value is 30 minutes. For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-variables.md).
 
 ### OSDPreserveDriveLetter task sequence variable has been deprecated
 The OSDPreserveDriveLetter task sequence variable has been deprecated. Starting in Configuration Manager version 1606, Windows Setup determines the best drive letter to use (typically C:) during an operating system deployment, by default.
 
-For details, see [Task sequence built-in variables](/sccm/osd/understand/task-sequence-variables).
+For details, see [Task sequence built-in variables](../../../osd/understand/task-sequence-variables.md).
 
 ### Customize the RamDisk TFTP window size for PXE-enabled distribution points
 You can now customize the RamDisk window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error, because the window size is too large. The RamDisk Trivial File Transfer Protocol (TFTP) window size customization lets you optimize TFTP traffic when you are using PXE to meet your specific network requirements.

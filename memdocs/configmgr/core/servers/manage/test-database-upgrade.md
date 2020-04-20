@@ -22,17 +22,17 @@ The information in this topic can help you run a test database upgrade before yo
 ## Do I need to run a test upgrade?
 The deprecation of this upgrade test is made possible due to changes that are introduced with Configuration Manager current branch. These changes simplify the process and speed by which a production environment can be updated to newer versions. This redesign was done to help customers stay current with less risk, and less operational overhead when installing each new update.
 
-The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](/sccm/core/servers/manage/install-in-console-updates#bkmk_retry).
+The changes are to how updates install, including logic that automatically rolls back a failed update without the need to run a site recovery. These changes enable the use of the console to manage update installations, and include an option to [retry installation of a failed update](install-in-console-updates.md#bkmk_retry).
 
 > [!TIP]
-> When you upgrade to Configuration Manager current branch from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test).
+> When you upgrade to Configuration Manager current branch from an older product, like System Center 2012 Configuration Manager, [test database upgrades remain a recommended step](../deploy/install/upgrade-to-configuration-manager.md#bkmk_test).
 
-If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
+If you still plan to test the upgrade of a site database when you install an in-console update, the following information supplements the [guidance on installing an in-console update](install-in-console-updates.md#bkmk_install).
 
 ## Prepare to run a test database upgrade  
 Before you install a new update in your hierarchy, like update 1702, you can test the upgrade of your site database.
 
-To run the upgrade test, use the Configuration Manager Setup from the source files from [the CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) of a site that runs the version of Configuration Manager that you are updating to. This requirement means that to test the database update for update to 1702:
+To run the upgrade test, use the Configuration Manager Setup from the source files from [the CD.Latest folder](the-cd.latest-folder.md) of a site that runs the version of Configuration Manager that you are updating to. This requirement means that to test the database update for update to 1702:
 -   You must have at least one site that runs version 1702 from which you can get that CD.Latest folder.
 -   If you do not have a site that runs the required version, consider installing a site in a lab environment, and then update that site to the new version. This creates the CD.Latest folder with the correct version of source files.
 
@@ -60,4 +60,4 @@ If an update install fails, you should not need to recover the site. Instead, yo
 
 
 ## Next steps
-After the test database update completes successfully, discard the updated database. It cannot be used by a Configuration Manager site. You can then return to your active site and [begin the update installation](/sccm/core/servers/manage/install-in-console-updates).
+After the test database update completes successfully, discard the updated database. It cannot be used by a Configuration Manager site. You can then return to your active site and [begin the update installation](install-in-console-updates.md).

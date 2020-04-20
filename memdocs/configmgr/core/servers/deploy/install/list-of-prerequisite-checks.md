@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](/sccm/core/servers/deploy/install/prerequisite-checker).  
+This article details the prerequisite checks that run when you install or update Configuration Manager. For more information, see [Prerequisite checker](prerequisite-checker.md).  
 
 
 
@@ -186,7 +186,7 @@ When you expand a primary site to a hierarchy, the site database for the standal
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, the **max text repl size** setting must be properly configured. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+When using SQL Server Always On, the **max text repl size** setting must be properly configured. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### Microsoft Intune Connector on the expanded primary site
 
@@ -276,7 +276,7 @@ The instance for SQL Server is configured to use the **SQL_Latin1_General_CP1_CI
 
 If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
 
-If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](/sccm/core/plan-design/hierarchy/international-support).
+If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](../../../plan-design/hierarchy/international-support.md).
 
 ### Server service is running
 
@@ -349,7 +349,7 @@ Configuration Manager doesn't support software update points on network (NLB) or
 
 *Applies to: Site database server*
 
-When using SQL Server Always On, it must meet the minimum requirements to host an availability group. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database).
+When using SQL Server Always On, it must meet the minimum requirements to host an availability group. For more information, see [Prepare to use SQL Server Always On availability groups with Configuration Manager](../configure/sql-server-alwayson-for-a-highly-available-site-database.md).
 
 ### SQL Server availability group configured for readable secondaries
 
@@ -387,7 +387,7 @@ Starting in version 1906, when using SQL Server Always On, availability group re
 
 *Applies to: Site database server*
 
-The SQL Server meets the minimum requirements for site upgrade. For more information, see [Supported SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).
+The SQL Server meets the minimum requirements for site upgrade. For more information, see [Supported SQL Server versions](../../../plan-design/configs/support-for-sql-server-versions.md).
 
 ### SQL Server edition
 
@@ -448,7 +448,7 @@ TCP is enabled for the SQL Server instance, and is set to use a static port.
 
 A supported version of SQL Server is installed on the specified site database server.
 
-For more information, see [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).
+For more information, see [Support for SQL Server versions](../../../plan-design/configs/support-for-sql-server-versions.md).
 
 ### Unsupported OS for Configuration Manager console
 
@@ -456,7 +456,7 @@ For more information, see [Support for SQL Server versions](/sccm/core/plan-desi
 
 Install the Configuration Manager console on computers that run a supported OS version.
 
-For more information, see the [Supported OS versions for the Configuration Manager console](/sccm/core/plan-design/configs/supported-operating-systems-consoles).
+For more information, see the [Supported OS versions for the Configuration Manager console](../../../plan-design/configs/supported-operating-systems-consoles.md).
 
 ### Unsupported OS for site server
 
@@ -464,7 +464,7 @@ For more information, see the [Supported OS versions for the Configuration Manag
 
 The server runs a supported OS version.
 
-For more information, see [Supported OS versions for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+For more information, see [Supported OS versions for Configuration Manager site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
 ### Unsupported site system role: out of band service point
 
@@ -520,7 +520,7 @@ The Windows Deployment Tools component of the Windows ADK is installed.
 
 Server with the site server, management point, or distribution point roles aren't part of a Windows Cluster.
 
-Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](/sccm/core/servers/deploy/configure/high-availability-options). <!--1359132-->  
+Starting in version 1810, the Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [High availability options](../configure/high-availability-options.md). <!--1359132-->  
 
 ### Windows PE installed
 
@@ -536,7 +536,7 @@ The Windows Preinstallation Environment (PE) component of the Windows ADK is ins
 
 *Applies to: Central administration site, primary site*
 
-The Active Directory domain and forest functional level is a minimum of Windows Server 2008 R2. For more information, see [Support for Active Directory domains](/sccm/core/plan-design/configs/support-for-active-directory-domains).
+The Active Directory domain and forest functional level is a minimum of Windows Server 2008 R2. For more information, see [Support for Active Directory domains](../../../plan-design/configs/support-for-active-directory-domains.md).
 
 ### Administrative rights on distribution point
 
@@ -592,9 +592,9 @@ The Background Intelligent Transfer Service (BITS) is installed and enabled in I
 
 The Upgrade Readiness service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
-Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](/sccm/desktop-analytics/overview).
+Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../../desktop-analytics/overview.md).
 
-If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove).
+If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](../../../clients/manage/upgrade-readiness.md#bkmk_remove).
 
 If you ignore this prerequisite warning, Configuration Manager setup automatically removes the Upgrade Readiness connector.<!-- #4898 -->
 
@@ -602,7 +602,7 @@ If you ignore this prerequisite warning, Configuration Manager setup automatical
 
 *Applies to: Cloud management gateway*
 
-With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Plan for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).
+With some versions of Configuration Manager, you can't use an HTTP management point with the cloud management gateway (CMG). Either configure the CMG for HTTPS, or configure the site for enhanced HTTP. For more information, see [Plan for cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### Configuration for SQL Server memory usage
 
@@ -716,7 +716,7 @@ Setup can establish a remote connection to WMI on the secondary site server.
 
 The Active Directory schema has been extended. If it's extended, the version of the schema extensions that were used.
 
-Configuration Manager doesn't require Active Directory schema extensions for site server installation. Microsoft recommends them for the full use of all Configuration Manager features. For more information about the advantages of extending the schema, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).
+Configuration Manager doesn't require Active Directory schema extensions for site server installation. Microsoft recommends them for the full use of all Configuration Manager features. For more information about the advantages of extending the schema, see [Prepare Active Directory for site publishing](../../../plan-design/network/extend-the-active-directory-schema.md).
 
 ### Share name in package
 
@@ -772,7 +772,7 @@ This SQL Native Client version supports TLS 1.2. For more information, see the f
 
 - [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 
-- [How to enable TLS 1.2 for Configuration Manager](/sccm/core/plan-design/security/enable-tls-1-2)  
+- [How to enable TLS 1.2 for Configuration Manager](../../../plan-design/security/enable-tls-1-2.md)  
 
 Configuration Manager uses SQL Server Native Client on the following site system roles:<!-- SCCMDocs issue 1150 -->
 
@@ -816,7 +816,7 @@ SQL Server is configured for Windows authentication security.
 
 Site system roles other than distribution points are installed on servers running Windows Server 2012 or later.
 
-For more information, see [Supported operating systems for Configuration Manager site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+For more information, see [Supported operating systems for Configuration Manager site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
 > [!NOTE]  
 > This check can't resolve the status of site system roles installed in Azure or for the cloud storage used by Microsoft Intune. Ignore warnings for these roles as false positives.
@@ -825,7 +825,7 @@ For more information, see [Supported operating systems for Configuration Manager
 
 *Applies to: Central administration site, primary site*
 
-The Upgrade Assessment Toolkit isn't installed. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+The Upgrade Assessment Toolkit isn't installed. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 ### Verify site server permissions to publish to Active Directory
 
@@ -833,7 +833,7 @@ The Upgrade Assessment Toolkit isn't installed. For more information, see [Remov
 
 The computer account for the site server has **Full Control** permissions to the **System Management** container in the Active Directory domain.
 
-For more information, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).
+For more information, see [Prepare Active Directory for site publishing](../../../plan-design/network/extend-the-active-directory-schema.md).
 
 > [!NOTE]  
 > If you manually verify the permissions, you can ignore this warning.

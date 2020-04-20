@@ -31,13 +31,13 @@ When you use availability groups in Microsoft Azure, you can further increase av
 
 ## Supported scenarios
 
-The following scenarios are supported for using availability groups with Configuration Manager. For more information and procedures for each scenario, see [Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag).
+The following scenarios are supported for using availability groups with Configuration Manager. For more information and procedures for each scenario, see [Configure availability groups for Configuration Manager](configure-aoag.md).
 
-- [Create an availability group for use with Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_create)  
-- [Configure a site to use the availability group](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_configure)  
-- [Add or remove synchronous replica members from an availability group that hosts a site database](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_sync)  
-- [Configure or recover a site from an asynchronous commit replicas](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_async)  
-- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](/sccm/core/servers/deploy/configure/configure-aoag#bkmk_stop)  
+- [Create an availability group for use with Configuration Manager](configure-aoag.md#bkmk_create)  
+- [Configure a site to use the availability group](configure-aoag.md#bkmk_configure)  
+- [Add or remove synchronous replica members from an availability group that hosts a site database](configure-aoag.md#bkmk_sync)  
+- [Configure or recover a site from an asynchronous commit replicas](configure-aoag.md#bkmk_async)  
+- [Move a site database out of an availability group to a default or named instance of a standalone SQL Server](configure-aoag.md#bkmk_stop)  
 
 
 ## Prerequisites
@@ -61,7 +61,7 @@ The computer account of the site server must be a member of the local **Administ
 
 #### Version
 
-Each replica in the availability group must run a version of SQL Server that's supported by your version of Configuration Manager. When supported by SQL Server, different nodes of an availability group can run different versions of SQL Server. For more information, see [Supported SQL Server versions for Configuration Manager](/sccm/core/plan-design/configs/support-for-sql-server-versions).<!--SCCMDocs issue 656-->
+Each replica in the availability group must run a version of SQL Server that's supported by your version of Configuration Manager. When supported by SQL Server, different nodes of an availability group can run different versions of SQL Server. For more information, see [Supported SQL Server versions for Configuration Manager](../../../plan-design/configs/support-for-sql-server-versions.md).<!--SCCMDocs issue 656-->
 
 #### Edition
 
@@ -209,7 +209,7 @@ Run the following SQL script to verify database configurations for both primary 
 
 - Use the same number and type of replicas in an availability group that your version of SQL Server supports.
 
-- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](/sccm/core/servers/manage/recover-sites#site-database-recovery-options).  
+- You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](../../manage/recover-sites.md#site-database-recovery-options).  
 
     > [!Warning]  
     > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
@@ -298,7 +298,7 @@ MSF Enabled : 1 (DWORD)
 ```
 
 > [!Warning]  
-> Use of [site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
+> Use of [site server high availability](site-server-high-availability.md) and SQL Server Always On with multi-subnet failover doesn't provide the full capabilities of automatic failover for disaster recovery scenarios.
 
 If you need to create an availability group with a member in a remote location, prioritize based on the lowest network latency. High network latency can cause replication failures.<!-- SCCMDocs#1381 -->
 
@@ -315,7 +315,7 @@ The following limitations apply to all scenarios.
 
 - **MultiSubnetFailover**: In version 1902 and earlier, it's not supported to use an availability group with Configuration Manager in a multi-subnet configuration. You also can't use the [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) keyword connection string.
 
-    To support this configuration, update Configuration Manager to version 1906 or later. For more information, see the [Multi-subnet failover](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#multi-subnet-failover) prerequisite.
+    To support this configuration, update Configuration Manager to version 1906 or later. For more information, see the [Multi-subnet failover](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
 ### SQL Servers that host additional availability groups
 
@@ -349,7 +349,7 @@ You can't use a new database created on the replica. When you configure an avail
 #### Distributed views
 
 <!-- SCCMDocs-pr#3792 -->
-In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
+In version 1902 and earlier, if you host the site database on a SQL Server Always On availability group, you can't enable [distributed views](../../../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) for database replication. To support this configuration, update to version 1906 or later.
 
 
 ### Setup errors in ConfigMgrSetup.log
@@ -387,7 +387,7 @@ Starting in version 1906, site recovery can recreate the database on a SQL Alway
 
 In version 1902 or earlier, when you lose all nodes of an availability group, before you can recover the site, first recreate the availability group. Configuration Manager can't rebuild or restore the availability node. Recreate the group, restore the backup, and reconfigure SQL. Then use the site recovery option to **Skip database recovery (Use this option if the site database was unaffected)**.
 
-For more information, see [Backup and recovery](/sccm/core/servers/manage/backup-and-recovery).
+For more information, see [Backup and recovery](../../manage/backup-and-recovery.md).
 
 
 ## Changes for reporting
@@ -411,4 +411,4 @@ The reporting services point doesn't support using the listener virtual name of 
 
 ## Next steps
 
-This article describes the prerequisites, limitations, and changes to common tasks that Configuration Manager requires when you use availability groups. For procedures to set up and configure your site to use availability groups, see [Configure availability groups](/sccm/core/servers/deploy/configure/configure-aoag).
+This article describes the prerequisites, limitations, and changes to common tasks that Configuration Manager requires when you use availability groups. For procedures to set up and configure your site to use availability groups, see [Configure availability groups](configure-aoag.md).

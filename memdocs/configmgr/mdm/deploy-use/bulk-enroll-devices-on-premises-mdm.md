@@ -22,15 +22,15 @@ Bulk enrollment in Configuration Manager on-premises mobile device management (M
 
 Include a certificate profile to automatically install a trusted root certificate on the device. This root certificate is required for trusted communication between the devices and the site system roles needed for on-premises MDM.
 
-When you prepare the site for on-premises MDM, you export the trusted root certificate. Use this certificate in the enrollment package's certificate profile. For more information on how to get the trusted root certificate, see [Export the trusted root certificate](/configmgr/mdm/get-started/set-up-certificates-on-premises-mdm#bkmk_exportCert).
+When you prepare the site for on-premises MDM, you export the trusted root certificate. Use this certificate in the enrollment package's certificate profile. For more information on how to get the trusted root certificate, see [Export the trusted root certificate](../get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert).
 
-Use the exported certificate to create a certificate profile. For more information, see [How to create certificate profiles](/configmgr/protect/deploy-use/create-certificate-profiles).
+Use the exported certificate to create a certificate profile. For more information, see [How to create certificate profiles](../../protect/deploy-use/create-certificate-profiles.md).
 
 ## <a name="CreateWifi"></a> Create a Wi-Fi profile
 
 Another component of the bulk enrollment package is a Wi-Fi profile. This profile can make sure that the device has the network connectivity to support enrollment.
 
-For more information on how to create a Wi-Fi profile in Configuration Manager, see [How to create Wi-Fi profiles](/configmgr/protect/deploy-use/create-wifi-profiles).
+For more information on how to create a Wi-Fi profile in Configuration Manager, see [How to create Wi-Fi profiles](../../protect/deploy-use/create-wifi-profiles.md).
 
 ### Wi-Fi profile limitations
 

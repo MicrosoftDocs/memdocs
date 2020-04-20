@@ -20,7 +20,7 @@ manager: dougeby
 
 Update 1810 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1710, 1802, or 1806. <!-- baseline only statement: When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1810.  
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810). After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1810](../../servers/manage/checklist-for-installing-update-1810.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1810.md#post-update-checklist).
 
 To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -37,13 +37,13 @@ To take advantage of new Configuration Manager features, first update clients to
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
 
-Learn about support changes before they're implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](/sccm/mdm/understand/what-happened-to-hybrid).<!--Intune feature 2683117-->  
+Starting on August 14, 2018, the hybrid mobile device management feature is deprecated. For more information, see [What happened to hybrid MDM](../../../mdm/understand/what-happened-to-hybrid.md).<!--Intune feature 2683117-->  
 
 Support for System Center Endpoint Protection (SCEP) for Mac and Linux (all versions) ends on December 31, 2018. Availability of new virus definitions for SCEP for Mac and SCEP for Linux may be discontinued after the end of support. For more information, see [End of support blog post](https://go.microsoft.com/fwlink/?linkid=870182).
 
-Classic service deployments in Azure are now deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway and the cloud distribution point. For more information, see [Plan for CMG](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager).
+Classic service deployments in Azure are now deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud management gateway and the cloud distribution point. For more information, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
 
 
@@ -54,7 +54,7 @@ Classic service deployments in Azure are now deprecated in Configuration Manager
 <!--1359195-->
 Configuration Manager now supports Windows Server 2019 and Windows Server, version 1809, as site systems.
 
-For more information, see [Supported operating systems for site system servers](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers).
+For more information, see [Supported operating systems for site system servers](../configs/supported-operating-systems-for-site-system-servers.md).
 
 
 ### Hierarchy support for site server high availability
@@ -62,20 +62,20 @@ For more information, see [Supported operating systems for site system servers](
 <!--3607755, fka 1358224-->
 Central administration sites and child primary sites can now have an additional site server in passive mode.
 
-For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).
+For more information, see [Site server high availability](../../servers/deploy/configure/site-server-high-availability.md).
 
 
 ### Improvements to setup prerequisites
 
 When you install or update to version 1810, Configuration Manager setup now includes or improves the following prerequisite checks:
 
-- **Pending system restart**: This prerequisite check is now more resilient. It checks additional registry keys for Windows features. For more information, see [Pending system restart](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
+- **Pending system restart**: This prerequisite check is now more resilient. It checks additional registry keys for Windows features. For more information, see [Pending system restart](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart). <!--SCCMDocs-pr issue 3010-->  
 
-- **SQL change tracking cleanup**: A new check if the site database has a backlog of SQL change tracking data. For more information, including a procedure to verify and clear this backlog, see [SQL change tracking cleanup](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
+- **SQL change tracking cleanup**: A new check if the site database has a backlog of SQL change tracking data. For more information, including a procedure to verify and clear this backlog, see [SQL change tracking cleanup](../../servers/deploy/install/list-of-prerequisite-checks.md#bkmk_changetracking). <!--SCCMDocs-pr issue 3023-->  
 
-- **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-server-native-client). <!--SCCMDocs-pr issue 3094-->  
+- **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402). For more information, see [SQL Native Client version](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client). <!--SCCMDocs-pr issue 3094-->  
 
-- **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [Windows Failover Cluster](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster). <!--1359132-->  
+- **Site system on Windows cluster node**: The Configuration Manager setup process no longer blocks installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Always On requires this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using SQL Always On and a site server in passive mode. For more information, see [Windows Failover Cluster](../../servers/deploy/install/list-of-prerequisite-checks.md#windows-failover-cluster). <!--1359132-->  
 
 
 ### New permission for client notification actions
@@ -88,7 +88,7 @@ Client notification actions now require the **Notify Resource** permission on th
 
 Add this permission to any custom roles that need to use client notification actions.
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
+For more information, see [Client notifications](../../clients/manage/client-notification.md).
 
 
 
@@ -103,7 +103,7 @@ Boundary groups now include the following additional settings to give you more c
 
 - **Prefer cloud distribution points over distribution points**: If you have a branch office with a faster internet link, you can now prioritize cloud content.  
 
-For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).
+For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
 
 
 ### Management insights rule for peer cache source client version
@@ -111,7 +111,7 @@ For more information, see [Boundary group options for peer downloads](/sccm/core
 <!-- 1358008 -->
 The **Management Insights** node has a new rule to identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. The new rule is **Upgrade peer cache sources to the latest version of the Configuration Manager client**, and is part of the new **Proactive Maintenance** rule group. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+For more information, see [Management insights](../../servers/manage/management-insights.md).
 
 
 
@@ -122,14 +122,14 @@ For more information, see [Management insights](/sccm/core/servers/manage/manage
 <!--1317364-->
 You can now wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify another client that's awake on the same remote subnet. The awake client then sends a wake on LAN request (magic packet).
 
-For more information, see [Configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan) and [How to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).
+For more information, see [Configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md) and [How to wake up clients](../../clients/deploy/plan/plan-wake-up-clients.md).
 
 ### New option to perform client notification from devices node
 
 <!--1317364-->
 Up until 1810, the **Client Notification** option was only available from either the Device Collection node or when you viewed the membership of a Device Collection. It's now possible to perform a **Client Notification** from the **Devices** node directly. There's no longer a requirement to be within a collection membership view.
 
-For more information, see [Client notifications](/sccm/core/clients/manage/client-notification).
+For more information, see [Client notifications](../../clients/manage/client-notification.md).
 
 
 ### Improvements to collection evaluation
@@ -141,7 +141,7 @@ The following changes in collection evaluation behavior can improve site perform
 
 - You can't disable the evaluation of built-in collections like **All Systems**, but now you can configure the schedule. This behavior allows you to customize this action at a time that meets your business requirements.
 
-For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections#bkmk_create).
+For more information, see [How to create collections](../../clients/manage/collections/create-collections.md#bkmk_create).
 
 
 ### Improvement to client installation
@@ -149,7 +149,7 @@ For more information, see [How to create collections](/sccm/core/clients/manage/
 <!--1358840-->
 When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. Previously in this process the management point only returns distribution points in the client's current boundary group. If no content is available, the setup process falls back to download content from the management point. There's no option to fall back to distribution points in other boundary groups that might have the necessary content. Now the management point returns distribution points based on boundary group configuration.
 
-For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup).
+For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup).
 
 
 
@@ -160,7 +160,7 @@ For more information, see [Configure boundary groups](/sccm/core/servers/deploy/
 <!--1358196-->
 Define compliance policy rules in Configuration Manager for required applications. This app assessment is part of the overall compliance state sent to Microsoft Intune for co-managed devices.
 
-For more information, see [Co-management workloads](/sccm/comanage/workloads).
+For more information, see [Co-management workloads](../../../comanage/workloads.md).
 
 
 ### Improvement to co-management dashboard
@@ -176,7 +176,7 @@ The co-management dashboard is enhanced with the following more detailed informa
 
 ![Co-management dashboard screenshot showing the top four tiles](media/1358980-comgmt-dashboard.png)
 
-For more information, see [Co-management dashboard](/sccm/comanage/how-to-monitor#co-management-dashboard).
+For more information, see [Co-management dashboard](../../../comanage/how-to-monitor.md#co-management-dashboard).
 
 
 ### Improvements to internet-based client setup
@@ -184,7 +184,7 @@ For more information, see [Co-management dashboard](/sccm/comanage/how-to-monito
 <!--3607731, fka 1359181-->
 This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
 
-For more information, see [How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client).
+For more information, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 
 
 
@@ -195,7 +195,7 @@ For more information, see [How to prepare internet-based devices for co-manageme
 <!--3607729, fka 1359029-->
 Starting in version 1806, Configuration Manager supports deployment of the new Windows 10 app package (.msix) format. Now you can convert your existing Windows Installer (.msi) applications to the MSIX format.
 
-For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_msix).  
+For more information, see [Create Windows applications](../../../apps/get-started/creating-windows-applications.md#bkmk_msix).  
 
 
 ### Repair applications
@@ -203,7 +203,7 @@ For more information, see [Create Windows applications](/sccm/apps/get-started/c
 <!--1357866-->
 Specify a repair command line for Windows Installer and Script Installer deployment types. Then if you enable the option on the deployment, a new button is available in Software Center to **Repair** the application. When you configure an application with a repair program, users can start the command from Software Center.
 
-For more information, see [Create applications](/sccm/apps/deploy-use/create-applications#bkmk_dt-content) and [Deploy applications](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy-settings).
+For more information, see [Create applications](../../../apps/deploy-use/create-applications.md#bkmk_dt-content) and [Deploy applications](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings).
 
 
 ### Approve application requests via email
@@ -211,7 +211,7 @@ For more information, see [Create applications](/sccm/apps/deploy-use/create-app
 <!--1321550-->
 Configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
-For more information, see [Approve applications](/sccm/apps/deploy-use/app-approval).
+For more information, see [Approve applications](../../../apps/deploy-use/app-approval.md).
 
 
 ### Detection methods don't load Windows PowerShell profiles
@@ -222,9 +222,9 @@ You can use Windows PowerShell scripts for detection methods on applications and
 A PowerShell profile is a script that runs when PowerShell starts. You can create a PowerShell profile to customize your environment and to add session-specific elements to every PowerShell session that you start.
 
 > [!Note]  
-> This change in behavior doesn't apply to [Scripts](/sccm/apps/deploy-use/create-deploy-scripts) or [CMPivot](/sccm/core/servers/manage/cmpivot). Both of these features already use this PowerShell parameter.  
+> This change in behavior doesn't apply to [Scripts](../../../apps/deploy-use/create-deploy-scripts.md) or [CMPivot](../../servers/manage/cmpivot.md). Both of these features already use this PowerShell parameter.  
 
-For more information, see [Create applications](/sccm/apps/deploy-use/create-applications) and [Create custom configuration items](/sccm/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client).
+For more information, see [Create applications](../../../apps/deploy-use/create-applications.md) and [Create custom configuration items](../../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md).
 
 
 
@@ -235,7 +235,7 @@ For more information, see [Create applications](/sccm/apps/deploy-use/create-app
 <!--3607717, fka 1358333-->
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices).
+For more information, see [Windows Autopilot for existing devices](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md).
 
 
 ### Specify the drive for offline OS image servicing
@@ -243,7 +243,7 @@ For more information, see [Windows Autopilot for existing devices](/sccm/osd/dep
 <!--1358924-->
 Now specify the drive that Configuration Manager uses when adding software updates to OS images and OS upgrade packages. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
-For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive) or [Manage OS upgrade packages](/sccm/osd/get-started/manage-operating-system-upgrade-packages#bkmk_servicing-drive).
+For more information, see [Manage OS images](../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive) or [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#bkmk_servicing-drive).
 
 
 ### Task sequence support for boundary groups
@@ -251,7 +251,7 @@ For more information, see [Manage OS images](/sccm/osd/get-started/manage-operat
 <!--1359025-->
 When a device runs a task sequence and needs to acquire content, it now uses boundary group behaviors similar to the Configuration Manager client.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd).
+For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_bgr-osd).
 
 
 ### Improvements to driver maintenance
@@ -259,21 +259,21 @@ For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/
 <!--3607716, fka 1358270-->
 Driver packages now have additional metadata fields for **Manufacturer** and **Model**. Use these fields to tag driver packages with information to assist in general housekeeping, or to identify old and duplicate drivers that you can delete.
 
-For more information, see [Manage drivers](/sccm/osd/get-started/manage-drivers).
+For more information, see [Manage drivers](../../../osd/get-started/manage-drivers.md).
 
 ### Improvements to Windows 10 servicing plan filters
 
 <!--3098809, 3113836, 3204570 -->
 Additional filters have been added to Windows 10 servicing plans. You can now filter by **Architecture**, **Product Category**, and if the upgrade is **Superseded**.
 
-For more information, see [Windows 10 servicing plan](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan).
+For more information, see [Windows 10 servicing plan](../../../osd/deploy-use/manage-windows-as-a-service.md#BKMK_ServicingPlan).
 
 ### New task sequence variable for last action name
 
 <!--SCCMDocs-pr issue #2964-->
 Along with the task sequence variable _SMSTSLastActionRetCode, the task sequence also sets a new variable **_SMSTSLastActionName**. It also logs this value to the smsts.log file. This new variable is beneficial when troubleshooting a task sequence. When a step fails, a custom script can include the step name along with the return code.
 
-For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSLastActionName).
+For more information, see [Task sequence variables](../../../osd/understand/task-sequence-variables.md#SMSTSLastActionName).
 
 
 
@@ -284,7 +284,7 @@ For more information, see [Task sequence variables](/sccm/osd/understand/task-se
 <!--1358146-->
 Create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
-For more information, see [Create phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+For more information, see [Create phased deployments](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 
 
 ### Improvement to maintenance windows for software updates
@@ -294,7 +294,7 @@ The following client setting is in the **Software Updates** group to control the
 
 By default, this option is **No** to keep consistent with the existing behavior. Change it to **Yes** to allow clients to use other available maintenance windows to install software updates.
 
-For more information, see [Software updates client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint).
+For more information, see [Software updates client settings](../../clients/deploy/about-client-settings.md#bkmk_SUMMaint).
 
 
 ### Improvement to software updates maintenance
@@ -302,14 +302,14 @@ For more information, see [Software updates client settings](/sccm/core/clients/
 <!--2839349-->
 WSUS cleanup tasks now run on secondary sites. WSUS cleanup for expired updates is run and superseded updates are declined in WSUS for secondary sites.
 
-For more information, see [WSUS cleanup behavior starting in version 1810](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
+For more information, see [WSUS cleanup behavior starting in version 1810](../../../sum/deploy-use/software-updates-maintenance.md#wsus-cleanup-behavior-starting-in-version-1810)
 
 ### Improvement to software update supersedence rules
 
 <!--3098809, 2977644-->
 You can now specify supersedence rules for feature updates separately from non-feature updates. This means your upgrades won't be removed from Configuration Manager before you have completed servicing your Windows 10 clients.
 
-For more information, see [Supersedence rules](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules).
+For more information, see [Supersedence rules](../../../sum/get-started/install-a-software-update-point.md#supersedence-rules).
 
 ## <a name="bkmk_report"></a> Reporting
 
@@ -320,7 +320,7 @@ The product lifecycle dashboard now includes information for **System Center 201
 
 There's also a new report, **Lifecycle 05A - Product lifecycle dashboard**. It includes similar information as the in-console dashboard.
 
-For more information on this dashboard, see [Use the Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard).
+For more information on this dashboard, see [Use the Product Lifecycle dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 
 ### Improvement to data warehouse
@@ -328,7 +328,7 @@ For more information on this dashboard, see [Use the Product Lifecycle dashboard
 <!--1358870-->
 You can now synchronize more tables from the site database to the data warehouse. This change allows you to create more reports based on your business requirements.
 
-For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).
+For more information, see [Data warehouse](../../servers/manage/data-warehouse.md).
 
 
 
@@ -339,7 +339,7 @@ For more information, see [Data warehouse](/sccm/core/servers/manage/data-wareho
 <!--1357013-->
 You can now specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. To configure this setting, find the **Authentication** tab in **Hierarchy Settings**.
 
-For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
 
 
 ### Support Center
@@ -347,7 +347,7 @@ For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hie
 <!--1357489-->
 Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to combine many administrator troubleshooting tools. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
 
-For more information, see [Support Center](/sccm/core/support/support-center).
+For more information, see [Support Center](../../support/support-center.md).
 
 
 ### Management insights dashboard
@@ -365,7 +365,7 @@ The **Management Insights** node now includes a graphical dashboard. This dashbo
 
 ![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
 
-For more information, see [Management insights](/sccm/core/servers/manage/management-insights).
+For more information, see [Management insights](../../servers/manage/management-insights.md).
 
 
 ### Improvements to CMPivot
@@ -379,7 +379,7 @@ CMPivot includes the following improvements:
 
 For more information on additional performance and troubleshooting improvements to CMPivot, see [Improvements to scripts](#bkmk_scripts).
 
-For more information on CMPivot, see [CMPivot](/sccm/core/servers/manage/cmpivot).
+For more information on CMPivot, see [CMPivot](../../servers/manage/cmpivot.md).
 
 
 ### <a name="bkmk_scripts"></a> Improvements to scripts
@@ -395,9 +395,9 @@ The following performance and troubleshooting improvements apply to both CMPivot
 
 For more information, see the following articles:  
 
-- [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Create and run PowerShell scripts from the Configuration Manager console](../../../apps/deploy-use/create-deploy-scripts.md)  
 
-- [Troubleshooting CMPivot](/sccm/core/servers/manage/cmpivot-tsg)
+- [Troubleshooting CMPivot](../../servers/manage/cmpivot-tsg.md)
 
 
 ### SMS Provider API
@@ -407,7 +407,7 @@ The SMS Provider now provides read-only API interoperability access to WMI over 
 
 The **SMS Provider** appears as a role with an option to allow communication over the cloud management gateway. The current use for this setting is to enable application approvals via email from a remote device.
 
-For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service).
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_admin-service).
 
 
 
@@ -442,16 +442,16 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](/sccm/core/servers/manage/updates) and [Checklist for installing update 1810](/sccm/core/servers/manage/checklist-for-installing-update-1810).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 1810](../../servers/manage/checklist-for-installing-update-1810.md).
 
 > [!TIP]  
 > To install a new site, use a baseline version of Configuration Manager.  
 >
 > Learn more about:
 >
-> - [Installing new sites](/sccm/core/servers/deploy/install/installing-sites)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
 
-For known, significant issues, see the [Release notes](/sccm/core/servers/deploy/install/release-notes).
+For known, significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1810.md#post-update-checklist).

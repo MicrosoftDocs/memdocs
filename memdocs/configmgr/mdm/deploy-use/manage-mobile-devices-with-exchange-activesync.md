@@ -22,7 +22,7 @@ If you have mobile devices that you connect to Exchange Server via the ActiveSyn
 
 ![Logical diagram of Exchange Server connector with Configuration Manager](media/configmgr-with-exchange.png)  
 
-When you manage mobile devices with this connector, it doesn't install the Configuration Manager client or enroll the devices via MDM. The management functions of Exchange Server are limited in comparison to these other options. For example, you can't install software or use configuration items to configure these devices. For more information, see [Choose a device management solution for Configuration Manager](/configmgr/core/plan-design/choose-a-device-management-solution).  
+When you manage mobile devices with this connector, it doesn't install the Configuration Manager client or enroll the devices via MDM. The management functions of Exchange Server are limited in comparison to these other options. For example, you can't install software or use configuration items to configure these devices. For more information, see [Choose a device management solution for Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).  
 
 ## Policies
 
@@ -47,7 +47,7 @@ When you configure at least one setting in the group, Configuration Manager mana
 
 You can also configure the Exchange Server connector to manage the Exchange access rules. These access rules include allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console, and users can remotely wipe their mobile devices by using the application catalog.
 
-A user's mobile device automatically appears in the application catalog when you manage it and the Exchange Server is on-premises. For the mobile device to appear in the application catalog when you use Exchange Online, manually configure user device affinity. For more information, see [Link users and devices with user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).
+A user's mobile device automatically appears in the application catalog when you manage it and the Exchange Server is on-premises. For the mobile device to appear in the application catalog when you use Exchange Online, manually configure user device affinity. For more information, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 > [!TIP]  
 > When a mobile device is transferred to another user, before the new owner configures their Exchange account on the device, delete the mobile device from the Configuration Manager console.
@@ -55,7 +55,7 @@ A user's mobile device automatically appears in the application catalog when you
 ## Prerequisites
 
 > [!IMPORTANT]  
-> Before you install this connector, confirm that Configuration Manager supports your version of Exchange. For more information, see [Supported configurations - Exchange Server connector](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_ExSrvConOS).  
+> Before you install this connector, confirm that Configuration Manager supports your version of Exchange. For more information, see [Supported configurations - Exchange Server connector](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_ExSrvConOS).  
 
 ### Permissions to configure the connector
 
@@ -79,9 +79,9 @@ You need the following security permissions to manage mobile devices:
 
 For example, the **Operations Administrator** built-in role includes these required permissions.
 
-For more information, see [Configure role-based administration](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
+For more information, see [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Install and configure the Exchange connector](/configmgr/mdm/deploy-use/install-configure-exchange-connector)
+> [Install and configure the Exchange connector](install-configure-exchange-connector.md)

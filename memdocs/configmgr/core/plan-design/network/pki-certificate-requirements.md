@@ -17,7 +17,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The public key infrastructure (PKI) certificates that you might require for Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For more information, see [Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 Certification Authority](/sccm/core/plan-design/network/example-deployment-of-pki-certificates).
+The public key infrastructure (PKI) certificates that you might require for Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For more information, see [Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 Certification Authority](example-deployment-of-pki-certificates.md).
 
 For more about Active Directory Certificate Services, see the following documentation:  
 

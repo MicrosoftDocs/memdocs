@@ -26,6 +26,8 @@ General notes about Software Center functionality:
 
 - Your IT admin may disable some aspects of Software Center. Your specific experience may vary.
 
+- If multiple users are using a device at the same time, say via multiple remote desktop sessions, the user with the lowest session ID will be the only one to see all available deployments in Software Center. Users with higher session IDs may not see some of the deployments in Software Center. For example, the users with higher session IDs may see deployed Applications, but not deployed Packages or Task Sequences. Meanwhile the user with the lowest session ID will see all deployed Applications, Packages, and Task Sequences.
+
 <!-- - Your IT admin may change the color of Software Center, and add your organization's logo. The images in this article show the default experience. -->
 
 ## <a name="bkmk_open"></a> How to open Software Center
@@ -162,7 +164,7 @@ Specify remote access and remote control settings for your computer
     - **Repeatedly during session**
     - **Never**
 
-    For more info, see [Introduction to Remote Control](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)
+    For more info, see [Introduction to Remote Control](../clients/manage/remote-control/introduction-to-remote-control.md)
     
 
 ## Custom tab in Software Center

@@ -25,22 +25,22 @@ Configure the following Azure services using this wizard:
 
 - **Cloud Management**: This service enables the site and clients to authenticate by using Azure AD. This authentication enables other scenarios, such as:  
 
-    - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+    - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-    - [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+    - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
-    - [Configure Azure AD User Group Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_azuregroupdisco)
+    - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-    - Support certain [cloud management gateway scenarios](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
+    - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
 
-    - [App approval email notifications](/sccm/apps/deploy-use/app-approval#bkmk_email-approve)
+    - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics Connector**: [Connect to Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics). Sync collection data to Log Analytics.  
+- **Log Analytics Connector**: [Connect to Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
     > [!Note]  
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. There's no functional difference. For more information, see [Azure Management - Monitoring](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
 
-- **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business). Get store apps for your organization that you can deploy with Configuration Manager.  
+- **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
 
 ### Service details
 
@@ -216,11 +216,11 @@ Select **OK** to create the native app in Azure AD and close the Create Client A
 
 After specifying the web and native apps on the Apps page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:  
 
-- **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+- **Cloud Management** service, **Discovery** page: [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#grant-configuration-manager-with-permissions-to-log-analytics)  
+- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
 
-- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
+- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
@@ -263,7 +263,7 @@ The following diagram is a conceptual data flow for the interaction between Conf
 
 2. Configuration Manager Azure AD user discovery method runs. The site uses the Azure AD server app token to query Microsoft Graph for user objects.  
 
-3. The site stores data about the user objects. For more information, see [Azure AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc).  
+3. The site stores data about the user objects. For more information, see [Azure AD User Discovery](about-discovery-methods.md#azureaddisc).  
 
 4. The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens).  
 

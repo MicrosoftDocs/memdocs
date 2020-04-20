@@ -17,7 +17,7 @@ The following example shows how to set the distribute on demand flag property of
 
 ### To set the distribute on demand flag  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Load the existing package object by using [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class.  
 
@@ -143,8 +143,8 @@ public void SetDistributeOnDemandFlag(WqlConnectionManager connection,
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Software distribution overview](software-distribution-overview.md)
+ [Objects overview](../../understand/configuration-manager-objects-overview.md)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)

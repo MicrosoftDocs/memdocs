@@ -45,4 +45,4 @@ After the site imports the configuration data, you can then work with it in the 
 
 ## Next steps
 
-[About authoring configuration baselines and items](/sccm/develop/compliance/about-authoring-configuration-baselines-and-configuration-items)
+[About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

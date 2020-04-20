@@ -16,7 +16,7 @@ manager: dougeby
 
 # Troubleshoot Microsoft Connected Cache in Configuration Manager
 
-This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache).
+This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
 > Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache (DOINC).
@@ -29,7 +29,7 @@ Verify this behavior [on a client](#bkmk_verify-client) or [on the server](#bkmk
 
 ### <a name="bkmk_verify-client"></a> Verify on a client
 
-1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](/sccm/core/plan-design/hierarchy/delivery-optimization-in-network-cache#verify).
+1. On client running Windows 10, version 1809 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Verify Connected Cache](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
 
 2. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`
 
@@ -229,4 +229,4 @@ If the IIS and ARR log files take up too much space on the server, there are sev
 
 ## See also
 
-[Microsoft Connected Cache in Configuration Manager](/sccm/core/plan-design/hierarchy/microsoft-connected-cache)
+[Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md)

@@ -18,7 +18,7 @@ With co-management, you can keep your well-established processes for using Confi
 
 In this tutorial, you set up co-management of Windows 10 devices in an environment where you use both Azure Active Directory (AD) and an on-premises AD but don't have a [hybrid Azure Active Directory](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (AD). The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 devices are already enrolled with Intune. 
 
-If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](/sccm/comanage/tutorial-co-manage-clients).
+If you have a hybrid Azure AD that joins your on-premises AD with Azure AD, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
 
 Use this tutorial when:
   
@@ -48,13 +48,13 @@ Use this tutorial when:
 - Intune is configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune)  
 
 > [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](/configmgr/core/understand/product-and-licensing-faq#bkmk_mem).
+> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### On-premises infrastructure
 
 - Configuration Manager current branch, version 1810 or later.
   
-  Version 1810 introduces [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
+  Version 1810 introduces [Enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md), which is used in this tutorial to avoid more complex PKI requirements. Through use of Enhanced HTTP, the primary site that you use to manage clients must be configured to use Configuration Manager-generated certificates for HTTP site systems.  
 
   Version 1810 also introduces a simpler command line for internet-based installation of the Configuration Manager client.
 
@@ -195,7 +195,7 @@ Run the following procedure from the primary site server.
    Then select **Cloud Management**, and then select **Next**.  
 
    > [!TIP]  
-   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](https://docs.microsoft.com/sccm/core/servers/deploy/configure/Azure-services-wizard#start-the-azure-services-wizard)
+   > For more information about the configurations you make in the wizard, see [Start the Azure Services wizard](../core/servers/deploy/configure/Azure-services-wizard.md#start-the-azure-services-wizard)
 
 2. On the **App Properties** page, for **Web app**, select **Browse** to open the **Server App** dialog, and then select **Create**. Configure the following fields:
 
@@ -420,6 +420,6 @@ After you complete the configuration steps of this tutorial, you can start co-ma
 
 ## Next steps
 
-- Review the status of co-managed devices with the [Co-management dashboard](https://docs.microsoft.com/sccm/core/clients/manage/co-management-dashboard)
-- Use [Windows Autopilot](/sccm/comanage/quickstart-autopilot) to provision new devices
-- Use [conditional access](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access) and Intune compliance rules to manage user access to corporate resources
+- Review the status of co-managed devices with the [Co-management dashboard](how-to-monitor.md)
+- Use [Windows Autopilot](quickstart-autopilot.md) to provision new devices
+- Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources

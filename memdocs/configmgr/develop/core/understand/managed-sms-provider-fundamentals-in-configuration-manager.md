@@ -71,5 +71,5 @@ The managed SMS Provider library is a .NET Framework library that wraps the Syst
 
 ## See also
 
- [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals)
- [Configuration Manager objects](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [SMS Provider fundamentals](sms-provider-fundamentals.md)
+ [Configuration Manager objects](configuration-manager-objects-overview.md)

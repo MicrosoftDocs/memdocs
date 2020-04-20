@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-This article describes security and privacy information for Configuration Manager clients. It also includes information for mobile devices that are managed by the [Exchange Server connector](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+This article describes security and privacy information for Configuration Manager clients. It also includes information for mobile devices that are managed by the [Exchange Server connector](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 
 ## <a name="BKMK_Security_Clients"></a> Security best practices for clients  
@@ -35,7 +35,7 @@ The Configuration Manager site accepts data from devices that run the Configurat
 
 Mobile device clients and some internet-based clients require these certificates. Microsoft recommends these certificates for all client connections on the intranet.  
 
-For more information about the PKI certificate requirements and how they're used to help protect Configuration Manager, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+For more information about the PKI certificate requirements and how they're used to help protect Configuration Manager, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).  
 
 ### Automatically approve client computers from trusted domains and manually check and approve other computers  
 
@@ -47,7 +47,7 @@ When you can't use PKI authentication, approval identifies a computer that you t
 
 The most secure approval method is to automatically approve clients that are members of trusted domains. Then manually check and approve all other computers. Automatically approving all clients isn't recommended, unless you have other access controls to prevent untrustworthy computers from accessing your network.  
 
-For more information about how to manually approve computers, see [Manage clients from the devices node](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode).  
+For more information about how to manually approve computers, see [Manage clients from the devices node](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 
 ### Don't rely on blocking to prevent clients from accessing the Configuration Manager hierarchy  
 
@@ -62,7 +62,7 @@ When site systems accept HTTP client connections, don't rely on blocking to prot
 
 Certificate revocation is the primary line of defense against potentially compromised certificates. A certificate revocation list (CRL) is only available from a supported public key infrastructure (PKI). Blocking clients in Configuration Manager offers a second line of defense to protect your hierarchy.  
 
-For more information, see [Determine whether to block clients](/sccm/core/clients/deploy/plan/determine-whether-to-block-clients).  
+For more information, see [Determine whether to block clients](determine-whether-to-block-clients.md).  
 
 ### Use the most secure client installation methods that are practical for your environment  
 
@@ -74,13 +74,13 @@ For more information, see [Determine whether to block clients](/sccm/core/client
 
 Of all the client installation methods, client push installation is the least secure because of the many dependencies it has. These dependencies include local administrative permissions, the Admin$ share, and firewall exceptions. The number and type of these dependencies increase your attack surface.  
 
-Starting in version 1806, when using client push, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).<!--1358204-->  
+Starting in version 1806, when using client push, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../deploy-clients-to-windows-computers.md#BKMK_ClientPush).<!--1358204-->  
 
-For more information about the different client installation methods, see [Client installation methods](/sccm/core/clients/deploy/plan/client-installation-methods).  
+For more information about the different client installation methods, see [Client installation methods](client-installation-methods.md).  
 
 Wherever possible, select a client installation method that requires the least security permissions in Configuration Manager. Restrict the administrative users that are assigned security roles with permissions that can be used for purposes other than client deployment. For example, configuring automatic client upgrade requires the **Full Administrator** security role, which grants an administrative user all security permissions.  
 
-For more information about the dependencies and security permissions required for each client installation method, see "Installation method dependencies" in [Prerequisites for computer clients](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers#BKMK_prereqs_computers).  
+For more information about the dependencies and security permissions required for each client installation method, see "Installation method dependencies" in [Prerequisites for computer clients](../prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers).  
 
 ### If you must use client push installation, take additional steps to secure the Client Push Installation Account  
 
@@ -92,7 +92,7 @@ For additional security, create multiple Client Push Installation Accounts, each
 
 When you deploy clients by using OS images, always remove certificates before capturing the image. These certificates include PKI certificates for client authentication, and self-signed certificates. If you don't remove these certificates, clients might impersonate each other. You can't verify the data for each client.  
 
-For more information, see [Create a task sequence to capture an operating system](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).  
+For more information, see [Create a task sequence to capture an operating system](../../../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).  
 
 ### Ensure that the Configuration Manager computer clients get an authorized copy of these certificates  
 
@@ -105,7 +105,7 @@ When both of the following statements are true, clients rely on the Configuratio
 
 In this scenario, clients have no way to verify that the management point is trusted for the hierarchy unless they use the trusted root key. Without the trusted root key, a skilled attacker could direct clients to a rogue management point.  
 
-When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
+When clients can't download the Configuration Manager trusted root key from the Global Catalog or by using PKI certificates, pre-provision the clients with the trusted root key. This action makes sure that they can't be directed to a rogue management point. For more information, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 #### The site server signing certificate  
 
@@ -113,7 +113,7 @@ Clients use this certificate to verify that the site server signed the policy do
 
 When clients can't download the site server signing certificate from the Global Catalog, by default they download it from the management point. If the management point is exposed to an untrusted network like the internet, manually install the site server signing certificate on clients. This action makes sure that they can't download tampered client policies from a compromised management point.  
 
-To manually install the site server signing certificate, use the CCMSetup client.msi property **SMSSIGNCERT**. For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+To manually install the site server signing certificate, use the CCMSetup client.msi property **SMSSIGNCERT**. For more information, see [About client installation properties](../about-client-installation-properties.md).  
 
 ### Don't use automatic site assignment if the client downloads the trusted root key from the first management point it contacts  
 
@@ -125,7 +125,7 @@ To avoid the risk of a new client downloading the trusted root key from a rogue 
 
 - You use PKI certificates from an enterprise certification authority to establish trust between the client and the management point.  
 
-For more information about the trusted root key, see [Planning for the trusted root key](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForRTK).  
+For more information about the trusted root key, see [Planning for the trusted root key](../../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
 
 ### Install client computers with the CCMSetup Client.msi option SMSDIRECTORYLOOKUP=NoWINS  
 
@@ -158,7 +158,7 @@ If you use software update-based client installation, and install a later versio
 
 When you update the site, the software update for client deployment that's published to the software update point isn't automatically updated. Republish the Configuration Manager client to the software update point and update the version number.  
 
-For more information, see [How to install Configuration Manager clients by using software update-based installation](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP).  
+For more information, see [How to install Configuration Manager clients by using software update-based installation](../deploy-clients-to-windows-computers.md#BKMK_ClientSUP).  
 
 ### Only suspend BitLocker PIN entry on trusted and restricted-access devices  
 
@@ -166,13 +166,13 @@ Only configure the client setting to **Suspend BitLocker PIN entry on restart** 
 
 When you set this client setting to **Always**, Configuration Manager can complete the installation of software. This behavior helps install critical software updates and resume services. If an attacker intercepts the restart process, they could take control of the computer. Use this setting only when you trust the computer, and when physical access to the computer is restricted. For example, this setting might be appropriate for servers in a data center.  
 
-For more information on this client setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#suspend-bitlocker-pin-entry-on-restart).  
+For more information on this client setting, see [About client settings](../about-client-settings.md#suspend-bitlocker-pin-entry-on-restart).  
 
 ### Don't bypass PowerShell execution policy
 
 If you configure the Configuration Manager client setting for **PowerShell execution policy** to **Bypass**, then Windows allows unsigned PowerShell scripts to run. This behavior could allow malware to run on client computers. When your organization requires this option, use a custom client setting. Assign it to only the client computers that must run unsigned PowerShell scripts.  
 
-For more information on this client setting, see [About client settings](/sccm/core/clients/deploy/about-client-settings#powershell-execution-policy).  
+For more information on this client setting, see [About client settings](../about-client-settings.md#powershell-execution-policy).  
 
 
 ## <a name="bkmk_mobile"></a> Security best practices for mobile devices  
@@ -233,7 +233,7 @@ If the Exchange Server is on-premise, use IPsec. Hosted Exchange automatically s
 
 ### Use the principle of least privileges for the connector  
 
-For a list of the minimum cmdlets that the Exchange Server connector requires, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+For a list of the minimum cmdlets that the Exchange Server connector requires, see [Manage mobile devices with Configuration Manager and Exchange](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 
 ## <a name="bkmk_macs"></a> Security best practices for Macs  
@@ -246,7 +246,7 @@ Before installing or enrolling the client on Mac computer, Configuration Manager
 
 To ensure business continuity, monitor and track the validity period of the certificates that you use for Mac computers. Configuration Manager doesn't support automatic renewal of this certificate, or warn you that the certificate is about to expire. A typical validity period is one year.  
 
-For more information about how to renew the certificate, see [Renewing the Mac client certificate manually](/sccm/core/clients/deploy/deploy-clients-to-macs#renew-the-mac-client-certificate).  
+For more information about how to renew the certificate, see [Renewing the Mac client certificate manually](../deploy-clients-to-macs.md#renew-the-mac-client-certificate).  
 
 ### Configure the trusted root certificate for SSL only  
 
@@ -344,7 +344,7 @@ When you deploy the Configuration Manager client, you enable client settings for
 
 Client information is stored in the Configuration Manager database in your SQL server, and isn't sent to Microsoft. Information is retained in the database until it's deleted by the site maintenance tasks **Delete Aged Discovery Data** every 90 days. You can configure the deletion interval. 
 
-Some summarized or aggregate diagnostics and usage data is sent to Microsoft. For more information, see [Diagnostics and usage data](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data).  
+Some summarized or aggregate diagnostics and usage data is sent to Microsoft. For more information, see [Diagnostics and usage data](../../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
 Before you configure the Configuration Manager client, consider your privacy requirements.  
 

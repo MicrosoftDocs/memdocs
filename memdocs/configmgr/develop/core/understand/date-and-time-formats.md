@@ -75,4 +75,4 @@ Actions, in Configuration Manager, that include date and time values are common,
 
 ## See also
 
-[Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+[Objects overview](configuration-manager-objects-overview.md)

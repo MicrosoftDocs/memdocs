@@ -16,7 +16,7 @@ manager: dougeby
 
 # SQL performance
 
-In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](/sccm/core/plan-design/hierarchy/database-replication).
+In a multi-site hierarchy, Configuration Manager uses SQL replication to transfer data between sites. For more information, see [Database replication](../../../plan-design/hierarchy/database-replication.md).
 
 Use the following diagram to start troubleshooting SQL performance that can impact replication status:
 
@@ -91,4 +91,4 @@ ORDER BY count (*) DESC
 
 ## See also
 
-[SQL configuration](/sccm/core/servers/manage/replication/sql-configuration)
+[SQL configuration](sql-configuration.md)

@@ -16,15 +16,15 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Learn how to create a certificate profile that uses a certification authority for credentials. This article highlights specific information about personal information exchange (PFX) certificate profiles. For more information about how to create and configure these profiles, see [Certificate profiles](/configmgr/protect/deploy-use/introduction-to-certificate-profiles).
+Learn how to create a certificate profile that uses a certification authority for credentials. This article highlights specific information about personal information exchange (PFX) certificate profiles. For more information about how to create and configure these profiles, see [Certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
 Configuration Manager allows you to create a PFX certificate profile using credentials issued by a certificate authority. You can choose Microsoft or Entrust as your certificate authority. When deployed to user devices, PFX files generate user-specific certificates to support encrypted data exchange.
 
-To import certificate credentials from existing certificate files, see [Import PFX certificate profiles](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles).
+To import certificate credentials from existing certificate files, see [Import PFX certificate profiles](import-pfx-certificate-profiles.md).
 
 ## Prerequisites
 
-Before you start creating a certificate profile, make sure the necessary prerequisites are ready. For more information, see [Prerequisites for certificate profiles](/configmgr/protect/plan-design/prerequisites-for-certificate-profiles). For example, for PFX certificate profiles, you need a [certificate registration point](/configmgr/protect/deploy-use/certificate-infrastructure#step-2---install-and-configure-the-certificate-registration-point) site system role.
+Before you start creating a certificate profile, make sure the necessary prerequisites are ready. For more information, see [Prerequisites for certificate profiles](../../protect/plan-design/prerequisites-for-certificate-profiles.md). For example, for PFX certificate profiles, you need a [certificate registration point](../../protect/deploy-use/certificate-infrastructure.md#step-2---install-and-configure-the-certificate-registration-point) site system role.
 
 ## Create a profile  
 
@@ -41,16 +41,16 @@ Before you start creating a certificate profile, make sure the necessary prerequ
 1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Create**. This option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). Choose your certificate authority: **Microsoft** or **Entrust Datacard**.
 
     > [!NOTE]
-    > The **Import** option gets information from an existing certificate to create a certificate profile. For more information, see [Import PFX certificate profiles](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles).
+    > The **Import** option gets information from an existing certificate to create a certificate profile. For more information, see [Import PFX certificate profiles](import-pfx-certificate-profiles.md).
 
-1. On the **Supported Platforms** page, select the OS versions that this certificate profile supports. For more information on supported OS versions for your version of Configuration Manager, see [Supported OS versions for clients and devices](/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices).
+1. On the **Supported Platforms** page, select the OS versions that this certificate profile supports. For more information on supported OS versions for your version of Configuration Manager, see [Supported OS versions for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 1. On the **Certificate Authorities** page, choose the certificate registration point (CRP) to process the PFX certificates:
 
     1. **Primary Site**: Choose the server containing the CRP role for the CA.
     1. **Certification authorities**: Select the relevant CA.
 
-    For more information, see [Certificate infrastructure](/configmgr/protect/deploy-use/certificate-infrastructure).
+    For more information, see [Certificate infrastructure](../../protect/deploy-use/certificate-infrastructure.md).
 
 The settings on the **PFX Certificate** page vary depending on the selected CA on the **General** page:
 
@@ -125,12 +125,12 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
 ## Deploy the profile
 
-After you create a certificate profile, it's now available in the **Certificate Profiles** node. For more information on how to deploy it, see [Deploy resource access profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles).
+After you create a certificate profile, it's now available in the **Certificate Profiles** node. For more information on how to deploy it, see [Deploy resource access profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md).
 
 ## See also
 
-[Create a new certificate profile](/configmgr/protect/deploy-use/create-certificate-profiles)
+[Create a new certificate profile](../../protect/deploy-use/create-certificate-profiles.md)
 
-[Import PFX certificate profiles](/configmgr/mdm/deploy-use/import-pfx-certificate-profiles)
+[Import PFX certificate profiles](import-pfx-certificate-profiles.md)
 
-[Deploy Wi-Fi, VPN, email, and certificate profiles](/configmgr/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles)
+[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

@@ -42,7 +42,7 @@ The Windows installation files include the default OS image. This image is a bas
 
 ### <a name="bkmk_capture"></a> Captured image from a reference computer
 
-To create a customized OS image, build a reference computer with the desired OS. Then install applications and configure settings. Capture the OS image from the reference computer to create the WIM file. Manually build the reference computer, or use a task sequence to automate some or all of the build steps. For more information, see [Customize OS images](/sccm/osd/get-started/customize-operating-system-images).  
+To create a customized OS image, build a reference computer with the desired OS. Then install applications and configure settings. Capture the OS image from the reference computer to create the WIM file. Manually build the reference computer, or use a task sequence to automate some or all of the build steps. For more information, see [Customize OS images](customize-operating-system-images.md).  
 
 #### Captured image advantages
 
@@ -74,7 +74,7 @@ Before you can use an OS image, add it to your Configuration Manager site.
         >
         > This extraction process can fail for extremely large image files, for example over 60 GB. The DISM error is `Not enough storage is available to process this command.` The command line that Configuration Manager uses is in the smsprov.log and dism.log. Manually run the same command and then import the image.<!-- SCCMDocs-pr issue 3502 -->  
 
-    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/configure-precache-content).<!--4224642-->  
+    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the image. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).<!--4224642-->  
 
 4. On the **General** page, specify the following information. This information is useful for identification purposes when you have more than one OS image.  
 
@@ -93,7 +93,7 @@ Next, distribute the OS image to distribution points.
 
 ## <a name="BKMK_DistributeBootImages"></a> Distribute content to distribution points  
 
-Distribute OS images to distribution points the same as other content. Before you deploy the task sequence, distribute the OS image to at least one distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).  
+Distribute OS images to distribution points the same as other content. Before you deploy the task sequence, distribute the OS image to at least one distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
 
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
@@ -101,7 +101,7 @@ Distribute OS images to distribution points the same as other content. Before yo
 
 ## <a name="BKMK_OSImageMulticast"></a> Prepare the OS image for multicast deployments  
 
-Use multicast deployments to allow more than one computer to simultaneously download an OS image. The image is multicast to clients by the distribution point, rather than each client downloading a copy of the image from the distribution point over a separate connection. When you choose the OS deployment method to [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network), configure the OS image to support multicast. Then distribute the image to a multicast-enabled distribution point.
+Use multicast deployments to allow more than one computer to simultaneously download an OS image. The image is multicast to clients by the distribution point, rather than each client downloading a copy of the image from the distribution point over a separate connection. When you choose the OS deployment method to [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), configure the OS image to support multicast. Then distribute the image to a multicast-enabled distribution point.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Operating System Images** node.  
 
@@ -117,6 +117,6 @@ Use multicast deployments to allow more than one computer to simultaneously down
 
     - **Transfer this package only via multicast**: Specify whether you want the distribution point to deploy the image only during a multicast session.  
 
-         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence).  
+         If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
 5. Select **OK** to save the settings and close the image properties.  

@@ -26,7 +26,7 @@ Existing WMI and PowerShell cmdlets are still supported and will continue to wor
 
 ### What if an existing WMI class or method doesn't work over the administration service?
 
-If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Find help for Configuration Manager](/configmgr/core/understand/find-help#send-a-smile-or-send-a-frown).
+If you find an existing WMI class or method that doesn't GET or PUT as expected, send a frown to inform the engineering team. For more information, see [Find help for Configuration Manager](../../core/understand/find-help.md#send-a-smile-or-send-a-frown).
 
 ### Are Swagger definitions available?
 
@@ -36,7 +36,7 @@ No, the administration service currently doesn't publish an [OpenAPI (Swagger) d
 
 ### Can I use the administration service with internet-based client management?
 
-No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](/configmgr/develop/adminservice/set-up#bkmk_cmg).
+No, internet-based client management (IBCM) doesn't support exposing the SMS Provider role to the internet. For internet access to the administration service, you need a cloud management gateway. For more information, see [Enable internet access](set-up.md#bkmk_cmg).
 
 ### Isn't it too risky to open this API to the internet?
 
@@ -56,4 +56,4 @@ Yes, and that configuration is easiest if you use [Azure App Proxy](https://docs
 
 ### How do I learn about what's new with the administration service in each Configuration Manager release?
 
-For more information, see [Release notes](/configmgr/develop/adminservice/release-notes).
+For more information, see [Release notes](release-notes.md).

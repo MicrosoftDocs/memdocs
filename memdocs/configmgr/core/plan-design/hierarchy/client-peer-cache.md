@@ -22,7 +22,7 @@ manager: dougeby
 Use peer cache to help manage deployment of content to clients in remote locations. Peer cache is a built-in Configuration Manager solution that enables clients to share content with other clients directly from their local cache.   
 
 > [!Note]  
-> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+> In version 1906, Configuration Manager enables this feature by default. In version 1902 or earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 
 
@@ -36,14 +36,14 @@ Definitions:
 
 Use client settings to enable clients to be peer cache sources. You don't need to enable peer cache clients. When you enable clients to be peer cache sources, the management point includes them in the list of content location sources.<!--510397--> For more information on this process, see [Operations](#operations).  
 
-A peer cache source must be a member of the current boundary group of the peer cache client. The management point doesn't include peer cache sources from a neighbor boundary group in the list of content sources it provides the client. It only includes distribution points from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).<!--SCCMDocs issue 685-->  
+A peer cache source must be a member of the current boundary group of the peer cache client. The management point doesn't include peer cache sources from a neighbor boundary group in the list of content sources it provides the client. It only includes distribution points from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md).<!--SCCMDocs issue 685-->  
 
 The Configuration Manager client uses peer cache to serve to other clients every type of content in the cache. This content includes Office 365 files and express installation files.<!--SMS.500850-->  
 
 Peer cache doesn't replace the use of other solutions like Windows BranchCache or Delivery Optimization. Peer cache works along with other solutions. These technologies give you more options for extending traditional content deployment solutions such as distribution points. Peer cache is a custom solution with no reliance on BranchCache. If you don't enable or use BranchCache, peer cache still works.  
 
 > [!Note]  
-> Starting in version 1802, Windows BranchCache is always enabled on deployments. The setting to **Allow clients to share content with other clients on the same subnet** is removed.<!--SCCMDocs issue 539--> If the distribution point supports it, and it's enabled in client settings, clients use BranchCache. For more information, see [Configure BranchCache](/sccm/core/clients/deploy/about-client-settings#configure-branchcache).<!--SCCMDocs issue 735-->   
+> Starting in version 1802, Windows BranchCache is always enabled on deployments. The setting to **Allow clients to share content with other clients on the same subnet** is removed.<!--SCCMDocs issue 539--> If the distribution point supports it, and it's enabled in client settings, clients use BranchCache. For more information, see [Configure BranchCache](../../clients/deploy/about-client-settings.md#configure-branchcache).<!--SCCMDocs issue 735-->   
 
 
 
@@ -54,13 +54,13 @@ To enable peer cache, deploy the [client settings](#bkmk_settings) to a collecti
 - A client that operates as a peer content source submits a list of available cached content to its management point using state messages.
 
    > [!NOTE]
-   > See [State messages in Configuration Manager](/sccm/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager#7200-state_topictype_super_peer_update_cache_map) for the list of applicable peer content source state messages specifcally those with with state message IDs of 7200, 7201, 7202, and 7203.
+   > See [State messages in Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) for the list of applicable peer content source state messages specifcally those with with state message IDs of 7200, 7201, 7202, and 7203.
 
-- Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#content-source-priority).  
+- Another client in the same boundary group makes a content location request to the management point. The server returns the list of potential content sources. This list includes each peer cache source that has the content and is online. It also includes the distribution points and other content source locations in that boundary group. For more information, see [Content source priority](fundamental-concepts-for-content-management.md#content-source-priority).  
 
 - As usual, the client that's seeking the content selects one source from the provided list. The client then attempts to get the content.  
 
-Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions).<!--1356193-->
+Starting in version 1806, boundary groups include additional settings to give you more control over content distribution in your environment. For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).<!--1356193-->
 
 > [!NOTE]  
 > If the client falls back to a neighbor boundary group for content, the management point doesn't add the peer cache sources from the neighbor boundary group to the list of potential content source locations.  
@@ -89,13 +89,13 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 ## Requirements
 
-- Peer cache supports all Windows versions listed as supported in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices). Non-Windows operating systems aren't supported as peer cache sources or peer cache clients.  
+- Peer cache supports all Windows versions listed as supported in [Supported operating systems for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md). Non-Windows operating systems aren't supported as peer cache sources or peer cache clients.  
 
 - A peer cache source must be a domain-joined Configuration Manager client. However, a client that's not domain-joined can get content from a domain-joined peer cache source.  
 
 - Clients can only download content from peer cache sources in their current boundary group.  
 
-- A [network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account) isn't required with the following exception:  
+- A [network access account](accounts.md#network-access-account) isn't required with the following exception:  
 
   - Configure a network access account in the site when a peer cache-enabled client runs a task sequence from Software Center, and it reboots to a boot image. When the device is in Windows PE, it uses the network access account to get content from the peer cache source.  
 
@@ -115,9 +115,9 @@ When the peer cache source rejects a request for the content, the peer cache cli
 
 ## <a name="bkmk_settings"></a> Peer cache client settings
 
-For more information about the peer cache client settings, see [Client cache settings](/sccm/core/clients/deploy/about-client-settings#client-cache-settings). 
+For more information about the peer cache client settings, see [Client cache settings](../../clients/deploy/about-client-settings.md#client-cache-settings). 
 
-For more information on configuring these settings, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+For more information on configuring these settings, see [How to configure client settings](../../clients/deploy/configure-client-settings.md).
 
 On peer cache-enabled clients that use the Windows Firewall, Configuration Manager configures the firewall ports that you specify in client settings.
 
@@ -158,7 +158,7 @@ Contoso has a single primary site with two boundary groups: Headquarters (HQ) an
 
 ### Configure partial download
 
-1. Set up [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) and peer cache sources per normal.  
+1. Set up [boundary groups](../../servers/deploy/configure/boundary-groups.md) and peer cache sources per normal.  
 
 2. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select **Sites**. Click **Hierarchy Settings** in the ribbon.  
 
@@ -177,13 +177,13 @@ To see them handling the download of content in parts, examine the **ContentTran
 <!--510645-->
 Peer cache relies on the Configuration Manager client cache to share content. Consider the following points for managing the client cache in your environment:  
 
-- The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache for Configuration Manager clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
+- The Configuration Manager client cache isn't like the content library on a distribution point. While you manage the content that you distribute to a distribution point, the Configuration Manager client automatically manages the content in its cache. There are settings and methods to help control what content is in the cache of a peer cache source. For more information, see [Configure the client cache for Configuration Manager clients](../../clients/manage/manage-clients.md#BKMK_ClientCache).  
 
-- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](/sccm/core/clients/deploy/about-client-settings#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows 10 express update files. Compare your need for this content against the available disk space on peer cache sources.  
+- Normal cache size and maintenance applies to peer cache sources. For more information, see [Configure client cache size](../../clients/deploy/about-client-settings.md#configure-client-cache-size). Consider the size of larger content such as OS upgrade packages or Windows 10 express update files. Compare your need for this content against the available disk space on peer cache sources.  
 
 - The peer cache source client updates the last referenced time of content in the cache when a peer downloads it. The client uses this timestamp when it automatically maintains its cache, removing older content first. So it should wait to remove content that peer cache clients more frequently download, if at all.  
 
-- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [Task sequence variables](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent).  
+- If necessary, during an OS deployment task sequence, use the **SMSTSPreserveContent** variable to keep content in the client cache. For more information, see [Task sequence variables](../../../osd/understand/task-sequence-variables.md#SMSTSPreserveContent).  
 
 - If necessary, when creating the following software, use the option to **Persist content in the client cache**:  
   - Applications
@@ -196,7 +196,7 @@ Peer cache relies on the Configuration Manager client cache to share content. Co
 
 ## Monitoring   
 
-To help you understand the use of peer cache, view the **Client Data Sources** dashboard. For more information, see [Client data sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+To help you understand the use of peer cache, view the **Client Data Sources** dashboard. For more information, see [Client data sources dashboard](../../servers/deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
 Also use reports to view peer cache use. In the console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node. The following reports all have a type of **Software Distribution Content**:  
 

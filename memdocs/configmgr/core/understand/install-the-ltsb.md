@@ -58,7 +58,7 @@ Uninstall the site system roles that the LTSB does not support:
 - Microsoft Intune connector
 - Cloud-based distribution points
 
-For more information, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).
+For more information, see [Upgrade to Configuration Manager](../servers/deploy/install/upgrade-to-configuration-manager.md).
 
 
 ### New scripted installation options
@@ -87,11 +87,11 @@ For example, to install a licensed Current Branch edition you would use:
 >
 > **SABranchOptions** does not apply to scripted upgrades from System Center 2012 Configuration Manager and always results in the Current Branch.
 
-For more information, see [Use a command line to install Configuration Manager sites](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites).
+For more information, see [Use a command line to install Configuration Manager sites](../servers/deploy/install/use-a-command-line-to-install-sites.md).
 
 
 ## Install a new site
-When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing Configuration Manager sites](/sccm/core/servers/deploy/install/installing-sites) topic with the addition of the following considerations for Setup:
+When you use the 1606 baseline media to install a new site of either branch, use the site planning, preparation, and installation procedures documented in the [Installing Configuration Manager sites](../servers/deploy/install/installing-sites.md) topic with the addition of the following considerations for Setup:
 
 - During Setup you must choose the branch of Configuration Manager that you want to install, and you can specify details for your Software Assurance agreement.
 - All sites in the same hierarchy must run the same branch. It is not supported to have a hierarchy with a mix of LTSB and Current Branch at different sites.
@@ -102,10 +102,10 @@ You can expand a stand-alone primary site that runs the LTSB.  The process is no
 
 - When installing the new central administration site you must use Setup from the original source media you used to install the LTSB site. Running Setup from the CD.Latest folder for this scenario is not supported.
 
-For more information about expanding a site, see "Expand a stand-alone primary site" in [Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites).
+For more information about expanding a site, see "Expand a stand-alone primary site" in [Install a site using the Setup Wizard](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md).
 
 ## Upgrade from System Center 2012 Configuration Manager
-When you upgrade from System Center 2012 Configuration Manager, use the site planning, preparation, and procedures as documented in the [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) topic, but with the following changes:
+When you upgrade from System Center 2012 Configuration Manager, use the site planning, preparation, and procedures as documented in the [Upgrade to Configuration Manager](../servers/deploy/install/upgrade-to-configuration-manager.md) topic, but with the following changes:
 
 **Upgrade to the Current Branch:**
 - During Setup, you must choose the Current Branch, and you can specify details for your Software Assurance agreement.
@@ -142,9 +142,9 @@ Media in the CD.Latest folder is supported for:
 Media in the CD.Latest folder is not supported for:  
 - Installing a central administration site as part of a site expansion scenario.
 
-For more information, see [the CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder).
+For more information, see [the CD.Latest folder](../servers/manage/the-cd.latest-folder.md).
 
 ## Backup, recovery, and site maintenance for the LTSB
-To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](/sccm/protect/understand/backup-and-recovery).  
+To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](../servers/manage/backup-and-recovery.md).  
 
 Use Configuration Manager Setup from the CD.Latest folder of the backup of your LTSB site.

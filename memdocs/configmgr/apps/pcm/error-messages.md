@@ -20,7 +20,7 @@ manager: dougeby
 
 <!--1357861-->
 
-This article describes the error messages that Package Conversion Manager displays. It also includes the possible causes of the error, and methods to correct the error. Package Conversion Manager logs error messages in **PCMTrace.log**. For more information, including how to control the verbosity level, see [Log files](/sccm/apps/pcm/troubleshoot-pcm#log-files).
+This article describes the error messages that Package Conversion Manager displays. It also includes the possible causes of the error, and methods to correct the error. Package Conversion Manager logs error messages in **PCMTrace.log**. For more information, including how to control the verbosity level, see [Log files](troubleshoot-pcm.md#log-files).
 
 
 #### Application creation failed with the following exception

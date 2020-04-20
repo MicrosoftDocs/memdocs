@@ -19,7 +19,7 @@ In Configuration Manager, you view the image properties for the Windows Image (W
 
 ### To view image properties  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get the `SMS_ImagePackage` class instance that you want to update.  
 
@@ -118,4 +118,4 @@ public void ViewOSImage(
 
 ## See also
 
-[About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)
+[About image management](about-operating-system-deployment-image-management.md)

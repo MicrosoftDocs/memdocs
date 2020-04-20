@@ -67,7 +67,7 @@ To configure these settings, use Windows Group Policy.
     To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client Device Settings**.
 
     > [!NOTE]  
-    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
 1. In the **User and Device Affinity** group, set the following settings:  
 
@@ -115,7 +115,7 @@ Set up a user to create their own user device affinity in Software Center.
     To create custom client agent settings, on the **Home** tab in the ribbon, in the **Create** group, choose **Create Custom Client User Settings**.
 
     > [!NOTE]  
-    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [Configure client settings](/sccm/core/clients/deploy/configure-client-settings).  
+    > If you modify the default client settings, the site deploys them to all computers in the hierarchy. For more information, see [Configure client settings](../../core/clients/deploy/configure-client-settings.md).  
 
 1. In the **User and Device Affinity** group, enable the setting to **Allow user to define their primary devices**.  
 
@@ -134,8 +134,8 @@ Starting in version 1902, use Software Center to set affinity.
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 1. In the application catalog, choose **My Systems**.  
 

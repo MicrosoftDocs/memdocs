@@ -32,15 +32,15 @@ Description: An error occurred during the processing of a configuration file req
 Parser Error Message: Could not load file or assembly 'System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 ```
 
-To fix this issue, make sure you installed the [prerequisite](/configmgr/protect/plan-design/bitlocker-management#prerequisites) for **Microsoft ASP.NET MVC 4.0** on the web server.
+To fix this issue, make sure you installed the [prerequisite](../../plan-design/bitlocker-management.md#prerequisites) for **Microsoft ASP.NET MVC 4.0** on the web server.
 
 ## See also
 
-For more information about using BitLocker event logs, see [BitLocker event logs](/configmgr/protect/tech-ref/bitlocker/about-event-logs).
+For more information about using BitLocker event logs, see [BitLocker event logs](about-event-logs.md).
 
 For a list of known errors and possible causes for event log entries, see the following articles:
 
-- [Client event logs](/configmgr/protect/tech-ref/bitlocker/client-event-logs)
-- [Server event logs](/configmgr/protect/tech-ref/bitlocker/server-event-logs)
+- [Client event logs](client-event-logs.md)
+- [Server event logs](server-event-logs.md)
 
-To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](/configmgr/protect/tech-ref/bitlocker/non-compliance-codes).
+To understand why clients are reporting not compliant with the BitLocker management policy, see [Non-compliance codes](non-compliance-codes.md).

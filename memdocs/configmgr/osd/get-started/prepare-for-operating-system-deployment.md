@@ -42,7 +42,7 @@ OS images are large in size. For example, the image size for Windows 7 is 3 GB o
 
 Also make sure that you plan for sufficient disk storage space on the distribution points that host the OS images.  
 
-For more information, see [Additional planning considerations for distribution points](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_AdditionalPlanning).
+For more information, see [Additional planning considerations for distribution points](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_AdditionalPlanning).
 
 
 ### Client cache size  
@@ -53,6 +53,6 @@ When a Configuration Manager client must download an OS image, but there isn't e
 
 The default cache size on Configuration Manager clients might not be large enough for most OS image deployments. If you plan to download the full image to the client cache, adjust the client cache size on the destination computers to accommodate the size of the image that you're deploying.  
 
-For more information, see [Configure the client cache](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache).  
+For more information, see [Configure the client cache](../../core/clients/manage/manage-clients.md#BKMK_ClientCache).  
 
 

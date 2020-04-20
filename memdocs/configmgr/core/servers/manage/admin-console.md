@@ -20,7 +20,7 @@ Administrators use the Configuration Manager console to manage the Configuration
 
 ## <a name="bkmk_open"></a> Open the console
 
-The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](/configmgr/core/servers/deploy/install/install-consoles).
+The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md).
 
 The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
 
@@ -47,11 +47,11 @@ To connect to a different site server, use the following steps:
 
 3. Select **Connect**.  
 
-Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). <!--1357013-->  
+Starting in version 1810, you can specify the minimum authentication level for administrators to access Configuration Manager sites. This feature enforces administrators to sign in to Windows with the required level. For more information, see [Plan for the SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth). <!--1357013-->  
 
 ## Navigation
 
-Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](/configmgr/core/understand/fundamentals-of-role-based-administration).
+Some areas of the console may not be visible depending on your assigned security role. For more information about roles, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md).
 
 ### Workspaces
 
@@ -117,9 +117,9 @@ At the bottom of the column context menu, you can sort or group by a column. Add
 
 <!--4786915-->
 
-If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](/configmgr/develop/core/understand/sedo).
+If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](../../../develop/core/understand/sedo.md).
 
-Starting in [current branch version 1906](/configmgr/core/plan-design/changes/whats-new-in-version-1906#reclaim-sedo-lock-for-task-sequences), you could clear your lock on a task sequence. Starting in version 1910, you can clear your lock on any object in the Configuration Manager console.
+Starting in [current branch version 1906](../../plan-design/changes/whats-new-in-version-1906.md#reclaim-sedo-lock-for-task-sequences), you could clear your lock on a task sequence. Starting in version 1910, you can clear your lock on any object in the Configuration Manager console.
 
 This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked object, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
@@ -132,7 +132,7 @@ Starting in version 1902, you can view the most recent connections for the Confi
 
 - Your account needs the **Read** permission on the **SMS_Site** object
 
-- Configure the administration service REST API. For more information, see [What is the administration service?](/configmgr/develop/adminservice/overview)
+- Configure the administration service REST API. For more information, see [What is the administration service?](../../../develop/adminservice/overview.md)
 
 ### View connected consoles
 
@@ -160,7 +160,7 @@ Starting in version 1910, you can message other Configuration Manager administra
 
 ### Prerequisites
 
-- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Azure AD or AD User Discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Azure AD or AD User Discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
 - All [prerequisites to view connected consoles](#bkmk_connections-prereq)
@@ -323,7 +323,7 @@ Submit product feedback from the console.
 
 - **Send a suggestion**: Takes you to UserVoice to share your idea  
 
-For more information, see [Product Feedback](/configmgr/core/understand/find-help#BKMK_1806Feedback).
+For more information, see [Product Feedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 ### Assets and Compliance workspace
@@ -377,7 +377,7 @@ Starting in version 1806, the following columns are available in the **Devices**
 - **Currently logged on user** <!--1358202-->  
 
     > [!NOTE]  
-    > Viewing the currently logged on user requires [user discovery](/configmgr/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud) and [user device affinity](/configmgr/apps/deploy-use/link-users-and-devices-with-user-device-affinity).  
+    > Viewing the currently logged on user requires [user discovery](../deploy/configure/configure-discovery-methods.md#bkmk_config-adud) and [user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
 For more information on how to show a non-default column, see [Columns](#columns).
 
@@ -400,7 +400,7 @@ This behavior significantly improves the time it takes to search by name, especi
 <!--4616810-->
 *(Introduced in version 1906)*
 
-In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](/configmgr/osd/understand/task-sequence-steps#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. Edit a task sequence, and select or add the [Install Package](../../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) step. If a package has more than one program, the drop-down list now sorts the programs alphabetically.
 
 #### Task sequences tab in applications node
 <!--4616810-->
@@ -488,10 +488,10 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ### Administration workspace
 
 <!--4223683-->
-Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](/configmgr/develop/adminservice/set-up#bkmk_console).
+Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#bkmk_console).
 
 ## Next steps
 
-[Accessibility features](/configmgr/core/understand/accessibility-features)
+[Accessibility features](../../understand/accessibility-features.md)
 
-[Task sequence editor](/configmgr/osd/understand/task-sequence-editor#bkmk_conditions)
+[Task sequence editor](../../../osd/understand/task-sequence-editor.md#bkmk_conditions)

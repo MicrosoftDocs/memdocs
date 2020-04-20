@@ -27,13 +27,13 @@ Update 1610 for Configuration Manager current branch is available as an in-conso
 > Learn more about:    
 > - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
 > - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
-> - [Baseline and update versions](/sccm/core/servers/manage/updates#bkmk_Baselines)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
 
 
 ## In-console monitoring of update installation status  
-Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_install).
+Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_install).
 
 
 ## Exclude clients from automatic upgrade
@@ -46,7 +46,7 @@ These improvements replace concepts and behaviors you might be familiar with (li
 
 When you update to version 1610, the update converts your current boundary group configurations to fit the new model so that these changes do not disturb your existing content distribution configurations.
 
-For more information, see [Boundary groups](/sccm/core/servers/deploy/configure/boundary-groups).
+For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md).
 
 
 ## Peer Cache for content distribution to clients
@@ -57,17 +57,17 @@ After you deploy client settings that enable Peer Cache to a collection, members
 You can also use the new **Client Data Sources** dashboard to understand the use of Peer Cache content sources in your environment.
 
 > [!TIP]  
-> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+> With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](../../servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
-For more information, see [Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache), and [Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard).
+For more information, see [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md), and [Client Data Sources dashboard](../../servers/deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
 
 ## Migrate multiple shared distribution points at the same time
-You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](/sccm/core/migration/planning-a-content-deployment-migration-strategy#migrate-multiple-shared-distribution-points-at-the-same-time).
+You can now use the option to **Reassign Distribution Point** to have Configuration Manager process in parallel the reassignment of up to 50 shared distribution points at the same time. Prior to this release, reassigned distribution points were processed one at a time. For more information see, [Migrate multiple shared distribution points at the same time](../../migration/planning-a-content-deployment-migration-strategy.md#migrate-multiple-shared-distribution-points-at-the-same-time).
 
 ## Cloud management gateway for managing Internet-based clients
 
-Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](/sccm/core/clients/manage/manage-clients-internet).
+Cloud management gateway provides a simple way to manage Configuration Manager clients on the Internet. The cloud management gateway service, which is deployed to Microsoft Azure and requires an Azure subscription, connects to your on-premises Configuration Manager infrastructure using a new role called the cloud management gateway connection point. Once it's completely deployed and configured, clients can communicate with on-premises Configuration Manager site system roles and cloud-based distribution points regardless of whether they're connected to the internal private network or on the Internet. For more information and to see how cloud management gateway compares with Internet-based client management, see [Manage clients on the Internet](../../clients/manage/manage-clients-internet.md).
 
 ## Improvements to the Windows 10 Edition Upgrade Policy
 In this release, the following improvements have been made to this policy type:
@@ -81,7 +81,7 @@ You can now provide a list of hardware IDs that Configuration Manager should ign
 1. Many devices, like the Surface Pro 3, do not include an onboard Ethernet port. A USB-to-Ethernet adapter is generally used to establish a wired connection for the purpose of deploying an operating system. However, due to cost and general usability, these are often shared adapters. Because the MAC address of this adapter is used to identify the device, reusing the adapter becomes problematic without additional administrator actions between each deployment. Now in Configuration Manager version 1610, you can exclude the MAC address of this adapter so that it can easily be reused in this scenario.
 2. The SMBIOS ID is supposed to be a unique hardware identifier, but some specialty hardware devices are built with duplicate IDs. This issue may not be as common as the USB-to-Ethernet adapter scenario just described, but you can address it by using the list of excluded hardware IDs.
 
-For details, see [Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers).
+For details, see [Manage duplicate hardware identifiers](../../clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers).
 
 ## Enhancements to Windows Store for Business integration with Configuration Manager
 Changes in this release:
@@ -90,7 +90,7 @@ Changes in this release:
 - You can now modify the client secret key that you obtained from Azure Active Directory.
 - You can delete a subscription to the store.
 
-For details, see [Manage apps from the Windows Store for Business with Configuration Manager](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
+For details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 
 ## Policy sync for Intune-enrolled devices
@@ -99,7 +99,7 @@ You can now request a policy sync for an Intune-enrolled device from the Configu
 
 ## Use compliance settings to configure Windows Defender settings
 You can now configure Windows Defender client settings on Intune-enrolled Windows 10 computers by using configuration items in the Configuration Manager console.
-For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client).
+For details, see the **Windows Defender** section in [Create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 
 
@@ -117,7 +117,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 - If the Application Catalog website point site server role is not installed, then Software Center displays the organization name specified in the **Computer Agent** client setting **Organization name displayed in Software Center**. For instructions, see [How to configure client settings](../../clients/deploy/configure-client-settings.md).
 
-- If the Application Catalog website point site server role is installed, then Software Center displays the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website).
+- If the Application Catalog website point site server role is installed, then Software Center displays the organization name and color specified in the Application Catalog website point site server role properties. For more information, see [Configuration options for Application Catalog website point](../../servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).
 
 - If a Microsoft Intune subscription is configured and connected to the Configuration Manager environment, then Software Center displays the organization name, color, and company logo specified in the Intune subscription properties.
 
@@ -148,13 +148,13 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 
 
 For more information:
-- [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments)
+- [Settings to manage high-risk deployments](../../servers/manage/settings-to-manage-high-risk-deployments.md)
 - [How to configure client settings](../../clients/deploy/configure-client-settings.md)
 
 ## Software updates dashboard
 Use the new software updates dashboard to view the current compliance status of devices in your organization, and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
-For details, see [Monitor software updates](/sccm/sum/deploy-use/monitor-software-updates).
+For details, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md).
 
 
 ## Improvements to the application request process
@@ -165,7 +165,7 @@ This action does not cause the application to be uninstalled from any devices. H
 ## Filter by content size in automatic deployment rules
 You can now filter on the content size for software updates in automatic deployment rules. For example, to download only software updates that are smaller than 2 MB, you can set the **Content Size (KB)** filter to **< 2048**. Using this filter prevents large software updates from automatically downloading, which better supports simplified Windows down-level servicing when network bandwidth is limited. For details, see:
 - [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
-- [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates)
+- [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 To configure the **Content Size (KB)** field, do one of the following:
 - When you create an automatic deployment rule, in the Create Automatic Deployment Rule wizard, go to the **Software Updates** page.
@@ -181,18 +181,18 @@ The dashboard displays charts for the following:
 - Office 365 client languages
 - Office 365 client channels     
 
-For details, see [Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates).
+For details, see [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## Task sequence steps to manage BIOS to UEFI conversion
-You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion).
+You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ##  Improvements to the task sequence step: Prepare ConfigMgr Client for Capture  
-The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time. For details, see [Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture).
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time. For details, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).
 
 
 
 ## Intune compliance policy charts
-You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](/sccm/protect/deploy-use/create-compliance-policy).
+You can now get a quick view of overall compliance for devices, and the top reasons for non-compliance, by using new charts under the **Monitoring** workspace in the Configuration Manager console. You can click a section in the chart to drill down to a list of the devices in that category. For details, see [Monitor the compliance policy](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
@@ -203,7 +203,7 @@ Users of noncompliant iOS devices will be prompted to enroll. They'll be require
 
 ## New compliance settings for configuration items
 There are many new settings you can use in your configuration items for various device platforms. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-For details, see [Configuration items for devices managed without the Configuration Manager client](/sccm/compliance/deploy-use/configuration-items-for-devices-managed-without-the-client).
+For details, see [Configuration items for devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).
 
 ### New settings for Android devices
 #### Password settings

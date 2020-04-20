@@ -17,7 +17,7 @@ You create a computer variable for a computer that is running Configuration Mana
 
 ### To create a computer variable  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get an instance of `SMS_MachineSettings`.  
 
@@ -167,4 +167,4 @@ public void CreateComputerVariable(
 
 ## See also
 
-[About OS deployment computer management](/sccm/develop/osd/about-computer-management)
+[About OS deployment computer management](about-computer-management.md)

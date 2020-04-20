@@ -39,7 +39,7 @@ Every Configuration Manager action is defined by an `ActionDescription` XML elem
  There are a number of child elements for any given action type.  
 
 ## See Also  
-[About Configuration Manager console actions](/sccm/develop/core/servers/console/configuration-manager-actions)
+[About Configuration Manager console actions](configuration-manager-actions.md)
  [Configuration Manager AssemblyType Action](../../../../develop/core/servers/console/assemblytype-action.md)   
  [Configuration Manager Conditional Actions](../../../../develop/core/servers/console/conditional-actions.md)   
  [Configuration Manager Executable Action](../../../../develop/core/servers/console/executable-action.md)   

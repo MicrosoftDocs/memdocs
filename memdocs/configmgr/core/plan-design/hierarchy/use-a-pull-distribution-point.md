@@ -35,7 +35,7 @@ Pull-distribution points support the same configurations and functionality as ty
 - The same certificate options as other distribution points
 - Manage individually or as a member of a distribution point group  
 
-Configure a pull-distribution point when you install the distribution point. After you create a distribution point, configure it as a pull-distribution point by editing the role properties. For more information on how to enable a distribution point as a pull-distribution point, see [Pull-distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pull).  
+Configure a pull-distribution point when you install the distribution point. After you create a distribution point, configure it as a pull-distribution point by editing the role properties. For more information on how to enable a distribution point as a pull-distribution point, see [Pull-distribution point](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pull).  
 
 Remove the configuration to be a pull-distribution point by editing the properties of the distribution point. When you remove the configuration as a pull-distribution point, it returns to normal operation. The site server manages future content transfers to the distribution point.  
 
@@ -86,7 +86,7 @@ When you use a pull-distribution point, review and configure the following site 
 
 -   You can't configure the distribution point role on a site server as a pull-distribution point.  
 
--   The prestage content configuration overrides the pull-distribution point configuration. If you turn on the option to **Enable this distribution point for prestaged content** on a pull-distribution point, it waits for the content. It doesn't pull content from the source distribution point. Like a standard distribution point enabled for prestaged content, it doesn't receive content from the site server. For more information, see [Prestaged content](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent).  
+-   The prestage content configuration overrides the pull-distribution point configuration. If you turn on the option to **Enable this distribution point for prestaged content** on a pull-distribution point, it waits for the content. It doesn't pull content from the source distribution point. Like a standard distribution point enabled for prestaged content, it doesn't receive content from the site server. For more information, see [Prestaged content](manage-network-bandwidth.md#BKMK_PrestagingContent).  
 
 -   A pull-distribution point doesn't use schedule or rate limit configurations. When you configure a previously installed distribution point to be a pull-distribution point, configurations for schedule and rate limits are saved, but not used. If you later remove the pull-distribution point configuration, the schedule and rate limit configurations are implemented as previously configured.  
 
@@ -113,10 +113,10 @@ When you configure the pull-distribution point, specify one or more source distr
 
 -   Use the Configuration Manager SDK to specify a source distribution point that's configured for HTTPS. To use a source distribution point that's configured for HTTPS, install the Configuration Manager client on the pull-distribution point.  
 
--   Starting in version 1806, if your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
+-   Starting in version 1806, if your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](use-a-cloud-based-distribution-point.md) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
 
     > [!Note]  
-    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost).  
+    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using a cloud distribution point](use-a-cloud-based-distribution-point.md#bkmk_cost).  
 
 
 > [!Tip]  
@@ -156,4 +156,4 @@ When you configure the pull-distribution point, specify one or more source distr
 
 
 ## See also  
- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
+ [Fundamental concepts for content management](fundamental-concepts-for-content-management.md)   

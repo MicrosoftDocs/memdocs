@@ -22,7 +22,7 @@ In Configuration Manager, operating system deployment task sequences are created
  A task sequence is packaged in an instance of the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class and there is a single package for each task sequence. The package is advertised to client computers by using an instance of the [SMS_Advertisement Server WMI Class](../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) class. To associate the task sequence package with the advertisement, you set the [SMS_Advertisement Server WMI Class](../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) PackageID property to the [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) PackageID property.  
 
 > [!NOTE]
->  [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) derives from [SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and can be used in the same way that packages are used. For more information, see [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview).  
+>  [SMS_TaskSequencePackage Server WMI Class](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) derives from [SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and can be used in the same way that packages are used. For more information, see [Software distribution overview](../core/servers/configure/software-distribution-overview.md).  
 
  For more information about creating a task sequence package, see [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md).  
 
@@ -61,7 +61,7 @@ In Configuration Manager, operating system deployment task sequences are created
  Configuration Manager defines a number of built-in actions that are defined in classes derived from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class. For example, the action that allows you to specify a command line is the [SMS_TaskSequence_RunCommandLineAction](../../develop/reference/osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md) class.  
 
 > [!NOTE]
-> The built-in actions are named SMS_TaskSequence_`ActionName`Action where `ActionName` is the name of the built-in action. For more information, see [SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class).  
+> The built-in actions are named SMS_TaskSequence_`ActionName`Action where `ActionName` is the name of the built-in action. For more information, see [SMS_TaskSequence_Action server WMI class](../reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
  In addition to the properties that are inherited from [SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md), a derived action inherits the following properties from the [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) class that you can set:  
 

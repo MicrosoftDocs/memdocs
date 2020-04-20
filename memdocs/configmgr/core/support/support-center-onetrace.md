@@ -94,6 +94,6 @@ The `GroupFilePath` property can include an explicit path for the log files. If 
 
 ## See also
 
-- [Support Center log viewer](/sccm/core/support/support-center-ui-reference#bkmk_log-viewer)
+- [Support Center log viewer](support-center-ui-reference.md#bkmk_log-viewer)
 
-- [CMTrace](/sccm/core/support/cmtrace)
+- [CMTrace](cmtrace.md)

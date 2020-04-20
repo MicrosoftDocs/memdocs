@@ -277,4 +277,4 @@ Class SMS_StateMigration : SMS_BaseClass
 
 ## See also
 
-[SMS_StateMigrationUserNames server WMI class](/sccm/develop/reference/osd/sms_statemigrationusernames-server-wmi-class)
+[SMS_StateMigrationUserNames server WMI class](sms_statemigrationusernames-server-wmi-class.md)

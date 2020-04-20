@@ -55,4 +55,4 @@ WHERE APP.IsLatest = 1 AND APP.DisplayName = 'Application Name' -- Replace Appli
 
 ## Next Steps
 
-- [Application Deployment Policy](/sccm/apps/understand/deployment-policy-technical-reference)
+- [Application Deployment Policy](deployment-policy-technical-reference.md)

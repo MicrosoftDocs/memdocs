@@ -28,11 +28,11 @@ The following Microsoft management solutions are all now part of the **Microsoft
 
 - [Configuration Manager](https://docs.microsoft.com/configmgr)
 - [Intune](https://docs.microsoft.com/intune)
-- [Desktop Analytics](/configmgr/desktop-analytics/overview)
+- [Desktop Analytics](../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://go.microsoft.com/fwlink/?linkid=2109094)
 
-For more information, see [Microsoft Endpoint Configuration Manager FAQ](/configmgr/core/understand/microsoft-endpoint-manager-faq).
+For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md).
 
 ## Introduction
 
@@ -80,7 +80,7 @@ After you install Configuration Manager, use the Configuration Manager console t
 
 You can install the Configuration Manager console on additional computers, and restrict access and limit what administrative users can see in the console by using Configuration Manager role-based administration.  
 
-For more information, see [Use the Configuration Manager console](/configmgr/core/servers/manage/admin-console).
+For more information, see [Use the Configuration Manager console](../servers/manage/admin-console.md).
 
 ### <a name="BKMK_ApplicationCatalog"></a> Software Center
 
@@ -92,19 +92,19 @@ For more information, see [Use the Configuration Manager console](/configmgr/cor
 
 You can also show custom tabs in Software Center to meet additional business requirements.
 
-For more information, see the [Software Center user guide](/configmgr/core/understand/software-center).
+For more information, see the [Software Center user guide](software-center.md).
 
 ## Next steps
 
 Before you install Configuration Manager, familiarize yourself with the basic concepts and terms:
 
-- If you're familiar with System Center 2012 Configuration Manager, see [What's changed from System Center 2012 Configuration Manager](/configmgr/core/plan-design/changes/what-has-changed-from-configuration-manager-2012).
+- If you're familiar with System Center 2012 Configuration Manager, see [What's changed from System Center 2012 Configuration Manager](../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
-- For a high-level technical overview of Configuration Manager, see [Fundamentals of Configuration Manager](/configmgr/core/understand/fundamentals).
+- For a high-level technical overview of Configuration Manager, see [Fundamentals of Configuration Manager](fundamentals.md).
 
 When you're familiar with the basic concepts, use this documentation library to help you successfully deploy and use Configuration Manager. Start with the following articles:
 
-- [Features and capabilities of Configuration Manager](/configmgr/core/plan-design/changes/features-and-capabilities)  
-- [Choose a device management solution](/configmgr/core/plan-design/choose-a-device-management-solution)  
-- [Evaluate Configuration Manager by building your own lab environment](/configmgr/core/get-started/set-up-your-lab)
-- [Find help for using Configuration Manager](/configmgr/core/understand/find-help)  
+- [Features and capabilities of Configuration Manager](../plan-design/changes/features-and-capabilities.md)  
+- [Choose a device management solution](../plan-design/choose-a-device-management-solution.md)  
+- [Evaluate Configuration Manager by building your own lab environment](../get-started/set-up-your-lab.md)
+- [Find help for using Configuration Manager](find-help.md)  

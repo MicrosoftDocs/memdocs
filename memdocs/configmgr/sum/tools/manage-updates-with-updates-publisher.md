@@ -23,10 +23,10 @@ software updates and bundles that you have imported to the repository.
 Management tasks include duplicating, editing, and expiring or reactivating updates and bundles, and assigning updates and bundles to publications. You can also export custom catalogs for use with other Updates Publisher installations.
 
 To get updates that you can manage:
--  [Add an update catalog](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) to your installation of Updates Publisher
--  [Import](/sccm/sum/tools/updates-publisher-catalogs#import-updates) the updates from that catalog to your repository.
+-  [Add an update catalog](updates-publisher-catalogs.md#add-software-update-catalogs) to your installation of Updates Publisher
+-  [Import](updates-publisher-catalogs.md#import-updates) the updates from that catalog to your repository.
 
-You can also [create your own updates](/sccm/sum/tools/create-updates-with-updates-publisher).
+You can also [create your own updates](create-updates-with-updates-publisher.md).
 
 
 
@@ -40,14 +40,14 @@ A new copy you create has a status of **Unexpired**, but otherwise retains the s
 ## Edit updates and bundles
 You can select updates and bundles that are in your repository to modify them.
 
-In the **Updates Workspace** select an update or bundle, and then select **Edit** from the **Home** tab to open the edit wizard. Updates and bundles each have separate but closely related wizards that present the same options as the [Create Update](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-update-wizard) or [Create Bundle](/sccm/sum/tools/create-updates-with-updates-publisher#use-the-create-bundle-wizard) wizards.
+In the **Updates Workspace** select an update or bundle, and then select **Edit** from the **Home** tab to open the edit wizard. Updates and bundles each have separate but closely related wizards that present the same options as the [Create Update](create-updates-with-updates-publisher.md#use-the-create-update-wizard) or [Create Bundle](create-updates-with-updates-publisher.md#use-the-create-bundle-wizard) wizards.
 
 When editing, you can change any available detail about the update or bundle so that it can be used in your environment. For example, you can edit the applicability or precedence rules, or change the language. You can also change the product and vendor to move the update or bundle to a custom folder to group updates for your own use.
 
 ## Assign updates and bundles to a publication
 You can select updates and bundles in the **Updates Workspace** and then choose **Assign** from the **Home** tab of the ribbon to add them to a publication. This starts the **Assign Software Updates** wizard.
 -  See [Publish updates and bundles](#publish-updates-and-bundles-from-the-updates-workspace) for information on how to select and publish updates and bundles as a single task.
--  See [Manage publications](/sccm/sum/tools/updates-publisher-publications) for information on how to manage groups of updates and bundles as a single object. After you assign updates to a publication, you can manage that publication, which in turn includes all its assigned updates.
+-  See [Manage publications](updates-publisher-publications.md) for information on how to manage groups of updates and bundles as a single object. After you assign updates to a publication, you can manage that publication, which in turn includes all its assigned updates.
 
 When you assign updates to a publication:
 
@@ -59,7 +59,7 @@ When you assign updates to a publication:
 
     -   **Metadata only** – This publishes only the metadata; update binaries are not published. You might choose this option when you want to gather compliance data.
 
-    -   **Automatic** – This mode is only available when you have connected Updates Publisher to Configuration Manager (See the [ConfigMgr Server](/sccm/sum/tools/updates-publisher-options#configmgr-server) option.)
+    -   **Automatic** – This mode is only available when you have connected Updates Publisher to Configuration Manager (See the [ConfigMgr Server](updates-publisher-options.md#configmgr-server) option.)
 
     With this type, Updates Publisher queries Configuration Manager to determine if the updates or bundles should be published with full content or only metadata. Full content for an update is published only when that update meets the **Requested client count threshold** and **Package source size threshold,** which are specified on the **ConfigMgr Server** page of Updates Publisher options.
 
@@ -69,16 +69,16 @@ When you assign updates to a publication:
 
     -   Use **Assign software update to a new publication** when you do not have a suitable publication. This will create a new publication with the name that you specify.
 
-After you assign updates to a publication, you can use the **Publication Workspace** to [publish](/sccm/sum/tools/updates-publisher-publications#publish-publications) or [export](/sccm/sum/tools/updates-publisher-publications#export-a-publication) the publication as a group.
+After you assign updates to a publication, you can use the **Publication Workspace** to [publish](updates-publisher-publications.md#publish-publications) or [export](updates-publisher-publications.md#export-a-publication) the publication as a group.
 
 ## Publish updates and bundles from the Updates Workspace
 When you publish updates and bundles, Updates Publisher adds information about those updates and bundles (metadata) and possibly the binaries for the updates (full content), to an update server for deployment to devices.
 
-Before you have the option to publish, you must configure the [Update Server](/sccm/sum/tools/updates-publisher-options#update-server) option for Updates Publisher. To open this configuration option, go to **Updates Workspace** &gt; **Overview** and select **Configure WSUS and Signing Certificate.** You can also go to the Update Server page in the Updates Publisher options.
+Before you have the option to publish, you must configure the [Update Server](updates-publisher-options.md#update-server) option for Updates Publisher. To open this configuration option, go to **Updates Workspace** &gt; **Overview** and select **Configure WSUS and Signing Certificate.** You can also go to the Update Server page in the Updates Publisher options.
 
 There are two ways to publish updates and bundles:
 -   Directly from the Updates Workspace. (See the following procedure, *To publish updates and bundles*.)
--   As a [publication](/sccm/sum/tools/updates-publisher-publications#publish-publications) from the Publications Workspace.  
+-   As a [publication](updates-publisher-publications.md#publish-publications) from the Publications Workspace.  
 
 > [!NOTE]   
 > Updates Publisher can only publish updates that are 375 megabytes (MB) or less in size.
@@ -95,7 +95,7 @@ There are two ways to publish updates and bundles:
 If publishing fails, you are presented with a link to the UpdatesPublisher.log file that can provide more information.
 
 ## Export updates
-You can export updates and bundles from your Updates Publisher repository to create a custom update catalog. Then, you can [add](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs) and then [import](/sccm/sum/tools/updates-publisher-catalogs#import-updates) that catalog to another instance of Updates Publisher. (You can also [export updates as a publication](/sccm/sum/tools/updates-publisher-publications##export-a-publication).)
+You can export updates and bundles from your Updates Publisher repository to create a custom update catalog. Then, you can [add](updates-publisher-catalogs.md#add-software-update-catalogs) and then [import](updates-publisher-catalogs.md#import-updates) that catalog to another instance of Updates Publisher. (You can also [export updates as a publication](updates-publisher-publications.md#export-a-publication).)
 
 To export directly, go to **Updates Workspace** > **All Software Updates** and select one or more updates and bundles. You cannot export a vendor or product folder, but you can select a folder and then select the updates in that folder for export.
 
@@ -110,7 +110,7 @@ Go to **Updates Workspace** > **All Software Updates** and select one or more in
 
 -   If your selection contains only updates or bundles that have not been published or that are expired, you are asked to confirm deletion before they are removed.
 
--   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](/sccm/sum/tools/updates-publisher-publications#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.  
+-   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](updates-publisher-publications.md#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.  
 
 If you delete an update or bundle from a vendor and then import that catalog again, that update is restored to your repository.
 

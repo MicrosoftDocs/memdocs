@@ -19,7 +19,7 @@ To clear a PXE advertisement for a Configuration Manager collection, you call th
 
 ### To clear a PXE advertisement for a collection  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object for the collection you want to clear the PXE advertisement for.  
 
@@ -110,4 +110,4 @@ public void ClearPxeAdvertisementCollection(WqlConnectionManager connection, str
 
 ## See Also  
  [How to Clear a PXE Advertisement for a Configuration Manager Resource](../../develop/osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md)   
- [About image management](/sccm/develop/osd/about-operating-system-deployment-image-management)
+ [About image management](about-operating-system-deployment-image-management.md)

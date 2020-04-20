@@ -39,4 +39,4 @@ With this release, Configuration Manager expands the abilities of system adminis
    [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [Software distribution overview](software-distribution-overview.md)

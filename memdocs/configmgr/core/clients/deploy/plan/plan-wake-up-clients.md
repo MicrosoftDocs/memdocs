@@ -20,7 +20,7 @@ manager: dougeby
  Configuration Manager supports traditional wake-up packets to wake up computers in sleep mode when you want to install required software, such as software updates and applications.
 
 > [!NOTE]
-> This article describes how an older version of Wake on LAN functions. This functionality still exists in Configuration Manager version 1810, which also includes a newer version of Wake on LAN too. Both versions of Wake on LAN can, and in many cases will, be enabled simultaneously. For more information about how the new version of Wake on LAN functions starting in 1810 and enabling either or both versions, see [How to configure Wake on LAN](/sccm/core/clients/deploy/configure-wake-on-lan).  
+> This article describes how an older version of Wake on LAN functions. This functionality still exists in Configuration Manager version 1810, which also includes a newer version of Wake on LAN too. Both versions of Wake on LAN can, and in many cases will, be enabled simultaneously. For more information about how the new version of Wake on LAN functions starting in 1810 and enabling either or both versions, see [How to configure Wake on LAN](../configure-wake-on-lan.md).  
 
 ## How to wake up clients in Configuration Manager
 
@@ -54,7 +54,7 @@ You can supplement the traditional wake-up packet method by using the wake-up pr
 > [!IMPORTANT]  
 >  If you have a separate team that is responsible for the network infrastructure and network services, notify and include this team during your evaluation and testing period. For example, on a network that uses 802.1X network access control, wake-up proxy will not work and can disrupt the network service. In addition, wake-up proxy could cause some network monitoring tools to generate alerts when the tools detect the traffic to wake-up other computers.  
 
--   All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) are supported for Wake On LAN.  
+-   All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for Wake On LAN.  
 
 -   Guest operating systems that run on a virtual machine are not supported.  
 

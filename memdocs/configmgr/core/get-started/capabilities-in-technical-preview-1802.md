@@ -20,7 +20,7 @@ ROBOTS: NOINDEX
 
 This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1802. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
 
-Review [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review [Technical Preview for Configuration Manager](technical-preview.md) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
 
 
 <!--  Known Issues Template   
@@ -29,7 +29,7 @@ Review [Technical Preview for Configuration Manager](/sccm/core/get-started/tech
     Workaround details.
 -->
 ## Known Issues in this Technical Preview
-- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
+- **Update to a new preview version fails when you have a site server in passive mode**. If you have a [primary site server in passive mode](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), then you must uninstall the passive mode site server before updating to this new preview version. You can reinstall the passive mode site server after your site completes the update.
 
   To uninstall the passive mode site server:
   1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**, and then select the passive mode site server.
@@ -46,7 +46,7 @@ Review [Technical Preview for Configuration Manager](/sccm/core/get-started/tech
 
 ## Transition Endpoint Protection workload to Intune using co-management    
 <!-- 1357365 -->
-In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](/sccm/core/clients/manage/co-management-overview).
+In this release, you can now transition the Endpoint Protection workload from Configuration Manager to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details, see [Co-management for Windows 10 devices](../../comanage/overview.md).
 
 
  
@@ -71,14 +71,14 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 ## Windows 10 in-place upgrade task sequence via cloud management gateway
 <!-- 1357149 -->
 
-The Windows 10 [in-place upgrade task sequence](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version) now supports deployment to internet-based clients managed through the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
+The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network. 
 
-Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). Otherwise devices cannot run the task sequence.
+Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices cannot run the task sequence.
 
 When you deploy an upgrade task sequence, use the following settings:
 - **Allow task sequence to run for client on the Internet**, on the User Experience tab of the deployment.
 - **Download all content locally before starting task sequence**, on the Distribution Points tab of the deployment. Other options such as **Download content locally when needed by the running task sequence** do not work in this scenario. The task sequence engine is currently unable to obtain content from a cloud distribution point. The Configuration Manager client must download the content from the cloud distribution point before starting the task sequence.
-- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content).
+- (*Optional*) **Pre-download content for this task sequence**, on the General tab of the deployment. For more information, see [Configure pre-cache content](../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 
 
@@ -92,23 +92,23 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 - **Remove incompatible applications**: Add steps in this group to remove any applications that are incompatible with this version of Windows 10. The method to uninstall an application varies. If the application uses Windows Installer, copy the **Uninstall program** command line from the **Programs** tab on the Windows Installer deployment type properties of the application. Then add a **Run Command Line** step in this group with the uninstall program command line. For example: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Remove incompatible drivers**: Add steps in this group to remove any drivers that are incompatible with this version of Windows 10.
 - **Remove/suspend third-party security**: Add steps in this group to remove or suspend third-party security programs, such as antivirus.
-   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
+   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
 
 ### New groups under **Post-Processing**
 - **Apply setup-based drivers**: Add steps in this group to install setup-based drivers (.exe) from packages.
 - **Install/enable third-party security**: Add steps in this group to install or enable third-party security programs, such as antivirus. 
-- **Set Windows default apps and associations**: Add steps in this group to set Windows default apps and file associations. First prepare a reference computer with your desired app associations. Then run the following command line to export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Add the XML file to a package. Then add a [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> For more information, see [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+- **Set Windows default apps and associations**: Add steps in this group to set Windows default apps and file associations. First prepare a reference computer with your desired app associations. Then run the following command line to export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Add the XML file to a package. Then add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> For more information, see [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
 - **Apply customizations and personalization**: Add steps in this group to apply Start menu customizations, such as organizing program groups. For more information, see [Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### Additional recommendations
 - Review Windows documentation to [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
 - On the default **Check Readiness** step, enable **Ensure minimum free disk space (MB)**. Set the value to at least **16384** (16 GB) for a 32-bit OS upgrade package, or **20480** (20 GB) for 64-bit. 
-- Use the **SMSTSDownloadRetryCount** [built-in task sequence variable](/sccm/osd/understand/task-sequence-built-in-variables) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients are not on a wired corporate network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it cannot download policy.<!-- 501016 --> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
+- Use the **SMSTSDownloadRetryCount** [built-in task sequence variable](../../osd/understand/task-sequence-variables.md) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients are not on a wired corporate network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it cannot download policy.<!-- 501016 --> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
 - Perform an inline compatibility assessment. 
    - Add a second **Upgrade Operating System** step early in the **Prepare for Upgrade** group. Name it *Upgrade assessment*. Specify the same upgrade package, and then enable the option to **Perform Windows Setup compatibility scan without starting upgrade**. Enable **Continue on error** on the Options tab. 
    - Immediately following this *Upgrade assessment* step, add a **Run Command Line** step. Specify the following command line:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>On the **Options** tab, add the following condition: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, this step is skipped. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan.
-   - For more information, see [Upgrade operating system](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS).
-- If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+   - For more information, see [Upgrade operating system](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
+- If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
 
 Send **Feedback** from the **Home** tab of the ribbon if you have further recommendations or suggestions.
 
@@ -116,14 +116,14 @@ Send **Feedback** from the **Home** tab of the ribbon if you have further recomm
 
 ## Improvements to PXE-enabled distribution points
 <!-- 1357580 -->
-To clarify the behavior of [new PXE functionality](/sccm/core/get-started/capabilities-in-technical-preview-1706#pxe-network-boot-support-for-ipv6) first introduced in Technical Preview version 1706, we renamed the **Support IPv6** option. On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. 
+To clarify the behavior of [new PXE functionality](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6) first introduced in Technical Preview version 1706, we renamed the **Support IPv6** option. On the **PXE** tab of the distribution point properties, check **Enable a PXE responder without Windows Deployment Service**. 
 
 This option enables a PXE responder on the distribution point, which does not require Windows Deployment Services (WDS). If you enable this new option on a distribution point that is already PXE-enabled, Configuration Manager suspends the WDS service. If you disable this new option, but still **Enable PXE support for clients**, then the distribution point enables WDS again.
 
 Because WDS is not required, the PXE-enabled distribution point can be a client or server operating system, including Windows Server Core. This new PXE responder service continues to support IPv6, and also enhances the flexibility of PXE-enabled distribution points in remote offices.
 
 > [!NOTE]
-> This service uses the same fundamental technology as the [Client-based PXE responder service](/sccm/core/get-started/capabilities-in-technical-preview-1712#client-based-pxe-responder-service) in Technical Preview version 1712. That feature does not require the overhead of the distribution point role.
+> This service uses the same fundamental technology as the [Client-based PXE responder service](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) in Technical Preview version 1712. That feature does not require the overhead of the distribution point role.
 
 ### Multicast
 To enable and configure multicast on the **Multicast** tab of the distribution point properties, the distribution point must use WDS. 
@@ -152,7 +152,7 @@ Try to complete the tasks. Then send **Feedback** from the **Home** tab of the r
 
 ## Product lifecycle dashboard
 <!--1319632-->
-The new [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard) shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
+The new [Product Lifecycle dashboard](../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) shows the state of the Microsoft Product Lifecycle policy for Microsoft products installed on devices managed with Configuration Manager. The dashboard provides you with information about Microsoft products in your environment, supportability state, and support end dates. You can use the dashboard to understand the availability of support for each product. 
 
 To access the Lifecycle Dashboard, in the Configuration Manager console, go to **Assets and Compliance** >**Asset Intelligence** >**Product Lifecycle**
 
@@ -175,13 +175,13 @@ Enable the **Hide Installed Applications in Software Center** setting in the Sof
 
 ## Improvements to Run Scripts
 <!--1236459-->
-The [Run Scripts](/sccm/apps/deploy-use/create-deploy-scripts) feature now returns script output using JSON formatting. This format consistently returns a readable script output. Scripts that fail to run may not get output returned. 
+The [Run Scripts](../../apps/deploy-use/create-deploy-scripts.md) feature now returns script output using JSON formatting. This format consistently returns a readable script output. Scripts that fail to run may not get output returned. 
 
 
 
 ## Boundary group fallback for management points
 <!-- 1324594 -->
-Starting in this release, you can configure fallback relationships for management points between [boundary groups](/sccm/core/servers/deploy/configure/boundary-groups). This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there is a new column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
+Starting in this release, you can configure fallback relationships for management points between [boundary groups](../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. On the **Relationships** tab of the boundary group properties, there is a new column for management point. When you add a new fallback boundary group, the fallback time for the management point is currently always zero (0). This behavior is the same for the **Default Behavior** on the site default boundary group.
 
 Previously, a common problem occurs when you have a protected management point in a secure network. Clients on the main corporate network receive policy that includes this protected management point, even though they cannot communicate with it across a firewall. To address this problem, use the **Never fallback** option to ensure that clients only fallback to management points with which they can communicate.
 
@@ -190,7 +190,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.
@@ -210,20 +210,20 @@ When a client receives five errors in ten minutes and fails to communicate with 
 
 ## Improved support for CNG certificates
 <!-- 1357314 -->
-Configuration Manager (current branch) version 1710 supports [Cryptography: Next Generation (CNG) certificates](/sccm/core/plan-design/network/cng-certificates-overview). Version 1710 limits support to client certificates in several scenarios. 
+Configuration Manager (current branch) version 1710 supports [Cryptography: Next Generation (CNG) certificates](../plan-design/network/cng-certificates-overview.md). Version 1710 limits support to client certificates in several scenarios. 
 
 Starting in this technical preview release, use CNG certificates for the following HTTPS-enabled server roles:
 - Management point
 - Distribution point
 - Software update point
 
-The list of [unsupported scenarios](/sccm/core/plan-design/network/cng-certificates-overview#unsupported-scenarios) remains the same.
+The list of [unsupported scenarios](../plan-design/network/cng-certificates-overview.md#unsupported-scenarios) remains the same.
 
 
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
@@ -233,8 +233,8 @@ Configuration Manager does not migrate existing classic CMG instances to the Azu
 > This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Prerequisites
-- Integration with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure). Azure AD user discovery is not required.
-- The same [requirements for cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#requirements), except for the Azure management certificate.
+- Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.
+- The same [requirements for cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md#requirements), except for the Azure management certificate.
 
 ### Try it out!  
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
@@ -256,11 +256,11 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
 > [!NOTE]
-> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version
-- Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
+- Enable the client setting **Use new Software Center** in the [Computer agent](../clients/deploy/about-client-settings.md#computer-agent) group
 
 ### Try it out!
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
@@ -278,16 +278,16 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Prerequisites
 - Enable HTTPS on the management point
-- Integrate the site with [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure)
+- Integrate the site with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)
 - Deploy an application as available to a user collection
-- Distribute any application content to a [cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)
-- Enable the client setting **Use new Software Center** in the [Computer agent](/sccm/core/clients/deploy/about-client-settings#computer-agent) group
+- Distribute any application content to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- Enable the client setting **Use new Software Center** in the [Computer agent](../clients/deploy/about-client-settings.md#computer-agent) group
 - The client must be: 
    - Windows 10
    - Azure AD-joined, also known as cloud domain-joined
 - To support internet-based clients:
-    - [Cloud management gateway](/sccm/core/clients/manage/plan-cloud-management-gateway) 
-    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](/sccm/core/clients/deploy/about-client-settings#client-policy) group
+    - [Cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) 
+    - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../clients/deploy/about-client-settings.md#client-policy) group
 - To support clients on the corporate network:
     - Add the cloud distribution point to a boundary group used by the clients
     - Clients must be able to resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point
@@ -365,7 +365,7 @@ For customers who use the [Microsoft Edge](https://technet.microsoft.com/microso
 3. Select additional options as necessary. Generate alerts when the policy is not compliant. Set the schedule by which the client evaluates the device's compliance with this policy.
 4. Click **OK** to create the deployment.
 
-Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](/sccm/compliance/deploy-use/monitor-compliance-settings) in the Configuration Manager console.
+Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](../../compliance/deploy-use/monitor-compliance-settings.md) in the Configuration Manager console.
 
 
 
@@ -420,4 +420,4 @@ Phased deployments automate a coordinated, sequenced rollout of software across 
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](/sccm/core/get-started/technical-preview).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    

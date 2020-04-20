@@ -34,7 +34,7 @@ You create the state migration point role, in Configuration Manager, by creating
 
 ### To create a state migration point role  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Create an instance of [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md).  
 
@@ -196,7 +196,7 @@ public void WriteScfEmbeddedProperty(
 ## See Also  
  [SMS_SCI_SysResUse Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)   
  [PackNALPath Method in Class SMS_NAL_Methods](../../develop/reference/misc/packnalpath-method-in-class-sms_nal_methods.md)   
- [About OS deployment site role configuration](/sccm/develop/osd/about-operating-system-deployment-site-role-configuration)
+ [About OS deployment site role configuration](about-operating-system-deployment-site-role-configuration.md)
  [How to Add a State Migration Point Folder](../../develop/osd/how-to-add-a-state-migration-point-folder.md)   
  [How to Set the Deletion Policy for a State Migration Point](../../develop/osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md)   
  [How to Set the Restore-Only Mode for a State Migration Point](../../develop/osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md)   

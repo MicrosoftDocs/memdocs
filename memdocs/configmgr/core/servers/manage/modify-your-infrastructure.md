@@ -30,7 +30,7 @@ At each Configuration Manager site, you can rerun setup to:
 
 Monitor the installation or removal of the SMS provider by viewing the **ConfigMgrSetup.log** in the root folder of the site server on which you run setup.
 
-Before you modify the SMS provider at a site, see [Plan for the SMS provider](/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider).
+Before you modify the SMS provider at a site, see [Plan for the SMS provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md).
 
 ### Manage the SMS provider configuration for a site  
 
@@ -57,11 +57,11 @@ The following tasks help you manage the Configuration Manager console:
 
 - To modify the language that displays in the Configuration Manager console, see the [Manage Configuration Manager console language](#BKMK_ManageConsoleLanguages) section.
 
-- To install additional consoles, see [Install Configuration Manager consoles](/sccm/core/servers/deploy/install/install-consoles).
+- To install additional consoles, see [Install Configuration Manager consoles](../deploy/install/install-consoles.md).
 
 - To configure DCOM permissions to enable consoles that are remote from the site server, see the [Configure DCOM permissions for remote Configuration Manager consoles](#BKMK_ConfigDCOMforRemoteConsole) section.
 
-- To modify administrative permissions to limit what users can see and do in the console, see [Modify the administrative scope of an administrative user](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser).
+- To modify administrative permissions to limit what users can see and do in the console, see [Modify the administrative scope of an administrative user](../deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser).
 
 ### <a name="BKMK_ManageConsoleLanguages"></a> Manage Configuration Manager console language
 
@@ -180,7 +180,7 @@ If you move the site database, also review the following configurations:
 - Make sure the new SQL Server has access to the backup location. When you use a UNC for storing your site database backup, after moving the database to a new server, make sure the computer account of the new SQL Server has **write** permissions to the UNC location. This configuration includes when you move to a SQL Server AlwaysOn availability group or a SQL Server cluster.
 
 > [!IMPORTANT]
-> Before you move a database that has one or more database replicas for management points, first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information, see [Database replicas for management points](/configmgr/core/servers/deploy/configure/database-replicas-for-management-points).
+> Before you move a database that has one or more database replicas for management points, first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
 ## <a name="bkmk_SPN"></a> Manage the SPN for the site database server
 
@@ -293,7 +293,7 @@ The account that you use to reset a site must have the following permissions:
 
 ### Limitations for a site reset
 
-If the hierarchy is configured to support [testing client upgrades in a pre-production collection](/sccm/core/clients/manage/upgrade/test-client-upgrades), you can't use a site reset to change the server or client language packs at sites.
+If the hierarchy is configured to support [testing client upgrades in a pre-production collection](../../clients/manage/upgrade/test-client-upgrades.md), you can't use a site reset to change the server or client language packs at sites.
 
 ### Run a site reset
 
@@ -329,7 +329,7 @@ Changes to the client language packs update the client installation source files
 
 After you update the client language packs at a site, install each client that will use the language packs by using source files that include the client language packs.
 
-For more information about the client and server languages that Configuration Manager supports, see [Language Packs](/configmgr/core/servers/deploy/install/language-packs).
+For more information about the client and server languages that Configuration Manager supports, see [Language Packs](../deploy/install/language-packs.md).
 
 ### Modify the supported language packs at a site
 
@@ -377,6 +377,6 @@ You can modify these values or disable alerts for each site:
 
 ## Uninstall sites and hierarchies
 
-You may need to uninstall a Configuration Manager site system role, site, or hierarchy. For more information, see [Uninstall roles, sites, and hierarchies](/configmgr/core/servers/deploy/install/uninstall-sites-and-hierarchies).
+You may need to uninstall a Configuration Manager site system role, site, or hierarchy. For more information, see [Uninstall roles, sites, and hierarchies](../deploy/install/uninstall-sites-and-hierarchies.md).
 
-Starting in version 2002, you can also remove the CAS from a hierarchy, but keep the primary site. For more information, see [Remove the CAS](/configmgr/core/servers/deploy/install/remove-central-administration-site).
+Starting in version 2002, you can also remove the CAS from a hierarchy, but keep the primary site. For more information, see [Remove the CAS](../deploy/install/remove-central-administration-site.md).

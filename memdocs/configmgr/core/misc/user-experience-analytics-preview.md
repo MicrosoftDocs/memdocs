@@ -53,7 +53,7 @@ This current preview requires:
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
-- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](/configmgr/comanage/overview).
+- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](../../comanage/overview.md).
 
 We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
 
@@ -122,7 +122,7 @@ Windows 10 provides a better user experience than older versions of Windows. See
 
 This metric measures the percent of devices on Windows 10 versus an older version of Windows.
 
-The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](/sccm/desktop-analytics/overview).
+The recommended remediation action for moving devices from older versions of Windows is to create a deployment plan using [Desktop Analytics](../../desktop-analytics/overview.md).
 
 ### <a name="bkmk_uea_ap"></a> Autopilot
 
@@ -138,13 +138,13 @@ Azure Active Directory (Azure AD) provides users with numerous productivity bene
 
 This metric measures the percent of devices enrolled in Azure AD.
 
-Your Microsoft-Intune managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to either [enroll them in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) or [co-manage them](/sccm/comanage/overview). Co-managing devices also improves your cloud management score.
+Your Microsoft-Intune managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to either [enroll them in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) or [co-manage them](../../comanage/overview.md). Co-managing devices also improves your cloud management score.
 
 ### <a name="bkmk_uea_intune"></a> Cloud management
 
 Microsoft Intune provides users with several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminates the need for and performance overhead of Group Policy, resulting in a better end-user experience. This metric measures the percent of PCs enrolled in Microsoft Intune. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
-The recommended remediation action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](/sccm/comanage/overview).
+The recommended remediation action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md).
 
 ### <a name="bkmk_uea_np"></a> No commercial median
 
@@ -311,8 +311,8 @@ To enable functional data sharing, configure your proxy server to allow the foll
 | Endpoint  | Function  |
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](/sccm/core/plan-design/network/proxy-server-support#configure-the-proxy-for-a-site-system-server). |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
 ### Proxy server authentication

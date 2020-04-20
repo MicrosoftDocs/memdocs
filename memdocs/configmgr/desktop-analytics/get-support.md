@@ -19,9 +19,9 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 > [!TIP]
 > Before contacting Microsoft Support, first review the following articles:
 >
-> - [Prerequisites](/sccm/desktop-analytics/overview#prerequisites)
-> - [Troubleshoot Desktop Analytics](/sccm/desktop-analytics/troubleshooting)
-> - [Frequently asked questions](/sccm/desktop-analytics/faq)
+> - [Prerequisites](overview.md#prerequisites)
+> - [Troubleshoot Desktop Analytics](troubleshooting.md)
+> - [Frequently asked questions](faq.md)
 
 ## Help and support
 
@@ -50,4 +50,4 @@ The fourth option opens the **Help and Support** option in the portal.
 
 ## See also
 
-[Find help for Configuration Manager](/configmgr/core/understand/find-help)
+[Find help for Configuration Manager](../core/understand/find-help.md)

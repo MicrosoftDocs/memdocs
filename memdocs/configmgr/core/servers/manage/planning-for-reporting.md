@@ -23,7 +23,7 @@ Reporting in Configuration Manager provides a set of tools and resources that he
 When you run Configuration Manager reports at a site, the reports have access to the information in the site database in which it connects. Use the following sections to help you determine where to install the reporting services point and what data source to use.
 
 > [!NOTE]
-> For more information about planning for site systems in Configuration Manager, see [Add site system roles](/configmgr/core/servers/deploy/configure/add-site-system-roles).
+> For more information about planning for site systems in Configuration Manager, see [Add site system roles](../deploy/configure/add-site-system-roles.md).
 
 ### Supported site system servers
 
@@ -37,13 +37,13 @@ Consider the following factors to help you determine where to install your repor
 
 - A reporting services point with a child primary site database as its reporting data source has access to global data and site data for only the local primary site and any child secondary sites. Site data for other primary sites in the Configuration Manager hierarchy doesn't replicate to this primary site. Reporting Services can't access site data for other primary sites. If you require reports that contain site data for a specific primary site or global data, and you don't want the user to have access to site data from other primary sites, install a reporting services point on a site system at the primary site. Then use the primary site's database as the reporting data source.
 
-For more information on global and site data, see [Types of data](/configmgr/core/plan-design/hierarchy/database-replication#types-of-data).
+For more information on global and site data, see [Types of data](../../plan-design/hierarchy/database-replication.md#types-of-data).
 
 ### Network bandwidth considerations
 
 Depending on how you configure the site, site systems in the same site communicate with each other by using server message block (SMB), HTTP, or HTTPS. Configuration Manager doesn't manage this communication. It can occur at any time without network bandwidth control. Review your available network bandwidth before you install the reporting services point role on a site system.
 
-For more information about planning for site systems, see [Add site system roles](/configmgr/core/servers/deploy/configure/add-site-system-roles).
+For more information about planning for site systems, see [Add site system roles](../deploy/configure/add-site-system-roles.md).
 
 ## Plan for role-based administration
 
@@ -58,9 +58,9 @@ For example, the **Software Update Manager** security role has the **Run Report*
 
 Reports are fully enabled for role-based administration. Configuration Manager filters the data for all included reports based on the permissions of the user who runs the report. Users with specific roles can only view information defined for their roles.
 
-For more information about security rights for reporting, see [Configure reporting](/configmgr/core/servers/manage/configuring-reporting).
+For more information about security rights for reporting, see [Configure reporting](configuring-reporting.md).
 
-For more information about role-based administration in Configuration Manager, see [Configure role-based administration](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
+For more information about role-based administration in Configuration Manager, see [Configure role-based administration](../deploy/configure/configure-role-based-administration.md).
 
 ## Reporting recommendations
 
@@ -78,8 +78,8 @@ Consider the following recommendations and tips for reporting in Configuration M
 
 Configuration Manager reports display information that it collects during standard Configuration Manager management operations. For example, you can display a report of information that Configuration Manager collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.
 
-For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](/configmgr/core/plan-design/security/security-and-privacy).  
+For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](../../plan-design/security/security-and-privacy.md).  
 
 ## Next steps
 
-[Prerequisites for reporting](/configmgr/core/servers/manage/prerequisites-for-reporting)
+[Prerequisites for reporting](prerequisites-for-reporting.md)

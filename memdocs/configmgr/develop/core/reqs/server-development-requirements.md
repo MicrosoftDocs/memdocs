@@ -47,14 +47,14 @@ In Configuration Manager, the SMS Provider and associated technologies can be pr
 
 - Microsoft .NET Framework 4  
 
-  For more information, see [About console extensions](/sccm/develop/core/servers/console/about-configuration-manager-console-extension).  
+  For more information, see [About console extensions](../servers/console/about-configuration-manager-console-extension.md).  
 
   For specific information about deploying Configuration Manager console extensions, see [Configuration Manager Console Extension Deployment](../../../develop/core/servers/console/console-extension-deployment.md)  
 
 ## VBScript  
  You can use Windows Management Instrumentation (WMI) to access the SMS Provider.  
 
- The scripting samples are provided in VBScript and use WMI to access Configuration Manager. For more information, see [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview).  
+ The scripting samples are provided in VBScript and use WMI to access Configuration Manager. For more information, see [Objects overview](../understand/configuration-manager-objects-overview.md).  
 
  Programming the SMS Provider with VBScript has the following requirements:  
 

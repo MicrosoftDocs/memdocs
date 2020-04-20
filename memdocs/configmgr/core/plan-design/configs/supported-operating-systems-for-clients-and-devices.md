@@ -26,13 +26,13 @@ Review the following requirements and limitations for all clients:
 
 ## Windows computers  
 
-To manage the following Windows OS versions, use the client that's included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).  
+To manage the following Windows OS versions, use the client that's included with Configuration Manager. For more information, see [How to deploy clients to Windows computers](../../clients/deploy/deploy-clients-to-windows-computers.md).  
 
 ### Supported client OS versions
 
 - **Windows 10**  
 
-    For more detailed information, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).  
+    For more detailed information, see [Support for Windows 10](support-for-windows-10.md).  
 
 - **Windows 8.1** (x86, x64): Professional, Enterprise
 
@@ -47,9 +47,9 @@ The client only disables user policy when it detects this type of device during 
 
 If you require user policy in this scenario, and accept any potential performance impact, use one of the following methods to enable user policy:
 
-- In version 1910 and later, use [client settings](/configmgr/core/clients/deploy/configure-client-settings). In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
+- In version 1910 and later, use [client settings](../../clients/deploy/configure-client-settings.md). In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
 
-- In version 1906, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](/sccm/develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
+- In version 1906, use the Configuration Manager SDK with the [SMS_PolicyAgentConfig server WMI class](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Set the new `PolicyEnableUserPolicyOnTS` property to `true`.
 
 > [!Note]  
 > You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
@@ -75,7 +75,7 @@ If you require user policy in this scenario, and accept any potential performanc
 
 The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>  
 
-Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 10 semi-annual channel version. For more information, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10).
+Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 10 semi-annual channel version. For more information, see [Support for Windows 10](support-for-windows-10.md).
 
 - **Windows Server 2019** (x64) <sup>[Note 2](#bkmk_note2)</sup>
 
@@ -91,7 +91,7 @@ Configuration Manager tests and supports Windows Server Datacenter editions, but
 
 #### <a name="bkmk_note2"></a> Note 2
 
-To support [client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
+To support [client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), add the File Server service of the File and Storage Services server role. For more information about installing Windows features on Server Core, see [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
 #### <a name="bkmk_note3"></a> Note 3
 
@@ -99,7 +99,7 @@ The new Software Center app isn't supported on any version of Windows Server Cor
 
 ## Windows Embedded computers  
 
-Manage Windows Embedded devices by installing the Configuration Manager client on the device. For more information, see [Planning for client deployment to Windows Embedded devices](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices).  
+Manage Windows Embedded devices by installing the Configuration Manager client on the device. For more information, see [Planning for client deployment to Windows Embedded devices](../../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ### Requirements and limitations
 
@@ -140,14 +140,14 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 - The mobile device client requires 0.78 MB of storage space for installation. Sign-in can require up to 256 KB of additional storage space.
 
-- Features for these mobile devices vary by platform and client type. For information about which management functions are supported, see [Choose a device management solution](/sccm/core/plan-design/choose-a-device-management-solution).  
+- Features for these mobile devices vary by platform and client type. For information about which management functions are supported, see [Choose a device management solution](../choose-a-device-management-solution.md).  
 
 ### Supported OS versions
 
 - Windows CE 7.0 (ARM and x86 processors)  
 
     > [!Note]
-    > Support is deprecated for Windows CE 7.0 in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client).
+    > Support is deprecated for Windows CE 7.0 in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](../changes/deprecated/removed-and-deprecated-client.md).
 
 #### Supported languages include
 
@@ -175,7 +175,7 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
@@ -185,7 +185,7 @@ Manage Apple Mac computers with the Configuration Manager client for macOS.
 
 The macOS client installation package isn't supplied with the Configuration Manager media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850).  
 
-For more information, see [How to deploy clients to Macs](/sccm/core/clients/deploy/deploy-clients-to-macs).  
+For more information, see [How to deploy clients to Macs](../../clients/deploy/deploy-clients-to-macs.md).  
 
 ### Requirements and limitations
 
@@ -202,19 +202,19 @@ For more information, see [How to deploy clients to Macs](/sccm/core/clients/dep
 ## Linux and UNIX servers  
 
 > [!Important]  
-> Configuration Manager version 1902 drops support for Linux and UNIX as a client. Deprecation was announced with [version 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
+> Configuration Manager version 1902 drops support for Linux and UNIX as a client. Deprecation was announced with [version 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
 The Linux and UNIX client installation packages aren't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
 
 ### Requirements and limitations
 
-- To review OS file dependencies for the client for Linux and UNIX, see [Prerequisites for client deployment to Linux and UNIX servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#BKMK_ClientDeployPrereqforLnU).  
+- To review OS file dependencies for the client for Linux and UNIX, see [Prerequisites for client deployment to Linux and UNIX servers](../../clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_ClientDeployPrereqforLnU).  
 
-- For an overview of supported management capabilities for Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
+- For an overview of supported management capabilities for Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](../../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
 - For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, CentOS version 6 includes  CentOS 6.3. Similarly, support for an OS that uses service packs (such as SUSE Linux Enterprise Server 11 SP1) includes subsequent service packs for that OS version.  
 
-- For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers).  
+- For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](../../clients/deploy/deploy-clients-to-unix-and-linux-servers.md).  
 
 ### Supported versions
 
@@ -311,7 +311,7 @@ The following versions are supported by using the indicated .tar file.
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
-Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure).  
+Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ### Supported operating systems
 
@@ -331,12 +331,12 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 - **Windows 10 Mobile Enterprise**  
 
     > [!Note]
-    > Support is deprecated for Windows 10 Mobile and Windows 10 Mobile Enterprise in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client).
+    > Support is deprecated for Windows 10 Mobile and Windows 10 Mobile Enterprise in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](../changes/deprecated/removed-and-deprecated-client.md).
 
 
 ## <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
 
-Configuration Manager supports limited management of devices that connect to your Exchange Server, without installing the Configuration Manager client. For more information, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+Configuration Manager supports limited management of devices that connect to your Exchange Server, without installing the Configuration Manager client. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ### Supported versions of Exchange Server
 

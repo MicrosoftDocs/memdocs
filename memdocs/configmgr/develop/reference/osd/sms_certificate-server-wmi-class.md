@@ -178,4 +178,4 @@ Class SMS_Certificate : SMS_BaseClass
 ## See Also  
  [BlockCertificate Method in Class SMS_CertificateInfo](../../../develop/reference/osd/blockcertificate-method-in-class-sms_certificateinfo.md)   
  [SMS_PXECertificateInfo Server WMI Class](../../../develop/reference/osd/sms_pxecertificateinfo-server-wmi-class.md)   
- [Task sequence overview](/sccm/develop/osd/operating-system-deployment-task-sequences-overview)
+ [Task sequence overview](../../osd/operating-system-deployment-task-sequences-overview.md)

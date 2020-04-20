@@ -19,7 +19,7 @@ manager: dougeby
 
 Use this procedure to install and configure an Exchange Server connector to manage mobile devices. Configuration Manager supports only one connector in an Exchange organization.
 
-Before you install the Exchange Server connector for Configuration Manager, make sure you have the required permissions and versions. For more information, see [Device management with Exchange and Configuration Manager](/configmgr/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync#prerequisites).
+Before you install the Exchange Server connector for Configuration Manager, make sure you have the required permissions and versions. For more information, see [Device management with Exchange and Configuration Manager](manage-mobile-devices-with-exchange-activesync.md#prerequisites).
 
 ## Exchange connection account
 
@@ -104,9 +104,9 @@ For more information, see [Understanding management role groups](https://docs.mi
     - **Security**
     - **Application**
 
-    For more information, see [Exchange connector settings](/configmgr/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync#policies).
+    For more information, see [Exchange connector settings](manage-mobile-devices-with-exchange-activesync.md#policies).
 
-    If you also enroll mobile devices by using Configuration Manager [on-premises MDM](/configmgr/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure), enable the option to **Allow external mobile device management**. This setting allows these mobile devices to continue receiving email from Exchange after Configuration Manager enrolls them.
+    If you also enroll mobile devices by using Configuration Manager [on-premises MDM](../understand/manage-mobile-devices-with-on-premises-infrastructure.md), enable the option to **Allow external mobile device management**. This setting allows these mobile devices to continue receiving email from Exchange after Configuration Manager enrolls them.
 
 1. Complete the wizard.
 
@@ -127,7 +127,7 @@ After you complete the installation, monitor the mobile devices that are found a
 
 ## See also
 
-- [Ports used by Configuration clients and site systems](/configmgr/core/plan-design/hierarchy/ports#BKMK_PortsExchangeConnectorHosted)
-- [Proxy server support](/configmgr/core/plan-design/network/proxy-server-support#site-system-roles-that-use-a-proxy)
-- [Security recommendations for mobile devices](/configmgr/core/clients/deploy/plan/security-and-privacy-for-clients#bkmk_mobile)
-- [Privacy information for mobile devices that are managed with the Exchange Server connector](/configmgr/core/clients/deploy/plan/security-and-privacy-for-clients#BKMK_Privacy_ExchangeConnector)
+- [Ports used by Configuration clients and site systems](../../core/plan-design/hierarchy/ports.md#BKMK_PortsExchangeConnectorHosted)
+- [Proxy server support](../../core/plan-design/network/proxy-server-support.md#site-system-roles-that-use-a-proxy)
+- [Security recommendations for mobile devices](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#bkmk_mobile)
+- [Privacy information for mobile devices that are managed with the Exchange Server connector](../../core/clients/deploy/plan/security-and-privacy-for-clients.md#BKMK_Privacy_ExchangeConnector)

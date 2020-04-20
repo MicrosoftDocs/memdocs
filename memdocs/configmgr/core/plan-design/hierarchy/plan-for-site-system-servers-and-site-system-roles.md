@@ -61,7 +61,7 @@ The site assigns this role to site system servers that hold an instance of the s
 
 The site assigns this role to each computer that hosts an instance of the SMS Provider. The provider is the interface between a Configuration Manager console and the site database. By default, this role automatically installs on the site server of a central administration site and primary sites. Install additional instances at each site to provide access to additional administrative users or for redundancy.  
 
-To install additional providers, run Configuration Manager setup to [Manage the SMS Provider](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider). Then install additional providers on additional computers. Only install one instance of the SMS Provider on a computer. That computer must be in the same domain as the site server.  
+To install additional providers, run Configuration Manager setup to [Manage the SMS Provider](../../servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider). Then install additional providers on additional computers. Only install one instance of the SMS Provider on a computer. That computer must be in the same domain as the site server.  
 
 ### Application catalog web service point
 
@@ -70,8 +70,8 @@ To install additional providers, run Configuration Manager setup to [Manage the 
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 A site system role that provides software information to the application catalog website from the software library. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
@@ -82,8 +82,8 @@ A site system role that provides software information to the application catalog
 >
 > For more information, see the following articles:
 >
-> - [Configure Software Center](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)
-> - [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)  
+> - [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
+> - [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
 
 A site system role that provides users with a list of available software from the application catalog. Although this role is supported only at primary sites, you can install multiple instances of this role at a site, or at multiple sites in the same hierarchy.  
 
@@ -91,7 +91,7 @@ A site system role that provides users with a list of available software from th
 
 A site system role that connects to Microsoft to download information for the Asset Intelligence catalog. This role also uploads uncategorized titles, so that Microsoft can consider them for future inclusion in the catalog. A hierarchy supports only a single instance of this role at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site. Then install it at the central administration site.
 
-For more information, see [Asset Intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/introduction-to-asset-intelligence).  
+For more information, see [Asset Intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 ### Certificate registration point
 
@@ -103,11 +103,11 @@ Each certificate registration point requires access to a separate NDES instance.
 
 ### Cloud management gateway connection point
 
-A site system role for communicating with the [cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway).  
+A site system role for communicating with the [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md).  
 
 ### Data warehouse service point
 
-Use the data warehouse service point to store and report on long-term historical data in your Configuration Manager environment. For more information, see [Data warehouse](/sccm/core/servers/manage/data-warehouse).  
+Use the data warehouse service point to store and report on long-term historical data in your Configuration Manager environment. For more information, see [Data warehouse](../../servers/manage/data-warehouse.md).  
 
 ### Distribution point
 
@@ -119,11 +119,11 @@ A site system role that contains source files for clients to download, for examp
 - OS images
 - Boot images  
 
-By default, this role installs on the site server when you install a new primary or secondary site. This role isn't supported at a central administration site. Install multiple instances of this role at a supported site, and at multiple sites in the same hierarchy. For more information, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management), and [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+By default, this role installs on the site server when you install a new primary or secondary site. This role isn't supported at a central administration site. Install multiple instances of this role at a supported site, and at multiple sites in the same hierarchy. For more information, see [Fundamental concepts for content management](fundamental-concepts-for-content-management.md), and [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 ### Endpoint Protection point
 
-A site system role that Configuration Manager uses to accept the Endpoint Protection license terms, and to configure the default membership for Cloud Protection Service. A hierarchy only supports a single instance of this role, and that must be at the top-tier site. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [Endpoint Protection in Configuration Manager](/sccm/protect/deploy-use/endpoint-protection).  
+A site system role that Configuration Manager uses to accept the Endpoint Protection license terms, and to configure the default membership for Cloud Protection Service. A hierarchy only supports a single instance of this role, and that must be at the top-tier site. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [Endpoint Protection in Configuration Manager](../../../protect/deploy-use/endpoint-protection.md).  
 
 ### Enrollment point
 
@@ -139,7 +139,7 @@ When you support mobile devices on the internet, install an enrollment proxy poi
 
 ### Exchange Server connector
 
-For information about this role, see [Manage mobile devices with Configuration Manager and Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync).  
+For information about this role, see [Manage mobile devices with Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 
 ### Fallback status point
 
@@ -151,15 +151,15 @@ A site system role that provides policy and service location information to clie
 
 By default, this role installs on the site server when you install a new primary or secondary site. Primary sites support multiple instances of this role. Secondary sites support a single management point. Also referred to as a proxy management point, this role at a secondary site provides a local point of contact for clients to obtain computer and user policies.  
 
-Set up management points to support either HTTP or HTTPs. They can also support mobile devices that you manage with Configuration Manager on-premises mobile device management (MDM). To help reduce the processing load placed on the site database server by management points as they service requests from clients, use [Database replicas for management points](/sccm/core/servers/deploy/configure/database-replicas-for-management-points).  
+Set up management points to support either HTTP or HTTPs. They can also support mobile devices that you manage with Configuration Manager on-premises mobile device management (MDM). To help reduce the processing load placed on the site database server by management points as they service requests from clients, use [Database replicas for management points](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
 ### Reporting services point
 
-A site system role that integrates with SQL Server Reporting Services to create and manage reports for Configuration Manager. This role is supported at primary sites and the central administration site, and you can install multiple instances of this role at a supported site. For more information, see [Planning for reporting](/sccm/core/servers/manage/planning-for-reporting).  
+A site system role that integrates with SQL Server Reporting Services to create and manage reports for Configuration Manager. This role is supported at primary sites and the central administration site, and you can install multiple instances of this role at a supported site. For more information, see [Planning for reporting](../../servers/manage/planning-for-reporting.md).  
 
 ### Service connection point
 
-A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).  
+A site system role that uploads usage data from your site, and is required to make updates for Configuration Manager available in the console. A hierarchy only supports a single instance of this role, and that must be at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site, and then install it at the central administration site. For more information, see [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md).  
 
 ### Software update point
 
@@ -171,13 +171,13 @@ A site system role that integrates with Windows Server Update Services (WSUS) to
 
 - When data transfer across the network is slow, consider installing a software update point in secondary sites.  
 
-For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).  
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md).  
 
 ### State migration point
 
-When you migrate a computer to a new operating system, this site system role stores user state data. This role is supported at primary sites and at secondary sites. Install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an OS, see [Manage user state](/sccm/osd/get-started/manage-user-state).  
+When you migrate a computer to a new operating system, this site system role stores user state data. This role is supported at primary sites and at secondary sites. Install multiple instances of this role at a site, and at multiple sites in the same hierarchy. For more information about storing user state when you deploy an OS, see [Manage user state](../../../osd/get-started/manage-user-state.md).  
 
 
 ## Next steps
 
-Some Configuration Manager site system roles require connections to the internet. If your environment requires internet traffic to use a proxy server, configure these site system roles to use the proxy. For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).  
+Some Configuration Manager site system roles require connections to the internet. If your environment requires internet traffic to use a proxy server, configure these site system roles to use the proxy. For more information, see [Proxy server support](../network/proxy-server-support.md).  

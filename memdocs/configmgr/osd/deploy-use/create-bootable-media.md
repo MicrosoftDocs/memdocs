@@ -20,9 +20,9 @@ manager: dougeby
 
 Bootable media in Configuration Manager contains the boot image, optional prestart commands and associated files, and Configuration Manager files. Use prestaged media for the following OS deployment scenarios:  
 
-- [Install a new version of Windows on a new computer (bare metal)](/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
 
-- [Replace an existing computer and transfer settings](/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings)  
+- [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)  
 
 
 ## Usage
@@ -53,13 +53,13 @@ Consider the following points about the boot image that you use in the task sequ
 
 ### Create a task sequence to deploy an OS
 
-As part of the bootable media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
+As part of the bootable media, specify the task sequence to deploy the OS. For more information, see [Create a task sequence to install an OS](create-a-task-sequence-to-install-an-operating-system.md).
 
 ### Distribute all content associated with the task sequence
 
 Distribute all content that the task sequence requires to at least one distribution point. This content includes the boot image and other associated prestart files. The wizard gathers the content from the distribution point when it creates the bootable media.
 
-Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute).
+Your user account needs at least **Read** access rights to the content library on that distribution point. For more information, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
 ### Prepare the removable USB drive
 
@@ -124,7 +124,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 6. On the **Security** page, specify the following options:  
 
-    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](/sccm/osd/get-started/prepare-for-unknown-computer-deployments).  
+    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).  
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.  
 
@@ -138,9 +138,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - For HTTPS communications, select **Import PKI certificate**. Then specify the certificate to import and its password.  
 
-        For more information about this client certificate that boot images use, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+        For more information about this client certificate that boot images use, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md).  
 
-    - **User device affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how OS deployment supports user device affinity, see [Associate users with a destination computer](/sccm/osd/get-started/associate-users-with-a-destination-computer).  
+    - **User device affinity**: To support user-centric management in Configuration Manager, specify how you want the media to associate users with the destination computer. For more information about how OS deployment supports user device affinity, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
         - **Allow user device affinity with auto-approval**: The media automatically associates users with the destination computer. This functionality is based on the actions of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and destination computer when it deploys the OS to the destination computer.  
 
@@ -171,7 +171,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - Add any variables that the task sequence uses.  
 
-    - **Enable prestart command**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs. For more information, see [Prestart commands for task sequence media](/sccm/osd/understand/prestart-commands-for-task-sequence-media).  
+    - **Enable prestart command**: Specify any prestart commands that you want to run before the task sequence runs. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs. For more information, see [Prestart commands for task sequence media](../understand/prestart-commands-for-task-sequence-media.md).  
 
         > [!TIP]  
         > During media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the **CreateTSMedia.log** file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
@@ -194,4 +194,4 @@ You can create bootable media on a removable USB drive when the drive isn't conn
 
 ## Next steps
 
-[Use bootable media to deploy Windows over the network](/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network)  
+[Use bootable media to deploy Windows over the network](use-bootable-media-to-deploy-windows-over-the-network.md)  

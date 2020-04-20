@@ -42,7 +42,7 @@ Software updates metadata is retrieved during the synchronization process in Con
      - **Tools**: Specifies a utility or feature that helps to complete one or more tasks.  
      - **Update Rollups**: Specifies a tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. An update rollup generally addresses a specific area, such as a security or product component.  
      - **Updates**: Specifies a widely released fix for a specific problem. An update addresses a non-critical, non-security-related bug.  
-     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012).
+     - **Upgrade**: Specifies an  upgrade for Windows 10 features and functionality. Your software update points and sites must run a minimum of WSUS 6.2 with the [hotfix 3095113](https://support.microsoft.com/kb/3095113) to get the **Upgrade** classification. For more information about installing this update and other updates for **Upgrades**, see [Prerequisites for software updates](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
 
     > [!NOTE]
     > You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> For more information, see the [Include Microsoft Surface drivers and firmware updates](#bkmk_Surface) section.
@@ -60,15 +60,15 @@ Software updates metadata is retrieved during the synchronization process in Con
     >
     > When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
     > - The **Windows 10, version 1903 and later** product is added for synchronization.
-    > - [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
-    > - [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+    > - [Automatic Deployment Rules](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+    > - [Servicing plans](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
 
 ## <a name="bkmk_Surface"></a> Include Microsoft Surface drivers and firmware updates
 
 You can select the **Include Microsoft Surface drivers and firmware updates** checkbox to synchronize Microsoft Surface drivers.<!--1098490--> All software update points must run Windows Server 2016 with cumulative update [KB4025339](https://support.microsoft.com/help/4025339) or later installed to successfully synchronize Surface drivers. If you enable a software update point on a computer running Windows Server 2012 after you enable Surface drivers, the scan results for the driver updates are not accurate. This results in incorrect compliance data displayed in the Configuration Manager console and in Configuration Manager reports.  
 
-- This feature was first introduced in version 1706 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1710, this feature is no longer a pre-release feature.  
-- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+- This feature was first introduced in version 1706 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 1710, this feature is no longer a pre-release feature.  
+- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 - Drivers for ARM devices aren't supported for synchronization.
 
 ## Configuring products for versions of Windows 10
@@ -114,24 +114,24 @@ When you approve feature updates for Windows 10, version 1909, there are a few d
 #### Windows 10, version 1903 and later with Configuration Manager version 1906
 When you update to Configuration Manager version 1906 and have the **Windows 10** product selected for synchronization, the following actions occur automatically:
 - The **Windows 10, version 1903 and later** product is added for synchronization.
-- [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
-- [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
+- [Automatic Deployment Rules](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) containing the **Windows 10** product will be updated to include **Windows 10, version 1903 and later**.
+- [Servicing plans](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) are updated to include the **Windows 10, version 1903 and later** product.
 
 #### Windows 10, version 1903 and later with Configuration Manager version 1902
 If you are using Configuration Manager 1902 with Windows 10,version 1903 clients, you'll need to:
 - Select the **Windows 10, version 1903 and later** product for synchronization.
-- Update any [Automatic Deployment Rules](/sccm/sum/deploy-use/automatically-deploy-software-updates#bkmk_adr-process) for Windows 10, version 1903 clients.
-- Update [Servicing plans](/sccm/osd/deploy-use/manage-windows-as-a-service#servicing-plan-workflow) for Windows 10, version 1903 clients.
+- Update any [Automatic Deployment Rules](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) for Windows 10, version 1903 clients.
+- Update [Servicing plans](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) for Windows 10, version 1903 clients.
 
 ## <a name="bkmk_WIfB"></a> Windows Insider Program
 <!--3556023-->
 Starting in September 2019, you can service and update devices running Windows Insider Preview builds with Configuration Manager. This change means you can manage these devices without changing your normal processes or enabling Windows Update for Business. You can download Feature Updates and Cumulative Updates for Windows Insider Preview builds into Configuration Manager just like any other Windows 10 update or upgrade. For more information, see the [Publishing pre-release Windows 10 Feature Updates to WSUS](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) blog post.
 
-For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#bkmk_WIfB-support).
+For more information about support for Windows Insider in Configuration Manager, see [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md#bkmk_WIfB-support).
 
 ### Prerequisites
 
-- Configuration Manager version 1906 or higher, configured for [software update management](/sccm/sum/plan-design/plan-for-software-updates).
+- Configuration Manager version 1906 or higher, configured for [software update management](../plan-design/plan-for-software-updates.md).
 - Windows 10 devices running [Windows Insider Preview build](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started).
 - A collection containing the Windows Insider devices.
 
@@ -161,23 +161,23 @@ Deploy Feature Updates for Windows Insider to your target collection just like a
 
 - These upgrades will be applicable to all Windows 10 clients 1903 or earlier, with matching architecture, edition, and language.
 - There are license terms, your deployment must accept the terms in order to install.
-- Consider using the [thread priority in client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority).
+- Consider using the [thread priority in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - Dynamic Update automatically installs critical updates, including the latest Cumulative Update, directly from Microsoft Update. This behavior started with Feature Updates for Windows 10 version 1903. 
-  - You can explicitly [disable Dynamic Update in client settings](/sccm/core/clients/deploy/about-client-settings#bkmk_du) or with a [setupconfig.ini file](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - You can explicitly [disable Dynamic Update in client settings](../../core/clients/deploy/about-client-settings.md#bkmk_du) or with a [setupconfig.ini file](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - For more information, see the [Windows 10 Dynamic Update](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) blog post.
 
-For more information on how to deploy upgrades, see [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).
+For more information on how to deploy upgrades, see [Manage Windows as a service](../../osd/deploy-use/manage-windows-as-a-service.md).
 
 
 ### Keeping Insider devices up-to date
 
-Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](/sccm/sum/deploy-use/automatically-deploy-software-updates) or [phased deployments](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Cumulative Updates for Windows Insider will be available for WSUS and by extension for Configuration Manager. These Cumulative Updates will be released at a frequency similar to Windows 10 version 1903 Cumulative Updates. The Windows Insider Cumulative updates are in the **Windows Insider Pre-Release** product category and classified as either **Security Updates** or **Updates**. You can deploy the Cumulative Updates for Windows Insider using your regular software update process like using [automatic deployment rules](../deploy-use/automatically-deploy-software-updates.md) or [phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
 The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product’s End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. For example, Windows 7. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](/sccm/core/servers/manage/updates#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. For example, Windows 7. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../core/servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 

@@ -20,15 +20,15 @@ manager: dougeby
 
 Run a Configuration Manager site recovery after a site fails or data loss occurs in the site database. Repairing and resynchronizing data are the core tasks of a site recovery and are required to prevent interruption of operations.
 
-The sections in this article can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](/sccm/core/servers/manage/backup-and-recovery).
+The sections in this article can help you recover a Configuration Manager site. To create a backup, see [Backup for Configuration Manager](backup-and-recovery.md).
 
 ## Considerations before recovering a site
 
 > [!Important]  
 > This information applies only to site recovery scenarios. When you're upgrading your on-premises infrastructure and not actively recovering a failed site, review the information in the following articles:
 >
-> - [Upgrade on-premises infrastructure](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
-> - [Modify your infrastructure](/sccm/core/servers/manage/modify-your-infrastructure)
+> - [Upgrade on-premises infrastructure](upgrade-on-premises-infrastructure.md)
+> - [Modify your infrastructure](modify-your-infrastructure.md)
 
 ### Prepare the server hardware
 
@@ -107,7 +107,7 @@ Additional SQL Server configuration requirements:
 
 ### SQL Server Always On availability groups
 
-If you use SQL Server Always On availability groups to host the site database, modify your recovery plans as described in [Prepare to use SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-recovery).
+If you use SQL Server Always On availability groups to host the site database, modify your recovery plans as described in [Prepare to use SQL Server Always On](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-recovery).
 
 ### Database replicas
 
@@ -246,7 +246,7 @@ Use one of the following procedures to help you recover your site server and sit
 
 ### Start a site recovery in the setup wizard
 
-1. Copy the [CD.Latest folder](/sccm/core/servers/manage/the-cd.latest-folder) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
+1. Copy the [CD.Latest folder](the-cd.latest-folder.md) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
 
 2. On the **Getting Started** page, select **Recover a site**, and then select **Next**.  
 
@@ -258,7 +258,7 @@ Use one of the following procedures to help you recover your site server and sit
 
 ### Start an unattended site recovery
 
-1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery](/sccm/core/servers/manage/unattended-recovery).  
+1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery](unattended-recovery.md).  
 
 2. Run Configuration Manager setup by using the `/script` command-line option. For example, you create a setup initialization file **ConfigMgrUnattend.ini**. You save it in the `C:\Temp` directory of the computer on which you're running setup. Use the following command:  
 
@@ -359,7 +359,7 @@ In Configuration Manager version 1806, after site recovery you'll see the follow
 
 `Index (zero-based) must be greater than or equal to zero`
 
-To resolve this, [Renew the secret key](/sccm/core/servers/deploy/configure/azure-services-wizard#bkmk_renew) for each Azure tenant connection.
+To resolve this, [Renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew) for each Azure tenant connection.
 
 ### Configure SSL for site system roles that use IIS
 
@@ -367,7 +367,7 @@ When you recover site systems that run IIS and you configured for HTTPS, reconfi
 
 ### Reinstall hotfixes
 
-After a site recovery, you must reinstall any [out-of-band hotfixes](/sccm/core/servers/manage/updates#bkmk_outofband) that were applied to the site server. After site recovery, view the list of the previously installed hotfixes on the **Finished** page of the setup wizard. This list is also saved to `C:\ConfigMgrPostRecoveryActions.html` on the recovered site server.
+After a site recovery, you must reinstall any [out-of-band hotfixes](updates.md#bkmk_outofband) that were applied to the site server. After site recovery, view the list of the previously installed hotfixes on the **Finished** page of the setup wizard. This list is also saved to `C:\ConfigMgrPostRecoveryActions.html` on the recovered site server.
 
 ### Recover custom reports
 
@@ -387,7 +387,7 @@ If you don't have a file system backup that includes the content library, you ha
 
 ### Recover custom software updates
 
-When you've included System Center Updates Publisher database files in your backup plan, you can recover the databases if the Updates Publisher computer fails. For more information about Updates Publisher, see [System Center Updates Publisher](/sccm/sum/tools/updates-publisher).
+When you've included System Center Updates Publisher database files in your backup plan, you can recover the databases if the Updates Publisher computer fails. For more information about Updates Publisher, see [System Center Updates Publisher](../../../sum/tools/updates-publisher.md).
 
 #### Restore the Updates Publisher database
 

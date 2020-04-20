@@ -1,4 +1,4 @@
-﻿---
+---
 title: Power management views
 titleSuffix: Configuration Manager
 description: Information about the power plans applied to computers by Configuration Manager.
@@ -18,11 +18,11 @@ manager: dougeby
 
 Information about the power plans applied to computers by Configuration Manager and the power capabilities of computers is retrieved by Configuration Manager hardware inventory.
 
-For more information about power management, see [Power management in Configuration Manager](/sccm/core/clients/manage/power/introduction-to-power-management).
+For more information about power management, see [Power management in Configuration Manager](../../../../core/clients/manage/power/introduction-to-power-management.md).
 
 Wake up proxy is used to supplement the traditional wake-up packet method by using the wake-up proxy client settings. Wake-up proxy uses a peer-to-peer protocol and elected computers to check whether other computers on the subnet are awake, and to wake them if necessary.
 
-For more information about wake up proxy, see the Power Management section of the [About client settings in Configuration Manager](/sccm/core/clients/deploy/about-client-settings) topic in the Configuration Manager Documentation Library.
+For more information about wake up proxy, see the Power Management section of the [About client settings in Configuration Manager](../../../../core/clients/deploy/about-client-settings.md) topic in the Configuration Manager Documentation Library.
 
 ## Power management views
 

@@ -34,13 +34,13 @@ If your Configuration Manager site had a Microsoft Intune Subscription, you need
 The following note is the original deprecation announcement:
 
 > [!NOTE]  
-> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.
 > <!--Intune feature 2683117-->  
 > Since launching on Azure over a year ago, Intune has added hundreds of new customer-requested and market-leading service capabilities. It now offers far more capabilities than those offered through hybrid mobile device management (MDM). Intune on Azure provides a more integrated, streamlined administrative experience for your enterprise mobility needs.
 >
 > As a result, most customers choose Intune on Azure over hybrid MDM. The number of customers using hybrid MDM continues to decrease as more customers move to the cloud. Therefore, on September 1, 2019, Microsoft will retire the hybrid MDM service offering.
 >
-> This change doesn't affect on-premises Configuration Manager or [co-management for Windows 10 devices](/sccm/comanage/overview). If you're unsure whether you're using hybrid MDM, go to the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and select **Microsoft Intune Subscriptions**. If you have a Microsoft Intune subscription set up, your tenant is configured for hybrid MDM.
+> This change doesn't affect on-premises Configuration Manager or [co-management for Windows 10 devices](../../comanage/overview.md). If you're unsure whether you're using hybrid MDM, go to the **Administration** workspace of the Configuration Manager console, expand **Cloud Services**, and select **Microsoft Intune Subscriptions**. If you have a Microsoft Intune subscription set up, your tenant is configured for hybrid MDM.
 >
 > **How does this affect me?**
 >
@@ -52,7 +52,7 @@ The following note is the original deprecation announcement:
 >
 > - Licensing remains the same. Intune on Azure licenses are included with hybrid MDM.  
 >
-> - The on-premises MDM feature in Configuration Manager isn't deprecated. Starting in Configuration Manager version 1810, you can use on-premises MDM without an Intune connection. For more information, see [An Intune connection is no longer required for new on-premises MDM deployments](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm).
+> - The on-premises MDM feature in Configuration Manager isn't deprecated. Starting in Configuration Manager version 1810, you can use on-premises MDM without an Intune connection. For more information, see [An Intune connection is no longer required for new on-premises MDM deployments](../../core/plan-design/changes/whats-new-in-version-1810.md#bkmk_opmdm).
 >
 > - The on-premises conditional access feature of Configuration Manager is also deprecated with hybrid MDM. If you use conditional access on devices managed with the Configuration Manager client, make sure they are protected before you migrate.
 >     1. Set up conditional access policies in Azure
@@ -61,7 +61,7 @@ The following note is the original deprecation announcement:
 >     4. Enable co-management
 >     5. Move the compliance policies co-management workload to Intune
 >
->     For more information, see [Conditional access with co-management](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access).
+>     For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
 >
 > **What do I need to do to prepare for this change?**
 >
@@ -76,5 +76,5 @@ The following note is the original deprecation announcement:
 For more information on supported features for managing MDM devices, see the following articles:
 
 - [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune)
-- [What is on-premises MDM?](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure)
-- [Device management with Exchange](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)
+- [What is on-premises MDM?](manage-mobile-devices-with-on-premises-infrastructure.md)
+- [Device management with Exchange](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

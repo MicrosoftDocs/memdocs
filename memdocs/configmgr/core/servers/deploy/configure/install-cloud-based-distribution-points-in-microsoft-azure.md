@@ -19,9 +19,9 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]  
-> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg).
+> The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../../clients/manage/cmg/setup-cloud-management-gateway.md#modify-a-cmg).
 >
-> You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+> You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 This article details the steps to install a Configuration Manager cloud distribution point in Microsoft Azure. It includes the following sections:
 
@@ -37,7 +37,7 @@ This article details the steps to install a Configuration Manager cloud distribu
 
 ## <a name="bkmk_before"></a> Before you begin
 
-Start by reading the article [Use a cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point). That article helps you plan and design your cloud distribution points.
+Start by reading the article [Use a cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). That article helps you plan and design your cloud distribution points.
 
 Use the following checklist to make sure you have the necessary information and prerequisites to create a cloud distribution point:  
 
@@ -47,7 +47,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - Starting in version 1806 and *recommended*, use the **Azure Resource Manager deployment**. It has the following requirements:<!--1322209-->  
 
-    - Integration with [Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) for **Cloud Management**. Azure AD user discovery isn't required.  
+    - Integration with [Azure Active Directory](azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
 
     - The Azure **Subscription ID**.  
 
@@ -74,7 +74,7 @@ Use the following checklist to make sure you have the necessary information and 
 - If you still need to use the Azure **classic service deployment** in Configuration Manager version 1810 or earlier, you need the following requirements:  
 
     > [!Important]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud distribution point. For more information, see [Azure Resource Manager](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#azure-resource-manager).  
+    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud distribution point. For more information, see [Azure Resource Manager](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#azure-resource-manager).  
     >
     > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point.<!-- 3605704 -->
 
@@ -86,7 +86,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 To enable a cloud distribution point to use Windows BranchCache, install the BranchCache feature on the site server.<!-- SCCMDocs-pr#4054 -->
 
-- If the site server has an on-premises distribution point site system role, configure the option in that role's properties to **Enable and configure BranchCache**. For more information, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general).
+- If the site server has an on-premises distribution point site system role, configure the option in that role's properties to **Enable and configure BranchCache**. For more information, see [Configure a distribution point](install-and-configure-distribution-points.md#bkmk_config-general).
 
 - If the site server doesn't have a distribution point role, install the BranchCache feature in Windows. For more information, see [Install the BranchCache feature](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
@@ -97,7 +97,7 @@ If you've already distributed content to a cloud distribution point, and then de
 
 ## <a name="bkmk_setup"></a> Set up  
 
-Perform this procedure on the site to host this cloud distribution point as determined by your [design](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_topology).  
+Perform this procedure on the site to host this cloud distribution point as determined by your [design](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology).  
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Cloud Distribution Points**. In the ribbon, select **Create Cloud Distribution Point**.  
 
@@ -191,14 +191,14 @@ The following process shows how a client resolves the name of the cloud distribu
 
 The primary site server that manages the cloud distribution point needs to communicate with Azure. If your organization uses a proxy server to control internet access, configure the primary site server to use this proxy.  
 
-For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).  
+For more information, see [Proxy server support](../../../plan-design/network/proxy-server-support.md).  
 
 
 ## <a name="bkmk_client"></a> Distribute content and configure clients
 
-Distribute content to the cloud distribution point the same as any other on-premises distribution point. The management point doesn't include the cloud distribution point in the list of content locations unless it has the content that clients request. For more information, see [Distribute and manage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content).
+Distribute content to the cloud distribution point the same as any other on-premises distribution point. The management point doesn't include the cloud distribution point in the list of content locations unless it has the content that clients request. For more information, see [Distribute and manage content](deploy-and-manage-content.md).
 
-Manage a cloud distribution point the same as any other on-premises distribution point. These actions include assigning it to a distribution point group, and managing content packages. For more information, see [Install and configure distribution points](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points).
+Manage a cloud distribution point the same as any other on-premises distribution point. These actions include assigning it to a distribution point group, and managing content packages. For more information, see [Install and configure distribution points](install-and-configure-distribution-points.md).
 
 Default client settings automatically enable clients to use cloud distribution points. Control access to all cloud distribution points in your hierarchy with the following client setting:  
 
@@ -211,7 +211,7 @@ Default client settings automatically enable clients to use cloud distribution p
 
 ## <a name="bkmk_monitor"></a> Manage and monitor  
 
-Monitor content that you distribute to a cloud distribution point the same as with any other on-premises distribution points. For more information, see [Monitor content](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed).
+Monitor content that you distribute to a cloud distribution point the same as with any other on-premises distribution points. For more information, see [Monitor content](monitor-content-you-have-distributed.md).
 
 ### <a name="bkmk_alerts"></a> Alerts  
 

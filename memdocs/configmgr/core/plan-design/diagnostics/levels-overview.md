@@ -58,13 +58,13 @@ To change the data collection level, you need **Modify** permissions on the **Si
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
-- [Diagnostic and usage data for 2002](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002)
-- [Diagnostic and usage data for 1910](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910)
-- [Diagnostic and usage data for 1906](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906)
-- [Diagnostic and usage data for 1902](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902)
-- [Diagnostic and usage data for 1810](/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)
+- [Diagnostic and usage data for 2002](levels-of-diagnostic-usage-data-collection-2002.md)
+- [Diagnostic and usage data for 1910](levels-of-diagnostic-usage-data-collection-1910.md)
+- [Diagnostic and usage data for 1906](levels-of-diagnostic-usage-data-collection-1906.md)
+- [Diagnostic and usage data for 1902](levels-of-diagnostic-usage-data-collection-1902.md)
+- [Diagnostic and usage data for 1810](levels-of-diagnostic-usage-data-collection-1810.md)
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Frequently asked questions](/configmgr/core/plan-design/diagnostics/frequently-asked-questions)
+> [Frequently asked questions](frequently-asked-questions.md)

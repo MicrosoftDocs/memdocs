@@ -46,9 +46,9 @@ This article describes the concepts for you to consider when planning for securi
 
 Configuration Manager uses a combination of self-signed certificates and public key infrastructure (PKI) certificates.  
 
-Use PKI certificates whenever possible. For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements). When Configuration Manager requests PKI certificates during enrollment for mobile devices, you must use Active Directory Domain Services and an enterprise certification authority. For all other PKI certificates, deploy and manage them independently from Configuration Manager. 
+Use PKI certificates whenever possible. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md). When Configuration Manager requests PKI certificates during enrollment for mobile devices, you must use Active Directory Domain Services and an enterprise certification authority. For all other PKI certificates, deploy and manage them independently from Configuration Manager. 
 
-PKI certificates are required when client computers connect to internet-based site systems. Some scenarios with the cloud management gateway and cloud distribution point also require PKI certificates. For more information, see [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet).
+PKI certificates are required when client computers connect to internet-based site systems. Some scenarios with the cloud management gateway and cloud distribution point also require PKI certificates. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).
 
 When you use a PKI, you can also use IPsec to help secure the server-to-server communication between site systems in a site, between sites, and for other data transfer between computers. Implementation of IPsec is independent from Configuration Manager.  
 
@@ -57,19 +57,19 @@ When PKI certificates aren't available, Configuration Manager automatically gene
 
 ### <a name="bkmk_plan-cng"></a> Cryptography: Next Generation (CNG) certificates  
 
-Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview).
+Configuration Manager supports Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates. For more information, see [CNG certificates overview](../network/cng-certificates-overview.md).
 
 
 ### <a name="bkmk_plan-ehttp"></a> Enhanced HTTP  
 
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. Starting in version 1806, you can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).  
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but is challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. Starting in version 1806, you can enable the site to use **Enhanced HTTP**. This configuration supports HTTPS on site systems by using a combination of self-signed certificates and Azure AD. It doesn't require PKI. For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).  
 
 
 ### <a name="bkmk_plan-cmgcdp"></a> Certificates for CMG and CDP
 
 Managing clients on the internet via the cloud management gateway (CMG) and cloud distribution point (CDP) requires the use of certificates. The number and type of certificates varies depending upon your specific scenarios. For more information, see the following articles:
-- [Certificates for the cloud management gateway](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)  
-- [Certificates for the cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_certs)  
+- [Certificates for the cloud management gateway](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
+- [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
 ### <a name="bkmk_plansitesign"></a> Plan for the site server signing certificate (self-signed)  
@@ -215,7 +215,7 @@ If more than one appropriate certificate is located after the selection criteria
 
 To help identify a unique PKI client certificate, you can also specify a custom store other than the default of **Personal** in the **Computer** store. However, you must create this store independently from Configuration Manager. You must be able to deploy certificates to this custom store and renew them before the validity period expires.  
 
-For more information, see [Configure settings for client PKI certificates](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
+For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
 
 
 ###  <a name="BKMK_PlanningForPKITransition"></a> Plan a transition strategy for PKI certificates and internet-based client management  
@@ -226,14 +226,14 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Install the Configuration Manager site and configure it so that site systems accept client connections over HTTPS and HTTP.  
 
-2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI).  
+2. Configure the **Client Computer Communication** tab in the site properties so that the **Site System Settings** is **HTTP or HTTPS**, and select **Use PKI client certificate (client authentication capability) when available**.  For more information, see [Configure settings for client PKI certificates](configure-security.md#BKMK_ConfigureClientPKI).  
 
     > [!Note]
     > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
 
-3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012).  
+3. Pilot a PKI rollout for client certificates. For an example deployment, see [Deploy the client certificate for Windows computers](../network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).  
 
-4. Install clients by using the client push installation method. For more information, see the [How to install Configuration Manager clients by using client push](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush).  
+4. Install clients by using the client push installation method. For more information, see the [How to install Configuration Manager clients by using client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).  
 
 5. Monitor client deployment and status by using the reports and information in the Configuration Manager console.  
 
@@ -249,11 +249,11 @@ Because of the number of configuration options and choices in Configuration Mana
    > - `/Criteria:<criteria>`: This option is the same as the **CCMCERTSEL** client.msi property    
    > - `/SelectFirstCert`: This option is the same as the **CCMFIRSTCERT** client.msi property    
    > 
-   >   For more information, see [About client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).  
+   >   For more information, see [About client installation properties](../../clients/deploy/about-client-installation-properties.md).  
 
 7. When you're confident that enough clients are successfully using their client PKI certificate for authentication over HTTP, follow these steps:  
 
-   1.  Deploy a PKI web server certificate to a member server that runs an additional management point for the site, and configure that certificate in IIS. For more information, see [Deploy the web server certificate for site systems that run IIS](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012).  
+   1.  Deploy a PKI web server certificate to a member server that runs an additional management point for the site, and configure that certificate in IIS. For more information, see [Deploy the web server certificate for site systems that run IIS](../network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).  
 
    2.  Install the management point role on this server and configure the **Client connections** option in the management point properties for **HTTPS**.  
 
@@ -262,7 +262,7 @@ Because of the number of configuration options and choices in Configuration Mana
 9. Reconfigure other site system roles to use HTTPS client connections. If you want to manage clients on the internet, make sure that site systems have an internet FQDN. Configure individual management points and distribution points to accept client connections from the internet.  
 
     > [!IMPORTANT]  
-    > Before you set up site system roles to accept connections from the internet, review the planning information and prerequisites for internet-based client management. For more information, see [Communications between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints).  
+    > Before you set up site system roles to accept connections from the internet, review the planning information and prerequisites for internet-based client management. For more information, see [Communications between endpoints](../hierarchy/communications-between-endpoints.md).  
 
 10. Extend the PKI certificate rollout for clients and for site systems that run IIS. Set up the site system roles for HTTPS client connections and internet connections, as required.  
 
@@ -280,9 +280,9 @@ For example, the site issues a certificate to the management point, which it sig
 
 Clients automatically retrieve the public copy of the trusted root key by using two mechanisms:  
 
-- You extend the Active Directory schema for Configuration Manager, and publish the site to Active Directory Domain Services. Then clients retrieve this site information from a global catalog server. For more information, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
+- You extend the Active Directory schema for Configuration Manager, and publish the site to Active Directory Domain Services. Then clients retrieve this site information from a global catalog server. For more information, see [Prepare Active Directory for site publishing](../network/extend-the-active-directory-schema.md).  
 
-- When you install clients using the client push installation method. For more information, see [Client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).  
+- When you install clients using the client push installation method. For more information, see [Client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).  
 
 If clients can't retrieve the trusted root key by using one of these mechanisms, they trust the trusted root key that's provided by the first management point that they communicate with. In this scenario, a client might be misdirected to an attacker's management point where it would receive policy from the rogue management point. This action requires a sophisticated attacker. This attack is limited to the short time before the client retrieves the trusted root key from a valid management point. To reduce this risk of an attacker misdirecting clients to a rogue management point, pre-provision the clients with the trusted root key.  
 
@@ -349,7 +349,7 @@ Remove the trusted root key from a client by using the client.msi property, **RE
 
 To replace the trusted root key, reinstall the client together with the new trusted root key. For example, use client push, or specify the client.msi property **SMSPublicRootKey**.  
 
-For more information on these installation properties, see [About client installation parameters and properties](/sccm/core/clients/deploy/about-client-installation-properties).
+For more information on these installation properties, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md).
 
 
 
@@ -361,13 +361,13 @@ To help protect the data that clients send to management points, you can require
 
 While signing helps protect the data from tampering, encryption helps protect the data from information disclosure. You can enable 3DES encryption for the inventory data and state messages that clients send to management points in the site. You don't have to install any updates on clients to support this option. Clients and management points require additional CPU usage for encryption and decryption.  
 
-For more information about how to configure the settings for signing and encryption, see [Configure signing and encryption](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureSigningEncryption).  
+For more information about how to configure the settings for signing and encryption, see [Configure signing and encryption](configure-security.md#BKMK_ConfigureSigningEncryption).  
 
 
 
 ##  <a name="BKMK_PlanningForRBA"></a> Plan for role-based administration  
 
-For more information, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).  
+For more information, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md).  
 
 
 
@@ -377,35 +377,35 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 **Client**  
 
-- [Manage clients on the internet via cloud management gateway](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
+- [Manage clients on the internet via cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
 
-- [Manage cloud domain-joined devices](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+- [Manage cloud domain-joined devices](../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-- [Co-management](/sccm/comanage/overview)  
+- [Co-management](../../../comanage/overview.md)  
 
-- [Deploy user-available apps](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)  
+- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)  
 
-- [Microsoft Store for Business online apps](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
+- [Microsoft Store for Business online apps](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 
-- Reduce infrastructure requirements. For example, [Software Center using the management point](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex) instead of the application catalog  
+- Reduce infrastructure requirements. For example, [Software Center using the management point](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex) instead of the application catalog  
 
-- [Manage Office 365 apps](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Manage Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
 
 
 **Server**  
 
-- [Desktop Analytics](/sccm/desktop-analytics/overview)  
+- [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics)  
+- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
 
-- [Community Hub](/sccm/core/get-started/capabilities-in-technical-preview-1807#bkmk_hub)  
+- [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
-- [Cloud distribution point](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)  
+- [Cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)  
 
-- [User discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+- [User discovery](../../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
 
-For more information on connecting your site to Azure AD, see [Configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard).
+For more information on connecting your site to Azure AD, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 
 
 For more information about Azure AD, see [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).
@@ -427,18 +427,18 @@ The following levels are available:
 
 - **Windows Hello for Business authentication**: Require authentication with strong two-factor authentication that's tied to a device and uses biometrics or a PIN.  
 
-For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth). 
+For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md#bkmk_auth). 
 
 
 
 ## See also
-- [Security and privacy for Configuration Manager clients](/sccm/core/clients/deploy/plan/security-and-privacy-for-clients)  
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
-- [Configure security](/sccm/core/plan-design/security/configure-security)  
+- [Configure security](configure-security.md)  
 
-- [Communication between endpoints](/sccm/core/plan-design/hierarchy/communications-between-endpoints)  
+- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)  
 
-- [Cryptographic controls technical reference](/sccm/core/plan-design/security/cryptographic-controls-technical-reference)  
+- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
 
-- [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements)  
+- [PKI certificate requirements](../network/pki-certificate-requirements.md)  
 

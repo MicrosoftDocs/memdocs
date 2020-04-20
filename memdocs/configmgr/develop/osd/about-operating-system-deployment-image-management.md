@@ -15,7 +15,7 @@ manager: dougeby
 # About Operating System Deployment Image Management
 There are several package types that Configuration Manager uses to manage reference computer operating system images.  
 
- For more information about operating system deployment image management, see [Manage operating system images with Configuration Manager](https://docs.microsoft.com/sccm/osd/get-started/manage-operating-system-images).  
+ For more information about operating system deployment image management, see [Manage operating system images with Configuration Manager](../../osd/get-started/manage-operating-system-images.md).  
 
 ## Reference Computer  
 
@@ -52,6 +52,6 @@ There are several package types that Configuration Manager uses to manage refere
 
 ## See also
 
-[Operating System Deployment Task Sequence Object Model](/sccm/develop/osd/operating-system-deployment-task-sequence-object-model)
+[Operating System Deployment Task Sequence Object Model](operating-system-deployment-task-sequence-object-model.md)
 
-[Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+[Software distribution overview](../core/servers/configure/software-distribution-overview.md)

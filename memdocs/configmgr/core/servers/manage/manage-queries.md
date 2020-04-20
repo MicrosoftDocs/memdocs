@@ -29,7 +29,7 @@ This article can help you manage queries in Configuration Manager.
 |Management task|Details| 
 |---------------------|-------------|
 |**Run**|Runs the selected query and displays the results in the Configuration Manager console.|
-|**Install Client**|Opens the **Install Client Wizard**, which lets you install the Configuration Manager client on computers returned by the selected query.<br /><br /> This option isn't available for queries that return mobile devices, users, or user groups. <br /><br /> For more information about how to install Configuration Manager clients by using client push, see [Deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).| 
+|**Install Client**|Opens the **Install Client Wizard**, which lets you install the Configuration Manager client on computers returned by the selected query.<br /><br /> This option isn't available for queries that return mobile devices, users, or user groups. <br /><br /> For more information about how to install Configuration Manager clients by using client push, see [Deploy clients to Windows computers](../../clients/deploy/deploy-clients-to-windows-computers.md).| 
 |**Export**|Opens the **Export Objects Wizard**. This wizard lets you export the query to a Managed Object Format (MOF) file that you can then import at another site.
 |**Move**|Opens the **Move Selected Items** dialog box. This dialog box lets you move the selected query to a folder that you previously created under the **Queries** node.|
 

@@ -32,7 +32,7 @@ You add a new computer directly to the Configuration Manager database by calling
 
 ### To add a new computer  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Call the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md).  
 
@@ -182,4 +182,4 @@ public int AddNewComputer(
 
 ## See Also  
  [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)   
- [About OS deployment computer management](/sccm/develop/osd/about-computer-management)
+ [About OS deployment computer management](about-computer-management.md)

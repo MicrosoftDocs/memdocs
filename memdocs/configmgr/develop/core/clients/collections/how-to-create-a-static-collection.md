@@ -57,7 +57,7 @@ CreateStaticCollection (WMIConnection, "New Static Collection Name", "New static
 
 ### To create a static collection  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).  
 
 2.  Create the new collection object by using the [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) class.  
 
@@ -206,8 +206,8 @@ public void CreateStaticCollection(WqlConnectionManager connection, string newCo
 ## See Also  
  [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
  [SMS_CollectionRuleDirect Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md)   
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
- [Objects overview](/sccm/develop/core/understand/configuration-manager-objects-overview)
+ [Software distribution overview](../../servers/configure/software-distribution-overview.md)
+ [About deployments](../../servers/configure/about-software-distribution-deployments.md)
+ [Objects overview](../../understand/configuration-manager-objects-overview.md)
  [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)

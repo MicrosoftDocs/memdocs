@@ -55,7 +55,7 @@ Use the following information to find security best practices and privacy inform
 
 -   [Security and privacy for compliance settings](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
+-   See the *Security and privacy considerations for remote connection profiles* section in [Remote connection profiles](../../../compliance/deploy-use/create-remote-connection-profiles.md)  
 
 -   [Security and privacy for certificate profiles](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)  
 

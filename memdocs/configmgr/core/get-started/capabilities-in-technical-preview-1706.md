@@ -68,7 +68,7 @@ This release includes improvements for how software update points work with boun
   - This cycle continues until the client connects to a software update point it can use.
   - Until the client finds a software update point, additional servers are added to pool of available servers when the fallback time for each neighbor boundary group is met.
 
-For more information, see [software update points](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points) in the Boundary Groups topic for the Current Branch.
+For more information, see [software update points](../servers/deploy/configure/boundary-groups.md#software-update-points) in the Boundary Groups topic for the Current Branch.
 
 
 ## Site server role high availability
@@ -116,7 +116,7 @@ To install a passive mode site server, you use the **Create Site System Server W
 
     - Site system roles that use a database (like the reporting point) must have that database on a server that is remote from both the active mode and passive mode site servers.
 
-    - The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider) on an additional computer.
+    - The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](../plan-design/hierarchy/plan-for-the-sms-provider.md) on an additional computer.
 
 **Known Issue**:   
 With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
@@ -125,7 +125,7 @@ With this release, **Status** for the following conditions appear in the console
 - 851967 – Failover failed
 
 ### Add a site server in passive mode
-1. In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](/sccm/core/servers/deploy/configure/install-site-system-roles). You can also use the **Create Site System Server Wizard**.
+1. In the console go to **Administration** > **Site Configuration** > **Sites** and start the [Add Site System Roles Wizard](../servers/deploy/configure/install-site-system-roles.md). You can also use the **Create Site System Server Wizard**.
 
 2. On the **General** page, specify the server that will host the passive mode site server. The server you specify cannot host any site system roles before installing a site server in passive mode.
 
@@ -182,7 +182,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 ## Include trust for specific files and folders in a Device Guard policy
 <!-- 1324676 -->
-In this release, we’ve added further capabilities to [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) policy management
+In this release, we’ve added further capabilities to [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) policy management
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 
@@ -202,10 +202,10 @@ You can now optionally add trust for specific files for folders in a Device Guar
 In this release, you can control when task sequence progress is displayed to end users by using a new variable. In your task sequence, use the **Set Task Sequence Variable** step to set the value for the **TSDisableProgressUI** variable to hide or display task sequence progress. You can use the Set Task Sequence Variable step multiple times in a task sequence to change the value for the variable. This lets you hide or display task sequence progress in different sections of the task sequence.
 
 #### To hide task sequence progress
-In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
+In task sequence editor, use the [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **True** to hide task sequence progress.
 
 #### To display task sequence progress
-In task sequence editor, use the [Set Task Sequence Variable](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to display task sequence progress.
+In task sequence editor, use the [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to set the value of the **TSDisableProgressUI** variable to **False** to display task sequence progress.
 
 ## Specify a different content location for install content and uninstall content
 <!-- 1097546 -->
@@ -227,7 +227,7 @@ To solve this problem, you can now specify both an installation content location
 
 ## Accessibility improvements  
 <!--1253000 -->
-This preview introduces several improvements to the [accessibility features](/sccm/core/understand/accessibility-features) in the Configuration Manager console. These include:     
+This preview introduces several improvements to the [accessibility features](../understand/accessibility-features.md) in the Configuration Manager console. These include:     
 
 **New keyboard shortcuts to move around the console:**
 - Ctrl + M - Sets focus on the main (central) pane.
@@ -256,7 +256,7 @@ Although the method to configure the connection has changed, prerequisites for t
 The prerequisites for a connection to Upgrade Readiness are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
 
 **Prerequisites**
-- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point) in an [online mode](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
+- In order to add the connection, your Configuration Manager environment must first configure a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
 - Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 - Create a client key for the registered management tool in Azure Active Directory.
 - In the Azure portal, provide the registered web app with permission to access OMS.
@@ -290,7 +290,7 @@ In this release, we’ve added two new client settings to Configuration Manager.
 - Control which Configuration Manager clients can access a configured cloud management gateway.
 - Automatically register Windows 10 domain-joined Configuration Manger clients with Azure Active Directory.
 
-These new settings help you accomplish the capabilities described in the [Configuration Manager 1705 Technical Preview](/sccm/core/get-started/capabilities-in-technical-preview-1705#new-capabilities-for-azure-ad-and-cloud-management).
+These new settings help you accomplish the capabilities described in the [Configuration Manager 1705 Technical Preview](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management).
 
 ### Before you start
 
@@ -300,7 +300,7 @@ If you remove the connection, devices are not un-registered, but no new devices 
 
 ### Try it out!
 
-1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](/sccm/core/clients/deploy/configure-client-settings).
+1. Configure the following client settings (found in the Cloud Services) section using the information in [How to configure client settings](../clients/deploy/configure-client-settings.md).
    - **Automatically register new Windows 10 domain joined devices with Azure Active Directory** – Set to **Yes** (default), or **No**.
    - **Enable clients to use a cloud management gateway** – Set to **Yes** (default), or **No**.
 2. Deploy the client settings to the required collection of devices.
@@ -327,7 +327,7 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 - **To approve, or deny scripts** - Your account must have **Approve** permissions for **SMS Scripts** in the **Full Administrator** security role.
 - **To run scripts** - Your account must have **Run Script** permissions for **Collections** in the **Compliance Settings Manager** security role.
 
-For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration).
+For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](../understand/fundamentals-of-role-based-administration.md).
 
 By default, users cannot approve a script they have authored. Since scripts are powerful, versatile, and can be deployed to many devices, we’ve introduced a new concept of providing the ability to separate the roles between the person that authors the script and the person that approves the script. This gives additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing, particularly during the Technical Preview release.
 
@@ -404,9 +404,9 @@ All software update points must run Windows Server 2016.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
-1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](/sccm/sum/get-started/configure-classifications-and-products) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
-2. [Synchronize the Microsoft Surface drivers](/sccm/sum/get-started/synchronize-software-updates).
-3. [Deploy synchronized Microsoft Surface drivers](/sccm/sum/deploy-use/deploy-software-updates)
+1. Enable Synchronization for Microsoft Surface drivers. Use the procedure in [Configure classification and products](../../sum/get-started/configure-classifications-and-products.md) and select **Include Microsoft Surface drivers and firmware updates** on the **Classifications** tab to enable Surface drivers.
+2. [Synchronize the Microsoft Surface drivers](../../sum/get-started/synchronize-software-updates.md).
+3. [Deploy synchronized Microsoft Surface drivers](../../sum/deploy-use/deploy-software-updates.md)
 
 ## Configure Windows Update for Business deferral policies
 <!-- 1290890 -->
@@ -439,7 +439,7 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
     - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
     - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
     - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
-    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../clients/manage/collections/use-maintenance-windows.md).
     - **Generate an alert**: Configures an alert that is generated if the configuration baseline compliance is less than a specified percentage by a specified date and time. You can also specify whether you want an alert to be sent to System Center Operations Manager.
     - **Random delay (hours)**: Specifies a delay window to avoid excessive processing on the Network Device Enrollment Service. The default value is 64 hours.
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed profile is evaluated on client computers. The schedule can be either a simple or a custom schedule. The profile is evaluated by client computers when the user logs on.
@@ -459,7 +459,7 @@ You can configure Entrust as the certification authority when adding a Certifica
 ## Cisco (IPsec) support for iOS VPN profiles
 <!-- 1321367 -->
 
-You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles#create-a-vpn-profile).
+You can create a iOS VPN profile with Cisco (IPsec) as the connection type. For more information, see [Create VPN profiles](../../protect/deploy-use/create-vpn-profiles.md#create-a-vpn-profile).
 
 
 ## New Windows configuration item settings
@@ -495,7 +495,7 @@ In this release, we've added the following new settings you can use in Windows c
 - **OpenSearch XML URL**
 - **Homepages (desktop only)**
 
-For more information about compliance settings, see [Ensure device compliance](/sccm/compliance/understand/ensure-device-compliance).
+For more information about compliance settings, see [Ensure device compliance](../../compliance/understand/ensure-device-compliance.md).
 
 
 ## New device compliance policy rules

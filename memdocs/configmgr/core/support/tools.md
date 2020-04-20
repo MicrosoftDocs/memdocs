@@ -30,17 +30,17 @@ All Windows operating systems listed as supported clients in [Supported operatin
 
 These tools are in the `ClientTools` subfolder:
 
-- [CMTrace](/sccm/core/support/cmtrace): View, monitor, and analyze Configuration Manager log files  
+- [CMTrace](cmtrace.md): View, monitor, and analyze Configuration Manager log files  
 
-- [Client Spy](/sccm/core/support/clispy): Troubleshoot issues related to software distribution, inventory, and metering
+- [Client Spy](clispy.md): Troubleshoot issues related to software distribution, inventory, and metering
 
-- [Deployment Monitoring Tool](/sccm/core/support/deployment-monitoring-tool): Troubleshoot applications, updates, and baseline deployments  
+- [Deployment Monitoring Tool](deployment-monitoring-tool.md): Troubleshoot applications, updates, and baseline deployments  
 
-- [Policy Spy](/sccm/core/support/policy-spy): View policy assignments  
+- [Policy Spy](policy-spy.md): View policy assignments  
 
-- [Power Viewer Tool](/sccm/core/support/power-viewer-tool): View status of power management feature  
+- [Power Viewer Tool](power-viewer-tool.md): View status of power management feature  
 
-- [Send Schedule Tool](/sccm/core/support/send-schedule-tool): Trigger schedules and evaluations of configuration baselines  
+- [Send Schedule Tool](send-schedule-tool.md): Trigger schedules and evaluations of configuration baselines  
 
 > [!Note]  
 > The `ClientTools` folder also includes the file Microsoft.Diagnostics.Tracing.EventSource.dll. Several client tools require this library. You can't directly use it.  
@@ -50,19 +50,19 @@ These tools are in the `ClientTools` subfolder:
 
 These tools are in the `ServerTools` subfolder:
 
-- [DP Job Queue Manager](/sccm/core/support/dp-job-manager): Troubleshoots content distribution jobs to distribution points  
+- [DP Job Queue Manager](dp-job-manager.md): Troubleshoots content distribution jobs to distribution points  
 
-- [Collection Evaluation Viewer](/sccm/core/support/ceviewer): View collection evaluation details  
+- [Collection Evaluation Viewer](ceviewer.md): View collection evaluation details  
 
-- [Content Library Explorer](/sccm/core/support/content-library-explorer): View contents of the content library single instance store  
+- [Content Library Explorer](content-library-explorer.md): View contents of the content library single instance store  
 
-- [Content Library Transfer](/sccm/core/support/content-library-transfer): Transfers content library between drives  
+- [Content Library Transfer](content-library-transfer.md): Transfers content library between drives  
 
-- [Content Ownership Tool](/sccm/core/support/content-ownership-tool): Changes ownership of orphaned packages. These packages exist in the site without an owning site server.
+- [Content Ownership Tool](content-ownership-tool.md): Changes ownership of orphaned packages. These packages exist in the site without an owning site server.
 
-- [Role-based Administration and Auditing Tool](/sccm/core/support/rbaviewer): Helps administrators audit roles configuration  
+- [Role-based Administration and Auditing Tool](rbaviewer.md): Helps administrators audit roles configuration  
 
-- [Run Meter Summarization Tool](/sccm/core/support/run-meter-summ): Run metering summarization task and analyze metering data
+- [Run Meter Summarization Tool](run-meter-summ.md): Run metering summarization task and analyze metering data
 
 > [!Note]  
 > The ServerTools folder also includes the following files:
@@ -75,22 +75,22 @@ These tools are in the `ServerTools` subfolder:
 
 ## Other tools and toolkits
 
-- [Support Center](/sccm/core/support/support-center): Gather information from clients for easier analysis when troubleshooting.
+- [Support Center](support-center.md): Gather information from clients for easier analysis when troubleshooting.
 
-    Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](/sccm/core/support/support-center-onetrace).
+    Starting in version 1906, **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).
 
-- [Extend and migrate on-premises site to Microsoft Azure](/sccm/core/support/azure-migration-tool): Helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022--> 
+- [Extend and migrate on-premises site to Microsoft Azure](azure-migration-tool.md): Helps you to programmatically create Azure virtual machines (VMs) for Configuration Manager. <!--3556022--> 
 
-- [Content library cleanup tool](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool): Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to remove orphaned content from a distribution point.  
+- [Content library cleanup tool](../plan-design/hierarchy/content-library-cleanup-tool.md): Use **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` to remove orphaned content from a distribution point.  
 
-- [Hierarchy Maintenance Tool](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
+- [Hierarchy Maintenance Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **Preinst.exe** in the `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` shared folder on the site server to pass commands to the hierarchy manager component.  
 
-- [Update reset tool](/sccm/core/servers/manage/update-reset-tool): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
+- [Update reset tool](../servers/manage/update-reset-tool.md): Use **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` to fix issues when in-console updates have problems downloading or replicating.  
 
-- [Service Connection Tool](/sccm/core/servers/manage/use-the-service-connection-tool): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.  
+- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): Use **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` to keep your site up-to-date when your service connection point is offline.   
 
-- [Microsoft Deployment Toolkit (MDT)](/sccm/mdt/): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
+- [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): A collection of tools, processes, and guidance for automating desktop and server OS deployments.
 
-- [System Center Updates Publisher (SCUP)](/sccm/sum/tools/updates-publisher): A stand-alone tool to manage and import custom software updates.
+- [System Center Updates Publisher (SCUP)](../../sum/tools/updates-publisher.md): A stand-alone tool to manage and import custom software updates.
 
-- [Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager): Convert legacy packages into applications.
+- [Package Conversion Manager](../../apps/pcm/package-conversion-manager.md): Convert legacy packages into applications.

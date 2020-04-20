@@ -54,7 +54,7 @@ For more information, see [BranchCache for Windows](https://docs.microsoft.com/w
 
 Configuration Manager provides support for clients in workgroups.  
 
-- Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to install Configuration Manager clients on workgroup computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientWorkgroup).  
+- Configuration Manager supports moving a client from a workgroup to a domain or from a domain to a workgroup. For more information, see [How to install Configuration Manager clients on workgroup computers](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup).  
 
 > [!NOTE]
 > Although clients in workgroups are supported, all site systems must be members of a supported Active Directory domain.  
@@ -108,7 +108,7 @@ In addition to Internet Protocol version 4 (IPv4), Configuration Manager support
 
 ## <a name="bkmk_NAT"></a> Network Address Translation  
 
-Network Address Translation (NAT) isn't supported in Configuration Manager, unless the site supports clients that are on the internet and the client detects that it's connected to the internet. For more information about internet-based client management, see [Plan for managing internet-based clients](/sccm/core/clients/deploy/plan/plan-for-managing-internet-based-clients).  
+Network Address Translation (NAT) isn't supported in Configuration Manager, unless the site supports clients that are on the internet and the client detects that it's connected to the internet. For more information about internet-based client management, see [Plan for managing internet-based clients](../../clients/manage/plan-internet-based-client-management.md).  
 
 ## <a name="bkmk_storage"></a> Specialized storage technology  
 

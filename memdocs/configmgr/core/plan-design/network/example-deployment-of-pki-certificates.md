@@ -20,7 +20,7 @@ manager: dougeby
 
 This step-by-step example deployment, which uses a Windows Server 2008 certification authority (CA), has procedures that show you how to create and deploy the public key infrastructure (PKI) certificates that Configuration Manager uses. These procedures use an enterprise certification authority (CA) and certificate templates. The steps are appropriate for a test network only, as a proof of concept.  
 
-Because there's no single method of deployment for the required certificates, consult your particular PKI deployment documentation for the required procedures and best practices to deploy the required certificates for a production environment. For more about the certificate requirements, see [PKI certificate requirements for Configuration Manager](/sccm/core/plan-design/network/pki-certificate-requirements).  
+Because there's no single method of deployment for the required certificates, consult your particular PKI deployment documentation for the required procedures and best practices to deploy the required certificates for a production environment. For more about the certificate requirements, see [PKI certificate requirements for Configuration Manager](pki-certificate-requirements.md).  
 
 > [!TIP]
 > You can adapt the instructions in this topic for operating systems that aren't documented in the Test Network Requirements section. However, if you are running the issuing CA on Windows Server 2012, you're not prompted for the certificate template version. Instead, specify this on the **Compatibility** tab of the template properties:  

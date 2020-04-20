@@ -34,4 +34,4 @@ This section provides topics about programmatically managing role-based administ
 
 ## See also
 
-[Configuration Manager SDK](/sccm/develop/core/misc/system-center-configuration-manager-sdk)
+[Configuration Manager SDK](../../misc/system-center-configuration-manager-sdk.md)

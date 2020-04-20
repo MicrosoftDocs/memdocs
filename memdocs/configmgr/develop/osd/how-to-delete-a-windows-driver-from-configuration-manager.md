@@ -17,7 +17,7 @@ You delete a Windows driver from the operating system deployment driver catalog,
 
 ### To delete a Windows driver  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Get the `SMS_Driver` object for the driver that you want to delete.  
 

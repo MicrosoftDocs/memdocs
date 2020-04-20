@@ -25,41 +25,41 @@ Welcome to the Configuration Manager documentation library. Find the documentati
 
 View the online documentation for the current branch of Configuration Manager at [docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr):  
 
-- [Introduction to Configuration Manager](/configmgr/core/understand/introduction)  
+- [Introduction to Configuration Manager](../understand/introduction.md)  
 
-- [Get ready for Configuration Manager](/configmgr/core/plan-design/get-ready)  
+- [Get ready for Configuration Manager](../plan-design/get-ready.md)  
 
-- [Start using Configuration Manager](/configmgr/core/servers/deploy/start-using)  
+- [Start using Configuration Manager](../servers/deploy/start-using.md)  
 
-- [Manage enterprise operating systems with Configuration Manager](/configmgr/osd/understand/introduction-to-operating-system-deployment)  
+- [Manage enterprise operating systems with Configuration Manager](../../osd/understand/introduction-to-operating-system-deployment.md)  
 
-- [Deploy and manage applications with Configuration Manager](/configmgr/apps/deploy-use/deploy-applications)  
+- [Deploy and manage applications with Configuration Manager](../../apps/deploy-use/deploy-applications.md)  
 
-- [Deploy and manage software updates in Configuration Manager](/configmgr/sum/understand/software-updates-introduction)  
+- [Deploy and manage software updates in Configuration Manager](../../sum/understand/software-updates-introduction.md)  
 
-- [Ensure device compliance with Configuration Manager](/configmgr/compliance/understand/ensure-device-compliance)  
+- [Ensure device compliance with Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
 
-- [Protect data and site infrastructure with Configuration Manager](/configmgr/protect/understand/protect-data-and-site-infrastructure)  
+- [Protect data and site infrastructure with Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)  
 
-- [Monitor and maintain Configuration Manager](/configmgr/core/servers/manage/maintenance-tasks)  
+- [Monitor and maintain Configuration Manager](../servers/manage/maintenance-tasks.md)  
 
-- [Security and privacy for Configuration Manager](/configmgr/core/plan-design/security/security-and-privacy)  
+- [Security and privacy for Configuration Manager](../plan-design/security/security-and-privacy.md)  
 
 ### Release notes
 
-The release notes contain information that isn't available in the product documentation and might be required to successfully install and use Configuration Manager. For more information, see [Release notes for Configuration Manager](/configmgr/core/servers/deploy/install/release-notes)  
+The release notes contain information that isn't available in the product documentation and might be required to successfully install and use Configuration Manager. For more information, see [Release notes for Configuration Manager](../servers/deploy/install/release-notes.md)  
 
 ### Find help
 
-For more information, see [Find help for using Configuration Manager](/configmgr/core/understand/find-help).
+For more information, see [Find help for using Configuration Manager](../understand/find-help.md).
 
 ### Accessibility
 
-For more information, see [Accessibility features for the Configuration Manager console](/configmgr/core/understand/accessibility-features).
+For more information, see [Accessibility features for the Configuration Manager console](../understand/accessibility-features.md).
 
 ## Configuration Manager technical preview branch
 
-For more information, see [Technical preview for Configuration Manager](/configmgr/core/get-started/technical-preview)  
+For more information, see [Technical preview for Configuration Manager](../get-started/technical-preview.md)  
 
 ## System Center 2012 Configuration Manager
 

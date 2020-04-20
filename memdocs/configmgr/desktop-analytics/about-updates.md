@@ -79,6 +79,6 @@ If a Windows 10 device is *not authenticated* with a Microsoft account, Windows 
 
 ## Next steps
 
-- [Learn about Desktop Analytics assets](/sccm/desktop-analytics/about-assets): devices, drivers, and apps  
+- [Learn about Desktop Analytics assets](about-assets.md): devices, drivers, and apps  
 
-- [Learn about deployment plans](/sccm/desktop-analytics/about-deployment-plans)  
+- [Learn about deployment plans](about-deployment-plans.md)  

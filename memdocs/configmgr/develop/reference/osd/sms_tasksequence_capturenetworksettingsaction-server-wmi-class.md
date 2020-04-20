@@ -144,4 +144,4 @@ Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action
 
 ## See also
 
-[SMS_TaskSequence_Action server WMI class](/sccm/develop/reference/osd/sms_tasksequence_action-server-wmi-class)
+[SMS_TaskSequence_Action server WMI class](sms_tasksequence_action-server-wmi-class.md)

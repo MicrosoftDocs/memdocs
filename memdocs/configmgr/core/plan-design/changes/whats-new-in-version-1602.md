@@ -25,8 +25,8 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 > [!TIP]  
 > Learn more about:  
 >   
-> - [Installing new sites](/sccm/core/servers/deploy/install/prepare-to-install-sites) (using a baseline version like 1511)  
-> - [Installing updates at sites](/sccm/core/servers/manage/updates) (like update 1602)  
+> - [Installing new sites](../../servers/deploy/install/prepare-to-install-sites.md) (using a baseline version like 1511)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (like update 1602)  
 
  The following sections provide details about changes and new capabilities introduced in version 1602 of Configuration Manager.  
 
@@ -58,7 +58,7 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 
 -   Available Windows 10 upgrades now only display in the **Windows 10 Servicing** \ **All Windows 10 Updates** node of the Configuration Manager console. These updates no longer display in the **Software Updates** \ **All Software Updates** node of the console.  
 
--   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md).  
+-   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
 -   Users who start a Windows 10 Upgrade package now receive a message that they will be upgrading their operating system.  
 
@@ -95,14 +95,14 @@ You will find these apps in the **Applications** node of the Configuration Manag
 ## Software updates  
 
 ### Manage Office 365 client updates  
- Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](/sccm/sum/deploy-use/manage-office-365-proplus-updates).  
+ Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## Compliance settings  
 
 ### Compliance settings for devices running Windows 10 Team  
  New settings have been added to the **Windows 8.1 and Windows 10** configuration item. These settings help you control devices running Windows 10 Team, such as a Surface Hub device.  
 
- For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ For details, see [How to create configuration items for Windows 8.1 and Windows 10 devices managed without the Configuration Manager client](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
 
 ### Kiosk mode settings for Android Samsung KNOX Standard devices  
  Kiosk mode allows you to lock a device so that only certain features work. For example, you can allow a device to run only one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point-of-sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX Standard devices.  
@@ -128,7 +128,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
  This rule overrides the default rule, which means that even if you set the default rule to quarantine or block access, enrolled and compliant devices will still be able to access Exchange on-premises. Use this setting when you want enrolled and compliant devices to always have access to email through Exchange on-premises.   
 
- For the detailed walkthrough, see [Manage email access](/configmgr/mdm/understand/what-happened-to-hybrid).  
+ For the detailed walkthrough, see [Manage email access](../../../mdm/understand/what-happened-to-hybrid.md).  
 
 ## Client management  
 

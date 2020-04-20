@@ -728,7 +728,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 -   Applications are disabled and cannot be automatically installed. This issue arises when the application requires administrator approval but has not yet been approved. If the **Require administrator approval if users request this application**check box is selected for the application, verify that the application has been approved.  
 
-     For more information on how to require administrator approval and grant approval, see [How to Deploy Applications in Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications).  
+     For more information on how to require administrator approval and grant approval, see [How to Deploy Applications in Configuration Manager](../apps/deploy-use/deploy-applications.md).  
 
 -   When performing the MDT Refresh Computer deployment scenario with a USB hard disk attached, task sequence errors may occur, because the Configuration Manager task sequencer placed the _SMSTaskSequence folder on the USB drive. By default, the  Configuration Manager task sequencer places the _SMSTaskSequence folder on the drive with the most available free disk space, which can cause problems later in the deployment process if the USB drive is removed.  
 
@@ -5050,7 +5050,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  For more information about:  
 
--   Hardware and software requirements for Configuration Manager, see [Supported Configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations)  
+-   Hardware and software requirements for Configuration Manager, see [Supported Configurations for Configuration Manager](../core/plan-design/configs/supported-configurations.md)  
 
 -   Configuring a Configuration Manager infrastructure to support ZTI deployments, see the section, "Step 1: Prepare the Prerequisite Infrastructure", in the MDT document *Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager*.  
 
@@ -6098,7 +6098,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
  For more information about:  
 
--   Hardware and software requirements for Configuration Manager, see [Supported Configurations for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-configurations) ..  
+-   Hardware and software requirements for Configuration Manager, see [Supported Configurations for Configuration Manager](../core/plan-design/configs/supported-configurations.md).
 
 -   Configuring a Configuration Manager infrastructure to support UDI deployments, see the section, "Step 1: Prepare the Prerequisite Infrastructure", in the MDT document Quick Start Guide for User-Driven Installation.  
 
@@ -10305,7 +10305,7 @@ Import-Module MyCustomModule
     |To|Do this|  
     |--------|-------------|  
     |Add an application from the deployment share (which is managed in the Applications node in the Deployment Workbench)|a. Click **Add**, and then click **Lite TouchApplication**.<br /><br /> The **Select an item** dialog box appears.<br /><br /> b. In the **Select an item** dialog box, select the application to add, and then click **OK**.<br /><br /> The application must exist in the same deployment share as the deployment share associated with the MDT DB you are configuring.|  
-    |Add a Configuration Manager application|a. Click **Add**, and then click **ConfigMgr 2012 Application**.<br /><br /> The **New ConfigMgr Application** dialog box appears.<br /><br /> b. In the **New ConfigMgr Application** dialog box, in **Please specify the new ConfigMgr application to add**, type ***configmgr_application***, and then click **OK** (where *configmgr_application* is the name of the Configuration Manager application to be added).<br /><br /> The name entered in **Please specify the new ConfigMgr application to add** must match the name of the Configuration Manager application exactly.<br /><br /> For more information on specifying the application name, see the section, "Install Application," at [Task Sequence Steps in Configuration Manager](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps).<br /><br /> The **Allow this application to be installed from the Install Application task sequence action without being deployed**check box must be selected for the Configuration Manager application to be deployed properly.|  
+    |Add a Configuration Manager application|a. Click **Add**, and then click **ConfigMgr 2012 Application**.<br /><br /> The **New ConfigMgr Application** dialog box appears.<br /><br /> b. In the **New ConfigMgr Application** dialog box, in **Please specify the new ConfigMgr application to add**, type ***configmgr_application***, and then click **OK** (where *configmgr_application* is the name of the Configuration Manager application to be added).<br /><br /> The name entered in **Please specify the new ConfigMgr application to add** must match the name of the Configuration Manager application exactly.<br /><br /> For more information on specifying the application name, see the section, "Install Application," at [Task Sequence Steps in Configuration Manager](../osd/understand/task-sequence-steps.md).<br /><br /> The **Allow this application to be installed from the Install Application task sequence action without being deployed**check box must be selected for the Configuration Manager application to be deployed properly.|  
     |Remove an application from the list of applications to be deployed|Click ***application*** (where *application* is the name of the application that you want to remove), and then click **Remove**.|  
     |Install an application prior to other applications |Click ***application*** (where *application* is the name of the application that you want to install before other applications), and then click **Up**.|  
     |Install an application after other applications |Click ***application*** (where *application* is the name of the application that you want to install after other applications), and then click **Down**.|  

@@ -45,6 +45,6 @@ End sub
  Using script to pass the user name and password is a security risk and should be avoided where possible.  
 
 ## See Also  
- [About errors](/sccm/develop/core/understand/about-configuration-manager-errors)\
+ [About errors](about-configuration-manager-errors.md)\
  [WMI SDK](/windows/win32/wmisdk/wmi-start-page)   
  [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md)

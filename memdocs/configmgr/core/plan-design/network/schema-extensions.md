@@ -62,7 +62,7 @@ Before you [extend the Active Directory schema](https://docs.microsoft.com/sccm/
 
 -   **Workarounds:** If you do not extend the schema, use one of the following options to provide configuration details that computers must install:  
 
-    -   **Use client push installation**. Before you use a client installation method, make sure that all prerequisites are met. For more information, see the 'Installation Method Dependencies' section in [Prerequisites for deploying clients to Windows computers](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers).  
+    -   **Use client push installation**. Before you use a client installation method, make sure that all prerequisites are met. For more information, see the 'Installation Method Dependencies' section in [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md).  
 
     -   **Install clients manually** and provide client installation properties by using CCMSetup installation command-line properties. This must include the following:  
 

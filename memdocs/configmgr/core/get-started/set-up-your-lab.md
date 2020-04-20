@@ -340,10 +340,10 @@ By default, IIS blocks several types of file extensions and locations from acces
 4.  Type **.msi** into the dialog box and click **OK**.  
 
 ##  <a name="BKMK_InstallCMLab"></a> Installing Configuration Manager  
-You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](/sccm/core/plan-design/configs/size-and-scale-numbers) of potential devices.  
+You will create a [Determine when to use a primary site](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary) to manage clients directly. This will allow your lab environment to support management for [Site system scale](../plan-design/configs/size-and-scale-numbers.md) of potential devices.  
 During this process, you will also install the Configuration Manager console, which will be used to manage your evaluation devices going forward.  
 
-Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
+Before you begin the installation, launch the  [Prerequisite Checker](../servers/deploy/install/prerequisite-checker.md) on the server using Windows Server 2012 to confirm that all settings have been correctly enabled.  
 
 #### To download and install Configuration Manager:  
 
@@ -351,7 +351,7 @@ Before you begin the installation, launch the  [Prerequisite Checker](/sccm/core
 
 2.  Decompress the download media into your predefined location.  
 
-3.  Follow the installation procedure listed at [Install a site using the Configuration Manager Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites). Within that procedure, you will input the following:  
+3.  Follow the installation procedure listed at [Install a site using the Configuration Manager Setup Wizard](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md). Within that procedure, you will input the following:  
 
     |Step in site installation procedure|Selection|  
     |-----------------------------------------|---------------|  

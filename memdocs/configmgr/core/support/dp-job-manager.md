@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The Distribution Point (DP) Job Queue Manager is one of the [Configuration Manager tools](/sccm/core/support/tools). Use it to troubleshoot and manage ongoing content distribution jobs to Configuration Manager distribution points. 
+The Distribution Point (DP) Job Queue Manager is one of the [Configuration Manager tools](tools.md). Use it to troubleshoot and manage ongoing content distribution jobs to Configuration Manager distribution points. 
 
 The tool displays the list of jobs that the package transfer manager component has in its queue. It also shows the status of the jobs: ready to be executed, running, or retrying. It lets you manipulate the jobs in the queue, move jobs higher on the list, cancel a job, or manually start running a job.
 
@@ -134,5 +134,5 @@ Shows in one flat view a list of all the jobs and their statuses. It contains th
 
 ## See also
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)
-- [Package transfer manager](/sccm/core/plan-design/hierarchy/package-transfer-manager)
+- [Fundamental concepts for content management](../plan-design/hierarchy/fundamental-concepts-for-content-management.md)
+- [Package transfer manager](../plan-design/hierarchy/package-transfer-manager.md)

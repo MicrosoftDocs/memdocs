@@ -24,7 +24,7 @@ Before you start working with Configuration Manager compliance settings, there a
 |Prerequisite|More information|  
 |------------------|----------------------|  
 |Windows Configuration Manager clients must be enabled and configured for compliance evaluation.|See below|  
-|If you want to run reports, then you must configure reporting for your site.|[Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting)|  
+|If you want to run reports, then you must configure reporting for your site.|[Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md)|  
 |Required security permissions.|The **Compliance Settings Manager** security role includes the necessary permissions to manage compliance settings, user data and profiles configuration items, and remote connection profiles.<br /><br /> [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
 
 ##  Enable and configure compliance settings (for Windows PCs only)  
@@ -40,7 +40,7 @@ This procedure configures the default client settings for compliance settings an
 4.  Configure the following client settings for compliance settings:
     - **Enable compliance evaluation on clients** - Set to **True** if you want to evaluate compliance on client devices.
     - **Schedule compliance evaluation** - Click **Schedule** if you want to modify the default compliance evaluation schedule on client devices.
-    - **Enable User Data and Profiles** - Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles).
+    - **Enable User Data and Profiles** - Enable this option if you want to create and deploy user data and profiles configuration items to Windows computers. For details, see [Create user data and profiles configuration items](../deploy-use/create-remote-connection-profiles.md).
 5. Click **OK** to close the **Default Settings** dialog box.  
 
 Client computers are configured with these settings the next time they download client policy.  

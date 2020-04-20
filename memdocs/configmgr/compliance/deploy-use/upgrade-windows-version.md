@@ -26,7 +26,7 @@ The following upgrade paths are supported:
 - From Windows 10 Home to Windows 10 Education
 - From Windows 10 Mobile to Windows 10 Mobile Enterprise
 
-The devices must run the Configuration Manager client software. Devices managed by [on-premises MDM](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure) aren't supported.
+The devices must run the Configuration Manager client software. Devices managed by [on-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) aren't supported.
 
 ## Before you start
 

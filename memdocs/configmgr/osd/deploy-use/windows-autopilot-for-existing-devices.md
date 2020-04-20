@@ -25,7 +25,7 @@ manager: dougeby
 
 ## Prerequisites
 
-- Acquire the installation media for Windows 10 version 1809, or later. Then create a Configuration Manager OS image. For more information, see [Manage OS images](/sccm/osd/get-started/manage-operating-system-images).
+- Acquire the installation media for Windows 10 version 1809, or later. Then create a Configuration Manager OS image. For more information, see [Manage OS images](../get-started/manage-operating-system-images.md).
 
 - In Microsoft Intune, create profiles for Windows Autopilot. For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot).
 
@@ -69,7 +69,7 @@ manager: dougeby
     > 
     > Windows Notepad uses ANSI encoding by default.  
 
-3. Create a Configuration Manager package that contains this file. It doesn't require a program. For more information, see [Create a package](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program).  
+3. Create a Configuration Manager package that contains this file. It doesn't require a program. For more information, see [Create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program).  
 
     > [!NOTE]  
     > Windows requires that this file is named **AutopilotConfigurationFile.json**. To use more than one Autopilot profile, create separate Configuration Manager packages.  
@@ -82,7 +82,7 @@ manager: dougeby
 
 2. On the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.  
 
-3. On the **Task sequence information** page, specify a name, optionally add a description, and select a boot image. For more information on supported boot image versions, see [Support for Windows 10](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk).  
+3. On the **Task sequence information** page, specify a name, optionally add a description, and select a boot image. For more information on supported boot image versions, see [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).  
 
 4. On the **Install Windows** page, select the Windows 10 **Image package**. Then configure the following settings:  
 
@@ -108,7 +108,7 @@ manager: dougeby
 7. The **Include updates** page selects by default the option to **Do not install any software updates**.  
 
     > [!Tip]  
-    > Use offline image servicing to keep the image up to date with the latest Windows 10 quality updates. For more information, see [Apply software updates to an OS image](/sccm/osd/get-started/manage-operating-system-images#BKMK_OSImagesApplyUpdates).  
+    > Use offline image servicing to keep the image up to date with the latest Windows 10 quality updates. For more information, see [Apply software updates to an OS image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).  
 
 8. On the **Install applications** page, you can select applications to install during the task sequence. However, Microsoft recommends that you mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
 
@@ -120,7 +120,7 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.  
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).  
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture).  
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Azure Active Directory (Azure AD). 
 
@@ -140,9 +140,9 @@ Use OneDrive for Business [known folder move](https://docs.microsoft.com/onedriv
 
 Use co-management to enhance the management features of your Windows 10 devices. The second path to co-management is through modern provisioning with Windows Autopilot. For more information, see the following articles:
 
-- [What is co-management?](/sccm/comanage/overview)
-- [Paths to co-management](/sccm/comanage/quickstart-paths)
-- [Windows Autopilot with co-management](/sccm/comanage/quickstart-autopilot)
+- [What is co-management?](../../comanage/overview.md)
+- [Paths to co-management](../../comanage/quickstart-paths.md)
+- [Windows Autopilot with co-management](../../comanage/quickstart-autopilot.md)
 
 ## See also
 

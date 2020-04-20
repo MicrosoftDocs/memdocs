@@ -32,13 +32,13 @@ Starting in version 1810, the dashboard includes information for System Center 2
 
 - Internet Explorer 9 or later must be installed on the computer running the Configuration Manager console.  
 
-- A service connection point role must be installed and configured. To get updates for the data on this dashboard, the service connection point must be online, or synchronized regularly if offline. For more information, see [About the service connection point](/sccm/core/servers/deploy/configure/about-the-service-connection-point).
+- A service connection point role must be installed and configured. To get updates for the data on this dashboard, the service connection point must be online, or synchronized regularly if offline. For more information, see [About the service connection point](../../../servers/deploy/configure/about-the-service-connection-point.md).
 
-- A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+- A reporting services point is required for hyperlink functionality in the dashboard. The dashboard links to SQL Server Reporting Services (SSRS) reports. For more information, see [Introduction to reporting](../../../servers/manage/introduction-to-reporting.md).  
 
-- The asset intelligence synchronization point must be configured and synchronized. The dashboard uses the asset intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence).  
-  - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients have scanned for and returned hardware inventory.  
-  - To view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](/sccm/core/clients/manage/asset-intelligence/configuring-asset-intelligence#BKMK_EnableAssetIntelligence). <!--4962901-->
+- The asset intelligence synchronization point must be configured and synchronized. The dashboard uses the asset intelligence catalog as metadata for product titles. The metadata is compared against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](configuring-asset-intelligence.md).  
+  - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients have scanned for and returned hardware inventory.  
+  - To view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). <!--4962901-->
 
 
 
@@ -99,4 +99,4 @@ Additional reports are available as well. In the Configuration Manager console, 
 
 - **Lifecycle 05A - Product lifecycle dashboard**: Starting in version 1810, this report includes similar information as the in-console dashboard. Select a category to view the count of products in your environment, and the days of support remaining.  
 
-For more information, see [List of reports](/sccm/core/servers/manage/list-of-reports#asset-intelligence).<!--SCCMDocs issue 997-->  
+For more information, see [List of reports](../../../servers/manage/list-of-reports.md#asset-intelligence).<!--SCCMDocs issue 997-->  

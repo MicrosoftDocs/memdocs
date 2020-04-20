@@ -22,5 +22,5 @@ Programs are commands that are associated with a Configuration Manager package t
  After you create a program for a given package, you can make that program and package available to a collection of clients by using an advertisement.  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
- [About deployments](/sccm/develop/core/servers/configure/about-software-distribution-deployments)
+ [Software distribution overview](software-distribution-overview.md)
+ [About deployments](about-software-distribution-deployments.md)

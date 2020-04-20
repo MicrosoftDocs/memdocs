@@ -32,7 +32,7 @@ All Configuration Manager site systems must be members of a supported Active Dir
 
   - Computer name  
 
-  Before making these changes, uninstall the site system role. To make these changes to a site server, uninstall the site first. You can also consider creating a [site server in passive mode](/sccm/core/servers/deploy/configure/site-server-high-availability) to help manage this change on a site server.
+  Before making these changes, uninstall the site system role. To make these changes to a site server, uninstall the site first. You can also consider creating a [site server in passive mode](../../servers/deploy/configure/site-server-high-availability.md) to help manage this change on a site server.
 
 - Configuration Manager supports domain and forest functional level of Windows Server 2008 R2 or later.<!-- SCCMDocs#1853 -->
 

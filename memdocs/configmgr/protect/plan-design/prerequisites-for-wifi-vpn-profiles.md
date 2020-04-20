@@ -40,4 +40,4 @@ You need the following security permissions to manage company resource access se
 
 - To create and manage Wi-Fi profiles: **Author Policy**, **Modify Report**, **Read**, and **Run Report** for the **Wi-Fi Profile** object.  
 
-The **Company Resource Access Manager** built-in security role includes these permissions that are required to manage Wi-Fi profiles in Configuration Manager. For more information, see [Configure security](/configmgr/core/plan-design/security/configure-security).
+The **Company Resource Access Manager** built-in security role includes these permissions that are required to manage Wi-Fi profiles in Configuration Manager. For more information, see [Configure security](../../core/plan-design/security/configure-security.md).

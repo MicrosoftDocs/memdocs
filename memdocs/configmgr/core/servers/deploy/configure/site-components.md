@@ -46,20 +46,20 @@ In the Configuration Manager console, go to the **Administration** workspace, ex
 On the **General** tab, specify settings that modify how the site server transfers content to its distribution points. When you increase the values you use for concurrent distribution settings, content distribution can use more network bandwidth.  
 
 #### Pull distribution point
-For more information, see [Use a pull-distribution point](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point).
+For more information, see [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md).
 
 #### Network access account
-For more information, see [Network access account](/sccm/core/plan-design/hierarchy/accounts#network-access-account).  
+For more information, see [Network access account](../../../plan-design/hierarchy/accounts.md#network-access-account).  
 
 
 ### Software update point  
 
-For more information, see [Install a software update point](/sccm/sum/get-started/install-a-software-update-point).  
+For more information, see [Install a software update point](../../../../sum/get-started/install-a-software-update-point.md).  
 
 
 ### Operating system deployment
 
-For more information, see [Specify the drive for offline OS image servicing](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive).
+For more information, see [Specify the drive for offline OS image servicing](../../../../osd/get-started/manage-operating-system-images.md#bkmk_servicing-drive).
 
 
 ### Management point  
@@ -75,9 +75,9 @@ The most secure method for clients to find management points is to publish them 
 - The Configuration Manager site is set up to publish to Active Directory Domain Services.
 - Clients belong to the same Active Directory forest as the site server's forest.  
 
-When clients on the intranet can't use Active Directory Domain Services to find management points, use [DNS publishing](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#bkmk_dns).  
+When clients on the intranet can't use Active Directory Domain Services to find management points, use [DNS publishing](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns).  
 
-For general information about service location, see [Understand how clients find site resources and services](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services).  
+For general information about service location, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
 
 #### Publish selected intranet management points in DNS
@@ -92,9 +92,9 @@ For Configuration Manager to publish intranet management points to DNS, all the 
 -   The specified fully qualified domain names (FQDNs) for the management points in Configuration Manager have host entries (A or AAA records) in DNS.  
 
 > [!WARNING]  
->  For clients to find management points that are published in DNS, you must assign the clients to a specific site (rather than use automatic-site assignment). Set up these clients to use the site code with the domain suffix of their management point. For more information, see [Locating management points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points).  
+>  For clients to find management points that are published in DNS, you must assign the clients to a specific site (rather than use automatic-site assignment). Set up these clients to use the site code with the domain suffix of their management point. For more information, see [Locating management points](../../../clients/deploy/assign-clients-to-a-site.md#locating-management-points).  
 
-If Configuration Manager clients can't use Active Directory Domain Services or DNS to find management points on the intranet, they use [WINS](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#bkmk_wins). The first management point that is installed for the site is automatically published to WINS when it's set up to accept HTTP client connections on the intranet.  
+If Configuration Manager clients can't use Active Directory Domain Services or DNS to find management points on the intranet, they use [WINS](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins). The first management point that is installed for the site is automatically published to WINS when it's set up to accept HTTP client connections on the intranet.  
 
 
 ### Status reporting  
@@ -106,14 +106,14 @@ These settings directly set up the level of detail that's included in status rep
 
 Specify account and email server details to enable Configuration Manager to send email notifications for alerts.  
 
-For more information, see [Use alerts and the status system](/sccm/core/servers/manage/use-alerts-and-the-status-system).
+For more information, see [Use alerts and the status system](../../manage/use-alerts-and-the-status-system.md).
 
 
 ### <a name="bkmk_colleval"></a> Collection membership evaluation  
 
 Use this component to set how often collection membership is incrementally evaluated. Incremental evaluation updates a collection membership with only new or changed resources.  
 
-For more information, see [Best practices for collections](/sccm/core/clients/manage/collections/best-practices-for-collections).
+For more information, see [Best practices for collections](../../../clients/manage/collections/best-practices-for-collections.md).
 
 
 

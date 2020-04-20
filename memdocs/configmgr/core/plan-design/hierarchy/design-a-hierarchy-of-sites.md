@@ -31,17 +31,17 @@ Then plan a topology that efficiently serves your current business needs and can
 
 When planning, keep in mind limitations for adding additional sites to a hierarchy or a stand-alone site:  
 
-- Install a new primary site below a central administration site, up to the [supported number of primary sites](/sccm/core/plan-design/configs/size-and-scale-numbers) for the hierarchy.  
+- Install a new primary site below a central administration site, up to the [supported number of primary sites](../configs/size-and-scale-numbers.md) for the hierarchy.  
 
-- [Expand a standalone primary site to install a new central administration site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand), to then install additional primary sites.  
+- [Expand a standalone primary site to install a new central administration site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand), to then install additional primary sites.  
 
-- Install new secondary sites below a primary site, up to the [supported limit for the primary site](/sccm/core/plan-design/configs/size-and-scale-numbers) and overall hierarchy.  
+- Install new secondary sites below a primary site, up to the [supported limit for the primary site](../configs/size-and-scale-numbers.md) and overall hierarchy.  
 
 - You can't add a previously installed site to an existing hierarchy to merge two standalone sites. Configuration Manager only supports installation of new sites to an existing hierarchy of sites.  
 
 
 > [!NOTE]  
-> When planning a new installation of Configuration Manager, be aware of the [release notes](/sccm/core/servers/deploy/install/release-notes), which detail current issues in the active versions. The release notes apply to all branches of Configuration Manager. When you use the [technical preview branch](/sccm/core/get-started/technical-preview), find issues specific to that branch in the documentation for each version of the technical preview.  
+> When planning a new installation of Configuration Manager, be aware of the [release notes](../../servers/deploy/install/release-notes.md), which detail current issues in the active versions. The release notes apply to all branches of Configuration Manager. When you use the [technical preview branch](../../get-started/technical-preview.md), find issues specific to that branch in the documentation for each version of the technical preview.  
 
 
 
@@ -57,7 +57,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 
 ### Standalone primary site
 
-Use a standalone primary site when it can support management of all devices and users. For more information, see [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers). This topology is also successful when your company’s geographic locations can be served by a single primary site. To help manage network traffic, use multiple management points in boundary groups, and a carefully planned content infrastructure. For more information, see [Configure boundary groups](/sccm/core/servers/deploy/configure/boundary-groups) and [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).  
+Use a standalone primary site when it can support management of all devices and users. For more information, see [Sizing and scale numbers](../configs/size-and-scale-numbers.md). This topology is also successful when your company’s geographic locations can be served by a single primary site. To help manage network traffic, use multiple management points in boundary groups, and a carefully planned content infrastructure. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md) and [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
 
 This topology provides the following benefits:  
 
@@ -94,7 +94,7 @@ The following information can help you decide when to install a central administ
 
      - If you immediately need two or more primary sites, install the central administration site first.  
 
-     - When you already have a primary site, and want to then install a central administration site, [expand the stand-alone primary site](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to install the central administration site.  
+     - When you already have a primary site, and want to then install a central administration site, [expand the stand-alone primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand) to install the central administration site.  
 
 - The central administration site supports only primary sites as child sites.  
 
@@ -201,7 +201,7 @@ If any of the following conditions apply, consider deploying a distribution poin
 
 - Background Intelligent Transfer Service (BITS) doesn't provide sufficient bandwidth control for your network requirements.  
 
-For more information about content management options in Configuration Manager, see [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).  
+For more information about content management options in Configuration Manager, see [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
 
 
 
@@ -216,39 +216,39 @@ Along with your initial hierarchy topology, also consider the following question
 
 The following common considerations are covered in separate articles. This information is important to influence or be influenced by your hierarchy design:  
 
-- When you're preparing to [Manage computers and devices](/sccm/core/clients/manage/manage-clients), consider whether the devices are on-premises, in the cloud, or include user-owned devices (BYOD). Additionally, consider how you'll manage devices that support multiple management options. For example, manage Windows 10 devices with Configuration Manager or though integration with Microsoft Intune. For more information, see [Choose a device management solution](/sccm/core/plan-design/choose-a-device-management-solution).  
+- When you're preparing to [Manage computers and devices](../../clients/manage/manage-clients.md), consider whether the devices are on-premises, in the cloud, or include user-owned devices (BYOD). Additionally, consider how you'll manage devices that support multiple management options. For example, manage Windows 10 devices with Configuration Manager or though integration with Microsoft Intune. For more information, see [Choose a device management solution](../choose-a-device-management-solution.md).  
 
-- Understand how your available network infrastructure might affect the flow of data between remote locations. For more information, see [Prepare your network environment](/sccm/core/plan-design/network/configure-firewalls-ports-domains). Also consider the geographic location of your users and devices, and whether they access your infrastructure through your on-premises network or the internet.  
+- Understand how your available network infrastructure might affect the flow of data between remote locations. For more information, see [Prepare your network environment](../network/configure-firewalls-ports-domains.md). Also consider the geographic location of your users and devices, and whether they access your infrastructure through your on-premises network or the internet.  
 
-- Plan for a content infrastructure to efficiently distribute the content you deploy to devices you manage. This content may be applications, software updates, or operating systems. For more information, see [Manage content and content infrastructure](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure).  
+- Plan for a content infrastructure to efficiently distribute the content you deploy to devices you manage. This content may be applications, software updates, or operating systems. For more information, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
-- Determine which [features and capabilities of Configuration Manager](/sccm/core/plan-design/changes/features-and-capabilities) you plan to use. Different features require different site system roles or Windows infrastructure. In a multiple site hierarchy, decide where you deploy them for the most efficient use of your network and server resources.  
+- Determine which [features and capabilities of Configuration Manager](../changes/features-and-capabilities.md) you plan to use. Different features require different site system roles or Windows infrastructure. In a multiple site hierarchy, decide where you deploy them for the most efficient use of your network and server resources.  
 
-- Consider security for data and devices, including the use of a public key infrastructure (PKI). For more information, see [PKI certificate requirements](/sccm/core/plan-design/network/pki-certificate-requirements).  
+- Consider security for data and devices, including the use of a public key infrastructure (PKI). For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).  
 
 
 Review the following articles for site-specific configurations:  
 
-- [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)  
+- [Plan for the SMS Provider](plan-for-the-sms-provider.md)  
 
-- [Plan for the site database](/sccm/core/plan-design/hierarchy/plan-for-the-site-database)  
+- [Plan for the site database](plan-for-the-site-database.md)  
 
-- [Plan for site system servers and site system roles](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles)  
+- [Plan for site system servers and site system roles](plan-for-site-system-servers-and-site-system-roles.md)  
 
-- [Plan for security](/sccm/core/plan-design/security/plan-for-security)  
+- [Plan for security](../security/plan-for-security.md)  
 
-- [Managing network bandwidth](/sccm/core/plan-design/hierarchy/manage-network-bandwidth) when deploying content within a site  
+- [Managing network bandwidth](manage-network-bandwidth.md) when deploying content within a site  
 
 
 Consider configurations that span sites and hierarchies  
 
-- [High availability options](/sccm/protect/understand/high-availability-options) for sites and hierarchies
+- [High availability options](../../servers/deploy/configure/high-availability-options.md) for sites and hierarchies
 
-- [Extend the Active Directory schema](/sccm/core/plan-design/network/extend-the-active-directory-schema) and configure sites to [publish site data](/sccm/core/servers/deploy/configure/publish-site-data)  
+- [Extend the Active Directory schema](../network/extend-the-active-directory-schema.md) and configure sites to [publish site data](../../servers/deploy/configure/publish-site-data.md)  
 
-- [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites)  
+- [Data transfers between sites](data-transfers-between-sites.md)  
 
-- [Fundamentals of role-based administration](/sccm/core/understand/fundamentals-of-role-based-administration)  
+- [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md)  
 
-- [Manage clients on the internet](/sccm/core/clients/manage/manage-clients-internet)  
+- [Manage clients on the internet](../../clients/manage/manage-clients-internet.md)  
 

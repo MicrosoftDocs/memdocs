@@ -10,8 +10,6 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-
-
 ---
 
 # Integrate with Windows Update for Business
@@ -21,8 +19,8 @@ ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
-> If you are using co-management for your devices and you have moved the [Windows Update policies](/sccm/comanage/workloads#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
-> - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates), is still managed by Configuration Manager.  
+> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), is still managed by Configuration Manager.  
 
  Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  
 
@@ -37,7 +35,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 - Configuration Manager won't be able to deploy Microsoft updates, such as Office, IE, and Visual Studio to clients that are connected to WUfB to receive updates.  
 
-- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to WUfB to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to WUfB, then disable the client setting named [Enable software updates on clients](/sccm/core/clients/deploy/about-client-settings#software-updates).
+- Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to WUfB to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to WUfB, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
 
 - Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to WUfB to receive updates.  
 
@@ -85,6 +83,12 @@ For more information about the Windows Insider program, see [Getting started wit
 1. On the **General** page, provide a name and description for the policy.
 1. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates. Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates. Choose either Semi-Annual Channel (Targeted), Semi-Annual Channel, or a Windows Insider build.
+
+        > [!NOTE]
+        > Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1809 or earlier*.
+        >
+        > If you deploy a policy for **Semi-Annual Channel** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
+
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.
 1. Choose whether to defer or pause Quality Updates. Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
@@ -101,6 +105,6 @@ For more information about the Windows Insider program, see [Getting started wit
 1. Configure the following settings:
     - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
     - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
-    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you're deploying the policy, enable this option to let policy settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](/sccm/core/clients/manage/collections/use-maintenance-windows).
+    - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you're deploying the policy, enable this option to let policy settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
     - **Schedule**: Specify the compliance evaluation schedule by which the deployed policy is evaluated on client computers. The schedule can be either a simple or a custom schedule.
 1. Complete the wizard to deploy the policy.

@@ -75,4 +75,4 @@ Starting in version 1806, this policy adds three settings for [Windows Defender 
 
 ## Next steps
 
-Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](/sccm/compliance/deploy-use/monitor-compliance-settings) in the Configuration Manager console.
+Like any compliance settings policy, the client remediates the settings on the schedule you specify. [Monitor and report on device compliance](monitor-compliance-settings.md) in the Configuration Manager console.

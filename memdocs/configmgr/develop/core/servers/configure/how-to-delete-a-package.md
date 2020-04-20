@@ -100,5 +100,5 @@ public void DeleteAPackage(WqlConnectionManager connection, string existingPacka
 ## .NET Framework Security  
 
 ## See Also  
- [Software distribution overview](/sccm/develop/core/servers/configure/software-distribution-overview)
+ [Software distribution overview](software-distribution-overview.md)
  [SMS_SCI_Component Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)

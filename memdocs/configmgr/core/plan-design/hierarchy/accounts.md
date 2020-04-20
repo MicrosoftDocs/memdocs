@@ -97,7 +97,7 @@ Configuration Manager automatically creates, and in many cases automatically mai
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
-For more information, see [Introduction to software inventory](/sccm/core/clients/manage/inventory/introduction-to-software-inventory).
+For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).
 
 #### Type and location
 This group is a local security group created on the primary site server.
@@ -115,14 +115,14 @@ By default, this group has **Read** permission to the following folder on the si
 
 This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
-For more information, see [Data transfers between sites](/sccm/core/servers/manage/data-transfers-between-sites).
+For more information, see [Data transfers between sites](data-transfers-between-sites.md).
 
 
 ### ConfigMgr Remote Control Users  
 
 Configuration Manager remote tools use this group to store the accounts and groups that you set up in the **Permitted Viewers** list. The site assigns this list to each client.  
 
-For more information, see [Introduction to remote control](/sccm/core/clients/manage/remote-control/introduction-to-remote-control).
+For more information, see [Introduction to remote control](../../clients/manage/remote-control/introduction-to-remote-control.md).
 
 #### Type and location
 This group is a local security group created on the Configuration Manager client when the client receives a policy that enables remote tools.
@@ -147,7 +147,7 @@ Configuration Manager uses this group to grant access to the SMS Provider throug
 > [!NOTE]  
 > The role-based administration configuration of an administrative user determines which objects they can view and manage when using the Configuration Manager console.  
 
-For more information, see [Plan for the SMS Provider](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider).
+For more information, see [Plan for the SMS Provider](plan-for-the-sms-provider.md).
 
 #### Type and location
 This group is a local security group created on each computer that has an SMS Provider. 
@@ -160,7 +160,7 @@ Configuration Manager automatically manages the group membership. By default, ea
 #### Permissions
 You can view the rights and permissions for the SMS Admins group in the **WMI Control** MMC snap-in. By default, this group is granted **Enable Account** and **Remote Enable** on the `Root\SMS` WMI namespace. Authenticated users have **Execute Methods**, **Provider Write**, and **Enable Account**.
 
-When you use a remote Configuration Manager console, configure **Remote Activation** DCOM permissions on both the site server computer and the SMS Provider. Grant these rights to the **SMS Admins** group. This action simplifies administration instead of granting these rights directly to users or groups. For more information, see [Configure DCOM permissions for remote Configuration Manager consoles](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ConfigDCOMforRemoteConsole). 
+When you use a remote Configuration Manager console, configure **Remote Activation** DCOM permissions on both the site server computer and the SMS Provider. Grant these rights to the **SMS Admins** group. This action simplifies administration instead of granting these rights directly to users or groups. For more information, see [Configure DCOM permissions for remote Configuration Manager consoles](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
 ### <a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
@@ -253,7 +253,7 @@ The site uses the **Active Directory group discovery account** to discover the f
 
 This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.  
 
-For more information, see [Active Directory group discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup).
+For more information, see [Active Directory group discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).
 
 
 ### Active Directory system discovery account  
@@ -262,7 +262,7 @@ The site uses the **Active Directory system discovery account** to discover comp
 
 This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.  
 
-For more information, see [Active Directory system discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutSystem).
+For more information, see [Active Directory system discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutSystem).
 
 
 ### Active Directory user discovery account  
@@ -271,7 +271,7 @@ The site uses the **Active Directory user discovery account** to discover user a
 
 This account can be a computer account of the site server that runs discovery, or a Windows user account. It must have **Read** access permission to the Active Directory locations that you specify for discovery.  
 
-For more information, see [Active Directory user discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser). 
+For more information, see [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). 
 
 
 ### Active Directory forest account  
@@ -285,16 +285,16 @@ To discover and publish to untrusted forests, the Active Directory forest accoun
 
 This account must have **Read** permissions to each Active Directory forest where you want to discover network infrastructure.  
 
-This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data. For more information, see [Prepare Active Directory for site publishing](/sccm/core/plan-design/network/extend-the-active-directory-schema).  
+This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data. For more information, see [Prepare Active Directory for site publishing](../network/extend-the-active-directory-schema.md).  
 
-For more information, see [Active Directory forest discovery](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutForest).
+For more information, see [Active Directory forest discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest).
 
 
 ### Certificate registration point account  
 
 The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database, because the state message system handles write tasks.  
 
-For more information, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+For more information, see [Introduction to certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
 
 ### Capture OS image account  
@@ -312,7 +312,7 @@ If you need to use this account, create one domain user account. Grant it minima
 >   
 > Don't use the network access account for this account.  
 
-For more information, see [Create a task sequence to capture an OS](/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system).
+For more information, see [Create a task sequence to capture an OS](../../../osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
 
 
 ### Client push installation account  
@@ -333,19 +333,19 @@ You can specify more than one client push installation account. Configuration Ma
 > [!IMPORTANT]  
 > Don't grant this account the right to sign in locally.  
 
-For more information, see [Client push installation](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation).
+For more information, see [Client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
 
 ### Enrollment point connection account  
 
 The enrollment point uses the **Enrollment point connection account** to connect to the Configuration Manager site database. It uses its computer account by default, but you can configure a user account instead. When the enrollment point is in an untrusted domain from the site server, you must specify a user account. This account requires **Read** and **Write** access to the site database.  
 
-For more information, see [Install site system roles for on-premises MDM](/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm).
+For more information, see [Install site system roles for on-premises MDM](../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).
 
 
 ### Exchange Server connection account  
 
-The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](/configmgr/mdm/deploy-use/install-configure-exchange-connector).  
+The site server uses the **Exchange Server connection account** to connect to the specified Exchange Server. It uses this connection to find and manage mobile devices that connect to Exchange Server. This account requires Exchange PowerShell cmdlets that provide the required permissions to the Exchange Server computer. For more information about the cmdlets, see [Install and configure the Exchange connector](../../../mdm/deploy-use/install-configure-exchange-connector.md).  
 
 
 ### Management point connection account  
@@ -367,7 +367,7 @@ If you need this account, create it as a low-rights, local account on the comput
 > [!IMPORTANT]  
 > Don't grant interactive sign-in rights to this account.  
 
-For more information, see [Use multicast to deploy Windows over the network](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network).
+For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
 
 ### Network access account  
@@ -379,7 +379,7 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.  
 
-Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).<!--1358228,1358278-->
+Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](enhanced-http.md).<!--1358228,1358278-->
 
 > [!Note]  
 > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
@@ -457,14 +457,14 @@ SQL Server Reporting Services uses the **Reporting services point account** to r
 > [!NOTE]  
 > The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the ConfigMgr database.
 
-For more information, see [Introduction to reporting](/sccm/core/servers/manage/introduction-to-reporting).
+For more information, see [Introduction to reporting](../../servers/manage/introduction-to-reporting.md).
 
 
 ### Remote tools permitted viewer accounts  
 
 The accounts that you specify as **Permitted Viewers** for remote control are a list of users who are allowed to use remote tools functionality on clients.  
 
-For more information, see [Introduction to remote control](/sccm/core/clients/manage/remote-control/introduction-to-remote-control).
+For more information, see [Introduction to remote control](../../clients/manage/remote-control/introduction-to-remote-control.md).
 
 
 ### Site installation account
@@ -511,7 +511,7 @@ The following site system roles use the **Site system proxy server account** to 
 > [!IMPORTANT]  
 > Specify an account that has the least possible permissions for the required proxy server or firewall.  
 
-For more information, see [Proxy server support](/sccm/core/plan-design/network/proxy-server-support).
+For more information, see [Proxy server support](../network/proxy-server-support.md).
 
 
 ### SMTP server connection account  
@@ -521,7 +521,7 @@ The site server uses the **SMTP server connection account** to send email alerts
 > [!IMPORTANT]  
 > Specify an account that has the least possible permissions to send emails.  
 
-For more information, see [Use alerts and the status system](/sccm/core/servers/manage/use-alerts-and-the-status-system).
+For more information, see [Use alerts and the status system](../../servers/manage/use-alerts-and-the-status-system.md).
 
 
 ### Software update point connection account  
@@ -536,7 +536,7 @@ The [site system installation account](#site-system-installation-account) can in
 
 This account must be a local administrator on the computer where you install WSUS. It must also be part of the local **WSUS Administrators** group.  
 
-For more information, see [Plan for software updates](/sccm/sum/plan-design/plan-for-software-updates).
+For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md).
 
 
 ### Source site account  
@@ -569,7 +569,7 @@ For more information, see [Migrate data between hierarchies](https://docs.micros
 
 ### Task sequence domain join account 
 
-Windows Setup uses the **Task sequence domain join account** to join a newly imaged computer to a domain. This account is required by the [Join Domain or Workgroup](/sccm/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup) task sequence step with the **Join a domain** option. This account can also be set up with the [Apply Network Settings](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyNetworkSettings) step, but it isn't required.  
+Windows Setup uses the **Task sequence domain join account** to join a newly imaged computer to a domain. This account is required by the [Join Domain or Workgroup](../../../osd/understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) task sequence step with the **Join a domain** option. This account can also be set up with the [Apply Network Settings](../../../osd/understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings) step, but it isn't required.  
 
 This account requires the **Domain Join** right in the target domain.  
 
@@ -584,7 +584,7 @@ This account requires the **Domain Join** right in the target domain.
 
 ### Task sequence network folder connection account  
 
-The task sequence engine uses the **Task sequence network folder connection account** to connect to a shared folder on the network. This account is required by the [Connect to Network Folder](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder) task sequence step.  
+The task sequence engine uses the **Task sequence network folder connection account** to connect to a shared folder on the network. This account is required by the [Connect to Network Folder](../../../osd/understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder) task sequence step.  
 
 This account requires permissions to access the specified shared folder. It must be a domain user account.  
 
@@ -599,7 +599,7 @@ This account requires permissions to access the specified shared folder. It must
 
 ### Task sequence run as account  
 
-The task sequence engine uses the **Task sequence run as account** to run command lines or PowerShell Scripts with credentials other than the Local System account. This account is required by the [Run Command Line](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) and [Run PowerShell Script](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript) task sequence steps with the option **Run this step as the following account** chosen.  
+The task sequence engine uses the **Task sequence run as account** to run command lines or PowerShell Scripts with credentials other than the Local System account. This account is required by the [Run Command Line](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) and [Run PowerShell Script](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript) task sequence steps with the option **Run this step as the following account** chosen.  
 
 Set up the account to have the minimum permissions required to run the command line that you specify in the task sequence. The account requires interactive sign-in rights. It usually requires the ability to install software and access network resources. For the Run PowerShell Script task, this account requires local administrator permissions. 
 

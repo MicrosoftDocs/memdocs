@@ -31,7 +31,7 @@ To see data in the Windows 10 servicing dashboard, you must do the following act
   - WSUS 10.0.14393 (role in Windows Server 2016)
   - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
   - WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
-    - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](/sccm/sum/plan-design/prerequisites-for-software-updates#BKMK_wsus2012) on WSUS 6.2 and 6.3.
+    - [KB 3095113 and KB 3159706 (or an equivalent update) must be installed](../../sum/plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012) on WSUS 6.2 and 6.3.
 
 - Enable Heartbeat Discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).
 
@@ -47,9 +47,9 @@ To see data in the Windows 10 servicing dashboard, you must do the following act
 
 - Software updates must be configured and synchronized. Select the **Upgrades** classification and synchronize software updates before any Windows 10 feature upgrades are available in the Configuration Manager console. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).
 
-- Starting in Configuration Manager version 1902, verify the **Specify thread priority for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority) to ensure it's appropriate for your environment.
+- Starting in Configuration Manager version 1902, verify the **Specify thread priority for feature updates** [client setting](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority) to ensure it's appropriate for your environment.
 
-- Starting in Configuration Manager version 1906, verify the **Enable Dynamic Update for feature updates** [client setting](/sccm/core/clients/deploy/about-client-settings#bkmk_du) to ensure it's appropriate for your environment. <!--4062619-->
+- Starting in Configuration Manager version 1906, verify the **Enable Dynamic Update for feature updates** [client setting](../../core/clients/deploy/about-client-settings.md#bkmk_du) to ensure it's appropriate for your environment. <!--4062619-->
 
 ## <a name="BKMK_ServicingDashboard"></a> Windows 10 servicing dashboard
 
@@ -69,7 +69,7 @@ The Windows 10 servicing dashboard provides you with information about Windows 1
 
 - **Service Plan Monitoring tile**: Display servicing plans that you've created and a chart of the compliance for each. This tile gives you a quick overview of the current state of the servicing plan deployments. If an earlier deployment ring meets your expectations for compliance, then you can select a later servicing plan (deploying ring) and click **Deploy Now** instead of waiting for the servicing plan rules to be triggered automatically.
 
-- The **Windows 10 Builds tile**: Display is a fixed image time line that provides you an overview of the Windows 10 builds that are currently released and gives you a general idea of when builds transition into different states. This tile was removed starting in Configuration Manager version 1902 since more detailed information is offered in the [Product Lifecycle dashboard](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard). <!--3446861-->
+- The **Windows 10 Builds tile**: Display is a fixed image time line that provides you an overview of the Windows 10 builds that are currently released and gives you a general idea of when builds transition into different states. This tile was removed starting in Configuration Manager version 1902 since more detailed information is offered in the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
 
 > [!IMPORTANT]
 > The information shown in the Windows 10 servicing dashboard (such as the support lifecycle for Windows 10  versions) is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
@@ -99,7 +99,7 @@ Windows 10 servicing plans in Configuration Manager are much like automatic depl
   When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection based on the settings that you configure in the servicing plan. You can monitor the deployments in the Service Plan Monitoring tile on the Windows 10 Servicing Dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
 
 > [!NOTE]
-> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10** product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](/configmgr/sum/get-started/configure-classifications-and-products#windows-10-version-1903-and-later).<!--4682946-->
+> **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10** product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](../../sum/get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later).<!--4682946-->
 
 ## <a name="BKMK_ServicingPlan"></a> Windows 10 servicing plan
 
@@ -111,7 +111,7 @@ As you deploy Windows 10 Semi-Annual Channel, you can create one or more servici
 You can create a basic servicing plan from the Windows 10 servicing dashboard. After you specify the name, collection (only displays the top 10 collections by size, smallest first), deployment package (only displays the top 10 packages by most recently modified), and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings. Use the following procedure to create a servicing plan by using the Create Servicing Plan wizard.  
 
 > [!NOTE]  
-> You can manage the behavior for high-risk deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys Windows 10 is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).
+> You can manage the behavior for high-risk deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys Windows 10 is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
 
 ### To create a Windows 10 servicing plan
 
@@ -131,7 +131,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
 
     - When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties.
 
-    - High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments).
+    - High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. Uncheck **Hide collections with a member count greater than the site's minimum size configuration** to see all custom collections that contain fewer clients than the configured maximum size. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
 
     - The deployment verification settings are based on the current membership of the collection. After you deploy the servicing plan, the collection membership isn't reevaluated for the high-risk deployment settings.
 
@@ -189,7 +189,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
            >
            > You can configure the **Computer Agent** client setting **Disable deadline randomization** to disable the installation randomization delay for required updates. For more information, see [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
-        - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](/sccm/core/clients/deploy/about-client-settings#grace-period-for-enforcement-after-deployment-deadline-hours).
+        - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](../../core/clients/deploy/about-client-settings.md#grace-period-for-enforcement-after-deployment-deadline-hours).
 
 1. On the User Experience page, configure the following settings:  
 
@@ -219,7 +219,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
 
     1. **Enable binary differential replication**: Enable this option if you want to use binary differential replication.
 
-1. On the Distribution Points page, specify the distribution points or distribution point groups that host the update files. For more information about distribution points, see [Configure a distribution point](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs).
+1. On the Distribution Points page, specify the distribution points or distribution point groups that host the update files. For more information about distribution points, see [Configure a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs).
 
     > [!NOTE]
     > This page is available only when you create a new software update deployment package.  
@@ -283,4 +283,4 @@ Use the following procedure to modify the properties of a servicing plan.
 
 ## Next steps
 
-For more information, see [Fundamentals of Configuration Manager as a service and Windows as a service](/sccm/core/understand/configuration-manager-and-windows-as-service).
+For more information, see [Fundamentals of Configuration Manager as a service and Windows as a service](../../core/understand/configuration-manager-and-windows-as-service.md).

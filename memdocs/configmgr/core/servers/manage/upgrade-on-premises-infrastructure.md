@@ -20,9 +20,9 @@ manager: dougeby
 
 Use the information in this article to help you upgrade the server infrastructure that runs Configuration Manager.  
 
-- If you want to *upgrade* from an earlier version to Configuration Manager, current branch, see [Upgrade to Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager).  
+- If you want to *upgrade* from an earlier version to Configuration Manager, current branch, see [Upgrade to Configuration Manager](../deploy/install/upgrade-to-configuration-manager.md).  
 
-- If you want to *update* your Configuration Manager, current branch, infrastructure to a new version, see [Updates for Configuration Manager](/sccm/core/servers/manage/updates).  
+- If you want to *update* your Configuration Manager, current branch, infrastructure to a new version, see [Updates for Configuration Manager](updates.md).  
 
 
 ## <a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade the OS of site systems  
@@ -67,7 +67,7 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
-- If you're upgrading the OS of the site server, make sure [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+- If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
     - On the sending site, review **sender.log**.
     - On the receiving site, review **despooler log**.
 
@@ -91,11 +91,11 @@ Use the steps in this section for any of the following upgrade scenarios:
 
     - Application Catalog website point  
 
-- Make sure each server that hosts a site system role continues to meet all [prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
+- Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
 
 - After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.  
 
-- If you're upgrading the primary site server, then [run a site reset](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset).  
+- If you're upgrading the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).  
 
 #### Known issue for remote Configuration Manager consoles
 
@@ -139,7 +139,7 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 
 - On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
-- If you're upgrading the OS of the site server, make sure [file-based replication](/sccm/core/plan-design/hierarchy/file-based-replication) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
+- If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
     - On the sending site, review **sender.log**.
     - On the receiving site, review **despooler log**.
 
@@ -165,7 +165,7 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 
     - Application Catalog website point  
 
-- Make sure each server that hosts a site system role continues to meet all [prerequisites](/sccm/core/plan-design/configs/site-and-site-system-prerequisites). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
+- Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.  
 
     After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.  
 
@@ -184,16 +184,16 @@ Configuration Manager supports an in-place upgrade of the OS for Configuration M
 
 - If Configuration Manager supports the resulting service pack level, it supports in-place upgrade to a later Windows service pack.  
 
-- In-place upgrade of Windows from a supported version to Windows 10. For more information, see [Upgrade Windows to the latest version](/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version).  
+- In-place upgrade of Windows from a supported version to Windows 10. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).  
 
-- Build-to-build servicing upgrades of Windows 10. For more information, see [Manage Windows as a service](/sccm/osd/deploy-use/manage-windows-as-a-service).  
+- Build-to-build servicing upgrades of Windows 10. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 
 ## <a name="BKMK_SupConfigUpgradeDBSrv"></a> Upgrade SQL Server  
 
 Configuration Manager supports an in-place upgrade of SQL Server on the site database server.
 
-For information about the versions of SQL Server that Configuration Manager supports, see [Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions).  
+For information about the versions of SQL Server that Configuration Manager supports, see [Support for SQL Server versions](../../plan-design/configs/support-for-sql-server-versions.md).  
 
 ### Upgrade the service pack version of SQL Server
 

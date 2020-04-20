@@ -20,7 +20,7 @@ In Configuration Manager, you create an `SMS_Query`-based query by creating an i
 
 ### To create a query  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
 2.  Create an instance of [SMS_Query](../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md).  
 

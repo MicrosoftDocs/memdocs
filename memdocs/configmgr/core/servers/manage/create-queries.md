@@ -181,4 +181,4 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 
 ## Next steps
 
-[How to manage queries](/sccm/core/servers/manage/manage-queries)
+[How to manage queries](manage-queries.md)

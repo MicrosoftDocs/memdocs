@@ -20,7 +20,7 @@ You create an association between a reference and destination computer, in Confi
 
 ### To create an association between two computers  
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](/sccm/develop/core/understand/sms-provider-fundamentals).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
 2.  Call the [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md).  
 
@@ -109,6 +109,6 @@ public void AssociateComputer(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
- [About OS deployment computer management](/sccm/develop/osd/about-computer-management)
+ [About OS deployment computer management](about-computer-management.md)
  [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md)   
  [DeleteAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/deleteassociation-method-in-class-sms_statemigration.md)

@@ -156,4 +156,4 @@ Class SMS_UpdateCategoryInstance : SMS_CategoryInstanceBase
 
 ## See Also  
  [SMS_CIAllCategories Server WMI Class](../../../develop/reference/sum/sms_ciallcategories-server-wmi-class.md)   
- [About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+ [About software update deployments](../../sum/about-software-updates-deployments.md)

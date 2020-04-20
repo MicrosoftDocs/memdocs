@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Use boundary groups in Configuration Manager to logically organize related network locations ([boundaries](/sccm/core/servers/deploy/configure/boundaries)) to make it easier to manage your infrastructure. Assign boundaries to boundary groups before using the boundary group.
+Use boundary groups in Configuration Manager to logically organize related network locations ([boundaries](boundaries.md)) to make it easier to manage your infrastructure. Assign boundaries to boundary groups before using the boundary group.
 
 By default, Configuration Manager creates a default site boundary group at each site.
 
@@ -39,7 +39,7 @@ Clients use a boundary group for:
   - Preferred management points  
 
     > [!NOTE]  
-    > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
+    > If you use preferred management points, enable this option for the hierarchy, not from within the boundary group configuration. For more information, see [Enable use of preferred management points](boundary-group-procedures.md#bkmk_proc-prefer).  
 
   - Cloud management gateway (starting in version 1902)
 
@@ -57,8 +57,8 @@ When a client fails to find an available site system in its current boundary gro
 
 For more information, see the following procedures:  
 
-- [Create a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_create)  
-- [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config)  
+- [Create a boundary group](boundary-group-procedures.md#bkmk_create)  
+- [Configure a boundary group](boundary-group-procedures.md#bkmk_config)  
 
 ### <a name="bkmk_show-boundary"></a> Show boundary groups for devices
 
@@ -79,7 +79,7 @@ Starting in version 2002, to help you better identify and troubleshoot device be
 
 To prevent problems when clients can't find an available site system in their current boundary group, define the relationship between boundary groups for fallback behavior. Fallback lets a client expand its search to additional boundary groups to find an available site system.
 
-Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of supported site system role, configure independent settings for fallback to the neighbor boundary group. For more information, see [Configure fallback behavior](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_bg-fallback).
+Relationships are configured on a boundary group properties **Relationships** tab. When you configure a relationship, you define a link to a neighbor boundary group. For each type of supported site system role, configure independent settings for fallback to the neighbor boundary group. For more information, see [Configure fallback behavior](boundary-group-procedures.md#bkmk_bg-fallback).
 
 For example, when you configure a relationship to a specific boundary group, set fallback for distribution points to occur after 20 minutes. The default is 120 minutes For a more extensive example, see [Example of using boundary groups](#example-of-using-boundary-groups).
 
@@ -126,12 +126,12 @@ You can configure each boundary group with an assigned site for clients.
 
 - Changes to a boundary groups assigned site only apply to new site assignment actions. Clients that previously assigned to a site don't reevaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).  
 
-For more information about client site assignment, see [Using automatic site assignment for computers](/sccm/core/clients/deploy/assign-clients-to-a-site#BKMK_AutomaticAssignment).  
+For more information about client site assignment, see [Using automatic site assignment for computers](../../../clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment).  
 
 For more information on how to configure site assignment, see the following procedures:
 
-- [Configure site assignment and select site system servers](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_references)
-- [Configure a fallback site for automatic site assignment](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_site-fallback)
+- [Configure site assignment and select site system servers](boundary-group-procedures.md#bkmk_references)
+- [Configure a fallback site for automatic site assignment](boundary-group-procedures.md#bkmk_site-fallback)
 
 ## Distribution points
 
@@ -204,11 +204,11 @@ Boundary groups include the following additional settings to give you more contr
 
 - [Prefer cloud distribution points over distribution points](#bkmk_bgoptions4)  
 
-For more information on how to configure these settings, see [Configure a boundary group](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_config).
+For more information on how to configure these settings, see [Configure a boundary group](boundary-group-procedures.md#bkmk_config).
 
 #### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 
-This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization).  
+This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
 
 There are two common scenarios in which you should consider disabling this option:  
 
@@ -229,9 +229,9 @@ Common scenarios for enabling this option:
 Starting in version 2002, depending on the configuration of your network, you can exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet. By default, Configuration Manager excludes the default Teredo subnet (`2001:0000:%`).<!--3555777-->
 
 > [!NOTE]
-> In version 2002, when you [expand a stand-alone primary site](/configmgr/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
+> In version 2002, when you [expand a stand-alone primary site](../install/prerequisites-for-installing-sites.md#bkmk_expand) to add a central administration site (CAS), the subnet exclusion list reverts to the default. To work around this issue, after site expansion, run the PowerShell script to customize the subnet exclusion list on the CAS.<!-- 6309068 -->
 
-Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](/configmgr/develop/reference/core/servers/configure/sms_sci_component-server-wmi-class).
+Import your subnet exclusion list as a comma-separated subnet string. Use the percent sign (`%`) as a wildcard character. On the top-level site server, set or read the **SubnetExclusionList** embedded property for the **SMS_HIERARCHY_MANAGER** component in the **SMS_SCI_Component** class. For more information, see [SMS_SCI_Component server WMI class](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
 
 ##### Sample PowerShell script to update the subnet exclusion list
 
@@ -341,7 +341,7 @@ When you switch to a new server, the devices use fallback to find that new serve
 
 Review your boundary group configurations. Before you start this change, make sure that your software update points are in the correct boundary groups.
 
-For more information, see [Manually switch clients to a new software update point](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs).
+For more information, see [Manually switch clients to a new software update point](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
 ## Management points
 
@@ -391,12 +391,12 @@ Preferred management points enable a client to identify a management point that'
 
 - A client tries to use a preferred management point from its assigned site before using one not configured as preferred from its assigned site.  
 
-- To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries. For more information, see [Enable use of preferred management points](/sccm/core/servers/deploy/configure/boundary-group-procedures#bkmk_proc-prefer).  
+- To use this option, enable **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**. Then configure boundary groups at individual primary sites. Include the management points that should be associated with that boundary group's associated boundaries. For more information, see [Enable use of preferred management points](boundary-group-procedures.md#bkmk_proc-prefer).  
 
 - When you configure preferred management points, and a client organizes its list of management points, the client places the preferred management points at the top of its list. This list includes all management points from the client's assigned site.  
 
 > [!NOTE]  
-> Client roaming means it changes its network locations. For example, when a laptop travels to a remote office location. When a client roams, it might use a management point from the local site before attempting to use a server from its assigned site. This list of servers from its assigned site includes the preferred management points. For more information, see [Understand how clients find site resources and services](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services).  
+> Client roaming means it changes its network locations. For example, when a laptop travels to a remote office location. When a client roams, it might use a management point from the local site before attempting to use a server from its assigned site. This list of servers from its assigned site includes the preferred management points. For more information, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
 
 ## Overlapping boundaries  
 
@@ -497,8 +497,8 @@ When a client searches for a content source location, it tries to access each di
 
 ## See also
 
-- [Procedures for boundary groups](/sccm/core/servers/deploy/configure/boundary-group-procedures)  
+- [Procedures for boundary groups](boundary-group-procedures.md)  
 
-- [About boundaries](/sccm/core/servers/deploy/configure/boundaries)  
+- [About boundaries](boundaries.md)  
 
-- [Fundamental concepts for content management](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)  
+- [Fundamental concepts for content management](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md)  

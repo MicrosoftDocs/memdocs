@@ -259,6 +259,6 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 
 ## See also
 
-[About software update deployments](/sccm/develop/sum/about-software-updates-deployments)
+[About software update deployments](about-software-updates-deployments.md)
 
-[SMS_SoftwareUpdate](/sccm/develop/reference/sum/sms_softwareupdate-server-wmi-class)
+[SMS_SoftwareUpdate](../reference/sum/sms_softwareupdate-server-wmi-class.md)

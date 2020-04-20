@@ -22,7 +22,7 @@ Use the following information to help you monitor and plan for power management 
 ##  <a name="BKMK_How_to_use_reports"></a> How to use reports for power management  
  Power management in Configuration Manager includes several reports to help you analyze power consumption and computer power settings in your organization. The reports can also be used to help you troubleshoot problems.  
 
- Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Introduction to reporting](/configmgr/core/servers/manage/introduction-to-reporting).  
+ Before you can use the power management reports, you must configure reporting for your hierarchy. For more information about reporting in Configuration Manager, see [Introduction to reporting](../../../servers/manage/introduction-to-reporting.md).  
 
 > [!NOTE]  
 >  Power management information used by daily reports is retained in the Configuration Manager site database for 31 days.  

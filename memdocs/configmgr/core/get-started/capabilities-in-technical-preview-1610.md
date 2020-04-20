@@ -47,7 +47,7 @@ Additionally, for a high-risk deployment, such as a task sequence that deploys a
 
 
 For more information:
-- [Settings to manage high-risk deployments](/sccm/core/servers/manage/settings-to-manage-high-risk-deployments)
+- [Settings to manage high-risk deployments](../servers/manage/settings-to-manage-high-risk-deployments.md)
 - [How to configure client settings](../clients/deploy/configure-client-settings.md)
 
 ## Deny previously approved application requests
@@ -57,7 +57,7 @@ As an administrator you can now deny a previously approved application request. 
 #### Try it out
 To deny an application approved request:
 
-1. In the Configuration Manager console, [create and deploy an application](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications) that requires approval.
+1. In the Configuration Manager console, [create and deploy an application](../../apps/deploy-use/create-applications.md) that requires approval.
 2. On a client computer, open Software Center and submit a request for the application.
 3. In the Configuration Manager console, approve the application request.
 4. Deny the approved application request: In the Configuration Manager console, navigate **Software Library** > **Overview** > **Application Management** > **Approval Requests** and select the application request you want to deny.  In the ribbon, click **Deny**.
@@ -81,9 +81,9 @@ So long as a collection is configured to be excluded, members of that collection
 - **Client Push Installation** – You can use client push installation to upgrade a client that is in an excluded collection. This is allowed as it is considered to be the intent of the administrator and enables you to upgrade clients without removing the entire collection from exclusion.       
 - **Manual client installation** – You can manually upgrade clients that are in an excluded collection when you use the following command line switch with ccmsetup:  ***/ignoreskipupgrade***
 
-  If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual).
+  If you attempt to manually upgrade a client that is a member of the excluded collection and do not use this switch, the client will not install the new client software. For more information see [How to install Configuration Manager Clients Manually](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).
 
-For more information on client installation methods, see [How to deploy clients to Windows computers](/sccm/core/clients/deploy/deploy-clients-to-windows-computers).
+For more information on client installation methods, see [How to deploy clients to Windows computers](../clients/deploy/deploy-clients-to-windows-computers.md).
 
 ## Windows Defender configuration settings
 

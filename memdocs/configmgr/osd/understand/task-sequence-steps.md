@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-The following task sequence steps can be added to a Configuration Manager task sequence. For more information, see [Use the task sequence editor](/configmgr/osd/understand/task-sequence-editor).  
+The following task sequence steps can be added to a Configuration Manager task sequence. For more information, see [Use the task sequence editor](task-sequence-editor.md).  
 
 ## Common settings
 
@@ -34,9 +34,9 @@ The rest of this article describes the other settings on the **Properties** tab 
 
 - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
 
-- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](/configmgr/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups).  
+- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md#BKMK_TSGroups).  
 
-- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](/configmgr/osd/understand/using-task-sequence-variables#bkmk_access-condition). For more information about conditions, see [Task sequence editor - Conditions](/configmgr/osd/understand/task-sequence-editor#bkmk_conditions).
+- **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](using-task-sequence-variables.md#bkmk_access-condition). For more information about conditions, see [Task sequence editor - Conditions](task-sequence-editor.md#bkmk_conditions).
 
 The sections below for specific task sequence steps describe other possible settings on the **Options** tab.
 
@@ -54,8 +54,8 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 Use the following task sequence variables with this step:  
 
-- [OSDDataImageIndex](/configmgr/osd/understand/task-sequence-variables#OSDDataImageIndex)  
-- [OSDWipeDestinationPartition](/configmgr/osd/understand/task-sequence-variables#OSDWipeDestinationPartition)  
+- [OSDDataImageIndex](task-sequence-variables.md#OSDDataImageIndex)  
+- [OSDWipeDestinationPartition](task-sequence-variables.md#OSDWipeDestinationPartition)  
 
 ### Cmdlets for Apply Data Image
 
@@ -110,19 +110,19 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Apply Driver Package**.
 
 > [!TIP]
-> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+> For an overview on drivers in Configuration Manager, see [Use task sequences to install drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).
 >
-> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable driver package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Variables for Apply Driver Package
 
 Use the following task sequence variables with this step:  
 
-- [OSDApplyDriverBootCriticalContentUniqueID](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalContentUniqueID)  
-- [OSDApplyDriverBootCriticalHardwareComponent](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
-- [OSDApplyDriverBootCriticalID](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
-- [OSDApplyDriverBootCriticalINFFile](/configmgr/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
-- [OSDInstallDriversAdditionalOptions](/configmgr/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016-->
+- [OSDApplyDriverBootCriticalContentUniqueID](task-sequence-variables.md#OSDApplyDriverBootCriticalContentUniqueID)  
+- [OSDApplyDriverBootCriticalHardwareComponent](task-sequence-variables.md#OSDApplyDriverBootCriticalHardwareComponent)  
+- [OSDApplyDriverBootCriticalID](task-sequence-variables.md#OSDApplyDriverBootCriticalID)  
+- [OSDApplyDriverBootCriticalINFFile](task-sequence-variables.md#OSDApplyDriverBootCriticalINFFile)  
+- [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions)<!--516679/2840016-->
 
 ### Cmdlets for Apply Driver Package
 
@@ -145,7 +145,7 @@ Specify the driver package that contains the needed device drivers. Select **Bro
 
 Select this option to add the `/recurse` parameter to the DISM command line when Windows applies the driver package.
 
-When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](/configmgr/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
 
@@ -180,16 +180,16 @@ To add this step in the task sequence editor, select **Add**, select **Settings*
 
 Use the following task sequence variables with this step:  
 
-- [OSDAdapter](/configmgr/osd/understand/task-sequence-variables#OSDAdapter)  
-- [OSDAdapterCount](/configmgr/osd/understand/task-sequence-variables#OSDAdapterCount)  
-- [OSDDNSDomain](/configmgr/osd/understand/task-sequence-variables#OSDDNSDomain)  
-- [OSDDNSSuffixSearchOrder](/configmgr/osd/understand/task-sequence-variables#OSDDNSSuffixSearchOrder)  
-- [OSDDomainName](/configmgr/osd/understand/task-sequence-variables#OSDDomainName)  
-- [OSDDomainOUName](/configmgr/osd/understand/task-sequence-variables#OSDDomainOUName)  
-- [OSDEnableTCPIPFiltering](/configmgr/osd/understand/task-sequence-variables#OSDEnableTCPIPFiltering)  
-- [OSDJoinAccount](/configmgr/osd/understand/task-sequence-variables#OSDJoinAccount)  
-- [OSDJoinPassword](/configmgr/osd/understand/task-sequence-variables#OSDJoinPassword)  
-- [OSDWorkgroupName](/configmgr/osd/understand/task-sequence-variables#OSDWorkgroupName)  
+- [OSDAdapter](task-sequence-variables.md#OSDAdapter)  
+- [OSDAdapterCount](task-sequence-variables.md#OSDAdapterCount)  
+- [OSDDNSDomain](task-sequence-variables.md#OSDDNSDomain)  
+- [OSDDNSSuffixSearchOrder](task-sequence-variables.md#OSDDNSSuffixSearchOrder)  
+- [OSDDomainName](task-sequence-variables.md#OSDDomainName)  
+- [OSDDomainOUName](task-sequence-variables.md#OSDDomainOUName)  
+- [OSDEnableTCPIPFiltering](task-sequence-variables.md#OSDEnableTCPIPFiltering)  
+- [OSDJoinAccount](task-sequence-variables.md#OSDJoinAccount)  
+- [OSDJoinPassword](task-sequence-variables.md#OSDJoinPassword)  
+- [OSDWorkgroupName](task-sequence-variables.md#OSDWorkgroupName)  
 
 ### Cmdlets for Apply Network Settings
 
@@ -214,7 +214,7 @@ Select this option to have the destination computer join the specified domain. S
 
 #### Account
 
-Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).
+Select **Set** to specify an account with the necessary permissions to join the computer to the domain. In the **Windows User Account** dialog box, enter the user name in the following format: `Domain\User`. For more information, see [Domain joining account](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
 #### Adapter settings
 
@@ -238,9 +238,9 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 > [!TIP]
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
+> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
 >
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 >
 > The **Setup Windows and ConfigMgr** step starts the installation of Windows.
 
@@ -248,9 +248,9 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 Use the following task sequence variables with this step:  
 
-- [OSDConfigFileName](/configmgr/osd/understand/task-sequence-variables#OSDConfigFileName)  
-- [OSDImageIndex](/configmgr/osd/understand/task-sequence-variables#OSDImageIndex)  
-- [OSDTargetSystemDrive](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemDrive)  
+- [OSDConfigFileName](task-sequence-variables.md#OSDConfigFileName)  
+- [OSDImageIndex](task-sequence-variables.md#OSDImageIndex)  
+- [OSDTargetSystemDrive](task-sequence-variables.md#OSDTargetSystemDrive)  
 
 ### Cmdlets for Apply OS Image
 
@@ -363,20 +363,20 @@ To add this step in the task sequence editor, select **Add**, select **Settings*
 
 Use the following task sequence variables with this step:  
 
-- [OSDComputerName](/configmgr/osd/understand/task-sequence-variables#OSDComputerName-input)  
-- [OSDLocalAdminPassword](/configmgr/osd/understand/task-sequence-variables#OSDLocalAdminPassword)  
-- [OSDProductKey](/configmgr/osd/understand/task-sequence-variables#OSDProductKey)  
-- [OSDRandomAdminPassword](/configmgr/osd/understand/task-sequence-variables#OSDRandomAdminPassword)  
-- [OSDRegisteredOrgName](/configmgr/osd/understand/task-sequence-variables#OSDRegisteredOrgName-input)  
-- [OSDRegisteredUserName](/configmgr/osd/understand/task-sequence-variables#OSDRegisteredUserName)  
-- [OSDServerLicenseConnectionLimit](/configmgr/osd/understand/task-sequence-variables#OSDServerLicenseConnectionLimit)  
-- [OSDServerLicenseMode](/configmgr/osd/understand/task-sequence-variables#OSDServerLicenseMode)  
-- [OSDTimeZone](/configmgr/osd/understand/task-sequence-variables#OSDTimeZone-input)  
-- [OSDWindowsSettingsInputLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsInputLocale)
-- [OSDWindowsSettingsSystemLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsSystemLocale)
-- [OSDWindowsSettingsUILanguage](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUILanguage)
-- [OSDWindowsSettingsUILanguageFallback](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUILanguageFallback)
-- [OSDWindowsSettingsUserLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsUserLocale)
+- [OSDComputerName](task-sequence-variables.md#OSDComputerName-input)  
+- [OSDLocalAdminPassword](task-sequence-variables.md#OSDLocalAdminPassword)  
+- [OSDProductKey](task-sequence-variables.md#OSDProductKey)  
+- [OSDRandomAdminPassword](task-sequence-variables.md#OSDRandomAdminPassword)  
+- [OSDRegisteredOrgName](task-sequence-variables.md#OSDRegisteredOrgName-input)  
+- [OSDRegisteredUserName](task-sequence-variables.md#OSDRegisteredUserName)  
+- [OSDServerLicenseConnectionLimit](task-sequence-variables.md#OSDServerLicenseConnectionLimit)  
+- [OSDServerLicenseMode](task-sequence-variables.md#OSDServerLicenseMode)  
+- [OSDTimeZone](task-sequence-variables.md#OSDTimeZone-input)  
+- [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale)
+- [OSDWindowsSettingsSystemLocale](task-sequence-variables.md#OSDWindowsSettingsSystemLocale)
+- [OSDWindowsSettingsUILanguage](task-sequence-variables.md#OSDWindowsSettingsUILanguage)
+- [OSDWindowsSettingsUILanguageFallback](task-sequence-variables.md#OSDWindowsSettingsUILanguageFallback)
+- [OSDWindowsSettingsUserLocale](task-sequence-variables.md#OSDWindowsSettingsUserLocale)
 
 ### Cmdlets for Apply Windows Settings
 
@@ -445,7 +445,7 @@ Configure the following settings:
 For more information on these Windows setup answer file values, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
-> If you create a custom Windows setup answer file (unattend.xml), this step overwrites any existing values. To automate a dynamic process for these settings, use the related task sequence variables. For example, [OSDWindowsSettingsInputLocale](/configmgr/osd/understand/task-sequence-variables#OSDWindowsSettingsInputLocale). 
+> If you create a custom Windows setup answer file (unattend.xml), this step overwrites any existing values. To automate a dynamic process for these settings, use the related task sequence variables. For example, [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
 ## <a name="BKMK_AutoApplyDrivers"></a> Auto Apply Drivers
 
@@ -459,7 +459,7 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Drivers**, and select **Auto Apply Drivers**.
 
 > [!TIP]
-> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](https://docs.microsoft.com/configmgr/osd/get-started/manage-drivers#BKMK_TSDrivers).
+> For an overview of drivers in Configuration Manager, see [Use task sequences to install drivers](../get-started/manage-drivers.md#BKMK_TSDrivers).
 
 ### Behaviors for Auto Apply Drivers
 
@@ -483,12 +483,12 @@ The **Auto Apply Drivers** task sequence step performs the following actions:
 
 Use the following task sequence variables with this step:  
 
-- [OSDAutoApplyDriverBestMatch](/configmgr/osd/understand/task-sequence-variables#OSDAutoApplyDriverBestMatch)  
-- [OSDAutoApplyDriverCategoryList](/configmgr/osd/understand/task-sequence-variables#OSDAutoApplyDriverCategoryList)  
-- [SMSTSDriverRequestConnectTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestConnectTimeOut)  
-- [SMSTSDriverRequestReceiveTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestReceiveTimeOut)  
-- [SMSTSDriverRequestResolveTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestResolveTimeOut)  
-- [SMSTSDriverRequestSendTimeOut](/configmgr/osd/understand/task-sequence-variables#SMSTSDriverRequestSendTimeOut)  
+- [OSDAutoApplyDriverBestMatch](task-sequence-variables.md#OSDAutoApplyDriverBestMatch)  
+- [OSDAutoApplyDriverCategoryList](task-sequence-variables.md#OSDAutoApplyDriverCategoryList)  
+- [SMSTSDriverRequestConnectTimeOut](task-sequence-variables.md#SMSTSDriverRequestConnectTimeOut)  
+- [SMSTSDriverRequestReceiveTimeOut](task-sequence-variables.md#SMSTSDriverRequestReceiveTimeOut)  
+- [SMSTSDriverRequestResolveTimeOut](task-sequence-variables.md#SMSTSDriverRequestResolveTimeOut)  
+- [SMSTSDriverRequestSendTimeOut](task-sequence-variables.md#SMSTSDriverRequestSendTimeOut)  
 
 ### Cmdlets for Auto Apply Drivers
 
@@ -542,8 +542,8 @@ To add this step in the task sequence editor, select **Add**, select **Settings*
 
 Use the following task sequence variables with this step:  
 
-- [OSDMigrateAdapterSettings](/configmgr/osd/understand/task-sequence-variables#OSDMigrateAdapterSettings)  
-- [OSDMigrateNetworkMembership](/configmgr/osd/understand/task-sequence-variables#OSDMigrateNetworkMembership)  
+- [OSDMigrateAdapterSettings](task-sequence-variables.md#OSDMigrateAdapterSettings)  
+- [OSDMigrateNetworkMembership](task-sequence-variables.md#OSDMigrateNetworkMembership)  
 
 ### Cmdlets for Capture Network Settings
 
@@ -580,7 +580,7 @@ Configuration Manager captures each volume (drive) from the reference computer t
 
 The installed OS on the reference computer must be a version of Windows that Configuration Manager supports. Use the SysPrep tool to prepare the OS on the reference computer. The installed OS volume and the boot volume must be the same volume.  
 
-Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#capture-os-image-account).
+Specify an account with write permissions to the selected network share. For more information on the capture OS image account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#capture-os-image-account).
 
 This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 
@@ -590,13 +590,13 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 Use the following task sequence variables with this step:  
 
-- [OSDCaptureAccount](/configmgr/osd/understand/task-sequence-variables#OSDCaptureAccount)  
-- [OSDCaptureAccountPassword](/configmgr/osd/understand/task-sequence-variables#OSDCaptureAccountPassword)  
-- [OSDCaptureDestination](/configmgr/osd/understand/task-sequence-variables#OSDCaptureDestination)  
-- [OSDImageCreator](/configmgr/osd/understand/task-sequence-variables#OSDImageCreator)  
-- [OSDImageDescription](/configmgr/osd/understand/task-sequence-variables#OSDImageDescription)  
-- [OSDImageVersion](/configmgr/osd/understand/task-sequence-variables#OSDImageVersion)  
-- [OSDTargetSystemRoot](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemRoot-input)  
+- [OSDCaptureAccount](task-sequence-variables.md#OSDCaptureAccount)  
+- [OSDCaptureAccountPassword](task-sequence-variables.md#OSDCaptureAccountPassword)  
+- [OSDCaptureDestination](task-sequence-variables.md#OSDCaptureDestination)  
+- [OSDImageCreator](task-sequence-variables.md#OSDImageCreator)  
+- [OSDImageDescription](task-sequence-variables.md#OSDImageDescription)  
+- [OSDImageVersion](task-sequence-variables.md#OSDImageVersion)  
+- [OSDTargetSystemRoot](task-sequence-variables.md#OSDTargetSystemRoot-input)  
 
 ### Cmdlets for Capture OS Image
 
@@ -637,7 +637,7 @@ Enter the Windows account that has permissions to the specified network share. S
 
 This step uses the User State Migration Tool (USMT) to capture user state and settings from the computer running the task sequence. This task sequence step is used in conjunction with the **Restore User State** task sequence step. This step always encrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
-For more information about managing the user state when deploying operating systems, see [Manage user state](/configmgr/osd/get-started/manage-user-state).  
+For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 If you want to save and restore user state settings from a state migration point, use this step with the **Request State Store** and **Release State Store** steps.  
 
@@ -651,14 +651,14 @@ To add this step in the task sequence editor, select **Add**, select **User Stat
 
 Use the following task sequence variables with this step:  
 
-- [_OSDMigrateUsmtPackageID](/configmgr/osd/understand/task-sequence-variables#OSDMigrateUsmtPackageID)  
-- [OSDMigrateAdditionalCaptureOptions](/configmgr/osd/understand/task-sequence-variables#OSDMigrateAdditionalCaptureOptions)  
-- [OSDMigrateConfigFiles](/configmgr/osd/understand/task-sequence-variables#OSDMigrateConfigFiles)  
-- [OSDMigrateContinueOnLockedFiles](/configmgr/osd/understand/task-sequence-variables#OSDMigrateContinueOnLockedFiles)  
-- [OSDMigrateEnableVerboseLogging](/configmgr/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)  
-- [OSDMigrateMode](/configmgr/osd/understand/task-sequence-variables#OSDMigrateMode)  
-- [OSDMigrateSkipEncryptedFiles](/configmgr/osd/understand/task-sequence-variables#OSDMigrateSkipEncryptedFiles)  
-- [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
+- [_OSDMigrateUsmtPackageID](task-sequence-variables.md#OSDMigrateUsmtPackageID)  
+- [OSDMigrateAdditionalCaptureOptions](task-sequence-variables.md#OSDMigrateAdditionalCaptureOptions)  
+- [OSDMigrateConfigFiles](task-sequence-variables.md#OSDMigrateConfigFiles)  
+- [OSDMigrateContinueOnLockedFiles](task-sequence-variables.md#OSDMigrateContinueOnLockedFiles)  
+- [OSDMigrateEnableVerboseLogging](task-sequence-variables.md#OSDMigrateEnableVerboseLogging)  
+- [OSDMigrateMode](task-sequence-variables.md#OSDMigrateMode)  
+- [OSDMigrateSkipEncryptedFiles](task-sequence-variables.md#OSDMigrateSkipEncryptedFiles)  
+- [OSDStateStorePath](task-sequence-variables.md#OSDStateStorePath)  
 
 ### Cmdlets for Capture User State
 
@@ -735,12 +735,12 @@ To add this step in the task sequence editor, select **Add**, select **Settings*
 
 Use the following task sequence variables with this step:  
 
-- [OSDComputerName](/configmgr/osd/understand/task-sequence-variables#OSDComputerName-output)  
-- [OSDMigrateComputerName](/configmgr/osd/understand/task-sequence-variables#OSDMigrateComputerName)  
-- [OSDMigrateRegistrationInfo](/configmgr/osd/understand/task-sequence-variables#OSDMigrateRegistrationInfo)  
-- [OSDMigrateTimeZone](/configmgr/osd/understand/task-sequence-variables#OSDMigrateTimeZone)  
-- [OSDRegisteredOrgName](/configmgr/osd/understand/task-sequence-variables#OSDRegisteredOrgName-output)  
-- [OSDTimeZone](/configmgr/osd/understand/task-sequence-variables#OSDTimeZone-output)  
+- [OSDComputerName](task-sequence-variables.md#OSDComputerName-output)  
+- [OSDMigrateComputerName](task-sequence-variables.md#OSDMigrateComputerName)  
+- [OSDMigrateRegistrationInfo](task-sequence-variables.md#OSDMigrateRegistrationInfo)  
+- [OSDMigrateTimeZone](task-sequence-variables.md#OSDMigrateTimeZone)  
+- [OSDRegisteredOrgName](task-sequence-variables.md#OSDRegisteredOrgName-output)  
+- [OSDTimeZone](task-sequence-variables.md#OSDTimeZone-output)  
 
 ### Cmdlets for Capture Windows Settings
 
@@ -795,18 +795,18 @@ The **smsts.log** includes the outcome of all checks. If one check fails, the ta
 
 Use the following task sequence variables with this step:  
 
-- [_TS_CRMEMORY](/configmgr/osd/understand/task-sequence-variables#TSCRMEMORY)
-- [_TS_CRSPEED](/configmgr/osd/understand/task-sequence-variables#TSCRSPEED)
-- [_TS_CRDISK](/configmgr/osd/understand/task-sequence-variables#TSCRDISK)
-- [_TS_CROSTYPE](/configmgr/osd/understand/task-sequence-variables#TSCROSTYPE)
-- [_TS_CRARCH](/configmgr/osd/understand/task-sequence-variables#TSCRARCH)
-- [_TS_CRMINOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](/configmgr/osd/understand/task-sequence-variables#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](/configmgr/osd/understand/task-sequence-variables#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](/configmgr/osd/understand/task-sequence-variables#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](/configmgr/osd/understand/task-sequence-variables#TSCRACPOWER)
-- [_TS_CRNETWORK](/configmgr/osd/understand/task-sequence-variables#TSCRNETWORK)
-- [_TS_CRWIRED](/configmgr/osd/understand/task-sequence-variables#TSCRWIRED)
+- [_TS_CRMEMORY](task-sequence-variables.md#TSCRMEMORY)
+- [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
+- [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
+- [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
 
 ### Cmdlets for Check Readiness
 
@@ -884,10 +884,10 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [SMSConnectNetworkFolderAccount](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderAccount)  
-- [SMSConnectNetworkFolderDriveLetter](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderDriveLetter)  
-- [SMSConnectNetworkFolderPassword](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPassword)  
-- [SMSConnectNetworkFolderPath](/configmgr/osd/understand/task-sequence-variables#SMSConnectNetworkFolderPath)  
+- [SMSConnectNetworkFolderAccount](task-sequence-variables.md#SMSConnectNetworkFolderAccount)  
+- [SMSConnectNetworkFolderDriveLetter](task-sequence-variables.md#SMSConnectNetworkFolderDriveLetter)  
+- [SMSConnectNetworkFolderPassword](task-sequence-variables.md#SMSConnectNetworkFolderPassword)  
+- [SMSConnectNetworkFolderPath](task-sequence-variables.md#SMSConnectNetworkFolderPath)  
 
 ### Cmdlets for Connect To Network Folder
 
@@ -912,7 +912,7 @@ Select the local drive letter to assign for this connection.
 
 #### Account
 
-Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-network-folder-connection-account).
+Select **Set** to specify the user account with permissions to connect to this network folder. For more information on the task sequence network folder connection account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-network-folder-connection-account).
 
 
 
@@ -933,8 +933,8 @@ To add this step in the task sequence editor, select **Add**, select **Disks**, 
 
 Starting in version 1906, use the following task sequence variables with this step:  
 
-- [OSDBitLockerRebootCount](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCount)  
-- [OSDBitLockerRebootCountOverride](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride)  
+- [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount)  
+- [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride)  
 
 ### Cmdlets for Disable BitLocker
 
@@ -962,7 +962,7 @@ Disables BitLocker on a specific drive. Use the drop-down list to specify the dr
 <!-- 4512937 -->
 Starting in version 1906, use this option to specify the number of restarts to keep BitLocker disabled. Instead of adding multiple instances of this step, set a value between 1 (default) and 15.
 
-You can set and modify this behavior with the task sequence variables [OSDBitLockerRebootCount](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCount) and [OSDBitLockerRebootCountOverride](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRebootCountOverride).
+You can set and modify this behavior with the task sequence variables [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount) and [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride).
 
 
 ## <a name="BKMK_DownloadPackageContent"></a> Download Package Content
@@ -987,7 +987,7 @@ This step works well in a task sequence to upgrade an OS in the following scenar
 This step runs in either the full OS or Windows PE. The option to save the package in the Configuration Manager client cache isn't supported in Windows PE.
 
 > [!NOTE]  
-> The **Download Package Content** task isn't supported for use with stand-alone media. For more information, see [Unsupported actions for stand-alone media](/configmgr/osd/deploy-use/create-stand-alone-media#unsupported-actions-for-stand-alone-media).  
+> The **Download Package Content** task isn't supported for use with stand-alone media. For more information, see [Unsupported actions for stand-alone media](../deploy-use/create-stand-alone-media.md#unsupported-actions-for-stand-alone-media).  
 
 To add this step in the task sequence editor, select **Add**, select **Software**, and select **Download Package Content**.
 
@@ -1032,7 +1032,7 @@ If the task sequence fails to download a package, it starts to download the next
 
 *Applies to version 1910 and later*<!-- SCCMDocs-pr #4202 -->
 
-If you configure the [task sequence properties](/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
+If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
 #### Example use case
 
@@ -1083,8 +1083,8 @@ If the hard drive is already encrypted, but BitLocker is disabled, then the **En
 
 Use the following task sequence variables with this step:  
 
-- [OSDBitLockerRecoveryPassword](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](/configmgr/osd/understand/task-sequence-variables#OSDBitLockerStartupKey)  
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
 
 ### Cmdlets for Enable BitLocker
 
@@ -1119,7 +1119,7 @@ To encrypt a specific, non-OS data drive, select **Specific drive**. Then select
 By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
 > [!TIP]
-> Starting in version 1910, you can create and deploy BitLocker management policies, which use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](/configmgr/protect/plan-design/bitlocker-management).
+> Starting in version 1910, you can create and deploy BitLocker management policies, which use *full disk* encryption. To manage BitLocker on devices after the task sequence deploys the OS, enable this option. For more information, see [Plan for BitLocker management](../../protect/plan-design/bitlocker-management.md).
 
 #### Choose where to create the recovery key
 
@@ -1148,10 +1148,10 @@ To add this step in the task sequence editor, select **Add**, select **Disks**, 
 
 Use the following task sequence variables with this step:  
 
-- [OSDDiskIndex](/configmgr/osd/understand/task-sequence-variables#OSDDiskIndex)  
-- [OSDGPTBootDisk](/configmgr/osd/understand/task-sequence-variables#OSDGPTBootDisk)  
-- [OSDPartitions](/configmgr/osd/understand/task-sequence-variables#OSDPartitions)  
-- [OSDPartitionStyle](/configmgr/osd/understand/task-sequence-variables#OSDPartitionStyle)  
+- [OSDDiskIndex](task-sequence-variables.md#OSDDiskIndex)  
+- [OSDGPTBootDisk](task-sequence-variables.md#OSDGPTBootDisk)  
+- [OSDPartitions](task-sequence-variables.md#OSDPartitions)  
+- [OSDPartitionStyle](task-sequence-variables.md#OSDPartitionStyle)  
 
 ### Cmdlets for Format and Partition Disk
 
@@ -1211,7 +1211,7 @@ The applications must meet the following criteria:
 - It must not initiate a restart on its own. The application must request a restart by using the standard restart code, 3010. This behavior makes sure that this step correctly handles the restart. If the application returns a 3010 exit code, the task sequence engine restarts the computer. After the restart, the task sequence automatically continues.  
 
 > [!Note]
-> If the application [checks for running executable files](/configmgr/apps/deploy-use/deploy-applications#bkmk_exe-check), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
+> If the application [checks for running executable files](../../apps/deploy-use/deploy-applications.md#bkmk_exe-check), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
@@ -1229,13 +1229,13 @@ To add this step in the task sequence editor, select **Add**, select **Software*
 
 Use the following task sequence variables with this step:  
 
-- [_TSAppInstallStatus](/configmgr/osd/understand/task-sequence-variables#TSAppInstallStatus)  
-- [SMSTSMPListRequestTimeoutEnabled](/configmgr/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
-- [SMSTSMPListRequestTimeout](/configmgr/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
-- [TSErrorOnWarning](/configmgr/osd/understand/task-sequence-variables#TSErrorOnWarning)  
+- [_TSAppInstallStatus](task-sequence-variables.md#TSAppInstallStatus)  
+- [SMSTSMPListRequestTimeoutEnabled](task-sequence-variables.md#SMSTSMPListRequestTimeoutEnabled)  
+- [SMSTSMPListRequestTimeout](task-sequence-variables.md#SMSTSMPListRequestTimeout)  
+- [TSErrorOnWarning](task-sequence-variables.md#TSErrorOnWarning)  
 
 > [!NOTE]  
-> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables).
+> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** task sequence variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application. For more information, see [Task sequence variables](task-sequence-variables.md).
 
 ### Cmdlets for Install Application
 
@@ -1338,7 +1338,7 @@ Programs that use the **Run another program first** option to install a dependen
 >
 > `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`  
 >
-> For more information about creating stand-alone media, see [Create stand-alone media](/configmgr/osd/deploy-use/create-stand-alone-media).  
+> For more information about creating stand-alone media, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.  
 
@@ -1348,7 +1348,7 @@ To add this step in the task sequence editor, select **Add**, select **Software*
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](/configmgr/osd/understand/task-sequence-variables#OSDDoNotLogCommand) <!--1358493-->  
+- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand) <!--1358493-->  
 
 ### Cmdlets for Install Package
 
@@ -1360,7 +1360,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Properties for Install Package
 
@@ -1425,14 +1425,14 @@ To add this step in the task sequence editor, select **Add**, select **Software*
 
 Use the following task sequence variables with this step:  
 
-- [SMSInstallUpdateTarget](/configmgr/osd/understand/task-sequence-variables#SMSInstallUpdateTarget)  
-- [SMSTSMPListRequestTimeoutEnabled](/configmgr/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeoutEnabled)  
-- [SMSTSMPListRequestTimeout](/configmgr/osd/understand/task-sequence-variables#SMSTSMPListRequestTimeout)  
-- [SMSTSSoftwareUpdateScanTimeout](/configmgr/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout)  
-- [SMSTSWaitForSecondReboot](/configmgr/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot)  
+- [SMSInstallUpdateTarget](task-sequence-variables.md#SMSInstallUpdateTarget)  
+- [SMSTSMPListRequestTimeoutEnabled](task-sequence-variables.md#SMSTSMPListRequestTimeoutEnabled)  
+- [SMSTSMPListRequestTimeout](task-sequence-variables.md#SMSTSMPListRequestTimeout)  
+- [SMSTSSoftwareUpdateScanTimeout](task-sequence-variables.md#SMSTSSoftwareUpdateScanTimeout)  
+- [SMSTSWaitForSecondReboot](task-sequence-variables.md#SMSTSWaitForSecondReboot)  
 
 > [!NOTE]  
-> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables).  
+> If the client fails to retrieve the management point list from location services, use the **SMSTSMPListRequestTimeoutEnabled** and **SMSTSMPListRequestTimeout** variables. These variables specify how many milliseconds a task sequence waits before it retries installing an application or software update. For more information, see [Task sequence variables](task-sequence-variables.md).  
 
 ### Cmdlets for Install Software Updates
 
@@ -1443,7 +1443,7 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 - [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
 - [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
-For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](/configmgr/osd/understand/install-software-updates).
+For more recommendations and a technical flow chart diagram for this step, see [Install Software Updates](install-software-updates.md).
 
 ### Properties for Install Software Updates
 
@@ -1459,13 +1459,13 @@ Select this option to install all available software updates. First deploy these
 
 #### Evaluate software updates from cached scan results
 
-By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](/configmgr/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system). A large number of software updates is likely in this scenario.
+By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md). A large number of software updates is likely in this scenario.
 
 Many of these updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior results in performance issues during the process and download of the update catalog.
 
 In most circumstances, use the default setting to use cached scan results.
 
-The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables#SMSTSSoftwareUpdateScanTimeout).
+The **SMSTSSoftwareUpdateScanTimeout** variable controls the software updates scan timeout during this step. The default value is 60 minutes. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSSoftwareUpdateScanTimeout).
 
 ### Options for Install Software Updates
 
@@ -1476,7 +1476,7 @@ Besides the default options, configure the following additional settings on the 
 If one of the updates unexpectedly restarts the computer, retry this step. The step enables this setting by default with two retries. You can specify from one to five retries.  
 
 > [!NOTE]  
-> Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](/configmgr/osd/understand/task-sequence-variables#SMSTSWaitForSecondReboot).  
+> Configure the **SMSTSWaitForSecondReboot** variable to specify how many seconds the task sequence pauses after the computer restarts in this scenario. For more information, see [Task sequence variables](task-sequence-variables.md#SMSTSWaitForSecondReboot).  
 
 
 
@@ -1492,13 +1492,13 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDJoinAccount](/configmgr/osd/understand/task-sequence-variables#OSDJoinAccount)  
-- [OSDJoinDomainName](/configmgr/osd/understand/task-sequence-variables#OSDJoinDomainName)  
-- [OSDJoinDomainOUName](/configmgr/osd/understand/task-sequence-variables#OSDJoinDomainOUName)  
-- [OSDJoinPassword](/configmgr/osd/understand/task-sequence-variables#OSDJoinPassword)  
-- [OSDJoinSkipReboot](/configmgr/osd/understand/task-sequence-variables#OSDJoinSkipReboot)  
-- [OSDJoinType](/configmgr/osd/understand/task-sequence-variables#OSDJoinType)  
-- [OSDJoinWorkgroupName](/configmgr/osd/understand/task-sequence-variables#OSDJoinWorkgroupName)  
+- [OSDJoinAccount](task-sequence-variables.md#OSDJoinAccount)  
+- [OSDJoinDomainName](task-sequence-variables.md#OSDJoinDomainName)  
+- [OSDJoinDomainOUName](task-sequence-variables.md#OSDJoinDomainOUName)  
+- [OSDJoinPassword](task-sequence-variables.md#OSDJoinPassword)  
+- [OSDJoinSkipReboot](task-sequence-variables.md#OSDJoinSkipReboot)  
+- [OSDJoinType](task-sequence-variables.md#OSDJoinType)  
+- [OSDJoinWorkgroupName](task-sequence-variables.md#OSDJoinWorkgroupName)  
 
 ### Cmdlets for Join Domain or Workgroup
 
@@ -1525,7 +1525,7 @@ Optionally, enter or browse for an organizational unit (OU) in the specified dom
 
 #### Enter the account which has permission to join the domain
 
-Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-domain-join-account).  
+Select **Set** to enter the username and password for an account with permissions to join the domain. Enter the account in the format:  `Domain\account`. For more information on the task sequence domain joining account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
 
 
 
@@ -1565,8 +1565,8 @@ To add this step in the task sequence editor, select **Add**, select **Images**,
 
 Use the following task sequence variables with this step:  
 
-- [OSDKeepActivation](/configmgr/osd/understand/task-sequence-variables#OSDKeepActivation)  
-- [OSDTargetSystemRoot](/configmgr/osd/understand/task-sequence-variables#OSDTargetSystemRoot-output)  
+- [OSDKeepActivation](task-sequence-variables.md#OSDKeepActivation)  
+- [OSDTargetSystemRoot](task-sequence-variables.md#OSDTargetSystemRoot-output)  
 
 ### Cmdlets for Prepare Windows for Capture
 
@@ -1594,7 +1594,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-The [Windows Autopilot for existing devices](/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) task sequence uses this step with this option.
+The [Windows Autopilot for existing devices](../deploy-use/windows-autopilot-for-existing-devices.md) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
@@ -1645,7 +1645,7 @@ Select this option to skip drive encryption on a computer that doesn't contain a
 
 Use this step to notify the state migration point that the capture or restore action is complete. Use this step in conjunction with the **Request State Store**, **Capture User State**, and **Restore User State** steps. You use these steps to migrate user state data using a state migration point and the User State Migration Tool (USMT).  
 
-For more information about managing the user state when deploying operating systems, see [Manage user state](/configmgr/osd/get-started/manage-user-state).  
+For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 If you use the **Request State Store** step to request access to a state migration point to *capture* user state, this step notifies the state migration point that the capture process is complete. The state migration point then marks the user state data as available for restore. The state migration point sets the access control permissions for the user state data so that only the restoring computer has read-only access.  
 
@@ -1662,7 +1662,7 @@ To add this step in the task sequence editor, select **Add**, select **User Stat
 
 Use the following task sequence variables with this step:  
 
-- [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
+- [OSDStateStorePath](task-sequence-variables.md#OSDStateStorePath)  
 
 ### Cmdlets for Release State Store
 
@@ -1683,7 +1683,7 @@ This step doesn't require any settings on the **Properties** tab.
 
 Use this step to request access to a state migration point when capturing or restoring state.  
 
-For more information about managing the user state when deploying operating systems, see [Manage user state](/configmgr/osd/get-started/manage-user-state).  
+For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 Use this step in conjunction with the **Release State Store**, **Capture User State**, and **Restore User State** steps. You use these steps to migrate computer state using a state migration point and the User State Migration Tool (USMT).  
 
@@ -1698,10 +1698,10 @@ To add this step in the task sequence editor, select **Add**, select **User Stat
 
 Use the following task sequence variables with this step:  
 
-- [OSDStateFallbackToNAA](/configmgr/osd/understand/task-sequence-variables#OSDStateFallbackToNAA)  
-- [OSDStateSMPRetryCount](/configmgr/osd/understand/task-sequence-variables#OSDStateSMPRetryCount)  
-- [OSDStateSMPRetryTime](/configmgr/osd/understand/task-sequence-variables#OSDStateSMPRetryTime)  
-- [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
+- [OSDStateFallbackToNAA](task-sequence-variables.md#OSDStateFallbackToNAA)  
+- [OSDStateSMPRetryCount](task-sequence-variables.md#OSDStateSMPRetryCount)  
+- [OSDStateSMPRetryTime](task-sequence-variables.md#OSDStateSMPRetryTime)  
+- [OSDStateStorePath](task-sequence-variables.md#OSDStateStorePath)  
 
 ### Cmdlets for Request State Store
 
@@ -1754,8 +1754,8 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [SMSRebootMessage](/configmgr/osd/understand/task-sequence-variables#SMSRebootMessage)  
-- [SMSRebootTimeout](/configmgr/osd/understand/task-sequence-variables#SMSRebootTimeout)  
+- [SMSRebootMessage](task-sequence-variables.md#SMSRebootMessage)  
+- [SMSRebootTimeout](task-sequence-variables.md#SMSRebootTimeout)  
 
 ### Cmdlets for Restart Computer
 
@@ -1796,7 +1796,7 @@ Specify the amount of time in seconds before the destination computer restarts. 
 
 Use this step to initiate the User State Migration Tool (USMT) to restore user state and settings to the destination computer. You use this step in conjunction with the **Capture User State** step.  
 
-For more information about managing the user state when deploying operating systems, see [Manage user state](/configmgr/osd/get-started/manage-user-state).  
+For more information about managing the user state when deploying operating systems, see [Manage user state](../get-started/manage-user-state.md).  
 
 Use this step with the **Request State Store** and **Release State Store** steps to save or restore the state settings with a state migration point. This option always decrypts the USMT state store by using an encryption key that Configuration Manager generates and manages.  
 
@@ -1813,13 +1813,13 @@ To add this step in the task sequence editor, select **Add**, select **User Stat
 
 Use the following task sequence variables with this step:  
 
-- [_OSDMigrateUsmtRestorePackageID](/configmgr/osd/understand/task-sequence-variables#OSDMigrateUsmtRestorePackageID)  
-- [OSDMigrateAdditionalRestoreOptions](/configmgr/osd/understand/task-sequence-variables#OSDMigrateAdditionalRestoreOptions)  
-- [OSDMigrateContinueOnRestore](/configmgr/osd/understand/task-sequence-variables#OSDMigrateContinueOnRestore)  
-- [OSDMigrateEnableVerboseLogging](/configmgr/osd/understand/task-sequence-variables#OSDMigrateEnableVerboseLogging)  
-- [OSDMigrateLocalAccounts](/configmgr/osd/understand/task-sequence-variables#OSDMigrateLocalAccounts)  
-- [OSDMigrateLocalAccountPassword](/configmgr/osd/understand/task-sequence-variables#OSDMigrateLocalAccountPassword)  
-- [OSDStateStorePath](/configmgr/osd/understand/task-sequence-variables#OSDStateStorePath)  
+- [_OSDMigrateUsmtRestorePackageID](task-sequence-variables.md#OSDMigrateUsmtRestorePackageID)  
+- [OSDMigrateAdditionalRestoreOptions](task-sequence-variables.md#OSDMigrateAdditionalRestoreOptions)  
+- [OSDMigrateContinueOnRestore](task-sequence-variables.md#OSDMigrateContinueOnRestore)  
+- [OSDMigrateEnableVerboseLogging](task-sequence-variables.md#OSDMigrateEnableVerboseLogging)  
+- [OSDMigrateLocalAccounts](task-sequence-variables.md#OSDMigrateLocalAccounts)  
+- [OSDMigrateLocalAccountPassword](task-sequence-variables.md#OSDMigrateLocalAccountPassword)  
+- [OSDStateStorePath](task-sequence-variables.md#OSDStateStorePath)  
 
 ### Cmdlets for Restore User State
 
@@ -1872,12 +1872,12 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDDoNotLogCommand](/configmgr/osd/understand/task-sequence-variables#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
-- [SMSTSDisableWow64Redirection](/configmgr/osd/understand/task-sequence-variables#SMSTSDisableWow64Redirection)  
-- [SMSTSRunCommandLineUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserName)  
-- [SMSTSRunCommandLineUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineUserPassword)  
-- [SMSTSRunCommandLineAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunCommandLineAsUser) (starting in version 2002)<!-- 5573175 -->
-- [WorkingDirectory](/configmgr/osd/understand/task-sequence-variables#WorkingDirectory)  
+- [OSDDoNotLogCommand](task-sequence-variables.md#OSDDoNotLogCommand) (starting in version 1902)<!--3654172-->  
+- [SMSTSDisableWow64Redirection](task-sequence-variables.md#SMSTSDisableWow64Redirection)  
+- [SMSTSRunCommandLineUserName](task-sequence-variables.md#SMSTSRunCommandLineUserName)  
+- [SMSTSRunCommandLineUserPassword](task-sequence-variables.md#SMSTSRunCommandLineUserPassword)  
+- [SMSTSRunCommandLineAsUser](task-sequence-variables.md#SMSTSRunCommandLineAsUser) (starting in version 2002)<!-- 5573175 -->
+- [WorkingDirectory](task-sequence-variables.md#WorkingDirectory)  
 
 ### Cmdlets for Run Command Line
 
@@ -1953,7 +1953,7 @@ Specifies that the command line is run as a Windows user account other than the 
 
 #### Account
 
-Specifies the Windows user account this step uses to run the command line. The command line runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+Specifies the Windows user account this step uses to run the command line. The command line runs with the permissions of the specified account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
@@ -1972,7 +1972,7 @@ Include other exit codes from the script that the step should evaluate as succes
 
 Use this step to run the specified Windows PowerShell script.  
 
-This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](/configmgr/osd/get-started/manage-boot-images).  
+This step can be run in the full OS or Windows PE. To run this step in Windows PE, enable PowerShell in the boot image. Enable the WinPE-PowerShell component from the **Optional Components** tab in the properties for the boot image. For more information about how to modify a boot image, see [Manage boot images](../get-started/manage-boot-images.md).  
 
 > [!NOTE]  
 > PowerShell isn't enabled by default on Windows Embedded operating systems.  
@@ -1986,10 +1986,10 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Use the following task sequence variables with this step:  
 
-- [OSDLogPowerShellParameters](/configmgr/osd/understand/task-sequence-variables#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
-- [SMSTSRunPowerShellAsUser](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
-- [SMSTSRunPowerShellUserName](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserName)  
-- [SMSTSRunPowerShellUserPassword](/sccm/osd/understand/task-sequence-variables#SMSTSRunPowerShellUserPassword)  
+- [OSDLogPowerShellParameters](task-sequence-variables.md#OSDLogPowerShellParameters) (starting in version 1902)<!--3556028-->  
+- [SMSTSRunPowerShellAsUser](task-sequence-variables.md#SMSTSRunPowerShellAsUser) (starting in version 2002)<!-- 5573175 -->
+- [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName)  
+- [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword)  
 
 ### Cmdlets for Run PowerShell Script
 
@@ -2026,7 +2026,7 @@ When you add or edit a script, the PowerShell script window provides the followi
 
 - Open an existing script from file  
 
-- Browse to an existing approved [script](/configmgr/apps/deploy-use/create-deploy-scripts) in Configuration Manager
+- Browse to an existing approved [script](../../apps/deploy-use/create-deploy-scripts.md) in Configuration Manager
 
 > [!Important]  
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -2101,7 +2101,7 @@ Starting in version 1902, specify that the PowerShell script is run as a Windows
 #### Account
 
 <!-- 3556028 -->
-Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](/configmgr/core/plan-design/hierarchy/accounts#task-sequence-run-as-account).
+Starting in version 1902, specify the Windows user account this step uses to run the PowerShell script. The specified account must be a local administrator on the system and the script runs with the permissions of this account. Select **Set** to specify the local user or domain account. For more information on the task sequence run-as account, see [Accounts](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
 > [!IMPORTANT]  
 > If this step specifies a user account and runs in Windows PE, the action fails. You can't join Windows PE to a domain. The **smsts.log** file records this failure.  
@@ -2120,7 +2120,7 @@ Starting in version 1902, include other exit codes from the script that the step
 ## <a name="child-task-sequence"></a> Run Task Sequence
 
 > [!Note]  
-> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](/configmgr/core/servers/manage/install-in-console-updates#bkmk_options).
+> In version 1910, Configuration Manager enables this feature by default. In version 1906 or earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 This step runs another task sequence. It creates a parent-child relationship between the task sequences. With child task sequences, you can create more modular, reusable task sequences.
 
@@ -2185,13 +2185,13 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 The task sequence automatically sets the following read-only task sequence variables:  
 
-- [\_SMSTSMake](/configmgr/osd/understand/task-sequence-variables#SMSTSMake)  
-- [\_SMSTSModel](/configmgr/osd/understand/task-sequence-variables#SMSTSModel)  
-- [\_SMSTSMacAddresses](/configmgr/osd/understand/task-sequence-variables#SMSTSMacAddresses)  
-- [\_SMSTSIPAddresses](/configmgr/osd/understand/task-sequence-variables#SMSTSIPAddresses)  
-- [\_SMSTSSerialNumber](/configmgr/osd/understand/task-sequence-variables#SMSTSSerialNumber)  
-- [\_SMSTSAssetTag](/configmgr/osd/understand/task-sequence-variables#SMSTSAssetTag)  
-- [\_SMSTSUUID](/configmgr/osd/understand/task-sequence-variables#SMSTSUUID)  
+- [\_SMSTSMake](task-sequence-variables.md#SMSTSMake)  
+- [\_SMSTSModel](task-sequence-variables.md#SMSTSModel)  
+- [\_SMSTSMacAddresses](task-sequence-variables.md#SMSTSMacAddresses)  
+- [\_SMSTSIPAddresses](task-sequence-variables.md#SMSTSIPAddresses)  
+- [\_SMSTSSerialNumber](task-sequence-variables.md#SMSTSSerialNumber)  
+- [\_SMSTSAssetTag](task-sequence-variables.md#SMSTSAssetTag)  
+- [\_SMSTSUUID](task-sequence-variables.md#SMSTSUUID)  
 
 ### Cmdlets for Set Dynamic Variables
 
@@ -2247,8 +2247,8 @@ To add this step in the task sequence editor, select **Add**, select **General**
 
 Task sequence variables are read by task sequence actions and specify the behavior of those actions. For more information about specific task sequence variables and how to use them, see the following articles:  
 
-- [How to use task sequence variables](/configmgr/osd/understand/using-task-sequence-variables)  
-- [Task sequence variables](/configmgr/osd/understand/task-sequence-variables)  
+- [How to use task sequence variables](using-task-sequence-variables.md)  
+- [Task sequence variables](task-sequence-variables.md)  
 
 ### Cmdlets for Set Task Sequence Variable
 
@@ -2327,7 +2327,7 @@ This step performs the following actions:
 
 2. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
 
-3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](/configmgr/osd/understand/provisioning-mode).  
+3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](provisioning-mode.md).  
 
 4. Wait for the client to be fully operational.  
 
@@ -2343,7 +2343,7 @@ The task sequence continues running the next step.
 
 Use the following task sequence variables with this step:  
 
-- [SMSClientInstallProperties](/configmgr/osd/understand/task-sequence-variables#SMSClientInstallProperties)  
+- [SMSClientInstallProperties](task-sequence-variables.md#SMSClientInstallProperties)  
 
 ### Cmdlets for Setup Windows and ConfigMgr
 
@@ -2370,7 +2370,7 @@ If there's a pre-production client package available, and the computer is a memb
 
 The task sequence step automatically specifies site assignment and the default configuration. Use this field to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.  
 
-Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](/configmgr/core/clients/deploy/about-client-installation-properties).  
+Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### Options for Setup Windows and ConfigMgr
 
@@ -2388,17 +2388,17 @@ This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
 > [!TIP]
-> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client).  
+> Beginning with Windows 10, version 1709, media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#windows-10-as-a-client).  
 >
-> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](https://docs.microsoft.com/configmgr/osd/deploy-use/configure-precache-content).
+> Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
 ### Variables for Upgrade OS
 
 Use the following task sequence variables with this step:  
 
-- [_SMSTSOSUpgradeActionReturnCode](/configmgr/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)  
-- [SetupCompletePause](/configmgr/osd/understand/task-sequence-variables#SetupCompletePause)
-- [OSDSetupAdditionalUpgradeOptions](/configmgr/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)  
+- [_SMSTSOSUpgradeActionReturnCode](task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)  
+- [SetupCompletePause](task-sequence-variables.md#SetupCompletePause)
+- [OSDSetupAdditionalUpgradeOptions](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)  
 
 ### Cmdlets for Upgrade OS
 
@@ -2439,14 +2439,14 @@ Specify one of the following options:
 
 - **Driver package**: Select **Browse** and choose an existing driver package from the list.
 
-- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step.  
+- **Staged content**: Select this option to specify the location for the driver content. You can specify a local folder, network path, or a task sequence variable. When you use a variable for the source path, set its value earlier in the task sequence. For example, by using the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step.  
 
 > [!TIP]
 > If you want to have dynamic content for multiple types of hardware:
 >
 > - Use multiple instances of this step with conditions for the hardware types and separate driver content.
 >
-> - Use multiple instances of the [Download Package Content](/configmgr/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
+> - Use multiple instances of the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
 
 #### Time-out (minutes)
 
@@ -2457,7 +2457,7 @@ Specify the number of minutes before Configuration Manager fails this step. This
 Perform the Windows Setup compatibility scan without starting the upgrade process. This setting corresponds to the Windows Setup command-line option `/Compat ScanOnly`. Deploy the entire OS upgrade package with this option.
 
 <!--SCCMDocs-pr issue 2812-->
-When you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](/configmgr/osd/understand/provisioning-mode).
+When you enable this option, this step doesn't put the Configuration Manager client into provisioning mode. Windows Setup runs silently in the background, and the client continues to function as normal. For more information, see [Provisioning mode](provisioning-mode.md).
 
 Setup returns an exit code as a result of the scan. The following table provides some of the more common exit codes:  
 
