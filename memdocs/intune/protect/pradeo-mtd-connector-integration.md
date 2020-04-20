@@ -39,7 +39,7 @@ Complete the following steps to integrate the Pradeo Mobile Threat Defense solut
 ## Before you begin
 
 > [!NOTE]
-> The following steps are to be completed in the [Pradeo Security console](https://www.apps-security.com).
+> The following steps are to be completed in the [Pradeo Security console](https://pradeo-security.com/).
 
 Before starting the process of integrating Pradeo with Intune, make sure you have the following:
 
