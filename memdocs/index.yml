@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 03/09/2020
+  ms.date: 04/20/2020
 
 highlightedContent:
   items:
@@ -53,31 +53,31 @@ conceptualContent:
           text: Manage and protect apps
     - title: Microsoft Endpoint Configuration Manager
       links:
-        - url: https://docs.microsoft.com/configmgr
+        - url: ./configmgr/index.yml
           itemType: get-started
           text: Microsoft Endpoint Configuration Manager documentation
-        - url: https://docs.microsoft.com/configmgr/comanage
+        - url: ./configmgr/comanage/index.yml
           itemType: concept
           text: Manage device workloads in Configuration Manager and Intune
-        - url: https://docs.microsoft.com/configmgr/desktop-analytics
+        - url: ./configmgr/desktop-analytics/index.yml
           itemType: overview
           text: Use Desktop Analytics for update readiness                  
-        - url: https://docs.microsoft.com/configmgr/core
+        - url: ./configmgr/core/index.yml
           itemType: overview
           text: Manage your infrastructure
-        - url: https://docs.microsoft.com/configmgr/apps
+        - url: ./configmgr/apps/index.yml
           itemType: concept
           text: Manage apps
-        - url: https://docs.microsoft.com/configmgr/osd
+        - url: ./configmgr/osd/index.yml
           itemType: concept
           text: Operating system deployment
-        - url: https://docs.microsoft.com/configmgr/sum
+        - url: ./configmgr/sum/index.yml
           itemType: concept
           text: Software updates
-        - url: https://docs.microsoft.com/configmgr/compliance
+        - url: ./configmgr/compliance/index.yml
           itemType: concept
           text: Manage configuration and compliance of devices
-        - url: https://docs.microsoft.com/configmgr/protect
+        - url: ./configmgr/protect/index.yml
           itemType: concept
           text: Protect your infrastructure and data
     - title: Windows Autopilot
@@ -88,6 +88,6 @@ conceptualContent:
         - url: /mem/intune/enrollment/enrollment-autopilot
           itemType: how-to-guide
           text: "Intune: Enroll Windows devices using Windows Autopilot"
-        - url: https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices
+        - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
           itemType: how-to-guide
           text: "Configuration Manager: Use Windows Autopilot for existing devices"         
