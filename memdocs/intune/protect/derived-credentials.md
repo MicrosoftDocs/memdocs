@@ -67,7 +67,7 @@ Intune supports derived credentials on the following platforms:
 
 Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
 
-- **DISA Purebred** (iOS only): https://cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (iOS only): https:\//cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -134,7 +134,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
-- [Android Enterprise fully managed devices](https://docs.microsoft.com/intune-user-help/enroll-android-device-entrust-datacard)
+- [Android Enterprise fully managed devices](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Key requirements include**:
 
@@ -152,7 +152,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
-- [Android Enterprise fully managed devices](https://docs.microsoft.com/intune-user-help/enroll-android-intercede)
+- [Android Enterprise fully managed devices](../user-help/enroll-android-device-intercede.md)
 
 **Key requirements include**:
 
@@ -228,7 +228,7 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
 
 **Complete the following tasks**:
   
-1. Download the [DISA Purebred application](https://cyber.mil/pki-pke/purebred/).
+1. Download the DISA Purebred application: https:\//cyber.mil/pki-pke/purebred/.
 
 2. Deploy the DISA Purebred application in Intune. See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
 
