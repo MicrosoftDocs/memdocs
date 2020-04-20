@@ -11,8 +11,8 @@
       topicHref: /mem/
       items:
       - name: Intune
-        tocHref: /intune/
-        topicHref: /intune/
+        tocHref: /mem/intune/
+        topicHref: /mem/intune/
         items:
         - name: Intune user help
           tocHref: /mem/intune/user-help/
@@ -39,8 +39,8 @@
           tocHref: /mem/intune/developer/
           topicHref: /mem/intune/developer/
       - name: Configuration Manager
-        tocHref: /configmgr/
-        topicHref: /configmgr/
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/
         items:
         - name: Application management guide
           tocHref: /mem/configmgr/apps/
