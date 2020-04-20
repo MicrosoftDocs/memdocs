@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,6 +56,7 @@ The following on-premises infrastructure must run on servers that are domain-joi
 - **Microsoft Intune Certificate Connector** – The Microsoft Intune Certificate Connector is required to use SCEP certificate profiles with Intune. This article will guide you through [installing this connector](#install-the-intune-certificate-connector).
 
   The connector supports Federal Information Processing Standard (FIPS) mode. FIPS isn’t required, but when it's enabled, you can issue and revoke certificates.
+  - The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - The connector must run on the same server as the NDES server role, a server that runs Windows Server 2012 R2 or later.
   - The .NET 4.5 Framework is required by the connector and is automatically included with Windows Server 2012 R2.
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) and the Microsoft Intune Certificate Connector.

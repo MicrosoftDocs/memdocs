@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,6 +47,7 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 ## Prerequisites
 
 - **An active subscription at the DigiCert CA**: The subscription is required to get a registration authority (RA) certificate from the DigiCert CA.
+- The Microsoft Intune Certificate Connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ## Install the DigiCert RA certificate
 
