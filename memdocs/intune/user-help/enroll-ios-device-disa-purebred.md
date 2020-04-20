@@ -44,7 +44,7 @@ You likely need to set up a derived credential if you use a smart card to:
 In this article, you will:  
 
    * Enroll a mobile iOS or iPadOS device with Intune Company Portal.  
-   * Get a derived credential from your organization's derived credential provider, [DISA Purebred](https://cyber.mil/pki-pke/purebred/).  
+   * Get a derived credential from your organization's derived credential provider, DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.  
 
 ## What are derived credentials?  
 A derived credential is a certificate that’s derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
