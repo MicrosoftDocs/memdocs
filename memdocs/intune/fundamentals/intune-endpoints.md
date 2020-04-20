@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,6 +38,9 @@ As a cloud-only service, Intune doesn't require on-premises infrastructure such 
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
+> [!NOTE]
+> The information in section also applies to the Microsoft Intune Certificate Connector. The connector has the same network requirements as managed devices
+
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
 - For some tasks (like downloading software updates for the classic pc agent), Intune requires unauthenticated proxy server access to manage.microsoft.com
 
@@ -48,6 +51,7 @@ You can modify proxy server settings on individual client computers. You can als
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Managed devices require configurations that let **All Users** access services through firewalls.
+
 
 The following tables list the ports and services that the Intune client accesses:
 
