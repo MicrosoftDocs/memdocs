@@ -108,4 +108,4 @@ Support articles that are new or updated between February 21 and March 19, 2020.
 - [KB 4552181 Content distribution stalls in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4552181)
 - [KB 4550023 A Configuration Manager in-place upgrade task sequence doesn't continue after a Windows 10 in-place upgrade rollback](https://support.microsoft.com/help/4550023)
 
-To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
