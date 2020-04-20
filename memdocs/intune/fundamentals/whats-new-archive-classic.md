@@ -367,7 +367,7 @@ The new app will also allow users to leverage additional platform features like 
 > While you can deploy Android for Work apps with an action of __Required__, you can only deploy apps as __Available__ if your Intune groups have been migrated to the new Azure AD groups experience.
 
 __Intune App SDK for Cordova plugin now supports MAM without enrollment__
-App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS. The Intune App SDK for Cordova plugin can be found [here](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS.
 
 __Intune App SDK Xamarin component now supports MAM without enrollment__
 App developers can now use the Intune App SDK Xamarin component to enable MAM functionality without device enrollment in their Xamarin-based apps for Android and iOS/iPadOS. The Intune App SDK Xamarin component can be found [here](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam).
