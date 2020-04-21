@@ -156,9 +156,10 @@ For account setup, the Enrollment Status Page tracks the following items if they
 Top questions for troubleshooting.
 
 - Why were my applications not installed during Device setup phase during Autopilot deployment that is using Enrollment Status Page?
-  - To guarantee applications are installed during an Autopilot Device setup phase, make sure that 
-        1. The application is selected to block access in the selected apps list
-        2. You're targeting the applications to the same Azure AD device group that your Autopilot profile is assigned to. 
+  - To guarantee applications are installed during an Autopilot Device setup phase, ensure that:
+      - The apps are assigned to an Azure AD group containing the device, using a "required" assignment.
+      - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
+      - The apps install in device context and have no user-context applicability rules.
 
 - Why is the Enrollment Status Page showing for non-Autopilot deployments, for example when a user logs in for the first time on a Configuration Manager co-management enrolled device?  
   - The Enrollment Status Page lists installation status for all enrollment methods, including
@@ -200,7 +201,6 @@ Top questions for troubleshooting.
 ### Known issues
 Below are known issues. 
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. You must deploy OMA-URI to disable the ESP. See above for instructions on how to disable ESP using OMA-URI. 
-- A pending reboot will always cause a timeout. The timeout occurs because the device needs to be rebooted. The reboot is required to allow time for the item tracked in Enrollment Status Page to complete. A reboot will cause the Enrollment Status Page to exit and after reboot the device won't enter during Account setup after reboot.  Consider not requiring a reboot with application installation. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration defined in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. This delay gives time for the on-prem AD connector to create the new device record to Azure AD. 
