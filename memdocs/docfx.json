@@ -43,6 +43,9 @@
         "*.md" : [
           "show_binary_rating"
         ]
+      },
+      "feedback_system": {
+        "configmgr/core/misc/**/*": "None"
       }
     },
     "template": [],
