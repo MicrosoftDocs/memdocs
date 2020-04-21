@@ -165,7 +165,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
     > [!Important]  
     > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
-    > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../clients/deploy/about-client-settings.md##allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
+    > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 - Starting in version 1806, configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](use-a-pull-distribution-point.md#about-source-distribution-points).<!--1321554-->  
 
