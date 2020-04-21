@@ -71,7 +71,7 @@ The **appType** entity lists the installation source of an app.
 | 3         | iOS   store app                   | An   iOS store app.                                 |
 | 4         | iOS   LOB app                     | An   iOS line-of-business app.                      |
 | 5         | Managed   iOS store app (MAM)     | An   iOSstore app that is management enabled.       |
-| 6         | O365   Pro Plus Suite             | The   Office 365 Pro Plus Suite for Windows 10.     |
+| 6         | O365   Pro Plus Suite             | The   Microsoft 365 Apps for Windows 10.     |
 | 7         | Web   app                         | A   web app.                                        |
 | 8         | Windows   Phone 8.1 store app     | A   Windows phone 8.1 store app.                    |
 | 9         | Windows   store app               | A   Windows store app.                              |
