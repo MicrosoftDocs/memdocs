@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -86,7 +86,7 @@ You can also use device compliance policies without any Conditional Access. When
 
 ## Ways to deploy device compliance policies
 
-You can deploy compliance policy to users in user groups or devices in device groups. When a compliance policy is deployed to a user, all of the user's devices are checked for compliance. On Windows 10 version 1803 and newer devices, it's recommended to deploy to device groups *if* the primary user didn't enroll the device. Using device groups in this scenario helps with compliance reporting.
+You can deploy compliance policy to users in user groups or devices in device groups. When a compliance policy is deployed to a user, all of the user's devices are checked for compliance. Using device groups in this scenario helps with compliance reporting.
 
 Intune also includes a set of built-in compliance policy settings. The following built-in policies get evaluated on all devices enrolled in Intune:
 
