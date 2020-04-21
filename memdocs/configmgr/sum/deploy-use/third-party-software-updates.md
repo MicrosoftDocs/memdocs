@@ -2,7 +2,7 @@
 title: Enable third party updates
 titleSuffix: Configuration Manager
 description: Enable third party updates in Configuration Manager
-ms.date: 11/29/2019
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum 
 ms.topic: conceptual
@@ -232,7 +232,7 @@ Synchronization of third-party software updates is handled by the SMS_ISVUPDATES
      - You can still use the older catalog cab file version as long as the download URL is https and the updates are signed. The content will fail to publish because the certificates for the binaries aren't in the cab file and already approved. You can work around this issue by finding the certificate in the **Certificates** node, unblocking it, then publish the update again. If you're publishing multiple updates signed with different certificates, you'll need to unblock each certificate that is used.
      - For more information, see status messages 11523 and 11524 in the below status message table.
 -  When the third-party software update synchronization service on the top-level software update point requires a proxy server for internet access, digital signature checks may fail. To mitigate this issue, configure the WinHTTP proxy settings on the site system. For more information, see [Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
-- When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](../../core/clients/deploy/about-client-settings.md#delivery-optimization) is enabled. <!--6598587--> 
+- When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
 
 ## Status messages
 
