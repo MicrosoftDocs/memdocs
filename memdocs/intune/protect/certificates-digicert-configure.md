@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -228,7 +228,7 @@ By default, Intune Certificate Connector is installed in **%ProgramFiles%\Micros
 
 ## Create a trusted certificate profile
 
-The PKCS certificates you'll deploy for Intune managed devices must be chained with a trusted root certificate. To establish this chain, create an Intune trusted certificate profile with the root certificate from the DigiCert CA.
+The PKCS certificates you'll deploy for Intune managed devices must be chained with a trusted root certificate. To establish this chain, create an Intune trusted certificate profile with the root certificate from the DigiCert CA, and deploy both the trusted certificate profile and the PKCS certificate profile to the same groups.
 
 1. Get a trusted root certificate from the DigiCert CA:
 
