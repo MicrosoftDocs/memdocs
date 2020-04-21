@@ -155,9 +155,9 @@ For account setup, the Enrollment Status Page tracks the following items if they
 ### Troubleshooting
 Top questions for troubleshooting.
 
-- Why were my applications not installed during Device setup phase during Autopilot deployment that is using Enrollment Status Page?
-  - To guarantee applications are installed during an Autopilot Device setup phase, ensure that:
-      - The apps are assigned to an Azure AD group containing the device, using a "required" assignment.
+- Why were my applications not installed and tracked using the Enrollment Status Page?
+  - To guarantee applications are installed and tracked using the Enrollment Status Page, ensure that:
+      - The apps are assigned to an Azure AD group containing the device (for device-targeted apps) or the user (for user-targeted apps), using a "required" assignment.  (Device-targeted apps are tracked during the device phase of ESP, while user-targeted apps are tracked during the user phase of ESP.)
       - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
       - The apps install in device context and have no user-context applicability rules.
 
