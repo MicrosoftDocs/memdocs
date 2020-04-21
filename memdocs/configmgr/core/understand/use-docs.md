@@ -2,7 +2,7 @@
 title: How to use the docs
 titleSuffix: Configuration Manager
 description: Learn tips on using the Configuration Manager technical documentation library.
-ms.date: 04/02/2020
+ms.date: 04/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -155,11 +155,11 @@ Follow these general guidelines when you contribute to Configuration Manager doc
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, this documentation library will move to `docs.microsoft.com/mem/configmgr` in April 2020. The Intune documentation library already moved to [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). All links will automatically redirect, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, their documentation libraries are consolidated on the [Microsoft Endpoint Manager site](https://docs.microsoft.com/mem). The Intune documentation is now at [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune), and the Configuration Manager documentation is now at [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). If you still use an old URL, it will automatically redirect, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes will be necessary:
 
-- Existing GitHub issues will remain in the original repository, [github.com/MicrosoftDocs/SCCMDocs/issues](https://github.com/MicrosoftDocs/SCCMDocs/issues).
+- Existing GitHub issues remain in the original repository, [IntuneDocs](https://github.com/MicrosoftDocs/IntuneDocs/issues) or [SCCMDocs](https://github.com/MicrosoftDocs/SCCMDocs/issues).
 
   - These issues won't show as open or closed issues in the Feedback section of the linked article.
 
@@ -167,8 +167,6 @@ If you provide feedback or contribute to articles, some changes will be necessar
 
   - In some instances, we may make the tough decision to close an issue that we don't think we can address.
 
-  - If you have an issue in the existing repository, and are passionate about it, file feedback on the migrated article in the memdocs repository.
+  - If you have an issue in the existing repository, and are passionate about it, file feedback on the migrated article in the [MEMDocs repository](https://github.com/MicrosoftDocs/MEMDocs).
 
-- We'll merge and close any open pull requests before the migration.
-
-- After migration, when you file feedback or edit an article, the issue or pull request will go to the memdocs repository.
+- Now when you file feedback or edit an article, the issue or pull request goes to the MEMDocs repository.
