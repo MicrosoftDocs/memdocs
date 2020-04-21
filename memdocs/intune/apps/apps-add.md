@@ -52,8 +52,8 @@ The following table lists the specific app types and how you can add them in the
 | Windows Phone 8.1 store apps  | Store app  | Select **Windows Phone 8.1** as the **app type**, and enter the Microsoft store URL for the app. |
 | Microsoft store apps  | Store app  | Select **Windows** as the **app type**, and enter the Microsoft store URL for the app. |
 | Managed Google Play apps | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. |
-| Microsoft 365 Apps for Windows 10  | Store app (Microsoft 365 Apps) | Select **Windows 10** under **Microsoft 365 Apps** section as the **app type**, and then select the Microsoft 365 Apps that you want to install.  |
-| Microsoft 365 Apps for macOS | Store app (Microsoft 365 Apps) | Select **macOS** under **Microsoft 365 Apps** section as the **app type**, and then select the Microsoft 365 Apps. |
+| Office 365 apps for Windows 10  | Store app (Office 365) | Select **Windows 10** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app that you want to install.  |
+| Office 365 apps for macOS | Store app (Office 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app suite. |
 | Microsoft Edge, version 77 and later for Windows 10 | Store app | Select **Windows 10** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Microsoft Edge, version 77 and later for macOS | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Android line-of-business (LOB) apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
@@ -201,8 +201,8 @@ To learn how to add apps for each platform to Intune, see:
 - [Windows Phone LOB apps](lob-apps-windows-phone.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
-- [Microsoft 365 Apps for Windows 10](apps-add-office365.md)
-- [Microsoft 365 Apps for macOS](apps-add-office365-macos.md)
+- [Office 365 apps for Windows 10](apps-add-office365.md)
+- [Office 365 apps for macOS](apps-add-office365-macos.md)
 - [Managed Google Play apps](apps-add-android-for-work.md)
 - [Microsoft Edge for Windows 10](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)

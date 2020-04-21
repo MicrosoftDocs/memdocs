@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Install Microsoft 365 Apps to macOS devices using Microsoft Intune
+title: Install Office 365 apps to macOS devices using Microsoft Intune
 titleSuffix: 
-description: Learn how you can use Microsoft Intune to install Microsoft 365 Apps on macOS devices.
+description: Learn how you can use Microsoft Intune to install Office 365 apps on macOS devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,16 +29,16 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Assign Microsoft 365 Apps to macOS devices with Microsoft Intune
+# Assign Office 365 to macOS devices with Microsoft Intune
 
-This app type makes it easy for you to assign Microsoft 365 Apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, and Teams. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
+This app type makes it easy for you to assign Office 365 2016 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, and Teams. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
 ## Before you start
 
-Before you begin adding Microsoft 365 Apps to macOS devices, understand the following details:
+Before you begin adding Office 365 apps to macOS devices, understand the following details:
 
 - Devices to which you deploy these apps must be running macOS 10.10 or later.
 - Intune supports adding the Office apps that are included with Office 2016 for Mac suite only.
@@ -49,7 +49,7 @@ Before you begin adding Microsoft 365 Apps to macOS devices, understand the foll
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
-4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
+4. 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
 
@@ -93,5 +93,5 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Next steps
 
-- To learn about adding Microsoft 365 Apps for Windows 10 devices, see [Assign Microsoft 365 Apps to Windows 10 devices with Microsoft Intune](apps-add-office365.md).
+- To learn about adding Office 365 apps to Windows 10 devices, see [Assign Microsoft 365 Apps to Windows 10 devices with Microsoft Intune](apps-add-office365.md).
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).

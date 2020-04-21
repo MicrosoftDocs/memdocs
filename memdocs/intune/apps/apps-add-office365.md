@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add Microsoft 365 Apps to Windows 10 devices using Microsoft Intune
+title: Add Office 365 apps to Windows 10 devices using Microsoft Intune
 titleSuffix: 
-description: Learn how you can use Microsoft Intune to install Microsoft 365 Apps for Windows 10 devices.
+description: Learn how you can use Microsoft Intune to install Office 365 apps on Windows 10 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 03/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,9 +29,9 @@ ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ---
 
-# Add Microsoft 365 Apps for Windows 10 devices with Microsoft Intune
+# Add Office 365 apps to Windows 10 devices with Microsoft Intune
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 Apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 Apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 Apps are displayed as a single entry in the list of apps in the Intune console within Azure.
+Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Office 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Office 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Office 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
@@ -41,17 +41,17 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 ## Before you start
 
 > [!IMPORTANT]
-> If there are .msi Office apps on the end-user device, you must use the **Remove MSI** feature to safely uninstall these apps. Otherwise, the Intune delivered Microsoft 365 Apps will fail to install.
+> If there are .msi Office apps on the end-user device, you must use the **Remove MSI** feature to safely uninstall these apps. Otherwise, the Intune delivered Office 365 apps will fail to install.
 
 - Devices to which you deploy these apps must be running the Windows 10 Creators Update or later.
-- Intune supports adding Office apps from the Microsoft 365 Apps section only.
+- Intune supports adding Office apps from the Microsoft 365 Apps suite only.
 - If any Office apps are open when Intune installs the app suite, the installation might fail, and users might lose data from unsaved files.
 - This installation method is not supported on Windows Home, Windows Team, Windows Holographic, or Windows Holographic for Business devices.
-- Intune does not support installing Microsoft 365 Apps for desktop from the Microsoft Store (known as Office Centennial apps) on a device to which you have already deployed Microsoft 365 Apps with Intune. If you install this configuration, it might cause data loss or corruption.
+- Intune does not support installing Office 365 desktop apps from the Microsoft Store (known as Office Centennial apps) on a device to which you have already deployed Office 365 apps with Intune. If you install this configuration, it might cause data loss or corruption.
 - Multiple required or available app assignments are not additive. A later app assignment will overwrite pre-existing installed app assignments. For example, if the first set of Office apps contains Word, and the later one does not, Word will be uninstalled. This condition does not apply to any Visio or Project applications.
-- Multiple Microsoft 365 Apps deployments are not currently supported. Only one deployment will be delivered to the device
+- Multiple Office 365 deployments are not currently supported. Only one deployment will be delivered to the device.
 - **Office version** - Choose whether you want to assign the 32-bit or 64-bit version of Office. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
-- **Remove MSI from end-user devices** - Choose whether you want to remove pre-existing Office .MSI apps from end-user devices. The installation won't succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled are not limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
+- **Remove MSI from end-user devices** - Choose whether you want to remove pre-existing Office .MSI apps from end-user devices. The installation won't succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled are not limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading toMicrosoft 365 Apps](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
 
 ## Select Microsoft 365 Apps
 
@@ -96,7 +96,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
    - **Select Office apps**: Select the standard Office apps that you want to assign to devices by choosing the apps in the dropdown list.
    - **Select other Office apps (license required)**: Select additional Office apps that you want to assign to devices and that you have licenses for by choosing the apps in the dropdown list. These apps include licensed apps, such as Microsoft Project Online desktop client and Microsoft Visio Online Plan 2.
    - **Architecture**: Choose whether you want to assign the **32-bit** or **64-bit** version of Microsoft 365 Apps. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
-    - **Update Channel**: Choose how Office is updated on devices. For information about the various update channels, see [Overview of update channels for Microsoft 365 Apps](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Choose from:
+    - **Update Channel**: Choose how Office is updated on devices. For information about the various update channels, see [Overview of update channels for Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Choose from:
         - **Monthly**
         - **Monthly (Targeted)**
         - **Semi-Annual**
@@ -115,19 +115,19 @@ When you choose **Configuration designer** the **Add app** pane will change to o
     - **Use shared computer activation**: Select this option when multiple users share a computer. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automatically accept the app end user license agreement**: Select this option if you don't require end users to accept the license agreement. Intune then automatically accepts the agreement.
     - **Languages**: Office is automatically installed in any of the supported languages that are installed with Windows on the end-user's device. Select this option if you want to install additional languages with the app suite. <p></p>
-        You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps** section. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        You can deploy additional languages for Office 365 Pro Plus apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - (**Option 2**) Configure app suite using XML data 
 
 If you selected the **Enter XML data** option under the **Setting format** dropdown box on the **Configure app suite** page, you can configure the Office app suite using a custom configuration file.
 
-![Add Microsoft 365 Apps configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
+![Add Office 365 configuration designer](./media/apps-add-office365/apps-add-office365-01.png)
 
 1. Added your configuration XML.
 
     > [!NOTE]
-    > The Product ID can either be Business (`O365BusinessRetail`) or Enterprise (`O365ProPlusRetail`). However, you can only configure the app suite of the Microsoft 365 Apps for business edition using XML data. Note that Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**.
+    > The Product ID can either be Business (`O365BusinessRetail`) or Proplus (`O365ProPlusRetail`). However, you can only configure the app suite of the Microsoft 365 Apps for business edition using XML data. Note that Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**.
 
 2. Click **Next** to display the **Scope tags** page.
 
@@ -168,9 +168,9 @@ Under the *Microsoft Office 15* directory, the Office Click-to-Run installation 
 The installation will be in silent mode if the assignment of the O365 Suite is configured as required. The downloaded installation files will be deleted once the installation succeeded. If the assignment is configured as **Available**, the Office applications will appear in the Company Portal application so that end-users can trigger the installation manually.
 
 ## Troubleshooting
-Intune uses the [Office Deployment Tool](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Microsoft 365 Apps to your client computers using the [Microsoft 365 Apps CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Microsoft 365 Apps endpoints](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
+Intune uses the [Office Deployment Tool](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) to download and deploy Office 365 ProPlus to your client computers using the [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Reference the best practices outlined in [Managing Office 365 endpoints](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) to ensure that your network configuration permits clients to access the CDN directly rather than routing CDN traffic through central proxies to avoid introducing unnecessary latency.
 
-Run the [Microsoft Support and Recovery Assistant for Microsoft 365 Apps](https://diagnostics.office.com) on a targeted device if you encounter installation or run-time issues.
+Run the [Microsoft Support and Recovery Assistant for Office 365](https://diagnostics.office.com) on a targeted device if you encounter installation or run-time issues.
 
 ### Additional troubleshooting details
 
@@ -178,10 +178,10 @@ When you are unable to install the O365 apps to a device, you must identify whet
 
 - The device is properly enrolled into Microsoft Intune. 
 - There is an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy will not apply until network connectivity is established.
-- Both Intune and Microsoft 365 Apps network requirements are met and the related IP ranges are accessible based on the following articles:
+- Both Intune and Office 365 network requirements are met and the related IP ranges are accessible based on the following articles:
 
   - [Intune network configuration requirements and bandwidth](https://docs.microsoft.com/intune/network-bandwidth-use)
-  - [Microsoft 365 Apps URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+  - [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
 
 - The correct groups have been assigned the O365 app suite. 
 
