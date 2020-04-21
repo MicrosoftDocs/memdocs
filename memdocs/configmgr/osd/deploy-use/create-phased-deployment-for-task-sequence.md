@@ -2,7 +2,7 @@
 title: Create phased deployments
 titleSuffix: Configuration Manager
 description: Use phased deployments to automate the rollout of software to several collections.
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -121,7 +121,8 @@ Include a timeline diagram
 
 6. Confirm your selections on the **Summary** tab, and then select **Next** to complete the wizard.  
 
-
+> [!NOTE]
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see the old name in the Configuration Manager product and documentation.  
 
 ## <a name="bkmk_manual"></a> Create a phased deployment with manually configured phases
 <!--1358148--> 

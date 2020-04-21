@@ -2,7 +2,7 @@
 title: "Synchronize Office 365 updates with no Internet connection"
 titleSuffix: "Configuration Manager"
 description: "Synchronize Office 365 updates on the top-level software update point that is disconnected from the Internet."
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -17,6 +17,9 @@ ms.author: mstewart
 *Applies to: Configuration Manager (current branch)*
 <!--4065163-->
 Starting in Configuration Manager version 2002, you can use a tool to import Office 365 updates from an internet connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
+
+> [!Note]
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation.
 
 ## Prerequisites
 
