@@ -136,7 +136,7 @@ Use the procedure to [Configure endpoint security policy]() to create a Disk Enc
 
 - For **Platform** select **macOS**.
 - For **Profile**, select **FileVault**
-- For more information about the FileVault settings, see [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault).
+- For more information about the BitLocker settings, see [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#BitLocker).
 
 
 ### Silently enable BitLocker on devices
@@ -195,6 +195,8 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 Use Firewall policy to configure a devices built-in firewall on devices that run macOS and Windows 10.
 
+View [settings for Firewall profiles](../protect/endpoint-security-Firewall-profile-settings.md).
+
 ### Prerequisites for Firewall profiles
 
 - Windows 10 or later
@@ -216,6 +218,8 @@ When you integrate Defender ATP with Intune, you can use policy for endpoint det
 
 The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
+View [settings for Endpoint detection and response profiles](../protect/endpoint-security-edr-profile-settings.md).
+
 ### Prerequisites for EDR profiles
 
 - Windows 10 or later
@@ -226,7 +230,7 @@ The capabilities of Microsoft Defender ATP endpoint detection and response provi
 **Windows 10 profiles**:
 
 - **Endpoint detection and response** – Manage settings for Microsoft Defender ATP endpoint detection and response.
-
+endpoint-security-edr-profile-settings.md
   The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
   To learn more, see [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
@@ -234,6 +238,8 @@ The capabilities of Microsoft Defender ATP endpoint detection and response provi
 ## Attack surface reduction
 
 Each attack surface reduction profile manages settings for a specific area of a Windows 10 device.
+
+View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md)].
 
 ### Prerequisites for Attack surface reduction profiles
 
@@ -275,6 +281,8 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
 ## Account protection
 
 Protect the identity and accounts of your users by configuring Windows Hello and credential guard.
+
+View [settings for account protection profiles](../protect/endpoint-security-asr-profile-settings.md).
 
 ### Prerequisites for Account protection profiles
 
