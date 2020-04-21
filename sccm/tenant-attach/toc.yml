@@ -1,8 +1,0 @@
-- name: Tenant attach documentation
-  href: index.yml
-- name: Deploy and use
-  items:
-  - name: Enable tenant attach
-    href: device-sync-actions.md
-  - name: Troubleshoot device actions
-    href: technical-reference.md
