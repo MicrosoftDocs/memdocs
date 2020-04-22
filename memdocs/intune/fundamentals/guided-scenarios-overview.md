@@ -25,7 +25,7 @@ A guided scenario is a customized series of steps centered around one end-to-end
 
 If you are not familiar with all the steps and resources needed to implement a particular Intune scenario, guided scenarios may be used as your starting point. The guided scenario will assemble policies, apps, assignments, and other management configurations automatically. Additionally, the guided scenarios may deliberately omit certain options not applicable or uncommon for the given scenario. 
 
-Guided scenarios are not a different management space from Intune’s normal workflows. These workflows are intended to be used in conjunction with Intune’s existing workflows for profiles, apps, and policies. Upon completing a guided scenario, all future management of the scenario must take place in the existing menus for policies, apps, and profiles. A guided scenario does not save a “guided scenario” resource type or track future changes made to the resources. Every resource created by a guided scenario will appear in its respective workload. All options, even those options omitted in the guided scenario, will be available for editing in the existing menus.  
+Guided scenarios are not a different management space from Intune's normal workflows. These workflows are intended to be used in conjunction with Intune's existing workflows for profiles, apps, and policies. Upon completing a guided scenario, all future management of the scenario must take place in the existing menus for policies, apps, and profiles. A guided scenario does not save a "guided scenario" resource type or track future changes made to the resources. Every resource created by a guided scenario will appear in its respective workload. All options, even those options omitted in the guided scenario, will be available for editing in the existing menus.  
 
 ## Types of guided scenarios 
 
@@ -50,7 +50,7 @@ After all prerequisite checks pass, the scenario offers appropriate settings for
 
 After all mandatory settings are entered, the guided scenario presents a summary of the settings entered and the resources the scenario requires. At this point, nothing has been saved unless explicitly noted.
 
-The next step is to deploy the scenario. Deploying a scenario creates and saves all necessary resources and selected settings. The time it takes to complete a deployment varies by scenario. Once the deployment is complete, the guided scenario presents a list of the created resources with links to each resource’s management view, the resource's normal workload, and documentation. 
+The next step is to deploy the scenario. Deploying a scenario creates and saves all necessary resources and selected settings. The time it takes to complete a deployment varies by scenario. Once the deployment is complete, the guided scenario presents a list of the created resources with links to each resource's management view, the resource's normal workload, and documentation. 
 
 > [!IMPORTANT]
 > The list presented at the end of the guided scenario is not saved and is only viewable while the guided scenario is open.  

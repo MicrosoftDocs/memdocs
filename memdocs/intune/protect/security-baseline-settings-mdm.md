@@ -129,7 +129,7 @@ For more information, see [Policy CSP - BitLocker](https://docs.microsoft.com/wi
 For more information, see [Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) in the Windows documentation.  
 
 - **Require SmartScreen for Microsoft Edge**  
-  Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Microsoft Defender SmartScreen. Enabling this policy turns off Microsoft Defender SmartScreen and prevent users from turning it on. Don’t configure this policy to let users choose to turn Microsoft defender SmartScreen on or off.  
+  Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Microsoft Defender SmartScreen. Enabling this policy turns off Microsoft Defender SmartScreen and prevent users from turning it on. Don't configure this policy to let users choose to turn Microsoft defender SmartScreen on or off.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **Default**: Yes  
@@ -147,7 +147,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
   **Default**: Yes  
   
 - **Block Password Manager**  
-  By default, Microsoft Edge uses Password Manager automatically, allowing users to manager passwords locally. Disabling this policy restricts Microsoft Edge from using Password Manager. Don’t configure this policy if you want to let users choose to save and manage passwords locally using Password Manager.  
+  By default, Microsoft Edge uses Password Manager automatically, allowing users to manager passwords locally. Disabling this policy restricts Microsoft Edge from using Password Manager. Don't configure this policy if you want to let users choose to save and manage passwords locally using Password Manager.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067128)  
   
   **Default**: Yes  
@@ -326,7 +326,7 @@ For more information, see [Policy CSP - DeviceLock](https://docs.microsoft.com/w
       *A setting of Yes prevents use of simple passwords.* 
 
   - **Prevent reuse of previous passwords**  
-    Specifies how many passwords can be stored in the history that can’t be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.  
+    Specifies how many passwords can be stored in the history that can't be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2066795)  
     
     **Default**: 24  
@@ -548,7 +548,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: No sites  
 
 - **Internet Explorer encryption support**  
-  This policy setting allows you to turn off support for Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0, or SSL 3.0 in the browser. TLS and SSL are protocols that help protect communication between the browser and the target server. When the browser attempts to set up a protected communication with the target server, the browser and server negotiate which protocol and version to use. The browser and server attempt to match each other’s list of supported protocols and versions, and they select the most preferred match. If you enable this policy setting, the browser negotiates or does not negotiate an encryption tunnel by using the encryption methods that you select from the drop-down list. If you disable or do not configure this policy setting, the user can select which encryption method the browser supports.  
+  This policy setting allows you to turn off support for Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0, or SSL 3.0 in the browser. TLS and SSL are protocols that help protect communication between the browser and the target server. When the browser attempts to set up a protected communication with the target server, the browser and server negotiate which protocol and version to use. The browser and server attempt to match each other's list of supported protocols and versions, and they select the most preferred match. If you enable this policy setting, the browser negotiates or does not negotiate an encryption tunnel by using the encryption methods that you select from the drop-down list. If you disable or do not configure this policy setting, the user can select which encryption method the browser supports.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067057)
 
   **Default**: 2 items:  TLS v1.1 and TLS v1.2  
@@ -697,7 +697,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   This policy setting lets you decide whether VBScript can run on pages in specific Internet Explorer zones. Options include: 
   - *Enable* - VBScript runs on pages in specific zones, without any interaction. 
   - *Prompt* - Employees are prompted whether to allow VBScript to run in the zone. 
-  - *Disable* - VBScript is prevented from running in the zone. If you disable or don’t configure this policy setting, VBScript runs without any interaction in the specified zone.    
+  - *Disable* - VBScript is prevented from running in the zone. If you disable or don't configure this policy setting, VBScript runs without any interaction in the specified zone.    
 
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067119)  
   

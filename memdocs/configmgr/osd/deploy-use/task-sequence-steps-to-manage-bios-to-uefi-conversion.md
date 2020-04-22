@@ -49,7 +49,7 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
 **Requirements**:
 - Windows 10 Creators Update
 - Computers that support UEFI
-- OEM tool that converts the computer’s firmware from BIOS to UEFI
+- OEM tool that converts the computer's firmware from BIOS to UEFI
 
 ### To convert from BIOS to UEFI during an in-place upgrade
 1. Create an operating system upgrade task sequence that performs an in-place upgrade to Windows 10 Creators Update.

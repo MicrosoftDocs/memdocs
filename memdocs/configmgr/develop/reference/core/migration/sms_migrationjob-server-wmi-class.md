@@ -403,7 +403,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 
  Collection migration jobs include the collections and collection related information such as the limiting collection, the source site code and the destination site code. Object migration jobs can include objects such as packages, but cannot include the collections and the targeting objects such as advertisements. Distribution point upgrade jobs can upgrade a shared distribution point to a Configuration Manager regular distribution point.  
 
- For collection migration jobs and object migration jobs, the included objects’ entity ID is stored as an array of properties on the job, SourceCollectionIDs and SourceObjectIDs. For distribution point upgrade jobs, the settings for the new site system and distribution point are stored as XML in the property `AdditionalConfiguration`. All job types are scheduled by using the `ScheduleToken` property.  
+ For collection migration jobs and object migration jobs, the included objects' entity ID is stored as an array of properties on the job, SourceCollectionIDs and SourceObjectIDs. For distribution point upgrade jobs, the settings for the new site system and distribution point are stored as XML in the property `AdditionalConfiguration`. All job types are scheduled by using the `ScheduleToken` property.  
 
 ## Requirements  
 

@@ -60,7 +60,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
     > [!TIP]
     > When using a device administrator-managed Android device, there may be multiple certificates listed. When a certificate profile is revoked or removed, the certificate stays on the device. In this scenario, select the newest certificate. It's usually the last certificate shown in the list.
     >
-    > This situation doesn’t occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices](../enrollment/android-enterprise-overview.md) and [Remove SCEP and PKCS certificates](../protect/remove-certificates.md#android-knox-devices).
+    > This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices](../enrollment/android-enterprise-overview.md) and [Remove SCEP and PKCS certificates](../protect/remove-certificates.md#android-knox-devices).
 
 3. Next, users receive a notification to install the Wi-Fi profile:
 
@@ -76,7 +76,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 
 On Android, the **Omadmlog.log** file details the activities of the Wi-Fi profile when it's installed on the device. You might have up to five Omadmlog log files. Be sure to get the timestamp of the last sync, as it will help you find the related log entries.
 
-In the following example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs, and search for “wifimgr”:
+In the following example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi connection shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -215,11 +215,11 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
   - When the Trusted Root and SCEP profiles are on the Android device and compliant, the Wi-Fi profile might not be on the device. This issue happens when the **CertificateSelector** provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the Certificate Template or in the SCEP profile.
 
-    If the matching certificate isn't found, the certificates on the device aren't installed. The Wi-Fi profile isn't applied because it doesn’t have the correct certificate. In this scenario, you see the following entry in the Company Portal app Omadmlog file:
+    If the matching certificate isn't found, the certificates on the device aren't installed. The Wi-Fi profile isn't applied because it doesn't have the correct certificate. In this scenario, you see the following entry in the Company Portal app Omadmlog file:
 
     ` Skipping Wifi profile <profile ID> because it is pending certificates.`
 
-    The following sample log shows certificates being excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. But, the certificates assigned to the device don’t have that EKU:
+    The following sample log shows certificates being excluded because the **Any Purpose** Extended Key Usage (EKU) criteria was specified. But, the certificates assigned to the device don't have that EKU:
 
     ```log
     2018-11-27T21:10:37.6390000    VERB     com.microsoft.omadm.utils.CertUtils      14210    00948    Excluding cert with alias User<ID1> and requestId <requestID1> as it does not have any purpose EKU.
@@ -240,7 +240,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Confirm that all required certificates in the complete certificate chain are on the Android device. Otherwise, the Wi-Fi profile can't be installed on the device. For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (opens Android's web site).
   - Filter Omadmlog with keywords to look for information, such as which certificate is used in the Wi-Fi profile, and if the profile successfully applied.
 
-    For example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter “wifimgr”:
+    For example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![Filter CMTrace to look for WiFiMgr configuration profiles on Android devices](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
@@ -250,7 +250,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     > [!div class="mx-imgBorder"]
     > ![Sample CMTrace log output that shows WiFi Intune configuration profile successfully applied on devices](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
 
-    If you see an error in the log, copy the time stamp of the error and unfilter the log. Then, use the “find” option with the time stamp to see what happened right before the error.
+    If you see an error in the log, copy the time stamp of the error and unfilter the log. Then, use the "find" option with the time stamp to see what happened right before the error.
 
 ### Issue 2: The Wi-Fi profile is deployed to the device, but the device can't connect to the network
 

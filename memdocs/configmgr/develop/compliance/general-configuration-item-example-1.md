@@ -35,7 +35,7 @@ Note:  The term general configuration item has replaced business policy configur
 The unique identify of the configuration item is the combination of the attributes AuthoringScopeID, LogicalName and Version.   
 Each attribute is part of the unique identity of the configuration item; the actual identity is AuthoringScopeID + LogicalName + Version.  
 
-AuthoringScopeID (string) - This attribute corresponds to the author’s namespace or identity.  
+AuthoringScopeID (string) - This attribute corresponds to the author's namespace or identity.  
 LogicalName (string) - This attribute identifies the configuration item within the authoring scope.  
 Version (string) - This attribute specifies the version of the configuration item.  
 -->  

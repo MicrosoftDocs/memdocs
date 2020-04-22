@@ -56,7 +56,7 @@ SInt32 ActivateHierarchy (
 
  Qualifiers: `[in]`  
 
- The destination site’s site code. This should be the top site.  
+ The destination site's site code. This should be the top site.  
 
  `scheduleToken`  
  Data type: `String` Array  

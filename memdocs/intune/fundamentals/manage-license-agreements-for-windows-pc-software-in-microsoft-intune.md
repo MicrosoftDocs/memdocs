@@ -151,7 +151,7 @@ You can also add other types of license agreements to Intune in addition to Micr
 
     - **Agreement name** (required). The agreement name can have a maximum of 256 characters, and cannot contain the following characters: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Spaces are allowed in the name.
 
-    - **Publisher** (required). When you start to type a publisher name, the service retrieves all publisher names that contain the letters that you type. For example, if you type “soft,” the service retrieves all publisher names that contain “soft” as part of the name, such as “Microsoft” and “Microsoft Research.” The publisher names are retrieved from the Software Asset Catalog. You must select the publisher before you can enter the product title.
+    - **Publisher** (required). When you start to type a publisher name, the service retrieves all publisher names that contain the letters that you type. For example, if you type "soft," the service retrieves all publisher names that contain "soft" as part of the name, such as "Microsoft" and "Microsoft Research." The publisher names are retrieved from the Software Asset Catalog. You must select the publisher before you can enter the product title.
 
         > [!IMPORTANT]
         > The company that you want to add might not appear in this list. You can only add software agreements for companies that are already present in the software asset catalog. However, Microsoft continuously works to add the most popular software titles. If you would like to submit a request to have a company added to this list, you can do so at the [Intune Uservoice site](https://microsoftintune.uservoice.com/).

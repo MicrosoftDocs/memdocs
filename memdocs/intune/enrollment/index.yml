@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Enroll devices in Microsoft Intune
-summary: There are several methods to enroll your workforce’s devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
+summary: There are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
 metadata:
   title: Enrollment in Microsoft Intune
   description: Landing page for enrollment in Microsoft Intune

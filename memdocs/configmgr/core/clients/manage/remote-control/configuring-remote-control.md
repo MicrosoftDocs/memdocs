@@ -37,7 +37,7 @@ To use Remote Assistance or Remote Desktop, it must be installed and configured 
 
 #### Enable keyboard translation
 
-By default, Configuration Manager transmits the key position from the viewer’s location to the sharer’s location. This can present a problem for keyboard configurations that differ from viewer to sharer. For example, a viewer with an English keyboard would type an “A”, but the sharer’s French keyboard would provide a “Q”. You now have the option of configuring remote control so that the character itself is transmitted from the viewer’s keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
+By default, Configuration Manager transmits the key position from the viewer's location to the sharer's location. This can present a problem for keyboard configurations that differ from viewer to sharer. For example, a viewer with an English keyboard would type an "A", but the sharer's French keyboard would provide a "Q". You now have the option of configuring remote control so that the character itself is transmitted from the viewer's keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
 
 To turn on keyboard translation, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
 

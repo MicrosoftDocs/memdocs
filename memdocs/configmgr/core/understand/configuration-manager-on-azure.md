@@ -47,7 +47,7 @@ Networking is a very important decision. Network speeds and latency can affect f
 - **ExpressRoute** (recommended)
   - Natural extension to your datacenter (can tie together multiple datacenters)
   - Private connections between Azure datacenters and your infrastructure
-  - Doesn’t go over the public internet
+  - Doesn't go over the public internet
   - Offers reliability, fast speeds, lower latency, high security
   - Offers up to 10gbps speeds and Unlimited Data plan options
 - **VPN Gateway**
@@ -56,7 +56,7 @@ Networking is a very important decision. Network speeds and latency can affect f
   - Uses Internet Protocol Security (IPsec) and Internet Key Exchange (IKE)
 
 ### ExpressRoute has many different options like unlimited vs. metered, different speed options, and premium add-on. Which should I choose?
-The options you select depend on the scenario you are implementing and how much data you plan to distribute. The transfer of Configuration Manager data can be controlled between site servers and distribution points, but site server-to-site server communication can’t be controlled.   When you use a metered data plan, placing specific sites (and site systems) on-premises and using [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md) can help control the cost of using Azure.
+The options you select depend on the scenario you are implementing and how much data you plan to distribute. The transfer of Configuration Manager data can be controlled between site servers and distribution points, but site server-to-site server communication can't be controlled.   When you use a metered data plan, placing specific sites (and site systems) on-premises and using [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md) can help control the cost of using Azure.
 
 ### What about installation requirements like Active Directory domains? Do I still need to join my site servers to an Active Directory domain?
 Yes. When you move to Azure, the [supported configurations](../plan-design/configs/supported-configurations.md) remain the same, including Active Directory requirements for installing Configuration Manager.
@@ -85,7 +85,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 
 ### So, tell me more about Azure virtual machines; what size VMs should I use?
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](../plan-design/configs/recommended-hardware.md). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
-- For production deployments of any significant size we recommend “**S**” class Azure VMs. This is because they can leverage Premium Storage disks.  Non “S” class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
+- For production deployments of any significant size we recommend "**S**" class Azure VMs. This is because they can leverage Premium Storage disks.  Non "S" class VMs use blob storage and in general will not meet the performance requirements necessary for an acceptable production experience.
 - Multiple Premium Storage disks should be used for higher scale, and striped in the Windows Disk Management console for maximum IOPS.  
 - We recommend using better or multiple premium disks during your initial site deployment (like P30 instead of P20, and 2xP30 in a striped volume instead of 1xP30). Then, if your site later needs to ramp up in VM size due to additional load, you can take advantage of the additional CPU and memory that a larger VM size provides. You will also have disks already in place that can take advantage of the additional IOPS throughput that the larger VM size allows.
 
@@ -117,7 +117,7 @@ The following shows an example configuration for 50k to 100k clients on DS14_V2 
 
 ## User Experience
 ### You mention that user experience is one of the main areas of importance, why is that?
-The decisions you make for networking, availability, performance, and where you place your Configuration Manager site servers can affect your users directly. We believe a move to Azure should be transparent to your users so that they don’t experience a change in their day-to-day interactions with Configuration Manager.
+The decisions you make for networking, availability, performance, and where you place your Configuration Manager site servers can affect your users directly. We believe a move to Azure should be transparent to your users so that they don't experience a change in their day-to-day interactions with Configuration Manager.
 
 ### Ok, I get it. I plan to install a single stand-alone primary site on an Azure virtual machine and I want to make sure my costs are low. Should I place (remote) site systems (like management points, distribution points, and software update points) on Azure virtual machines as well or on-premises?
 Except for communication from the site server to a distribution point, these server-to-server communications in a site can occur at any time and do not use mechanisms to control the use of network bandwidth. Because you cannot control the communication between site systems, any costs associated with these communications should be considered.

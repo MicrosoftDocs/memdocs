@@ -35,7 +35,7 @@ ms.collection:
 
 If you receive either of the following messages while trying to get your macOS device managed, contact your company support.
 
-**Message 1**: *We’re having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else. Learn how to resolve these problems or contact your company support.*
+**Message 1**: *We're having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else. Learn how to resolve these problems or contact your company support.*
 
 **Message 2**: *It looks like you're using a virtual machine. Make sure you've fully configured your virtual machine, including serial number and hardware model. If this isn't a virtual machine, please contact support.*  
 

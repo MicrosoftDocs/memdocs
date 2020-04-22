@@ -20,7 +20,7 @@ manager: dougeby
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Determine the object’s key property identifier.  
+2.  Determine the object's key property identifier.  
 
 3.  Determine the object type identifier.  
 

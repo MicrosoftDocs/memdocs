@@ -1,7 +1,7 @@
 ---
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
-description: Use PXE-initiated OS deployments to refresh a computer’s operating system or to install a new version of Windows on a new computer.
+description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
 ms.date: 02/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
@@ -100,6 +100,9 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 - Only media and PXE
 
 - Only media and PXE (hidden)
+
+## Option 82 during PXE DHCP handshake
+Starting with version 1906, Option 82 during the PXE DHCP handshake is supported with the PXE responder without WDS. If Option 82 is required, make sure to use the PXE responder without WDS. Option 82 is not supported with WDS.
 
 ## <a name="BKMK_Deploy"></a> Deploy the task sequence
 

@@ -65,7 +65,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 ### Troubleshoot stuck files
 
-If you don’t see any new files being created in the *Succeed* folder, check whether there are any files stuck in the *Processing* folder.
+If you don't see any new files being created in the *Succeed* folder, check whether there are any files stuck in the *Processing* folder.
 
 Verify that the Intune Connector Service is started on the NDES server, and there are no errors in Ndesconnector.svclog.
 

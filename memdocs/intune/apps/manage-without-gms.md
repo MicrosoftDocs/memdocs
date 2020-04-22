@@ -58,7 +58,7 @@ Some Intune features rely on components of GMS such as the Google Play store or 
 
 ### Some tasks may be delayed 
 
-In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn’t available, push notifications may also not be available. Therefore, Intune must wait for the next device check-in time to complete the tasks.  
+In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available. Therefore, Intune must wait for the next device check-in time to complete the tasks.  
 
 Enrolled Android devices report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks. 
 

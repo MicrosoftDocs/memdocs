@@ -43,7 +43,7 @@ To link a user to a PC:
 
 2. Select the PC that you want to link a user, and then choose **Link User**.
 
-   The **Link User** dialog box displays a list of available users with their display name, user ID, and the number of PCs to which each user is currently linked. If a user is already linked to the selected PC, that user’s name and user ID are displayed under **Current user**. If the PC is not linked to any user, **No User** appears under **Current User**.
+   The **Link User** dialog box displays a list of available users with their display name, user ID, and the number of PCs to which each user is currently linked. If a user is already linked to the selected PC, that user's name and user ID are displayed under **Current user**. If the PC is not linked to any user, **No User** appears under **Current User**.
 
 3. Do one of the following:
 

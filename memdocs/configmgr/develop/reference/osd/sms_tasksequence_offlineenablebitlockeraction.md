@@ -73,7 +73,7 @@ Class SMS_TaskSequence_OfflineEnableBitLockerAction : SMS_TaskSequence_Action
 
  Access type: Read/Write  
 
- Qualifiers: [commandlinearg(1), valuerange(“0-99")]  
+ Qualifiers: [commandlinearg(1), valuerange("0-99")]  
 
  Index of the disk for which to pre-provision BitLocker. The index can have a value of 1 through 99.  
 
@@ -91,7 +91,7 @@ Class SMS_TaskSequence_OfflineEnableBitLockerAction : SMS_TaskSequence_Action
 
  Access type: Read/Write  
 
- Qualifiers: [commandlinearg(2), requiredifnotnull(“DesinationDisk"), valuerange(“1-99")]  
+ Qualifiers: [commandlinearg(2), requiredifnotnull("DesinationDisk"), valuerange("1-99")]  
 
  Index of the partition on the target disk specified by `DestinationDisk` to which to pre-provision BitLocker. The index can have a value of 1 through 99.  
 
@@ -118,7 +118,7 @@ Class SMS_TaskSequence_OfflineEnableBitLockerAction : SMS_TaskSequence_Action
 
  Access type: Read/Write  
 
- Qualifiers: [allowedlen(“1-100")]  
+ Qualifiers: [allowedlen("1-100")]  
 
  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 

@@ -112,7 +112,7 @@ Class SMS_AICategory : SMS_BaseClass
 |-----------|-----------------|  
 |0|Category: Category this software fits into.<br />Example: Antivirus.|  
 |1|Family: Family this software belongs in.<br />Example: Microsoft Office.|  
-|2|Tag: User defined tags which are assigned to the software entries.<br />Example: Installed on a receptionist’s computer.|  
+|2|Tag: User defined tags which are assigned to the software entries.<br />Example: Installed on a receptionist's computer.|  
 
 ## Remarks  
  Class qualifiers for this class include:  
