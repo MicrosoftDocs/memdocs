@@ -148,6 +148,9 @@ For Apple's Automated Device Enrollment, the automated device sync interval betw
 ### Autopilot support for Hololens 2 devices<!--6305220-->
 Windows Autopilot will support Hololens 2 devices. For more information on using Autopilot in Intune, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot).
 
+### Enrollment restrictions will support scope tags<!--4209550 -->
+You'll be able to assign scope tags to enrollment restrictions. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction**. Create either type of restriction and you'll seee the **Scope tags** page.
+
 <!-- ***********************************************-->
 ## Device management
 
