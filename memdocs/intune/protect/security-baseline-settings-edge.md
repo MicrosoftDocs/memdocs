@@ -50,6 +50,11 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 > The Microsoft Edge baseline for October 2019 is in Public Preview.
 
 ::: zone-end
+::: zone pivot="edge-april-2020"
+
+*This new baseline is rolling out to tenants over the next several weeks. We expect all tenants will have this new baseline in early May.*
+
+::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"
 
 ## Microsoft Edge

@@ -46,7 +46,7 @@ Class SMS_SettableSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [read, sizelimit(“512��?)]  
+ Qualifiers: [read, sizelimit(“512")]  
 
  Description of the security category.  
 
@@ -64,7 +64,7 @@ Class SMS_SettableSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, sizelimit(“256��?)]  
+ Qualifiers: [not_null, read, sizelimit(“256")]  
 
  Name of the security category.  
 
@@ -73,7 +73,7 @@ Class SMS_SettableSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“512")]  
 
  The name of the user who created the security category.  
 
@@ -100,7 +100,7 @@ Class SMS_SettableSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“512")]  
 
  The name of the user who last modified the security category.  
 
@@ -145,7 +145,7 @@ Class SMS_SettableSecuredCategory : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“3��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“3")]  
 
  Site where this was security category was created.  
 

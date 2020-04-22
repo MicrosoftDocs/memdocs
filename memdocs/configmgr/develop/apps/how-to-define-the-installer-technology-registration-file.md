@@ -29,7 +29,7 @@ To define an installer technology registration file, create an XML file based on
 
 |Attributes|Description|  
 |----------------|-----------------|  
-|AuthoringScopeID|AuthoringScopeId will always be “GLOBAL��?.|  
+|AuthoringScopeID|AuthoringScopeId will always be “GLOBAL".|  
 |LogicalName|LogicalName must match the name of the SDK class created in the SDK assembly for InstallerTechnology.|  
 |HostingId|HostingId must match the constant declared and used in the SDK assembly for InstallerTechnolgy.|  
 |AssemblySuffix|AssemblySuffix must match the filename of the SDK assembly (Microsoft.ConfigurationManagement.ApplicationManagement.<`AssemblySuffix`>.dll).|  
