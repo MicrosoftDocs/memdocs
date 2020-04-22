@@ -114,10 +114,7 @@ Include a timeline diagram
 
 4. On the **Settings** page, choose one option for each of the scheduling settings. For more information, see [Phase settings](#bkmk_settings). Select **Next** when complete.  
 
-5. On the **Phases** page, see the two phases that the wizard creates for the specified collections. Select **Next**.   
-
-    > [!Note]  
-    > This section covers the procedure to automatically create a default two-phase deployment. The wizard lets you add, remove, reorder, edit, or view phases for a phased deployment. For more information on these additional actions, see [Create a phased deployment with manually configured phases](#bkmk_manual).  
+5. On the **Phases** page, see the two phases that the wizard creates for the specified collections. Select **Next**. These instructions cover the procedure to automatically create a default two-phase deployment. The wizard lets you add, remove, reorder, edit, or view phases for a phased deployment. For more information on these additional actions, see [Create a phased deployment with manually configured phases](#bkmk_manual).  
 
 6. Confirm your selections on the **Summary** tab, and then select **Next** to complete the wizard.  
 
