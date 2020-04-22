@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Office 365 to macOS devices using Microsoft Intune
+title: Install Office 365 apps to macOS devices using Microsoft Intune
 titleSuffix: 
 description: Learn how you can use Microsoft Intune to install Office 365 apps on macOS devices.
 keywords:
@@ -33,21 +33,23 @@ ms.collection: M365-identity-device-management
 
 This app type makes it easy for you to assign Office 365 2016 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, and Teams. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
 
+> [!NOTE]
+> Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
 ## Before you start
 
-Before you begin adding Office 365 to macOS devices, understand the following details:
+Before you begin adding Office 365 apps to macOS devices, understand the following details:
 
 - Devices to which you deploy these apps must be running macOS 10.10 or later.
 - Intune supports adding the Office apps that are included with Office 2016 for Mac suite only.
 - If any Office apps are open when Intune installs the app suite, users might lose data from unsaved files.
 
-## Select the Office 365 Suite app type
+## Select Microsoft 365 Apps
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. Select **macOS** in the **Office 365 Suite** section of the **Select app type** pane.
-4. Click **Select**. The **Add Office 365 Suite** steps are displayed.
+3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
+4. 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
 
@@ -64,7 +66,7 @@ In this step, you provide information about the app suite. This information help
     - **Developer**: Microsoft appears as the developer.
     - **Owner**: Microsoft appears as the owner.
     - **Notes**: Enter any notes that you want to associate with this app.
-    - **Logo**: The Office 365 logo is displayed with the app when users browse the company portal.
+    - **Logo**: The Microsoft 365 Apps logo is displayed with the app when users browse the company portal.
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
@@ -78,7 +80,7 @@ You can use scope tags to determine who can see client app information in Intune
 1. Select the **Required** or **Available for enrolled devices** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
     >[!Note]
-    > You cannot uninstall the Office 365 for macOS app suite through Intune.
+    > You cannot uninstall the 'Microsoft 365 apps for macOS' app suite through Intune.
 
 2. Click **Next** to display the **Review + create** page. 
 
@@ -87,9 +89,9 @@ You can use scope tags to determine who can see client app information in Intune
 1. Review the values and settings you entered for the app suite.
 2. When you are done, click **Create** to add the app to Intune.
 
-    The **Overview** blade of the Office 365 Window 10 app suite you've created is displayed. The suite appears in the list of apps as a single entry.
+    The **Overview** blade is displayed. The suite appears in the list of apps as a single entry.
 
 ## Next steps
 
-- To learn about adding Office 365 apps to Windows 10 devices, see [Assign Office 365 ProPlus 2016 apps to Windows 10 devices with Microsoft Intune](apps-add-office365.md).
+- To learn about adding Office 365 apps to Windows 10 devices, see [Assign Microsoft 365 Apps to Windows 10 devices with Microsoft Intune](apps-add-office365.md).
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).

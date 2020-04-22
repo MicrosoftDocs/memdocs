@@ -101,7 +101,7 @@ Apps can only be installed in the device context when supported by the device an
 - Win32 apps
 - Offline licensed Microsoft Store for Business apps
 - LOB apps (MSI, APPX and MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 
 Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
