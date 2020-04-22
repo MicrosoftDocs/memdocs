@@ -99,7 +99,7 @@ For CMG/CDP service deployment, the **service connection point** needs access to
 
 The **CMG connection point** needs access to the following service endpoints:
 
-- Service management endpoint: `https://management.core.windows.net/`  
+- Service Management endpoint: `https://management.core.windows.net/`  
 
 - Storage endpoint: `<name>.blob.core.windows.net` and `<name>.table.core.windows.net`
 

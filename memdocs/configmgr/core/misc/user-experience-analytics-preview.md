@@ -189,8 +189,8 @@ If you click through to a particular device, you can see its boot and sign-in hi
 ### Reporting tabs
 
 The **Startup performance** page has reporting tabs that provide support for the insights, including:
-1. **Model performance**. This tab let's you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
-1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (e.g., GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see it's boot and sign-in history, which can help you identify if there was a recent regression
+1. **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
+1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
 1. **Startup processes**. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered.
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
@@ -739,8 +739,8 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
   - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 - Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
-  - **id:** Unique device ID used by Windows Update
-  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **ID:** Unique device ID used by Windows Update
+  - **localId:** A locally defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   
