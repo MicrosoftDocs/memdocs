@@ -26,7 +26,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# In development for Microsoft Intune - April 2020
+# In development for Microsoft Intune - May 2020
 
 To help in your readiness and planning, this page lists Intune UI updates and features that are in development but not yet released. In addition to the information on this page: 
 
@@ -59,9 +59,32 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
  
 <!-- ***********************************************-->
-<!--
 ## App management
--->
+
+### Support for multiple accounts in Company Portal for Mac<!-- 5779449  -->
+The Company Portal on macOS devices now caches user accounts, making sign-in easier. Users no longer need to sign into the Company Portal every time they launch the application. Additionally, the Company Portal will display an account picker if multiple user accounts are cached, so that users don't have to enter their user name. 
+
+### Auto update VPP available apps<!-- 3640511  -->
+Apps that are published as Volume Purchase Program (VPP) available apps will be automatically updated when **Automatic App Updates** is enabled for the VPP token. Currently, VPP available apps do not automatically update. Instead, end-users must go to Company Portal and reinstall the app if a newer version is available. However, required apps currently do support automatic updates.
+
+### Customize self-service device actions in the Company Portal<!--4393379  -->
+You will be able to customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you will be able to configure these settings for the Company Portal app by selecting **Tenant Administration** > **Customization** > **Create** > **Hide features**. The following actions are available:
+- Hide **Remove** button on corporate Windows device.
+- Hide **Reset** button on corporate Windows devices.
+- Hide **Reset** button on corporate iOS devices.
+- Hide **Remove** button on corporate iOS devices.
+
+For more information, see [User self-service device actions from the Company Portal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
+
+### Control the display of Azure AD Enterprise or Office Online applications in the Company Portal<!--4404429  ->
+You will be able to toggle (**Hide** or **Show**) the display of Azure AD Enterprise or Office Online applications in the Company Portal. Each user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website in the 2005 release with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow in the 2006 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this future setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+#### Search the Intune docs from the Company Portal<!-- 1736480  ->
+You can now search the Intune documentation directly from the Company Portal for macOS app. In the menu bar, select **Help** > **Search** and enter the key words of your search to quickly find answers to your questions.
+
+### Company Portal for Android will guide users to get apps after work profile enrollment <!-- 6103999  -->
+We're improving the in-app guidance in Company Portal to make it easier for users to find and install apps.  After they enroll in work profile management, users will see a message telling them they can find suggested apps in the badged version of Google Play. Users will also see a new **Get apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS ** tab will be removed. 
+
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -103,11 +126,24 @@ Applies to:
 
 For more information on using single sign-on on iOS/iPadOS devices, see [Single sign-on app extension overview](../configuration/device-features-configure.md#single-sign-on-app-extension) and [Single sign-on settings list](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
+### Configure system extensions on macOS devices<!-- 6255624  -->
+On macOS devices, you can create a kernel extensions profile to configure settings at the kernel-level (**Devices** > **Configuration profiles** > **macOS** for platform > **Kernel extensions** for profile). Apple is eventually deprecating kernel extensions, and replacing them with system extensions in a future release. System extensions run in the user space, and don’t give access to the kernel. The goal is to increase security and provide more end user control, while limiting attacks at the kernel level. Both kernel extensions and system extensions allow users to install app extensions that extend the native capabilities of the operating system.
+
+In Intune, you can configure both kernel extensions and system extensions (**Devices** > **Configuration profiles** > **macOS** for platform > **System extensions** for profile). Kernel extensions apply to 10.13.2 and newer. System extensions apply to 10.15 and newer. From macOS 10.15 to macOS 10.15.4, kernel extensions and system extensions can run side-by-side. 
+
+To learn about kernel extensions on macOS devices, see [Add macOS kernel extensions](../configuration/kernel-extensions-overview-macos.md).
+
+Applies to:
+- macOS 10.15 and newer
+
 <!-- ***********************************************-->
 ## Device enrollment
 
 ### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
 The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own third party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
+
+### Automated device sync interval down to 12 hours<!--3077535 -->
+For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios#sync-managed-devices).
 
 <!-- ***********************************************-->
 ## Device management
@@ -121,15 +157,21 @@ You'll be able to add and deploy scripts to macOS devices. This support extends 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
+### Use rename and sync remote actions in bulk<!--6440956 -->
+You'll be able to use the rename and sync remote actions on up to 100 iOS devices at a time. To see this feature, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk device actions**. 
+
+### New details for the Autopilot report<!--5405786 -->
+To see the new details about App and Policy install status, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-<!--
 ## Monitor and troubleshoot
--->
+
+### Power BI compliance report template V2.0<!-- 636958  -->
+Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that is being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
 <!--
@@ -156,6 +198,16 @@ The settings we're updating include Windows 10 device configuration profiles for
 - [Endpoint Protection](../protect/endpoint-protection-windows-10.md) > Microsoft Defender Antivirus
 
 The settings that are supported with Intune aren't changing. This is only an update to the UI text in the Microsoft Endpoint Management Admin Center.
+
+### Set device compliance state from third-party MDM partners<!-- 6361689      -->
+You’ll soon be able to allow the compliance state of iOS or Android devices managed by third-party Mobile Device Management (MDM) partners to be set in Azure Active Directory (Azure AD).
+
+When Intune is configured for partner compliance, compliance data for devices managed by the third-party MDM partner is sent to Intune for compliance evaluation. The results are then passed to Azure AD where the compliance data is used to enforce your conditional access policies for those devices.
+
+Support will soon include the following partners:
+- VMware WorkspaceONE (previously known as AirWatch)
+
+To enable a device compliance partner you’ll use a new node in the Microsoft Endpoint Manager admin center: **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** where you’ll select **Add Compliance Partner**.
 
 <!-- ***********************************************-->
 ## Notices
