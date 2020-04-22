@@ -380,7 +380,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Qualifiers: none  
 
- EndPoint Protection client agent version, such as ‘4.1.522.0’.  
+ EndPoint Protection client agent version, such as '4.1.522.0'.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -435,7 +435,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Qualifiers: none  
 
- EndPoint Protection engine version, such as ‘1.1.8904.0’.  
+ EndPoint Protection engine version, such as '1.1.8904.0'.  
 
  `EPInfectionStatus`  
  Data type: `UInt32`  
@@ -591,7 +591,7 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Qualifiers: none  
 
- Name of the policy that gets applied, such as ‘Antimalware Policy’.  
+ Name of the policy that gets applied, such as 'Antimalware Policy'.  
 
  This method/property has been removed or deprecated in Configuration Manager SP1.  
 

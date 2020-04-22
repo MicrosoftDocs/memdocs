@@ -71,13 +71,13 @@ To confirm the validation request is submitted to the module, look for an entry 
 
 **When success indicators aren't present**:
 
-If you don’t find these entries, start by reviewing the troubleshooting guidance for [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors).
+If you don't find these entries, start by reviewing the troubleshooting guidance for [device to NDES server communication](troubleshoot-scep-certificate-device-to-ndes.md#troubleshoot-common-errors).
 
 If the information in that article doesn't help you resolve the issue, the following are additional entries that can indicate problems.
 
 ### NDESPlugin.log contains an error 12175
 
-When the log contains an error 12175 that’s similar to the following, there might be a problem with the SSL certificate:
+When the log contains an error 12175 that's similar to the following, there might be a problem with the SSL certificate:
 
 ```
 WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
@@ -96,7 +96,7 @@ Modern browsers and browsers on mobile devices ignore the *Common Name* on an SS
 
 ### NDESPlugin.log contains an error 403 – Forbidden: Access is denied"
 
-When the following logs contain an error 403 that’s similar to the following, the client certificate might be untrusted or invalid:
+When the following logs contain an error 403 that's similar to the following, the client certificate might be untrusted or invalid:
 
 **NDESPlugin.log**:
 
@@ -129,7 +129,7 @@ Signing certificate could not be retrieved. System.Security.Cryptography.Cryptog
 
 **Resolution**: On the server where the connector is installed, open the Registry Editor, locate the `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` registry key, and then check whether the SigningCertificate value exists.
 
-If this value doesn’t exist, restart the Intune Connector Service in services.msc, and then check whether the value appears in registry. If the value is still missing, it’s often because of network connectivity issues between the server that NDES and the Intune service.
+If this value doesn't exist, restart the Intune Connector Service in services.msc, and then check whether the value appears in registry. If the value is still missing, it's often because of network connectivity issues between the server that NDES and the Intune service.
 
 ## NDES passes the request to issue the certificate
 
@@ -159,7 +159,7 @@ After a successful validation by the certificate registration point (the policy 
 
 **When success indicators aren't present**:
 
-If you don’t see the entries that indicate success, follow these steps:
+If you don't see the entries that indicate success, follow these steps:
 
 1. Look for problems that are logged in *CertificateRegistrationPoint.svclog* when the certificate registration point verifies the challenge. Look for the entries between the following lines:
 

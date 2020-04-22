@@ -53,7 +53,7 @@ Applications are new to Configuration Manager.  Prior to Configuration Manager, 
 
 3. Persist the application to the provider.  
 
-   To use this sample, create a new command line C# application and copy and replace the code shown. You’ll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
+   To use this sample, create a new command line C# application and copy and replace the code shown. You'll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
 
 - AdminUI.AppManFoundation.dll  
 

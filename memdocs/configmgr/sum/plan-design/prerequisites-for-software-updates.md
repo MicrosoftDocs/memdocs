@@ -137,7 +137,7 @@ Follow the steps below to resolve both the 0xc1800118 error and "Error: Invalid 
      - For more information, see [Configure classifications and products](../get-started/configure-classifications-and-products.md).
    - Uncheck the **Upgrades** classification from WSUS under **Products and Classifications** on the [**Options** page](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations), or use the PowerShell ISE running as administrator.
       ```PowerShell
-      Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq “Upgrades”} | Set-WsusClassification -Disable
+      Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - If you share the WSUS database between multiple WSUS servers, you only need to uncheck **Upgrades** once for each database.  
 1. On each WSUS server, from an elevated command prompt run: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`. Then, restart the WSUS service on all of the WSUS servers.

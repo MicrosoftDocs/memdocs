@@ -44,7 +44,7 @@ Class SMS_Site : SMS_BaseClass
 
 |Method|Description|  
 |------------|-----------------|  
-|[EncryptDataEx Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/encryptdataex-method-in-class-sms_site.md)|Encrypts data using the specified site server’s public key and returns the encrypted data.|  
+|[EncryptDataEx Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/encryptdataex-method-in-class-sms_site.md)|Encrypts data using the specified site server's public key and returns the encrypted data.|  
 |[GetAutoUpgradeConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md)|Gets configurations for auto-upgrade settings.|  
 |[GetClientInfo Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getclientinfo-method-in-class-sms_site.md)|Gets information about a client.|  
 |[GetClientPilotingConfigs Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md)|Gets the configurations for client piloting settings.|  

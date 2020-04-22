@@ -89,7 +89,7 @@ For more information, see [How to validate your app protection policy setup in M
 
 In most scenarios, users log in to their accounts by using their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Azure AD. When this issue occurs, app protection policies aren't applied as expected.
 
-Microsoft’s recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
 If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
@@ -190,7 +190,7 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 
 ## References
 
-If you’re still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team visit the forums. So, there’s a good chance that you can find someone who has the information that you need.
+If you're still looking for a solution to a related problem, or for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
 
 To open a support request for the Microsoft Intune product support team, see [How to get support for Microsoft Intune](../fundamentals/get-support.md).
 

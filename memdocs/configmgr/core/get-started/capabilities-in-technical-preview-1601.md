@@ -75,9 +75,9 @@ In the 1601 Technical Preview, we have added support for the following features:
 
     To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
-    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user’s device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user's device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
-    -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user’s device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
+    -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user's device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
 
     -   **Require BitLocker drive encryption:** This is a check to see if the primary drive (e.g. C:\\) on the device is BitLocker encrypted. If Bitlocker encryption is not enabled on the primary device access to email and SharePoint services is blocked.  
 
@@ -122,7 +122,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 ##  <a name="bkmk_clientStatus"></a> Client online status  
 Beginning with technical preview 1601, you can identify at a glance whether a client is online or offline in the Configuration Manager console. With updated icons and columns in the console device listings, you can assess the status of clients in your environment to identify problem areas and other issues that might need your attention.  
 
-A client is online if it is currently connected to a Configuration Manager management point site system role. As long as the management point is receiving ping-like messages from the client, its status is online. If the management doesn’t receive a message for 5 minutes or so, the client’s status changes to offline.  
+A client is online if it is currently connected to a Configuration Manager management point site system role. As long as the management point is receiving ping-like messages from the client, its status is online. If the management doesn't receive a message for 5 minutes or so, the client's status changes to offline.  
 
 ### Icons for client status  
 
@@ -176,7 +176,7 @@ A client is online if it is currently connected to a Configuration Manager manag
 -   You must have deployed an iOS application that supports application configuration.  
 
 #### Try it out!  
- Once the prerequisites above are met, you must create a Configuration Manager application that uses an iOS deployment type. The app you use must support application configuration. Refer to the application’s vendor documentation to learn what specific items (name/value pairs), you can configure.  
+ Once the prerequisites above are met, you must create a Configuration Manager application that uses an iOS deployment type. The app you use must support application configuration. Refer to the application's vendor documentation to learn what specific items (name/value pairs), you can configure.  
 
  Then, you associate the app configuration policy with the iOS deployment type during app deployment. You can also deploy the policy from the **App Configuration Policies** node, targeted to an existing app and collection.  
 

@@ -288,7 +288,7 @@ Additional policy settings for the [Attack Surface Reduction](../../../protect/d
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
 For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_HIS): 
-- Websites can be given access to the host’s virtual graphics processor. 
+- Websites can be given access to the host's virtual graphics processor. 
 - Files downloaded inside the container can be persisted on the host. 
 
 

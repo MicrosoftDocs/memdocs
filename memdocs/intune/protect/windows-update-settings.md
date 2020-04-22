@@ -188,7 +188,7 @@ User experience settings control the end-user experience for device restart and 
   - **Allow** - Allow device users to use Windows Update scan to find and download updates, and install features.
   - **Block** - Prevent device users from accessing the Windows Update scan, downloading updates, and installing features.  
 
-- **Require user’s approval to restart outside of work hours**  
+- **Require user's approval to restart outside of work hours**  
   **Default**: Not configured  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
@@ -215,7 +215,7 @@ User experience settings control the end-user experience for device restart and 
   **Default**: Use the default Windows Update notifications  
   Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
-  Specify what level of Windows Update notifications users see. This setting doesn’t control how and when updates are downloaded and installed.  
+  Specify what level of Windows Update notifications users see. This setting doesn't control how and when updates are downloaded and installed.  
 
   Supported options:
   - **Not configured**

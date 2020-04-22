@@ -57,7 +57,7 @@ If you have trouble with the installation, try the troubleshooting steps at the 
 
 10. If no threats are found, all three threat types will appear green.
 
-11. The **Device Details** screen in the Company Portal shows that you are now in compliance with your company’s security requirements.
+11. The **Device Details** screen in the Company Portal shows that you are now in compliance with your company's security requirements.
 
     ![Your device is now in compliance with policies](./media/mtd-device-now-compliant-android.png)
 

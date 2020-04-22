@@ -44,7 +44,7 @@ Some additional recommendations:
 - After you successfully connect to the Wi-Fi endpoint (Wi-Fi router), note the SSID and the credential used (this value is the password or passphrase).
 - Enter the SSID and credential (password or passphrase) in the Pre-Shared Key field. 
 - Deploy to a test group that has limited number of users, preferably only the IT team. 
-- Sync your iOS/iPadOS device to Intune. Enroll if you haven’t already enrolled. 
+- Sync your iOS/iPadOS device to Intune. Enroll if you haven't already enrolled. 
 - Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
 - Roll out to larger groups and eventually to all expected users in your organization. 
 

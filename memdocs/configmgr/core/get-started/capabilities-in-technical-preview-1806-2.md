@@ -197,7 +197,7 @@ Additional management insights are available in this release to highlight potent
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment.  
 
-- **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members.  
+- **Boundary groups with no members**: Boundary groups aren't applicable for site assignment or content lookup if they don't have any members.  
 
 - **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days. This data is based on reports from clients of their download history.  
 

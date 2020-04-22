@@ -55,7 +55,7 @@ FROM RCM_DrsInitializationTracking dt
 WHERE RequestTrackingGUID=@trackingGuid
 ```
 
-### Check primary site isn’t in maintenance mode
+### Check primary site isn't in maintenance mode
 
 ```sql
 SELECT * FROM ServerData

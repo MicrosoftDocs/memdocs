@@ -31,7 +31,7 @@ ms.collection:
 
 # How to set the amount of time before your Android device locks its screen
 
-To reconnect to your work, you’ll need to set the password timeout on your device by following the steps for the type of device you have.
+To reconnect to your work, you'll need to set the password timeout on your device by following the steps for the type of device you have.
 
 ## Native (non-Samsung Knox) device
 

@@ -93,7 +93,7 @@ A kiosk device typically runs a specific app. Users are prevented from accessing
 
   - **Not Configured** (default): The policy does not enable a kiosk mode. 
   - **Single app kiosk**: The profile enables the device to only run one app. When the user signs in, a specific app starts. This mode also restricts the user from opening new apps, or changing the running app.
-  - **Multi-app kiosk**: The profile enables the device to run multiple apps. Only the apps you add are available to the user. The benefit of a multi-app kiosk, or fixed-purpose device, is to provide an easy-to-understand experience for individuals by only accessing apps they need. And, removing the apps they don’t need from their view. 
+  - **Multi-app kiosk**: The profile enables the device to run multiple apps. Only the apps you add are available to the user. The benefit of a multi-app kiosk, or fixed-purpose device, is to provide an easy-to-understand experience for individuals by only accessing apps they need. And, removing the apps they don't need from their view. 
   
     When you add apps for a multi-app kiosk experience, you also add a start menu layout file. [Start menu layout file](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) includes sample XML that can be used in Intune. 
 

@@ -43,7 +43,7 @@ This article introduces the features that are available in the Technical Preview
 
  When enabled, the end user who is sharing a remote session must grant permissions to the viewer of that session before the viewer can transfer files from the session to their local machine via the shared clipboard.  
 
- This adds a layer of protection for the end user as previously, if the viewer was granted full control of the end user’s computer, they would be able to use the shared clipboard to transfer files from the session to their local computer in a way that was entirely transparent to the end user.  
+ This adds a layer of protection for the end user as previously, if the viewer was granted full control of the end user's computer, they would be able to use the shared clipboard to transfer files from the session to their local computer in a way that was entirely transparent to the end user.  
 
 ##  <a name="BKMK_RamDiskTFTP"></a> Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points  
  In the 1603 Technical Preview, you can customize the RamDisk TFTP block size and window size for PXE-enabled distribution points. If you have customized your network, it could cause the boot image download to fail with a time-out error because the block or window size is too large. The RamDisk TFTP block size and window size customization allow you to optimize TFTP traffic when using PXE to meet your specific network requirements.   

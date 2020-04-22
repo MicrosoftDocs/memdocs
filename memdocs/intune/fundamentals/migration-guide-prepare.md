@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Phase 1: Prepare Microsoft Intune for mobile device management (MDM)
 
-Before diving into the details of setting up Intune, let’s review the mobile device management requirements of your organization. It might be helpful to run reports of active users in your current MDM provider to identify the critical user groups. Then you can begin addressing the questions in the [Assess MDM requirements](migration-guide-prepare.md#assess-mdm-requirements) section.
+Before diving into the details of setting up Intune, let's review the mobile device management requirements of your organization. It might be helpful to run reports of active users in your current MDM provider to identify the critical user groups. Then you can begin addressing the questions in the [Assess MDM requirements](migration-guide-prepare.md#assess-mdm-requirements) section.
 
 ## Assess MDM requirements
 

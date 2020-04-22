@@ -34,7 +34,7 @@ This article introduces the features that are available in the Technical Preview
   - **Block USB debugging on device**
   - **Block apps from unknown sources**
 
-    For example, if admins set **Block USB debugging on device** to **true**, all devices that don’t have USB debugging enabled are marked as non-compliant.
+    For example, if admins set **Block USB debugging on device** to **true**, all devices that don't have USB debugging enabled are marked as non-compliant.
 
 **The following are new features you can try out with this version.**  
 
@@ -172,7 +172,7 @@ The **Summary** tab:
 
 The **Content Library** tab:
 - View the **State** for content that synchronizes from the active site server to the passive mode site server.
-- You can select content with a State of **Failed**, and then choose **Sync selected items** from the Ribbon. This action tries to resynchronize that content from the content’s source to the passive mode site server. During recovery, the State displays as **In progress**, and when it is in sync, it displays as **Success**.
+- You can select content with a State of **Failed**, and then choose **Sync selected items** from the Ribbon. This action tries to resynchronize that content from the content's source to the passive mode site server. During recovery, the State displays as **In progress**, and when it is in sync, it displays as **Success**.
 
 ### Try it out!
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
@@ -182,7 +182,7 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 
 ## Include trust for specific files and folders in a Device Guard policy
 <!-- 1324676 -->
-In this release, we’ve added further capabilities to [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) policy management
+In this release, we've added further capabilities to [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md) policy management
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 
@@ -257,7 +257,7 @@ The prerequisites for a connection to Upgrade Readiness are unchanged from those
 
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
-- Register Configuration Manager as a “Web Application and/or Web API” management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Register Configuration Manager as a "Web Application and/or Web API" management tool, and get the [client ID from this registration](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
 - Create a client key for the registered management tool in Azure Active Directory.
 - In the Azure portal, provide the registered web app with permission to access OMS.
 
@@ -285,7 +285,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
 ## New client settings for cloud services
 <!-- 1319883 -->
 
-In this release, we’ve added two new client settings to Configuration Manager. You’ll find these in the **Cloud Services** section.  These settings give you the following capabilities:
+In this release, we've added two new client settings to Configuration Manager. You'll find these in the **Cloud Services** section.  These settings give you the following capabilities:
 
 - Control which Configuration Manager clients can access a configured cloud management gateway.
 - Automatically register Windows 10 domain-joined Configuration Manger clients with Azure Active Directory.
@@ -329,7 +329,7 @@ To use scripts, you must be a member of the appropriate Configuration Manager se
 
 For more information about Configuration Manager security roles, see [Fundamentals of role-based administration](../understand/fundamentals-of-role-based-administration.md).
 
-By default, users cannot approve a script they have authored. Since scripts are powerful, versatile, and can be deployed to many devices, we’ve introduced a new concept of providing the ability to separate the roles between the person that authors the script and the person that approves the script. This gives additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing, particularly during the Technical Preview release.
+By default, users cannot approve a script they have authored. Since scripts are powerful, versatile, and can be deployed to many devices, we've introduced a new concept of providing the ability to separate the roles between the person that authors the script and the person that approves the script. This gives additional level of security against running a script without oversight. You can turn off this secondary approval, for ease of testing, particularly during the Technical Preview release.
 
 To allow users to approve their own scripts:
 

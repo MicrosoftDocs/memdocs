@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # EncryptDataEx Method in Class SMS_Site
-The `EncryptDataEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data using the specified site server’s public key and returns the encrypted data.  
+The `EncryptDataEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data using the specified site server's public key and returns the encrypted data.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

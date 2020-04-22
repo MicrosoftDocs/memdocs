@@ -63,23 +63,23 @@ In the 1512 Technical Preview we have added the following new settings in Endpoi
 
     -   This setting provides greater granularity for the administrator to allow on-demand scans of network files without the risk of always scanning mapped network drives during a scheduled full scan.  
 
-    -   The setting **Scan network files** must first be enabled (“yes”) for this setting to be available to configure.  
+    -   The setting **Scan network files** must first be enabled ("yes") for this setting to be available to configure.  
 
-    -   By default, this setting is “No” meaning that a full scan will not access mapped network drives.  
+    -   By default, this setting is "No" meaning that a full scan will not access mapped network drives.  
 
 -   Auto sample file submission settings:  
 
      The antimalware engine may request file samples to be sent to Microsoft for further analysis. By default, it will always prompt before it sends such samples. Administrators can now manage the following settings to configure this behavior:  
 
-    -   Advanced: **Enable auto sample file submission to help Microsoft determine whether certain detected items are Malicious**:  Change this setting to “Yes” to enable auto sample file submission. By default, this setting is “No” which means auto sample file submission is disabled and users will be prompted before sending samples.   (This setting was first introduced in System Center 2012 R2 Configuration Manager SP1)  
+    -   Advanced: **Enable auto sample file submission to help Microsoft determine whether certain detected items are Malicious**:  Change this setting to "Yes" to enable auto sample file submission. By default, this setting is "No" which means auto sample file submission is disabled and users will be prompted before sending samples.   (This setting was first introduced in System Center 2012 R2 Configuration Manager SP1)  
 
-    -   Advanced: **Allow users to modify auto sample file submission settings**: This setting determines whether a user with local administrative rights on a device can change the auto sample file submission setting in the client interface. By default, this setting is “No” which means the settings can only be changed from within the Configuration Manager console, and local administrators on a device cannot change this configuration.  
+    -   Advanced: **Allow users to modify auto sample file submission settings**: This setting determines whether a user with local administrative rights on a device can change the auto sample file submission setting in the client interface. By default, this setting is "No" which means the settings can only be changed from within the Configuration Manager console, and local administrators on a device cannot change this configuration.  
 
          For example, the following shows the Windows Defender setting in Windows 10 set by the administrator as enabled, and the user is not allowed to modify it:  
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    Additionally, the existing **Exclude files and folders** setting in the “Exclusion settings” section of endpoint protection antimalware policy is improved to allow device exclusions. For example, you can now specify the following as an exclusion: **\device\mvfs** (for Multiversion File System). The policy does not validate the device path; the endpoint protection policy is provided to the antimalware engine on the client which must be able to interpret the device string.  
+    Additionally, the existing **Exclude files and folders** setting in the "Exclusion settings" section of endpoint protection antimalware policy is improved to allow device exclusions. For example, you can now specify the following as an exclusion: **\device\mvfs** (for Multiversion File System). The policy does not validate the device path; the endpoint protection policy is provided to the antimalware engine on the client which must be able to interpret the device string.  
 
 **Prerequisites for using Endpoint Protection policies:**  
 

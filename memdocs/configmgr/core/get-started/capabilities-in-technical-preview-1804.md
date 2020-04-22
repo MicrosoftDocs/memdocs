@@ -284,7 +284,7 @@ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know 
 > Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.  
 
 ### Known issues
-After adding the architecture criteria, the automatic deployment rule properties page shows **Title** in the search criteria. The automatic deployment rule still functions as expected, and selects the correct software updates. However, you can’t include both **Architecture** and **Title** criteria at this time. <!--512634,512632-->
+After adding the architecture criteria, the automatic deployment rule properties page shows **Title** in the search criteria. The automatic deployment rule still functions as expected, and selects the correct software updates. However, you can't include both **Architecture** and **Title** criteria at this time. <!--512634,512632-->
 
 
 

@@ -261,7 +261,7 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_IRQ
 
-List information about Interrupt Requests (IRQ’s) found on client computers.
+List information about Interrupt Requests (IRQ's) found on client computers.
 This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_KEYBOARD_DEVICE
@@ -528,7 +528,7 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEMBOOTSUMMARY
 
-Lists summary information about the computer boot times. This includes Latest, Maximum and median’s for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
+Lists summary information about the computer boot times. This includes Latest, Maximum and median's for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
 
 The view can be joined with other views by using the **ResourceID** column.
 

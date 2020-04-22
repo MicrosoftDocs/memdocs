@@ -40,7 +40,7 @@ Class SMS_UserApplicationRequestHistoryItem :
 
  Qualifiers: none  
 
- Comments entered to explain why the change occurred. These could be user’s comment explaining why they are requesting the application or approver comments explaining why the application was approved or denied.  
+ Comments entered to explain why the change occurred. These could be user's comment explaining why they are requesting the application or approver comments explaining why the application was approved or denied.  
 
  `ModifiedBy`  
  Data type: `String`  
