@@ -155,7 +155,7 @@ For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot
 
 You can now use CMPivot as a standalone app. CMPivot standalone is a **pre-release feature** and is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
-You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don't have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
+You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don’t have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
 For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_standalone) and [Pre-release features](../../servers/manage/pre-release-features.md#bkmk_table).
 
@@ -369,6 +369,10 @@ This release includes the following improvements to OS deployment:
 - The task sequence sets a new read-only variable **_SMSTSLastContentDownloadLocation**. This variable contains the last location where the task sequence downloaded or attempted to download content. Inspect this variable instead of parsing the client logs.<!-- 2840337 -->
 
 - When you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.<!-- 4090666 -->
+
+### Improvements to PXE
+
+Option 82 during the PXE DHCP handshake is now supported with the PXE responder without WDS. Option 82 is not supported with WDS.
 
 
 ## <a name="bkmk_userxp"></a> Software Center
