@@ -268,3 +268,5 @@ The following diagram is a conceptual data flow for the interaction between Conf
 4. The Configuration Manager client requests the Azure AD user token. The client makes the claim using the application ID of the Azure AD client app, and the server app as the audience. For more information, see [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens).  
 
 5. The client authenticates with the site by presenting the Azure AD token to the cloud management gateway and on-premises HTTPS-enabled management point.  
+
+For more detailed information, see [Azure AD authentication workflow](../../../clients/manage/azure-ccmsetup.md).
