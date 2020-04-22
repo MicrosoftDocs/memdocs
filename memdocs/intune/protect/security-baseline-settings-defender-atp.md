@@ -760,7 +760,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Enable network protection**  
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  - **Not configured** -The setting returns to the Windows default, which is disabled.
+  - **Not configured** - The setting returns to the Windows default, which is disabled.
   - **User defined**
   - **Enable** - Network protection is enabled for all users on the system.
   - **Audit mode** (*default*) - Users aren't blocked from dangerous domains and Windows events are raised instead.

@@ -149,12 +149,35 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
-## Web protection 
+## Web protection profile
 
-  CSP: []()
+### Web Protection
 
+- **Enable network protection**  
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is disabled.
+  - **User defined**
+  - **Enable** - Network protection is enabled for all users on the system.
+  - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+
+- **Require SmartScreen for Microsoft Edge**  
+  CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
+
+  - **Yes** - Use SmartScreen to protect users from potential phishing scams and malicious software.
+  - **Not configured** (*default*) 
+
+- **Block malicious site access**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
+
+  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
   - **Not configured** (*default*)
-  - **Yes**
+
+- **Block unverified file download**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
+
+  - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
+  - **Not configured** (*default*)
 
 ## Application control 
 
