@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -214,6 +214,9 @@ For more information about other available commands, see the readme file at [PFX
 ## Create a PKCS imported certificate profile
 
 After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Azure Active Directory groups.
+
+> [!NOTE]
+> After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited edited. If you need a different value for either of these settings, create and deploy a new profile. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
