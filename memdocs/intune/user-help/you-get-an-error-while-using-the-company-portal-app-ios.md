@@ -32,12 +32,12 @@ ms.collection:
 
 # You get an error while using the Company Portal app
 
-If you get an error while you’re using the Company Portal app on your iOS device, you can help your company support troubleshoot the problem by sending them information. You can send error information in different ways:
+If you get an error while you're using the Company Portal app on your iOS device, you can help your company support troubleshoot the problem by sending them information. You can send error information in different ways:
 
 - Tap **Report** on error alert messages.
 
 - Tap **Send Diagnostic Report** on the **About** screen of the Company Portal app.
 
-- Shake your device while you’re in the Company Portal app, then tap **Email** when the diagnostics alert appears. If the alert doesn’t appear when you shake the device, open **Settings** > **Company Portal**, and make sure that the **Shake Gesture** option is on.
+- Shake your device while you're in the Company Portal app, then tap **Email** when the diagnostics alert appears. If the alert doesn't appear when you shake the device, open **Settings** > **Company Portal**, and make sure that the **Shake Gesture** option is on.
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -38,7 +38,7 @@ App-based Conditional Access and client app management add a security layer by m
 > [!NOTE]
 > A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
 
-You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don’t have Intune app protection policies applied from accessing SharePoint Online.
+You can block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don't have Intune app protection policies applied from accessing SharePoint Online.
 
 ## Prerequisites
 
@@ -68,15 +68,15 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be either the Microsoft Authenticator for iOS, or the Microsoft Company portal for Android devices.
 
-   If users try to use a native e-mail app, they’ll be redirected to the app store to then install the Outlook app.
+   If users try to use a native e-mail app, they'll be redirected to the app store to then install the Outlook app.
 
 3. The broker app gets installed on the device.
 
 4. The broker app starts the Azure AD registration process, which creates a device record in Azure AD. This isn't the same as the mobile device management (MDM) enrollment process, but this record is necessary so the Conditional Access policies can be enforced on the device.
 
-5. The broker app verifies the identity of the app. There’s a security layer so the broker app can validate if the app is authorized for use by the user.
+5. The broker app verifies the identity of the app. There's a security layer so the broker app can validate if the app is authorized for use by the user.
 
-6. The broker app sends the App Client ID to Azure AD as part of the user authentication process to check if it’s in the policy approved list.
+6. The broker app sends the App Client ID to Azure AD as part of the user authentication process to check if it's in the policy approved list.
 
 7. Azure AD allows the user to authenticate and use the app based on the policy approved list. If the app isn't on the list, Azure AD denies access to the app.
 

@@ -29,7 +29,7 @@ Configuration Manager actions can be displayed according to specified conditions
 |`MatchPattern`|Specifies the pattern to search for.|  
 |`MatchValueToTest`|Specifies the value to compare against. The value following `##Sub` is a property on the selected object. The property must not be lazy and must exist on the select object.|  
 
- The following action displays a dialog box whenever the specified pattern (MS_ASYNC_RAS) matches the selected object’s `AddressType` property:  
+ The following action displays a dialog box whenever the specified pattern (MS_ASYNC_RAS) matches the selected object's `AddressType` property:  
 
 ```  
 <ActionDescription ActionVerb="Properties" Class="ShowDialog">  <ShowOn>  <string>DefaultContextualTab</string> <!-- Show on Ribbon -->           <string>ContextMenu</string> <!-- Show on Context Menu -->   </ShowOn>  <MatchPattern>MS_ASYNC_RAS</MatchPattern>  

@@ -29,7 +29,7 @@ For example, the following is a rule set that contains three rules. The first ru
 
 ``` Example
 And  
-  File ‘\[PROGRAM\_FILES\] \\Microsoft\\MyFile’ exists  
+  File '\[PROGRAM\_FILES\] \\Microsoft\\MyFile' exists  
   Or  
     Windows Language is English
     Windows Language is Japanese

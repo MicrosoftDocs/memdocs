@@ -18,9 +18,9 @@ The features and capabilities of a site are determined by the site roles applied
  Configuring a site is performed through Windows Management Instrumentation (WMI) classes. For example, [SMS_SCI_Component Server WMI Class](../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) holds information about the server components stored on a Configuration Manager site server. These classes derive from [SMS_SiteControlItem Server WMI Class](../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md). For more information, see [Configuration Manager Site Configuration Server WMI Classes](../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md).  
 
 > [!NOTE]
->  In earlier versions of Configuration Manager, the `SMS_SiteControlFile` WMI class  was used to receive the latest copy of a site’s configuration, to update a site’s configuration, and to manage update sessions. This is no longer required as the changes that are made to a site’s configuration are immediately written to the database and a file is no longer used.  
+>  In earlier versions of Configuration Manager, the `SMS_SiteControlFile` WMI class  was used to receive the latest copy of a site's configuration, to update a site's configuration, and to manage update sessions. This is no longer required as the changes that are made to a site's configuration are immediately written to the database and a file is no longer used.  
 
- Site control items generally use three types’ properties for individual settings, embedded properties, property lists, and multi-string lists. They are accessed by using the following classes:  
+ Site control items generally use three types' properties for individual settings, embedded properties, property lists, and multi-string lists. They are accessed by using the following classes:  
 
 |Type|WMI Class|  
 |----------|---------------|  

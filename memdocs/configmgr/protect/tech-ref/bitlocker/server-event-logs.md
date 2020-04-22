@@ -38,7 +38,7 @@ Application: {SiteName}{VirtualDirectory} is missing the following Service Princ
 
 For integrated Windows Authentication to succeed, necessary SPNs need to be in place. This message indicates that the SPN required for the application isn't correctly configured. Details contained in this event should provide more information.
 
-<!-- See “Service Principal Name (SPN)” in MBAM 2.5 Server Prerequisites for Stand-alone and Configuration Manager Integration Topologies for more information. -->
+<!-- See "Service Principal Name (SPN)" in MBAM 2.5 Server Prerequisites for Stand-alone and Configuration Manager Integration Topologies for more information. -->
 
 ### 100: AdminServiceRecoveryDbError
 

@@ -27,7 +27,7 @@ In this tutorial, you learn how to:
 > * Create a Desktop Analytics deployment plan for Windows 10  
 > * Use Configuration Manager to deploy Windows 10 to the pilot group  
 
-If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
+If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
 Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 

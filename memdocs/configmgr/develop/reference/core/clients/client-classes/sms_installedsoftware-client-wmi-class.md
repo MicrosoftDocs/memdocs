@@ -105,8 +105,8 @@ Class SMS_InstalledSoftware
 |A|Windows Installer|  
 |B|The software's install registry key|  
 |C|The software's uninstall registry key|  
-|D|Operating System’s Windows Installer|  
-|E|Operating System’s Windows NT registry setting|  
+|D|Operating System's Windows Installer|  
+|E|Operating System's Windows NT registry setting|  
 |M|Internally computed property|  
 |X|Unknown|  
 

@@ -31,7 +31,7 @@ To make these changes, you need local administrative permissions on the client w
 > [!Important]  
 > The Support Center configuration file is an XML-formatted file. It's essential to the operation of Support Center. Modifying this file is only recommended for users who are familiar with XML and regular expressions.  
 
-Before you customize the Support Center configuration file, save a backup of the original. This backup allows you to recover the original Support Center functionality if you make mistakes while editing the file. If you don’t create a backup, and Support Center doesn't function correctly after you modify the configuration file, reinstall Support Center. You can also copy a configuration file from another installation of Support Center.
+Before you customize the Support Center configuration file, save a backup of the original. This backup allows you to recover the original Support Center functionality if you make mistakes while editing the file. If you don't create a backup, and Support Center doesn't function correctly after you modify the configuration file, reinstall Support Center. You can also copy a configuration file from another installation of Support Center.
 
 
 

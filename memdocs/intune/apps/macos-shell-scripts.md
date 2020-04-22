@@ -120,8 +120,8 @@ Log collection may not be successful due to any of the following reasons provide
 | 0X87D300D3, 0X87D300D5, 0X87D300D7 | 2016214829, 2016214827, 2016214825 | Log collection file upload failed due to encryption failure. Retry log upload. | Retry the **Collect logs** action. |
 | | 2016214828 | The number of log files exceeded the allowed limit of 25 files. | Only up to 25 log files can be collected at a time. |
 | 0X87D300D6 | 2016214826 | Log collection file upload failed due to zip error. Retry log upload. | Retry the **Collect logs** action. |
-| | 2016214740 | The logs couldn’t be encrypted as compressed logs were not found. | Retry the **Collect logs** action. |
-| | 2016214739 | The logs were collected but couldn’t be stored. | Retry the **Collect logs** action. |
+| | 2016214740 | The logs couldn't be encrypted as compressed logs were not found. | Retry the **Collect logs** action. |
+| | 2016214739 | The logs were collected but couldn't be stored. | Retry the **Collect logs** action. |
 
 ## Frequently asked questions
 ### Why are assigned shell scripts not running on the device?

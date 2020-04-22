@@ -392,7 +392,7 @@ x00000400 (10)|BALLOON_REMINDERS_REQUIRED. Balloon reminders are required.|
 |0x00002000 (13)|RERUN_IF_FAILED. Rerun the program if execution previously failed.|  
 |0x00004000 (14)|RERUN_IF_SUCCEEDED. Rerun the program if execution previously succeeded.|  
 |0x00008000 (15)|PERSIST_ON_WRITE_FILTER_DEVICES <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
-|0x00020000 (17)|DON’T_FALLBACK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
+|0x00020000 (17)|DON'T_FALLBACK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 |0x00040000 (18)|DP_ALLOW_METERED_NETWORK <br /><br /> This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.|  
 
 ### `SourceSite`  

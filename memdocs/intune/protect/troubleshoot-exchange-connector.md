@@ -34,7 +34,7 @@ This article describes how to troubleshoot issues related to the Intune Exchange
 
 ## Before you start
 
-Before you start troubleshooting an Exchange Connector issue in Intune, collect some basic information so that you’re working on a solid foundation. This approach can help you better understand the nature of the problem and resolve it more quickly.
+Before you start troubleshooting an Exchange Connector issue in Intune, collect some basic information so that you're working on a solid foundation. This approach can help you better understand the nature of the problem and resolve it more quickly.
 
 - Verify that your process meets the installation requirements. See [Set up the on-premises Intune Exchange Connector](exchange-connector-install.md).
 - Verify that your account has both Exchange and Intune administrator permissions.
@@ -60,7 +60,7 @@ Review the [on-premises Exchange connector requirements](exchange-connector-inst
 
 - Make sure your firewall and proxy servers allow communication between the server that hosts the Intune Exchange Connector and the Intune service.
 
-- The computer that hosts the Intune Exchange Connector and the Exchange Client Access Server (CAS) should be domain-joined and on same LAN. Make sure that the required permissions are added for the account that’s used by the Intune Exchange connector.
+- The computer that hosts the Intune Exchange Connector and the Exchange Client Access Server (CAS) should be domain-joined and on same LAN. Make sure that the required permissions are added for the account that's used by the Intune Exchange connector.
 
 - The notification account is used to retrieve *Autodiscover* settings. For more information about Autodisover in Exchange, see [Autodiscover service in Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 

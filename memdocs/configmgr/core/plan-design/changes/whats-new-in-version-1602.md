@@ -58,7 +58,7 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 
 -   Available Windows 10 upgrades now only display in the **Windows 10 Servicing** \ **All Windows 10 Updates** node of the Configuration Manager console. These updates no longer display in the **Software Updates** \ **All Software Updates** node of the console.  
 
--   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
+-   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
 -   Users who start a Windows 10 Upgrade package now receive a message that they will be upgrading their operating system.  
 
@@ -177,7 +177,7 @@ For details, see [Health attestation for Configuration Manager](../../../core/se
 
     -   Advanced: Allow users to modify automatic sample file submission settings.  
 
-    Additionally, in the “Exclusion settings” section of endpoint protection antimalware policy, the existing **Exclude files and folders** setting now allows device exclusions.  
+    Additionally, in the "Exclusion settings" section of endpoint protection antimalware policy, the existing **Exclude files and folders** setting now allows device exclusions.  
 
 For details, see [How to create and deploy antimalware policies for Endpoint Protection](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 

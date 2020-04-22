@@ -330,7 +330,7 @@ When you create more than one detection method for a deployment type, you can gr
 
 1. Create three or more detection method clauses on a deployment type.  
 
-2. Select two or more consecutive clauses, and then select **Group**. You’ll see the parentheses added to the associated columns, which show where the group starts and ends.  
+2. Select two or more consecutive clauses, and then select **Group**. You'll see the parentheses added to the associated columns, which show where the group starts and ends.  
 
     Example:
 

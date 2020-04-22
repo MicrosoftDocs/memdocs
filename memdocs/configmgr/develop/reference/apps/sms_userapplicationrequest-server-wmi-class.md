@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # SMS_UserApplicationRequest Server WMI Class
-The `SMS_UserApplicationRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user’s application request.  
+The `SMS_UserApplicationRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a user's application request.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

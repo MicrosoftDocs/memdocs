@@ -44,15 +44,15 @@ Follow these steps to unenroll your macOS device from management:
 
 When you unenroll your device from Intune, here's what happens:
 
-- Your device doesn’t appear in the Company Portal.
+- Your device doesn't appear in the Company Portal.
 
-- You can’t install apps from the Company Portal.
+- You can't install apps from the Company Portal.
 
 - Any settings that were changed on your device when you added it (like password length) no longer apply.
 
 - You might not have access to some company resources, such as file shares or internal web sites, on your device anymore.
 
-- You can’t use company apps and company data on your device anymore.
+- You can't use company apps and company data on your device anymore.
 
 - You might not be able to connect to your company network using Wi-Fi or a virtual private network (VPN) anymore.
 

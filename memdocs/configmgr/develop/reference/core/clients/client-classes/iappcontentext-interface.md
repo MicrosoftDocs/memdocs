@@ -22,7 +22,7 @@ The `IAppContentExt` interface, in Configuration Manager, defines functions to r
 
 |Term|Definition|  
 |----------|----------------|  
-|[IAppContentExt::GetExcludedFileList](../../../../../develop/reference/core/clients/client-classes/iappcontentext--getexcludedfilelist.md)|Gets the excluded file list for an application’s content. This is used to support selective file download.|  
+|[IAppContentExt::GetExcludedFileList](../../../../../develop/reference/core/clients/client-classes/iappcontentext--getexcludedfilelist.md)|Gets the excluded file list for an application's content. This is used to support selective file download.|  
 
 ## Remarks  
  .  

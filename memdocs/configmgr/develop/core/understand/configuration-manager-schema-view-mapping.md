@@ -34,7 +34,7 @@ In Configuration Manager, the names of views and columns are designed to be as c
 ## Custom Architecture Views  
  The syntax for the current groups is v_G<em>\<resource type number>_\<group name></em> (for example, v_G6_VendorData).  
 
- In the previous example, it is assumed that a new inventory architecture, for example VendingMachine, has been added to the system and assigned the resource type number 6 and VendorData is a inventory group that is associated with the architecture. The resource type number might be related to the resource type name and its group’s classes using the schema information views.  
+ In the previous example, it is assumed that a new inventory architecture, for example VendingMachine, has been added to the system and assigned the resource type number 6 and VendorData is a inventory group that is associated with the architecture. The resource type number might be related to the resource type name and its group's classes using the schema information views.  
 
  The corresponding history inventory classes will use the suffix H in place of G.  
 

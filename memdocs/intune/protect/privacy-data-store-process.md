@@ -41,7 +41,7 @@ All non-telemetry data collected is processed through the Intune service and is 
 - Reliable Collections (Service fabric)  
 - Azure storage 
 
-Telemetry (service logs, performance logs, errors, and so on) that are key to monitoring and providing a stable service are sent to Microsoft’s telemetry data stores.
+Telemetry (service logs, performance logs, errors, and so on) that are key to monitoring and providing a stable service are sent to Microsoft's telemetry data stores.
 
 ### Storage locations
 
@@ -67,12 +67,12 @@ Microsoft Intune does not use any personal data collected as part of providing t
 
 ### Restrict processing of personal data
 
-To restrict the processing of a user’s personal data, you can delete the users account by:
+To restrict the processing of a user's personal data, you can delete the users account by:
 1. Exporting an electronic copy of the personal data of the user, including
     - accounts
     - service data
     - associated logs
-2. Deleting the user’s account and associated data from Intune.
+2. Deleting the user's account and associated data from Intune.
 
 ## Next steps
 

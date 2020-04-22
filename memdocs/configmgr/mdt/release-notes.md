@@ -125,7 +125,7 @@ Starting with Windows 10 version 1809, language interface packs (LIPs) are deliv
 For more information, see [Microsoft Deployment Toolkit support life cycle](https://support.microsoft.com/help/2872000/microsoft-deployment-toolkit-support-life-cycle).
 
 #### <a name="bkmk_note2"></a> Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?
-We primarily tested this build of MDT with the configuration listed above. Unless there are any explicit known issues, anything outside of the above configuration has a high probability of still working. Your mileage may vary as we haven’t explicitly tested other combinations.
+We primarily tested this build of MDT with the configuration listed above. Unless there are any explicit known issues, anything outside of the above configuration has a high probability of still working. Your mileage may vary as we haven't explicitly tested other combinations.
 
 #### How do I get help with MDT?
 Use one of the following methods to get help with MDT (in prioritized order):
