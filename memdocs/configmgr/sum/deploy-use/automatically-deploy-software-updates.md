@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/29/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -44,7 +44,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
          - The **Patch Tuesday** template provides common settings to use when you deploy software updates on a monthly cycle.  
 
-         - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Office 365 Pro Plus clients.  
+         - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Office 365 Pro Plus clients.
+             > [!Note]
+             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - The **SCEP and Windows Defender Antivirus Updates** template provides common settings to use when you deploy Endpoint Protection definition updates.  
 
