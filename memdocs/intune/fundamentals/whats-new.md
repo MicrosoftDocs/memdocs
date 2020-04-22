@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,9 +56,15 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
-## Week of April 20, 2020 
+## Week of April 20, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Device management
+
+#### Microsoft Endpoint Manager tenant attach: Device sync and device actions<!-- 6317104, CM3555758 idready -->
+Microsoft Endpoint Manager is bringing together Configuration Manager and Intune into a single console. Starting in Configuration Manager version 2002, you can upload your Configuration Manager devices to the cloud service and take actions on them in the admin center. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions). 
+
 ### App management
 
 #### Microsoft Office 365 ProPlus rename<!-- 6368143 -->
