@@ -35,7 +35,7 @@ Intune supports managing virtual machines running Windows 10 Enterprise with cer
 
 When managing Windows 10 VMs with Intune, keep the following points in mind:
 
-- Windows 10 Enterprise Multi Session (Enterprise for Virtual Devices) as used in Windows Virtual Desktop, does not currently support Intune management.
+- Windows 10 Enterprise Multi Session (Enterprise for Virtual Devices) as used in Windows Virtual Desktop does not currently support Intune management.
 
 ## Enrollment
 - We don't recommend managing on-demand, session-host virtual machines with Intune. Each VM must be enrolled when it's created. Also, regularly deleting VMs will leave orphaned device records in Intune until they're [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
