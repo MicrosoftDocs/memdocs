@@ -143,7 +143,7 @@ Applies to:
 The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own third party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 ### Automated device sync interval down to 12 hours<!--3077535 -->
-For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios#sync-managed-devices).
+For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
 
 <!-- ***********************************************-->
 ## Device management
