@@ -145,6 +145,9 @@ The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you de
 ### Automated device sync interval down to 12 hours<!--3077535 -->
 For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
 
+### Autopilot support for Hololens 2 devices<!--6305220-->
+Windows Autopilot will support Hololens 2 devices. For more information on using Autopilot in Intune, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot).
+
 <!-- ***********************************************-->
 ## Device management
 
@@ -157,7 +160,7 @@ You'll be able to add and deploy scripts to macOS devices. This support extends 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
-### Use rename and sync remote actions in bulk<!--6440956 -->
+### Use rename and sync remote actions in bulk for iOS<!--6440956 -->
 You'll be able to use the rename and sync remote actions on up to 100 iOS devices at a time. To see this feature, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk device actions**. 
 
 ### New details for the Autopilot report<!--5405786 -->
