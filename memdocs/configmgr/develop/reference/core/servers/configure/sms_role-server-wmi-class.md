@@ -52,7 +52,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit(“8��?)]  
+ Qualifiers: [sizelimit(“8")]  
 
  Role ID from which this role was copied.  
 
@@ -61,7 +61,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“512")]  
 
  Name of the user that created this role.  
 
@@ -97,7 +97,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“512")]  
 
  The name of the user that last modified the role.  
 
@@ -133,7 +133,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit(“512��?)]  
+ Qualifiers: [sizelimit(“512")]  
 
  Description of the role.  
 
@@ -151,7 +151,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [not_null, sizelimit(“256��?)]  
+ Qualifiers: [not_null, sizelimit(“256")]  
 
  Name of the role.  
 
@@ -160,7 +160,7 @@ Class SMS_Role : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“3��?)]  
+ Qualifiers: [not_null, read, SizeLimit(“3")]  
 
  The site code of the site where the role was created.  
 

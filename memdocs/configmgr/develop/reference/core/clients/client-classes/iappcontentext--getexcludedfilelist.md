@@ -39,7 +39,7 @@ HRESULT GetExcludedFileList(
 
  Qualifiers: [out]  
 
- The exclude file list is a single string separated by the ‘:’ character. For example, “File1.txt:File2.exe��?.  
+ The exclude file list is a single string separated by the ‘:’ character. For example, “File1.txt:File2.exe".  
 
  `pbForceFileExclusion`  
  Data type: `BOOL`  
