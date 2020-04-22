@@ -119,7 +119,7 @@ Starting in version 2002, you can install complex applications using task sequen
 
 - Define additional metadata for the app task sequence, including localized information
 
-You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. A user-targeted deployment still runs in the user context of the local System account.
+You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 When you add this deployment type to an app, configure its properties on the **Task Sequence** page. For more information, see [Deployment type **Task Sequence** options](../deploy-use/create-applications.md#bkmk_dt-ts).
 
