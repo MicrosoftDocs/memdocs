@@ -101,6 +101,9 @@ To use a PXE-initiated OS deployment, configure the deployment to make the OS av
 
 - Only media and PXE (hidden)
 
+## Option 82 during PXE DHCP handshake
+Starting with version 1906, Option 82 during the PXE DHCP handshake is supported with the PXE responder without WDS. If Option 82 is required, make sure to use the PXE responder without WDS. Option 82 is not supported with WDS.
+
 ## <a name="BKMK_Deploy"></a> Deploy the task sequence
 
 Deploy the OS to a target collection. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md). When you deploy operating systems by using PXE, you can configure whether the deployment is required or available.
