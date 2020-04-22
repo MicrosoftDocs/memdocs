@@ -146,7 +146,7 @@ The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you de
 For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
 
 ### Autopilot support for Hololens 2 devices<!--6305220-->
-Windows Autopilot will support Hololens 2 devices. For more information on using Autopilot in Intune, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot).
+Windows Autopilot will support Hololens 2 devices. For more information on using Autopilot in Intune, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot.md).
 
 ### Enrollment restrictions will support scope tags<!--4209550 -->
 You'll be able to assign scope tags to enrollment restrictions. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction**. Create either type of restriction and you'll seee the **Scope tags** page.
