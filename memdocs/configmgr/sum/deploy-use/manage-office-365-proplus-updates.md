@@ -19,7 +19,7 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 *Applies to: Configuration Manager (current branch)*
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 

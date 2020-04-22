@@ -122,7 +122,7 @@ Include a timeline diagram
 6. Confirm your selections on the **Summary** tab, and then select **Next** to complete the wizard.  
 
 > [!NOTE]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see the old name in the Configuration Manager product and documentation.  
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see the old name in the Configuration Manager product and documentation while the console is being updated.  
 
 ## <a name="bkmk_manual"></a> Create a phased deployment with manually configured phases
 <!--1358148--> 
