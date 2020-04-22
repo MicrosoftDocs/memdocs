@@ -234,7 +234,7 @@ A self join uses any of the above join types, but is a view that is joined to it
 
 ## NOT IN keyword phrase
 
-Subqueries with the keyword phrase NOT IN are very useful to find information about a set of data that doesn’t meet certain criteria. In the following example, the query returns the NetBIOS name of all computers that do NOT have Notepad.exe installed. You must first create a query that can detect all computers that have the selected file installed as follows:
+Subqueries with the keyword phrase NOT IN are very useful to find information about a set of data that doesn't meet certain criteria. In the following example, the query returns the NetBIOS name of all computers that do NOT have Notepad.exe installed. You must first create a query that can detect all computers that have the selected file installed as follows:
 
 ```sql
 SELECT DISTINCT v_R_System.Netbios_Name0

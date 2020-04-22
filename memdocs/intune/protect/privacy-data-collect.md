@@ -33,9 +33,9 @@ ms.collection: M365-identity-device-management
 
 When users enroll their corporate or personal devices using Intune, Intune collects and shares some personal data. Intune collects personal data from the following sources:
 
-- The admin’s use of the Intune in the Azure portal.
+- The admin's use of the Intune in the Azure portal.
 - End-user devices (when they enroll for Intune management and during usage).
-- Customer accounts at third party services (per the admin’s instructions).
+- Customer accounts at third party services (per the admin's instructions).
 - Diagnostic, performance, and usage information.
 
 From these sources, Intune collects information that falls into the following three categories: [identified](#identified-data), [pseudonymized](#pseudonymized-data), and [aggregated](#aggregated-data).
@@ -45,7 +45,7 @@ From these sources, Intune collects information that falls into the following th
 
 ## Identified data
 
-Most personal data collected by Intune is identified data. This data is tied to a user, device, or application and is essential to the nature of management. Identified data is used to manage a user’s device and applications, and to provision the Intune service.
+Most personal data collected by Intune is identified data. This data is tied to a user, device, or application and is essential to the nature of management. Identified data is used to manage a user's device and applications, and to provision the Intune service.
 
 Identified data collected by Intune may include, but is not limited to: 
 
@@ -74,7 +74,7 @@ Identified data collected by Intune may include, but is not limited to:
   - Contact information (name, phone number, email address)
   - Email discussions with Microsoft support, product, and/or customer experience team members
 - Access control information (Intune uses this data to manage access to administrative roles and functions through features like [Role Based Access Control](../fundamentals/role-based-access-control.md).
-  - Static authenticators (customer’s password)
+  - Static authenticators (customer's password)
   - Privacy keys for certificates 
 - Admin and account information
   - Admin user first name and last name
@@ -103,7 +103,7 @@ Pseudonymized data collected by Intune may include, but is not limited to:
 - Diagnostic, performance, and usage data tied to a user and/or device
   - The number of times a feature is used
   - The commands provided to the feature
-  - A service’s response time
+  - A service's response time
   - Success rates of installations and other processes
   - Intune company portal application errors
   - User and device identifiers

@@ -127,7 +127,7 @@ After you add the apps you want to protect with WIP, you need to apply a protect
 
 ### Before you begin
 
-WIP Learning is a report that allows you to monitor your WIP-enabled apps and WIP-unknown apps. The unknown apps are the ones not deployed by your organization’s IT department. You can export these apps from the report and add them to your WIP policies to avoid productivity disruption before they enforce WIP in “Block” mode.
+WIP Learning is a report that allows you to monitor your WIP-enabled apps and WIP-unknown apps. The unknown apps are the ones not deployed by your organization's IT department. You can export these apps from the report and add them to your WIP policies to avoid productivity disruption before they enforce WIP in "Block" mode.
 
 <!-- 1631908 -->
 In addition to viewing information about WIP-enabled apps, you can view a summary of the devices that have shared work data with websites. With this information, you can determine which websites should be added to group and user WIP policies. The summary shows which website URLs are accessed by WIP-enabled apps.
@@ -148,7 +148,7 @@ WIP runs silently, logging inappropriate data sharing, without blocking anything
 #### Off (not recommended)
 WIP is turned off and doesn't help to protect or audit your data.
 
-After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on the locally attached drives. Note that previous decryption and policy info isn’t automatically reapplied if you turn WIP protection back on.
+After you turn off WIP, an attempt is made to decrypt any WIP-tagged files on the locally attached drives. Note that previous decryption and policy info isn't automatically reapplied if you turn WIP protection back on.
 
 ### Add a protection mode
 

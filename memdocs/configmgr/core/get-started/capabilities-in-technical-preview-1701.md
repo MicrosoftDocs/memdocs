@@ -41,12 +41,12 @@ However, with this preview, boundary groups for software update points are only 
 The following describes the behavior for software update points with this technical preview:  
 
 - **New clients use boundary groups to select software update points,**
-  A client that you install after you install version 1701 selects a software update point from those associated with the client’s boundary group.
+  A client that you install after you install version 1701 selects a software update point from those associated with the client's boundary group.
 
   This replaces the previous behavior where clients select a software update point randomly from a list of those that share the clients forest.   
 
 - **Previously installed clients continue to use their current software update point until they fallback to find a new one.**
-  Clients that were previously installed and that already have a software update point will continue to use that software update point until they fallback. This includes software update points that are not associated with the client’s current boundary group. They do not immediately attempt to find and use a software update point from their current boundary group.
+  Clients that were previously installed and that already have a software update point will continue to use that software update point until they fallback. This includes software update points that are not associated with the client's current boundary group. They do not immediately attempt to find and use a software update point from their current boundary group.
 
   A client that already has a software update point begins to use this new boundary group behavior only after the client fails to reach its current software update point and starts fallback.
   This delay in switching over to the new behavior is intentional. This is because a change of software update point can result in a large use of network bandwidth as the client synchronizes data with the new software update point. The delay in transition can help to avoid saturating your network should all your clients switch to new software update points at the same time.
@@ -111,7 +111,7 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 
    **Edits:**
 
-   Change the value for the setting name *FairFaxArmResourceID* to be equal to “<https://management.usgovcloudapi.net/”>
+   Change the value for the setting name *FairFaxArmResourceID* to be equal to "<https://management.usgovcloudapi.net/">
 
    - **Original:**
      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   

@@ -73,7 +73,7 @@ When you select a folder, it displays in the right pane any files within the fol
 - Other packages that use the same file on the drive
 - When the file was last changed on the distribution point
 
-The tool also connects to the Configuration Manager provider. This connection is to determine which packages are distributed to the distribution point, and whether they're actually in the distribution point’s content library. For instance, a package that's pending distribution may not yet exist in the content library. Such a package would appear as "PENDING" in the tool, and no actions are enabled for this package.
+The tool also connects to the Configuration Manager provider. This connection is to determine which packages are distributed to the distribution point, and whether they're actually in the distribution point's content library. For instance, a package that's pending distribution may not yet exist in the content library. Such a package would appear as "PENDING" in the tool, and no actions are enabled for this package.
 
 
 ### <a name="bkmk_disabled-packages"></a> Disabled packages

@@ -124,9 +124,9 @@
 		</g>
 		<g id="shape189-67" transform="translate(238.138,-355.531)">
 			<title>Sheet.189</title>
-			<desc>Check which replication group hasn’t completed reinit</desc>
+			<desc>Check which replication group hasn't completed reinit</desc>
 			<rect x="0" y="622.45" width="135" height="17.55" class="st6"/>
-			<text x="2" y="628.83" class="st3">Check which replication group <tspan x="2" dy="1.2em" class="st5">hasn</tspan>’t completed reinit</text>		</g>
+			<text x="2" y="628.83" class="st3">Check which replication group <tspan x="2" dy="1.2em" class="st5">hasn</tspan>'t completed reinit</text>		</g>
 		<g id="shape190-71" transform="translate(202.138,-355.531)">
 			<title>Dynamic connector.1138</title>
 			<path d="M9 640 L9 671.99" class="st7"/>

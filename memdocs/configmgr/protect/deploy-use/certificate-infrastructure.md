@@ -154,7 +154,7 @@ You must install and configure at least one certificate registration point in th
 
     -   On the site system server, use the *<ConfigMgr Installation Path\>*\Logs\crpsetup.log file and *<ConfigMgr Installation Path\>*\Logs\crpmsi.log file. A successful installation will return an exit code of 0.  
 
-    -   By using a browser, verify that you can connect to the URL of the certificate registration pointâ€”for example, https://server1.contoso.com/CMCertificateRegistration. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
+    -   By using a browser, verify that you can connect to the URL of the certificate registration pointâ€"for example, https://server1.contoso.com/CMCertificateRegistration. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
 
 11. Locate the exported certificate file for the root CA that the certificate registration point automatically created in the following folder on the primary site server computer: *<ConfigMgr Installation Path\>*\inboxes\certmgr.box. Save this file to a secured location that you can securely access when you later install the Configuration Manager Policy Module on the server that is running the Network Device Enrollment Service.  
 

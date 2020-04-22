@@ -37,7 +37,7 @@ You might have different sets of requirements for each of your use-case and sub-
 
 You may also have organizational groups for the corporate use-case scenario that have different sets of requirements (for example, PIN settings, Wi-Fi or VPN profile, apps deployed). Your requirements may also be determined by the capabilities of the mobile device platform (for example, finger print reader, email profile).
 
-Here are a few examples of an organization’s use-case requirements showing different sets of requirements for each use-case and sub-use-case scenario, organizational group, and mobile device platform. You can also use the following table to enter your organization’s use-case requirements:
+Here are a few examples of an organization's use-case requirements showing different sets of requirements for each use-case and sub-use-case scenario, organizational group, and mobile device platform. You can also use the following table to enter your organization's use-case requirements:
 
 | **Use cases** | **Sub-use cases** | **Groups** | **Device platforms** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -47,7 +47,7 @@ Here are a few examples of an organization’s use-case requirements showing dif
 | BYOD | Information worker | Marketing, Sales | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |                                                         
 | BYOD | Executives | Marketing, Sales | iOS/iPadOS | Secure e-mail, device settings, profiles, apps |
 
-You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization’s use-case and sub-use-case requirements.
+You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization's use-case and sub-use-case requirements.
 
 
 ## Examples of requirements

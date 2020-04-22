@@ -39,7 +39,7 @@ The following example shows how to create a program, in Configuration Manager, b
 
    | Property Name |                                                                                           Property Value                                                                                            |
    |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  CommandLine  | PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application’s XML manifest file. |
+   |  CommandLine  | PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application's XML manifest file. |
    |  ProgramName  |                                                                                        [Virtual application]                                                                                        |
 
 

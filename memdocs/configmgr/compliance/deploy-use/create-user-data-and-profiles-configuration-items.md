@@ -20,11 +20,11 @@ ms.author: aaroncz
 
 User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
 
-- Redirect a user’s Documents folder to a network share.  
+- Redirect a user's Documents folder to a network share.  
 
-- Ensure that specified files stored on the network are available on a user’s computer when the network connection is unavailable.  
+- Ensure that specified files stored on the network are available on a user's computer when the network connection is unavailable.  
 
-- Configure which files in a user’s roaming profile are synchronized with a network share when the user logs on and off.  
+- Configure which files in a user's roaming profile are synchronized with a network share when the user logs on and off.  
 
   Unlike other configuration items in Configuration Manager, you do not add user data and profile configuration items to a configuration baseline which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.  
 
@@ -62,7 +62,7 @@ User data and profiles configuration items in Configuration Manager contain sett
 
    -   **Roaming user profiles:** Check this box if you want to configure settings for roaming user profiles for this configuration item.  
 
-4. On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user’s primary devices. For more information about folder redirection, see your Windows Server documentation.  
+4. On the **Folder Redirection** page of the **Create User Data and Profiles Configuration Item Wizard**, specify how you want the client computers of users that receive this configuration item to manage folder redirection. You can configure settings for any device the user logs onto or for only the user's primary devices. For more information about folder redirection, see your Windows Server documentation.  
 
    > [!NOTE]  
    >  This page only appears if you checked **Folder redirection** on the **General** page of the wizard.  

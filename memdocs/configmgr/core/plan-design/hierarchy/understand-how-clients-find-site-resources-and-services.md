@@ -168,7 +168,7 @@ To publish management points to DNS, the following two conditions must be true:
 
 **When your DNS servers support automatic updates**, you can configure Configuration Manager to automatically publish management points on the intranet to DNS, or you can manually publish these records to DNS. When management points are published to DNS, their intranet FQDN and port number are published in the service location (SRV) record. You configure DNS publishing at a site in the site's Management Point Component Properties. For more information, see  [Site components for Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
-**When your DNS zone is set to “Secure only” for dynamic updates**, only the first management point to publish to DNS can do so successfully with default permissions.
+**When your DNS zone is set to "Secure only" for dynamic updates**, only the first management point to publish to DNS can do so successfully with default permissions.
 
 If only one management point can successfully publish and change its DNS record, and the management point server is healthy, clients can get the full MP list from that management point and then find their preferred management point.
 

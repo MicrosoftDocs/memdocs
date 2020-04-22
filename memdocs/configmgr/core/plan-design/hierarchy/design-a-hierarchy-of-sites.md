@@ -57,7 +57,7 @@ The key driver of the type and count of sites that you use in a hierarchy is usu
 
 ### Standalone primary site
 
-Use a standalone primary site when it can support management of all devices and users. For more information, see [Sizing and scale numbers](../configs/size-and-scale-numbers.md). This topology is also successful when your company’s geographic locations can be served by a single primary site. To help manage network traffic, use multiple management points in boundary groups, and a carefully planned content infrastructure. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md) and [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
+Use a standalone primary site when it can support management of all devices and users. For more information, see [Sizing and scale numbers](../configs/size-and-scale-numbers.md). This topology is also successful when your company's geographic locations can be served by a single primary site. To help manage network traffic, use multiple management points in boundary groups, and a carefully planned content infrastructure. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md) and [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
 
 This topology provides the following benefits:  
 

@@ -58,7 +58,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
-      Example: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Example: ['IntuneMAMUPN', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > In Intune, the App Configuration policy enrollment type must be set to **Managed Devices**.

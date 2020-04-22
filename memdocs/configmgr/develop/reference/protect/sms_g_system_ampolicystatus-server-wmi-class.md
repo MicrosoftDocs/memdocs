@@ -48,7 +48,7 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  Qualifiers: [key]  
 
- Unique identifier for customized policy. For default policy, the value is always ‘AntimalwareEx Agent’.  
+ Unique identifier for customized policy. For default policy, the value is always 'AntimalwareEx Agent'.  
 
  `CollectionName`  
  Data type: `String`  
@@ -125,7 +125,7 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  Qualifiers: none  
 
- Policy priority. 10000 for the default policy as it’s always the lowest priority.  
+ Policy priority. 10000 for the default policy as it's always the lowest priority.  
 
  `ResourceID`  
  Data type: `UInt32`  

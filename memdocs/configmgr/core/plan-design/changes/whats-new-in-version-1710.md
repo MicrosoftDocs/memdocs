@@ -63,7 +63,7 @@ As devices now include hard drives with sizes in the gigabyte (GB), terabyte (TB
 
 ### Co-management for Windows 10 devices    
 <!-- 1350871 -->
-In the previous Windows 10 updates, you can already join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Starting with Configuration Manager version 1710, co-management takes advantage of this improvement and enables you to concurrently manage Windows 10, version 1709 (also known as the Fall Creators Update) devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. For details, see [Co-management for Windows 10 devices](../../../comanage/overview.md).
+In the previous Windows 10 updates, you can already join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Starting with Configuration Manager version 1710, co-management takes advantage of this improvement and enables you to concurrently manage Windows 10, version 1709 (also known as the Fall Creators Update) devices by using both Configuration Manager and Intune. It's a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. For details, see [Co-management for Windows 10 devices](../../../comanage/overview.md).
 
 ### Restart computers from the Configuration Manager console  <!-- 1356283 -->
 Beginning with this release, you can use the Configuration Manager console to identify client devices that require a restart, and then use a client notification action to restart them.
@@ -146,7 +146,7 @@ Hybrid mobile device management (MDM) scenarios will be supported on ARM64 devic
 ### Improved VPN Profile Experience in Configuration Manager Console 
 <!-- 1318232 -->
 
-With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform:
+With this release, we've updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform:
 
 
 - Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
@@ -185,7 +185,7 @@ You can [create and deploy Windows Defender Application Guard policies](../../..
 The following three changes have been made in relation to Device Guard policies:
 
 - Device Guard policies have been renamed to Windows Defender Application Control policies. So, for example, the **Create Device Guard policy wizard** is now named **Create Windows Defender Application Control policy wizard**.
-- Devices using the Fall Creators Update for Windows version 1709 don’t require a restart to apply the Windows Defender Application Control policies. Restarting is still the default, but you can [turn off restarts](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md).
+- Devices using the Fall Creators Update for Windows version 1709 don't require a restart to apply the Windows Defender Application Control policies. Restarting is still the default, but you can [turn off restarts](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md).
 - You can [set devices to automatically run software](../../../protect/deploy-use/use-device-guard-with-configuration-manager.md) trusted by the Intelligent Security Graph.
 
 

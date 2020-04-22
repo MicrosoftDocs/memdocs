@@ -38,7 +38,7 @@ This article introduces the features that are available in the Technical Preview
 ##  <a name="BKMK_SC1601"></a> Improvements to Software Center in version 1602  
 
 ### Refresh PC machine and user policy from Software Center  
- A new option, **Sync Policy** has been added to the **Options** > **Computer Maintenance** page of Software Center that causes the PC to refresh it’s Configuration Manager machine and user policy.  
+ A new option, **Sync Policy** has been added to the **Options** > **Computer Maintenance** page of Software Center that causes the PC to refresh it's Configuration Manager machine and user policy.  
 
 ##  <a name="BKMK_Win10Servicing"></a> Improvements to Windows 10 Servicing  
  In the 1602 Technical Preview we have added the following improvements for Windows 10 Servicing:  

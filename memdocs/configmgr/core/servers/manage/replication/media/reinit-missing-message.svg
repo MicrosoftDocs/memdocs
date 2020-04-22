@@ -52,9 +52,9 @@
 			<text x="5.98" y="497.05" class="st3">Subscriber <tspan x="19.15" dy="1.2em" class="st5">site</tspan></text>		</g>
 		<g id="shape21-10" transform="translate(188.138,-378.5)">
 			<title>Sheet.21</title>
-			<desc>Check if site replication hasn’t finished reinit</desc>
+			<desc>Check if site replication hasn't finished reinit</desc>
 			<rect x="0" y="480.404" width="113.664" height="38.0962" class="st6"/>
-			<text x="2" y="497.05" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st5">hasn</tspan>’t finished reinit</text>		</g>
+			<text x="2" y="497.05" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st5">hasn</tspan>'t finished reinit</text>		</g>
 		<g id="shape22-14" transform="translate(310.803,-464.45)">
 			<title>Dynamic connector.1114</title>
 			<path d="M0 518.5 L0 548.35 L-152.14 548.35 L-152.14 558.31" class="st7"/>
