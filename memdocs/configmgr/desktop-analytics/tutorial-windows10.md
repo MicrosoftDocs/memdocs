@@ -11,8 +11,6 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
-
-
 ---
 
 # Tutorial: Deploy Windows 10 to pilot
@@ -217,8 +215,7 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to **Global Pilot**, and see your Configuration Manager device collections. It may take 2-3 days for the rest of the portal to show complete data. See [Data latency](https://docs.microsoft.commem/configmgr/desktop-analytics/troubleshooting#data-latency)
-
+Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to **Global Pilot**, and see your Configuration Manager device collections. It may take two to three days for the rest of the portal to show complete data. For more information, see [Data latency](troubleshooting.md#data-latency).
 
 ## Create a Desktop Analytics deployment plan
 
