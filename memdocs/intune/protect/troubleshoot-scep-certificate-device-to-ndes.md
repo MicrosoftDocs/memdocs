@@ -165,7 +165,7 @@ Connections that resemble the following example, with a status code of 500, indi
 
 Use the following steps to test the URL that is specified in the SCEP certificate profile.
 
-1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/msecp.dll*.
+1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/mscep.dll*.
 
 2. Open a web browser, and then browse to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
