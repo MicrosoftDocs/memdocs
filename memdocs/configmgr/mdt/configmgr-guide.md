@@ -338,7 +338,7 @@ manager: dougeby
 3. In the **Microsoft Self-Extractor** dialog box, in **Select the folder where you want to unzip the files to**, type **E:\Source$\SQL2008R2SP1CU6**, and then click **OK**.  
 
    > [!NOTE]   
-   >  You can click the ellipse (…) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
+   >  You can click the ellipsis (**...**) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
 
     The extraction process is displayed. When the process is complete, the completion status is displayed.  
 

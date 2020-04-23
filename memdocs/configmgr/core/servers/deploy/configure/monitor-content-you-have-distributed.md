@@ -154,7 +154,7 @@ Displays the sources from which clients got content:
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [Peer Cache](../../../plan-design/hierarchy/client-peer-cache.md)
 - [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (starting in version 1906)<sup>[Note 1](#bkmk_note1)</sup>
-- Microsoft Update: Devices report this source when the Configuration Manager client downloads software updates from Microsoft cloud services. These services include Microsoft Update and Office 365.
+- Microsoft Update: Devices report this source when the Configuration Manager client downloads software updates from Microsoft cloud services. These services include Microsoft Update and Microsoft 365 Apps for enterprise.
 
 ![Client Content Sources tile on the dashboard](media/3555759-do-source.png)
 

@@ -97,7 +97,7 @@ Class SMS_ADSite : SMS_BaseClass
 
  Qualifiers: [key]  
 
- SiteID …   
+ The ID of the site.
 
 ## Requirements  
 
