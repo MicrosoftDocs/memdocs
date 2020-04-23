@@ -71,4 +71,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for EDR](../protect/endpoint-security-policy.md#endpoint-detection-and-response)
+[Endpoint security policy for EDR](../protect/endpoint-security-policy.md#endpoint-detection-and-response-policy)

@@ -177,7 +177,7 @@ Use the procedure to [Configure endpoint security policy]() to create a Disk Enc
 
 - For **Platform** select **macOS**.
 - For **Profile**, select **FileVault**
-- For more information about the BitLocker settings, see [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#BitLocker).
+- For more information about the BitLocker settings, see [settings for BitLocker](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
 
 ### Silently enable BitLocker on devices

@@ -167,4 +167,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for firewalls](../protect/endpoint-security-policy.md#firewall)
+[Endpoint security policy for firewalls](../protect/endpoint-security-policy.md#firewall-policy)
