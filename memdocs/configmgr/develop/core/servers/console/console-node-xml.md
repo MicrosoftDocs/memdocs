@@ -36,12 +36,20 @@ The node XML for the Configuration Manager console is in workspace XML files loc
 |[ActionDescription.imageDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.imagedescription.aspx)|The assembly containing the icon and other image resources used by the node.|  
 |**ActionDescription.viewAssemblyDescription**|The view type of the node.|  
 
-## Node Hierarchy  
- You define cascading nodes in the following manner:  
+## Node hierarchy
 
-```  
-<RootNodeDescription>  <ChildNodes>    <RootNodeDescription>         <ChildNodes>  
-               …               </ChildNodes>    </RootNodeDescription>  </ChildNodes></RootNodeDescription>  
+Define cascading nodes in the following manner:  
+
+```xml
+<RootNodeDescription>
+  <ChildNodes>
+      <RootNodeDescription>
+               <ChildNodes>
+               ...
+               </ChildNodes>
+      </RootNodeDescription>
+  </ChildNodes>
+</RootNodeDescription>  
 ```  
 
 ## See also

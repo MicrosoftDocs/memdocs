@@ -117,7 +117,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
  Qualifiers: [Not_Null]  
 
- FileAccess ….  Possible values are:  
+ Corresponds to the UI option to **Copy by using file system access**.
 
 - Normal (default)  
 
@@ -194,7 +194,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   Qualifiers: [Not_Null, VariableName("_OSDMigrateUseHardlinks")]  
 
-  `true` to ….  The default value is `false`.  
+  `true` to configure USMT to use hardlinks. The default value is `false`.  
 
   `UsmtPackageID`  
   Data type: `String`  

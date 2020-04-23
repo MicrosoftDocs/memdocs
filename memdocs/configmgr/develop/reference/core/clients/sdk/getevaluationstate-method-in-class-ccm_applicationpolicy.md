@@ -9,11 +9,11 @@ ms.assetid: abe568e3-3859-44a1-a97b-e9127055480b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # GetEvaluationState Method in Class CCM_ApplicationPolicy
-The `GetEvaluationState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that …   
+
+The `GetEvaluationState` Windows Management Instrumentation (WMI) class method in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

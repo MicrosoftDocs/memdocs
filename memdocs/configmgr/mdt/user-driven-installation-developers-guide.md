@@ -261,7 +261,7 @@ Figure 2. Folder structure for UDI development
 12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
 
     > [!TIP]
-    >  You can click the ellipse (…) button to browse to the folder and select UDIDesigner.exe.  
+    >  You can click the ellipsis (**...**) button to browse to the folder and select UDIDesigner.exe.  
 
 13. From the **File** menu, click **Save All**.  
 
@@ -2704,7 +2704,7 @@ __interface ISettingsProperties : IUnknown
  This method retrieves a list of **DataItem** elements under the current node. From the page level, call **GetDataNode** to retrieve an **ISettingsProperty** interface for the data. Then, on that instance, call **GetDataNodes** to retrieve the list of records. For example, given this XML:  
 
 ```xml
-    <Page …>  
+    <Page ...>  
       <Data Name="Network">  
         <DataItem>  
           <Setter Property="DisplayName">Public</Setter>  
@@ -3612,7 +3612,7 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
         Width="450"  
         HeaderText="Title text"  
         SetterData="{Binding KeyLocationSetter}"   
-        InstructionText="What this means…"  
+        InstructionText="What this means..."  
         HorizontalAlignment="Left">  
 
     <TextBox  

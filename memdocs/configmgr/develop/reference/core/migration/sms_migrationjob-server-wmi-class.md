@@ -93,11 +93,11 @@ Class SMS_MigrationJob : SMS_BaseClass
 <DPUpgrade>  
   <SourceSiteCode>CEN</SourceSiteCode>  
   <SiteCode>CAS</SiteCode>  
-  <NALPath>…</NALPath>  
-  …  
+  <NALPath>...</NALPath>  
+  ...  
   <SiteSystem>  
-    <NALPath>…</NALPath>  
-    …  
+    <NALPath>...</NALPath>  
+    ...  
     <EmbeddedProperties>  
       <EmbeddedProperty>  
         <PropertyName>IsProtected</PropertyName>  
@@ -105,11 +105,11 @@ Class SMS_MigrationJob : SMS_BaseClass
         <Value1 />  
         <Value2 />  
       </EmbeddedProperty>  
-      …  
+      ...  
     </EmbeddedProperties>  
   </SiteSystem>  
   <DistributionPoint>  
-  …  
+  ...  
   </DistributionPoint>  
 </DPUpgrade>  
 ```  

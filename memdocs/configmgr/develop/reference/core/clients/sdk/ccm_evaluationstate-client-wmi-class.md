@@ -9,11 +9,11 @@ ms.assetid: cee8005f-1db4-4978-ae16-51901fd0ff1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # CCM_EvaluationState Client WMI Class
-The `CCM_EvaluationState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
+
+The `CCM_EvaluationState` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

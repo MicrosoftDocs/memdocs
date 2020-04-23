@@ -38,7 +38,7 @@ Use client settings to enable clients to be peer cache sources. You don't need t
 
 A peer cache source must be a member of the current boundary group of the peer cache client. The management point doesn't include peer cache sources from a neighbor boundary group in the list of content sources it provides the client. It only includes distribution points from a neighbor boundary group. For more information about current and neighbor boundary groups, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md).<!--SCCMDocs issue 685-->  
 
-The Configuration Manager client uses peer cache to serve to other clients every type of content in the cache. This content includes Office 365 files and express installation files.<!--SMS.500850-->  
+The Configuration Manager client uses peer cache to serve to other clients every type of content in the cache. This content includes Microsoft 365 Apps for enterprise files and express installation files.<!--SMS.500850-->  
 
 Peer cache doesn't replace the use of other solutions like Windows BranchCache or Delivery Optimization. Peer cache works along with other solutions. These technologies give you more options for extending traditional content deployment solutions such as distribution points. Peer cache is a custom solution with no reliance on BranchCache. If you don't enable or use BranchCache, peer cache still works.  
 

@@ -961,9 +961,9 @@ Subsection=Server-%IsServer%
 
    ```ini  
    [Settings]  
-   …  
+   ...
    Priority=MacAddress, DefaultGateway, DynamicPackages, Default  
-   …  
+   ...
    ```  
 
 5. Create a `[DynamicPackages]` section to specify the name of a database section.  
@@ -1895,7 +1895,7 @@ IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating s
 
 7. Click **Next**.  
 
-8. On the **Distribution Agent Security** page, click **…** to open the **Distribution Agent Security** dialog box.  
+8. On the **Distribution Agent Security** page, click **...** to open the **Distribution Agent Security** dialog box.  
 
 9. Type the details of the account to use for the distribution agent, and then click **Next**.  
 
@@ -2571,7 +2571,7 @@ Function Main()
 
   iRetVal = SUCCESS  
 
-  oLogging.CreateEntry "Begin example script…", _  
+  oLogging.CreateEntry "Begin example script...", _  
     LogTypeInfo  
 
   ' %ServerA% is a generic variable available within  
