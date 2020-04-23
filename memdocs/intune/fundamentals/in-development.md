@@ -215,6 +215,18 @@ Support will soon include the following partners:
 
 To enable a device compliance partner you’ll use a new node in the Microsoft Endpoint Manager admin center: **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** where you’ll select **Add Compliance Partner**.
 
+### Duplicate your policies in Endpoint Security<!-- 589255   -->
+You’ll be able to select a policy you’ve created in the Endpoint security node of the Microsoft Endpoint Manager admin center, and then duplicate it to create a copy.  The policies you’ll be able to duplicate include those you create for:
+
+- Antivirus
+- Disk encryption
+- Firewall
+- Endpoint detection and response
+- Attack surface reduction
+- Account protection
+
+Duplication will make a copy of the original policy, which you can then rename and edit. The copy will not include assignments from the original.
+
 <!-- ***********************************************-->
 ## Notices
 
