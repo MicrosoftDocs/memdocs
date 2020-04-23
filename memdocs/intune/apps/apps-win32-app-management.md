@@ -354,7 +354,7 @@ Additionally, the Company Portal app shows additional app installation status me
 You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 
 
 > [!IMPORTANT]
-> The **estart grace period** setting in the **Assignment** section is only available when the **Device restart behavior** of the **Program** section is set to either of the following options:
+> The **Restart grace period** setting in the **Assignment** section is only available when the **Device restart behavior** of the **Program** section is set to either of the following options:
 > - **Determine behavior based on return codes**
 > - **Intune will force a mandatory device restart**
 
