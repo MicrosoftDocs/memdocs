@@ -13,7 +13,7 @@ manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
-# <a name="bkmk_uea"></a> Endpoint analytics private preview
+# <a name="bkmk_uea"></a> Endpoint analytics preview
 
 > [!Note]  
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
@@ -189,8 +189,8 @@ If you click through to a particular device, you can see its boot and sign-in hi
 ### Reporting tabs
 
 The **Startup performance** page has reporting tabs that provide support for the insights, including:
-1. **Model performance**. This tab let's you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
-1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (e.g., GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see it's boot and sign-in history, which can help you identify if there was a recent regression
+1. **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
+1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
 1. **Startup processes**. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered.
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
@@ -363,7 +363,7 @@ This table shows the script names, descriptions, detections, remediations, and c
 |Script name|Description|
 |---|---|
 |**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Microsoft 365 Apps for enterprise won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
@@ -739,8 +739,8 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
   - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 - Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
-  - **id:** Unique device ID used by Windows Update
-  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **ID:** Unique device ID used by Windows Update
+  - **localId:** A locally defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   
