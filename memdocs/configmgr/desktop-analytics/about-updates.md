@@ -43,8 +43,15 @@ Devices are running a security update older than Latest-1.
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.  
 
-If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
+Too see the adoption trends for security updates, select **View More** for a specific version of Windows. Devices in the stacked area chart are categorized by the security update they have installed over time. Select **See all** to review the deployment status for security updates. This view lists devices in the following categories:
 
+- Not started
+- In progress
+- Completed
+- Needs attention - Devices (sorted by device name)
+- Needs attention - Issues (sorted by issue type)
+
+Select **View recent data** to show devices that have new information that is still being processed. This information will be reflected in the next full Desktop Analytics data refresh.
 
 ## Feature updates
 
@@ -74,8 +81,7 @@ Devices are running a feature update that's past the end of service date. These 
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.
 
-If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
-
+Select the tile to see the adoption trends for feature updates, Devices in the stacked area chart are categorized by the feature update they have installed over time. 
 
 ## Next steps
 
