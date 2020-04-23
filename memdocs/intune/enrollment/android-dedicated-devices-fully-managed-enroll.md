@@ -38,9 +38,8 @@ After you've set up your [Android Enterprise dedicated devices](android-kiosk-en
 | Near Field Communication | 6.0 |
 | Token entry | 6.0 |
 | QR code | 7.0 |
-| Zero Touch  | 8.0\* |
-
-\* On participating manufacturers.
+| Zero Touch  | 8.0<br><br> On participating manufacturers. |
+| [Knox Mobile Enrollment](https://docs.microsoft.com/en-us/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> On Samsung Knox 2.8 or higher devices only. |
 
 ## Enroll by using Near Field Communication (NFC)
 
