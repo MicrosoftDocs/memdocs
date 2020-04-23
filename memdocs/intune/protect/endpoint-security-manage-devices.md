@@ -44,6 +44,8 @@ The initial *All devices* view displays your devices and includes key informatio
 
 ![All device view in the admin center](./media/endpoint-security-manage-devices/all-device-view.png)
 
+## Device details
+
 When viewing devices in the Microsoft Endpoint Manager admin center, consider how the device is managed. The management source affects the information that’s presented in the admin center and which actions are available to manage the device from the admin center.
 
 Consider the following fields:
@@ -77,7 +79,7 @@ Consider the following fields:
 
 - **Last check-in**: If a device hasn’t checked in for some time, its details, including its Compliance status, can be out of date.
 
-### Remote actions for devices
+## Remote actions for devices
 
 Remote actions are actions you can start or apply to a device from the Microsoft Endpoint Manager admin center. When you view details for a device, you can access remote actions that apply to the device.
 
