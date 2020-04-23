@@ -55,7 +55,7 @@ Supported platforms and profiles:
     - **Personal recovery key rotation**  
       Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
     - **Escrow location description of personal recovery key**  
-      Specify a short message to the user that explains how they can retrieve their personal recovery key. This text is inserted into the message the user sees on their log in screen when prompted to enter their personal recovery key if a password is forgotten.
+      Specify a short message to the user that explains how they can retrieve their personal recovery key. The user sees this message on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
 
   - **Number of times allowed to bypass**  
     Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
@@ -81,7 +81,7 @@ Supported platforms and profiles:
 
   If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
   
-  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption, however on Azure AD Join and Microsoft Account (MSA) registration/login automatic encryption may apply enabling BitLocker at XTS-AES 128-bit encryption.
+  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Azure AD Join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
 
   - **Not configured** (*default*) - No BitLocker enforcement takes place.
   - **Yes** - Enforce use of BitLocker.
@@ -133,7 +133,7 @@ Supported platforms and profiles:
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
 
-    - **Not configured** (*default*) - The default recovery options are supported including DRA. The end user can specify recovery options and recovery information isn't backed up to Azure Active Directory.
+    - **Not configured** (*default*) - The default recovery options are supported including the data recovery agent (DRA). The end user can specify recovery options and recovery information isn't backed up to Azure Active Directory.
     - **Configure** – Enable access to configure various drive recovery techniques.
 
     When set to *Configure* the following settings are available:
@@ -200,7 +200,7 @@ Supported platforms and profiles:
     CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
 
     - **Not configured** (*default*)
-    - **Yes** - Configure the additional authentication requirements at system startup, including utilizing the use of Trusted Platform Module (TPM) or startup PIN requirements.
+    - **Yes** - Configure the additional authentication requirements at system startup, including the use of Trusted Platform Module (TPM) or startup PIN requirements.
 
     When set to *Yes* you can configure the following settings:
 
@@ -209,7 +209,7 @@ Supported platforms and profiles:
 
       It's recommended to require a TPM for BitLocker. This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
-      - **Blocked** (*default*) - BitLocker doesn’t utilize the TPM.
+      - **Blocked** (*default*) - BitLocker doesn’t use the TPM.
       - **Required** - BitLocker enables only if a TPM is present and usable.
       - **Allowed** - BitLocker uses the TPM if it's present.
 
@@ -220,7 +220,7 @@ Supported platforms and profiles:
       - **Required** - Require a PIN and TPM be present to enable BitLocker.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup PIN to be configured by the user.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) cannot be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
 
     - **Compatible TPM startup key**  
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
@@ -229,7 +229,7 @@ Supported platforms and profiles:
       - **Required** - Require a startup key and TPM be present to enable BitLocker.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup key (such as a USB drive) be present to unlock the drives.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) cannot be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
 
     - **Compatible TPM startup key and PIN**  
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
@@ -238,7 +238,7 @@ Supported platforms and profiles:
       - **Required** - Require BitLocker have a startup key and PIN present to become enabled.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup key) and PIN combination.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) cannot be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
 
     - **Disable BitLocker on devices where TPM is incompatible**  
     CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
@@ -307,7 +307,7 @@ Supported platforms and profiles:
 
       Specify the minimum startup PIN length when TPM + PIN is required during BitLocker enablement. The PIN length must be between 4 and 20 digits.
 
-      If you do not configure this setting, users can configure a startup PIN of any length (between 4 and 20 digits)
+      If you don't configure this setting, users can configure a startup PIN of any length (between 4 and 20 digits)
 
       This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
@@ -347,7 +347,7 @@ Supported platforms and profiles:
     CSP: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)
 
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.
-    - **Yes** - Windows doesn’t allow data to be written to removable drives that are not BitLocker protected. If an inserted removable drive is not encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
+    - **Yes** - Windows doesn’t allow data to be written to removable drives that aren't BitLocker protected. If an inserted removable drive isn't encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
 
     - **Block write access to removable data-drives not protected by BitLocker**  
       CSP: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)

@@ -52,7 +52,7 @@ Consider the following fields:
 
   - **MDM**  - These devices are managed by Intune. Compliance data is collected and reported by Intune to the admin center.
 
-  - **ConfigMgr** – These devices appear when you use *tenant attach* to add your devices that are managed by Configuration Manager to the Microsoft Endpoint Manager admin center. Devices that are added from Configuration Manager include the devices that are identified by Configuration Manager as **Client** = **Yes** and include:
+  - **ConfigMgr** – These devices appear when you use *tenant attach* to add your devices that are managed by Configuration Manager to the Microsoft Endpoint Manager admin center. Devices that are added from Configuration Manager include the devices that Configuration Manager identifies as **Client** = **Yes** and include:
 
     - Workgroup (AAD joined and otherwise)
     - Domain Joined

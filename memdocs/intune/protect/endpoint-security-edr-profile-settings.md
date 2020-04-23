@@ -2,7 +2,7 @@
 # required metadata
 
 title: Intune endpoint security Endpoint detection and response settings | Microsoft Docs
-description: Endpoint security Endpoint detection and response policy settings for Windows and macOS in Microsoft Intune 
+description: Endpoint security Endpoint detection and response policy settings in Microsoft Intune 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -51,12 +51,12 @@ Supported platforms and profiles:
   When set to *Onboarding blob*, you can configure the following settings:
 
   - **Advanced threat protection onboarding blob**  
-    Click **Select onboarding file** to open the *Select onboarding File* pane, where you specify a *.onbaording* file.
+    Click **Select onboarding file** to open the *Select onboarding File* pane, where you specify a `.onboarding` file.
 
   When set to *Offboarding blob*, you can configure the following settings:
   
   - **Advanced threat protection offboarding blob**  
-     Click **Select offboarding file** to open the *Select offboarding File* pane, where you specify a *.offbaording* file.
+     Click **Select offboarding file** to open the *Select offboarding File* pane, where you specify a `.offboarding` file.
 
 - **Sample sharing for all files**  
 
@@ -67,7 +67,7 @@ Supported platforms and profiles:
 - **Expedite telemetry reporting frequency**
 
   - **Not configured**   (*default*)
-  - **Yes** - Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
+  - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
 
 ## Next steps
 

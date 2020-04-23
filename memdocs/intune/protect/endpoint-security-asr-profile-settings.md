@@ -2,7 +2,7 @@
 # required metadata
 
 title: Intune endpoint security Attack surface reduction settings | Microsoft Docs
-description: Endpoint security Attack surface reduction policy settings for Windows and macOS in Microsoft Intune 
+description: Endpoint security Attack surface reduction policy settings in Microsoft Intune 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -133,7 +133,7 @@ Supported platforms and profiles:
     Expand the dropdown, select **Add**, and then specify *Proxy servers*.
 
   - **Internal proxy servers**  
-    Expand the dropdown, select **Add**, and then specify *Intenral proxy servers*.
+    Expand the dropdown, select **Add**, and then specify *Internal proxy servers*.
 
   - **Neutral resources**  
     Expand the dropdown, select **Add**, and then specify *Neutral resources*.
@@ -184,15 +184,15 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Enforce Components and Store Apps**
   - **Audit Components and Store Apps**
-  - **Enforce Components, Store Aps, and Smartlocker**
-  - **Audit Components, Store Aps, and SMartlocker**
+  - **Enforce Components, Store Apps, and Smartlocker**
+  - **Audit Components, Store Apps, and SMartlocker**
 
 - **Block users from ignoring SmartScreen warnings**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
   - **Not configured** (*default*) - Returns the setting to the Windows default, which allows the user override.
-  - **Yes** - - SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it.
+  - **Yes** - - SmartScreen won't present an option for the user to disregard the warning and run the app. The warning is presented, but the user won't able to bypass it.
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -208,7 +208,7 @@ Supported platforms and profiles:
   <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
 
-  This ASR rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **User defined**
   - **Enable** - Attempts to steal credentials via lsass.exe are blocked.
@@ -323,7 +323,7 @@ Supported platforms and profiles:
 - **Enable folder protection**  
   CSP: [EnableControlledFolderAccess](https://go.microsoft.com/fwlink/?linkid=872614)
 
-  - **Not configured** (*default*) - This setting returns to it's default which is no read or writes are blocked.
+  - **Not configured** (*default*) - This setting returns to its default, which is no read or writes are blocked.
   - **Enable** - For untrusted apps, Defender blocks attempts to modify or delete files in protected folders, or write to disk sectors. Defender automatically determines which applications can be trusted. Alternatively, you can define your own list of trusted applications.
   - **Audit mode** - Windows events are raised when untrusted applications access controlled folders, but no blocks are enforced.
   - **Block disk modification** - Only attempts to write to disk sectors are blocked.
@@ -332,7 +332,7 @@ Supported platforms and profiles:
 - **Exclude files and paths from attack surface reduction rules**  
   CSP: [AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)
 
-  Expand the dropdown and then select **Add** to define a **Path** to a file or folder to exclude from your attck surface reduction rules.
+  Expand the dropdown and then select **Add** to define a **Path** to a file or folder to exclude from your attack surface reduction rules.
 
 ## Device control profile
 
@@ -349,14 +349,14 @@ Supported platforms and profiles:
 
   When set to *Block hardware device installation* you can configure the following settings:
 
-- **Remove matching hardware devices**
+  - **Remove matching hardware devices**
 
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
     - **Yes**
     - **Not configured**
 
   - **Hardware device identifiers that are blocked**  
-    
+
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
 
     Select **Add**, and then specify the hardware device identifier you want to block.
@@ -390,63 +390,24 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to client default, which scans removable drives, however the user can disable this scan.
   - **Yes** - During a full scan, removable drives (like USB flash drives) are scanned.
   
-## Exploit protection
+## Exploit protection profile
 
-- ****  
-  CSP: []()
+### Exploit protection
 
+- **Upload XML**  
+  CSP: [ExploitProtectionSettings](https://go.microsoft.com/fwlink/?linkid=2067035)
+
+  Enables the IT admin to push out a configuration representing the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML file. Exploit protection can help protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.
+
+  Choose **Select XML File**, specify the XML filet upload, and then click **Select**.
   - **Not configured** (*default*)
   - **Yes**
 
-- ****  
-  CSP: []()
+- **Block users from editing the Exploit Guard protection interface**  
+  CSP: [DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
 
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-- ****  
-  CSP: []()
-
-  - **Not configured** (*default*)
-  - **Yes**
-
-
+  - **Not configured** (*default*) - Local users can make changes in the exploit protection settings area.
+  - **Yes** - Prevent users from making changes to the exploit protection settings area in the Microsoft Defender Security Center.
 
 ## Next steps
 
