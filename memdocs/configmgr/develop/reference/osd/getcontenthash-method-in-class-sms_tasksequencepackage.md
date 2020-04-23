@@ -40,7 +40,7 @@ SInt32 GetContentHash(
 
  Qualifiers: [in]  
 
- HashAlgID ….  
+ The ID of the cryptographic algorithm used to hash the content.
 
  `Hash`  
  Data type: `String`  

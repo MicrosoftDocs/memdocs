@@ -88,17 +88,14 @@ Saving application, Title: [app], Scope: [ScopeId_D5230FF0-B439-44D9-906E-00A330
 Successfully saved application.  
 ```  
 
-## Example  
- The following example method shows …  
+## Example
+
+The following example method creates an application with the script deployment type and persists into the Configuration Manager database.
+
+> [!NOTE]
+> This code is a sample. It doesn't contain error handling for all cases, nor demonstrate relationships such as dependencies and supersedence. It also doesn't demonstrate creating requirement rules for a deployment type.
 
 ```c#  
-// Sample program for creating an Application with the Script Deployment Type and persisting into the   
-// Configuration Manager database.  
-//   
-// This is example code and does not contain error handling for all cases, nor demonstrate relationships  
-// such as dependencies and supersedence, and also does not demonstrate creating requirement rules for a   
-// Deployment Type.  
-
 namespace ApplicationCreator  
 {  
     using System;  

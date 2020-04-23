@@ -9,11 +9,11 @@ ms.assetid: 80356bbf-d4d3-420f-b1ec-305e25257ae2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_G_SYSTEM_AmPolicyStatus Server WMI Class
-The `SMS_G_SYSTEM_AmPolicyStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
+
+The `SMS_G_SYSTEM_AmPolicyStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
