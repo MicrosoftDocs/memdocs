@@ -4715,7 +4715,7 @@ cscript.exe LiteTouch.vbs /debug:true
 
 |**Value**|**Description**|  
 |-|-|
-|*property1, property2, …*|Properties to define the sort order for the result set \(where *propertyn* represents the properties in the sort criteria\)|  
+|*property1, property2, ...*|Properties to define the sort order for the result set \(where *propertyn* represents the properties in the sort criteria\)|  
 
 |**Example**|  
 |-|  
@@ -7232,7 +7232,7 @@ PackageGroup001=TopFolder\SecondFolder
 
 |     **Value**     |                                                                                                                                                                **Description**                                                                                                                                                                |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *user1, user2, …* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
+| *user1, user2, ...* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br /><br /> Note:<br /><br /> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
 
 |**Example**|  
 |-|  
