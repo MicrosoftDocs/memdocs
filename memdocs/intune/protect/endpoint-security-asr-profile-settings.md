@@ -87,7 +87,6 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Within the Application Guard virtual browsing session, use a virtual graphics processing unit to load graphics-intensive websites faster.
 
-
   - **Allow users to download files onto the host**  
     CSP: [SaveFilesToHost](https://go.microsoft.com/fwlink/?linkid=872421)
 
@@ -99,12 +98,10 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Allow printing print to local printers.
 
-
 - **Application guard allow print to network printers**  
 
   - **Not configured** (*default*)
   - **Yes** - Allow printing print to network printers.
- 
 
 - **Application guard allow print to PDF**  
 
@@ -131,7 +128,7 @@ Supported platforms and profiles:
 
   - **Network domains**  
    Expand the dropdown, select **Add**, and then specify *Network domains*.
- 
+
   - **Proxy servers**  
     Expand the dropdown, select **Add**, and then specify *Proxy servers*.
 
@@ -165,7 +162,7 @@ Supported platforms and profiles:
   CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
   - **Yes** - Use SmartScreen to protect users from potential phishing scams and malicious software.
-  - **Not configured** (*default*) 
+  - **Not configured** (*default*)
 
 - **Block malicious site access**  
   CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
@@ -179,34 +176,276 @@ Supported platforms and profiles:
   - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
   - **Not configured** (*default*)
 
-## Application control 
+## Application control profile
 
-  CSP: []()
+### Microsoft Defender Application Control
 
+- **App locker application control**  
   - **Not configured** (*default*)
-  - **Yes**
+  - **Enforce Components and Store Apps**
+  - **Audit Components and Store Apps**
+  - **Enforce Components, Store Aps, and Smartlocker**
+  - **Audit Components, Store Aps, and SMartlocker**
 
-## Attack surface reduction rules
+- **Block users from ignoring SmartScreen warnings**  
+  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  CSP: []()
+  This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
+  - **Not configured** (*default*) - Returns the setting to the Windows default, which allows the user override.
+  - **Yes** - - SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it.
 
-  - **Not configured** (*default*)
-  - **Yes**
+- **Turn on Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
 
-## Device control
+  - **Not configured** (*default*) - Return the setting to Windows default, which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
+  - **Yes** - Enforce the use of SmartScreen for all users.
 
-  CSP: []()
+## Attack surface reduction rules profile
 
-  - **Not configured** (*default*)
-  - **Yes**
+### Attack Surface Reduction Rules
 
+- **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
+  <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  This ASR rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **User defined**
+  - **Enable** - Attempts to steal credentials via lsass.exe are blocked.
+  - **Audit mode** - Users aren't blocked from dangerous domains and Windows events are raised instead.
+
+- **Block Adobe Reader from creating child processes**  
+  [Reduce attack surfaces with attack surface reduction rules](https://go.microsoft.com/fwlink/?linkid=853979)
+  
+  This ASR rule is controlled via the following GUID: 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
+  - **Not configured** (*default*) - The Windows default is restored, is to not block creation of child processes.
+  - **User defined**
+  - **Enable** - Adobe Reader is blocked from creating child processes.
+  - **Audit mode** - Windows events are raised instead of blocking child processes.
+
+- **Block Office applications from injecting code into other processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Office applications are blocked from injecting code into other processes.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Office applications from creating executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  This ASR rule is controlled via the following GUID: 3B576869-A4EC-4529-8536-B80A7769E899
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Office applications are blocked from creating executable content.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block all Office applications from creating child processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  This ASR rule is controlled via the following GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Office applications are blocked from creating child processes.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Win32 API calls from Office macro**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  This ASR rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block**  - Office macro's are blocked from using Win32 API calls.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block Office communication apps from creating child processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
+  - **Not configured** (*default*) - The Windows default is restored, which is to not block creation of child processes.
+  - **User defined**
+  - **Enable** - Office communication applications are blocked from creating child processes.
+  - **Audit mode** - Windows events are raised instead of blocking child processes.
+
+- **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Defender blocks execution of obfuscated scripts.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872979)
+
+   This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block process creations originating from PSExec and WMI commands**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874500)
+
+  This ASR rule is controlled via the following GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Process creation by PSExec or WMI commands is blocked.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block untrusted and unsigned processes that run from USB**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874502)
+
+  This ASR rule is controlled via the following GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Untrusted and unsigned processes that run from a USB drive are blocked.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block executable files from running unless they meet a prevalence, age, or trusted list criteria**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874503)
+
+  This ASR rule is controlled via the following GUID: 01443614-cd74-433a-b99e-2ecdc07bfc25e
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block**
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Block executable content download from email and webmail clients**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **Block** - Executable content downloaded from email and webmail clients is blocked.
+  - **Audit mode** - Windows events are raised instead of blocking.
+
+- **Use advanced protection against ransomware**  
+   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874504)
+
+  This ASR rule is controlled via the following GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
+  - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
+  - **User defined**
+  - **Enable**
+  - **Audit mode** - - Windows events are raised instead of blocking.
+
+- **Enable folder protection**  
+  CSP: [EnableControlledFolderAccess](https://go.microsoft.com/fwlink/?linkid=872614)
+
+  - **Not configured** (*default*) - This setting returns to it's default which is no read or writes are blocked.
+  - **Enable** - For untrusted apps, Defender blocks attempts to modify or delete files in protected folders, or write to disk sectors. Defender automatically determines which applications can be trusted. Alternatively, you can define your own list of trusted applications.
+  - **Audit mode** - Windows events are raised when untrusted applications access controlled folders, but no blocks are enforced.
+  - **Block disk modification** - Only attempts to write to disk sectors are blocked.
+  - **Audit disk modification** - Windows events are raised instead of blocking attempts to write to disk sectors.
+  
+- **Exclude files and paths from attack surface reduction rules**  
+  CSP: [AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)
+
+  Expand the dropdown and then select **Add** to define a **Path** to a file or folder to exclude from your attck surface reduction rules.
+
+## Device control profile
+
+### Device Control
+
+- **Hardware device installation by device identifiers**  
+  [PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  This setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device.  If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+
+  - **Not configured**
+  - **Allow hardware device installation** - Devices can be installed and updated as allowed or prevented by other policy settings.
+  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose hardware ID or compatible ID appears in a list you define.
+
+  When set to *Block hardware device installation* you can configure the following settings:
+
+- **Remove matching hardware devices**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+    - **Yes**
+    - **Not configured**
+
+  - **Hardware device identifiers that are blocked**  
+    
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+
+    Select **Add**, and then specify the hardware device identifier you want to block.
+
+- **Hardware device installation by setup classes**  
+  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
+
+  - **Not configured**
+  - **Allow hardware device installation** - Windows can install and update devices as allowed or prevented by other policy settings.
+  - **Block hardware device installation** (*default*) - Windows is prevented from installing a device whose setup class GUIDs appear in a list you define.
+
+  When set to *Block hardware device installation* you can configure *Remove matching hardware devices* and *Hardware device identifiers that are blocked*.
+
+  - **Remove matching hardware devices**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+    - **Yes**
+    - **Not configured**
+
+  - **Hardware device identifiers that are blocked**
+
+    This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
+
+    Select **Add**, and then specify the hardware device identifier you want to block.
+
+- **Scan removable drives during full scan**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  - **Not configured** (*default*) - The setting returns to client default, which scans removable drives, however the user can disable this scan.
+  - **Yes** - During a full scan, removable drives (like USB flash drives) are scanned.
+  
 ## Exploit protection
 
-
+- ****  
   CSP: []()
 
   - **Not configured** (*default*)
   - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
+- ****  
+  CSP: []()
+
+  - **Not configured** (*default*)
+  - **Yes**
+
 
 
 ## Next steps
