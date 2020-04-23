@@ -64,14 +64,14 @@ class CCM_CTM_JobStateEx4
 
  Qualifiers: [in]  
 
- Provider specific data for the current provider.  
+ Provider-specific data for the current provider.  
 
  `CurrentProviderSettingsFromRequest`  
  Data type: String  
 
  Qualifiers: [in]  
 
- CurrentProviderSettingsFromRequest …  
+ Provider-specific settings for the current provider.
 
 ## Return Values  
  None.  

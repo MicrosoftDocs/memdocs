@@ -31,7 +31,7 @@ sint32 RemoveType(
 
  Qualifiers: `[in]`  
 
- TypeId ….   
+The type ID.
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

@@ -137,7 +137,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- ….  
+ Value that indicates whether the client always behaves like an internet-based client.
 
  `Client`  
  Data type: `UInt32`  
@@ -220,7 +220,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- EASDeviceID ….   
+ The Exchange Active Sync device ID for mobile device management.
 
  `HardwareID`  
  Data type: `String`  
@@ -238,7 +238,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- ….   
+ Shows whether the device is enabled as an internet device.
 
  `IPAddresses`  
  Data type: `String` Array  
@@ -265,7 +265,7 @@ Class SMS_R_System : SMS_Resource
 
  Qualifiers: None  
 
- List of the IPv6 addresses of the resource. ….  
+ List of the IPv6 addresses of the resource.
 
  `IPv6Prefixes`  
  Data type: `String` Array  

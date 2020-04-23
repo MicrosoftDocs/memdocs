@@ -167,7 +167,7 @@ Class SMS_CIToContent : SMS_BaseClass
 
  Qualifiers: [read]  
 
- SecuredModelName description ….  
+ The name of the secured model.
 
 ## Remarks  
  Class qualifiers for this class include:  
