@@ -2,7 +2,7 @@
 title: Updates in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about security and feature updates in Desktop Analytics.
-ms.date: 08/21/2019
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Updates in Desktop Analytics
@@ -43,8 +41,17 @@ Devices are running a security update older than Latest-1.
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.  
 
-If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
+To see the adoption trends for security updates, select **View More** for a specific version of Windows. The stacked area chart categorizes devices by the security update they've installed over time.
 
+To review the deployment status for security updates, select **See all**. This view lists devices in the following categories:
+
+- Not started
+- In progress
+- Completed
+- Needs attention - Devices (sorted by device name)
+- Needs attention - Issues (sorted by issue type)
+
+To show devices with new information that the service is still processing, select **View recent data**. Desktop Analytics will show this information after its next full data refresh.
 
 ## Feature updates
 
@@ -74,8 +81,7 @@ Devices are running a feature update that's past the end of service date. These 
 
 Desktop Analytics hasn't assessed the device. This state includes devices running Windows 7, Windows 8.1, or Windows 10 devices registered for the Windows Insider Program.
 
-If a Windows 10 device is *not authenticated* with a Microsoft account, Windows doesn't report this data. This authentication is typically completed as part of the Windows Setup out-of-box-experience (OOBE).<!-- 5148153 -->
-
+Select the tile to see the adoption trends for feature updates. The stacked area chart categorizes devices by the feature update they've installed over time.
 
 ## Next steps
 
