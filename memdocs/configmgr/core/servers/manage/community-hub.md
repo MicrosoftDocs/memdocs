@@ -26,13 +26,6 @@ Community hub supports the following objects:
 - Applications
 - Configuration items  
 
-The hub allows sharing these objects, but doesn't share any package source content associated with the objects. For example, boot images, OS upgrade packages, or driver packages referenced by a task sequence aren't shared.
-
-The hub currently doesn't support object dependencies. For example, if you share app A that is dependent upon app B, it only shares app A with the community. Similarly, if a task sequence includes the Install Application step, the referenced apps aren't shared.
-
-Passwords or other secrets are removed from a task sequence before sharing.
-
-
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the hub needs the following items:
