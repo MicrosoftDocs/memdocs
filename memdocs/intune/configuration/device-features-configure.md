@@ -42,9 +42,6 @@ Intune uses "configuration profiles" to create and customize these settings for 
 
 This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Airprint
 
 Airprint is an Apple feature that allows devices to print to files over a wireless network. In Intune, you can add AirPrint information to devices.

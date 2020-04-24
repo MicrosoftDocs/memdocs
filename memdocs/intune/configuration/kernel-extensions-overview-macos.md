@@ -72,9 +72,6 @@ This article shows you how to create a device configuration profile using kernel
 > - [Notarizing your app before distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (opens Apple's web site) 
 > - [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site)
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
