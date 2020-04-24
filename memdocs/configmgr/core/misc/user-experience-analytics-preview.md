@@ -75,7 +75,7 @@ Proactive remediations also require one of the following licenses for the manage
 
 The following permissions are used for Endpoint analytics:
 - **Read** under the **Device configurations** category.
-- **Read** under the **Organization** category. <!--temporary for pp->
+- **Read** under the **Organization** category. <!--temporary for pp-->
 - Permissions appropriate to the user's role under the **Endpoint Analytics** category.
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
