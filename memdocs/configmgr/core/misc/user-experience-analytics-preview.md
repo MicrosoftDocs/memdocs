@@ -57,8 +57,7 @@ This current preview requires:
 
 - For [**Proactive remediation scripting**](#bkmk_uea_prs), devices must meet one of the following conditions:
    - A Windows 10 Enterprise device that is managed by Intune
-   - A [co-managed](../../comanage/overview.md) Windows 10 Enterprise version 1903 or higher device with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
-
+   - A [co-managed](../../comanage/overview.md) Windows 10 Enterprise, version 1903 or later device with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
 
 
 We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
