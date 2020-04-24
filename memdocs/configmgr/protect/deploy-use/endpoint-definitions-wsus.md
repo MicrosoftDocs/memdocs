@@ -1,7 +1,7 @@
 ---
-title: "Endpoint Protection malware definitions from WSUS"
-titleSuffix: "Configuration Manager"
-ms.date: 02/14/2017
+title: Endpoint Protection malware definitions from WSUS
+titleSuffix: Configuration Manager
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,88 +10,82 @@ author: mestew
 ms.author: mstewart
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 manager: dougeby
-
-
 ---
 
-# Enable Endpoint Protection malware definitions to download from Windows Server Update Services (WSUS) for Configuration Manager
+# Enable Endpoint Protection malware definitions to download from WSUS for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
- If you use WSUS to keep your antimalware definitions up to date, you can configure it to auto-approve definition updates. Although using Configuration Manager software updates is the recommended method to keep definitions up to date, you can also configure WSUS as a method to allow users to manually initiate definition updated. Use the following procedures to configure WSUS as a definition update source.
+If you use WSUS to keep your antimalware definitions up to date, you can configure it to auto-approve definition updates. Although using Configuration Manager software updates is the recommended method to keep definitions up to date, you can also configure WSUS as a method to allow users to manually update definitions. Use the following procedures to configure WSUS as a definition update source.
 
-## To synchronize Endpoint Protection definition updates in Configuration Manager software updates
+## Synchronize definition updates for Configuration Manager
 
-1. In the Configuration Manager console, click **Administration**.
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and then select **Sites**.
 
-2. In the **Administration** workspace, expand **Site Configuration**, and then click **Sites**.
+1. Select the site that contains your software update point. In the **Settings** group of the ribbon, select **Configure Site Components**, and then select **Software Update Point**.
 
-3. Select the site that contains your software update point. In the **Settings** group, click **Configure Site Components**, and then click **Software Update Point**.
+1. In the **Software Update Point Component Properties** window, switch to the **Classifications** tab. Select **Definition Updates**.
 
-4. On the **Classifications** tab of the **Software Update Point Component Properties** dialog box, select the **Definition Updates** check box.
+1. To specify the **Products** updated with WSUS, switch to the **Products** tab.
 
-5. Specify the **Products** updated with WSUS:
+    - For Windows 10 and later: Under Microsoft > Windows, select **Windows Defender**.
 
-   -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
+    - For Windows 8.1 and earlier: Under Microsoft > Forefront, select **System Center Endpoint Protection**.
 
-   -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
+1. Select **OK** to close the **Software Update Point Component Properties** window.
 
-6. Click **OK** to close the **Software Update Point Component Properties** dialog box.
+## Synchronize definition updates for standalone WSUS
 
-   Use the following procedure to configure Endpoint Protection updates when your WSUS server is not integrated into your Configuration Manager environment.
+Use the following procedure to configure Endpoint Protection updates when your WSUS server isn't integrated into your Configuration Manager environment.
 
-## To synchronize Endpoint Protection definition updates in standalone WSUS
+1. In the WSUS administration console, expand **Computers**, select **Options**, and then select **Products and Classifications**.
 
-1.  In the WSUS administration console, expand **Computers**, click **Options**, and then click **Products and Classifications**.
+1. To specify the **Products** updated with WSUS, switch to the **Products** tab.
 
-2.  Specify the **Products** updated with WSUS:
+    - For Windows 10 and later: Under Microsoft > Windows, select **Windows Defender**.
 
-    -   For Windows 8.1 and earlier, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Forefront Endpoint Protection 2010** check box.
+    - For Windows 8.1 and earlier: Under Microsoft > Forefront, select **System Center Endpoint Protection**.
 
-    -   For Windows 10 and later, on the **Products** tab of the **Software Update Point Component Properties** dialog box, select the **Windows Defender** check boxes.
+1. Switch to the **Classifications** tab. Select **Definition Updates** and **Updates**.
 
-3.  On the **Classifications** tab of the **Products and Classifications** dialog box, select the **Definition Updates** and **Updates** check boxes.
+## Approve definition updates
 
-## Approving Definition Updates
- Endpoint Protection definition updates must be approved and downloaded to the WSUS server before they are offered to clients that request the list of available updates. Clients connect to the WSUS server to check for applicable updates and then request the latest approved definition updates.
+Endpoint Protection definition updates must be approved and downloaded to the WSUS server before they're offered to clients that request the list of available updates. Clients connect to the WSUS server to check for applicable updates and then request the latest approved definition updates.
 
-### To approve definitions and updates in WSUS
+### Approve definitions and updates in WSUS
 
-1. In the WSUS administration console, click **Updates**, and then click **All Updates** or the classification of updates that you want to approve.
+1. In the WSUS administration console, select **Updates**. Then select **All Updates** or the classification of updates that you want to approve.
 
-2. In the list of updates, right-click the update or updates you want to approve for installation, and then click **Approve**.
+1. In the list of updates, right-click the update or updates you want to approve for installation, and then select **Approve**.
 
-3. In the **Approve Updates** dialog box, select the computer group for which you want to approve the updates, and then click **Approved for Install**.
+1. In the **Approve Updates** window, select the computer group for which you want to approve the updates, and then select **Approved for Install**.
 
-   In addition to manual approval, you can also set an automatic approval rule for definition updates and Endpoint Protection updates. This will configure WSUS to automatically approve Endpoint Protection definition updates downloaded by WSUS.
+### Configure an automatic approval rule
 
-### To configure an automatic approval rule
+You can also set an automatic approval rule for definition updates and Endpoint Protection updates. This action configures WSUS to automatically approve Endpoint Protection definition updates downloaded by WSUS.
 
-1.  In the WSUS administration console, click **Options**, and then click **Automatic Approvals**.
+1. In the WSUS administration console, select **Options**, and then select **Automatic Approvals**.
 
-2.  On the **Update Rules** tab, click **New Rule**.
+1. On the **Update Rules** tab, select **New Rule**.
 
-3.  In the **Add Rule** dialog box, under **Step 1: Select properties**, select the **When an update is in a specific classification** check box.
+1. In the **Add Rule** window, under **Step 1: Select properties**, select the option: **When an update is in a specific classification**.
 
-4.  Under **Step 2: Edit the properties**, click **any classification**.
+    1. Under **Step 2: Edit the properties**, select **any classification**.
 
-5.  Clear all check boxes except **Definition Updates**, and then click **OK**.
+    1. Clear all options except **Definition Updates**, and then select **OK**.
 
-6.  In the **Add Rule** dialog box, under **Step 1: Select properties**, select the **When an update is in a specific product** check box.
+1. In the **Add Rule** window, under **Step 1: Select properties**, select the option: **When an update is in a specific product**.
 
-7.  Under **Step 2: Edit the properties**, click **any product**.
+    1. Under **Step 2: Edit the properties**, select **any product**.
 
-8.  Clear all check boxes except **Forefront Endpoint Protection** for Windows 8.1 and earlier or **Windows Defender** for Windows 10 and later, and then click **OK**.
+    1. Clear all options except **System Center Endpoint Protection** for Windows 8.1 and earlier or **Windows Defender** for Windows 10 and later. Then select **OK**.
 
-9. Under **Step 3: Specify a name**, enter a name for the rule, and then click **OK**.
+1. Under **Step 3: Specify a name**, enter a name for the rule, and then select **OK**.
 
-10. In the **Automatic Approvals** dialog box, select the check box for the newly created rule and then click **Run rule**.
+1. In the **Automatic Approvals** dialog box, select the newly created rule, and then select **Run rule**.
 
 > [!NOTE]
->  To maximize performance on your WSUS server and client computers, decline old definition updates. To accomplish this task, you can configure automatic approval for revisions and automatic declining of expired updates. For more information, see [Microsoft Knowledge Base article 938947](https://go.microsoft.com/fwlink/p/?LinkId=204078).
-> 
-> [!div class="button"]
-> [Next step >](endpoint-antimalware-policies.md)
-> 
-> [!div class="button"]
-> [Back >](endpoint-configure-alerts.md)
+> To maximize performance on your WSUS server and client computers, decline old definition updates. To accomplish this task, you can configure automatic approval for revisions and automatic declining of expired updates. For more information, see [Microsoft Support article 938947](https://support.microsoft.com/kb/938947).
+
+> [!div class="nextstepaction"]
+> [Create and deploy antimalware policies](endpoint-antimalware-policies.md)
