@@ -63,9 +63,6 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Devices enrolled to multiple users aren't supported.
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
