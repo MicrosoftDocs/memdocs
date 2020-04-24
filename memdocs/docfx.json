@@ -37,7 +37,7 @@
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "brand": "Microsoft Endpoint Manager",
       "searchScope": {
-        "mem/intune/**/*.md": ["Intune"],
+        "mem/intune/**/*.md": ["Intune"]
       },       
       "contributors_to_exclude": [
         "PRMerger9",
