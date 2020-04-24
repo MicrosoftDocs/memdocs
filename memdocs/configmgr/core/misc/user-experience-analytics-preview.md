@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/10/2020
+ms.date: 04/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -75,6 +75,7 @@ Proactive remediations also require one of the following licenses for the manage
 
 The following permissions are used for Endpoint analytics:
 - **Read** under the **Device configurations** category.
+- **Read** under the **Organization** category. <!--temporary for pp->
 - Permissions appropriate to the user's role under the **Endpoint Analytics** category.
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
