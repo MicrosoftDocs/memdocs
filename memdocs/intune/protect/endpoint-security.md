@@ -44,7 +44,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Integrate Intune with your Microsoft Defender Advanced Threat Protection (Defender ATP) team**. By [integrating with Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp) that closely tie Defender ATP and Intune together to help identify and remediate devices that are at risk.
 
-The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center. 
+The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center, and the role-based access control (RBAC) permissions required to use them.
 
 ## Manage devices
 
@@ -139,6 +139,78 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 - Access to *Tamper protection* capabilities
 
  To learn more about using Defender ATP with Intune, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md)
+
+## RBAC requirements
+
+To manage tasks in the Endpoint security node, an account must have role-based access control permissions equal to those provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role is intended for those who manage security and compliance features, including security baselines, device compliance, conditional access,and Microsoft Defender ATP.
+
+For more infomration, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+
+To manage tasks in the Endpoint security node, an account must have role-based access control permissions equal to those provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role is intended for those who manage security and compliance features, including security baselines, device compliance, conditional access,and Microsoft Defender ATP.
+
+### Permissions granted by the *Endpoint Security Manager* role
+
+You can view the follwing list of permissions in the Microsoft Endooint Manager admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
+
+**Permissions:**
+
+- **Android for work**
+  - Read
+- **Audit data**
+  - Read
+- **Corporate device identifiers**
+  - Read
+- **Device compliance policies**
+  - Assign
+  - Create
+  - Delete
+  - Read
+  - Update
+  - View reports
+- **Device configurations**
+  - Read
+- **Device enrollment managers**
+  - Read
+- **Endpoint protection reports**
+  - Read
+- **Enrollment programs**
+  - Read device
+  - Read profile
+  - Read token
+- **Intune data warehouse**
+  - Read
+- **Managed apps**
+  - Read
+- **Managed devices**
+  - Delete
+  - Read
+  - Set primary user
+  - Update
+- **Mobile apps**
+  - Read
+- **Organization**
+  - Read
+- **PolicySets**
+  - Read
+- **Remote assistance**
+  - Read
+- **Remote tasks**
+  - Get filevault key.
+- **Roles**
+  - Read
+- **Security baselines**
+  - Assign
+  - Create
+  - Delete
+  - Read
+  - Update
+- **Security tasks**
+  - Read
+  - Update
+- **Telecom expenses**
+  - Read
+- **Terms and conditions**
+  - Read
 
 ## Next steps
 
