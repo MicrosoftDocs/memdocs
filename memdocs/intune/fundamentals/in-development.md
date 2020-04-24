@@ -79,7 +79,7 @@ For more information, see [User self-service device actions from the Company Por
 ### Control the display of Azure AD Enterprise or Office Online applications in the Company Portal<!--4404429 -->
 You will be able to toggle (**Hide** or **Show**) the display of Azure AD Enterprise or Office Online applications in the Company Portal. Each user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website in the 2005 release with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow in the 2006 release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this future setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
-### Search the Intune docs from the Company Portal<!-- 1736480  ->
+### Search the Intune docs from the Company Portal<!-- 1736480 -->
 You can now search the Intune documentation directly from the Company Portal for macOS app. In the menu bar, select **Help** > **Search** and enter the key words of your search to quickly find answers to your questions.
 
 ### Company Portal for Android will guide users to get apps after work profile enrollment <!-- 6103999  -->
@@ -207,7 +207,10 @@ Duplication will make a copy of the original policy, which you can then rename a
 ### Send push notifications as an action for non-compliance <!-- 1733150   -->
 For iOS and Android platforms, we are adding a new action for non-compliance that will send an app push notification through the Company Portal app. Users can click on the notifications which will launch the Company Portal app that then displays the reason they are non-compliant. Admins will be able to configure this new action for non-compliance in the Microsoft Endpoint Manager admin center by going to **Devices** > **Compliance policies** > **Create policy**, and then selecting the *Action* to send an app push notification. 
 
+### New profile for Endpoint Security Firewall policy<!-- 5653324   -->
+As a preview, we're adding an additional profile for Windows 10 and later to the Firewall policy in Intune's Endpoint security (**Endpoint security** > **Firewall** > **Create Policy** > select **Windows 10 and later**). 
 
+Each instance of this new profile supports up to 150 custom *Microsoft Defender Firewall rules*. The Microsoft Defender Firewall rules profile allows you define granular Windows Firewall rules to allow or block ports and applications in Windows 10.
 
 <!-- ***********************************************-->
 ## Notices
