@@ -8,8 +8,8 @@
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "sccm/**"          
         ]
       }
     ],
@@ -18,13 +18,14 @@
         "files": [
           "**/media/**",
           "**/*.png",
+          "**/*.jpg",
           "**/*.gif",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "sccm/**"
         ]
       }
     ],
@@ -34,9 +35,57 @@
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
-      "feedback_product_url": "",  
-      "brand": "Intune",
-      "searchScope": ["Intune"]
+      "feedback_product_url": {
+        "memdocs/configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "memdocs/intune/**/*.md": "https://microsoftintune.uservoice.com/"
+      },
+      "brand": "Microsoft Endpoint Manager",
+      "searchScope": {
+        "memdocs/intune/**/*.md": ["Intune"],
+        "memdocs/configmgr/**/*.md": ["ConfigMgr"]
+      },  
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "hexiaokai",
+        "openpublishingbuild",
+        "tysonn",
+        "v-anpasi",
+        "kiwhit",
+        "ShawnJackson",
+        "PRmerger",
+        "DuncanmaMSFT",
+        "Saisang",
+        "Ja-Dunn",
+        "jomolnar",
+        "KatieCumming",
+        "rjagiewich",
+        "deneha",
+        "ktoliver",
+        "itechedit",
+        "MattGLaBelle",
+        "Lisaco88",
+        "GitHubber17",
+        "v-shils",
+        "rmca14",
+        "trishamc",
+        "Jak-MS",
+        "garycentric",
+        "jborsecnik",
+        "Kellylorenebaker",
+        "ShannonLeavitt",
+        "v-albemi",
+        "v-dansch",
+        "chbain",
+        "atookey",
+        "tfosmark",
+        "sdwheeler",
+        "meganbradley"
+      ]      
     },
     "fileMetadata": {
       "featureFlags": {
@@ -46,7 +95,7 @@
       }
     },
     "template": [],
-    "dest": "intune-azure",
+    "dest": "memdocs",
     "markdownEngineName": "markdig"
   }
 }
