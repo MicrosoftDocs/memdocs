@@ -37,7 +37,7 @@
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "brand": "Microsoft Endpoint Manager",
       "searchScope": {
-        "memdocs/intune/**.md": ["Intune"],
+        "mem/intune/**/*.md": ["Intune"],
       },       
       "contributors_to_exclude": [
         "PRMerger9",
@@ -84,12 +84,11 @@
     },
     "fileMetadata": {
       "feedback_product_url": {
-        "memdocs/configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
-        "memdocs/intune/**/*.md": "https://microsoftintune.uservoice.com/"
+        "mem/configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "mem/intune/**/*.md": "https://microsoftintune.uservoice.com/"
       },
       "searchScope": {
-        "memdocs/intune/**/*.md": ["Intune"],
-        "memdocs/configmgr/**/*.md": ["ConfigMgr"]
+        "mem/configmgr/**/*.md": ["ConfigMgr"]
       }, 
       "featureFlags": {
         "*.md" : [
