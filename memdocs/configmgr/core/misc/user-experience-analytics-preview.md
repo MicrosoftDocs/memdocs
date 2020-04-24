@@ -53,7 +53,13 @@ This current preview requires:
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
-- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](../../comanage/overview.md).
+
+
+- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices must meet one of the following conditions:
+   - A Windows 10 Enterprise device that is managed by Intune
+   - A [co-managed](../../comanage/overview.md) Windows 10 Enterprise version 1903 or higher device with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
+
+
 
 We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
 
