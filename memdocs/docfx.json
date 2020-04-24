@@ -36,9 +36,6 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "brand": "Microsoft Endpoint Manager",
-      "searchScope": [
-        "Microsoft Endpoint Manager"
-      ], 
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
