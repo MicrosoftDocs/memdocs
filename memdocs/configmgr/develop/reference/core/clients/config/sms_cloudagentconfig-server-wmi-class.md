@@ -9,11 +9,11 @@ ms.assetid: 969c2e06-c475-409b-903b-71be831fa754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_CloudAgentConfig Server WMI Class
-The `SMS_CloudAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
+
+The `SMS_CloudAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

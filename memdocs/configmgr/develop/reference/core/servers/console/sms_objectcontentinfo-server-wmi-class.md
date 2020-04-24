@@ -194,7 +194,7 @@ Class SMS_ObjectContentInfo : SMS_BaseClass
 
  Qualifiers: [read]  
 
- SourceSite description … The default value is …  
+ The source site.
 
  `SourceSize`  
  Data type: `UInt32`  

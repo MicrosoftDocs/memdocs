@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: About the retirement of the Ready for Windows website
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -28,6 +28,9 @@ Many customers have challenges with getting and staying current with Windows 10 
 The *Ready for modern desktop* directory listed software solutions that are supported and in-use on commercial devices running Windows 10 and Office 365 ProPlus. The directory helps IT managers who are considering the latest versions of Windows 10 and Office 365 for their deployments.
 
 Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Office 365 ProPlus readiness features](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Office 365 ProPlus upgrade projects. 
+
+> [!Note]
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 ### What is Desktop Analytics?
 

@@ -825,7 +825,7 @@ The following table lists the log files that contain information related to soft
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|Records details when the client calls the Office click-to-run COM interface to download and install Office 365 client updates. It's similar to use of WuaHandler when it calls the Windows Update Agent API to download and install Windows updates.<!-- SCCMDocs#888 -->|Client|
+|AlternateHandler.log|Records details when the client calls the Office click-to-run COM interface to download and install Microsoft 365 Apps for enterprise client updates. It's similar to use of WuaHandler when it calls the Windows Update Agent API to download and install Windows updates.<!-- SCCMDocs#888 -->|Client|
 |ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|Client|
 |DeltaDownload.log|Records information about the download of express updates and updates downloaded using Delivery Optimization.|Client|  
 |PatchDownloader.log|Records details about the process of downloading software updates from the update source to the download destination on the site server.|When downloading updates manually, this log file is located in the %temp% directory of the user running the console on the machine you're running the console. For Automatic Deployment Rules, this log file is located on the site server in %windir%\CCM\Logs, if the ConfigMgr client is installed on the site server.|  

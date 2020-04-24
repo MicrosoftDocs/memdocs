@@ -387,7 +387,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Qualifiers: [not_null]  
 
- ModelID description … . The default value is …  
+ The model ID.
 
  `ModelName`  
  Data type: `String`  
@@ -459,7 +459,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Qualifiers: [read]  
 
- SecuredScopeNames description … .   
+ The names of the secured scopes.
 
  `SedoObjectVersion`  
  Data type: `String`  
@@ -468,7 +468,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Qualifiers: [read]  
 
- SedoObjectVersion description … .   
+The version of the SEDO object.
 
  `SourceSite`  
  Data type: `String`  

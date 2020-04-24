@@ -9,11 +9,11 @@ ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_UserMachineRelationship Server WMI Class
-The `SMS_UserMachineRelationship` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents …..   
+
+The `SMS_UserMachineRelationship` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

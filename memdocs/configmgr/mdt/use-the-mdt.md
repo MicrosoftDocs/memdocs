@@ -3635,10 +3635,10 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
   ```  
   <groups>  
-  …  
+  ...
    <group_quid="{e5143c1c-24e4-466d-9b56-b0db693c8619}" enable="True">  
      <Name>WinPEAndFullOS</Name>  
-  …  
+  ...
      <Member>{1eca45a5-d7ef-475a-bb0d-7f7747f16b3a}</Member>  
   ```  
 
@@ -8708,23 +8708,23 @@ Cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"
 
   -   make_01\  
 
-       …\model_01  
+       ...\model_01  
 
-       …\model_02  
+       ...\model_02  
 
-       …\model_03  
+       ...\model_03  
 
   -   make_02\  
 
-       …\model_aa  
+       ...\model_aa  
 
-       …\model_ab  
+       ...\model_ab  
 
   -   make_03\  
 
-       …\model_xx  
+       ...\model_xx  
 
-       …\model_xy  
+       ...\model_xy  
 
   **Example: Woodgrove Bank Device Driver Folder Structure for LTI**  
 

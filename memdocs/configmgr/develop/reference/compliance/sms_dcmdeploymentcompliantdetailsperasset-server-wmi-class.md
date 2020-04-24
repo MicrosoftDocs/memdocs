@@ -99,7 +99,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Qualifiers: [key, not_null, read]  
 
- AssignmentID description … AssignmentID. The default value is …  
+ The assignment ID.
 
  `AssignmentUniqueID`  
  Data type: `String`  

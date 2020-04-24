@@ -9,11 +9,11 @@ ms.assetid: de103be8-9c09-4014-949b-57372690d704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # GetNetworkCost Method in Class CCM_ClientUtilities
-The `GetNetworkCost` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that …   
+
+The `GetNetworkCost` Windows Management Instrumentation (WMI) class method in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -65,7 +65,7 @@ The Endpoint Protection workload includes the Windows Defender suite of antimalw
 - Windows Defender Application Guard  
 - Windows Defender Firewall  
 - Windows Defender SmartScreen  
-- Windows Encryption  
+- Windows Encryption
 - Windows Defender Exploit Guard  
 - Windows Defender Application Control  
 - Windows Defender Security Center  
@@ -80,6 +80,8 @@ For more information on the Intune feature, see [Endpoint Protection for Microso
 > The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
 >
 > The Microsoft Defender Antivirus settings that are part of the Device restrictions profile type for Intune Device configuration are not included in scope of the Endpoint protection slider. To manage Microsoft Defender Antivirus for co-managed devices with the endpoint protection slider enabled, use the new Antivirus policies in **Microsoft Endpoint manager admin center** > **Endpoint security** > **Antivirus**. The new policy type has new and improved options available, and support all of the same settings available in the Device restrictions profile. <!--6609171-->
+>
+> The Windows Encryption feature includes BitLocker management. For more information on the behavior of this feature with co-management, see [Deploy BitLocker management](../protect/deploy-use/bitlocker/deploy-management-agent.md#co-management-and-intune).<!-- SCCMDocs#2321 -->
 
 ## Device configuration
 

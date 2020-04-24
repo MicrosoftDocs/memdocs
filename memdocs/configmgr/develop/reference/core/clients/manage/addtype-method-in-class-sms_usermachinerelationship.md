@@ -25,13 +25,14 @@ sint32 AddType(
 );  
 ```  
 
-#### Parameters  
+#### Parameters
+
  `TypeId`  
  Data type: `UInt32` Array  
 
  Qualifiers: `[in]`  
 
- TypeId ….   
+The type ID.
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

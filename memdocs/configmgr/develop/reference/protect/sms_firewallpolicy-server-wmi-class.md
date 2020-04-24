@@ -89,7 +89,7 @@ Class SMS_FirewallPolicy : SMS_ConfigurationPolicyBase
 
  Qualifiers: [not_null, read]  
 
- ActivatedCount description …   
+ The activated count.
 
  `ApplicabilityCondition`  
  Data type: `String`  
@@ -107,7 +107,7 @@ Class SMS_FirewallPolicy : SMS_ConfigurationPolicyBase
 
  Qualifiers: [not_null, read]  
 
- AssignedCount description …   
+ The assigned count.
 
  `CategoryInstance_UniqueIDs`  
  Data type: `String Array`  
@@ -170,7 +170,7 @@ Class SMS_FirewallPolicy : SMS_ConfigurationPolicyBase
 
  Qualifiers: [not_null, read]  
 
- CompliantPercentage description …   
+ Percentage of computers that are compliant with the configuration item.
 
  `CreatedBy`  
  Data type: `String`  
@@ -260,7 +260,7 @@ Class SMS_FirewallPolicy : SMS_ConfigurationPolicyBase
 
  Qualifiers: [not_null, read]  
 
- Failure count .…   
+ Count of compliance failures.
 
  `IsAssigned`  
  Data type: `Boolean`  
@@ -494,7 +494,7 @@ Class SMS_FirewallPolicy : SMS_ConfigurationPolicyBase
 
  Qualifiers: none  
 
- Precedence description … .   
+ Precedence
 
  `SDMPackageLocalizedData`  
  Data type: `Object Array`  

@@ -9,13 +9,13 @@ ms.assetid: 22eb79c4-c169-4a91-a478-78ce2cd7ba27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_AppFailedVEsData Server WMI Class
-The `SMS_AppFailedVEsData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_AppFailedVEsData Server WMI Class
+
+The `SMS_AppFailedVEsData` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
 ## Syntax  
 
