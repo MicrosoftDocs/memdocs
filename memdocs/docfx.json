@@ -82,12 +82,12 @@
     },
     "fileMetadata": {
       "feedback_product_url": {
-        "mem/configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
-        "mem/intune/**/*.md": "https://microsoftintune.uservoice.com/"
+        "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "intune/**/*.md": "https://microsoftintune.uservoice.com/"
       },
       "searchScope": {
-        "memdocs/configmgr/**/*.md": ["ConfigMgr"],
-        "memdocs/configmgr/core/**/*.md": ["ConfigMgr"]        
+        "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/core/**/*.md": ["ConfigMgr"]        
       }, 
       "featureFlags": {
         "*.md" : [
