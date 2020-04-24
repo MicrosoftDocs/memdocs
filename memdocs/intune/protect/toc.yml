@@ -282,7 +282,9 @@
         href: antivirus-microsoft-defender-settings-macos.md
       - name: Windows 10 Microsoft Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows.md
-    - name: Disk encreyption profile settings
+      - name: Windows Security experience settings
+        href: antivirus-security-experience-windows-settings.md
+    - name: Disk encryption profile settings
       href: endpoint-security-disk-encryption-profile-settings.md
     - name: Firewall policy settings
       href: endpoint-security-firewall-profile-settings.md
