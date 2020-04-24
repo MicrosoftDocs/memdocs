@@ -86,7 +86,8 @@
         "mem/intune/**/*.md": "https://microsoftintune.uservoice.com/"
       },
       "searchScope": {
-        "mem/configmgr/**/*.md": ["ConfigMgr"]
+        "memdocs/configmgr/**/*.md": ["ConfigMgr"],
+        "memdocs/configmgr/core/**/*.md": ["ConfigMgr"]        
       }, 
       "featureFlags": {
         "*.md" : [
