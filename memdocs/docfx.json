@@ -40,10 +40,7 @@
         "memdocs/intune/**/*.md": "https://microsoftintune.uservoice.com/"
       },
       "brand": "Microsoft Endpoint Manager",
-      "searchScope": {
-        "memdocs/intune/**/*.md": ["Intune"],
-        "memdocs/configmgr/**/*.md": ["ConfigMgr"]
-      },  
+ 
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -88,6 +85,10 @@
       ]      
     },
     "fileMetadata": {
+      "searchScope": {
+        "memdocs/intune/**/*.md": ["Intune"],
+        "memdocs/configmgr/**/*.md": ["ConfigMgr"]
+      }, 
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"
