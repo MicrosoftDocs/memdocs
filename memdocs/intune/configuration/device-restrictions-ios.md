@@ -675,7 +675,6 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
 - App Lock (Single App Mode) 
-- Global HTTP Proxy 
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
