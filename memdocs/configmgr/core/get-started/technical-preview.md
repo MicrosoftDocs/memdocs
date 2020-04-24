@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/31/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -117,9 +117,37 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md#bkmk_anchor) <!--ID-->
+<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
+
+### Technical preview version 2004
+
+- [6374854](2020/technical-preview-2004.md) <!--6374854-->
+- [6521921](2020/technical-preview-2004.md) <!--6521921-->
+- [3953121](2020/technical-preview-2004.md) <!--3953121-->
+- [6890051](2020/technical-preview-2004.md) <!--6890051-->
+- [6518631](2020/technical-preview-2004.md) <!--6518631-->
+- [6023299](2020/technical-preview-2004.md) <!--6023299-->
+- [6610288](2020/technical-preview-2004.md) <!--6610288-->
+- [6982275](2020/technical-preview-2004.md) <!--6982275-->
+- [7019342](2020/technical-preview-2004.md) <!--7019342-->
+
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
+
+## Features in recent technical previews
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2002:
+
+> [!TIP]
+> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### Technical preview version 2003
 
@@ -132,24 +160,6 @@ The following features are available with the most recent Configuration Manager 
 - [Query for feedback sent to Microsoft](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
 - [New SDK method for task sequence progress](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
 - [Improvements to OS deployment](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
-
-> [!NOTE]
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
-
-<!-- temp remove for 2002 CB ## Features in recent technical previews -->
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-<!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
-
-> [!TIP]
-> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
-
-<!-- ### Technical preview version 2003 -->
 
 ## Features in previous technical previews
 
