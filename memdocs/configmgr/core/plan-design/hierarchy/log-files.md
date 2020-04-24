@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Log file reference
@@ -274,6 +272,7 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. This feature was first introduced as a pre-release feature starting in Configuration Manager version 1906. In version 1910 and earlier, this log is named SMS_AZUREAD_DISCOVERY_AGENT.log. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -320,7 +319,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for synchronization of collection membership results to Azure Active directory. This was first introduced as a pre-release feature starting in Configuration Manager version 1906.| Site server|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for synchronization of collection membership results to Azure Active Directory. This feature was first introduced as a pre-release feature starting in Configuration Manager version 1906. Starting in version 2002, this log is renamed CollectionAADGroupSyncWorker.log. | Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
