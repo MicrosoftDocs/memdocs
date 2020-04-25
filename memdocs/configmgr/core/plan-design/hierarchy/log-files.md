@@ -280,7 +280,7 @@ The following table lists the log files that are on the Configuration Manager si
 |dataldr.log|Records information about the processing of MIF files and hardware inventory in the Configuration Manager database.|Site server|  
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |despool.log|Records incoming site-to-site communication transfers.|Site server|  
-|distmgr.log|Records details about package creation, compression, delta replication, and information updates. It can also include other activities from the distribution manager component. For example, installing a distribution point, connection attempts, and installing components. For more information on other functionality that uses this log, see [Service connection point](BKMK_WITLog) and [OS deployment](#BKMK_OSDLog).|Site server|  
+|distmgr.log|Records details about package creation, compression, delta replication, and information updates. It can also include other activities from the distribution manager component. For example, installing a distribution point, connection attempts, and installing components. For more information on other functionality that uses this log, see [Service connection point](#BKMK_WITLog) and [OS deployment](#BKMK_OSDLog).|Site server|  
 |EPCtrlMgr.log|Records information about the syncing of malware threat information from the Endpoint Protection site system role server with the Configuration Manager database.|Site server|  
 |EPMgr.log|Records the status of the Endpoint Protection site system role.|Site system server|  
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|  
@@ -319,7 +319,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery.| Site server|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
