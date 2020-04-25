@@ -282,7 +282,7 @@ The following table lists the log files that are on the Configuration Manager si
 |dataldr.log|Records information about the processing of MIF files and hardware inventory in the Configuration Manager database.|Site server|  
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |despool.log|Records incoming site-to-site communication transfers.|Site server|  
-|distmgr.log|Records details about package creation, compression, delta replication, and information updates.|Site server|  
+|distmgr.log|Records details about package creation, compression, delta replication, and information updates. It can also include other activities from the distribution manager component. For example, installing a distribution point, connection attempts, and installing components. For more information on other functionality that uses this log, see [Service connection point](BKMK_WITLog) and [OS deployment](#BKMK_OSDLog).|Site server|  
 |EPCtrlMgr.log|Records information about the syncing of malware threat information from the Endpoint Protection site system role server with the Configuration Manager database.|Site server|  
 |EPMgr.log|Records the status of the Endpoint Protection site system role.|Site system server|  
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|  
