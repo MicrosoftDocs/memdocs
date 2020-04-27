@@ -128,7 +128,7 @@ While you can configure the same device settings by using *Endpoint Protection p
 
 - **FileVault** - FileVault provides built-in Full Disk Encryption for macOS devices.
 
-  Manage [FileVault settings](../protect/antivirus-microsoft-defender-settings-macos) for macOS.
+  Manage [FileVault settings](../protect/endpoint-security-disk-encryption-profile-settings#filevault) for macOS.
 
   To create a FileVault profile, see [Use FileVault disk encryption for macOS](../protect/encrypt-devices-filevault.md).
 
@@ -138,14 +138,14 @@ While you can configure the same device settings by using *Endpoint Protection p
 
   Manage [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings#bitlocker) for Windows 10.
 
-  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows 10](../protect/device-encryption.md).
+  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows 10](../protect/encrypt-devices.md).
 
 ### Manage device encryption
 
-After you deploy policy to encrypt a device disk, see the following articles for infomration on managing encryption:
+After you deploy policy to encrypt a device disk, see the following articles for information on managing encryption:
 
-- [Manage BitLocker](../protect/device-encryption.md#manage-bitlocker)
-- [Manage FileVault]( ../protect/device-encryption.md#manage-filevault)
+- [Manage BitLocker](../protect/encrypt-devices.md#manage-bitlocker)
+- [Manage FileVault](../protect/encrypt-devices-filevault.md#manage-filevault)
 - [Monitor device encryption](../protect/encryption-monitor.md)
 
 <!--

@@ -33,11 +33,11 @@ Intune supports macOS FileVault disk encryption. FileVault is a whole-disk encry
 
 Use one of the following policy types to configure FileVault on your managed devices:
 
-- **Endpoint security [disk encryption policy for macOS FileVault](../protect/endpoint-security-policy.md#manage-filevault-for-macos)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
+- **[Endpoint security policy for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
 
   View details about the [FileVault settings](../protect/endpoint-security-disk-encryption-profile-settings.md) you can manage through disk encryption policy.
 
-- **[Device configuration profile](../protect/endpoint-protection-configure.md) for endpoint protection for macOS FileVault**. FileVault settings are one of the available settings categories for macOS endpoint protection.
+- **[Device configuration profile for endpoint protection for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Inunte](../configuration/device-profile-create.md).
 
   View details about the [FileVault settings](../protect/endpoint-protection-macos.md#filevault) you can manage with Intune through device configuration policy.
 

@@ -33,13 +33,13 @@ BitLocker is available on devices that run Windows 10 or later. Some settings fo
 
 Use one of the following policy types to configure BitLocker on your managed devices
 
-- **Endpoint security [disk encryption policy for macOS FileVault](../protect/endpoint-security-policy.md#manage-filevault-for-macos)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
+- **[Endpoint security disk encryption policy for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 
-  View details about the [FileVault settings](../protect/endpoint-security-disk-encryption-profile-settings.md) you can manage through disk encryption policy.
+  View details about the [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md) you can manage through disk encryption policy.
 
-- **[Device configuration profile](../protect/endpoint-protection-configure.md) for endpoint protection for macOS FileVault**. FileVault settings are one of the available settings categories for macOS endpoint protection.
+- **[Device configuration profile for endpoint protection for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10 endpoint protection.
 
-To manage FileVault for macOS, see [Manage FileVault policy](../protect/encrypt-devices-filevault.md).
+To manage BitLocker for Windows 10, see [Manage BitLocker policy](../protect/encrypt-devices.md).
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the encryption report.
@@ -70,7 +70,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 or later
    2. **Profile**: BitLocker
 
-   ![Select the FileVault profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
+   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
 
@@ -98,7 +98,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 and later
    2. **Profile type**: Endpoint protection
 
-   ![Select the FileVault profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Select **Settings** > **Windows Encryption**.
 
@@ -180,6 +180,10 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 2. Select **Devices** > **All devices**.
 
 3. In the list of devices that you manage, select a device, select **More**, and then select the **BitLocker key rotation** device remote action.
+
+4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don’t see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
+
+   ![Select the ellipsis to view more options](./media/encrypt-devices/select-more.png)
 
 ## Next steps
 
