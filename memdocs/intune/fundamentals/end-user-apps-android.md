@@ -40,10 +40,10 @@ This article helps you understand how and where your Android device administrato
 | Available apps      | Users tap **install** in the Company Portal. A notification appears, which users then tap to start the installation. After the installation is successful, the notification disappears. | Users tap the app in the Company Portal, and are taken to an app page in the Play Store. This is where they start the installation.|
 | Required apps      | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification to start the installation. After the installation is successful, the notification disappears.    | Users are shown a notification, which they can't dismiss, indicating that they need to install an app. Users tap the notification and are taken to an app page in the Play Store. This is where they start the installation. After the installation is successful, the notification disappears. |
 
-Your end users need to allow installation from unknown sources to install [LOB apps](../apps/lob-apps-android.md). This setting is normally found in two different places:
+Your end users need to allow installation from unknown sources to install [LOB apps](../apps/lob-apps-android.md). This setting is normally found in two different places, depending on the version of Android:
 
-* **Android 7.1.2 and lower**: **Settings** > **Security** > **Unknown sources**
-* **Android 8.0 and above**: **Settings** > **Apps & notifications** > **Special app access** > **Install unknown apps** > **Company Portal** > **Allow from this source**
+* Android 7.1.2 and lower: **Settings** > **Security** > **Unknown sources**
+* Android 8.0 and above: **Settings** > **Apps & notifications** > **Special app access** > **Install unknown apps** > **Company Portal** > **Allow from this source**
 
 If this occurs, the Company Portal app will inform and directly guide the end user to the appropriate setting. 
 
