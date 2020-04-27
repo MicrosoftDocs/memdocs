@@ -117,6 +117,39 @@ Disk encryption profiles focus on only the settings that are relevant for a devi
 
 While you can configure the same device settings by using *Endpoint Protection profiles* for device configuration, the device configuration profiles include additional categories of settings that are unrelated to disk encryption, which can complicate the task of configuring only disk encryption.
 
+### Prerequisites for disk encryption policy
+
+- **macOS** - macOS 10.13 or later
+- **Windows** - Windows 10 or later
+
+### Disk encryption profiles
+
+**macOS profiles**:
+
+- **FileVault** - FileVault provides built-in Full Disk Encryption for macOS devices.
+
+  Manage [FileVault settings](../protect/antivirus-microsoft-defender-settings-macos) for macOS.
+
+  To create a FileVault profile, see [Use FileVault disk encryption for macOS](../protect/encrypt-devices-filevault.md).
+
+**Windows 10 profiles**:
+
+- **BitLocker** - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers
+
+  Manage [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings#bitlocker) for Windows 10.
+
+  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows 10](../protect/device-encryption.md).
+
+### Manage device encryption
+
+After you deploy policy to encrypt a device disk, see the following articles for infomration on managing encryption:
+
+- [Manage BitLocker](../protect/device-encryption.md#manage-bitlocker)
+- [Manage FileVault]( ../protect/device-encryption.md#manage-filevault)
+- [Monitor device encryption](../protect/encryption-monitor.md)
+
+<!--
+
 Use one of the following profiles for disk encryption:
 
 - [macOS FileVault](#manage-filevault-for-macos) - FileVault provides built-in Full Disk Encryption for macOS devices. Manage [settings for FileVault](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault) on devices that run macOS.
@@ -201,6 +234,7 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don’t see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
 
    ![Select the ellipsis to view more options](./media/endpoint-security-configure-disk-encryption/select-more.png)
+-->
 
 ## Firewall policy
 
@@ -318,7 +352,7 @@ The information at the following links can help you identify and resolve conflic
 - [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
-<!-- 
+<!--   
 ## Policy types and defaults
 
 Intune includes multiple methods to deploy and manage settings on your devices.  To avoid creating conflicts and to help you predict the outcome and compliance to your policies, the following information describes the behaviors of policy types and setting configurations.
