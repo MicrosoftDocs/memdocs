@@ -124,7 +124,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
  
     **Default**: *Varies* - When the setting *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Disable**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 
-For more information about FileVault with Intune, see [Mnage FileVault](../protect/encrypt-devices-filevault.md#manage-filevault).
+For more information about FileVault with Intune, see [Manage FileVault](../protect/encrypt-devices-filevault.md#manage-filevault).
 
 ## Next steps
 
