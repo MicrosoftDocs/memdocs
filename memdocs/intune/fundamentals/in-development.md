@@ -76,7 +76,7 @@ You'll be able to customize the available self-service device actions that are s
 
 For more information, see [User self-service device actions from the Company Portal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
 
-### Control the display of Azure AD Enterprise or Office Online applications in the Company Portal<!--4404429 -->
+### Unified delivery of Azure AD Enterprise or Office Online applications in the Company Portal<!--4404429 -->
 You'll be able to toggle (**Hide** or **Show**) the display of Azure AD Enterprise or Office Online applications in the Company Portal. Each user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website in the 2005 release with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this future setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### Search the Intune docs from the Company Portal<!-- 1736480 -->
