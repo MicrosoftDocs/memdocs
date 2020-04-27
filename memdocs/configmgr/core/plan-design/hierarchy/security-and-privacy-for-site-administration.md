@@ -2,7 +2,7 @@
 title: Site administration security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
-ms.date: 04/23/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -170,7 +170,7 @@ Whenever possible, use a mail server that supports authenticated access. Use the
 
 ### Enforce LDAP channel binding and LDAP signing
 
-The security of Active Directory domain controllers can be improved by configuring the server to reject Simple Authentication and Security Layer (SASL) LDAP binds that do not request signing or to reject LDAP simple binds that are performed on a clear text connection. All supported versions of Configuration Manager support enforcing LDAP channel binding and LDAP signing. For more information, see [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). <!--6244453-->
+The security of Active Directory domain controllers can be improved by configuring the server to reject Simple Authentication and Security Layer (SASL) LDAP binds that do not request signing or to reject LDAP simple binds that are performed on a clear text connection. Starting in version 1910, Configuration Manager supports enforcing LDAP channel binding and LDAP signing. For more information, see [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). <!--6244453-->
 
 
 ## <a name="BKMK_Security_SiteServer"></a> Security guidance for the site server
