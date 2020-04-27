@@ -41,5 +41,5 @@ Sometimes issues can occur with your iOS device that may be able to be fixed thr
 - [How do I find the serial number on my device?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [I need to update my iOS device](you-need-to-update-your-ios-device.md)
 - [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
-- [I need to install a Mobile Threat Defense app on my iOS device](you-are-prompted-to-install-mtd-ios.md)
+- [I need to install a Mobile Threat Defense app on my iOS device](set-up-mobile-threat-defense.md)
 - [I need to resolve a threat that a Mobile Threat Defense app found on my iOS device](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
