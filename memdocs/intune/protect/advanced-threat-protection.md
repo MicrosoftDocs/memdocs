@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -83,17 +83,17 @@ You only need to enable Defender ATP a single time per tenant.
 
    ![Select to open the Microsoft Defender Security Center](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. In **Microsoft Defender Security Center**:
-    1. Select **Settings** > **Advanced features**.
-    2. For **Microsoft Intune connection**, choose **On**:
+3. In **Microsoft Defender Security Center**:
+   1. Select **Settings** > **Advanced features**.
+   2. For **Microsoft Intune connection**, choose **On**:
 
-        ![Enable the connection to Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
+      ![Enable the connection to Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
-    3. Select **Save preferences**.
+   3. Select **Save preferences**.
 
 4. Return to **Microsoft Defender ATP** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, depending on your organization's needs:
-    * Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On** and/or
-    * Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** to **On**. 
+   - Set **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** to **On** and/or
+   - Set **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** to **On**.
 
 5. Select **Save**.
 
