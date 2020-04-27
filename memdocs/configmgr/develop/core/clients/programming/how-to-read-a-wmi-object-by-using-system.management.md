@@ -81,7 +81,7 @@ void ReadObject(ManagementScope scope)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](https://msdn.microsoft.com/library/system.management.managementexception.aspx).  
+ The exception that can be raised is [System.Management.ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception).  
 
 ## See Also  
  [About Configuration Manager WMI Programming](../../../../develop/core/clients/programming/about-configuration-manager-wmi-programming.md)   

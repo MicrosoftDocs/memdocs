@@ -96,7 +96,7 @@ public void RunQuery(WqlConnectionManager connection, string queryId)
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`queryID`|-   Managed: `String`<br />-   VBScript: `String`|A query identifier. For more information see the `SMS_Query` class `QueryID` property.|  
 
 ## Compiling the Code  
