@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
-In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
+In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
 
  To handle each returned object, create an [objWbemSink.OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) event subroutine.  
 
@@ -28,7 +28,7 @@ In Configuration Manager, you perform an synchronous query for Configuration Man
 
 3.  Create an [OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) subroutine to handle query completion.  
 
-4.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query Configuration Manager objects asynchronously.  
+4.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query Configuration Manager objects asynchronously.  
 
 ## Example  
  The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects.  
@@ -75,7 +75,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|[SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## See Also  
  [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   

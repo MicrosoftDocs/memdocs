@@ -155,7 +155,7 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing software updates deployment package.|  
 |`validateNewPackageSource`|-   Managed: `dictionary` object|The `validateNewPackageSource` is a dictionary object containing the parameters that the `ValidateNewPackageSource` method requires.<br /><br /> `PackageSource`|  
 |`newPackageSourceLocation`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package source location. The source path must be a Universal Naming Convention (UNC) path. All of the updates available in the old package source must be available in the new package source.|  
