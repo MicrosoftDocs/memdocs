@@ -55,7 +55,7 @@ Your organization cannot see your personal information when you enroll a device 
 - IMEI
 
  > [!NOTE]
-    > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.    
+ > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.    
     
 **What your organization might be able to see:**
 
