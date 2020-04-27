@@ -200,7 +200,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
