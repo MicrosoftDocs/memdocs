@@ -85,7 +85,7 @@ You can now search the Intune documentation directly from the Company Portal for
 ### Company Portal for Android will guide users to get apps after work profile enrollment <!-- 6103999  -->
 We're improving the in-app guidance in Company Portal to make it easier for users to find and install apps.  After they enroll in work profile management, users will see a message telling them they can find suggested apps in the badged version of Google Play. Users will also see a new **Get apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS** tab will be removed. 
 
-### Android Compnay Portal user experience<!-- 5736084 -->
+### Android Company Portal user experience<!-- 5736084 -->
 In the 2005 release of Android Company Portal, end-users of Android devices that are issued a warn, block, or wipe by an app protection policy will see a new user experience. Instead of the current dialog experience, end-users will see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issue. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) and [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
 
 
