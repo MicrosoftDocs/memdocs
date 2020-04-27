@@ -183,6 +183,6 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 ## Next steps
 
-[Manage FileVault policy](../protect/encrypt-device-filevault.md)
+[Manage FileVault policy](../protect/encrypt-devices-filevault.md)
 
 [Monitor disk encryption](../protect/encryption-monitor.md)
