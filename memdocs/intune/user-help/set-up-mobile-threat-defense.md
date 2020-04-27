@@ -35,7 +35,7 @@ As part of your organization's security requirements, you might be required to i
 
 If you don't have the required MTD app, you'll be blocked from signing in to protected apps with your work or school account. In this article, you'll learn [how to install an MTD app](set-up-mobile-threat-defense.md#install-app) to get unblocked.  
 
-There are a variety of MTD vendor apps available to install; your organization will let you know which one to use. If you're prompted to install the app but aren't given further instructions or a link to get the app, contact your IT support person. 
+There are a variety of MTD vendor apps available to install, all with different names. Your organization will let you know which one to use. If you're prompted to install the app but aren't given further instructions or a link to get the app, contact your IT support person. 
 
 
 ## Information your organization can see   
