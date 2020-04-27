@@ -38,9 +38,8 @@ After you've set up your [Android Enterprise dedicated devices](android-kiosk-en
 | Near Field Communication | 6.0 |
 | Token entry | 6.0 |
 | QR code | 7.0 |
-| Zero Touch  | 8.0\* |
-
-\* On participating manufacturers.
+| Zero Touch  | 8.0<br><br> On participating manufacturers. |
+| [Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> On Samsung Knox 2.8 or higher devices only. |
 
 ## Enroll by using Near Field Communication (NFC)
 
@@ -95,6 +94,8 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
 
 4. Choose **Apply**.
 
+## Enroll by using Knox Mobile Enrollment
+To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 6 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll).
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)
