@@ -54,6 +54,9 @@ Your organization cannot see your personal information when you enroll a device 
 - Device serial number
 - IMEI
 
+ > [!NOTE]
+ > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.    
+    
 **What your organization might be able to see:**
 
 - Phone number: For corporate-owned devices, your full phone number can be seen. For personal-owned devices, just the last four digits of your phone number are visible to your organization. You can see the ownership type for each individual device on its **Device Details** page.
