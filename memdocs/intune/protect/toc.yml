@@ -141,8 +141,10 @@
             href: zimperium-mtd-connector-integration.md     
     - name: Encrypt disks
       items:
-      - name: Encrypt device disks
+      - name: Manage BitLocker policy
         href: encrypt-devices.md
+      - name: Manage FileVault policy
+        href: encrypt-devices-filevault.md
       - name: Monitor disk encryption
         href: encryption-monitor.md
   - name: Identity protection
