@@ -200,7 +200,7 @@ When you switch encryption management authorities, plan for [re-encryption](#re-
 
 For more information about managing BitLocker with Intune, see the following articles:
 
-- [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md)
 - [Troubleshoot BitLocker policies in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## Next steps

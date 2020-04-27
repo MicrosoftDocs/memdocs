@@ -41,7 +41,7 @@ Use one of the following policy types to configure FileVault on your managed dev
 
   View details about the [FileVault settings](../protect/endpoint-protection-macos.md#filevault) you can manage with Intune through device configuration policy.
 
-To manage BitLocker for Windows 10, see [Manage BitLocker policy](device-encrytion.md).
+To manage BitLocker for Windows 10, see [Manage BitLocker policy](../protect/device-encryption.md).
 
 > [!TIP]
 > [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
@@ -127,7 +127,7 @@ Select **Next**.
 
 ## Manage FileVault
 
-To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/monitor-encryption.md).
+To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
 
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
 
@@ -185,6 +185,6 @@ Intune supports multiple options to rotate and recover personal recovery keys. O
 
 ## Next steps
 
-[Manage BitLocker policy](../protect/device-encryption.md)
+[Manage BitLocker policy](../protect/encrypt-devices.md)
 
-[Monitor disk encryption](../protect/monitor-encryption.md)
+[Monitor disk encryption](../protect/encryption-monitor.md)

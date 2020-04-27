@@ -178,14 +178,14 @@ For details on managing recovery keys, see the following in the Intune documenta
 
 macOS FileVault:
 - [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
-- [Rotate recovery keys](../protect/encrypt-devices-filevault.md#retoate-recovery-keys)
-- [Recover recovery keys](../protect/encrypt-devices-filevault.md#recovery-recovery-keys)
+- [Rotate recovery keys](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Recover recovery keys](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
 Windows 10 BitLocker:
 - [Rotate BitLocker recovery keys](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## Next steps
 
-[Manage BitLocker policy](../protect/device-encryption.md)
+[Manage BitLocker policy](../protect/encrypt-devices.md)
 
-[Manage FileVault policy](device-encrytion-filevault.md)
+[Manage FileVault policy](encrypt-devices-filevault.md)
