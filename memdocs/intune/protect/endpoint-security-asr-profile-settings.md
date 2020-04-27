@@ -29,7 +29,7 @@ ms.reviewer: mattsha
 ---
 # Attack surface reduction policy settings for endpoint security in Intune
 
-View the settings you can configure in profiles for *Attack surface reduction* policy in the endpoint security node of Intune.
+View the settings you can configure in profiles for *Attack surface reduction* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 Supported platforms and profiles:
 
