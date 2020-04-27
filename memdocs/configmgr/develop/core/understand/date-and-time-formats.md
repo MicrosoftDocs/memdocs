@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # Configuration Manager Date and Time Formats
-Actions, in Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, “1998.10.31��?).  
+Actions, in Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, "1998.10.31").  
 
  The times that are stored in the Configuration Manager site database can be local or in Coordinated Universal Time (UTC). Status Message Viewer can convert to local time, but queries and reports cannot. What you see might be seven hours later than expected, if local time is Pacific Daylight time. Therefore, the user must be aware of the following:  
 

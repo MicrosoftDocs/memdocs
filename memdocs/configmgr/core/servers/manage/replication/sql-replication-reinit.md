@@ -33,7 +33,7 @@ SELECT * FROM ServerData
 WHERE Status = 120
 ```
 
-### Check which replication group hasn’t completed reinit
+### Check which replication group hasn't completed reinit
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking

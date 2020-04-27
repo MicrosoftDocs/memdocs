@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 A successful Microsoft Intune deployment starts with having a good plan and design. The purpose of this guide is to step you through the process of developing a deployment plan, creating a design, onboarding Intune, and conducting a production rollout.
 
-## What’s included in this guide?
+## What's included in this guide?
 
 This guide includes sections that will walk you through the end-to-end process of deploying Intune. Start with Section 1 to clarify your goals, objectives, and challenges. Then move on to Sections 2 – 7 in the order that best meets your needs. You don't need to work through these sections sequentially; you can complete them in parallel.
 
@@ -67,4 +67,4 @@ This guide also provides additional technical information and table templates th
 
 ## Next steps
 
-Let’s get started with the first section: [Determine deployment goals, objectives, and challenges](planning-guide-deployment-goals.md).
+Let's get started with the first section: [Determine deployment goals, objectives, and challenges](planning-guide-deployment-goals.md).

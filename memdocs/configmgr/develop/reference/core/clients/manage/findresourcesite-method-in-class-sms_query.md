@@ -47,7 +47,7 @@ SInt32 FindResourceSite(
 
  Qualifiers: [out]  
 
- ….  
+ The resource number.
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

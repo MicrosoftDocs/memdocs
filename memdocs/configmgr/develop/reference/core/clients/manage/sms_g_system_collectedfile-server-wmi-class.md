@@ -127,7 +127,7 @@ Class SMS_G_System_CollectedFile : SMS_G_System
 
  Qualifiers: None  
 
- Date and time the file was last modified….  
+ Date and time the file was last modified.
 
 ## Remarks  
  There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  

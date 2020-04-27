@@ -100,7 +100,7 @@ Class SMS_Operation :
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit(“256��?)]  
+ Qualifiers: [sizelimit("256")]  
 
  Name of the operation.  
 

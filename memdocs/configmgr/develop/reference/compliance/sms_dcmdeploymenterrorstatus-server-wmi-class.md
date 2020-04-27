@@ -175,7 +175,7 @@ Class SMS_DCMDeploymentErrorStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- ErrorTypeDisplay description …   
+The description of the error type.
 
  `ObjectDescription`  
  Data type: `String`  

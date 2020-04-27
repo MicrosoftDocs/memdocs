@@ -5,7 +5,7 @@ description: "The Configuration Manager console provides alerts and statuses to 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -29,7 +29,7 @@ Starting in Configuration Manager version 1610, you can use the Software Updates
 <!--4224414-->
 *(Introduced in version 1906)*
 
-You can drill through compliance statistics to see which devices require a specific Office 365 software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
+You can drill through compliance statistics to see which devices require a specific Microsoft 365 Apps software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
 
 1. Go to **Software Library** > **Software Updates** > **All Software Updates**.
 1. Select any update that is required by at least one device.

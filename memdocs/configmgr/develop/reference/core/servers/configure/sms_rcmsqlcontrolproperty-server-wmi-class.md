@@ -9,11 +9,11 @@ ms.assetid: 6ebd8c91-7e3a-446d-b7bb-53bc8fe7ba8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # SMS_RcmSqlControlProperty Server WMI Class
-The `SMS_RcmSqlControlProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents ….  
+
+The `SMS_RcmSqlControlProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

@@ -32,7 +32,7 @@ To define a deployment technology registration file, create an XML file based on
 
 |Attributes|Description|  
 |----------------|-----------------|  
-|AuthoringScopeID|AuthoringScopeId will always be “GLOBAL��?.|  
+|AuthoringScopeID|AuthoringScopeId will always be "GLOBAL".|  
 |LogicalName|LogicalName must match the name of the SDK class created in the SDK assembly.|  
 |TechnologyId|Technology must match the constant declared and used in the SDK assembly.|  
 |AssemblySuffix|AssemblySuffix must match the filename of the SDK assembly (Microsoft.ConfigurationManagement.ApplicationManagement.<`AssemblySuffix`>.dll).|  
@@ -40,8 +40,8 @@ To define a deployment technology registration file, create an XML file based on
 
 |Element|Description|  
 |-------------|-----------------|  
-|HostingTechnology|The HostingTechnology element must be “GLOBAL/<`ClassNameForHostingTechnology`>��?.|  
-|InstallerTechnology|The InstallerTechnology element must be “GLOBAL/<`ClassNameForInstallerTechnology`>��?.|  
+|HostingTechnology|The HostingTechnology element must be "GLOBAL/<`ClassNameForHostingTechnology`>".|  
+|InstallerTechnology|The InstallerTechnology element must be "GLOBAL/<`ClassNameForInstallerTechnology`>".|  
 
 ## See Also  
  [How to Define the Hosting Technology Registration File](../../develop/apps/how-to-define-the-hosting-technology-registration-file.md)   

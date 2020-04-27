@@ -55,7 +55,7 @@ Use the following URL format to open Software Center to a particular application
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the Software Library workspace, expand **Application Management**, and then click **Applications**.
-3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
+3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You'll see that the unique ID of each application is now shown in the list.
 4. Note the **CI Unique ID** of the application you want to provide a link to, for example:
 **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5. Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.

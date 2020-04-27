@@ -2,7 +2,7 @@
 title: Troubleshoot MSfB integration
 titleSuffix: Configuration Manager
 description: Provides suggestions and resolutions to troubleshoot some of the most common problems with Microsoft Store for Business and Education integration.
-ms.date: 12/03/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 09929057-ecf2-4d49-aee0-709916932b14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Troubleshoot the Microsoft Store for Business and Education integration with Configuration Manager
@@ -78,7 +76,7 @@ Then look at one of the following sections for common issues:
 - [Authorization error](#bkmk_fail-symptom1)
 - [The secret key is invalid](#bkmk_fail-symptom2)
 - [Error getting application token](#bkmk_fail-symptom3)
-- [Content location does not exist](#bkmk_fail-symptom4)
+- [Content location doesn't exist or incorrect permissions](#bkmk_fail-symptom4)
 - [Error occurred making http request calling 'GET' method](#bkmk_fail-symptom5)
 - [Cannot write more bytes to the buffer](#bkmk_fail-symptom6)
 
@@ -132,11 +130,16 @@ Then recreate the connection. For more information, see the following articles:
 - [Configure Azure Services](../../core/servers/deploy/configure/azure-services-wizard.md)
 - [Set up Microsoft Store for Business and Education synchronization](manage-apps-from-the-windows-store-for-business.md#bkmk_setup)
 
-### <a name="bkmk_fail-symptom4"></a> Content location does not exist
+### <a name="bkmk_fail-symptom4"></a> Content location doesn't exist or incorrect permissions
 
 #### Cause
 
-When you set up the Microsoft Store for Business and Education connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions.
+When you set up the Microsoft Store for Business and Education connection, you specify a network share for storing synchronized content. This issue can occur if this share doesn't exist or has incorrect permissions. The computer account for the service connection point should be the owner of this directory and any sub-directories.<!-- memdocs#146 --> If it isn't, you'll see an error similar to the following error:
+
+```
+Failed to download package d788cc1b-ab00-bb5f-1548-f2dfe717583b-X86-Arm for product 9WZDNCRFJ3PS\0015.
+System.IO.IOException: This security ID may not be assigned as the owner of this object.
+```
 
 To see the location that you configured:
 

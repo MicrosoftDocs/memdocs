@@ -218,7 +218,7 @@ When you configure a client to use a fallback status point, you provide an addit
 
 ### Central management of client data and client identity
 
-The site database, rather than the individual client, retains important information about each client’s identity, and associates that data to a specific computer, or user.  
+The site database, rather than the individual client, retains important information about each client's identity, and associates that data to a specific computer, or user.  
 
 - The client source files on a computer can be uninstalled and reinstalled without affecting the historical records for the computer where the client is installed.  
 

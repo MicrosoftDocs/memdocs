@@ -39,7 +39,7 @@ sint32 RemoveDistributionPoints(
 
  Qualifiers: `[in, optional]`  
 
- `true` if …  The default value is `false`.  
+ The default value is `false`.
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

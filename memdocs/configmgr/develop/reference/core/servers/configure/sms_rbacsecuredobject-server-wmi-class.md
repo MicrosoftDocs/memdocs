@@ -83,7 +83,7 @@ Class SMS_RbacSecuredObject : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit(“256��?)]  
+ Qualifiers: [sizelimit("256")]  
 
  Name of the object type.  
 

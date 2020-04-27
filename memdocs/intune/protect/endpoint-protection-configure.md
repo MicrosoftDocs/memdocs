@@ -43,9 +43,6 @@ Before you create a profile, review the following articles that detail the endpo
 - [macOS settings](endpoint-protection-macos.md)
 - [Windows 10 settings](endpoint-protection-windows-10.md)
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Create a device profile containing endpoint protection settings
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

@@ -41,11 +41,11 @@ Good change management relies on clear and helpful communications about the upco
 
 - The timeline for communications
 
-Let’s review each area in more detail.
+Let's review each area in more detail.
 
 ## What needs to be communicated?
 
-Determining what information to be communicated depends on when in the Intune rollout process you are communicating. You might decide to communicate in waves to your organizational groups and users, starting with an Intune rollout kickoff, followed by pre-enrollment, and follow up with post-enrollment. Let’s discuss the type of information that could be communicated in each wave.
+Determining what information to be communicated depends on when in the Intune rollout process you are communicating. You might decide to communicate in waves to your organizational groups and users, starting with an Intune rollout kickoff, followed by pre-enrollment, and follow up with post-enrollment. Let's discuss the type of information that could be communicated in each wave.
 
 **Kickoff wave** <br/>Broad communications that introduce the Intune project itself. It should answer questions like what is Intune, why the organization is adopting Intune (benefits to the organization and users), and provide a high-level plan of the deployment and rollout.
 

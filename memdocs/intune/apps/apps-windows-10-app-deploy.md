@@ -101,11 +101,11 @@ Apps can only be installed in the device context when supported by the device an
 - Win32 apps
 - Offline licensed Microsoft Store for Business apps
 - LOB apps (MSI, APPX and MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 
-Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
+Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you've selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
-  - Error: A user can’t be targeted with a device context install.
+  - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
 > When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
