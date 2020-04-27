@@ -33,7 +33,7 @@ ms.collection:
 
 # Resolving a threat found by a Mobile Threat Defense app
 
-A Mobile Threat Defense (MTD) app detects and alerts you to potential threats such as suspicious apps, networks, or OS vulnerabilities on your device. The Company Portal app notifies you when a threat is detected and lets you know if it affects your access to school or work resources. It then redirects you to the MTD app for details about the threat and, if available, steps to fix it. 
+A Mobile Threat Defense (MTD) app detects and alerts you to potential threats on your device, such as suspicious apps, networks, or OS vulnerabilities. The Company Portal app notifies you when a threat is detected and lets you know if it affects your access to school or work resources. It then redirects you to the MTD app for details about the threat and, if available, steps to fix it. 
 
 If a threat appears to be too risky, as determined by your organization, your access to school or work resources can be revoked. As long as these threats are present on your device, you may be unable to:  
 
