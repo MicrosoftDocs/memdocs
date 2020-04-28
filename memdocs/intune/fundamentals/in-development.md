@@ -26,7 +26,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# In development for Microsoft Intune - May 2020
+# In development for Microsoft Intune
 
 To help in your readiness and planning, this page lists Intune UI updates and features that are in development but not yet released. In addition to the information on this page: 
 
@@ -126,7 +126,7 @@ Applies to:
 ## Device enrollment
 
 ### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
-The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own third party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
+This feature may be delayed.
 
 ### Automated device sync interval down to 12 hours<!--3077535 -->
 For Apple's Automated Device Enrollment, the automated device sync interval between Intune and Apple Business Manager will be reduced from 24 hours to 12 hours. For more information on sync, see [Sync managed devices](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
@@ -185,15 +185,6 @@ In April, Intune added support for *Entrust Datacard* and *Intercede* as provide
 ### Privacy preferences settings for macOS devices<!-- 2934232 --> 
 With the release of macOS Catalina 10.15, Apple added new security and privacy enhancements. By default, applications and processes are unable to access specific data without user consent. If users do not provide consent, the applications and processes may fail to function. Intune is adding support for settings that enable IT administrators to allow or disallow data access consent on behalf of end-users on devices running macOS 10.14 and later. These settings will ensure that applications and processes continue to function properly and reduce the number of prompts that end-users experience.
 
-### Set device compliance state from third-party MDM partners<!-- 6361689      -->
-You’ll soon be able to allow the compliance state of iOS or Android devices managed by third-party Mobile Device Management (MDM) partners to be set in Azure Active Directory (Azure AD).
-
-When Intune is configured for partner compliance, compliance data for devices managed by the third-party MDM partner is sent to Intune for compliance evaluation. The results are then passed to Azure AD where the compliance data is used to enforce your conditional access policies for those devices.
-
-Support will soon include the following partners:
-- VMware WorkspaceONE (previously known as AirWatch)
-
-To enable a device compliance partner you’ll use a new node in the Microsoft Endpoint Manager admin center: **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** where you’ll select **Add Compliance Partner**.
 
 ### Duplicate your policies in Endpoint Security<!-- 5892558   -->
 You’ll be able to select a policy you’ve created in the Endpoint security node of the Microsoft Endpoint Manager admin center, and then duplicate it to create a copy.  The policies you’ll be able to duplicate include those you create for:
