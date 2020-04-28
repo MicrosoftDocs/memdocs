@@ -99,7 +99,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|
 
-### Android
+### Android device administrator
 
 |Data type|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -115,11 +115,11 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android work profile
+### Android Enterprise devices with a work profile
 
 Removing company data from an Android work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android work profiles.
 
-### Android enterprise kiosk devices
+### Android Enterprise dedicated devices
 
 You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
