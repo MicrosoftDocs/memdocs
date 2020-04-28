@@ -88,7 +88,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 ## Devices are blocked and no quarantine email is received
 
-- Verify that the device is present in the Intune admin console as an Exchange ActiveSync device. If it’s not, it's likely that device discovery is failing, probably because of an Exchange Connector issue. For more information, see [Troubleshoot the Intune on-premises Exchange connector](troubleshoot-exchange-connector.md).
+- Verify that the device is present in the Intune admin console as an Exchange ActiveSync device. If it's not, it's likely that device discovery is failing, probably because of an Exchange Connector issue. For more information, see [Troubleshoot the Intune on-premises Exchange connector](troubleshoot-exchange-connector.md).
 
 - Before the Exchange Connector blocks a device, it sends an activation (quarantine) email. If the device is offline, it might not receive the activation email. 
 
@@ -108,14 +108,14 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 If a device  isn't compliant but continues to have access, take the following actions.
 
-- Review your Target and Exclusion groups. If a user isn't in the right target group or is in the exclusion group, they won’t be blocked. Only devices of users in a Target group are checked for compliance.
+- Review your Target and Exclusion groups. If a user isn't in the right target group or is in the exclusion group, they won't be blocked. Only devices of users in a Target group are checked for compliance.
 
 - Ensure the device is being discovered. Is the Exchange Connector pointing to an Exchange 2010 CAS while the user is on an Exchange 2013 server? In this case, if the default Exchange rule is Allow, even if the user is in the Target group, Intune can't be aware of the device's connection to Exchange.
 
 - Check Device Existence/Access State in Exchange:
-  - Use this PowerShell cmdlet to get a list of all mobile devices for a mailbox: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. If the device isn’t listed, it isn’t accessing Exchange.
+  - Use this PowerShell cmdlet to get a list of all mobile devices for a mailbox: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. If the device isn't listed, it isn't accessing Exchange.
   
-  - If the device is listed, use the 'Get-CASmailbox -identity:’upn’ | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support.
+  - If the device is listed, use the 'Get-CASmailbox -identity:'upn' | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support.
 
 ## Next steps
 If this information doesn't help you, you can also [get support for Microsoft Intune](../fundamentals/get-support.md).

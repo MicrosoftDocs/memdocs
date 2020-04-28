@@ -69,8 +69,8 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 
     In the email, you can include the URL below in your messages to users. The URL will launch the Android Company Portal to the **Update device settings** page. This page starts their flow to move to work profile management.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-    - For US government, you can use this link instead: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.

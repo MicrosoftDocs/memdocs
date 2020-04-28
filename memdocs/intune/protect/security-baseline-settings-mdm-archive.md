@@ -129,7 +129,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
 
 - **Require SmartScreen for Microsoft Edge**  
 
-  Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Windows Defender SmartScreen. Enabling this policy turns off Windows Defender SmartScreen and prevent users from turning it on. Don’t configure this policy to let users choose to turn Windows defender SmartScreen on or off.  
+  Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Windows Defender SmartScreen. Enabling this policy turns off Windows Defender SmartScreen and prevent users from turning it on. Don't configure this policy to let users choose to turn Windows defender SmartScreen on or off.  
   
   **Default**: Yes  
   
@@ -145,7 +145,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
   **Default**: Yes  
   
 - **Block Password Manager**  
-  By default, Microsoft Edge uses Password Manager automatically, allowing users to manager passwords locally. Disabling this policy restricts Microsoft Edge from using Password Manager. Don’t configure this policy if you want to let users choose to save and manage passwords locally using Password Manager.
+  By default, Microsoft Edge uses Password Manager automatically, allowing users to manager passwords locally. Disabling this policy restricts Microsoft Edge from using Password Manager. Don't configure this policy if you want to let users choose to save and manage passwords locally using Password Manager.
   
   **Default**: Yes  
   
@@ -303,7 +303,7 @@ For more information, see [Policy CSP - DeviceLock](https://docs.microsoft.com/w
       *A setting of Yes prevents use of simple passwords.* 
 
   - **Prevent reuse of previous passwords**  
-    Specifies how many passwords can be stored in the history that can’t be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.
+    Specifies how many passwords can be stored in the history that can't be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.
     
     **Default**: 24  
 
@@ -587,7 +587,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   This policy setting lets you decide whether VBScript can run on pages in specific Internet Explorer zones. Options include: 
   - *Enable* - VBScript runs on pages in specific zones, without any interaction. 
   - *Prompt* - Employees are prompted whether to allow VBScript to run in the zone. 
-  - *Disable* - VBScript is prevented from running in the zone. If you disable or don’t configure this policy setting, VBScript runs without any interaction in the specified zone. 
+  - *Disable* - VBScript is prevented from running in the zone. If you disable or don't configure this policy setting, VBScript runs without any interaction in the specified zone. 
   
   **Default**: Disable  
   

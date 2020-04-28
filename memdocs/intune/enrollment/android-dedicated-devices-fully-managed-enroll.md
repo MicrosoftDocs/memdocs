@@ -35,16 +35,15 @@ After you've set up your [Android Enterprise dedicated devices](android-kiosk-en
 
 | Enrollment method | Minimum Android OS version for dedicated and fully managed devices |
 | ----- | ----- |
-| Near Field Communication | 5.1 |
+| Near Field Communication | 6.0 |
 | Token entry | 6.0 |
 | QR code | 7.0 |
-| Zero Touch  | 8.0\* |
-
-\* On participating manufacturers.
+| Zero Touch  | 8.0<br><br> On participating manufacturers. |
+| [Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> On Samsung Knox 2.8 or higher devices only. |
 
 ## Enroll by using Near Field Communication (NFC)
 
-For devices that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
+For devices 6 and later that support NFC, you can provision your devices by creating a specially formatted NFC tag. You can use your own app or any NFC tag creator tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## Enroll by using a token
 
@@ -95,6 +94,8 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
 
 4. Choose **Apply**.
 
+## Enroll by using Knox Mobile Enrollment
+To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 6 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll).
 
 ## Next steps
 - [Deploy Android apps](../apps/apps-deploy.md)

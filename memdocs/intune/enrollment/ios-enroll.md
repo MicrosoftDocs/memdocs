@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,9 +39,9 @@ As an Intune admin, you can set up enrollment for iOS/iPadOS and iPadOS devices 
 
 Before you can enable iOS/iPadOS devices, complete the following steps:
 
-- [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
+- [Make sure your devices are supported](../fundamentals/supported-devices-browsers.md).
 - [Set up Intune](../fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../fundamentals/mdm-authority-set.md).
-- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOiOS/iPadOS and macOS devices.
+- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOS/iPadOS and macOS devices.
 
 ## User-owned iOS/iPadOS and iPadOS devices (BYOD)
 

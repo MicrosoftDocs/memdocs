@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,8 @@ ms.collection: M365-identity-device-management
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
-> [!IMPORTANT]  
-> Before you create SCEP certificate profiles, devices that will use a SCEP certificate profile must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*.
-
+> [!IMPORTANT]
+> For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-configure.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
 ## Create a SCEP certificate profile
 
@@ -98,7 +97,8 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
        - **Serial number**
        - **Custom**: When you select this option, a **Custom** text box is also shown. Use this field to enter a custom subject name format, including variables. Custom format supports two variables: **Common Name (CN)** and **Email (E)**. **Common Name (CN)** can be set to any of the following variables:
 
-         - **CN={{UserName}}**: The user principal name of the user, such as janedoe@contoso.com.
+         - **CN={{UserName}}**: The user name of the user, such as janedoe.
+         - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
          - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
          - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
@@ -114,6 +114,8 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
+         
+         \* For Android Device Owner Only profiles, the **CN={{UserPrincipalName}}** setting will not work. Android Device Owner Only profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
 
       - **Device certificate type**
 
@@ -228,7 +230,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **SCEP Server URLs**:
 
-     Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on later device check-ins, the cert request could be made against the same server that is down.
+     Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on later device check-ins, the cert request could be made against the same server that is down.
 
 8. Select **Next**.
 
@@ -263,7 +265,7 @@ When your subject name includes one of the special characters, use one of the fo
 
 **For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*.  A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem.  The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:
 
-- **Add quotes**: *CN=*"Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Add quotes**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Remove the comma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  However, attempts to escape the comma by using a backslash character will fail with an error in the CRP logs:
@@ -286,7 +288,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## Assign the certificate profile
 
-Assign SCEP certificate profiles the same way you [deploy device profiles](../configuration/device-profile-assign.md) for other purposes. However, consider the following before you continue:
+Assign SCEP certificate profiles the same way you [deploy device profiles](../configuration/device-profile-assign.md) for other purposes.
+
+To use a SCEP certificate profile, a device must have also received the trusted certificate profile that provisions it with your Trusted Root CA certificate. We recommend you deploy both the trusted root certificate profile and SCEP certificate profile to the same groups.
+
+Consider the following before you continue:
 
 - When you assign SCEP certificate profiles to groups, the Trusted Root CA certificate file (as specified in the *trusted certificate profile*) is installed on the device. The device uses the SCEP certificate profile to create a certificate request for that Trusted Root CA certificate.
 
@@ -297,8 +303,6 @@ Assign SCEP certificate profiles the same way you [deploy device profiles](../co
 - To publish a certificate to a device quickly after the device enrolls, assign the certificate profile to a user group rather than to a device group. If you assign to a device group, a full device registration is required before the device receives policies.
 
 - If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 clients to start the process of requesting the certificate.
-
-- Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile. For example, if you are deploying a SCEP certificate profile to a user group, the trusted root (and intermediate) certificate profile must also be deployed to that same user group.
 
 > [!NOTE]
 > On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 

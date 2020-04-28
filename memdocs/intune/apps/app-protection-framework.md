@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ The APP data protection configuration framework is organized into three distinct
 
 - Level 2 enterprise enhanced data protection – Microsoft recommends this configuration for devices where users access sensitive or confidential information. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
 
-- Level 3 enterprise high data protection – Microsoft recommends this configuration for devices run by an organization with a larger or more sophisticated security team, or for specific users or groups who are at uniquely high risk (as one example, one organization identified users who handle data whose theft would directly and seriously impact their stock price). An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
+- Level 3 enterprise high data protection – Microsoft recommends this configuration for devices run by an organization with a larger or more sophisticated security team, or for specific users or groups who are at uniquely high risk (users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization). An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
 
 ## APP Data Protection Framework deployment methodology
 
@@ -66,6 +66,9 @@ Individual APP settings for each app can be validated on devices using Edge and 
 The following App Protection Policy settings should be enabled for the applicable apps and assigned to all mobile users. For more information on each policy setting, see [iOS app protection policy settings](app-protection-policy-settings-ios.md) and [Android app protection policy settings](app-protection-policy-settings-android.md).
 
 Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.  
+
+### Conditional Access Policies
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. See **Scenario 1: Office 365 apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies.
 
 ### Apps to include in the App Protection Policies  
 
@@ -160,8 +163,8 @@ The policy settings enforced in level 2 include all the policy settings recommen
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   12.4.4* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
-| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 8.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor.Build <br>Example:   12.4.6* / Block access |          iOS/iPadOS        | Microsoft recommends configuring the minimum iOS   major version to match the supported iOS versions for Microsoft apps.   Microsoft apps support a N-1 approach where N is the current iOS major   release version. For minor and build version values, Microsoft recommends   ensuring devices are up to date with the respective security updates. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 5.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Min patch   version  |          *Format:   YYYY-MM-DD <br> Example: 2020-01-01* / Block access  |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See [Android Security Bulletins](https://source.android.com/security/bulletin/) for the latest patch   releases.  |
 
 #### Level 3 enterprise high data protection 
@@ -193,6 +196,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 8.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](https://aka.ms/mtdmamdocs).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
 

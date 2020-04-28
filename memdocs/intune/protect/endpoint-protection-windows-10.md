@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -947,6 +947,9 @@ Block the following to help prevent email threats:
 > **On X86 client machines**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### Controlled folder access  
 
@@ -1269,9 +1272,8 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Block** - Users can press a docked portable device's physical eject button to safely undock the device.  
-  - **Not configured** - A user must sign in to the device, and receive permission to undock the device.  
+  - **Block** - A user must sign in to the device, and receive permission to undock the device.
+  - **Not configured** - Users can press a docked portable device's physical eject button to safely undock the device.
 
 - **Install printer drivers for shared printers**  
   **Default**:  Not configured  
@@ -1314,8 +1316,8 @@ Use these options to configure the local security settings on Windows 10 devices
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Enable** - Pressing CTRL+ALT+DEL isn't required for users to sign in.  
-  - **Not configured** Require users to press CTRL+ALT+DEL before logging on to Windows.  
+  - **Enable** -  Require users to press CTRL+ALT+DEL before logging on to Windows.
+  - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
 
 - **Smart card removal behavior**  
   **Default**: Lock workstation   

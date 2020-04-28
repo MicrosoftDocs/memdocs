@@ -36,7 +36,7 @@ Set up app-based Conditional Access policies for apps that are part of the list 
 Before you can use app-based Conditional Access policies, you need to have [Intune app protection policies](../apps/app-protection-policies.md) applied to your apps.
 
 > [!IMPORTANT]
-> This article walks through the steps to add an app-based Conditional Access policy. You can use the same steps when add apps like SharePoint Online, Microsoft Teams, and Microsoft Exchange Online from the list of approved apps.
+> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## Create app-based Conditional Access policies
 
@@ -52,7 +52,7 @@ Before you can create Conditional Access policies from the Microsoft Endpoint Ma
 
 3. Enter a policy **Name**, and then under *Assignments*, select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and select **Done**.
 
-4. Select **Cloud apps or actions**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 SharePoint Online** and **Office 365 Exchange Online**.
+4. Select **Cloud apps or actions**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 (preview)**.
 
    Select **Done** to save your changes.
 
@@ -60,7 +60,7 @@ Before you can create Conditional Access policies from the Microsoft Endpoint Ma
 
    Select **Done** to save your changes.
 
-6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require device to be marked as compliant**.
+6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require approved client app** and **Require app protection policy (preview)** then select **Require one of the selected controls**
 
    Choose **Select** to save your changes.
 
