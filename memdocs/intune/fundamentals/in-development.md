@@ -187,7 +187,7 @@ With the release of macOS Catalina 10.15, Apple added new security and privacy e
 
 
 ### Duplicate your policies in Endpoint Security<!-- 5892558   -->
-You’ll be able to select a policy you’ve created in the Endpoint security node of the Microsoft Endpoint Manager admin center, and then duplicate it to create a copy.  The policies you’ll be able to duplicate include those you create for:
+You’ll be able to select a policy you’ve created in the Endpoint security node of the Microsoft Endpoint Manager admin center, and then duplicate it to create a copy.  The policies you’ll be able to duplicate include those you create for: 
 
 - Antivirus
 - Disk encryption
