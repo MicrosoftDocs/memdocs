@@ -59,7 +59,7 @@ By the end of this lab, you'll have the skills to get started using Intune and M
 
 This feature applies to:
 
-- Windows 10 version 1703 and newer
+- Windows 10 version 1709 and newer
 
 ## Prerequisites
 
