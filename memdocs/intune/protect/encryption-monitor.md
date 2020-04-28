@@ -56,7 +56,7 @@ The Encryption report pane displays a list of the devices you manage with high
   - **Ready**: The device can be encrypted by using MDM policy, which requires the device meet the following requirements:
 
     **For macOS devices**:
-    - MacOS version 10.13 or later
+    - macOS version 10.13 or later
 
     **For Windows 10 devices**:
     - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
@@ -123,9 +123,9 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
     *Consider: Intune can't set up FileVault on a device that is already encrypted. Instead, the user needs to manually decrypt their device before it can be managed by a device configuration policy and Intune*.
 
-  - FileVault needs the user to approve their management profile in MacOS Catalina and higher.
+  - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
-    *Consider: Beginning with MacOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../enrollment/macos-enroll.md) in the Intune documentation*.
+    *Consider: Beginning with macOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../enrollment/macos-enroll.md) in the Intune documentation*.
 
   - Unknown.
 
