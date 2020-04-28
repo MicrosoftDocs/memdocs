@@ -40,7 +40,7 @@ public void RenameCollection(WqlConnectionManager connection, string collectionI
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |collectionID|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the CollectionID property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
 |name|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  
 |comment|-   Managed: `String`<br />-   VBScript: `String`|An example collection property. The property value is modified in the code snippet.|  
