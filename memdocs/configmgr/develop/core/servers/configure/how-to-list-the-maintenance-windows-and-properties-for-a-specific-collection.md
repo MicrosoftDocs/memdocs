@@ -137,7 +137,7 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the collection.|  
 
 ## Compiling the Code  

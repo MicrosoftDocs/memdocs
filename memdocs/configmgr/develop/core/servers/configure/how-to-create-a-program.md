@@ -110,7 +110,7 @@ public void CreateProgram(WqlConnectionManager connection,
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The name of the package associated with the program.|  
 |`newProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the new program.|  
 |`newProgramComment`|-   Managed: `String`<br />-   VBScript: `String`|Comment that describes the program in the Configuration Manager console.|  

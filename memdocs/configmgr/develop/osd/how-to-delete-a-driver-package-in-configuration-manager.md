@@ -68,7 +68,7 @@ public void DeleteDriverPackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`packageID`|-   Managed: `String`<br />-   VBScript: `String`|-   The driver package identifier available in SMS_DriverDriverPackage.PackageID.|  
 
 ## Compiling the Code  

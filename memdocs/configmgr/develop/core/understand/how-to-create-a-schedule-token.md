@@ -123,7 +123,7 @@ public void CreateDailyRecurringScheduleToken(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`hourDuration`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Number of hours during which the scheduled action occurs. Allowable values are in the range 0-23. The default value is 0, indicating no duration.|  
 |`daySpan`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Number of days spanning schedule intervals. Allowable values are in the range 0-31. The default value is 0.|  
 |`startTime`|-   Managed: `String` (DateTime)<br />-   VBScript: `String` (DateTime)|Date and time when the scheduled action takes place. The default value is "19700201000000.000000+***". This is the format in which (WMI) CIM DATETIME values are stored.|  

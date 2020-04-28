@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Call a Configuration Manager Object Class Method by Using WMI
-To call a SMS Provider class method, in Configuration Manager, you use the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) method to call methods that are defined by the class.  
+To call a SMS Provider class method, in Configuration Manager, you use the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) method to call methods that are defined by the class.  
 
 > [!NOTE]
 >  To call a method on an object instance, call the method from the object directly. For example,  `ObjectInstance.MethodName parameters`.  
@@ -81,7 +81,7 @@ Sub ValidateQueryRule(connection, wqlQuery)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`wqlQuery`|-   `String`|A WQL query string. For this example, `SELECT * FROM SMS_R_System` is a valid query.|  
 
 ## Compiling the Code  
