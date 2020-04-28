@@ -103,7 +103,7 @@ public void CreateInstallSoftwareTaskSequence(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript:  `String`|The task sequence step name.|  
 |`description`|-   VBScript:  `String`|The task sequence step description.|  
 |`packageID`|-   Managed: `String`<br />-   VBScript:  `String`|The package identifier containing the software to be installed. Obtained from `SMS_Package.PackageID`.|  

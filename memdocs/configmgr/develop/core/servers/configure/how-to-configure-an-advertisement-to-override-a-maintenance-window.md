@@ -117,7 +117,7 @@ public void ModifySWDAdvertisementToOverrideMaintenanceWindows(WqlConnectionMana
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingAdvertisementID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the advertisement to modify.|  
 
 ## Compiling the Code  

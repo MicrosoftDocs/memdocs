@@ -153,7 +153,7 @@ public void CreateSUMUpdateList(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newUpdates`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the updates that is associated with the Update List.|  
 |`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type `LocalizedInformation`.|  
 

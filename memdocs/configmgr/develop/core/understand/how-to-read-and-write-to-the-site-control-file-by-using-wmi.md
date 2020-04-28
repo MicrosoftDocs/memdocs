@@ -256,7 +256,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   `String`|The site code for the Configuration Manager site.|  
 
 ## Compiling the Code  

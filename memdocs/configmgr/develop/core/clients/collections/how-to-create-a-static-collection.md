@@ -170,7 +170,7 @@ public void CreateStaticCollection(WqlConnectionManager connection, string newCo
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newCollectionName`|-   Managed: `String`<br />-   VBScript: `String`|The unique name that represents the collection in the Configuration Manager console.|  
 |`newCollectionComment`|-   Managed: `String`<br />-   VBScript: `String`|General comment or note that documents the collection.|  
 |`ownedByThisSite`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|`true` if the collection originated at the local Configuration Manager site.|  

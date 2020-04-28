@@ -19,7 +19,7 @@ You modify a Configuration Manager object, in Configuration Manager, by using th
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, call the [Get](https://msdn.microsoft.com/library/aa393868.aspx) method and specify the class and key information for the object you want. This returns a [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) representing object.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](https://msdn.microsoft.com/library/aa393868.aspx) method and specify the class and key information for the object you want. This returns a [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) representing object.  
 
 3.  Using the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx), update the object properties.  
 
@@ -63,7 +63,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|[SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`packageID`|`String`|The package identifier. This is available from the `SMS_Package` class `PackageID` identifier.|  
 |`Description`|`String`|A new description for the object.|  
 
