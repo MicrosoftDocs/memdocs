@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -679,7 +679,7 @@ These settings use the [start policy CSP](https://docs.microsoft.com/windows/cli
 
 ## Microsoft Defender Smart Screen
 
-- **SmartScreen for Microsoft Edge**: **Require** turns off Microsoft Defender SmartScreen and prevent users from turning it on. **Not configured** (default) turns on SmartScreen. Helps protect users from potential threats and prevent users from turning it off.
+- **SmartScreen for Microsoft Edge**: **Require** turns on Microsoft Defender SmartScreen, and prevents users from turning it off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on SmartScreen, and allow users to turn it on and off.
 
   Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software.
 
