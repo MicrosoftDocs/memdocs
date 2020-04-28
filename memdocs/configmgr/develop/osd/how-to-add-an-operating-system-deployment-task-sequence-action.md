@@ -105,7 +105,7 @@ public IResultObject AddTaskSequenceActionCommandLine(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence.|  
 |`Name`|-   Managed: `String`<br />-   VBScript: `String`|A name for the new action.|  
 |`Description`|-   Managed: `String`<br />-   VBScript: `String`|A description for the action.|  

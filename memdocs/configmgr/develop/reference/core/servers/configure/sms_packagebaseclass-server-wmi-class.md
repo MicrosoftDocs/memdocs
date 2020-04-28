@@ -296,7 +296,7 @@ Access type: Read/Write
 
 Qualifiers: None  
 
-The number of programs the package has. The default value is …  
+The number of programs the package has.
 
 ### PackageID  
 Data type: `String`  

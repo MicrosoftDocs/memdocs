@@ -12,10 +12,10 @@ manager: dougeby
 
 ---
 # Get started with Configuration Manager programming
-To get started with programming for Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
+To get started with programming for Configuration Manager, it's beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
 
 > [!IMPORTANT]
-> You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you’ll find many references containing "SMS" – in fact, most WMI classes start with "SMS_" and the primary Configuration Manager WMI namespace is "SMS". Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
+> You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you'll find many references containing "SMS" – in fact, most WMI classes start with "SMS_" and the primary Configuration Manager WMI namespace is "SMS". Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
 
 ## Functional understanding  
 
@@ -51,7 +51,7 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 ## Architectural understanding  
 
-Configuration Manager is multi-tiered, distributed management system. It’s important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
+Configuration Manager is multi-tiered, distributed management system. It's important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
 
 - [Architectural Overview](../../../develop/core/understand/architectural-overview.md)  
 
@@ -59,7 +59,7 @@ In addition to the architectural information, there are several key points that 
 
 - **Server:** In a general sense, most programming actions (in particular, automation) take place on a Configuration Manager site server. Actions or configuration changes are propagated throughout the Configuration Manager hierarchy to the clients via policy. Policy is pulled down by the client on a configurable polling interval **NOT** pushed immediately to the client by the server. In general, once a client is installed, there is no direct communication from the site server to the client or the client to the site server – all communication takes place through intermediary server roles.  
 
-- **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A ‘server’ can be a Configuration Manger client. An Exchange server, an Active Directory server, and a Configuration Manager server can all be Configuration Manager clients. In addition, Windows 10, Windows Phone, and macOS devices can all be Configuration Manager clients.  
+- **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A 'server' can be a Configuration Manger client. An Exchange server, an Active Directory server, and a Configuration Manager server can all be Configuration Manager clients. In addition, Windows 10, Windows Phone, and macOS devices can all be Configuration Manager clients.  
 
 Configuration Manager clients receive policy by periodically polling a Configuration Manager Management Point. The polling interval for retrieving basic policy is configurable, as are other settings. Because of this, there are inherent delays in client targeted actions initiated from the Configuration Manager site server.  
 
@@ -120,7 +120,7 @@ Configuration Manager clients receive policy by periodically polling a Configura
 
 ### WBEMTEST  
 
-If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
+If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft's implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
 
 [Introduction to WBEMTEST](../../../develop/core/understand/introduction-to-wbemtest.md)  
 

@@ -370,6 +370,10 @@ This release includes the following improvements to OS deployment:
 
 - When you create task sequence media, Configuration Manager doesn't add an autorun.inf file. This file is commonly blocked by antimalware products. You can still include the file if necessary for your scenario.<!-- 4090666 -->
 
+### Improvements to PXE
+
+Option 82 during the PXE DHCP handshake is now supported with the PXE responder without WDS. Option 82 is not supported with WDS.
+
 
 ## <a name="bkmk_userxp"></a> Software Center
 

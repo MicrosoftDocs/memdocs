@@ -81,7 +81,7 @@ Each hierarchy supports a single instance of this role, on any site system of th
 
 To install the role, use the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. For more information, see [Install site system roles](../deploy/configure/install-site-system-roles.md). On the **System Role Selection** page of the wizard, select the **Data Warehouse service point** role. 
 
-When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database, Configuration Manager doesn’t create a new database. Instead it uses the one you specify. This process is the same as when you [move the data warehouse database to a new SQL Server](#move-the-database).
+When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database, Configuration Manager doesn't create a new database. Instead it uses the one you specify. This process is the same as when you [move the data warehouse database to a new SQL Server](#move-the-database).
 
 
 ### Configure properties

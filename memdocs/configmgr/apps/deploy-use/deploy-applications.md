@@ -99,7 +99,7 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Allow end users to attempt to repair this application**: Starting in version 1810, if you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->  
 
-- **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user’s primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
+- **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.  
 
 - **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](../../core/clients/deploy/plan/plan-wake-up-clients.md).  
 
@@ -262,7 +262,7 @@ After clients receive the deployment, the following behavior applies:
 
     - Schedule these dialogs in the **Computer Agent** group of client settings. For more information, see [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-    - If you don’t want the user to see these messages, select the option to **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment's properties. For more information, see [Deployment User Experience settings](#bkmk_deploy-ux).  
+    - If you don't want the user to see these messages, select the option to **Hide in Software Center and all notifications** on the **User Experience** tab of the deployment's properties. For more information, see [Deployment User Experience settings](#bkmk_deploy-ux).  
 
 - If you deployed the application as **Required**, and didn't specify to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the installation of the app fails if one or more of the specified applications are running.  
 

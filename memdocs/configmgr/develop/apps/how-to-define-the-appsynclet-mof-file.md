@@ -21,7 +21,7 @@ To define a custom synclet MOF file, create an instance of the CCM_AppHandlers c
 
 ### To define a custom synclet MOF file  
 
-1.  Create an instance of the `CCM_AppHandlers` class. This class associates the synclet with the custom client-side handler. The HandlerCLSID value is the globally unique identifier that identifies the custom client-side handler’s COM object.  This, and the other class instances will be stored in WMI under root\ccm\cimodels.  
+1.  Create an instance of the `CCM_AppHandlers` class. This class associates the synclet with the custom client-side handler. The HandlerCLSID value is the globally unique identifier that identifies the custom client-side handler's COM object.  This, and the other class instances will be stored in WMI under root\ccm\cimodels.  
 
      The following example from the RDP sample project demonstrates how to define a custom synclet MOF file.  
 

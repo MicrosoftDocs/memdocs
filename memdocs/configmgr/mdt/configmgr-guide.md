@@ -18,7 +18,7 @@ manager: dougeby
 > [!NOTE]     
 >  In this document, *Windows* applies to the Windows 8.1, Windows 8, Windows 7, Windows Server® 2012 R2, Windows Server 2012, and Windows Server 2008 R2 operating systems unless otherwise noted. MDT does not support ARM processor–based versions of Windows. Similarly, *MDT* refers to MDT 2013 unless otherwise stated.  
 
- After using this guide to evaluate MDT, review the rest of the MDT guidance to learn more about the technology’s advanced features.  
+ After using this guide to evaluate MDT, review the rest of the MDT guidance to learn more about the technology's advanced features.  
 
 ## Prerequisites  
  Zero Touch Installation installations using Configuration Manager have the following prerequisites.  
@@ -338,7 +338,7 @@ manager: dougeby
 3. In the **Microsoft Self-Extractor** dialog box, in **Select the folder where you want to unzip the files to**, type **E:\Source$\SQL2008R2SP1CU6**, and then click **OK**.  
 
    > [!NOTE]   
-   >  You can click the ellipse (…) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
+   >  You can click the ellipsis (**...**) to browse for the E:\Source$\SQL2008R2SP1CU6 folder.  
 
     The extraction process is displayed. When the process is complete, the completion status is displayed.  
 
@@ -393,7 +393,7 @@ manager: dougeby
 8.  Close any open windows.  
 
 ###  <a name="InstallConfigManager"></a> Step 1-11: Install Configuration Manager  
- When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, “Extend the Active Directory Schema,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+ When the other products and technologies have been installed, install Configuration Manager. Before doing so, however, extend the Active Directory schema so that computers can locate the distribution points, service locator points, and other server roles. Also, you can extend the schema after you have installed Configuration Manager. For more information about how to extend the Active Directory schema for Configuration Manager, see the section, "Extend the Active Directory Schema," in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
  After extending the Active Directory schema, install Configuration Manager. The configuration of WDG-MDT-01 supports Configuration Manager for this sample. The configuration of computers in the production network may vary. To find out more about the prerequisites for installing Configuration Manager, see [Supported Configurations for Configuration Manager](https://technet.microsoft.com/library/gg682077.aspx).  
 
@@ -927,7 +927,7 @@ manager: dougeby
    |**Progress**|The progress for importing the computer is displayed.|  
    |**Confirmation**|Click **Close**.|  
 
-   For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section “How to Deploy Operating Systems in Configuration Manager,” in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
+   For more information on adding a new computer to the Configuration Manager site database, see the section, "To import computer information for a single computer," in the section "How to Deploy Operating Systems in Configuration Manager," in the Configuration Manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateCollectionContainRefComp"></a> Step 4-2: Create a Collection That Contains the Reference Computer  
  In the Configuration Manager console, create a collection that includes the reference computer (WDG-REF-01). This computer collection is used later when advertising the task sequence created earlier in the process.  
@@ -954,7 +954,7 @@ manager: dougeby
    |**Progress**|The progress for creating the device collection is displayed.|  
    |**Completion**|Click **Close**.|  
 
-   For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, "How to Create Collections in Configuration Manager," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="DeployRefCompTaskSeq"></a> Step 4-3: Deploy the Reference Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process to the device collection that includes the reference computer created earlier in the process.  
@@ -986,7 +986,7 @@ manager: dougeby
    |**Progress**|The progress for deploying the task sequence is displayed.|  
    |**Completion**|Click **Close**.|  
 
-   For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, "How to Deploy a Task Sequence," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateTaskSeqBootMedia"></a> Step 4-4: Create the Task Sequence Bootable Media  
  To initiate the MDT process, provide a method for starting the computer with Windows PE and the necessary software by creating the task sequence bootable media disk. Use the Task Sequence Media Wizard in the Configuration Manager console to create bootable media for storage on a USB flash drive, CD, or DVD.  
@@ -1022,7 +1022,7 @@ manager: dougeby
 
 6. If WDG-REF-01 is a physical computer, create a CD or DVD of the International Organization for Standardization (ISO) file. If WDG-REF-01 is a VM, start the VM directly from the ISO file.  
 
-   For more information on creating the task sequence bootable media disk, see the section, “How to Create Bootable Media,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information on creating the task sequence bootable media disk, see the section, "How to Create Bootable Media," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="StartRefCompwithTaskSeqBootMedia"></a> Step 4-5: Start the Reference Computer with the Task Sequence Bootable Media  
  Start the reference computer (WDG-REF-01) with the task sequence bootable media disk created earlier in the process. This medium starts Windows PE on the reference computer and initiates the MDT process. At the end of the MDT process, Windows 8.1 is deployed on the reference computer and an image of the reference computer is saved to \WDG-MDT-01\Capture$\WDG-REF-01.wim.  
@@ -1391,7 +1391,7 @@ manager: dougeby
    |**Progress**|The progress for importing the computer is displayed.|  
    |**Confirmation**|Click **Close**.|  
 
-   For more information on adding a new computer to the Configuration Manager site database, see the section, “To import computer information for a single computer,” in the section, “How to Deploy Operating Systems in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information on adding a new computer to the Configuration Manager site database, see the section, "To import computer information for a single computer," in the section, "How to Deploy Operating Systems in Configuration Manager," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="CreateComputerCollectionIncludesTarget"></a> Step 6-2: Create a Computer Collection That Includes the Target Computer  
  In the Configuration Manager console, create a collection that includes the target computer (WDG-CLI-01). You use this computer collection later when advertising the task sequence created earlier in the process.  
@@ -1419,7 +1419,7 @@ manager: dougeby
    |**Progress**|The progress for creating the device collection is displayed.|  
    |**Completion**|Click **Close**.|  
 
-   For more information, see the section, “How to Create Collections in Configuration Manager,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, "How to Create Collections in Configuration Manager," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="DeployTargetComputerTaskSequence"></a> Step 6-3: Deploy the Target Computer Task Sequence  
  In the Configuration Manager console, deploy the task sequence created earlier in the process for the target computers. Deploy the task sequence to the collection of target computers created earlier in the process.  
@@ -1452,7 +1452,7 @@ manager: dougeby
    |**Progress**|The progress for deploying the task sequence is displayed.|  
    |**Completion**|Click **Close**.|  
 
-   For more information, see the section, “How to Deploy a Task Sequence,” in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
+   For more information, see the section, "How to Deploy a Task Sequence," in the Configuration manager Documentation Library, which is installed with Configuration Manager.  
 
 ###  <a name="StartTargetComputerTaskSequenceMedia"></a> Step 6-4: Start the Target Computer with the Task Sequence Bootable Media  
  Start the target computer (WDG-CLI-01) with the task sequence bootable media created earlier in the process. This medium starts Windows PE on the reference computer and initiates the MDT process. At the end of the MDT process, Windows 8.1 is deployed on the target computer.  

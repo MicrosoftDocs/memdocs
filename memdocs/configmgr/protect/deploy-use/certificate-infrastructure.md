@@ -10,8 +10,6 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Configure certificate infrastructure
@@ -31,7 +29,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
 ### To install and configure the Network Device Enrollment Service and dependencies  
 
-1. On a server that is running Windows Server 2012 R2, install and configure the Network Device Enrollment Service role service for the Active Directory Certificate Services server role. For more information, see [Network Device Enrollment Service Guidance](https://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
+1. On a server that is running Windows Server 2012 R2, install and configure the Network Device Enrollment Service role service for the Active Directory Certificate Services server role. For more information, see [Network Device Enrollment Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Check, and if necessary, modify the security permissions for the certificate templates that the Network Device Enrollment Service is using:  
 
@@ -41,7 +39,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    -   For the SCEP Service account that the Network Device Enrollment Service application pool uses: **Read** and **Enroll** permissions.  
 
-        This requirement is not specific to Configuration Manager but is part of configuring the Network Device Enrollment Service. For more information, see [Network Device Enrollment Service Guidance](https://go.microsoft.com/fwlink/p/?LinkId=309016) in the Active Directory Certificate Services library on TechNet.  
+        This requirement is not specific to Configuration Manager but is part of configuring the Network Device Enrollment Service. For more information, see [Network Device Enrollment Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  To identify which certificate templates the Network Device Enrollment Service is using, view the following registry key on the server that is running the Network Device Enrollment Service: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -66,7 +64,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    - Set the **MaxRequestBytes** key to **16777216**.  
 
-     For more information, see article [820129: Http.sys registry settings for Windows](https://go.microsoft.com/fwlink/?LinkId=309013) in the Microsoft Knowledge Base.  
+     For more information, see Microsoft Support article [820129: Http.sys registry settings for Windows](https://support.microsoft.com/help/820129).
 
 6. On the same server, in Internet Information Services (IIS) Manager, modify the request-filtering settings for the /certsrv/mscep application, and then restart the server. In the **Edit Request Filtering Settings** dialog box, the **Request Limits** settings should be as follows:  
 
@@ -76,7 +74,7 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    - **Maximum query string (Bytes)**: **65534**  
 
-     For more information about these settings and how to configure them, see [Requests Limits](https://go.microsoft.com/fwlink/?LinkId=309014) in the IIS Reference Library.  
+     For more information about these settings and how to configure them, see [IIS Requests Limits](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. If you want to be able to request a certificate that has a lower validity period than the certificate template that you are using: This configuration is disabled by default for an enterprise CA. To enable this option on an enterprise CA, use the Certutil command-line tool, and then stop and restart the certificate service by using the following commands:  
 
@@ -86,9 +84,9 @@ Use these steps to configure your infrastructure for SCEP, or PFX certificates.
 
    3. **net start certsvc**  
 
-      For more information, see [Certificate Services Tools and Settings](https://go.microsoft.com/fwlink/p/?LinkId=309015) in the PKI Technologies library on TechNet.  
+      For more information, see [Certificate services tools and settings](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
-8. Verify that the Network Device Enrollment Service is working by using the following link as an example: **https://server.contoso.com/certsrv/mscep/mscep.dll**. You should see the built-in Network Device Enrollment Service webpage. This webpage explains what the service is and explains that network devices use the URL to submit certificate requests.  
+8. Verify that the Network Device Enrollment Service is working by using the following link as an example: `https://server.contoso.com/certsrv/mscep/mscep.dll`. You should see the built-in Network Device Enrollment Service webpage. This webpage explains what the service is and explains that network devices use the URL to submit certificate requests.  
 
    Now that the Network Device Enrollment Service and dependencies are configured, you are ready to install and configure the certificate registration point.
 
@@ -122,7 +120,7 @@ You must install and configure at least one certificate registration point in th
    - If you selected **Process SCEP certificate requests**, then configure the following:
      -   **Website name**, **HTTPS port number**, and **Virtual application name** for the certificate registration point. These fields are filled in automatically with default values. 
      -   **URL for the Network Device Enrollment Service and root CA certificate** - Click **Add**, then in the **Add URL and Root CA Certificate** dialog box, specify the following:
-         - **URL for the Network Device Enrollment Service**: Specify the URL in the following format: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. For example, if the FQDN of your server that is running the Network Device Enrollment Service is server1.contoso.com, type **https://server1.contoso.com/certsrv/mscep/mscep.dll**.
+         - **URL for the Network Device Enrollment Service**: Specify the URL in the following format: https://*<server_FQDN>*/certsrv/mscep/mscep.dll. For example, if the FQDN of your server that is running the Network Device Enrollment Service is server1.contoso.com, type `https://server1.contoso.com/certsrv/mscep/mscep.dll`.
          - **Root CA Certificate**: Browse to and select the certificate (.cer) file that you created and saved in **Step 1: Install and configure the Network Device Enrollment Service and dependencies**. This root CA certificate allows the certificate registration point to validate the client authentication certificate that the Configuration Manager Policy Module will use.  
 
    - If you selected **Process PFX certificate requests**, you configure the connection details and credentials for the selected certificate authority.
@@ -154,7 +152,7 @@ You must install and configure at least one certificate registration point in th
 
     -   On the site system server, use the *<ConfigMgr Installation Path\>*\Logs\crpsetup.log file and *<ConfigMgr Installation Path\>*\Logs\crpmsi.log file. A successful installation will return an exit code of 0.  
 
-    -   By using a browser, verify that you can connect to the URL of the certificate registration pointâ€”for example, https://server1.contoso.com/CMCertificateRegistration. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
+    -   By using a browser, verify that you can connect to the URL of the certificate registration point. For example, `https://server1.contoso.com/CMCertificateRegistration`. You should see a **Server Error** page for the application name, with an HTTP 404 description.  
 
 11. Locate the exported certificate file for the root CA that the certificate registration point automatically created in the following folder on the primary site server computer: *<ConfigMgr Installation Path\>*\inboxes\certmgr.box. Save this file to a secured location that you can securely access when you later install the Configuration Manager Policy Module on the server that is running the Network Device Enrollment Service.  
 
@@ -182,7 +180,7 @@ You must install and configure the Configuration Manager Policy Module on each s
 
 4. On the **Installation Folder** page, accept the default installation folder for the policy module or specify an alternative folder, and then click **Next**.  
 
-5. On the **Certificate Registration Point** page, specify the URL of the certificate registration point by using the FQDN of the site system server and the virtual application name that is specified in the properties for the certificate registration point. The default virtual application name is CMCertificateRegistration. For example, if the site system server has an FQDN of server1.contoso.com and you used the default virtual application name, specify **https://server1.contoso.com/CMCertificateRegistration**.  
+5. On the **Certificate Registration Point** page, specify the URL of the certificate registration point by using the FQDN of the site system server and the virtual application name that is specified in the properties for the certificate registration point. The default virtual application name is CMCertificateRegistration. For example, if the site system server has an FQDN of server1.contoso.com and you used the default virtual application name, specify `https://server1.contoso.com/CMCertificateRegistration`.
 
 6. Accept the default port of **443** or specify the alternative port number that the certificate registration point is using, and then click **Next**.  
 

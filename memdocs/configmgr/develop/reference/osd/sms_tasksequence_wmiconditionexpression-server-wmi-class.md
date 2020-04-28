@@ -53,7 +53,7 @@ Class SMS_TaskSequence_WMIConditionExpression : SMS_TaskSequence_ConditionExpres
  The query result set is the results that satisfy the condition. For example, if you need to identify if a computer has at least one NTFS partition, you would use the following query:  
 
 ```  
-Select * from win32_logicaldisk where FileSystem=’NTFS’  
+Select * from win32_logicaldisk where FileSystem='NTFS'  
 ```  
 
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  

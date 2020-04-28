@@ -25,7 +25,7 @@ Each of these discovered resources has a defined resource type, which is stored 
 The discovery schema views provide information about all resources in a Configuration Manager site. The two discovery schema views are **v_ResourceMap** and **v_ResourceAttributeMap**. The **v_ResourceMap** view contains a list of all the resource types for discovered data. By default, Configuration Manager has the Unknown System, User Group, User, and System Resource types, each of which has its own resource type number and individual view. The view can be joined to other views by using the **ResourceType** column. The following table contains the default data stored in the **v_ResourceMap** view.
 
 ### v_R_System_Valid
-Lists information about valid computers. This view is sorted by **ResourceID** and includes the client version, the processor type, the client’s domain, the NetBIOS name, the operating system and more.
+Lists information about valid computers. This view is sorted by **ResourceID** and includes the client version, the processor type, the client's domain, the NetBIOS name, the operating system and more.
 This view can be joined to other views by using the **ResourceID** column.
 
 |Resource type|Display name|Resource Class Name|

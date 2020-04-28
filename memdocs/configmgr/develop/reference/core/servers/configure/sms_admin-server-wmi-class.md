@@ -123,7 +123,7 @@ Class SMS_Admin : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]  
 
  The name of the user that created this account.  
 
@@ -141,7 +141,7 @@ Class SMS_Admin : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit (“512")]  
+ Qualifiers: [sizelimit ("512")]  
 
  The display name of the account.  
 
@@ -150,7 +150,7 @@ Class SMS_Admin : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [sizelimit(“4000")]  
+ Qualifiers: [sizelimit("4000")]  
 
  The distinguished name of the account. If the distinguished name is not null, `LogonName` and `AdminSid` will be ignored.  
 
@@ -195,7 +195,7 @@ Class SMS_Admin : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [not_null, read, SizeLimit(“512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]  
 
  The name of the user that last modified this account.  
 
@@ -296,7 +296,7 @@ Class SMS_Admin : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [read, sizelimit(“3")]  
+ Qualifiers: [read, sizelimit("3")]  
 
  The site where the account was created.  
 

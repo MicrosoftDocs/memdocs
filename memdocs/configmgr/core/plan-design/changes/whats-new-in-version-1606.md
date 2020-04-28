@@ -71,7 +71,7 @@ Beginning with 1606, you must give consent to use pre-release features in Config
 ### New distribution point update behavior
 Update 1606 introduces changes that improve the availability of distribution points when you install future updates.
 
-After update 1606 is installed, when you next install an update at that site that requires the automatic reinstallation of standard and pull-distribution point site system roles, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site’s content distribution settings to distribute the update to a subset of distribution points at any given time. The result is that only some distribution points go offline to install the update. This allows distribution points that have not yet begun to update, or that have completed the update, to remain online and able to provide content to clients.
+After update 1606 is installed, when you next install an update at that site that requires the automatic reinstallation of standard and pull-distribution point site system roles, all distribution points no longer go offline to update at the same time. Instead, the site server uses the site's content distribution settings to distribute the update to a subset of distribution points at any given time. The result is that only some distribution points go offline to install the update. This allows distribution points that have not yet begun to update, or that have completed the update, to remain online and able to provide content to clients.
 
 
 
@@ -203,7 +203,7 @@ For details, see [How to automatically categorize devices into collections with 
 
 ### Predeclare devices with IMEI or iOS serial numbers
 
-You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as “Corporate” in lists of devices. An Intune license is still required for each user who accesses the service.
+You can identify corporate-owned devices by importing their international station mobile equipment identity (IMEI) numbers or iOS serial numbers. You can upload a comma-separated values (.csv) file containing device IMEI numbers, or you can manually enter device information. Imported information sets the ownership of the devices that enroll as "Corporate" in lists of devices. An Intune license is still required for each user who accesses the service.
 
 ### On-premises Health Attestation service communication
 

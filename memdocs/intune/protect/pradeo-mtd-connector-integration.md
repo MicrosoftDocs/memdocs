@@ -63,7 +63,7 @@ The Pradeo app authorization process follows:
 
 - Allow the Pradeo service to communicate information related to device health state back to Intune.
 
-- Pradeo syncs with Azure AD Enrollment Group membership to populate its device’s database.
+- Pradeo syncs with Azure AD Enrollment Group membership to populate its device's database.
 
 - Allow Pradeo admin console to use Azure AD Single Sign On (SSO).
 

@@ -11,8 +11,6 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
-
-
 ---
 
 # Tutorial: Deploy Windows 10 to pilot
@@ -27,7 +25,7 @@ In this tutorial, you learn how to:
 > * Create a Desktop Analytics deployment plan for Windows 10  
 > * Use Configuration Manager to deploy Windows 10 to the pilot group  
 
-If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
+If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
 Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -217,8 +215,7 @@ Configuration Manager creates a settings policy to configure devices in the Targ
 
 Monitor the configuration of your devices for Desktop Analytics. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
 
-Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to  **Global Pilot**, and see your Configuration Manager device collections.
-
+Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to **Global Pilot**, and see your Configuration Manager device collections. It may take two to three days for the rest of the portal to show complete data. For more information, see [Data latency](troubleshooting.md#data-latency).
 
 ## Create a Desktop Analytics deployment plan
 

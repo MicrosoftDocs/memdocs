@@ -21,7 +21,10 @@ If you have Windows 10 Mobile devices deployed in your organization, between now
 You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ff5a940cf1a76c73a10b77cfc023472ccc9a0b4d
 ### End of support for legacy PC management
 
 Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as Mobile Device Management (MDM) devices to keep them managed by Intune.
@@ -34,8 +37,8 @@ Android device administrator (sometimes referred to "legacy" Android management 
 
 #### How does this affect me?
 Because of these changes by Google, Intune users will be impacted in the following ways:  
-- Intune will only be able to provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won’t receive new password requirements.
-    - Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune’s integration with the Knox platform. This gives you more time to plan the transition off device admin management.    
+- Intune will only be able to provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won't receive new password requirements.
+    - Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune's integration with the Knox platform. This gives you more time to plan the transition off device admin management.    
 - Device administrator-managed Android devices that remain on Android versions below Android 10 won't be impacted and can continue to be entirely managed with device administrator.    
 - For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:  
     - Network access control for VPN will no longer work.   

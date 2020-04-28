@@ -27,7 +27,7 @@ Keep the following considerations in mind when you create and deploy application
 
 -   Before you can deploy Mac application packages to Mac computers, you must use the **CMAppUtil** tool on a Mac computer to convert these applications into a format that can be read by Configuration Manager.  
 
--   Configuration Manager does not support the deployment of Mac applications to users. Instead, these deployments must be made to a device. Similarly, for Mac application deployments, Configuration Manager does not support the **Pre-deploy software to the user’s primary device** option on the **Deployment Settings** page of the **Deploy Software Wizard**.  
+-   Configuration Manager does not support the deployment of Mac applications to users. Instead, these deployments must be made to a device. Similarly, for Mac application deployments, Configuration Manager does not support the **Pre-deploy software to the user's primary device** option on the **Deployment Settings** page of the **Deploy Software Wizard**.  
 
 -   Mac applications support simulated deployments.  
 
@@ -192,7 +192,7 @@ Use the following procedure to help you create an application for Mac computers 
 
 -   Deployments that have a purpose of **Available** are not supported.  
 
--   The **Pre-deploy software to the user’s primary device** option on the **Deployment Settings** page of the **Deploy Software Wizard** is not supported.  
+-   The **Pre-deploy software to the user's primary device** option on the **Deployment Settings** page of the **Deploy Software Wizard** is not supported.  
 
 -   Because Mac computers do not support Software Center, the setting **User notifications** on the **User Experience** page of the **Deploy Software Wizard** is ignored.  
 

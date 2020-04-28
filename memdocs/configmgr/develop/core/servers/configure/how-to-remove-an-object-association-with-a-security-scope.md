@@ -25,7 +25,7 @@ Removing a security scope from an object instance is as simple as deleting the W
 
 1.  Set up a connection to the SMS Provider.  
 
-2.  Determine the object’s key property identifier.  
+2.  Determine the object's key property identifier.  
 
 3.  Determine the object type identifier.  
 
@@ -73,7 +73,7 @@ public void RemoveObjectScope(WqlConnectionManager connection, string scopeId, s
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeId`|`String`|The identifier of the security scope.|  
 |objectKey|`String`|The key property value of the object.|  
 |objectTypeId|`Integer`|The type identifier of the object referenced in the `objectKey` parameter.|  

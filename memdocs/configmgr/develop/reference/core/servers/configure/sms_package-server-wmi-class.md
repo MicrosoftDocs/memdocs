@@ -423,7 +423,7 @@ Class SMS_Package : SMS_PackageBaseclass
 
  Qualifiers: [read]  
 
- See [SMS_PackageBaseclass Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md).…  
+ See [SMS_PackageBaseclass Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md).
 
  `ShareName`  
  Data type: `String`  

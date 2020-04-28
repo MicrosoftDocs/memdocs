@@ -15,7 +15,7 @@ manager: dougeby
 # Configuration Manager Console Node XML
 The node XML for the Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  
 
- The following XML defines an extension node called “MyNode". The “MyNode" node is defined as a child of the **Site Configuration** node (d61498cb-7b3f-4748-ae3e-026674fb0cbd) in the Administration workspace of the Configuration Manager console. “MyNode" is associated with a **Microsoft.ConfigurationManagement.AdminConsole.ConsoleView.ViewDescription** type which is a grid view that ships with Configuration Manager. When the node is selected, it will cause a grid view to appear in the view panel. The grid view displays two properties (**RoleName** and **SiteCode**) of each `MyClass` custom management class instance that is returned by the WQL query.  
+ The following XML defines an extension node called "MyNode". The "MyNode" node is defined as a child of the **Site Configuration** node (d61498cb-7b3f-4748-ae3e-026674fb0cbd) in the Administration workspace of the Configuration Manager console. "MyNode" is associated with a **Microsoft.ConfigurationManagement.AdminConsole.ConsoleView.ViewDescription** type which is a grid view that ships with Configuration Manager. When the node is selected, it will cause a grid view to appear in the view panel. The grid view displays two properties (**RoleName** and **SiteCode**) of each `MyClass` custom management class instance that is returned by the WQL query.  
 
 > [!NOTE]
 >  The UIExtensionsDemo.dll referenced below is an example of referencing a custom assembly.  
@@ -36,12 +36,20 @@ The node XML for the Configuration Manager console is in workspace XML files loc
 |[ActionDescription.imageDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.imagedescription.aspx)|The assembly containing the icon and other image resources used by the node.|  
 |**ActionDescription.viewAssemblyDescription**|The view type of the node.|  
 
-## Node Hierarchy  
- You define cascading nodes in the following manner:  
+## Node hierarchy
 
-```  
-<RootNodeDescription>  <ChildNodes>    <RootNodeDescription>         <ChildNodes>  
-               …               </ChildNodes>    </RootNodeDescription>  </ChildNodes></RootNodeDescription>  
+Define cascading nodes in the following manner:  
+
+```xml
+<RootNodeDescription>
+  <ChildNodes>
+      <RootNodeDescription>
+               <ChildNodes>
+               ...
+               </ChildNodes>
+      </RootNodeDescription>
+  </ChildNodes>
+</RootNodeDescription>  
 ```  
 
 ## See also

@@ -24,7 +24,7 @@ To read a lazy property from a Configuration Manager object returned in a query,
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, use the [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) object to query Configuration Manager objects.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use the [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) object to query Configuration Manager objects.  
 
 3.  Iterate through the query results.  
 

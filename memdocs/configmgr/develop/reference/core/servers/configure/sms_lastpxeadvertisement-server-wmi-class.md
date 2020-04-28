@@ -59,7 +59,7 @@ Class SMS_LastPXEAdvertisement : SMS_BaseClass
 
  Qualifiers: none  
 
- NetbiosName description … The netbios name.. The default value is …  
+ The NETBIOS name for the resource, which is often the same as the host name.
 
  `ResourceId`  
  Data type: `UInt32`  

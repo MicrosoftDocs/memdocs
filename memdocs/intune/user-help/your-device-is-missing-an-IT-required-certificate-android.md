@@ -31,7 +31,7 @@ ms.collection:
 
 # Install missing certificate required by your organization  
 
-If your device isn’t enrolled in Intune, and it’s missing a required certificate, you won’t be able to sign in to the Company Portal app. When you try to sign in, you'll see the following message:
+If your device isn't enrolled in Intune, and it's missing a required certificate, you won't be able to sign in to the Company Portal app. When you try to sign in, you'll see the following message:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 

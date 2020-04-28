@@ -34,7 +34,7 @@ To define the application management installer technology, implement the `Micros
         //   Installer technology for RDP.   
         public class RdpInstallerTechnology : InstallerTechnology  
         {  
-            // Initializes a new instance of the “RdpInstallerTechnology" class.   
+            // Initializes a new instance of the "RdpInstallerTechnology" class.   
              public RdpInstallerTechnology()  
                 : base(Common.TechnologyId, typeof(RdpInstaller), typeof(RdpContentImporter))   
             {  

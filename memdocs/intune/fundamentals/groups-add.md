@@ -95,7 +95,7 @@ Use the following steps to create a new group.
 
 ## Groups and policies
 
-Access to your organization’s resources are controlled by users and groups you create.
+Access to your organization's resources are controlled by users and groups you create.
 
 When you create groups, consider how you'll apply [compliance policies](../protect/device-compliance-get-started.md) and [configuration profiles](../configuration/device-profiles.md). For example, you might have:
 

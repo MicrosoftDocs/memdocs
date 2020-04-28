@@ -49,7 +49,7 @@ If you're using your own iOS device, rather than an org-provided one, follow the
 1. Turn on your iOS device.
 2. After you select your **Language**, connect your device to Wi-Fi.
 3. On the **Set up iOS device** screen, choose **Set up as new device**.  
-4. Once you’ve connected to Wi-Fi, the **Configuration** screen will appear. This will say that **[Your Company] will automatically configure your device.**
+4. Once you've connected to Wi-Fi, the **Configuration** screen will appear. This will say that **[Your Company] will automatically configure your device.**
 
    **Configuration allows [Your Company] to manage this device over the air. An administrator can help you set up email and network accounts, install and configure apps, and manage settings remotely. An administrator may disable features, install and remove apps, monitor and restrict your Internet traffic and remotely erase this device.**
 

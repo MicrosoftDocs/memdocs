@@ -22,28 +22,23 @@ Applications are new to Configuration Manager.  Prior to Configuration Manager, 
 
  A simple command line program that demonstrates the how to create the model and persist to the database through the SMS Provider is shown below. As a sample, it contains strings that are hard-coded, and should not be considered a real world application for automating application creation. Additionally, there is minimal error handling. However, this example should be enough to get you started.  
 
-### Additional References  
- You can refer to the following posts for additional details about creating applications:  
+### Additional references
 
--   **Saving the World One Line of Code at a Time**  
+You can refer to the following posts for additional details about creating applications:  
 
-     [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](https://blogs.msdn.com/b/one_line_of_code_at_a_time/archive/2011/06/14/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk.aspx)  
+- **Saving the World One Line of Code at a Time**  
 
--   **Adam Meltzer's Configuration Manager Blog**  
+    [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](https://docs.microsoft.com/archive/blogs/one_line_of_code_at_a_time/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk)  
 
-     [SDK: How to create a basic application and add a deployment type](https://blogs.msdn.com/b/ameltzer/archive/2012/04/25/sdk-how-to-create-a-basic-application-and-add-a-deployment-type.aspx)  
+- [Adam Meltzer's Configuration Manager blog](https://docs.microsoft.com/archive/blogs/ameltzer/)
 
--   **SDK Sample: AppSupersedence**  
+- **SDK Sample: AppSupersedence**  
 
-     Demonstrates how to create an application-supersedence relationship between two versions of an application.  
+    Demonstrates how to create an application-supersedence relationship between two versions of an application. For more information, see [Configuration Manager SDK samples](../../develop/core/understand/configuration-manager-sdk-samples.md).
 
-     See [Configuration Manager SDK Samples](../../develop/core/understand/configuration-manager-sdk-samples.md) for more information.  
+- **SDK Sample: DTRequirements**  
 
--   **SDK Sample: DTRequirements**  
-
-     Demonstrates how to create deployment type requirements and add them to a deployment type.  
-
-     See [Configuration Manager SDK Samples](../../develop/core/understand/configuration-manager-sdk-samples.md) for more information.  
+    Demonstrates how to create deployment type requirements and add them to a deployment type. For more information, see [Configuration Manager SDK Samples](../../develop/core/understand/configuration-manager-sdk-samples.md).
 
 ##### To Create an Application with the Script Deployment Type  
 
@@ -53,7 +48,7 @@ Applications are new to Configuration Manager.  Prior to Configuration Manager, 
 
 3. Persist the application to the provider.  
 
-   To use this sample, create a new command line C# application and copy and replace the code shown. You’ll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
+   To use this sample, create a new command line C# application and copy and replace the code shown. You'll need to add references to the 5 assemblies below are all found in the adminconsole\bin directory:  
 
 - AdminUI.AppManFoundation.dll  
 
@@ -88,17 +83,14 @@ Saving application, Title: [app], Scope: [ScopeId_D5230FF0-B439-44D9-906E-00A330
 Successfully saved application.  
 ```  
 
-## Example  
- The following example method shows …  
+## Example
+
+The following example method creates an application with the script deployment type and persists into the Configuration Manager database.
+
+> [!NOTE]
+> This code is a sample. It doesn't contain error handling for all cases, nor demonstrate relationships such as dependencies and supersedence. It also doesn't demonstrate creating requirement rules for a deployment type.
 
 ```c#  
-// Sample program for creating an Application with the Script Deployment Type and persisting into the   
-// Configuration Manager database.  
-//   
-// This is example code and does not contain error handling for all cases, nor demonstrate relationships  
-// such as dependencies and supersedence, and also does not demonstrate creating requirement rules for a   
-// Deployment Type.  
-
 namespace ApplicationCreator  
 {  
     using System;  

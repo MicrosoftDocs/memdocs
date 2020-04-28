@@ -670,7 +670,7 @@ Certificate Registration Point PFX support. ConfigMgr grants permission to the c
 
 ### smsdbrole_DMP
 
-Device Management Point. ConfigMgr grants this permission to computer account for a Management Point that has the option, “Allow mobile devices and Mac Computer to uses this management point”, the ability to provide support for MDM enrolled devices.
+Device Management Point. ConfigMgr grants this permission to computer account for a Management Point that has the option, "Allow mobile devices and Mac Computer to uses this management point", the ability to provide support for MDM enrolled devices.
 
 ### smsdbrole_DmpConnector
 

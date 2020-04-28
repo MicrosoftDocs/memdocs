@@ -202,7 +202,7 @@ If you're installing a central administration site as part of a site expansion s
     > This step only applies when you install a primary site. If you're installing a central administration site, skip this step.  
 
     > [!NOTE]  
-    > To install site system roles, Setup uses the **site system installation account**. By default, this uses the primary site’s computer account. This account must be a local administrator on a remote computer to install the site system role. If this account lacks the required permissions, uncheck the site system roles and install them later from within the Configuration Manager console, after configuring additional accounts to use as site system installation accounts. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).  
+    > To install site system roles, Setup uses the **site system installation account**. By default, this uses the primary site's computer account. This account must be a local administrator on a remote computer to install the site system role. If this account lacks the required permissions, uncheck the site system roles and install them later from within the Configuration Manager console, after configuring additional accounts to use as site system installation accounts. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).  
 
 17. On the **Usage Data** page, review the information about data that Microsoft collects, and then choose **Next**. For more information, see [Diagnostics and usage data](../../../plan-design/diagnostics/diagnostics-and-usage-data.md).  
 

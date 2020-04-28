@@ -29,7 +29,7 @@ sint32 Approve(
  `Comments`  
  Data type: `String` Array  
 
- Qualifiers: [in, SizeLimit(“2000")]  
+ Qualifiers: [in, SizeLimit("2000")]  
 
  Comments regarding the approval of the application request.  
 
