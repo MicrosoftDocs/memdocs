@@ -43,7 +43,7 @@ All Windows devices can be synced from the device Settings app, including:
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## Sync directly from Company Portal app for Windows
-Complete these steps to manually sync any Windows 10 device running Creator's Update (version 1703) or later.
+Complete these steps to manually sync any Windows 10 device running Creator's Update (version 1709) or later.
 
 1. Open the Company Portal app on your device.
 
