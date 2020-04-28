@@ -59,7 +59,7 @@ The Encryption report pane displays a list of the devices you manage with high
     - MacOS version 10.13 or later
 
     **For Windows 10 devices**:
-    - Version 1703 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
+    - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
     - The device must have a TPM chip
 
     For more information, see the [BitLocker configuration service provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
@@ -232,7 +232,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1709 and later, and for Windows 10 Pro version 1809 and later.
 
 ## Next steps
 
