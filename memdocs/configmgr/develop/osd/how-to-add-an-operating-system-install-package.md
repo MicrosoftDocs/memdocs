@@ -84,7 +84,7 @@ public void AddOSInstallPackage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new operating system image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the operating system image package.|  
 |`path`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Universal Naming Convention (UNC) path to the image Windows Image (WIM) file.|  

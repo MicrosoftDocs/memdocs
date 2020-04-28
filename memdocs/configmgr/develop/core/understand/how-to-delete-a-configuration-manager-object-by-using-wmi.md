@@ -19,7 +19,7 @@ To delete a Configuration Manager object, in Configuration Manager, call the [SW
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, call the [Get](https://msdn.microsoft.com/library/aa393868.aspx) method and specify the class and key information for the object you want to delete. `Get` returns a `SWbemObject` that represents the object.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](https://msdn.microsoft.com/library/aa393868.aspx) method and specify the class and key information for the object you want to delete. `Get` returns a `SWbemObject` that represents the object.  
 
 3.  Using the `SWbemObject`, call `Delete` to delete the object.  
 

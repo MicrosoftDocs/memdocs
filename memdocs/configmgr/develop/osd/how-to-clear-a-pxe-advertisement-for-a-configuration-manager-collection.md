@@ -80,7 +80,7 @@ public void ClearPxeAdvertisementCollection(WqlConnectionManager connection, str
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`collectionID`|-   Managed: `String`<br />-   VBScript: `String`|The resource identifier. You can obtain this from the `SMS_Collection` class CollectionID property.|  
 
 ## Compiling the Code  

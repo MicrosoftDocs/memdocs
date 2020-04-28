@@ -15,7 +15,7 @@ manager: dougeby
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.  
 
- Before you can enable the Partner Notification API, you must configure Wake on LAN for each primary site for which you want to enable this feature.  For more information about configuring Wake on LAN, see [How to configure Wake on LAN](https://technet.microsoft.com/library/mt757110.aspx).  
+ Before you can enable the Partner Notification API, you must configure Wake on LAN for each primary site for which you want to enable this feature.  For more information about configuring Wake on LAN, see [How to configure Wake on LAN](../../../../core/clients/deploy/configure-wake-on-lan.md).  
 
 ### To enable the Partner Notification API  
 
@@ -29,7 +29,7 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
 
 2.  Restart the SMS_EXECUTIVE service on each computer where you updated the registry keys.  
 
-3.  Create an advertisement  by using the [SMS_Advertisement Server WMI Class](../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md). Set the `OfferType` value to 0 and the `AdvertFlags` value to 0x00400000. For more information about advertisements, see [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md) and [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md).  
+3.  Create an advertisement  by using the [SMS_Advertisement Server WMI Class](../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md). Set the `OfferType` value to 0 and the `AdvertFlags` value to 0x00400000. For more information about advertisements, see [How to Create an Advertisement](how-to-create-an-advertisement.md) and [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md).  
 
 4.  Use the `AssignedSchedule` and `AssignedScheduleEnabled` properties to set a schedule for your advertisement.  
 
@@ -38,5 +38,5 @@ The Partner Notification API allows third-party partners to use the Wake on LAN 
 5.  Use the list of computers in the partner notification file to wake the computers with your custom code.  
 
 ## See Also  
- [How to Create an Advertisement](../../../../develop/core/servers/configure/how-to-create-an-advertisement.md)   
- [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](../../../../develop/core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)
+ [How to Create an Advertisement](how-to-create-an-advertisement.md)   
+ [How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN](how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md)

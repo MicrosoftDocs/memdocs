@@ -28,7 +28,7 @@ In Configuration Manager, you can read the available tally intervals for a site 
 4.  Display the contents of the embedded property list.  
 
 ## Example  
- The following example method returns a [SMS_TaskSequence](assetId:///SMS_TaskSequence?qualifyHint=False&autoUpgrade=True) object after importing it from the supplied XML.  
+ The following example method returns a [SMS_TaskSequence](../../../reference/osd/sms_tasksequence-server-wmi-class.md) object after importing it from the supplied XML.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -103,7 +103,7 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](assetId:///WqlConnectionManager?qualifyHint=False&autoUpgrade=True)<br />-   VBScript: [SWbemServices](assetId:///SWbemServices?qualifyHint=False&autoUpgrade=True)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
+|`connection`|-   Managed: [WqlConnectionManager](../../understand/managed-sms-provider-fundamentals-in-configuration-manager.md#wqlconnectionmanager)<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid Configuration Manager site code.|  
 
 ## Compiling the Code  
