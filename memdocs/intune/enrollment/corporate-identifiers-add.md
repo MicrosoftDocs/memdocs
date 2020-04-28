@@ -63,7 +63,7 @@ This feature is supported for the following platforms:
 [Learn how to find your Android device serial number](https://support.google.com/store/answer/3333000).
 
 ## Add corporate identifiers by using a .csv file
-To create the list, create a two-column, comma-separated value (.csv) list without a header. Add the 14-digit IMEI or serial numbers in the left column, and the details in the right column. Only one type of ID, IMEI or serial number, can be imported in a single .csv file. Details are limited to 128 characters and are for administrative use only. Details aren't displayed on the device. The current limit is 5,000 rows per .csv file. 
+To create the list, create a two-column, comma-separated value (.csv) list without a header. Add the 14-digit IMEI or serial numbers in the left column, and the details in the right column. Only one type of ID, IMEI or serial number, can be imported in a single .csv file. Details are limited to 128 characters and are for administrative use only. Details aren't displayed on the device. The current limit is 5,000 rows per .csv file.
 
 **Upload a .csv file that has serial numbers** – Create a two-column, comma-separated value (.csv) list without a header, and limit the list to 5,000 devices or 5 MB per .csv file.
 
