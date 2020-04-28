@@ -185,7 +185,7 @@ public void ObjectReady(object sender, EventArrivedEventArgs e)
  System.Management  
 
 ## Robust Programming  
- The exception that can be raised is [System.Management.ManagementException](assetId:///System.Management.ManagementException?qualifyHint=False&autoUpgrade=True).  
+ The exception that can be raised is [System.Management.ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception).  
 
 ## See Also  
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   

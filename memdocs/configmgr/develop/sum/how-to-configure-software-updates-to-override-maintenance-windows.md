@@ -87,7 +87,7 @@ public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionMan
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingAssignmentID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|An existing Assignment ID to modify.|  
 
 ## Compiling the Code  

@@ -71,7 +71,7 @@ public void InitiateSync(WqlConnectionManager connection, string serverName)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|connection|Managed: `WqlConnectionManager`<br /><br /> VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the provider.|  
+|connection|Managed: `WqlConnectionManager`<br /><br /> VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the provider.|  
 |serverName|Managed: `String`<br /><br /> VBScript: `String`|Name of the server to run the refresh on. This name maps to the `ProxyName` property of an `SMS_AIProxy` instance.|  
 
 ## Compiling the Code  

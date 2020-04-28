@@ -179,7 +179,7 @@ public void CreateDriverPackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`driverId`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The driver identifier (`SMS_Driver.CI_ID`).|  
 |`newPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|A description for the new package.|  

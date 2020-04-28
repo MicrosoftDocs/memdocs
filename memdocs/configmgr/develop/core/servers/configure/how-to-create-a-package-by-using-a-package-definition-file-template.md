@@ -75,7 +75,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPDF_ID`|-   VBScript: `Integer`|ID of the package definition file.|  
 |`newPackageSourceFlag`|-   VBScript: `Integer`|The package source.|  
 |`newPackageSourcePath`|-   VBScript: `String`|The path to the package source.|  
