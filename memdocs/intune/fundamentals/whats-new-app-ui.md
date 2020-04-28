@@ -480,7 +480,7 @@ The device can still be enrolled into full management by tapping on the **action
 
 ### Improvements to app syncing with Windows 10 Creators Update <!--676505-->
 
-The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
+The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
 
 ![An image of the Windows 10 Company Portal app, where the download of Microsoft Word is in a pending state from the Company Portal's app store.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
