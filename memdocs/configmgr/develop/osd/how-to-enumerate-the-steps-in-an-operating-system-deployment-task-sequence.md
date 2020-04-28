@@ -102,7 +102,7 @@ public void RecurseTaskSequenceSteps(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393854.aspx)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`indent`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Indent is used to space console output for child groups.|  
 
 ## Compiling the Code  

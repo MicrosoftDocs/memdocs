@@ -98,7 +98,7 @@ public void EnableDisableSoftwareMeteringRule(WqlConnectionManager connection,
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingSWMRuleID`|-   Managed: `String`<br />-   VBScript: `String`|Identifies a specific software metering rule. In this case, identifies the specific software metering rule that will be enabled or disabled.|  
 |`enableDisableSWMRule`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Enables or disables the software metering rule.<br /><br /> `true` - Enabled<br /><br /> `false` - Disabled|  
 

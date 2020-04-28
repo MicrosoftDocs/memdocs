@@ -88,7 +88,7 @@ public void AddBootImage(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new boot image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the boot image package.|  
 |`pathToWIM`|-   Managed: `Integer`<br />-   VBScript: `Integer`|UNC path to the image.|  

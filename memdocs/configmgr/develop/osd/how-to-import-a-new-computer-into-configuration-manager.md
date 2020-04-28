@@ -152,7 +152,7 @@ public int AddNewComputer(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|-   A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
 |`netBiosName`|-   Managed: `String`<br />-   VBScript: `String`|-   The computer NETBIOS name.|  
 |`smBiosGuid`|-   Managed: `String`<br />-   VBScript: `String`|The SMBIOS GUID for the computer.|  
 |`MacAddress`|-   Managed: `String`<br />-   VBScript: `String`|The MAC address for the computer in the following format: `00:00:00:00:00:00`.|  
