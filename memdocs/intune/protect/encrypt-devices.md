@@ -129,12 +129,12 @@ A device must meet the following conditions to be eligible for silently enabling
 
 **BitLocker policy configuration**:
 
-The following two settings for [BitLocker base settings](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) must be configured in the BitLocker policy:
+The following two settings for *BitLocker base settings* must be configured in the BitLocker policy:
 
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
 
-The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can't silently enable and requires interaction from the end user.  This requirement is met through the following three [BitLocker OS drive settings](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) in the same policy:
+The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can't silently enable and requires interaction from the end user.  This requirement is met through the following three *BitLocker OS drive settings* in the same policy:
 
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
 - **Compatible TPM startup key** must not set to *Require startup key with TPM*
