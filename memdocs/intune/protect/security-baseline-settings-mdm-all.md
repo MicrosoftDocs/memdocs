@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/28/2020
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -475,7 +475,7 @@ For more information, see [Policy CSP - Experience](https://docs.microsoft.com/w
 
   **Default**: Yes
 
-  When *Block Windows Spotlight* is set to *Not configured*, Windows Spotlight not blocked on devices, and you can then configure the following settings to block selected items for Windows Spotlight:
+  When *Block Windows Spotlight* is set to *Not configured*, Windows Spotlight isn't blocked on devices, and you can then configure the following settings to block selected items for Windows Spotlight:
 
   - **Block third-party suggestions in Windows Spotlight**:  
     Specifies whether to allow app and content suggestions from third-party software publishers in Windows spotlight features like lock screen spotlight, suggested apps in the Start menu, and Windows tips. Users may still see suggestions for Microsoft features, apps, and services.  
