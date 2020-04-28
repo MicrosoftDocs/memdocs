@@ -221,6 +221,7 @@ The following table lists CMG support for Configuration Manager features:
 | Mac, Linux, and UNIX clients     | ![Not supported](media/Red_X.png) |
 | Peer cache     | ![Not supported](media/Red_X.png) |
 | On-premises MDM     | ![Not supported](media/Red_X.png) |
+| BitLocker Management     | ![Not supported](media/Red_X.png) |
 
 |Key|
 |--|
