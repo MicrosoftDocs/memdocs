@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -470,24 +470,24 @@ For more information, see [Policy CSP - EventLogService](https://docs.microsoft.
 For more information, see [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in the Windows documentation.
 
 - **Block Windows Spotlight**:  
-  Allows IT admins to turn off all Windows Spotlight Features - Window spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features.  
+  Allows IT admins to turn off (block) all Windows Spotlight Features. This includes Window spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Default**: Yes
 
-  When *Block Windows Spotlight* is set to *Yes*, the following settings are available.
+  When *Block Windows Spotlight* is set to *Not configured*, Windows Spotlight not blocked on devices, and you can then configure the following settings to block selected items for Windows Spotlight:
 
   - **Block third-party suggestions in Windows Spotlight**:  
     Specifies whether to allow app and content suggestions from third-party software publishers in Windows spotlight features like lock screen spotlight, suggested apps in the Start menu, and Windows tips. Users may still see suggestions for Microsoft features, apps, and services.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Default**: Yes
+    **Default**: Not configured
 
   - **Block consumer specific features**:  
     Allows IT admins to turn on experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install, and redirect tiles.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Default**: Yes
+    **Default**: Not configured
 
 ## Exploit Guard
 
