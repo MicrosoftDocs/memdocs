@@ -21,10 +21,6 @@ If you have Windows 10 Mobile devices deployed in your organization, between now
 You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ff5a940cf1a76c73a10b77cfc023472ccc9a0b4d
 ### End of support for legacy PC management
 
 Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as Mobile Device Management (MDM) devices to keep them managed by Intune.
