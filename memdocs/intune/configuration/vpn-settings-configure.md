@@ -185,6 +185,8 @@ VPN profiles can use a number of different connection types and protocols from d
 
 When you create the VPN profile, you choose a SCEP or PKCS certificate profile that you previously created in Intune. This profile is known as the identity certificate. It's used to authenticate against a trusted certificate profile (or *root certificate*) that you create to allow the user's device to connect. The trusted certificate is assigned to the computer that authenticates the VPN connection, typically, the VPN server.
 
+If you use certificate based authentication for your VPN profile, deploy the VPN profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.
+
 For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 ### User name and password
