@@ -114,10 +114,6 @@ The top of the App workload navigation menu provide commonly used app details:
     - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](vpp-apps.md).
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
-### Try the interactive guide
-The Manage and protect mobile and desktop applications with Microsoft Endpoint Manager interactive guide walks you through the Microsoft Endpoint Manager admin center to show you how to manage and protect mobile and desktop application.
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
-
 ## Additional information
 The following items within the console provide app related functionality:
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).

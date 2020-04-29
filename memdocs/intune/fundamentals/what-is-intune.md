@@ -63,9 +63,6 @@ When devices are enrolled and managed in Intune, administrators can:
 
 - [Protect devices with Microsoft Intune](../protect/device-protect.md)
 
-### Try the interactive guide
-
-
 ## Manage apps
 
 Mobile application management (MAM) in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices, and personal devices.
