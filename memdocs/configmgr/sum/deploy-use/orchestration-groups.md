@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 04/01/2020
+ms.date: 04/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -132,8 +132,7 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
 1. If an orchestration group is in a *Failed* state:
    1. Determine why the orchestration failed and resolve any issues.
    1. [Reset the orchestration state for group members](#bkmk_reset).
-   1. From the **Orchestration Group** nose, click the **Start Orchestration** button to restart orchestration.
-    reset that status it by using **Start Orchestration** button.  
+   1. From the **Orchestration Group** node, click the **Start Orchestration** button to restart orchestration.
    [![Start Orchestration ](./media/3098816-start-orchestration.png)](./media/3098816-start-orchestration.png#lightbox)
 
 
