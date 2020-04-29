@@ -355,6 +355,10 @@ This approach is the most complex because it requires the following configuratio
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
 
+### Will my Endpoint Analytics data migrate if I move my Intune tenant to a different tenant location?
+
+If you migrate your Intune tenant to a different location, all data in your Endpoint Analytics solution at the time of the migration will be lost. Since endpoints report into Endpoint Analytics continuously, all events that occur post-migration will automatically upload into your new tenant location and reports will begin to repopulate assuming devices remain properly enrolled. 
+
 ### Why are the scripts exiting with a code of 1?
 
 The scripts exit with a code of 1 to signal to Intune that remediation should occur. In this case, exiting a detection script with 1 means it's true that remediation is needed. Many script packages that run solely in CM may show compliant, but exit with a code of 1. For these scripts, exiting with a code of 1 isn't something alarming but you may want to verify the device remediates properly.
