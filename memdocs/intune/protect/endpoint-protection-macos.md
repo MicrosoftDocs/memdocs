@@ -126,7 +126,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     >
     > After this issue is fixed, you can use the ability to bypass requiring encryption by reconfiguring this setting to set **No limit, always prompt** as the setting will operate as originally expected and allow users to bypass encrypting the device.
     >
-    > For more information, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Tenant status**, and search for the message ID **MC210922**.
+    > If you have macOS devices enrolled, you can view more information when you sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Tenant status**, select **Service health and message center**, and look for message ID **MC210922**.
 
     <br> 
 
