@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -117,6 +117,14 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
 
   - **Number of times allowed to bypass**  
   Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in. 
+
+    > [!IMPORTANT]
+    >
+    > There is a known issue with the value **No limit, always prompt**. Instead of enabling a user to bypass encryption when they sign in, this setting requires device encryption at sign-in. This issue is expected to be fixed in late June.
+    >
+    > When fixed, this setting will have a new option of zero (**0**), which will require devices to encrypt the next time a user signs into the device. In addition, when Intune updates to include this fix, any policy that’s set to **No limit, always prompt** will be updated to use the new value of **0**, which maintains the current behavior of requiring encryption.
+    >
+    > After this issue is fixed, you can use the ability to bypass requiring encryption by reconfiguring this setting to set **No limit, always prompt** as the setting will operate as originally expected and allow users to bypass encrypting the device.
 
     - **Not configured** - Encryption on the device is required before the next sign-in is allowed.  
     - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.  
