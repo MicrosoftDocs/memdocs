@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 03/12/2020
+ms.date: 05/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -21,6 +21,16 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## May 2020
+
+### Apps count consolidation for all versions of same name and publisher
+
+<!-- 5542186 -->
+
+To help consolidate and reduce the number of apps shown on the assets page in the portal, it now combines all versions of apps with the same name and publisher. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, this behavior is configurable.
+
+For more information, see [About assets](about-assets.md).
 
 ## March 2020
 
