@@ -459,6 +459,14 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |RPC Endpoint Mapper|135|135|  
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
 
+### <a name="BKMK_CMGCP_SiteServer"></a> Site server &lt;--> CMG connection point
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|Server Message Block (SMB)|--|445|  
+|RPC Endpoint Mapper|135|135|  
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
+
 ### <a name="BKMK_PortsEndpointProtection_SiteServer"></a> Site server &lt;--> Endpoint Protection point  
 
 |Description|UDP|TCP|  
@@ -515,6 +523,14 @@ You can move the content library to another storage location to free up hard dri
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Server Message Block (SMB)|--|445|  
+
+### <a name="BKMK_SCP_SiteServer"></a> Site server &lt;--> Service connection point
+
+|Description|UDP|TCP|  
+|-----------------|---------|---------|  
+|Server Message Block (SMB)|--|445|  
+|RPC Endpoint Mapper|135|135|  
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
 
 ### <a name="BKMK_PortsSite-RSP"></a> Site server &lt;--> Reporting services point
 
