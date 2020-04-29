@@ -790,8 +790,6 @@ On-premises Configuration Manager clients or site systems can make the following
 
 - [Software update point --&gt; Upstream WSUS Server](#BKMK_PortsSUP-WSUS)  
 
-- [Service connection point --&gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
-
 - [Service connection point --> Azure](#bkmk_scp-cmg)  
 
 - [CMG connection point --> CMG cloud service](#bkmk_cmgcp-cmg)  
