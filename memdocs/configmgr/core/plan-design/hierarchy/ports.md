@@ -145,7 +145,11 @@ For more information, see [CMG Ports and data flow](../../clients/manage/cmg/pla
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
-|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|  
+|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+|Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|<!-- SCCMDocs#2091 -->
+
+> [!NOTE]
+> Use client settings to configure the alternate port for express updates. For more information, see [Port that clients use to receive requests for delta content](../../clients/deploy/about-client-settings.md#port-that-clients-use-to-receive-requests-for-delta-content).
 
 ### <a name="BKMK_PortsClient-DP2"></a> Client --> Distribution point configured for multicast, both standard and pull  
 
