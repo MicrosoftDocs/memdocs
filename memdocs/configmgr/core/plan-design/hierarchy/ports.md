@@ -348,6 +348,7 @@ A distribution point communicates to the management point in the following scena
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
 |Lightweight Directory Access Protocol (LDAP)|389|389|  
+|Secure LDAP (LDAPS, for signing and binding)|636|636|  
 |Global catalog LDAP|--|3268|  
 |RPC Endpoint Mapper|--|135|  
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
@@ -440,7 +441,8 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 
 |Description|UDP|TCP|  
 |-----------------|---------|---------|  
-|Lightweight Directory Access Protocol (LDAP)|389|389|  
+|Lightweight Directory Access Protocol (LDAP)|389|389|
+|Secure LDAP (LDAPS, for signing and binding)|636|636|
 |Global catalog LDAP|--|3268|  
 |RPC Endpoint Mapper|--|135|  
 |RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|  
@@ -739,6 +741,7 @@ For an example of how to configure SQL Server to use a specific port, see [Confi
 Configuration Manager uses the following ports for the discovery and publishing of site information:
 
 - Lightweight Directory Access Protocol (LDAP): 389
+- Secure LDAP (LDAPS, for signing and binding): 636
 - Global catalog LDAP: 3268
 - RPC Endpoint Mapper: 135
 - RPC: Dynamically allocated high TCP ports
