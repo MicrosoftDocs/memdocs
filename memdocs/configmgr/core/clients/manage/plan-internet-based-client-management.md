@@ -1,8 +1,8 @@
 ---
-title: "Internet-based client management"
-titleSuffix: "Configuration Manager"
-description: "Create a plan to manage internet-based clients in Configuration Manager."
-ms.date: 05/16/2017
+title: Internet-based client management
+titleSuffix: Configuration Manager
+description: Create a plan to manage internet-based clients in Configuration Manager.
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,189 +10,167 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Plan for internet-based client management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Internet-based client management (sometimes referred to as IBCM) lets you manage Configuration Manager clients when they are not connected to your company network but have a standard internet connection. This arrangement has several advantages that include the reduced costs of not having to run virtual private networks (VPNs) and being able to deploy software updates in a timelier manner.  
+Use internet-based client management (IBCM) to manage Configuration Manager clients when they aren't connected to your internal network. Advantages of using IBCM:
 
- Because of the higher security requirements of managing client computers on a public network, internet-based client management requires that clients and the site system servers that the clients connect to use PKI certificates. This ensures that connections are authenticated by an independent authority, and that data to and from these site systems are encrypted by using Secure Sockets Layer (SSL).  
+- Full control of servers and roles providing the service
+- No cloud service dependency
+- May not require a virtual private network (VPN)
+- All costs are associated with the on-premises service
 
- Use the following sections to help you plan for internet-based client management.  
+Because of the higher security requirements of managing client computers on a public network, IBCM requires the use of PKI certificates. This configuration makes sure that connections are authenticated by an independent authority. When IBCM clients and site servers send data, it's encrypted and secure.  
 
-##  Features that Are Not Supported on the internet  
- Not all client management functionality is appropriate for the internet; therefore they are not supported when clients are managed on the internet. The features that are not supported for internet management typically rely on Active Directory Domain Services or are not appropriate for a public network, such as network discovery and Wake-on-LAN (WOL).  
+## Client communications
 
- The following features are not supported when clients are managed on the internet:  
+The following site system roles at primary sites support connections from clients that are in untrusted locations:
 
-- Client deployment over the internet, such as client push and software update-based client deployment. Instead, use manual client installation.  
+> [!NOTE]
+> While IBCM primarily focuses on the internet-based scenario, the same behaviors apply to clients in an untrusted Active Directory forest. Secondary sites don't support client connections from untrusted locations.
 
-- Automatic site assignment.  
+- Certificate registration point for the Configuration Manager policy module (NDES)
 
-- Wake-on-LAN.  
+- Distribution point
 
-- Operating system deployment. However, you can deploy task sequences that do not deploy an operating system; for example, task sequences that run scripts and maintenance tasks on clients.  
+- Cloud-based distribution point
 
-- Remote control.  
+- Enrollment proxy point
 
-- Software deployment to users unless the internet-based management point can authenticate the user in Active Directory Domain Services by using Windows authentication (Kerberos or NTLM). This is possible when the internet-based management point trusts the forest where the user account resides.  
+- Fallback status point
 
-  Additionally, internet-based client management does not support roaming. Roaming enables clients to always find the closest distribution points to download content. Clients that are managed on the internet communicate with site systems from their assigned site when these site systems are configured to use an internet FQDN and the site system roles allow client connections from the internet. Clients non-deterministically select one of the internet-based site systems, regardless of bandwidth or physical location.  
+- Management point
 
-  When you have a software update point that is configured to accept connections from the internet, Configuration Manager internet-based clients on the internet always scan against this software update point, to determine which software updates are required. However, when these clients are on the internet, they first try to download the software updates from Microsoft Update, rather than from an internet-based distribution point. Only if this fails, will they then try to download the required software updates from an internet-based distribution point. Clients that are not configured for internet-based client management never try to download the software updates from Microsoft Update, but always use Configuration Manager distribution points.  
- 
-> [!Tip]  
-> The Configuration Manager client automatically determines whether it's on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to Currently intranet. Otherwise, it switches to Currently internet, and the client uses the management points, software update points, and distribution points assigned to its site for  communication.
+- Software update point
 
-##  Considerations for client communications from the internet or untrusted forest  
- The following site system roles installed at primary sites support connections from clients that are in untrusted locations, like the internet or an untrusted forest (secondary sites do not support client connections from untrusted locations):  
+> [!NOTE]
+> Support ended for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). For Configuration Manager versions 1906 and earlier that are still in support, the application catalog website point can accept connections from internet-based clients.
 
-- Application Catalog website point  
+### About internet facing site systems
 
-    > [!Important]  
-    > Support ends for the application catalog roles with version 1910. For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
+There's no requirement to have a trust between a client's forest and that of the site system server. However, when the forest that contains an internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the internet when you enable the **Client Policy** client setting **Enable user policy requests from internet clients**.
 
-- Configuration Manager Policy Module  
+For example, the following configurations illustrate when IBCM supports user policies for devices on the internet:
 
-- Distribution point (HTTPS is required by cloud-based distribution points)  
+- The internet-based management point is in the perimeter network. That network also has a read-only domain controller to authenticate the user. A firewall between the perimeter and internal networks allows Active Directory packets.
 
-- Enrollment proxy point  
+- The user account is in the intranet-based forest. The internet-based management point is in the perimeter-based forest. The perimeter forest trusts the internal forest. A firewall between the perimeter and internal networks allows the authentication packets.
 
-- Fallback status point  
+- The user account and the internet-based management point are both in the intranet-based forest. You publish the management point to the internet with a web proxy server.
 
-- Management point  
+### Use a web proxy server
 
-- Software update point  
+You can place internet-based site systems in the intranet when you publish them to the internet with a web proxy server. Configure these site systems for client connections from the internet only, or client connections from the internet and intranet. When you use a web proxy server, you can configure it for Secure Sockets Layer (SSL) bridging to SSL or SSL tunneling.
 
-  **About internet facing site systems:**   
-  Although there is no requirement to have a trust between a client's forest and that of the site system server, when the forest that contains an internet facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the internet when you enable the **Client Policy** client setting **Enable user policy requests from internet clients**.  
+#### SSL bridging to SSL
 
-  For example, the following configurations illustrate when internet-based client management supports user policies for devices on the internet:  
+SSL bridging to SSL is the recommended and more secure configuration, because it uses SSL termination with authentication. It authenticates client computers with computer authentication. Mobile devices that you enroll with Configuration Manager don't support SSL bridging.
 
-- The internet-based management point is in the perimeter network where a read-only domain controller resides to authenticate the user and an intervening firewall allows Active Directory packets.  
+With SSL termination at the proxy, it inspects packets from the internet before it forwards them to the internal network. The proxy authenticates the connection from the client, terminates it, and then opens a new authenticated connection to the internet-based site systems. When Configuration Manager clients use a proxy, the client securely contains its identity (GUID) in the packet payload. The management point doesn't consider the proxy to be the client. Configuration Manager doesn't support bridging with HTTP to HTTPS, or from HTTPS to HTTP.
 
-- The user account is in Forest A (the intranet) and the internet-based management point is in Forest B (the perimeter network). Forest B trusts Forest A, and an intervening firewall allows the authentication packets.  
+> [!NOTE]
+> Configuration Manager doesn't support setting third-party SSL bridging configurations. For example, Citrix Netscaler or F5 BIG-IP. Please work with your device vendor to configure it for use with Configuration Manager.
 
-- The user account and the internet-based management point are in Forest A (the intranet). The management point is published to the internet by using a web proxy server (like Forefront Threat Management Gateway).  
+#### Tunneling
 
-> [!NOTE]  
->  If Kerberos authentication fails, NTLM authentication is then automatically tried.  
+If your proxy web server can't support the requirements for SSL bridging, Configuration Manager also supports SSL tunneling. You can also use SSL tunneling to support mobile devices that you enroll with Configuration Manager. It's a less secure option because the proxy forwards the SSL packets from the internet to the site systems without SSL termination. The proxy doesn't inspect the packets for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.
 
- As the previous example shows, you can place internet-based site systems in the intranet when they are published to the internet by using a web proxy server, such as ISA Server and Forefront Threat Management Gateway. These site systems can be configured for client connection from the internet only, or client connections from the internet and intranet. When you use a web proxy server, you can configure it for Secure Sockets Layer (SSL) bridging to SSL (more secure) or SSL tunneling:  
+## Plan for internet-based clients
 
--   **SSL bridging to SSL:**   
-    The recommended configuration when you use proxy web servers for internet-based client management is SSL bridging to SSL, which uses SSL termination with authentication. Client computers must be authenticated by using computer authentication, and mobile device legacy clients are authenticated by using user authentication. Mobile devices that are enrolled by Configuration Manager do not support SSL bridging.  
+Decide whether to configure your internet-based clients for management on both the intranet and the internet, or for internet-only client management. You can only configure this management option during client installation. To change it later, reinstall the client.
 
-     The benefit of SSL termination at the proxy web server is that packets from the internet are subject to inspection before they are forwarded to the internal network. The proxy web server authenticates the connection from the client, terminates it, and then opens a new authenticated connection to the internet-based site systems. When Configuration Manager clients use a proxy web server, the client identity (client GUID) is securely contained in the packet payload so that the management point does not consider the proxy web server to be the client. Bridging is not supported in Configuration Manager with HTTP to HTTPS, or from HTTPS to HTTP.  
-     
-    > [!Note]  
-    > Configuration Manager doesn't support setting third-party SSL bridging configurations. For example, Citrix Netscaler or F5 BIG-IP. Please work with your device vendor to configure it for use with Configuration Manager.  
+> [!NOTE]
+> If you configure a management point to support internet-based clients, clients that connect to this management point will become internet-capable when they next refresh their list of available management points.
+>
+> You don't have to restrict the configuration of internet-only client management to the internet. You can also use it on the intranet.
 
--   **Tunneling**:   
-    If your proxy web server cannot support the requirements for SSL bridging, or you want to configure internet support for mobile devices that are enrolled by Configuration Manager, SSL tunneling is also supported. It is a less secure option because the SSL packets from the internet are forwarded to the site systems without SSL termination, so they cannot be inspected for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.  
+Clients that you configure for internet-only management only communicate with the site systems that you configure for client connections from the internet. Use this configuration in the following scenarios:
 
-##  Planning for internet-Based Clients  
- You must decide whether the client computers that will be managed over the internet will be configured for management on the intranet and the internet, or for internet-only client management. You can only configure the client management option during the installation of a client computer. If you change your mind later, you must reinstall the client.  
+- For computers that you know will never connect to your intranet. For example, point of sale computers in remote locations.
+- To restrict client communication to HTTPS only. For example, to support firewall and restricted security policies.
+- When you install internet-based site systems in a perimeter network, and you want to manage these servers as Configuration Manager clients.
 
-> [!NOTE]  
->  If you configure an internet capable management point, clients that connect to the management point will become internet-capable when they next refresh their list of available management points.  
+> [!NOTE]
+> When you want to manage workgroup clients on the internet, install them as internet-only.
+>
+> When you configure a mobile device to use an internet-based management point, it automatically configures as internet-only.
 
-> [!TIP]  
->  You do not have to restrict the configuration of internet-only client management to the internet and you can also use it on the intranet.  
+You can configure other clients for both internet and intranet client management. When they detect a change of network, they automatically switch between IBCM and intranet client management. If these clients can find and connect to a management point that supports client connections on the intranet, these clients are managed as intranet clients. Intranet clients have full Configuration Manager functionality. If the clients can't find or connect to a management point that supports client connections on the intranet, they attempt to connect to an internet-based management point. If this action succeeds, these clients are then managed by the internet-based site systems in their assigned site.
 
- Clients that are configured for internet-only client management only communicate with the site systems that are configured for client connections from the internet. This configuration would be appropriate for computers that you know never connect to your company intranet, for example, point of sale computers in remote locations. It might also be appropriate when you want to restrict client communication to HTTPS only (for example, to support firewall and restricted security policies), and when you install internet-based site systems in a perimeter network and you want to manage these servers by using the Configuration Manager client.  
+The benefit in automatic switching is that clients can use all features when they connect to the intranet, and receive essential management when they're on the internet. Content download that begins on the internet can seamlessly resume on the intranet, and the other way around.
 
- When you want to manage workgroup clients on the internet, you must install them as internet-only.  
+## Prerequisites
 
-> [!NOTE]  
->  Mobile device clients are automatically configured as internet-only when they are configured to use an internet-based management point.  
+IBCM in Configuration Manager has the following dependencies:
 
- Other client computers can be configured for internet and intranet client management. They can automatically switch between internet-based client management and intranet client management when they detect a change of network. If these clients can find and connect to a management point that is configured for client connections on the intranet, these clients are managed as intranet clients that have full Configuration Manager management functionality. If the clients cannot find or connect to a management point that is configured for client connections on the intranet, they attempt to connect to an internet-based management point, and if this is successful, these clients are then managed by the internet-based site systems in their assigned site.  
+- Clients require an internet connection. Configuration Manager uses the device's existing internet connection. Mobile devices must have a direct internet connection. Full client computers can have either a direct internet connection or connect by using a proxy web server.
 
- The benefit in automatic switching between internet-based client management and intranet client management is that client computers can automatically use all Configuration Manager features whenever they are connected to the intranet and continue to be managed for essential management functions when they are on the internet. Additionally, a download that began on the internet can seamlessly resume on the intranet, and vice versa.  
+- Site systems that support IBCM require an internet connection, and must be in an Active Directory domain. The internet-based site systems don't require a trust relationship with the Active Directory forest of the site server. However, when the internet-based management point can authenticate the user by using Windows authentication, it supports user policies. If Windows authentication fails, it only supports device policies.
 
-##  Prerequisites for internet-Based Client Management  
- Internet-based client management in Configuration Manager has the following external dependencies:  
+    > [!NOTE]
+    > To support user policies, also enable the following client settings in the **Client Policy** group:
+    >
+    > - **Enable user policy polling on clients**
+    > - **Enable user policy requests from Internet clients**  
 
-- Clients that will be managed on the internet must have an internet connection.  
+- A public key infrastructure (PKI) to deploy and manage the required certificates for internet-based clients and site system servers. For more information, see [PKI certificate requirements](../../plan-design/network/pki-certificate-requirements.md).
 
-   Configuration Manager uses existing Internet Service Provider (ISP) connections to the internet, which can be either permanent or temporary connections. Client mobile devices must have a direct internet connection, but client computers can have either a direct internet connection or connect by using a proxy web server.  
+- Register public DNS host entries for the internet fully qualified domain names (FQDN) of site systems that support IBCM.
 
-- Site systems that support internet-based client management must have connectivity to the internet and must be in an Active Directory domain.  
+### Client communication requirements
 
-   The internet-based site systems do not require a trust relationship with the Active Directory forest of the site server. However, when the internet-based management point can authenticate the user by using Windows authentication, user policies are supported. If Windows authentication fails, only computer policies are supported.  
+Intervening firewalls or proxy servers must allow the client communication for internet-based site systems:
 
-  > [!NOTE]
-  >  To support user policies, you also must set to **True** the two **Client Policy** client settings:  
-  > 
-  > - **Enable user policy polling on clients**  
-  >   -   **Enable user policy requests from Internet clients**  
+- Support HTTP 1.1  
 
-   An internet-based Application Catalog website point also requires Windows authentication to authenticate users when their computer is on the internet. This requirement is independent from user policies.  
+- Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)  
 
-- You must have a supporting public key infrastructure (PKI) that can deploy and manage the certificates that the clients require and that are managed on the internet and the internet-based site system servers.  
+#### Verbs
 
-   For more information about the PKI certificates, see [PKI certificate requirements for Configuration Manager](../../plan-design/network/pki-certificate-requirements.md).  
+Allow the following verbs for the internet-based site system server roles:
 
-- The internet fully qualified domain name (FQDN) of site systems that support internet-based client management must be registered as host entries on public DNS servers.  
+| Role | Verbs |
+|------|-------|
+| Management point | - HEAD<br>- CCM_POST<br>- BITS_POST<br>- GET<br>- PROPFIND |
+| Distribution point | - HEAD<br>- GET<br>- PROPFIND |
+| Fallback status point | POST |
+| Application catalog website point | -POST<br>-GET |
 
-- Intervening firewalls or proxy servers must allow the client communication that is associated with internet-based site systems.  
+#### HTTP headers
 
-   Client communication requirements:  
+Allow the following HTTP headers for the internet-based site system server roles:
 
-  - Support HTTP 1.1  
+| Role | HTTP headers |
+|------|--------------|
+| Management point | - Range:<br>- CCMClientID:<br>- CCMClientIDSignature:<br>- CCMClientTimestamp:<br>- CCMClientTimestampsSignature: |
+| Distribution point | Range: |
 
-  - Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)  
+For similar communication requirements when you use the software update point for client connections from the internet, see the documentation for Windows Server Update Services (WSUS).
 
-  - Allow the following verbs for the internet-based management point:  
+## Unsupported features
 
-    -   HEAD  
+Not all client management functionality is appropriate for the internet. Configuration Manager doesn't support some features for clients on the internet. These unsupported features typically rely on Active Directory Domain Services or aren't appropriate for a public network.
 
-    -   CCM_POST  
+The following features aren't supported when you manage clients on the internet with IBCM:
 
-    -   BITS_POST  
+- Client deployment over the internet, such as client push and software update-based client deployment. Use manual client installation.
 
-    -   GET  
+- Automatic site assignment
 
-    -   PROPFIND  
+- Wake-on-LAN
 
-  - Allow the following verbs for the internet-based distribution point:  
+- OS deployment. However, you can deploy task sequences that don't deploy an OS.
 
-    -   HEAD  
+- Remote control
 
-    -   GET  
+- Software deployment to users. This feature relies upon the application catalog, which is deprecated.
 
-    -   PROPFIND  
+- Client roaming. Roaming enables clients to always find the closest distribution points to download content. Clients non-deterministically select one of the internet-based site systems, whatever the bandwidth or physical location.
 
-  - Allow the following verbs for the internet-based fallback status point:  
+When you configure a software update point to accept connections from the internet, internet-based clients always scan against this software update point to determine which software updates are required. When these clients are on the internet, they first try to download the software updates from Microsoft Update, rather than from an internet-based distribution point. If this behavior fails, they then try to download the required software updates from an internet-based distribution point.
 
-    -   POST  
-
-  - Allow the following verbs for the internet-based Application Catalog website point:  
-
-    -   POST  
-
-    -   GET  
-
-  - Allow the following HTTP headers for the internet-based management point:  
-
-    -   Range:  
-
-    -   CCMClientID:  
-
-    -   CCMClientIDSignature:  
-
-    -   CCMClientTimestamp:  
-
-    -   CCMClientTimestampsSignature:  
-
-  - Allow the following HTTP header for the internet-based distribution point:  
-
-    -   Range:  
-
-    For configuration information to support these requirements, refer to your firewall or proxy server documentation.  
-
-    For similar communication requirements when you use the software update point for client connections from the internet, see the documentation for Windows Server Update Services (WSUS). For example, for WSUS on Windows Server 2003, see [Appendix D: Security Settings](https://go.microsoft.com/fwlink/p/?LinkId=143368), the deployment appendix for security settings.
+> [!TIP]
+> The Configuration Manager client automatically determines whether it's on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to "Currently *intranet*". Otherwise, it switches to "Currently *internet*", and communicates with the site systems assigned to its site.

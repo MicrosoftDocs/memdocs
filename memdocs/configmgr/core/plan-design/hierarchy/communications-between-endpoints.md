@@ -105,59 +105,13 @@ When a client communicates with a distribution point, it only needs to authentic
 | HTTP     | - Anonymous, if allowed<br>- Windows-integrated authentication with computer account or network access account<br> - Content access token (Enhanced HTTP) |
 | HTTPS    | - PKI certificate<br> - Windows-integrated authentication with computer account or network access account<br> - Content access token |
 
+### <a name="BKMK_clientspan"></a> Considerations for client communications from the internet or an untrusted forest
 
-###  <a name="BKMK_clientspan"></a> Considerations for client communications from the internet or an untrusted forest  
+For more information, see the following articles:
 
-The following site system roles installed at primary sites support connections from clients that are in untrusted locations, such as the internet or an untrusted forest. (Secondary sites don't support client connections from untrusted locations.) 
+- [Plan for cloud management gateway](../..//clients/manage/cmg/plan-cloud-management-gateway.md)
 
--   Application catalog website point  
-
--   Configuration Manager policy module (NDES) 
-
--   Distribution point   
-
--   Cloud-based distribution point (requires HTTPS)
-
--   Enrollment proxy point  
-
--   Fallback status point  
-
--   Management point  
-
--   Software update point  
-
--   Cloud management gateway (requires HTTPS)
-
-
-### <a name="bkmk_internetfacing"></a> About internet-facing site systems
-
-> [!Note]  
-> The following section is about internet-based client management scenarios. It doesn't apply to cloud management gateway scenarios. For more information, see [Manage clients on the internet](../../clients/manage/manage-clients-internet.md).  
-
-There's no requirement to have a trust between a client's forest and that of the site system server. However, when the forest that contains an internet-facing site system trusts the forest that contains the user accounts, this configuration supports user-based policies for devices on the internet when you enable the **Client Policy** client setting **Enable user policy requests from internet clients**.  
-
-For example, the following configurations illustrate when internet-based client management supports user policies for devices on the internet:  
-
--   The internet-based management point is in the perimeter network where a read-only domain controller resides to authenticate the user and an intervening firewall allows Active Directory packets.  
-
--   The user account is in Forest A (the intranet) and the internet-based management point is in Forest B (the perimeter network). Forest B trusts Forest A, and an intervening firewall allows the authentication packets.  
-
--   The user account and the internet-based management point are in Forest A (the intranet). The management point is published to the internet by using a web proxy server (like Forefront Threat Management Gateway).  
-
-> [!NOTE]  
->  If Kerberos authentication fails, NTLM authentication is then automatically tried.  
-
-As the previous example shows, you can place internet-based site systems in the intranet when they're published to the internet by using a web proxy server. These site systems can be configured for client connection from the internet only, or for client connections from the internet and intranet. When you use a web proxy server, you can configure it for Secure Sockets Layer (SSL) bridging to SSL (more secure) or SSL tunneling as follows:  
-
--   **SSL bridging to SSL:**   
-    The recommended configuration when you use proxy web servers for internet-based client management is SSL bridging to SSL, which uses SSL termination with authentication. Client computers must be authenticated by using computer authentication, and mobile device legacy clients are authenticated by using user authentication. Mobile devices that are enrolled by Configuration Manager don't support SSL bridging.  
-
-     The benefit of SSL termination at the proxy web server is that packets from the internet are subject to inspection before they're forwarded to the internal network. The proxy web server authenticates the connection from the client, terminates it, and then opens a new authenticated connection to the internet-based site systems. When Configuration Manager clients use a proxy web server, the client identity (client GUID) is securely contained in the packet payload so that the management point doesn't consider the proxy web server to be the client. Bridging isn't supported in Configuration Manager with HTTP to HTTPS, or from HTTPS to HTTP.  
-
--   **Tunneling**:   
-    If your proxy web server can't support the requirements for SSL bridging, or you want to configure internet support for mobile devices that are enrolled by Configuration Manager, SSL tunneling is also supported. It's a less secure option because the SSL packets from the internet are forwarded to the site systems without SSL termination, so they can't be inspected for malicious content. When you use SSL tunneling, there are no certificate requirements for the proxy web server.  
-
-
+- [Plan for internet-based client management](../../clients/manage/plan-internet-based-client-management.md)
 
 ##  <a name="Plan_Com_X-Forest"></a> Communications across Active Directory forests  
 
