@@ -205,8 +205,8 @@ Configure an on-premises management point to allow connections from the CMG with
 
 | Type of client   | Management point |
 |------------------|------------------|
-| Workgroup        | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
-| AD domain-joined | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS |
+| Workgroup<sup>[Note 1](#bkmk_note1)</sup>        | E-HTTP, HTTPS |
+| AD domain-joined<sup>[Note 1](#bkmk_note1)</sup> | E-HTTP, HTTPS |
 | Azure AD-joined  | E-HTTP, HTTPS |
 | Hybrid-joined    | E-HTTP, HTTPS |
 
