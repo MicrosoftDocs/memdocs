@@ -214,4 +214,4 @@ This process generally takes between 15-60 minutes. The timing depends on the si
 If you aren't seeing changes updated within the time frames indicated above, wait another 24 hours for the next daily refresh. If you see longer delays, check the service health dashboard. If the service reports as healthy, contact Microsoft support.<!-- 3896921 -->
 
 > [!IMPORTANT]
-> The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--7080949-->  
+> The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
