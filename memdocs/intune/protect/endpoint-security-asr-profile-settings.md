@@ -56,7 +56,7 @@ Supported platforms and profiles:
   - **Clipboard behavior**  
     CSP: [ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-    - **Choose what copy and paste actions are allowed from the local PC and an Application Guard virtual browser.
+    Choose what copy and paste actions are allowed from the local PC and an Application Guard virtual browser.
     - **Not configured** (*default*)
     - **Block copy and paste between PC and browser**
     - **Allow copy and paste from browser to PC only**
