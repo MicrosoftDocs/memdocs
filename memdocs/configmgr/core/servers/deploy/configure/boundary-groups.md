@@ -216,6 +216,9 @@ There are two common scenarios in which you should consider disabling this optio
 
 - If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
 
+> [!NOTE]
+> If a device is in more than one boundary group, make sure to enable this setting on all boundary groups for the device. Otherwise the client doesn't use any peer source. For example, it doesn't set the DOGroupID registry key.
+
 #### <a name="bkmk_bgoptions2"></a> During peer downloads, only use peers within the same subnet
 
 This setting is dependent upon the preceding option. If you enable this option, the management point only includes in the content location list peer sources that are in the same subnet as the client.
