@@ -53,6 +53,9 @@ To review the deployment status for security updates, select **See all**. This v
 
 To show devices with new information that the service is still processing, select **View recent data**. Desktop Analytics will show this information after its next full data refresh.
 
+  > [!IMPORTANT]
+  > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).<!--7080949-->  
+
 ## Feature updates
 
 To review the current status of feature updates, select **Feature updates** in the **Monitor** section of Desktop Analytics:
