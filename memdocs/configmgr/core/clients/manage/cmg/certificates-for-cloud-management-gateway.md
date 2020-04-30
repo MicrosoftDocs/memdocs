@@ -205,15 +205,20 @@ Configure an on-premises management point to allow connections from the CMG with
 
 | Type of client   | Management point |
 |------------------|------------------|
-| Workgroup<sup>[Note 1](#bkmk_note1)</sup>        | E-HTTP, HTTPS |
-| AD domain-joined<sup>[Note 1](#bkmk_note1)</sup> | E-HTTP, HTTPS |
+| Workgroup        | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS<sup>[Note 2](#bkmk_note1)</sup> |
+| AD domain-joined | E-HTTP<sup>[Note 1](#bkmk_note1)</sup>, HTTPS<sup>[Note 2](#bkmk_note1)</sup> |
 | Azure AD-joined  | E-HTTP, HTTPS |
 | Hybrid-joined    | E-HTTP, HTTPS |
 
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **Note 1**: This configuration requires the client has a [client authentication certificate](#bkmk_clientauth), and only supports device-centric scenarios.  
+> **Note 1**: This configuration requires token-based authentication available starting in version 2002, and only supports device-centric scenarios. 
+
+<a name="bkmk_note2"></a>
+
+> [!Note]  
+> **Note 2**: This configuration requires the client has a [client authentication certificate](#bkmk_clientauth). It also supports the token-based authentication available starting in version 2002 and only supports device-centric scenarios. 
 
 #### For on-premises clients communicating with the on-premises management point
 
