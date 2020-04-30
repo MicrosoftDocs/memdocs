@@ -1,7 +1,7 @@
 ---
 title: "SMS_AppDeploymentAssetDetails Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+ms.date: "04/30/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -146,13 +146,13 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Intended purpose of the deployment. Possible values are:  
+ Intended purpose of the deployment, regardless of the Action (Install or Uninstall) specified. Possible values are:  
 
 |||  
 |-|-|  
-|1|Install|  
-|2|Uninstall|  
-|3|Preflight|  
+|1|Required|  
+|2|Available|  
+|3|Simulate|  
 
  `DTCI`  
  Data type: `UInt32`  
