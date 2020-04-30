@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 04/01/2020
+ms.date: 04/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -94,7 +94,7 @@ The token isn't stored on the client or the site. Make sure to copy the token fr
 
 #### /lifetime
 
-Use with `/new` parameter to specify the token validity period of the token. Specify an integer value in minutes. The default value is 4,320 (three days).
+Use with `/new` parameter to specify the token validity period of the token. Specify an integer value in minutes. The default value is 4,320 (three days). The maximum value is 10,080 (seven days).
 
 Example: `BulkRegistrationTokenTool.exe /lifetime:4320`
 
