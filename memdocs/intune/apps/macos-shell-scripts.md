@@ -42,7 +42,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
  - Command-line interpreters for the applicable shells are installed.
 
 ## Important considerations before using shell scripts
- - Shell scripts require that the Microsoft Intune management agent is successfully installed on the macOS device. For more information, see [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+ - Shell scripts require that the Microsoft Intune management agent is successfully installed on the macOS device. For more information, see [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
  - Shell scripts run in parallel on devices as separate processes.
  - Shell scripts that are run as the signed-in user will run for all currently signed-in user accounts on the device at the time of the run.
  - An end user is required to sign in to the device to execute scripts running as a signed-in user.
@@ -65,7 +65,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more device groups that include the users whose macOS devices are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
    > - Shell scripts in Intune can only be assigned to Azure AD device security groups. User group assignment is not supported in preview. 
-   > - Updating assignments for shell scripts also updates assignments for the [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+   > - Updating assignments for shell scripts also updates assignments for the [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
 The script you created now appears in the list of scripts. 
