@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
 
 > [!IMPORTANT]
-> When deploying Win32 apps, consider using [Intune Management Extension](../apps/intune-management-extension.md) exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
+> When deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
 ## Prerequisites
 
@@ -353,6 +353,11 @@ Additionally, the Company Portal app shows additional app installation status me
 ## Set Win32 app availability and notifications
 You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 
 
+> [!IMPORTANT]
+> The **Restart grace period** setting in the **Assignment** section is only available when the **Device restart behavior** of the **Program** section is set to either of the following options:
+> - **Determine behavior based on return codes**
+> - **Intune will force a mandatory device restart**
+
 Set the app availability based on a date and time for a required app using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -401,6 +406,8 @@ Agent logs on the client machine are commonly in `C:\ProgramData\Microsoft\Intun
 > **On X86 client machines**:<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### Detecting the Win32 app file version using PowerShell
 

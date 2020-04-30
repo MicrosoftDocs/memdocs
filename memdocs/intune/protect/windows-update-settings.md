@@ -91,8 +91,7 @@ Update settings control what bits a device will download, and when. For more inf
   Supported deferral period:  
 
   - *Windows version 1709 and later* - 0 to 365 days  
-  - *Windows version 1703* - 0 to 180 days  
-
+  
   Feature Updates are typically new features for Windows.  
 
 - **Set feature update uninstall period (2 – 60 days)**  
@@ -170,8 +169,6 @@ User experience settings control the end-user experience for device restart and 
   
   This setting has different results depending on the devices version of Windows:  
  
-  - *Windows version 1703 and earlier* - When you restart a device, there are some checks that occur, including checking for active users, battery levels, running games, and more.  
-  
   - *Windows version 1709 and later* - During Active Hours, the following processes don't run for updates: scan, download, install, and reboot. After Active Hours, the update processes do run and can wake the device from sleep, scan, download, install, and reboot the device as long as the battery checks and power checks pass. 
 
 - **Block user from pausing Windows updates**  
@@ -188,7 +185,7 @@ User experience settings control the end-user experience for device restart and 
   - **Allow** - Allow device users to use Windows Update scan to find and download updates, and install features.
   - **Block** - Prevent device users from accessing the Windows Update scan, downloading updates, and installing features.  
 
-- **Require user’s approval to restart outside of work hours**  
+- **Require user's approval to restart outside of work hours**  
   **Default**: Not configured  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
@@ -215,7 +212,7 @@ User experience settings control the end-user experience for device restart and 
   **Default**: Use the default Windows Update notifications  
   Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
-  Specify what level of Windows Update notifications users see. This setting doesn’t control how and when updates are downloaded and installed.  
+  Specify what level of Windows Update notifications users see. This setting doesn't control how and when updates are downloaded and installed.  
 
   Supported options:
   - **Not configured**

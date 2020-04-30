@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,8 +44,8 @@ Microsoft Intune protection policies for Microsoft Edge help to protect your org
 
 You and your end users can download Microsoft Edge from public app stores for use in your organizations. 
 The operating system requirements for browser policies are either of the following:
-- Android 4 and later
-- iOS 8.0 and later
+- Android 5 and later
+- iOS 12.0 and later
 
 ## Application protection policies for Microsoft Edge
 
@@ -135,7 +135,7 @@ You assign the settings to groups of users in Azure AD. If that user has the tar
 
 ## Direct users to Microsoft Edge instead of the Intune Managed Browser 
 
-Both the Intune Managed Browser and Microsoft Edge can be used as policy-protected browsers. To ensure that your users are being directed to use the correct browser app, target all of your Intune-managed apps (for example, Outlook, OneDrive, and SharePoint) with the following configuration setting:
+Microsoft Edge can be used as a policy-protected browser. To ensure that your users are being directed to use the correct browser app, target all of your Intune-managed apps (for example, Outlook, OneDrive, and SharePoint) with the following configuration setting:
 
 |    Key    |    Value    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -200,7 +200,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
@@ -373,14 +373,14 @@ If your organization operates in a highly-regulated industry or uses a per-app V
 
 |    Key    |    Value    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** disables InPrivate browsing.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** disables InPrivate browsing.   |
 
 ### Restrict Microsoft Edge use to allowed-accounts only
 
 In addition to blocking InPrivate and MSA browsing, you can only allow use of Microsoft Edge when the user is logged in with their AAD account. This feature is only available for MDM-enrolled users. You can learn more about configuring this setting here:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` can be used to disable multiple features simultaneously. For example, to disable both InPrivate and password, use `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` can be used to disable multiple features simultaneously. For example, to disable both InPrivate and password, use `inprivate|password`.
 
 ## Configure Microsoft Edge as a kiosk app on Android devices
 
@@ -421,7 +421,7 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 
 The following are additional security and privacy considerations for Microsoft Edge:
 
-- Microsoft Edge doesn't consume settings that users set for the native browserhttps://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps on their devices, because Microsoft Edge can't access these settings.
+- Microsoft Edge doesn't consume settings that users set for the native browser on their devices, because Microsoft Edge can't access these settings.
 - You can configure the option **Require simple PIN for access** or **Require corporate credentials for access** in an app protection policy associated with Microsoft Edge. If a user selects the help link on the authentication page, they can browse any internet sites, regardless of whether they were added to a blocked list in the policy.
 - Microsoft Edge can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
 - To allow authentication, and access to Intune documentation, ***.microsoft.com** is exempt from the allow or block list settings. It's always allowed.

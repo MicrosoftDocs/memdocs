@@ -45,7 +45,7 @@ Use this article to create a default Windows Hello for Business policy that targ
 > [!IMPORTANT]
 > In Windows 10 desktop and mobile versions prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
-> - The **work PIN** was used to access Azure AD resources on user’s personal devices (BYOD).
+> - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
 > 
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.

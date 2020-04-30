@@ -52,8 +52,8 @@ The following table lists the specific app types and how you can add them in the
 | Windows Phone 8.1 store apps  | Store app  | Select **Windows Phone 8.1** as the **app type**, and enter the Microsoft store URL for the app. |
 | Microsoft store apps  | Store app  | Select **Windows** as the **app type**, and enter the Microsoft store URL for the app. |
 | Managed Google Play apps | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. |
-| Office 365 apps for Windows 10  | Store app (Office 365) | Select **Windows 10** under **Office 365 Suite** as the **app type**, and then select the Office 365 app that you want to install.  |
-| Office 365 apps for macOS | Store app (Office 365) | Select **macOS** under **Office 365 Suite** as the **app type**, and then select the Office 365 app suite. |
+| Office 365 apps for Windows 10  | Store app (Office 365) | Select **Windows 10** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app that you want to install.  |
+| Office 365 apps for macOS | Store app (Office 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app suite. |
 | Microsoft Edge, version 77 and later for Windows 10 | Store app | Select **Windows 10** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Microsoft Edge, version 77 and later for macOS | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Android line-of-business (LOB) apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
@@ -117,7 +117,7 @@ For more information about the types of apps that your organization needs, see "
 Intune lets you modify the functionality of apps that you deploy to help align them with your company's compliance and security policies. This control allows you to determine how your company data is protected. Intune-managed apps are enabled with a rich set of mobile application protection policies, such as:
 
 - Restricting copy-and-paste and save-as functions.
-- Configuring web links to open inside the Intune Managed Browser app.
+- Configuring web links to open inside the Microsoft Edge app.
 - Enabling multi-identity use and app-level Conditional Access.
 
 Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../developer/app-sdk.md).

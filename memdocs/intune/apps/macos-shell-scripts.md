@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,6 +58,9 @@ Ensure that the following prerequisites are met when composing shell scripts and
 4. In **Script settings**, enter the following properties, and select **Next**:
    - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user. 
+   - **Hide script notifications on devices:** By default, script notifications are shown for each script that is run. End users see a *IT is configuring your computer* notification from Intune on macOS devices.
+   - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once.
+   - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more device groups that include the users whose macOS devices are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
@@ -78,6 +81,47 @@ You can monitor the run status of all assigned scripts for users and devices by 
 Once a script runs, it returns one of the following statuses:
 - A script run status of **Failed** indicates that the script returned a non-zero exit code or the script is malformed. 
 - A script run status of **Success** indicated that the script returned zero as the exit code. 
+
+## Troubleshoot macOS shell script policies using log collection
+
+You can collect device logs to help troubleshoot script issues on macOS devices. 
+
+### Requirements for log collection
+The following items are required to collect logs on a macOS device:
+- You must specify the full absolute log file path.
+- File paths must be separated using only a semicolon (;).
+- The maximum log collection size to upload is 60 MB (compressed) or 25 files, whichever occurs first.
+- File types that are allowed for log collection include the following extensions: *.log, .zip, .gz, .tar, .txt, .xml, .crash, .rtf*
+
+#### Collect device logs
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. In **Device status** or **User status** report, select a device.
+3. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`. 
+
+   >[!IMPORTANT]
+   > Multiple log file paths separated using comma, period, newline or quotation marks with or without spaces will result in log collection error. Spaces are also not allowed as separators between paths.
+
+4. Select **OK**. Logs are collected the next time the Intune MDM agent on the device checks in with Intune. This check-in usually occurs every 8 hours.
+
+   >[!NOTE]
+   > 
+   > - Collected logs are encrypted on the device, transmitted and stored in Microsoft Azure storage for 30 days. Stored logs are decrypted on demand and downloaded using Microsoft Endpoint Manager admin center.
+   > - In addition to the admin-specified logs, Intune MDM agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`. 
+   > - If any admin-specified file is missing or has the wrong file-extension, you will find these file-names listed in `LogCollectionInfo.txt`.     
+
+### Log collection errors
+Log collection may not be successful due to any of the following reasons provided in the table below. To resolve these errors, follow the remediation steps.
+
+| Error code (hex) | Error code (dec) | Error message | Remediation steps |
+|------------------|------------------|---------------|-------------------|
+| 0X87D300D1 | 2016214834 | Log file size cannot exceed 60 MB. | Ensure that compressed logs are less than 60 MB in size. |
+| 0X87D300D1 | 2016214831 | The provided log file path must exist. The system user folder is an invalid location for log files. | Ensure that the provided file path is valid and accessible. |
+| 0X87D300D2 | 2016214830 | Log collection file upload failed due to expiration of upload URL. | Retry the **Collect logs** action. |
+| 0X87D300D3, 0X87D300D5, 0X87D300D7 | 2016214829, 2016214827, 2016214825 | Log collection file upload failed due to encryption failure. Retry log upload. | Retry the **Collect logs** action. |
+| | 2016214828 | The number of log files exceeded the allowed limit of 25 files. | Only up to 25 log files can be collected at a time. |
+| 0X87D300D6 | 2016214826 | Log collection file upload failed due to zip error. Retry log upload. | Retry the **Collect logs** action. |
+| | 2016214740 | The logs couldn't be encrypted as compressed logs were not found. | Retry the **Collect logs** action. |
+| | 2016214739 | The logs were collected but couldn't be stored. | Retry the **Collect logs** action. |
 
 ## Frequently asked questions
 ### Why are assigned shell scripts not running on the device?
@@ -106,9 +150,17 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  - The agent silently authenticates with Intune services before checking in to receive assigned shell scripts for the macOS device.
  - The agent receives assigned shell scripts and runs the scripts based on the configured schedule, retry attempts, notification settings, and other settings set by the admin.
  - The agent checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
+ 
+ ### How can I manually initiate an agent check-in from a Mac?
+On a managed Mac that has the agent installed, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
- >[!NOTE]
- > The **Check settings** action in Company Portal only forces an MDM check-in. There is no manual action for agent check-in.
+Alternatively, you can do the following:
+1. Open **Activity Monitor** > **View** > *select **All processes**.* 
+2. Search for processes named `IntuneMdmAgent`. 
+3. Quit the process running for **root** user. 
+
+> [!NOTE]
+> The **Check settings** action in Company Portal and the **Sync** action for devices in Microsoft Endpoint Manager Admin Console initiates an MDM check-in and does not force an agent check-in.
 
  ### When is the agent removed?
  There are several conditions that can cause the agent to be removed from the device such as:

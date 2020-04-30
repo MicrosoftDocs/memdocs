@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ If you have an Exchange Online Dedicated environment and need to find out whethe
 
 Before you can configure Conditional Access, verify the following configurations exist:
 
-- Your Exchange version is **Exchange 2010 SP1 or later**. Exchange server Client Access Server (CAS) array is supported.
+- Your Exchange version is **Exchange 2010 SP3 or later**. Exchange server Client Access Server (CAS) array is supported.
 
 - You have installed and use the [Exchange ActiveSync on-premises Exchange connector](exchange-connector-install.md), which connects Intune to on-premises Exchange.
 
@@ -128,7 +128,7 @@ Before you can use the following procedure to set up Exchange on-premises access
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Edit Organization workflow for notifications](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
-   Modify the default email message that’s sent to users if their device isn't compliant and they want to access Exchange on-premises. The message template uses Markup language. You can also see the preview of how the message looks as you type
+   Modify the default email message that's sent to users if their device isn't compliant and they want to access Exchange on-premises. The message template uses Markup language. You can also see the preview of how the message looks as you type
 
    Select **Review + save**, and then **Save** to save your edits to complete configuration of Exchange on-premises access.
 
@@ -146,7 +146,7 @@ Before you can use the following procedure to set up Exchange on-premises access
 
      - **Block access** and **Quarantine** – All devices are immediately blocked from accessing Exchange on-premises initially. Devices that belong to users in the groups you configured as included in the previous procedure get access after the device enrolls in Intune and is evaluated as compliant.
 
-       Android devices that *do not* run Samsung Knox standard don’t support this setting and are always blocked.
+       Android devices that *do not* run Samsung Knox standard don't support this setting and are always blocked.
 
    - For **Device platform exceptions**, select **Add**, and then specify details as needed for your environment.
 

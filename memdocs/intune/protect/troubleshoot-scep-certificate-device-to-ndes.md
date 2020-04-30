@@ -165,7 +165,7 @@ Connections that resemble the following example, with a status code of 500, indi
 
 Use the following steps to test the URL that is specified in the SCEP certificate profile.
 
-1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/msecp.dll*.
+1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/mscep.dll*.
 
 2. Open a web browser, and then browse to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
@@ -302,7 +302,7 @@ You have Azure AD Application Proxy configured. When you browse to the SCEP serv
 
 `This page can't be displayed`
 
-- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is https://contoso.com/certsrv/mscep/mscep.dll.
+- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is `https://contoso.com/certsrv/mscep/mscep.dll`.
 
   **Resolution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
 

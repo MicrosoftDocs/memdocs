@@ -2,7 +2,7 @@
 # required metadata
 
 title: Legacy Intune PC client and Intune on Azure
-description: Considerations when using Intune on Azure to manage your organization’s Windows devices.
+description: Considerations when using Intune on Azure to manage your organization's Windows devices.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 Intune uses an Azure-based SaaS application service architecture. Azure provides significant improvements in scale, capacity, and performance. This offers enhanced Intune admin experiences and optimized workflows in the Azure portal. 
 
-When using Intune on Azure to manage your organization’s Windows devices, consider the following points:
+When using Intune on Azure to manage your organization's Windows devices, consider the following points:
 
 ## Manage Windows 10 devices by using MDM
 
@@ -45,7 +45,7 @@ The Intune PC Client management workflows use the [Silverlight-based Intune Admi
 - For all non-grouping management tasks using the Intune PC Client, you must use the Silverlight console.
 - When managing groups, you must use the [Intune on Azure portal](https://portal.azure.com/). This requirement exists because Intune now uses Azure AD Groups instead of legacy Intune Groups. 
 
-Because of the switch to Azure AD Groups, “group-based” filtering in the Silverlight console dashboard views has changed slightly. To filter in the updated Silverlight UI, follow these steps:
+Because of the switch to Azure AD Groups, "group-based" filtering in the Silverlight console dashboard views has changed slightly. To filter in the updated Silverlight UI, follow these steps:
 
 1. Select a view.
 2. In the **Filters** box, enter the name of the group that you want to filter by and press enter. This will filter the list view to the devices in that particular group.
@@ -55,11 +55,11 @@ Because of the switch to Azure AD Groups, “group-based” filtering in the Sil
 
 ## Continue to manage Windows 7 by using Intune PC Client
 
-For Windows 7, which can’t be managed by using MDM, we will continue to support existing Intune PC Client capabilities in the Silverlight console only. Consider migrating to MDM management when you upgrade to Windows 10.
+For Windows 7, which can't be managed by using MDM, we will continue to support existing Intune PC Client capabilities in the Silverlight console only. Consider migrating to MDM management when you upgrade to Windows 10.
 
 ## MDM Capabilities
 
-For a detailed comparison between PC Client and MDM capabilities, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md). MDM updates will continue to bring new management capabilities to MDM-enrolled, Windows 10 devices, inclusive of evaluating options for Win 32 apps. View the [What’s New](whats-new.md) for the latest release additions to the service.
+For a detailed comparison between PC Client and MDM capabilities, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md). MDM updates will continue to bring new management capabilities to MDM-enrolled, Windows 10 devices, inclusive of evaluating options for Win 32 apps. View the [What's New](whats-new.md) for the latest release additions to the service.
 
 ## Switch from PC Client to MDM
 

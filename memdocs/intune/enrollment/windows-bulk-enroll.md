@@ -34,7 +34,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 ## Prerequisites for Windows devices bulk enrollment
 
-- Devices running Windows 10 Creator update (build 1703) or later
+- Devices running Windows 10 Creator update (build 1709) or later
 - [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## Create a provisioning package
@@ -77,8 +77,8 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 1. Access the provisioning package in the location specified in **Project folder** specified in the app.
 
-2. Choose how you’re going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
-   - Place the provisioning package on a USB drive, insert the USB drive into the device you’d like to bulk enroll, and apply it during initial setup
+2. Choose how you're going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
+   - Place the provisioning package on a USB drive, insert the USB drive into the device you'd like to bulk enroll, and apply it during initial setup
    - Place the provisioning package on a network folder, and apply it after initial setup
 
    For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).

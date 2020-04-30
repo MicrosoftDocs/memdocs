@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Phase 2: Migration campaign
 
-Choose a migration approach that is most suitable for your organization's needs and adjust implementation tactics based on your specific requirements. The remainder of this guide will equip you with the tools you need to achieve the goal of getting your users’ devices enrolled into Intune.
+Choose a migration approach that is most suitable for your organization's needs and adjust implementation tactics based on your specific requirements. The remainder of this guide will equip you with the tools you need to achieve the goal of getting your users' devices enrolled into Intune.
 
 ## Keys to a successful migration
 
@@ -69,7 +69,7 @@ When you are satisfied with the first phase of migrations, repeat the [migration
 
 - Ensure the helpdesk team is ready to support end users throughout the migration campaign. Run a voluntary migration until you can estimate support call workload.
 
-- Don’t set deadlines for enrollment until the remaining population can be handled by your helpdesk
+- Don't set deadlines for enrollment until the remaining population can be handled by your helpdesk
 
 > [!IMPORTANT]
 > Do not configure both Intune and your existing third party MDM solution to apply access controls to resources such as Exchange or SharePoint Online. Additionally, devices should only be enrolled in one solution at a time.

@@ -80,7 +80,7 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 
 ## Not using an app development platform listed above?
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms, and Cordova platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
 
 ## Feature comparison
 
@@ -108,7 +108,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Support for MAM without device enrollment|X|X|
 |Full Wipe of app data|X|X|
 |Selective Wipe of work and school data in Multi-Identity scenarios <br><br>**Note:** For iOS/iPadOS, when the management profile is removed, the app is also removed.|X||
-|Prevent “Save as”|X||
+|Prevent "Save as"|X||
 |Targeted Application Configuration (or app config through the "MAM channel")|X|X|
 |Support for Multi-Identity|X||
 |Customizable Style |X|||

@@ -51,7 +51,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 - Windows 10 PCs must run the following Windows 10 versions:
   - **Windows 10 update rings**: version 1607 or later
-  - **Windows 10 feature updates**: version 1703 or later
+  - **Windows 10 feature updates**: version 1709 or later
 
 - Windows Update supports the following Windows 10 editions:
   - Windows 10

@@ -307,7 +307,7 @@ Registering your device for mobile management (Previous step failed)
 
 - The device must have a physical TPM 2.0 chip. Devices with virtual TPMs (for example, Hyper-V VMs) or TPM 1.2 chips don't work with self-deploying mode.
 - The device must be running one of the following versions of Windows:
-    - Windows 10 build 1703 or a later version.
+    - Windows 10 build 1709 or a later version.
     - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
 
 

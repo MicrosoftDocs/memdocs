@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,10 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 
 This feature applies to:
 
-- Windows 10 and later
+- Windows 10 and later (excluding Windows 10 Home)
+
+> [!NOTE]
+> Once the Intune management extension prerequisites are met, the Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. For more information, see Intune Management Extensions [prerequisites](../apps/intune-management-extension.md#prerequisites).
 
 ## Move to modern management
 
@@ -47,11 +50,14 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 The Intune management extension has the following prerequisites. Once the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1703 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
+- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
   
 - Devices joined to Azure Active Directory (AD), including:  
   
   - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+  
+  > [!TIP]
+  > Be sure devices are [joined](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.  
 
 - Devices enrolled in Intune, including:
 
@@ -71,8 +77,8 @@ The Intune management extension has the following prerequisites. Once the prereq
     - [Client apps workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Be sure devices are [joined](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) to Azure AD. Devices that are only [registered](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD won't receive your scripts.
+> [!NOTE]
+> For information about using Window 10 VMs, see [Using Windows 10 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## Create a script policy and assign it
 
@@ -124,7 +130,36 @@ The Intune management extension has the following prerequisites. Once the prereq
 
 - End users aren't required to sign in to the device to execute PowerShell scripts.
 
-- The Intune management extension client checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy.
+- The Intune management extension agent checks with Intune once every hour and after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent will attempt to retry the script three times for the next 3 consecutive Intune management extension agent check-ins.
+
+- For shared devices, the PowerShell script will run for every new user that signs in.
+
+### Failure to run script example
+8 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails
+
+9AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 1)
+
+10 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 2)
+  
+11 AM
+  -  Check in
+  -  Run script **ConfigScript01**
+  -  Script fails (retry count = 3)
+
+12 PM
+  -  Check in
+  - No additional attempts are made to run **ConfigScript01**script.
+  - Going forward, if no additional changes are made to the script, no additional attempts will be made to run the script.
+
 
 ## Monitor run status
 

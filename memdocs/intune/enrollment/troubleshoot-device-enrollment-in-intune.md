@@ -241,7 +241,7 @@ To verify a proper certificate installation, you can use the diagnostics tool av
 
 The follow steps describe just one of many methods and tools that you can use to validate that the certificate installed correctly.
 
-1. Go to the [free Digicert tool](ttps://www.digicert.com/help/).
+1. Go to the [free Digicert tool](https://www.digicert.com/help/).
 2. Enter your AD FS server's fully qualified domain name (for example, sts.contoso.com) and select **CHECK SERVER**.
 
 If the Server certificate is installed correctly, you see all check marks in the results. If the problem above exists, you see a red X in the "Certificate Name Matches" and the "SSL Certificate is correctly Installed" sections of the report.

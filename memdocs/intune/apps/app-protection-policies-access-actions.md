@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Using Intune app protection policies, you can configure settings to block end users from accessing a corporate app or account. These settings target data relocation and access requirements set by your organization for things like jail-broken devices and minimum OS versions.
  
-You can explicitly choose to wipe your company’s corporate data from the end user’s device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
+You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
 
 ## Create an app protection policy using conditional launch actions
 
@@ -113,7 +113,7 @@ To configure a setting, select a setting from the dropdown under the **Setting**
 
 The following list provides the common list of actions:
 - **Block access** – Block the end user from accessing the corporate app.
-- **Wipe data** – Wipe the corporate data from the end user’s device.
+- **Wipe data** – Wipe the corporate data from the end user's device.
 - **Warn** – Provide dialog to end user as a warning message.
 
 In some cases, such as the **Min OS version** setting, you can configure the setting to perform all applicable actions based on different version numbers. 
