@@ -204,6 +204,14 @@ When a security baseline setting no longer applies to a device, or settings in a
 
 Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
+### Older baseline versions
+
+Microsoft Endpoint Manager updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
+
+When there are no longer any profiles that use a older baseline listed in your tenant, Microsoft Endpoint Manager will only list the latest baseline version available.
+
+If you have a profile associated with an older baseline, that older baseline will continue to be listed.
+
 ## Co-managed devices
 
 Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](https://docs.microsoft.com/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.

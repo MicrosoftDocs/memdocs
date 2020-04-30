@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,6 @@ In this tutorial, we'll set up an Intune app protection policy for iOS for the O
    Click **Next** to continue.
 
 8. Use the **Assignments** page to assign the app protection policy to groups of users. For this tutorial, you won't assign this policy to a group.  
- don't need to configure these settings.
 
    Click **Next** to continue.
 
