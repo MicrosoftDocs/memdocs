@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run PowerShell scripts on client devices.
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -291,7 +291,7 @@ After you have initiated running a script on a collection of devices, use the fo
 
 ## Script output
 
-Client's return script output using JSON formatting by pipeing the script's results to the ConvertTo-Json cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
+Client's return script output using JSON formatting by piping the script's results to the ConvertTo-Json cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
 
 - Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
 - Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
@@ -301,7 +301,8 @@ Client's return script output using JSON formatting by pipeing the script's resu
 
 You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text or the output can be converted to JSON using the ConvertTo-Json PowerShell cmdlet, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
 
-### Example: Script output is convertable to valid JSON
+### Example: Script output is convertible to valid JSON
+
 Command: `$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -311,6 +312,7 @@ Major  Minor  Build  Revision
 ```
 
 ### Example: Script output isn't valid JSON
+
 Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
