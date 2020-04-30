@@ -144,7 +144,7 @@ Supported platforms and profiles:
   - **Queue Outbound**
   - **Queue Both**
 
-- **rn on Microsoft Defender Firewall for domain networks**  
+- **Turn on Microsoft Defender Firewall for domain networks**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
   - **Not configured** (*default*) - The client returns to default, which is to enable the firewall.
