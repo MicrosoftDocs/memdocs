@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 01/14/2020
+ms.date: 05/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -42,8 +42,6 @@ By default, Desktop Analytics refreshes deployment plan data daily. Any changes 
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
 
-
-
 ## Readiness rules
 
 The following readiness rules are available in deployment plans:
@@ -51,7 +49,6 @@ The following readiness rules are available in deployment plans:
 - Whether your devices automatically receive drivers from Windows Update. If devices receive the driver updates from Windows Update, then any driver issues identified as part of readiness assessment are automatically marked as **Ready**.  
 
 - Low install count threshold for your Windows apps. If an app is installed on a higher percentage of computers than this threshold, the deployment plan marks the app as **Noteworthy**. This tag means you can decide how important the app is to test during the pilot phase.  
-
 
 ## Plan assets
 
@@ -71,14 +68,14 @@ The Windows upgrade decision to **Replace device** can be because of one of the 
 - A boot critical component on the system has a blocked driver
 - The specific make and model can't upgrade
 - There's a display-class component with a driver block that has all of the following attributes:
-    - You don't override
-    - There's no driver in the new OS version
-    - It's not already on Windows Update
+  - You don't override
+  - There's no driver in the new OS version
+  - It's not already on Windows Update
 - There's another plug-and-play component on the system that blocks upgrade
 - There's a wireless component that uses an XP-emulated driver
 - A network component with an active connection will lose its driver. In other words, after upgrade it could lose network connectivity.
 
-The Windows upgrade decision to **Re-install** indicates the upgrade will require a reinstall as opposed to an in-place upgrade. 
+The Windows upgrade decision to **Re-install** indicates the upgrade will require a reinstall as opposed to an in-place upgrade.
 
 A **Blocked** Windows upgrade decision can be caused by the following reasons:
 
@@ -97,11 +94,11 @@ The apps that Desktop Analytics shows as *noteworthy* are based on the low insta
    > [!Tip]
    > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
+The **App versions details** setting is on by default, so this tab displays all versions of an app.<!-- 5542186 --> Turn off this setting to combine all versions of apps with the same name and publisher. This behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. You can also make decisions once for all versions. For more information, see [About assets - Apps](about-assets.md#apps).
 
 ### Drivers
 
 See the list of drivers included with this deployment plan. Set the **Upgrade decision**, review Microsoft's recommendation, and see compatibility risk factors.
-
 
 ## Importance
 
@@ -111,18 +108,13 @@ If an app is installed on less than 2% of the targeted devices, it's marked **Lo
 
 For apps, choose an importance of **Critical**, **Important**, or **Not important**. If you mark one as critical or important, Desktop Analytics includes in the pilot deployment some devices with that app. The service includes in the pilot more instances of a critical app. If you mark an app as not important, Desktop Analytics automatically sets it to **Ready to upgrade**.
 
-
-
 ## Pilot devices
 
 Desktop Analytics combines your importance information with the global pilot settings. It then creates a recommendation for which devices should be part of the pilot deployment. The recommended pilot deployment includes devices with different hardware configurations and one or more instances of all the critical and important apps. If an app is marked critical, the service recommends more devices with that app in the pilot.
 
-
-
 ## Deployment plans in Configuration Manager
 
 After creating a deployment plan, use Configuration Manager to deploy the products. Once the deployment starts, Desktop Analytics monitors the deployment based on the settings in the plan.
-
 
 ## Next steps
 

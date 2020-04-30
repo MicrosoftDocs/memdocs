@@ -24,13 +24,13 @@ To get notified when this page is updated, copy and paste the following URL into
 
 ## May 2020
 
-### Apps count consolidation for all versions of same name and publisher
+### Reduce the number of apps for review
 
 <!-- 5542186 -->
 
-To help consolidate and reduce the number of apps shown on the assets page in the portal, it now combines all versions of apps with the same name and publisher. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, this behavior is configurable.
+To help consolidate and reduce the number of apps shown on the assets page in the portal, you can now combine all versions of apps with the same name and publisher. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, this behavior is configurable.
 
-For more information, see [About assets](about-assets.md).
+For more information, see [About assets - Apps](about-assets.md#apps).
 
 ## March 2020
 
