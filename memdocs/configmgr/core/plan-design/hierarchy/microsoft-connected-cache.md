@@ -146,10 +146,6 @@ Starting in version 1910, when you enable Connected Cache on your Configuration 
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group.
 
-- Enable **Allow peer downloads in this boundary group** on the boundary group.
-    > [!NOTE]
-    >Make sure to enable this setting on all Boundary Groups where the device is part of. Otherwise the device does not get the DOGroupId registry key!
-
 - Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
