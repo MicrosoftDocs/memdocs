@@ -1633,7 +1633,7 @@ Use this variable to temporarily persist content in the task sequence cache. Thi
 
 ### <a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifies a command that's run after the task sequence completes. For example, specify a script that enables write filters on embedded devices after the task sequence deploys an OS to the device.
+Specifies a command that's run after the task sequence completes. For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
 
 ### <a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 
