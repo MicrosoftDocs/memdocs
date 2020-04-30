@@ -102,7 +102,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
 ## Known issues
 
 ### Specific devices don't synchronize
-## Known issues
+
 <!--7099564-->
 It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the could management gateway service.
 
