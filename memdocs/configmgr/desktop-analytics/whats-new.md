@@ -116,3 +116,7 @@ The Desktop Analytics docs always refer to functionality in the latest version o
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [What's new in version 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## Deprecated features
+
+When Microsoft plans to remove a significant feature of the Desktop Analytics service, that change will be announced in advance as a Configuration Manager deprecated feature. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
