@@ -45,7 +45,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.
 
-## Microsoft Defender ATP
+
+## Device owner
+
+### Microsoft Defender ATP
 
 - **Require the device to be at or under the machine risk score**  
 
@@ -55,8 +58,6 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Low**
   - **Medium**
   - **High**
-
-## Device owner
 
 ### Device Health
 
@@ -156,7 +157,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Work profile
 
-## Microsoft Defender ATP - *for work profile*
+### Microsoft Defender ATP - *for work profile*
 
 - **Require the device to be at or under the machine risk score**  
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
