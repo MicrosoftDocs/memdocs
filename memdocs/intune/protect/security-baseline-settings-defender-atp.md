@@ -41,7 +41,7 @@ zone_pivot_groups: edge-baseline-versions
 ::: zone pivot="atp-march-2020,atp-april-2020"
 ::: zone-end
 -->
-
+ 
 # Microsoft Defender Advanced Threat Protection baseline settings for Intune
 
 View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
