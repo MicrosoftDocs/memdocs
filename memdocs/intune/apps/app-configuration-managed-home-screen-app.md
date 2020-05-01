@@ -221,7 +221,7 @@ The following is an example JSON script with all the available configuration key
                         {
                             "key": "SSID",
                             "valueString": "name of Wi-Fi network 1 here"
-                        },
+                        }
                     ]
                 },   
                 {
@@ -229,7 +229,7 @@ The following is an example JSON script with all the available configuration key
                         {
                             "key": "SSID",
                             "valueString": "name of Wi-Fi network 2 here"
-                        },
+                        }
                     ]
                 }  
             ]
