@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
