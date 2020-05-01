@@ -157,7 +157,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
-### Rotate BitLocker recovery keysAutomatic rotation
+### Rotate BitLocker recovery keys
 
 You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later.
 
