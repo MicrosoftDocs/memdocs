@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,22 +43,28 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+   - **Platform**: Select **Windows 10 and later**.
+   - **Profile type**: Select **Delivery Optimization**.
 
-    - **Name**: Enter a descriptive name for the new profile.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Delivery optimization**.
+4. Select **Create**.
 
-4. Choose **Settings** > **Configure**, and define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
+5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-5. When finished, select **OK** > **Create** to save your changes.
+6. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
 
-The profile is created and is shown in the list. Next, [assign the profile](device-profile-assign.md) and then [monitor its status](device-profile-monitor.md).
+   When your done configuring settings, select **Next**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+  
+   Select **Next** to continue.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next**.
+
+9. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
+
+10. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list. Next, [assign the profile](device-profile-assign.md) and then [monitor its status](device-profile-monitor.md).
 
 ## Remove Delivery Optimization from Windows 10 Update Rings
 

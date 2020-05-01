@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -248,9 +248,6 @@ When you create a profile for iOS or macOS devices, the experience in the Endpoi
 - Preference file: macOS
 
 ### Hide from user configuration setting in device features on macOS devices<!-- 6524869 -->
-
-> [!NOTE]
-> This change will roll out to all customers over the next couple of weeks.
 
 When you create a device features configuration profile on macOS devices, there's a new **Hide from user configuration** setting (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile > **Login items**).
 

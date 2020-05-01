@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -42,7 +42,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
  - Command-line interpreters for the applicable shells are installed.
 
 ## Important considerations before using shell scripts
- - Shell scripts require that Microsoft Intune MDM Agent is successfully installed on the macOS device. For more information, see [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+ - Shell scripts require that the Microsoft Intune management agent is successfully installed on the macOS device. For more information, see [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
  - Shell scripts run in parallel on devices as separate processes.
  - Shell scripts that are run as the signed-in user will run for all currently signed-in user accounts on the device at the time of the run.
  - An end user is required to sign in to the device to execute scripts running as a signed-in user.
@@ -65,7 +65,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more device groups that include the users whose macOS devices are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
    > - Shell scripts in Intune can only be assigned to Azure AD device security groups. User group assignment is not supported in preview. 
-   > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+   > - Updating assignments for shell scripts also updates assignments for the [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
 The script you created now appears in the list of scripts. 
@@ -101,12 +101,12 @@ The following items are required to collect logs on a macOS device:
    >[!IMPORTANT]
    > Multiple log file paths separated using comma, period, newline or quotation marks with or without spaces will result in log collection error. Spaces are also not allowed as separators between paths.
 
-4. Select **OK**. Logs are collected the next time the Intune MDM agent on the device checks in with Intune. This check-in usually occurs every 8 hours.
+4. Select **OK**. Logs are collected the next time the Intune management agent on the device checks in with Intune. This check-in usually occurs every 8 hours.
 
    >[!NOTE]
    > 
    > - Collected logs are encrypted on the device, transmitted and stored in Microsoft Azure storage for 30 days. Stored logs are decrypted on demand and downloaded using Microsoft Endpoint Manager admin center.
-   > - In addition to the admin-specified logs, Intune MDM agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`. 
+   > - In addition to the admin-specified logs, the Intune management agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`. 
    > - If any admin-specified file is missing or has the wrong file-extension, you will find these file-names listed in `LogCollectionInfo.txt`.     
 
 ### Log collection errors
@@ -139,9 +139,9 @@ A script is run again only when the **Max number of times to retry if script fai
 ### What Intune role permissions are required for shell scripts?
 Your assigned-intune role requires **Device configurations** permissions to delete, assign, create, update, or read shell scripts.
 
-## Microsoft Intune MDM Agent for macOS
+## Microsoft Intune management agent for macOS
  ### Why is the agent required?
- Microsoft Intune MDM Agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
+The Microsoft Intune management agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
  
  ### How is the agent installed?
  The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in Microsoft Endpoint Manager Admin Center. The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
@@ -169,7 +169,7 @@ Alternatively, you can do the following:
  - The agent is in an irrecoverable state for more than 24 hours (device-awake time).
 
  ### How to turn off usage data sent to Microsoft for shell scripts?
- To turn off usage data sent to Microsoft from Intune MDM Agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both Intune MDM agent and Company Portal.
+ To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both the agent and Company Portal.
 
 ## Known issues
 - **User group assignment:** Shell scripts assigned to user groups doesn't apply to devices. User group assignment is currently not supported in preview. Use device group assignment to assign scripts.

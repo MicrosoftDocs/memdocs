@@ -78,7 +78,7 @@ Intune uses Azure Active Directory (AD) [Conditional Access](https://docs.micros
 
 ### With Conditional Access
 
-For devices that comply to policy rules, you can give those devices access to email and other organization resources. If the devices don't comply to policy rules, then they don't get access to organization resources. This is Conditional Access.
+For devices that comply with policy rules, you can give those devices access to email and other organization resources. If the devices don't comply with policy rules, then they don't get access to organization resources. This is Conditional Access.
 
 ### Without Conditional Access
 

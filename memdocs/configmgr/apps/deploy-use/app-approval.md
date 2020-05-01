@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Approve applications in Configuration Manager
@@ -42,10 +40,7 @@ If a request isn't approved within 30 days, it's removed. Reinstalling the clien
 
 When you require approval on a deployment to a device collection, the app isn't displayed in Software Center. If you require approval on a deployment to a user collection, the app is displayed in Software Center. You can still hide it from users with the client setting, **Hide unapproved applications in Software Center**. For more information, see [Software Center client settings](../../core/clients/deploy/about-client-settings.md#software-center).
 
-After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
-
-> [!Important]  
-> Starting in version 1806, *the behavior has changed* when you revoke approval for an application that was previously approved and installed. Now when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->  
+After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. If users haven't already installed the application, this action stops them from installing new copies of the application from Software Center. If an application was previously approved and installed, when you **Deny** the request for the application, the client uninstalls the application from the user's device.<!--1357891-->
 
 Starting in version 1906, if you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  <!-- 4224910 -->
 
@@ -87,19 +82,17 @@ Application approval requests are displayed in the **Application Requests** node
 
 After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
 
-
 ## <a name="bkmk_email-approve"></a> Email notifications
 
 <!--1321550-->
 
-Starting in version 1810, configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
+You can configure email notifications for application approval requests. When a user requests an application, you receive an email. Click links in the email to approve or deny the request, without requiring the Configuration Manager console.
 
 You can define the email addresses of the users who can approve or deny the request while creating a new deployment for the application. If you need to change the list of email addresses afterwards, go to the **Monitoring** workspace, expand **Alerts**, and select the **Subscriptions** node. Select **Properties** from one of the **Approve application via email** subscriptions that's related to your application deployment.
 
 If there is more than one alert, you can determine which alert goes with which deployment. Open the alert properties, and view the list of **Selected alerts** on the General tab. The deployment is enabled as the alert for this subscription.
 
 Users can add a comment to the request from Software Center. This comment shows on the application request in the Configuration Manager console. Starting in version 1902, that comment also shows in the email. Including this comment in the email helps the approvers make a better decision to approve or deny the request.<!--3594063-->
-
 
 ### Prerequisites
 
@@ -111,14 +104,17 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
-- Enable the SMS Provider to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
+- Enable the SMS Provider on the primary site to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
-    - Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) (recommended)  
+  - (Recommended) Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) for the primary site.
 
-        > [!Note]  
-        > When the site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, when responding to an application request, you may see a security warning.  
+    > [!Note]  
+    > When the primary site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, when responding to an application request, you may see a security warning.  
 
-    - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role  
+  - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role on the primary site.
+
+> [!NOTE]
+> If you have multiple child primary sites in a hierarchy, configure these prerequisites for each primary site where you want to enable this feature. The links in the email notification are for the administration service at the primary site.<!-- 7108472 -->
 
 #### To take action from internet
 
@@ -126,15 +122,15 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
 
-    - The SMS Provider requires **.NET 4.5.2** or later.  
+  - The SMS Provider requires **.NET 4.5.2** or later.  
 
 - [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+  - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
-    - Manually configure settings in Azure AD:  
+  - Manually configure settings in Azure AD:  
 
         1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.  
 
@@ -156,7 +152,6 @@ With these additional optional prerequisites, recipients can approve or deny the
 
             3. Select **Save**.  
 
-
 ### Configure email approval
 
 1. In the Configuration Manager console, [deploy an application](deploy-applications.md) as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter one or more email addresses to receive notification. Separate email addresses with a semi-colon (`;`).  
@@ -174,7 +169,6 @@ With these additional optional prerequisites, recipients can approve or deny the
 > The link to approve or deny is for one-time use. For example, you configure a group alias to receive notifications. Meg approves the request. Now Bruce can't deny the request.  
 
 Review the **NotiCtrl.log** file on the site server for troubleshooting.
-
 
 ## Maintenance
 

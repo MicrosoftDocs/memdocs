@@ -2,7 +2,7 @@
 title: SQL Server cluster
 titleSuffix: Configuration Manager
 description: Use a SQL Server cluster to host the Configuration Manager site database
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Use a SQL Server cluster for the site database
@@ -59,9 +57,12 @@ Be aware of the following prerequisites:
 
 - To support Kerberos authentication, enable the **TCP/IP** network communication protocol for the network connection of each SQL Server cluster node. The **Named pipes** protocol isn't required, but can be used to troubleshoot Kerberos authentication issues. The network protocol settings are configured in **SQL Server Configuration Manager**, under **SQL Server Network Configuration**.  
 
-- If you use a public key infrastructure (PKI), see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md). There are specific certificate requirements when you use a SQL Server cluster for the site database.  
+- There are specific certificate requirements when you use a SQL Server cluster for the site database. For more information, see the following articles:
+  - [Install a certificate in a SQL failover cluster configuration](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > If you don't pre-provision a certificate in SQL, Configuration Manager creates and provisions a self-signed certificate for SQL.<!-- 7099499 -->
 
 ## Limitations
 
