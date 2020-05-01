@@ -188,7 +188,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices.
 
 - **Company portal app runtime integrity**
-    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Choose *Require* to confirm the Company Portal app meets all the following requirements:
 
     - Has the default runtime environment installed

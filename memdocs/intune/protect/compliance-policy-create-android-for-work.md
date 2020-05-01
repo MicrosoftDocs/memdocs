@@ -45,6 +45,17 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android Enterprise**.
 
+## Microsoft Defender ATP
+
+- **Require the device to be at or under the machine risk score**  
+
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  - **Not configured** (*default*)
+  - **Clear**
+  - **Low**
+  - **Medium**
+  - **High**
+
 ## Device owner
 
 ### Device Health
@@ -57,7 +68,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
   
-> [!NOTE] 
+> [!NOTE]
 > All the Mobile Threat Defense (MTD) providers are supported on Android Enterprise device owner deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Device Owner platforms on Intune.
 
 #### Google Play Protect
@@ -83,82 +94,104 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   *By default, no date is configured*.
 
-
 ### System Security
 
-- **Require a password to unlock mobile devices**: 
+- **Require a password to unlock mobile devices**  
   - **Not configured** (*default*) -  This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device.
-  - **Required password type**: Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-    - **Device default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.  
-    - **Password required, no restrictions**
-    - **Weak biometric** - [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-    - **Numeric** (*default*): Password must only be numbers, such as `123456789`. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-    - **Numeric complex** - Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-    - **Alphabetic** - Letters in the alphabet are required. Numbers and symbols aren't required. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-    - **Alphanumeric** - Includes uppercase letters, lowercase letters, and numeric characters. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-    - **Alphanumeric with symbols** - Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. Also enter:
-    
-    Depending on the *password type* you select, the following settings are available:  
-    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.  
 
-    - **Number of characters required**: Enter the number of characters the password must have, between 0 and 16 characters.
+- **Required password type**  
+  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
+  - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*.
+  - **Password required, no restrictions**
+  - **Weak biometric** - [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **Numeric** (*default*): Password must only be numbers, such as `123456789`. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Numeric complex** - Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Alphabetic** - Letters in the alphabet are required. Numbers and symbols aren't required. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Alphanumeric** - Includes uppercase letters, lowercase letters, and numeric characters. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Alphanumeric with symbols** - Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
-    - **Number of lowercase characters required**: Enter the number of lowercase characters the password must have, between 0 and 16 characters.
+  Depending on the *password type* you select, the following settings are available:
+  - **Minimum password length**  
+    Enter the minimum length the password must have, between 4 and 16 characters.  
 
-    - **Number of uppercase characters required**: Enter the number of uppercase characters the password must have, between 0 and 16 characters.
+  - **Number of characters required**  
+    Enter the number of characters the password must have, between 0 and 16 characters.
 
-    - **Number of non-letter characters required**: Enter the number of non-letters (anything other than letters in the alphabet) the password must have, between 0 and 16 characters.
+  - **Number of lowercase characters required**  
+    Enter the number of lowercase characters the password must have, between 0 and 16 characters.
 
-    - **Number of numeric characters required**: Enter the number of numeric characters (`1`, `2`, `3`, and so on) the password must have, between 0 and 16 characters.
-    
-    - **Number of symbol characters required**: Enter the number of symbol characters (`&`, `#`, `%`, and so on) the password must have, between 0 and 16 characters.
- 
-- **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
+  - **Number of uppercase characters required**  
+    Enter the number of uppercase characters the password must have, between 0 and 16 characters.
 
-- **Number of days until password expires**: Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+  - **Number of non-letter characters required**  
+    Enter the number of non-letters (anything other than letters in the alphabet) the password must have, between 0 and 16 characters.
 
-   *By default, no value is configured*.
+  - **Number of numeric characters required**  
+    Enter the number of numeric characters (`1`, `2`, `3`, and so on) the password must have, between 0 and 16 characters.
 
-- **Number of passwords required before user can reuse a password**: Enter the number of recent passwords that can't be reused, between 1-24. Use this setting to restrict the user from creating previously used passwords.  
+  - **Number of symbol characters required**  
+    Enter the number of symbol characters (`&`, `#`, `%`, and so on) the password must have, between 0 and 16 characters.
+
+  - **Maximum minutes of inactivity before password is required**  
+    Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
+
+  - **Number of days until password expires**  
+    Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+
+    *By default, no value is configured*.
+
+  - **Number of passwords required before user can reuse a password**  
+    Enter the number of recent passwords that can't be reused, between 1-24. Use this setting to restrict the user from creating previously used passwords.  
 
     *By default, no version is configured*.
 
 #### Encryption
 
-- **Encryption of data storage on device**: 
+- **Encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** -  Encrypt data storage on your devices.  
+  - **Require** - Encrypt data storage on your devices.
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
 ## Work profile
 
-### Device Health
+## Microsoft Defender ATP - *for work profile*
 
-- **Rooted devices**: 
+- **Require the device to be at or under the machine risk score**  
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender ATP. Devices which exceed this score get marked as noncompliant.
+  - **Not configured** (*default*)
+  - **Clear**
+  - **Low**
+  - **Medium**
+  - **High**
+
+### Device Health - *for work profile*
+
+- **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted (jailbroken) devices as not compliant.  
+  - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
-- **Require the device to be at or under the Device Threat Level**: Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
-
+- **Require the device to be at or under the Device Threat Level**  
+  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. If the device is detected with any level of threats, it's evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-#### Google Play Protect
+#### Google Play Protect - *for work profile*
 
-- **Google Play Services is configured**: 
+- **Google Play Services is configured**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** - Require that the Google Play services app is installed and enabled. Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices. 
+  - **Require** - Require that the Google Play services app is installed and enabled. Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
   
-- **Up-to-date security provider**: 
+- **Up-to-date security provider**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities. 
+  - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **SafetyNet device attestation**: Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **SafetyNet device attestation**
+  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
@@ -166,27 +199,30 @@ As an Intune administrator, use these compliance settings to help protect your o
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
-### Device Properties
+### Device Properties - *for work profile*
 
-#### Operating System Version
+#### Operating System Version - *for work profile*
 
-- **Minimum OS version**: When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
-
-  *By default, no version is configured*.
-
-- **Maximum OS version**: When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
+- **Minimum OS version**  
+When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
 
   *By default, no version is configured*.
 
-### System security
+- **Maximum OS version**  
+When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
 
-- **Require a password to unlock mobile devices**: 
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance. 
+  *By default, no version is configured*.
+
+### System security - *for work profile*
+
+- **Require a password to unlock mobile devices**  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Users must enter a password before they can access their device.  
 
   This setting applies at the device level. If you only need to require a password at the work profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
 
-- **Required password type**: Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
+- **Required password type**  
+  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
   - **Device Default**
   - **Low security biometric**
   - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
@@ -195,26 +231,31 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **At least alphanumeric**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
   - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
 
-  Depending on the *password type* you select, the following settings are available:  
-  - **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
+  Depending on the *password type* you select, the following settings are available:
 
-  - **Number of days until password expires**: Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+  - **Maximum minutes of inactivity before password is required**  
+    Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
-  - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters. 
-  
-  - **Number of previous passwords to prevent reuse**: Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
+  - **Number of days until password expires** 
+    Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
-#### Encryption
+  - **Minimum password length**  
+    Enter the minimum length the password must have, between 4 and 16 characters.
 
-- **Encryption of data storage on device**: 
+  - **Number of previous passwords to prevent reuse**  
+    Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
+
+#### Encryption - *for work profile*
+
+- **Encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** -  Encrypt data storage on your devices.  
 
   You don't have to configure this setting because Android Enterprise devices enforce encryption.
 
-#### Device Security
+#### Device Security - *for work profile*
 
-- **Block apps from unknown sources**: 
+- **Block apps from unknown sources**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Block** - Block devices with **Security** > **Unknown Sources** enabled sources (*supported on Android 4.0 through Android 7.x. Not supported by Android 8.0 and later*).  
 
@@ -225,21 +266,22 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   You don't have to configure this setting as Android Enterprise devices always restrict installation from unknown sources.
 
-- **Company portal app runtime integrity**: 
+- **Company portal app runtime integrity**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** -  Choose *Require* to confirm the Company Portal app meets all the following requirements:
+  - **Require** - Choose *Require* to confirm the Company Portal app meets all the following requirements:
     - Has the default runtime environment installed
     - Is properly signed
     - Isn't in debug-mode
     - Is installed from a known source
 
-- **Block USB debugging on device**: 
+- **Block USB debugging on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Block** - Prevent devices from using the USB debugging feature.  
 
   You don't have to configure this setting because USB debugging is already disabled on Android Enterprise devices.
 
-- **Minimum security patch level**:  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
+- **Minimum security patch level**  
+  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 
   *By default, no date is configured*.
 
