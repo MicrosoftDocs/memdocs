@@ -46,13 +46,24 @@ zone_pivot_groups: atp-baseline-versions
 
 View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
 
+::: zone pivot="atp-april-2020"
+
 The details in this article apply to version 4 of the Microsoft Defender ATP baseline, which released on April 21, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
-::: zone pivot="atp-march-2020,atp-april-2020"
+
 ## Application Guard
 
 For more information, see [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
