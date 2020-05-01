@@ -40,6 +40,8 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 **RSS feed**: Find out when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
+This article was last updated on the date listed under the title above.
+
 <!--
 ## What's coming to Intune in the Azure portal 
 ## What's coming to Intune apps
