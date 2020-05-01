@@ -19,6 +19,9 @@ ROBOTS: NOINDEX, NOFOLLOW
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md). 
+>
+>If you would like to join the private preview for Endpoint Analytics, please enter the details [in this form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Tenants will be flighted as openings for the preview expands.
+
 
 ## Endpoint analytics overview
 
