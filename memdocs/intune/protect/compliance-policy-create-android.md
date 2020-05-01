@@ -148,7 +148,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   Based on the configuration of this setting, one or more of the following options are available:
 
-  - **Minimum password length**
+  - **Minimum password length**  
     *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
 
     Enter the minimum number of digits or characters that the user's password must have.
@@ -163,11 +163,12 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   Select the number of days before the password expires and the user must create a new password.
 
-  - **Number of previous passwords to prevent reuse**: Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords. (Supported for Android 4.0 and above, or KNOX 4.0 and above.)
+  - **Number of previous passwords to prevent reuse**  
+    Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords. (Supported for Android 4.0 and above, or KNOX 4.0 and above.)
 
 ### Encryption
 
-- **Encryption of data storage on a device**
+- **Encryption of data storage on a device**  
   *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -175,7 +176,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Device Security
 
-- **Block apps from unknown sources**
+- **Block apps from unknown sources**  
   *Supported on Android 4.0 to Android 7.x. Not supported by Android 8.0 and later*
 
   - **Not configured** (*default*) - this setting isn't evaluated for compliance or non-compliance.
@@ -187,8 +188,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices.
 
 - **Company portal app runtime integrity**
-
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+    - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Choose *Require* to confirm the Company Portal app meets all the following requirements:
 
     - Has the default runtime environment installed
@@ -196,19 +196,20 @@ As an Intune administrator, use these compliance settings to help protect your o
     - Isn't in debug-mode
     - Is installed from a known source
 
-- **Block USB debugging on device** *(Android 4.2 or later)*
+- **Block USB debugging on device**  
+  *(Supported on Android 4.2 or later)*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Block** - Prevent devices from using the USB debugging feature.
 
-- **Minimum security patch level** *(Android 6.0 or later)*:
+- **Minimum security patch level**  
+  *(Supported on Android 6.0 or later)*
 
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 
   *By default, no date is configured*.
 
-- **Restricted apps**
-
+- **Restricted apps**  
   Enter the **App name** and **App bundle ID** for apps that should be restricted, and then select **Add**. A device with at least one restricted app installed is marked as non-compliant.
 
 ## Next steps
