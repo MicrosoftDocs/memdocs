@@ -38,6 +38,8 @@ View the MDM security baseline settings that Microsoft Intune supports for devic
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
 - The most recent baseline version is **MDM Security Baseline for May 2019**
 
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
 Be sure to select the version of the baseline that you want to view.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 

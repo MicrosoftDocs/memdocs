@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,7 +60,8 @@ The following security baseline instances are available for use with Intune. Use
 
 - **Microsoft Defender ATP baseline**
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))*.
-  - [Microsoft Defender ATP baseline version 3](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP baseline for April 2020 - version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Microsoft Defender ATP baseline for March 2020 - version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > The Microsoft Defender ATP security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
@@ -77,15 +78,21 @@ When your ready to move to a more recent version of a baseline you use, see [Cha
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes the baseline template name,, how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when the latest version of the baseline template became available.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes the baseline template name, how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when the latest version of the baseline template became available.
 
-To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. On the Versions pane, you can select a single version to view deeper details about the profiles that use that version. You can also select two different versions and then choose **Compare baselines** to download a CSV file that details those differences.
-
-![Compare baselines](./media/security-baselines/compare-baselines.png)
-
-When you create a security baseline *profile*, the profile automatically uses the most recently released security baseline instance.  You can continue to use and edit profiles that you previously created that use an earlier baseline version instance, including baselines created using a Preview version.
+To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles, including the most recent and current baseline version.  You can select a single version to view deeper details about the profiles that use that version.
 
 You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that's in use with a given profile. This means when a new version comes out, you don't have to create a new baseline profile to take advantage of it. Instead, when you're ready, you can select a baseline profile and then use the built-in option to change the instance version for that profile to a new one.
+
+### Compare baseline versions
+
+On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline.  You can continue to use and edit profiles that you previously created that use an earlier baseline version, including baselines created using a Preview version.
+
+To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines** to download a CSV file that details those differences. 
+
+The download identifies each setting in the two baseline versions, and notes if this setting has changed (*notEqual*) or has remained the same (*equal*). Details also include the default value for the setting by version, and if the setting was *added* to the more recent version, or *removed* from the more recent version.
+
+![Compare baselines](./media/security-baselines/compare-baselines.png)
 
 ## Avoid conflicts
 
