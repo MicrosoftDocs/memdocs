@@ -46,7 +46,9 @@ To start using Endpoint analytics, verify the prerequisites, then start gatherin
 
 ### Technical Prerequisites
 
-This current preview requires:
+For this preview, you can enroll devices via Configuration Manager or Microsoft Intune. 
+
+To enroll devices via Intune, this preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined machines aren't currently supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
@@ -54,14 +56,16 @@ This current preview requires:
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
+To enroll devices via Configuration Manager, this preview requires:
+- Configuration Manager version 2002 or newer
+- Clients upgraded to version 2002 or newer
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America (we will be expanding to other regions soon)
 
-- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-   - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
-   - A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
-   - A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Configuration Manager.
-
-
-We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
+Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
+- Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
+- A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
+- A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Configuration Manager.
 
 ### Licensing Prerequisites
 
