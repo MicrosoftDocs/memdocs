@@ -61,7 +61,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Device Health
 
-- **Require the device to be at or under the Device Threat Level**: Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
+- **Require the device to be at or under the Device Threat Level**  
+  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. If the device is detected with any level of threats, it's evaluated as noncompliant.
@@ -74,7 +75,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 #### Google Play Protect
 
-- **SafetyNet device attestation**: Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **SafetyNet device attestation**  
+  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
   - **Check basic integrity & certified devices**
@@ -83,15 +85,18 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 #### Operating System Version
 
-- **Minimum OS version**: When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
+- **Minimum OS version**  
+  When a device doesn't meet the minimum OS version requirement, it's reported as non-compliant. A link with information on how to upgrade is shown. The end user can upgrade their device, and then access organization resources.
 
   *By default, no version is configured*.
 
-- **Maximum OS version**: When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
+- **Maximum OS version**  
+  When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
 
   *By default, no version is configured*.
 
-- **Minimum security patch level**:  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
+- **Minimum security patch level**  
+  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 
   *By default, no date is configured*.
 
@@ -191,7 +196,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **SafetyNet device attestation**
+- **SafetyNet device attestation**  
   Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
@@ -237,7 +242,7 @@ When a device is using an OS version later than the version in the rule, access 
   - **Maximum minutes of inactivity before password is required**  
     Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
 
-  - **Number of days until password expires** 
+  - **Number of days until password expires**  
     Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
   - **Minimum password length**  
