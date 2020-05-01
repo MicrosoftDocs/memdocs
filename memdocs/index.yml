@@ -1,0 +1,93 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Manager documentation
+summary: Official product documentation for Microsoft Endpoint Manager
+
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: mtillman
+  ms.date: 04/20/2020
+
+highlightedContent:
+  items:
+    - title: Overview of Microsoft Endpoint Manager
+      itemType: overview
+      url: endpoint-manager-overview.md
+    - title: Microsoft Endpoint Manager (product page)
+      itemType: get-started
+      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+    - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
+      itemType: tutorial
+      url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+    - title: Secure your remote workforce
+      itemType: get-started
+      url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+
+conceptualContent:
+  items:
+    - title: Microsoft Intune
+      links:
+        - url: ./intune/index.yml
+          itemType: overview
+          text: Microsoft Intune documentation 
+        - url: ./intune/fundamentals/index.yml
+          itemType: overview
+          text: Plan for and set up Intune   
+        - url: ./intune/enrollment/index.yml
+          itemType: overview
+          text: Enroll devices   
+        - url: ./intune/remote-actions/index.yml
+          itemType: overview
+          text: Remotely manage devices   
+        - url: ./intune/protect/index.yml
+          itemType: overview
+          text: Create compliance rules for users and devices 
+        - url: ./intune/configuration/index.yml
+          itemType: overview
+          text: Control device features and settings   
+        - url: ./intune/apps/index.yml
+          itemType: concept
+          text: Manage and protect apps
+    - title: Microsoft Endpoint Configuration Manager
+      links:
+        - url: ./configmgr/index.yml
+          itemType: get-started
+          text: Microsoft Endpoint Configuration Manager documentation
+        - url: ./configmgr/comanage/index.yml
+          itemType: concept
+          text: Manage device workloads in Configuration Manager and Intune
+        - url: ./configmgr/desktop-analytics/index.yml
+          itemType: overview
+          text: Use Desktop Analytics for update readiness                  
+        - url: ./configmgr/core/index.yml
+          itemType: overview
+          text: Manage your infrastructure
+        - url: ./configmgr/apps/index.yml
+          itemType: concept
+          text: Manage apps
+        - url: ./configmgr/osd/index.yml
+          itemType: concept
+          text: Operating system deployment
+        - url: ./configmgr/sum/index.yml
+          itemType: concept
+          text: Software updates
+        - url: ./configmgr/compliance/index.yml
+          itemType: concept
+          text: Manage configuration and compliance of devices
+        - url: ./configmgr/protect/index.yml
+          itemType: concept
+          text: Protect your infrastructure and data
+    - title: Windows Autopilot
+      links:
+        - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+          itemType: concept
+          text: Windows Autopilot documentation
+        - url: /mem/intune/enrollment/enrollment-autopilot
+          itemType: how-to-guide
+          text: "Intune: Enroll Windows devices using Windows Autopilot"
+        - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+          itemType: how-to-guide
+          text: "Configuration Manager: Use Windows Autopilot for existing devices"         

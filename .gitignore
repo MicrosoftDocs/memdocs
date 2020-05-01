@@ -1,0 +1,18 @@
+log/
+xhtml/
+packages/
+obj/
+_site/
+Tools/NuGet/
+.optemp/
+_themes/
+
+
+# Visual Studio and VS Code files
+.vscode/*
+
+
+
+.openpublishing.build.mdproj
+.openpublishing.buildcore.ps1
+packages.config
