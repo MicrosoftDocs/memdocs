@@ -22,7 +22,7 @@ zone_pivot_groups: windows-mdm-versions
 
 #audience:
 
-#ms.reviewer:  
+ms.reviewer: laarrizz 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
