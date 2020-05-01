@@ -24,15 +24,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2004/1234567.md)] -->
 
-[!INCLUDE [6374854](includes/2004/6374854.md)]
-[!INCLUDE [6521921](includes/2004/6521921.md)]
-[!INCLUDE [3953121](includes/2004/3953121.md)]
-[!INCLUDE [6890051](includes/2004/6890051.md)]
-[!INCLUDE [6518631](includes/2004/6518631.md)]
-[!INCLUDE [6023299](includes/2004/6023299.md)]
-[!INCLUDE [6610288](includes/2004/6610288.md)]
-[!INCLUDE [6982275](includes/2004/6982275.md)]
-[!INCLUDE [7019342](includes/2004/7019342.md)]
+[!INCLUDE [Microsoft Endpoint Manager tenant attach: ConfigMgr client details](includes/2004/6374854.md)]
+[!INCLUDE [Notifications from Microsoft](includes/2004/3953121.md)]
+[!INCLUDE [Copy discovery data from the console](includes/2004/6890051.md)]
+[!INCLUDE [Improvements to CMPivot](includes/2004/6518631.md)]
+[!INCLUDE [Support for PowerShell version 7](includes/2004/6023299.md)]
+[!INCLUDE [Improvement to Format and Partition Disk task sequence step](includes/2004/6610288.md)]
+[!INCLUDE [Management insight rules for OS deployment](includes/2004/6982275.md)]
+[!INCLUDE [PowerShell cmdlets for task sequence deployment types](includes/2004/7019342.md)]
 
 <!--
 ## General known issues

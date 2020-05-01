@@ -65,12 +65,7 @@ For most product prerequisites, use the information in the [Supported configurat
 
 The technical preview branch of Configuration Manager supports the following products and technologies:
 
-- It only supports the following versions of **SQL Server**:
-
-  - SQL Server 2017 (with cumulative update 2 or later)
-  - SQL Server 2016 (with no service pack or later)
-  - SQL Server 2014 (with service pack 1 or later)
-  - SQL Server 2012 (with service pack 3 or later)
+- Unless otherwise noted, the technical preview branch supports the same versions of SQL Server as the current branch. For more information, see [Supported SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md).
 
 - The site supports up to 10 clients, which can run any [supported client OS version](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
@@ -123,15 +118,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2004
 
-- [6374854](2020/technical-preview-2004.md) <!--6374854-->
-- [6521921](2020/technical-preview-2004.md) <!--6521921-->
-- [3953121](2020/technical-preview-2004.md) <!--3953121-->
-- [6890051](2020/technical-preview-2004.md) <!--6890051-->
-- [6518631](2020/technical-preview-2004.md) <!--6518631-->
-- [6023299](2020/technical-preview-2004.md) <!--6023299-->
-- [6610288](2020/technical-preview-2004.md) <!--6610288-->
-- [6982275](2020/technical-preview-2004.md) <!--6982275-->
-- [7019342](2020/technical-preview-2004.md) <!--7019342-->
+- [Microsoft Endpoint Manager tenant attach: ConfigMgr client details](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Notifications from Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Copy discovery data from the console](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Improvements to CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Support for PowerShell version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Improvement to Format and Partition Disk task sequence step](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Management insight rules for OS deployment](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [PowerShell cmdlets for task sequence deployment types](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
