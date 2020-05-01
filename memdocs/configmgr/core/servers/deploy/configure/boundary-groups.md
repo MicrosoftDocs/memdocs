@@ -206,6 +206,13 @@ Boundary groups include the following additional settings to give you more contr
 
 For more information on how to configure these settings, see [Configure a boundary group](boundary-group-procedures.md#bkmk_config).
 
+If a device is in more than one boundary group, the following behaviors apply for these settings:
+
+- **Allow peer download in this boundary group**: If it is disabled in any one boundary group, the client won't use delivery optimization.
+- **During peer downloads, only use peers with the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
+- **Prefer distribution points over peers within the same subnet**: If it is enabled in any one boundary group, this setting takes effect.
+- **Prefer cloud based sources over on-premise sources**: If it is enabled in any one boundary group, this setting takes effect.
+
 #### <a name="bkmk_bgoptions1"></a> Allow peer downloads in this boundary group
 
 This setting is enabled by default. The management point provides clients a list of content locations that includes peer sources. This setting also affects applying Group IDs for [Delivery Optimization](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
@@ -216,8 +223,8 @@ There are two common scenarios in which you should consider disabling this optio
 
 - If you use a single, large boundary group for site assignment that doesn't reference any distribution points.  
 
-> [!NOTE]
-> If a device is in more than one boundary group, make sure to enable this setting on all boundary groups for the device. Otherwise the client doesn't use any peer source. For example, it doesn't set the DOGroupID registry key.
+> [!IMPORTANT]
+> If a device is in more than one boundary group, make sure to enable this setting on all boundary groups for the device. Otherwise the client won't use delivery optimization. For example, it doesn't set the DOGroupID registry key.
 
 #### <a name="bkmk_bgoptions2"></a> During peer downloads, only use peers within the same subnet
 
