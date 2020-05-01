@@ -104,7 +104,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
 ### Specific devices don't synchronize
 
 <!--7099564-->
-It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the could management gateway service.
+It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the service.
 
 **Impacted devices:**
 If a device is a distribution point that uses the same PKI certificate for both the distribution point functionality and its client agent, then the device won't be included in the tenant attach device sync.
