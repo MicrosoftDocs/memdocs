@@ -596,9 +596,12 @@ To add apps, you can:
 
 ## Autonomous single app mode
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
 For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
+
+> [!NOTE]
+> Be aware that not all apps may support autonomous single app mode. Typically either a bundle ID (as referencedd below) or a key value pair delivered by an app config policy are required in order to place the app in autonomous single app mode. For more information on the specific settings required for the app you are configuring, consult the vendor documentation.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
