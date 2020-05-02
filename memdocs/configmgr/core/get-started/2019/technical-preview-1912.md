@@ -10,8 +10,7 @@ ms.assetid: ef972b5f-61f6-49a9-91a9-f70bf5c325b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 1912
