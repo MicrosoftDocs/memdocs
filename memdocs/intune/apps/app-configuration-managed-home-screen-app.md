@@ -81,7 +81,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Type of virtual home button | string | swipe_up | Use **swipe_up** to access home button with a swipe up gesture. Use **float** to access a sticky, persistent  home button that can be moved around the screen by the end user. |
 | Battery and Signal Strength   indicator bar | bool | True  | Turning this setting to `True` shows the battery and signal strength indicator bar. |
 | Exit lock task mode password | string |   | Enter a 4-6-digit code to use to temporarily drop out of lock-task mode for troubleshooting. |
-| Show Managed Setting | bool | TRUE | “Managed Setting”  is a Managed Home Screen app that appears only if you've configured any settings for quick access including, **Show Wi-Fi Setting**, **Show Bluetooth setting**, **Show volume setting**, and **show flashlight setting**. These settings can also be accessed by swiping-down on the screen. Set this key to `False` to hide the “Managed Setting” app and have end-users access settings only via swiping-down.    |
+| Show Managed Setting | bool | TRUE | "Managed Setting"  is a Managed Home Screen app that appears only if you've configured any settings for quick access including, **Show Wi-Fi Setting**, **Show Bluetooth setting**, **Show volume setting**, and **show flashlight setting**. These settings can also be accessed by swiping-down on the screen. Set this key to `False` to hide the "Managed Setting" app and have end-users access settings only via swiping-down.    |
 | Enable easy access debug menu | bool | FALSE | Turn this setting to `True` to access the debug menu from the Managed Settings app or from swipe-down while in Managed Home Screen. The debug menu is currently where the capability to exit kiosk mode lives, and is accessed by clicking the back button about 15 times. Keep this setting set to `False` to keep the entry point to debug menu only accessible via the back button.   |
 | Show Wi-Fi setting | bool | FALSE | Turning this setting to `True` allows the end user to turn on or off Wi-Fi, or to connect to different Wi-Fi networks.  |
 | Enable Wi-Fi allow-list | bool | FALSE | Turn this setting to `True` and fill out the **Wi-Fi allow-list** key to restrict what Wi-Fi networks are shown within Managed Home Screen. Set to `False` to show all possible available Wi-Fi networks the device has discovered. Note that this setting is only relevant if **show Wi-Fi setting** has been set to `True` and the **Wi-Fi allow-list** has been filled out.   |
@@ -221,7 +221,7 @@ The following is an example JSON script with all the available configuration key
                         {
                             "key": "SSID",
                             "valueString": "name of Wi-Fi network 1 here"
-                        },
+                        }
                     ]
                 },   
                 {
@@ -229,7 +229,7 @@ The following is an example JSON script with all the available configuration key
                         {
                             "key": "SSID",
                             "valueString": "name of Wi-Fi network 2 here"
-                        },
+                        }
                     ]
                 }  
             ]

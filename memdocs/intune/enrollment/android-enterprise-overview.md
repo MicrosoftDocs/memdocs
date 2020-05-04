@@ -43,13 +43,13 @@ Before enrolling Android Enterprise work profile devices, you must complete some
 
 ## Work profile management
 
-When you manage an Android Enterprise work profile device with Intune, you don’t manage the entire device. Management capabilities only affect the work profile that is created on the device during enrollment. Any apps deployed to the device with Intune get installed in the work profile. App icons in the work profile are differentiated from personal apps on the device. All Android apps and data outside the Android enterprise portion of the device remain personal and under the control of the end user. Users can install any app they choose to the personal side of the device. Administrators can manage and monitor apps and actions scoped to the work profile.
+When you manage an Android Enterprise work profile device with Intune, you don't manage the entire device. Management capabilities only affect the work profile that is created on the device during enrollment. Any apps deployed to the device with Intune get installed in the work profile. App icons in the work profile are differentiated from personal apps on the device. All Android apps and data outside the Android enterprise portion of the device remain personal and under the control of the end user. Users can install any app they choose to the personal side of the device. Administrators can manage and monitor apps and actions scoped to the work profile.
 
 Intune supplies a range of built-in general settings that you can configure on Android work profile devices. For more information, see [Android work profile device policy settings](../protect/compliance-policy-create-android-for-work.md).
 
 ## App publishing and distribution
 
-Managed Google Play is an integral part of Android Enterprise app distribution and management. All apps deployed to Android Enterprise work profile devices in the work profile come from the Managed Google Play service. To manage and deploy apps in the Play Store, you sign in to the Google Play website with your company's administrator credentials for Google management. You can approve apps for Android Enterprise deployment to have them appear in devices' work profiles. These apps then sync to the Intune console where they can then be deployed and managed using Intune. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using Google’s Android app publishing console. Line-of-business apps must be configured in the Android app publishing console to restrict access to your organization.
+Managed Google Play is an integral part of Android Enterprise app distribution and management. All apps deployed to Android Enterprise work profile devices in the work profile come from the Managed Google Play service. To manage and deploy apps in the Play Store, you sign in to the Google Play website with your company's administrator credentials for Google management. You can approve apps for Android Enterprise deployment to have them appear in devices' work profiles. These apps then sync to the Intune console where they can then be deployed and managed using Intune. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using Google's Android app publishing console. Line-of-business apps must be configured in the Android app publishing console to restrict access to your organization.
 
 Apps can be installed without user interaction and without requiring that the user allow **Installation from Unknown Sources**. To browse and install optional or available apps, the user can browse the Play for Work store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../apps/apps-add-android-for-work.md).
 
@@ -59,7 +59,7 @@ Android Enterprise provides infrastructure for deploying app configuration value
 
 ## Email configuration
 
-Android Enterprise doesn’t provide a default email app or native email profile object like those provided by iOS/iPadOS. Instead, email configurations can be set by applying app configuration settings to email apps that support them. Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support configuration with Android Enterprise app configuration.
+Android Enterprise doesn't provide a default email app or native email profile object like those provided by iOS/iPadOS. Instead, email configurations can be set by applying app configuration settings to email apps that support them. Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support configuration with Android Enterprise app configuration.
 
 Intune provides configuration templates for Gmail and Nine Work apps when managed as work apps. Other email apps that support app configuration profiles can be configured with mobile app configuration policies.
 

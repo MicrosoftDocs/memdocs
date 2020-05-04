@@ -89,7 +89,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 ### System security
 
-- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
+- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
 ### Dedicated devices
 

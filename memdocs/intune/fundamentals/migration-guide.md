@@ -37,7 +37,7 @@ A successful migration to Microsoft Intune starts with a solid plan that factors
 
 This guide walks you through the various details involved in migrating from a third-party MDM provider to Intune.
 
-## What’s included in this guide?
+## What's included in this guide?
 
 This guide breaks down the migration into two phases, both of which include tasks, strategies, and tactical guidance that will help you step through the end-to-end process of migrating to Intune MDM.
 

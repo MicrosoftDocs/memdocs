@@ -58,7 +58,7 @@ The remote lock setting works for:
 
 4. A message appears to warn you that you are about to lock your device. Tap **Remote lock** to confirm.
 
-After the confirmation, the Company Portal attempts to lock your device. A “Remote lock pending” message appears during this time. When your device is locked, the status appears as “Remote lock successful.”  
+After the confirmation, the Company Portal attempts to lock your device. A "Remote lock pending" message appears during this time. When your device is locked, the status appears as "Remote lock successful."  
 
 The Remote Lock status displays in three places:
 
@@ -67,7 +67,7 @@ The Remote Lock status displays in three places:
 * The tile that shows the device name on the **Devices** section of the page.  
 
 > [!Note]
-> If you see a notification that the remote lock failed, wait a few minutes. Then try to lock your device again. The status will change back to “Remote lock pending." If the retry doesn't work, contact your company support for help.
+> If you see a notification that the remote lock failed, wait a few minutes. Then try to lock your device again. The status will change back to "Remote lock pending." If the retry doesn't work, contact your company support for help.
 
 If you find your device and want to unlock it after using Remote Lock, just enter your passcode.  
 

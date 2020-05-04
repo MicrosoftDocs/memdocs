@@ -31,9 +31,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and enables users to be productive while keeping your organization data protected. It integrates with other services, including Microsoft 365 and Azure Active Directory (Azure AD) to control who has access, and what they have access to, and Azure Information Protection for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices, while keeping your organization's information protected.
 
-![Image of Intune architecture](./media/what-is-intune/intunearch_sm.png)
-
-View a [larger version](./media/what-is-intune/intunearchitecture.svg) of the Intune architecture diagram.
+[![Image of Intune architecture](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 With Intune, you can:
 
@@ -64,6 +62,11 @@ When devices are enrolled and managed in Intune, administrators can:
 - [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
 
 - [Protect devices with Microsoft Intune](../protect/device-protect.md)
+
+### Try the interactive guide
+The [Manage devices with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage and protect mobile and desktop applications.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## Manage apps
 

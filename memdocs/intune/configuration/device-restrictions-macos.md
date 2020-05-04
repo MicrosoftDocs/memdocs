@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,7 +45,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ### Settings apply to: All enrollment types
 
 - **Block Apple Music**: **Yes** reverts the Music app to classic mode, and disables the Music service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Apple Music app.
-- **Block File Transfer using iTunes**: **Yes** disables application file sharing services. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow application file sharing services.
+- **Block file transfer using Finder or iTunes**: **Yes** disables application file sharing services. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow application file sharing services.
 
   This feature applies to:  
   - macOS 10.13 and newer
@@ -72,7 +72,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Block iCloud Bookmark Backup**: **Yes** prevents iCloud from syncing the device Bookmarks. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Bookmark synchronization to iCloud.
 - **Block iCloud Notes Backup**: **Yes** prevents iCloud from syncing the device Notes. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Notes synchronization to iCloud.
 - **Block iCloud Photos backup**: **Yes** disables iCloud Photo Library, and prevents iCloud from syncing the device photos. Any photos not fully downloaded from iCloud Photo Library are removed from local storage on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow syncing photos between the device and the iCloud Photo Library.
-- **BLock Handoff**: This feature allows users to start work on a macOS device, and then continue the work they started on another iOS/iPadOS or macOS device. **Yes** prevents the Handoff feature on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature on devices.
+- **Block Handoff**: This feature allows users to start work on a macOS device, and then continue the work they started on another iOS/iPadOS or macOS device. **Yes** prevents the Handoff feature on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature on devices.
 
   This feature applies to:  
   - macOS 10.15 and newer
@@ -81,7 +81,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Block Apple Watch Auto Unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
+- **Block Apple watch auto unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
@@ -91,7 +91,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
-- **Unmarked Email Domains**: **Add** one or more URLs to the list. When users receive an email from a domain other than one you configured, the email is marked as untrusted in the macOS Mail app.
+- **Unmarked Email Domains**: **Add** one or more URLs to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
 
 ## General
 
@@ -152,12 +152,12 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Number of non-alphanumeric characters in password**: Enter the number of complex characters required in the password, from 0-4. A complex character is a symbol, such as `?`. When left blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Minimum password length**: Enter the minimum length the password must have, from 4-16 characters. When left blank, Intune doesn't change or update this setting.
   - **Block simple passwords**: **Yes** prevents using simple passwords, such as `0000` or `1234`. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might allow simple passwords.
-  - **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. For example, enter 5 to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+  - **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Maximum minutes after screen lock before password is required**: Enter the length of time devices must be inactive before a password is required to unlock it. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Password expiration (days)**: Enter the number of days until the device password must be changed, from 1-65535. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
   - **Prevent reuse of previous passwords**: Restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 
-- **Block User from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
+- **Block user from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 
 - **Block Touch ID to unlock device**: **Yes** prevents using fingerprints to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
 

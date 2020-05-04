@@ -1,0 +1,13 @@
+{
+    "redirections": [
+        {
+            "source_path": "mem/intune/user-help/you-are-prompted-to-install-mtd-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "mem/intune/user-help/you-are-prompted-to-install-mtd-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": true
+        }   ]
+}

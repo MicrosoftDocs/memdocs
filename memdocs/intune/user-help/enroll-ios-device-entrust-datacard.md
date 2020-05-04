@@ -11,6 +11,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology:
 ms.assetid: 
 searchScope:
@@ -46,7 +47,7 @@ In this article, you will:
    * Get a derived credential from your organization's derived credential provider, [Entrust Datacard](https://www.entrustdatacard.com/).  
 
 ### What are derived credentials?  
-A derived credential is a certificate that’s derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
+A derived credential is a certificate that's derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
 
 Derived credentials are used to: 
 * Authenticate students and employees who sign in to school or work apps, Wi-Fi, and VPN

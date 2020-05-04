@@ -176,7 +176,7 @@ The dynamic group is created in the **Users and Groups – All Groups** pane.
 4. On the **Devices** pane, choose **All devices**.
 5. On the **Devices – All devices** pane, choose a device.
 6. On the device pane, choose **Properties**.
-7. On the device’s properties pane, enter the device category in the **Device category** text box.
+7. On the device's properties pane, enter the device category in the **Device category** text box.
 8. On the device pane, choose **Save**.
 
 The device is now associated to the device category. Repeat this process for all the devices you want to associate to the device category you created.

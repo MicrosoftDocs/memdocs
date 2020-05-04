@@ -93,7 +93,7 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Office 365 ProPlus Suite (Windows 10)
+  - Microsoft 365 Apps (Windows 10)
   - Web link
   - Built-in iOS/iPadOS app
   - Built-in Android app

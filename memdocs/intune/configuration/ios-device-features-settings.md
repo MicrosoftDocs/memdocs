@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -101,7 +101,7 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
     Apps that you add to a page in a folder are arranged from left to right, and in the same order as the list. If you add more apps than can fit on a page, the apps are moved to another page.
 
-    - **Folder name**: Enter the name of the folder. This name is shown to users on their device.
+    - **Folder name**: Enter the name of the folder. This name is shown to users on their devices.
     - **List of pages**: **Add** a page, and enter the following properties:
 
       - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
@@ -115,10 +115,10 @@ You can add up to **six** items (apps and folders combined) for the device dock.
 
 #### Example
 
-In the following example, the dock screen shows only the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
+In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Mail app is selected to show its properties:
 
 > [!div class="mx-imgBorder"]
-> ![Sample iOS/iPadOS dock settings](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Sample iOS/iPadOS Home screen layout dock settings in Intune](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
@@ -162,10 +162,15 @@ You can add up to **40** pages on a device.
 
 #### Example
 
-In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps. The Settings app is selected to show its properties:
+In the following example, a new page named **Contoso** is added. The page shows the Find Friends and Settings apps:
 
 > [!div class="mx-imgBorder"]
-> ![iOS/iPadOS Home screen settings example in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![iOS/iPadOS Home screen layout new page settings and example in Intune](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+The Settings app is selected to show its properties:
+
+> [!div class="mx-imgBorder"]
+> ![iOS/iPadOS Home screen layout Settings app properties example in Intune](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 When you assign the policy to an iPhone, the page looks similar to the following image:
 
@@ -179,7 +184,7 @@ When you assign the policy to an iPhone, the page looks similar to the following
 - **Add**: Add notifications for apps:
 
   > [!div class="mx-imgBorder"]
-  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![Add app notification in iOS/iPadOS profile in Intune](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
   - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.

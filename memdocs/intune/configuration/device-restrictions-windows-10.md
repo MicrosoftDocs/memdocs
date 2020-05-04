@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -146,15 +146,14 @@ These settings use the [Bluetooth policy CSP](https://docs.microsoft.com/windows
 
 These settings use the [accounts policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); which also lists the supported Windows editions.
 
-- **Microsoft account**: **Block** prevents end users from associating a Microsoft account with the device. **Block** may also impact some enrollment scenarios that rely on users to complete the enrollment process.
+> [!IMPORTANT]
+> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [AutoPilot white glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
-  **Not configured** (default) allows adding and using a Microsoft account.
+- **Microsoft account**: **Block** prevents end users from associating a Microsoft account with the device. **Not configured** (default) allows adding and using a Microsoft account.
 
 - **Non-Microsoft account**: **Block** prevents end users from adding non-Microsoft accounts using the user interface. **Not configured** (default) allows users to add email accounts that aren't associated with a Microsoft account.
 - **Settings synchronization for Microsoft account**: **Not configured** (default) allows device and app settings associated with a Microsoft account to synchronize between devices. **Block** prevents this synchronization.
 - **Microsoft Account sign-in assistant**: When set to **Not configured** (default), end users can start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service. This operating system service allows users to sign in to their Microsoft account. **Disable** configures the Microsoft Sign-in Assistant service (wlidsvc) to Disabled and prevents end users from manually starting it.
-
-  **Disable** may also impact some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot white glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
@@ -680,7 +679,7 @@ These settings use the [start policy CSP](https://docs.microsoft.com/windows/cli
 
 ## Microsoft Defender Smart Screen
 
-- **SmartScreen for Microsoft Edge**: **Require** turns off Microsoft Defender SmartScreen and prevent users from turning it on. **Not configured** (default) turns on SmartScreen. Helps protect users from potential threats and prevent users from turning it off.
+- **SmartScreen for Microsoft Edge**: **Require** turns on Microsoft Defender SmartScreen, and prevents users from turning it off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on SmartScreen, and allow users to turn it on and off.
 
   Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software.
 

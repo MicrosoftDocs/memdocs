@@ -99,12 +99,12 @@ Because one of your compliance policies requires a passcode.
 
 ## Wipe action
 
-### I can’t restart a Windows 10 device after using the wipe action
+### I can't restart a Windows 10 device after using the wipe action
 This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** on a Windows 10 device.
 
 This may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
-### I can’t restart a BitLocker encrypted device after using the wipe action
+### I can't restart a BitLocker encrypted device after using the wipe action
 This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
 
 To resolve this issue, use bootable media to re-install Windows 10 on the device.
