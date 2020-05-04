@@ -1690,7 +1690,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Network protection**:  
   [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  When set to Yes, network protection will be enabled for all users on the system. Network protection protects emploees from accessing phyishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not COnfigured will return the setting to Windows default, which is disabled.
+  When set to Yes, network protection will be enabled for all users on the system. Network protection protects employees from accessing phishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not COnfigured will return the setting to Windows default, which is disabled.
 
   **Default**: Enable
 
@@ -1712,7 +1712,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Block JavaScript or VBScript from launching downloaded executable content**  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872979)
 
-  When set to Yes, Defender will block Javascript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
+  When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview"
@@ -1984,7 +1984,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Setting this to Yes, SmartScreen will not present an option for the user to disreguard the warning and run the app. The warning will be presented, but the user will be able to bypass it. Setting this to Not configured will return the setting to Windows default which is to allow the user override. This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
+  Setting this to Yes, SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it. Setting this to Not configured will return the setting to Windows default which is to allow the user override. This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
 
   **Default**: Yes
 
