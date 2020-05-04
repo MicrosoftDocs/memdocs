@@ -197,6 +197,43 @@ This command displays any internet-based management points the client knows abou
 > [!Note]  
 > To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### Install off-premises clients using a CMG
+
+To install the client agent on systems not currently connected to your intranet, one of the following conditions must be true. In all cases, a local administrator account on the target systems is required.
+
+1. The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
+
+2. The systems are Azure Active Directory domain joined or Hybrid Azure Active Directory domain joined.
+
+3. The site is running Configuration Manager version 2002 (or above).
+
+For options 1 and 2, use the **/mp** parameter to specify the CMG's URL when calling **ccmsetup.exe**. For complete details see [About client installation parameters and properties in Configuration Manager](../../deploy/about-client-installation-properties#mp).
+
+For option 3, starting in Configuration Manager version 2002, you can install the client agent on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token#create-a-bulk-registration-token).
+
+### Configure off-premises clients for CMG
+
+You can connect systems to a recently configured CMG where the following conditions are true:  
+
+- Systems already have the Configuration Manager client agent installed.
+
+- Systems are not connected and cannot be connected to your intranet.
+
+- Systems meet one of the following conditions:
+
+ - Each has a valid, unique, and trusted client authentication certificate previously issued to it.
+ 
+ - Azure Active Directory domain joined
+ 
+ - Hybrid Azure Active Directory domain joined.
+
+- You do not wish to or cannot completely reinstall the existing client agent.
+
+- You have a method to change a machine registry value and restart the **SMS Agent Host** using a local administrator account.
+
+To force the connection on these systems, create the registry value **CMGFQDNs** (of type REG_SZ) under **HKLM\Software\Microsoft\CCM**. Set this value to the URL of the CMG (for example, https://contoso-cmg.contoso.com). Once set, restart the **SMS Agent Host** service on the client system.
+
+The **CMGFQDNs** registry value is automatically checked by the client agent if no current CMG or Internet-facing management point is set. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when a network change is detected. This value is automatically populated by the client agent when it learns of a CMG while connected to your Configuration Manager Site.
 
 ## Modify a CMG
 
