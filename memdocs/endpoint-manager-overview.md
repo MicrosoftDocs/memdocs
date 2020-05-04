@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: 
@@ -105,11 +105,11 @@ You can also think of Endpoint Manager in three parts: cloud, on-premises, and c
 
 ## What you need to get started
 
+Microsoft Endpoint Manager is a solution platform that unifies several technologies. It's not a new license. The services are licensed according to their individual licenses terms. For more information, see the [product licensing terms](https://www.microsoft.com/licensing/product-licensing/products).
+
 If you currently use Configuration Manager, you also get Microsoft Intune to co-manage your Windows devices. For other platforms, such as iOS/iPadOS and Android, then you'll need a separate Intune license.
 
-In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager, and Office 365.
-
-For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager, and Office 365. For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## Next steps
 
