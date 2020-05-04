@@ -63,3 +63,4 @@ To troubleshoot an app group deployment, use the following log files on the clie
 - Don't include in the group any apps that require restart, or the group deployment may fail.
 - *Version 1906*: You can't deploy the app group to a user collection.
 - *Version 1906*: Users can't **Uninstall** the app group in Software Center.
+- If you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a simple change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 -->

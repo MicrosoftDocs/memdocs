@@ -106,6 +106,11 @@ That action opens the **Device compliance** window, and displays devices in a **
 
 If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
 
+> [!TIP]
+> If no user is signed in the device, the device with the targeted device compliance policy will send a compliance report back to Intune showing up the **System Account** as the user principal name. This happens because a device compliance policy was targeted to either a group of users or devices, and no user was signed into the device at the time the compliance policy was evaluated.
+>
+> Additionally, if there are multiple users signed into the same device, and coincidentally the device is targeted with a compliance policy that is scoped to cover all users that are currently signed in the device, the compliance report might show the same device multiple times as every user signed into the device has to evaluate the device compliance policy and report it back to Intune.
+
 #### Filter and columns
 
 ![Select Filter and Column to change the results in the chart](./media/compliance-policy-monitor/filter-columns.png)

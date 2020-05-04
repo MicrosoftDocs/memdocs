@@ -126,7 +126,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Users of the device need one of the following licenses:
 
-  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 

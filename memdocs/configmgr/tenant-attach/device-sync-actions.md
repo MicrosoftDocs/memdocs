@@ -99,6 +99,18 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
 
    [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
+## Known issues
+
+### Specific devices don't synchronize
+
+<!--7099564-->
+It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the service.
+
+**Impacted devices:**
+If a device is a distribution point that uses the same PKI certificate for both the distribution point functionality and its client agent, then the device won't be included in the tenant attach device sync.
+
+**Behavior:** When performing tenant attach during the on-boarding phase, a full sync is performed the first time. Subsequent sync cycles are delta synchronizations. Any update to the impacted devices will cause the device to be removed from the sync.
+
 ## Log files
 Use the following logs located on the service connection point:
 

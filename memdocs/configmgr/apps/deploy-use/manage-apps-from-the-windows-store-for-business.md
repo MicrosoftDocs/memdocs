@@ -10,8 +10,6 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
@@ -126,6 +124,9 @@ On the **Configurations** page of the Azure Services Wizard, specify the followi
 - **Selected languages**: Select the languages to sync from the store and display to users in Software Center. For example, if the user configures Windows for German, then Software Center shows German strings for the store app. This behavior requires that language to be synchronized, and to exist for the specific application.
 
 - **Default language**: If the user's language is unavailable, select a default language to use.  
+
+> [!NOTE]
+> Configuration Manager doesn't synchronize the app icon from the store. If you need an icon to display for this app in Software Center, manually add it in the app properties. For more information, see [Manually specify application information](create-applications.md#bkmk_manual-app).<!-- 2837053 -->
 
 ## <a name="bkmk_deploy"></a> Create and deploy the app
 
