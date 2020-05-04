@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -601,8 +601,7 @@ Use these settings to configure iOS/iPadOS devices to run specific apps in auton
 For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
 
 > [!NOTE]
-> Be aware that not all apps may support autonomous single app mode. Typically either a bundle ID (as referencedd below) or a key value pair delivered by an app config policy are required in order to place the app in autonomous single app mode. Refer to the 'autonomousSingleAppModePermittedAppIDs' restriction in the Apple MDM documentation: https://developer.apple.com/documentation/devicemanagement/restrictions
-For more information on the specific settings required for the app you are configuring, consult the vendor documentation.
+> Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -614,8 +613,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-Kiosk mode in Intune is also known as Single App mode. Apple refer to this payload as App Lock in their MDM documentation: 
-https://developer.apple.com/documentation/devicemanagement/applock
+In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM documentation](https://developer.apple.com/documentation/devicemanagement/applock), kiosk mode is known as App Lock.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -681,7 +679,7 @@ https://developer.apple.com/documentation/devicemanagement/applock
 
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
-- Kiosk Mode (Single App Mode) - this is referred to as 'app lock' in the Apple MDM documentation.
+- Kiosk Mode (Single App Mode): Called "app lock" in the Apple MDM documentation.
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
