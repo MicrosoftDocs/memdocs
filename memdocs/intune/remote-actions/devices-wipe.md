@@ -99,7 +99,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|
 
-### Android
+### Android device administrator
 
 |Data type|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -115,11 +115,11 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android work profile
+### Android Enterprise devices with a work profile
 
 Removing company data from an Android work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android work profiles.
 
-### Android enterprise kiosk devices
+### Android Enterprise dedicated devices
 
 You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
@@ -139,7 +139,7 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows Phone 8.1 and Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps originally installed through the Company Portal are uninstalled. Company app data is removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1703 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
+|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps originally installed through the Company Portal are uninstalled. Company app data is removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|Removed.|Not supported.|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Not supported.|Certificates are removed and revoked.|

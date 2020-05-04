@@ -40,7 +40,7 @@ You can use the [Microsoft Endpoint Manager admin center](https://go.microsoft.c
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
 
-2. Choose the box for **Intune** > **Save**.
+2. Choose the box for **Intune** > **Save**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead.
 
    ![Screenshot of the Microsoft 365 admin center Product licenses section.](./media/licenses-assign/mem-assign-license.png)
 
