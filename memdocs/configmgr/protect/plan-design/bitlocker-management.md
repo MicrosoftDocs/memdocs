@@ -91,7 +91,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - The user account that runs the portal installer script needs SQL **sysadmin** rights on the site database server. During the setup process, the script sets login, user, and SQL role rights for the web server machine account. You can remove this user account from the sysadmin role after you complete setup of the self-service portal and the administration and monitoring website.
 
-- BitLocker Management is not supported on virtual machines (VMs). For this reason some features may not work as expected on virtual machines. For example BitLocker Management will not start the encryption on fixed drives of virtual machines. Additional fixed drives in virtual machines may show as compliant even though they are not encrypted.
+- BitLocker Management is not supported on virtual machines (VMs) or on server OSes. For this reason some features may not work as expected on virtual machines or on server OSes. For example on virtual machines BitLocker Management will not start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they are not encrypted.
 
 > [!TIP]
 > By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
