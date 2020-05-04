@@ -282,7 +282,7 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
   - If you have existing Office 365 groups, you can move to Microsoft 365. Your existing groups remain, and you get all the features services of Microsoft 365. For more information, see:
 
-    - [What is Microsoft 365?](https://docs.microsoft.com/en-us/learn/modules/what-is-m365/)
+    - [What is Microsoft 365?](https://docs.microsoft.com/learn/modules/what-is-m365/)
     - [Migration to Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/migration-microsoft-365-enterprise-workload)
     - [Upgrade to Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/migrate-to-microsoft-365-business)
 

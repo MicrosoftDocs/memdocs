@@ -70,7 +70,7 @@
   items:
   - name: Plan deployment
     items:
-    - name: New planning guide
+    - name: NEW planning guide
       href: intune-planning-guide.md
     - name: Planning guide
       href: planning-guide.md
@@ -95,6 +95,14 @@
         href: planning-guide-test-validation.md
       - name: Additional resources
         href: planning-guide-resources.md
+    - name: NEW deployment guides
+      items:
+      - name: Intune setup
+        href: deployment-guide-intune-setup.md
+      - name: Enroll devices
+        href: deployment-guide-enrollment.md
+      - name: Compliance and configuration
+        href: deployment-guide-compliance-configuration.md
     - name: Migration guide
       href: migration-guide.md
       items:
