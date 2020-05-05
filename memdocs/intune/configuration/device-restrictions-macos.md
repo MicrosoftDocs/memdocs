@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,18 +44,17 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Block Apple Music**: **Yes** reverts the Music app to classic mode, and disables the Music service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Apple Music app.
-- **Block file transfer using Finder or iTunes**: **Yes** disables application file sharing services. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow application file sharing services.
-
-  This feature applies to:  
-  - macOS 10.13 and newer
-
 - **Block Safari AutoFill**: **Yes** disables the autofill feature in Safari on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change autocomplete settings in the web browser.
 - **Block use of camera**: **Yes** prevents access to the camera on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
 
   Intune only manages access to the device camera. It doesn't have access to pictures or videos.
-
+  
+- **Block Apple Music**: **Yes** reverts the Music app to classic mode, and disables the Music service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Apple Music app.
 - **Block spotlight suggestions**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search to connect to the Internet, and get search results.
+- **Block file transfer using Finder or iTunes**: **Yes** disables application file sharing services. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow application file sharing services.
+
+  This feature applies to:  
+  - macOS 10.13 and newer
 
 ## Cloud and storage
 
@@ -79,23 +78,21 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
-
 - **Block AirDrop**: **Yes** prevents using AirDrop on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the AirDrop feature to exchange content with nearby devices.
+- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
 
 ## Domains
 
 ### Settings apply to: All enrollment types
 
-- **Unmarked Email Domains**: **Emil domain URL** Add one or more URLs to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
+- **Unmarked Email Domains**: Enter one ore more **Email domain URL** to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
 
 ## General
 
 ### Settings apply to: All enrollment types
 
-- **Block dictation**: **Yes** stops users from using voice input to enter text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use dictation input.
-
 - **Block Lookup**: **Yes** prevents user from highlighting a word, and then looking up its definition on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the definition lookup feature.
+- **Block dictation**: **Yes** stops users from using voice input to enter text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use dictation input.
 - **Block content caching**: **Yes** prevents content caching. Content caching stores app data, web browser data, downloads, and more locally on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might enable content caching.
 
   For more information on content caching on macOS, see [Manage content caching on Mac](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (opens another website).
@@ -134,7 +131,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Require password**: **Yes** requires users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require a password. It also doesn't force any restrictions, such as blocking simple passwords or setting a minimum length.
   - **Required password type**: Enter the required password complexity level your organization requires. When left blank, Intune doesn't change or update this setting. Your options:
-    - **Not configured** The device default
+    - **Not configured**: Uses the device default.
     - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
     - **Numeric**: Password must only be numbers, such as 123456789.
 
