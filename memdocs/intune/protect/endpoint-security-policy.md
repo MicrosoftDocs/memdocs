@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage endpoint security policies in Microft Intune | Microsoft Docs
+title: Manage endpoint security policies in Microsoft Intune | Microsoft Docs
 description: Learn how Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Endpoint Manager. 
 keywords:
 author: brenduns
@@ -167,6 +167,8 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 **Windows 10 profiles**:
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
+
+- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic.
 
 ## Endpoint detection and response policy
 

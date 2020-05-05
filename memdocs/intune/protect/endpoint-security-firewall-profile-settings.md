@@ -43,6 +43,8 @@ Supported platforms and profiles:
 
 ### Firewall
 
+The following settings are configured as [Endpoint Security policy for macOS Firewalls](../protect/endpoint-security-policy.md#firewall-policy)
+
 - **Enable Firewall**
 
   - **Not configured** (*default*)
@@ -67,11 +69,13 @@ Supported platforms and profiles:
       - Block
       - Allow
 
-    - **Bundle id** - The ID identifies the app. For example: *com.apple.app*
+    - **Bundle ID** - The ID identifies the app. For example: *com.apple.app*
 
 ## Microsoft Defender Firewall profile
 
 ### Microsoft Defender Firewall
+
+The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-policy.md#firewall-policy).
 
 - **Disable stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
@@ -164,6 +168,114 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The client returns to default, which is to enable the firewall.
   - **Yes** - The Microsoft Defender Firewall for the network type of **public** is turned on and enforced.
   - **No** - Disable the firewall.
+
+<!-- Microsoft Defender Firewall rules added in 2005  -->
+
+### Microsoft Defender Firewall rules  
+
+The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-policy.md#firewall-policy).
+
+#### Windows Firewall Rule
+
+- **Name**  
+  Specify a friendly name for your rule. This name will appear in the list of rules to help you identify it.
+
+- **Description**  
+  Provide a description of the rule.
+
+- **Direction**  
+  - **Not configured** (*default*) - This rule defaults to outbound traffic.
+  - **Out** - This rule applies to outbound traffic.
+  - **In** -  This rule applies to inbound traffic.
+
+- **Action**  
+  - **Not configured** (*default*) - The rule defaults to allow traffic.
+  - **Blocked** - Traffic is blocked in the *Direction* you've configured.
+  - **Allowed** - Traffic is allowed in the *Direction* you've configured.
+
+- **Network type**  
+  Specify the network type to which the rule belongs. You can choose one or more of the following. If you don't select an option, the rule applies to all network types.
+  - **Domain**
+  - **Private**
+  - **Public**
+  - **Not configured**
+
+- **Package family name**  
+  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+
+  Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
+
+- **File path**  
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+
+  To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe` or `%WINDIR%\Notepad.exe`
+
+- **Service name**  
+  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+
+  Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
+
+- **Protocol**  
+  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+
+  Specify the protocol for this port rule.
+  - Transport layer protocols like *TCP(6)* and *UDP(17)* allow you to specify ports or port ranges.
+  - For custom protocols, enter a number between *0* and *255* that represents the IP protocol.
+  - When nothing is specified, the rule defaults to **Any**.
+
+- **Interface types**  
+  Specify the interface types to which the rule belongs. You can choose one or more of the following. If you don't select an option, the rule applies to all interface types:
+  - **Remote access**
+  - **Wireless**
+  - **Local area network**
+  - **Not configured**
+
+- **Authorized users**  
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+
+  Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
+
+- **Any local address**  
+  **Not configured** (*default*) - Use the following setting, *Local address ranges** to configure a range of addresses to support.
+  - **Yes** - Support any local address and don't configure an address range.
+
+- **Local address ranges**  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+
+  Add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid entries (tokens) include the following options:
+  - **An asterisk** - An asterisk (\*) indicates any local address. If present, the asterisk must be the only token included.
+  - **A subnet** - Specify subnets by using the subnet mask or network prefix notation. If a subnet mask or network prefix isn't specified, the subnet mask defaults to 255.255.255.255.​​
+  - **A valid IPv6 address**
+  - **An IPv4 address range** - IPv4 ranges must be in the format of *start address - end address* with no spaces included, where the start address is less than the end address.​​
+  - **An IPv6 address range** - IPv6 ranges must be in the format of *start address - end address* with no spaces included, where the start address is less than the end address.
+
+  When no value is specified, this setting defaults to use *Any address*.
+
+- **Any remote address**  
+  **Not configured** (*default*) - Use the following setting, *Remote address ranges** to configure a range of addresses to support.
+  - **Yes** - Support any remote address and don't configure an address range.
+
+- **Remote address ranges**  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+
+  Add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Valid entries (tokens) include the following and aren't case-sensitive:
+  - **An asterisk** - An asterisk (\*) indicates any remote address. If present, the asterisk must be the only token included.
+  - **Defaultgateway**
+  - **DHCP**
+  - **DNS**
+  - **WINS**
+  - **Intranet** - Supported on devices that run Windows 1809 or later.
+  - **RmtIntranet** - Supported on devices that run Windows 1809 or later.
+  - **Ply2Renders** - Supported on devices that run Windows 1809 or later.
+  - **LocalSubnet** - Indicates any local address on the local subnet.
+  - **A subnet** - Specify subnets by using the subnet mask or network prefix notation. If a subnet mask or a network prefix isn't specified, the subnet mask defaults to 255.255.255.255.​​
+  - **A valid IPv6 address**
+  - **An IPv4 address range** - IPv4 ranges must be in the format of *start address - end address* with no spaces included, where the start address is less than the end address.​​
+  - **An IPv6 address range** - IPv6 ranges must be in the format of *start address - end address* with no spaces included, where the start address is less than the end address.
+
+  When no value is specified, this setting defaults to use *Any address*.
+
+<!-- End of 2005 additions  -->
 
 ## Next steps
 
