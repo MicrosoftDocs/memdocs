@@ -50,8 +50,6 @@ These settings are added to a device configuration profile in Intune, and then a
   This feature applies to:  
   - macOS 10.13 and newer
 
-### Settings apply to: User approved device enrollment, and Automated device enrollment
-
 - **Block Safari AutoFill**: **Yes** disables the autofill feature in Safari on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change autocomplete settings in the web browser.
 - **Block use of camera**: **Yes** prevents access to the camera on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
 
@@ -81,25 +79,21 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Block Apple watch auto unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
-
-### Settings apply to: User approved device enrollment, and Automated device enrollment
+- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their macOS device with their Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock their macOS device with their Apple Watch.
 
 - **Block AirDrop**: **Yes** prevents using AirDrop on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the AirDrop feature to exchange content with nearby devices.
 
 ## Domains
 
-### Settings apply to: User approved device enrollment, and Automated device enrollment
+### Settings apply to: All enrollment types
 
-- **Unmarked Email Domains**: **Add** one or more URLs to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
+- **Unmarked Email Domains**: **Emil domain URL** Add one or more URLs to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
 
 ## General
 
 ### Settings apply to: All enrollment types
 
 - **Block dictation**: **Yes** stops users from using voice input to enter text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use dictation input.
-
-### Settings apply to: User approved device enrollment, and Automated device enrollment
 
 - **Block Lookup**: **Yes** prevents user from highlighting a word, and then looking up its definition on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the definition lookup feature.
 - **Block content caching**: **Yes** prevents content caching. Content caching stores app data, web browser data, downloads, and more locally on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might enable content caching.
@@ -128,8 +122,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
     To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
 
-### Settings apply to: Automated device enrollment
-
 - **Require teacher permission to leave Classroom app unmanaged classes**: **Yes** forces students enrolled in an unmanaged Classroom course to get teacher approval to leave the course. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow students to leave the course whenever the student chooses.
 
 - **Allow Classroom to lock the device without prompting**: **Yes** lets teachers lock a student's device or app without the student's approval. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students agree before teachers can lock the device or app.
@@ -142,7 +134,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Require password**: **Yes** requires users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require a password. It also doesn't force any restrictions, such as blocking simple passwords or setting a minimum length.
   - **Required password type**: Enter the required password complexity level your organization requires. When left blank, Intune doesn't change or update this setting. Your options:
-    - **Device default**
+    - **Not configured** The device default
     - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
     - **Numeric**: Password must only be numbers, such as 123456789.
 
@@ -168,13 +160,13 @@ These settings are added to a device configuration profile in Intune, and then a
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow these features.
 
-- **Block proximity based password sharing request**: **Yes** prevents devices from requesting passwords from nearby devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow these password requests.
+- **Block password proximity requests**: **Yes** prevents devices from requesting passwords from nearby devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow these password requests.
 
 - **Block password sharing**: **Yes** prevents sharing passwords between devices using AirDrop. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be shared.
 
 ## Restricted apps
 
-### Settings apply to: User approved device enrollment, and Automated device enrollment
+### Settings apply to: All enrollment types
 
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
@@ -184,7 +176,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Apps list**: **Add** apps to your list:
   - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-  - **App store URL**: Enter the iTunes App store URL of the app. For example, to add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
 
     To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL. You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 
