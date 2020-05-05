@@ -306,7 +306,7 @@ Consider the following before you continue:
 
 > [!NOTE]
 > - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
-> - On iOS 13 and MacOS 10.15 there are some [Apple Requirements](https://support.apple.com/en-us/HT210176) that need to be considered during the certificates configuration.
+> - On iOS 13 and macOS 10.15, there are some [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
 
 
 ## Next steps
