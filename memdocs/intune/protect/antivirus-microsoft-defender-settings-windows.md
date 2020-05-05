@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -94,6 +94,14 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Not Configured** (*default*) - This policy doesn't alter the state of this setting on a device. The existing state on the device remains unchanged.
   - **No** - Block On Access Protection on devices. Device users can't change this setting.
   - **Yes** - On Access Protection is active on devices.
+
+- **Monitoring for incoming and outgoing files**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943&clcid=0x409)
+
+  Configure this setting to determine which NTFS file and program activity is monitored.
+  - **Monitor all files** (*default*)
+  - **Only monitor incoming files**
+  - **Only monitor outgoing files**
 
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
