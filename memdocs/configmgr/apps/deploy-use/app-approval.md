@@ -104,6 +104,9 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
+    > [!NOTE]
+    > The administrative user that deploys the application needs permission to create an alert and subscription. If this user doesn't have these permissions, they'll see an error at the end of the **Deploy Software Wizard**: "You do not have security rights to perform this operation."<!-- 2810283 -->
+
 - Enable the SMS Provider on the primary site to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
   - (Recommended) Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) for the primary site.
