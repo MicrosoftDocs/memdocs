@@ -49,9 +49,8 @@ This article lists these settings, and describes what each setting does. It also
 - **AirPrint destinations**: **Add** one or more AirPrint printers users can print from their devices. Also enter:
   - **Port** (iOS 11.0+, iPadOS 13.0+): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
   - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
-  - **Resource path**: Enter the path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
-  - **Enable TLS** (iOS 11.0+, iPadOS 13.0+): Your options:
-    - **Not configured**: Intune doesn't change or update this setting.
+  - **Path**: Enter the resource path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
+  - **TLS** (iOS 11.0+, iPadOS 13.0+): Your options:
     - **No** (default): Transport Layer Security (TLS) isn't enforced when connecting to AirPrint printers.
     - **Yes**: Secures AirPrint connections with Transport Layer Security (TLS).
 
@@ -126,8 +125,7 @@ This feature applies to:
     When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
 
   - **Hide**: Choose to show or hide the app. Your options:
-    - **Not configured**: Intune doesn't change or update this setting. By default, the OS might show items in the Users & Groups login items list with the hide option unchecked.
-    - **No**: Shows the app in the Users & Groups login items list.
+    - **Not configured**: This is the default. Intune doesn't change or update this setting. By default, the OS will show items in the Users & Groups login items list with the hide option unchecked.
     - **Yes**: Hides the app in the Users & Groups login items list.
 
 ## Login window
