@@ -70,14 +70,13 @@ The Endpoint Protection workload includes the Windows Defender suite of antimalw
 - Windows Defender Application Control  
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (now known as Microsoft Defender Threat Protection)
-- Windows Information Protection  
 
 For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
 >
-> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 -->
+> The Endpoint Protection workload is also part of device configuration. The same behavior applies when you switch the [Device Configuration](#device-configuration) workload.<!-- SCCMDocs.nl-nl issue #4 --> When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature, which isn't included in the endpoint protection workload.<!-- 4184095 -->
 >
 > The Microsoft Defender Antivirus settings that are part of the Device restrictions profile type for Intune Device configuration are not included in scope of the Endpoint protection slider. To manage Microsoft Defender Antivirus for co-managed devices with the endpoint protection slider enabled, use the new Antivirus policies in **Microsoft Endpoint manager admin center** > **Endpoint security** > **Antivirus**. The new policy type has new and improved options available, and support all of the same settings available in the Device restrictions profile. <!--6609171-->
 >
@@ -92,6 +91,9 @@ The device configuration workload includes settings that you manage for devices 
 You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.  
 
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature, which isn't included in the endpoint protection workload.<!-- 4184095 -->
 
 ## Office Click-to-Run apps
 
