@@ -48,7 +48,7 @@ For this configuration, the primary site server:
 
 ### Cloud management gateway connection point
 
-The cloud management gateway (CMG) connection point is an on-premises role that communicates with the CMG service in Azure. For more informationm, see [Plan for the CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+The cloud management gateway (CMG) connection point is an on-premises role that communicates with the CMG service in Azure. For more information, see [Plan for the CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### Distribution point
 
