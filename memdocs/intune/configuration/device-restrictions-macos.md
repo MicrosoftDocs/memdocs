@@ -33,6 +33,9 @@ This article lists and describes the different settings you can control on macOS
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
+> [!NOTE]
+> The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.
+
 ## Before you begin
 
 [Create a macOS device restrictions configuration profile](device-restrictions-configure.md).
