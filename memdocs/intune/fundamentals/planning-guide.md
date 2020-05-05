@@ -21,7 +21,7 @@ ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
 #ROBOTS:
 #audience:
 
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -57,7 +57,10 @@ This guide includes sections that will walk you through the end-to-end process o
 
 This guide also provides additional technical information and table templates that can be used to assist you with the Intune deployment planning, design, and implementation process.
 
-- [Additional resources: Links and table templates](planning-guide-resources.md)
+### Additional resources
+
+- [Microsoft Endpoint Manager Proof of Concept (PoC) guide:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) this is intended to provide a framework and technical guidance on how to run a successful PoC within your organization.
+- [Links and table templates](planning-guide-resources.md)
 
 ## Assumptions
 
