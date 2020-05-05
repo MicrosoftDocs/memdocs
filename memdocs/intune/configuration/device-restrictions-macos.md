@@ -88,7 +88,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Unmarked Email Domains**: Enter one ore more **Email domain URL** to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
+- **Unmarked Email Domains**: Enter one or more **Email domain URL** to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
 
 ## General
 
