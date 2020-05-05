@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -128,7 +128,7 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   **Default**: Not configured  
 
-- **User can override Gatekeeper**  
+- **Do not allow user to override Gatekeeper**  
   Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.  
 
   - **Not configured** - Users can Control-click to install apps.  
