@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -594,11 +594,16 @@ To add apps, you can:
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
-## Autonomous single app mode
+## Autonomous single app mode (ASAM)
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
 For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
+
+> [!NOTE]
+> Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
+
+For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -609,6 +614,8 @@ For example, in a school or university environment, add an app that lets users t
 You can also **Import** a CSV file with the list of app names and their bundle IDs. Or, **Export** an existing list that includes the apps.
 
 ## Kiosk
+
+In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM documentation](https://developer.apple.com/documentation/devicemanagement/applock), kiosk mode is known as App Lock.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -674,7 +681,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
-- App Lock (Single App Mode) 
+- Kiosk Mode (Single App Mode): Called "app lock" in the Apple MDM documentation.
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
