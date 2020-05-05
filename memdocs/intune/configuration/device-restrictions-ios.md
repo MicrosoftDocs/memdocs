@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -594,7 +594,7 @@ To add apps, you can:
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
-## Autonomous single app mode
+## Autonomous single app mode (ASAM)
 
 Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
@@ -602,6 +602,8 @@ For example, in a school or university environment, add an app that lets users t
 
 > [!NOTE]
 > Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
+
+For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### Settings apply to: Automated device enrollment (supervised)
 
