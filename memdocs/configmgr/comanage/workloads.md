@@ -92,6 +92,9 @@ You can still deploy settings from Configuration Manager to co-managed devices e
 
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
 
+> [!NOTE]
+> When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature, which isn't included in the endpoint protection workload.<!-- 4184095 -->
+
 ## Office Click-to-Run apps
 
 <!--1357841-->
