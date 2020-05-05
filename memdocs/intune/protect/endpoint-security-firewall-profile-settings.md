@@ -171,7 +171,9 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 
 <!-- Microsoft Defender Firewall rules added in 2005  -->
 
-### Microsoft Defender Firewall rules  
+### Microsoft Defender Firewall rules
+
+*(Public preview)*
 
 The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-policy.md#firewall-policy).
 
