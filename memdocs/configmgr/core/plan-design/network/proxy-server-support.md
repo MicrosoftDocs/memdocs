@@ -2,7 +2,7 @@
 title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site system servers use proxy servers.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -45,6 +45,10 @@ For this configuration, the primary site server:
 - By default, uses the computer's **System** account to make the connection. It can also use the site system proxy server account, if necessary.  
 
 - Uses Windows web browser APIs.  
+
+### Cloud management gateway connection point
+
+The cloud management gateway (CMG) connection point is an on-premises role that communicates with the CMG service in Azure. For more informationm, see [Plan for the CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### Distribution point
 
@@ -106,3 +110,7 @@ Starting in Configuration Manager version 2002, the following features use the p
     - **Use credentials to connect to the proxy server**: Many proxy servers require a user to authenticate. By default, the site system server uses its computer account to connect to the proxy server. If necessary, enable this option, click **Set**, and then choose an **Existing Account** or specify a **New Account**. These credentials are the **site system proxy server account**.  For more information, see [Accounts used in Configuration Manager](../hierarchy/accounts.md).  
 
 4. Choose **OK** to save the new proxy server configuration.  
+
+## Next steps
+
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow access to internet endpoints. For more information, see [internet access requirements](internet-endpoints.md).
