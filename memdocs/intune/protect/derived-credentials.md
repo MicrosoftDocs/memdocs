@@ -67,7 +67,7 @@ Intune supports derived credentials on the following platforms:
 
 Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
 
-- **DISA Purebred** (iOS only): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (iOS only): https://cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
