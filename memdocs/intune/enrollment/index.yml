@@ -70,8 +70,6 @@ landingContent:
             url: connect-intune-android-enterprise.md
           - text: Set up enrollment of Android Enterprise work profile devices
             url: android-work-profile-enroll.md
-          - text: Set up enrollment of Android Enterprise work profile devices
-            url: android-work-profile-enroll.md
           - text: Set up enrollment of Android Enterprise dedicated devices
             url: android-kiosk-enroll.md
           - text: Set up Intune enrollment of Android Enterprise fully managed devices (preview)
