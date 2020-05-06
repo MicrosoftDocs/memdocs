@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -100,7 +100,7 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Allow USB accessories while device is locked**: **Allow** lets USB accessories exchange data with devices that are locked for over an hour. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not update USB Restricted mode on devices, and USB accessories are blocked from transferring data from devices if locked for over an hour.
 
  This feature applies to:  
-  - iOS 11.4.1 and newer
+  - iOS/iPadOS 11.4.1 and newer
 
 - **Force automatic date and time**: **Require** forces supervised devices to set the Date & Time automatically. The device's time zone is updated when the device has cellular connections or has Wi-Fi with location services enabled. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Require students to request permission to leave Classroom course**: **Require** forces students enrolled in an unmanaged course using the Classroom app to request permission from the teacher to leave the course. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not force the student to ask for permission.
