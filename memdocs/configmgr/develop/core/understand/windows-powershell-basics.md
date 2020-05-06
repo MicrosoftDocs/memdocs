@@ -206,7 +206,7 @@ Enabled
 PS C:\> Show-Command  
 ```  
 
- If you want to learn more Windows PowerShell basics, jump over to  [Getting Started with Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell).  
+ If you want to learn more Windows PowerShell basics, jump over to  [Getting Started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell).  
 
 ## See Also  
  [Getting Started with Configuration Manager and Windows PowerShell](../../../develop/core/understand/getting-started-with-configuration-manager-and-windows-powershell.md)

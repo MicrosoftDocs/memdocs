@@ -160,7 +160,6 @@ A client is online if it is currently connected to a Configuration Manager manag
 
  Configuration Manager now helps you manage apps you purchased through such a program by importing the license information from the app store and tracking how many of the licenses you have used.  
 
- For details, see [Manage apps you purchased through a volume-purchase program with Configuration Manager](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### iOS - App Configuration for applications<br />Hybrid  
  Some iOS applications support pre-configuring settings such as a server or database that the application should connect to. Configuration Manager now supports deploying app configuration policies to the device which enable the user to use the app immediately without needing to know this information. Developers must enable this functionality in their apps.  

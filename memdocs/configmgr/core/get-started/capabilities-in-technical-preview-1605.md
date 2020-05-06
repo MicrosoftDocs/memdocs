@@ -188,7 +188,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 #### General prerequisites  
 
--   Ensure you have completed the [Preparation steps for On-premises Mobile Device Management](https://technet.microsoft.com/library/mt613153.aspx) and [enrolled your devices](https://technet.microsoft.com/library/mt627870.aspx).  
+-   Ensure you have completed the [Preparation steps for on-premises MDM](../../mdm/plan-design/plan-on-premises-mdm.md) and [enrolled your devices](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   For the best application install experience when using the Company Portal, make sure Configuration Manager has an active connection to Microsoft Intune.  
 
@@ -280,7 +280,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 #### To create a collection for a server group  
 
-1.  [Create a device collection](https://technet.microsoft.com/library/gg712295.aspx) that contains the computers in the server group.  
+1.  [Create a device collection](../core/clients/manage/collections/create-collections.md) that contains the computers in the server group.  
 
 2.  In the **Assets and Compliance** workspace, click **Device Collections**, right-click the collection that contains the computers in the server group, and then click **Properties**.  
 
@@ -321,9 +321,9 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 #### To deploy software updates to the server group and monitor status  
 
-1.  [Deploy software updates](https://technet.microsoft.com/library/gg712304.aspx) to the server group collection.  
+1.  [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) to the server group collection.  
 
-2.  [Monitor the software update deployment](https://technet.microsoft.com/library/gg712304.aspx). In addition to the standard monitoring views for software updates deployment, a new state description is displayed when a client is waiting for its turn to install the software updates. **Waiting for lock** is displayed for this new state.  
+2.  [Monitor the software update deployment](../../sum/deploy-use/monitor-software-updates.md). In addition to the standard monitoring views for software updates deployment, a new state description is displayed when a client is waiting for its turn to install the software updates. **Waiting for lock** is displayed for this new state.  
 
 #### To clear the deployment locks for computers in a server group  
 

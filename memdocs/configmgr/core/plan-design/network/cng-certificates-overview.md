@@ -20,7 +20,7 @@ manager: dougeby
 Configuration Manager has limited support for Cryptography: Next Generation (CNG) certificates. Configuration Manager clients can use PKI client authentication certificate with private key in CNG Key Storage Provider (KSP). With KSP support, Configuration Manager clients support hardware-based private key, such as TPM KSP for PKI client authentication certificates.
 
 ## Supported scenarios
-You can use [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) certificate templates for the following scenarios:
+You can use [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) certificate templates for the following scenarios:
 
 - Client registration and communication with an HTTPS management point   
 - Software distribution and application deployment with an HTTPS distribution point   

@@ -405,7 +405,7 @@ You can use the **RetryContentReplication** Windows Management Instrumentation (
 
 Only use this method to force replication when you must redistribute content after there were issues with normal replication of content (typically confirmed by use of the Monitoring node of the console).   
 
-For more information about this SDK option, see [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) on MSDN.Microsoft.com.
+For more information about this SDK option, see [RetryContentReplication Method in Class SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
 
 ### Remove content
 When you no longer require content on your distribution points, you can remove the content files on the distribution point.  
