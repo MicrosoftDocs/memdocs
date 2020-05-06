@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage devices with endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to view devices and take action to manage them in Microsoft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to view devices and act to manage them in Microsoft Endpoint Manager. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Manage devices with endpoint security in Microsoft Intune
 
-As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and act to manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD), and includes devices managed by Intune, Configuration Manager, and through [co-management](https://docs.microsoft.com/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
+As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and act to manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD). This includes devices that are managed by Intune, Configuration Manager, and through [co-management](https://docs.microsoft.com/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
 
  To find it the view, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
 
@@ -54,13 +54,13 @@ Consider the following fields:
 
   - **MDM**  - These devices are managed by Intune. Compliance data is collected and reported by Intune to the admin center.
 
-  - **ConfigMgr** – These devices appear when you use *tenant attach* to add your devices that are managed by Configuration Manager to the Microsoft Endpoint Manager admin center. Devices that are added from Configuration Manager include the devices that Configuration Manager identifies as **Client** = **Yes** and include:
+  - **ConfigMgr** – These devices appear in the Microsoft Endpoint Manager admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
 
-    - Workgroup (AAD joined and otherwise)
+    - In a Workgroup (AAD joined and otherwise)
     - Domain Joined
     - Hybrid AAD Joined (joined to the AD and AAD)
 
-    Compliance status is managed in Configuration Manager and might not be visible in the Microsoft Endpoint Manager admin center.
+    Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Endpoint Manager admin center.
 
     <!-- Tenant attached devices can receive your endpoint security policies. The following policy types are supported, with additional policy types being added in future updates to Intune: 
     -->
@@ -77,7 +77,7 @@ Consider the following fields:
 
   After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
 
-- **Last check-in**: If a device hasn’t checked in for some time, its details, including its Compliance status, can be out of date.
+- **Last check-in**: This field identifies the last time the device  reported its status.
 
 ## Remote actions for devices
 
@@ -98,13 +98,19 @@ The remote actions that are available depend on how the device is managed:
 
 - **Co-management**: You can access both Intune remote actions and Configuration Manager actions.
 
-Some of the Intune remote actions can help secure devices or safeguard data that might be on the device. With remote actions you can lock a device, reset a device, remove company data, scan for malware outside of a scheduled run, and rotate BitLocker keys.
+Some of the Intune remote actions can help secure devices or safeguard data that might be on the device. With remote actions you can:
+
+- Lock a device
+- Reset a device
+- Remove company data
+- Scan for malware outside of a scheduled run
+- Rotate BitLocker keys
 
 The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../remote-actions/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
 - [Synchronize device](../remote-actions/device-sync.md) – For the device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it.  
 
-- [Restart](../remote-actions/device-restart.md) – Force a Windows 10 device to restart, within five minutes. THe device owner won't automatically be notified of the restart and might lose work.
+- [Restart](../remote-actions/device-restart.md) – Force a Windows 10 device to restart, within five minutes. The device owner won't automatically be notified of the restart and might lose work.
 
 - [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 

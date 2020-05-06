@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,7 +62,7 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
    When your done configuring settings, select **Next**.
 
-7. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+7. On the **Scope (Tags)** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   
    Select **Next** to continue.
 
@@ -78,7 +78,7 @@ Antivirus policies make it easy for security admins to focus on managing the dis
 
 Antivirus profiles contain only the settings that are relevant for Defender ATP antivirus for macOS and Windows 10, and for the user experience in the Windows Security app on Windows 10 devices.
 
-While you can configure some of the same settings as part of *Endpoint Protection* profiles for [device configuration](../configuration/device-profile-create.md) or *device restriction* profiles for [device compliance](../protect/device-compliance-get-started.md), those other profiles include additional categories of settings that are unrelated to Antivirus, which can complicate the task of configuring Antivirus. Additionally, for macOS devices, the Antivirus settings aren't available through other profiles. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
+While Antivirus policies include the same settings found in *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy and are similar to settings from [device compliance](../protect/device-compliance-get-started.md) policy, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
 ### Prerequisites for antivirus policy
 
@@ -104,7 +104,7 @@ While you can configure some of the same settings as part of *Endpoint Protectio
 
   Defender Antivirus is the next-generation protection component of Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). Next-generation protection brings together machine learning, big-data analysis, in-depth threat resistance research, and cloud infrastructure to protect devices in your enterprise organization.
 
-  The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings found in the *Device Restriction profile* for Device Compliance policy.
+  The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings that are found in the *Device Restriction profile* for Device Configuration policy.
   
   Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
@@ -112,9 +112,9 @@ While you can configure some of the same settings as part of *Endpoint Protectio
 
 ## Disk encryption policy
 
-Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption methods, like FileVault or BitLocker.
+Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker.
 
-While you can configure the same device settings by using *Endpoint Protection profiles* for device configuration, the device configuration profiles include additional categories of settings that are unrelated to disk encryption, which can complicate the task of configuring only disk encryption.
+While you can configure the same device settings by using *Endpoint Protection profiles* for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
 ### Prerequisites for disk encryption policy
 
@@ -181,15 +181,15 @@ View [settings for Endpoint detection and response profiles](../protect/endpoint
 ### Prerequisites for EDR profiles
 
 - Windows 10 or later
-- For Intune to manage endpoint detection and response settings on a device, Defender ATP must be installed on that device.
+- For Intune to manage endpoint detection and response settings on a device, you must onboard the device with Defender ATP.
 
 ### EDR profiles
 
 **Windows 10 profiles**:
 
-- **Endpoint detection and response** – Manage settings for Microsoft Defender ATP endpoint detection and response.
-endpoint-security-edr-profile-settings.md
-  The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
+- **Endpoint detection and response** – Manage [settings for Microsoft Defender ATP endpoint detection and response](endpoint-security-edr-profile-settings.md).
+
+  The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable.
 
   To learn more, see [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
 
@@ -197,12 +197,12 @@ endpoint-security-edr-profile-settings.md
 
 Each attack surface reduction profile manages settings for a specific area of a Windows 10 device.
 
-View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md)].
+View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
 
 ### Prerequisites for Attack surface reduction profiles
 
 - Windows 10 or later
-- For Intune to manage attack surface reduction settings on a device, Defender ATP must be installed on that device.
+- Defender antivirus must be the primary antivirus on the device
 
 ### Attack surface reduction profiles
 
@@ -256,7 +256,7 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Manage conflicts
 
-Many of the device settings that you can manage with Endpoint security policies (security policies) can also be managed through other policy types in Intune, including both endpoint protection profiles in *device configuration* policy, and by *security baselines*. Because the same setting can be managed by multiple Intune policies, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+Many of the device settings that you can manage with Endpoint security policies (security policies) you can manage through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because you can manage a setting with several different policy types or multiple instances of the same policy type, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
 
 By default, security baselines can set a non-default value for a setting to comply with the recommended configuration that baseline addresses. Other policy types, including the endpoint security policies, use *Not configured* by default, which requires you to explicitly configure setting in the policy to modify it on a device.
 
