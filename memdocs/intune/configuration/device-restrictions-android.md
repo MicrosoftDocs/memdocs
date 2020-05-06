@@ -118,7 +118,7 @@ Use these settings to allow or prevent specific apps on devices. This feature is
 setting.
 - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. If a user installs an app from this list, you're notified by Intune.
 - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps.  Apps that are managed by Intune are automatically allowed, including the Company Portal app.
-- **Apps list**: **Add** you app:
+- **Apps list**: **Add** your app:
   - **App bundle ID**: Enter the app bundle ID.
   - **App store URL**: Enter the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
