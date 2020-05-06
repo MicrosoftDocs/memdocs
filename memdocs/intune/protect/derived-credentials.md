@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2002
+ms.date: 5/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -67,7 +67,7 @@ Intune supports derived credentials on the following platforms:
 
 Intune supports a single derived credential issuer per tenant. You can configure Intune to work with the following issuers:
 
-- **DISA Purebred** (iOS only): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (iOS only): https://cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -116,6 +116,7 @@ Following are key considerations for each supported partner.  Become familiar wi
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android Enterprise fully managed devices](https://docs.microsoft.com/intune-user-help/enroll-android-device-disa-purebred)
 
 **Key requirements include**:
 
@@ -230,7 +231,10 @@ In addition to the deploying the app with Intune, configure an Intune per-app VP
   
 1. Download the DISA Purebred application: https:\//cyber.mil/pki-pke/purebred/.
 
-2. Deploy the DISA Purebred application in Intune. See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
+2. Deploy the DISA Purebred application in Intune. 
+
+   - See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
+   - See [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
 
 3. [Create a per-app VPN](../configuration/vpn-settings-configure.md) for the DISA Purebred application.
 
