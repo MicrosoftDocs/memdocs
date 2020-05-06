@@ -192,10 +192,17 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
 - **Antivirus**:  
   - **Not configured** (*default*) - Intune doesn't check for any antivirus solutions installed on the device. 
   - **Require** - Check compliance using antivirus solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
+  
+[DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/en-us/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
   - **Require** - Check compliance using antispyware solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.  
+  
+[DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/en-us/windows/client-management/mdm/devicestatus-csp)
+
+NOTE: Be aware of the following limitations for the Antivirus and Antispyware settings on Windows 10 Home edition SKU
+While the DevicestatusCSP is supported on Windows 10 Home edition, Intune does not currently support using these two setting in a device compliance policy targeted against Home edition. Intune will report a status of 'Not applicable'. This will be addressed in a future monthly release of Intune. Consider leveraging the [Windows Defender](https://docs.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-windows#defender) compliance settings instead, which will work on Home edition.  
 
 ### Defender
 
