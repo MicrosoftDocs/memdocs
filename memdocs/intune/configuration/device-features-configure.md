@@ -135,7 +135,7 @@ Applies to:
 
 ## Privacy preferences
 
-Users are prompted by apps to allow access, or deny access to device features. For example, users are prompted to allow access to the camera and the media library. Use these privacy preferences settings to reduce the number of prompts by pre-configuring apps or processes to allow or block access.
+Users are prompted by apps to allow access, or deny access to device features. For example, users are prompted to allow access to the camera and the media library. Use these privacy settings to reduce the number of prompts by pre-configuring apps or processes to allow or block access.
 
 For a list of the settings you can configure in Intune, see [Privacy preferences on macOS](device-restrictions-macos.md#privacy-preferences).
 

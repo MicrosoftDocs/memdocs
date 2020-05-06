@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -188,7 +188,7 @@ This feature applies to:
     - **Bundle ID**: Select this option for apps.
     - **Path**: Select this option for non-bundled binaries, which is a process or executable.
 
-    Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing application app bundle.
+    Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing application bundle.
 
   - **Code requirement**: Enter the code signature for the application or process.
 
@@ -236,8 +236,8 @@ This feature applies to:
 
   - **Reminders**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access reminders information managed by the system Reminders app.
-    - **Block**: Prevents the app from accessing this reminders information.
+    - **Allow**: Allows the app to access reminder information managed by the system Reminders app.
+    - **Block**: Prevents the app from accessing this reminder information.
 
   - **Photos**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
@@ -253,8 +253,8 @@ This feature applies to:
 
   - **File provider presence**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access the File Provider application, and know when users are using files managed by the File Provider. A File Provider app allows other File Provider apps to access the documents and directories stored and managed by the containing app.
-    - **Block**: Prevents the app from accessing the File Provider application.
+    - **Allow**: Allows the app to access the File Provider app, and know when users are using files managed by the File Provider. A File Provider app allows other File Provider apps to access the documents and directories stored and managed by the containing app.
+    - **Block**: Prevents the app from accessing the File Provider app.
 
     Requires macOS 10.15 and newer.
 
@@ -308,9 +308,9 @@ This feature applies to:
     - **Allow**: Allows the app to use CoreGraphics APIs to send CGEvents to the system event stream.
     - **Block**: Prevents the app from using CoreGraphics APIs to send CGEvents to the system event stream.
 
-  - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Also enter the following information of the receiving app or process.
+  - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Enter the following information of the receiving app or process:
 
-    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event sent by the identifier app or process.  
+    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
 
     - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
 
