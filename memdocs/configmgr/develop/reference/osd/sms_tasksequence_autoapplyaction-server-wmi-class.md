@@ -136,10 +136,8 @@ Class SMS_TaskSequence_AutoApplyAction : SMS_TaskSequence_Action
 
  `true` to configure the Windows operating system to allow unsigned device drivers to be installed. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDAllowUnsignedDriver. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDAllowUnsignedDriver).  
-
 > [!NOTE]
->  This property is required by the task sequence action. Unattended installation of unsigned drivers is done on versions of Windows where this is allowed.  
+> This property is required by the action. However, it's deprecated and not used by modern OS versions.  
 
 ## Remarks  
  Class qualifiers for this class include:  

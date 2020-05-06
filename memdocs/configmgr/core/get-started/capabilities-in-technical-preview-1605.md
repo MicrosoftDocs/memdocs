@@ -280,7 +280,7 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
 #### To create a collection for a server group  
 
-1.  [Create a device collection](../core/clients/manage/collections/create-collections.md) that contains the computers in the server group.  
+1.  [Create a device collection](../clients/manage/collections/create-collections.md) that contains the computers in the server group.  
 
 2.  In the **Assets and Compliance** workspace, click **Device Collections**, right-click the collection that contains the computers in the server group, and then click **Properties**.  
 
