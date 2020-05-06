@@ -256,64 +256,17 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Manage conflicts
 
-Most settings that are included in the different Endpoint security policies (security policies) can also be managed through endpoint protection profiles in *device configuration* policy, and by *security baselines*.
+Many of the device settings that you can manage with Endpoint security policies (security policies) can also be managed through other policy types in Intune, including both endpoint protection profiles in *device configuration* policy, and by *security baselines*. Because the same setting can be managed by multiple Intune policies, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
 
-Because the same setting can be managed by multiple Intune policies, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+By default, security baselines can set a non-default value for a setting to comply with the recommended configuration that baseline addresses. Other policy types, including the endpoint security policies, use *Not configured* by default, which requires you to explicitly configure setting in the policy to modify it on a device.
 
-The information at the following links can help you identify and resolve conflicts:
-
-- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
-- [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-<!--   
-## Policy types and defaults
-
-Intune includes multiple methods to deploy and manage settings on your devices.  To avoid creating conflicts and to help you predict the outcome and compliance to your policies, the following information describes the behaviors of policy types and setting configurations.
-
-### Defaults for settings in different policy types
-
-All Intune policy types include groups of settings with each setting have a default value. When you create a new instance of a policy type, that new instance has all its settings set to the default values for that policy type. You can then edit the policy to configure the settings you want to actively manage.  
-
-For most policy types, like [device configuration](../configuration/device-profile-create.md) or endpoint security profiles, the default value of each setting is *Not configured*, or an equivalent value. The exception to this is for [security baselines](../protect/security-baselines.md), which include values for many settings that are other than *Not configured*. Security baselines are an exception because they are pre-configured groups to help you apply a known group of settings and default values that are recommended by the relevant security teams.
-
-The use of Not configured as a default value for most policy types helps to avoid conflicts prior to your customizations.  However, the value of Not configured has more complex results, which are worth understanding, especially when the same setting appears in multiple policy types or multiple instances of the same policy type.
-
-**General rules**:
-
-- When Intune policy applies a setting other than not configured, the policy sets the configuration on the device, and manages that setting.
-
-- When multiple policies configure the same setting with a value other than Not configured, a conflict can occur if the configurations are different from each other. To resolve conflicts, you might need to edit one or more policies so only one policy manages the setting, or to align all policies to agree on the settings configuration.
-
-- When Intune policy applies the value of Not configured, special rules apply.
-
-**Use of Not configured**
-
-In the following, a policy instance is an individual policy for any policy type. Using BitLocker settings as an example, if you create two profiles for BitLocker as an Endpoint Security Disk Encryption policy, each of the profiles is a separate policy instance. If you also have an endpoint configuration profile for device configuration that also manages BitLocker settings, that is a third instance of policy.
-
-- By default, each policy type (other than security baselines) applies a value of Not configured to each setting the policy includes. A value of Not configured results in the policy ignoring that setting on the device, leaving the settings configuration unchanged. This could be the device or app default, or it might be a configuration made by the device user, or by another method outside of Intune like Group Policy.
-
-- When you modify Intune policy to use a value other than Not configured and then deploy that policy, that policy becomes responsible for managing the setting. On devices that receive the policy, Intune applies the configuration.
-
-- Later, if a separate Intune policy instance attempts to manage a setting that’s been set by a different Intune policy, a conflict can occur:
-  - If both policies set the same value, there is no conflict.
-  - If the two policies set different values, a conflict occurs. 
-  - If the second policy sets a value of Not configured, the second policy doesn’t attempt to manage the setting on the device. Instead, the device retains the original configuration from the first policy.
-
-- To restore a setting on a device to its original value, which is the operating system or application default, you can modify a  policy that is already managing that value and have it apply the value of Not configured. 
-
-  If the original policy instance isn’t available, you will need to use a policy to actively manage the setting, and then edit that policy to set the setting to not configured.
-
-### Manage conflicts
-
-Most settings that are included in the different Endpoint security policies (security policies) can also be managed through endpoint protection profiles in *device configuration* policy, and by *security baselines*.
-
-Because the same setting can be managed by multiple Intune policies, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+Regardless of the policy method, managing the same setting on the same device through multiple policy types, or through multiple instances of the same policy type can result in conflicts that should be avoided.
 
 The information at the following links can help you identify and resolve conflicts:
 
 - [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
--->
+
 
 ## Next steps
 
