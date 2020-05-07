@@ -81,7 +81,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
  `true` (default) to allow the capture user state action to proceed even if some files cannot be captured. This property is required.  
 
- The task sequence variable associated with this property is OSDMigrateContinueOnLockedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateContinueOnLockedFiles. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
  `Description`  
  Data type: `String`  
@@ -117,7 +117,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
  Qualifiers: [Not_Null]  
 
- FileAccess ….  Possible values are:  
+ Corresponds to the UI option to **Copy by using file system access**.
 
 - Normal (default)  
 
@@ -165,7 +165,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   `true` to skip encrypted files. The default value is `false`.  
 
-  The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is OSDMigrateSkipEncryptedFiles. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
   `SupportedEnvironment`  
   Data type: `String`  
@@ -194,7 +194,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   Qualifiers: [Not_Null, VariableName("_OSDMigrateUseHardlinks")]  
 
-  `true` to ….  The default value is `false`.  
+  `true` to configure USMT to use hardlinks. The default value is `false`.  
 
   `UsmtPackageID`  
   Data type: `String`  
@@ -205,7 +205,7 @@ Class SMS_TaskSequence_CaptureUserStateAction : SMS_TaskSequence_Action
 
   The ID of the Configuration Manager package that contains USMT binaries. This property is required.  
 
-  The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is _OSDMigrateUsmtPackageID. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

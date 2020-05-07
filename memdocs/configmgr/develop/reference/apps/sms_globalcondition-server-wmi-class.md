@@ -82,7 +82,7 @@ Class SMS_GlobalCondition : SMS_ConfigurationItemBaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [not_null, sizelimit(“512��?]  
+ Qualifiers: [not_null, sizelimit("512"]  
 
  See [SMS_ConfigurationItemLatestBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md).  
 

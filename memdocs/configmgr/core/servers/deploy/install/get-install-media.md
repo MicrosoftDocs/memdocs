@@ -21,6 +21,6 @@ If you have Configuration Manager volume licenses with Software Assurance, or if
 
 If you have a Configuration Manager license from EMS, Microsoft 365, or a Cloud Solution Provider (CSP), please see the [Product and Licensing FAQ](../../../understand/product-and-licensing-faq.md#bkmk_csp).
 
-If you would like to purchase volume licenses for Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of Configuration Manager from the [TechNet Evaluation Center]( https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
+If you would like to purchase volume licenses for Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of Configuration Manager from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) website.
 
 To learn about baseline media for Configuration Manager, see [Baseline and update versions](../../manage/updates.md#bkmk_Baselines).

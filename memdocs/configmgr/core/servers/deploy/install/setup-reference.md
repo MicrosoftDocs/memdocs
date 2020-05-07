@@ -69,4 +69,4 @@ Data collection includes these three levels:
 
 For more information, including disclosure of the details collected by each level, see [Diagnostics and usage data for Configuration Manager](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  
 
-To view the Configuration Manager Privacy Statement on-line, go to [https://go.microsoft.com/fwlink/?LinkID=626527](https://go.microsoft.com/fwlink/?LinkID=626527).
+For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).

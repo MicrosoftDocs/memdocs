@@ -17,7 +17,7 @@ You can use Configuration Manager to collect hardware and software inventory fro
  When the hardware inventory client agent is enabled for Configuration Manager sites, hardware inventory data gives you system information (such as available disk space, processor type, and operating system) about each computer. When the software inventory client agent is enabled, you can inventory information, such as the specific file types and versions that are present on client computers. The software inventory client agent can also collect information about files that are inventoried on client systems. Configuration Manager software inventory can also collect files, not just details about the files, from client computers. With file collection, you specify a set of files to be copied from clients to the Configuration Manager site server that the clients are assigned to.  
 
 > [!NOTE]
->  For information about using Inventory in Configuration Manager, see [Inventory in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=275839).  
+> For more information, see [Introduction to hardware inventory](../../../../core/clients/manage/inventory/introduction-to-hardware-inventory.md).  
 
 ## About Collecting Hardware Inventory  
  When it is enabled, the Configuration Manager hardware inventory client agent automatically collects detailed information about the hardware characteristics of clients in a Configuration Manager site. By using this feature, you can collect a wide variety of information about client computers, such as memory, operating system, and peripherals for client computers.  
@@ -33,7 +33,7 @@ You can use Configuration Manager to collect hardware and software inventory fro
  By default, NOIDMIF and IDMIF file information is not inventoried by Configuration Manager sites. To enable NOIDMIF and IDMIF file information to be inventoried, NOIDMIF and IDMIF collection must be enabled. You can choose to enable one or both types of MIF file collection for Configuration Manager sites on the **MIF Collection** tab of the hardware inventory client agent properties.  
 
 > [!IMPORTANT]
->  Before you can add information from MIF files to the Configuration Manager database, you must create or import class information for them. For more information, see the sections **To add a new inventory class** and **To import hardware inventory classes** in [How to Extend Hardware Inventory in Configuration Manager](https://technet.microsoft.com/library/gg712290.aspx).  
+>  Before you can add information from MIF files to the Configuration Manager database, you must create or import class information for them. For more information, see the sections **To add a new inventory class** and **To import hardware inventory classes** in [How to Extend Hardware Inventory in Configuration Manager](../../../../core/clients/manage/inventory/extend-hardware-inventory.md).  
 
 ### NOIDMIF Files  
  Standard MIF files that are used in Configuration Manager hardware inventory are called NOIDMIF files. NOIDMIF files do not contain a unique identifier for the data. Configuration Manager automatically associates NOIDMIF file data with the client that the NOIDMIF file is collected from when reporting inventory information.  

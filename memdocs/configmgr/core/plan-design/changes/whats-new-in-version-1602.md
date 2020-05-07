@@ -38,9 +38,9 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 > [!WARNING]  
 >  Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server.  
 >   
->  For information about this critical step, see the "New and changed functionality" section in [Windows Server Update Services Overview](https://technet.microsoft.com/library/hh852345.aspx), in the Windows Server documentation.  
+>  For more information about this critical step, see the "New and changed functionality" section in [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- To upgrade a server, use the Windows Server 2012 R2 upgrade procedures. You do not need to run a Configuration Manager site server restore after the upgrade. For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) in the Windows Server documentation.  
+ To upgrade a server, use the Windows Server 2012 R2 upgrade procedures. You do not need to run a Configuration Manager site server restore after the upgrade. For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in the Windows Server documentation.  
 
 ###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn availability groups  
  Use SQL Server AlwaysOn availability groups to host the site database at primary sites, and the central administration site as a high-availability and disaster-recovery solution.  
@@ -58,7 +58,7 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 
 -   Available Windows 10 upgrades now only display in the **Windows 10 Servicing** \ **All Windows 10 Updates** node of the Configuration Manager console. These updates no longer display in the **Software Updates** \ **All Software Updates** node of the console.  
 
--   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site’s properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
+-   A servicing plan is considered a high-risk deployment, and the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. For more information, see [Settings to manage high-risk deployments for Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
 -   Users who start a Windows 10 Upgrade package now receive a message that they will be upgrading their operating system.  
 
@@ -177,7 +177,7 @@ For details, see [Health attestation for Configuration Manager](../../../core/se
 
     -   Advanced: Allow users to modify automatic sample file submission settings.  
 
-    Additionally, in the “Exclusion settings” section of endpoint protection antimalware policy, the existing **Exclude files and folders** setting now allows device exclusions.  
+    Additionally, in the "Exclusion settings" section of endpoint protection antimalware policy, the existing **Exclude files and folders** setting now allows device exclusions.  
 
 For details, see [How to create and deploy antimalware policies for Endpoint Protection](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 

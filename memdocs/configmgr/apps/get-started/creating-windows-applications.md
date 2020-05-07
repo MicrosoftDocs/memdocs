@@ -53,7 +53,7 @@ To configure a Windows app deployment type for this feature, enable the option t
 
 Configuration Manager supports the Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Windows 10 version 1809 or later support these formats.
 
-- For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
+- For an overview of MSIX, see [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -74,7 +74,7 @@ Convert your existing Windows Installer (.msi) applications to the MSIX format.
 
   - Install the [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) from the Microsoft Store  
 
-  - Install the [MSIX packaging tool driver](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Install the [MSIX packaging tool driver](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Don't install any other apps or services on this device. It's your reference system.
 
@@ -99,7 +99,7 @@ If the process fails, the summary page points to the log file with more informat
 
 To use this MSIX app, you first need to digitally sign it so that clients trust it. For more information on this process, see the following articles:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).
@@ -119,7 +119,7 @@ Starting in version 2002, you can install complex applications using task sequen
 
 - Define additional metadata for the app task sequence, including localized information
 
-You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. A user-targeted deployment still runs in the user context of the local System account.
+You can only add a non-OS deployment task sequence as a deployment type on an app. High-impact, OS deployment, or OS upgrade task sequences aren't supported. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 When you add this deployment type to an app, configure its properties on the **Task Sequence** page. For more information, see [Deployment type **Task Sequence** options](../deploy-use/create-applications.md#bkmk_dt-ts).
 

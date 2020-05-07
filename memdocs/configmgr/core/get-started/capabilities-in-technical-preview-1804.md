@@ -131,8 +131,6 @@ If you attempt to send feedback from a device that isn't able to access the inte
 
 Use Support Center for client troubleshooting, real-time log viewing, or capturing the state of a Configuration Manager client computer for later analysis. Support Center is a single tool to consolidate many administrator troubleshooting tools. A preview of the latest version of Support Center with bug fixes, improvements, and a preview of our new log viewer is available in the technical preview. Find the Support Center installer on the site server in the **cd.latest\SMSSETUP\Tools\SupportCenter** folder.
 
- > [!Tip]  
- > Legacy documentation for the existing functionality in Support Center is available on [TechNet](https://technet.microsoft.com/library/dn688621.aspx). Relevant information is in process to migrate to the docs.microsoft.com library.  
 
 ### New Support Center features  
 
@@ -284,7 +282,7 @@ Try to complete the tasks. Then send [Feedback](#bkmk_feedback) letting us know 
 > Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.  
 
 ### Known issues
-After adding the architecture criteria, the automatic deployment rule properties page shows **Title** in the search criteria. The automatic deployment rule still functions as expected, and selects the correct software updates. However, you can’t include both **Architecture** and **Title** criteria at this time. <!--512634,512632-->
+After adding the architecture criteria, the automatic deployment rule properties page shows **Title** in the search criteria. The automatic deployment rule still functions as expected, and selects the correct software updates. However, you can't include both **Architecture** and **Title** criteria at this time. <!--512634,512632-->
 
 
 

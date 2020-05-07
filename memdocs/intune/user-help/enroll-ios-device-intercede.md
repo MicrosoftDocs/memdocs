@@ -48,7 +48,7 @@ In this article, you will:
 
 
 ## What are derived credentials?  
-A derived credential is a certificate that’s derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
+A derived credential is a certificate that's derived from your smart card credentials and installed on your device. It grants you remote access to work resources, while preventing unauthorized users from accessing sensitive information.  
 
 Derived credentials are used to: 
 * Authenticate students and employees who sign in to school or work apps, Wi-Fi, and VPN

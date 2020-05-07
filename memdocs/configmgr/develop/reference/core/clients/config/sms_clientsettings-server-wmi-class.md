@@ -199,7 +199,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Access type: Read-only  
 
- Qualifiers: [notnull, read, sizelimit(“64��?)]  
+ Qualifiers: [notnull, read, sizelimit("64")]  
 
  For internal use only.  
 

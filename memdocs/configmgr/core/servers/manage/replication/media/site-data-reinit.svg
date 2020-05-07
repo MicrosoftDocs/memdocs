@@ -55,9 +55,9 @@
 			<text x="13.15" y="1244.35" class="st3">CAS</text>		</g>
 		<g id="shape21-9" transform="translate(182.974,-1120.53)">
 			<title>Sheet.21</title>
-			<desc>Check if site replication hasn’t finished reinit</desc>
+			<desc>Check if site replication hasn't finished reinit</desc>
 			<rect x="0" y="1222.9" width="113.664" height="38.0962" class="st5"/>
-			<text x="2" y="1239.55" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st6">hasn</tspan>’t finished reinit</text>		</g>
+			<text x="2" y="1239.55" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st6">hasn</tspan>'t finished reinit</text>		</g>
 		<g id="shape22-13" transform="translate(305.638,-1206.48)">
 			<title>Dynamic connector.1114</title>
 			<path d="M0 1261 L0 1282.13 L-152.14 1282.13 L-152.14 1300.81" class="st7"/>
@@ -198,9 +198,9 @@
 		</g>
 		<g id="shape90-132" transform="translate(328.253,-605.281)">
 			<title>Sheet.90</title>
-			<desc>Check primary site isn’t in maintenance mode</desc>
+			<desc>Check primary site isn't in maintenance mode</desc>
 			<rect x="0" y="1243.45" width="98.9606" height="17.55" class="st5"/>
-			<text x="2" y="1249.83" class="st3">Check primary site isn’t <tspan x="2" dy="1.2em" class="st6">in maintenance mode</tspan></text>		</g>
+			<text x="2" y="1249.83" class="st3">Check primary site isn't <tspan x="2" dy="1.2em" class="st6">in maintenance mode</tspan></text>		</g>
 		<g id="shape91-136" transform="translate(294.013,-538.025)">
 			<title>Decision.91</title>
 			<path d="M0 1252.22 L11.7 1243.45 L23.4 1252.22 L11.7 1261 L0 1252.22 Z" class="st2"/>

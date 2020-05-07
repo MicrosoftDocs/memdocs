@@ -144,7 +144,7 @@ When you create a phased deployment and manually configure a phase, on the **Pha
 <!--1357427-->
 Configuration Manager now supports the deployment of new Windows 10 app package (.msix) and app bundle (.msixbundle) formats. The latest [Windows Insider Preview](https://insider.windows.com/) builds currently support these new formats.
 
-For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).
+For an overview of MSIX, see [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
 
 For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -197,7 +197,7 @@ Additional management insights are available in this release to highlight potent
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment.  
 
-- **Boundary groups with no members**: Boundary groups aren’t applicable for site assignment or content lookup if they don’t have any members.  
+- **Boundary groups with no members**: Boundary groups aren't applicable for site assignment or content lookup if they don't have any members.  
 
 - **Distribution points not serving content to clients**: Distribution points that haven't served content to clients in the past 30 days. This data is based on reports from clients of their download history.  
 

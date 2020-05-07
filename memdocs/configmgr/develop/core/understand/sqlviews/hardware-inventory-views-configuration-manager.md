@@ -6,8 +6,6 @@ ms.date: 06/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: aczechowski
 ms.author: aaroncz
@@ -74,7 +72,6 @@ This view can be joined to other views by using the **CollectionID** column.
 
 Lists information about the software installed on Configuration Manager clients that is registered in Add or Remove Programs or Programs and Features list.
 The view can be joined with other views by using the **ResourceID** column.
-
 
 ### v_GS_1394_CONTROLLER
 
@@ -261,7 +258,7 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_IRQ
 
-List information about Interrupt Requests (IRQ’s) found on client computers.
+List information about Interrupt Requests (IRQ's) found on client computers.
 This view can be joined to other views by using the **ResourceID** column.
 
 ### v_GS_KEYBOARD_DEVICE
@@ -522,18 +519,20 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEMBOOTDATA
 
-Lists information about the computer boot times. This includes BIOS duration, boot duration, event log start,  group policy duration, system start time and update duration. 
+Lists information about the computer boot times. This includes BIOS duration, boot duration, event log start,  group policy duration, system start time and update duration.
 
 The view can be joined with other views by using the **ResourceID** column.
 
 ### v_GS_SYSTEMBOOTSUMMARY
 
-Lists summary information about the computer boot times. This includes Latest, Maximum and median’s for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
+Lists summary information about the computer boot times. This includes Latest, Maximum and median's for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
 
 The view can be joined with other views by using the **ResourceID** column.
 
 #### Sample Query
-Select 
+
+```sql
+Select
     RV.Netbios_Name0 as 'Computer',
     SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
     SBS.LatestBootDuration0 as 'Latest Boot Duration',
@@ -541,17 +540,12 @@ Select
     SBS.LatestEventLogStart0 as 'Latest Event Log Start',
     SBS.LatestGPDuration0 as 'Latest Group Ploci Duration',
     SBS.LatestUpdateDuration0 as 'Latest Update Duration'
-from 
+from
     dbo.v_R_System_Valid RV
     inner join dbo.v_GS_SYSTEMBOOTSUMMARY SBS on RV.ResourceID = SBS.ResourceID
 Order by
     RV.Netbios_Name0
-
-
-### v_GS_SYSTEMHEALTHAGENT
-
-Lists information about the Configuration Manager System Health Agent.
-The view can be joined with other views by using the **ResourceID** column.
+```
 
 ### v_GS_TAPE_DRIVE
 
@@ -648,7 +642,6 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the memory found on Configuration Manager clients.
 The view can be joined with other views by using the **ResourceID** column.
 
-
 ### v_Network_DATA_Serialized
 
 Lists information about the network item found on Configuration Manager clients, and organized by **ResourceID** and then by **GroupID**. The **GroupID** column starts at 1 for the first network item for a client and increments by 1 for each additional network item. The view lists the IP address for the default gateway, the IP address for the DHCP server, DNS domain, IP address, MAC address, and so on.
@@ -661,4 +654,4 @@ The view can be joined with other views by using the **ResourceID** column.
 
 ## See also
 
-[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md) 
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

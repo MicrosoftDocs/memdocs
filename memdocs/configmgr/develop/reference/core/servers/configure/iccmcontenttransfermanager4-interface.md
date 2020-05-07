@@ -72,14 +72,14 @@ interface ICcmContentTransferManager4 : IUnknown
 
  Qualifiers: [in]  
 
- eContentType …   
+ The type of content.
 
  `Priority`  
  Data type: CCM_CONTENTPRIORITY  
 
  Qualifiers: [in]  
 
- Priority …   
+ The content priority.
 
  `dwDTSFlags`  
  Data type: DWORD  
@@ -135,7 +135,7 @@ interface ICcmContentTransferManager4 : IUnknown
 
  Qualifiers: [in]  
 
- dwNotifyKBytes …  
+ dwNotifyKBytes
 
  `szOwnerSID`  
  Data type: LPCWSTR  

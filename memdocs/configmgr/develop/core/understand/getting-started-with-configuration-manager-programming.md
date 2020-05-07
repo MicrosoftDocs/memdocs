@@ -12,24 +12,18 @@ manager: dougeby
 
 ---
 # Get started with Configuration Manager programming
-To get started with programming for Configuration Manager, it’s beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
+To get started with programming for Configuration Manager, it's beneficial to have a basic functional and architectural understanding of Configuration Manager. In addition, there are a number of key tools and resources that critical to validating and troubleshooting solutions. Below are tips and resources for someone new to programming for Configuration Manager.  
 
 > [!IMPORTANT]
-> You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you’ll find many references containing "SMS" – in fact, most WMI classes start with "SMS_" and the primary Configuration Manager WMI namespace is "SMS". Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
+> You should recognize that Configuration Manager, previously Systems Management Server (SMS), has quite a long history as a product. In reviewing namespaces, classes, methods, properties and log files you'll find many references containing "SMS" – in fact, most WMI classes start with "SMS_" and the primary Configuration Manager WMI namespace is "SMS". Over the course of years, numerous legacy classes, methods and properties have accumulated – not apparent to an administrative user, but when programming the history/legacy can be confusing.  
 
 ## Functional understanding  
 
-To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. See the below resources, for functional information on Configuration Manager.  
-
-- [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx)  
-
-- [Fundamentals of Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
-
-- [TechNet Virtual Labs](https://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
+To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. For more information, see [Fundamentals of Configuration Manager](../../../core/understand/fundamentals.md).
 
 ### More resources  
 
-**Books:** There are numerous books available for Configuration Manager. A few example books are listed below.  
+#### Books
 
 - [System Center 2012 Configuration Manager: Mastering the Fundamentals](https://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
 
@@ -37,21 +31,21 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 - [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](https://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
-**Videos:** There are numerous videos available for Configuration Manager. A few example videos are listed below.  
+#### Videos
 
 - [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
 - [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
-**Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
+#### Forums
 
-- [TechNet: Configuration Manager 2012 - General](https://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
+- [Configuration Manager forums](https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc)  
 
 - [windows-noob.com: Configuration Manager 2012](https://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 
 ## Architectural understanding  
 
-Configuration Manager is multi-tiered, distributed management system. It’s important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
+Configuration Manager is multi-tiered, distributed management system. It's important to understand the general architecture of Configuration Manager. Below is a link to an overview of the Configuration Manager architecture.  
 
 - [Architectural Overview](../../../develop/core/understand/architectural-overview.md)  
 
@@ -59,7 +53,7 @@ In addition to the architectural information, there are several key points that 
 
 - **Server:** In a general sense, most programming actions (in particular, automation) take place on a Configuration Manager site server. Actions or configuration changes are propagated throughout the Configuration Manager hierarchy to the clients via policy. Policy is pulled down by the client on a configurable polling interval **NOT** pushed immediately to the client by the server. In general, once a client is installed, there is no direct communication from the site server to the client or the client to the site server – all communication takes place through intermediary server roles.  
 
-- **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A ‘server’ can be a Configuration Manger client. An Exchange server, an Active Directory server, and a Configuration Manager server can all be Configuration Manager clients. In addition, Windows 10, Windows Phone, and macOS devices can all be Configuration Manager clients.  
+- **Client:**  Configuration Manager clients are systems and devices managed by Configuration Manager. A 'server' can be a Configuration Manger client. An Exchange server, an Active Directory server, and a Configuration Manager server can all be Configuration Manager clients. In addition, Windows 10, Windows Phone, and macOS devices can all be Configuration Manager clients.  
 
 Configuration Manager clients receive policy by periodically polling a Configuration Manager Management Point. The polling interval for retrieving basic policy is configurable, as are other settings. Because of this, there are inherent delays in client targeted actions initiated from the Configuration Manager site server.  
 
@@ -120,7 +114,7 @@ Configuration Manager clients receive policy by periodically polling a Configura
 
 ### WBEMTEST  
 
-If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft’s implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
+If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft's implementation of an Internet standard called Web Based Enterprise Management (WBEM). There are many WMI tools out there.  However, WBEMTEST is immediately available on most systems, rather than having to be downloaded first. You might think of it like Notepad.exe – there are text editors with richer capabilities available, but Notepad.exe is always there when you need to view or create a text file.  
 
 [Introduction to WBEMTEST](../../../develop/core/understand/introduction-to-wbemtest.md)  
 

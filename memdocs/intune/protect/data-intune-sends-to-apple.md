@@ -53,20 +53,20 @@ The following table lists the data that Microsoft Intune sends from a device to 
 | ASM/DEP | server_name | An identifiable name for the MDM server. |
 | ASM/DEP | server_uuid | A system-generated server identifier. |
 | ASM/DEP | admin_id | Apple ID of the person who generated the current tokens that are in use. |
-| ASM/DEP | org_name | The organization’s name. |
-| ASM/DEP | org_email | The organization’s email address. |
-| ASM/DEP | org_phone | The organization’s phone. |
-| ASM/DEP | org_address | The organization’s address. |
+| ASM/DEP | org_name | The organization's name. |
+| ASM/DEP | org_email | The organization's email address. |
+| ASM/DEP | org_phone | The organization's phone. |
+| ASM/DEP | org_address | The organization's address. |
 | ASM/DEP | org_id | DEP customer ID. This key is available only in protocol version 3 and later. |
-| ASM/DEP | serial_number | The device’s serial number (string). |
+| ASM/DEP | serial_number | The device's serial number (string). |
 | ASM/DEP | model | The model name (string). |
 | ASM/DEP | description | A description of the device (string). |
-| ASM/DEP | asset_tag | The device’s asset tag (string). |
+| ASM/DEP | asset_tag | The device's asset tag (string). |
 | ASM/DEP | profile_status | The status of profile installation. Possible values: **empty**, **assigned**, **pushed**, or **removed**. |
 | ASM/DEP | profile_uuid | The unique ID of the assigned profile. |
 | ASM/DEP | device_assigned_by | The email of the person who assigned the device. |
-| ASM/DEP | os | The device’s operating system: iOS/iPadOS, OSX, or tvOS. This key is valid in X-Server-Protocol-Version 2 and later. |
-| ASM/DEP | device_family | The device’s Apple product family: iPad, iPhone, iPod, Mac, or AppleTV. This key is valid in X-Server-Protocol-Version 2 and later. |
+| ASM/DEP | os | The device's operating system: iOS/iPadOS, OSX, or tvOS. This key is valid in X-Server-Protocol-Version 2 and later. |
+| ASM/DEP | device_family | The device's Apple product family: iPad, iPhone, iPod, Mac, or AppleTV. This key is valid in X-Server-Protocol-Version 2 and later. |
 | ASM/DEP | profile_name | String. A human-readable name for the profile. |
 | ASM/DEP | support_phone_number | Optional. String. A support phone number for the organization. |
 | ASM/DEP | support_email_address | Optional. String. A support email address for the organization. This key is valid in X-Server-Protocol-Version 2 and later. |

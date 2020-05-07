@@ -296,7 +296,7 @@ Access type: Read/Write
 
 Qualifiers: None  
 
-The number of programs the package has. The default value is …  
+The number of programs the package has.
 
 ### PackageID  
 Data type: `String`  
@@ -543,4 +543,4 @@ For more information, see [Configuration Manager Server Development Requirements
 
 ## See Also  
 [How to Create a Package](../../../../../develop/core/servers/configure/how-to-create-a-package.md)   
-[PowerShell Cmdlet: New-CMPackage](https://go.microsoft.com/fwlink/?LinkId=309284)
+ [PowerShell Cmdlet: New-CMPackage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmpackage?view=sccm-ps)

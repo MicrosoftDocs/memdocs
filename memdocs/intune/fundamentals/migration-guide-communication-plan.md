@@ -37,7 +37,7 @@ Download:  [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit)
 
 ## Email templates
 
-We recommend the following email communication plan. You may edit the text to align to your users' operating system and environment. We’ve provided templates for you to adapt for your communication plan:
+We recommend the following email communication plan. You may edit the text to align to your users' operating system and environment. We've provided templates for you to adapt for your communication plan:
 
 - **Email #1**: Explain the benefits, expectations, and schedule. Take this opportunity to showcase any other new services whose access will be granted on devices managed by Intune.
 

@@ -15,7 +15,7 @@ manager: dougeby
 # Configuration Manager Console Management Class XML
 The management classes XML for the Configuration Manager console are located %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ManagementClassDescriptions.xml file. Your extension management class XML files, however, must be placed in the AdminConsole\XmlStorage\Extensions\ManagementClasses\ folder.  
 
- The following XML defines an extension management class called “MyClass��?. The “MyClass��? node is a subclass of the `SMS_SiteControlItem` management class, which is defined in the ConsoleRoot\ManagementClassDescriptions.xml.  
+ The following XML defines an extension management class called "MyClass". The "MyClass" node is a subclass of the `SMS_SiteControlItem` management class, which is defined in the ConsoleRoot\ManagementClassDescriptions.xml.  
 
 ```  
 

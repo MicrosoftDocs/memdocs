@@ -18,15 +18,15 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-It is the administrator’s responsibility to validate proposed PowerShell and PowerShell parameter usage in their environment. Here are some helpful resources to help educate administrators about the power of PowerShell and potential risk surfaces. This is to help mitigate potential risk surfaces and allow safe scripts to be used.
+It is the administrator's responsibility to validate proposed PowerShell and PowerShell parameter usage in their environment. Here are some helpful resources to help educate administrators about the power of PowerShell and potential risk surfaces. This is to help mitigate potential risk surfaces and allow safe scripts to be used.
 
 ## PowerShell Script Security
-Built into the Run Scripts is a feature to visually review and approve scripts that are requested to be run in the environment. Administrators should be aware PowerShell scripts can have obfuscated script: script that is malicious and difficult to detect with visual inspection during the script approval process. As a best practice, using certain inspection tools, in additional to visually reviewing PowerShell scripts, will help detect suspicious scripts issues. These tools can’t always determine the PowerShell author's intent so it can bring attention to a suspicious script. However, the tools will require the administrator to judge if it is malicious or intentional script syntax.
+Built into the Run Scripts is a feature to visually review and approve scripts that are requested to be run in the environment. Administrators should be aware PowerShell scripts can have obfuscated script: script that is malicious and difficult to detect with visual inspection during the script approval process. As a best practice, using certain inspection tools, in additional to visually reviewing PowerShell scripts, will help detect suspicious scripts issues. These tools can't always determine the PowerShell author's intent so it can bring attention to a suspicious script. However, the tools will require the administrator to judge if it is malicious or intentional script syntax.
 
 ## Recommendations
 - Familiarize yourself with PowerShell security best practices using the various links referenced below.
 - **Sign your scripts**: Another method for keeping scripts Secure is by having them vetted and then signed, before importing them for usage.
-- Don’t store secrets (such as passwords) in PowerShell scripts and learn more about how to handle secrets.
+- Don't store secrets (such as passwords) in PowerShell scripts and learn more about how to handle secrets.
 
 
 ## General information about PowerShell security best practices
@@ -56,11 +56,11 @@ Best practices for preventing malicious parameters or script injection are:
 - Only allow usage of pre-defined parameters.
 - Use the regular expression feature, to validate parameters that are allowed.
     - Example: If only a certain range of values are allowed, use a regular expression to check for only those characters or values that can make up the range.
-    - Validating parameters can help prevent users trying use certain characters that can be escaped, like quotes. Be aware that there can be multiple types of quotes, so using regular expressions to validate which characters you’ve decided are permissible is often easier than trying to define all the inputs that not permissible.
+    - Validating parameters can help prevent users trying use certain characters that can be escaped, like quotes. Be aware that there can be multiple types of quotes, so using regular expressions to validate which characters you've decided are permissible is often easier than trying to define all the inputs that not permissible.
 - Leverage the PowerShell module ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) in the PowerShell Gallery.
     - There can be false positives, so look for intent when something is flagged as suspicious to determine if it is a real issue or not. 
 - Microsoft Visual Studio has a Script analyzer, that can assist with checking PowerShell syntax.
-- This video titled: “DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server” gives an overview of the types of issues that you can secure against (especially the section 12:20 to 17:50):
+- This video titled: "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" gives an overview of the types of issues that you can secure against (especially the section 12:20 to 17:50):
       <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Environment Recommendations

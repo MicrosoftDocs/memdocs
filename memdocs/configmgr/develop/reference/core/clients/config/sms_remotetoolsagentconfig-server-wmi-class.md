@@ -158,7 +158,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- This applied to the remote control setting ‘Allow permitted viewers to connect using Remote Desktop Connection at admin console UI item. This property can be set only when ManageTS is true.  
+ This applied to the remote control setting 'Allow permitted viewers to connect using Remote Desktop Connection at admin console UI item. This property can be set only when ManageTS is true.  
 
  `EnforceRAandTSSettings`  
  Data type: `Boolean`  
@@ -167,7 +167,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `true` if Remote Assistance settings, which might be configured by the user in a Control Panel program, should be overridden by the Configuration Manager settings. This matches ‘Manage solicited Remote Assistance settings’.  
+ `true` if Remote Assistance settings, which might be configured by the user in a Control Panel program, should be overridden by the Configuration Manager settings. This matches 'Manage solicited Remote Assistance settings'.  
 
  `FirewallExceptionProfiles`  
  Data type: `UInt32`  
@@ -185,7 +185,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `true` if the client should set local Remote Assistance settings. This matches ‘Manage unsolicited Remote Assistance settings’.  
+ `true` if the client should set local Remote Assistance settings. This matches 'Manage unsolicited Remote Assistance settings'.  
 
  `ManageTS`  
  Data type: `Boolean`  
@@ -194,7 +194,7 @@ Class SMS_RemoteToolsAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Configuration Manager will manage Remote Desktop settings. This applies to the ‘Manage Remote Desktop Settings’ in the Admin Console’s remote desktop settings.  
+ Configuration Manager will manage Remote Desktop settings. This applies to the 'Manage Remote Desktop Settings' in the Admin Console's remote desktop settings.  
 
  `PermissionRequired`  
  Data type: `Boolean`  

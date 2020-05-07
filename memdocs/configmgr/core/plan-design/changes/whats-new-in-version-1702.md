@@ -24,8 +24,8 @@ Update 1702 for Configuration Manager current branch is available as an in-conso
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Installing updates at sites](../../servers/manage/updates.md)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
@@ -67,7 +67,7 @@ You can find the **Feedback** option:
 - When you right-click on any object in the console.   
    ![Righ-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
+  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  Changes for Updates and Servicing
@@ -88,7 +88,7 @@ The following are changes for Updates and Servicing:
   You can choose to download and install the other available updates, even when they are not the most current version. If you download an older update, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
 - **Improved cleanup of older updates**   
-  We added an automatic clean-up function that deletes the unneeded downloads from the ‘EasySetupPayload’ folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.  
+  We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.  
 
 
 ### Data Warehouse service point
@@ -182,7 +182,7 @@ For details, see [Configure high-impact task sequence settings](../../../osd/dep
 You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:
 
 - When a computer starts in Windows PE, the task sequence bootstrap dialog might display before the task sequence is available. When you click Next in this scenario, the final page of the task sequence displays with a message that there are no task sequences available. Now, you can click **Previous** to search again for available task sequences. You can repeat this process until the task sequence is available.
-- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn’t distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
+- When you run a task sequence, but dependent content packages are not yet available on distribution points, the task sequence fails. You can now distribute the missing content (if it wasn't distributed yet) or wait for the content to be available on distribution points, and then click **Previous** to have the task sequence search again for the content.
 
 ### Pre-cache content for available deployments and task sequences
 Beginning in version 1702, for available deployments of task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive. For details, see [Configure pre-cache content](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).

@@ -18,7 +18,7 @@ The custom client-side handler needs to implement a public COM interface and met
  The client extension maps closely to the Installer object, defined as part of the DeploymentType. Property values are stored in WMI and the public COM methods in the client-side handler map to detection, installation and uninstallation.  
 
 > [!IMPORTANT]
->  The COM object’s globally unique identifier needs to be registered in WMI; see the topic [How to Define the AppSynclet MOF File](../../develop/apps/how-to-define-the-appsynclet-mof-file.md).  
+>  The COM object's globally unique identifier needs to be registered in WMI; see the topic [How to Define the AppSynclet MOF File](../../develop/apps/how-to-define-the-appsynclet-mof-file.md).  
 
  A complete example of implementing the public COM interface and methods is provided for reference. Below are examples of key methods.  
 

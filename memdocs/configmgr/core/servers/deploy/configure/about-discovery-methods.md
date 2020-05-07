@@ -240,9 +240,9 @@ Heartbeat Discovery differs from other Configuration Manager discovery methods. 
 
 Heartbeat Discovery runs on a schedule configured for all clients in the hierarchy. The default schedule for Heartbeat Discovery is set to every seven days. If you change the heartbeat discovery interval, ensure that it runs more frequently than the site maintenance task **Delete Aged Discovery Data**. This task deletes inactive client records from the site database. You can configure the **Delete Aged Discovery Data** task only for primary sites. 
 
-You can also manually invoke Heartbeat Discovery on a specific client. Run the **Discovery Data Collection Cycle** on the **Action** tab of a client’s Configuration Manager control panel.  
+You can also manually invoke Heartbeat Discovery on a specific client. Run the **Discovery Data Collection Cycle** on the **Action** tab of a client's Configuration Manager control panel.  
 
-When Heartbeat Discovery runs, it creates a DDR that has the client’s current information. The client then copies this small file (about 1 KB in size) to a management point so that a primary site can process it. The file has the following information:  
+When Heartbeat Discovery runs, it creates a DDR that has the client's current information. The client then copies this small file (about 1 KB in size) to a management point so that a primary site can process it. The file has the following information:  
 
 -   Network location  
 

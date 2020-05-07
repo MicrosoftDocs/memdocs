@@ -39,7 +39,7 @@ The following example shows how to create a program, in Configuration Manager, b
 
    | Property Name |                                                                                           Property Value                                                                                            |
    |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |  CommandLine  | PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application’s XML manifest file. |
+   |  CommandLine  | PkgGUID={E742FFD6-D539-42CC-9827-73535FC81E06}:VersionGUID={19366289-8C55-44E2-A5EC-7B385EFB4C30}<br /><br /> **Note:** The GUID values are taken from the virtual application's XML manifest file. |
    |  ProgramName  |                                                                                        [Virtual application]                                                                                        |
 
 
@@ -110,7 +110,7 @@ public void CreateProgram(WqlConnectionManager connection,
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The name of the package associated with the program.|  
 |`newProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the new program.|  
 |`newProgramComment`|-   Managed: `String`<br />-   VBScript: `String`|Comment that describes the program in the Configuration Manager console.|  

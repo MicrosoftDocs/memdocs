@@ -106,7 +106,7 @@ To validate the profile was sent to the device you expect, in the [Microsoft End
 
 ### Validate the policy reached the Windows device
 
-The arrival of the policy for the profile is logged in a Windows device’s *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log, with an event ID **306**. 
+The arrival of the policy for the profile is logged in a Windows device's *DeviceManagement-Enterprise-Diagnostics-Provider* > **Admin** log, with an event ID **306**. 
 
 To open the log:
 

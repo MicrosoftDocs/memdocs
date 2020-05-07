@@ -200,7 +200,7 @@ Class SMS_EndpointProtectionHealthStatus : SMS_BaseClass
 
  Qualifiers: none  
 
- TimeLastUpdated description … Time the statistics were last updated. The default value is …  
+ Time the statistics were last updated.
 
  `TotalMemberCount`  
  Data type: `UInt32`  

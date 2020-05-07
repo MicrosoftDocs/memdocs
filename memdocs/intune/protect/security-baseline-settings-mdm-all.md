@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -22,7 +22,7 @@ zone_pivot_groups: windows-mdm-versions
 
 #audience:
 
-#ms.reviewer:  
+ms.reviewer: laarrizz 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,10 +38,13 @@ View the MDM security baseline settings that Microsoft Intune supports for devic
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
 - The most recent baseline version is **MDM Security Baseline for May 2019**
 
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
 Be sure to select the version of the baseline that you want to view.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **MDM Security Baseline for May 2019**:  
 > [!NOTE]
 > In June of 2019, the *MDM Security Baseline for May 2019* template was released as generally available (not in preview). This version of the security baseline replaces the previous baseline, the *MDM Security Baseline for October 2018*.  Profiles that were created prior to the availability of the May 2019 baseline won't update to reflect the settings and values that are in the May 2019 version.  Although you cannot create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
@@ -50,6 +53,7 @@ To learn about what's changed in this version of the baseline from the previous 
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Preview - MDM Security Baseline for October 2018**:  
 > [!NOTE]
 > This is the preview version of the MDM security baseline, released in October of 2018. This preview baseline was replaced in June of 2019 by the release of the *MDM Security Baseline for May 2019* template, which is generally available (not in preview). Profiles that were created prior to the availability of the *MDM Security Baseline for May 2019* baseline won't update to reflect the settings and values that are in the MDM Security Baseline for May 2019 version. Although you cannot create new profiles based on the preview template, you can edit and continue to use profiles you previously created that are based on the preview template.
@@ -150,11 +154,17 @@ For more information, see [Policy CSP - BitLocker](https://docs.microsoft.com/wi
 
   For BitLocker removable drive policy, configure the following setting:
 
-  - **Require encryption for write access**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **Block write access to removable data-drives not protected by BitLocker**:  
     **Default**: Yes
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Require encryption for write access**:  
+    **Default**: Yes
 
 - **BitLocker removable drive policy**:  
   This policy setting is used to control the encryption method and cipher strength. The values of this policy determine the strength of the cipher that BitLocker uses for encryption. Enterprises may want to control the encryption level for increased security (AES-256 is stronger than AES-128). If you enable this setting, you can configure an encryption algorithm and key cipher strength for fixed data drives, operating system drives, and removable data drives individually. For fixed and operating system drives, we recommend that you use the XTS-AES algorithm. For removable drives, you should use AES-CBC 128-bit or AES-CBC 256-bit if the drive is used in other devices that aren't running Windows 10, version 1511 or later. Changing the encryption method has no effect if the drive is already encrypted or if encryption is in progress. In these cases, this policy setting is ignored.  
@@ -288,7 +298,7 @@ For more information, see [Policy CSP - DataProtection](https://docs.microsoft.c
 
 For more information, see [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) in the Windows documentation.
 
-- **Credential Guard**:  
+- **Turn on credential guard**:  
   This setting lets users turn on Credential Guard with virtualization-based security to help protect credentials at next reboot.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -388,7 +398,7 @@ For more information, see [Policy CSP - DeviceLock](https://docs.microsoft.com/w
 
     **Default**: 60
 
-  - **Required password type**:  
+  - **Required password**:  
     Determines the type of PIN or password required.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -470,24 +480,24 @@ For more information, see [Policy CSP - EventLogService](https://docs.microsoft.
 For more information, see [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in the Windows documentation.
 
 - **Block Windows Spotlight**:  
-  Allows IT admins to turn off all Windows Spotlight Features - Window spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features.  
+  Allows IT admins to turn off (block) all Windows Spotlight Features. This includes Window spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Default**: Yes
 
-  When *Block Windows Spotlight* is set to *Yes*, the following settings are available.
+  When *Block Windows Spotlight* is set to *Not configured*, Windows Spotlight isn't blocked on devices, and you can then configure the following settings to block selected items for Windows Spotlight:
 
   - **Block third-party suggestions in Windows Spotlight**:  
     Specifies whether to allow app and content suggestions from third-party software publishers in Windows spotlight features like lock screen spotlight, suggested apps in the Start menu, and Windows tips. Users may still see suggestions for Microsoft features, apps, and services.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Default**: Yes
+    **Default**: Not configured
 
   - **Block consumer specific features**:  
     Allows IT admins to turn on experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install, and redirect tiles.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Default**: Yes
+    **Default**: Not configured
 
 ## Exploit Guard
 
@@ -896,7 +906,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
 
   **Default**: Enabled
 
-- **Internet Explorer trusted zone don't run antimalware against Active X controls**:  
+- **Internet Explorer trusted zone do not run antimalware against Active X controls**:  
   This policy setting determines whether Internet Explorer runs antimalware programs against ActiveX controls, to check if they're safe to load on pages. If you enable this policy setting, Internet Explorer won't check with your antimalware program to see if it's safe to create an instance of the ActiveX control. If you disable this policy setting, Internet Explorer always checks with your antimalware program to see if it's safe to create an instance of the ActiveX control. If you don't configure this policy setting, Internet Explorer always checks with your antimalware program to see if it's safe to create an instance of the ActiveX control. Users can turn this behavior on or off, using Internet Explorer Security settings.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067115)
 
@@ -1508,7 +1518,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](https://do
 
   **Default**: Yes
   
-- **Allow UI access applications for secure locations**:  
+- **Only allow UI access applications for secure locations**:  
   This policy setting controls whether User Interface Accessibility (UIAccess or UIA) programs can automatically disable the secure desktop for elevation prompts used by a standard user.
 
   - *Yes* - UIA programs, including Windows Remote Assistance, automatically disable the secure desktop for elevation prompts. If you don't disable the "User Account Control: Switch to the secure desktop when prompting for elevation" policy setting, the prompts appear on the interactive user's desktop instead of the secure desktop.
@@ -1546,151 +1556,168 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](https://do
 
 For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
-- **Scan incoming mail messages**:  
-  Allows or disallows scanning of email.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Default**: Yes
-
-- **Office apps launch child process type**:  
-  Office apps won't be allowed to create child processes. This includes Word, Excel, PowerPoint, OneNote, and Access. This is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Default**: Block
-
-- **Defender sample submission consent type**:  
-  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Default**: Send safe samples automatically
-
-- **Signature update interval (in hours)**:  
-  Defender signature update interval in hours.
-
-  **Default**: 4
-
-- **Script downloaded payload execution type**:  
-  Defender script downloaded payload execution type.
-
-  **Default**: Block
-  
-- **Prevent credential stealing type**:  
-  Microsoft Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Microsoft Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Default**: Enable
-
-- **Email content execution type**:  
-  This rule blocks the following file types from running or launching from an email seen in either Microsoft Outlook or webmail (such as Gmail.com or Outlook.com): Executable files (such as .exe, .dll, or .scr) Script files (such as a PowerShell .ps, VisualBasic .vbs, or JavaScript .js file) Script archive files.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Default**: Block
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Adobe Reader Launch in a child process**:  
+- **Block Adobe Reader from creating child processes**:  
 This rule prevents attacks by blocking Adobe Reader from creating additional processes. Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader. By blocking child processes from being generated by Adobe Reader, malware attempting to use it as a vector are prevented from spreading.
 [Learn more](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Default**: Enable
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Network protection**:  
-  This policy allows you to turn on network protection (block/audit) or off in Microsoft Defender Exploit Guard. Network protection is a feature of Microsoft Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites. Value type is integer. If you enable this setting, network protection is turned on and employees can't turn it off. Its behavior can be controlled by the following options: Block and Audit. If you enable this policy with the "Block" option, users and apps are blocked from connecting to dangerous domains. You can see this activity in Microsoft Defender Security Center. If you enable this policy with the "Audit" option, users/apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Microsoft Defender Security Center. If you disable this policy, users/apps won't be blocked from connecting to dangerous domains. You'll not see any network activity in Microsoft Defender Security Center. If you don't configure this policy, network blocking is disabled by default.  
-  [Learn more](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Office communication apps launch in a child process**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Default**: Enable
+
+- **Enter how often (0-24 hours) to check for security intelligence updates**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Specify how often to check for new signatures. A value of 1 is one hour, 2 is two hours, and so on.
+
+  **Default**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Defender schedule scan day**:  
   Defender schedule scan day.
 
   **Default**: Everyday
 
-- **Cloud-delivered protection**:  
-  To best protect your PC, Microsoft Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Turn on cloud-delivered protection**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default which enables the feature but allows the user to disable it.
 
   **Default**:  Yes  
 
-- **Defender potentially unwanted app action**:  
-  The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might do actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Turn on real-time protection**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Default**: Block  
+  When this setting is set to Yes, real-time monitoring will be enforced and the user cannot disable it. When set to Not configured, the setting is returned to client default which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
-- **Script obfuscated macro code type**:  
-  Malware and other threats can attempt to obfuscate or hide their malicious code in some script files. This rule prevents scripts that appear to be obfuscated from running.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Default**: Block
-
-- **Scan removable drives during a full scan**:  
-  Allows Microsoft Defender to scan for malicious and unwanted software in removable drives (for example, flash drives) during a full scan. Microsoft Defender Antivirus scans all files on USB devices before execution.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Default**: Yes  
+  **Default**:  Yes  
 
 - **Scan archive files**:  
-  Defender scan archive files.
+  CSP: [](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  When set to Yes, archive files such as ZIP or CAB file scanning will be enforced. When set to Not configured, the setting will be returned back to client default which is to scan archived files, however the user may disable this.
 
   **Default**: Yes
 
-- **Behavior monitoring**:  
-  Allows or disallows Microsoft Defender Behavior Monitoring functionality. Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Turn on behavior monitoring**:  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  When this setting is set to Yes, behavior monitoring will be enforced and the user cannot disable it. When set to Not configured, the setting is returned to client default which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
 
   **Default**: Yes
 
-- **Scan files opened from network folders**:  
-  If files are read-only, user won't be able to remove any detected malware.
+- **Scan incoming mail messages**:  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  When set to Yes, e-mail mailbox and mail files such as PST, DBX, MNX, MIME and BINHEX will be scanned. When Not configured, the setting will return to client default of e-mail files not being scanned.
 
   **Default**: Yes
 
-- **Untrusted USB process type**:  
-  With this rule, admins can prevent unsigned or untrusted executable files from running from USB removable drives, including SD cards.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Scan removable drives during a full scan**:  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  **Default**: Block
+  When set to Yes, during a full scan removable drives (e.g. USB flash drives) will be scanned. When set to Not Configured, the setting will return to client default which scans removable drives, however the user can disable this.
+  **Default**: Yes  
 
-- **Office apps other process injection type**:  
-  Office apps, including Word, Excel, PowerPoint, and OneNote, can't inject code into other processes. This is typically used by malware to run malicious code in an attempt to hide the activity from antivirus scanning engines.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Block Office applications from injecting code into other processes**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  When set to Yes, Office applications will be blocked from injecting code into other processes. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Default**:  Block
 
-- **Office macro code allow Win32 imports type**:  
-  Malware can use macro code in Office files to import and load Win32 DLLs, which is used to make API calls to allow further infection throughout the system. This rule attempts to block Office files that contain macro code that can import Win32 DLLs. This includes Word, Excel, PowerPoint, and OneNote.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Block Office applications from creating executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  When set to Yes, Office applications will not be allowed to create executable content. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 3B576869-A4EC-4529-8536-B80A7769E899
+
+  **Default**:  Block
+
+- **Block all Office applications from creating child processes**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  When set to Audit mode, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+
+  **Default**:  Block
+
+- **Block Win32 API calls from Office macro**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  When set to Yes, Office macro's will be blocked from using Win32 API calls. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Default**: Block
+
+- **Block execution of potentially obfuscated scripts (js/vbs/ps)**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  When set to yes, Defender will block execution of obfuscated scripts. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Default**: Block
+
+- **Email content execution type**:    
+  [Block executable content download from email and webmail clients](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  When set to Yes, executable content downloaded from email and webmail clients will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off.
 
   **Default**: Block
 
-- **Defender cloud block level**:  
-  Defender cloud block level.
+- **Prevent credential stealing type**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  When set to Yes, attempts to steal credentials via lsass.exe will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
-  **Default**: Not Configured
+  **Default**: Enable
 
-- **Real-time monitoring**:  
-  Defender requires real-time monitoring.
+- **Defender potentially unwanted app action**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
-  **Default**: Yes
+  The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might do actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.
+
+  **Default**: Block
+
+- **Block untrusted and unsigned processes that run from USB**:  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  When set to Yes, untrusted/unsigned processes executing from a USB drive will be blocked. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **Default**: Block
+
+- **Network protection**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  When set to Yes, network protection will be enabled for all users on the system. Network protection protects employees from accessing phishing scams, and malicious content on the Internet. This includes third-party browsers. Setting this to Audit only, users will not be blocked from dangerous domains however Windows events will be raised instead. Setting this to Not COnfigured will return the setting to Windows default, which is disabled.
+
+  **Default**: Enable
+
+- **Defender sample submission consent type**:  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+
+  **Default**: Send safe samples automatically
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Office communication apps launch in a child process**:  
-  **Default**:  Enable
+- **Scan network files**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Default**: Yes
+
+- **Block JavaScript or VBScript from launching downloaded executable content**  
+  [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Office apps executable content creation or launch type**:  
-  This rule targets typical behaviors used by suspicious and malicious add-ons and scripts (extensions) that create or launch executable files. This is a typical malware technique. Extensions are blocked from being used by Office apps. Typically these extensions use the Windows Scripting Host (.WSH files) to run scripts that automate certain tasks or provide user-created add-on features.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Default**: Block
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## MS Security Guide
 
@@ -1740,7 +1767,7 @@ For more information, see [Policy CSP - MSSLegacy](https://docs.microsoft.com/wi
 
   **Default**: Highest protection
 
-- **Network ICMP redirects override OSPF generated**:  
+- **Network ICMP redirects override OSPF generated routes**:  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Default**: Disabled
@@ -1794,6 +1821,7 @@ For more information, see [Policy CSP - RemoteAssistance](https://docs.microsoft
 
   **Default**: Disable Remote Assistance
 
+<!-- These settings are not available: 
   When set to *Enable Remote Assistance*, configure the following additional settings:
 
   - **Remote Assistance solicited permission**:  
@@ -1807,6 +1835,7 @@ For more information, see [Policy CSP - RemoteAssistance](https://docs.microsoft
 
   - **E-Mail invitation method**:  
     **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1924,6 +1953,9 @@ For more information, see [Policy CSP - Search](https://docs.microsoft.com/windo
 
 For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Block execution of unverified files**:  
   Block user from running unverified files.
 
@@ -1940,6 +1972,26 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Turn on Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Setting this to Yes will enforce the use of SmartScreen for all users. Setting this to Not configured will return the setting to Windows default which is to enable SmartScreen, however users may change this setting. To disable SmartScreen, use a custom URI.
+
+  **Default**: Yes
+
+- **Block users from ignoring SmartScreen warnings**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Setting this to Yes, SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it. Setting this to Not configured will return the setting to Windows default which is to allow the user override. This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
+
+  **Default**: Yes
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## System
 
@@ -1998,52 +2050,40 @@ For more information, see [Policy CSP - WindowsConnectionManager](https://docs.m
 
 ## Windows Hello for Business
 
-- **Enable to use enhanced anti-spoofing, when available**
+- **Block Windows Hello for Business**  
+  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards. If you disable or do not configure this policy setting, the device provisions Windows Hello for Business. If you enable this policy setting, the device does not provision Windows Hello for Business for any user.
 
-  If Yes, devices will use enhanced anti-spoofing, when available. If No, anti-spoofing will be blocked. Not configured will honor configurations done on the client.  
-  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Default**: Enabled
+  
+  When set to *Disabled*, you can configure the following settings:
 
-  **Default**: Yes
+  - **Minimum PIN length**  
+    Minimum PIN length must be between 4 and 127.
 
-- **Configure Windows Hello for Business**
+    **Default**: *Not configured*
 
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.
+  - **Enable to use enhanced anti-spoofing, when available**  
+    [Anti-spoofing protection](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > The options for this setting are reversed from their implied meaning. While reversed, a value of *Yes* does not enable Windows Hello and instead is treated as *Not configured*. When this setting is set to *Not configured*, Windows Hello is enabled on devices that receive this baseline.
-  >
-  > The following descriptions have been revised to reflect this behavior. The reversal of settings will be fixed in a future update to this security baseline.
+    If enabled, devices will use enhanced anti-spoofing, when available. If not configured, the client configuration for anti-spoofing will be honored.
 
-  - When set to *Not configured*, Windows Hello is enabled, and the device provisions Windows Hello for Business.
-  - When set to *Yes*, the baseline doesn't affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If it's enabled, it remains enabled.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Default**: Not configured
 
-  You can't disable Windows Hello for Business through this baseline. You can disable Windows Hello for Business when you configure [Windows enrollment](windows-hello.md), or as part of a device configuration profile for [identity protection](identity-protection-configure.md).  
+  - **Lowercase letters in PIN**:  
+    If required, user PIN must include at least one lowercase letter.
 
-  **Default**: Yes
+    **Default**: Not allowed
 
-- **Require lowercase letters in PIN**:  
-  If required, user PIN must include at least one lowercase letter.
+  - **Special characters in PIN**:  
+    If required, user PIN must include at least one special character.
 
-  **Default**: Allowed
+    **Default**: Not allowed
+ 
 
-- **Require special characters in PIN**:  
-  If required, user PIN must include at least one special character.
+  - **Uppercase letters in PIN**:  
+    If required, user PIN must include at least one uppercase letter.
 
-  **Default**: Allowed
-
-- **Minimum PIN length**:  
-  Minimum PIN length must be between 4 and 127.
-
-  **Default**: 6
-
-- **Require uppercase letters in PIN**:  
-  If required, user PIN must include at least one uppercase letter.
-
-  **Default**: Allowed
+    **Default**: Not allowed
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2069,7 +2109,7 @@ For more information, see [Policy CSP - WindowsInkWorkspace](https://docs.micros
 
 For more information, see [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) in the Windows documentation.
 
-- **Power shell shell script block logging**:  
+- **PowerShell script block logging**:  
   This policy setting enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log. If you enable this policy setting, Windows PowerShell will log the processing of commands, script blocks, functions, and scripts - whether invoked interactively, or through automation. If you disable this policy setting, logging of PowerShell script input is disabled. If you enable the Script Block Invocation Logging, PowerShell additionally logs events when invocation of a command, script block, function, or script starts or stops. Enabling Invocation Logging generates a high volume of event logs. Note: This policy setting exists under both Computer Configuration and User Configuration in the Group Policy Editor. The Computer Configuration policy setting takes precedence over the User Configuration policy setting.  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067330)
 

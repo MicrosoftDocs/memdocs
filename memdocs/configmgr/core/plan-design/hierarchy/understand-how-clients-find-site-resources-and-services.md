@@ -58,7 +58,7 @@ A client selects a management point to communicate with based on the client's  c
 
 You can use preferred management points. Preferred management points are management points from a client's assigned site that are associated with a boundary group that the client is using to find site system servers. A preferred management point's association with a boundary group as a site system server is similar to how distribution points or state migration points are associated with a boundary group. If you enable preferred management points for the hierarchy, when a client uses a management point from its assigned site, it will try to use a preferred management point before using other management points from its assigned site.  
 
-You can also use the information in the [management point affinity](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) blog on TechNet.com to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and lets the client use one or more specific management points.  
+You can also use the information in the [management point affinity](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) blog to configure management point affinity. Management point affinity overrides the default behavior for assigned management points and lets the client use one or more specific management points.  
 
 Each time a client needs to contact a management point, it checks the MP list, which it stores locally in Windows Management Instrumentation (WMI). The client creates an initial MP list when it's installed. The client then periodically updates the list with details about each management point in the hierarchy.  
 
@@ -127,12 +127,12 @@ After a client establishes communication with a management point, it continues t
 The client then randomly selects a new management point to use.  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](/../../servers/deploy/configure/publish-site-data.md).  
 
 A client can use AD DS for service location when all the following conditions are true:  
 
-- The Active Directory [schema has been extended](https://technet.microsoft.com/library/mt345589.aspx) or was extended for System Center 2012 Configuration Manager.  
-- The [Active Directory forest is configured for publishing](https://technet.microsoft.com/library/hh696542.aspx), and Configuration Manager sites are configured to publish.  
+- The Active Directory [schema has been extended](../network/extend-the-active-directory-schema.md) or was extended for System Center 2012 Configuration Manager.  
+- The [Active Directory forest is configured for publishing](/../../servers/deploy/configure/publish-site-data.md), and Configuration Manager sites are configured to publish.  
 - The client computer is a member of an Active Directory domain and can access a global catalog server.  
 
 If a client cannot find a management point to use for service location from AD DS, it attempts to use DNS.  
@@ -144,7 +144,7 @@ Consider using DNS for service location when any of the following conditions are
 - The AD DS schema is not extended to support Configuration Manager.
 - Clients on the intranet are located in a forest that is not enabled for Configuration Manager publishing.  
 - You have clients on workgroup computers, and those clients are not configured for internet-only client management. (A workgroup client configured for the internet will communicate only with internet-facing management points and will not use DNS for service location.)  
-- You can [configure clients to find management points from DNS](https://technet.microsoft.com/library/gg682055).  
+- You can [configure clients to find management points from DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 When a site publishes service location records for management points to DNS:  
 
@@ -168,7 +168,7 @@ To publish management points to DNS, the following two conditions must be true:
 
 **When your DNS servers support automatic updates**, you can configure Configuration Manager to automatically publish management points on the intranet to DNS, or you can manually publish these records to DNS. When management points are published to DNS, their intranet FQDN and port number are published in the service location (SRV) record. You configure DNS publishing at a site in the site's Management Point Component Properties. For more information, see  [Site components for Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
-**When your DNS zone is set to “Secure only” for dynamic updates**, only the first management point to publish to DNS can do so successfully with default permissions.
+**When your DNS zone is set to "Secure only" for dynamic updates**, only the first management point to publish to DNS can do so successfully with default permissions.
 
 If only one management point can successfully publish and change its DNS record, and the management point server is healthy, clients can get the full MP list from that management point and then find their preferred management point.
 

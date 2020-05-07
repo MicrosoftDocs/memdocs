@@ -64,7 +64,7 @@ This view can be joined to other views by using the **TaskID** column.
  
 ### v_BgbMP
 
-List the server name and database ID’s of the management points that send out client notifications.
+List the server name and database ID's of the management points that send out client notifications.
 This view can be joined to other views by using the **ServerName** column.
  
 ### v_BgbServerCurrent

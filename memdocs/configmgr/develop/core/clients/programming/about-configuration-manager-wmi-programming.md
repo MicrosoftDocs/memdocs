@@ -24,10 +24,10 @@ Programming the Configuration Manager client Windows Management Instrumentation 
 
  For more information about using Configuration Manager client WMI namespace objects by using the System.Management namespace, see [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md).  
 
- For more information about using the System.Management namespace, see [System.Management Namespace](https://go.microsoft.com/fwlink/?LinkID=84308).  
+ For more information about using the System.Management namespace, see [System.Management Namespace](https://docs.microsoft.com/dotnet/api/system.management?view=dotnet-plat-ext-3.1).  
 
 ## VBScript  
- If you are using VBScript you access and use Configuration Manager client WMI objects by using the same coding techniques that are used for accessing other WMI objects, including the Configuration Manager WMI objects. For more information, see the [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page).  
+ If you are using VBScript you access and use Configuration Manager client WMI objects by using the same coding techniques that are used for accessing other WMI objects, including the Configuration Manager WMI objects. For more information, see the [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page).  
 
 ## Client WMI Namespace  
  The Configuration Manager client WMI namespace begins at \\\\<client\>\root\ccm. For example, root\ccm contains the [SMS_Client](../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md) class that can be used to get and set client information.  
@@ -38,5 +38,5 @@ Programming the Configuration Manager client Windows Management Instrumentation 
  [How to Perform an Asynchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md)   
  [How to Perform a Synchronous Query by Using System.Management](../../../../develop/core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md)   
  [How to Read a WMI Object by Using System.Management](../../../../develop/core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md)   
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
- [System.Management Namespace](/dotnet/api/system.management)
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
+ [System.Management Namespace](https://docs.microsoft.com/dotnet/api/system.management)

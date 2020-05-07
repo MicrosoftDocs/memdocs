@@ -30,7 +30,7 @@ manager: dougeby
      ![Screenshot showing successful registration](../../develop/apps/media/appmanregistrationscreenshot.gif "AppManRegistrationScreenshot")  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=215691).  
+> For more information on using the Create Application Wizard, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
 #### Create an application using the Create Application Wizard  
 
@@ -45,7 +45,7 @@ manager: dougeby
 5.  Continue through the wizard until successful completion.  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Applications in Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=215691).  
+> For more information on using the Create Application Wizard, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
 #### Create a deployment type using the Create Deployment Type Wizard  
 
@@ -60,7 +60,7 @@ manager: dougeby
 5.  Continue through the wizard until successful completion.  
 
 > [!TIP]
->  For additional information on using the Create Application Wizard, see [How to Create Deployment Types in Configuration Manager](https://go.microsoft.com/fwlink/?LinkID=215692).  
+> For more information on using the Create Application Wizard, see [Create applications](../../apps/deploy-use/create-applications.md).  
 
 #### Check the Deployment Type Properties  
 
@@ -106,7 +106,7 @@ manager: dougeby
 4.  The results should appear similar to the below list:  
 
 ```text
-     <AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/…  
+     <AppMgmtDigest xmlns="http://schemas.microsoft.com/SystemCenterConfigurationManager/...
 ```
 
 5.  Double-click the result value to view the digest.  
@@ -145,11 +145,11 @@ manager: dougeby
 
 4. The results should appear similar to the below list:  
 
-    \<*Technology*>*Detect_Synclet.ActionType="Detect",AppDeliveryTypeId="ScopeId\\* …  
+    \<*Technology*>*Detect_Synclet.ActionType="Detect",AppDeliveryTypeId="ScopeId\\* ...
 
-    \<*Technology*>*Install_Synclet.ActionType="Install" ,AppDeliveryTypeId="ScopeId\\* …  
+    \<*Technology*>*Install_Synclet.ActionType="Install" ,AppDeliveryTypeId="ScopeId\\* ...
 
-    \<*Technology*>_Uninstall_Synclet.ActionType="Uninstall" ,AppDeliveryTypeId="ScopeId_ …  
+    \<*Technology*>_Uninstall_Synclet.ActionType="Uninstall" ,AppDeliveryTypeId="ScopeId_ ...
 
 #### Ensure that each action performs as expected on the client  
 

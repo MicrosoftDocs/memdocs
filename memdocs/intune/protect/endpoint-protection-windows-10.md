@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -753,17 +753,6 @@ These settings apply specifically to fixed data drives.
     - **Backup recovery passwords and key packages**  
     - **Backup recovery passwords only**  
 
-  - **Client-driven recovery password rotation**  
-    **Default**: Key rotation enabled for Azure AD-joined devices  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).  
-
-    - Not configured  
-    - Key rotation disabled  
-    - Key rotation enabled for Azure AD-joined deices  
-    - Key rotation enabled for Azure AD and Hybrid-joined devices  
-
   - **Store recovery information in Azure Active Directory before enabling BitLocker**  
     **Default**: Not configured  
  
@@ -1272,9 +1261,8 @@ Use these options to configure the local security settings on Windows 10 devices
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Block** - Users can press a docked portable device's physical eject button to safely undock the device.  
-  - **Not configured** - A user must sign in to the device, and receive permission to undock the device.  
+  - **Block** - A user must sign in to the device, and receive permission to undock the device.
+  - **Not configured** - Users can press a docked portable device's physical eject button to safely undock the device.
 
 - **Install printer drivers for shared printers**  
   **Default**:  Not configured  
@@ -1317,8 +1305,8 @@ Use these options to configure the local security settings on Windows 10 devices
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Enable** - Pressing CTRL+ALT+DEL isn't required for users to sign in.  
-  - **Not configured** Require users to press CTRL+ALT+DEL before logging on to Windows.  
+  - **Enable** -  Require users to press CTRL+ALT+DEL before logging on to Windows.
+  - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
 
 - **Smart card removal behavior**  
   **Default**: Lock workstation   

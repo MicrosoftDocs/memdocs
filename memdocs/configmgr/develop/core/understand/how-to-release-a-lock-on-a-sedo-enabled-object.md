@@ -21,7 +21,7 @@ manager: dougeby
 
 3.  Assign the object path of the object you wish to unlock to the `ObjectRelPath` property.  
 
-4.  Create an `InvokeMethodOptions` object instance. On the Context property, add a name/value pair. The name must be “MachineName��? and the value must be name of the computer releasing the lock. For more information, see [How to Acquire a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md)  
+4.  Create an `InvokeMethodOptions` object instance. On the Context property, add a name/value pair. The name must be "MachineName" and the value must be name of the computer releasing the lock. For more information, see [How to Acquire a Lock on a SEDO-Enabled Object](../../../develop/core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md)  
 
 5.  Call **InvokeMethod** on the `SMS_ObjectLock` instance.  
 

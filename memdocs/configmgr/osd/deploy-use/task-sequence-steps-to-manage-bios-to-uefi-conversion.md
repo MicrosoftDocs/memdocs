@@ -49,12 +49,12 @@ Windows 10 Creators Update introduces a simple conversion tool that automates th
 **Requirements**:
 - Windows 10 Creators Update
 - Computers that support UEFI
-- OEM tool that converts the computer’s firmware from BIOS to UEFI
+- OEM tool that converts the computer's firmware from BIOS to UEFI
 
 ### To convert from BIOS to UEFI during an in-place upgrade
 1. Create an operating system upgrade task sequence that performs an in-place upgrade to Windows 10 Creators Update.
 2. Edit the task sequence. In the **Post-Processing group**, add the following task sequence steps:
-   1. From General, add a **Run Command Line** step. You will add the command line for the MBR2GPT tool that coverts a disk from MBR to GPT without modifying or deleting data from the disk. In Command line, type the following:  **MBR2GPT /convert /disk:0 /AllowFullOS**. You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full operating system. You can do this by adding a step to restart the computer to WinPE before the step to run the MBR2GPT.EXE tool and removing the /AllowFullOS option from the command line. For details about the tool and available options, see [MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt).
+   1. From General, add a **Run Command Line** step. You will add the command line for the MBR2GPT tool that coverts a disk from MBR to GPT without modifying or deleting data from the disk. In Command line, type the following:  **MBR2GPT /convert /disk:0 /AllowFullOS**. You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full operating system. You can do this by adding a step to restart the computer to WinPE before the step to run the MBR2GPT.EXE tool and removing the /AllowFullOS option from the command line. For details about the tool and available options, see [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
    2. Add a step to start the OEM tool that will convert the firmware from BIOS to UEFI. This will typically be a Run Command Line task sequence step with a command line to start the OEM tool.
    3. From General, add the **Restart Computer** step. For Specify what to run after restart, select **The currently installed default operating system**.
 3. Deploy the task sequence.

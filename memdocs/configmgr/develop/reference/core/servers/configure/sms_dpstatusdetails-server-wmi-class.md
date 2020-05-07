@@ -232,7 +232,7 @@ Class SMS_DPStatusDetails : SMS_BaseClass
 
  Qualifiers: [not_null, read]  
 
- NALPath description … NALPath. The default value is …  
+ The site's definition of the distribution point's location.
 
  `PackageID`  
  Data type: `String`  

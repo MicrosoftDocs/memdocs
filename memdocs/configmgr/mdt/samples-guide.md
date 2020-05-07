@@ -24,7 +24,7 @@ This guide is part of Microsoft Deployment Toolkit (MDT) and guides a specialist
 
  Review the list of scenario topics in the Table of Contents.  
 
-1. Select the scenario that most closely represents your organization’s deployment goals.  
+1. Select the scenario that most closely represents your organization's deployment goals.  
 
 2. Review the sample configuration settings for the selected scenario.  
 
@@ -961,9 +961,9 @@ Subsection=Server-%IsServer%
 
    ```ini  
    [Settings]  
-   …  
+   ...
    Priority=MacAddress, DefaultGateway, DynamicPackages, Default  
-   …  
+   ...
    ```  
 
 5. Create a `[DynamicPackages]` section to specify the name of a database section.  
@@ -1511,7 +1511,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 9. Click **OK**.  
 
 ### WMI Queries in Conditions  
- Use the **WMI Query** condition to run any WMI query. The condition is evaluated as True if the query returns at least one result. For example, consider that a deployment team needs to upgrade the operating system of all servers of a given model—Dell 1950, for instance. You can use a WMI query to check each computer’s model and proceed with the deployment only if the right model is found.  
+ Use the **WMI Query** condition to run any WMI query. The condition is evaluated as True if the query returns at least one result. For example, consider that a deployment team needs to upgrade the operating system of all servers of a given model—Dell 1950, for instance. You can use a WMI query to check each computer's model and proceed with the deployment only if the right model is found.  
 
  **To add a WMI Query condition to a task sequence step**  
 
@@ -1895,7 +1895,7 @@ IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating s
 
 7. Click **Next**.  
 
-8. On the **Distribution Agent Security** page, click **…** to open the **Distribution Agent Security** dialog box.  
+8. On the **Distribution Agent Security** page, click **...** to open the **Distribution Agent Security** dialog box.  
 
 9. Type the details of the account to use for the distribution agent, and then click **Next**.  
 
@@ -2167,7 +2167,7 @@ ParameterCondition=OR
 
  **Server weight/sum of all server weights**  
 
- In  the previous example, the three servers at Contoso HQ are listed as 1, 2, and 4. The likelihood of a server with a weighting of 2 being selected becomes 2 in 7. Therefore, to use the weighting system, determine the capacity of the servers available at a location, and weight each server by the server’s capacity in relation to each of the other servers.  
+ In  the previous example, the three servers at Contoso HQ are listed as 1, 2, and 4. The likelihood of a server with a weighting of 2 being selected becomes 2 in 7. Therefore, to use the weighting system, determine the capacity of the servers available at a location, and weight each server by the server's capacity in relation to each of the other servers.  
 
 ### Adding the LocationServer.xml File to the Extra Files Directory  
  After you have created the LocationServer.xml file, add it to the LiteTouch_x86 and LiteTouch_x64 Windows PE boot images in the ***X:\\Deploy\Control folder***. Using the Deployment Workbench, add other files and folders to these Windows PE images by specifying an additional directory to add in the deployment share properties.  
@@ -2571,7 +2571,7 @@ Function Main()
 
   iRetVal = SUCCESS  
 
-  oLogging.CreateEntry "Begin example script…", _  
+  oLogging.CreateEntry "Begin example script...", _  
     LogTypeInfo  
 
   ' %ServerA% is a generic variable available within  
@@ -2927,9 +2927,9 @@ The following table details some useful functions available, and their output. F
 #### Specify the Device Driver Application in CustomSettings.ini  
  When an LTI or ZTI deployment begins, one of the first actions to be completed is the processing of the BootStrap.ini and CustomSettings.ini control files. Both of these files contain rules that can be used to dynamically customize the deployment.  
 
- Because of the way MDT processes the CustomSettings.ini file, you can use it to add applications based on specific conditions. This logic will be used to add device driver–specific applications during deployment based on specific hardware types. Applications are referenced in CustomSettings.ini by the application’s GUID, located in the Applications.xml file in the deployment share.  
+ Because of the way MDT processes the CustomSettings.ini file, you can use it to add applications based on specific conditions. This logic will be used to add device driver–specific applications during deployment based on specific hardware types. Applications are referenced in CustomSettings.ini by the application's GUID, located in the Applications.xml file in the deployment share.  
 
- **To locate an imported application’s GUID**  
+ **To locate an imported application's GUID**  
 
 1. In the deployment share of the deployment server, open the Control folder—for example, D:\Production Deployment Share\Control.  
 
@@ -3052,7 +3052,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 6.  On the **Applications** tab, add each of the device driver applications required for that model of hardware.  
 
 ## Initiating MDT Using Windows Deployment Services  
- Windows Server 2008 uses Windows Deployment Services as an updated and redesigned version of Remote Installation Services, the default deployment tool in Windows Server 2003 with SP2. Using Windows Deployment Services, you can deploy Windows operating systems—particularly Windows 7, Windows Server 2008 or later operating systems—across a network using either a computer’s PXE-enabled network adapter or boot media.  
+ Windows Server 2008 uses Windows Deployment Services as an updated and redesigned version of Remote Installation Services, the default deployment tool in Windows Server 2003 with SP2. Using Windows Deployment Services, you can deploy Windows operating systems—particularly Windows 7, Windows Server 2008 or later operating systems—across a network using either a computer's PXE-enabled network adapter or boot media.  
 
  Before deploying Windows Deployment Services, determine which of the following integration options best suits your environment:  
 
@@ -3137,7 +3137,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 #### Use Windows Deployment Services to Automatically Detect the Deployment Server  
  An additional option is available when using Windows Deployment Services to host MDT boot images when the MDT deployment share is hosted on the same server as Windows Deployment Services.  
 
- When a PXE client loads the MDT boot image, the name of the Windows Deployment Services server hosting the boot image is captured and placed in the MDTProperty **WDSServer**. You can then reference this property in the boot image’s BootStrap.ini file and in the deployment share’s CustomSettings.ini file by the **DeployRoot** property. Doing so results in a client that boots from Windows Deployment Services automatically using the deployment share hosted on the Windows Deployment Services server. This eliminates the need to specify a server name in any configuration file.  
+ When a PXE client loads the MDT boot image, the name of the Windows Deployment Services server hosting the boot image is captured and placed in the MDTProperty **WDSServer**. You can then reference this property in the boot image's BootStrap.ini file and in the deployment share's CustomSettings.ini file by the **DeployRoot** property. Doing so results in a client that boots from Windows Deployment Services automatically using the deployment share hosted on the Windows Deployment Services server. This eliminates the need to specify a server name in any configuration file.  
 
  **To set the local Windows Deployment Services server as the deployment server**  
 
@@ -3305,7 +3305,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 
 - **Phase 3**. Complete deployment of the target computer in the production environment.  
 
-  Phase 1 and Phase 3 are typically performed by the deployment organization. Depending on the use of the OEM preload process in the organization, Phase 2 may be performed by the organization or by the computer hardware vendor that supplies the computers. If the organization performs Phase 2, then the staging environment is within the organization. If an OEM performs Phase 2, then the staging environment is in the OEM’s environment.  
+  Phase 1 and Phase 3 are typically performed by the deployment organization. Depending on the use of the OEM preload process in the organization, Phase 2 may be performed by the organization or by the computer hardware vendor that supplies the computers. If the organization performs Phase 2, then the staging environment is within the organization. If an OEM performs Phase 2, then the staging environment is in the OEM's environment.  
 
 #### Overview of MDT Configuration Files in the OEM Preload Process  
  Separate MDT configuration files (CustomSettings.ini and Bootstrap.ini) are used by the task sequences run during Phase 1 and Phase 3 of the OEM preload process. However, both configuration files exist simultaneously in different folder structures.  
@@ -3326,7 +3326,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 ### Staged Deployments Using LTI  
  For LTI deployments, perform the OEM preload process using a *Removable media (Media)* deployment share type. Other deployment share types are not supported for the OEM preload process.  
 
- To perform the OEM preload process, create a task sequence based on the Litetouch OEM Task Sequence task sequence template, in addition to any task sequences that will be used to deploy the target operating system. Then, create a *Removable media (Media)* deployment share that will ultimately create an ISO file of the deployment share contents, specifically the LiteTouchPE_x86.iso file or LiteTouchPE_x64.iso file (based on the target computer’s processor platform). The deployment share update process also creates a folder structure that can be used to create Universal Disk Format media.  
+ To perform the OEM preload process, create a task sequence based on the Litetouch OEM Task Sequence task sequence template, in addition to any task sequences that will be used to deploy the target operating system. Then, create a *Removable media (Media)* deployment share that will ultimately create an ISO file of the deployment share contents, specifically the LiteTouchPE_x86.iso file or LiteTouchPE_x64.iso file (based on the target computer's processor platform). The deployment share update process also creates a folder structure that can be used to create Universal Disk Format media.  
 
 #### LTI OEM Preload Process—Phase 1: Create a Media-Based Image  
  The deployment organization performs the first phase in the OEM preload process. The final deliverable of this phase is a bootable image (such as an ISO file) or media (such as a DVD) that is sent to the OEM or to the staging environment within the deployment organization. Most of these steps are performed in the Deployment Workbench.  
@@ -3368,9 +3368,9 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 7. Burn a DVD of the LiteTouchMedia.iso file created in the previous step.  
 
    > [!NOTE]
-   >  If delivering the ISO file to the OEM or to the organization’s staging environment, this step is not necessary.  
+   >  If delivering the ISO file to the OEM or to the organization's staging environment, this step is not necessary.  
 
-8. Deliver the ISO file or the DVD to the OEM or to the organization’s staging environment.  
+8. Deliver the ISO file or the DVD to the OEM or to the organization's staging environment.  
 
 #### LTI OEM Preload Process—Phase 2: Apply the Image to the Target Computer  
  The second phase of the OEM preload process is performed by the OEM or by the deployment team in the staging environment of the deployment organization. During this phase of the process, the .iso file or DVD created in Phase 1 is applied to the target computers. The deliverable of this phase is the image deployed on the target computers so that they are ready for deployment in the production environment.  
@@ -3394,7 +3394,7 @@ MandatoryApplications001={c303fa6e-3a4d-425e-8102-77db9310e4d0}
 5.  The target computers are delivered to the production environment for deployment.  
 
 #### LTI OEM Preload Process—Phase 3: Complete Target Computer Deployment  
- The third and final phase of the OEM preload process is performed in the deployment organization’s production environment. During this phase of the process, the target computer is started and the bootable media image, placed on the hard disk in the staging environment during the previous phase, starts.  
+ The third and final phase of the OEM preload process is performed in the deployment organization's production environment. During this phase of the process, the target computer is started and the bootable media image, placed on the hard disk in the staging environment during the previous phase, starts.  
 
  **To complete deployment of the target computers in the production environment**  
 

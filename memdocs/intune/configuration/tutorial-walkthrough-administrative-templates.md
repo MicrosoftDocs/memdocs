@@ -40,7 +40,7 @@ Group policy administrative templates, also known as ADMX templates, include set
 ADMX templates are available for the following services:
 
 - **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise).
-- **Office**: Download at [Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: Built in to the Windows 10 OS.
 
 For more information on ADMX policies, see [Understanding ADMX-backed policies](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
@@ -59,7 +59,7 @@ By the end of this lab, you'll have the skills to get started using Intune and M
 
 This feature applies to:
 
-- Windows 10 version 1703 and newer
+- Windows 10 version 1709 and newer
 
 ## Prerequisites
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 As you develop your strategy to enable employees to work remotely on their own devices (BYOD), you need to make key decisions in the scenarios to enable BYOD and how to protect your corporate data. Fortunately, EMS offers all of the capabilities you need in a comprehensive set of solutions.  
 
-In this topic, we examine the simple use case of enabling BYOD access to corporate email. We’ll focus on whether or not you need to manage the entire device or just the applications, both of which are completely valid choices.
+In this topic, we examine the simple use case of enabling BYOD access to corporate email. We'll focus on whether or not you need to manage the entire device or just the applications, both of which are completely valid choices.
 
 ## Assumptions
 * You have basic knowledge of Azure Active Directory and Microsoft Intune
@@ -64,7 +64,7 @@ As already mentioned, Conditional Access can drive a user to enroll their device
 * Sign-in risk level
 * Device platform
 
-Still, many organizations often have specific risks they’re concerned about.  The table below lists the common concerns and MDM vs MAM response to that concern.
+Still, many organizations often have specific risks they're concerned about.  The table below lists the common concerns and MDM vs MAM response to that concern.
 
 | Concern   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -86,6 +86,6 @@ Still, many organizations often have specific risks they’re concerned about.  
 |Accidental data sharing or saving to unsecured locations | Disable printing | n/a|
 
 ## Next steps
-Now it’s time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  
+Now it's time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  
 
 Use the Intune [Planning Guide](planning-guide.md) to map out your next level of planning.

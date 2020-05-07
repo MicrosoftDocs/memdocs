@@ -23,7 +23,7 @@ manager: dougeby
 
 4.  Set the `RequestTransfer` property to `true`.  
 
-5.  Create an `InvokeMethodOptions` object instance. On the Context property, add a name/value pair. The name must be “ObjectLockContext��? and the value must be a unique value such as a Guid. Add another name/value pair with “MachineName��? and the name of the computer requesting the lock.  
+5.  Create an `InvokeMethodOptions` object instance. On the Context property, add a name/value pair. The name must be "ObjectLockContext" and the value must be a unique value such as a Guid. Add another name/value pair with "MachineName" and the name of the computer requesting the lock.  
 
 6.  Call **InvokeMethod** on the `SMS_ObjectLock` instance.  
 

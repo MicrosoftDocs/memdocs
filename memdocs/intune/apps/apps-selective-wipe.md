@@ -67,7 +67,7 @@ The service creates and tracks a separate wipe request for each protected app on
 
 ## Create a user based wipe request
 
-By adding a user to the User-level wipe we will automatically issue wipe commands to all apps on all the user’s devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
+By adding a user to the User-level wipe we will automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>

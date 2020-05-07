@@ -81,7 +81,7 @@ Class SMS_TaskSequence_SoftwareConditionExpression : SMS_TaskSequence_ConditionE
 
   Qualifiers: None  
 
-  Version …   
+  The version of the software.
 
 ## Remarks  
  There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
