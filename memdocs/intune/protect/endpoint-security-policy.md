@@ -72,6 +72,42 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
 9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
+## Duplicate a policy
+
+Endpoint security policies support duplication to create a copy of the original policy. A scenario when duplicating a policy is useful is if you need to assign similar policies to different groups but don't want to manually recreate the entire policy. Instead, you can duplicate the original policy and then introduce only the changes the new policy requires. You might only change a specific setting and the group the policy is assigned to.
+
+When you duplicate a policy, you must give the new copy a new name. The rest of the configurations including settings, scope tags, and group assignments remain unchanged.
+
+The following policy types support duplication:
+
+- Antivirus
+- Disk encryption
+- Firewall
+- Endpoint detection and response
+- Attack surface reduction
+- Account protection
+
+After creating the new policy, review and edit the policy to make changes to its configuration.
+
+### To duplicate a policy
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select the policy that you want to copy. Next, select **Duplicate** or select the ellipsis (**…**) to the right of the policy and select **Duplicate**.
+3. Provide a **New name** for the policy, and then select **Save**.
+
+### To edit a policy
+
+1. Select the new policy, and then select **Properties**.
+2. Select Settings to expand a list of the configuration settings in the policy. You can’t modify the settings from this view, but you can review how they're configured.
+3. To modify the policy, select **Edit** for each category where you want to make a change:
+   - Basics
+   - Assignments
+   - Scope tags
+   - Configuration settings
+4. After you’ve made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
+
+
+
 ## Antivirus policy
 
 Antivirus policies make it easy for security admins to focus on managing the discrete group of antivirus settings for your managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender Advanced Threat Protection (Defender ATP) as a Mobile Threat Defense solution.
