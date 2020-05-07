@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 05/06/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -94,7 +94,9 @@ The apps that Desktop Analytics shows as *noteworthy* are based on the low insta
    > [!Tip]
    > For more information about the "Not important" app category, see [Automatic upgrade decision of system and store apps](about-assets.md#bkmk_plan-autoapp). <!-- 3587232 -->
 
-The **App versions details** setting is on by default, so this tab displays all versions of an app.<!-- 5542186 --> Turn off this setting to combine all versions of apps with the same name and publisher. This behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. You can also make decisions once for all versions. For more information, see [About assets - Apps](about-assets.md#apps).
+The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working at the global assets level. For more information, see [About assets - Apps](about-assets.md#apps).
+
+When the **App versions details** setting is off, the app details pane shows the number of app versions and languages that it combines. If you save any changes to the app details, it applies to all versions. For example, set the **Upgrade Decision** or **Importance**. Some values will display "Multiple", which means there's not one consistent value across all versions. The service still makes compatibility risk assessments for each version. Turn on **App versions details** to see the compatibility risk assessment for a specific app version.
 
 ### Drivers
 

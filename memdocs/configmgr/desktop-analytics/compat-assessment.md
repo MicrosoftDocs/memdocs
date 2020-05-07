@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -38,6 +38,9 @@ There are several sources that Desktop Analytics uses to generate the assessment
 - [Advanced insights](#advanced-insights)
 
 You can find the assessment for each source on the app in Desktop Analytics. In the list of app assets in a deployment plan, select an individual app to open its properties flyout pane. You'll see an overall recommendation and assessment level. The **Compatibility risk factors** section shows the detail for these assessments.
+
+> [!TIP]
+> If the app details pane doesn't show the compatibility assessment, it may be because the **App Versions Details** setting is off. It's off by default, and combines all versions of apps with the same name and publisher. The service still makes compatibility risk assessments for each version. Turn on **App versions details** to see the compatibility risk assessment for a specific app version. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
 ## Microsoft known issues
 
