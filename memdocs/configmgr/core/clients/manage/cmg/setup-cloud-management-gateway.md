@@ -203,13 +203,13 @@ To install the client agent on systems not currently connected to your intranet,
 
 1. The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
 
-2. The systems are Azure Active Directory domain joined or Hybrid Azure Active Directory domain joined.
+2. The systems are Azure AD domain-joined or hybrid Azure AD domain-joined.
 
 3. The site is running Configuration Manager version 2002 (or above).
 
-For options 1 and 2, use the **/mp** parameter to specify the CMG's URL when calling **ccmsetup.exe**. For complete details see [About client installation parameters and properties in Configuration Manager](../../deploy/about-client-installation-properties#mp).
+For options 1 and 2, use the **/mp** parameter to specify the CMG's URL when calling **ccmsetup.exe**. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
 
-For option 3, starting in Configuration Manager version 2002, you can install the client agent on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token#create-a-bulk-registration-token).
+For option 3, starting in Configuration Manager version 2002, you can install the client agent on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
 
 ### Configure off-premises clients for CMG
 
@@ -217,23 +217,23 @@ You can connect systems to a recently configured CMG where the following conditi
 
 - Systems already have the Configuration Manager client agent installed.
 
-- Systems are not connected and cannot be connected to your intranet.
+- Systems aren't connected and can't be connected to your intranet.
 
 - Systems meet one of the following conditions:
 
  - Each has a valid, unique, and trusted client authentication certificate previously issued to it.
  
- - Azure Active Directory domain joined
+ - Azure AD domain-joined
  
- - Hybrid Azure Active Directory domain joined.
+ - Hybrid Azure AD domain-joined.
 
-- You do not wish to or cannot completely reinstall the existing client agent.
+- You don't wish to or can't completely reinstall the existing client agent.
 
-- You have a method to change a machine registry value and restart the **SMS Agent Host** using a local administrator account.
+- You have a method to change a machine registry value and restart the **SMS Agent Host** service using a local administrator account.
 
-To force the connection on these systems, create the registry value **CMGFQDNs** (of type REG_SZ) under **HKLM\Software\Microsoft\CCM**. Set this value to the URL of the CMG (for example, https://contoso-cmg.contoso.com). Once set, restart the **SMS Agent Host** service on the client system.
+To force the connection on these systems, create the registry value **CMGFQDNs** (of type REG_SZ) under **HKLM\Software\Microsoft\CCM**. Set this value to the URL of the CMG (for example, `https://contoso-cmg.contoso.com`). Once set, restart the **SMS Agent Host** service on the client system.
 
-The **CMGFQDNs** registry value is automatically checked by the client agent if no current CMG or Internet-facing management point is set. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when a network change is detected. This value is automatically populated by the client agent when it learns of a CMG while connected to your Configuration Manager Site.
+If the Configuration Manager client doesn't have a current CMG or internet-facing management point set in the registry, it automatically checks the **CMGFQDNs** registry value. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when it detects a network change. When the client connects to the site and learns of a CMG, it automatically updates this value.
 
 ## Modify a CMG
 
