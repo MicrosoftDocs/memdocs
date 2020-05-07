@@ -133,16 +133,6 @@ Applies to:
 
 - macOS 10.7 and newer
 
-## Privacy preferences
-
-Users are prompted by apps to allow access, or deny access to device features. For example, users are prompted to allow access to the camera and the media library. Use these privacy settings to reduce the number of prompts by pre-configuring apps or processes to allow or block access.
-
-For a list of the settings you can configure in Intune, see [Privacy preferences on macOS](device-restrictions-macos.md#privacy-preferences).
-
-Applies to:
-
-- macOS 10.14 and newer
-
 ## Single sign-on
 
 Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
