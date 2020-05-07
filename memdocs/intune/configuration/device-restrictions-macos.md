@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -88,7 +88,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ### Settings apply to: All enrollment types
 
-- **Unmarked Email Domains**: Enter one or more **Email domain URL** to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
+- **Unmarked Email Domains**: Enter one or more **Email domain URLs** to the list. When users send or receive an email from a domain other than the domains you added, the email is marked as untrusted in the macOS Mail app.
 
 ## General
 
@@ -163,6 +163,167 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Block password proximity requests**: **Yes** prevents devices from requesting passwords from nearby devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow these password requests.
 
 - **Block password sharing**: **Yes** prevents sharing passwords between devices using AirDrop. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be shared.
+
+## Privacy preferences
+
+Apps and processes prompt users to allow or deny access to device features, such as the camera, microphone, calendar, Documents folder, and more. These settings allow administrators to pre-approve or pre-deny access to these device features. When you configure these settings, you manage data access consent on behalf of your users. Your settings override their previous decisions.
+
+The goal of these settings is to reduce the number of prompts by apps and processes.
+
+This feature applies to:
+
+- macOS 10.14 and newer
+- Some settings apply to macOS 10.15 and newer.
+- These settings only apply on devices that have the privacy preferences profile installed before being upgraded.
+
+### Settings apply to: User approved device enrollment, Automated device enrollment
+
+- **Apps and processes**: **Add** apps or processes to configure access. Also enter:
+  - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft Office 365`.
+  - **Identifier**: Enter the app bundle ID, or the installation file path of the process or executable. For example, enter `com.contoso.appname`.
+
+    To get the app bundle ID, open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
+
+  - **Identifier type**: Your options:
+    - **Bundle ID**: Select this option for apps.
+    - **Path**: Select this option for non-bundled binaries, which is a process or executable.
+
+    Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing application bundle.
+
+  - **Code requirement**: Enter the code signature for the application or process.
+
+    A code signature is created when an app or binary is signed by a developer certificate. To find the designation, run the `codesign` command manually in the Terminal app: `codesign --display -r -/path/to/app/binary`. The code signature is everything that appears after `=>`.
+
+  - **Enable static code validation**: Choose **Yes** for the app or process to statically validate the code requirement. When set to **Not configured**, Intune doesn't change or update this setting.
+
+    Enable this setting only if the process invalidates its dynamic code signature. Otherwise, use **Not configured**.  
+
+  - **Block Camera**: **Yes** prevents the app from accessing the system camera. You can't allow access to the camera. When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Block Microphone**: **Yes** prevents the app from accessing the system microphone. You can't allow access to the microphone. When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Block screen recording**: **Yes** blocks the app from capturing the contents of the system display. You can't allow access to screen recording and screen capture. When set to **Not configured**, Intune doesn't change or update this setting.
+
+    Requires macOS 10.15 and newer.
+
+  - **Block input monitoring**: **Yes** blocks the app from using CoreGraphics and HID APIs to listen to CGEvents and HID events from all processes. **Yes** also denies apps and processes from listening to and collecting data from input devices, such as a mouse, keyboard, or trackpad. You can't allow access to the CoreGraphics and HID APIs.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+    Requires macOS 10.15 and newer.
+
+  - **Speech recognition**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access the system speech recognition, and allows sending speech data to Apple.
+    - **Block**: Prevents the app from accessing the system speech recognition, and prevents sending speech data to Apple.
+
+    Requires macOS 10.15 and newer.
+
+  - **Accessibility**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access to the system Accessibility app. This app includes closed captions, hover text, and voice control.
+    - **Block**: Prevents the app from accessing the system Accessibility app.
+
+  - **Contacts**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access contact information managed by the system Contacts app.  
+    - **Block**: Prevents the app from accessing this contact information.
+
+  - **Calendar**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access calendar information managed by the system Calendar app.
+    - **Block**: Prevents the app from accessing this calendar information.
+
+  - **Reminders**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access reminder information managed by the system Reminders app.
+    - **Block**: Prevents the app from accessing this reminder information.
+
+  - **Photos**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access the pictures managed by the system Photos app in `~/Pictures/.photoslibrary`.
+    - **Block**: Prevents the app from accessing these pictures.
+
+  - **Media library**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access Apple Music, music and video activity, and the media library.  
+    - **Block**: Prevents the app from accessing this media.
+
+    Requires macOS 10.15 and newer.
+
+  - **File provider presence**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access the File Provider app, and know when users are using files managed by the File Provider. A File Provider app allows other File Provider apps to access the documents and directories stored and managed by the containing app.
+    - **Block**: Prevents the app from accessing the File Provider app.
+
+    Requires macOS 10.15 and newer.
+
+  - **Full disk access**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access all protected files, including system administration files. Apply this setting with caution.
+    - **Block**: Prevents the app from accessing these protected files.
+
+  - **System admin files**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access some files used in system administration.
+    - **Block**: Prevents the app from accessing these files.
+
+  - **Desktop folder**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access files in the user’s Desktop folder.
+    - **Block**: Prevents the app from accessing these files.
+
+    Requires macOS 10.15 and newer.
+
+  - **Documents folder**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access files in the user’s Documents folder.
+    - **Block**: Prevents the app from accessing these files.
+
+    Requires macOS 10.15 and newer.
+
+  - **Downloads folder**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access files in the user’s Downloads folder.
+    - **Block**: Prevents the app from accessing these files.
+
+    Requires macOS 10.15 and newer.
+
+  - **Network volumes**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access files on network volumes.
+    - **Block**: Prevents the app from accessing these files.
+
+    Requires macOS 10.15 and newer.
+
+  - **Removable volumes**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to access files on removable volumes, such as a hard disk.
+    - **Block**: Prevents the app from accessing these files.
+
+    Requires macOS 10.15 and newer.
+
+  - **System events**: Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Allow**: Allows the app to use CoreGraphics APIs to send CGEvents to the system event stream.
+    - **Block**: Prevents the app from using CoreGraphics APIs to send CGEvents to the system event stream.
+
+  - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Enter the following information of the receiving app or process:
+
+    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
+
+    - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
+
+    - **Code requirement**: Enter the code signature for the receiving application or process.
+
+      A code signature is created when an app or binary is signed by a developer certificate. To find the designation, run the `codesign` command manually in the Terminal app: `codesign --display -r -/path/to/app/binary`. The code signature is everything that appears after `=>`.
+
+    - **Allow macOS Apple Event Receiver**: Your options:
+      - **Not configured**: Intune doesn't change or update this setting.
+      - **No**: Prevents the app or process from sending a restricted Apple event to the receiving app or process.
+      - **Yes**: Allows the app or process to send the restricted Apple event to the receiving app or process.
+
+  - **Save** your changes.
 
 ## Restricted apps
 

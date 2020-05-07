@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,7 +58,7 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
 For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
@@ -132,6 +132,16 @@ For a list of the settings you can configure in Intune, see [Login window on mac
 Applies to:
 
 - macOS 10.7 and newer
+
+## Privacy preferences
+
+Users are prompted by apps to allow access, or deny access to device features. For example, users are prompted to allow access to the camera and the media library. Use these privacy settings to reduce the number of prompts by pre-configuring apps or processes to allow or block access.
+
+For a list of the settings you can configure in Intune, see [Privacy preferences on macOS](device-restrictions-macos.md#privacy-preferences).
+
+Applies to:
+
+- macOS 10.14 and newer
 
 ## Single sign-on
 
