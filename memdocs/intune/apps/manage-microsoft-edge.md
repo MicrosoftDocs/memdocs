@@ -357,7 +357,7 @@ By default, Microsoft Edge on iOS offers to save your users passwords to the key
 
 |    Key    |    Value    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
 
 ### Disable users from adding extensions to Microsoft Edge 
 
