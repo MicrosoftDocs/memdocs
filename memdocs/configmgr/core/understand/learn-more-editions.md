@@ -29,7 +29,7 @@ Use this article to learn about the licensing requirements for the installation 
 
 Customers with active Software Assurance (SA) on Configuration Manager licenses or with equivalent subscription rights as of October 1, 2016 have rights to use the October 2016 version 1606 release of Configuration Manager. Customers with rights to Configuration Manager on or after October 1, 2016 will find two licensed options upon installation: current branch and long-term servicing branch (LTSB).
 
-For the complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs, see [Licensing Terms and Documentation](https://go.microsoft.com/fwlink/?LinkId=800052).
+For the complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs, see [Licensing Terms and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## Licensed branches
@@ -114,7 +114,7 @@ To learn more about product licensing details, use the following resources.
 
 - [Overview of VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Microsoft Volume Licensing Product Terms](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Microsoft Volume Licensing Product Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Volume license customers can get a summary of their licenses from the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Go to the **Licenses** menu, and select **Licenses Summary**.
 

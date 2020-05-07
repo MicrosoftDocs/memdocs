@@ -103,7 +103,7 @@ For more information, see [Upgrade Windows devices with the edition upgrade poli
 
 ## Microsoft Edge browser profiles
 <!-- 1357310 -->
-Starting in version 1802, for customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a compliance settings policy to configure several Microsoft Edge settings. 
+Starting in version 1802, for customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a compliance settings policy to configure several Microsoft Edge settings. 
 
 For more information, see [Microsoft Edge browser profiles](../deploy-use/browser-profiles.md).
 

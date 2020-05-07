@@ -161,8 +161,6 @@ When you transition this workload, you can still deploy settings from Configurat
 
 Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Server to help manage background network transfers. For distribution points running on supported versions of Windows Server, you can enable an option to help adjust network traffic. Clients only use network bandwidth when it's available. 
 
-For more information on Windows LEDBAT, see the [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) blog post.
-
 
 ### Prerequisites
 - A distribution point on Windows Server, version 1709.  

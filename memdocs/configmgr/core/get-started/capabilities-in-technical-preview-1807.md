@@ -79,7 +79,7 @@ The **Community** workspace also includes the following nodes:
 
 - Use the Configuration Manager console on a client OS.  
 
-    - Alternatively but not recommended: on a server OS, disable [Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - Alternatively but not recommended: on a server OS, disable [Internet Explorer: Enhanced Security Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - The computer with the console requires internet access, and connectivity to the following sites:  
     - `https://aka.ms`  

@@ -50,7 +50,7 @@ Cloud integrations, as well as any features included with Configuration Manager 
 
 ## Find LTSB documentation
 
-The LTSB is based on current branch version 1606. Use the [current branch documentation](https://docs.microsoft.com/sccm/), with caveats and limitations that are specific to the LTSB. Those caveats and limitations are identified in the following articles:
+The LTSB is based on current branch version 1606. Use the [current branch documentation](https://docs.microsoft.com/mem/configmgr/), with caveats and limitations that are specific to the LTSB. Those caveats and limitations are identified in the following articles:
 
 - [Install the LTSB](install-the-ltsb.md)
 - [Upgrade the LTSB to the current branch](convert-to-current-branch.md)
@@ -65,7 +65,7 @@ Customers with active Software Assurance (SA) on Configuration Manager licenses,
 
 Customers that have perpetual rights to System Center Configuration Manager, or that allow SA or subscription to lapse after October 1, can install the version of System Center Configuration Manager LTSB that is current at the time of lapse.
 
-For more information about these licenses, see the [Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs](https://go.microsoft.com/fwlink/?LinkId=800052).
+For more information about these licenses, see the [Complete terms and conditions for the products you purchase through Microsoft Volume Licensing programs](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 For more information about licensing for Configuration Manager branches, see [Configuration Manager licensing and branches](learn-more-editions.md).
 

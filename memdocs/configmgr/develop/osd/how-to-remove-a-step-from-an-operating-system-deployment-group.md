@@ -100,7 +100,7 @@ public void RemoveActionFromGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequenceGroup`|-   Managed: IResultObject<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|The task sequence group containing the action to be deleted.|  
+|`taskSequenceGroup`|-   Managed: IResultObject<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|The task sequence group containing the action to be deleted.|  
 |`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the [SMS_TaskSequenceAction.Name](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) property.|  
 
 ## Compiling the Code  

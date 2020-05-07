@@ -10,8 +10,6 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # The content library in Configuration Manager
@@ -193,3 +191,5 @@ The following tips may help you troubleshoot issues with the content library:
 - To see if there are any hash mismatches, validate the package from the Configuration Manager console.  
 
 - As a last option, redistribute the content. This action should resolve most issues.  
+
+For more in-depth information, see [Understanding and troubleshooting content distribution in Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).
