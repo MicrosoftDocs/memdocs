@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: macOS kernel extension settings in Microsoft Intune - Azure | Microsoft Docs
+title: macOS extension settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add, configure, or create settings on macOS devices to use kernel extensions. Also, allow users to override approved extensions, allow all extensions from a team identifier, or allow specific extensions or apps in Microsoft Intune.
+description: Add, configure, or create settings on macOS devices to use system extensions and kernel extensions. Also, allow users to override approved extensions, allow all extensions from a team identifier, or allow specific extensions or apps in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,32 +27,78 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# macOS device settings to configure and use kernel extensions in Intune
+# macOS device settings to configure and use kernel and system extensions in Intune
 
-This article lists and describes the different kernel extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage kernel extensions on your devices.
+> [!NOTE]
+> macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-To learn more about kernel extensions in Intune, and any prerequisites, see [add macOS kernel extensions](kernel-extensions-overview-macos.md).
+This article lists and describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
+
+To learn more about extensions in Intune, and any prerequisites, see [add macOS extensions](kernel-extensions-overview-macos.md).
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
 ## Before you begin
 
-[Create a device kernel extensions configuration profile](kernel-extensions-overview-macos.md).
+[Create a macOS extensions configuration profile](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
+## System extensions
+
+This feature applies to:
+
+- macOS 10.15 and newer
+
+### Settings apply to: User approved device enrollment, Automated device enrollment
+
+- **Block User Overrides**: **Yes** prevents users from approving system extensions that aren't in the allowed list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to approve unknown extensions not included in the configuration profile. Meaning, extensions not included in the configuration profile are allowed.
+
+- **Allowed team identifiers**: Use this setting to allow one or many team IDs. Any system extensions signed with the team IDs you enter are always allowed and trusted. In other words, use this option to allow all system extensions within the same team ID, which may be a specific developer or partner.
+
+  **Add** a **Team identifier** of valid and signed system extensions to load. You can add multiple team identifiers. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `ABCDE12345`.
+
+  After you add a team identifier, it can also be deleted.
+
+  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's web site) has more information.
+
+- **Allowed system extensions**: Use this setting to always allow specific system extensions. Only the system extensions you enter are allowed or trusted.
+
+  **Add** the **Bundle identifier** and **Team identifier** of a system extension to load. For unsigned legacy system extensions, use an empty team identifier. You can add multiple system extensions. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `com.contoso.appname.macos` for **Bundle ID**, and `ABCDE12345` for **Team identifier**.
+
+- **Allowed system extension types**: Enter the Team ID, and system extension types to allow for that Team ID:
+  - **Team identifier**: Enter the Team ID of another system extension you want to allow specific extension types. Or, enter a Team ID you added to **Allowed system extensions**.
+  - **Allowed system extension types**: Select the system extension types to allow for each Team ID. Your options:
+    - Select all
+    - Driver extensions
+    - Network extensions
+    - Endpoint security extensions
+
+    For more information on these extension types, see [System Extensions](https://developer.apple.com/system-extensions/) (opens Apple's web site).
+
+    You can add a team ID from the **Allowed system extensions** list, and allow a specific extension type. If the extension is a type that isn't allowed, then the extension might not run.
+
+    To allow all extension types for a Team ID, add the Team ID to the **Allowed system extensions** list. Don't add the Team ID to the **Allowed system extension types** list. In other words, if a team ID is in the **Allowed system extensions** list, and not in the **Allowed system extension types** list, then all extension types are allowed for that team ID.
+
+> [!NOTE]
+> You can configure **Allowed system extensions** or **Allowed team identifiers**. You can't configure both.
+
 ## Kernel extensions
 
-### Settings apply to: User approved, Automated device enrollment
+This feature applies to:
 
-- **Allow User Overrides**: **Allow** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
+- macOS 10.13.2 and newer
 
-  See [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (opens Apple's web site) for more information on this feature.
+### Settings apply to: User approved device enrollment, Automated device enrollment
+
+- **Allow User Overrides**: **Yes** lets users approve kernel extensions not included in the configuration profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from allowing extensions not included in the configuration profile. Meaning, only extensions included in the configuration profile are allowed.
+
+  For more information on this feature, see [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (opens Apple's web site).
 
 - **Allowed Team Identifiers**: Use this setting to allow one or many team IDs. Any kernel extensions signed with the team IDs you enter are allowed and trusted. In other words, use this option to allow all kernel extensions within the same team ID, which may be a specific developer or partner.
 
-  **Add** a team identifier of valid and signed kernel extensions that you want to load. You can add multiple team identifiers. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `ABCDE12345`.
+  **Add** a team identifier of valid and signed kernel extensions to load. You can add multiple team identifiers. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `ABCDE12345`.
 
   After you add a team identifier, it can also be deleted.
 
@@ -60,7 +106,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - **Allowed Kernel Extensions**: Use this setting to allow specific kernel extensions. Only the kernel extensions you enter are allowed or trusted.
 
-  **Add** the bundle identifier and team identifier of a kernel extension that you want to load. For unsigned legacy kernel extensions, use an empty team identifier. You can add multiple kernel extensions. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `com.contoso.appname.macos` for **Bundle ID**, and `ABCDE12345` for **Team identifier**.
+  **Add** the bundle identifier and team identifier of a kernel extension to load. For unsigned legacy kernel extensions, use an empty team identifier. You can add multiple kernel extensions. The team identifier must be alphanumeric (letters and numbers) and have 10 characters. For example, enter `com.contoso.appname.macos` for **Bundle ID**, and `ABCDE12345` for **Team identifier**.
 
   > [!TIP]
   > To get the Bundle ID of a kernel extension (Kext) on a macOS device, you can:
