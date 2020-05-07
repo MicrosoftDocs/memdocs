@@ -190,7 +190,8 @@ If you use certificate based authentication for your VPN profile, deploy the VPN
 For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 > [!NOTE]
-> Imported PKCS certificates aren't supported for VPN authentication.
+> Certificates added using the **PKCS imported certificate** profile type aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile type are supported for VPN authentication.
+
 
 ### User name and password
 
