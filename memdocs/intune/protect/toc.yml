@@ -75,6 +75,9 @@
       href: atp-manage-vulnerabilities.md 
     - name: Security policy
       href: endpoint-security-policy.md
+      items:
+        - name: Antivirus policy reports
+          href: endpoint-security-antivirus-reports.md
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
     - name: Mobile Threat Defense partners
