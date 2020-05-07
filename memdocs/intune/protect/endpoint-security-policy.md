@@ -76,7 +76,7 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
 Endpoint security policies support duplication to create a copy of the original policy. A scenario when duplicating a policy is useful is if you need to assign similar policies to different groups but don't want to manually recreate the entire policy. Instead, you can duplicate the original policy and then introduce only the changes the new policy requires. You might only change a specific setting and the group the policy is assigned to.
 
-When you duplicate a policy, you must give the new copy a new name. The rest of the configurations including settings, scope tags, and group assignments remain unchanged.
+When creating a duplicate you'll give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but won't have any assignments. You'll need to edit the new policy later to create assignments.  
 
 The following policy types support duplication:
 
