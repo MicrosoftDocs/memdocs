@@ -43,7 +43,7 @@ To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https:
 
 ## Automated Device Enrollment and the Company Portal
 
-ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on a ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
+ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
 
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
