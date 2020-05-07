@@ -196,7 +196,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The DeviceStatus CSP for Antivirus isn’t supported for *Windows 10 Home* and reports a status of *Not applicable*. To work around this limitation, consider using [Windows Defender](#defender) settings in your device compliance policy. Windows Defender settings are supported with Windows 10 Home.  
+  > The DeviceStatus CSP for Antivirus isn’t supported for *Windows 10 Home* and reports a status of *Not applicable*. The Intune team is working on a fix. To work around this limitation, consider using [Windows Defender](#defender) settings in your device compliance policy. Windows Defender settings are supported with Windows 10 Home.  
 
 - **Antispyware**:  
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
@@ -205,7 +205,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The DeviceStatus CSP for Antispyware isn’t supported for *Windows 10 Home* and reports a status of *Not applicable*. To work around this limitation, consider using [Windows Defender](#defender) settings in your device compliance policy. Windows Defender settings are supported with Windows 10 Home. 
+  > The DeviceStatus CSP for Antispyware isn’t supported for *Windows 10 Home* and reports a status of *Not applicable*. The Intune team is working on a fix. To work around this limitation, consider using [Windows Defender](#defender) settings in your device compliance policy. Windows Defender settings are supported with Windows 10 Home. 
 
 ### Defender
 
