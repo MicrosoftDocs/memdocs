@@ -45,11 +45,7 @@ Each version of Configuration Manager supports a specific version of the Windows
 
 - **WinPE-WDS-Tools**: Installs Windows Deployment Services tools.  
 
-  There are other Windows PE packages available for you to add. The following resources provide more information about the optional components that you can add to the boot image.  
-
-- For Windows PE 5, see [WinPE: Add packages (Optional Components Reference)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx)  
-
-- For Windows PE 3.1, see the [Add a Package to a Windows PE Image](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+  There are other Windows PE packages available for you to add. For more information about the optional components that you can add to the boot image, see [WinPE: Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >When you boot to WinPE from a customized boot image that includes tools that you added, you can open a command prompt from WinPE and type the file name of the tool to run it. The location of these tools are automatically added to the path variable. The command prompt can only be added if the **Enable command support (testing only)** setting is selected on the **Customization** tab in the boot image properties.
@@ -72,7 +68,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
 
    > [!NOTE]
-   >  For more information about DISM, see the [DISM - Deployment Image Servicing and Management Technical Reference](https://technet.microsoft.com/library/hh824821.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.
+   >  For more information, see the [DISM (Deployment Image Servicing and Management) Reference](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 5, the 64-bit optional components are located in <*Installation path*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -108,7 +104,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  For more information about the optional components that you can add to the boot image, see the [Windows PE Optional Components Reference](https://technet.microsoft.com/library/hh824926.aspx) topic in the Windows 8.1 and Windows 8 TechNet Documentation Library.  
+   >  For more information about the optional components that you can add to the boot image, see the [Windows PE Optional Components Reference](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image:  
 
@@ -194,7 +190,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     Where C:\WinPEWAIK is the folder that contains the boot image and C:\WinPEMount is the mounted folder.  
 
    > [!NOTE]
-   >  For more information about DISM, see the [Deployment Image Servicing and Management Technical Reference](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+   > For more information, see the [DISM (Deployment Image Servicing and Management) Reference](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. After you mount the boot image, use DISM to add optional components to the boot image. In Windows PE 3.1, for example, the optional components are located in <*InstallationPath*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -224,7 +220,7 @@ Each version of Configuration Manager supports a specific version of the Windows
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  For more information about the different packages that you can add to the boot image, see the [Add a Package to a Windows PE Image](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) topic in the Windows 7 TechNet Documentation Library.  
+   >  For more information about the different packages that you can add to the boot image, see [Add a Package to a Windows PE Image](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Use DISM to add specific drivers to the boot image, when required. Type the following to add drivers to the boot image, if required:  
 

@@ -60,7 +60,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
 ### Environment  
  The MOF file should specify the operating environment with the [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)`SupportedEnvironment` property. The available environments are Windows PE (`WinPE`), full operating system (`FullOS`), or both environments (`WinPEandFullOS`).  
 
- The choice of environment depends on the circumstances. For example, pre-operating install configuration will likely be done in the Windows PE environment. For more information, see [https://go.microsoft.com/fwlink/?LinkID=110498](https://go.microsoft.com/fwlink/?LinkID=110498). Updates to currently installed operating systems will use the full operating system environment. For example, software or driver installation. Operating system environment agnostic tasks such as reboots or the creation of network connections, can be performed by using both environment settings.  
+ The choice of environment depends on the circumstances. For example, pre-operating install configuration will likely be done in the Windows PE environment. For more information, see [Infrastructure requirements for OS deployment](../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md). Updates to currently installed operating systems will use the full operating system environment. For example, software or driver installation. Operating system environment agnostic tasks such as reboots or the creation of network connections, can be performed by using both environment settings.  
 
 ### Processing  
  During processing, you access the task sequence variables defined by the MOF file by using the `TSEnvironment` COM automation object. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
@@ -75,7 +75,7 @@ CommandLine("smsswd.exe /run:PackageID abc.exe [any abc.exe command line args]"
 |0|Success|  
 |Non-zero|Failure|  
 
- If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [https://go.microsoft.com/fwlink/?LinkId=110499](https://go.microsoft.com/fwlink/?LinkId=110498). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
+ If a reboot is required after the application finishes, the `SMSTSRebootRequested` environment variable should be set. For more information, see [Task sequence variables](../../osd/understand/task-sequence-variables.md#SMSTSRebootRequested). For information about setting environment variables, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
 
 ## Deployment  
  To be used by Configuration Manager, the custom action application must be available from a Configuration Manager package. The administrator can create the package by using either the Configuration Manager console or by using a programming language. For more information, see [How to Create a Package](../../develop/core/servers/configure/how-to-create-a-package.md).  
@@ -103,12 +103,12 @@ string          PackageIDForAbcExe;
 -   The package identifier is provided by using the `/run` command-line parameter to Smsswd.exe.  
 
 ## Pre-Network Partition and Pre-Partition Setup  
- If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see TechNet documentation for the Windows Assessment and Deployment Kit ([https://go.microsoft.com/fwlink/?LinkId=111704](https://go.microsoft.com/fwlink/?LinkId=111704)).  
+ If you need to configure disk or network connectivity before you have a disk partition and before you have network connectivity, you will need to create an application to perform these tasks. Your application should be placed in a custom boot image by using the Windows Assessment and Deployment Kit. For more information, see [Windows ADK for Windows 10 scenarios for IT Pros](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros).  
 
 > [!NOTE]
 >  Adding files to the boot image file can increase the minimum RAM requirements and can, due to low memory conditions, cause task sequences to fail in unexpected ways.  
 
- You will then need to import the image into Configuration Manager as a custom image. For more information, see How to Add a Boot Image to Configuration Manager ([https://go.microsoft.com/fwlink/?LinkId=111706](https://go.microsoft.com/fwlink/?LinkId=111706)).  
+ You will then need to import the image into Configuration Manager as a custom image. For more information, see [Add a boot image](../../osd/get-started/manage-boot-images.md#BKMK_AddBootImages).  
 
  The application, any supporting files, and the custom SMSTS.INI should be placed in the Windows folder.  
 

@@ -38,7 +38,7 @@ When you run Configuration Manager setup, it downloads language pack files as pa
 
 ## Server languages  
 
-Use the following table to map a locale ID to a language that you want to support on servers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Use the following table to map a locale ID to a language that you want to support on servers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Server language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  
@@ -65,7 +65,7 @@ Use the following table to map a locale ID to a language that you want to suppor
 
 ## Client languages  
 
-Use the following table to map a locale ID to a language that you want to support on client computers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Use the following table to map a locale ID to a language that you want to support on client computers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Client language|Locale ID (LCID)|Three-letter code|  
 |---------------------|------------------------|-----------------------|  

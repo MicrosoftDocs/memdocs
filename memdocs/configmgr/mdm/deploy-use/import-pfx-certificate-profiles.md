@@ -23,7 +23,7 @@ Configuration Manager supports different kinds of certificate stores for differe
 Use Configuration Manager to import certificate credentials and then provision PFX files to devices. You can use these files to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
-> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](https://blogs.technet.microsoft.com/karanrustagi/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager/).  
+> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
 
 ## Create a profile
 

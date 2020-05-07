@@ -9051,7 +9051,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
  MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
 
 > [!NOTE]
->  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information about what information MDT sends when CEIP is enabled, see the [Microsoft Deployment Toolkit Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=314082).  
+>  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).  
 
  The **Opt In to CEIP and WER** task sequence step is included in the following MDT task sequence templates but is disabled by default:  
 

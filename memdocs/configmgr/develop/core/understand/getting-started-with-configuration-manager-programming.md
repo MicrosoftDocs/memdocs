@@ -19,17 +19,11 @@ To get started with programming for Configuration Manager, it's beneficial to ha
 
 ## Functional understanding  
 
-To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. See the below resources, for functional information on Configuration Manager.  
-
-- [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx)  
-
-- [Fundamentals of Configuration Manager](https://technet.microsoft.com/library/mt622643.aspx)  
-
-- [TechNet Virtual Labs](https://go.microsoft.com/fwlink/?LinkId=329809) (See: Virtual Lab: Introduction to Configuration Manager 2012 SP1)  
+To successfully automate or extend Configuration Manager, it is incredibly important to gain a functional understanding of the product. Configuration Manager is multi-tiered, distributed management system, most often spread over numerous servers and numerous locations. For more information, see [Fundamentals of Configuration Manager](../../../core/understand/fundamentals.md).
 
 ### More resources  
 
-**Books:** There are numerous books available for Configuration Manager. A few example books are listed below.  
+#### Books
 
 - [System Center 2012 Configuration Manager: Mastering the Fundamentals](https://www.amazon.com/System-Center-2012-Configuration-Manager/dp/9197939048)  
 
@@ -37,15 +31,15 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 
 - [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](https://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
-**Videos:** There are numerous videos available for Configuration Manager. A few example videos are listed below.  
+#### Videos
 
 - [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
 - [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 
-**Forums:** There are numerous forums available for Configuration Manager. A few example forums are listed below.  
+#### Forums
 
-- [TechNet: Configuration Manager 2012 - General](https://social.technet.microsoft.com/Forums/home?forum=configmanagergeneral)  
+- [Configuration Manager forums](https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc)  
 
 - [windows-noob.com: Configuration Manager 2012](https://www.windows-noob.com/forums/index.php?/forum/92-setup-sccm-2012/)  
 

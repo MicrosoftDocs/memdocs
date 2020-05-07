@@ -141,7 +141,7 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
 -   Make sure your antivirus and antispyware software, Windows Defender, is using the latest updates again potential threats (see How do I keep virus and spyware definitions up to date?). Also make sure you're always using the latest version of Windows Defender.  
 
--   Only download updates from reputable sources. For Windows operating systems, always go to [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) and for other software always use the legitimate websites of the company or person who produces it.  
+-   Only download updates from reputable sources. For Windows operating systems, always go to the [Microsoft Update catalog](https://catalog.update.microsoft.com).  For other software, always use the legitimate websites of the company or person who produces it.
 
 -   If you receive an e-mail with an attachment and you're unsure of the source, then you should delete it immediately. Don't download any applications or files from unknown sources, and be careful when trading files with other users.  
 

@@ -165,7 +165,7 @@ After you install an update bundle that includes updates for the SMS Provider, y
 If you remove and then reinstall the SMS Provider on a computer, you must then reinstall the update for the SMS Provider on that computer.  
 
 ###  <a name="BKMK_clients"></a> Update clients  
-When you install an update that includes updates for the Configuration Manager client, you are presented with the option to automatically upgrade clients with the update installation, or manually upgrade clients at a later time. For more information about automatic client upgrade, see [How to upgrade clients for Windows computers](https://technet.microsoft.com/library/mt627885.aspx).  
+When you install an update that includes updates for the Configuration Manager client, you are presented with the option to automatically upgrade clients with the update installation, or manually upgrade clients at a later time. For more information about automatic client upgrade, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 You can deploy updates with Updates Publisher or a software deployment package, or you can choose to manually install the update on each client. For more information about how to use deployments to install updates, see the [Deploy updates for Configuration Manager](#BKMK_Deploy) section in this topic.  
 
@@ -203,7 +203,7 @@ The catalog for Updates Publisher is named **SCUPCatalog.cab** and can be found 
 > [!IMPORTANT]  
 > Because the SCUPCatalog.cab file is created by using paths that are specific to the site server where the update bundle is installed, it cannot be used on other site servers.  
 
-After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) in the TechNet library for System Center 2012.  
+After the wizard is finished, you can import the catalog to Updates Publisher, and then use Configuration Manager software updates to deploy the updates. For information about Updates Publisher, see [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Use the following procedure to import the SCUPCatalog.cab file to Updates Publisher and publish the updates.  
 
