@@ -208,12 +208,11 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 ### Firewall rule mergers and policy conflicts
 
-Like other policy types, plan for Firewall policies to be applied to a device using only one policy. Use of a single policy and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. This source of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
+Like other policy types, plan for Firewall policies to be applied to a device using only one policy. Use of a single policy and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. This source of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration. This profile type doesn’t conflict with *Microsoft Defender Firewall rules* profiles.
 
-However, you can successfully have multiple profiles for **Microsoft Defender Firewall rules** apply to the same device, unless the two profiles contain direct conflicts. When the profiles don’t directly conflict with each other, devices will merge the rules from *Microsoft Defender Firewall rules* profiles to create combined firewall rule configuration. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
+When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device, unless the two profiles contain direct conflicts. When the rules profiles don’t directly conflict with each other, devices will merge the rules from each to create combined firewall rule configuration. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
 
 For example, you have two Microsoft Defender Firewall rules profiles. The first profile allows *Teams.exe* through the firewall. The second profile allows *Outlook.exe* through the firewall. When a device receives both profiles, the device is configured to allow both apps through the firewall.
-
 
 ## Endpoint detection and response policy
 
