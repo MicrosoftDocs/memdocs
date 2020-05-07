@@ -25,14 +25,15 @@ In Configuration Manager, Windows PowerShell allows you to manage a Configuratio
 
 -   [Connecting to Configuration Manager with Windows PowerShell](../../../develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md)  
 
-## More Resources  
- **PowerShell and Cmdlet Help:** Although PowerShell help is available from the PowerShell command-line, the same information is available online. A few example sites are listed below.  
+## More Resources
 
-- [TechNet: Using Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)  
+### PowerShell and Cmdlet help
 
-- [TechNet: Cmdlets](https://technet.microsoft.com/library/jj849987.aspx)  
+- [Getting Started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 
-  **Books:** There are numerous books available for PowerShell. A few example books are listed below.  
+- [Get started with Configuration Manager cmdlets](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps)
+
+### Books
 
 - [Learn Windows PowerShell in a Month of Lunches](https://www.amazon.com/Learn-Windows-PowerShell-Month-Lunches/dp/1617291080/ref=sr_1_1?s=books&ie=UTF8&qid=1383160508&sr=1-1&keywords=PowerShell)  
 
@@ -40,7 +41,7 @@ In Configuration Manager, Windows PowerShell allows you to manage a Configuratio
 
 - [Windows PowerShell Cookbook: The Complete Guide to Scripting Microsoft's Command Shell](https://www.amazon.com/Windows-PowerShell-Cookbook-Scripting-Microsofts/dp/1449320686/ref=pd_sim_b_3)  
 
-  **Videos:** There are numerous videos available for PowerShell. A few example videos are listed below.  
+### Videos
 
 - [Channel9: Windows PowerShell Crash Course](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/WSV321-R)  
 
@@ -48,9 +49,9 @@ In Configuration Manager, Windows PowerShell allows you to manage a Configuratio
 
 - [YouTube: PowerShell in a Nutshell](https://www.youtube.com/watch?v=vvCtUwHN2XI)  
 
-  **Forums/Sites:** There are numerous forums/sites available for PowerShell. A few example forums/sites are listed below.  
+#### Forums/Community
 
-- [Microsoft: Scripting](https://technet.microsoft.com/scriptcenter/default)  
+- [Microsoft: Scripting](https://devblogs.microsoft.com/scripting/)  
 
 - [Microsoft: Windows Server\Windows PowerShell](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverpowershell)  
 

@@ -30,14 +30,16 @@ In Configuration Manager, the Asset Intelligence client Windows Management Instr
 |[SMS_SystemConsoleUsage Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md)|Defines usage data about devices, based on the system security event log.|  
 |[SMS_SystemConsoleUser Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleuser-client-wmi-class.md)|Defines usage data about users, based on the system security event log.|  
 
-## Remarks  
- Classes related to the asset intelligence client WMI classes are:  
+## Remarks
 
--   `SoftwareLicensingProduct` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
+Classes related to the asset intelligence client WMI classes are:  
 
--   `SoftwareLicensingService` class. Specific to Windows Vista. For more information, see the Microsoft TechNet article, [Windows Vista Volume Activation 2.0 Technical Attributes](https://go.microsoft.com/fwlink/?LinkId=99938).  
+- `SoftwareLicensingProduct` class. For more information, see [SoftwareLicensingProduct class](https://docs.microsoft.com/previous-versions/windows/desktop/sppwmi/softwarelicensingproduct).
 
--   `Win32_USBDevice` class. Tracks devices connected to USB ports.  
+- `SoftwareLicensingService` class. For more information, see [SoftwareLicensingService class](https://docs.microsoft.com/previous-versions/windows/desktop/sppwmi/softwarelicensingservice).  
 
-## See Also  
+- `Win32_USBDevice` class. Tracks devices connected to USB ports.  
+
+## See also
+
 [Initiate Asset Intelligence synchronization](../../../../core/clients/asset-intelligence/how-to-initiate-a-synchronization.md)

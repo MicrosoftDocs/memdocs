@@ -15,7 +15,7 @@ manager: dougeby
 # Securing Configuration Manager Applications
 The security model for Configuration Manager has changed significantly from previous versions of Configuration Manager. The previous security model has been replaced by Role-Based Administration.  
 
- For an extensive discussion of the Configuration Manager security and privacy model, see [Security and privacy for Configuration Manager](https://technet.microsoft.com/library/mt622694.aspx).  
+For an extensive discussion of the Configuration Manager security and privacy model, see [Security and privacy](../../../core/plan-design/security/security-and-privacy.md).  
 
  Specific to the Configuration Manager SDK, see [Configuration Manager Role-Based Administration](../../../develop/core/servers/configure/role-based-administration.md).  
 

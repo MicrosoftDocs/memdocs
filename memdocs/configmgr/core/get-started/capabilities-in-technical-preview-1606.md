@@ -76,9 +76,9 @@ Similar options have been added to the software updates deployment wizard, autom
 
 Device Guard is a Windows 10 feature that uses hardware and software features to strictly control what is allowed to run on the device.
 
-You can read a detailed overview of what Device Guard does, and how it works at [this Technet article](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview).
+For more information, see [Introduction to Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
+In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
 
 At present, this capability is not configurable from the Configuration Manager console. To configure the policy requires you to configure a registry key on each client, and configure Windows services on the client.
 Once this is done, configure the AppLocker policy file. After you configure the policy file, you can deploy it to any compatible client device.
@@ -89,13 +89,11 @@ Like all AppLocker policies, policies with Managed Installer rules can run in tw
 - Audit mode – Applications are note prevented from running, but any applications that would have been blocked are reported in a log file (This will be supported in a later release of Configuration Manager).
 - Enforcement enabled – Applications are blocked from running.
 
-Further information about how to use Device Guard with Configuration Manager can be found on the [Enterprise Mobility and Security blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
+For more information, see the following articles:
 
-Further reading:
+- [Device Guard introduction](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Device Guard introduction](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Planning and getting started on the Windows Defender Application Control deployment process](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
   With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
@@ -217,7 +215,7 @@ After clients have the new location information for Cloud Proxy Service, try che
 
 Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Office 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
 
-For more information, see [Manage Office 365 ProPlus updates](https://technet.microsoft.com/library/mt741983.aspx).
+For more information, see [Manage Office 365 ProPlus updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.

@@ -115,7 +115,7 @@ public void AddRegistryCondition(
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence step ([SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence step ([SMS_TaskSequenceStep](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
 
 ## Compiling the Code  
  The C# example has the following compilation requirements:  

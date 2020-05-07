@@ -231,7 +231,7 @@ The writer ID for the SMS Writer is **03ba67dd-dc6d-4729-a038-251f7018463b**.
 The SMS Writer service must run under the Local System account.  
 
 ### Volume Shadow Copy service  
-The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](https://go.microsoft.com/fwlink/p/?LinkId=241968).  
+The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 

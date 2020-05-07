@@ -117,12 +117,12 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 
 - This release does not support failover to use the asynchronous commit replica as your site database.
   > [!CAUTION]  
-  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
 
 - You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) See [the SQL Server documentation](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) for information on how to add secondary replicas to availability groups.
+To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) For more information, see [Add a secondary replica to an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).

@@ -82,7 +82,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
      - The limit for software updates in the ADR is 1000 software updates.  
 
-     - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - Starting in version 1910, you can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
          - When using **Deployed** as a filter, be mindful that you may have already deployed the update to another collection, such as a pilot or test collection. <!--4852033-->

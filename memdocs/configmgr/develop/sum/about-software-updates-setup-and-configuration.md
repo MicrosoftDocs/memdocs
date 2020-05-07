@@ -15,8 +15,7 @@ manager: dougeby
 # About Software Updates Setup and Configuration
 Before software update compliance assessment data is displayed in the Configuration Manager console and before software updates can be deployed to client computers, you must install and configure a software update point. In addition, consider the configuration and settings for other software updates components, such as the Windows Server Update Services (WSUS) server and the software updates client agent. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  
 
-> [!NOTE]
->  General information about Software Updates can be found in the [Documentation for Configuration Manager](https://technet.microsoft.com/library/mt346023.aspx) under [Deploy and manage software updates](https://technet.microsoft.com/library/mt634340.aspx).  
+For more information about software updates, see [Deploy and manage software updates](../../sum/understand/software-updates-introduction.md).  
 
 ## Software Update Point  
  A software update point in Configuration Manager is a required component of software updates, and after it is installed, the software update point is displayed as a site system role in the Configuration Manager console. The software update point site system role must be created on a site system server that has Windows Server Update Services (WSUS) 3.0 installed.  

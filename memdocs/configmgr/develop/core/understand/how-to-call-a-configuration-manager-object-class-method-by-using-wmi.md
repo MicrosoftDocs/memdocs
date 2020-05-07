@@ -22,13 +22,13 @@ To call a SMS Provider class method, in Configuration Manager, you use the [SWbe
 
 1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
-2.  Using the SWbemServices you obtain in step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the class definition.  
+2.  Using the SWbemServices you obtain in step one, call [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) to get the class definition.  
 
-3.  Create the input parameters as a [SWbemMethodSet](https://msdn.microsoft.com/library/aa393723.aspx).  
+3.  Create the input parameters as a [SWbemMethodSet](https://docs.microsoft.com/windows/win32/wmisdk/swbemmethodset).  
 
 4.  Using the SWbemServices object instance, call [ExecMethod](https://msdn.microsoft.com/library/aa393862.aspx) and specify the class name and input parameters.  
 
-5.  Retrieve the method return value from the *ReturnValue* property in the returned [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object.  
+5.  Retrieve the method return value from the *ReturnValue* property in the returned [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) object.  
 
 ## Example  
  The following example validates a collection rule query by calling the [SMS_CollectionRuleQuery](../../../develop/reference/core/clients/collections/sms_collectionrulequery-server-wmi-class.md) class [ValidateQuery](../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md) class method.  
@@ -87,7 +87,7 @@ Sub ValidateQueryRule(connection, wqlQuery)
 ## Compiling the Code  
 
 ## See Also  
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
  [Objects overview](configuration-manager-objects-overview.md)
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
  [How to Create a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md)   

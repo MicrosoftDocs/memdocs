@@ -70,7 +70,7 @@ The technical preview branch of Configuration Manager supports the following pro
 - The site supports up to 10 clients, which can run any [supported client OS version](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).
+> The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
 
 ## <a name="bkmk_install"></a> Install and update
 
@@ -91,7 +91,7 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2002**: The Configuration Manager technical preview branch version 2002 is available as both an in-console update and as a new baseline version.
 
-Download a baseline version from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 

@@ -40,7 +40,7 @@ In Configuration Manager, when you write unmanaged applications, you might have 
 >  The header files can be found in the % Program Files %\Microsoft System Center 2012 Configuration Manager SDK\Samples\Includes folder.  
 
 > [!IMPORTANT]
->  For more information about general Configuration Manager requirements, see [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=248211).  
+>  For more information about general Configuration Manager requirements, see [Supported configurations](../../../core/plan-design/configs/supported-configurations.md).  
 
 ## See Also  
  [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md)   

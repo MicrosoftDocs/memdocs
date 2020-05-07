@@ -97,7 +97,7 @@ Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
 
  Password of the account specified by `DomainUsername`. Set this property if the `Type` property is set to 0.  
 
- The task sequence variable associated with this property is OSDJoinPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDJoinPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
  `DomainPassword` might be required to disjoin from the computer's domain.  
 
@@ -110,7 +110,7 @@ Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
 
  Account that should be used by the target computer to join a Windows domain, with appropriate domain join rights. Set this property if the `Type` property is set to 0.  
 
- The task sequence variable associated with this property is OSDJoinAccount. For more information, see [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDJoinAccount. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
 
  `DomainUserName` may be required to disjoin from the computer's domain.  
 
@@ -175,7 +175,7 @@ Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
 |0|Domain|  
 |1|Workgroup|  
 
- The task sequence variable associated with this property is OSDJoinType. For more information, see [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDJoinType. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
 
  `WorkgroupName`  
  Data type: `String`  
