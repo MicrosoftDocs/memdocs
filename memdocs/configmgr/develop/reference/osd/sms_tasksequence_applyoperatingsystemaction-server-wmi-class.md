@@ -65,7 +65,7 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
  The name of the answer file specified in the `ConfigFilePackage` property. For more information, see the Remarks section later in this topic.  
 
- The task sequence variable associated with this property is OSDConfigFileName. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDConfigFileName. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDConfigFileName).  
 
  `ConfigFilePackage`  
  Data type: `String`  
@@ -148,7 +148,7 @@ Class SMS_TaskSequence_ApplyOperatingSystemAction : SMS_TaskSequence_Action
 
  Index of the image in the WIM file applied to the target computer. The value of this property can be between 1 and 2147483647. This property is required if `ImagePackageID` is set. For more information, see the Remarks section later in this topic.  
 
- The task sequence variable associated with this property is OSDImageIndex. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDImageIndex. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDImageIndex).  
 
  `ImagePackageID`  
  Data type: `String`  

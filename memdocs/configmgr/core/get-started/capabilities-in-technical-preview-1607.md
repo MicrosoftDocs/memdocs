@@ -58,7 +58,7 @@ Custom branding for the Software Center is applied according to the following ru
 ## Use the same network adapter for multiple PXE initiated deployments
 In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration.
 
-For more information about this issue, see the [Configuration Manager OSD Support Team Blog](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+For more information about this issue, see the [Configuration Manager OSD Support Team Blog](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### Enable the feature to manage duplicate hardware identifiers  
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Updates and Servicing** > **Features**.

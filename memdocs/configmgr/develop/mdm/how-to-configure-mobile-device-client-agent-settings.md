@@ -16,7 +16,7 @@ manager: dougeby
 You configure the Mobile Device Client Agent settings, in Configuration Manager, by modifying the site control file.  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
+> This article only applies to the mobile device legacy client. For more information on the mobile device legacy client platforms, see [Supported configurations](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-ce-computers).
 
 ### To configure the Mobile Device Client Agent settings  
 

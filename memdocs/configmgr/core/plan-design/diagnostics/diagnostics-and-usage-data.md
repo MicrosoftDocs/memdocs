@@ -25,7 +25,7 @@ Each Configuration Manager hierarchy enables diagnostics and usage data. It cons
 > [!NOTE]  
 > Configuration Manager collects data only from the site's SQL server database, and it doesn't collect data directly from clients or site servers.  
 
-For more information, see the [Microsoft privacy statement](https://go.microsoft.com/fwlink/?LinkID=626527).  
+For more information, see the [Microsoft privacy statement](https://privacy.microsoft.com/privacystatement).  
 
 > [!div class="nextstepaction"]
 > [How Microsoft uses diagnostics and usage data](how-diagnostics-and-usage-data-is-used.md)

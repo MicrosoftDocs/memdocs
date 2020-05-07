@@ -112,7 +112,7 @@ public IResultObject CreateTaskSequencePackage(
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence `SMS_TaskSequence`|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence `SMS_TaskSequence`|  
 
 ## Compiling the Code  
  The C# example requires:  

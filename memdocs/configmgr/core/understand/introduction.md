@@ -30,7 +30,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Other features in the [Device Management Admin Console](https://go.microsoft.com/fwlink/?linkid=2109094)
+- Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.md).
 
