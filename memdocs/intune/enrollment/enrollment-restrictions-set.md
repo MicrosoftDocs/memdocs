@@ -87,12 +87,14 @@ Default restrictions are automatically provided for both device type and device 
 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
-8. Choose **Next** to go to the **Assignments** page.
-9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+8. Choose **Next** to go to the **Scope tags** page.
+9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. Choose **Next** to go to the **Assignments** page.
+11. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
-10. Select **Next** to go to the **Review + create** page.
-11. Select **Create** to create the restriction.
-12. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+12. Select **Next** to go to the **Review + create** page.
+13. Select **Create** to create the restriction.
+14. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 
 ## Create a device limit restriction
@@ -102,12 +104,14 @@ Default restrictions are automatically provided for both device type and device 
 3. Choose **Next** to go to the **Device limit** page.
 4. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Choose **Next** to go to the **Assignments** page.
-6. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+5. Choose **Next** to go to the **Scope tags** page.
+6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. Choose **Next** to go to the **Assignments** page.
+8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. Select **Next** to go to the **Review + create** page.
-8. Select **Create** to create the restriction.
-9. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+9. Select **Next** to go to the **Review + create** page.
+10. Select **Create** to create the restriction.
+11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 During BYOD enrollments, users see a notification that tells them when they've met their limit of enrolled devices. For example, on iOS:
 
