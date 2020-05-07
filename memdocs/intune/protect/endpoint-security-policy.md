@@ -74,9 +74,9 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
 ## Duplicate a policy
 
-Endpoint security policies support duplication to create a copy of the original policy. A scenario when duplicating a policy is useful is if you need to assign similar policies to different groups but don't want to manually recreate the entire policy. Instead, you can duplicate the original policy and then introduce only the changes the new policy requires. You might only change a specific setting and the group the policy is assigned to.
+Endpoint security policies support duplication to create a copy of the original policy. A scenario when duplicating a policy is useful, is if you need to assign similar policies to different groups but don't want to manually recreate the entire policy. Instead, you can duplicate the original policy and then introduce only the changes the new policy requires. You might only change a specific setting and the group the policy is assigned to.
 
-When creating a duplicate you'll give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but won't have any assignments. You'll need to edit the new policy later to create assignments.  
+When creating a duplicate, you'll give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but won't have any assignments. You'll need to edit the new policy later to create assignments.  
 
 The following policy types support duplication:
 
@@ -205,6 +205,15 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** *(Public preview)* - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+
+### Firewall rule mergers and policy conflicts
+
+Like other policy types, plan for Firewall policies to be applied to a device using only one policy. Use of a single policy and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. This source of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
+
+However, you can successfully have multiple profiles for **Microsoft Defender Firewall rules** apply to the same device, unless the two profiles contain direct conflicts. When the profiles don’t directly conflict with each other, devices will merge the rules from *Microsoft Defender Firewall rules* profiles to create combined firewall rule configuration. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
+
+For example, you have two Microsoft Defender Firewall rules profiles. The first profile allows *Teams.exe* through the firewall. The second profile allows *Outlook.exe* through the firewall. When a device receives both profiles, the device is configured to allow both apps through the firewall.
+
 
 ## Endpoint detection and response policy
 
