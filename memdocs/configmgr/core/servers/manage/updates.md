@@ -61,7 +61,7 @@ The following supported versions of Configuration Manager are currently availabl
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 
-The **Availability date** is when the [early update ring](checklist-for-installing-update-2002.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after update is globally available.
+The **Availability date** is when the [early update ring](checklist-for-installing-update-2002.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
 
 <a name="bkmk_note1"></a>
 
