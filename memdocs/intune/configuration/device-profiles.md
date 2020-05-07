@@ -184,7 +184,7 @@ This feature supports:
 
 ## Extensions
 
-[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific kernel extensions.
+[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
 
