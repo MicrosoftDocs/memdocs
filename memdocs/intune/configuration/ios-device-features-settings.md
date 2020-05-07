@@ -111,7 +111,7 @@ You can add up to **six** items (apps and folders combined) for the device dock.
       You can add up to **20** pages for the device dock.
 
 > [!NOTE]
-> When you add icons using the Dock settings, the icons on the Home Screen and pages are locked, and can't be moved. This may be by design with iOS/iPadOS and Apple's MDM policies.
+> When you use the Home Screen Layout setting either to add Pages OR add Pages AND apps to Dock, the icons on the Home Screen and pages are locked, they can't be moved or delete. This may be by design with iOS/iPadOS and Apple's MDM policies.
 
 #### Example
 
