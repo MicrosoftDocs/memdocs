@@ -1600,7 +1600,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**:  Yes  
 
 - **Scan archive files**:  
-  CSP: [](https://go.microsoft.com/fwlink/?linkid=2114047)
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
   
   When set to Yes, archive files such as ZIP or CAB file scanning will be enforced. When set to Not configured, the setting will be returned back to client default which is to scan archived files, however the user may disable this.
 
