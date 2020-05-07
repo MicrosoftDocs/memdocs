@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -111,7 +111,7 @@ You can add up to **six** items (apps and folders combined) for the device dock.
       You can add up to **20** pages for the device dock.
 
 > [!NOTE]
-> When you use the Home Screen Layout setting either to add Pages OR add Pages AND apps to Dock, the icons on the Home Screen and pages are locked, they can't be moved or delete. This may be by design with iOS/iPadOS and Apple's MDM policies.
+> When you use the Home Screen Layout settings to add pages, or add pages and apps to the Dock, the icons on the Home Screen and pages are locked. They can't be moved or deleted. This behavior might be by design with iOS/iPadOS and Apple's MDM policies.
 
 #### Example
 
