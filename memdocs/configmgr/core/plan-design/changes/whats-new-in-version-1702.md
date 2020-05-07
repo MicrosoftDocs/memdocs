@@ -24,8 +24,8 @@ Update 1702 for Configuration Manager current branch is available as an in-conso
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Installing updates at sites](../../servers/manage/updates.md)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
@@ -67,7 +67,7 @@ You can find the **Feedback** option:
 - When you right-click on any object in the console.   
    ![Righ-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
+  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  Changes for Updates and Servicing

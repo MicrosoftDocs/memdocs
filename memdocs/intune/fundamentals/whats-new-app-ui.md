@@ -620,6 +620,6 @@ These are the plans for ways we will be improving the user experience by updatin
 
 
 ## See also
-* [Microsoft Intune Blog](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Cloud Platform roadmap](https://www.microsoft.com/cloud-platform/roadmap)
 * [What's new in Intune](whats-new.md)

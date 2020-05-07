@@ -49,7 +49,7 @@ Starting in version 1906, **OneTrace** is a new log viewer with Support Center. 
 
 ### PowerShell cmdlets
 
-Support Center also includes [Windows PowerShell cmdlets](https://go.microsoft.com/fwlink/?linkid=397830). Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
+Support Center also includes [PowerShell cmdlets](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Use these cmdlets to create a remote connection to another Configuration Manager client, to configure the data collection options, and to start data collection.
 
 
 ## Prerequisites

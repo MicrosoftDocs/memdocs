@@ -20,6 +20,9 @@ ms.author: aaroncz
 
 Configuration baselines in Configuration Manager contain predefined configuration items and optionally, other configuration baselines. After a configuration baseline is created, you can deploy it to a collection so that devices in that collection download the configuration baseline and assess their compliance with it.  
 
+> [!TIP]
+> There's no way to specify the order that the Configuration Manager client evaluates the configuration items in a baseline. It's non-deterministic.<!-- MEMDocs#175 -->
+
 ## Configuration baselines
 
  Configuration baselines in Configuration Manager can contain specific revisions of configuration items or can be configured to always use the latest version of a configuration item. For more information about configuration item revisions, see [Management tasks for configuration data](../../compliance/deploy-use/management-tasks-for-configuration-data.md).  

@@ -17,12 +17,12 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Administrators can view the status of [Windows 10 Device Health Attestation](https://technet.microsoft.com/library/mt592023.aspx) in the Configuration Manager console.  Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  
+Administrators can view the status of [Windows 10 Device Health Attestation](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) in the Configuration Manager console.  Device health attestation lets the administrator ensure that client computers have the following trustworthy BIOS, TPM, and boot software configurations enabled:  
 
 -   Early-launch antimalware - Early launch anti-malware (ELAM) protects your computer when it starts up and before third-party drivers initialize. [How to turn on ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker - Windows BitLocker Drive Encryption is software that lets you encrypt all data stored on the Windows operating system volume.  [How to turn on BitLocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Secure Boot - Secure Boot is a security standard developed by members of the PC industry to help make sure that your PC boots using only software that is trusted by the PC manufacturer. [Learn more about Secure Boot](https://technet.microsoft.com/library/hh824987.aspx)  
--   Code Integrity - Code Integrity is a feature that improves the security of the operating system by validating the integrity of a driver or system file each time it is loaded into memory. [Learn about Code Integrity](https://technet.microsoft.com/library/dd348642.aspx)  
+-   Secure Boot - Secure Boot is a security standard developed by members of the PC industry to help make sure that your PC boots using only software that is trusted by the PC manufacturer. [Learn more about Secure Boot](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Code Integrity - Code Integrity is a feature that improves the security of the operating system by validating the integrity of a driver or system file each time it is loaded into memory. [Learn about Code Integrity](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 This functionality is available for PCs and on-premises resources managed by Configuration Manager and mobile devices managed with Microsoft Intune. Administrators can specify whether reporting is done via the cloud or on-premises infrastructure. On-premises device health attestation monitoring enables administrator to monitor client PCs without internet access.
 
@@ -30,7 +30,7 @@ This functionality is available for PCs and on-premises resources managed by Con
 
  **Requirements:**  
 
--   Client devices running Windows 10 version 1607 or Windows Server 2016 version 1607 with [Device Health Attestation enabled](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Client devices running Windows 10 version 1607 or Windows Server 2016 version 1607 with [Device Health Attestation enabled](https://docs.microsoft.com/windows-server/security/device-health-attestation).
 -   TPM 1.2 or TPM 2 enabled devices.
 -   When using cloud management, communication between the Configuration Manager client agent and the management point with *has.spserv.microsoft.com* (port 443) Health Attestation service (cloud management). When on-premises, the client must be able to communicate with the device health attestation-enabled management point.
 

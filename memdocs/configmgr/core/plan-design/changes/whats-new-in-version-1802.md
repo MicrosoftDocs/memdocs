@@ -165,7 +165,7 @@ Beginning in this release, you can view a dashboard with information about co-ma
 
 ### Microsoft Edge browser policies
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md). 
+For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md). 
 
 
 

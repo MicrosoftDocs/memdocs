@@ -9,16 +9,13 @@ ms.assetid: efbb6dc8-cb1c-4513-95a4-eb3a8c3936b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # About Maintenance Windows
-For detailed information about Configuration Manager maintenance windows, see the Configuration Manager documentation on TechNet. The following links are particularly useful in understanding how maintenance windows work.  
 
--   [About Maintenance Windows](https://technet.microsoft.com/library/bb694295.aspx)  
+For more information about Configuration Manager maintenance windows, see [Use maintenance windows](../../../../core/clients/manage/collections/use-maintenance-windows.md).
 
--   [Program Run Scenario using Maintenance Windows](https://technet.microsoft.com/library/bb694197.aspx)  
+## See also
 
-## See Also  
- [About deployments](about-software-distribution-deployments.md)
- [Software distribution overview](software-distribution-overview.md)
+- [About deployments](about-software-distribution-deployments.md)
+- [Software distribution overview](software-distribution-overview.md)

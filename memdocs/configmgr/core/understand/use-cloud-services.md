@@ -33,7 +33,7 @@ Although provisioning cloud resources is not something you must do before you de
 
 -   For information about cloud-based distribution points, see [Install cloud-based distribution points](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
--   For more information about Azure, see [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in the MSDN Library.  
+-   For more information about Azure, see [What is Azure?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### Azure virtual machines (for cloud-based infrastructure)  
  Configuration Manager supports using computers that run in virtual machines in Azure, just as it does when run on-premises within your physical corporate network. You can use Azure virtual machines in the following scenarios:  
@@ -75,12 +75,4 @@ These additional capabilities do not require you to have an Azure subscription. 
 ##  <a name="BKMK_CloudSec"></a> Security for cloud-based services  
  Configuration Manager uses certificates to provision and access your content in Azure, and to manage the services that you use. Configuration Manager encrypts the data that you store in Azure, but does not introduce additional security or data controls beyond those that Azure provides.  
 
- For more information, see the details for the different cloud-based resource scenarios. You can also view the following topics for Azure security:  
-
--   [Azure: Understanding Security Account Management in Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Azure Security Overview](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Get Past the Security Crossroads in Your Cloud Migration](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Data Security in Azure Part 1 of 2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ For more information, see the details for the different cloud-based resource scenarios. Also see an [Introduction to Azure security](https://docs.microsoft.com/azure/security/fundamentals/overview).

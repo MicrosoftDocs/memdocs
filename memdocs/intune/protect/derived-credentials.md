@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 5/15/2020
+ms.date: 5/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high

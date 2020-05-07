@@ -79,7 +79,7 @@ Class SMS_TaskSequence_RestoreUserStateAction : SMS_TaskSequence_Action
 
  `true` (default) if user state restoration should continue even if some files cannot be restored.  
 
- The task sequence variable associated with this property is OSDMigrateContinueOnRestore. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateContinueOnRestore. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
  `Description`  
  Data type: `String`  
@@ -117,7 +117,7 @@ Class SMS_TaskSequence_RestoreUserStateAction : SMS_TaskSequence_Action
 
  Password for the local user account to reset for restored local user profiles.  
 
- The task sequence variable associated with this property is OSDMigrateLocalAccountPassword. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateLocalAccountPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
  `LocalAccounts`  
  Data type: `Boolean`  
@@ -128,7 +128,7 @@ Class SMS_TaskSequence_RestoreUserStateAction : SMS_TaskSequence_Action
 
  `true` to restore the local computer account. The default value is `false`.  
 
- The task sequence variable associated with this property is OSDMigrateLocalAccounts. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+ The task sequence variable associated with this property is OSDMigrateLocalAccounts. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
  `Mode`  
  Data type: `String`  
@@ -179,7 +179,7 @@ Class SMS_TaskSequence_RestoreUserStateAction : SMS_TaskSequence_Action
 
   ID of the task sequence package containing the USMT program.  
 
-  The task sequence variable associated with this property is _OSDMigrateUsmtRestorePackageID. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is _OSDMigrateUsmtRestorePackageID. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
 ## Remarks  
  Class qualifiers for this class include:  

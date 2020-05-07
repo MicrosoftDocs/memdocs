@@ -27,7 +27,7 @@ When you use Configuration Manager to manage virtual applications, you gain the 
 
 -   Operating system deployment, software and hardware inventory, software metering, and asset intelligence to support virtual applications  
 
-For more information about how to create and sequence applications with Microsoft Application Virtualization (App-V), see [Application Virtualization](https://technet.microsoft.com/library/cc843848.aspx) in the TechNet Library.  
+For more information about how to create and sequence applications with Microsoft Application Virtualization (App-V), see [Application Virtualization 4 documentation](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
 
 In addition to the other Configuration Manager requirements and procedures for creating an application, you must take the following considerations into account when you create and deploy virtual applications:
 
@@ -45,7 +45,7 @@ In addition to the other Configuration Manager requirements and procedures for c
 
 -   To deploy virtual applications in Configuration Manager, client computers must have at minimum the App-V 4.6 SP1 or a later version of the client installed.  
 
--   Before you can successfully deploy virtual applications, you must update the App-V Client with the hotfix described in the Knowledge Base article [2645225](https://support.microsoft.com/kb/2645225).  
+-   Before you can successfully deploy virtual applications, update the App-V client with the latest hotfix. For more information, see [Current list of App-V 4.5 and App-V 4.6 file versions](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).
 
 -   When you use connection groups in App-V 5.0, your deployed virtual applications can share the same file system and registry on client computers. Unlike standard virtual applications, these applications can share data with one another. Additionally, connection groups preserve user settings for the applications that they contain. App-V virtual environments in Configuration Manager are used to set up connection groups on client computers. Virtual environments are created or changed on client computers when the application is installed or when clients next evaluate their installed applications. You can prioritize these applications so that when multiple applications try to change a file system or registry value, the application that has the highest priority takes precedence. For more information, see [Create App-V virtual environments](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
@@ -54,16 +54,16 @@ In addition to the other Configuration Manager requirements and procedures for c
 
 -   **App-V 4.6**: To use virtual applications in Configuration Manager, client computers must have the App-V 4.6 SP1, App-V 4.6 SP2, or App-V 4.6 SP3 client installed.  
 
-     Before you can successfully deploy virtual applications, you must also update the App-V 4.6 SP1 client with the hotfix that is described in the Knowledge Base article [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322).  
+     Before you can successfully deploy virtual applications, update the App-V 4.6 client with the latest hotfix. For more information, see [Current list of App-V 4.5 and App-V 4.6 file versions](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).  
 
--   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) or use App-V 5.0 SP3.  
+-   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3, and App-V 5.1**: For App-V 5.0 SP2, you must install [Hotfix Package 5](https://support.microsoft.com/help/2963211) or use App-V 5.0 SP3.  
 -   **App-V 5.2**: This is built into Windows 10 Education (1607 and later), Windows 10 Enterprise (1607 and later), and Windows Server 2016.
 
 For more information about App-V in Windows 10, see the following topics:
 
-- [What's new in App-V](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
-- [Getting Started with App-V for Windows 10](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
-- [Upgrading to App-V for Windows 10 from an existing installation](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [What's new in App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
+- [Getting Started with App-V for Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
+- [Upgrading to App-V for Windows 10 from an existing installation](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  Steps to manage App-V virtual applications  
  To manage App-V virtual applications, follow these steps:  
@@ -143,7 +143,7 @@ For you to use this feature with Configuration Manager, both packages must be de
 For more information about App-V Dynamic Suite Composition, see your App-V documentation.  
 
 ##  Converting App-V 4.6 applications to App-V 5 applications  
-The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see your [App-V 5 documentation](https://technet.microsoft.com/library/jj713472.aspx).  
+The application package format has changed between App-V 4.6 and App-V 5. Applications that have been sequenced by using App-V 4.6 are no longer supported. But App-V 5 has a package converter tool that you can use to convert applications. For more information, see [How to convert a package created in a previous version of App-V](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 Use the following steps to convert App-V 4.6 applications to App-V 5 applications:  
 
@@ -174,7 +174,7 @@ The deployment configuration file has settings that apply to the computer, like 
 
 If you want to deploy App-V 5 virtual applications with Configuration Manager, all three files must be present in the same folder when you create the App-V 5 deployment type. If there are multiple files in the folder, Configuration Manager will use the most recent.  
 
-For more information, see your [App-V 5 documentation](https://technet.microsoft.com/library/jj713466.aspx).  
+For more information, see your [About App-V 5.0 dynamic configuration](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
 
 ##  App-V local interaction  
 In some application deployment scenarios, applications are installed locally on client computers, and other applications are deployed as virtual applications to the same client computer. By default, the applications that were locally installed cannot see or communicate directly with virtualized applications. This is the intended behavior of the application isolation that App-V provides. Local interaction is a feature of the App-V Client that you can enable for each application to allow locally installed applications that run on a client computer to see and communicate with virtualized applications. Configuration Manager and App-V fully support local interaction.  
@@ -182,7 +182,7 @@ In some application deployment scenarios, applications are installed locally on 
 For more information about the App-V local interaction feature, see your App-V documentation.  
 
 ##  App-V 5 Shared Content Store  
-Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](https://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager supports the App-V 5 Shared Content Store feature. For more information, see [Planning for the App-V 5.0 Shared Content Store (SCS)](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  Monitoring virtual applications  
 

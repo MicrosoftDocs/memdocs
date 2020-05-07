@@ -13,20 +13,20 @@ manager: dougeby
 
 ---
 # How to Modify a Configuration Manager Object by Using WMI
-You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object to change its properties.  
+You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) object to change its properties.  
 
 ### To modify a Configuration Manager object  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](https://msdn.microsoft.com/library/aa393868.aspx) method and specify the class and key information for the object you want. This returns a [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) representing object.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) method and specify the class and key information for the object you want. This returns a [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) representing object.  
 
-3.  Using the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx), update the object properties.  
+3.  Using the [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject), update the object properties.  
 
-4.  Call [Put_](https://msdn.microsoft.com/library/aa393783.aspx) to update the object in the SMS Provider.  
+4.  Call [Put_](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject-put-) to update the object in the SMS Provider.  
 
 ## Example  
- The following VBScript code example gets a package (SMS_Package) object, changes the package description, and then commits the changes back to the SMS Provider. In this example, the package is retrieved through a call to the SWbemServices object [Get](https://msdn.microsoft.com/library/aa393868.aspx). You can also retrieve the package by using a query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md).  
+ The following VBScript code example gets a package (SMS_Package) object, changes the package description, and then commits the changes back to the SMS Provider. In this example, the package is retrieved through a call to the SWbemServices object [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get). You can also retrieve the package by using a query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
