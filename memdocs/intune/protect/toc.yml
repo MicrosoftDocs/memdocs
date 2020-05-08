@@ -89,7 +89,7 @@
           href: endpoint-security-asr-policy.md
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
-      - name: Microsoft Defender ATP
+    - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
     - name: Mobile Threat Defense partners
       href: mobile-threat-defense.md

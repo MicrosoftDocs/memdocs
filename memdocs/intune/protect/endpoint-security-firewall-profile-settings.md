@@ -43,7 +43,7 @@ Supported platforms and profiles:
 
 ### Firewall
 
-The following settings are configured as [Endpoint Security policy for macOS Firewalls](../protect/endpoint-security-policy.md#firewall-policy)
+The following settings are configured as [Endpoint Security policy for macOS Firewalls](../protect/endpoint-security-firewall-policy.md)
 
 - **Enable Firewall**
 
@@ -75,7 +75,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
 ### Microsoft Defender Firewall
 
-The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-policy.md#firewall-policy).
+The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-firewall-policy.md).
 
 - **Disable stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
@@ -175,7 +175,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 
 *(Public preview)*
 
-The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-policy.md#firewall-policy).
+The following settings are configured as [Endpoint Security policy for Windows 10 Firewalls](../protect/endpoint-security-firewall-policy.md).
 
 #### Windows Firewall Rule
 
