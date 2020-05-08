@@ -19,9 +19,9 @@ manager: dougeby
 Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
-  - [Configuration Manager_CollectedFilesAccess](#Configuration Manager_collectedfilesaccess)  
-  - [Configuration Manager_DViewAccess](#Configuration Manager_dviewaccess)  
-  - [Configuration Manager Remote Control Users](#Configuration Manager-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Configuration Manager Remote Control Users](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitecode\>](#bkmk_remoteprov)  
@@ -91,7 +91,7 @@ Configuration Manager automatically creates, and in many cases automatically mai
 > When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.  
 
 
-### <a name="Configuration Manager_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
+### <a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
@@ -109,14 +109,14 @@ Configuration Manager automatically manages the group membership. Membership inc
 By default, this group has **Read** permission to the following folder on the site server: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="Configuration Manager_dviewaccess"></a>Configuration Manager_DViewAccess  
+### <a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
 For more information, see [Data transfers between sites](data-transfers-between-sites.md).
 
 
-### Configuration Manager Remote Control Users  
+### <a name="configmgr_rcusers"></a> Configuration Manager Remote Control Users  
 
 Configuration Manager remote tools use this group to store the accounts and groups that you set up in the **Permitted Viewers** list. The site assigns this list to each client.  
 
@@ -379,7 +379,7 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.  
 
-If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints#bkmk_client2mp).<!-- SCCMDocs#1345 -->
+If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
@@ -739,7 +739,7 @@ User Reporting access. Configuration Manager grants access to the account used f
 
 <!-- SCCMDocs#405 -->
 
-Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
+Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
 
 - The computer account of the primary site server and central administration site server requires:
 
