@@ -240,6 +240,8 @@ By default, this group has **Full control** to the following folder: `C:\Program
 
 You can set up the following accounts for Configuration Manager.  
 
+> [!TIP]
+> Don't use the percentage character (`%`) in the password for accounts that you specify in the Configuration Manager console. The account will fail to authenticate.<!-- SCCMDocs#1032 -->
 
 ### Active Directory group discovery account  
 
