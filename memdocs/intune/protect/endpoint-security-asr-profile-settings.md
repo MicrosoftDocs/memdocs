@@ -411,4 +411,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for ASR](../protect/endpoint-security-policy.md#attack-surface-reduction-profiles)
+[Endpoint security policy for ASR](../protect/endpoint-security-asr-policy.md)

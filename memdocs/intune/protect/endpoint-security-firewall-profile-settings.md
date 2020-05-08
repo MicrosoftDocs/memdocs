@@ -281,4 +281,4 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 
 ## Next steps
 
-[Endpoint security policy for firewalls](../protect/endpoint-security-policy.md#firewall-policy)
+[Endpoint security policy for firewalls](../protect/endpoint-security-firewall-policy.md)
