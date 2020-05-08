@@ -10,8 +10,6 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Prerequisites for installing Configuration Manager sites
@@ -46,6 +44,9 @@ If you're installing a central administration site as part of a hierarchy expans
 
         > [!IMPORTANT]  
         > When Configuration Manager setup finishes, the site server computer account must retain sysadmin rights to SQL Server. Don't remove the SQL sysadmin rights from this account.  
+
+    > [!NOTE]
+    > For more information on the need for these permissions after setup is complete, see [Elevated permissions](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - If you're installing a primary site, you need the following additional rights:  
 
