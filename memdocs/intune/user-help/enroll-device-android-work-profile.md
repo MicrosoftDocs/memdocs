@@ -81,7 +81,7 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
 10. When prompted to view your organization's suggested apps in Google Play, select **OPEN**. If you're not ready to install apps, you can always access them later by opening the badged version of the Google Play app.  
 
-    ![Example image of Company Portal prompt to open badged version of Google Play.](./media/after1-banner-android-2005.png) 
+    ![Example image of Company Portal prompt to open badged version of Google Play.](./media/get-apps-banner-android-2005.png) 
 
 
 ## Next steps  

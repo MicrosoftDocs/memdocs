@@ -56,7 +56,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
-## Week of May 8, 2020  
+## Week of May 4, 2020  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
