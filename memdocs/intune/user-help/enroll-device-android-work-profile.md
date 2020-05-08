@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020  
+ms.date: 05/08/2020  
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -78,6 +78,10 @@ Find out more about [what happens when you create a work profile](what-happens-w
 9. When setup is complete, tap **DONE**.  
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
+
+10. When prompted to view your organization's suggested apps in Google Play, select **OPEN**. If you're not ready to install apps, you can always access them later by opening the badged version of the Google Play app.  
+
+    ![Example image of Company Portal prompt to open badged version of Google Play.](./media/after1-banner-android-2005.png) 
 
 
 ## Next steps  

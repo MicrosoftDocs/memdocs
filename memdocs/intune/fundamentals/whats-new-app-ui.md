@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020 
+ms.date: 05/08/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,17 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Update your organization's documentation or helpdesk procedures.  
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+
+
+
+## Week of May 4, 2020  
+### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
+We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. Users will also see a new **Get apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS ** tab was removed. To see the updated screens, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). The message is also documented in the last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md).  
+
+![Example image of Company Portal, Devices tab prompt to open badged version of Google Play.](./media/whats-new-app-ui/updated-banner-android-2005.png)
+
+![Example image Company Portal left-hand drawer, highlighting Get apps menu item.](./media/whats-new-app-ui/updated-drawer-android-2005.png)
+
 
 
 
