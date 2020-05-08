@@ -79,9 +79,14 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 
-10. When prompted to view your organization's suggested apps in Google Play, select **OPEN**. If you're not ready to install apps, you can always access them later by opening the badged version of the Google Play app.  
+10. When prompted to view your organization's suggested apps in Google Play, select **OPEN**. 
 
     ![Example image of Company Portal prompt to open badged version of Google Play.](./media/get-apps-banner-android-2005.png) 
+
+    If you're not ready to install apps, you can always access them later by going directly to the badged version of the Google Play app. You can also select **Get Apps** from the Company Portal menu.  
+
+    ![Example image of Company Portal menu, highlighting Get Apps link.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## Next steps  
