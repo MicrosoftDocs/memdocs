@@ -63,9 +63,9 @@ Plan for Firewall policies to be applied to a device using only one policy. Use 
 
   Microsoft *Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
 
-When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device. 
+When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
 
-- For example, if one rule blocks *Teams.exe* through the firewall and a second rule allows *Teams.exe*, both rules are delivered to the client. This result is different from conflicts created through other policies for the Firewall settings. 
+- For example, if one rule blocks *Teams.exe* through the firewall and a second rule allows *Teams.exe*, both rules are delivered to the client. This result is different from conflicts created through other policies for  Firewall settings.
 
 When rules from multiple rules profiles don't conflict with each other, devices merge the rules from each profile to create combined firewall rule configuration on the device. This behavior enables you to deploy more than the 150 rules that each individual profile supports to a device.
 
