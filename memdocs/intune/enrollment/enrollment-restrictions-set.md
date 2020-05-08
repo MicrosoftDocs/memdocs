@@ -88,7 +88,7 @@ Default restrictions are automatically provided for both device type and device 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
 8. Choose **Next** to go to the **Scope tags** page.
-9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
 10. Choose **Next** to go to the **Assignments** page.
 11. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
@@ -105,7 +105,7 @@ Default restrictions are automatically provided for both device type and device 
 4. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
 5. Choose **Next** to go to the **Scope tags** page.
-6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
 7. Choose **Next** to go to the **Assignments** page.
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
