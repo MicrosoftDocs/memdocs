@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,6 +39,7 @@ Intune supports a wide range of app types. The available options differ for each
 | Apps written in-house (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
 | Apps that are built-in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps on the web (web link) | Intune creates a shortcut to the web app on the device home screen. | App updates are automatic. |
+| Apps from other Microsoft services  | Intune creates a shortcut to the app in the Company Portal. | App updates are automatic. |
 
 ### Specific app type details
  
@@ -66,7 +67,6 @@ The following table lists the specific app types and how you can add them in the
 | Android Enterprise system apps  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | Windows app (Win32)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
 | macOS LOB apps | LOB app  | Select **Line-of-business** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunemac**.  |
-
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 
