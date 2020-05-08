@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -187,6 +187,10 @@ When you create the VPN profile, you choose a SCEP or PKCS certificate profile t
 If you use certificate-based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This assignment makes sure each device recognizes the legitimacy of your certificate authority.
 
 For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+
+> [!NOTE]
+> Certificates added using the **PKCS imported certificate** profile type aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile type are supported for VPN authentication.
+
 
 ### User name and password
 
