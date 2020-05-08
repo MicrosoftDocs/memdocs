@@ -73,4 +73,4 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 ## Next steps
 
-Configure Endpoint security policies(../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

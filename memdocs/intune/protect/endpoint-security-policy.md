@@ -106,8 +106,6 @@ After creating the new policy, review and edit the policy to make changes to its
    - Configuration settings
 4. After you’ve made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
 
-
-
 ## Manage conflicts
 
 Many of the device settings that you can manage with Endpoint security policies (security policies) you can manage through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because you can manage a setting with several different policy types or multiple instances of the same policy type, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect. When Intune identifies a conflict for policies, the settings that conflict are not sent to devices, and remain unamanged by Intune until you resolve the policy conflict.

@@ -94,4 +94,4 @@ Only devices with detected issues appear in this view. This view doesn't display
 
 ## Next steps
 
-Configure Endpoint security policies(../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

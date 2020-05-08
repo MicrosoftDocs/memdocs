@@ -53,4 +53,4 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Next steps
 
-Configure Endpoint security policies(../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

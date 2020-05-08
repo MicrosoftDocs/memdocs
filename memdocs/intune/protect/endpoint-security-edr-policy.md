@@ -55,4 +55,4 @@ View [settings for Endpoint detection and response profiles](../protect/endpoint
 
 ## Next steps
 
-Configure Endpoint security policies(../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

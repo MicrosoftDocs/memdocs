@@ -82,4 +82,4 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
 
 ## Next steps
 
-Configure Endpoint security policies(../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)

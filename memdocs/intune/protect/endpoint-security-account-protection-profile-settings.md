@@ -63,4 +63,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for EDR](../protect/endpoint-security-edr-policy.md)
+[Endpoint security policy for Account protection](../protect/endpoint-security-account-protection-policy.md)
