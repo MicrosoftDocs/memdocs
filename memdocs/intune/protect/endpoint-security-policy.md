@@ -110,9 +110,10 @@ After creating the new policy, review and edit the policy to make changes to its
 
 ## Manage conflicts
 
-Many of the device settings that you can manage with Endpoint security policies (security policies) you can manage through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because you can manage a setting with several different policy types or multiple instances of the same policy type, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect.
+Many of the device settings that you can manage with Endpoint security policies (security policies) you can manage through other policy types in Intune. These other policy types include *device configuration* policy and *security baselines*. Because you can manage a setting with several different policy types or multiple instances of the same policy type, be prepared to identify and resolve policy conflicts should a device not adhere to the configurations you expect. When Intune identifies a conflict for policies, the settings that conflict are not sent to devices, and remain unamanged by Intune until you resolve the policy conflict.
 
-By default, security baselines can set a non-default value for a setting to comply with the recommended configuration that baseline addresses. Other policy types, including the endpoint security policies, use *Not configured* by default, which requires you to explicitly configure setting in the policy to modify it on a device.
+- Security baselines can set a non-default value for a setting to comply with the recommended configuration that baseline addresses. 
+- Other policy types, including the endpoint security policies, set a value of *Not configured* by default. These other policy types require you to explicitly configure settings in the policy.
 
 Regardless of the policy method, managing the same setting on the same device through multiple policy types, or through multiple instances of the same policy type can result in conflicts that should be avoided.
 
