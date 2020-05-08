@@ -133,16 +133,6 @@ Applies to:
 
 - macOS 10.7 and newer
 
-## Privacy preferences
-
-Users are prompted by apps to allow access, or deny access to device features. For example, users are prompted to allow access to the camera and the media library. Use these privacy settings to reduce the number of prompts by pre-configuring apps or processes to allow or block access.
-
-For a list of the settings you can configure in Intune, see [Privacy preferences on macOS](device-restrictions-macos.md#privacy-preferences).
-
-Applies to:
-
-- macOS 10.14 and newer
-
 ## Single sign-on
 
 Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
@@ -167,7 +157,7 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect type is designed for modern authentication protocols, such as OAuth and SAML2. You can use a generic redirect extension on macOS devices. For iOS/iPadOS devices, you can choose between Microsoft's Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth and SAML2. You can use a generic redirect extension on macOS devices. For iOS/iPadOS devices, you can choose between Microsoft's Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
