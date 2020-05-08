@@ -41,7 +41,7 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 ## Week of May 4, 2020  
 ### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
-We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. Users will also see a new **Get apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS ** tab was removed. 
+We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. Users will also see a new **Get apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS** tab was removed. 
 
 ![Example image of Company Portal, Devices tab prompt to open badged version of Google Play.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
 
