@@ -42,7 +42,7 @@ This feature applies to:
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check in within your schedule configuration. Although the update process does not typically involve any user interaction, if the device has a passcode the user must enter it in order to start a software update. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
 
 > [!NOTE]
-> If using [Autonomous Single App Mode (ASAM)](https://docs.microsoft.com/en-us/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
+> If using [Autonomous Single App Mode (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
 Consider testing to assess the impact of OS updates on the app you are running in ASAM. Contact Apple if additional information is required regarding iOS software updates.
 
 ## Configure the policy
