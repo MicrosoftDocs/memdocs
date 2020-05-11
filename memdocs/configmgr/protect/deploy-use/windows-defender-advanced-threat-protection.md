@@ -54,7 +54,7 @@ Starting in Configuration Manager version 2002, you can onboard the following op
       1. Select **Configuration Manager (current branch) version 1606** and select **Download package**.
       1. Download the compressed archive (.zip) file and extract the contents.
    - If you're onboarding another Windows operating system:
-      1. Select the operating systems you'd like to onboard from the list. For example, choose either **Windows 7 and 8.1** or **Windows Server 2008 R2 SP1, 2012 R2 and 2016**.
+      1. Select the operating systems you'd like to onboard from the list presented in the Microsoft Defender ATP online service.
       1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section once the process completes.
 
 > [!IMPORTANT]
@@ -65,7 +65,7 @@ Starting in Configuration Manager version 2002, you can onboard the following op
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
-   - For **Windows 7 and 8.1** or **Windows Server 2008 R2 SP1, 2012 R2 and 2016**, provide the **Workspace key** and **Workspace ID**.
+   - For Windows 8.1* or Windows Server 2012 R2 and 2016, provide the **Workspace key** and **Workspace ID**.
    - For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only Windows Server 2019 and Windows Server 1803 or later devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
 
