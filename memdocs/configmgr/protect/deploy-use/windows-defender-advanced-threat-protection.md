@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -36,10 +36,10 @@ Based on the version of Configuration Manager you're running, the following clie
 
 #### Configuration Manager version 2002 and later
 <!--5229962-->
-- Windows 7 SP1
+Starting in Configuration Manager version 2002, you can onboard the following operating systems:
+
 - Windows 8.1
 - Windows 10, version 1607 or later
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016, version 1803
@@ -53,7 +53,7 @@ Based on the version of Configuration Manager you're running, the following clie
    - If you're onboarding Windows 10, Windows Server 1803, and Windows Server 2019:
       1. Select **Configuration Manager (current branch) version 1606** and select **Download package**.
       1. Download the compressed archive (.zip) file and extract the contents.
-   - If you're onboarding another Windows operating system: 
+   - If you're onboarding another Windows operating system:
       1. Select the operating systems you'd like to onboard from the list. For example, choose either **Windows 7 and 8.1** or **Windows Server 2008 R2 SP1, 2012 R2 and 2016**.
       1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section once the process completes.
 
