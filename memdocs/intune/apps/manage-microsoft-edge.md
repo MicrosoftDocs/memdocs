@@ -80,7 +80,7 @@ For more information on the available settings, see [Android app protection poli
 
 ## Single sign-on to Azure AD-connected web apps in policy-protected browsers
 
-Edge for iOS and Android on iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Azure AD-connected. SSO allows users to access Azure AD-connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
+Edge for iOS and Android can take advantage of single sign-on (SSO) to all web apps (SaaS and on-premises) that are Azure AD-connected. SSO allows users to access Azure AD-connected web apps through Edge for iOS and Android, without having to re-enter their credentials.
 
 SSO requires your device to be registered by either the Microsoft Authenticator app for iOS devices, or the Intune Company Portal on Android. When users have either of these, they are prompted to register their device when they go to an Azure AD-connected web app in a policy-protected browser (this is only true if their device hasn't already been registered). After the device is registered with the user's account managed by Intune, that account has SSO enabled for Azure AD-connected web apps.
 
