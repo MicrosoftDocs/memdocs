@@ -127,12 +127,12 @@ After a client establishes communication with a management point, it continues t
 The client then randomly selects a new management point to use.  
 
 ##  <a name="bkmk_ad"></a> Active Directory  
-Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](/../../servers/deploy/configure/publish-site-data.md).  
+Clients that are domain joined can use AD DS for service location. This requires sites to [publish data to Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 A client can use AD DS for service location when all the following conditions are true:  
 
 - The Active Directory [schema has been extended](../network/extend-the-active-directory-schema.md) or was extended for System Center 2012 Configuration Manager.  
-- The [Active Directory forest is configured for publishing](/../../servers/deploy/configure/publish-site-data.md), and Configuration Manager sites are configured to publish.  
+- The [Active Directory forest is configured for publishing](../../servers/deploy/configure/publish-site-data.md), and Configuration Manager sites are configured to publish.  
 - The client computer is a member of an Active Directory domain and can access a global catalog server.  
 
 If a client cannot find a management point to use for service location from AD DS, it attempts to use DNS.  
