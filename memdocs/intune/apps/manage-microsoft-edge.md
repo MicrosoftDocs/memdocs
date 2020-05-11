@@ -329,14 +329,15 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 
 ### Managing NTLM single sign-on sites
 
-Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication. However, organizations can define a list of web sites where Edge for iOS and Android caches the NTLM credentials after the user enters credentials and successfully authenticates. The credentials are cached for 30 days, by default.
+Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
+
+Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
 
 
 |Key  |Value  |
 |---------|---------|
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
-
 
 ### Managing proxy configuration
 
