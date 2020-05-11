@@ -93,7 +93,7 @@ Edge for iOS and Android supports app settings that allow unified endpoint manag
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Edge for iOS and Android supports the following configuration scenarios:
 
-- Organization allowed accounts mode
+- Only allow work or school accounts
 - General app configuration settings
 - Data protection settings
 
