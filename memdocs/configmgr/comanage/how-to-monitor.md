@@ -171,7 +171,7 @@ The production policy (CoMgmtSettingsProd) is targeted to the **All Systems** co
 
 ## WMI device data
 
-Query the site server's **SMS_Client_ComanagementState** WMI class in the **ROOT\SMS\site_&lt;SITECODE>** namespace. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](../core/clients/manage/collections/create-collections.md).
+Query the **SMS_Client_ComanagementState** WMI class in the **ROOT\SMS\site_&lt;SITECODE>** namespace on the site server. You can create custom collections in Configuration Manager, which help determine the status of your co-management deployment. For more information on creating custom collections, see [How to create collections](../core/clients/manage/collections/create-collections.md).
 
 The following fields are available in the WMI class:  
 
