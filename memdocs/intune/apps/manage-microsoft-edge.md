@@ -255,14 +255,14 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied:
 
-- Managing restricted web sites
-- Managing NTLM single sign-on sites
-- Managing proxy configuration
-- Managing account synchronization
+- Manage restricted web sites
+- Manage NTLM single sign-on sites
+- Manage proxy configuration
+- Manage account synchronization
 
 These settings can be deployed to the app regardless of device enrollment status.
 
-### Managing restricted web sites
+### Manage restricted web sites
 
 Organizations can define which sites users can access within the work or school account context in Edge for iOS and Android. If you use an allow list, your users are only able to access the sites explicitly listed. If you use a blocked list, users can access all sites except for those explicitly blocked. You should only impose either an allowed or a blocked list, not both. If you impose both, only the allowed list is honored.
 
@@ -327,7 +327,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-### Managing NTLM single sign-on sites
+### Manage NTLM single sign-on sites
 
 Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
 
@@ -339,7 +339,7 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
 
-### Managing proxy configuration
+### Manage proxy configuration
 
 You can use Edge for iOS and Android and [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
 
@@ -367,7 +367,7 @@ Target Edge for iOS with the following key/value pair, to enable Application Pro
 
 For more information about how to use Edge for iOS and Android and Azure AD Application Proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
-### Managing account synchronization
+### Manage account synchronization
 
 By default, Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. The data supported by sync includes:
 
@@ -384,7 +384,7 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 |---------|---------|
 |com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (default) allows Edge sync<br>**false** disables Edge sync          |
 
-## Deploying app configuration scenarios with Microsoft Endpoint Manager
+## Deploy app configuration scenarios with Microsoft Endpoint Manager
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
