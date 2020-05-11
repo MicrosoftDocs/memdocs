@@ -62,7 +62,7 @@ You'll find these policies under *Manage* in the **Endpoint security** node of t
 
    When your done configuring settings, select **Next**.
 
-7. On the **Scope (Tags)** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+7. On the **Scope tags** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   
    Select **Next** to continue.
 

@@ -32,7 +32,7 @@ ms.reviewer: mattsha
 
 As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and act to manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD). This includes devices that are managed by Intune, Configuration Manager, and through [co-management](https://docs.microsoft.com/configmgr/comanage/overview) by both Intune and Configuration Manager. Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
 
- To find it the view, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
+ To find the view, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
 
 The initial *All devices* view displays your devices and includes key information about each:
 
@@ -44,9 +44,11 @@ The initial *All devices* view displays your devices and includes key informatio
 
 ![All device view in the admin center](./media/endpoint-security-manage-devices/all-device-view.png)
 
-## Device details
+While viewing device details, you can select a device to drill-in for more information.
 
-When viewing devices in the Microsoft Endpoint Manager admin center, consider how the device is managed. The management source affects the information that’s presented in the admin center and which actions are available to manage the device from the admin center.
+## Available details by management type
+
+When viewing devices in the Microsoft Endpoint Manager admin center, consider how the device is managed. The management source affects the information that’s presented in the admin center and which actions are available to manage the device.
 
 Consider the following fields:
 
@@ -60,7 +62,7 @@ Consider the following fields:
     - Domain Joined
     - Hybrid AAD Joined (joined to the AD and AAD)
 
-    Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Endpoint Manager admin center.
+    The compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Endpoint Manager admin center.
 
     <!-- Tenant attached devices can receive your endpoint security policies. The following policy types are supported, with additional policy types being added in future updates to Intune: 
     -->
@@ -75,9 +77,19 @@ Consider the following fields:
 
 - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to either Intune or Pilot Intune.  
 
-  After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant.  That information can help you investigate and help you bring the device into compliance.
+  After compliance is reported to the admin center for a device, you can drill into the details to view additional details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant. That information can help you investigate and help you bring the device into compliance.
 
 - **Last check-in**: This field identifies the last time the device  reported its status.
+
+## Review a devices policy
+
+While viewing the list of devices, you can select a device to drill-in for more information about it by opening that device’s *Overview* page.
+
+From the Overview page of a device, you can then select **Endpoint security configuration** to view the endpoint security policies that apply to that device. Policy details are available for devices managed by MDM and Intune.
+
+![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
+
+Devices that are managed by Configuration Manager don’t display policy details. To view additional information for these devices, use the Configuration Manager console.
 
 ## Remote actions for devices
 
@@ -108,7 +120,7 @@ Some of the Intune remote actions can help secure devices or safeguard data that
 
 The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../remote-actions/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
-- [Synchronize device](../remote-actions/device-sync.md) – For the device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it.  
+- [Synchronize device](../remote-actions/device-sync.md) – Have the device immediately check in with Intune. When a device checks in, it receives any pending actions or policies that have been assigned to it.  
 
 - [Restart](../remote-actions/device-restart.md) – Force a Windows 10 device to restart, within five minutes. The device owner won't automatically be notified of the restart and might lose work.
 

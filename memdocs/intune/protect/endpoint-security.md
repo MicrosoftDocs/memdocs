@@ -36,35 +36,35 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level and then drill into specific devices to understand which compliance policies aren't met so you can resolve them.
 
-- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Defender ATP and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that are the relevant security teams recommend.
+- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender Advanced Threat Protection (Defender ATP) and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that the relevant security teams recommend.
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Defender ATP.
 
 - **Establish device and user requirements through compliance policy**. With [compliance policies](../protect/device-compliance-get-started.md), you set the rules that devices and users must meet to be considered compliant. Rules can include OS versions, password requirements, device threat-levels, and more.
 
-  When you integrate with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
+  When you integrate with Azure Active Directory (Azure AD) [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
-- **Integrate Intune with your Microsoft Defender Advanced Threat Protection (Defender ATP) team**. By [integrating with Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp). Security tasks closely tie Defender ATP and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
+- **Integrate Intune with your Microsoft Defender ATP team**. By [integrating with Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp). Security tasks closely tie Defender ATP and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
 
 The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center, and the role-based access control (RBAC) permissions that are required to use them.
 
 ## Manage devices
 
-The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure Active Directory (Azure AD) that are available in Microsoft Endpoint Manager.
+The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure AD that are available in Microsoft Endpoint Manager.
 
 From this view, you can select devices to drill in for more information like which policies a device isn't compliant with. You can also use access from this view to remediate issues for a device, including, restarting a device, start a scan for malware, or rotate BitLocker keys on a Window 10 device.
 
-For more information, see [Manage devices with endpoint security in Microsoft Intune](../protect/endpoint-security-manage-devices.md)
+For more information, see [Manage devices with endpoint security in Microsoft Intune](../protect/endpoint-security-manage-devices.md).
 
 ## Manage Security baselines
 
-Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the applicable product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender Advanced Threat Protection, and more.
+Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender Advanced Threat Protection, and more.
 
 You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
 
 For more information, see [Use security baselines to configure Windows 10 devices in Intune](../protect/security-baselines.md).
 
-Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
+Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
 ## Review Security tasks from Defender ATP
 
@@ -80,13 +80,13 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node to configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies you can configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
 
 Included under *Manage* is access to *Device compliance* and *Conditional access* policies. These policies are important tools for managing devices and access to your corporate resources.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
-To start using security policies, see [Manage device security with endpoint security polices](../protect/endpoint-security-policy.md).
+To start using security policies, see [Manage device security with endpoint security policies](../protect/endpoint-security-policy.md).
 
 Endpoint security policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
@@ -103,13 +103,13 @@ The [available compliance settings](../protect/device-compliance-get-started.md#
 In addition to the policy rules, compliance policies support:
 
 - [Locations](../protect/use-network-locations.md) that you define in Intune. When you use locations with a compliance policy, policy can ensure devices are connected to a work network to be compliant.
-- [Actions for non-compliance](../protect/actions-for-noncompliance.md) that are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
+- [Actions for non-compliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
 
 When you integrate Intune with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and from devices that you don't manage.
 
 To learn more, see [Set rules on devices to allow access to resources in your organization using Intune](../protect/device-compliance-get-started.md).
 
-Device compliance policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
+Device compliance policies are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices, and to avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
 ## Configure conditional access
 
@@ -131,11 +131,11 @@ When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) 
 While Intune can integrate with several [Mobile Threat Defense partners](../protect/mobile-threat-defense.md), when you use Defender ATP you gain a tight integration between Defender ATP and Intune with access to deep device protection options, including:
 
 - Security tasks – Seamless communication between ATP and Intune admins about devices at risk, how to remediate them, and confirmation when those risks are mitigated.
-- Streamlined onboarding for Defender ATP on clients
-- Use of ATP device risk signals in Intune compliance policies
-- Access to *Tamper protection* capabilities
+- Streamlined onboarding for Defender ATP on clients.
+- Use of ATP device risk signals in Intune compliance policies.
+- Access to *Tamper protection* capabilities.
 
- To learn more about using Defender ATP with Intune, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md)
+ To learn more about using Defender ATP with Intune, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
 ## Role-based access control requirements
 
