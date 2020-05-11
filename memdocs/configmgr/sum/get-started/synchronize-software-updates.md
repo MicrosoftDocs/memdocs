@@ -2,7 +2,7 @@
 title: Manage software updates synchronization
 titleSuffix: "Configuration Manager"
 description: "Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization."
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -53,7 +53,7 @@ Use the following procedures on the top-level site to manually initiate software
 
 2. In the Software Library workspace, expand **Software Updates** and click **All Software Updates** or **Software Update Groups**.  
 
-3. On the **Home** tab, in the **Create** group, click **Synchronize Software Updates**. Click **Yes** in the dialog box to confirm that you want to initiate the synchronization process.  
+3. On the **Home** tab, in the **All Software Updates** group, click **Synchronize Software Updates**. Click **Yes** in the dialog box to confirm that you want to initiate the synchronization process.  
 
    After you initiate the synchronization process on the software update point, you can monitor the synchronization process from the Configuration Manager console for all software update points in your hierarchy. Use the following procedure to monitor the software updates synchronization process.  
 
