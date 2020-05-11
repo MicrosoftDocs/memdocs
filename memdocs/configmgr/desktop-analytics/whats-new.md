@@ -10,6 +10,7 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # What's new in Desktop Analytics

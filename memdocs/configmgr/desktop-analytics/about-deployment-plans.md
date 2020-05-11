@@ -10,6 +10,7 @@ ms.assetid: 0f369f3a-f251-4f34-9302-1bdc6ea5d139
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # About deployment plans in Desktop Analytics
