@@ -152,9 +152,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. 
-For devices enrolled with Automated Device Enrollment with User Affinity, target AAD User Groups where the enrolling user is a member prior to the device setup will ensure the fastest policy delivery to the devices. Targeting applications and policy to Dynamic groups based on the Enrollment profiles will result in some delay in applying to devices after completing the enrollment flow.
-Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details. 
 
     ![Profile name and description.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -270,6 +268,17 @@ Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.
 16. Choose **Next** to go to the **Review + Create** page.
 
 17. To save the profile, choose **Create**.
+
+### Dynamic groups in Azure Active Directory
+
+You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory. For more information, see [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+
+You can use the profile name to define the [enrollmentProfileName parameter](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
+
+For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an AAD user group. 
+
+Assigning dynamic groups to enrollment profiles can lead to some delay in delivering applications and policies to devices after the enrollment.
+
 
 ## Sync managed devices
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
