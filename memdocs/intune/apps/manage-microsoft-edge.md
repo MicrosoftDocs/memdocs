@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied, which requires the user to sign-in to the app.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -166,7 +166,7 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character.<br>For example: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 #### Industry news
 
@@ -189,11 +189,11 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
 - Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
-- Bookmarks are created in a folder named after the organization's name defined in Azure Active Directory.
+- Bookmarks are created in a folder named after the organization's name which is defined in Azure Active Directory.
 
 |    Key    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    The value for this configuration is a   list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.      Example:<br>`Microsoft Bing|https://www.bing.com`<br>To configure multiple bookmarks, separate each pair with the double character `||`.<p>Example:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    The value for this configuration is a   list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.<br> For example: `Microsoft Bing|https://www.bing.com`<p>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### My Apps bookmark
 
