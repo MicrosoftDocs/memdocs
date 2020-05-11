@@ -130,6 +130,8 @@ Edge supports the following settings for configuration:
 - App behavior experiences
 - Kiosk mode experiences
 
+These settings can be deployed to the app regardless of device enrollment status.
+
 ### New Tab Page experiences
 
 Edge for iOS and Android offers organizations several options for adjusting the New Tab Page experience.
@@ -153,8 +155,6 @@ Next, utilize the following key/value pairs to pull your organization's branding
 #### Homepage shortcut
 
 This setting allows you to configure a homepage shortcut for Edge for iOS and Android. The homepage shortcut you configure appears as the first icon beneath the search bar when the user opens a new tab in Edge for iOS and Android. The user can't edit or delete this shortcut in their managed context. The homepage shortcut displays your organization's name to distinguish it. 
-
-Use the following key/value pair to configure a homepage shortcut:
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
@@ -189,8 +189,6 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
 - Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
-
-Use the following key/value pair to configure managed bookmarks:
 
 |    Key    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
