@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied, which requires the user to sign-in to the app.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied, which requires an account to be signed into the app.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -252,7 +252,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied, which requires an account to be signed into the app:
 
 - Manage restricted web sites
 - Manage NTLM single sign-on sites
