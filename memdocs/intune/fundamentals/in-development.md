@@ -198,9 +198,6 @@ You’ll be able to select a policy you’ve created in the Endpoint security no
 
 Duplication will make a copy of the original policy, which you can then rename and edit. The copy will not include assignments from the original.
 
-### Send push notifications as an action for non-compliance <!-- 1733150   -->
-For iOS and Android platforms, we are adding a new action for non-compliance that will send an app push notification through the Company Portal app. Users can click on the notifications which will launch the Company Portal app that then displays the reason they are non-compliant. Admins will be able to configure this new action for non-compliance in the Microsoft Endpoint Manager admin center by going to **Devices** > **Compliance policies** > **Create policy**, and then selecting the *Action* to send an app push notification. 
-
 ### New profile for Endpoint Security Firewall policy<!-- 5653324   -->
 As a preview, we're adding an additional profile for Windows 10 and later to the Firewall policy in Intune's Endpoint security (**Endpoint security** > **Firewall** > **Create Policy** > select **Windows 10 and later**). 
 
