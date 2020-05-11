@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use templates for Windows 10 devices in Microsoft Intune - Azure | Microsoft Docs
-description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10 devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure features in Internet Explorer, control access to OneDrive, use remote desktop features, enable Auto-Play, set power management settings, use HTTP printing, use different user sign-in options, and control the event log size.
+description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10 devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 When managing devices in your organization, you want to create groups of settings that apply to different device groups. For example, you have several device groups. For GroupA, you want to assign a specific set of settings. For GroupB, you want to assign a different set of settings. You also want a simple view of the settings you can configure.
 
-You can complete this task using **Administrative Templates** in Microsoft Intune. The administrative templates include hundreds of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Microsoft Office programs, remote desktop, OneDrive, passwords and PINs, and more. These settings allow group administrators to manage group policies using the cloud.
+You can complete this task using **Administrative Templates** in Microsoft Intune. The administrative templates include hundreds of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow group administrators to manage group policies using the cloud.
 
 This feature applies to:
 
@@ -66,27 +66,27 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 
 6. Select **Next**.
 
-7. In **Configuration settings**, configure settings that apply to the device (**Computer configuration**), and settings that apply to users **(User configuration**):
+7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
 
     > [!div class="mx-imgBorder"]
     > ![Apply ADMX template settings to users and devices in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. When you select **Computer configuration**, the setting categories are shown. You can select any category to see the available settings.
+8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
+
+    > [!div class="mx-imgBorder"]
+    > ![See a sample list of settings and use previous and next buttons](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+9. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
+
+    > [!TIP]
+    > The Windows settings in Intune correlate to the on-premises group policy path you see in Local Group Policy Editor (`gpedit`)
+
+10. When you select **Computer configuration** or **User configuration**, the setting categories are shown. You can select any category to see the available settings.
 
     For example, select **Computer configuration** > **Windows components** > **Internet Explorer** to see all the device settings that apply to Internet Explorer:
 
     > [!div class="mx-imgBorder"]
     > ![See all device settings that apply to Internet Explorer in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. You can also select **All settings** to see every device setting. Scroll down to use the before and next arrows to see more settings:
-
-    > [!div class="mx-imgBorder"]
-    > ![See a sample list of settings and use previous and next buttons](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-10. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
-
-    > [!TIP]
-    > The Windows settings in Intune correlate to the on-premises group policy path you see in Local Group Policy Editor (`gpedit`)
 
 11. Select **OK** to save your changes.
 
@@ -108,7 +108,7 @@ This article lists the steps to create a template for Windows 10 devices, and sh
 14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     If the profile is assigned to user groups, then configured ADMX settings apply to any device that the user enrolls, and signs in to. If the profile is assigned to device groups, then configured ADMX settings apply to any user that signs into that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`), or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user may also impact the experience of other users on that device.
-    
+
     For more information, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
     Select **Next**.
