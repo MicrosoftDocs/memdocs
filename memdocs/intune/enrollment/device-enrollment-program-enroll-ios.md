@@ -43,7 +43,7 @@ To enable ADE, you use both the Intune and [Apple Business Manager (ABM)](https:
 
 ## Automated Device Enrollment and the Company Portal
 
-ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on a ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
+ADE enrollments aren't compatible with the app store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You may want to provide this access to let users choose which corporate apps they wish to use on their device or to use modern authentication to complete the enrollment process. 
 
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
@@ -152,9 +152,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. 
-For devices enrolled with Automated Device Enrollment with User Affinity, target AAD User Groups where the enrolling user is a member prior to the device setup will ensure the fastest policy delivery to the devices. Targeting applications and policy to Dynamic groups based on the Enrollment profiles will result in some delay in applying to devices after completing the enrollment flow.
-Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details. 
 
     ![Profile name and description.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -214,19 +212,21 @@ Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.
     > After the device is enrolled with **Locked enrollment**, users will not be able to use **Remove Device** or **Factory Reset** by in the Company Portal app. The options will be unavailable to the user. The user also won't be able to remove the device in the Company Portal website (https://portal.manage.microsoft.com).
     > Also, if a BYOD device is convereted to an Apple Automated Device Enrollment device and enrolled with a **Locked enrollment** enabled profile, the user will be allowed to use **Remove Device** and **Factory Reset** for 30 days, and then the options will be disabled or unavailable. Reference: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
 
-11. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
+11. If you chose **Enroll without User Affinity** and **Supervised** above, you must decide whether or not to allow **Shared iPad** devices. By choosing **Yes** for this option, multiple users will be able to sign in to the same device. This option requires iOS/iPadOS 13.4 or later and an Apple Business Manager account.
+
+12. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
 
      > [!NOTE]
      > If **Sync with computers** is set to **Deny all**, the port will be limited on iOS and iPadOS devices. The port can only be used for charging and nothing else. The port will be blocked from using iTunes or Apple Configurator 2.
        If **Sync with computers** is set to **Allow Apple Configurator by certificate**, make sure you save a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy. It is important to retain this certificate to be accessible in the future. 
 
-12. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
+13. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
-13. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
+14. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
 
-14. Choose **Next: Setup Assistant Customization**.
+15. Choose **Next: Setup Assistant Customization**.
 
-15. On the **Setup Assistant customization** page, configure the following profile settings:
+16. On the **Setup Assistant customization** page, configure the following profile settings:
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
@@ -267,9 +267,20 @@ Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.
     | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from their old device to this device.|
     
 
-16. Choose **Next** to go to the **Review + Create** page.
+17. Choose **Next** to go to the **Review + Create** page.
 
-17. To save the profile, choose **Create**.
+18. To save the profile, choose **Create**.
+
+### Dynamic groups in Azure Active Directory
+
+You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory. For more information, see [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+
+You can use the profile name to define the [enrollmentProfileName parameter](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
+
+For the fastest policy delivery on ADE devices with user affinity, make sure the enrolling user is a member, prior to device setup, of an AAD user group. 
+
+Assigning dynamic groups to enrollment profiles can lead to some delay in delivering applications and policies to devices after the enrollment.
+
 
 ## Sync managed devices
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
@@ -279,7 +290,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. If an ADE device is deleted from the Intune portal, it should be unassigned from the Apple MDM server in the ADE portal. If it's not unassigned, it won't be reimported to Intune until the full sync is run.   
-   - A sync is run automatically every 24 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.   
+   - A sync is run automatically every 12 hours. You can also sync by clicking the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server.   
 
 
 ## Assign an enrollment profile to devices

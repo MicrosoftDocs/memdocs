@@ -24,11 +24,11 @@ To read a lazy property from a Configuration Manager object returned in a query,
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use the [ExecQuery](https://msdn.microsoft.com/library/aa393866.aspx) object to query Configuration Manager objects.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use the [ExecQuery](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-execquery) object to query Configuration Manager objects.  
 
 3.  Iterate through the query results.  
 
-4.  Using the `SWbemServices` object you obtain from step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object for each queried object you want to get lazy properties from.  
+4.  Using the `SWbemServices` object you obtain from step one, call [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) to get the [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) object for each queried object you want to get lazy properties from.  
 
 ## Example  
  The following VBScript code example queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects and then displays rule names obtained from the `CollectionRules` lazy property.  
@@ -76,7 +76,7 @@ End Sub
 ## Compiling the Code  
 
 ## See Also  
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
  [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)   
  [Objects overview](configuration-manager-objects-overview.md)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   

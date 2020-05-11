@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -141,13 +141,13 @@ Starting in version 1902, there are new rules with recommendations on managing c
 
 - **Collections with the same re-evaluation start time**: These collections have the same re-evaluation time as other collections. Modify the re-evaluation time so they don't conflict.  
 
-- **Collections with query time over two seconds**: Review the query rules for this collection. Consider modifying or deleting the collection.
+- **Collections with query time over 5 minutes**: Review the query rules for this collection. Consider modifying or deleting the collection.
 
 - The following rules include configurations that potentially cause unnecessary load on the site. Review these collections, then either delete them, or disable rule evaluation:  
 
   - **Collections with no query rules and incremental updates enabled**  
 
-  - **Collections with no query rules and enabled for scheduled or incremental evaluation**  
+  - **Collections with no query rules and enabled for any schedule**  
 
   - **Collections with no query rules and schedule full evaluation selected**  
 

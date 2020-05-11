@@ -108,8 +108,8 @@ The following files are in the `%Program Files%\Microsoft System Center 2012 R2 
 >
 > For more information, see the following articles:
 >
-> - [Management point interface](https://go.microsoft.com/fwlink/?LinkId=255152)
-> - [About management point interface messages](https://go.microsoft.com/fwlink/?LinkId=255153)
+> - [Management point interface](https://docs.microsoft.com/previous-versions/system-center/developer/cc142947(v=msdn.10))
+> - [About management point interface messages](https://docs.microsoft.com/previous-versions/system-center/developer/cc145217(v=msdn.10))
 
 ## OS deployment
 

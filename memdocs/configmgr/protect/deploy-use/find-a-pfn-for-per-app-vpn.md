@@ -22,7 +22,7 @@ There are two ways to find a PFN so that you can configure a per-app VPN.
 
 ## Find a PFN for an app that's installed on a Windows 10 computer
 
-If the app you are working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](https://technet.microsoft.com/library/hh856044.aspx) PowerShell cmdlet to get the PFN.
+If the app you are working with is already installed on a Windows 10 computer, you can use the [Get-AppxPackage](https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell cmdlet to get the PFN.
 
 The syntax for Get-AppxPackage is:
 

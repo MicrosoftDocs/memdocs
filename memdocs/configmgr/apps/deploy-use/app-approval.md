@@ -2,7 +2,7 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -104,6 +104,9 @@ With these prerequisites, recipients receive an email with notification of the r
 
 - Configure [email notification for alerts](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
+    > [!NOTE]
+    > The administrative user that deploys the application needs permission to create an alert and subscription. If this user doesn't have these permissions, they'll see an error at the end of the **Deploy Software Wizard**: "You do not have security rights to perform this operation."<!-- 2810283 -->
+
 - Enable the SMS Provider on the primary site to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
 
   - (Recommended) Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) for the primary site.
@@ -122,35 +125,35 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
 
-  - The SMS Provider requires **.NET 4.5.2** or later.  
+- The SMS Provider requires **.NET 4.5.2** or later.  
 
-- [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Set up a [cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
+- Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
-  - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+- Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-  - Manually configure settings in Azure AD:  
+- Manually configure settings in Azure AD:  
 
-        1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.  
+    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.  
 
-        2. Select the application that you created for Configuration Manager **Cloud Management** integration.  
+    1. Select the application that you created for Configuration Manager **Cloud Management** integration.  
 
-        3. In the **Manage** menu, select **Authentication**.  
+    1. In the **Manage** menu, select **Authentication**.  
 
-            1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.  
+        1. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.  
 
-            3. Then select **Save**.  
+        1. Then select **Save**.  
 
-        4. In the **Manage** menu, select **Manifest**.  
+    1. In the **Manage** menu, select **Manifest**.  
 
-            1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
+        1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
 
-            2. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`  
+        1. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`  
 
-            3. Select **Save**.  
+        1. Select **Save**.  
 
 ### Configure email approval
 

@@ -78,14 +78,6 @@ The following are typical settings to use for a proxy server that caches content
 
 For information about using a proxy server to cache content, see the documentation for your proxy server solution.
 
-### Use Background Intelligent Transfer Service (BITS) on computers
-
-During hours that you configure, you can use BITS on a Windows computer to reduce the network bandwidth. You can configure BITS policy on the **Network bandwidth** page of the Intune Agent policy.
-
-> [!NOTE]
-> For MDM management on Windows, only the OS's management interface for the MobileMSI app type uses BITS to download. AppX/MsiX use their own non-BITS download stack and Win32 apps via the Intune agent use Delivery Optimization rather than BITS.
-
-To learn more about BITS and Windows computers, see [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in the TechNet Library.
 
 ### Delivery Optimization
 
@@ -95,7 +87,22 @@ To see the full list of Windows 10 versions and content types supported by Deliv
 
 You can [set up Delivery Optimization](../configuration/delivery-optimization-settings.md) as part of your device configuration profiles.
 
-### Use BranchCache on computers
+
+### Background Intelligent Transfer Service (BITS) and BranchCache 
+
+You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache and BITS aren't supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md).
+
+#### Use (BITS) on computers (requires Intune software client)
+
+During hours that you configure, you can use BITS on a Windows computer to reduce the network bandwidth. You can configure BITS policy on the **Network bandwidth** page of the Intune Agent policy.
+
+> [!NOTE]
+> For MDM management on Windows, only the OS's management interface for the MobileMSI app type uses BITS to download. AppX/MsiX use their own non-BITS download stack and Win32 apps via the Intune agent use Delivery Optimization rather than BITS.
+
+To learn more about BITS and Windows computers, see [Background Intelligent Transfer Service](https://technet.microsoft.com/library/bb968799.aspx) in the TechNet Library.
+
+
+#### Use BranchCache on computers (requires Intune software client)
 
 Intune clients can use BranchCache to reduce wide area network (WAN) traffic. The following operating systems support BranchCache:
 
@@ -110,8 +117,6 @@ When the Intune client is installed on computers, BranchCache and distributed ca
 
 If you use BranchCache, work with other administrators in your organization to manage Group Policy and Intune Firewall policy. Ensure they don't deploy policy that disables BranchCache or Firewall exceptions. For more about BranchCache, see [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> You can use Microsoft Intune to manage Windows PCs either [as mobile devices with mobile device management (MDM)](../enrollment/windows-enroll.md) or as computers with the Intune software client. Microsoft recommends that customers [use the MDM management solution](../enrollment/windows-enroll.md) whenever possible. When managed this way, BranchCache is not supported. For more information, see [Compare managing Windows PCs as computers or mobile devices](pc-management-comparison.md).
 
 ## Next steps
 

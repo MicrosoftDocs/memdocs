@@ -21,7 +21,7 @@ You use the SMS Provider to access and modify Configuration Manager data. The SM
 ### WMI Object Model  
  Management applications and scripts work with WMI through the WMI Object Model. The object model defines the programming interface to WMI.  
 
- For more information about WMI, see [Windows Management Instrumentation](https://go.microsoft.com/fwlink/?LinkId=276770).  
+ For more information about WMI, see [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page).  
 
  The main elements of the WMI Object Model are shown in the following table:  
 

@@ -40,7 +40,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 
 **RSS feed**: Find out when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
-This article was last updated on the date listed under the title above.
+**This article was last updated on the date listed under the title above.**
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -155,8 +155,6 @@ PowerShell scripts will support Azure AD registered devices in Intune. For more 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
-### New details for the Autopilot report<!--5405786 -->
-To see the new details about App and Policy install status, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 
 ### macOS script support<!-- 6376978  -->
 Script support for macOS is now generally available. In addition, we will be adding support for both user assigned scripts and macOS devices that have been enrolled with Apple's Automated Device Enrollment (formerly Device Enrollment Program). For more information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).

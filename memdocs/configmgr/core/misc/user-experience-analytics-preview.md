@@ -19,6 +19,9 @@ ROBOTS: NOINDEX, NOFOLLOW
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md). 
+>
+>If you would like to join the private preview for Endpoint Analytics, please enter the details [in this form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Tenants will be flighted as openings for the preview expands.
+
 
 ## Endpoint analytics overview
 
@@ -59,7 +62,7 @@ To enroll devices via Intune, this preview requires:
 To enroll devices via Configuration Manager, this preview requires:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America (we will be expanding to other regions soon)
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
 
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
 - Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:

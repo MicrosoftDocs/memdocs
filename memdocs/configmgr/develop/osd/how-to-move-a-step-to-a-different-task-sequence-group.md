@@ -86,7 +86,7 @@ public void MoveActionToGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
+|`taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence step (Group or action) ([SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md)).|  
 |`sourceGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied from.|  
 |`targetGroup`|-   Managed: `IResultObject`<br />-   VBScript: `SWbemObject`|The group `SMS_TaskSequenceGroup` the step is copied to.|  
 

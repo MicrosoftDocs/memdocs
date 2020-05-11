@@ -56,30 +56,12 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
-## Week of May 4, 2020
+## Week of May 4, 2020  
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
-### App management
-
-#### Newly available protected apps<!-- 7060934  -->
-The following protected apps are now available:
-- Board Papers
-- Breezy for Intune
-- Hearsay Relate for Intune
-- ISEC7 Mobile Exchange Delegate for Intune
-- Lexmark for Intune
-- Meetio Enterprise
-- Microsoft Whiteboard
-- Now® Mobile - Intune
-- Qlik Sense Mobile 
-- ServiceNow® Agent - Intune
-- ServiceNow® Onboarding - Intune
-- Smartcrypt for Intune
-- Tact for Intune
-- Zero - email for attorneys
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
+We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. Users will also see a new **Get Apps** link in the Company Portal drawer on the left. To make way for these new and improved experiences, the **APPS** tab was removed. To see the updated screens, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
 ## Week of April 20, 2020

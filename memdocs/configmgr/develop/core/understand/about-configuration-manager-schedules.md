@@ -48,13 +48,15 @@ In Configuration Manager, scheduling information is configured by using schedule
  [WriteToString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md)  
  The `WriteToString` WMI class method encodes `SMS_ScheduleToken` data into an SMS interval string.  
 
-## See Also  
- [How to Create a Schedule Token](../../../develop/core/understand/how-to-create-a-schedule-token.md)   
- [SMS_ST_NonRecurring Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)   
- [SMS_ST_RecurInterval Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md)   
- [SMS_ST_RecurMonthlyByDate Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md)   
- [SMS_ST_RecurMonthlyByWeekday Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybyweekday-server-wmi-class.md)   
- [SMS_ST_RecurWeekly Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md)   
- [SMS_ScheduleMethods Server WMI Class](../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md)   
- [ReadFromString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md)   
- [WriteToString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md)
+## See also
+
+- [How to Create a Schedule Token](../../../develop/core/understand/how-to-create-a-schedule-token.md)
+- [SMS_ST_NonRecurring Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_nonrecurring-server-wmi-class.md)
+- [SMS_ST_RecurInterval Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurinterval-server-wmi-class.md)
+- [SMS_ST_RecurMonthlyByDate Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md)
+- [SMS_ST_RecurMonthlyByWeekday Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurmonthlybyweekday-server-wmi-class.md)
+- [SMS_ST_RecurWeekly Server WMI Class](../../../develop/reference/core/servers/configure/sms_st_recurweekly-server-wmi-class.md)
+- [SMS_ScheduleMethods Server WMI Class](../../../develop/reference/core/servers/configure/sms_schedulemethods-server-wmi-class.md)
+- [ReadFromString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md)
+- [WriteToString Method in Class SMS_ScheduleMethods](../../../develop/reference/core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md)
+- [Microsoft.ConfigurationManagement.Messaging.Framework.Scheduler namespace](https://docs.microsoft.com/previous-versions/system-center/developer/mt746124\(v=cmsdk.12\))

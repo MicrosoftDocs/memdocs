@@ -29,7 +29,7 @@ The MPAPI contains the management point interface libraries.
 
 - [Microsoft.ConfigurationManagement.MPAPI.amd64](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.MPAPI.amd64/)  
 
-For more information, see the [MPAPI documentation](https://msdn.microsoft.com/library/cc144951.aspx) for these libraries on MSDN.  
+For more information, see the [MPAPI documentation](https://docs.microsoft.com/previous-versions/system-center/developer/cc144951(v=msdn.10)).  
 
 > [!Note]  
 > The MPAPI documentation is planned to migrate to the docs.microsoft.com platform in the future.  
@@ -51,7 +51,7 @@ For more information, see the [ISMIFCOM documentation](../../reference/core/serv
 SMSRsGen and SMSRsGenCtl are legacy COM libraries used to create data discovery records (DDRs). 
 
 > [!Important]  
-> These are legacy libraries. The current recommendation is to use the Client Messaging SDK [DiscoveryDataRecordFile class](https://msdn.microsoft.com/library/microsoft.configurationmanagement.messaging.messages.server.discoverydatarecordfile.aspx). Use the latest [Client Messaging SDK package](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.Messaging/) from NuGet.  
+> These are legacy libraries. The current recommendation is to use the Client Messaging SDK [DiscoveryDataRecordFile class](https://docs.microsoft.com/previous-versions/system-center/developer/mt778052(v=cmsdk.12)). Use the latest [Client Messaging SDK package](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.Messaging/) from NuGet.  
 
 - [Microsoft.ConfigurationManagement.SMSRsGen.i386](https://www.nuget.org/packages/Microsoft.ConfigurationManagement.SMSRsGen.i386/)  
 

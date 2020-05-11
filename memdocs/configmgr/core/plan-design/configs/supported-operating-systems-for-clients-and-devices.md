@@ -204,7 +204,7 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 > [!Important]  
 > Configuration Manager version 1902 drops support for Linux and UNIX as a client. Deprecation was announced with [version 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
-The Linux and UNIX client installation packages aren't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
+The Linux and UNIX client installation packages aren't supplied with the Configuration Manager media. Download the **Clients for Additional Operating Systems** from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). In addition to client installation packages, the client download includes the script that manages the installation of the client on each computer.  
 
 ### Requirements and limitations
 

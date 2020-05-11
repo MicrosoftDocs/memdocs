@@ -576,7 +576,7 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 |256|  
 |512|  
 
- For additional information see [Windows PE Servicing Command-Line Options](https://go.microsoft.com/fwlink/?LinkId=272891).  
+ For additional information see [DISM Windows PE servicing command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-windows-pe-servicing-command-line-options).  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 

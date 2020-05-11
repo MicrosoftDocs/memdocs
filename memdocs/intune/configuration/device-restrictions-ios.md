@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -98,6 +98,10 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Activation Lock**: **Allow** enables Activation Lock on supervised iOS/iPadOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Block app removal**: **Block** prevents removing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove apps from devices.
 - **Allow USB accessories while device is locked**: **Allow** lets USB accessories exchange data with devices that are locked for over an hour. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not update USB Restricted mode on devices, and USB accessories are blocked from transferring data from devices if locked for over an hour.
+
+  This feature applies to:  
+  - iOS/iPadOS 11.4.1 and newer
+
 - **Force automatic date and time**: **Require** forces supervised devices to set the Date & Time automatically. The device's time zone is updated when the device has cellular connections or has Wi-Fi with location services enabled. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Require students to request permission to leave Classroom course**: **Require** forces students enrolled in an unmanaged course using the Classroom app to request permission from the teacher to leave the course. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not force the student to ask for permission.
 
@@ -295,7 +299,7 @@ These settings are added to a device configuration profile in Intune, and then a
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
   - **Installing apps from App Store**: **Block** doesn't show the app store on the device home screen. Users can continue to use iTunes or the Apple Configurator to install apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the app store on the home screen.
-  - **Automatic app downloads**: **Block** prevents automatic downloading of apps bought on other devices. It doesn't affect updates to existing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps bought on other iOS/iPadOS devices to download on the device.
+  - **Automatic app downloads**: **Block** prevents automatic downloading of apps bought on other devices and automatic updates to new apps. It doesn't affect updates to existing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps bought on other iOS/iPadOS devices to download and update on the device.
 
 - **Explicit iTunes music, podcast, or news content**: **Block** prevents explicit iTunes music, podcast, or news content. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to access content rated as adult from the store.
 
@@ -594,11 +598,16 @@ To add apps, you can:
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
-## Autonomous single app mode
+## Autonomous single app mode (ASAM)
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode. When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
 For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
+
+> [!NOTE]
+> Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
+
+For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -609,6 +618,8 @@ For example, in a school or university environment, add an app that lets users t
 You can also **Import** a CSV file with the list of app names and their bundle IDs. Or, **Export** an existing list that includes the apps.
 
 ## Kiosk
+
+[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -674,7 +685,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
-- App Lock (Single App Mode) 
+- Kiosk Mode (Single App Mode): Referred to as "app lock" in the [Apple developer documentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 

@@ -117,7 +117,7 @@ Class SMS_TaskSequence_InstallUpdateAction : SMS_TaskSequence_Action
 
 - All. Install all software updates for the computers targeted by this task sequence action.  
 
-  The task sequence variable associated with this property is SMSInstallUpdateTarget. For more information, see the MSDN documentation for [Operating System Deployment Task Sequence Variables](https://go.microsoft.com/fwlink/?LinkId=100711).  
+  The task sequence variable associated with this property is SMSInstallUpdateTarget. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
 
   `Timeout`  
   Data type: `UInt32`  

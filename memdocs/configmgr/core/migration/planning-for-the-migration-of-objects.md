@@ -119,7 +119,7 @@ You can migrate the following operating system deployment objects from a support
 You can migrate configuration items and configuration baselines.  
 
 > [!NOTE]  
->  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For more about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](https://go.microsoft.com/fwlink/?LinkId=103846) topic in the Configuration Manager 2007 documentation library.  
+>  Uninterpreted configuration items from Configuration Manager 2007 source hierarchies are not supported for migration. You cannot migrate or import these configuration items to the destination hierarchy. For more about uninterpreted configuration items, see Uninterpreted configuration items in the [About Configuration Items in Desired Configuration Management](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) topic in the Configuration Manager 2007 documentation library.  
 
 You can import Configuration Manager 2007 Configuration Packs. The import process automatically converts the configuration packs to be compatible with Configuration Manager current branch.  
 
