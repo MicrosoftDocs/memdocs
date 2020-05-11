@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
