@@ -76,7 +76,7 @@ Regardless of whether the device is enrolled in an MDM solution, an Intune app p
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal. For more information, see [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md).
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal. For more information, see [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md).
 
 ## Single sign-on to Azure AD-connected web apps in policy-protected browsers
 
@@ -189,18 +189,19 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
 - If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
 - Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
+- Bookmarks are created in a folder named after the organization's name defined in Azure Active Directory.
 
 |    Key    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.bookmarks    |    The value for this configuration is a   list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.      Example:<br>`Microsoft Bing|https://www.bing.com`<br>To configure multiple bookmarks, separate each pair with the double character `||`.<p>Example:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
-#### MyApps sites
+#### My Apps bookmark
 
-By default, users are shown the MyApps sites that are configured to them within a folder inside Edge for iOS and Android bookmarks. The folder is labeled with the name of your organization.
+By default, users have the My Apps bookmark configured within the organization folder inside Edge for iOS and Android.
 
 |    Key    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (default) shows MyApps within the Edge for iOS and Android bookmarks<br>**false** hides MyApps within Edge for iOS and Android    |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (default) shows My Apps within the Edge for iOS and Android bookmarks<br>**false** hides My Apps within Edge for iOS and Android    |
 
 ### App behavior experiences
 
