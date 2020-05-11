@@ -166,7 +166,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Privacy preferences
 
-Apps and processes prompt users to allow or deny access to device features, such as the camera, microphone, calendar, Documents folder, and more. These settings allow administrators to pre-approve or pre-deny access to these device features. When you configure these settings, you manage data access consent on behalf of your users. Your settings override their previous decisions.
+On macOS devices, apps and processes often prompt users to allow or deny access to device features, such as the camera, microphone, calendar, Documents folder, and more. These settings allow administrators to pre-approve or pre-deny access to these device features. When you configure these settings, you manage data access consent on behalf of your users. Your settings override their previous decisions.
 
 The goal of these settings is to reduce the number of prompts by apps and processes.
 
@@ -180,15 +180,16 @@ This feature applies to:
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
   - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft Office 365`.
-  - **Identifier**: Enter the app bundle ID, or the installation file path of the process or executable. For example, enter `com.contoso.appname`.
-
-    To get the app bundle ID, open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
-
+  
   - **Identifier type**: Your options:
     - **Bundle ID**: Select this option for apps.
     - **Path**: Select this option for non-bundled binaries, which is a process or executable.
 
     Helper tools embedded within an application bundle automatically inherit the permissions of their enclosing application bundle.
+
+  - **Identifier**: Enter the app bundle ID, or the installation file path of the process or executable. For example, enter `com.contoso.appname`.
+
+    To get the app bundle ID, open the Terminal app, and run the `codesign` command. This command identifies the code signature. So you can get the bundle ID and the code signature simultaneously.
 
   - **Code requirement**: Enter the code signature for the application or process.
 
@@ -310,18 +311,18 @@ This feature applies to:
 
   - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Enter the following information of the receiving app or process:
 
-    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
-
     - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
+    
+    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
 
     - **Code requirement**: Enter the code signature for the receiving application or process.
 
       A code signature is created when an app or binary is signed by a developer certificate. To find the designation, run the `codesign` command manually in the Terminal app: `codesign --display -r -/path/to/app/binary`. The code signature is everything that appears after `=>`.
 
-    - **Allow macOS Apple Event Receiver**: Your options:
+    - **Access**: Allow a macOS Apple Event to be sent to the receiving app or process. Your options:
       - **Not configured**: Intune doesn't change or update this setting.
-      - **No**: Prevents the app or process from sending a restricted Apple event to the receiving app or process.
-      - **Yes**: Allows the app or process to send the restricted Apple event to the receiving app or process.
+      - **Allow**: Allows the app or process to send the restricted Apple event to the receiving app or process.
+      - **Block**: Prevents the app or process from sending a restricted Apple event to the receiving app or process.
 
   - **Save** your changes.
 
