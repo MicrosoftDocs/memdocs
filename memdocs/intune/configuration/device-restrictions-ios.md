@@ -619,7 +619,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM documentation](https://developer.apple.com/documentation/devicemanagement/applock), kiosk mode is known as App Lock.
+[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -685,7 +685,7 @@ In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM document
 
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
-- Kiosk Mode (Single App Mode): Called "app lock" in the Apple MDM documentation.
+- Kiosk Mode (Single App Mode): Referred to as "app lock" in the [Apple developer documentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
