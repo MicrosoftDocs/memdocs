@@ -32,9 +32,27 @@ ms.reviewer: mattsha
 
 As a security admin, use the security policies from the *Endpoint security* of Intune to configure device security without the overhead of navigating the larger body and range of settings found in device configuration profiles and security baselines.
 
+Each policy type supports one or more profiles. Profiles are where you configure settings and can group settings for different platforms, or for different areas of focus in the larger policy area.
+
 You'll find these policies under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ![Manage policies](./media/endpoint-security-policy/endpoint-security-policies.png)
+
+Following are brief descriptions of each endpoint security policy type. To learn more about them, including the available profiles for each, follow the links to content dedicated to each policy type:
+
+- [Antivirus](../protect/endpoint-security-antivirus-policy.md) - Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. To use Antivirus policy, integrate Intune with Microsoft Defender Advanced Threat Protection (Defender ATP) as a Mobile Threat Defense solution.
+
+- [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
+
+- [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10. Built-in firewalls include BitLocker for Windows devices and FileVault for macOS.
+
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Defender ATP with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
+
+- [Attack surface reduction](../protect/endpoint-security-account-protection-policy.md) - When Defender antivirus is in use on your Windows 10 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+
+- [Account protection](../protect/endpoint-security-account-protection-policy.md) - Account protection policies help you protect the identity and accounts of your users. The account protection policy is focused on settings for  Windows Hello and Credential Guard, which is part of Windows identity and access management.
+
+The following sections apply to all of the endpoint security policies.
 
 ## Create an endpoint security policy
 

@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Endpoint detection and response policy for endpoint security in Intune
 
-When you integrate Defender ATP with Intune, you can use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings.
+When you integrate Defender ATP with Intune, you can use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
 
 The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
