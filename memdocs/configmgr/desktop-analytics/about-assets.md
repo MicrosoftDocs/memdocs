@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # Assets in Desktop Analytics
@@ -36,6 +37,10 @@ The **Apps** tab shows all installed apps that the service detects on your Windo
 
 **Noteworthy** apps are installed on more than 2% of enrolled devices.
 
+The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working with a deployment plan. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
+
+Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
+
 Configure the **Importance** of apps by setting one of the following categories:
 
 - Critical
@@ -44,7 +49,7 @@ Configure the **Importance** of apps by setting one of the following categories:
 - Not reviewed
 - Not important<!-- 3587232 -->
 
-Select the app from the list, and select **Edit**. This action displays details for the app. Select the **Importance** drop-down menu and set a value. You can also assign an **Owner**. If you make any changes, select **Save**.
+When the **App versions details** setting is off, the app details pane shows the number of app versions and languages that it combines. If you save any changes to the app details, it applies to all versions. For example, set the **Importance** or **Owner**. Some values will display "Multiple", which means there's not one consistent value across all versions.
 
 ### <a name="bkmk_plan-autoapp" /> Automatic upgrade decision of system and store apps
 
@@ -65,7 +70,7 @@ Identifying **Importance** and **Upgrade Decision** is critical for all notewort
 >    - For store apps, filter **Type** as **Modern**
 >    - For system apps, filter **Category** as **Background process** or **Windows component**
 
-In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](about-deployment-plans.md#plan-assets)
+In a deployment plan, you can also set the **Upgrade decision**. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
 ### Usage
 
