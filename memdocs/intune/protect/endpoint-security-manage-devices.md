@@ -64,9 +64,6 @@ Consider the following fields:
 
     The compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Endpoint Manager admin center.
 
-    <!-- Tenant attached devices can receive your endpoint security policies. The following policy types are supported, with additional policy types being added in future updates to Intune: 
-    -->
-
     For more information, see [Enable tenant attach](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
 
   - **MDM/ConfigMgr Agent** – These devices are under co-management between Intune and Configuration Manager.

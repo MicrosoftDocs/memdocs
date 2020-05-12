@@ -141,8 +141,8 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 To manage tasks in the Endpoint security node of the Microsoft Endpoint Manager admin center, an account must:
 
-1. Be assigned a license for Intune.
-2. Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Endpoint Manager admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender ATP.
+- Be assigned a license for Intune.
+- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Endpoint Manager admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender ATP.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
