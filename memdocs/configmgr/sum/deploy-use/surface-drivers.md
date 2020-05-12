@@ -21,8 +21,8 @@ System Center Configuration Manager allows you to synchronize drivers for Surfac
 
 ## Prerequisites for synchronizing Surface Drivers
 
-- An internet connected top-level Software Update Point (SUP).
-- All Software Update Points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
+- An internet connected top-level software update point (SUP).
+- All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
 - Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 ## Enable sync for Surface Drivers
@@ -30,14 +30,14 @@ System Center Configuration Manager allows you to synchronize drivers for Surfac
 To enable synchronization of Surface drivers, do following steps:
 
 1. Connect the Configuration Manger console to the top-level site server.
-1. Go to **Administration** < **Site Configuration** < **Sites**, then click on your top-level site.
-1. In the ribbon, select **Settings** < **Configure Site Components** < **Software Update Point**.
+1. Go to **Administration** > **Site Configuration** > **Sites**, then click on your top-level site.
+1. In the ribbon, select **Settings** > **Configure Site Components** > **Software Update Point**.
 1. Click on the **Classifications** tab, then click the checkbox for **Include Microsoft Surface drivers and firmware updates** and click **Apply**.
 
      ![Enable Surface drivers from the SUP properties](media/enable-surface-driver-sync.png)
 
 1. In the Software Update Point Component Properties, click the **Products** tab. For more information, see the [Products for Surface drivers](#bkmk_prod) and [Surface Models](#bkmk_models) sections.
-1. Select the products for each version of Windows 10 that you would like to support Surface drivers for. You'll notice that there are two different versions of each of the products for drivers:
+1. Select the products for each version of Windows 10 for which you would like to support Surface drivers. You'll notice that there are two different versions of each of the products for drivers:
 
    - Windows 10 *version* **Update and later Servicing Drivers**
    - Windows 10 *version* **Update and later Upgrade & Servicing Drivers**.
@@ -45,7 +45,7 @@ To enable synchronization of Surface drivers, do following steps:
      ![Windows 10 versions driver product list](media/surface-driver-products-sup.png)
 
 1. When you have finished selecting the products, click **OK**.
-1. [Synchronize your Software Update Point](../get-started/synchronize-software-updates.md) to bring the Surface drivers into Configuration Manager.
+1. [Synchronize your software update point](../get-started/synchronize-software-updates.md) to bring the Surface drivers into Configuration Manager.
 1. Once the Surface drivers are synchronized, deploy them  in the same manner as you deploy other updates.
 
 ## <a name="bkmk_prod"></a> Products for Surface drivers
