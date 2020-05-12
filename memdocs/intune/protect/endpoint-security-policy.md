@@ -48,7 +48,7 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Defender ATP with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
 
-- [Attack surface reduction](../protect/endpoint-security-account-protection-policy.md) - When Defender antivirus is in use on your Windows 10 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+- [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
 - [Account protection](../protect/endpoint-security-account-protection-policy.md) - Account protection policies help you protect the identity and accounts of your users. The account protection policy is focused on settings for  Windows Hello and Credential Guard, which is part of Windows identity and access management.
 
@@ -137,7 +137,6 @@ The information at the following links can help you identify and resolve conflic
 
 - [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitor your security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
 
 ## Next steps
 
