@@ -96,8 +96,10 @@ The following table provides additional configuration details:
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
 | Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
-| Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. Details below. |
+| Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. For more information, see [Device enrollment setting options](../apps/company-portal-app.md#device-enrollment-setting-options). |
 | Device ownership notification | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which include the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Azure AD Enterprise Applications | N/A | Select **Hide** or **Show** to display **Azure AD Enterprise applications** in the Company Portal for each end-user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online Applications | N/A | Select **Hide** or **Show** to display **Office Online applications** in the Company Portal for each end-user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
 
 ### Device enrollment setting options
 
@@ -119,6 +121,13 @@ The following table provides additional configuration details:
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
+
+### App source setting options
+
+> [!NOTE]
+> The Company Portal website will initially support the display of apps from other Microsoft services.
+
+You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end-user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.auzre.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
