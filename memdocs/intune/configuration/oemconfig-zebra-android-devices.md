@@ -56,12 +56,12 @@ In another example, you assigned an OEMConfig profile that configured some Zebra
 
 ## Ordering
 
-With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction](https://techdocs.zebra.com/oemconfig/9-1/mc/) feature. Let's look at an example.
+With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction feature](https://techdocs.zebra.com/oemconfig/9-1/mc/) (opens Zebra's web site). Let's look at an example.
 
 There are two profiles:
 
-- Profile 1: Turns on Bluetooth. This profile is assigned on Monday to the **All Devices** group.
-- Profile 2: Configures any other setting. This profile is assigned on Tuesday to the **All Devices** group.
+- **Profile 1**: Turns on Bluetooth. This profile is assigned on Monday to the **All Devices** group.
+- **Profile 2**: Configures any other setting. This profile is assigned on Tuesday to the **All Devices** group.
 
 Bluetooth must be turned on before the other setting is configured.
 
@@ -69,13 +69,13 @@ On Wednesday, you enroll 10 new Zebra devices with Intune. Profile 1 and Profile
 
 Use the **Steps** feature in Zebra’s schema to confirm that operations run in sequence. In this case, you create one profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMCong app receives the profile, it runs the steps in order, guaranteed by Zebra.
 
-For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/9-1/mc/).
+For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/9-1/mc/) (opens Zebra's web site).
 
 ## Enhanced reporting
 
 You deploy a profile, and it’s executed by the Zebra OEMConfig app on the device. The Zebra OEMConfig app reports the profile status to Intune. In the Endpoint Manager admin center, you can see the status of deployed OEMConfig profiles, and any errors or warnings.
 
-1. Open [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select your Zebra OEMConfig profile > **Monitor** > **Device status**. This option shows the devices that have your OEMConfig profile assigned.
 3. Select a device > **Device configuration** > Select your Zebra OEMConfig profile. This option shows the profile settings that succeeded or failed.
 
@@ -83,8 +83,6 @@ You deploy a profile, and it’s executed by the Zebra OEMConfig app on the devi
 
 ## Next steps
 
-Learn more about [OEMConfig configuration profiles](android-oem-configuration-overview.md).
-
-On Android device administrator, configure [Mobility Extensions (MX)](android-zebra-mx-overview.md).
-
-[Monitor the profile status](device-profile-monitor.md).
+- Learn more about [OEMConfig configuration profiles](android-oem-configuration-overview.md).
+- On Android device administrator, configure [Mobility Extensions (MX)](android-zebra-mx-overview.md).
+- [Monitor the profile status](device-profile-monitor.md).

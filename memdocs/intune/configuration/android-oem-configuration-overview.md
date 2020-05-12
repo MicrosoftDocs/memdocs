@@ -64,7 +64,7 @@ When using OEMConfig, be aware of the following information:
 - At any time, OEMs can update their supported features and schemas, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
 - On Zebra devices, you can create multiple profiles, and assign them to the same device. For more information, see [OEMConfig on Zebra devices](oemconfig-zebra-android-devices.md).
 
-  On non-Zebra devices, you can assign one OEMConfig profile to a device. If multiple profiles are assigned to the same device, you may see inconsistent behavior. The OEMConfig model only supports a single policy per device.
+  The OEMConfig model on non-Zebra devices only supports a single policy per device. If multiple profiles are assigned to the same device, you may see inconsistent behavior.
 
 ## Prerequisites
 
