@@ -104,7 +104,7 @@ This parameter can also specify the URL of a cloud management gateway (CMG). Use
 - Run the following command:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Append the `https://` prefix to use with the **/mp** parameter.
