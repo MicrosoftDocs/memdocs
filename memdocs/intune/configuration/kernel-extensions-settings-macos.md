@@ -50,6 +50,7 @@ These settings are added to a device configuration profile in Intune, and then a
 This feature applies to:
 
 - macOS 10.15 and newer
+- User approved device enrollment is required
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
@@ -89,6 +90,7 @@ This feature applies to:
 This feature applies to:
 
 - macOS 10.13.2 and newer
+- User approved device enrollment is required 
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
