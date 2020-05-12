@@ -71,7 +71,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
       Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
 
-    - **Select a file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
+    - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
 
       The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
 
