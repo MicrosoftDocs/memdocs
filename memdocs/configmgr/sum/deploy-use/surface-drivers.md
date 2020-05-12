@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Surface driver updates for depl
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
