@@ -63,13 +63,13 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   CSP: [DisableNetworkUI](https://go.microsoft.com/fwlink/?linkid=873668)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
-  - **Yes** - The firewall and network protection area in the Windows Security is be hidden from end-users. Firewall and network protection-related notifications are suppressed.
+  - **Yes** - The firewall and network protection area in the Windows Security are hidden from end-users. Firewall and network protection-related notifications are suppressed.
 
 - **Hide the App and browser control area in the Windows Security app**  
   CSP: [DisableAppBrowserUI](https://go.microsoft.com/fwlink/?linkid=873669)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
-  - **Yes** - The app and browser control area in the Windows Security is be hidden from end-users. App and browser control related notifications are suppressed.
+  - **Yes** - The app and browser control area in the Windows Security is hidden from end-users. App and browser control related notifications are suppressed.
 
 - **Hide the Device security area in the Windows Security app**  
   CSP: [DisableDeviceSecurityUI](https://go.microsoft.com/fwlink/?linkid=873670)
@@ -87,7 +87,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   CSP: [DisableFamilyUI](https://go.microsoft.com/fwlink/?linkid=873673)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
-  - **Yes** - The family options area in the Windows Security app will are from end-users. Also, notifications related to family options are suppressed.
+  - **Yes** - The family options area in the Windows Security app is hidden from end-users. Also, notifications related to family options are suppressed.
 
 - **Windows Security app notifications**  
   CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
