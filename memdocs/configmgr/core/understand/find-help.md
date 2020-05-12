@@ -2,7 +2,7 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -124,6 +124,13 @@ When you **Send a smile** or **Send a frown**, the following information is sent
         - `-s --silent`  No logging to console (Cannot combine with --verbose)
         - `-v, --verbose` Output verbose logging to console (Cannot combine with --silent)
         - `--help` Displays the help screen
+    
+    - Starting in version 1910, the UploadOfflineFeedback utility supports the use of a proxy server. You can specify the following parameters:
+        - `-x, --proxy` Specifies a proxy server to connect internet.
+        - `-o, --port` Specifies the port for the proxy server to connect internet.
+        - `-u, --user` Specifies user name for the proxy server to connect internet.
+        - `-w, --password` Specifies the password for the proxy server to connect internet. Type an asterisk (&#42;) to produce a prompt for the password. The password is not displayed when you type it at the password prompt. We strongly recommend to use an asterisk (&#42;) to produce a prompt for the password input since plain text on command line is less secure.
+        - `-i` Skip Connection Check: Skips the network connection check, just uploads feedback with specified settings.
 
 ## <a name="bkmk_feedbackid"></a> Confirmation of console feedback
 
