@@ -2,7 +2,7 @@
 title: "Deploy content"
 titleSuffix: "Configuration Manager"
 description: "After you install distribution points for Configuration Manager, here's how you can begin to deploy content to them."
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -20,7 +20,7 @@ manager: dougeby
 After you install distribution points for Configuration Manager, you can begin to deploy content to them. Typically, content transfers to distribution points across the network, but other options to get content to the distribution points exists. After content transfers to a distribution point, you can update, redistribute, remove, and validate that content on distribution points.  
 
 ##  <a name="bkmk_distribute"></a> Distribute content  
-Typically, you distribute content to distribution points so that it is available to client computers. (The exception to this is when you use on-demand content distribution for a specific deployment.)  When you distribute content,   Configuration Manager stores content files in a package, and then distributes the package to the distribution point. Types of content that you can distribute, include:  
+Typically, you distribute content to distribution points so that it is available to client computers. (The exception to this is when you use on-demand content distribution for a specific deployment.) When you distribute content, Configuration Manager stores content files in a package, and then distributes the package to the distribution point. The content for the package is pulled from the site server's content library. Types of content that you can distribute, include:  
 
 - Application deployment types  
 
@@ -307,7 +307,7 @@ You have the following options for managing content:
 
 ### Update content
 When the source file location for a deployment is updated by adding new files or replace existing files with a newer version, you can update the content files on distribution points by using the **Update Distribution Points** or **Update Content** action:  
-- The content files are copied from the source file path to the content library on the site that owns the package content source  
+- The content files are copied from the original package source location to the content library on the site that owns the package content source
 - The package version is incremented  
 - Each instance of the content library on site servers and on  distribution points updates with only the files that have changed  
 
