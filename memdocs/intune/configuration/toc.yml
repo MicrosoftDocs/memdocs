@@ -84,6 +84,10 @@
   - name: OEMConfig on Android Enterprise
     href: android-oem-configuration-overview.md
     displayName: original equipment manufacturers, schema
+    items:
+    - name: OEMConfig profiles on Zebra devices
+      href: oemconfig-zebra-android-devices.md
+    displayName: zebra, multiple, order, android, original equipment manufacturers
   - name: Kiosks and dedicated devices
     href: kiosk-settings.md
     displayName: single app, multi app
