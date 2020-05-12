@@ -53,8 +53,6 @@ View [settings for Endpoint detection and response profiles](../protect/endpoint
 
   To learn more, see [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
 
-## 
-
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
