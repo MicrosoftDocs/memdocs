@@ -10,6 +10,7 @@ ms.assetid: 7ed389c3-a9ab-48ce-a5eb-27d52ee4fb94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # How to connect Configuration Manager with Desktop Analytics

@@ -82,7 +82,7 @@ This feature applies to:
     To allow all extension types for a Team ID, add the Team ID to the **Allowed system extensions** list. Don't add the Team ID to the **Allowed system extension types** list. In other words, if a team ID is in the **Allowed system extensions** list, and not in the **Allowed system extension types** list, then all extension types are allowed for that team ID.
 
 > [!NOTE]
-> You can configure **Allowed system extensions** or **Allowed team identifiers**. You can't configure both.
+> Adding the same Team ID for **Allowed system extensions** and **Allowed team identifiers** can result in an error and the profile failing. Don't add the same exact Team Identifier to both settings. 
 
 ## Kernel extensions
 

@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -208,7 +208,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **Download software updates from the internet**: Select this setting to download the software updates from a specified location on the internet. This setting is enabled by default.  
 
-    -   **Download software updates from a location on the local network**: Select this setting to download the software updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard doesn't have internet access. Any computer with internet access can preliminarily download the software updates. Then store them in a location on the local network that's accessible from the computer that runs the wizard.  
+    -   **Download software updates from a location on the local network**: Select this setting to download the software updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard doesn't have internet access. Any computer with internet access can preliminarily download the software updates. Then store them in a location on the local network that's accessible from the computer that runs the wizard. Another scenario could be when downloading content that is published through System Center Updates Publisher or a third-party patching solution. The WSUS content share on the top-level software update point can be entered as the network location to download from, such as `\\server\WsusContent`. <!--memdocs-issue-211-->
 
 14. On the **Language Selection** page, select the languages for which the site downloads the selected software updates. The site only downloads these updates if they're available in the selected languages. Software updates that aren't language-specific are always downloaded. By default, the wizard selects the languages that you've configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that a software update doesn't support, the download fails for the update.  
 

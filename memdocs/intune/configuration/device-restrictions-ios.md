@@ -299,7 +299,7 @@ These settings are added to a device configuration profile in Intune, and then a
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
   - **Installing apps from App Store**: **Block** doesn't show the app store on the device home screen. Users can continue to use iTunes or the Apple Configurator to install apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the app store on the home screen.
-  - **Automatic app downloads**: **Block** prevents automatic downloading of apps bought on other devices. It doesn't affect updates to existing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps bought on other iOS/iPadOS devices to download on the device.
+  - **Automatic app downloads**: **Block** prevents automatic downloading of apps bought on other devices and automatic updates to new apps. It doesn't affect updates to existing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow apps bought on other iOS/iPadOS devices to download and update on the device.
 
 - **Explicit iTunes music, podcast, or news content**: **Block** prevents explicit iTunes music, podcast, or news content. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to access content rated as adult from the store.
 
@@ -619,7 +619,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Kiosk
 
-In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM documentation](https://developer.apple.com/documentation/devicemanagement/applock), kiosk mode is known as App Lock.
+[Single App Mode](https://support.apple.com/guide/mdm/mdm80a981/web) is referred to as Kiosk mode in Intune.
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -685,7 +685,7 @@ In Intune, kiosk mode is also known as Single App mode. In [Apple's MDM document
 
 iOS/iPadOS supervised mode can only be enabled during initial device setup through Apple's Device Enrollment Program, or by using Apple Configurator. Once supervised mode is enabled, Intune can configure a device with the following functionality:
 
-- Kiosk Mode (Single App Mode): Called "app lock" in the Apple MDM documentation.
+- Kiosk Mode (Single App Mode): Referred to as "app lock" in the [Apple developer documentation](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Disable Activation Lock 
 - Autonomous Single App Mode 
 - Web Content Filter 
