@@ -23,7 +23,7 @@ System Center Configuration Manager allows you to synchronize drivers for Surfac
 
 - An internet connected top-level Software Update Point (SUP).
 - All Software Update Points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates#bkmk_options).<!--505213-->  
+- Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
 ## Enable sync for Surface Drivers
 
@@ -45,7 +45,7 @@ To enable synchronization of Surface drivers, do following steps:
      ![Windows 10 versions driver product list](media/surface-driver-products-sup.png)
 
 1. When you have finished selecting the products, click **OK**.
-1. [Synchronize your Software Update Point](../get-started/synchronize-software-updates) to bring the Surface drivers into Configuration Manager.
+1. [Synchronize your Software Update Point](../get-started/synchronize-software-updates.md) to bring the Surface drivers into Configuration Manager.
 1. Once the Surface drivers are synchronized, deploy them  in the same manner as you deploy other updates.
 
 ## <a name="bkmk_prod"></a> Products for Surface drivers
