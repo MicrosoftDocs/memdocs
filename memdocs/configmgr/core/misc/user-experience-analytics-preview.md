@@ -123,7 +123,7 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
 
-   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Enpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
 ### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
