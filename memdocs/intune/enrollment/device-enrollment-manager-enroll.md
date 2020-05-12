@@ -51,6 +51,8 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 
 ## Enrollment methods supported by DEM accounts
 
+You can use the following methods to enroll devices using DEM accounts:
+
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
 - DEM initiated via Company Portal
