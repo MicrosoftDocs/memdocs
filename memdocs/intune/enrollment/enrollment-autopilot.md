@@ -94,7 +94,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 ## Create an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices. You can create up to 350 profiles per tenant.
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and Hololens, see [Windows Autopilot for HoloLens 2 evaluation guide](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
     ![Screenshot of Basics page](./media/enrollment-autopilot/create-profile-basics.png)
