@@ -90,13 +90,15 @@ Enter your organization's support information, so employees can reach out with q
 
 ## Configuration
 
+### Enrollment
+
 The following table provides additional configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Device enrollment | N/A | Specify if and how users should be prompted to enroll into mobile device management. For more information, see [Device enrollment setting options](../apps/company-portal-app.md#device-enrollment-setting-options). |
 | Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. |
-| Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the Default or set   a Custom message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
-| Device enrollment | N/A | Specify if and how users should be prompted to enroll into   mobile device management. Details below. |
+| Privacy message in the Company Portal for iOS/iPadOS | 520 | Keep the **Default** or set a **Custom** message to list the items that your organization can or can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links. |
 | Device ownership notification | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which include the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### Device enrollment setting options
