@@ -43,7 +43,7 @@ Supported platforms and profiles:
 
 ## Endpoint detection and response (MDM)
 
-### Endpoint Detection and Response
+**Endpoint detection and response**:
 
 - **Microsoft Defender ATP client configuration package type**
 
@@ -74,10 +74,9 @@ Supported platforms and profiles:
   - **Not configured**   (*default*)
   - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
 
-
 ## Endpoint detection and response (ConfigMgr) (Preview)
 
-### Endpoint Detection and Response
+**Endpoint detection and response**:
 
 - **Sample sharing for all files**  
 
