@@ -105,7 +105,7 @@ Intune also includes a set of built-in compliance policy settings. The following
 
   Evaluation is triggered by opening the Company Portal app or physically moving the device a significant distance of approximately 500 meters or more. On iOS 13 and up, this feature will require users to select Always Allow whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users do not always allow location access and have a policy with this setting configured, their device will be marked noncompliant. Note that Intune cannot guarantee that each significant location change will ensure a jailbreak detection check as this depends on a device's network connection at the time.
 
-- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The maximum value is 120 and minimum value is 1 day.
+- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The maximum value is 120 days. The minimum value is 1 day.
 
   This setting shows as the **Is active** default compliance policy (**Devices** > **Monitor** > **Setting compliance**). The background task for this policy runs once a day.
 
