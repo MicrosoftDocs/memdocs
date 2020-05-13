@@ -30,13 +30,13 @@ ms.reviewer: mattsha
 
 # Endpoint detection and response policy for endpoint security in Intune
 
-When you integrate Defender ATP with Intune, you can use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender Advanced Threat Protection (Defender ATP).
+When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) with Intune, you can use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
 
-The capabilities of Microsoft Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
+The capabilities of Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
-EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Defender ATP. Onboarding packages are how devices are configured to work with Microsoft Defender ATP. After a device onboards with Defender Advanced Threat Protection, you can start to use threat data from that device and Advanced Threat Protection.
+EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Defender ATP. Onboarding packages are how devices are configured to work with Defender ATP. After a device onboards, you can start to use threat data from that device.
 
-You deploy EDR policies to groups of devices in Azure AD that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for devices you manage with Intune and devices you manage with Configuration Manager require different onboarding package. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
+EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
 
 > [!TIP]
 > Support for devices you manage with Configuration Manager is in *public preview*.
@@ -60,11 +60,11 @@ To support using EDR policies with Configuration Manager devices, your Configura
 - **Install the Configuration Manager update** - To enable support in Configuration Manager 2002 for using EDR policy you create in the Microsoft Endpoint Manager admin center, you must install the following update from within the Configuration Manager console:
   - **NAME**
 
-- **Configure Tenant attach** - Tenant attach lets you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy EDR policies to those collections
+- **Configure Tenant attach** - Tenant attach lets you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy EDR policies to those collections.
 
   Tenant attach is often configured with co-management, but you can configure tenant attach on its own.
 
-- **Synchronize Configuration Manager collections** – At the time you configure tenant attach, you can select the Configuration Manager device collections to synchronize with Microsoft Endpoint Manager admin center. You can also edit this list to add additional collections of devices.  EDR policy for Configuration Manager devices can only be assigned to collections you’ve synchronized.
+- **Synchronize Configuration Manager collections** – When you configure tenant attach, you can select the Configuration Manager device collections to synchronize with Microsoft Endpoint Manager admin center. You can also return later to modify the device collections you sync. EDR policy for Configuration Manager devices can only be assigned to collections you’ve synchronized.
 
   After selecting collections to synchronize, you must enable them for use with Microsoft Defender ATP.
 
@@ -105,7 +105,7 @@ The following sections cover the required tasks:
 
 ### Task 1: Install the update for Configuration Manager
 
-Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center. Later versions of Configuration Manager might not require this update.
+Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center. Later versions of Configuration Manager should not require this update.
 
 **Update details**:
 
@@ -130,14 +130,14 @@ For more information about the Tenant attach scenario, see [Enable tenant attach
 > [!TIP]
 > You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don’t need to enable co-management.
 
-If you're planning to enable co-management, be familiar with co-management, its prerequisites and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
+If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, click **Configure co-management** to open the wizard.
 3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
    1. Click **Sign In**. Use your *Global Administrator* account to sign in.
 
-   2. Ensure the option **Upload to Microsoft Endpoint Manager admin center** option is selected on the **Tenant onboarding** page.
+   2. Ensure the option **Upload to Microsoft Endpoint Manager admin center** is selected on the **Tenant onboarding** page.
 
    3. Remove the check from **Enable automatic client enrollment for co-management**.
 
@@ -148,7 +148,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 4. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync of collections to the Microsoft Endpoint Manager admin center.
 
 5. On the **Configure upload** page, configure which collections you want to sync.
-   You can limit your configuration to one or  few device collections, or use the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**.
+   You can limit your configuration to one or  few device collections or use the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**.
 
 6. Click **Summary** to review your selection, then click **Next**.
 
@@ -163,7 +163,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 2. Right-click your co-management settings and select **Properties**.
 
 3. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
-   - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+   - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
      ![View the co-management properties tab](./media/endpoint-security-edr-policy/configure-upload.png)
 
@@ -177,16 +177,17 @@ If you're planning to enable co-management, be familiar with co-management, its 
 
 ### Task 3: Select collections to synchronize
 
-When tenant attach is configured, you can select collections to synchronize. If you didn’t do that, or need to reconfigure the collections you synchronize, you can edit the properties of co-management in the Configuration Manager console to do so.
+When tenant attach is configured, you can select collections to sync. If you haven't already synchronize collections or need to reconfigure which ones you do sync, you can edit the properties of co-management in the Configuration Manager console to do so.
 
 #### Select collections
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 
 2. Right-click your co-management settings and select **Properties**.
+
 3. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
 
-   The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+   The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
 ### Task 4: Enable collections for Microsoft Defender ATP
 
@@ -194,7 +195,7 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 #### Enable collections for use with Advanced Threat Protection
 
-1. From a Configuration Manger console connected to your top-level site, right-click on a device collection that you synchronize to Microsoft Endpoint Manager admin center and select **Properties**.
+1. From a Configuration Manager console connected to your top-level site, right-click on a device collection that you synchronize to Microsoft Endpoint Manager admin center and select **Properties**.
 
 2. On the **Cloud Sync** tab, enable the option to **Make this collection available to assign Microsoft Defender ATP policies in Intune**.
 
@@ -208,9 +209,9 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 ## Create and deploy EDR policies
 
-When you Microsoft Defender ATP subscription is integrated with Intune, you can create and deploy EDR policies. There are two distinct types of EDR policy you can create. One policy type for devices you manage with Intune through MDM. The second type is for devices you manage with Configuration Manager.
+When your Microsoft Defender ATP subscription is integrated with Intune, you can create and deploy EDR policies. There are two distinct types of EDR policy you can create. One policy type for devices you manage with Intune through MDM. The second type is for devices you manage with Configuration Manager.
 
-You’ll choose the type of policy your creating while creating a new EDR policy when you choose the Platform for the policy.
+You’ll choose the type of policy your creating while creating a new EDR policy when you choose the platform for the policy.
 
 Before you can deploy policy to devices managed by Configuration Manager, [set up Configuration Manager to support EDR policy](#set-up-configuration-manager-to-support-edr-policy) from the Microsoft Endpoint Manager admin center.
 
@@ -241,7 +242,7 @@ Before you can deploy policy to devices managed by Configuration Manager, [set u
 7. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
 
    - For Intune, you’ll select groups from Azure AD.
-   - For Configuration Manager, you select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender ATP policy.
+   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender ATP policy.
 
    You can choose not to assign groups or collections at this time, and later edit the policy to add an assignment.
 
