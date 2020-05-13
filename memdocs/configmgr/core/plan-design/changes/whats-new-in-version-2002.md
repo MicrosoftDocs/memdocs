@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
+Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1810 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
