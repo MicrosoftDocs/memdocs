@@ -152,7 +152,7 @@ For more information about these settings, see [About log files](../../plan-desi
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
 
 > [!Tip]
-> Collected Client Logs are stored according to the Software Inventory File Collection settings.  By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory.  The files are deleted according to the site maintenance task [Delete Aged Collected Files](https://docs.microsoft.com/en-us/mem/configmgr/core/servers/manage/reference-for-maintenance-tasks#delete-aged-collected-files), which by default is every 90 days.
+> Collected Client Logs are stored according to the software inventory file collection settings.  The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory.  There is no defined limit to the number of versions; however, the files are deleted according to the site maintenance task [Delete Aged Collected Files]../../servers/manage/reference-for-maintenance-tasks#delete-aged-collected-files), which by default is every 90 days.
 
 ### Prerequisites - Client diagnostics
 
