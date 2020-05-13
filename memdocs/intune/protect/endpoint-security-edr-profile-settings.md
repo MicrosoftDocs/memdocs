@@ -29,16 +29,21 @@ ms.reviewer: mattsha
 ---
 # Endpoint detection and response policy settings for endpoint security in Intune
 
-View the settings you can configure in profiles for *Endpoint detection and response* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the settings you can configure in profiles for [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md) in the endpoint security node of Intune.
 
 Supported platforms and profiles:
 
-- **Windows 10 and later**:
-  - Profile: **Endpoint detection and response**
+- **Windows 10 and later**: Use this platform for policy you deploy to devices managed with Intune.
+  - Profile: **Endpoint detection and response (MDM)**
 
-## Endpoint detection and response profile
+- **Windows 10 and Windows Server**: Use this platform for policy you deploy to devices managed by Configuration Manager.
+  - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
+  
+  *This platform and profile are in Public Preview*.
 
-### Endpoint detection and response
+## Endpoint detection and response (MDM)
+
+### Endpoint Detection and Response
 
 - **Microsoft Defender ATP client configuration package type**
 
@@ -57,6 +62,22 @@ Supported platforms and profiles:
   
   - **Advanced threat protection offboarding blob**  
      Click **Select offboarding file** to open the *Select offboarding File* pane, where you specify a `.offboarding` file.
+
+- **Sample sharing for all files**  
+
+  Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
+  - **Not configured**   (*default*)
+  - **Yes**
+
+- **Expedite telemetry reporting frequency**
+
+  - **Not configured**   (*default*)
+  - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
+
+
+## Endpoint detection and response (ConfigMgr) (Preview)
+
+### Endpoint Detection and Response
 
 - **Sample sharing for all files**  
 

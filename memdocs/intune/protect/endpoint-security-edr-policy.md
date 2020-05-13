@@ -239,7 +239,13 @@ Before you can deploy policy to devices managed by Configuration Manager, [set u
 
    When your done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
+7. *This step only applies for the **Endpoint detection and response (MDM)** profile*:  
+
+   On the **Scope tags** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+  
+   Select **Next** to continue.
+
+8. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
 
    - For Intune, you’ll select groups from Azure AD.
    - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender ATP policy.
@@ -248,7 +254,7 @@ Before you can deploy policy to devices managed by Configuration Manager, [set u
 
    When ready to continue, select **Next**.
 
-8. On the **Review + create** page, when you're done, choose **Create**.
+9. On the **Review + create** page, when you're done, choose **Create**.
 
    The new profile is displayed in the list when you select the policy type for the profile you created.
 
