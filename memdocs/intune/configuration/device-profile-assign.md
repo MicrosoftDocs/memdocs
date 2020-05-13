@@ -52,7 +52,7 @@ Be sure you have the appropriate role to assign profiles. For more information, 
 3. Select the profile you want to assign > **Assignments**.
 4. Choose to **Include** groups or **Exclude** groups, and then select your groups. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-    :::image type="content" source="group-include-exclude.png" alt-text="Screenshot of options to include or exclude groups from a profile assignment in Microsoft Intune" border="true":::
+    :::image type="content" source="media/group-include-exclude.png" alt-text="Screenshot of options to include or exclude groups from a profile assignment in Microsoft Intune" border="true":::
 
 5. **Save** your changes.
 
@@ -113,7 +113,7 @@ As a best practice, create and assign profiles specifically for your user groups
 
 When you assign your profiles, use the following table when including and excluding groups. A checkmark means that assignment is supported:
 
-:::image type="content" source="include-exclude-user-device-groups.png" alt-text="Supported options include or exclude groups from a profile assignment" border="true":::
+:::image type="content" source="./media/include-exclude-user-device-groups.png" alt-text="Supported options include or exclude groups from a profile assignment" border="true":::
 
 ### What you should know
 
