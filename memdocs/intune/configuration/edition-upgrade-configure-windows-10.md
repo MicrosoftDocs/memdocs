@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,8 +29,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune
-
-
 
 As part of your mobile device management (MDM) solution, you may want to upgrade your Windows 10 devices. For example, you want to upgrade your Windows 10 Professional devices to Windows 10 Enterprise. Or, you want the device to switch out of S mode.
 
@@ -104,21 +102,37 @@ The following table lists the supported upgrade paths for the Windows 10 edition
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Select **Windows 10 and later**.
+    - **Profile**: Select **Edition upgrade**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the new profile. For example, enter something like `Windows 10 edition upgrade profile` or `Windows 10 switch off S mode`.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Edition upgrade**.
-    - **Settings**: Enter the settings you want to configure. For a list of all settings, and what they do, see:
 
-        - [Windows 10 upgrade and S mode](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. Select **Next**.
+7. In **Configuration settings**, enter the settings you want to configure. For a list of all settings, and what they do, see:
 
-4. Select **OK** > **Create** to save your changes.
+    - [Windows 10 upgrade and S mode](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-The profile is created and shown in the list. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+8. Select **Next**.
+
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+The next time each device checks in, the policy is applied.
 
 ## Next steps
 
-After the profile is created, it's ready to be assigned. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-View the upgrade and S mode settings for [Windows 10](edition-upgrade-windows-settings.md) and [Windows Holographic for Business](holographic-upgrade.md) devices.
+See the upgrade and S mode settings for [Windows 10](edition-upgrade-windows-settings.md) and [Windows Holographic for Business](holographic-upgrade.md) devices.
