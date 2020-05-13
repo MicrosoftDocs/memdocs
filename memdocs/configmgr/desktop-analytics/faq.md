@@ -49,7 +49,7 @@ Yes, use the following process:
 
 <!-- 7130169 -->
 > [!Note]
-> Don't include more than 20 collections to the list of additional collections and be cautious about the total number of deviceseach collection. Be sure to include your [Global pilot include and exclude collections](/mem/configmgr/desktop-analytics/deploy-pilot#bkmk_GlobalPilot).  
+> Don't include more than 20 collections to the list of additional collections. Be cautious about the total number of devices in each collection. Always include your [Global pilot include and exclude collections](deploy-pilot.md#bkmk_GlobalPilot).  
 
 > [!IMPORTANT]  
 > Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](account-close.md#reconfigure-clients).
