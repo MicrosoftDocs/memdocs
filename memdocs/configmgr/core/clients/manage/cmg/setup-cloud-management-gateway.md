@@ -205,7 +205,7 @@ To install the client agent on systems not currently connected to your intranet,
 
 2. The systems are Azure AD domain-joined or hybrid Azure AD domain-joined.
 
-3. The site is running Configuration Manager version 2002 (or above).
+3. The site is running Configuration Manager version 2002 or later.
 
 For options 1 and 2, use the **/mp** parameter to specify the CMG's URL when calling **ccmsetup.exe**. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
 
