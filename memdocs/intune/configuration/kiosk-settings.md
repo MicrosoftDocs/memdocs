@@ -49,8 +49,8 @@ This article shows you how to create a device configuration profile. For a list 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-   - **Platform**: Select **Windows 10 and later**
-   - **Profile**: Select **Kiosk**
+   - **Platform**: Select **Windows 10 and later**.
+   - **Profile**: Select **Kiosk**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

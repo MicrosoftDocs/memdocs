@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Configure eSIM cellular profiles in Intune - Public preview
+# Configure eSIM cellular profiles in Intune (public preview)
 
 eSIM is an embedded SIM chip, and lets you connect to the Internet over a cellular data connection on an eSIM-capable device, such as the [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). With an eSIM, you don't need to get a SIM card from your mobile operator. As a global traveler, you can also switch between mobile operators and data plans to always stay connected.
 
@@ -101,11 +101,11 @@ When working with the csv file with the activation codes, be sure you or your mo
     1. First column is the unique ICCID (the identifier of the SIM chip)
     2. Second column is the Matching ID with only a comma separating them (no comma at the end). See the following example:
 
-        :::image type="content" source="url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file." border="true":::
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
 3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
 
-    :::image type="content" source="subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name." border="true":::
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
 
 ## Step 2: Create an Azure AD device group
 
@@ -124,7 +124,7 @@ Assign the profile to the Azure AD group that includes your eSIM devices.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
-    :::image type="content" source="include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune." border="true":::
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
 
 5. When you select your groups, you're choosing an Azure AD group. To select multiple groups, use the **Ctrl** key, and select the groups.
 6. When done, **Save** your changes.
@@ -177,7 +177,7 @@ You can monitor and view a detailed list of devices you can view in Device Statu
 2. Select **Cellular** > **Manage eSIM profiles**
 3. The eSIM profiles are listed:
 
-    :::image type="content" source="device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings." border="true":::
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings.":::
 
 ## Remove the eSIM profile from device
 

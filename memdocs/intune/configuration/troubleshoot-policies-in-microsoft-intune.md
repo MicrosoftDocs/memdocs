@@ -42,12 +42,12 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support**:
 
-    :::image type="content" source="help-and-support-troubleshoot.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support." border="true":::
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
 2. Choose **Select user** > select the user having an issue > **Select**.
 3. Confirm that **Intune License** and **Account Status** both show green checks:
 
-    :::image type="content" source="account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Account status and Intune license show green checks marks for the status." border="true":::
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Account status and Intune license show green checks marks for the status.":::
 
     **Helpful links**:
 

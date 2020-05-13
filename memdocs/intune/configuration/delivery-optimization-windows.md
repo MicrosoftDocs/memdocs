@@ -49,23 +49,30 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 4. Select **Create**.
 
-5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+5. In **Basics**, enter the following properties:
 
-6. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
+   - **Name**: Enter a descriptive name for the new profile.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
 
    When your done configuring settings, select **Next**.
 
-7. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+8. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   
    Select **Next** to continue.
 
-8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-9. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
+10. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
 
-10. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list. Next, [assign the profile](device-profile-assign.md) and then [monitor its status](device-profile-monitor.md).
+11. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list.
+
+The next time each device checks in, the policy is applied.
 
 ## Remove Delivery Optimization from Windows 10 Update Rings
 
