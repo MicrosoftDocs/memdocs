@@ -232,11 +232,11 @@ Run the following procedure from the primary site server.
 
    1. Select the Web app you created.
 
-   2. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
+   2. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.  
 
    3. Select the Native Client app you created.
 
-   4. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
+   4. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.
 
 9. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Azure Services**, and select your Azure Service. Then right-click on **Azure Active Directory User Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
 
