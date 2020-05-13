@@ -100,8 +100,8 @@ The following sections cover the required tasks:
 > [!TIP]
 > To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003#bkmk_atp)
-> - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach)
+> - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Install the update for Configuration Manager
 
@@ -123,7 +123,7 @@ If co-management was previously enabled, then tenant attach is already set up an
 
 With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, you can use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
 
-For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions) in the Configuration Manager content.
+For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
 #### Enable tenant attach when co-management hasn’t been enabled
 
@@ -141,7 +141,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 
    3. Remove the check from **Enable automatic client enrollment for co-management**.
 
-      When this option is selected, the Wizard presents additional pages to complete the setup of co-management. For more information, see [Enable co-management](../../configmgr/comanage/how-to-enable) in the Configuration Manager content.
+      When this option is selected, the Wizard presents additional pages to complete the setup of co-management. For more information, see [Enable co-management](../../configmgr/comanage/how-to-enable.md) in the Configuration Manager content.
 
      ![Configure tenant attach](./media/endpoint-security-edr-policy/tenant-onboarding.png)
 
@@ -188,7 +188,7 @@ When tenant attach is configured, you can select collections to synchronize. If 
 
    The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
 
-### Task : Enable collections for Microsoft Defender ATP
+### Task 4: Enable collections for Microsoft Defender ATP
 
 After you configure collections to sync to Microsoft Endpoint Manager admin center, you must still enable those collections to be eligible for onboarding and Microsoft Defender ATP policies.  To do so, you edit the properties of each collection in the Configuration Manager console.
 
