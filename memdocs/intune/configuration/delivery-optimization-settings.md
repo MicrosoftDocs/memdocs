@@ -28,7 +28,7 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Delivery optimization settings for Intune
+# Delivery optimization settings for Windows 10 devices in Intune
 
 This article lists the delivery optimization settings that Intune supports for devices that run Windows 10 or later.  
 
