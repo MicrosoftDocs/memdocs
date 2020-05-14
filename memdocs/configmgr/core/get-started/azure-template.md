@@ -30,12 +30,12 @@ For more information, see [Configuration Manager on Azure](../understand/configu
 ## Prerequisites
 
 This process requires an Azure subscription in which you can create the following objects: 
-- Two Standard_B2s virtual machines for Domain Contoller and MP & DP roles.
-- One Standard_B2ms virtual machine for Primary Site Server and SQL database server.
+- Two Standard_B2s virtual machines for domain controller, management point, and distribution point.
+- One Standard_B2ms virtual machine for the primary site server and the SQL database server.
 - Standard_LRS storage account
 
 > [!Tip]  
-> See the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to help determine potential costs.  
+> To help determine potential costs, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).  
 
 
 
@@ -97,7 +97,7 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 ### `<prefix>DC01`
 
 - Active Directory domain controller
-- Standard_B2s, which has two CPU and 4 GB of memory
+- Standard_B2s, which has two processors and 4 GB of memory
 - Windows Server 2019 Datacenter edition
 
 #### Windows features and roles
@@ -108,7 +108,7 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 ### `<prefix>PS01`
 
-- Standard_B2ms, which has two CPU and 8 GB of memory
+- Standard_B2ms, which has two processors and 8 GB of memory
 - Windows Server 2016 Datacenter edition
 - SQL Server
 - Windows 10 ADK with Windows PE 
@@ -122,7 +122,7 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s, which has two CPU and 4 GB of memory
+- Standard_B2s, which has two processors and 4 GB of memory
 - Windows Server 2019 Datacenter edition
 - Distribution point
 - Management point
