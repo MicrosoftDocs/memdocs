@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,6 +32,20 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Keep current on updates to the Intune Data Warehouse.
+
+# 2003 
+_Released March 2020_
+
+### Beta changes
+
+The following table lists the added property to the **device** entity in the Intune Data Warehouse.<!--6123680>
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    EthernetMacAddress    |    Added    |    The unique network identifier of this device.                                                                                                                                                                                                                                                                     |
+|    Model    |    Added    |    The device model.                                                                                                                                                                                                                                                                     |
+|    Office365Version    |    Added    |    The version of Office 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
+|    PhysicalMemoryInBytes    |    Added    |    The physical memory in bytes.                                                                                                                                                                                                                                                                     |
 
 ## 1903 (Part 2)
 _Released April 2019_
