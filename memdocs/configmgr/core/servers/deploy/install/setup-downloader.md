@@ -31,6 +31,8 @@ You have two options to run setup downloader:
 - Run the application with the user interface
 - Run the application at a command prompt for additional command-line options
 
+If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the tool to access internet endpoints. The device where you'll run the tool requires internet access the same as the service connection point. For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#bkmk_scp).<!-- SCCMDocs#677 -->
+
 ## <a name="bkmk_ui"></a> Run setup downloader with the user interface
 
 1. On a computer that has internet access, browse to the installation media for the version of Configuration Manager that you want to install.
