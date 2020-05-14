@@ -34,7 +34,8 @@ View the settings you can configure in profiles for *Account protection* policy 
 Supported platforms and profiles:
 
 - **Windows 10 and later**:
-  - Profile: **Account protection**
+  - Profile: **Account protection** *(Preview)*
+
 
 ## Account protection profile
 

@@ -87,7 +87,6 @@ For more information about FileVault with Intune, see [Manage FileVault](../prot
 
 Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.  
 
-**General**
 - **Enable Firewall**  
   Enable Firewall to configure how incoming connections are handled in your environment.  
   - **Not configured**  
@@ -102,12 +101,13 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   **Default**: Not configured  
 
-- **Firewall apps**: Select **Add** to set rules for incoming connections for the following apps:
-  - **Allow incoming connections**: Your options:
-    - **Not configured**: Intune doesn't change or update this setting.
-    - **Block**: Incoming connections are blocked.
-    - **Allow**: Incoming connections are explicitly allowed.
-  - **Bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+- **Allow incoming connections for the following apps**: Select apps that are allowed to receive incoming connections. Your options:
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+- **Block incoming connections for the following apps**: Select apps that aren't allowed to receive incoming connections. Your options:
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - **Enable stealth mode**  
   To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.  

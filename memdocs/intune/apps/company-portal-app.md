@@ -236,13 +236,13 @@ Some platforms and configurations do not allow self-service device actions. This
 
 ## Customizing user self-service actions for the Company Portal
 
-You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **End User Experiences** > **Branding and Customization** > **Company Portal customization** > **Hide features**. 
+You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. 
 
 The following actions are available:
 - Hide **Remove** button on corporate Windows devices.
 - Hide **Reset** button on corporate Windows devices.
-- Hide **Reset** button on corporate iOS devices.
-- Hide **Remove** button on corporate iOS devices.
+- Hide **Remove** button on corporate iOS/iPadOS devices.
+- Hide **Reset** button on corporate iOS/iPadOS devices.
 
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies. 

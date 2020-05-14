@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -97,8 +97,36 @@ A read-only user would only need the **Read** permission under both the **Device
 
 For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
 
-
 ## <a name="bkmk_uea_start"></a> Start gathering data
+- If you are enrolling Intune managed devices only, skip to the [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard) section.
+
+- If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps:
+   - [Enable Endpoint analytics data collection in Configuration Manager](#bkmk_uea_cm_enroll)
+   - [Enable data upload in Configuration Manager](#bkmk_uea_cm_upload)
+   - [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard)  
+
+### <a name="bkmk_uea_cm_enroll"></a> Enroll devices managed by Configuration Manager
+<!--6051638, 5924760-->
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_uea_prereq) including enabling [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). If you are enrolling Intune managed devices only, skip to the [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard) section.
+
+#### <a name="bkmk_uea_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
+
+1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
+1. Right-click and select **Properties** then select the **Computer Agent** settings.
+1. Set **Enable Endpoint analytics data collection** to **Yes**.
+   > [!Important] 
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
+
+#### <a name="bkmk_uea_cm_upload"></a> Enable data upload in Configuration Manager
+
+1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
+1. Select **CoMgmtSettingsProd** then click **Properties**.
+1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
+Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
