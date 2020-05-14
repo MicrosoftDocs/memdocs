@@ -81,7 +81,7 @@ Any app that has been integrated with the [Intune App SDK](../developer/app-sdk.
 
 The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
-**Does the Intune APP SDK support Microsoft Authentication Library (MSAL), or social accounts?**<br></br>
+**Does the Intune APP SDK support Microsoft Authentication Library (MSAL)?**<br></br>
 The Intune App SDK can use either the Azure Active Directory Authentication Library or the Microsoft Authentication Library for its authentication and conditional launch scenarios. It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 **What are the additional requirements to use the [Outlook mobile app](https://products.office.com/outlook)?**
