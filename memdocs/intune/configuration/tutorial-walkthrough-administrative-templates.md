@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -249,7 +249,7 @@ In this section, we create an administrative template in Intune, look at some se
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 5. Select **Next**.
-6. In **Configuration settings**, **All settings** show an alphabetical list of all the settings. You can also filter settings that apply to devices (**Computer configuration**), and settings apply to users (**User configuration**):
+6. In **Configuration settings**, **All settings** show an alphabetical list of all the settings. You can also filter settings that apply to devices (**Computer configuration**), and settings that apply to users (**User configuration**):
 
     > [!div class="mx-imgBorder"]
     > ![Apply ADMX template settings to users and devices in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
@@ -408,7 +408,7 @@ In this section, you create a OneDrive admin template in Intune to control some 
 5. Select **Next**.
 6. In **Configuration settings**, configure the following settings. Be sure to select **OK** to save your changes:
 
-    - **Computer configuration** > **All settings**:
+    - **Computer configuration**:
       - **Silently sign in users to the OneDrive sync client with their Windows credentials**
         - **Type**: Device
         - **Value**: Enabled
@@ -416,7 +416,7 @@ In this section, you create a OneDrive admin template in Intune to control some 
         - **Type**: Device
         - **Value**: Enabled
 
-    - **User configuration** > **All settings**:
+    - **User configuration**:
       - **Prevent users from syncing personal OneDrive accounts**
         - **Type**: User
         - **Value**: Enabled

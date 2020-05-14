@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 When managing devices in your organization, you want to create groups of settings that apply to different device groups. For example, you have several device groups. For GroupA, you want to assign a specific set of settings. For GroupB, you want to assign a different set of settings. You also want a simple view of the settings you can configure.
 
-You can complete this task using **Administrative Templates** in Microsoft Intune. The administrative templates include hundreds of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow group administrators to manage group policies using the cloud.
+You can complete this task using **Administrative Templates** in Microsoft Intune. The administrative templates include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow group administrators to manage group policies using the cloud.
 
 This feature applies to:
 
@@ -119,16 +119,24 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Find some settings
 
-There are hundreds of settings available in these templates. To make it easier to find specific settings, use the built-in features:
+There are thousands of settings available in these templates. To make it easier to find specific settings, use the built-in features:
 
-- In your template, select the **Settings**, **State**, **Setting type**, or **Path** columns to sort the list. For example, select the **Path** column, and use the next arrow to see the settings in the `Microsoft Excel` path:
+- In your template, select the **Settings**, **State**, **Setting type**, or **Path** columns to sort the list. For example, select the **Path** column, and use the next arrow to see the settings in the `Microsoft Excel` path.
 
-- In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, search for `copy`. All the settings with `copy` are shown:
+- In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, select **All settings**, and search for `copy`. All the settings with `copy` are shown:
 
   > [!div class="mx-imgBorder"]
   > ![Search for copy to show all the device settings in administrative templates in Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   In another example, search for `microsoft word`. You see the settings you can set for the Microsoft Word program. Search for `explorer` to see the Internet Explorer settings you can add to your template.
+
+- You can also narrow your search by only selecting **Computer configuration** or **User configuration**.
+
+  For example, to see all the available Internet Explorer user settings, select  **User configuration**, and search for `Internet Explorer`. Only the IE settings that apply to users are shown:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="In the ADMX template, select user configuration, and search or filter for Internet Explorer in Microsoft Intune.":::
+
+  
 
 ## Next steps
 
