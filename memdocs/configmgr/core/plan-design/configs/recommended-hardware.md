@@ -91,7 +91,7 @@ For content on distribution points, it depends upon your deployments. This guida
 
 When you plan for disk space requirements, consider the following additional guidelines:
 
-- Each client requires approximately 5 MB of space.
+- Each client requires approximately 5-10 MB of space in the database. This number depends upon the hierarchy tpe, the configuration, and the number of clients. The size is generally less for larger environments. Smaller sites have greater database usage per client.<!-- SCCMDocs#1048 -->
 
 - For the primary site's temp database, plan for a combined size that is 25% to 30% of the site database .mdf file. The actual size can be smaller or larger. It depends on the performance of the site server and the volume of incoming data over both short and long periods of time.
 
