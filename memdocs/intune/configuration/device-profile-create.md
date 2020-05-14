@@ -180,7 +180,7 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of a setting that can apply to users and/or apply to devices:
 
-      :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices.":::
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices.":::
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from 4 characters to 6 characters, let your users know before your assign the policy.
 
