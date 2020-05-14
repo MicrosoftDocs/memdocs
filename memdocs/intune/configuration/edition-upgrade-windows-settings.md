@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,12 +48,14 @@ For more information on this feature, see [Upgrade Windows 10 editions or enable
 
 ## Mode switch
 
-- **No configuration**: An S mode device stays in S mode. An end user can switch the device out of S mode.
-- **Keep in S mode**: Disables the end user from switching the device out of S mode.
-- **Switch**: Switches the device out of S mode.
+- **Switch out of S mode**: Switches the device out of S mode. Your options:
+
+  - **No configuration**: Intune doesn't change or update this setting. By default, the S mode device might stay in S mode. User can switch the device out of S mode.
+  - **Keep in S mode**: Prevents users from switching the device out of S mode.
+  - **Switch**: Allows users to switch the device out of S mode.
 
 ## Next steps
 
-The profile is created, but it may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 You can also create edition upgrade profiles for [Windows Holographic for Business](holographic-upgrade.md) devices.
