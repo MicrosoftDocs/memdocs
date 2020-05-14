@@ -89,10 +89,9 @@ Then, choose the profile type. Depending on the platform you choose, the setting
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
+For example, if you select **iOS/iPadOS** for the platform, your profile options look similar to the following profile:
 
-> [!div class="mx-imgBorder"]
-> ![Create iOS/iPadOS profile in Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Create an iOS/iPadOS profile in Microsoft Intune.":::
 
 ## Scope tags
 
@@ -133,10 +132,9 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 ### Add a rule
 
-1. Select **Applicability Rules**. You can choose the **Rule**, **Property**, and **OS edition**:
+1. Select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Add an applicability rule to a device configuration profile in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -182,8 +180,7 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of a setting that can apply to users and/or apply to devices:
 
-  > [!div class="mx-imgBorder"]
-  > ![Intune admin template that applies to user and devices](./media/device-profile-create/setting-applies-to-user-and-device.png)
+      :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices.":::
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from 4 characters to 6 characters, let your users know before your assign the policy.
 
