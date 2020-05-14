@@ -91,7 +91,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 3. Enter the following properties:
 
     - **Platform**: Select **Android enterprise**.
-    - **Profile type**: Select **OEMConfig**.
+    - **Profile**: Select **OEMConfig**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

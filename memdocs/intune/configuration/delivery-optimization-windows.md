@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/28/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,28 +43,36 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
 3. Enter the following properties:
+
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile type**: Select **Delivery Optimization**.
+   - **Profile**: Select **Delivery Optimization**.
 
 4. Select **Create**.
 
-5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+5. In **Basics**, enter the following properties:
 
-6. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
+   - **Name**: Enter a descriptive name for the new profile.
+   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery optimization settings for Intune](delivery-optimization-settings.md).
 
    When your done configuring settings, select **Next**.
 
-7. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+8. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   
    Select **Next** to continue.
 
-8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-9. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
+10. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
 
-10. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list. Next, [assign the profile](device-profile-assign.md) and then [monitor its status](device-profile-monitor.md).
+11. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list.
+
+The next time each device checks in, the policy is applied.
 
 ## Remove Delivery Optimization from Windows 10 Update Rings
 
@@ -75,23 +83,32 @@ Delivery Optimization was previously configured as part of Software Update Rings
     1. In the Microsoft Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
     2. Enter the following properties:
 
+        - **Platform**: Select **Windows 10 and later**.
+        - **Profile**: Select **Delivery optimization**.
+
+    3. Select **Create**.
+    4. In **Basics**, enter the following properties:
+
         - **Name**: Enter a descriptive name for the new profile.
         - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-        - **Platform**: Select **Windows 10 and later**.
-        - **Profile type**: Select **Delivery optimization**.
-        - **Settings**: For **Delivery optimization download mode**, choose the same mode that's used by the existing software update ring unless you want to change the settings you apply to your devices. Your options:
-            - **Not configured​**
-            - **HTTP only, no peering​**
-            - **HTTP blended with peering behind the same NAT**
-            - **HTTP blended with peering across a private group​**
-            - **HTTP blended with Internet peering​**
-            - **Simple download mode with no peering​**
-            - **Bypass mode**
-    3. Configure any additional settings you might want to manage.
 
-2. Assign this new profile to the same devices and users as the existing software update ring. [Assign the profile](device-profile-assign.md) lists the steps.
+    5. Select **Next**.
+    6. In **Configuration settings** > **Download mode**, choose the same mode that's used by the existing software update ring *unless* you want to change the settings you apply to your devices. Your options:
 
-3. Unconfigure the existing software ring:
+        - **Not configured​**
+        - **HTTP only, no peering​**
+        - **HTTP blended with peering behind the same NAT**
+        - **HTTP blended with peering across a private group​**
+        - **HTTP blended with Internet peering​**
+        - **Simple download mode with no peering​**
+        - **Bypass mode**
+
+    7. Configure [any additional settings](delivery-optimization-settings.md) you want to manage, and continue creating the profile.
+
+        In **Assignments**, assign this new profile to the same devices and users as the existing software update ring. For more information, see [assign the profile](device-profile-assign.md).
+
+2. Unconfigure the existing software ring:
+
     1. In the Microsoft Endpoint Manager admin center, go to **Software updates** > Windows 10 Update Rings.
     2. In the list, select your update ring.
     3. In the settings, set **Delivery optimization download mode** to **Not configured**.
@@ -99,5 +116,6 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md) its status.  
+After you [assign the profile](device-profile-assign.md), [monitor its status](device-profile-monitor.md) its status.
+
 View the [delivery optimization settings](delivery-optimization-settings.md) for Intune.
