@@ -115,12 +115,6 @@ The following table provides enrollment specific configuration details:
 
 <sup>(1)</sup> **Known issue:** If you set apps to require enrollment for install and also set device enrollment to "Unavailable," the Company Portal app on Android will still guide users to enroll. This will be removed shortly.
 
-> [!NOTE]
-> If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues.
-
-> [!NOTE]
-> Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
-
 ### Privacy
 
 The following table provides privacy specific configuration details:
@@ -154,7 +148,7 @@ You can choose which additional app sources will be shown in Company Portal. The
 
 You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end-user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.auzre.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
-## Customizing user self-service actions for the Company Portal
+### Customizing user self-service actions for the Company Portal
 
 You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. 
 
@@ -246,6 +240,13 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br>
 <sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.
+
+### App logs
+
+If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues.
+
+> [!NOTE]
+> Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
 
 ## Next steps
 
