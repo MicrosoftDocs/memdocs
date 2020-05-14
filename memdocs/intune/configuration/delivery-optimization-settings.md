@@ -28,8 +28,6 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-
-
 # Delivery optimization settings for Intune
 
 This article lists the delivery optimization settings that Intune supports for devices that run Windows 10 or later.  
@@ -45,6 +43,10 @@ The following tables include:
 - **Details**: A brief description of how Intune implements the setting, including the Intune default. When available, there are links to [delivery optimization Policy configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization) (CSP) entries.  
 
 To configure Intune to use these settings, see [Deliver updates](delivery-optimization-windows.md).  
+
+## Before you begin
+
+[Create a Windows 10 delivery optimization profile](delivery-optimization-windows.md).
 
 ## Delivery Optimization  
 
@@ -84,7 +86,8 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 |[Delay foreground download Cache Server fallback (in seconds)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Specify a time in seconds (0-2592000) to delay the fallback from a Cache server to the HTTP source for a for a foreground content download. When the policy to delay foreground download from http, it will apply first (to allow downloads from peers first). (0-2592000)    <br><br>**Default**: 0  <br><br>Policy CSP [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
 |[Delay background download Cache Server fallback (in seconds)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Specify a time in seconds (0-2592000) to delay the fallback from a Cache server to the HTTP source for a background content download. When *Delay background HTTP download (in seconds)* configured, that setting applies first to allow downloads from peers. (0-2592000)   <br><br>**Default**: 0 <br><br>Policy CSP: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
 
-
 ## Next steps
 
-[Configure delivery optimization in Intune](delivery-optimization-windows.md)
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+[Learn more about delivery optimization in Intune](delivery-optimization-windows.md).
