@@ -100,7 +100,7 @@ For more information, see [Client installation properties](../core/clients/deplo
 
 ### Create the app in Intune
 
-1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), and then expand the left nav pane.  
+1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), and then expand the left navigation pane.  
 
 2. Select **Apps** > **All Apps** > **Add**.  
 
