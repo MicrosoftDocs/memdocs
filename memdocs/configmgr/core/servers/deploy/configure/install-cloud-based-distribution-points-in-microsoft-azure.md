@@ -10,8 +10,6 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Install a cloud distribution point for Configuration Manager
@@ -212,6 +210,8 @@ Default client settings automatically enable clients to use cloud distribution p
 ## <a name="bkmk_monitor"></a> Manage and monitor  
 
 Monitor content that you distribute to a cloud distribution point the same as with any other on-premises distribution points. For more information, see [Monitor content](monitor-content-you-have-distributed.md).
+
+When you view the list of cloud distribution points in the console, you can add additional columns to the list. For example, the **Data egress** column shows the amount of data clients downloaded from the service in the last 30 days.<!-- SCCMDocs#755 -->
 
 ### <a name="bkmk_alerts"></a> Alerts  
 

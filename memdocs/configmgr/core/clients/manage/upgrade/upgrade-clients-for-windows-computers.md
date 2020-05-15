@@ -10,8 +10,6 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to upgrade clients for Windows computers in Configuration Manager
@@ -94,7 +92,7 @@ Use the following procedure to configure automatic client upgrade at the CAS. Th
 Clients receive these settings when they next download policy.
 
 > [!NOTE]
-> Client upgrades honor any Configuration Manager maintenance windows you've configured.
+> Client upgrades honor any Configuration Manager maintenance windows you've configured. The execmgr thread only runs the client setup bootstrap program (ccmsetup.exe) during a maintenance window. If the device runs an edition of Windows with a write filter, ccmsetup tries to download and install at the same time. Otherwise, ccmsetup randomizes a time to download content. After it downloads content and compiles the local policy, execmgr schedules the client upgrade during the next maintenance window.<!-- SCCMDocs#896 -->
 
 ## Next steps
 
