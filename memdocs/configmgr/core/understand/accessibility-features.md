@@ -2,7 +2,7 @@
 title: Accessibility
 titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -42,7 +42,7 @@ To access a workspace, use the following keyboard shortcuts:
 |Ctrl + 4|  Administration|
 
 
-### Other keyboard shortcuts
+### Other console shortcuts
 
 |Keyboard shortcut|  Purpose|
 |--------|--------|  
@@ -53,6 +53,14 @@ To access a workspace, use the following keyboard shortcuts:
 |Ctrl + D|Set the focus to the details pane, when available.|
 |Alt     |Change the focus in and out of the ribbon.|
 
+### CMPivot shortcuts
+
+Most [web browser keyboard shortcuts](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) will work in CMPivot.
+
+|Keyboard shortcut|  Purpose|
+|--------|--------|  
+|Ctrl + 1|Set the focus on the first tab.|
+|Alt + &lt;|To back to the address|
 
 
 ## Other accessibility features
