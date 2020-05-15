@@ -65,7 +65,7 @@ In an existing task sequence to install an OS, add a new group with steps to do 
     > [!TIP]
     > By default, the EFI partition size is 500 MB. In some environments, the boot image is too large to store on this partition. To work around this issue, increase the size of the EFI partition. For example, set it to 1 GB.<!-- SCCMDocs#1024 -->
 
-## Convert from BIOS to UEFI during in-place upgrade
+## <a name="bkmk_ipu"></a> Convert from BIOS to UEFI during in-place upgrade
 
 Windows 10 includes a simple conversion tool, **MBR2GPT**. It automates the process to repartition the hard disk for UEFI-enabled hardware. You can integrate the conversion tool into the in-place upgrade process to Windows 10. Combine this tool with your upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI.
 
