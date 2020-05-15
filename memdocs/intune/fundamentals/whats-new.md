@@ -133,7 +133,7 @@ Applies to:
 ### Device enrollment
 
 #### Enrollment restrictions support scope tags<!--4209550  -->
-You can now assign scope tags to enrollment restrictions. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction**. Create either type of restriction and you'll seee the **Scope tags** page. For more information, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
+You can now assign scope tags to enrollment restrictions. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction**. Create either type of restriction and you'll see the **Scope tags** page. For more information, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 
 #### Autopilot support for Hololens 2 devices<!--6305220  -->
 Windows Autopilot now supports Hololens 2 devices. For more information on using Autopilot for Hololens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
