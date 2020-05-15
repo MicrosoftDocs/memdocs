@@ -61,8 +61,9 @@ Before you create a profile, review the following articles that detail the endpo
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Endpoint Protection profile that configures the Firewall for all macOS devices**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
+
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
 

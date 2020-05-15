@@ -46,7 +46,7 @@ Depending on the settings you choose, not all values in the following list are c
     - **IP address or FQDN**: Provide the IP address or fully qualified domain name of the VPN server that devices connect to. Examples: **192.168.1.1**, **vpn.contoso.com**.
     - **Default server**: Enables this server as the default server that devices use to establish the connection. Make sure to set only one server as the default.
   - **Import**: Browse to a comma-separated file with the list of servers in the format description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
-  - **Export**: Exports the list of servers to a comma-seperated-values (csv) file.
+  - **Export**: Exports the list of servers to a comma-separated-values (csv) file.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
   - **Check Point Capsule VPN**

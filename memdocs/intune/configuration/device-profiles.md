@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -184,7 +184,7 @@ This feature supports:
 
 ## Extensions
 
-[Kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs at the kernel-level on macOS devices. Configure these settings to trust all extensions from a specific developer or partner, or allow specific kernel extensions.
+[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
 
