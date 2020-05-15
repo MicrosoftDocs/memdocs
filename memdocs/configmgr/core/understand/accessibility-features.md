@@ -2,7 +2,7 @@
 title: Accessibility
 titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual

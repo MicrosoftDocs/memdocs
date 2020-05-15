@@ -1,2 +1,2 @@
-{:allowed-branchname-matches ["master" "release-.*" "sandbox-.*"]
- :allowed-filename-matches ["sccm"]}
+{:allowed-branchname-matches ["^master$" "^release..*"]
+ :allowed-filename-matches ["memdocs"]}

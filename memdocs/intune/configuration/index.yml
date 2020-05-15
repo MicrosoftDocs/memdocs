@@ -1,0 +1,166 @@
+### YamlMime:Landing
+
+title: Configure device settings
+summary: Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles" and then you can use Intune to apply or "assign" the profile to the devices.
+metadata:
+  title: Configure device settings
+  description: Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles" and then you can use Intune to apply or "assign" the profile to the devices.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: configuration
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: dougeby
+  ms.author: dougeby
+  ms.date: 02/18/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Apply features and setting on devices
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Device configuration overview
+            url: device-profiles.md
+      - linkListType: quickstart
+        links:
+          - text: Create an email device profile for iOS/iPadOS
+            url: quickstart-email-profile.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create a profile
+            url: device-profile-create.md
+          - text: Assign profiles
+            url: device-profile-assign.md
+          - text: Monitor profiles
+            url: device-profile-monitor.md
+
+  # Card (optional)
+  - title: Settings for Windows 10 and later
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Use Windows 10 templates to configure group policy settings
+        url: administrative-templates-windows.md
+      - text: Configure device restriction settings
+        url: device-restrictions-configure.md
+      - text: Delivery optimization settings
+        url: delivery-optimization-windows.md
+      - text: Add email settings to devices
+        url: email-settings-configure.md
+      - text: Settings to run as a dedicated kiosk
+        url: kiosk-settings.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md  
+
+  # Card (optional)
+  - title: Settings for Windows Holographic for Business
+    linkLists:
+    - linkListType: how-to-guide      
+      links:
+      - text: Upgrade Windows 10 editions or switch out of S mode
+        url: edition-upgrade-configure-windows-10.md
+      - text: Settings to run as a dedicated kiosk
+        url: kiosk-settings.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md  
+      - text: Control access, accounts, and power features on shared PC or multi-user devices
+        url: shared-user-device-settings.md 
+
+  # Card (optional)
+  - title: Settings for iOS/iPadOS
+    linkLists:
+    - linkListType: how-to-guide      
+      links:
+      - text: Add iOS/iPadOS device feature settings
+        url: device-features-configure.md
+      - text: Configure device restriction settings
+        url: device-restrictions-configure.md
+      - text: Add email settings to devices
+        url: email-settings-configure.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Create per-app VPN profiles for iOS/iPadOS devices
+        url: vpn-setting-configure-per-app.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md          
+
+  # Card (optional)
+  - title: Settings for macOS
+    linkLists:
+    - linkListType: how-to-guide  
+      links: 
+      - text: Add iOS/iPadOS device feature settings
+        url: device-features-configure.md
+      - text: Configure device restriction settings
+        url: device-restrictions-configure.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md  
+      - text: Add macOS kernel extensions
+        url: kernel-extensions-overview-macos.md  
+
+  # Card (optional)
+  - title: Settings for Android
+    linkLists:
+    - linkListType: how-to-guide  
+      links: 
+      - text: Configure device restriction settings
+        url: device-restrictions-configure.md
+      - text: Add email settings to devices
+        url: email-settings-configure.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md  
+      - text: Create a WiFi profile with a pre-shared key
+        url: wi-fi-profile-shared-key.md  
+      - text: Manage Zebra devices with Zebra Mobility Extensions
+        url: android-zebra-mx-overview.md  
+      - text: Manage Android Enterprise devices with OEMConfig
+        url: android-oem-configuration-overview.md
+
+  # Card (optional)
+  - title: Settings for Android Enterprise
+    linkLists:
+    - linkListType: how-to-guide  
+      links: 
+      - text: Configure device restriction settings
+        url: device-restrictions-configure.md
+      - text: Add email settings to devices
+        url: email-settings-configure.md
+      - text: Create VPN profiles to connect to VPN servers
+        url: vpn-settings-configure.md
+      - text: Add and use Wi-Fi settings on your devices
+        url: wi-fi-settings-configure.md  
+
+  # Card (optional)
+  - title: Settings lists
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Android
+        url: device-restrictions-android.md
+      - text: Android Enterprise
+        url: device-restrictions-android-for-work.md
+      - text: iOS/iPadOS
+        url: ios-device-features-settings.md
+      - text: macOS
+        url: macos-device-features-settings.md
+      - text: Windows 10 and later
+        url: delivery-optimization-settings.md
+      - text: Windows Holographic for Business
+        url: device-restrictions-windows-holographic.md                      
+      - text: Windows 8.1
+        url: device-restrictions-windows-8-1.md
+      - text: Windows Phone 8.1
+        url: device-restrictions-windows-phone-8-1.md

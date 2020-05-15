@@ -1,0 +1,154 @@
+### YamlMime:Landing
+
+title: Protect Data and Devices with Intune
+summary: Intune helps protect devices and your corporate data with tools like security baselines, Azure AD conditional access, and partners for Mobile Threat Defense.
+metadata:
+  title: Protect Data and Devices with Intune
+  description: Intune helps protect devices and your corporate data with tools like security baselines, Azure AD conditional access, and partners for Mobile Threat Defense.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: protect
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: brenduns
+  ms.author: brenduns
+  ms.date: 08/20/2019  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Set rules on devices to allow access to resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Compliance overview
+            url: device-compliance-get-started.md
+      - linkListType: quickstart
+        links:
+          - text: Create a device compliance policy
+            url: quickstart-set-password-length-android.md
+      - linkListType: tutorial
+        links:
+          - text: Protect Exchange Online email on managed devices
+            url: tutorial-protect-email-on-enrolled-devices.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create a policy
+            url: create-compliance-policy.md
+          - text: Location based compliance
+            url: use-network-locations.md
+          - text: Actions for noncompliance
+            url: actions-for-noncompliance.md
+
+  # Card
+  - title: Manage privacy and personal data
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Privacy and personal data
+            url: privacy-personal-data.md
+      - linkListType: concept
+        links:
+          - text: Data collection
+            url: privacy-data-collect.md
+          - text: Data storage and processing
+            url: privacy-data-store-process.md
+          - text: Data security and sharing
+            url: privacy-data-secure-share.md
+      - linkListType: how-to-guide
+        links:
+          - text: Data that Intune shares
+            url: privacy-data-secure-share.md
+          - text: Audit, export, delete
+            url: privacy-data-audit-export-delete.md
+          - text: View and correct personal data
+            url: privacy-data-view-correct.md
+
+  # Card
+  - title: Protect devices and networks
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Device protection
+            url: device-protect.md
+          - text: Mobile Threat Defense
+            url: mobile-threat-defense.md
+      - linkListType: how-to-guide
+        links:
+          - text: Microsoft Defender ATP
+            url: advanced-threat-protection.md
+          - text: Mobile Threat Defense partners
+            url: mtd-apps-ios-app-configuration-policy-add-assign.md
+          - text: Security baselines
+            url: security-baselines.md
+          - text: Endpoint protection
+            url: endpoint-protection-configure.md
+          - text: Network access control
+            url: network-access-control-integrate.md
+          - text: Encrypt devices
+            url: encrypt-devices.md
+
+  # Card (optional)
+  - title: Use secure authentication methods
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Certificates and Intune
+            url: certificates-configure.md
+      - linkListType: how-to-guide
+        links:
+          - text: SCEP certificate profiles
+            url: certificates-scep-configure.md
+          - text: PKCS certificate profiles
+            url: certficates-pfx-configure.md
+          - text: Imported PFX Certificates
+            url: certificates-imported-pfx-configure.md
+#         - text: Derived Credentials (TBD or 1910)
+#         - url:  tbd
+          - text: Windows Hello for Business
+            url: windows-hello.md
+
+  # Card
+  - title: Manage software updates
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+#     - text: Android
+#     - url: not-yet-supported.md
+          - text: iOS
+            url: software-updates-ios.md
+#     - text: macOS
+#     - url: not-yet-supported.md
+          - text: Windows
+            url: windows-update-for-business-configure.md
+
+  # Card
+  - title: Use Conditional Access
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Conditional Access overview 
+            url: conditional-access.md
+          - text: Protect Exchange Online 
+            url: exchange-online-protect.md
+      - linkListType: tutorial
+        links:
+          - text: Protect email on managed devices
+            url: tutorial-protect-email-on-enrolled-devices.md
+          - text: Protect email on unmanaged devices
+            url: tutorial-protect-email-on-unmanaged-devices.md
+      - linkListType: concept
+        links:
+          - text: ADAL and Intune
+            url: app-modern-authentication-block.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create and assign Conditional Access policy
+            url: conditional-access-exchange-create.md
+          - text: Common ways to use Conditional Access
+            url: conditional-access-intune-common-ways-use.md
+          - text: Jamf Pro for macOS 
+            url: conditional-access-jamf-cloud-connector.md

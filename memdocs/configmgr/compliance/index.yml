@@ -1,0 +1,71 @@
+### YamlMime:Landing
+
+title: Device compliance documentation
+summary: Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. 
+ 
+
+metadata:
+  title: Device compliance documentation
+  titleSuffix: Configuration Manager
+  description: Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. 
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About device compliance
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introduction to device compliance
+            url: understand/ensure-device-compliance.md
+          - text: Get started with compliance settings
+            url: get-started/get-started-with-compliance-settings.md
+      - linkListType: architecture
+        links:
+          - text: Plan for and configure compliance settings 
+            url: plan-design/plan-for-and-configure-compliance-settings.md
+
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Common tasks for managing compliance
+            url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+          - text: Create configuration items for Windows 10 devices
+            url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+          - text: Create configuration baselines
+            url: deploy-use/create-configuration-baselines.md
+      - linkListType: deploy
+        links:
+          - text: Deploy configuration baselines
+            url: deploy-use/deploy-configuration-baselines.md
+      - linkListType: how-to-guide
+        links:
+          - text: Monitor compliance settings
+            url: deploy-use/monitor-compliance-settings.md
+
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create custom configuration items
+            url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+          - text: Create remote connection profiles
+            url: deploy-use/create-remote-connection-profiles.md
+          - text: Create user data and profiles configuration items
+            url: deploy-use/create-user-data-and-profiles-configuration-items.md
+      - linkListType: concept
+        links:
+          - text: OneDrive for Business Profiles
+            url: deploy-use/onedrive-profile.md
+          - text: Manage configuration data 
+            url: deploy-use/management-tasks-for-configuration-data.md
