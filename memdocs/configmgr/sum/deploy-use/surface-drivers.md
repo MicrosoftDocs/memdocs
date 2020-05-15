@@ -21,7 +21,7 @@ System Center Configuration Manager allows you to synchronize drivers for Surfac
 
 ## Prerequisites for synchronizing Surface Drivers
 
-- An internet connected top-level software update point (SUP).
+- An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
 - Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
@@ -34,7 +34,7 @@ To enable synchronization of Surface drivers, do following steps:
 1. In the ribbon, select **Settings** > **Configure Site Components** > **Software Update Point**.
 1. Click on the **Classifications** tab, then click the checkbox for **Include Microsoft Surface drivers and firmware updates** and click **Apply**.
 
-     ![Enable Surface drivers from the SUP properties](media/enable-surface-driver-sync.png)
+     ![Enable Surface drivers from the software update point properties](media/enable-surface-driver-sync.png)
 
 1. In the Software Update Point Component Properties, click the **Products** tab. For more information, see the [Products for Surface drivers](#bkmk_prod) and [Surface Models](#bkmk_models) sections.
 1. Select the products for each version of Windows 10 for which you would like to support Surface drivers. You'll notice that there are two different versions of each of the products for drivers:
@@ -107,7 +107,7 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
 1. Open WsyncMgr.log and check for the following log entry:
 
     ```text
-    Surface Drivers can be supported in this hierarchy since all SUPs are on Windows Server 2016, WCM SCF property Sync Catalog Drivers is set. 
+    Surface Drivers can be supported in this hierarchy since all software update points are on Windows Server 2016, WCM SCF property Sync Catalog Drivers is set. 
     …
     Sync Catalog Drivers SCF value is set to : 1
     ```
@@ -126,7 +126,7 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
    </Categories>
    ```
 
-   This entry is an XML element that lists every product group and classification that's currently synchronized by your SUP server. If you can't find the products that you've selected, double-check the products for the software update point are saved.
+   This entry is an XML element that lists every product group and classification that's currently synchronized by your software update point server. If you can't find the products that you've selected, double-check the products for the software update point are saved.
 1. You can also wait until the next synchronization finishes. Then, check whether the Surface driver and firmware updates are listed in Software Updates in the Configuration Manager console. For example, the console might display the following information:
    ![Synchronized Surface drivers in Configuration Manger console](media/synchronized-surface-drivers.png)
 
@@ -146,7 +146,7 @@ Additionally, there are more than 68,000 updates that are classified as drivers 
 
 The Surface driver allow list isn't published online. This list is delivered to Configuration Manager through the update and servicing channels. If your Configuration Manager environment is online and able to detect new updates, you'll receive updates to the list automatically.
 
-If your Configuration Manager environment is offline, a new allow list is imported every time you import servicing updates to Configuration Manager. You'll also have to import a new WSUS catalog that contains the drivers before the updates are displayed in the Configuration Manager console. Because a stand-alone WSUS environment contains more drivers than a Configuration Manager SUP, we recommend that you establish a Configuration Manager environment that has online capabilities, and that you configure it to synchronize Surface drivers. This provides a smaller WSUS export that closely resembles the offline environment.
+If your Configuration Manager environment is offline, a new allow list is imported every time you import servicing updates to Configuration Manager. You'll also have to import a new WSUS catalog that contains the drivers before the updates are displayed in the Configuration Manager console. Because a stand-alone WSUS environment contains more drivers than a Configuration Manager software update point, we recommend that you establish a Configuration Manager environment that has online capabilities, and that you configure it to synchronize Surface drivers. This provides a smaller WSUS export that closely resembles the offline environment.
 
 Another solution is to use [alternative methods](#bkmk_alt) to deploy Surface driver and firmware updates.
 
