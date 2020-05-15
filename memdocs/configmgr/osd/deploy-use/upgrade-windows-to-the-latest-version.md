@@ -82,7 +82,7 @@ The following tasks aren't compatible with the in-place upgrade. They require yo
 
   - Changing disk partitions
   - Changing the system architecture from x86 to x64
-  - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).)
+  - Implementing UEFI. (For more information on a possible option, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).)
   - Modifying the base OS language  
 
 - You have custom requirements including using a custom base image, using third-party disk encryption, or require WinPE offline operations.  

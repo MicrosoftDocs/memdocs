@@ -64,7 +64,7 @@ For more information, see [Refresh an existing computer with a new version of Wi
 
 ### Can I change from BIOS to UEFI when upgrading Windows?
 
-Yes. For more information, see [Convert from BIOS to UEFI during an in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Yes. For more information, see [Convert from BIOS to UEFI during an in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### Can I use Desktop Analytics with Windows 10 LTSC?
 

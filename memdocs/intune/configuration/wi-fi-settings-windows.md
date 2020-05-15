@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -73,8 +73,6 @@ This article describes these settings.
   - **Manually configure**: Enter the **Proxy server IPaddress** and its **Port number**.
   - **Automatically configure**: Enter the URL pointing to a proxy autoconfiguration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
-Select **OK** > **Create** to save your changes. The profile is created and is shown in the profiles list.
-
 ## Enterprise profile
 
 - **Wi-Fi type**: Choose **Enterprise**.
@@ -120,7 +118,7 @@ Select **OK** > **Create** to save your changes. The profile is created and is s
   - **Protected PEAP** (PEAP)
 
     **EAP-TLS, EAP-TTLS, and PEAP additional settings**:
-    
+
     > [!NOTE]
     > Currently, only SCEP certificate profiles are supported when using an EAP type. PKCS certificate profiles are not supported. Anytime a user is asked to enter a certificate, be sure to choose an SCEP certificate.
 
@@ -154,8 +152,6 @@ Select **OK** > **Create** to save your changes. The profile is created and is s
   - **Automatically configure**: Enter the URL pointing to a proxy auto-configuration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
 - **Force Wi-Fi profile to be compliant with the Federal Information Processing Standard (FIPS)**: Choose **Yes** when validating against the FIPS 140-2 standard. This standard is required for all US federal government agencies that use cryptography-based security systems to protect sensitive but unclassified information stored digitally. Choose **No** to not be FIPS-compliant.
-
-Select **OK** > **Create** to save your changes. The profile is created and is shown in the profiles list.
 
 ## Use an imported settings file
 
