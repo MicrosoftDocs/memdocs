@@ -172,7 +172,7 @@ In addition to the availability of content, the following are new for Endpoint S
 
 - [**Endpoint security policies**](../protect/endpoint-security-policy.md) **are out of** ***preview*** and are now ready to use in production environments, as *generally available*, with two exceptions:
 
-  - In a new *public preview*, you can use the [**Microsoft Defender Firewall rules** profile](../endpoint-security-firewall-policy.md#firewall-profiles) for Windows 10 Firewall policy. With each instance of this profile you can configure up to 150 firewall rules to compliment your Microsoft Defender Firewall profiles. 
+  - In a new *public preview*, you can use the [**Microsoft Defender Firewall rules** profile](../protect/endpoint-security-firewall-policy.md#firewall-profiles) for Windows 10 Firewall policy. With each instance of this profile you can configure up to 150 firewall rules to compliment your Microsoft Defender Firewall profiles. 
   - Account protection security policy remains in preview. 
 
 - You can now [**create a duplicate of endpoint security policies**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplicates keep the settings configuration of the original policy, but get a new name, and don’t include any assignments to groups, until you edit them to add them.  
