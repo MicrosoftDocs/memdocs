@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Enroll Android device with the Microsoft Intune app and Entrust Datacard  
-description: Enroll an Android device and set up derived credential authentication with Entrust Datacard.
+title: Enroll an Android device with Microsoft Intune app and DISA Purebred  
+description: Learn how to enroll an Android device and set up derived credential authentication with DISA Purebred.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020 
+ms.date: 05/15/2020  
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 ---
 
 
-# Set up Android device with Company Portal and Entrust Datacard
+# Set up Android device with the Microsoft Intune app and DISA Purebred
 
-Enroll your device with the Microsoft Intune app to gain secure, mobile access to your organization's email, files, and apps. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune.
+Enroll your device with the Microsoft Intune app to gain secure, mobile access to your organization's email, files, and apps. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune.  
 
 During enrollment, you'll also install a derived credential on your device. Your organization might require you to use the derived credential as an authentication method when accessing resources, or for signing and encrypting emails.
 
@@ -43,7 +43,7 @@ You likely need to set up a derived credential if you use a smart card to:
 In this article, you will:
 
 * Enroll a mobile Android device with the Intune app
-* Set up your smart card by installing a derived credential from your organization's derived credential provider, [Entrust Datacard](https://www.entrustdatacard.com/)
+* Set up your smart card by installing a derived credential from your organization's derived credential provider, [DISA Purebred](https://cyber.mil/pki-pke/purebred/)
 
 ## What are derived credentials?
 
@@ -58,12 +58,15 @@ Derived credentials are an implementation of the National Institute of Standards
 
 ## Prerequisites
 
- To complete enrollment, you must have:
+To complete enrollment, you must have:
 
 * Your school or work-provided smart card
 * Access to a computer or kiosk where you can sign in with your smart card
-* A new or factory-reset device running Android 7.0 or later
+* A new or factory-reset device running Android 7.0 or later 
 * The Microsoft Intune app installed on your device
+* The Purebred app installed on your device (App should automatically install shortly after device setup. If it doesn't, contact your IT support person.)
+
+You'll also need to contact a Purebred agent or representative during setup.
 
 ## Enroll device  
 
@@ -101,7 +104,7 @@ Derived credentials are an implementation of the National Institute of Standards
    > [!div class="mx-imgBorder"]
    > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)
 
-10. Insert your smart card to sign in.  
+10. Insert your smart card to sign in. 
 
 11. On the sign-in screen, select your work or school account. Then switch back to your mobile device. 
 
@@ -111,17 +114,17 @@ Derived credentials are an implementation of the National Institute of Standards
 
 13. To install work apps on your device, tap **INSTALL**. After installation is complete, tap **NEXT**.  
 
-       ![Example image of Set up your work phone screen, highlighting Install button.](./media/fully-managed-intune-app-11.png)    
+       ![Example image of Set up your work phone screen, highlighting Install button.](./media/fully-managed-intune-app-11.png)   
 
 14. Tap **START** to open the Microsoft Intune app. 
 
     ![Example image of Set up your work phone screen, highlighting Start button.](./media/fully-managed-intune-app-17.png)   
- 
+
 15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done. 
 
     ![Example image of Set up access, register your device screen, highlighting Done button.](./media/fully-managed-intune-app-19.png)   
 
-16. Continue to the [set up your smart card](enroll-android-device-entrust-datacard.md#set-up-smart-card) section in this article to finish setting up your device.  
+16. Continue to the [set up your smart card](enroll-android-device-disa-purebred.md#set-up-smart-card) section in this article to finish setting up your device.  
 
 ### QR code enrollment  
 In this section, you'll scan your company-provided QR code.  When you're done, we'll redirect you back to the device enrollment steps.     
@@ -138,7 +141,7 @@ In this section, you'll scan your company-provided QR code.  When you're done, w
 ### Token enrollment  
 In this section, you'll enter your company-provided token. When you're done, we'll redirect you back to the device enrollment steps.  
 
-1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Then tap **Next**. 
+1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Tap **Next**. 
 
    ![Example image of Google sign-in screen, showing that "afw#setup" is typed into field.](./media/token-intune-app-01.png)   
 
@@ -154,64 +157,61 @@ In this section, you'll enter your company-provided token. When you're done, we'
 
 6. Return to [Enroll device](#enroll-device), step 4 to continue setup.
 
+
 ## Set up smart card  
+
+> [!NOTE]
+> The Purebred app is required to complete these steps and will automatically install on your device after enrollment. If you still don't have the app after waiting a short while, contact your IT support person.  
 
 1. After enrollment is complete, the Intune app will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal push notification on device home screen.](./media/action-required-in-app-android.png)
+   > ![Screenshot of the Intune app push notification on device home screen.](./media/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
-   1. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.
+   1. Tap the link to your organization's setup instructions and review them. If your organization doesn't provide additional instructions, you'll be sent to this article.
 
-   2. Tap **BEGIN**. 
+   2. Tap **BEGIN**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-open-entrust-android.png)
+   > ![Screenshot of the Intune app, Set up smart card screen.](./media/smart-card-open-disa-purebred-android.png)
 
-3. Switch to your smart card-enabled device and open IdentityGuard.
+3. On the **Get certificates** screen, tap **LAUNCH PUREBRED** to open the Purebred app. (The app should have been installed automatically on your device. If you don't have it, contact your support person.)  
 
-4. Find the smart credential sign-in area and select the sign-in button.
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot of the Intune app prompt to open DISA Purebred app.](./media/open-app-prompt-disa-purbred-android.png)  
 
-5. When you're prompted to select a certificate, pick your smart card credentials. Then select **OK**.
+4. The Purebred app might need additional permissions from you in order to run properly. Tap **Allow** or **Allow all the time** when prompted. For more information about why these permissions are required, speak with your support person or Purebred agent.  
 
-6. Enter your smart card PIN.
+5. Once you're in the Purebred app, work with your organization's Purebred agent to download and install the certificates you need to access work or school resources.
 
-7. You'll be asked to choose from a list of actions. Select the one that lets you enroll for a derived mobile smart credential. The link or button might say **I'd like to enroll for a derived mobile smart card credential.**
+    > [!IMPORTANT]
+    > During this process, tap **OK** or **Install** when prompted. Don't change the names of any certificate authorities (CAs) or certificates that you're prompted to install.    
 
-8. Select that you've successfully downloaded and installed the smart credential-enabled application. Then continue to the next screen.
-
-9. Enter information about your derived smart card credential:
-
-    1. For the identity name, enter any name, such as *Entrust Derived Cred*.  
-    2. In the dropdown menu, select **Entrust IdentityGuard Mobile Smart Credential**.
-
-    3. Continue to the next screen. You'll see a QR code with a numerical password under it.
-
-10. Return to your Android device. On the Intune app > **Get QR code** screen, tap **NEXT**.
+6. After installation is complete, you'll receive a notification that your certificates are ready. Tap the notification to return to the Intune app.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal Get QR code screen.](./media/get-qr-code-entrust-android.png)
+    > ![Screenshot of the "Allow access to certificates" screen](./media/certificates-ready-prompt-disa-purbred-android.png)
 
-11. If you're prompted to allow the Intune app to use your camera, tap **Allow**.
+7. From the **Allow access to certificates** screen, you'll give the Intune app permission to access the derived credential you got from DISA Purebred. This step ensures that your organization can verify your identity whenever you access protected work or school resources.  
 
-12. Scan the image of the QR code that's on your smart card-enabled device.
+    1. Tap **NEXT**.
 
-13. On the **Password required** screen, enter the password that appears under the QR code.
+       > [!div class="mx-imgBorder"]
+       > ![Screenshot of the "Certificates are ready" prompt](./media/certificates-access-disa-purbred-android.png)
+
+    2. When you're prompted to **Choose certificate**, don't change the selection. The correct certificate is already selected, so just tap **Select** or **OK**.  
+
+       > [!div class="mx-imgBorder"]
+       > ![Screenshot of the "Choose certificate" prompt](./media/choose-certificates-prompt-disa-purbred-android.png)
+
+    3. Your derived credential is made up of multiple certificates, so you might see the **Choose certificate** prompt multiple times. Repeat the previous step until no more prompts appear.  
+
+8. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. You'll know setup is complete when you see the **You're all set!** screen.  
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal "Password required" screen.](./media/password-required-entrust-android.png)  
-
-14. The Intune app will start downloading and installing the certificates needed to access work or school resources. Depending on your internet connection, this process might take some time. Don't close the app during this time.
-
-    > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal "Downloading and installing certificates" screen](./media/install-certificates-entrust-android.png)
-
-15. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. You'll know setup is complete when you see the **You're all set!** screen.
-
-    > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the "You're all set" screen](./media/all-set-android.png)
+    > ![Screenshot of the "You're all set" screen](./media/all-set-android.png)
 
 ## Next steps
 
@@ -219,5 +219,6 @@ After enrollment is complete, you'll have access to work resources, such as emai
 
 * [Use managed apps on your device](use-managed-apps-on-your-device-android.md)  
 * [Manage apps from the Company Portal website](manage-apps-cpweb.md)  
+
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
