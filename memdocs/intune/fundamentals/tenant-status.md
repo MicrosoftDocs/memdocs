@@ -66,20 +66,20 @@ For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-P
 ## Service health dashboard  
 On the Service health dashboard you can view details for *Service incidents* that affect your tenant, and *Intune news* that provides information about updates and planned changes.
 
-### Intune Service Health
+### Intune Service Health and message center
 View details for active incidents and advisories without having to navigate to the Microsoft 365 Service Health Dashboard or the Message Center, both located in the [Microsoft 365 admin center](https://admin.microsoft.com). Only incidents that affect your tenant are shown.  
 
 When you select an incident, the incident details are presented directly in the Tenant Status page. To view past advisories and incidents, select **See past Incidents/Advisories**. The Microsoft 365 admin center opens and you can then view advisories and incidents from the last 30 days for your tenant.  
 
-To view information for *Intune Service Health*, your account must have the **Global Administrator** or **Service Administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service Administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
+To view information for *Intune Service Health*, your account must have the **Global Administrator** or **Service support  Administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
 You can only set up your communication preferences for Intune Service Health through the Microsoft 365 admin center.
 
-### Intune news  
+### Intune Message Center  
 View informational communications from the Intune service team without having to navigate to the Office Message Center. Communications include messages about changes that have recently happened to the Intune service, or that are on the way for your tenant.  
 
 By default, the 10 most recent and active messages display. To view older messages, select **See past Messages** to open the *Message center* in the Microsoft 365 admin center.  
 
-To view information for Intune News, your account must have the **Global Administrator** or **Service Administrator** role in Azure Active Directory, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
+To view information for Intune News, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
 
-You can only set up your communication preferences for Intune News through the Microsoft 365 admin center.
+You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center.
