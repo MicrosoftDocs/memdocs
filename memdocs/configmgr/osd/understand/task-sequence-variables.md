@@ -1828,6 +1828,10 @@ Specify this variable to control the type of information that the task sequence 
 - `2`: Include the current step, total steps, and percentage completed. For example, **2 of 10 (20% complete)**.
 - `3`: Include the percentage completed. For example, **(20% complete)**.
 
+### <a name="TSUEFIDrive"></a> TSUEFIDrive
+
+Use on the properties of a FAT32 partition in the **Variable** field. When the task sequence detects this variable, it prepares the disk for transition to UEFI before it restarts the computer. For more information, see [Task sequence steps to manage BIOS to UEFI conversion](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
+
 ### <a name="WorkingDirectory"></a> WorkingDirectory
 
 *Applies to the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step.*

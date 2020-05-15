@@ -98,6 +98,28 @@ Use with `/new` parameter to specify the token validity period of the token. Spe
 
 Example: `BulkRegistrationTokenTool.exe /lifetime:4320`
 
+## Bulk registration token management
+
+You can see previously created bulk registration tokens and their lifetimes in the Configuration Manager console and block their usage if necessary. The site database doesn't, however, store bulk registration tokens.
+
+#### To review a bulk registration token
+
+1. In the Configuration Manager console, click **Administration**.
+
+2. In the Administration workspace, expand **Security**, and click **Certificates**. The console lists all site-related certificates and bulk registration tokens in the details pane.
+
+3. Select the bulk registration token to review.
+
+You can identify specific bulk registration tokens based on their GUID. GUIDs for bulk registration tokens are displayed at token creation time. You can also filter or sort on the **Type** column if needed.
+
+#### To block a bulk registration token
+
+1. In the Configuration Manager console, click **Administration**.
+
+2. In the Administration workspace, expand **Security**, click **Certificates**, and select the bulk registration token to block.
+
+3. On the **Home** tab of the ribbon bar or the right-click content menu, select **Block**. Conversely, you can unblock previously blocked bulk registration tokens by selecting **Unblock** on the **Home** tab of the ribbon bar or the right-click content menu.
+
 ## See also
 
 - [Plan for the cloud management gateway](../manage/cmg/plan-cloud-management-gateway.md)

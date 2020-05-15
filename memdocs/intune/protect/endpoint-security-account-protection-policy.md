@@ -47,9 +47,11 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Account protection profiles
 
+*Account protection profiles are in Preview*.
+
 **Windows 10 profiles**:
 
-- **Account protection** – Settings for account protection policies help you protect user credentials.
+- **Account protection** *(Preview)* – Settings for account protection policies help you protect user credentials.
 
 ## Next steps
 

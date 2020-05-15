@@ -107,7 +107,7 @@ For Proactive remediations, the user needs permissions appropriate to their role
 
 ### <a name="bkmk_uea_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_uea_prereq) including enabling [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). If you are enrolling Intune managed devices only, skip to the [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard) section.
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_uea_prereq) including enabling [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
 
 #### <a name="bkmk_uea_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
 
@@ -122,6 +122,8 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
 ### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.

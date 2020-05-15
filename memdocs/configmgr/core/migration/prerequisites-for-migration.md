@@ -10,9 +10,8 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Prerequisites for migration in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -89,11 +88,13 @@ The following are required configurations for using migration and migration oper
 
   When gathering data, the following network protocols and ports are used:  
 
-  -   NetBIOS/SMB - 445 (TCP)  
+  - NetBIOS/SMB - 445 (TCP)  
 
-  -   RPC (WMI) - 135 (TCP)  
+  - RPC (WMI) - 135 (TCP & UDP)  
 
-  -   SQL Server - The TCP ports in use by both the source and destination site databases.  
+  - Dynamic RPC. Dynamic ports use a range of port numbers that are defined by the OS version. These ports are also known as ephemeral ports. For more information about the default port ranges, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows).<!-- SCCMDocs#1053 -->
+
+  - SQL Server - The TCP ports in use by both the source and destination site databases.  
 
 - **Migrate Software Updates:**  
 

@@ -212,21 +212,19 @@ Now that you've installed your token, you can create an enrollment profile for A
     > After the device is enrolled with **Locked enrollment**, users will not be able to use **Remove Device** or **Factory Reset** by in the Company Portal app. The options will be unavailable to the user. The user also won't be able to remove the device in the Company Portal website (https://portal.manage.microsoft.com).
     > Also, if a BYOD device is convereted to an Apple Automated Device Enrollment device and enrolled with a **Locked enrollment** enabled profile, the user will be allowed to use **Remove Device** and **Factory Reset** for 30 days, and then the options will be disabled or unavailable. Reference: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
 
-11. If you chose **Enroll without User Affinity** and **Supervised** above, you must decide whether or not to allow **Shared iPad** devices. By choosing **Yes** for this option, multiple users will be able to sign in to the same device. This option requires iOS/iPadOS 13.4 or later and an Apple Business Manager account.
-
-12. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
+11. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
 
      > [!NOTE]
      > If **Sync with computers** is set to **Deny all**, the port will be limited on iOS and iPadOS devices. The port can only be used for charging and nothing else. The port will be blocked from using iTunes or Apple Configurator 2.
        If **Sync with computers** is set to **Allow Apple Configurator by certificate**, make sure you save a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy. It is important to retain this certificate to be accessible in the future. 
 
-13. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
+12. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
-14. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
+13. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
 
-15. Choose **Next: Setup Assistant Customization**.
+14. Choose **Next: Setup Assistant Customization**.
 
-16. On the **Setup Assistant customization** page, configure the following profile settings:
+15. On the **Setup Assistant customization** page, configure the following profile settings:
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
@@ -267,9 +265,9 @@ Now that you've installed your token, you can create an enrollment profile for A
     | <strong>Device to Device Migration</strong> | Give the user the option to migrate data from their old device to this device.|
     
 
-17. Choose **Next** to go to the **Review + Create** page.
+16. Choose **Next** to go to the **Review + Create** page.
 
-18. To save the profile, choose **Create**.
+17. To save the profile, choose **Create**.
 
 ### Dynamic groups in Azure Active Directory
 
