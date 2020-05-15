@@ -237,7 +237,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 #### Disable extensions
 
-You can disable the extension framework within Edge for iOS and Android to prevent users from installing any app extensions. To do this, configure the following setting:
+You can disable the extension framework within Edge for Android to prevent users from installing any app extensions. To do this, configure the following setting:
 
 |    Key    |    Value    |
 |-----------|-------------|
@@ -375,8 +375,7 @@ By default, Microsoft Edge sync enables users to access their browsing data acro
 
 - Favorites
 - Passwords
-- Addresses and more (form-fill)
-- Settings
+- Addresses and more (autofill form entry)
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. For more information see [Microsoft Edge Sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
 
