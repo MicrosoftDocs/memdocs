@@ -62,7 +62,7 @@ Then, choose the profile type. Depending on the platform you choose, the setting
 
 - [Administrative templates (Windows)](administrative-templates-windows.md)
 - [Custom](custom-settings-configure.md)
-- [Delivery optimization (Windows)](delivery-optimization-windows.md)
+- [Delivery Optimization (Windows)](delivery-optimization-windows.md)
 - [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
 - [Device firmware (Windows)](device-firmware-configuration-interface-windows.md)
