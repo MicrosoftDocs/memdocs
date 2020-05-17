@@ -71,7 +71,7 @@ The Intune management extension has the following prerequisites. Once the prereq
     
     - User signs in to the device using their Azure AD account, and then enrolls in Intune.
 
-  - Co-managed devices that use Configuration Manager and Intune. Be sure the **Apps** workload is set to **Pilot Intune** or **Intune**. See the following articles for guidance: 
+  - Co-managed devices that use Configuration Manager and Intune. When installing Win 32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. See the following articles for guidance: 
   
     - [What is co-management](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Client apps workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
