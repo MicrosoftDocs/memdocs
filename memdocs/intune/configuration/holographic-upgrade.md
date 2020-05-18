@@ -1,8 +1,7 @@
 ---
 # required metadata
-title: Upgrade to Windows Holographic for Business
-titleSuffix: Microsoft Intune
-description: Learn how to ugrade devices running Windows Holographic to Window Holographic for Business
+title: Upgrade to Windows Holographic for Business in Microsoft Intune - Azure | Microsoft Docs
+description: Upgrade to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -28,9 +27,11 @@ ms.collection: M365-identity-device-management
 
 # Upgrade devices running Windows Holographic to Windows Holographic for Business
 
-Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade Windows Holographic devices to Windows Holographic for Business. These settings are created in an upgrade configuration profile in Intune that are pushed or deployed to devices.
+Microsoft Intune includes many settings to help manage and protect your devices. This article lists and describes the settings to upgrade Windows Holographic devices to Windows Holographic for Business.
 
 As part of your mobile device management (MDM) solution, use these settings to upgrade your Windows Holographic devices. For the Microsoft HoloLens, you can purchase the Commercial Suite to get the required license for the upgrade. For more information, see [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise).
+
+As an Intune administrator, you can create and assign these settings to your devices.
 
 For more information on this feature, see [Upgrade Windows 10 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 

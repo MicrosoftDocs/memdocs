@@ -47,6 +47,9 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
   1. Create this kiosk profile to run the device in kiosk mode.
   2. Create the [device restrictions profile](device-restrictions-windows-holographic.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
 
+> [!IMPORTANT]
+> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-holographic.md#microsoft-edge-browser).
+
 ## Single app, full-screen kiosk
 
 Runs only one app on the device. When the user signs in, a specific app starts. This mode also restricts the user from opening new apps, or changing the running app.
