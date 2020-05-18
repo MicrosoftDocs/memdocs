@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -128,7 +128,7 @@ To make use of the PowerShell cmdlets, you build the project yourself using Visu
 
 3. On the top, change from **Debug** to **Release**.
 
-4. Go to **Build** and select **Build PFXImportPS**. After a few moments you'll see the **Build succeeded** confirmation appear at the bottom left of Visual Studio.
+4. Go to **Build** and select **Build PFXImportPS**. In a few moments, you'll see the **Build succeeded** confirmation appear at the bottom left of Visual Studio.
 
    ![Visual Studio Build option](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
@@ -190,12 +190,12 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 3. To import the module, run `Import-Module .\IntunePfxImport.psd1`
 
-4. To authenticate to Intune Graph, run `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
+4. To authenticate to Intune Graph, run `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
    > As the authentication is run against Graph, you must provide permissions to the AppID. If it's the first time you've used this utility, a *Global administrator* is required. The PowerShell cmdlets use the same AppID as the one used with [PowerShell Intune Samples](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Convert the password for each PFX file your are importing to a secure string by running `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
+5. Convert the password for each PFX file you're importing to a secure string by running `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
 6. To create a **UserPFXCertificate** object, run
 `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
@@ -205,9 +205,11 @@ Select the Key Storage Provider that matches the provider you used to create the
    > [!NOTE]
    > When you import the certificate from a system other than the server where the connector is installed, use must use the following command that includes the key file path: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
 
-7. Import the **UserPFXCertificate** object to Intune by running `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
+7. Import the **UserPFXCertificate** object to Intune by running `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
 
-8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
+8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
+
+9.	As a best practice to clean up the AAD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
 
 For more information about other available commands, see the readme file at [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -216,7 +218,7 @@ For more information about other available commands, see the readme file at [PFX
 After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Azure Active Directory groups.
 
 > [!NOTE]
-> After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited edited. If you need a different value for either of these settings, create and deploy a new profile. 
+> After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited. If you need a different value for either of these settings, create and deploy a new profile. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

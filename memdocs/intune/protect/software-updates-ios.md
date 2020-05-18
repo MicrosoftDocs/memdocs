@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 05/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,9 @@ By default, devices check in with Intune about every 8 hours. If an update is av
        If you do not configure times to start or end, the configuration results in no restriction and updates can install at any time.  
 
        > [!NOTE]
-       > To delay the visibility of software updates for a specific amount of time on your supervised iOS/iPadOS devices, configure those settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed as defined by your iOS update policy.
+       > You can configure settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general) to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before its visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+       >
+       > When you use a device restriction to hide an update, review your software update policies to ensure they wont schedule the install of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
 
    After configuring *Update policy settings*, select **Next**.
 
