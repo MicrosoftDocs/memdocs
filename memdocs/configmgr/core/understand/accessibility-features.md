@@ -10,8 +10,7 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.collection: M365-identity-device-management
 ---
 
 # Accessibility features in Configuration Manager
@@ -53,11 +52,11 @@ To access a workspace, use the following keyboard shortcuts:
 |Ctrl + D|Set the focus to the details pane, when available.|
 |Alt     |Change the focus in and out of the ribbon.|
 
-### CMPivot shortcuts
+### <a name="bkmk_cmpshortcuts"></a> CMPivot shortcuts
 
 Most [web browser keyboard shortcuts](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) will work in CMPivot.
 
-|Keyboard shortcut|  Purpose|
+|Keyboard shortcut|Purpose|
 |--------|--------|  
 |Ctrl + 1|Set the focus on the first tab.|
 |Alt + &lt;|To back to the address|
@@ -90,7 +89,7 @@ Most [web browser keyboard shortcuts](https://support.microsoft.com/help/17456/w
 ## See also
 
 For more information on the fundamentals of navigating Configuration Manager user interfaces, see the following articles:
-- [Using the Configuration Manager console](../servers/manage/admin-console.md)  
+- [Using the Configuration Manager console](../servers/manage/admin-console.md)
 - [Software Center user guide](software-center.md)
 
 > [!NOTE]  
