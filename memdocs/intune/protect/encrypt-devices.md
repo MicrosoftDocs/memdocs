@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,11 +35,11 @@ Use one of the following policy types to configure BitLocker on your managed dev
 
 - **[Endpoint security disk encryption policy for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 
-  View details about the [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md) you can manage through disk encryption policy.
+  View the BitLocker settings that are available in [BitLocker profiles from disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
 - **[Device configuration profile for endpoint protection for Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10 endpoint protection.
 
-To manage BitLocker for Windows 10, see [Manage BitLocker policy](../protect/encrypt-devices.md).
+  View the BitLocker settings that are available for [BitLocker in endpoint protection profiles form device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows 10 device with BitLocker, you can view and retrieve BitLocker recovery keys when you view the encryption report.
@@ -139,6 +139,8 @@ The BitLocker policy **must not require** use of a startup PIN or startup key. W
 - **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
 - **Compatible TPM startup key** must not set to *Require startup key with TPM*
 - **Compatible TPM startup key and PIN** must not set to *Require startup key and PIN with TPM*
+
+### View details for recovery keys
 
 Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10 devices, from within the Intune portal. To be accessible, the device must have its keys escrowed to Azure AD.
 
