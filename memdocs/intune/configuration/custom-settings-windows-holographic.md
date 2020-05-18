@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,6 +26,7 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
+
 # Use custom settings for Windows Holographic for Business devices in Intune
 
 Using Microsoft Intune, you can add or create custom settings for your Windows Holographic for Business devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
@@ -38,38 +39,30 @@ If you're looking for a specific setting, remember that the [Windows Holographic
 
 This article shows you how to create a custom profile for Windows Holographic for Business devices. It also includes a list of the recommended OMA-URI settings.
 
-## Create the profile
+## Before you begin
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following settings:
+[Create a Windows 10 custom profile](custom-settings-configure.md#create-the-profile).
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Hololens custom profile**.
-    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
-    - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Custom**.
+## Custom OMA-URI Settings
 
-4. In **Custom OMA-URI Settings**, select **Add**. Enter the following settings:
+**Add**: Enter the following settings:
 
-    - **Name**: Enter a unique name for the OMA-URI setting to help you identify it in the list of settings.
-    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
-    - **OMA-URI** (case sensitive): Enter the OMA-URI you want to use as a setting.
-    - **Data type**: Select the data type you'll use for this OMA-URI setting. Your options:
+- **Name**: Enter a unique name for the OMA-URI setting to help you identify it in the list of settings.
+- **Description**: Enter a description that gives an overview of the setting, and any other important details.
+- **OMA-URI** (case sensitive): Enter the OMA-URI you want to use as a setting.
+- **Data type**: Select the data type you'll use for this OMA-URI setting. Your options:
 
-        - String
-        - String (XML file)
-        - Date and time
-        - Integer
-        - Floating point
-        - Boolean
-        - Base64 (file)
+  - String
+  - String (XML file)
+  - Date and time
+  - Integer
+  - Floating point
+  - Boolean
+  - Base64 (file)
 
-    - **Value**: Enter the data value you want to associate with the OMA-URI you entered. The value depends on the data type you selected. For example, if you select **Date and time**, select the value from a date picker.
+- **Value**: Enter the data value you want to associate with the OMA-URI you entered. The value depends on the data type you selected. For example, if you select **Date and time**, select the value from a date picker.
 
-    After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
-
-5. Select **OK** to save your changes. Continue to add more settings as needed.
-6. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
+After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
 
 ## Recommended custom settings
 
@@ -152,7 +145,6 @@ The following settings are useful for devices running Windows Holographic for Bu
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Integer<br/>Default value is 30.|
 
-
 ### [StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
@@ -175,6 +167,8 @@ Additionally, Intune doesn't support all of the settings listed in [CSPs support
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 Create a [custom profile on Windows 10 devices](custom-settings-windows-10.md).
+
+Learn more about [custom profiles](custom-settings-configure.md) in Intune.

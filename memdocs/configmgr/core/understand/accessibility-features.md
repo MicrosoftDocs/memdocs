@@ -56,7 +56,7 @@ To access a workspace, use the following keyboard shortcuts:
 
 Most [web browser keyboard shortcuts](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) will work in CMPivot.
 
-|Keyboard shortcut|  Purpose|
+|Keyboard shortcut|Purpose|
 |--------|--------|  
 |Ctrl + 1|Set the focus on the first tab.|
 |Alt + &lt;|To back to the address|
