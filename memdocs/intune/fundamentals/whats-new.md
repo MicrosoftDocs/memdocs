@@ -61,6 +61,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
+#### Customize self-service device actions in the Company Portal<!--4393379 -->
+You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure these settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. The following actions are available:
+- Hide **Remove** button on corporate Windows device.
+- Hide **Reset** button on corporate Windows devices.
+- Hide **Reset** button on corporate iOS devices.
+- Hide **Remove** button on corporate iOS devices.
+For more information, see [User self-service device actions from the Company Portal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
+
 #### Auto update VPP available apps<!-- 3640511  -->
 Apps that are published as Volume Purchase Program (VPP) available apps will be automatically updated when **Automatic App Updates** is enabled for the VPP token. Previously, VPP available apps did not automatically update. Instead, end-users had to go to the Company Portal and reinstall the app if a newer version was available. Required apps continue to support automatic updates.
 
