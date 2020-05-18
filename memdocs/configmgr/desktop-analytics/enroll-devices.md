@@ -121,7 +121,7 @@ There's an option in the Configuration Manager settings for Desktop Analytics to
 
 In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](group-policy-settings.md). Settings targeted by group policy take precedence over Configuration Manager settings.
+Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](group-policy-settings.md). Settings targeted by group policy take precedence over Configuration Manager settings. Devices targetted by group policy may not accurately reflect status in [Connection health](/mem/configmgr/desktop-analytics/monitor-connection-health) dashboard.
 
 When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Group policy settings for Desktop Analytics](group-policy-settings.md).
 
