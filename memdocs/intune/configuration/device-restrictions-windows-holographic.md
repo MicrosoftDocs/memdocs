@@ -123,7 +123,7 @@ When you create a Windows 10 device restrictions configuration profile, there ar
 
   [Browser/AllowDoNotTrack CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)
 
-## Microsoft Defender Smart Screen
+## Microsoft Defender SmartScreen
 
 - **SmartScreen for Microsoft Edge**: **Require** turns on Microsoft Defender SmartScreen, and prevents users from turning it off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on SmartScreen, and allow users to turn it on and off.
 
