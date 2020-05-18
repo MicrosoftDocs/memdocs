@@ -362,8 +362,6 @@ A third provider, DISA Purebred, will be available for Android in a future relea
 
 #### Microsoft Edge security baseline is now Generally Available<!--6586139 -->
 
-*This new baseline is rolling out to tenants over the next several weeks. We expect all tenants will have this new baseline in early May.*
-
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Edge baseline was in Preview.  The new baseline version ins April 2020 (Edge version 80 and later). 
 
 With the release of this new baseline, you'll no longer be able to create profiles based on the previous baseline versions, but you can continue to use profiles you created with those versions. You can also choose to [update your existing profiles to use the latest baseline version](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 

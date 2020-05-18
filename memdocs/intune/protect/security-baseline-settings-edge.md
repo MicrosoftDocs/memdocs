@@ -52,7 +52,6 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*This new baseline is rolling out to tenants over the next several weeks. We expect all tenants will have this new baseline in early May.*
 To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
 
 ::: zone-end
