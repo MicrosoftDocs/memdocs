@@ -45,7 +45,7 @@ When you create a Windows 10 edition upgrade and mode switch device configuratio
 - **Edition to upgrade to**: Select **Windows 10 Holographic for Business**.
 - **License File**: Browse to and select the XML license file that was provided to you.
 
-  ![Enter the XML file name that includes the Holographic for Business license information](./media/holographic-upgrade/Holographic-edition-upgrade.png)
+  :::image type="content" source="./media/holographic-upgrade/Holographic-edition-upgrade.png" alt-text="In Intune, enter the XML file name that includes the Holographic for Business license information.":::
 
 ## Next steps
 

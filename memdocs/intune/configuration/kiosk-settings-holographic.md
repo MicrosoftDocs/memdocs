@@ -38,9 +38,14 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
 ## Before you begin
 
-[Create a Windows 10 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- [Create a Windows 10 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
-When you create a Windows 10 kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+  When you create a Windows 10 kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+
+- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
+
+  1. Create this kiosk profile to run the device in kiosk mode.
+  2. Create the [device restrictions profile](device-restrictions-windows-holographic.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
 
 ## Single app, full-screen kiosk
 
@@ -80,10 +85,10 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       - **Normal mode (full version of Microsoft Edge)**: Runs a full-version of Microsoft Edge with all browsing features. User data and state are saved between sessions.
       - **Public browsing (InPrivate)**: Runs a multi-tab version of Microsoft Edge InPrivate with a tailored experience for kiosks that run in full-screen mode.
 
-      For more information on these options, see Deploy Microsoft Edge kiosk mode.
+      For more information on these options, see [Deploy Microsoft Edge kiosk mode](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-      > [!NOTE
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](/device-restrictions-windows-holographic.md) lists and describes the available Holographic for Business settings.
+      > [!NOTE]
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) lists and describes the available Holographic for Business settings.
 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
@@ -95,7 +100,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       - **Application name**: Required. Enter a name for the application.
       - **Application user model ID (AUMID)**: Required. Enter the Application user model ID (AUMID) of the Windows app. To get this ID, see [find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-    - **AutoLaunch**: Supported?
+    - **AutoLaunch**: Optional. After you add your apps and browser, select one app or browser to automatically open when the user signs in. Only a single app or browser can be autolaunched.
     - **Tile size**: Required. After you add your apps, select a Small, Medium, Wide, or Large app tile size.
 
 - **Use alternative Start layout**: Select **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export start layout](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) provides some guidance, and includes a specific XML file for Windows Holographic for Business devices.
