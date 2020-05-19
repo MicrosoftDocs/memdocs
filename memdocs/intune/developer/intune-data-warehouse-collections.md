@@ -195,6 +195,10 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | JailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | DeviceCategoryKey          | Key of device category attribute for this device.                                                                                                                                    |
+| PhysicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
+| TotalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
+
+
 ## deviceRegistrationStates
 The **DeviceRegistrationState** entity represents the registration type referenced by other data warehouse collections. 
 
@@ -246,7 +250,6 @@ The **device** entity lists all enrolled devices under management and their corr
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Device supervised status                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Free Storage in bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
 | EncryptionState            | Encryption state on the   device.                                                                                                                                                      |
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
@@ -255,7 +258,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | Model                      | The device model.                                                                                                                                                                      |
 | Office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
-| PhysicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
+| WindowsOsEdition           | The Operating System version.                                                                                                                             |
 
 
 ## deviceTypes
