@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Keep current on updates to the Intune Data Warehouse.
 
-# 2004 
+## 2004 
 _Released April 2020_
 
 ### Beta changes
@@ -44,12 +44,12 @@ The following table lists the added property to the **device** entity in the Int
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    WindowsOsEdition     |    Added    |    Operating System version.                                                                                                                                                                                                                                                                     |
 
-# 2003 
+## 2003 
 _Released March 2020_
 
 ### Beta changes
 
-The following table lists the added property to the **device** entity in the Intune Data Warehouse.
+The following table lists the added properties to the **device** entity in the Intune Data Warehouse.
 
 |    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ The following table lists the added property to the **device** entity in the Int
 |    Model    |    Added    |    The device model.                                                                                                                                                                                                                                                                     |
 |    Office365Version    |    Added    |    The version of Office 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
 
-The following table lists the added property to the **devicePropertyHistory** entity in the Intune Data Warehouse.
+The following table lists the added properties to the **devicePropertyHistory** entity in the Intune Data Warehouse.
 
 |    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
