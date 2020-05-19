@@ -165,7 +165,7 @@
         - name: App protection policies overview
           href: app-protection-policy.md
           displayName: app; protection; policy
-        - name: Data protection framework using APP
+        - name: Data protection framework using app protection policies
           href: app-protection-framework.md
         - name: Create app protection policies
           items:
