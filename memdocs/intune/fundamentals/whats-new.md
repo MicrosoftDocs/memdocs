@@ -573,13 +573,13 @@ For more information about this setting, see [Move Android devices from device a
 The Intune Data Warehouse provides the MAC address as a new property (`EthernetMacAddress`) in the `device` entity to allow admins to correlate between the user and host mac address. This property helps to reach specific users and troubleshoot incidents occurring on the network. Admins can also use this property in [Power BI reports](../developer/reports-proc-get-a-link-powerbi.md) to build richer reports. For more information, see the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
 
 #### Additional Data Warehouse device inventory properties<!-- 6125732  -->
-Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/reports-ref-devices#devices) beta collection:
+Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/reports-ref-devices.md#devices) beta collection:
 - `ethernetMacAddress` -  The unique network identifier of this device.
 - `model` - The device model.
 - `office365Version` - The version of Office 365 that is installed on the device.
 - `windowsOsEdition` - The Operating System version.
 
-The following properties are now exposed via the [devicePropertyHistory](../developer/reports-ref-devices#devicepropertyhistories) beta collection:
+The following properties are now exposed via the [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) beta collection:
 - `physicalMemoryInBytes` - The physical memory in bytes.
 - `totalStorageSpaceInBytes` - Total storage capacity in bytes.
 
