@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -90,20 +90,20 @@ You can deploy compliance policy to users in user groups or devices in device gr
 
 Intune also includes a set of built-in compliance policy settings. The following built-in policies get evaluated on all devices enrolled in Intune:
 
-- **Mark devices with no compliance policy assigned as**: This property has two values:
+- **Mark devices with no compliance policy assigned as**: This is a default action for noncompliance. This property has two values:
 
   - **Compliant** (*default*): security feature off
   - **Not compliant**: security feature on
 
   If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../apps/company-portal-app.md) shows `No compliance policies have been assigned`.
 
-- **Enhanced jailbreak detection**: When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device's location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
+- **Enhanced jailbreak detection** (*Applies to iOS/iPadOS*): When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device's location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
 
   Enabling this setting requires devices to:
   - Enable location services at the OS level.
   - Always allow the Company Portal to use location services.
 
-  Evaluation is triggered by opening the Company Portal app or physically moving the device a significant distance of approximately 500 meters or more. On iOS 13 and up, this feature will require users to select Always Allow whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users do not always allow location access and have a policy with this setting configured, their device will be marked noncompliant. Note that Intune cannot guarantee that each significant location change will ensure a jailbreak detection check as this depends on a device's network connection at the time.
+  Enhanced detection works through the location services. The evaluation is triggered by opening the Company Portal app or physically moving the device a significant distance of approximately 500 meters or more. On iOS 13 and up, this feature requires users to select Always Allow whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users do not always allow location access and have a policy with this setting configured, their device will be marked noncompliant. Note that Intune cannot guarantee that each significant location change will ensure a jailbreak detection check as this depends on a device's network connection at the time.
 
 - **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The maximum value is 120 days. The minimum value is 1 day.
 

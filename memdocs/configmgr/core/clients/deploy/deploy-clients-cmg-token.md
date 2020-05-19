@@ -96,7 +96,7 @@ The token isn't stored on the client or the site. Make sure to copy the token fr
 
 Use with `/new` parameter to specify the token validity period of the token. Specify an integer value in minutes. The default value is 4,320 (three days). The maximum value is 10,080 (seven days).
 
-Example: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Example: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## Bulk registration token management
 

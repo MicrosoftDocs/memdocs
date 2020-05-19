@@ -43,7 +43,7 @@ You likely need to set up a derived credential if you use a smart card to:
 In this article, you will:
 
 * Enroll a mobile Android device with the Intune app
-* Set up your smart card by installing a derived credential from your organization's derived credential provider, [DISA Purebred](https://cyber.mil/pki-pke/purebred/)
+* Set up your smart card by installing a derived credential from your organization's derived credential provider, [DISA Purebred](https://public.cyber.mil/pki-pke/purebred/)
 
 ## What are derived credentials?
 
