@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,7 +46,7 @@ The richest and broadest protection capabilities for Office 365 data are availab
 ## Apply Conditional Access
 Organizations can use use Azure AD Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Follow [Scenario 3: Browser apps require approved apps with app protection policies](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Office 365 endpoints.
+1. Follow [Scenario 2: Browser apps require approved apps with app protection policies](https://review.docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access?branch=master#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Office 365 endpoints.
 
    >[!NOTE]
    > This policy ensures mobile users can access all Office 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Office 365 endpoints.
@@ -142,8 +142,8 @@ These settings allow you to customize the New Tab Page for Edge for iOS and Andr
 
 To upload your organization's logo and color, first complete the following steps:
 1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
-2. To set your brand's logo, under "Display", choose "Company Logo only". Transparent background logos are recommended.
-3. To set your brand's background color, under "Display" choose "Theme Color". Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
+2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
+3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
 Next, utilize the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
@@ -257,12 +257,28 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app:
 
-- Manage restricted web sites
-- Manage NTLM single sign-on sites
-- Manage proxy configuration
 - Manage account synchronization
+- Manage restricted web sites
+- Manage proxy configuration
+- Manage NTLM single sign-on sites
 
 These settings can be deployed to the app regardless of device enrollment status.
+
+### Manage account synchronization
+
+By default, Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. The data supported by sync includes:
+
+- Favorites
+- Passwords
+- Addresses and more (autofill form entry)
+
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. For more information see [Microsoft Edge Sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
+
+Organizations have the capability to disable Edge sync on iOS and Android. 
+
+|Key  |Value  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (default) allows Edge sync<br>**false** disables Edge sync          |
 
 ### Manage restricted web sites
 
@@ -329,18 +345,6 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-### Manage NTLM single sign-on sites
-
-Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
-
-Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
-
-
-|Key  |Value  |
-|---------|---------|
-|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
-|com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
-
 ### Manage proxy configuration
 
 You can use Edge for iOS and Android and [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
@@ -369,21 +373,17 @@ Target Edge for iOS with the following key/value pair, to enable Application Pro
 
 For more information about how to use Edge for iOS and Android and Azure AD Application Proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Azure Active Directory team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
-### Manage account synchronization
+### Manage NTLM single sign-on sites
 
-By default, Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. The data supported by sync includes:
+Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
 
-- Favorites
-- Passwords
-- Addresses and more (autofill form entry)
+Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
 
-Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. For more information see [Microsoft Edge Sync](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
-
-Organizations have the capability to disable Edge sync on iOS and Android. 
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (default) allows Edge sync<br>**false** disables Edge sync          |
+|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
+|com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
 
 ## Deploy app configuration scenarios with Microsoft Endpoint Manager
 
