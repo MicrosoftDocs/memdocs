@@ -70,7 +70,10 @@ Before you can configure Conditional Access, verify the following configurations
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
+- **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
+
 - **EAS mail clients on Android work profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+
 
 #### To set up Conditional Access for Android work profile devices
 
