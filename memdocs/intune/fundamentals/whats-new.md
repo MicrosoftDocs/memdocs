@@ -573,13 +573,17 @@ For more information about this setting, see [Move Android devices from device a
 The Intune Data Warehouse provides the MAC address as a new property (`EthernetMacAddress`) in the `device` entity to allow admins to correlate between the user and host mac address. This property helps to reach specific users and troubleshoot incidents occurring on the network. Admins can also use this property in [Power BI reports](../developer/reports-proc-get-a-link-powerbi.md) to build richer reports. For more information, see the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
 
 #### Additional Data Warehouse device inventory properties<!-- 6125732  -->
-Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/intune-data-warehouse-collections.md#devices) collection:
-- 'Model' - The device model.
-- 'Office365Version' - The version of Office 365 that is installed on the device.
-- 'PhysicalMemoryInBytes` - The physical memory in bytes.
+Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/reports-ref-devices#devices) beta collection:
+- `EthernetMacAddress` -  The unique network identifier of this device.
+- `Model` - The device model.
+- `Office365Version` - The version of Office 365 that is installed on the device.
+- `WindowsOsEdition` - The Operating System version.
+
+The following properties are now exposed via the [devicePropertyHistory](../developer/reports-ref-devices#devicepropertyhistories) beta collection:
+- `PhysicalMemoryInBytes` - The physical memory in bytes.
 - `TotalStorageSpaceInBytes` - Total storage capacity in bytes.
 
-For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md) and the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
+For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
 We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../fundamentals/get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
