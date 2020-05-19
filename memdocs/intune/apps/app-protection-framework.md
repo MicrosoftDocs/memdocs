@@ -59,7 +59,7 @@ As the above table indicates, all changes to the App Protection Policies should 
 
 When testing changes to an APP, be aware of the [delivery timing](app-protection-policy-delivery.md). The status of APP delivery for a given user can monitored. For more information, see [How to monitor app protection policies](app-protection-policies-monitor.md).
 
-Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## APP Data Protection Framework settings
 
