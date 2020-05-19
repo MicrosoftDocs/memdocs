@@ -574,14 +574,14 @@ The Intune Data Warehouse provides the MAC address as a new property (`EthernetM
 
 #### Additional Data Warehouse device inventory properties<!-- 6125732  -->
 Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/reports-ref-devices#devices) beta collection:
-- `EthernetMacAddress` -  The unique network identifier of this device.
-- `Model` - The device model.
-- `Office365Version` - The version of Office 365 that is installed on the device.
-- `WindowsOsEdition` - The Operating System version.
+- `ethernetMacAddress` -  The unique network identifier of this device.
+- `model` - The device model.
+- `office365Version` - The version of Office 365 that is installed on the device.
+- `windowsOsEdition` - The Operating System version.
 
 The following properties are now exposed via the [devicePropertyHistory](../developer/reports-ref-devices#devicepropertyhistories) beta collection:
-- `PhysicalMemoryInBytes` - The physical memory in bytes.
-- `TotalStorageSpaceInBytes` - Total storage capacity in bytes.
+- `physicalMemoryInBytes` - The physical memory in bytes.
+- `totalStorageSpaceInBytes` - Total storage capacity in bytes.
 
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
