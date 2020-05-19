@@ -61,6 +61,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
+#### Customize self-service device actions in the Company Portal<!--4393379 -->
+You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure these settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. The following actions are available:
+- Hide **Remove** button on corporate Windows device.
+- Hide **Reset** button on corporate Windows devices.
+- Hide **Reset** button on corporate iOS devices.
+- Hide **Remove** button on corporate iOS devices.
+For more information, see [User self-service device actions from the Company Portal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
+
 #### Auto update VPP available apps<!-- 3640511  -->
 Apps that are published as Volume Purchase Program (VPP) available apps will be automatically updated when **Automatic App Updates** is enabled for the VPP token. Previously, VPP available apps did not automatically update. Instead, end-users had to go to the Company Portal and reinstall the app if a newer version was available. Required apps continue to support automatic updates.
 
@@ -353,8 +361,6 @@ Intune now supports the following derived credential providers with Android:
 A third provider, DISA Purebred, will be available for Android in a future release.
 
 #### Microsoft Edge security baseline is now Generally Available<!--6586139 -->
-
-*This new baseline is rolling out to tenants over the next several weeks. We expect all tenants will have this new baseline in early May.*
 
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Edge baseline was in Preview.  The new baseline version ins April 2020 (Edge version 80 and later). 
 
