@@ -102,11 +102,12 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between February 21 and March 19, 2020.
+Support articles that are new or updated between March 20 and May 15, 2020.
 
-- [KB 4552430 Third-party update category synchronization resets to default in Configuration Manager](https://support.microsoft.com/help/4552430)
-- [KB 4551013 Revised third-party updates fail to download in Configuration Manager](https://support.microsoft.com/help/4551013)
-- [KB 4552181 Content distribution stalls in Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 A Configuration Manager in-place upgrade task sequence doesn't continue after a Windows 10 in-place upgrade rollback](https://support.microsoft.com/help/4550023)
+- [KB 4561494 Microsoft Edge application creation fails in Configuration Manager](https://support.microsoft.com/help/4561494)
+- [KB 4551059 Remote Configuration Manager console hangs for 20 seconds every 10 minutes](https://support.microsoft.com/help/4551059)
+- [KB 4556203 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Update for Microsoft Endpoint Configuration Manager version 2002, early update ring](https://support.microsoft.com/help/4553501)
+- [KB 4561945 "The underlying connection was closed" error when the service connection tool downloads the ConfigMgr.AdminUIContent.cab file](https://support.microsoft.com/help/4561945)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
