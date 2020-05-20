@@ -265,6 +265,11 @@ The **devices** entity lists all enrolled devices under management and their cor
 | cellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | Integrated Circuit Card Identifier                                                                                                                                                     |
+| windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
+| ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
+| model                      | The device model.                                                                                                                                                                      |
+| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+
 
 ## devicePropertyHistories
 
@@ -283,4 +288,6 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | deviceCategoryKey          | Key of device category attribute for this device. 
+| physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
 
