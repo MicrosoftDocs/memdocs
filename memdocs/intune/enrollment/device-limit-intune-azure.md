@@ -53,9 +53,10 @@ If you have both Intune and Azure device limit restrictions set, the following t
 | ----- | ----- | ----- | ----- | ----- |
 | Android Enterprise work profile | Yes | Yes | Yes|
 | Andorid Enterprise dedicated device | No | No | No |
-|Android Enterprise fully managed | Yes | Yes | Yes |
-|Android device administrator ||||
-|iOS/macOS BYOD | Yes | Yes | Yes |
+| Android Enterprise fully managed | Yes | Yes | Yes |
+| Android device administrator | Yes | Yes | Yes |
+| Android device administrator DEM | No | | No | 
+| iOS/macOS BYOD | Yes | Yes | Yes |
 | iOS/macOS ADE | Yes | Yes | Yes |
 | iOS/macOS ADE | No | Yes | No |
 | Windows BYOD | Yes | Yes | Yes |
