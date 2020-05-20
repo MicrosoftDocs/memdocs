@@ -47,17 +47,17 @@ Azure device limit restrictions set the maximum number of devices that either Az
 
 ## Settings applied based on user affinity
 
-If you have both Intune and Azure device limit restrictions set, the following table shows you which is applied based on your user affinity setting.
+If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on your user affinity setting.
 
 | Device platform | User affinity | Azure applies | Intune applies |
 | ----- | ----- | ----- | ----- | ----- |
 | Android Enterprise work profile | Yes | Yes | Yes|
-| Andorid Enterprise dedicated device | No | No | No |
+| Android Enterprise dedicated device | No | No | No |
 | Android Enterprise fully managed | Yes | Yes | Yes |
 | Android device administrator | Yes | Yes | Yes |
 | Android device administrator DEM | No | | No | 
 | iOS/macOS BYOD | Yes | Yes | Yes |
-| iOS/macOS ADE | Yes | Yes | Yes |
+| iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |
 | iOS/macOS ADE | No | Yes | No |
 | Windows BYOD | Yes | Yes | Yes |
 | Windows MD-only | | Yes | Yes |
@@ -76,14 +76,14 @@ If you have both Intune and Azure device limit restrictions set, the following t
 - The Azure **Maximum number of devices per user** setting is set to 3.
 - The Intune **Device limit** setting is set to 5.
  
-**Outcome:** The maximum number is per user. Therefore, if you enroll three Intune devices, the Azure registration for the fourth device will fail because of the settings to limit the number of registrations for the devices.
+**Outcome:** The maximum number is per user. For example, if you enroll three Intune devices, the Azure registration for the fourth device will fail because of the settings to limit the number of registrations for the devices.
 
 ### iOS or Android devices example 2
 
 - The Azure **Maximum number of devices per user** setting is set to 20.
 - The Intune **Device limit** setting is set to 2.
 
-**Outcome:** You can successfully register and enroll two devices. Intune enrollment will be blocked for any additional devices. Automated Device Enrollment without user affinity is restricted by Azure device registration limits although it's not associated with a user.
+**Outcome:** You can successfully register and enroll two devices. Intune enrollment will be blocked for any additional devices. ADE without user affinity is restricted by Azure device registration limits although it's not associated with a user.
 
 ## Windows devices
 
@@ -97,7 +97,7 @@ Intune device limit restrictions don't apply for the following Windows enrollmen
 
 You can't enforce device limit restrictions for these enrollment types because they're considered shared device scenarios. You can set hard limits for these enrollment types in Azure Active Directory.
 
-For the device limit restriction in Azure, the **Maximum number of devices per user** setting applies to devices that are either Azure AD joined or Azure AD registered. This setting does not apply to hybrid Azure AD joined devices.
+For the device limit restriction in Azure, the **Maximum number of devices per user** setting applies to devices that are either Azure AD joined or Azure AD registered. This setting doesn't apply to hybrid Azure AD joined devices.
 
 ### Windows 10 example 1
 
@@ -105,7 +105,7 @@ For the device limit restriction in Azure, the **Maximum number of devices per u
 - The Intune **Device limit** setting is set to 3.
 - The devices are hybrid Azure AD joined and enrolled automatically (GPO configured).
 
-**Outcome:** Because the enrollment is pushed through GPO, Azure device registration limit doesn't apply nor does the Intune device limit restriction apply.
+**Outcome:** Because the enrollment is pushed through GPO, the Azure device registration limit doesn't apply.  The Intune device limit restriction also doesn't apply.
 
 ### Windows 10 example 2
 
@@ -113,11 +113,11 @@ For the device limit restriction in Azure, the **Maximum number of devices per u
 - The Intune **Device limit** setting is set to 2.
 - The devices are local domain joined and enrolled by using **Settings** > **Access Work or School** > **Connect**.
 
-**Outcome:** You can only enroll two devices before they are blocked. You can register up to five devices.
+**Outcome:** You can only enroll two devices before they're blocked. You can register up to five devices.
 
 
 ## Next steps
 
-- [Create a device limit restrction in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
+- [Create a device limit restriction in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
 - [Configure device settings in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
 - [Learn more about registration and domain joined.](https://docs.microsoft.com/azure/active-directory/devices/overview.md#getting-devices-in-azure-ad)
