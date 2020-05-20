@@ -195,6 +195,8 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | JailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | DeviceCategoryKey          | Key of device category attribute for this device.                                                                                                                                    |
+
+
 ## deviceRegistrationStates
 The **DeviceRegistrationState** entity represents the registration type referenced by other data warehouse collections. 
 
@@ -224,7 +226,6 @@ The **device** entity lists all enrolled devices under management and their corr
 | DeviceRegistrationState    | Key   of the client registration state attribute for this device.                                                                                                                      |
 | OwnerTypeKey               | Key   of the owner type attribute for this device: corporate, personal, or unknown.                                                                                                    |
 | EnrolledDateTime           | Date   and time that this device was enrolled.                                                                                                                                         |
-| EthernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | LastSyncDateTime           | Last known device check-in with   Intune.                                                                                                                                              |
 | ManagementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | ManagementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
@@ -246,16 +247,12 @@ The **device** entity lists all enrolled devices under management and their corr
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Device supervised status                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Free Storage in bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
 | EncryptionState            | Encryption state on the   device.                                                                                                                                                      |
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| Model                      | The device model.                                                                                                                                                                      |
-| Office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
-| PhysicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
 
 
 ## deviceTypes

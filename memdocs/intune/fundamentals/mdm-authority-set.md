@@ -40,9 +40,9 @@ Possible configurations are:
 
 - **Intune co-management** - integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Mobile Device Management for Office 365** - integration of Office 365 with the Intune cloud solution. You configure Intune from your Microsoft 365 admin center. Includes a subset of the capabilities that are available with Intune Standalone. Set the MDM authority in Microsoft 365 admin center.
+- **Mobile Device Management for Office 365** - integration of Office 365 with the Intune cloud solution. You configure Intune from your Microsoft 365 admin center. Includes a subset of the capabilities that are available with Intune Standalone. See [Set up Mobile Device Management (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-- **Office 365 MDM Coexistence** You can activate and use both MDM for Office 365 and Intune concurrently on your tenant and set the management authority to either Intune or MDM for Office 365 for each user to dictate which service will be used to manage their mobile devices. User's management authority is defined based on the license assigned to the user.
+- **Office 365 MDM Coexistence** You can activate and use both MDM for Office and Intune concurrently on your tenant and set the management authority to either Intune or MDM for Office for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by MDM for Office. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by MDM for Office, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace MDM for Office prior to switching users to Intune, otherwise their devices will lose MDM for Office configuration and will not receive any replacement from Intune.
 
 ## Set MDM authority to Intune
 
@@ -74,14 +74,6 @@ After you switch to the new MDM authority, there will likely be transition time 
 - Devices must connect with the service after the change so that the settings from the new MDM authority (Intune standalone) replace the existing settings on the device.
 - After you change the MDM authority, some of the basic settings (such as profiles) from the previous MDM authority will remain on the device for up to seven days or until the device connects to the service for the first time. It's recommended that you configure apps and settings (policies, profiles, apps, etc.) in the new MDM authority as soon as possible and deploy the setting to the user groups that contains users who have existing enrolled devices. As soon as a device connects to the service after the change in MDM authority, it will receive the new settings from the new MDM authority and prevent gaps in management and protection.
 - Devices that don't have associated users (typically when you have iOS/iPadOS Device Enrollment Program or bulk enrollment scenarios) are not migrated to the new MDM authority. For those devices, you need to call support for assistance to move them to the new MDM authority.
-
-## Change MDM authority to Office 365
-
-To activate Office 365 MDM (or to enable MDM coexistence in addition to your existing Intune Service), go to [https://protection.office.com](https://protection.office.com), choose **Data Loss Prevention** > **Device Security Policies** > **View list of Managed Devices** > **Let's get started**.
-
-For more information, see [Set up Mobile Device Management (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
-
-If you want the end users to only be managed by Office 365 MDM, then remove any assigned Intune and/or EMS licenses after activating Office 365 MDM.
 
 ## Mobile device cleanup after MDM certificate expiration
 
