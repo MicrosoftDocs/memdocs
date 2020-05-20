@@ -37,7 +37,7 @@ Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Micro
 
 ### For users outside of mainland China 
 
-If Google Play isn't available, Android devices can download the [Microsoft Intune Company Portal for Android](../user-help/install-the-company-portal-app-android.md) and sideload the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually. 
+If Google Play isn't available, Android devices can download the [Microsoft Intune Company Portal for Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) and sideload the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually. 
 
 ### For users in mainland China 
 
@@ -58,7 +58,7 @@ Some Intune features rely on components of GMS such as the Google Play store or 
 
 ### Some tasks may be delayed 
 
-In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn’t available, push notifications may also not be available. Therefore, Intune must wait for the next device check-in time to complete the tasks.  
+In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available. Therefore, Intune must wait for the next device check-in time to complete the tasks.  
 
 Enrolled Android devices report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks. 
 

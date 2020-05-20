@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,7 +38,7 @@ Using Intune app protection policies with Microsoft Edge helps ensure that corpo
 - **Azure Application Proxy integration.** You can control access to software as a service (SaaS) apps and web apps. This helps ensure that browser-based apps only run in the secure Microsoft Edge browser, whether end users connect from the corporate network or connect from the internet.
 - **Application configuration.** You can use application configuration settings to strengthen your organization's security posture and configure ease-of-use features for your end users. For example, you can define bookmarks, a homepage shortcut, allowed or blocked sites, and Azure Active Directory (Azure AD) Application Proxy.
 
-Microsoft Intune protection policies for Microsoft Edge help to protect your organization's data and resources. Using these policies with Microsoft Edge ensures that your company's resources are protected not only within natively installed apps, but also when accessed through the web browser.
+Microsoft Intune protection policies for Microsoft Edge help to protect your organization's data and resources. Using these policies with Microsoft Edge ensures that your organization's resources are protected not only within natively installed apps, but also when accessed through the web browser.
 
 ## Getting started
 
@@ -200,16 +200,16 @@ Similarly to configuring a homepage shortcut, you can configure multiple top sit
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. For example: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## Configure your organization's logo and brand color for new tab pages in Microsoft Edge
 
 These settings allow you to customize the New Tab Page for Microsoft Edge to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Customization** -> **Company Identity Branding**.
-- To set your brand's logo, under "Display", choose "Company Logo only". Transparent background logos are recommended. 
-- To set your brand's background color, under "Display" choose "Theme Color". Microsoft Edge applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability. 
+- Within the Azure portal, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Tenant Administration** -> **Customization**.
+- To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended. 
+- To set your brand's background color, select a **Theme color**. Microsoft Edge applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability. 
 
 Next, use the following key/value pairs to pull your organizations branding into Microsoft Edge:
 
@@ -357,7 +357,7 @@ By default, Microsoft Edge on iOS offers to save your users passwords to the key
 
 |    Key    |    Value    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **password** will disable prompts that offer to save passwords for the end user.    |
 
 ### Disable users from adding extensions to Microsoft Edge 
 

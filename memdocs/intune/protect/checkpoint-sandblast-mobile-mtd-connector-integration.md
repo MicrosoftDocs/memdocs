@@ -62,7 +62,7 @@ The Check Point SandBlast app authorization process consists of the following:
 
 - Allow the Check Point SandBlast Mobile service to communicate information related to device health state back to Intune.
 
-- CheckPoint SandBlast Mobile syncs with Azure AD Enrollment Group membership to populate its device’s database.
+- CheckPoint SandBlast Mobile syncs with Azure AD Enrollment Group membership to populate its device's database.
 
 - Allow Check Point SandBlast admin console to use Azure AD Single Sign On (SSO).
 

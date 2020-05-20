@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 
 ms.collection: M365-identity-device-management
 ---
+
 # Use a custom device profile to create a WiFi profile with a pre-shared key in Intune
 
 Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a pre-shared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
@@ -56,12 +57,17 @@ This feature supports:
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Choose your platform.
+    - **Profile**: Select **Custom**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Custom OMA-URI Wi-Fi profile settings for Android device administrator devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Choose your platform.
-    - **Profile type**: Select **Custom**.
 
-4. In **Settings**, select **Add**. Enter a new OMA-URI setting with the following properties:
+6. Select **Next**.
+7. In **Configuration settings**, select **Add**. Enter a new OMA-URI setting with the following properties:
 
     1. **Name**: Enter a name for the OMA-URI setting.
     2. **Description**: Enter a description for the OMA-URI setting. This setting is optional, but recommended.
@@ -78,10 +84,22 @@ This feature supports:
     4. **Data Type**: Select **String**.
 
     5. **Value**: Paste your XML code. See the [examples](#android-or-windows-wi-fi-profile-example) in this article. Update each value to match your network settings. The comments section of the code includes some pointers.
+    6. Select **Add** to save your changes.
 
-5. When you're done, select **OK** > **Create** to save your changes.
+8. Select **Next**.
 
-Your profile is shown in the profiles list. Next, [assign this profile](device-profile-assign.md) to your user groups. This policy can only be assigned to user groups.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    > [!NOTE]
+    > This policy can only be assigned to user groups.
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time each device checks in, the policy is applied, and a Wi-Fi profile is created on the device. The device can then connect to the network automatically.
 

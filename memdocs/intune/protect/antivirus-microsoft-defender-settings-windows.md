@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 in Microsoft Intune.
+View the Endpoint security antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 ## Cloud protection
 
@@ -87,7 +87,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
 
 - **Enable on access protection**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Configure virus protection that's continuously active, as opposed to on demand.
 
@@ -95,8 +95,16 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **No** - Block On Access Protection on devices. Device users can't change this setting.
   - **Yes** - On Access Protection is active on devices.
 
+- **Monitoring for incoming and outgoing files**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Configure this setting to determine which NTFS file and program activity is monitored.
+  - **Monitor all files** (*default*)
+  - **Only monitor incoming files**
+  - **Only monitor outgoing files**
+
 - **Turn on behavior monitoring**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
 
@@ -114,7 +122,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Yes** - Network protection is turned on. Device users can't change this setting.
 
 - **Scan all downloaded files and attachments**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Configure Defender to scan all downloaded files and attachments.
 
@@ -123,7 +131,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Yes** - Defender scans all downloaded files and attachments. Device users can't change this setting.
 
 - **Scan scripts that are used in Microsoft browsers**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Configure Defender to scan scripts.
 
@@ -132,7 +140,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Yes** - Defender scans scripts. Device users can't change this setting.
 
 - **Scan network files**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Configure Defender to scan network files.
 
@@ -141,7 +149,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Yes** - Turn on scanning of network files. Device users can't change this setting.
 
 - **Scan emails**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Configure Defender to scan incoming email.
 
@@ -152,7 +160,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 ## Remediation
 
 - **Number of days (0-90) to keep quarantined malware**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and does not automatically remove them.
 
@@ -165,7 +173,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Send all samples automatically**
 
 - **Action to take on potentially unwanted apps**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
 
@@ -175,7 +183,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Audit mode** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Actions for detected threats**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
   
@@ -198,7 +206,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 ## Scan
 
 - **Scan archive files**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configure Defender to scan archive files, like ZIP or CAB files.
 
@@ -208,7 +216,7 @@ Learn more
   - **Yes** - Enable scans of archive files. Device users can't change this setting.
 
 - **Use low CPU priority for scheduled scans**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configure CPU priority for scheduled scans.
   - **Not configured** (*default*) - The setting returns to the system default, in which no changes to CPU priority are made.
@@ -216,7 +224,7 @@ Learn more
   - **Yes** - Low CPU priority will be used during scheduled scans. Device users can't change this setting.
 
 - **Disable catch-up full scan**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -225,7 +233,7 @@ Learn more
   - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **Disable catchup quick scan**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -234,12 +242,12 @@ Learn more
   - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **CPU usage limit per scan**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Specify as a percent from zero to 100, the average CPU load factor for the Defender scan.
 
 - **Scan mapped network drives during full scan**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Configure Defender to scan mapped network drives.
 
@@ -248,13 +256,13 @@ Learn more
   - **Yes** - Enable scans of mapped network drives. Device users can't change this setting.
 
 - **Run daily quick scan at**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Select the time of day that Defender quick scans run.
   By default, this is **Not configured**
 
 - **Scan type**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Select the type of scan that Defender runs.
 
@@ -276,14 +284,14 @@ Learn more
 ## Updates
 
 - **Enter how often (0-24 hours) to check for security intelligence updates**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 
 ## User experience
 
 - **Allow user access to Microsoft Defender app**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
   - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.

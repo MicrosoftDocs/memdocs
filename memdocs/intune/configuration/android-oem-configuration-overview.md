@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,6 +35,8 @@ In Microsoft Intune, you can use OEMConfig to add, create, and customize OEM-spe
 This feature applies to:  
 
 - Android Enterprise
+
+For Android device administrator devices, use [Mobile extensions (MX)](android-zebra-mx-overview.md).
 
 This article describes OEMConfig, lists the prerequisites, shows how to create a configuration profile, and lists the supported OEMConfig apps in Intune.
 
@@ -60,7 +62,9 @@ When using OEMConfig, be aware of the following information:
 - Intune exposes the OEMConfig app's schema so you can configure it. Intune doesn't validate or change the schema provided by the app. So if the schema is incorrect, or has inaccurate data, then this data is still sent to devices. If you find a problem that originates in the schema, contact the OEM for guidance.
 - Intune doesn't influence or control the content of the app schema. For example, Intune doesn't have any control over strings, language, the actions allowed, and so on. We recommend contacting the OEM for more information on managing their devices with OEMConfig.
 - At any time, OEMs can update their supported features and schemas, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
-- Assign one OEMConfig profile to a device. If multiple profiles are assigned to the same device, you may see inconsistent behavior. The OEMConfig model only supports a single policy per device.
+- On Zebra devices, you can create multiple profiles, and assign them to the same device. For more information, see [OEMConfig on Zebra devices](oemconfig-zebra-android-devices.md).
+
+  The OEMConfig model on non-Zebra devices only supports a single policy per device. If multiple profiles are assigned to the same device, you may see inconsistent behavior.
 
 ## Prerequisites
 
@@ -87,7 +91,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 3. Enter the following properties:
 
     - **Platform**: Select **Android enterprise**.
-    - **Profile type**: Select **OEMConfig**.
+    - **Profile**: Select **OEMConfig**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -155,21 +159,26 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 
 | OEM | Bundle ID | OEM Documentation (if available) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com.ascom.myco.oemconfig | |
+| Cipherlab | com.cipherlab.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com.seuic.seuicoemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| Seuic | com.seuic.seuicoemconfig | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 
-If an OEMConfig application exists for your device, but it isn’t in the table above, or isn't showing up in the Intune console, email `IntuneOEMConfig@microsoft.com`.
+If an OEMConfig application exists for your device, but it isn't in the table above, or isn't showing up in the Intune console, email `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
 > OEMConfig apps must on-boarded by Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.

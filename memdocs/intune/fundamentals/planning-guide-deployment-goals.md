@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Determine deployment goals, objectives, and challenges
 
-Having a good deployment plan begins with first identifying your organization’s deployment goals and objectives, along with potential challenges. Let’s discuss each area in more detail.
+Having a good deployment plan begins with first identifying your organization's deployment goals and objectives, along with potential challenges. Let's discuss each area in more detail.
 
 ## Deployment goals
 
@@ -99,4 +99,4 @@ Deployment challenges are issues that are top of mind for an organization and th
 
 ## Next steps
 
-Now that you have identified your deployment goals, objectives, and potential challenges, let’s move to the next section: [Identify use case scenarios](planning-guide-scenarios.md).
+Now that you have identified your deployment goals, objectives, and potential challenges, let's move to the next section: [Identify use case scenarios](planning-guide-scenarios.md).

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,9 +44,9 @@ To selectively remove company app data, create a wipe request by using the steps
 > Contacts synced directly from the app to the native address book are removed. Any contacts synced from the native address book to another external source can't be wiped. Currently, this only applies to the Microsoft Outlook app.
 
 ## Deployed WIP policies without user enrollment
-Windows Information Protection (WIP) policies can be deployed without requiring MDM users to enroll their Windows 10 device. This configuration allows companies to protect their corporate documents based on the WIP configuration, while allowing the user to maintain management of their own Windows devices. Once documents are protected with a WIP policy, the protected data can be selectively wiped by an Intune administrator. By selecting the user and device, and sending a wipe request, all data that was protected via the WIP policy will become unusable. From the Intune in the Azure portal, select **Client app** > **App selective wipe**. For more information, see [Create and deploy Windows Information Protection (WIP) app protection policy with Intune](windows-information-protection-policy-create.md).
+Windows Information Protection (WIP) policies can be deployed without requiring MDM users to enroll their Windows 10 device. This configuration allows companies to protect their corporate documents based on the WIP configuration, while allowing the user to maintain management of their own Windows devices. Once documents are protected with a WIP policy, the protected data can be selectively wiped by an Intune administrator ([Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators)). By selecting the user and device, and sending a wipe request, all data that was protected via the WIP policy will become unusable. From the Intune in the Azure portal, select **Client app** > **App selective wipe**. For more information, see [Create and deploy Windows Information Protection (WIP) app protection policy with Intune](windows-information-protection-policy-create.md).
 
-## Create a wipe request
+## Create a device based wipe request
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
@@ -65,6 +65,16 @@ The service creates and tracks a separate wipe request for each protected app on
 
    ![Screenshot of 'Client apps - App selective wipe' pane](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## Create a user based wipe request
+
+By adding a user to the User-level wipe we will automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
+   Select **User-Level Wipe**
+3. Click **Add** and **Select user** pane is displayed.
+4. Chose the user whose app data you would like to wipe and click **Select**.
+
 ## Monitor your wipe requests
 
 You can have a summarized report that shows the overall status of the wipe request, and includes the number of pending requests and failures. To get more details, follow these steps:
@@ -78,7 +88,7 @@ Additionally, you are able to see the device name, and its device type, which ca
 >[!IMPORTANT]
 > The user must open the app for the wipe to occur, and the wipe may take up to 30 minutes after the request was made.
 
-## Delete a wipe request
+## Delete a device wipe request
 
 Wipes with pending status are displayed until you manually delete them. To manually delete a wipe request:
 
@@ -89,6 +99,14 @@ Wipes with pending status are displayed until you manually delete them. To manua
     ![Screenshot of the wipe request list in the App selective wipe pane](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. You're prompted to confirm the deletion, choose **Yes** or **No**, then click **OK**.
+
+## Delete a user wipe request
+
+User wipes will remain in the list until removed by an administrator. To remove a user from the list:
+
+1. On the **Client Apps - App selective wipe** pane select **User-Level Wipe**
+2. From the list, right-click on the user you want to delete, then choose **Delete**. 
+
 
 ## See also
 [What's app protection policy](app-protection-policy.md)

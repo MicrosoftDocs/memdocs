@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -79,7 +79,7 @@ Import the VPN server's root certificate issued by the CA into a profile created
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile type**: Select **Trusted certificate**.
+    - **Profile**: Select **Trusted certificate**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -117,7 +117,7 @@ The VPN profile includes the SCEP or PKCS certificate that has the client creden
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile type**: Select **VPN**.
+    - **Profile**: Select **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

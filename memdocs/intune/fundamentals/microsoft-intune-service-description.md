@@ -64,13 +64,13 @@ Because the mobile device management ecosystem changes frequently with operating
 
   A few helpful hints:
 
-  - The messages in the Office 365 Message Center are targeted. This means that if your company doesn’t have an Intune for EDU offer, we won’t message you about Intune for EDU.
+  - The messages in the Office 365 Message Center are targeted. This means that if your company doesn't have an Intune for EDU offer, we won't message you about Intune for EDU.
 
-  - Messages expire. For example, the notification that your service has been updated with a link to the What’s New page will likely expire prior to the next service update notification. Otherwise, you’d have a large backlog of posts that may no longer be relevant.
+  - Messages expire. For example, the notification that your service has been updated with a link to the What's New page will likely expire prior to the next service update notification. Otherwise, you'd have a large backlog of posts that may no longer be relevant.
 
   - The Office 365 admin mobile app allows you to search through all the messages and to forward the notification if you wanted to share it with peers in your organization.
 
-  - Under Edit message center preferences, we’ll eventually have a toggle for **Intune** so you can look at those messages posted to an Intune subscription. If you see Mobile Device Management for Office 365, that is a different service, not Intune.
+  - Under Edit message center preferences, we'll eventually have a toggle for **Intune** so you can look at those messages posted to an Intune subscription. If you see Mobile Device Management for Office 365, that is a different service, not Intune.
 
 - We also use two blogs to share the EMS message and Intune support best practices:
 
@@ -85,18 +85,18 @@ Because the mobile device management ecosystem changes frequently with operating
 
 To help you plan for service changes, we notify you at least 7-90 days prior to the service change, depending on the impact of the change. These changes might include any of the following types of change:
 
-- Changes to the end-user experience that you may want to share with your helpdesk staff or your end users. We provide typically 7 to 30 days notice of those changes and document them on the [What’s New in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, we won’t typically call out in documentation. But a change in the end-user enrollment experience is significant enough in the UI that we’ll both post a message to customers in the Office 365 Message center and link to the What’s New in the Intune App UI so you are notified of what’s changing and have time to evaluate and update your end-user guidance before the changes rolling out in production.
+- Changes to the end-user experience that you may want to share with your helpdesk staff or your end users. We provide typically 7 to 30 days notice of those changes and document them on the [What's New in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, we won't typically call out in documentation. But a change in the end-user enrollment experience is significant enough in the UI that we'll both post a message to customers in the Office 365 Message center and link to the What's New in the Intune App UI so you are notified of what's changing and have time to evaluate and update your end-user guidance before the changes rolling out in production.
 
 - Changes that require you to take action are called **Plan for Change** and typically provide about 30 days notice. In the Office 365 Message Center the Category specifically says Plan for Change, and if we have an exact date for when the change is in production, we also put in an **Act By** date and that gives you a visual queue and an explanation mark.
 
-- For most deprecations, we prefer to provide 90 days notice of that deprecation. For example, if we’re no longer going to support a specific version of IE, our goal is to provide 90 days notice. However, deprecations do get complicated when it’s another company announcing the deprecation. For example, a browser company provided notice that they would no longer support Silverlight with their latest build, so we let customers know we were dropping support of that browser, but our notification to customers under the 90-day period.
+- For most deprecations, we prefer to provide 90 days notice of that deprecation. For example, if we're no longer going to support a specific version of IE, our goal is to provide 90 days notice. However, deprecations do get complicated when it's another company announcing the deprecation. For example, a browser company provided notice that they would no longer support Silverlight with their latest build, so we let customers know we were dropping support of that browser, but our notification to customers under the 90-day period.
 
 - In the event of Intune service retirement, you would be notified 12 months in advance.
 
-Finally, in the rare event there’s any post-incident action needed to get your service back to normal or a large change that we deem potentially disruptive based on customer feedback, we will email the service administrators based on how your [Office 365 communication preferences](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) are set and whether you include a valid (and preferably work) email address.  
+Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that we deem potentially disruptive based on customer feedback, we will email the service administrators based on how your [Office 365 communication preferences](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) are set and whether you include a valid (and preferably work) email address.  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.

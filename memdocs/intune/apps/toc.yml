@@ -147,10 +147,10 @@
           href: apps-configure-chrome-android.md
       - name: Volume-purchased apps and books
         items:
-        - name: Manage VPP apps and books
+        - name: Volume-purchased overview
           href: vpp-apps.md
           displayName: vpp; volume purchased
-        - name: iOS VPP apps
+        - name: Volume-purchased iOS apps
           href: vpp-apps-ios.md
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md
@@ -165,7 +165,7 @@
         - name: App protection policies overview
           href: app-protection-policy.md
           displayName: app; protection; policy
-        - name: Data protection framework using APP
+        - name: Data protection framework using app protection policies
           href: app-protection-framework.md
         - name: Create app protection policies
           items:
@@ -206,6 +206,10 @@
         href: app-install-error-codes.md
       - name: Troubleshoot mobile application management
         href: troubleshoot-mam.md
+      - name: Review app protection logs
+        href: app-protection-policy-settings-log.md
+      - name: Troubleshooting app protection policy deployment
+        href: troubleshoot-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK
