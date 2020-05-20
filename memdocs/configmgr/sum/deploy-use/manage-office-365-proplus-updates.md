@@ -237,7 +237,6 @@ For update packages released on and after June 9, the title will begin with "Mic
 &nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
 </br>
 </br>
-</br>
 
 |New Channel name|Previous Channel name|
 |--|--|
