@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,12 +43,12 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 
 Wi-Fi profiles support the following device platforms:
 
-- Android 4 and newer
+- Android 5 and later
 - Android Enterprise and kiosk
-- iOS 8.0 and newer
-- iPadOS 13.0 and newer
-- macOS X 10.11 and newer
-- Windows 10 and newer, Windows 10 Mobile, and Windows Holographic for Business
+- iOS 11.0 and later
+- iPadOS 13.0 and later
+- macOS X 10.12 and later
+- Windows 10 and later, Windows 10 Mobile, and Windows Holographic for Business
 
 > [!NOTE]
 > For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device.
