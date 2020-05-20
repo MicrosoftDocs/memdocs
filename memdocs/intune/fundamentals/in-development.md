@@ -126,9 +126,6 @@ Admins will be able to update the Power BI compliance report template version fr
 <!-- ***********************************************-->
 ## Security
 
-### Privacy preferences settings for macOS devices<!-- 2934232 --> 
-With the release of macOS Catalina 10.15, Apple added new security and privacy enhancements. By default, applications and processes are unable to access specific data without user consent. If users do not provide consent, the applications and processes may fail to function. Intune is adding support for settings that enable IT administrators to allow or disallow data access consent on behalf of end-users on devices running macOS 10.14 and later. These settings will ensure that applications and processes continue to function properly and reduce the number of prompts that end-users experience.
-
 
 ### Duplicate your policies in Endpoint Security<!-- 5892558   -->
 You’ll be able to select a policy you’ve created in the Endpoint security node of the Microsoft Endpoint Manager admin center, and then duplicate it to create a copy.  The policies you’ll be able to duplicate include those you create for: 
