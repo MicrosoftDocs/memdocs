@@ -163,35 +163,13 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
     For more information on these rules, see [Understand WDAC policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
-9. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**:
+9. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. You'll add this **compiledPolicy.bin** binary file to Intune.
 
     ```powershell
     ConvertFrom-CIPolicy .\mergedPolicy.xml .\compiledPolicy.bin
     ```
 
-10. Copy the following script, as save it as a `.ps1` file. Then, execute this `.ps1` PowerShell script in the PowerShell window.
-
-    This script converts the **compiledPolicy.bin** binary file to a base64 string. You'll add this converted **compiledPolicy.bin** binary file to Intune.
-
-    ```powershell
-    param(
-    [Parameter(Mandatory=$true)]
-    [string]$sourceFilePath,
-    [Parameter(Mandatory=$true)]
-    [string]$targetFilePath
-    )
-    
-    Write-Output "Reading from $sourceFilePath"
-    [byte[]]$bytes = Get-Content "$sourceFilePath" -Encoding byte
-    
-    $output = [System.Convert]::ToBase64String($bytes)
-    
-    Write-Output "Writing to $targetFilePath"
-    
-    Set-Content -Path "$targetFilePath" -Value $output -Encoding Ascii
-    ```
-
-11. Create the custom device configuration profile in Intune:
+10. Create the custom device configuration profile in Intune:
 
     1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10 custom device configuration profile.
 
@@ -206,13 +184,13 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
         The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
 
       - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
-      - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 9, and converted in step 10).
+      - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 9).
 
       Your settings look similar to the following settings:
 
       :::image type="content" source="./media/custom-profile-hololens/custom-applicationcontrol-omauri.png" alt-text="Add a custom OMA-URI to configure ApplicationControl CSP in Microsoft Intune.":::
 
-When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices. Using Windows PowerShell, you can see the apps being denied, and prevented from opening.
+11. When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices.
 
 ## Next steps
 
