@@ -27,21 +27,23 @@ ms.collection: M365-identity-device-management
 
 # Use WDAC and Windows PowerShell to allow or blocks apps on HoloLens 2 devices with Microsoft Intune
 
-To allow or block specific apps from running on Microsoft HoloLens 2 devices, use a custom configuration profile in Intune.
+Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp), which replaces the [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
 
-Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp). This WDAC CSP replaces the [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp), and is based on the [Windows Defender Application Control (WDAC) feature](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
-
-In Intune, using a custom profile is the only way to allow or prevent apps from opening on HoloLens 2 devices.
+Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you may want to allow or prevent the Cortana app from opening on HoloLens 2 devices in your organization.
 
 This feature applies to:
 
 - HoloLens 2 devices running Windows Holographic for Business
 
+The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
+
 This article shows you how to:
 
-1. Using Windows PowerShell, create WDAC policies.
-2. Using Windows PowerShell, convert the WDAC policy rules to XML, update the XML, and then convert the XML to a binary file.
-3. In Microsoft Intune, apply the WDAC policy using a [custom device configuration profile](custom-settings-windows-10.md).
+1. Use Windows PowerShell to create WDAC policies.
+2. Use Windows PowerShell to convert the WDAC policy rules to XML, update the XML, and then convert the XML to a binary file.
+3. In Microsoft Intune, create a [custom device configuration profile](custom-settings-windows-holographic.md), add this WDAC policy binary file, and apply the policy to your HoloLens 2 devices.
+
+In Intune, you must create a custom configuration profile to use the Windows Defender Application Control (WDAC) CSP. 
 
 Use the steps in this article as a template to allow or deny specific apps from opening on HoloLens 2 devices.
 
@@ -58,7 +60,7 @@ Use the steps in this article as a template to allow or deny specific apps from 
 
   [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) has more information.
 
-- Create a user group or devices group with your HoloLens 2 devices.
+- Create a user group or devices group with your HoloLens 2 devices. For more information, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
 ## Example
 
@@ -210,7 +212,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
       :::image type="content" source="./media/custom-profile-hololens/custom-applicationcontrol-omauri.png" alt-text="Add a custom OMA-URI to configure ApplicationControl CSP in Microsoft Intune.":::
 
-When the profile is applied to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices. Using Windows PowerShell, you can see the apps being denied, and prevented from opening.
+When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices. Using Windows PowerShell, you can see the apps being denied, and prevented from opening.
 
 ## Next steps
 
