@@ -43,7 +43,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
 > [!NOTE]
 > If using [Autonomous Single App Mode (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
-Consider testing to assess the impact of OS updates on the app you are running in ASAM. Contact Apple if additional information is required regarding iOS software updates.
+Consider testing to assess the impact of OS updates on the app you are running in ASAM.
 
 ## Configure the policy
 
