@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -150,7 +150,7 @@ The PowerShell module provides methods to create a key using Windows cryptograph
 
 3. To import the module, run `Import-Module .\IntunePfxImport.psd1` to import the module.
 
-4. Next, run `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
+4. Next, run `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"`
 
    > [!TIP]
    > The provider you use must be selected again when you import PFX Certificates. You can use the **Microsoft Software Key Storage Provider**, although it is supported to use a different provider. The key name is also provided as an example, and you can use a different key name of your choice.
@@ -204,6 +204,9 @@ Select the Key Storage Provider that matches the provider you used to create the
 
    > [!NOTE]
    > When you import the certificate from a system other than the server where the connector is installed, use must use the following command that includes the key file path: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > *VPN* is not supported as a IntendedPurpose. 
+
 
 7. Import the **UserPFXCertificate** object to Intune by running `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
 
