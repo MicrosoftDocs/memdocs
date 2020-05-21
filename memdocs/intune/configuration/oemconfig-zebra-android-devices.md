@@ -48,7 +48,9 @@ Create an [OEMConfig configuration profile](android-oem-configuration-overview.m
 
 ## Use multiple profiles
 
-On Zebra devices, you can have many profiles on each device simultaneously. This feature allows you to split your Zebra OEMConfig settings into smaller profiles. Zebra’s OEMConfig schema also uses **Actions**. Actions are operations that run on the device. They don’t configure any settings. Use these actions to trigger a file download, clear the clipboard, and more. For a full list of the supported actions, see [Zebra’s documentation](https://techdocs.zebra.com/oemconfig/10-0/about/) (opens Zebra's web site).
+On Zebra devices, you can have many profiles on each device simultaneously. This feature allows you to split your Zebra OEMConfig settings into smaller profiles. For example, you could have one baseline profile that affects all devices, and then additional profiles for certain devices that configure settings specific to those use cases.
+
+Zebra’s OEMConfig schema also uses **Actions**. Actions are operations that run on the device. They don’t configure any settings. Use these actions to trigger a file download, clear the clipboard, and more. For a full list of the supported actions, see [Zebra’s documentation](https://techdocs.zebra.com/oemconfig/10-0/about/) (opens Zebra's web site).
 
 For example, you create a Zebra OEMConfig profile that applies some settings to the device. Another Zebra OEMConfig profile includes an action that clears the clipboard. You assign the first profile to a Zebra devices group. Later, you need to clear the clipboard on those devices. You assign the second profile to the same devices group, without changing the first profile. The device clipboard gets cleared without resending or affecting the configuration settings created in the first profile.
 
@@ -56,20 +58,20 @@ In another example, you assigned an OEMConfig profile that configured some Zebra
 
 ## Ordering
 
-With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction feature](https://techdocs.zebra.com/oemconfig/9-1/mc/) (opens Zebra's web site). Let's look at an example.
+With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site). Let's look at an example.
 
-There are two profiles:
+Let's say you want to turn on Bluetooth for all newly-enrolled Zebra devices before configuring another setting on the same devices.
+
+You create two profiles:
 
 - **Profile 1**: Turns on Bluetooth. This profile is assigned on Monday to the **All Devices** group.
-- **Profile 2**: Configures any other setting. This profile is assigned on Tuesday to the **All Devices** group.
-
-Bluetooth must be turned on before the other setting is configured.
+- **Profile 2**: Configures the other setting. This profile is assigned on Tuesday to the **All Devices** group.
 
 On Wednesday, you enroll 10 new Zebra devices with Intune. Profile 1 and Profile 2 are assigned to the **All Devices** group. After the new devices sync with Intune, they receive the profiles. These devices may get Profile 2 before Profile 1.
 
-Use the **Steps** feature in Zebra’s schema to confirm that operations run in sequence. In this case, you create one profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMCong app receives the profile, it runs the steps in order, guaranteed by Zebra.
+The better way to accomplish your goal is to use the **Steps** feature in Zebra’s schema to confirm that operations run in sequence. In this case, you create one profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMConfig app receives the profile, it runs the steps in order.
 
-For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/9-1/mc/) (opens Zebra's web site).
+For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site).
 
 ## Enhanced reporting
 
