@@ -20,6 +20,18 @@ CMPivot allows you to quickly assess the state of devices in your environment an
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](includes/cmpivot-overview-shared.md)]
 
+## Additional entities, operators, and functions for CMPivot from Configuration Manager
+
+> [!Important]
+> These items aren't supported when you run CMPivot from Microsoft Endpoint Manager admin center.
+
+|Type|Item|Description|
+|--|--|---|
+|Entity|AccountSID|Account SID|
+|Entity|FileContent()|Content of a specific file|
+|Entity|NAPClient|NAP Client|
+|Entity|NAPSystemHealthAgent|NAP System Health Agent|
+|Table operator|render|Renders results as graphical output|
 
 ## Next steps
 

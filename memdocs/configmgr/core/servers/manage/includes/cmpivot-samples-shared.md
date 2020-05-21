@@ -10,30 +10,27 @@ ms.date: 05/26/2020
 
 > [!Important]
 > - File retrieval entities aren't supported when you run CMPivot from Microsoft Endpoint Manager.
-## Count of operating systems
 
-Gets a count of operating systems and presents it in a bar chart.
+## Operating system
+
+Gets operating system information.
 
 ```kusto
-// Sample query for OS count
+// Sample query for OS information
 OperatingSystem
-| summarize count() by Caption
-| order by count_ asc
-| render barchart
 ```
 
 ## Recently used applications
 
-The following query renders the most recently used applications as a bar chart:
+The following query gets recently used applications (last 2 hours):
 
 ```kusto
 CCMRecentlyUsedApplications
-| summarize dcount( Device ) by ProductName
-| top 10 by dcount_
-| render barchart
+| where (LastUsedTime > ago(2h))
+| project CompanyName, ProductName, ProductVersion, LastUsedTime
 ```
 
-## Time chart for device start times
+## Device start times
 
 The following query shows when devices have started in the last seven days:
 
@@ -41,7 +38,6 @@ The following query shows when devices have started in the last seven days:
 OperatingSystem
 | where LastBootUpTime <= ago(7d)
 | summarize count() by bin(LastBootUpTime,1d)
-| render timechart
 ```
 
 ## Free disk space by device
@@ -50,9 +46,8 @@ The following query shows free disk space by device:
 
 ```kusto
 LogicalDisk
-| summarize sum( FreeSpace ) by Device
-| order by sum_ desc
-| render columnchart
+| project Device, DeviceID, Name, Description, FileSystem, Size, FreeSpace
+| order by DeviceID asc
 ```
 
 ## Device information 
@@ -67,35 +62,21 @@ ComputerSystem
 
 ## Boot times for a device
 
-Show a graph of boot times for a device:
+Show boot times for devices:
 
 ```kusto
 SystemBootData
-| where Device == 'MyDevice'
-| project SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
+| project Device, SystemStartTime, BootDuration, OSStart=EventLogStart, GPDuration, UpdateDuration
 | order by SystemStartTime desc
-| render barchart with (kind=stacked, title='Boot times for MyDevice', ytitle='Time (ms)')
 ```
 
 ## Authentication failures
 
-Search all event logs on all clients in your enterprise for authentication failures.
+Search the event logs for authentication failures.
 
 ```kusto
 EventLog('Security')
 | where  EventID == 4673
-| summarize count() by Device
-| order by count_ desc
-```
-
-## Event log errors for Windows Hello for Business
-
-Lists errors in the event log for Windows Hello for Business within the last day.
-
-```kusto
-WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
-| where LevelDisplayName =='Error'
-| summarize count() by Device
 ```
 
 ## ProcessModule(\<processname>)  
@@ -108,17 +89,6 @@ ProcessModule('powershell')
 | order by count_ desc
 ```
 
-## Azure Active Directory identity information
-
-Get the current Azure Active Directory identity information from a device.
-
-```kusto
-AadStatus
-| project Device, IsAADJoined=iif( isnull(DeviceId),'No','Yes')
-| summarize DeviceCount=count() by IsAADJoined
-| render piechart
-```
-
 ## Antimalware software status
 
 Gets the status of antimalware software installed on the computer.
@@ -127,8 +97,6 @@ Gets the status of antimalware software installed on the computer.
 EPStatus
 | project Device, QuickScanAge=datetime_diff('day',now(),QuickScanEndTime)
 | summarize DeviceCount=count() by QuickScanAge
-| order by QuickScanAge
-| render barchart
 ```
 
 ## Find BIOS Manufacturer that contains any word like Micro
@@ -151,6 +119,9 @@ Device
 ```
 
 ## <a name="bkmk_File"></a> Get file content(\<filename>)
+
+> [!Important]
+> The file retrieval entity, (FileContent), isn’t supported when you run CMPivot from Microsoft Endpoint Manager admin center.
 
 Gets the contents of a text file.
 

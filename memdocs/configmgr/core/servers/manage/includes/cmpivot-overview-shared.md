@@ -9,27 +9,23 @@ ms.date: 05/26/2020
 
 ## Queries
 
-Queries can be used to search terms, identify trends, analyze patterns, and provide many other insights based on your data.
-CMPivot uses a subset of the [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) data flow model for the tabular expression statement. The typical structure of a tabular expression statement is a composition of client entities and tabular data operators (such as filters and projections). The composition is represented by the pipe character (|), giving the statement a regular form that visually represents the flow of tabular data from left to right. Each operator accepts a tabular data set "from the pipe", and additional inputs (including other tabular data sets) from the body of the operator, then emits a tabular data set to the next operator that follows:
+Queries can be used to search terms, identify trends, analyze patterns, and provide many other insights based on your data. CMPivot uses a subset of the [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) data flow model for the tabular expression statement. The typical structure of a tabular expression statement is a composition of client entities and tabular data operators (such as filters and projections). The composition is represented by the pipe character (|), giving the statement a regular form that visually represents the flow of tabular data from left to right. Each operator accepts a tabular data set "from the pipe", and additional inputs (including other tabular data sets) from the body of the operator, then emits a tabular data set to the next operator that follows:
 `entity | operator1 | operator2 | ...`
 
-In the following example, the entity is *Device* (a reference to the current state of all devices in the collection), and the operator is *where* (which filter out records from its input according to some per-record predicate):
+In the following example, the entity is `CCMRecentlyUsedApplications` (a reference to the recently used applications), and the operator is where (which filter out records from its input according to some per-record predicate):
 
 ```
-Device | where Manufacturer like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 ```
 
 ## Entities
 
 Entities are objects that can be queried from the client. We currently support the following entities:
 
-> [!Important]
-> The File() entity isn't supported when you run CMPivot from Microsoft Endpoint Manager.
 
 |Entity|Description|
 |---|---|
 |AadStatus|Status of Azure Active Directory|
-|AccountSID|Account SID|
 |Administrators|Members of the local administrators group|
 |AppCrash|Recent application crash reports|
 |AppVClientApplication|AppV Client Application|
@@ -67,7 +63,6 @@ Entities are objects that can be queried from the client. We currently support t
 |EPStatus|Status of antimalware software on the computer|
 |EventLog()|Events within 24 hours (by default) from an event log|
 |File()|Information about a specific file|
-|FileContent()|Content of a specific file|
 |FileShare|Active file share information|
 |Firmware|Firmware|
 |IDEController|IDE Controller|
@@ -82,8 +77,6 @@ Entities are objects that can be queried from the client. We currently support t
 |Memory|Memory|
 |Modem|Modem|
 |Motherboard|Motherboard|
-|NAPClient|NAP Client|
-|NAPSystemHealthAgent|NAP System Health Agent|
 |NetworkAdapter|Network Adapter|
 |NetworkAdapterConfiguration|Network Adapter Configuration|
 |NetworkClient|Network Client|
@@ -191,7 +184,6 @@ Table operators can be used filter, summarize, and transform data streams. Curre
 |join|Merge the rows of two tables to form a new table by matching row for the same device|
 |order by|Sort the rows of the input table into order by one or more columns|
 |project|Select the columns to include, rename or drop, and insert new computed columns|
-|render|Renders results as graphical output|
 |summarize|Produces a table that aggregates the content of the input table|
 |take|Return up to the specified number of rows|
 |top|Returns the first N records sorted by the specified columns|
