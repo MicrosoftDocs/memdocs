@@ -76,7 +76,7 @@ Users will manually set up and enroll their new devices in mobile device managem
 The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Deploy** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table will not be saved.
 
 > [!IMPORTANT]
-> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resouces will not be saved.
+> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.
 
 ### Verification
 

@@ -69,7 +69,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
 - To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
-- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manage client to the management point. There are two options:
+- The BitLocker recovery service requires HTTPS to encrypt the recovery keys across the network from the Configuration Manager client to the management point. There are two options:
 
   - HTTPS-enable the IIS website on the management point that hosts the recovery service. This option only applies to Configuration Manager version 2002.<!-- 5925660 -->
 
