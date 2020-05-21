@@ -72,7 +72,7 @@ This problem occurs when you have not authenticated your new tenant account thro
 
   - From any node in the Microsoft Endpoint Manager admin center, select the **?** icon in the upper-right corner of the portal, and then use the drop-down to select the management type you want help with. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
 
-    - Configure Manager (includes Desktop Analytics)
+    - Configuration Manager (includes Desktop Analytics)
     - Intune
     - Co-management  
 

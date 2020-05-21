@@ -97,6 +97,8 @@ A read-only user would only need the **Read** permission under both the **Device
 
 For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
 
+An [Intune Service Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
+
 ## <a name="bkmk_uea_start"></a> Start gathering data
 - If you are enrolling Intune managed devices only, skip to the [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard) section.
 
@@ -233,7 +235,7 @@ If you click through to a particular device, you can see its boot and sign-in hi
 The **Startup performance** page has reporting tabs that provide support for the insights, including:
 1. **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
 1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
-1. **Startup processes**. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered.
+1. **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant.  
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
 

@@ -61,9 +61,21 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
+#### Customize self-service device actions in the Company Portal<!--4393379 -->
+You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure these settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. The following actions are available:
+- Hide **Remove** button on corporate Windows device.
+- Hide **Reset** button on corporate Windows devices.
+- Hide **Reset** button on corporate iOS devices.
+- Hide **Remove** button on corporate iOS devices.
+For more information, see [User self-service device actions from the Company Portal](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
+
 #### Auto update VPP available apps<!-- 3640511  -->
 Apps that are published as Volume Purchase Program (VPP) available apps will be automatically updated when **Automatic App Updates** is enabled for the VPP token. Previously, VPP available apps did not automatically update. Instead, end-users had to go to the Company Portal and reinstall the app if a newer version was available. Required apps continue to support automatic updates.
 
+
+#### Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal<!-- 4404429   -->
+*This feature is in progress and rolling out over the next few weeks. You may see the feature controls in the user interface, but the settings won’t take effect for up to a few weeks.*
+On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Android Company Portal user experience<!-- 5736084  -->
 In the 2005 release of Android Company Portal, end-users of Android devices that are issued a warn, block, or wipe by an app protection policy will see a new user experience. Instead of the current dialog experience, end-users will see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issue. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) and [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -350,8 +362,6 @@ A third provider, DISA Purebred, will be available for Android in a future relea
 
 #### Microsoft Edge security baseline is now Generally Available<!--6586139 -->
 
-*This new baseline is rolling out to tenants over the next several weeks. We expect all tenants will have this new baseline in early May.*
-
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Edge baseline was in Preview.  The new baseline version ins April 2020 (Edge version 80 and later). 
 
 With the release of this new baseline, you'll no longer be able to create profiles based on the previous baseline versions, but you can continue to use profiles you created with those versions. You can also choose to [update your existing profiles to use the latest baseline version](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
@@ -563,13 +573,17 @@ For more information about this setting, see [Move Android devices from device a
 The Intune Data Warehouse provides the MAC address as a new property (`EthernetMacAddress`) in the `device` entity to allow admins to correlate between the user and host mac address. This property helps to reach specific users and troubleshoot incidents occurring on the network. Admins can also use this property in [Power BI reports](../developer/reports-proc-get-a-link-powerbi.md) to build richer reports. For more information, see the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
 
 #### Additional Data Warehouse device inventory properties<!-- 6125732  -->
-Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/intune-data-warehouse-collections.md#devices) collection:
-- 'Model' - The device model.
-- 'Office365Version' - The version of Office 365 that is installed on the device.
-- 'PhysicalMemoryInBytes` - The physical memory in bytes.
-- `TotalStorageSpaceInBytes` - Total storage capacity in bytes.
+Additional device inventory properties are available using the Intune Data Warehouse. The following properties are now exposed via the [devices](../developer/reports-ref-devices.md#devices) beta collection:
+- `ethernetMacAddress` -  The unique network identifier of this device.
+- `model` - The device model.
+- `office365Version` - The version of Office 365 that is installed on the device.
+- `windowsOsEdition` - The Operating System version.
 
-For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md) and the Intune Data Warehouse [device](../developer/intune-data-warehouse-collections.md#devices) entity.
+The following properties are now exposed via the [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) beta collection:
+- `physicalMemoryInBytes` - The physical memory in bytes.
+- `totalStorageSpaceInBytes` - Total storage capacity in bytes.
+
+For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
 We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../fundamentals/get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:

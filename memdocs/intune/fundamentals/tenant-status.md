@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,7 +26,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 # Use the Intune Tenant Status page
-The Microsoft Intune Tenant Status page is a centralized hub where you can view current and important details about your tenant. Details include license availability and use, connector status, and important communications about the Intune service.  
+
+The Microsoft Intune Tenant Status page is a centralized hub where you can view current and important details about your tenant. Details include license availability and use, connector status, and important communications about the Intune service.
+
+> [!TIP]
+> A tenant is an instance of Azure Active Directory (Azure AD). Your subscription to Intune is hosted by an Azure AD Tenant. For more information, see [Set up a tenant](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) in the Azure AD documentation.
 
 To view the dashboard, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration**, and then select **Tenant Status**.
 
