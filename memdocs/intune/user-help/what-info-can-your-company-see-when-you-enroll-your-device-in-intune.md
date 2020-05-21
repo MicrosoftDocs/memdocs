@@ -55,7 +55,14 @@ Your organization cannot see your personal information when you enroll a device 
 - IMEI
 
  > [!NOTE]
- > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.    
+ > For Android Enterprise fully managed and dedicated devices, you will not be able see all app inventory.
+ 
+ > [!NOTE]
+ > An app is considered **managed app** when installed in one of the following ways:
+ > 1. A user install it from Company Portal app after it is published as **available** by an Intune admin.
+ > 2. The app is published as **required** by an Intune admin and is installed on the device. 
+ >
+ > If you are an IT administrator or support person at your organization and want more information about app management in Intune, see [Understanding the capabilities of unmanaged apps, managed apps, and MAM apps](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **What your organization might be able to see:**
 
