@@ -82,7 +82,7 @@ The final step allows you to review a summary of the settings you configured. On
 > Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
 > [!IMPORTANT]
-> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resouces will not be saved.
+> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.
 
 ## Next steps
 

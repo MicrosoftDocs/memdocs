@@ -20,7 +20,7 @@ manager: dougeby
 
 The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
-Starting in version 2002, Configuration Manager extends its device support with the following methods:
+To overcome these challenges, starting in version 2002, Configuration Manager extends its device support with the following methods:
 
 - Register on the internal network for a unique token
 
