@@ -158,7 +158,7 @@ This setting allows you to configure a homepage shortcut for Edge for iOS and An
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Specify a valid URL. Incorrect URLs are blocked as a security measure.<br>**Example:** <`https://www.bing.com`>     |
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Specify a valid URL. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`     |
 
 #### Multiple top site shortcuts
 
