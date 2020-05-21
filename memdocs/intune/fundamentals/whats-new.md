@@ -74,7 +74,7 @@ Apps that are published as Volume Purchase Program (VPP) available apps will be 
 
 
 #### Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal<!-- 4404429   -->
-*This feature is in progress and rolling out over the next few weeks. You may see the feature controls in the user interface, but the settings won’t take effect for up to a few weeks.*
+*This feature has been delayed.*
 On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Android Company Portal user experience<!-- 5736084  -->
