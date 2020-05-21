@@ -96,7 +96,7 @@ Before you can deploy Windows, first create the software objects in Configuratio
 
 ## Deploy to pilot devices
 
-Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. To make sure devices are healthy after each deployment phase, use the following procedure to create a Desktop Analytics-integrated phased deployment:
+Configuration Manager uses the data from Desktop Analytics to create collections for the pilot and production deployments. These collections can be found in **Assets and Compliance**, **Device Collections** under **Deployment Plans**. To make sure devices are healthy after each deployment phase, use the following procedure to create a Desktop Analytics-integrated phased deployment:
 
 1. In the Configuration Manager console, go to the **Software Library**, expand **Desktop Analytics Servicing**, and select the **Deployment Plans** node.  
 
