@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Endpoint detection and response policy for endpoint security in Intune
 
-When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) with Intune, you can use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
+When you integrate Microsoft Defender Advanced Threat Protection (Defender ATP) with Intune, you can use endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
 
 The capabilities of Defender ATP endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
@@ -57,8 +57,8 @@ To support using EDR policies with Configuration Manager devices, your Configura
 
 - **Configuration Manager with version 2002 or later** – Your site must run Configuration Manager 2002 or later.
 
-- **Install the Configuration Manager update** - To enable support in Configuration Manager 2002 for using EDR policy you create in the Microsoft Endpoint Manager admin center, you must install the following update from within the Configuration Manager console:
-  - **NAME**
+- **Install the Configuration Manager update** - To enable support in Configuration Manager 2002 for using EDR policy you create in the Microsoft Endpoint Manager admin center, install the following update from within the Configuration Manager console:
+  - **Configuration Manager 2002 Hotfix (KB4563473)**
 
 - **Configure Tenant attach** - Tenant attach lets you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy EDR policies to those collections.
 
@@ -105,11 +105,11 @@ The following sections cover the required tasks:
 
 ### Task 1: Install the update for Configuration Manager
 
-Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center. Later versions of Configuration Manager should not require this update.
+Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center.
 
 **Update details**:
 
-- ***pending update name and details***
+- **Configuration Manager 2002 Hotfix (KB4563473)**
 
 You’ll find this update as an *in-console update* for Configuration Manager 2002.
 
@@ -121,7 +121,7 @@ After installing the update, return here to continue configuring your environmen
 
 If co-management was previously enabled, then tenant attach is already set up and you can skip ahead to [Task 3](#task-3-select-collections-to-synchronize).
 
-With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, you can use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
+With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
 
 For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
