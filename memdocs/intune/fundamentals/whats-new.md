@@ -56,6 +56,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+## Week of May 18, 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### Updates to informational screen in Company Portal for iOS/iPadOS <!--7032452 -->
+An informational screen in Company Portal for iOS/iPadOS has been updated to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To see the updated screens, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
+
+<!-- ########################## -->
 ## Week of May 11, 2020 (2005 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
