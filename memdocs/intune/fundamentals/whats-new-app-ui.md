@@ -44,7 +44,7 @@ If you're an employee or student, be sure to check out the screenshots and links
 We've updated an informational screen in Company Portal for iOS/iPadOS to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To learn more about what's visible to an admin, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
 
-[![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-02.png#lightbox)
+[![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 ## Week of May 4, 2020  
 ### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
