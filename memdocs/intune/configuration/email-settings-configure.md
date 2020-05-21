@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,11 +33,11 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 
 You can use email profiles to configure the built-in email settings for the following devices:
 
-- Android device administrator on Samsung Knox Standard 4.0 and newer
+- Android device administrator on Samsung Knox Standard 5.0 and later
 - Android Enterprise
-- iOS 8.0 and newer
-- iPadOS 13.0 and newer
-- Windows Phone 8.1 and newer
+- iOS 11.0 and later
+- iPadOS 13.0 and later
+- Windows Phone 8.1 and later
 - Windows 10 (desktop) and Windows 10 Mobile
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
