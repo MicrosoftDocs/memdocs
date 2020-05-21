@@ -217,7 +217,7 @@ Other processes that might later change settings on the device include a differe
 
 ### Duplicate a security baseline
 
-You can create a duplicate of a security baseline configuration. A scenario when duplicating a baseline is useful is when you want to assign a similar but distinct baseline to a subset of devices. By creating a duplicate, you won't need to manually recreate the entire baseline. Instead, you can duplicate any of your current baselines and then introduce only the changes the new instance requires. You might only change a specific setting and the group the baseline is assigned to.
+You can create duplicates of your security baselines. A scenario when duplicating a baseline is useful is when you want to assign a similar but distinct baseline to a subset of devices. By creating a duplicate, you won't need to manually recreate the entire baseline. Instead, you can duplicate any of your current baselines and then introduce only the changes the new instance requires. You might only change a specific setting and the group the baseline is assigned to.
 
 When you create a duplicate, you'll give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but won't have any assignments. You'll need to edit the new baseline to add assignments.
 
