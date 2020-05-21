@@ -59,6 +59,15 @@ When the email is sent, Intune includes details about the noncompliant device in
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
+  The following platforms support this action:
+  - Android
+  - Android enterprise kiosk devices
+  - Android enterprise work profile devices
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 and later
+
 - **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
 
   The following platforms support this action:
