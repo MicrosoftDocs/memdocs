@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,9 +42,6 @@ Intune uses "configuration profiles" to create and customize these settings for 
 
 This article describes the different features you can configure, and shows you how to create a device configuration profile. You can also see all the available settings for [iOS/iPadOS](ios-device-features-settings.md) and [macOS](macos-device-features-settings.md) devices.
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Airprint
 
 Airprint is an Apple feature that allows devices to print to files over a wireless network. In Intune, you can add AirPrint information to devices.
@@ -61,7 +58,7 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
 For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
@@ -160,7 +157,7 @@ These settings configure an app extension that enables single sign-on (SSO) for 
 
 In Intune, use these settings to configure an SSO app extension created by your organization, your identity provider, Microsoft, or Apple. The SSO app extension handles authentication for your users. These settings configure redirect-type and credential-type SSO app extensions.
 
-- The redirect type is designed for modern authentication protocols, such as OAuth and SAML2. You can use a generic redirect extension on macOS devices. For iOS/iPadOS devices, you can choose between Microsoft's Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+- The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth and SAML2. You can use a generic redirect extension on macOS devices. For iOS/iPadOS devices, you can choose between Microsoft's Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).

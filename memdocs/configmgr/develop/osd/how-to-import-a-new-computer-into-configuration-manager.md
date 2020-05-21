@@ -15,6 +15,10 @@ manager: dougeby
 # How to Import a New Computer into Configuration Manager
 You add a new computer directly to the Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by Configuration Manager.  
 
+> [!TIP]
+> You can also use the [Import-CMComputerInformation](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmcomputerinformation?view=sccm-ps) PowerShell cmdlet.<!-- SCCMDocs#663 -->
+
+
  You must provide the following information:  
 
 -   NETBIOS computer name  
@@ -152,7 +156,7 @@ public int AddNewComputer(
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|-   A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
 |`netBiosName`|-   Managed: `String`<br />-   VBScript: `String`|-   The computer NETBIOS name.|  
 |`smBiosGuid`|-   Managed: `String`<br />-   VBScript: `String`|The SMBIOS GUID for the computer.|  
 |`MacAddress`|-   Managed: `String`<br />-   VBScript: `String`|The MAC address for the computer in the following format: `00:00:00:00:00:00`.|  
@@ -181,5 +185,6 @@ public int AddNewComputer(
  For more information about securing Configuration Manager applications, see [Securing Configuration Manager Applications](../../develop/core/understand/securing-configuration-manager-applications.md).  
 
 ## See Also  
+
  [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md)   
  [About OS deployment computer management](about-computer-management.md)

@@ -96,8 +96,8 @@ public void AddStepToGroup(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
-|`taskSequence`<br /><br /> `taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|-   A valid task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) that contains the group.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`taskSequence`<br /><br /> `taskSequenceStep`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|-   A valid task sequence ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) that contains the group.|  
 |`groupName`<br /><br /> `group`|-   Managed: `String`<br />-   VBScript: `String`|The name of the group that the command-line action is added to. This is obtained from the `SMS_TaskSequenceGroup.Name` property.|  
 
 ## Compiling the Code  

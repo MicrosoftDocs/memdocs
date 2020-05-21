@@ -121,7 +121,7 @@ After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wiz
 
 ## Limited support for CNG certificates
 <!-- 1356191 -->
-Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) certificate templates for the following scenarios:
+Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) certificate templates for the following scenarios:
 
 - Client registration and communication with an HTTPS management point.   
 - Software distribution and application deployment with an HTTPS distribution point.   

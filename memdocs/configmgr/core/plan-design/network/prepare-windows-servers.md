@@ -95,7 +95,7 @@ The following Windows roles are required to support specific functionality, like
 ##  <a name="BKMK_IISFiltering"></a> IIS request filtering for distribution points  
 By default, IIS uses request filtering to block several file name extensions and folder locations from access by HTTP or HTTPS communication. On a distribution point, this prevents clients from downloading packages that have blocked extensions or folder locations.  
 
-When your package source files have extensions that are blocked in IIS by your request filtering configuration, you must set up request filtering to allow them. This is done by [editing the request filtering feature](https://technet.microsoft.com/library/hh831621.aspx) in the IIS Manager on your distribution point computers.  
+When your package source files have extensions that are blocked in IIS by your request filtering configuration, you must set up request filtering to allow them. This is done by [editing the request filtering feature](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in the IIS Manager on your distribution point computers.  
 
 Additionally, the following file name extensions are used by Configuration Manager for packages and applications. Make sure that your request filtering configurations don't block these file extensions:  
 
@@ -133,4 +133,4 @@ For example, source files for a software deployment might include a folder named
 - HEAD
 - PROPFIND
 
-For more information, see [Configure request filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs). 
+For more information, see [Configure request filtering in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 

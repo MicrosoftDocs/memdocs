@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Typical migration cycle
 
-It’s common for an organization to start their Intune migration with a small pilot by targeting a subset of their users in the IT department. Additionally, your organization may need to discuss such factors as the group’s willingness for change, number of users, complexity, requirements, location, and business risk to assist in determining the migration time-frame.
+It's common for an organization to start their Intune migration with a small pilot by targeting a subset of their users in the IT department. Additionally, your organization may need to discuss such factors as the group's willingness for change, number of users, complexity, requirements, location, and business risk to assist in determining the migration time-frame.
 
-Here’s an example of how your target groups could be scheduled:
+Here's an example of how your target groups could be scheduled:
 
   | **Migration targeted groups** | **Time period 1** | **Time period 2** | **Time period 3** | **Time period 4** | **...**
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -68,4 +68,4 @@ Track how many users have enrolled devices after each phase so that you can:
 
 ## Post-migration
 
-Retire the previous MDM provider and unsubscribe from the service after migrating to Intune. Additionally, remove any unneeded infrastructure requirements by following the MDM provider’s instructions.
+Retire the previous MDM provider and unsubscribe from the service after migrating to Intune. Additionally, remove any unneeded infrastructure requirements by following the MDM provider's instructions.

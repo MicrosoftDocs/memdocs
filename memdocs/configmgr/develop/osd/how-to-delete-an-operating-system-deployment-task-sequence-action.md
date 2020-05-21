@@ -103,8 +103,8 @@ public void RemoveAction(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)|The task sequence containing the action to be deleted.|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|The task sequence containing the action to be deleted.|  
 |`actionName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the action to be deleted. This can be obtained from the `SMS_TaskSequenceAction.Name` property.|  
 
 ## Compiling the Code  

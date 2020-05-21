@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # About client settings in Configuration Manager
@@ -322,9 +320,9 @@ If clients must install required software updates at the deployment deadline wit
 
 ### Grace period for enforcement after deployment deadline (hours)
 
-If you want to give users more time to install required application or software update deployments beyond the deadline, set this option to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
+If you want to give users more time to install required application or software update deployments beyond the deadline, set a value for this option. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
 
-Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## Computer restart
@@ -356,13 +354,13 @@ You use Configuration Manager boundary groups to define and regulate content dis
 > [!Note]
 > - Delivery Optimization is only available on Windows 10 clients.
 > - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
-> - When using a CMG for content storage, the content for third-party updates won't download to clients if Delivery Optimization is enabled. <!--6598587--> 
+> - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
 Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
 
- [!Note]
+> [!Note]
 > Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
 
 ### Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download
@@ -890,7 +888,7 @@ Set this option to **Yes** to allow clients to use delta content files. This set
 - Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
  - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
  - Starting in Configuration Manager version 1910, when this option is set, delta download is used for all Windows update installation files, not just express installation files.
-    - When using a CMG for content storage, the content for third-party updates won't download to clients if **Download delta content when available** is enabled. <!--6598587--> 
+    - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587--> 
 
 
 ### Port that clients use to receive requests for delta content

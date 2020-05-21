@@ -2,16 +2,14 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Accounts used in Configuration Manager
@@ -21,9 +19,9 @@ manager: dougeby
 Use the following information to identify the Windows groups, accounts, and SQL objects that are used in Configuration Manager, how they are used, and any requirements.  
 
 - [Windows groups that Configuration Manager creates and uses](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [ConfigMgr Remote Control Users](#configmgr-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Configuration Manager Remote Control Users](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitecode\>](#bkmk_remoteprov)  
@@ -93,7 +91,7 @@ Configuration Manager automatically creates, and in many cases automatically mai
 > When Configuration Manager creates a group on a computer that's a domain member, the group is a local security group. If the computer is a domain controller, the group is a domain local group. This type of group is shared among all domain controllers in the domain.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Configuration Manager uses this group to grant access to view files collected by software inventory.  
 
@@ -111,14 +109,14 @@ Configuration Manager automatically manages the group membership. Membership inc
 By default, this group has **Read** permission to the following folder on the site server: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 This group is a local security group that Configuration Manager creates on the site database server or database replica server for a child primary site. The site creates it when you use distributed views for database replication between sites in a hierarchy. It contains the site server and SQL Server computer accounts of the central administration site.
 
 For more information, see [Data transfers between sites](data-transfers-between-sites.md).
 
 
-### ConfigMgr Remote Control Users  
+### <a name="configmgr_rcusers"></a> Configuration Manager Remote Control Users  
 
 Configuration Manager remote tools use this group to store the accounts and groups that you set up in the **Permitted Viewers** list. The site assigns this list to each client.  
 
@@ -242,6 +240,8 @@ By default, this group has **Full control** to the following folder: `C:\Program
 
 You can set up the following accounts for Configuration Manager.  
 
+> [!TIP]
+> Don't use the percentage character (`%`) in the password for accounts that you specify in the Configuration Manager console. The account will fail to authenticate.<!-- SCCMDocs#1032 -->
 
 ### Active Directory group discovery account  
 
@@ -379,7 +379,7 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.  
 
-Starting in version 1806, a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Enhanced HTTP](enhanced-http.md).<!--1358228,1358278-->
+If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
@@ -455,7 +455,7 @@ SQL Server Reporting Services uses the **Reporting services point account** to r
 > The account you specify must have **Log on locally** permissions on the computer hosting the SQL Reporting Services database.
 
 > [!NOTE]  
-> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the ConfigMgr database.
+> The account is automatically granted all necessary rights by being added to the smsschm_users SQL Database Role on the Configuration Manager database.
 
 For more information, see [Introduction to reporting](../../servers/manage/introduction-to-reporting.md).
 
@@ -640,41 +640,41 @@ This object is used to run SQL Reporting Executions.  The following stored proce
 
 ## <a name="bkmk_sqlroles"></a>Database roles that Configuration Manager uses in SQL
 <!--SCCMDocs issue #1160-->
-Configuration Manager automatically creates and maintains the following role objects in SQL. These roles provide access to specific stored procedures, tables, views and functions to perform the needed actions of each role to either retrieve data or insert data to and from the ConfigMgr database. These objects are located within the Configuration Manager database under Security/Roles/Database Roles.
+Configuration Manager automatically creates and maintains the following role objects in SQL. These roles provide access to specific stored procedures, tables, views and functions to perform the needed actions of each role to either retrieve data or insert data to and from the Configuration Manager database. These objects are located within the Configuration Manager database under Security/Roles/Database Roles.
 
 > [!IMPORTANT]  
-> Modifying or removing these objects may cause drastic issues within a Configuration Manager environment.  We recommend you do not make any changes to these objects.
+> Modifying or removing these objects may cause drastic issues within a Configuration Manager environment. Don't change these objects. The following list is for information purposes only.
 
 ### smsdbrole_AITool
 
-Asset Intelligence Volume Licenses import. ConfigMgr grants this permission to users accounts based on RBA access to be able to import volume license to be used with Asset Intelligence.  This account could be added by a full administrator role or an Asset Manager role.
+Asset Intelligence Volume Licenses import. Configuration Manager grants this permission to users accounts based on RBA access to be able to import volume license to be used with Asset Intelligence.  This account could be added by a full administrator role or an Asset Manager role.
 
 ### smsdbrole_AIUS
 
-Asset Intelligence Update Synchronization. ConfigMgr grants the computer account that host the Asset Intelligence Synchronization Point account access to get Asset Intelligence proxy data and to view pending AI data for upload.
+Asset Intelligence Update Synchronization. Configuration Manager grants the computer account that host the Asset Intelligence Synchronization Point account access to get Asset Intelligence proxy data and to view pending AI data for upload.
 
 ### smsdbrole_AMTSP
 
 Out of Band Management. This role is used by Configuration Manager AMT role to retrieve data on devices that supported Intel AMT.
 
 > [!NOTE]  
-> This role is deprecated in newer releases of ConfigMgr.
+> This role is deprecated in newer releases of Configuration Manager.
 
 ### smsdbrole_CRP
 
-Certificate Registration Point System Center Endpoint Protection (SCEP) support. ConfigMgr grants permission to the computer account of the site system that supports the Certificate Registration Point for SCEP support for certificate signing and renewal.
+Certificate registration point to support Simple Certificate Enrollment Protocol (SCEP). Configuration Manager grants permission to the computer account of the site system that supports the Certificate Registration Point for SCEP support for certificate signing and renewal.
 
 ### smsdbrole_CRPPfx
 
-Certificate Registration Point PFX support. ConfigMgr grants permission to the computer account of the site system that supports the Certificate Registration Point configured for PFX support for signing and renewal.
+Certificate Registration Point PFX support. Configuration Manager grants permission to the computer account of the site system that supports the Certificate Registration Point configured for PFX support for signing and renewal.
 
 ### smsdbrole_DMP
 
-Device Management Point. ConfigMgr grants this permission to computer account for a Management Point that has the option, “Allow mobile devices and Mac Computer to uses this management point”, the ability to provide support for MDM enrolled devices.
+Device Management Point. Configuration Manager grants this permission to computer account for a Management Point that has the option, "Allow mobile devices and Mac Computer to uses this management point", the ability to provide support for MDM enrolled devices.
 
 ### smsdbrole_DmpConnector
 
-Service Connection Point. ConfigMgr grants this permission to the computer account that host the Service Connection Point to retrieve and provide telemetry data, manage cloud services, and retrieve service updates.
+Service Connection Point. Configuration Manager grants this permission to the computer account that host the Service Connection Point to retrieve and provide telemetry data, manage cloud services, and retrieve service updates.
 
 ### smsdbrole_DViewAccess
 
@@ -682,11 +682,11 @@ Distributed Views. Configuration Manager grants this permission to the computer 
 
 ### smsdbrole_DWSS
 
-Data Warehouse. ConfigMgr grants this permission to the computer account that host the Data Warehouse role.
+Data Warehouse. Configuration Manager grants this permission to the computer account that host the Data Warehouse role.
 
 ### smsdbrole_EnrollSvr
 
- Enrollment Point. ConfigMgr grants this permission to the computer account that host the Enrollment Point to allow for device enrollment via MDM.
+ Enrollment Point. Configuration Manager grants this permission to the computer account that host the Enrollment Point to allow for device enrollment via MDM.
 
 ### smsdbrole_extract
 
@@ -694,26 +694,26 @@ Provides access to all the extended schema views.
 
 ### smsdbrole_HMSUser
 
-Hierarchy Manager Service. ConfigMgr grants permissions this account to manage failover state messages and SQL Server Broker transactions between sites within a hierarchy.
+Hierarchy Manager Service. Configuration Manager grants permissions this account to manage failover state messages and SQL Server Broker transactions between sites within a hierarchy.
 
 > [!NOTE]  
 > The smdbrole_WebPortal role is a member of this role by default.
 
 ### smsdbrole_MCS
 
-Multicast Service. ConfigMgr grants this permission to the computer account of the Distribution Point that supports multicast.
+Multicast Service. Configuration Manager grants this permission to the computer account of the Distribution Point that supports multicast.
 
 ### smsdbrole_MP
 
-Management Point. ConfigMgr grants this permission to the computer account that host the Management Point role to provide support for the ConfigMgr clients.
+Management Point. Configuration Manager grants this permission to the computer account that host the Management Point role to provide support for the Configuration Manager clients.
 
 ### smsdbrole_MPMBAM
 
-Management Point Microsoft BitLocker Administration and Monitoring. ConfigMgr grants this permission to the computer account that host the Management Point that manages MBAM for an environment.
+Management Point Microsoft BitLocker Administration and Monitoring. Configuration Manager grants this permission to the computer account that host the Management Point that manages MBAM for an environment.
 
 ### smsdbrole_MPUserSvc
 
-Management Point Application Request. ConfigMgr grants this permission to the computer account that host the Management Point to support user-based application requests.
+Management Point Application Request. Configuration Manager grants this permission to the computer account that host the Management Point to support user-based application requests.
 
 ### smsdbrole_siteprovider
 
@@ -721,16 +721,37 @@ SMS Provider. Configuration Manager grants this permission to the computer accou
 
 ### smsdbrole_siteserver
 
-Site Server. ConfigMgr grants this permission to the computer account that host the Primary or CAS Site.
+Site Server. Configuration Manager grants this permission to the computer account that host the Primary or CAS Site.
 
 ### smsdbrole_SUP
 
-Software Update Point. ConfigMgr grants this permission to the computer account that host the Software Update Point for working with Third party updates.
+Software Update Point. Configuration Manager grants this permission to the computer account that host the Software Update Point for working with Third party updates.
 
 ### smsdbrole_WebPortal
 
-Application Catalog Web Site Point. ConfigMgr grants permission to the computer account that host the Application Catalog Web Site Point to provide user based application deployment.
+Application Catalog Web Site Point. Configuration Manager grants permission to the computer account that host the Application Catalog Web Site Point to provide user based application deployment.
 
 ### smsschm_users
 
-User Reporting access. ConfigMgr grants access to the account used for the Reporting Services point account to allow access to the SMS reporting views to display the Configuration Manager reporting data.  The data is further restricted with the use of RBA.
+User Reporting access. Configuration Manager grants access to the account used for the Reporting Services point account to allow access to the SMS reporting views to display the Configuration Manager reporting data.  The data is further restricted with the use of RBA.
+
+## Elevated permissions
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager requires some accounts to have elevated permissions for on-going operations. For example, see [Prerequisites for installing a primary site](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). The following list summarizes these permissions and the reasons why they're needed.
+
+- The computer account of the primary site server and central administration site server requires:
+
+  - Local Administrator rights on all site system servers. This permission is to manage, install, and remove system services. The site server also updates local groups on the site system when you add or remove roles.
+
+  - Sysadmin access to the SQL instance for the site database. This permission is to configure and manage SQL for the site. Configuration Manager tightly integrates with SQL, it's not just a database.
+
+- User accounts in the Full Administrator role require:
+
+  - Local Administrator rights on all site servers. This permission is to view, edit, remove, and install system services, registry keys and values, and WMI objects.
+
+  - Sysadmin access to the SQL instance for the site database. This permission is to install and update the database during setup or recovery. It's also required for SQL maintenance and operations. For example, reindexing and updating statistics.
+
+    > [!NOTE]
+    > Some organizations may choose to remove sysadmin access and only grant it when it is required. This behavior is sometimes referred to as "just-in-time (JIT) access." In this case, users with the Full Administrator role should still have access to read, update, and execute stored procedures on the Configuration Manager database. These permissions allow them to troubleshoot most issues without full sysadmin access.

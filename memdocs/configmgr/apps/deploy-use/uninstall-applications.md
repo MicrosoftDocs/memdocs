@@ -31,7 +31,7 @@ Take the following actions to uninstall an application you previously deployed.
 
 -   When you uninstall a Configuration Manager (Configuration Manager) application, any dependent applications are not automatically uninstalled.  
 
--   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, the uninstall might fail if the user’s account does not have permissions to uninstall the application.  
+-   If you deploy an application that uses an action of **Uninstall** to a user, and the application was installed for all users of the computer, the uninstall might fail if the user's account does not have permissions to uninstall the application.  
 
 -   If you remove a user or a device from a collection that has an application deployed to it, the application is not automatically removed from the device.  
 

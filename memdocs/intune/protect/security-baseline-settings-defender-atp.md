@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,29 +15,54 @@ ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
 
+
 # optional metadata
 
 #ROBOTS:
 
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
+zone_pivot_groups: atp-baseline-versions
 ---
+
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
 
 # Microsoft Defender Advanced Threat Protection baseline settings for Intune
 
 View the Microsoft Defender Advanced Threat Protection baseline settings that are supported by Microsoft Intune. The Advanced Threat Protection (ATP) baseline defaults represent the recommended configuration for ATP, and might not match baseline defaults for other security baselines.
 
-The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020.
+::: zone pivot="atp-april-2020"
+
+The details in this article apply to version 4 of the Microsoft Defender ATP baseline, which released on April 21, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+The details in this article apply to version 3 of the Microsoft Defender ATP baseline, which released on March 1, 2020. To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+
 
 ## Application Guard
 
@@ -577,7 +602,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Not configured** - The Windows default is restored, is to not block creation of child processes.
+  - **Not configured** - The Windows default is restored, which is to not block creation of child processes.
   - **User defined**
   - **Enable** (*default*) - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
@@ -635,11 +660,26 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Yes** (*default*) - All downloaded files and attachments are scanned. The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
   - **Not configured** - The setting is returned to client default, which is on, but the user can change it. To disable this setting, use a custom URI.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Block on access protection**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Yes**
+  - **Not configured** (*default*)
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Block on access protection**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Yes** (*default*)
   - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Scan browser scripts**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -760,7 +800,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Enable network protection**  
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  - **Not configured** -The setting returns to the Windows default, which is disabled.
+  - **Not configured** - The setting returns to the Windows default, which is disabled.
   - **User defined**
   - **Enable** - Network protection is enabled for all users on the system.
   - **Audit mode** (*default*) - Users aren't blocked from dangerous domains and Windows events are raised instead.
@@ -869,6 +909,8 @@ For more information, see [PassportForWork CSP](https://docs.microsoft.com/windo
     - **Not allowed**
     - **Required**
     - **Allowed** (*default*)
+
+::: zone-end
 
 ## Next steps
 

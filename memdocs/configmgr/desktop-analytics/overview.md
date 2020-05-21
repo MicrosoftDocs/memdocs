@@ -10,6 +10,7 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # What is Desktop Analytics?
@@ -88,7 +89,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
     >
     > - Use different Commercial IDs and Azure AD tenants.
-    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance.
+    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 minutes after you disconnect a hiearchy for the portal to reflect changes. 
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 
@@ -126,7 +127,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - Users of the device need one of the following licenses:
 
-  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+  - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
   - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 

@@ -8,8 +8,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,9 +48,6 @@ These settings are added to a device configuration profile in Intune, and then a
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
 
-> [!NOTE]
-> The Intune user interface (UI) is updating to a full screen experience, and may take several weeks. Until your tenant receives this update, you will have a slightly different workflow when you create or edit settings described in this article.
-
 ## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -70,9 +67,13 @@ These settings are added to a device configuration profile in Intune, and then a
 
 7. In **Configuration settings**, configure your settings:
 
-    - **Preference domain name**: Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created. Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
+    - **Preference domain name**: Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
+
+      Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
+
     - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
-    - **File contents**: The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
+
+      The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
 
     Be sure your file is formatted correctly. The file should only have key value pairs, and shouldn't be wrapped in `<dict>`, `<plist>`, or `<xml>` tags. For example, your property list file should be similar to the following file:
 
@@ -97,6 +98,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 For more information on preference files for Microsoft Edge, see [Configure Microsoft Edge policy settings on macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

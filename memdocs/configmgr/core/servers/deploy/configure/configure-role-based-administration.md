@@ -117,7 +117,7 @@ In Configuration Manager, role-based administration combines security roles, sec
     > [!IMPORTANT]  
     > - Existing security roles will automatically get **Folder Class** permissions added when you install Configuration Manager version 1906. You'll need to add **Folder Class** permissions for any new security roles and verify existing roles have the appropriate permissions for your environment.
     > 
-    > - An item is searchable in folder outside of a user’s security scope if that user shares a security scope with the person who created the object. <!--5602690-->
+    > - An item is searchable in folder outside of a user's security scope if that user shares a security scope with the person who created the object. <!--5602690-->
 
 ## <a name="BKMK_ConfigColl"></a> Configure collections to manage security
 

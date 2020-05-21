@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 01/29/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -68,7 +68,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](../../core/clients/deploy/about-client-settings.md#delivery-optimization) when changing your [software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) for delta content.
 > - Delivery Optimization can't be used for Office 365 client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Office 365 clients. You can deregister Office COM to allow the use of Delivery Optimization for Office 365 updates. When Office COM is disabled, software updates for Office 365 are managed by the default Office Automatic Updates 2.0 scheduled task. This means that Configuration Manager doesn't dictate or monitor the installation process for Office 365 updates. Configuration Manager will continue to collect information from hardware inventory to populate Office 365 Client Management Dashboard in the console. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
-> - When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](../../core/clients/deploy/about-client-settings.md#delivery-optimization) is enabled. <!--6598587-->
+> - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
 
 
 ### Configuration Manager peer cache
@@ -128,7 +128,7 @@ The Windows update agent (WUA) requests express content first. If it fails to in
 
 3. CBS then asks WUA to download the required ranges from one or more express .psf files.  
 
-4. Delivery Optimization coordinates with Configuration Manager and downloads the ranges from a local distribution point or peers if available. If Delivery Optimization is disabled, the Background Intelligent Transfer Service (BITS) is used in the same manner with Configuration Manager coordinating peer cache sources. Delivery Optimization or BITS passes the ranges to WUA, which makes them available to CBS to apply and install.  
+4. If Delivery Optimization is enabled and peers are discovered to have the needed ranges, the client will download from peers independently of the ConfigMgr client. If Delivery Optimization is disabled or no peers have the needed ranges, the ConfigMgr client will download these ranges from a local distribution point (or a peer or Microsoft Update). The ranges are passed to the Windows Update Agent which makes them available to CBS to apply the ranges.
 
 
 #### Why are the express files (.psf) so large when stored on Configuration Manager peer sources in the ccmcache folder?

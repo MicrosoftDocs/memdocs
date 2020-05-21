@@ -59,9 +59,10 @@ If not already present in your environment, during this tutorial you'll:
 
 Throughout this tutorial, use the following permissions to complete tasks:
 
-- An account that is a *global administrator* in Azure Active Directory (Azure AD) 
 - An account that is a *domain admin* on your on-premises infrastructure  
 - An account that is a *full administrator* for *all* scopes in Configuration Manager
+- An account that is a *global administrator* in Azure Active Directory (Azure AD)
+   - Make sure you've assigned an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized". <!--mem issue 169-->
 
 ## Set up hybrid Azure AD
 

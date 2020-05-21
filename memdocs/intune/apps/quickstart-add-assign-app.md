@@ -50,7 +50,7 @@ An app can be included so that Intune can manage aspects of the app.
 Use the following steps to add an app to Intune:
 
 1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All apps** > **Add**. 
-2. Select **Windows 10** in the **Office 365 Suite** section of the **Select app type** pane.
+2. Select **Windows 10** in the **Microsoft 365 Apps** section of the **Select app type** pane.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** page.
 5. Click **Next** to display the **Configure app suite** page.
@@ -92,7 +92,7 @@ You must install and use the Company Portal app to install the **Contoso's To-Do
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
-4. Click the app that you added using Intune. In this quickstart you added the **Microsoft Office 365 app suite** app.
+4. Click the app that you added using Intune. In this quickstart you added the **Microsoft 365 Apps** suite.
 
     > [!NOTE]
     > If you did not successfully assign any apps to the Intune user, you will see the following message:

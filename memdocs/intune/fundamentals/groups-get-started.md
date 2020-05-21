@@ -88,7 +88,7 @@ Attributes are device properties that may be used in defining groups. This table
 |Manager attribute for user groups|Advanced Rule for *manager* attribute in dynamic groups|
 |All users from the parent user group|Static group with that group as a member|
 |All mobile devices from the parent device group|Static group with that group as a member|
-|All mobile devices managed by Intune|Management Type attribute with ‘MDM’ as value for dynamic group|
+|All mobile devices managed by Intune|Management Type attribute with 'MDM' as value for dynamic group|
 |Nested groups within static groups |Nested groups within static groups|
 |Nested groups within dynamic groups|Dynamic group with one level of nesting|
 

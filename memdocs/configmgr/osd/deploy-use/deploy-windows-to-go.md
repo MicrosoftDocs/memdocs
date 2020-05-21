@@ -20,7 +20,7 @@ manager: dougeby
 
 This topic provides the steps to provision Windows To Go in Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
 
- For more information about Windows To Go, see [Windows To Go feature overview](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ For more information about Windows To Go, see [Windows To Go feature overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## Provision Windows To Go  
  Windows To Go is an operating system stored on a USB-connected external drive. You can provision the Windows To Go drive much like you provision other operating system deployments. However, because Windows To Go is designed to be a user-centric and highly mobile solution, you must take a slightly different approach to provisioning these drives.  

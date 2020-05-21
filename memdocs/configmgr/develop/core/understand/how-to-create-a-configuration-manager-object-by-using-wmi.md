@@ -13,21 +13,21 @@ manager: dougeby
 
 ---
 # How to Create a Configuration Manager Object by Using WMI
-You create a Configuration Manager object, in Configuration Manager, by calling the [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) object [SpawnInstance_](https://msdn.microsoft.com/library/aa393789.aspx) method.  
+You create a Configuration Manager object, in Configuration Manager, by calling the [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) object [SpawnInstance_](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject-spawninstance-) method.  
 
- The [SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx) is the class definition for the object type that you want to create. For example, [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md). You get the [SWBemObject](https://msdn.microsoft.com/library/aa393741.aspx) by calling the [SWBemServices](https://msdn.microsoft.com/library/aa393854.aspx) object [Get](https://msdn.microsoft.com/library/aa393868.aspx) method.  
+ The [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) is the class definition for the object type that you want to create. For example, [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md). You get the [SWBemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) by calling the [SWBemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) method.  
 
 ### To create a Configuration Manager object  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx) object you obtain from step one, call [Get](https://msdn.microsoft.com/library/aa393868.aspx) to get the [SWBemObject](https://msdn.microsoft.com/library/aa393741.aspx) for the Configuration Manager object class definition.  
+2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) to get the [SWBemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) for the Configuration Manager object class definition.  
 
-3.  Call [SpawnInstance_](https://msdn.microsoft.com/library/aa393789.aspx) on the SWbemObject to create the new object. An SWbemObject is returned for the new object.  
+3.  Call [SpawnInstance_](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject-spawninstance-) on the SWbemObject to create the new object. An SWbemObject is returned for the new object.  
 
 4.  Using the SWbemObject returned from the call to SpawnInstance, populate the object properties.  
 
-5.  Call [Put_](https://msdn.microsoft.com/library/aa393783.aspx) to commit the new object to the SMS Provider.  
+5.  Call [Put_](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject-put-) to commit the new object to the SMS Provider.  
 
 ## Example  
  The following VBScript code example creates an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object.  
@@ -68,12 +68,12 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|[SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`Connection`|[SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
 
 ## See Also  
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
  [Objects overview](configuration-manager-objects-overview.md)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   

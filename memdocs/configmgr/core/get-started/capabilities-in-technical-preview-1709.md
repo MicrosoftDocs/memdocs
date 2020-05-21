@@ -40,7 +40,7 @@ This article introduces the features that are available in the Technical Preview
 
 ## Improved VPN Profile experience in Configuration Manager console
 <!-- 1313282 -->
-With this release, we’ve updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. Specifically:
+With this release, we've updated the VPN profile wizard and properties pages to display settings appropriate for the selected platform. Specifically:
 
 - Each platform has its own workflow, meaning that new VPN profiles contain only the setting supported by the platform.
 - The **Supported Platforms** pages now appear after the **General** page.  You now choose the platform before setting property values.
@@ -56,7 +56,7 @@ To minimize compatibility risk, existing VPN profiles are unchanged.  When you e
 
 ### Try it out!
 
-Create a new VPN profile using the usual process. Notice that the first page in the VPN profile wizard’s options have changed.
+Create a new VPN profile using the usual process. Notice that the first page in the VPN profile wizard's options have changed.
 
 1. Go to **Assets and Compliance** > **Overview** > **Compliance Settings** > **Company Resource Access** > **VPN Profiles** and then choose **Create VPN Profile**.
 2. Enter a name on the **General** page and choose one of the following options under **Specify the type of VPN profile you want to create**:
@@ -75,7 +75,7 @@ As you select different platforms, notice that only the settings relevant to the
 
 ## Co-management for Windows 10 devices    
 <!-- 1350871 -->
-Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It’s a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
+Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It's a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
 
 ### Prerequisites
 You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
@@ -148,7 +148,7 @@ You can enable co-management on Windows 10 devices that are joined to AD and Azu
 #### Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;”
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;"
 
 For example, if you had the following values:
 
@@ -169,7 +169,7 @@ For example, if you had the following values:
 
 You would use the following command line:
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
+ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
 >You can find the command-line parameters for your site by using the following steps:     

@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/15/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -221,6 +221,7 @@ The following table lists CMG support for Configuration Manager features:
 | Mac, Linux, and UNIX clients     | ![Not supported](media/Red_X.png) |
 | Peer cache     | ![Not supported](media/Red_X.png) |
 | On-premises MDM     | ![Not supported](media/Red_X.png) |
+| BitLocker Management     | ![Not supported](media/Red_X.png) |
 
 |Key|
 |--|
@@ -282,7 +283,7 @@ CMG uses the following Azure components, which incur charges to the Azure subscr
 - Internet-based clients get Microsoft software update content from Windows Update at no charge. Don't distribute update packages with Microsoft update content to a cloud distribution point, otherwise you may incur storage and data egress costs.  
 
 - For any other necessary content, such as applications or third-party software updates, you must distribute to a cloud distribution point. Currently, the CMG supports only the cloud distribution point for sending content to clients.
-   - When using a CMG for content storage, the content for third-party updates won't download to clients if [Delivery Optimization](../../deploy/about-client-settings.md#delivery-optimization) is enabled. <!--6598587--> 
+   - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 - For more information, see the cost of using [cloud distribution points](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_cost).  
 

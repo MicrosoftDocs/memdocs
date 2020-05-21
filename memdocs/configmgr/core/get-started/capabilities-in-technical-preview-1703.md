@@ -55,7 +55,7 @@ Use the following URL format to open Software Center to a particular application
 
 1. In the Configuration Manager console, click **Software Library**.
 2. In the Software Library workspace, expand **Application Management**, and then click **Applications**.
-3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You’ll see that the unique ID of each application is now shown in the list.
+3. In the **Applications** view, right-click one of the column headers, and then, from the list, select **CI Unique ID**. You'll see that the unique ID of each application is now shown in the list.
 4. Note the **CI Unique ID** of the application you want to provide a link to, for example:
 **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5. Then, remove any text following the application GUID, in this case **/2**. This leaves you with the application identifier.
@@ -129,7 +129,7 @@ You can view and edit the properties of a cloud service to modify the configurat
 In the console go to **Administration** > **Overview** > **Cloud Services Management** > **Azure** > **Azure Services**, and then choose **Configure Azure Services**, select a Cloud Service and then choose **Properties**.
 
 ## Convert from BIOS to UEFI during an in-place upgrade
-Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## Collapsible task sequence groups
 This version introduces the ability to expand and collapse task sequence groups. You can expand or collapse individual groups or expand or collapse all groups at once.

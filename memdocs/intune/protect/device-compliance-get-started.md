@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,17 +68,23 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## Device compliance policies work with Azure AD
 
-Intune uses Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) (opens another docs web site) to help enforce compliance. When a device enrolls in Intune, the Azure AD registration process starts, and device information is updated in Azure AD. One key piece of information is the device compliance status. This compliance status is used by Conditional Access policies to block or allow access to e-mail and other organization resources.
+Intune uses [Conditional Access](../protect/conditional-access.md) to help enforce compliance. Conditional Access is an Azure Active Directory (Azure AD) technology.
 
-- [What is device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) is a great resource on why and how devices are registered in Azure AD.
+When a device enrolls in Intune, the Azure AD registration process starts, and device information is updated in Azure AD. One key piece of information is the device compliance status. This compliance status is used by Conditional Access policies to block or allow access to e-mail and other organization resources.
 
-- [Conditional Access](conditional-access.md) and [common ways to use Conditional Access](conditional-access-intune-common-ways-use.md) describe this feature as it relates to Intune.
+Learn about Conditional Access and Intune:
+
+- [Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)
+
+Learn about Conditional Access in the Azure AD documentation:
+  - [What is Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [What is a device identity](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## Ways to use device compliance policies
 
 ### With Conditional Access
 
-For devices that comply to policy rules, you can give those devices access to email and other organization resources. If the devices don't comply to policy rules, then they don't get access to organization resources. This is Conditional Access.
+For devices that comply with policy rules, you can give those devices access to email and other organization resources. If the devices don't comply with policy rules, then they don't get access to organization resources. This is Conditional Access.
 
 ### Without Conditional Access
 
@@ -86,26 +92,26 @@ You can also use device compliance policies without any Conditional Access. When
 
 ## Ways to deploy device compliance policies
 
-You can deploy compliance policy to users in user groups or devices in device groups. When a compliance policy is deployed to a user, all of the user's devices are checked for compliance. On Windows 10 version 1803 and newer devices, it's recommended to deploy to device groups *if* the primary user didn't enroll the device. Using device groups in this scenario helps with compliance reporting.
+You can deploy compliance policy to users in user groups or devices in device groups. When a compliance policy is deployed to a user, all of the user's devices are checked for compliance. Using device groups in this scenario helps with compliance reporting.
 
 Intune also includes a set of built-in compliance policy settings. The following built-in policies get evaluated on all devices enrolled in Intune:
 
-- **Mark devices with no compliance policy assigned as**: This property has two values:
+- **Mark devices with no compliance policy assigned as**: This is a default action for noncompliance. This property has two values:
 
   - **Compliant** (*default*): security feature off
   - **Not compliant**: security feature on
 
   If a device doesn't have a compliance policy assigned, then this device is considered compliant by default. If you use Conditional Access with compliance policies, we recommended you change the default setting to **Not compliant**. If an end user isn't compliant because a policy isn't assigned, then the [Company Portal app](../apps/company-portal-app.md) shows `No compliance policies have been assigned`.
 
-- **Enhanced jailbreak detection**: When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device's location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
+- **Enhanced jailbreak detection** (*Applies to iOS/iPadOS*): When enabled, this setting causes jailbroken device status to happen more frequently on iOS/iPadOS devices. This setting only affects devices that are targeted with a compliance policy that blocks jailbroken devices. Enabling this property uses the device's location services and may impact battery usage. The user location data isn't stored by Intune and is only used to trigger jailbreak detection more frequently in the background. 
 
   Enabling this setting requires devices to:
   - Enable location services at the OS level.
   - Always allow the Company Portal to use location services.
 
-  Evaluation is triggered by opening the Company Portal app or physically moving the device a significant distance of approximately 500 meters or more. On iOS 13 and up, this feature will require users to select Always Allow whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users do not always allow location access and have a policy with this setting configured, their device will be marked noncompliant. Note that Intune cannot guarantee that each significant location change will ensure a jailbreak detection check as this depends on a device's network connection at the time.
+  Enhanced detection works through the location services. The evaluation is triggered by opening the Company Portal app or physically moving the device a significant distance of approximately 500 meters or more. On iOS 13 and up, this feature requires users to select Always Allow whenever the device prompts them to continue allowing Company Portal to use their location in the background. If users do not always allow location access and have a policy with this setting configured, their device will be marked noncompliant. Note that Intune cannot guarantee that each significant location change will ensure a jailbreak detection check as this depends on a device's network connection at the time.
 
-- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The minimum value is 1 day.
+- **Compliance status validity period (days)**: Enter the time period that devices report the status for all received compliance policies. Devices that don't return the status within this time period are treated as noncompliant. The default value is 30 days. The maximum value is 120 days. The minimum value is 1 day.
 
   This setting shows as the **Is active** default compliance policy (**Devices** > **Monitor** > **Setting compliance**). The background task for this policy runs once a day.
 

@@ -190,6 +190,19 @@ For example, you used MBAM to encrypt the drive without PIN protection, but the 
 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
 
+## Co-management and Intune
+
+<!-- SCCMDocs#2321 -->
+
+The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
+
+When you switch encryption management authorities, plan for [re-encryption](#re-encryption).
+
+For more information about managing BitLocker with Intune, see the following articles:
+
+- [Use device encryption with Intune](../../../../intune/protect/encrypt-devices.md)
+- [Troubleshoot BitLocker policies in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
+
 ## Next steps
 
 [Set up BitLocker reports and portals](setup-websites.md)

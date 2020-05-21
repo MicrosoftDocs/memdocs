@@ -10,8 +10,6 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # The content library in Configuration Manager
@@ -87,6 +85,8 @@ A remote content library is a prerequisite for [site server high availability](.
 - The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
 
 - The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
+
+- The remote system for the content library needs to be in a trusted domain.
 
 > [!Important]  
 > Don't reuse a shared network location between multiple sites. For example, don't use the same path for both a central administration site and a child primary site. This configuration has the potential to corrupt the content library, and require you to rebuild it.<!--SCCMDocs-pr issue 2764-->  
@@ -193,3 +193,5 @@ The following tips may help you troubleshoot issues with the content library:
 - To see if there are any hash mismatches, validate the package from the Configuration Manager console.  
 
 - As a last option, redistribute the content. This action should resolve most issues.  
+
+For more in-depth information, see [Understanding and troubleshooting content distribution in Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).

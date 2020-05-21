@@ -173,7 +173,7 @@ In general, SQL Always On has negligible effect on performance of the system whe
 
 ### Should I enable SQL compression on my database?
 
-SQL compression isn't recommended for the Configuration Manager database. While there are no functional issues with enabling compression on a Configuration Manager database, test results don’t show much size savings compared to the potential sizable performance impact to the system.
+SQL compression isn't recommended for the Configuration Manager database. While there are no functional issues with enabling compression on a Configuration Manager database, test results don't show much size savings compared to the potential sizable performance impact to the system.
 
 ### Should I enable SQL encryption on my database?
 
@@ -209,7 +209,7 @@ Leaving your setting at 0 (use all available processors) is optimal for overall 
 
 Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
 
-On SQL servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site’s SQL server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL server for a 100,000 client site needs at least 12 cores. If your SQL server has 16 cores, start testing your MaxDOP setting with a value of 12.
+On SQL servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site's SQL server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL server for a 100,000 client site needs at least 12 cores. If your SQL server has 16 cores, start testing your MaxDOP setting with a value of 12.
 
 ## Other common performance-related questions
 

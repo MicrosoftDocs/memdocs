@@ -108,4 +108,4 @@ The app is displayed on the **Apps** node of the **Apps** workspace.
 
 After you've created an app, the next step is to deploy it. To find out more, see [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
-If you want to read more information about tips and tricks to deploy software to Windows PCs, see the blog post [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929).
+If you want to read more information about tips and tricks to deploy software to Windows PCs, see the blog post [Support Tip: Best Practices for Intune Software Distribution to PC's](https://support.microsoft.com/en-US/help/2583929).

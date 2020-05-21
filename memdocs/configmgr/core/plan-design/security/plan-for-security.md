@@ -389,7 +389,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - Reduce infrastructure requirements. For example, [Software Center using the management point](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex) instead of the application catalog  
 
-- [Manage Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
+- [Manage Microsoft 365 Apps for enterprise](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
 
 
 **Server**  

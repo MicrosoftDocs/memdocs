@@ -24,8 +24,8 @@ Update 1706 for Configuration Manager current branch is available as an in-conso
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Installing updates at sites](../../servers/manage/updates.md)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
 
 The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.  
@@ -243,7 +243,7 @@ Windows Analytics is a set of solutions that allow you to form insight into the 
 
 ### Updates to Android for Work sharing configuration
 <!-- 1338403 -->
-With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We’ve also added a custom setting to block copy-paste between work and personal profiles.
+With this release, the values for the **Allow data sharing between work and personal profile** setting in the **Work Profile** setting group have been updated. We've also added a custom setting to block copy-paste between work and personal profiles.
 
 
 ### Android and iOS enrollment restrictions
@@ -254,7 +254,7 @@ With this release, you can now specify that users cannot enroll personal Android
 
 ### Include trust for specific files and folders in a Device Guard policy
 <!--1324676-->
-In this release, we’ve added further capabilities to Device Guard policy management.
+In this release, we've added further capabilities to Device Guard policy management.
 
 You can now optionally add trust for specific files for folders in a Device Guard policy. This lets you:
 

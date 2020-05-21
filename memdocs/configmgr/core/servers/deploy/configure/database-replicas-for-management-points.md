@@ -2,7 +2,7 @@
 title: "Management point database replicas"
 titleSuffix: "Configuration Manager"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -53,7 +53,7 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 
     -   The site database must **publish** the database replica, and each remote database replica server must **subscribe** to the published data.  
 
-    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   Both the SQL Server that hosts the  site database and that hosts a database replica must be configured to support a **Max Text Repl Size** of 2 GB. For an example of how to configure this for SQL Server 2012, see [Configure the max text repl size Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Self-signed certificate:** To configure a database replica, you must create a self-signed certificate on the database replica server and make this certificate available to each management point that will use that database replica server.  
 
@@ -78,6 +78,8 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 -   **Upgrades to Configuration Manager current branch**: Before you upgrade a site, either from System Center 2012 Configuration Manager to Configuration Manager current branch or updating Configuration Manager current branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
 
 -   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
+
+- User deployments in Software Center won't work against a management point using a SQL replica. <!--sccmdocs-1011-->
 
 ##  <a name="BKMK_DBReplica_Config"></a> Configure database replicas  
 To use configure a database replica, the following steps are required:  
@@ -168,7 +170,7 @@ Use the following procedure as an example of how to configure a database replica
         -   If the SQL Server Agent runs by using a different account, select **Run under the following Windows account**, and then configure that account. You can specify a Windows account or a SQL Server account.  
 
         > [!IMPORTANT]  
-        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](https://go.microsoft.com/fwlink/p/?LinkId=238463) in the SQL Server TechNet Library.  
+        >  You must grant the account that runs the Distribution Agent permissions to the publisher as a pull subscription. For information about configuring these permissions, see [Distribution Agent Security](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - For **Connect to the Distributor**, select **By impersonating the process account**.  
 
@@ -453,7 +455,7 @@ To support client notification with a database replica for a management point, y
 -   For each subsequent  database replica you use this script to configure, update the Friendly name for the certificate.  To do so, edit the line **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** and replace **ConfigMgr SQL Server Identification Certificate** with a new name, like  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="BKMK_DBReplicaOps"></a> Manage database replica configurations  
- When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For example, if you use SQL Server 2008 R2, see [How to: Delete a Publication (Replication Transact-SQL Programming)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ When you use a database replica at a site, use the information in the following sections to supplement the process of uninstalling a database replica, uninstalling a site that uses a database replica, or moving the site database to a new installation of SQL Server. When you use information in the following sections to delete publications, use the guidance for deleting transactional replication for the version of SQL Server that you use for the database replica. For more information, see [Delete a Publication](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  After you restore a site database that was configured for database replicas, before you can use the database replicas you must reconfigure each database replica, recreating both the publications and subscriptions.  

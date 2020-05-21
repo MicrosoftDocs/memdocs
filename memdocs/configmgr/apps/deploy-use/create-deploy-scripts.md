@@ -2,7 +2,7 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run PowerShell scripts on client devices.
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -95,7 +95,7 @@ This approval is primarily used for the testing phase of script development.
 >As a best practice, you shouldn't allow a script author to approve their own scripts. It should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
-*(Introduced with version 1710)*  
+  
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
@@ -165,11 +165,11 @@ The three security roles used for running scripts aren't created by default in C
 5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
 
 > [!IMPORTANT]
-> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices, starting in Configuration Manager version 1710. The [pending restart column](../../core/clients/manage/manage-clients.md#restart-clients) can help identify devices that need a restart. 
+> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices. The [pending restart column](../../core/clients/manage/manage-clients.md#restart-clients) can help identify devices that need a restart. 
 > <!--SMS503978  -->
 
 ## Script parameters
-*(Introduced with version 1710)*  
+
 Adding parameters to a script provides increased flexibility for your work. You can include up to 10 parameters. The following outlines the Run Scripts feature's current capability with script parameters for; *String*, *Integer* data types. Lists of preset values are also available. If your script has unsupported data types, you get a warning.
 
 In the **Create Script** dialog, click **Script Parameters** under **Script**.
@@ -177,9 +177,8 @@ In the **Create Script** dialog, click **Script Parameters** under **Script**.
 Each of your script's parameters has its own dialog for adding further details and validation. If there's a default parameter in the script, it will be enumerated in the parameter UI and you can set it. Configuration Manager won't overwrite the default value since it will never modify the script directly. You can think of this as "pre-populated suggested values" are provided in the UI, but Configuration Manager doesn't provide access to "default" values at run-time. This can be worked around by editing the script to have the correct defaults. <!--17694323-->
 
 >[!IMPORTANT]
-> Parameter values can't contain an apostrophe. </br></br>
-> There is a known issue in Configuration Manager version 1802 where parameters with spaces don't get passed to the script properly. If a space is used in the parameter, only the first item in the parameter is passed to the script and everything after the space is not passed. Admins can script around this by substituting alternate characters for spaces and converting them, or with other methods.
-
+> Parameter values can't contain a single quote. </br></br>
+> There is a known issue where parameter values that include or are enclosed in single quotes don't get passed to the script properly. When specifying default parameter values containing a space within a script, use double quotes instead. When specifying default parameter values during creation or execution of a **Script**, surrounding the default value in either double or single quotes is not necessary regardless of whether the value contains a space or not.
 
 ### Parameter validation
 
@@ -279,22 +278,31 @@ The script is executed as the *system* or *computer* account on the targeted cli
 
 ## Script monitoring
 
-After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. Beginning with version 1710, you're both able to monitor a script in real time as it executes, and you can also return to a report for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
+After you have initiated running a script on a collection of devices, use the following procedure to monitor the operation. You are able to monitor a script in real time as it executes, and later return to the status and results for a given Run Script execution. Script status data is cleaned up as part of the [Delete Aged Client Operations maintenance task](../../core/servers/manage/reference-for-maintenance-tasks.md) or deletion of the script.<br>
 
 ![Script monitor - Script Run Status](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. In the Configuration Manager console, click **Monitoring**.
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
-    - Beginning in Configuration Manager 1802, script output is truncated to 4 KB to allow for better display experience.  <!--510013-->
-   
+
+ 
    ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
 
-## Script output in 1810
+## Script output
 
-You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
+Client's return script output using JSON formatting by piping the script's results to the [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
 
-### Example: Script output is valid JSON
+- Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
+- Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
+- Convert an enum object to a string value in scripts so they're properly displayed in JSON formatting. <!--508377-->
+
+   ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
+
+You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text or the output can be converted to JSON using the [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
+
+### Example: Script output is convertible to valid JSON
+
 Command: `$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -304,34 +312,14 @@ Major  Minor  Build  Revision
 ```
 
 ### Example: Script output isn't valid JSON
+
 Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- 1810 clients return output less than 80 KB to the site over a fast communication channel. This change increases the performance of viewing script or query output.  
-
-  - If the script or query output is greater than 80 KB, the client sends the data via a state message.  
-  - Pre-1802 clients continue to use state messages.
-
-## Script output pre-1810
-
-- Starting in Configuration Manager version 1802, script output returns using JSON formatting. This format consistently returns a readable script output. 
-- Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
-- Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
-- Some functionality with script output formatting isn't available when running Configuration Manager version 1802 or later with a down-level version of the client. <!--508487-->
-    - When you have a pre-1802 Configuration Manager client, you get a string output.
-    -  For Configuration Manager client version 1802 and above, you get JSON formatting.
-        - For example, you might get results that say TEXT on one client version and "TEXT" (the output is surrounded in double quotes) on other version, which will be put in chart as two different categories.
-        - If you need to work around this behavior, consider running script against two different collections. One with pre-1802 clients and another with 1802 and higher clients. Or, you can convert an enum object to a string value in scripts so they're properly displayed in JSON formatting. 
-- Convert an enum object to a string value in scripts so they're properly displayed in JSON formatting. <!--508377-->
-
-   ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
-
 ## Log files
-
-Starting in version 1810, additional logging was added for troubleshooting.
 
 - On the client, by default in C:\Windows\CCM\logs:  
   - **Scripts.log**  

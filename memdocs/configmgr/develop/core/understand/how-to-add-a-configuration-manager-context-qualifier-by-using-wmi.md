@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Add a Configuration Manager Context Qualifier by Using WMI
-In Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)) or object ([SWbemObject](https://msdn.microsoft.com/library/aa393741.aspx)) by creating a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set as a parameter to connection and object methods.  
+In Configuration Manager, you add context qualifiers to a connection ([SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)) or object ([SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)) by creating a [SWbemNamedValueSet](https://docs.microsoft.com/windows/win32/wmisdk/swbemnamedvalueset) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](https://docs.microsoft.com/windows/win32/wmisdk/swbemnamedvalueset) value set as a parameter to connection and object methods.  
 
  in Configuration Manager, you can provide your application name (ApplicationName), computer name (MachineName) and locale identifier (LocaleID).  
 
@@ -23,12 +23,12 @@ In Configuration Manager, you add context qualifiers to a connection ([SWbemServ
 
 1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
 
-2.  Create a [WbemScripting.SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) object and add the desired context qualifiers.  
+2.  Create a [WbemScripting.SWbemNamedValueSet](https://docs.microsoft.com/windows/win32/wmisdk/swbemnamedvalueset) object and add the desired context qualifiers.  
 
-3.  Use the [SWbemNamedValue](https://msdn.microsoft.com/library/aa393731.aspx) value set you created in step two to pass context qualifiers to connection and object manipulation calls.  
+3.  Use the [SWbemNamedValue](https://docs.microsoft.com/windows/win32/wmisdk/swbemnamedvalue) value set you created in step two to pass context qualifiers to connection and object manipulation calls.  
 
 ## Example  
- The following VBScript example creates a [SWbemNamedValueSet](https://msdn.microsoft.com/library/aa393732.aspx) value set and adds the supplied context qualifiers. The following code example demonstrates how to call the method for use in an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) package object **Put** method call. For more information about Configuration Manager objects, see [Objects overview](configuration-manager-objects-overview.md).  
+ The following VBScript example creates a [SWbemNamedValueSet](https://docs.microsoft.com/windows/win32/wmisdk/swbemnamedvalueset) value set and adds the supplied context qualifiers. The following code example demonstrates how to call the method for use in an [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) package object **Put** method call. For more information about Configuration Manager objects, see [Objects overview](configuration-manager-objects-overview.md).  
 
  `Dim context`  
 
@@ -83,4 +83,4 @@ End Function
  [Objects overview](configuration-manager-objects-overview.md)
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)

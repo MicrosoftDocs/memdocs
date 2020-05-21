@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,7 +52,7 @@ Be sure you have the appropriate role to assign profiles. For more information, 
 3. Select the profile you want to assign > **Assignments**.
 4. Choose to **Include** groups or **Exclude** groups, and then select your groups. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-    ![Screenshot of options to include or exclude groups from a profile assignment](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot of options to include or exclude groups from a profile assignment in Microsoft Intune":::
 
 5. **Save** your changes.
 
@@ -93,7 +93,7 @@ To summarize, use device groups when you don't care who's signed in on the devic
 
 ### User groups
 
-Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It’s normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
+Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It's normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
 
 For example:
 
@@ -113,7 +113,7 @@ As a best practice, create and assign profiles specifically for your user groups
 
 When you assign your profiles, use the following table when including and excluding groups. A checkmark means that assignment is supported:
 
-![Supported options include or exclude groups from a profile assignment](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Supported options include or exclude groups from a profile assignment":::
 
 ### What you should know
 

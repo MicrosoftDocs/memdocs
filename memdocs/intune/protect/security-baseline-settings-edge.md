@@ -21,7 +21,7 @@ zone_pivot_groups: edge-baseline-versions
 
 #audience:
 
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,6 +48,11 @@ View the Microsoft Edge web browser baseline settings that are supported by Micr
 
 > [!NOTE]
 > The Microsoft Edge baseline for October 2019 is in Public Preview.
+
+::: zone-end
+::: zone pivot="edge-april-2020"
+
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline.
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"

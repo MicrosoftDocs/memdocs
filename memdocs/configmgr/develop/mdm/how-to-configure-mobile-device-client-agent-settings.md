@@ -16,7 +16,7 @@ manager: dougeby
 You configure the Mobile Device Client Agent settings, in Configuration Manager, by modifying the site control file.  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
+> This article only applies to the mobile device legacy client. For more information on the mobile device legacy client platforms, see [Supported configurations](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-ce-computers).
 
 ### To configure the Mobile Device Client Agent settings  
 
@@ -235,7 +235,7 @@ public void ConfigureMobileDeviceClientAgentSettings(WqlConnectionManager connec
 ||||  
 |-|-|-|  
 |Parameter|Type|Description|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`newPollInterval`|-   Managed: `String`<br />-   VBScript: `String`|The interval that the client tries to contact the server.<br /><br /> The format of the string must be:<br /><br /> Years-months-days hours:minutes:seconds<br /><br /> "0000-00-00 00:00:00"|  

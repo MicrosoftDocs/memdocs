@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -153,7 +153,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
 
    ![Microsoft Intune Certificate Connector download](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. After the download completes, sign in to the server. Then:
 
     1. Be sure .NET 4.5 Framework or higher is installed, as it's required by the NDES Certificate connector. .NET 4.5 Framework is automatically included with Windows Server 2012 R2 and newer versions.
@@ -204,7 +204,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
@@ -266,7 +266,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile.For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 

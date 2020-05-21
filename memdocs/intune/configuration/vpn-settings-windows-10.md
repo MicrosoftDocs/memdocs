@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,7 @@ Depending on the settings you choose, not all values may be configurable.
   - **PPTP**
 
   When you choose a VPN connection type, you may also be asked for the following settings:  
-  - **Always On**: Choose **Enable** to automatically connect to the VPN connection when the following events happen:
+  - **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
     - Users sign into their devices
     - The network on the device changes
     - The screen on the device turns back on after being turned off
@@ -118,10 +118,11 @@ For more information about creating custom EAP XML, see [EAP configuration](http
 
   - **Associate a WIP with this connection**: Enter a **WIP domain for this connection**
   - **Associate apps with this connection**: You can **Restrict VPN connection to these apps**, and then add **Associated Apps**. The apps you enter automatically use the VPN connection. The type of app determines the app identifier. For a universal app, enter the package family name. For a desktop app, enter the file path of the app.
-  >[!IMPORTANT]
-  >We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
 
-- **Network traffic rules for this VPN connection**: Select which protocols, and which local & remote port and address ranges, are enabled for the VPN connection. If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled. After you create a rule, the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
+  > [!IMPORTANT]
+  > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
+
+- **Network traffic rules for this VPN connection**: Select the protocols, and the local & remote port and address ranges, are enabled for the VPN connection. If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled. After you create a rule, the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
 
 ## Conditional Access
 

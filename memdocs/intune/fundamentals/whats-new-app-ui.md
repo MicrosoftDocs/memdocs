@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020 
+ms.date: 05/08/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,6 +39,26 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 
 
+## Week of May 4, 2020  
+### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
+We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. 
+
+![Example image of Company Portal, Devices tab prompt to open badged version of Google Play.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Users will also see a new **Get Apps** link in the Company Portal drawer on the left. 
+
+![Example image Company Portal left-hand drawer, highlighting Get apps menu item.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+To make way for these new and improved experiences, the **APPS** tab shown in the following image has been removed.  
+
+![Example image of the now removed Company Portal, Apps tab.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## Week of March 2, 2020   
 ### Improved sign-in experience in Company Portal for Android   
 We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. To see all Company Portal for Android enrollment instructions, go to [Enroll your Android device](../user-help/enroll-device-android-company-portal.md) or [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).   
@@ -47,7 +67,7 @@ We've updated the layout of several sign-in screens in the Company Portal app fo
 |Updated|Previous|   
 |---|---|   
 |![Example image of new Company Portal sign in screen, sign in button.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Example image of previous Company Portal sign in page, showing busier design.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Example image of new sign-in progress screen, showing one progress bar.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Example image of previous sign-in progress screen, showing a busier design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Example image of new sign-in progress screen, showing one progress bar.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Example image of previous sign-in progress screen, showing a busier design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## Week of February 3, 2020
 
 ### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
@@ -480,7 +500,7 @@ The device can still be enrolled into full management by tapping on the **action
 
 ### Improvements to app syncing with Windows 10 Creators Update <!--676505-->
 
-The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
+The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
 
 ![An image of the Windows 10 Company Portal app, where the download of Microsoft Word is in a pending state from the Company Portal's app store.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
@@ -620,6 +640,6 @@ These are the plans for ways we will be improving the user experience by updatin
 
 
 ## See also
-* [Microsoft Intune Blog](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Cloud Platform roadmap](https://www.microsoft.com/cloud-platform/roadmap)
 * [What's new in Intune](whats-new.md)

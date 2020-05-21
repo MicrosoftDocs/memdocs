@@ -59,7 +59,7 @@ Configuration Manager is a configuration management product that requires server
 ### Configuration Manager and the WBEM Architecture  
  Configuration Manager uses the WBEM architecture to manage objects. WBEM is an industry initiative adopted by the DMTF that is also supported by many non-Windows computer and network device manufactures. The WBEM initiative complements Active Directory that locates and manages entity policies. WBEM also provides a unifying mechanism through which management applications can interact with the managed entities (like Configuration Manager objects) – without you having to understand the underlying management protocols that these entities use.  
 
- In Configuration Manager, objects are items such as client computers, advertisements, and packages stored in the Configuration Manager database. The WBEM initiative outlines the architecture used by Windows Management., Microsoft’s implementation of one of the DMTF object management standards.  
+ In Configuration Manager, objects are items such as client computers, advertisements, and packages stored in the Configuration Manager database. The WBEM initiative outlines the architecture used by Windows Management., Microsoft's implementation of one of the DMTF object management standards.  
 
  The CIM Object Manager stores the metadata, Windows Management provides access to the Configuration Manager configuration and operations data with an extensible, platform-independent interface. And managed object, such as a disk drive or a collection is represented by an instance of a Configuration Manager class. Each Configuration Manager managed object is represented by a CIM class.  
 

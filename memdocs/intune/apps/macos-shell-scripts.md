@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,10 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use shell scripts on macOS devices in Intune (Public Preview)
-
-> [!NOTE]
-> Shell scripts for macOS devices is currently in preview. Review the list of [known issues in preview](macos-shell-scripts.md#known-issues) before using this feature.
+# Use shell scripts on macOS devices in Intune
 
 Use shell scripts to extend device management capabilities on Intune beyond what is supported by the macOS operating system. 
 
@@ -42,7 +39,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
  - Command-line interpreters for the applicable shells are installed.
 
 ## Important considerations before using shell scripts
- - Shell scripts require that Microsoft Intune MDM Agent is successfully installed on the macOS device. For more information, see [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+ - Shell scripts require that the Microsoft Intune management agent is successfully installed on the macOS device. For more information, see [Microsoft Intune management agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
  - Shell scripts run in parallel on devices as separate processes.
  - Shell scripts that are run as the signed-in user will run for all currently signed-in user accounts on the device at the time of the run.
  - An end user is required to sign in to the device to execute scripts running as a signed-in user.
@@ -62,10 +59,11 @@ Ensure that the following prerequisites are met when composing shell scripts and
    - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once.
    - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more device groups that include the users whose macOS devices are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
+6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
    > [!NOTE]
-   > - Shell scripts in Intune can only be assigned to Azure AD device security groups. User group assignment is not supported in preview. 
-   > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+   > - Shell scripts assigned to user groups applies to any user logging in to the Mac.  
+   > - Updating assignments for shell scripts also updates assignments for [Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
 The script you created now appears in the list of scripts. 
@@ -101,12 +99,12 @@ The following items are required to collect logs on a macOS device:
    >[!IMPORTANT]
    > Multiple log file paths separated using comma, period, newline or quotation marks with or without spaces will result in log collection error. Spaces are also not allowed as separators between paths.
 
-4. Select **OK**. Logs are collected the next time the Intune MDM agent on the device checks in with Intune. This check-in usually occurs every 8 hours.
+4. Select **OK**. Logs are collected the next time the Intune management agent on the device checks in with Intune. This check-in usually occurs every 8 hours.
 
    >[!NOTE]
    > 
    > - Collected logs are encrypted on the device, transmitted and stored in Microsoft Azure storage for 30 days. Stored logs are decrypted on demand and downloaded using Microsoft Endpoint Manager admin center.
-   > - In addition to the admin-specified logs, Intune MDM agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`. 
+   > - In addition to the admin-specified logs, the Intune management agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`. 
    > - If any admin-specified file is missing or has the wrong file-extension, you will find these file-names listed in `LogCollectionInfo.txt`.     
 
 ### Log collection errors
@@ -120,18 +118,18 @@ Log collection may not be successful due to any of the following reasons provide
 | 0X87D300D3, 0X87D300D5, 0X87D300D7 | 2016214829, 2016214827, 2016214825 | Log collection file upload failed due to encryption failure. Retry log upload. | Retry the **Collect logs** action. |
 | | 2016214828 | The number of log files exceeded the allowed limit of 25 files. | Only up to 25 log files can be collected at a time. |
 | 0X87D300D6 | 2016214826 | Log collection file upload failed due to zip error. Retry log upload. | Retry the **Collect logs** action. |
-| | 2016214740 | The logs couldn’t be encrypted as compressed logs were not found. | Retry the **Collect logs** action. |
-| | 2016214739 | The logs were collected but couldn’t be stored. | Retry the **Collect logs** action. |
+| | 2016214740 | The logs couldn't be encrypted as compressed logs were not found. | Retry the **Collect logs** action. |
+| | 2016214739 | The logs were collected but couldn't be stored. | Retry the **Collect logs** action. |
 
 ## Frequently asked questions
 ### Why are assigned shell scripts not running on the device?
 There could be several reasons:
-* The agent might need to check-in to receive new or updated scripts. This check-in process occurs every 8 hours and is different from the MDM check-in. Make sure that the device is awake and connected to a network for a successful agent check-in and wait for the agent to check-in.
+* The agent might need to check-in to receive new or updated scripts. This check-in process occurs every 8 hours and is different from the MDM check-in. Make sure that the device is awake and connected to a network for a successful agent check-in and wait for the agent to check-in. You can also request the end-user to open Company Portal on the Mac, select the device and click **Check settings**.
 * The agent may not be installed. Check that the agent is installed at `/Library/Intune/Microsoft Intune Agent.app` on the macOS device.
 * The agent may not be in a healthy state. The agent will attempt to recover for 24 hours, remove itself and reinstall if shell scripts are still assigned.
 
 ### How frequently is script run status reported?
-Script run status is reported to Microsoft Endpoint Manager Admin Console as soon as script run is complete. If a script is scheduled to run periodically at a set  frequency, it only reports status the first time it runs.
+Script run status is reported to Microsoft Endpoint Manager Admin Console as soon as script run is complete. If a script is scheduled to run periodically at a set frequency, it only reports status the first time it runs.
 
 ### When are shell scripts run again?
 A script is run again only when the **Max number of times to retry if script fails** setting is configured and the script fails on run. If the **Max number of times to retry if script fails** is not configured and a script fails on run, it will not be run again and run status will be reported as **failed**. 
@@ -139,9 +137,9 @@ A script is run again only when the **Max number of times to retry if script fai
 ### What Intune role permissions are required for shell scripts?
 Your assigned-intune role requires **Device configurations** permissions to delete, assign, create, update, or read shell scripts.
 
-## Microsoft Intune MDM Agent for macOS
+## Microsoft Intune management agent for macOS
  ### Why is the agent required?
- Microsoft Intune MDM Agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
+The Microsoft Intune management agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
  
  ### How is the agent installed?
  The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in Microsoft Endpoint Manager Admin Center. The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
@@ -152,15 +150,12 @@ Your assigned-intune role requires **Device configurations** permissions to dele
  - The agent checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
  
  ### How can I manually initiate an agent check-in from a Mac?
-On a managed Mac that has the agent installed, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
+On a managed Mac that has the agent installed, open **Company Portal**, select the local device, click on **Check settings**. This initiates an MDM check-in as well as an agent check-in.
 
-Alternatively, you can do the following:
-1. Open **Activity Monitor** > **View** > *select **All processes**.* 
-2. Search for processes named `IntuneMdmAgent`. 
-3. Quit the process running for **root** user. 
+Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
 > [!NOTE]
-> The **Check settings** action in Company Portal and the **Sync** action for devices in Microsoft Endpoint Manager Admin Console initiates an MDM check-in and does not force an agent check-in.
+> The **Sync** action for devices in Microsoft Endpoint Manager Admin Console initiates an MDM check-in and does not force an agent check-in.
 
  ### When is the agent removed?
  There are several conditions that can cause the agent to be removed from the device such as:
@@ -168,14 +163,14 @@ Alternatively, you can do the following:
  - The macOS device is no longer managed.
  - The agent is in an irrecoverable state for more than 24 hours (device-awake time).
 
+ ### Why are scripts running even though the Mac is no longer managed?
+ When a Mac with assigned scripts is no longer managed, the agent is not removed immediately. The agent detects that the Mac is not managed at the next agent check-in (usually every 8 hours) and cancels scheduled script-runs. So, any locally stored scripts scheduled to run more frequently than the next scheduled agent check-in will run. When the agent is unable to check-in, it retries checking in for up to 24 hours (device-awake time) and then removes itself from the Mac.
+ 
  ### How to turn off usage data sent to Microsoft for shell scripts?
- To turn off usage data sent to Microsoft from Intune MDM Agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both Intune MDM agent and Company Portal.
+ To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both the agent and Company Portal.
 
 ## Known issues
-- **User group assignment:** Shell scripts assigned to user groups doesn't apply to devices. User group assignment is currently not supported in preview. Use device group assignment to assign scripts.
-- **Collect logs:** "Collect logs" action is visible. But when log collection is attempted, it shows "an error occurred" and doesn't capture logs. Log collection is currently not supported in preview.
 - **No script run status:** In the unlikely event that a script is received on the device and the device goes offline before the run status is reported, the device will not report run status for the script in the admin console.
-- **User status report:** An empty report issue exists. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Monitor**. The user status shows an empty report.
 
 ## Next steps
 

@@ -51,7 +51,7 @@ Class SMS_SecuredCategoryMembership : SMS_BaseClass
 
  Access type: Read/Write  
 
- Qualifiers: [key, sizelimit(“256��?)]  
+ Qualifiers: [key, sizelimit("256")]  
 
  The key of object.  
 

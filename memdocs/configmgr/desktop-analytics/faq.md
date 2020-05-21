@@ -10,6 +10,7 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # Desktop Analytics FAQ
@@ -31,6 +32,9 @@ When you first set up Desktop Analytics, the reports in Configuration Manager an
 - Provision [Azure AD applications](troubleshooting.md#bkmk_AzureADApps) on your Azure AD.
 - Check devices that you've associated with your organization in the last seven days. In the [Desktop Analytics portal](https://aka.ms/desktopanalytics), go to the **Connected services** pane. Select **Enroll devices**, and **View recent data**
 
+  > [!IMPORTANT]
+  > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
 If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.microsoft.com/hub/4343728/support-for-business).
 
 ## Connect Configuration Manager
@@ -42,6 +46,10 @@ Yes, use the following process:
 - In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties for the entry associated with your Desktop Analytics service.
 
 - On the **Desktop Analytics Connection** tab, change the **Target Collection** or manage the additional collections.
+
+<!-- 7130169 -->
+> [!Note]
+> Don't include more than 20 collections to the list of additional collections. Be cautious about the total number of devices in each collection. Always include your [Global pilot include and exclude collections](deploy-pilot.md#bkmk_GlobalPilot).  
 
 > [!IMPORTANT]  
 > Configuration Manager uses a settings policy to configure devices in the target collection. This policy includes the diagnostic data settings to enable devices to send data to Microsoft. Changing the target collection doesn't undo the settings policy on devices no longer in the target collection. If you don't want your devices to continue sending diagnostic data, [reconfigure the devices](account-close.md#reconfigure-clients).
@@ -56,7 +64,7 @@ For more information, see [Refresh an existing computer with a new version of Wi
 
 ### Can I change from BIOS to UEFI when upgrading Windows?
 
-Yes. For more information, see [Convert from BIOS to UEFI during an in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Yes. For more information, see [Convert from BIOS to UEFI during an in-place upgrade](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### Can I use Desktop Analytics with Windows 10 LTSC?
 

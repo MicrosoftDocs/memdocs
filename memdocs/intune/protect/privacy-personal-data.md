@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 # Privacy and personal data in Intune
 
-End users can receive, transmit, and store data on devices managed by Intune. They trust that the data’s privacy is protected and used only in a way that is consistent with their expectations. To help Intune admins set such expectations, the articles in this section provide information on how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. You'll also learn how to view, correct, and delete personal data.
+End users can receive, transmit, and store data on devices managed by Intune. They trust that the data's privacy is protected and used only in a way that is consistent with their expectations. To help Intune admins set such expectations, the articles in this section provide information on how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. You'll also learn how to view, correct, and delete personal data.
 
 Microsoft Intune does not use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
@@ -40,9 +40,9 @@ Microsoft Intune does not use any personal data collected as part of providing t
 
 ## Your company terms and conditions
 
-You can [include privacy statements in your company’s terms and conditions for end users](../apps/company-portal-app.md). Such privacy statements can include information about the usage and privacy of the end user’s personal data.
+You can [include privacy statements in your company's terms and conditions for end users](../apps/company-portal-app.md). Such privacy statements can include information about the usage and privacy of the end user's personal data.
 
-You can display your company’s terms and conditions in the Intune Company Portal app. This way, users can review the terms and conditions, including the privacy statement, before they enroll in Intune and access company assets and data.
+You can display your company's terms and conditions in the Intune Company Portal app. This way, users can review the terms and conditions, including the privacy statement, before they enroll in Intune and access company assets and data.
 
 ## Next steps
 

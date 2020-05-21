@@ -23,7 +23,7 @@ In Configuration Manager, to create a custom console view, you must create two .
  The following procedures create an extension node with a custom view control.  
 
 ### Create the View Controller Class  
- The following procedure creates the `OverviewControllerBase` derived class. The controller class’s Content property is set contain your custom control. In the example below, the Content property is assigned a simple label control.  
+ The following procedure creates the `OverviewControllerBase` derived class. The controller class's Content property is set contain your custom control. In the example below, the Content property is assigned a simple label control.  
 
 ##### To create a console view class  
 
@@ -52,7 +52,7 @@ In Configuration Manager, to create a custom console view, you must create two .
     ```  
 
 ### Create the extension node XML  
- The following XML is required in order to load your extension into the console. Note that the `DisplayName` and `Description` properties refer to names in your assembly’s resource file.  
+ The following XML is required in order to load your extension into the console. Note that the `DisplayName` and `Description` properties refer to names in your assembly's resource file.  
 
 ```  
 <RootNodeDescription NamespaceGuid="c192799c-82cd-43cc-bc11-12996bca800f" Id="MyViewNode" DisplayName="ViewNodeName" Description="ViewNodeDescription">  <ResourceAssembly>    <Assembly>NameofMyAssembly.dll</Assembly>    <Type>NameofMyAssembly.Resources.resources</Type>  </ResourceAssembly>  <ImagesDescription>    <ResourceAssembly>      <Assembly> NameofMyAssembly.dll</Assembly>      <Type> NameofMyAssembly.Resources.resources</Type>    </ResourceAssembly>    <ImageResourceName>NodeIcon</ImageResourceName>  </ImagesDescription>  <ViewAssemblyDescriptions>    <ViewAssemblyDescription>      <Assembly> NameofMyAssembly.dll</Assembly>      <Type>NameofMyAssembly.MyViewDescription</Type>    </ViewAssemblyDescription>  </ViewAssemblyDescriptions></RootNodeDescription>  

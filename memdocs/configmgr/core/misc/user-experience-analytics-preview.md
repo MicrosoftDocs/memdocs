@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 04/10/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -13,12 +13,15 @@ manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
-# <a name="bkmk_uea"></a> Endpoint analytics private preview
+# <a name="bkmk_uea"></a> Endpoint analytics preview
 
 > [!Note]  
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new-endpoint-analytics.md). 
+>
+>If you would like to join the private preview for Endpoint Analytics, please enter the details [in this form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Tenants will be flighted as openings for the preview expands.
+
 
 ## Endpoint analytics overview
 
@@ -46,16 +49,26 @@ To start using Endpoint analytics, verify the prerequisites, then start gatherin
 
 ### Technical Prerequisites
 
-This current preview requires:
+For this preview, you can enroll devices via Configuration Manager or Microsoft Intune. 
+
+To enroll devices via Intune, this preview requires:
 - Intune enrolled devices running Windows 10
-- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or Hybrid Azure AD joined. Workplace joined machines aren't currently supported.
+- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined machines aren't currently supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](#bkmk_uea_endpoints).
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](#bkmk_uea_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
-- For [**Proactive remediation scripting**](#bkmk_uea_prs), devices need to be [co-managed](../../comanage/overview.md).
 
-We're in the process of rolling out a private preview Configuration Manager connector, which won't have the limitations above. It will work for any version and edition of Windows and won't require Azure AD or Intune enrollment.
+To enroll devices via Configuration Manager, this preview requires:
+- Configuration Manager version 2002 or newer
+- Clients upgraded to version 2002 or newer
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
+
+Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
+- Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
+- A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Intune.
+- A [co-managed](../../comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../../comanage/workloads.md#client-apps) pointed to Configuration Manager.
 
 ### Licensing Prerequisites
 
@@ -65,7 +78,7 @@ Endpoint analytics is included in the following plans:
 - [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
 
 Proactive remediations also require one of the following licenses for the managed devices:
-- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F1, E3, or E5)
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 
@@ -75,6 +88,7 @@ Proactive remediations also require one of the following licenses for the manage
 
 The following permissions are used for Endpoint analytics:
 - **Read** under the **Device configurations** category.
+- **Read** under the **Organization** category. <!--temporary for pp-->
 - Permissions appropriate to the user's role under the **Endpoint Analytics** category.
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
@@ -83,8 +97,38 @@ A read-only user would only need the **Read** permission under both the **Device
 
 For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
 
+An [Intune Service Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
 
 ## <a name="bkmk_uea_start"></a> Start gathering data
+- If you are enrolling Intune managed devices only, skip to the [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard) section.
+
+- If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps:
+   - [Enable Endpoint analytics data collection in Configuration Manager](#bkmk_uea_cm_enroll)
+   - [Enable data upload in Configuration Manager](#bkmk_uea_cm_upload)
+   - [Onboard in the Endpoint analytics portal](#bkmk_uea_onboard)  
+
+### <a name="bkmk_uea_cm_enroll"></a> Enroll devices managed by Configuration Manager
+<!--6051638, 5924760-->
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_uea_prereq) including enabling [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
+
+#### <a name="bkmk_uea_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
+
+1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
+1. Right-click and select **Properties** then select the **Computer Agent** settings.
+1. Set **Enable Endpoint analytics data collection** to **Yes**.
+   > [!Important] 
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
+
+#### <a name="bkmk_uea_cm_upload"></a> Enable data upload in Configuration Manager
+
+1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
+1. Select **CoMgmtSettingsProd** then click **Properties**.
+1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
+Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
@@ -189,9 +233,9 @@ If you click through to a particular device, you can see its boot and sign-in hi
 ### Reporting tabs
 
 The **Startup performance** page has reporting tabs that provide support for the insights, including:
-1. **Model performance**. This tab let's you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
-1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (e.g., GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see it's boot and sign-in history, which can help you identify if there was a recent regression
-1. **Startup processes**. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered.
+1. **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
+1. **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
+1. **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant.  
 
 ## <a name="bkmk_uea_prs"></a> Proactive remediations
 
@@ -317,7 +361,7 @@ To enable functional data sharing, configure your proxy server to allow the foll
 
 ### Proxy server authentication
 
-Make sure that a proxy doesn't block the data because of authentication. If your organization uses proxy server authentication for outbound traffic, use one or more of the following approaches:
+If your organization uses proxy server authentication for internet access, make sure that it doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
 
 #### Bypass (recommended)
 
@@ -327,26 +371,47 @@ Configure your proxy servers to not require proxy authentication for traffic to 
 
 Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
 
-- Devices have the current quality update for Windows 10
-- Configure user-level proxy (WinINET proxy) in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel. 
+- Devices have the current quality update for a supported version of Windows
+
+- Configure user-level proxy (WinINET proxy) in **Proxy settings** in the Network & Internet group of Windows Settings. You can also use the legacy Internet Options control panel.
+
 - Make sure that the users have proxy permission to reach the data sharing endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
-> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and Internet connectivity settings](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 #### Device proxy authentication
+
+This approach supports the following scenarios:
+
+- Headless devices, where no user signs in, or users of the device don't have internet access
+
+- Authenticated proxies that don't use Windows Integrated Authentication
+
+- If you also use Microsoft Defender Advanced Threat Protection
 
 This approach is the most complex because it requires the following configurations:
 
 - Make sure devices can reach the proxy server through WinHTTP in local system context. Use one of the following options to configure this behavior:
+
   - The command line `netsh winhttp set proxy`
-  - Web Proxy Auto-discovery Protocol (WPAD)
+
+  - Web proxy auto-discovery (WPAD) protocol
+
   - Transparent proxy
+
+  - Configure device-wide WinINET proxy using the following group policy setting: **Make proxy settings per-machine (rather than per-user)** (ProxySettingsPerUser = `1`)
+
   - Routed connection, or that uses network address translation (NAT)
 
-- Configure proxy servers to allow the computer accounts in Active Directory to access the diagnostic data endpoints. This configuration requires proxy servers to support Windows-Integrated Authentication.  
+- Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  
+
 
 ## <a name="bkmk_uea_faq"></a> Frequently asked questions
+
+### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
+
+If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration will be lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled. 
 
 ### Why are the scripts exiting with a code of 1?
 
@@ -363,7 +428,7 @@ This table shows the script names, descriptions, detections, remediations, and c
 |Script name|Description|
 |---|---|
 |**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Office 365 ProPlus won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Microsoft 365 Apps for enterprise won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
@@ -739,8 +804,8 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **desktopUsableDurationInMilliseconds:** Time for desktop (explorer.exe) to be usable
   - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 - Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
-  - **id:** Unique device ID used by Windows Update
-  - **localId:** A locally-defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **ID:** Unique device ID used by Windows Update
+  - **localId:** A locally defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   

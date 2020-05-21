@@ -28,7 +28,7 @@ Consider the following behaviors for any of the actions described for default bo
 
 - The source driver objects must be valid. These objects include the driver source files. If the objects aren't valid, the site doesn't add the drivers to the boot images.  
 
-- Boot images that aren’t based on the default boot images, even if they use the same Windows PE version, aren't modified.  
+- Boot images that aren't based on the default boot images, even if they use the same Windows PE version, aren't modified.  
 
 - Redistribute the modified boot images to distribution points.  
 
@@ -198,13 +198,8 @@ On the **Customization** tab, select any of the following settings:
 
 - **Set default keyboard layout in WinPE**: <!--4910348-->Starting in version 1910, configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
-    > [!Tip]
-    > The [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet now includes a new parameter, `-InputLocale`. For example:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Use the [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet to configure these settings from a script.
 
 #### Optional Components
 

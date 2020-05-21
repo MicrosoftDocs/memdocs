@@ -2,7 +2,7 @@
 title: Compatibility assessment
 titleSuffix: Configuration Manager
 description: Learn about compatibility assessment for Windows apps and drivers in Desktop Analytics.
-ms.date: 03/03/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,6 +10,7 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # Compatibility assessment in Desktop Analytics
@@ -24,7 +25,7 @@ Desktop Analytics uses the following compatibility assessment categories:
 
 - **High**: The application is almost certain to fail during or after upgrade. It may need a remediation.
 
-- **Unknown**: The app wasn't assessed. There are no other insights such as *MS Known Issues*.
+- **Unknown**: The app wasn't assessed. There are no other insights such as *MS Known Issues* or *Ready for Windows*.
 
 In the list of app or driver assets in a deployment plan, you'll see this value for each asset in the **Compatibility Risk** column.
 
@@ -35,9 +36,13 @@ In the list of app or driver assets in a deployment plan, you'll see this value 
 There are several sources that Desktop Analytics uses to generate the assessment rating for applications:
 
 - [Microsoft known issues](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [Advanced insights](#advanced-insights)
 
 You can find the assessment for each source on the app in Desktop Analytics. In the list of app assets in a deployment plan, select an individual app to open its properties flyout pane. You'll see an overall recommendation and assessment level. The **Compatibility risk factors** section shows the detail for these assessments.
+
+> [!TIP]
+> If the app details pane doesn't show the compatibility assessment, it may be because the **App Versions Details** setting is off. It's off by default, and combines all versions of apps with the same name and publisher. The service still makes compatibility risk assessments for each version. Turn on **App versions details** to see the compatibility risk assessment for a specific app version. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
 ## Microsoft known issues
 
@@ -126,6 +131,28 @@ Windows compatibility data classifies some apps and drivers with a *safeguard*, 
 
 [![Screenshot of the Safeguard app in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
 
+## Ready for Windows
+
+The Adoption Status is based on information from commercial devices that share data with Microsoft. The status is integrated with support statements from software vendors.
+
+Desktop Analytics provides the adoption status for each version of an asset found in commercial devices. This status doesn't include data from consumer devices or devices that don't share data. The status may not be representative of the adoption rate across all Windows 10 devices.
+
+The possible categories are:
+
+- **Highly adopted**: At least 100,000 commercial Windows 10 devices have installed this app.
+
+- **Adopted**: At least 10,000 commercial Windows 10 devices have installed this app.
+
+- **Insufficient data**: Too few commercial Windows 10 devices are sharing information for this app for Microsoft to categorize its adoption.
+
+- **Contact developer**: There may be compatibility issues with this version of the app. Microsoft recommends contacting the software provider to learn more.
+
+- **Unknown**: There's no information available for this version of this application. Information may be available for other versions of the application.
+
+### Support statement
+
+If the software provider supports one or more versions of this application on Windows 10, you'll see this statement on the app properties pane. In the Compatibility risk factors section, look at the **Support statement**.
+
 ## Advanced insights
 
 Desktop Analytics can also detect issues using the following additional insights:
@@ -213,4 +240,4 @@ You can find the assessment on the driver in Desktop Analytics. In the list of d
 
 ## See also
 
-The FastTrack Center Benefit for Windows 10 provides access to **Desktop App Assure**. This benefit is a new service designed to address issues with Windows 10 and Office 365 ProPlus app compatibility. For more information, see [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+The FastTrack Center Benefit for Windows 10 provides access to **Desktop App Assure**. This benefit is a new service designed to address issues with Windows 10 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).

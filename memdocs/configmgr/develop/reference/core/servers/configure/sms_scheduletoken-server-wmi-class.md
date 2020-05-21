@@ -94,7 +94,7 @@ Class SMS_ScheduleToken
 
 ```  
 sInterval = "791378800008000055147880001B200055177880001E2000"  
-…  
+...
 instance of SMS_ST_NonRecurring  
 {  
  DayDuration = 0;  

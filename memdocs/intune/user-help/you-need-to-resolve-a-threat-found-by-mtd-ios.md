@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -31,11 +31,11 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by a Mobile Threat Defense app
+# Resolving a threat found by a Mobile Threat Defense app
 
-Mobile Threat Defense apps detect and alert you to potential threats on your devices. Some organizations integrate a Mobile Threat Defense service with an MDM provider, like Intune. When integrated, the Mobile Threat Defense service reports the threats (such as suspicious apps, networks, and OS vulnerabilities) and notifies you in the Company Portal app. You can then find details about the threat and remediation steps in the Mobile Threat Defense app.  
+A Mobile Threat Defense (MTD) app detects and alerts you to potential threats on your device, such as suspicious apps, networks, or OS vulnerabilities. The Company Portal app notifies you when a threat is detected and lets you know if it affects your access to school or work resources. It then redirects you to the MTD app for details about the threat and, if available, steps to fix it. 
 
-Threats appear to you in the Company Portal as unresolved, noncompliant issues. If the threats are classified as risky enough, then your company will revoke your access to its corporate resources. As long as these threats are present on your device, you may be unable to:  
+If a threat appears to be too risky, as determined by your organization, your access to school or work resources can be revoked. As long as these threats are present on your device, you may be unable to:  
 
 * Connect to corporate e-mail
 * Connect to corporate Wi-Fi
@@ -43,7 +43,7 @@ Threats appear to you in the Company Portal as unresolved, noncompliant issues. 
 * Sync corporate files with OneDrive
 * Access company apps
 
-Below are the iOS-specific Mobile Threat Defense services that your organization could have set up. Select an app to read more about its behavior. 
+There are a variety of MTD vendor apps that you could have, all with different names. Below are just a few iOS-specific apps that you could have. Select an app to see how it works with Company Portal to alert you to threats. For more guidance, follow the Company Portal and MTD app's onscreen instructions or contact your IT support person. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -51,5 +51,5 @@ Below are the iOS-specific Mobile Threat Defense services that your organization
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Check in with your support person. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

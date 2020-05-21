@@ -94,7 +94,7 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  Qualifiers: [not_null]  
 
- AssignedUpdateGroup description … .  
+ The ID of the update group that is assigned.
 
  `AssignmentAction`  
  Data type: `SInt32`  
@@ -411,7 +411,7 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  Qualifiers: [not_null]  
 
- UseBranchCache description … .   
+ Whether to enable the deployment to use Windows BranchCache peer technology.
 
  `UseGMTTimes`  
  Data type: `Boolean`  
@@ -429,7 +429,7 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  Qualifiers: [not_null]  
 
- UserUIExperience description … .  
+ Allow the user to interact with the deployment.
 
  `WoLEnabled`  
  Data type: `Boolean`  

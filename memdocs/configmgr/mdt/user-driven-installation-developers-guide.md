@@ -178,7 +178,7 @@ Figure 2. Folder structure for UDI development
     copy /y "$(ProjectDir)..\..\..\..\OSDSetupWizard\x86\*.*" "$(TargetDir)"  
     xcopy /y /i "$(ProjectDir)..\..\..\..\OSDSetupWizard\x86\en-us" "$(TargetDir)en-us"  
     copy /y "$(ProjectDir)..\..\..\..\OSDSetupWizard\OSDResults\Images\UDI_Wizard_Banner.bmp" "$(ProjectDir)header.bmp"  
-    copy /y "$(ProjectDir)Config.xml" "$(TargetDir)”  
+    copy /y "$(ProjectDir)Config.xml" "$(TargetDir)"  
     copy /y "$(ProjectDir)header.bmp" "$(TargetDir)header.bmp"  
     ```  
 
@@ -261,7 +261,7 @@ Figure 2. Folder structure for UDI development
 12. In **Start external program**, type ***installation_folder\Bin\UDIDesigner.exe*** (where *installation_folder* is the folder in which you installed MDT), and then click **OK**.  
 
     > [!TIP]
-    >  You can click the ellipse (…) button to browse to the folder and select UDIDesigner.exe.  
+    >  You can click the ellipsis (**...**) button to browse to the folder and select UDIDesigner.exe.  
 
 13. From the **File** menu, click **Save All**.  
 
@@ -332,7 +332,7 @@ Figure 2. Folder structure for UDI development
 
 |**Method**|**Description**|  
 |-|-|  
-|**OnWindowCreated**|This method is called once, after the page’s window has been created.<br /><br /> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|  
+|**OnWindowCreated**|This method is called once, after the page's window has been created.<br /><br /> For this method, write code that initializes the page for the first time and only needs to be performed once. For example, use this method to initialize fields or to read configuration information from the **Setter** elements in the UDI Wizard configuration file.|  
 |**OnWindowShown**|This method is called each time the page is displayed (shown) in the UDI Wizard. It is called the first time the page is displayed and each time you navigate to the page by clicking **Next** or **Back** in the wizard.<br /><br /> For this method, write code that prepares the page to be displayed—for example, reading memory variables, task sequence variables, or environment variables, and then updating the page based on any changes to those variables.|  
 |**OnCommonControlEvent**|This method can be called anytime the wizard page is displayed and receives a WM_NOTIFY message from a child (typically, common controls).<br /><br /> For this method, write code that handles WM_NOTIFY based on the notification message. For example, you may want to respond to events from a common control, such as responding to click or double-click events for a **TreeView** control.|  
 |**OnUnhandledEvent**|This method is called anytime an unhandled window message occurs for your wizard page. This method provides the opportunity to intercept and handle these otherwise unhandled window messages.<br /><br /> For this method, write code that handles the window messages that are pertinent to your wizard page. Typically, you will not need to override this method.|  
@@ -778,7 +778,7 @@ CreateInstance(Container(), ID_WmiRepository, &pWmi);
  The **CreateInstance** function is a type-safe template function for creating new instances of components. **PWmiRepository** is a smart pointer, so it handles reference counting for you.  
 
 #### Creatable Components  
- There is a set of components that you can register with the registry. The first set of components is always registered, because the main UDI Wizard executable file provides it. The other two sets of components are provided in “optional” DLLs. For these components to be available, the DLL must be listed in the **DLLs** section of the .config XML file. Your code does not need to know which executable contains a specific component.  
+ There is a set of components that you can register with the registry. The first set of components is always registered, because the main UDI Wizard executable file provides it. The other two sets of components are provided in "optional" DLLs. For these components to be available, the DLL must be listed in the **DLLs** section of the .config XML file. Your code does not need to know which executable contains a specific component.  
 
  The list of component IDs for components (the component name is the same as the ID but without the initial *ID_*) registered with the factory registry (defined in OSDSetupWizard) is shown in Table 3.  
 
@@ -870,7 +870,7 @@ GetControlWrapper(View(), IDC_EDIT_PASSWORD2, CONTROL_STATIC_TEXT, &pPassword
 pValidator->SetProperty(0, pPassword2);  
 ```  
 
- First, you define the **Confirm Password** control as a “child” of the **Password** control. That way, if the form controller disables the **Password** control, it will also disable the **Confirm Password** control. Next, add a password validator to the form. Finally, provide the password validator with the interface to the **Confirm Password** control.  
+ First, you define the **Confirm Password** control as a "child" of the **Password** control. That way, if the form controller disables the **Password** control, it will also disable the **Confirm Password** control. Next, add a password validator to the form. Finally, provide the password validator with the interface to the **Confirm Password** control.  
 
  Because of the requirement for two controls, you must use code to set up this validator rather than the .config XML file.  
 
@@ -890,7 +890,7 @@ pValidator->SetProperty(0, pPassword2);
 |Workgroup|The name must be between 1 and 15 characters long and cannot contain a set of characters (such as =, +, and ?)|  
 
 #### FactoryRegistry Component  
- This component keeps track of all class factories and services. It implements the **IFactoryRegistry** interface and is available indirectly through your page’s **Container** method. In addition, the registry loads extension DLLs. After it loads a DLL, the registry looks for an exported function called **RegisterFactories**. You must implement this function and in it register the class factories for your pages, tasks, and validators (and any other class factories you want to register). Here is an example from the sample project:  
+ This component keeps track of all class factories and services. It implements the **IFactoryRegistry** interface and is available indirectly through your page's **Container** method. In addition, the registry loads extension DLLs. After it loads a DLL, the registry looks for an exported function called **RegisterFactories**. You must implement this function and in it register the class factories for your pages, tasks, and validators (and any other class factories you want to register). Here is an example from the sample project:  
 
 ```cpp
 extern "C" __declspec(dllexport) void RegisterFactories(IFactoryRegistry *factories)  
@@ -906,7 +906,7 @@ Register<LocationPageFactory>(ID_LocationPage, factories);
  The *property bag* is a container for memory variables. It is available from your page using **Container()->Properties()**. Memory variables are useful for passing temporary data among different pages.  
 
 #### TSVariableBag and TSRepository Components  
- The **TSVariableBag** component allows you to read and write task sequence variables. It keeps the values in memory until the user clicks **Finish** (by default). You can access the **TSVariable** bag via the page’s **TSVariables** method (implemented by the **WizardPageImpl** base class). These components log all reads and writes of task sequence variables.  
+ The **TSVariableBag** component allows you to read and write task sequence variables. It keeps the values in memory until the user clicks **Finish** (by default). You can access the **TSVariable** bag via the page's **TSVariables** method (implemented by the **WizardPageImpl** base class). These components log all reads and writes of task sequence variables.  
 
 #### WmiRepository Component  
  This component provides a façade for working with WMI queries. You can call the **CreateInstance** helper function with **ID_WmiRepository** to obtain an instance of this component, which supports the **IWmiRepository** interface. This component returns result records via the **IWmiIterator** interface.  
@@ -1084,9 +1084,9 @@ classCopyFilesTask :public WizardComponent<ITask>
     ...  
 ```  
 
- The parameter for this template class is the “main” interface you want to use for your component, which in the case of tasks is **ITask**. Using **WizardComponent** means that your component supports both the interface your provide (**ITask** in this example) and **IWizardComponent**.  
+ The parameter for this template class is the "main" interface you want to use for your component, which in the case of tasks is **ITask**. Using **WizardComponent** means that your component supports both the interface your provide (**ITask** in this example) and **IWizardComponent**.  
 
- Whenever you use the class factory registry to create a new component, the registry calls the component’s **IWizardComponent->SetContainer** method to provide your component access to the wizard services.  
+ Whenever you use the class factory registry to create a new component, the registry calls the component's **IWizardComponent->SetContainer** method to provide your component access to the wizard services.  
 
 ####  <a name="WizardPageImplTemplateClass"></a> WizardPageImpl Template Class  
  Use this class as the base class for your custom pages—for example:  
@@ -1171,7 +1171,7 @@ __interface IBackgroundTask : IUnknown
 |**Parameter**|**Description**|  
 |-|-|  
 |**pTask**|Pointer to the class that contains the code you want to run on another thread|  
-|**Id**|A number you can use in the callback’s **Finished** method to tell which task finished running; useful if you start several tasks with the same callback method|  
+|**Id**|A number you can use in the callback's **Finished** method to tell which task finished running; useful if you start several tasks with the same callback method|  
 |**pCallback**|A class that implements the **Finished** method, which is called whenever a task finishes running; the call to the **Finished** method will be on the background thread, not the UI thread|  
 
 ##### void Start(void)  
@@ -1214,7 +1214,7 @@ __interface IBackgroundTask : IUnknown
 
 |**Parameter**|**Description**|  
 |-|-|  
-|**pCode**|Pointer to a **DWORD** that will be set on return or **nullptr** if you do not need the return value. On exit, this parameter is set to **STILL_ACTIVE** if the thread is running, the code returned by the task’s **Execute** method, or the value passed to the **Terminate** method if you called that method.|  
+|**pCode**|Pointer to a **DWORD** that will be set on return or **nullptr** if you do not need the return value. On exit, this parameter is set to **STILL_ACTIVE** if the thread is running, the code returned by the task's **Execute** method, or the value passed to the **Terminate** method if you called that method.|  
 |**pHresult**|Pointer to an **HRESULT** that will be set on return or **nullptr** if you do not need the **HRESULT** value.|  
 
 ##### HRESULT Close(void)  
@@ -1366,8 +1366,8 @@ __interface IDomainJoinValidator : IUnknown
 
 |**Parameter**|**Description**|  
 |-|-|  
-|**pLogger**|The logger instance, which is available to your page via the page’s **Logger** method|  
-|**pContainer**|Passes the results from your page’s **Container** method|  
+|**pLogger**|The logger instance, which is available to your page via the page's **Logger** method|  
+|**pContainer**|Passes the results from your page's **Container** method|  
 |**pUsername**|The text box that contains the user name to be validated|  
 |**pPassword**|The text box that contains the password to be validated|  
 |**PComputerName**|The text box that contains the name of the computer that will eventually be joined to the domain|  
@@ -1399,7 +1399,7 @@ __interface IDriveList : IUnknown
  Call this method before you call any other components. You will need to create a new **WmiRepository** before you call this method.  
 
 ##### HRESULT SetWhereClause(LPCTSTR whereClause)  
- This method allows you to add text that will appear as a “where” clause in the query. For example, the following line returns only USB drives:  
+ This method allows you to add text that will appear as a "where" clause in the query. For example, the following line returns only USB drives:  
 
 ```cpp
 pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");  
@@ -1433,7 +1433,7 @@ pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");
 |**Parameter**|**Description**|  
 |-|-|  
 |**Index**|Zero-based index to the result record|  
-|**propName**|Name of the property, such as “Size”|  
+|**propName**|Name of the property, such as "Size"|  
 |**Value**|On return, this parameter contains a variant value of the property|  
 
 ##### HRESULT GetCaption(size_t index,  LPBSTR pCaption)  
@@ -1536,7 +1536,7 @@ m_pList->SetExtendedStyle(LVS_EX_FULLROWSELECT);
  Create a new image list, and attach it to the list view.  
 
 ##### int AddImage(HINSTANCE hInstance, int resourceId)  
- Add an image to the list view’s image list. You need to call **CreateImageList**, first.  
+ Add an image to the list view's image list. You need to call **CreateImageList**, first.  
 
 ##### HRESULT SetImage(int index, int imageIndex)  
  Set the image that will be shown on the left side for a specific list view item.  
@@ -1890,16 +1890,16 @@ __interface IFormController : IUnknown
  Each page in the UDI Wizard has its own form controller that implements this interface. You use this controller to connect the field data in the .config XML file to the controls on your page. The form controller then handles many of the details for you.  
 
 #####  <a name="SettingUptheForm"></a> Setting up the Form  
- Generally, set up the form controller in your page’s **OnWindowCreated** method. Doing so usually involves calling the methods shown in Table 28.  
+ Generally, set up the form controller in your page's **OnWindowCreated** method. Doing so usually involves calling the methods shown in Table 28.  
 
 ### Table 28. OnWindowCreated Method  
 
 |**Method**|**Description**|  
 |-|-|  
 |**Init**|Initializes the form controller|  
-|**AddField**|Provides a connection between a field in the .config XML file that is a string name and a control in your page’s dialog box that is an ID|  
+|**AddField**|Provides a connection between a field in the .config XML file that is a string name and a control in your page's dialog box that is an ID|  
 |**AddRadioGroup**|Used to connect a radio button to both a group and a control in your dialog box|  
-|**AddToGroup**|Allows you “child” controls that are enabled or disabled along with their parent or based on which radio button is selected|  
+|**AddToGroup**|Allows you "child" controls that are enabled or disabled along with their parent or based on which radio button is selected|  
 |**InitFields**|Call after you have called all the **Add** methods to set up the form|  
 |**Validate**|Performs the initial validation|  
 
@@ -1928,7 +1928,7 @@ Form()->ControlEvent(eventId, controlId);
 HRESULT Init(IWizardPageView *pView, IWizardPageContainer *pContainer)  
 ```  
 
- You usually call this method near the start of your page’s **OnWindowCreated** method. The command should look something like this:  
+ You usually call this method near the start of your page's **OnWindowCreated** method. The command should look something like this:  
 
 ```cpp
 Form()->Init(View(), Container());  
@@ -1940,7 +1940,7 @@ Form()->Init(View(), Container());
 HRESULT SetPageInfo(ISettingsProperties *pPageInfo)  
 ```  
 
- This method is called internally, and you should not call it yourself. It provides the page’s XML to the form controller.  
+ This method is called internally, and you should not call it yourself. It provides the page's XML to the form controller.  
 
 ##### Validate  
 
@@ -1956,7 +1956,7 @@ HRESULT Validate(void)
 AddToGroup(int groupControlId, int controlId)  
 ```  
 
- This method adds a control as a “child” of a check box or radio button, as shown in Table 30. All such child controls will be disabled when the parent control is not selected. The method always returns **S_OK**.  
+ This method adds a control as a "child" of a check box or radio button, as shown in Table 30. All such child controls will be disabled when the parent control is not selected. The method always returns **S_OK**.  
 
 ### Table 30. AddToGroup  
 
@@ -1971,7 +1971,7 @@ AddToGroup(int groupControlId, int controlId)
 HRESULT UpdateCheckGroup(int groupControlId)  
 ```  
 
- This method updates the enable or disable status of a group’s child controls based on the status of the parent control. Generally, you do not need to call this method yourself, because the form controller calls it for you.  
+ This method updates the enable or disable status of a group's child controls based on the status of the parent control. Generally, you do not need to call this method yourself, because the form controller calls it for you.  
 
 ##### AddValidator  
 
@@ -2010,14 +2010,14 @@ HRESULT DisableValidation(int controlId, BOOL disable)
 HRESULT AddField(LPCWSTR fieldName, int controlId, BOOL suppressLog, DialogControlTypes type)  
 ```  
 
- Add a control mapping between the name in a **Field** element of the .config XML file and the control ID in your page’s dialog box, as shown in   Table 32. You must call this method before the call to **InitFields**, because **InitFields** uses this information. This method always returns **S_OK**.  
+ Add a control mapping between the name in a **Field** element of the .config XML file and the control ID in your page's dialog box, as shown in   Table 32. You must call this method before the call to **InitFields**, because **InitFields** uses this information. This method always returns **S_OK**.  
 
 ### Table 32. HRESULT AddField  
 
 |**Parameter**|**Description**|  
 |-|-|  
-|**Fieldname**|Name of the field as it appears in your page’s XML|  
-|**controlId**|The ID of the control in your page’s dialog box template|  
+|**Fieldname**|Name of the field as it appears in your page's XML|  
+|**controlId**|The ID of the control in your page's dialog box template|  
 |**suppressLog**|Set to TRUE if you do not want the values from this field written to the log file; always set this parameter to TRUE for password or PIN fields|  
 |**Type**|The type of control, which is one of the following:<br /><br /> -   **CONTROL_STATIC_TEXT**<br />-   **CONTROL_COMBO_BOX**<br />-   **CONTROL_LIST_VIEW**<br />-   **CONTROL_PROGRESS_BAR**<br />-   **CONTROL_GENERIC**<br />-   **CONTROL_RADIO_BUTTON**<br />-   **CONTROL_CHECK_BOX**<br />-   **CONTROL_TREE_VIEW**|  
 
@@ -2097,7 +2097,7 @@ HRESULT InitSection(LPCWSTR key, LPCWSTR sectionCaption)
 |**Parameter**|**Description**|  
 |-|-|  
 |**Key**|This parameter should be unique to your page. It is used to ensure that each page has its own summary information.|  
-|**sectionCaption**|The header that will be shown on the **Summary** page for this page’s summary information. Typically, you use **DisplayName()** as the value for this parameter.|  
+|**sectionCaption**|The header that will be shown on the **Summary** page for this page's summary information. Typically, you use **DisplayName()** as the value for this parameter.|  
 
 ##### AddSummaryItem  
 
@@ -2190,7 +2190,7 @@ __interface IValidator : IUnknown
 |**Message**|The message to display on the page if the control is not valid|  
 
 ##### HRESULT Init(IControl \*pControl, IWizardPageContainer \*pContainer, IStringProperties \*pProperties)  
- The form controller calls this method to initialize validators that it creates based on the page’s XML. See Table 40.  
+ The form controller calls this method to initialize validators that it creates based on the page's XML. See Table 40.  
 
 ### Table 40. HRESULT Init Method  
 
@@ -2225,7 +2225,7 @@ __interface IRegEx : IUnknown
  This method is implemented by the **ID_Regex** component (IRegex.h) and provides support for regular expression processing.  
 
 ##### BOOL MatchesRegex(LPCTSTR input, LPCTSTR regex)  
- This method runs the regular expression against the input text. It uses the C++ standard library’s **regex_match** function to do the actual work. The method returns TRUE if there were matches, FALSE otherwise.  
+ This method runs the regular expression against the input text. It uses the C++ standard library's **regex_match** function to do the actual work. The method returns TRUE if there were matches, FALSE otherwise.  
 
 ##### HRESULT GetMatch(size_t index, LPBSTR pValue)  
  This method allows you to retrieve the matches from the most recent **MatchesRegex** call. Note that there is no error processing in this method, and it either returns **S_OK** or throws an exception.  
@@ -2273,7 +2273,7 @@ __interface ITSVariableBag : IUnknown
 };  
 ```  
 
- This interface provides access to task sequence variables. You can access this interface using your page’s **TSVariables()** method.  
+ This interface provides access to task sequence variables. You can access this interface using your page's **TSVariables()** method.  
 
 ##### void GetValue([in] LPCTSTR variableName, [out] LPBSTR pValue)  
  This method reads the value of a task sequence variable.  
@@ -2366,7 +2366,7 @@ __interface IDataNodes : IUnknown
 
  This interface provides access to hierarchical data that can be saved in a page. You obtain this interface via methods on the **ISettingsProperties** interface, which is available to your page through the **Settings** method.  
 
- Data in a page’s XML can look something like this  
+ Data in a page's XML can look something like this  
 
 ```xml
       <Data Name="Network">  
@@ -2387,7 +2387,7 @@ __interface IDataNodes : IUnknown
  This method returns the number of **DataItem** elements.  
 
 ##### HRESULT SetCaptionProperty(LPCTSTR captionProperty)  
- The component that supports this interface also supports **IBindableList**, which makes it easy to populate a combo box with data from the page’s XML. This method controls which property (setter) in each **DataItem** element will be used for this binding. For example, you could call this method with **DisplayName**, and it would use that setter property for data binding. The combo box would then contain **Public** and **Dev Team** as items.  
+ The component that supports this interface also supports **IBindableList**, which makes it easy to populate a combo box with data from the page's XML. This method controls which property (setter) in each **DataItem** element will be used for this binding. For example, you could call this method with **DisplayName**, and it would use that setter property for data binding. The combo box would then contain **Public** and **Dev Team** as items.  
 
 ##### HRESULT GetProperty(size_t index, LPCTSTR propertyName, [out] LPBSTR propertyValue)  
  This method gets a property from one of the **DataItem** elements. See Table 41 and Table 42.  
@@ -2508,7 +2508,7 @@ __interface ILogger : IUnknown
 ```  
 
 ##### Overview  
- The UDI Wizard logs information to a log file, which helps troubleshoot issues found in the field. It is a good idea for your pages to log information. You can obtain a pointer to this interface from within your page using the page’s **Logger()** method. Lines in the log file contain a “level” number that represents error, normal, verbose, or debug messages.  
+ The UDI Wizard logs information to a log file, which helps troubleshoot issues found in the field. It is a good idea for your pages to log information. You can obtain a pointer to this interface from within your page using the page's **Logger()** method. Lines in the log file contain a "level" number that represents error, normal, verbose, or debug messages.  
 
 > [!NOTE]
 >  Debug messages are not saved to the log file unless debug support is turned on. You can turn on debug support by adding the following line to the **Style** element in the .config file:  
@@ -2571,7 +2571,7 @@ HRESULT Error(HRESULT error, LPCTSTR component, LPCTSTR message)
 HRESULT Error2(HRESULT error, LPCTSTR component, LPCTSTR message, LPCTSTR message2)  
 ```  
 
- This method is like the **Error** method but allows you to provide a two-part message. The final message will have “message,” and then “message2” in the output file. This is simply a convenience method.  
+ This method is like the **Error** method but allows you to provide a two-part message. The final message will have "message," and then "message2" in the output file. This is simply a convenience method.  
 
 ##### Normal  
 
@@ -2683,7 +2683,7 @@ __interface ISettingsProperties : IUnknown
 ```  
 
 ##### Overview  
- This interface provides access to page data. To get to the top level of page data, use the page’s **Settings()** method.  
+ This interface provides access to page data. To get to the top level of page data, use the page's **Settings()** method.  
 
 ##### HRESULT GetAttribute(LPCTSTR attributeName,  LPBSTR attributeValue)  
  This method allows you to retrieve the values of attributes on the main node, which is the **Page** node when you are using the **Settings()** method of the page.  
@@ -2695,16 +2695,16 @@ __interface ISettingsProperties : IUnknown
  Call this method if you want to directly get a list of XML nodes using an XPath expression. It is better to use one of the other methods if you can. Use this method only if you cannot get to nodes any other way.  
 
 ##### HRESULT SelectSingleNode(LPCTSTR xPath,  IXMLDOMNode **ppNode)  
- Call this method if you want to directly get a single XML node using an XPath expression. It is better to use one of the other methods if you can. Use this method only if you can’t get to a node any other way.  
+ Call this method if you want to directly get a single XML node using an XPath expression. It is better to use one of the other methods if you can. Use this method only if you can't get to a node any other way.  
 
 ##### HRESULT GetDataNode(LPCTSTR name,  ISettingsProperties **ppNode)  
- Retrieve a **Data** element based on that element’s **Name** attribute.  
+ Retrieve a **Data** element based on that element's **Name** attribute.  
 
 ##### HRESULT GetDataNodes(IDataNodes **ppNodes)  
  This method retrieves a list of **DataItem** elements under the current node. From the page level, call **GetDataNode** to retrieve an **ISettingsProperty** interface for the data. Then, on that instance, call **GetDataNodes** to retrieve the list of records. For example, given this XML:  
 
 ```xml
-    <Page …>  
+    <Page ...>  
       <Data Name="Network">  
         <DataItem>  
           <Setter Property="DisplayName">Public</Setter>  
@@ -2813,7 +2813,7 @@ __interface ITaskManager : IUnknown
 |**idListView**|The control ID of a **ListView** control that will display the list of tasks and the status of those tasks|  
 |**idMessage**|The control ID of a text box that will be used to display a message for the task that you select|  
 |**idRetryButton**|The control ID of a button you can click to run the tasks again|  
-|**pPageInfo**|A wrapper around the page’s XML (**TaskManager** loads the set of tasks to run from this XML.)|  
+|**pPageInfo**|A wrapper around the page's XML (**TaskManager** loads the set of tasks to run from this XML.)|  
 |**pCallback**|Can be null (If this parameter is not null, **TaskManager** calls the **Started** method when it starts a task and the **Finished** method for each task that finishes running.)|  
 
 ##### HRESULT SetFailMessage(LPCWSTR message)  
@@ -2826,7 +2826,7 @@ __interface ITaskManager : IUnknown
  This method is for internal use only. It retrieves the current message for a task based on its index in the list of tasks.  
 
 ##### HRESULT GetResultType)(size_t index, LPBSTR type)  
- This method retrieves the current “type” for a task. Table 50 shows the available types.  
+ This method retrieves the current "type" for a task. Table 50 shows the available types.  
 
 ### Table 50. HRESULT GetResultType  
 
@@ -2836,10 +2836,10 @@ __interface ITaskManager : IUnknown
 |**1**|Represents a tasks that returned a warning|  
 |**-1**|Represents a failed task|  
 
- The type is retrieved by looking at the task’s exit or error code and finding a match in the task’s <ExitCodes\> XML element.  
+ The type is retrieved by looking at the task's exit or error code and finding a match in the task's <ExitCodes\> XML element.  
 
 ##### HRESULT GetProperty(size_t index, LPCTSTR propertyName, LPBSTR value)  
- This method is used by the progress and preflight pages to retrieve the **BitmapFilename** setter property so it can display an image next to the message for the task that you highlight. In other words, you can add a custom setter to the task’s XML, and then retrieve it with this method.  
+ This method is used by the progress and preflight pages to retrieve the **BitmapFilename** setter property so it can display an image next to the message for the task that you highlight. In other words, you can add a custom setter to the task's XML, and then retrieve it with this method.  
 
 ##### int GetSelectedIndex(void)  
  This method retrieves the index of the currently selected task, which is useful if you want to retrieve additional information about the task (see **GetProperty** method) to display for the selected task. The progress and preflight pages use this method to display an image for the selected task.  
@@ -2860,10 +2860,10 @@ __interface ITaskManager : IUnknown
  This method returns the number of tasks currently running.  
 
 ##### void OnCommonControlEvent(WORD controlId, LPNMHDR pInfo)  
- Call this method from your page’s **OnCommonControlEvent** so the **TaskManager** can process events it needs.  
+ Call this method from your page's **OnCommonControlEvent** so the **TaskManager** can process events it needs.  
 
 ##### void OnControlEvent(WORD eventId, WORD controlId)  
- Call this method from your page’s **OnControlEvent** so the **TaskManager** can process events it needs.  
+ Call this method from your page's **OnControlEvent** so the **TaskManager** can process events it needs.  
 
 ##### void EnableButtons(BOOL enable)  
  This method is for internal use only.  
@@ -2980,7 +2980,7 @@ Logger()->Verbose(s_component, L"Message for log file");
 ```  
 
 ##### IPropertyBag * Properties(void)  
- This method provides access to “memory” variables, which are properties that are in memory only while the UDI Wizard is running. These properties are available to other pages either in code or in the XML using the **$memoryVarName$** syntax.  
+ This method provides access to "memory" variables, which are properties that are in memory only while the UDI Wizard is running. These properties are available to other pages either in code or in the XML using the **$memoryVarName$** syntax.  
 
 ##### HRESULT CreateInstance(LPCTSTR type, [out] IUnknown **ppInstance)  
  This method allows you to create a new instance of any component that has been registered. However, it is better to use the template function **CreateInstance**, because it is strongly typed.  
@@ -2995,7 +2995,7 @@ Logger()->Verbose(s_component, L"Message for log file");
 
 |**Format**|**Description**|  
 |-|-|  
-|**$Name$**|Replaces the value of a memory variable with this name (If there is no memory variable with the name, the “token” will be removed.)|  
+|**$Name$**|Replaces the value of a memory variable with this name (If there is no memory variable with the name, the "token" will be removed.)|  
 |**%Name%**|Either a task sequence variable or an environment variable. The order is as follows:<br /><br /> 1.  Use the value of a task sequence variable, if present.<br />2.  Use the value of an environment variable, if present.<br />3.  Otherwise, remove this text from the string.|  
 
 ### Table 52. HRESULT Parameter  
@@ -3012,7 +3012,7 @@ Logger()->Verbose(s_component, L"Message for log file");
  This method displays a message box with the text and caption that you provide. The **uType** parameter is any value that you can supply to the **MessageBox** Win32 function.  
 
 ##### BOOL InPreview(void)  
- This method returns TRUE if you launched the wizard in “preview” mode by supplying the **/preview** switch. In preview mode, the **Next** button is never disabled. This method allows you to bypass code in preview mode, for example, that could cause issues when you do not have valid data on the page.  
+ This method returns TRUE if you launched the wizard in "preview" mode by supplying the **/preview** switch. In preview mode, the **Next** button is never disabled. This method allows you to bypass code in preview mode, for example, that could cause issues when you do not have valid data on the page.  
 
 ##### HWND GetHwnd(void)  
  This method returns the **HWND** for the main dialog box. Use this method with care. Generally, the UDI Wizard application programming interface is designed so that you never work directly with window handles.  
@@ -3072,7 +3072,7 @@ GetControlWrapper(View(), IDC_MY_COMBO, CONTROL_COMBO_BOX, &m_pCombo);
  This method is for internal use only.  
 
 ##### HRESULT FocusWizardButton(WizardButtons button)  
- Sets the focus to one of the wizard’s buttons.**WizardButtons** has two values: **BackButton** and **NextButton**.  
+ Sets the focus to one of the wizard's buttons.**WizardButtons** has two values: **BackButton** and **NextButton**.  
 
 ##### HRESULT SetEnable(WizardButtons button, BOOL enable)  
  Request that one of the wizard buttons be enabled or disabled. The button might not match the state that you request. For example, if you run the UDI Wizard with the **/preview** switch, the buttons will always be enabled. **WizardButtons** has two values: **BackButton** and **NextButton**.  
@@ -3142,7 +3142,7 @@ Pointer<IXMLDOMNode> pNewChild
 pXmlDom->CreateNode(NODE_ELEMENT, L"MyElement", L"", &pNewChild);  
 ```  
 
- Once you create a new node, you can add it as a child to another node by calling the parent’s **appendChild** method.  
+ Once you create a new node, you can add it as a child to another node by calling the parent's **appendChild** method.  
 
 ### Helper Functions  
 
@@ -3511,7 +3511,7 @@ Table 67 lists the attributes of the [Validator](#Validator) element and provide
 |[SetterControl](#SetterControl)|This control is used to modify the value of a [setter](#Setter) element in the UDI Wizard configuration file.|  
 
 ####  <a name="CollectionTControl"></a> CollectionTControl  
- This control provides many capabilities for editing data. The best way to learn how to use this control is to look at the sample, which shows how to edit data under a page’s **Data** element. In particular, the sample shows how to add, remove, and edit items in this control.  
+ This control provides many capabilities for editing data. The best way to learn how to use this control is to look at the sample, which shows how to edit data under a page's **Data** element. In particular, the sample shows how to add, remove, and edit items in this control.  
 
 ####  <a name="FieldElementControl"></a> FieldElementControl  
  Use this control to edit a field, which is typically linked to a **TextBox** control on the .xaml page.  
@@ -3612,7 +3612,7 @@ FieldData="{Binding DataContext.Location, ElementName=ControlRoot}"
         Width="450"  
         HeaderText="Title text"  
         SetterData="{Binding KeyLocationSetter}"   
-        InstructionText="What this means…"  
+        InstructionText="What this means..."  
         HorizontalAlignment="Left">  
 
     <TextBox  
@@ -3674,7 +3674,7 @@ XElement CurrentPage { get; set; }
 ####  <a name="IMessageBoxService"></a> IMessageBoxService  
  This interface provides access to methods that you can use to display message boxes. You may be wondering why you need an interface to display a message box. The reality is that you do not: Microsoft uses this interface with in code, because it aids in writing automated tests for designer pages.  
 
- However, using these methods does provide one useful benefit: The dialog boxes always have the “owner” set to the UDI Wizard, which ensures that the dialog box is grouped correctly with the main window.  
+ However, using these methods does provide one useful benefit: The dialog boxes always have the "owner" set to the UDI Wizard, which ensures that the dialog box is grouped correctly with the main window.  
 
  You can use dependency injection to obtain a pointer to this interface using code like this in your class:  
 
@@ -3794,7 +3794,7 @@ void ShowWizardWindow(Type viewType, DialogInteraction dialogPayload);
 |[Default](#default)|Specifies a default value for the field specified in the parent [Field](#Field) or [RadioGroup](#RadioGroup) element. The default is set to the value bracketed by this element.|  
 |[DLL](#DLL)|Specifies a DLL that is to be loaded and referenced by the UDI Wizard and the UDI Wizard Designer.|  
 |[DLLs](#DLLs)|Groups the individual [DLL](#DLL) elements.|  
-|[Error](#Error)|Specifies a possible error code that can a task can return. The value of the error code is returned by the task’s **HRESULT** and is trapped by this element to provide more specific error information.|  
+|[Error](#Error)|Specifies a possible error code that can a task can return. The value of the error code is returned by the task's **HRESULT** and is trapped by this element to provide more specific error information.|  
 |[ExitCode](#ExitCode)|Specifies a possible exit code for a task. The exit codes are return codes that the task expects. Create an **ExitCode** element for each possible exit code. Otherwise, you can specify an asterisk (\*) in the **Value** attribute to handle return codes not listed in other **ExitCode** elements.|  
 |[ExitCodes](#ExitCodes)|Groups a set of [ExitCode](#ExitCode) and [Error](#Error) elements for a [Task](#Task) element or an **Error** element.|  
 |[Field](#Field)|Specifies an instance of a control in a [Page](#Page) element that is used to provide customization with XML. Not all controls allow customization with XML—only controls that use the [Field](#Field) element.|  
@@ -3959,7 +3959,7 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 ```  
 
 ####  <a name="Error"></a> Error  
- This element specifies a possible error code that a task can return. The value of the error code is returned and trapped by the task’s **HRESULT** to provide more specific error information.  
+ This element specifies a possible error code that a task can return. The value of the error code is returned and trapped by the task's **HRESULT** to provide more specific error information.  
 
 ##### Element Information  
  Table 85 provides information about the [Error](#Error) element.  

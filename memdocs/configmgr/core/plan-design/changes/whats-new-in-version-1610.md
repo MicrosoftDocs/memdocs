@@ -25,8 +25,8 @@ Update 1610 for Configuration Manager current branch is available as an in-conso
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Installing updates at sites](../../servers/manage/updates.md)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
@@ -164,7 +164,7 @@ This action does not cause the application to be uninstalled from any devices. H
 
 ## Filter by content size in automatic deployment rules
 You can now filter on the content size for software updates in automatic deployment rules. For example, to download only software updates that are smaller than 2 MB, you can set the **Content Size (KB)** filter to **< 2048**. Using this filter prevents large software updates from automatically downloading, which better supports simplified Windows down-level servicing when network bandwidth is limited. For details, see:
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 To configure the **Content Size (KB)** field, do one of the following:
@@ -196,7 +196,7 @@ You can now get a quick view of overall compliance for devices, and the top reas
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout’s mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout’s solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status.
+Microsoft is integrating with Lookout's mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout's solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status.
 
 Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data.
 

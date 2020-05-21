@@ -198,7 +198,7 @@ public string GetDriverName(IResultObject driver)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://msdn.microsoft.com/library/aa393854.aspx)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`path`|-   Managed: `String`<br />-   VBScript: `String`|A valid UNC network path to the folder that contains the driver contents. For example, \\\Servers\Driver\VideoDriver.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the Txtsetup.oem file. For example, you might have \\\server\drivers\Video for `path` and Txtsetup.oem for `name`.|  
 

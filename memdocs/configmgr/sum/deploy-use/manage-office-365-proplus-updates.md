@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Office 365 client updates from 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -17,6 +17,9 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 # Manage Office 365 ProPlus with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!Note]
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 Configuration Manager lets you manage Office 365 ProPlus apps in the following ways:
 
@@ -221,7 +224,33 @@ To ensure that the update channel is set so that deployed updates will be proper
     Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Click **OK**. 
 
-## <a name="bkmk_channel"></a> Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+## <a name="bkmk_channel"></a> Update channels for Microsoft 365 Apps
+<!--6298093-->
+When Office 365 ProPlus was renamed to **Microsoft 365 Apps for enterprise**, the update channels were also renamed. If you use an automatic deployment rule (ADR) to deploy updates, you'll need to make changes to your ADRs if they rely on the **Title** property. That's because the name of update packages in the Microsoft Update Catalog is changing.
+
+Currently, the title of an update package for Office 365 ProPlus begins with "Office 365 Client Update" as seen in the following example:
+
+&nbsp; &nbsp; Office 365 Client Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.20648)
+
+For update packages released on and after June 9, the title will begin with "Microsoft 365 Apps Update" as seen in the following example:
+
+&nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
+</br>
+</br>
+
+|New Channel name|Previous Channel name|
+|--|--|
+|Semi-Annual Enterprise Channel|Semi-Annual Channel|
+|Semi-Annual Enterprise Channel (Preview)|Semi-Annual Channel (Targeted)|
+|Monthly Enterprise Channel|NA|
+|Current Channel|Monthly Channel|
+|Current Channel (Preview)|Monthly Channel (Targeted)|
+|Beta Channel|Insider|
+
+For more information about how to modify your ADRs, see [Automatically deploy software updates](automatically-deploy-software-updates.md). For more information about the name change, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
 
 After deploying Office 365 ProPlus, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Office 365 ProPlus update channel for devices in your organization](https://docs.microsoft.com//deployoffice/change-update-channels).
 

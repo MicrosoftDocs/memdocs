@@ -49,9 +49,9 @@ After you have defined parent to child relationships, you can filter your view t
 The display now shows only the parent software items, or software that has no defined relationships. Software that is only a child of another title does not display.
 
 ## Remote control keyboard translation
-In the past, Configuration Manager transmitted the key position from the viewer’s location to the sharer’s location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an “A”, but the sharer’s French keyboard would provide a “Q”. We are changing the default behavior so that the character itself is transmitted from the viewer’s keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
+In the past, Configuration Manager transmitted the key position from the viewer's location to the sharer's location. This was problematic for keyboard configurations that differed from viewer to sharer. For example, a viewer with an English keyboard would type an "A", but the sharer's French keyboard would provide a "Q". We are changing the default behavior so that the character itself is transmitted from the viewer's keyboard to the sharer, and what the viewer intends to type arrives at the sharer.
 
-This behavior can be turned off by the viewer if they prefer to type according to the sharer’s keyboard arrangement. To change the behavior, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
+This behavior can be turned off by the viewer if they prefer to type according to the sharer's keyboard arrangement. To change the behavior, in **Configuration Manager Remote Control**, choose **Action**,and choose **Enable keyboard translation** to transmit key position.
 
 > [!NOTE]
 >

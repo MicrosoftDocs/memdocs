@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,9 +33,9 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 
 You can use email profiles to configure the built-in email settings for the following devices:
 
-- Android device administrator on Samsung Knox Standard 4.0 and newer
+- Android device administrator on Samsung Knox Standard 5.0 and newer
 - Android Enterprise
-- iOS 8.0 and newer
+- iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - Windows Phone 8.1 and newer
 - Windows 10 (desktop) and Windows 10 Mobile
@@ -98,6 +98,8 @@ Email profiles are assigned to device groups, not user groups. There are differe
 You can help secure email profiles using the following options:
 
 - **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
+
+  If you use certificate based authentication for your email profile, deploy the email profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.
 
   For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
 

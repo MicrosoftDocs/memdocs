@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -61,7 +61,7 @@ For internet-based devices in the second path, you need to create an app in Intu
 3. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process.  
 
 The following command line is an example:
-`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Decide which command-line properties you require for your environment:  
@@ -87,22 +87,22 @@ Decide which command-line properties you require for your environment:
 
     For more information, see [About client installation properties - PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
-The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
+The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSITECODE**.<!--3607731-->
 
 > [!NOTE]
 > If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI. <!-- SCCMDocs-pr issue 3084 -->
 
 The following example includes all of these properties:
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 For more information, see [Client installation properties](../core/clients/deploy/about-client-installation-properties.md).
 
 ### Create the app in Intune
 
-1. Go to the [Azure portal](https://portal.azure.com), and then open the Intune page.  
+1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), and then expand the left navigation pane.  
 
-2. Select **Client Apps** > **Apps** > **Add**.  
+2. Select **Apps** > **All Apps** > **Add**.  
 
 3. Under **Other**, select **Line-of-business app**.  
 

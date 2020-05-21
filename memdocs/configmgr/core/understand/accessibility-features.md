@@ -2,7 +2,7 @@
 title: Accessibility
 titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,7 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.collection: M365-identity-device-management
 ---
 
 # Accessibility features in Configuration Manager
@@ -42,7 +41,7 @@ To access a workspace, use the following keyboard shortcuts:
 |Ctrl + 4|  Administration|
 
 
-### Other keyboard shortcuts
+### Other console shortcuts
 
 |Keyboard shortcut|  Purpose|
 |--------|--------|  
@@ -53,6 +52,14 @@ To access a workspace, use the following keyboard shortcuts:
 |Ctrl + D|Set the focus to the details pane, when available.|
 |Alt     |Change the focus in and out of the ribbon.|
 
+### <a name="bkmk_cmpshortcuts"></a> CMPivot shortcuts
+
+Most [web browser keyboard shortcuts](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) will work in CMPivot.
+
+|Keyboard shortcut|Purpose|
+|--------|--------|  
+|Ctrl + 1|Set the focus on the first tab.|
+|Alt + &lt;|To back to the address|
 
 
 ## Other accessibility features
@@ -82,9 +89,9 @@ To access a workspace, use the following keyboard shortcuts:
 ## See also
 
 For more information on the fundamentals of navigating Configuration Manager user interfaces, see the following articles:
-- [Using the Configuration Manager console](../servers/manage/admin-console.md)  
+- [Using the Configuration Manager console](../servers/manage/admin-console.md)
 - [Software Center user guide](software-center.md)
 
 > [!NOTE]  
-> The information in this article might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](https://go.microsoft.com/fwlink/?LinkId=8431) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
+> The information in this article might apply only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary information card that came with your software package or visit the [Microsoft Accessibility website](https://www.microsoft.com/accessibility/) for contact information for Microsoft support services. You can contact your subsidiary to find out whether the type of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
 

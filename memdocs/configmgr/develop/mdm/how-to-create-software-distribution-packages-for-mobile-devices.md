@@ -22,7 +22,7 @@ Configuration Manager device management enables mobile device software distribut
 -   [How to Create an Advertisement](../../develop/core/servers/configure/how-to-create-an-advertisement.md)  
 
 > [!IMPORTANT]
->  This topic only applies to the Mobile Device Legacy Client. For addition information on the Mobile Device Legacy Client platforms, see the Mobile Device Legacy Client section of the [Supported Configurations for Configuration Manager](https://go.microsoft.com/fwlink/?LinkId=272885).  
+> This article only applies to the mobile device legacy client. For more information on the mobile device legacy client platforms, see [Supported configurations](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-ce-computers).
 
 ## Packages  
  Packages for mobile devices in Configuration Manager generally represent a software application to be installed on a mobile device, but they might also contain individual files, updates, or even an individual command.  

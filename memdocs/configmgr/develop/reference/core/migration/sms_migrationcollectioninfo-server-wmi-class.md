@@ -135,7 +135,7 @@ Class SMS_MigrationCollectionInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- The string that concatenate all ID of collections that the collection is limit to, separated by ‘,’.  
+ The string that concatenate all ID of collections that the collection is limit to, separated by ','.  
 
  `SiteCodeCount`  
  Data type: `UInt32`  
@@ -153,7 +153,7 @@ Class SMS_MigrationCollectionInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- The string that concatenate all site codes that embedded in the collection query string, separated by ‘,’.  
+ The string that concatenate all site codes that embedded in the collection query string, separated by ','.  
 
  `SourceSiteCollectionID`  
  Data type: `String`  

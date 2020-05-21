@@ -60,9 +60,9 @@
 			<text x="2" y="963.72" class="st3">Troubleshoot SQL replication <tspan x="2" dy="1.2em" class="st6">reinit for global data</tspan></text>		</g>
 		<g id="shape282-13" transform="translate(188.898,-831.634)">
 			<title>Sheet.282</title>
-			<desc>Check if site replication hasn’t finished reinit</desc>
+			<desc>Check if site replication hasn't finished reinit</desc>
 			<rect x="0" y="938.038" width="113.664" height="38.0962" class="st5"/>
-			<text x="2" y="954.69" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st6">hasn</tspan>’t finished reinit</text>		</g>
+			<text x="2" y="954.69" class="st3">Check if site replication <tspan x="2" dy="1.2em" class="st6">hasn</tspan>'t finished reinit</text>		</g>
 		<g id="shape283-17" transform="translate(311,-919.609)">
 			<title>Dynamic connector.1114</title>
 			<path d="M0 976.13 L0 1008.01 L-151.58 1008.01 L-151.58 1017.97" class="st7"/>
@@ -290,7 +290,7 @@
 						x="4" dy="1.2em" class="st6">INNER JOIN ReplicationData rg  </tspan><tspan x="4" dy="1.2em" class="st6">ON dt.ReplicationGroup = </tspan><tspan
 						x="4" dy="1.2em" class="st6">rg.ReplicationGroup </tspan><tspan x="4" dy="1.2em" class="st6">WHERE dt.InitializationStatus NOT </tspan><tspan
 						x="4" dy="1.2em" class="st6">IN (6,7)  </tspan><tspan x="4" dy="1.2em" class="st6">AND </tspan><tspan x="4"
-						dy="1.5em" class="st6">rg.ReplicationPattern=N</tspan>’Global&#39;</text>		</g>
+						dy="1.5em" class="st6">rg.ReplicationPattern=N</tspan>'Global&#39;</text>		</g>
 		<g id="shape345-219" transform="translate(322.25,-582.119)">
 			<title>Orthogonal.1110</title>
 			<desc>SELECT RequestTrackingGUID, InitializationStatus FROM RCM_Drs...</desc>
@@ -321,7 +321,7 @@
 						x="4" dy="1.2em" class="st6">FROM RCM_DrsInitializationTracking dt </tspan><tspan x="4" dy="1.2em"
 						class="st6">INNER JOIN ReplicationData rg  </tspan><tspan x="4" dy="1.2em" class="st6">ON dt.ReplicationGroup = </tspan><tspan
 						x="4" dy="1.2em" class="st6">rg.ReplicationGroup </tspan><tspan x="4" dy="1.2em" class="st6">WHERE dt.InitializationStatus NOT IN </tspan><tspan
-						x="4" dy="1.2em" class="st6">(6,7)  </tspan><tspan x="4" dy="1.2em" class="st6">AND rg.ReplicationPattern=N</tspan>’Global&#39;</text>		</g>
+						x="4" dy="1.2em" class="st6">(6,7)  </tspan><tspan x="4" dy="1.2em" class="st6">AND rg.ReplicationPattern=N</tspan>'Global&#39;</text>		</g>
 		<g id="shape349-257" transform="translate(17.4866,-336.219)">
 			<title>Orthogonal.100</title>
 			<desc>SELECT Status FROM RCM_InitPackageRequest WHERE RequestTracki...</desc>

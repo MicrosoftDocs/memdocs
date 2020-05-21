@@ -295,7 +295,7 @@ It is unlikely that this view will be joined to other views.
 
 ### v_SMSCICurrentComplianceStatus
 
-Lists compliance information for each configuration item that has been deployed. This includes whether the configuration item is applicable, it’s version, the last time it reported about compliance, and more.
+Lists compliance information for each configuration item that has been deployed. This includes whether the configuration item is applicable, it's version, the last time it reported about compliance, and more.
 This view can be joined to other views by using the **CI_CurrentComplianceStatusID** column.
 
 ### v_CI_CurrentErrorDetails

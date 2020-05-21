@@ -35,7 +35,7 @@ Remove an enrolled Android device so that it's no longer managed by your organiz
 
 * The device loses access to your organization's protected data and resources.
 * The device no longer appears in Company Portal.
-* You can’t install apps from Company Portal.
+* You can't install apps from Company Portal.
 * Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.  
 
 > [!NOTE]

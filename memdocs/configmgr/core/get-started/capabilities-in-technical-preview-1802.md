@@ -52,7 +52,7 @@ In this release, you can now transition the Endpoint Protection workload from Co
  
 ## Configure Windows Delivery Optimization to use Configuration Manager boundary groups
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. 
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Starting in this release, configure Delivery Optimization to use your boundary groups when sharing content among peers. A new client setting applies the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. 
 
 ### Prerequisites
 - Delivery Optimization is only available on Windows 10 clients
@@ -64,7 +64,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 2. Select the new **Delivery Optimization** group.
 3. Enable the setting **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**.
 
-For more information, see the **Group** delivery mode option in [Delivery Optimization options](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
+For more information, see the **Group** delivery mode option in [Delivery Optimization options](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
 
 
 
@@ -92,23 +92,23 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 - **Remove incompatible applications**: Add steps in this group to remove any applications that are incompatible with this version of Windows 10. The method to uninstall an application varies. If the application uses Windows Installer, copy the **Uninstall program** command line from the **Programs** tab on the Windows Installer deployment type properties of the application. Then add a **Run Command Line** step in this group with the uninstall program command line. For example: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Remove incompatible drivers**: Add steps in this group to remove any drivers that are incompatible with this version of Windows 10.
 - **Remove/suspend third-party security**: Add steps in this group to remove or suspend third-party security programs, such as antivirus.
-   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
+   - If you are using a third-party disk encryption program, provide its encryption driver to Windows Setup with the **/ReflectDrivers** [command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). Add a [Set Task Sequence Variable](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) step to the task sequence in this group. Set the task sequence variable to **OSDSetupAdditionalUpgradeOptions**. Set the value to **/ReflectDriver** with the path to the driver. This [task sequence action variable](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) appends the Windows Setup command-line used by the task sequence. Contact your software vendor for any additional guidance on this process.
 
 ### New groups under **Post-Processing**
 - **Apply setup-based drivers**: Add steps in this group to install setup-based drivers (.exe) from packages.
 - **Install/enable third-party security**: Add steps in this group to install or enable third-party security programs, such as antivirus. 
-- **Set Windows default apps and associations**: Add steps in this group to set Windows default apps and file associations. First prepare a reference computer with your desired app associations. Then run the following command line to export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Add the XML file to a package. Then add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> For more information, see [Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
-- **Apply customizations and personalization**: Add steps in this group to apply Start menu customizations, such as organizing program groups. For more information, see [Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Set Windows default apps and associations**: Add steps in this group to set Windows default apps and file associations. First prepare a reference computer with your desired app associations. Then run the following command line to export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Add the XML file to a package. Then add a [Run Command Line](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step in this group. Specify the package that contains the XML file, and then specify the following command line: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> For more information, see [Export or import default application associations](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+- **Apply customizations and personalization**: Add steps in this group to apply Start menu customizations, such as organizing program groups. For more information, see [Customize the Start screen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### Additional recommendations
-- Review Windows documentation to [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
+- Review Windows documentation to [Resolve Windows 10 upgrade errors](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
 - On the default **Check Readiness** step, enable **Ensure minimum free disk space (MB)**. Set the value to at least **16384** (16 GB) for a 32-bit OS upgrade package, or **20480** (20 GB) for 64-bit. 
 - Use the **SMSTSDownloadRetryCount** [built-in task sequence variable](../../osd/understand/task-sequence-variables.md) to retry downloading policy. Currently by default, the client retries twice; this variable is set to two (2). If your clients are not on a wired corporate network connection, additional retries help the client obtain policy. Using this variable causes no negative side effect, other than delayed failure if it cannot download policy.<!-- 501016 --> Also increase the **SMSTSDownloadRetryDelay** variable from the default 15 seconds.
 - Perform an inline compatibility assessment. 
    - Add a second **Upgrade Operating System** step early in the **Prepare for Upgrade** group. Name it *Upgrade assessment*. Specify the same upgrade package, and then enable the option to **Perform Windows Setup compatibility scan without starting upgrade**. Enable **Continue on error** on the Options tab. 
    - Immediately following this *Upgrade assessment* step, add a **Run Command Line** step. Specify the following command line:</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>On the **Options** tab, add the following condition: </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, this step is skipped. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan.
    - For more information, see [Upgrade operating system](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS).
-- If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+- If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 Send **Feedback** from the **Home** tab of the ribbon if you have further recommendations or suggestions.
 
@@ -223,14 +223,14 @@ The list of [unsupported scenarios](../plan-design/network/cng-certificates-over
 
 ## Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud management gateway](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The CMG wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new CMG instances. If possible, redeploy existing CMG instances through Resource Manager.
 
 Configuration Manager does not migrate existing classic CMG instances to the Azure Resource Manager deployment model. Create new CMG instances using Azure Resource Manager deployments, and then remove classic CMG instances. 
 
 > [!IMPORTANT]
-> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> This capability does not enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP does not support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
 ### Prerequisites
 - Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.
@@ -313,7 +313,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
 
 ## Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added in Configuration Manager for [Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
+Additional policy settings for the Attack Surface Reduction and Controlled folder access components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection).
 
 **New settings for Controlled folder access**<br/>
 There are two additional options when you configure Controlled folder access: **Block disk sectors only** and **Audit disk sectors only**. These two settings allow Controlled folder access to be enabled for boot sectors only and does not enable the protection of specific folders or the default protected folders. 
@@ -328,20 +328,20 @@ There are two additional options when you configure Controlled folder access: **
 
 ## Microsoft Edge browser policies
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) web browser on Windows 10 clients, you can now create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. This policy currently includes the following settings:
+For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, you can now create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. This policy currently includes the following settings:
 - **Set Microsoft Edge browser as default**: configures the Windows 10 default app setting for web browser to Microsoft Edge
-- **Allow address bar drop down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Allow autofill**: For more information, see [AllowAutofill browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Allow cookies**: For more information, see [AllowCookies browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Allow address bar drop down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Allow autofill**: For more information, see [AllowAutofill browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Allow cookies**: For more information, see [AllowCookies browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Allow extensions**: For more information, see [AllowExtensions browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 ### Prerequisites
 - Windows 10 client that is Azure Active Directory-joined. 
