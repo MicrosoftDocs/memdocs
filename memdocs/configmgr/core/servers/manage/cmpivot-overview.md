@@ -20,7 +20,7 @@ CMPivot allows you to quickly assess the state of devices in your environment an
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](includes/cmpivot-overview-shared.md)]
 
-## Additional entities, operators, and functions for CMPivot from Configuration Manager
+## <a name="bkmk_onprem_only"></a> Additional entities, operators, and functions for CMPivot from Configuration Manager
 
 > [!Important]
 > These items aren't supported when you run CMPivot from Microsoft Endpoint Manager admin center.
