@@ -125,7 +125,7 @@ For more information about configuring site systems, see [Install site system ro
 
     - **Reporting services point account**: Select **Set**, and then select an account to use. SQL Server Reporting Services on the reporting services point uses this account to connect to the Configuration Manager site database. This connection is to retrieve the data for a report. Select **Existing account** to specify a Windows user account that you previously configured as a Configuration Manager account. Select **New account** to specify a Windows user account that's not currently configured for use. Configuration Manager automatically grants the specified user access to the site database.  
 
-        The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**. It also needs the **Read tokenGroupsGlobalAndUniversal** permission set to **Allow**. Users in a different domain than the reporting services point account need a two-way trust between the domains to successfully run reports.
+        The account that runs Reporting Services must belong to the domain local security group **Windows Authorization Access Group**. This grants the account **Allow Read** permissions on the **tokenGroupsGlobalAndUniversal** attribute for all user objects within the domain. Users in a different domain than the reporting services point account need a two-way trust between the domains to successfully run reports.
 
         The specified Windows user account and password are encrypted and stored in the Reporting Services database. Reporting Services retrieves the data for reports from the site database by using this account and password.  
 
