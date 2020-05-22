@@ -65,7 +65,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
 
-To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy[(../protect/endpoint-security-edr-policy.md##set-up-configuration-manager-to-support-edr-policy). Set up includes:
+To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy](../protect/endpoint-security-edr-policy.md##set-up-configuration-manager-to-support-edr-policy). Set up includes:
 
 - Configure your Configuration manager for *tenant attach*.
 - Install an in-console update for Configuration Manager to enable support for the EDR policies. This update applies only to hierarchies that have enabled *tenant attach*.
