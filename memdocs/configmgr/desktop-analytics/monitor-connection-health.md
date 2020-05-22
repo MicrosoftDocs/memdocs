@@ -407,7 +407,7 @@ Otherwise, it might display one of the following errors:
 - Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements  
 
     > [!TIP]
-    > There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes#dawin7-diagtrack).<!-- 7283186 -->
+    > There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements  
 
