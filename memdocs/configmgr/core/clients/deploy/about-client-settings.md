@@ -358,7 +358,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
-Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
+Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. Enabling this setting also sets the Delivery Optimization download mode to the Group (2) option on targeted clients.
 
 > [!Note]
 > Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
