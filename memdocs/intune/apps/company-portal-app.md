@@ -224,8 +224,8 @@ Some platforms and configurations do not allow self-service device actions. This
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Retire | Available<sup>(1)</sup> | Available | Available | Available<sup>(7)</sup> |
-| Wipe | Available | Available<sup>(5)</sup> | NA | Available<sup>(7)</sup> |
+| Retire | Available<sup>(1)</sup> | Available<sup>(9)</sup> | Available | Available<sup>(7)</sup> |
+| Wipe | Available | Available<sup>(5)</sup><sup>(9)</sup> | NA | Available<sup>(7)</sup> |
 | Rename<sup>(4)</sup> | Available | Available | Available | Available |
 | Sync | Available | Available | Available | Available |
 | Remote Lock | Windows Phone only | Available | Available | Available |
@@ -240,6 +240,7 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br>
 <sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.
+<sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
 
 ### App logs
 
