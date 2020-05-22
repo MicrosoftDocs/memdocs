@@ -35,6 +35,5 @@ CMPivot allows you to quickly assess the state of devices in your environment an
 
 ## Next steps
 
-To learn more about CMPivot, see the following articles:
-- [Use CMPivot](cmpivot.md)
-- [CMPivot sample scripts](cmpivot-sample-scripts.md)
+To learn more about CMPivot, see [Use CMPivot](cmpivot.md).
+

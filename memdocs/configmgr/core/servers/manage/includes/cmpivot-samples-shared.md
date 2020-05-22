@@ -8,8 +8,6 @@ ms.date: 05/26/2020
 
 <!--This file is shared by the CMPivot script samples articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
-> [!Important]
-> - File retrieval entities aren't supported when you run CMPivot from Microsoft Endpoint Manager.
 
 ## Operating system
 
@@ -118,19 +116,6 @@ Device
 | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
 ```
 
-## <a name="bkmk_File"></a> Get file content(\<filename>)
-
-> [!Important]
-> The file retrieval entity, (FileContent), isn’t supported when you run CMPivot from Microsoft Endpoint Manager admin center.
-
-Gets the contents of a text file.
-
-```kusto
-FileContent('c:\\windows\\SMSCFG.ini')
-| where Content startswith  'SMS Unique Identifier='
-| project Device, SMSId= substring(Content,22)
-```
-
 ## Find 'Scripts' in the CCM logs in the last hour
 
 The following query will look at events in the last 1 hour:
@@ -138,3 +123,4 @@ The following query will look at events in the last 1 hour:
 ```kusto
 CcmLog('Scripts',1h)
 ```
+
