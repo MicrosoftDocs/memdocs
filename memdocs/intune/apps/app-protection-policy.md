@@ -159,13 +159,13 @@ The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authenticati
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
 
-- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have an Azure Active Directory (Azure AD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
 
 - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-- The end user must sign into the app using their AAD account.
+- The end user must sign into the app using their Azure AD account.
 
 ## App protection policies for Microsoft Office apps
 
