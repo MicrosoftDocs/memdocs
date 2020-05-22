@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -28,6 +28,8 @@ For information about the new features introduced with different versions, see t
 - [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [What's new in version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
@@ -161,6 +163,15 @@ To work around this issue, create a custom security role. Copy an existing secur
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)
 
 ## Desktop Analytics
+
+### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
+
+<!-- 7283186 -->
+_Applies to: Configuration Manager versions 1902, 1906, 1910, and 2002_
+
+The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+No workaround is required for this issue. Don't uninstall the April ESU. If otherwise properly configured, the Windows 7 devices still report diagnostic data to the Desktop Analytics service, and still show in the portal.
 
 ### If you use hardware inventory for distributed views, you can't onboard to Desktop Analytics
 
