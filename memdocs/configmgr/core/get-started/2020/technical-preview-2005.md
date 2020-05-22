@@ -33,6 +33,7 @@ The following sections describe the new features to try out in this version:
 <!--5110009,3601031-->
 
 [!INCLUDE [6386392](includes/2005/6386392.md)]
+[!INCLUDE [3555935](includes/2005/3555935.md)]
 [!INCLUDE [4224406](includes/2005/4224406.md)]
 [!INCLUDE [5622909](includes/2005/5622909.md)]
 [!INCLUDE [6527576](includes/2005/6527576.md)]
