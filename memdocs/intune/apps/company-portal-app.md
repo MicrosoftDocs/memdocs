@@ -251,5 +251,5 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 ## Next steps
 
-- [Configure your organization's logo and brand color for new tab pages in Microsoft Edge](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
+- [Configure your organization's logo and brand color for new tab pages in Microsoft Edge for iOS and Android](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Add apps](apps-add.md)
