@@ -118,6 +118,6 @@ For the device limit restriction in Azure, the **Maximum number of devices per u
 
 ## Next steps
 
-- [Create a device limit restriction in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
+- [Create a device limit restriction in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Configure device settings in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Learn more about registration and domain joined.](https://docs.microsoft.com/azure/active-directory/devices/overview.md#getting-devices-in-azure-ad)
+- [Learn more about registration and domain joined.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
