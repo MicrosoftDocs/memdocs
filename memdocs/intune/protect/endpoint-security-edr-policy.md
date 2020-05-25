@@ -271,4 +271,4 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 ## Next steps
 
 - [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Learn more about [endpoint detection and response](https://docs.microsoft.com/windows/security/-threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
+- Learn more about [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
