@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
 
+
 ---
 
 # Endpoint detection and response policy for endpoint security in Intune
