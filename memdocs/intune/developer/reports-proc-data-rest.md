@@ -70,7 +70,7 @@ You now have an app defined in Azure. Grant access from the native app to the Mi
 7. Select **Select**.
 8. Check the **Delegated Permissions** box to add **Get data warehouse information from Microsoft Intune**.
 
-    ![Enable access - Microsot Intune API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
+    ![Enable access - Microsoft Intune API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
 
 9. Select **Select**.
 10. Select **Done**.
