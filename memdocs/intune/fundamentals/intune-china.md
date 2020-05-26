@@ -36,11 +36,11 @@ Microsoft doesn't operate the service itself. 21Vianet operates, provides, and m
 
 ## Feature differences in Intune operated by 21Vianet
 
-Because of the unique nature of the China services—operated by a partner from datacenters inside China, there are some features differences with Intune. 
+Because the China services are operated by a partner from datacenters inside China, there are some features differences with Intune. 
 
-- Intune operated by 21Vianet only supports standalone deployments and Co-Management with System Center Configuration Manager.
+- Intune operated by 21Vianet only supports standalone deployments and co-management with System Center Configuration Manager.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
-- Co-Management support is tracked for August 2020. Tenant attach (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
+- Co-management support is tracked for August 2020. Tenant attach (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
 - Intune operated by 21Vianet doesn't support the Intune agent and so doesn't support legacy PC management.
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
@@ -65,7 +65,7 @@ In Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you h
 With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you’re the owner of your data:
 - 21Vianet doesn’t use customer data for advertising.
 - You control who has access to your customer data.
-- We use logical isolation to segregate each customer’s data from that of others.
+- We use logical isolation to segregate each customer’s data.
 - We provide simple, transparent data-use policies, and get independent audits.
 - Our subcontractors are under contract to meet our privacy requirements.
 
@@ -77,7 +77,7 @@ With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you
 - receive their data
 - fulfill a request to transmit their data to another controller.
 
-The Tenant Administrator role for Intune operated by 21Vianet can request data on behalf of a data subject in the following ways:
+The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
 - Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services.
 - System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export.
