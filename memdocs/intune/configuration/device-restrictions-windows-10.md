@@ -244,7 +244,7 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 - **Removable storage**: **Block** prevents users from using external storage devices, like SD cards with the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Geolocation**: **Block** prevents users from turning on location services on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  [System/AllowLocation CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+  [System/AllowLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
 
 - **Internet sharing**: **Block** prevents Internet connection sharing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Phone reset**: **Block** prevents users from wiping or doing a factory reset on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
