@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -165,7 +165,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Remotely lock the noncompliant device**: When the device is noncompliant, lock the device. This action forces the user to enter a PIN or passcode to unlock the device.
 
-   - **Retire the noncompliant device**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
+   - **Retire the noncompliant device**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management.
 
    - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 
