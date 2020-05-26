@@ -66,7 +66,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end user experience for this flow.
 
-  ![Noncompliance actions](../media/android-move-device-admin-work-profile/noncompliance-actions.png)
+  ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
   These are some actions to consider:
 
