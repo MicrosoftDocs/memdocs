@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # Configuration Manager Console Node XML
-The node XML for the Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  
+The node XML for the Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  
 
  The following XML defines an extension node called "MyNode". The "MyNode" node is defined as a child of the **Site Configuration** node (d61498cb-7b3f-4748-ae3e-026674fb0cbd) in the Administration workspace of the Configuration Manager console. "MyNode" is associated with a **Microsoft.ConfigurationManagement.AdminConsole.ConsoleView.ViewDescription** type which is a grid view that ships with Configuration Manager. When the node is selected, it will cause a grid view to appear in the view panel. The grid view displays two properties (**RoleName** and **SiteCode**) of each `MyClass` custom management class instance that is returned by the WQL query.  
 

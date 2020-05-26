@@ -504,13 +504,12 @@ Choose one of the following options for this setting:
 
     - Required deployments (when the installation deadline is reached)  
 
-    > [!IMPORTANT]  
-    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
-
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
 - **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
 
+> [!IMPORTANT]  
+> The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
 
 ## Power management  
