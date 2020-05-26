@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -222,6 +222,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```
