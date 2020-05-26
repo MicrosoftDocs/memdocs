@@ -2,7 +2,7 @@
 title: "Management point database replicas"
 titleSuffix: "Configuration Manager"
 description: "Use a database replica to reduce the CPU load placed on the site database server by management points."
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -78,6 +78,8 @@ Configuration Manager primary sites can use a database replica to reduce the CPU
 -   **Upgrades to Configuration Manager current branch**: Before you upgrade a site, either from System Center 2012 Configuration Manager to Configuration Manager current branch or updating Configuration Manager current branch to the latest release, you must disable database replicas for management points.  After your site upgrades, you can reconfigure the database replicas for management points.  
 
 -   **Multiple replicas on a single SQL Server:**  If you configure  a database replica server to host multiple database replicas for management points (each replica must be on a separate instance) you must use a modified configuration script (from Step 4 of the following section)  to prevent overwriting the self-signed certificate in use by previously configured database replicas on that server.  
+
+- User deployments in Software Center won't work against a management point using a SQL replica. <!--sccmdocs-1011-->
 
 ##  <a name="BKMK_DBReplica_Config"></a> Configure database replicas  
 To use configure a database replica, the following steps are required:  

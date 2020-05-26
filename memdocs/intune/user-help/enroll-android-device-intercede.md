@@ -139,7 +139,7 @@ In this section, you'll scan your company-provided QR code.  When you're done, w
 ### Token enrollment  
 In this section, you'll enter your company-provided token. When you're done, we'll redirect you back to the device enrollment steps.  
 
-1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Tap **Next**. 
+1. On the Google sign-in screen, in the **Email or phone** box, type **afw#setup**. Then tap **Next**. 
 
    ![Example image of Google sign-in screen, showing that "afw#setup" is typed into field.](./media/token-intune-app-01.png)   
 
@@ -166,7 +166,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 
    1. Tap the link to your organization's setup instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.
 
-   2. Tap **Begin**.  
+   2. Tap **BEGIN**.  
 
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/smart-card-open-entrust-android.png)
@@ -177,7 +177,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 
 5. When asked what profile you want to use, select the option to activate with a mobile credential. A QR code appears.  
 
-6. Return to your Android device. On the Company Portal > **Get QR code** screen, tap **Next**.
+6. Return to your Android device. On the Company Portal > **Get QR code** screen, tap **NEXT**.
 
     > [!div class="mx-imgBorder"]
     > ![Example screenshot of the Company Portal Get QR code screen.](./media/get-qr-code-entrust-android.png)

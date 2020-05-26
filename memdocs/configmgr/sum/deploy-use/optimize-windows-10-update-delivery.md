@@ -2,7 +2,7 @@
 title: Optimize Windows 10 update delivery
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows 10.  
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -128,7 +128,7 @@ The Windows update agent (WUA) requests express content first. If it fails to in
 
 3. CBS then asks WUA to download the required ranges from one or more express .psf files.  
 
-4. Delivery Optimization coordinates with Configuration Manager and downloads the ranges from a local distribution point or peers if available. If Delivery Optimization is disabled, the Background Intelligent Transfer Service (BITS) is used in the same manner with Configuration Manager coordinating peer cache sources. Delivery Optimization or BITS passes the ranges to WUA, which makes them available to CBS to apply and install.  
+4. If Delivery Optimization is enabled and peers are discovered to have the needed ranges, the client will download from peers independently of the ConfigMgr client. If Delivery Optimization is disabled or no peers have the needed ranges, the ConfigMgr client will download these ranges from a local distribution point (or a peer or Microsoft Update). The ranges are passed to the Windows Update Agent which makes them available to CBS to apply the ranges.
 
 
 #### Why are the express files (.psf) so large when stored on Configuration Manager peer sources in the ccmcache folder?

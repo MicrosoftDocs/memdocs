@@ -126,7 +126,7 @@ To enable the Intune App SDK, follow these steps:
 2. Add these iOS frameworks to the project:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  

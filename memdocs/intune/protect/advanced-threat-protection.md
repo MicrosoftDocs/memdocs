@@ -209,7 +209,7 @@ For more information about reports, see [Intune reports](../fundamentals/reports
 
 ## View onboarding status
 
-To view the onboarding status of all Intune-managed Windows 10 devices, you can go to **Tenant administration** > **Microsoft Defender ATP**. From this page, you can also initiate the creation of a device configuration profile for onboarding more devices to Microsoft Defender ATP.
+To view the onboarding status of all Intune-managed Windows 10 devices, you can go to **Endpoint security** > **Microsoft Defender ATP**. From this page, you can also initiate the creation of a device configuration profile for onboarding more devices to Microsoft Defender ATP.
 
 ## Next steps
 

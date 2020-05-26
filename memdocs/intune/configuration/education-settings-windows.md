@@ -41,14 +41,12 @@ After you've configured the profile, assign and deploy it to your students.
 [Create a device configuration profile](education-settings-configure.md#create-a-device-profile).
 
 ## Take a test settings
-After you create a device configuration profile, go to **Profile type** and select **Secure assessment (Education)**. You'll find the following Take a Test app settings. 
-
 
 - **Account type**: Choose how users sign in to the test. Your options:
   - Azure AD account
   - Domain account
   - Local account
-  - Local guest account: Only available on devices running Windows 10, version 1903 and later.    
+  - Local guest account: Only available on devices running Windows 10, version 1903 and later.
 - **Account user name**: Enter the user name of the account used with the Take a Test app. You can enter accounts in the following format:
   - `user@contoso.com`
   - `domain\username`
@@ -56,10 +54,12 @@ After you create a device configuration profile, go to **Profile type** and sele
   - `computerName\username`
 - **Account name**: To set up a local guest account type, enter the name of the account used with the Take a Test app. The account name will appear as a tile on the sign-in screen. Students click the tile to launch the test.​  
 - **Assessment URL**: Enter the URL of the test you want users to take. For more information on getting the URL, see the [Take a Test documentation](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
-- **Printer connection**: Choose **Require** to only allow access to the Take a Test app from devices that are connected to a printer. This setting also makes the app's print button available to test-takers. **Not configured** allows students to access the app from devices that aren't connected to a printer.​  
-- **Screen monitoring**: Choose **Allow** to monitor the screen activity while users are taking a test. **Not configured** prevents you from monitoring the screen during the test.
-- **Text suggestions**: Choose **Allow** so test takers can see text suggestions. **Not configured** blocks text suggestions while users are taking a test.
+- **Printer connection**: **Require** only allows access to the Take a Test app from devices that are connected to a printer. This setting also makes the app's print button available to test-takers. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may allow students to access the app from devices that aren't connected to a printer.​  
+- **Screen monitoring**: **Allow** monitors the screen activity while users are taking a test. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may prevent you from monitoring the screen during the test.
+- **Text suggestions**: Choose **Allow** so test takers can see text suggestions. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS may block text suggestions while users are taking a test.
 
 ## Next steps
 
-Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+Learn more about the [Take a Test app](education-settings-configure.md).
