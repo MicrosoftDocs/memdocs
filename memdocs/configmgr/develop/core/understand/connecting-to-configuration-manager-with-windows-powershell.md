@@ -72,14 +72,14 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 
     ```  
     PS C:\> CD $env:SMS_ADMIN_UI_PATH\..\  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>  
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin>  
 
     ```  
 
      Go to your Windows PowerShell window, and type in `import-module .\ConfigurationManager.psd1 -verbose`:  
 
     ```  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> import-module .\ConfigurationManager.psd1 -verbose  
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin> import-module .\ConfigurationManager.psd1 -verbose  
 
     Note: The '-verbose' switch displays a list of the cmdlets being imported (quite a long list in the case of Configuration Manager).  
 
@@ -90,7 +90,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
      Go to your Windows PowerShell window, and type in `Get-CMSite`:  
 
     ```  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>Get-CMSite  
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin>Get-CMSite  
     get-cmsite : This command cannot be run from the current drive. To run this command you must first connect to a Configuration Manager drive.  
     at line:1 char:1  
      get-cmsite  
@@ -98,7 +98,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
        + CategoryInfo          : NotSpecified: (:) [Get-CMSite], InvalidOperationException  
        + FullyQualifiedErrorId : System.InvalidOperationException,Microsoft.ConfigurationManagement.Cmdlets.HS.Commands.GetSiteCommand  
 
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin>  
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin>  
     ```  
 
      The error was caused by our current path pointing to the local hard drive (our Configuration Manager Console path) not the Configuration Manager site.  
@@ -109,7 +109,7 @@ In the [Configuration Manager Windows PowerShell Basics](../../../develop/core/u
 4.  Go to your Windows PowerShell window, and type in `CD <site code>:`, replacing \<site code> with your site code (the site code is used below):  
 
     ```  
-    PS C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin> CD XYZ:
+    PS C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin> CD XYZ:
     PS XYZ:\>  
     ```  
 
