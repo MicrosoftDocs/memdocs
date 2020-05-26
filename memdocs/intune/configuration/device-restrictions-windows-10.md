@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -238,11 +238,20 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
   [Camera CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
 - **OneDrive file sync**: **Block** prevents users from synchronizing files to OneDrive from the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  [System/DisableOneDriveFileSync CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+
 - **Removable storage**: **Block** prevents users from using external storage devices, like SD cards with the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Geolocation**: **Block** prevents users from turning on location services on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  [System/AllowLocation CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+
 - **Internet sharing**: **Block** prevents Internet connection sharing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Phone reset**: **Block** prevents users from wiping or doing a factory reset on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **USB connection**: **Block** prevents access to external storage devices through a USB connection on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
+
+  [Connectivity/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
 - **AntiTheft mode** (mobile only): **Block** prevents users from selecting AntiTheft mode preference on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Cortana**: **Block** disable the Cortana voice assistant on the device. When Cortana is off, users can still search to find items on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Cortana.
 
@@ -253,6 +262,9 @@ These settings use the [experience policy CSP](https://docs.microsoft.com/window
 - **Add provisioning packages**: **Block** prevents the run time configuration agent that installs provisioning packages on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Remove provisioning packages**: **Block** prevents the run time configuration agent that removes provisioning packages from the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Device discovery**: **Block** prevents the device from being discovered by other devices. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  [Experience/AllowDeviceDiscovery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+
 - **Task Switcher** (mobile only): **Block** prevents task switching on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **SIM card error dialog** (mobile only): **Block** error messages from showing on the device if no SIM card is detected. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the error messages.
 - **Ink Workspace**: Choose if and how user access the ink workspace. Your options:
