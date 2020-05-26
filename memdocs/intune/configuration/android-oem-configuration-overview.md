@@ -153,7 +153,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 ## Supported OEMConfig apps
 
-Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must register their OEMConfig apps with Google to enable these features guarantee correct functioning. Intune currently supports the following OEMConfig apps:
+Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must register their OEMConfig apps with Google. If you don't register, these features may not work as expected. Intune currently supports the following OEMConfig apps:
 
 -----------------
 
