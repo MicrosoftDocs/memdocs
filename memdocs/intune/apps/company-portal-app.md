@@ -108,7 +108,7 @@ The following table provides enrollment specific configuration details:
 > - Company Portal on Android: version 5.0.4715.0 or later 
 
 > [!IMPORTANT]
-> The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will only enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
+> The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
