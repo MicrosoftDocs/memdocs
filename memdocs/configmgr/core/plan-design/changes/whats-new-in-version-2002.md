@@ -2,7 +2,7 @@
 title: What's new in version 2002
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
-ms.date: 05/22/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -332,7 +332,7 @@ You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) 
 This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Endpoint Manager admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
 
 > [!Important]
-> You'll need the hotfix rollup, KB4563473, installed in your environment for this feature.
+> You'll need the hotfix rollup, [KB4563473](https://support.microsoft.com/help/4563473), installed in your environment for this feature.
 
 ### Improvements to BitLocker management
 
