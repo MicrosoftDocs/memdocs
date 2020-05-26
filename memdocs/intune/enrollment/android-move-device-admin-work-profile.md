@@ -66,9 +66,9 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end user experience for this flow.
 
-![Noncompliance actions](./media/android-move-device-admin-work-profile/noncompliance-actions.png)
+    ![Noncompliance actions](./media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-These are some actions to consider.
+    These are some actions to consider.
 
     - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. Changing this to a greater number of days provides users with a grace period in which they can see the flow to move to work profile management without yet being marked noncompliant. For example, setting this to 14 days would give users two weeks to move from device administrator to work profile management without the risk of losing access to resources.
     - **Send push notification to end user**: Configure this to send push notifications to the device administrator devices. When a user selects the notification, it will launch the Android Company Portal to the **Update device settings** page where they can start the flow to move to work profile management.
