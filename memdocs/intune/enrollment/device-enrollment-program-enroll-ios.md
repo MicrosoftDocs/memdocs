@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -48,9 +48,6 @@ ADE enrollments aren't compatible with the app store version of the Company Port
 To enable modern authentication during enrollment, push the app to the device using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required Volume Purchase Program (VPP) app with an [Application Configuration policy](../apps/app-configuration-policies-use-ios.md) applied.
-
-> [!NOTE]
-> During automated device enrollment, while the Company Portal is running in single app mode, clicking the **Learn more** link results in an error message because of single app mode. After enrollment is completed, you can view more information in the CP when the device is no longer in single app mode. 
 
 ## What is supervised mode?
 
@@ -216,7 +213,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
      > [!NOTE]
      > If **Sync with computers** is set to **Deny all**, the port will be limited on iOS and iPadOS devices. The port can only be used for charging and nothing else. The port will be blocked from using iTunes or Apple Configurator 2.
-       If **Sync with computers** is set to **Allow Apple Configurator by certificate**, make sure you save a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy. It is important to retain this certificate to be accessible in the future. 
+       If **Sync with computers** is set to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can access later. You won't be able to make changes to the uploaded copy and it is important to retain this certificate to be accessible in the future. To connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device that was enrolled with the Automated Device Enrollment profile with this configuration and certificate.
 
 12. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 

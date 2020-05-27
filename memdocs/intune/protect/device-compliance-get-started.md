@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -68,11 +68,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## Device compliance policies work with Azure AD
 
-Intune uses Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) (opens another docs web site) to help enforce compliance. When a device enrolls in Intune, the Azure AD registration process starts, and device information is updated in Azure AD. One key piece of information is the device compliance status. This compliance status is used by Conditional Access policies to block or allow access to e-mail and other organization resources.
+Intune uses [Conditional Access](../protect/conditional-access.md) to help enforce compliance. Conditional Access is an Azure Active Directory (Azure AD) technology.
 
-- [What is device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) is a great resource on why and how devices are registered in Azure AD.
+When a device enrolls in Intune, the Azure AD registration process starts, and device information is updated in Azure AD. One key piece of information is the device compliance status. This compliance status is used by Conditional Access policies to block or allow access to e-mail and other organization resources.
 
-- [Conditional Access](conditional-access.md) and [common ways to use Conditional Access](conditional-access-intune-common-ways-use.md) describe this feature as it relates to Intune.
+Learn about Conditional Access and Intune:
+
+- [Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)
+
+Learn about Conditional Access in the Azure AD documentation:
+  - [What is Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [What is a device identity](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## Ways to use device compliance policies
 

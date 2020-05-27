@@ -19,7 +19,7 @@ manager: dougeby
 This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache (DOINC).
+> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
 
 ## Verify
 

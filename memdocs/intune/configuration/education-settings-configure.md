@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high

@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/07/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -106,6 +106,9 @@ The following table provides enrollment specific configuration details:
 > Support for the device enrollment setting requires end users have these Company Portal versions:
 > - Company Portal on iOS/iPadOS: version 4.4 or later
 > - Company Portal on Android: version 5.0.4715.0 or later 
+
+> [!IMPORTANT]
+> The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -224,8 +227,8 @@ Some platforms and configurations do not allow self-service device actions. This
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Retire | Available<sup>(1)</sup> | Available | Available | Available<sup>(7)</sup> |
-| Wipe | Available | Available<sup>(5)</sup> | NA | Available<sup>(7)</sup> |
+| Retire | Available<sup>(1)</sup> | Available<sup>(9)</sup> | Available | Available<sup>(7)</sup> |
+| Wipe | Available | Available<sup>(5)</sup><sup>(9)</sup> | NA | Available<sup>(7)</sup> |
 | Rename<sup>(4)</sup> | Available | Available | Available | Available |
 | Sync | Available | Available | Available | Available |
 | Remote Lock | Windows Phone only | Available | Available | Available |
@@ -239,7 +242,8 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(5)</sup> **Wipe** is not available on User Enrolled iOS/iPadOS devices.<br>
 <sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br>
-<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.
+<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.<br>
+<sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
 
 ### App logs
 
@@ -250,5 +254,5 @@ If you are using Azure Government, app logs are offered to the end user to decid
 
 ## Next steps
 
-- [Configure your organization's logo and brand color for new tab pages in Microsoft Edge](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
+- [Configure your organization's logo and brand color for new tab pages in Microsoft Edge for iOS and Android](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Add apps](apps-add.md)

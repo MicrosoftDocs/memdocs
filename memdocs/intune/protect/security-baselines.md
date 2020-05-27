@@ -7,8 +7,8 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -72,23 +72,27 @@ The following security baseline instances are available for use with Intune. Use
 
 You can continue to use and edit profiles that you previously created based on a preview template, even when that preview template is no longer available for creating new profiles.
 
-When your ready to move to a more recent version of a baseline you use, see [Change the baseline version for a profile](#change-the-baseline-version-for-a-profile) in this article. 
+When you're ready to move to a more recent version of a baseline you use, see [Change the baseline version for a profile](#change-the-baseline-version-for-a-profile) in this article. 
 
 ## About baseline versions and instances
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes the baseline template name, how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when the latest version of the baseline template became available.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes:
+- the baseline template name
+- how many profiles you have that use that baseline type
+- how many separate instances (versions) of the baseline type are available
+- a *Last Published* date that identifies when the latest version of the baseline template became available
 
-To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles, including the most recent and current baseline version.  You can select a single version to view deeper details about the profiles that use that version.
+To view more information about the baseline versions you use, select a baseline to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
-You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that's in use with a given profile. This means when a new version comes out, you don't have to create a new baseline profile to take advantage of it. Instead, when you're ready, you can select a baseline profile and then use the built-in option to change the instance version for that profile to a new one.
+You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
 ### Compare baseline versions
 
 On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline.  You can continue to use and edit profiles that you previously created that use an earlier baseline version, including baselines created using a Preview version.
 
-To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines** to download a CSV file that details those differences. 
+To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines**. You're then prompted to download a CSV file that details those differences.
 
 The download identifies each setting in the two baseline versions, and notes if this setting has changed (*notEqual*) or has remained the same (*equal*). Details also include the default value for the setting by version, and if the setting was *added* to the more recent version, or *removed* from the more recent version.
 
@@ -211,11 +215,41 @@ When a security baseline setting no longer applies to a device, or settings in a
 
 Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
+### Duplicate a security baseline
+
+You can create duplicates of your security baselines. A scenario when duplicating a baseline is useful is when you want to assign a similar but distinct baseline to a subset of devices. By creating a duplicate, you won't need to manually recreate the entire baseline. Instead, you can duplicate any of your current baselines and then introduce only the changes the new instance requires. You might only change a specific setting and the group the baseline is assigned to.
+
+When you create a duplicate, you'll give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but won't have any assignments. You'll need to edit the new baseline to add assignments.
+
+All security baselines support creating a duplicate.
+
+After you duplicate a baseline, review and edit the new instance to make changes to its configuration.
+
+#### To duplicate a baseline
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Endpoint security** > **Security baselines**, select the type of baseline you want to duplicate, and then select **Profiles**.
+3. Right-click on the profile you want to duplicate and select **Duplicate**, or select the ellipsis (**…**) to the right of the baseline and select **Duplicate**.
+4. Provide a **New name** for the baseline, and then select **Save**.
+
+After a *Refresh*, the new baseline profile appears in the admin center.
+
+#### To edit a baseline
+
+1. Select the baseline, and then select **Properties**.
+2. Select **Settings** to expand the list of settings categories in the baseline. You can’t modify the settings from this view, but you can review how they're configured.
+3. To modify the settings, select **Edit** for each category where you want to make a change:
+   - Basics
+   - Assignments
+   - Scope tags
+   - Configuration settings
+4. After you’ve made changes, select **Save** to save your edits.  You must save edits to one category before you can introduce edits to additional categories.
+
 ### Older baseline versions
 
 Microsoft Endpoint Manager updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
 
-When there are no longer any profiles that use a older baseline listed in your tenant, Microsoft Endpoint Manager will only list the latest baseline version available.
+When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Endpoint Manager will only list the latest baseline version available.
 
 If you have a profile associated with an older baseline, that older baseline will continue to be listed.
 
