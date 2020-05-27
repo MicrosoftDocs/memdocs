@@ -142,7 +142,7 @@ When you use Conditional Access, you can configure your Conditional Access polic
 
 When a device enrolls in Intune it registers in Azure AD. The compliance status for devices is reported to Azure AD. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional access uses that compliance status to determine whether to grant or block access to email and other organization resources.
 
-If you’ll use device compliance status with Conditional Access policies, review how your tenant has configured *Mark devices with no compliance policy assigned as*, which you manage under [Compliance policy settings](#compliance-settings-policy).
+If you’ll use device compliance status with Conditional Access policies, review how your tenant has configured *Mark devices with no compliance policy assigned as*, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
 For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](../protect/conditional-access-intune-common-ways-use.md#device-based-conditional-access)
 
