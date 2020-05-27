@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -59,11 +59,25 @@ When the email is sent, Intune includes details about the noncompliant device in
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
+  The following platforms support this action:
+  - Android:
+    - Android device administrator
+    - Android Enterprise Device Owner
+    - Android Enterprise Work Profile
+    - Android Enterprise kiosk devices
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 and later
+
 - **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
 
   The following platforms support this action:
-  - Android
-  - iOS
+  - Android:
+    - Android device administrator
+    - Android Enterprise Device Owner
+    - Android Enterprise Work Profile
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 and later
@@ -165,7 +179,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Remotely lock the noncompliant device**: When the device is noncompliant, lock the device. This action forces the user to enter a PIN or passcode to unlock the device.
 
-   - **Retire the noncompliant device**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
+   - **Retire the noncompliant device**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management.
 
    - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 

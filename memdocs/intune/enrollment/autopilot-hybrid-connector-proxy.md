@@ -8,7 +8,7 @@ author: master11218
 ms.author: erikje
 manager: dougeby
 ms.date: 4/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high

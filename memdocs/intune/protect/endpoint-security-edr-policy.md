@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/22/2020
-ms.topic: reference
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -25,6 +25,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
+
 
 ---
 
