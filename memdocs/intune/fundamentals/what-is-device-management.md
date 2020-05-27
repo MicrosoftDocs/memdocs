@@ -7,7 +7,7 @@ author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
 ms.date: 11/13/2019
-ms.topic: conceptual 
+ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
 ms.subservice: fundamentals

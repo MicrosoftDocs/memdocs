@@ -5,7 +5,7 @@ description: Learn how to search the Intune docs, provide doc feedback, and cont
 ms.date: 03/03/2020
 ms.service: microsoft-intune 
 ms.subservice: fundamentals
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
