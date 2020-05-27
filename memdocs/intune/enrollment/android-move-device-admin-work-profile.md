@@ -76,10 +76,10 @@ When users see that they're out of compliance for this reason, they can tap **Re
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
-    > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
+      > [!NOTE]
+      > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
+      > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
+      > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
 
     Choose **Next**.
 
