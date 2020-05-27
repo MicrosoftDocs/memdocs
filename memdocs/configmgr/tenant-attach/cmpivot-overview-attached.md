@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Microsoft Endpoint Manager tenant attach: CMPivot overview
+# Tenant attach: CMPivot overview
 
 *Applies to: Configuration Manager (technical preview branch)*
 

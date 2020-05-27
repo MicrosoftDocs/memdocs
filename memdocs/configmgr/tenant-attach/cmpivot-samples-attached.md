@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Microsoft Endpoint Manager tenant attach: CMPivot sample scripts
+# Tenant attach: CMPivot sample scripts
 <!---->
 *Applies to: Configuration Manager (technical preview branch)*
 
