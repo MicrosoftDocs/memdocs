@@ -15,7 +15,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager uses *collection evaluation* to update collection membership based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. It's important to understand collection evaluation behavior so you can make appropriate collection design decisions.
+Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. It's important to understand collection evaluation behavior so you can make appropriate collection design decisions.
 
 Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be very convenient, since most Configuration Manager functionality is dependent on collections. To formulate an appropriate collection evaluation plan, carefully consider both performance impacts and business requirements.
 
@@ -31,16 +31,16 @@ At a high level, each individual collection evaluation and update follows these 
 1. Add any systems that are direct members.
 1. Evaluate all *include* collections.
    
-   If the include collections also have query rules, or have include or exclude collections, those are also evaluated. If the include collections themselves are limiting collections, any collections below them are also evaluated. When the tree is fully evaluated, the evaluator returns the results to the calling collection.
+   If the include collections also have query rules, or have include or exclude collections, they are also evaluated. If the include collections themselves are limiting collections, any collections below them are also evaluated. When the tree is fully evaluated, the evaluator returns the results to the calling collection.
    
 1. Perform a logical `AND` between the returned results and the limiting collection.
 1. Evaluate the *exclude* collections.
    
-   If the exclude collections also have query rules, or have include or exclude collections, those are also evaluated. If these collections themselves are limiting collections, any collections below them are also evaluated. When the entire tree is evaluated, the evaluator returns the results to the calling collection.
+   If the exclude collections also have query rules, or have include or exclude collections, they are also evaluated. If these collections themselves are limiting collections, any collections below them are also evaluated. When the entire tree is evaluated, the evaluator returns the results to the calling collection.
    
 1. Perform a logical `OR` between the result set from evaluating the direct members and include collections, and the results of evaluating the exclude collections.
 1. Write the changes to the database and perform updates.
-1. Trigger any dependent collections to update as well. Dependent collections are those that refer to the current collection using include or exclude rules, or collections that are limited to the current collection.
+1. Trigger any dependent collections to update as well. Dependent collections are collections that refer to the current collection using include or exclude rules, or are limited to the current collection.
 
 ## Collection evaluation types and triggers
 
@@ -58,7 +58,7 @@ The following table describes collection evaluation triggers and their correspon
 |Manual|Single or Auxiliary|Manual is the highest priority collection evaluation. When an administrator requests a manual collection evaluation, the collection evaluator assigns the next available evaluation thread to the evaluation.|
 |Scheduled|Primary|The process of scheduled evaluation is the same as manual evaluation, except the evaluation is time-driven rather than event-driven.|
 |Staging|Single or Auxiliary|In Configuration Manager 2012 and later, all collections directly or indirectly depend on **All Systems** or **All Users and Groups**. Both of these collections do a full collection evaluation at 4:00 AM daily. A change to either of these collections triggers updates of dependent collections, based on a [full collection graph](#collection-evaluation-graph).
-|Incremental|Express|Incremental evaluation uses a collection evaluation graph to evaluate and update dependent collections if an update to the incremental collection membership changes. Configuration Manager 2012 and above monitor and update resources objects in all collections that are configured for incremental updates.<br/><br/>Incremental collection evaluation is similar to the *delta* collection updates in Configuration Manager 2007, which added resources to a collection only when the device was initially discovered. If a collection query is based on information that will be updated later, like hardware inventory, the resource is only added to or removed from a collection during a scheduled collection update.|
+|Incremental|Express|Incremental evaluation uses a collection evaluation graph to evaluate and update dependent collections if an update to the incremental collection membership changes. Configuration Manager 2012 and above monitors and updates resources objects in all collections that are configured for incremental updates.<br/><br/>Incremental collection evaluation is similar to the *delta* collection updates in Configuration Manager 2007, which added resources to a collection only when the device was initially discovered. If a collection query is based on information that will be updated later, like hardware inventory, the resource is only added to or removed from a collection during a scheduled collection update.|
 
 ## Collection evaluation graph
 
@@ -70,13 +70,13 @@ When collection evaluation starts, Configuration Manager builds a graph that inc
 
 If one or more of the collections being evaluated has an include or exclude rule, the collection evaluator adds the collection being included or excluded to the graph, along with any collections limited by that collection. If there are any changes during the evaluation of the include and exclude collections, the graph continues on that branch before returning to the main branch.
 
-An *incremental collection evaluation graph* maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
+An *incremental* collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
 
-For example, the following diagram shows newly-discovered resources that are applicable to all collections. However, the collection evaluation only updates the **All Servers** and **All Servers with Windows Server 2008 R2** collections. The other collections aren't evaluated, because the **All Servers with Windows Server 2012 R2** collection isn't enabled for incremental evaluation.
+For example, the following diagram shows newly discovered resources that are applicable to all collections. However, the collection evaluation only updates the **All Servers** and **All Servers with Windows Server 2008 R2** collections. The other collections aren't evaluated, because the **All Servers with Windows Server 2012 R2** collection isn't enabled for incremental evaluation.
 
 ![Incremental collection evaluation graph example](media/incremental-collection-evaluation-graph.png)
 
-Manual or scheduled collection evaluations build a *full collection evaluation graph* of all dependent collections. The graph includes all collections that reference the collection that is updating and subsequent collections. Configuration Manager continues to evaluate down the graph as long as updates occur to the collections being processed. 
+Manual or scheduled collection evaluations build a *full* collection evaluation graph of all dependent collections. The graph includes all collections that reference the collection that is updating and subsequent collections. Configuration Manager continues to evaluate down the graph as long as updates occur to the collections being processed. 
 
 The following diagram shows how a scheduled or manual collection update request for the **All Servers** collection produces a full graph that includes all applicable collections. The two new DNS servers running Windows Server 2008 R2 and Windows Server 2012 R2 resources are in scope of the membership queries of all collections, so all the collections update.
 
@@ -94,7 +94,7 @@ In a busy Configuration Manager environment, you can improve collection evaluati
 
 If a collection is configured for incremental evaluation and updates on a schedule, referencing collections that aren't enabled for incremental evaluation may not update as expected. Because updates likely occurred during incremental evaluation cycles, a full evaluation may not result in an update to the collection, and will therefore signal the end of the collection evaluation graph for that evaluation cycle. In that case, no referencing collection evaluations will be triggered. Consequently, don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
 
-## Hierarchy considerations
+### Hierarchy considerations
 
 A Configuration Manager environment may have one or more of the following three types of sites:
 
@@ -102,13 +102,13 @@ A Configuration Manager environment may have one or more of the following three 
 - **Primary sites** below the CAS act on replicated instructions from the CAS database to manage clients, and are the only sites that evaluate collections.
 - **Secondary sites** act as proxies, using only data replicated from their associated primary sites, and don't evaluate collections.
 
-The CAS doesn't evaluate collection membership. To request an collection update, the CAS sends a request to each primary site. The primary sites evaluate the collection and send the results back to the CAS. The collection evaluation results appear only after all the collection evaluation instructions have been replicated to all of the sites, all the sites have evaluated the collection, and all the data has been returned to the CAS and consolidated.
+The CAS doesn't evaluate collection membership. To request a collection update, the CAS sends a request to each primary site. The primary sites evaluate the collection and send the results back to the CAS. The collection evaluation results appear only after all the collection evaluation instructions have been replicated to all of the sites, all the sites have evaluated the collection, and all the data has been returned to the CAS and consolidated.
 
 The following diagram demonstrates the flow when the CAS requests a manual collection update:
 
-![Manual collection update from a CAS](https://msdnshared.blob.core.windows.net/media/2017/09/Administrator-Experience-During-a-Manual-Collection-Update-from-a-CAS.png)
+![Manual collection update from a CAS](media/manual-collection-update-from-cas.png)
 
-A collection update from a CAS with multiple primary sites can be time consuming. When a collection doesn't evaluate in a timely fashion, it can be tempting to simply repeat the request. 
+A collection update from a CAS with multiple primary sites can be time consuming. When a collection doesn't evaluate in a timely fashion, it can be tempting to repeat the request. 
 
 Once a collection evaluation thread is started and the evaluation graph is loaded, evaluation continues until the collection evaluation graph is emptied. The thread then terminates and becomes available for the next evaluation. However, if another collection evaluation cycle is queued while the thread is occupied evaluating collections, the thread is immediately restarted to attempt an evaluation of the "missed" evaluation cycle.
 
@@ -120,7 +120,7 @@ To prevent these scenarios, avoid manual collection evaluations of large trees, 
 
 To strike a balance between business requirements and performance, it's important to understand the collection structure you're creating and the dependencies it has on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, be aware that all of those collections will be evaluated to create the membership of this collection.
 
-The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. But if using include and exclude collections results in a high performance toll, you can use the WQL query method:
+The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. But if using include and exclude collections results in a high performance toll, you can use the WQL query method instead:
 
 Include:
 
@@ -134,7 +134,7 @@ Exclude:
 
 When table data changes, a SQL trigger inserts a row in the **CollectionNotifications** table. The next time the collection schedule fires, it `AND`s the resource ID with the existing collection query and triggers collection updates on incremental collections. 
 
-Incremental collection executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes. [Collection best practices](https://technet.microsoft.com/en-us/library/gg699372.aspx) recommend a limit of 200 incremental collections. The exact number depends on:
+Incremental collection executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes. [Collection best practices](https://technet.microsoft.com/library/gg699372.aspx) recommend a limit of 200 incremental collections. The exact number depends on:
 
 - The total number of collections
 - The frequency of new resources being added and changed in the hierarchy
