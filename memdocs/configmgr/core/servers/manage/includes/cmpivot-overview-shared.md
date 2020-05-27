@@ -253,3 +253,16 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |strlen()|Returns the length, in characters, of the input string|
 |substring()|Extracts a substring from a source string starting from some index to the end of the string|
 |tostring()|Converts input to a string representation|
+
+## <a name="bkmk_onprem_only"></a> Additional entities, operators, and functions for CMPivot from Configuration Manager
+
+> [!Important]
+> These items aren't supported when you run CMPivot from Microsoft Endpoint Manager admin center.
+
+|Type|Item|Description|
+|--|--|---|
+|Entity|AccountSID|Account SID|
+|Entity|FileContent()|Content of a specific file|
+|Entity|NAPClient|NAP Client|
+|Entity|NAPSystemHealthAgent|NAP System Health Agent|
+|Table operator|render|Renders results as graphical output|

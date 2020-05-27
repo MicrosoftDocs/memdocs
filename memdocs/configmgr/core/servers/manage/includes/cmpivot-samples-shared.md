@@ -38,9 +38,9 @@ OperatingSystem
 | summarize count() by bin(LastBootUpTime,1d)
 ```
 
-## Free disk space by device
+## Free disk space
 
-The following query shows free disk space by device:
+The following query shows free disk space:
 
 ```kusto
 LogicalDisk
@@ -48,7 +48,7 @@ LogicalDisk
 | order by DeviceID asc
 ```
 
-## Device information 
+## Device information
 
 Show device, manufacturer, model, and OSVersion:
 
