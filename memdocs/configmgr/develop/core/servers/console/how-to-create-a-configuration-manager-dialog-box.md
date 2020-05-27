@@ -42,7 +42,7 @@ These procedures show you how to create a modeless dialog box assembly, in Confi
 
 5.  In Solution Explorer, right-click **References**, and then click **Add Reference**.  
 
-6.  In the **Add Reference** dialog box, click the **Browse** tab, navigate to **%ProgramFiles%\Microsoft Configuration Manager\AdminConsole\bin** and then select **microsoft.configurationmanagement.exe**, **microsoft.configurationmanagement.managementprovider.dll**, **Microsoft.ConfigurationManagement.DialogFoundation.dll** and **AdminUI.DialogFoundation.dll**. Click **OK** to add the assemblies as project references.  
+6.  In the **Add Reference** dialog box, click the **Browse** tab, navigate to **%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin** and then select **microsoft.configurationmanagement.exe**, **microsoft.configurationmanagement.managementprovider.dll**, **Microsoft.ConfigurationManagement.DialogFoundation.dll** and **AdminUI.DialogFoundation.dll**. Click **OK** to add the assemblies as project references.  
 
 7.  In Solution Explorer, right-click **ConfigMgrDialogControl.cs** and then click **View Code**.  
 
@@ -83,7 +83,7 @@ These procedures show you how to create a modeless dialog box assembly, in Confi
 
 1.  Build the project, and depending on where you created your project, your Visual Studio installation, the assembly is created as \Visual Studio 2010\Projects\ConfigMgDialogControl\ConfigMgrDialogControl\bin\Debug\ConfigMgrDialogControl.dll.  
 
-2.  Copy the assembly to the folder %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin.  
+2.  Copy the assembly to the folder %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin.  
 
 ## See Also  
  [How to Add a Property Page to an Existing Configuration Manager Property Sheet](../../../../develop/core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md)   

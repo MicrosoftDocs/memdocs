@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,21 +58,7 @@ This article guides you through these steps.
 
 ## eSIM capable devices
 
-The following devices have been announced as eSIM-capable, or are in-market today. Also, check if [your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows 10 PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## Step 1: Add cellular activation codes
 
