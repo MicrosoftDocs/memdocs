@@ -75,8 +75,8 @@ With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you
 
 The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
-- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services.
-- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export.
+- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services. For more information, see [Azure Data Subject Requests - Delete](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## Next steps
 
