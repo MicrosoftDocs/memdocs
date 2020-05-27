@@ -26,7 +26,7 @@
   - name: App protection policies and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
-  - name: Use Intune without GMS
+  - name: Use Intune without Google Mobile Services
     href: manage-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.md
