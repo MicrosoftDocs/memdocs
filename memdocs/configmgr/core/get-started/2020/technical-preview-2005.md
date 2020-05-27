@@ -27,6 +27,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [7141381,6024389,6024393,6234688,6024392,6503612,6479246](includes/2005/6234688.md)]
 <!--7141381,6024389,6024393,6234688,6024392,6503612,6479246-->
 
+
+[!INCLUDE [7141381](includes/2005/7141381.md)]
+
 [!INCLUDE [6298093](includes/2005/6298093.md)]
 [!INCLUDE [3601237](includes/2005/3601237.md)]
 [!INCLUDE [5110009,3601031](includes/2005/5110009.md)]
