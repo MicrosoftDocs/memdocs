@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Manage Edge for iOS and Android for iOS and Android with Intune 
+title: Manage Edge for iOS and Android with Intune 
 titleSuffix: 
-description: Use Intune app protection policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
+description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
 author: Erikre
 ms.author: erikre
