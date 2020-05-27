@@ -29,7 +29,7 @@ ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# US government endpoints for Microsoft Intune
+# China endpoints for Microsoft Intune
 
 This page lists the China endpoints needed for proxy settings in your Intune deployments.
 
