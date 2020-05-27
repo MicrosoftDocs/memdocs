@@ -34,6 +34,8 @@ Intune operated by 21Vianet is designed to meet the needs for secure, reliable, 
 
 Microsoft doesn't operate the service itself. 21Vianet operates, provides, and manages delivery of the service. 21Vianet is an Internet data center services provider in China. It provides hosting, managed network services, and cloud computing infrastructure services. By licensing Microsoft technologies, 21Vianet operates local datacenters to provide you the ability to use Intune service while keeping your data within China. 21Vianet also provides your subscription, billing, and support services.
 
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-dsr-and-stp-note.md)]
+
 ## Feature differences in Intune operated by 21Vianet
 
 Because the China services are operated by a partner from inside China, there are some feature differences with Intune. 
@@ -69,13 +71,7 @@ With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you
 - We provide simple, transparent data-use policies, and get independent audits.
 - Our subcontractors are under contract to meet our privacy requirements.
 
-## Data subject requests for GDPR
-
-[General Data Protection Regulation (GDPR)](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview) grants individuals certain rights concerning their personal data processing. These rights include the right to:
-- correct inaccurate data
-- erase data or restrict its processing
-- receive their data
-- fulfill a request to transmit their data to another controller.
+## Data subject requests
 
 The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
