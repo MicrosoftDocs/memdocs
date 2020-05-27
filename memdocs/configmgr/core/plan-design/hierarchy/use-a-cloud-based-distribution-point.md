@@ -171,7 +171,9 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 ### Deployment settings
 
-- When you deploy a task sequence with the option to **Download content locally when needed by running task sequence**, the management point doesn't include a cloud distribution point as a content location. Deploy the task sequence with the option to **Download all content locally before starting task sequence** for clients to use a cloud distribution point.  
+- **Download content locally when needed by the running task sequence**. Starting in version 1910, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
+
+- **Download all content locally before starting task sequence**. In Configuration Manager version 1906 and earlier, other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine can't download content from a cloud source. The Configuration Manager client must download the content from the cloud source before starting the task sequence. You can still use this option in version 1910 if needed to meet your requirements.
 
 - A cloud distribution point doesn't support package deployments with the option to **Run program from distribution point**. Use the deployment option to **Download content from distribution point and run locally**.  
 

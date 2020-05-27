@@ -42,7 +42,6 @@ Here's what you need to set it up:
         - For federated domains
 - Client agent setting for hybrid Azure AD-join
 - Configure auto-enrollment of devices to Intune
-- Assign Intune user licenses
 - Enable co-management in Configuration Manager
 
 For a tutorial on this path, see [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md).
