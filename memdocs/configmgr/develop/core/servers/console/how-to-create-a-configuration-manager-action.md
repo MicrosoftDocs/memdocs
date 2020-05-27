@@ -12,7 +12,7 @@ manager: dougeby
 
 ---
 # How to Create a Configuration Manager Action
-To create a Configuration Manager console action, in Configuration Manager, you create an XML file that populates an [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) XML element for the action. You must then copy the XML file to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions\GUID folder.  
+To create a Configuration Manager console action, in Configuration Manager, you create an XML file that populates an [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) XML element for the action. You must then copy the XML file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Actions\GUID folder.  
 
  For sample XML for each action type, see the following:  
 
@@ -44,7 +44,7 @@ To create a Configuration Manager console action, in Configuration Manager, you 
     </ActionDescription>  
     ```  
 
-4.  Save the XML file in the folder \<%*Program Files*%> Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb. The GUID identifies the software updates folder. The file name can be anything with an .xml extension, but it does alphabetically affect the ordering of actions in the context-sensitive menu and in the actions pane. If it is not already created, you must create the Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb folder structure. Be sure to save the file as type `All Files`.  
+4.  Save the XML file in the folder \<%*Program Files*%> Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb. The GUID identifies the software updates folder. The file name can be anything with an .xml extension, but it does alphabetically affect the ordering of actions in the context-sensitive menu and in the actions pane. If it is not already created, you must create the Extensions\Actions\f5445252-da1d-450f-a772-7c3d3cb929fb folder structure. Be sure to save the file as type `All Files`.  
 
 5.  Start the Configuration Manager console.  
 

@@ -44,7 +44,7 @@ Configuration Manager console actions are tasks or commands that are performed b
 
 1. **Create the action XML file.** The name you choose for the file should have the .xml extension. The arrangement of the actions in the context menu and actions pane is based on the alphabetical ordering of the file names in the actions folder.  
 
-2. **Deploy the action XML.** The custom action XML file is placed in the *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Actions folder under the GUID named folder of the Configuration Manager console node.  
+2. **Deploy the action XML.** The custom action XML file is placed in the *%ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Actions folder under the GUID named folder of the Configuration Manager console node.  
 
    For example, to create an action that is displayed on the software updates node you would have following folder structure:  
 
