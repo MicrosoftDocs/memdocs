@@ -35,9 +35,7 @@ Device management enables organizations to protect and secure their resources an
 
 Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meet their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
 
-The answer is [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview). Endpoint Manager includes [Microsoft Intune](what-is-intune.md) for a cloud-based solution, and [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) for a cloud-attach solution.
-
-Endpoint Manager offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
+The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 
 - Support a diverse mobile environment and manage iOS/iPadOS, Android, Windows, and macOS devices securely.
 - Make sure devices and apps are compliant with your organization's security requirements.
@@ -66,6 +64,8 @@ For more information about Intune, see [What is Intune](what-is-intune.md).
 ## Co-management
 
 Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [running remote actions](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [using Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), and more.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) is a solution platform that unifies several services. It includes [Microsoft Intune](what-is-intune.md) for cloud-based device management, and [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) for cloud-attach device management.
 
 If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer.
 
