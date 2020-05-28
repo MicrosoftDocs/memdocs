@@ -61,9 +61,9 @@ The following tables list the ports and services that the Intune client accesses
 ## Partner service endpoints
 
 Intune operated by 21Vianet depends on the following partner service endpoints:
-- AAD Sync service: https:\//syncservice.partner.microsoftonline.cn/DirectoryService.svc
+- Azure AD Sync service: https:\//syncservice.partner.microsoftonline.cn/DirectoryService.svc
 - Evo STS: https:\//login.chinacloudapi.cn/
-- AAD Graph: https:\//graph.chinacloudapi.us
+- Azure AD Graph: https:\//graph.chinacloudapi.us
 - MS Graph: https:\//microsoftgraph.chinacloudapi.cn
 - ADRS: https:\//enterpriseregistration.partner.microsoftonline.cn
 
