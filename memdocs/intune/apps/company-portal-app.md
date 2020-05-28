@@ -184,7 +184,7 @@ End users can trigger navigation, app, and device actions in the Windows Company
 The following keyboard shortcuts are available in the Windows Company Portal app.
 
 | Area | Description | Keyboard shortcut |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |
