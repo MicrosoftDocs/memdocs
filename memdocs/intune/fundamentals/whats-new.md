@@ -61,6 +61,9 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ### App management
 
+#### Windows 32-bit (x86) apps on ARM64 devices<!-- 5477661 -->
+Windows 32-bit (x86) apps that are deployed as available to ARM64 devices will now be displayed in the Company Portal. For more information about Windows 32-bit apps, see [Win32 app management](../apps/apps-win32-app-management.md).
+
 #### Windows Company Portal app icon<!-- 7114635 -->
 The icon for the Windows Company Portal app has been updated. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
