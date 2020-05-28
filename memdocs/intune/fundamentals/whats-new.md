@@ -66,6 +66,11 @@ The icon for the Windows Company Portal app has been updated. For more informati
 
 ## Week of May 18, 2020
 
+### App management  
+
+#### Update to icons in Company Portal app for iOS/iPadOS and macOS<!--6057697 -->
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System. To see the updated icons, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
+
 ### Device security
 
 #### Use Endpoint detection and response policy to onboard devices to Defender ATP<!-- 7130165  -->
