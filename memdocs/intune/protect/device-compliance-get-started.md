@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ Compliance policies in Intune:
 
 There are two parts to compliance policies in Intune:
 
-- **Compliance policy settings** – Tenant-wide settings that are a built-in compliance policy that every device receives. Compliance policy settings set a baseline for how compliance policy works in your Intune environment, including whether devices that haven’t received any device compliance policies are compliant or noncompliant.
+- **Compliance policy settings** – Tenant-wide settings that are like a built-in compliance policy that every device receives. Compliance policy settings set a baseline for how compliance policy works in your Intune environment, including whether devices that haven’t received any device compliance policies are compliant or noncompliant.
 
 - **Device compliance policy** – Platform-specific rules you configure and deploy to groups of users or devices.  These rules define requirements for devices, like minimum operating systems or the use of disk encryption. Devices must meet these rules to be considered compliant.
 
@@ -63,9 +63,9 @@ Compliance policy settings include the following settings:
 
   If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../apps/company-portal-app.md) shows No compliance policies have been assigned.
 
-- **Enhanced jailbreak detection** (*Applies only to iOS/iPadOS*)
+- **Enhanced jailbreak detection** (*applies only to iOS/iPadOS*)
 
-  This setting works only with devices that you target with a device compliance policy that blocks jailbroken devices.  (See [Device Health](../protect/compliance-policy-create-ios.md#device-health) settings for iOS/iPadOS).
+  This setting works only with devices that you target with a device compliance policy that blocks jailbroken devices.  (See [Device Health](compliance-policy-create-ios.md#device-health) settings for iOS/iPadOS).
 
   This setting has two values:
 
@@ -91,7 +91,7 @@ Compliance policy settings include the following settings:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about device compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](../protect/compliance-policy-monitor.md).
+  You can view details about device compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
 
 ## Device compliance policies
 
@@ -107,7 +107,7 @@ The available settings you can specify in a device compliance policy depend on t
 
 The following subjects link to dedicated articles for different aspects of device configuration policy.
 
-- [**Actions for noncompliance**](../protect/actions-for-noncompliance.md) - Each device compliance policy includes one or more actions for noncompliance. These actions are rules that get applied to devices that don’t meet the conditions you set in the policy.
+- [**Actions for noncompliance**](actions-for-noncompliance.md) - Each device compliance policy includes one or more actions for noncompliance. These actions are rules that get applied to devices that don’t meet the conditions you set in the policy.
 
   By default, each device compliance policy includes the action to mark a device as noncompliant if it fails to meet a policy rule. The policy then applies to the device any additional actions for noncompliance that you’ve configured, based on the schedules you set for those actions.
 
@@ -117,9 +117,9 @@ The following subjects link to dedicated articles for different aspects of devic
   - **Remotely lock devices** that have been noncompliant for some time.
   - **Retire devices** after they’ve been noncompliant for some time. This action removes the device from Intune management and removes all company data from the device.
 
-- [**Configure network locations**](../protect/use-network-locations.md) - Supported by Android devices, you can configure *network locations* and then use those locations as a device compliance rule. This type of rule can flag a device as noncompliant when it’s outside of or leaves a specified network. Before you can specify a Location rule, you must configure the network locations.
+- [**Configure network locations**](use-network-locations.md) - Supported by Android devices, you can configure *network locations* and then use those locations as a device compliance rule. This type of rule can flag a device as noncompliant when it’s outside of or leaves a specified network. Before you can specify a Location rule, you must configure the network locations.
 
-- [**Create a policy**](../protect/create-compliance-policy.md) – With the information in this article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
+- [**Create a policy**](create-compliance-policy.md) – With the information in this article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
 
   View the device compliance settings for the different device platforms:
 
@@ -134,7 +134,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
 ## Monitor compliance status
 
-Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill-in to policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](../protect/compliance-policy-monitor.md).
+Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill-in to policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](compliance-policy-monitor.md).
 
 ## Integrate with Conditional Access
 
@@ -144,7 +144,7 @@ When a device enrolls in Intune it registers in Azure AD. The compliance status 
 
 If you’ll use device compliance status with Conditional Access policies, review how your tenant has configured *Mark devices with no compliance policy assigned as*, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
-For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](../protect/conditional-access-intune-common-ways-use.md#device-based-conditional-access)
+For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](conditional-access-intune-common-ways-use.md#device-based-conditional-access)
 
 Learn more about Conditional Access in the Azure AD documentation:
 
@@ -177,8 +177,8 @@ The following table describes how noncompliant settings are managed when a compl
 
 ## Next steps
 
-- [Configure Locations](../protect/use-network-locations.md) for use with Android devices
+- [Configure Locations](use-network-locations.md) for use with Android devices
 - [Create] and deploy policy](..protect/create-compliance-policy.md) and review prerequisites
-- [Monitor device compliance](../protect/compliance-policy-monitor.md)
+- [Monitor device compliance](compliance-policy-monitor.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
 - [Reference for policy entities](../developer/reports-ref-policy.md) has information about the Intune Data Warehouse policy entities
