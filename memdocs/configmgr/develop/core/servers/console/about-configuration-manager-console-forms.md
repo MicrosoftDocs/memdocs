@@ -47,12 +47,12 @@ You can extend the Configuration Manager console with new Windows forms. Specifi
  Whether or not the form is a property sheet, the form has a form XML file that defines the assembly, namespace, and type of the form. In property sheets, it defines the order of the property pages on the property sheet. There is a property sheet XML file for every Configuration Manager console form.  
 
 > [!NOTE]
->  The Configuration Manager console property sheet XML files are stored in *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Forms.  
+>  The Configuration Manager console property sheet XML files are stored in *%ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Forms.  
 
  When you create a new form, you create a new property sheet XML file. If you are adding a new property page to an existing property sheet, you merge the property page XML with an existing property sheet XML file.  
 
 > [!NOTE]
->  Extension property sheets are stored in *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\Extensions\Forms.  
+>  Extension property sheets are stored in *%ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Forms.  
 
  For more information about form XML deployment, see [Configuration Manager Console Extension Deployment](../../../../develop/core/servers/console/console-extension-deployment.md).  
 

@@ -8,7 +8,7 @@ ms.author: dougeby
 author: dougeby
 manager: dougeby
 ms.date: 03/18/2019
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
