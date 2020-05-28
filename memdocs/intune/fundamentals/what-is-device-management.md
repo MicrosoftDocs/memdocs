@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger 
 ms.author: mandia 
 manager: dougeby 
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -35,7 +35,9 @@ Device management enables organizations to protect and secure their resources an
 
 Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meet their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
 
-The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
+The answer is [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview). Endpoint Manager includes [Microsoft Intune](what-is-intune.md) for a cloud-based solution, and [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) for a cloud-attach solution.
+
+Endpoint Manager offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 
 - Support a diverse mobile environment and manage iOS/iPadOS, Android, Windows, and macOS devices securely.
 - Make sure devices and apps are compliant with your organization's security requirements.
@@ -60,6 +62,14 @@ With Intune, you can manage multiple devices per person, and the different platf
 - Using personal devices to access organizational resources
 
 For more information about Intune, see [What is Intune](what-is-intune.md).
+
+## Co-management
+
+Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [running remote actions](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [using Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), and more.
+
+If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer.
+
+For more information about cloud-attaching your Configuration Manager, see [What is co-management](https://docs.microsoft.com/mem/configmgr/comanage/overview).
 
 ## Integration with secure-and-protect services
 
