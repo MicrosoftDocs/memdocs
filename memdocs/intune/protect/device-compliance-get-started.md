@@ -177,8 +177,8 @@ The following table describes how noncompliant settings are managed when a compl
 
 ## Next steps
 
-- [Configure Locations](use-network-locations.md) for use with Android devices
-- [Create and deploy policy](..protect/create-compliance-policy.md) and review prerequisites
-- [Monitor device compliance](compliance-policy-monitor.md)
+- [Configure Locations](../protect/use-network-locations.md) for use with Android devices
+- [Create and deploy policy](../protect/create-compliance-policy.md) and review prerequisites
+- [Monitor device compliance](../protect/compliance-policy-monitor.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
 - [Reference for policy entities](../developer/reports-ref-policy.md) has information about the Intune Data Warehouse policy entities
