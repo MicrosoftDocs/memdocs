@@ -58,7 +58,9 @@ The following tables list the ports and services that the Intune client accesses
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoftonline.cn/
 
 
-## Partner service endpoints that Intune depends on in China operated by 21 Vianet
+## Partner service endpoints
+
+Intune operated by 21Vianet depends on the following partner service endpoints:
 - AAD Sync service: https:\//syncservice.partner.microsoftonline.cn/DirectoryService.svc
 - Evo STS: https:\//login.chinacloudapi.cn/
 - AAD Graph: https:\//graph.chinacloudapi.us
@@ -66,5 +68,5 @@ The following tables list the ports and services that the Intune client accesses
 - ADRS: https:\//enterpriseregistration.partner.microsoftonline.cn
 
 ## Next steps
-[Network endpoints for Microsoft Intune](intune-endpoints.md)
+[Learn more about Intune operated by 21Vianet in China](china.md)
 
