@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/26/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,22 +118,22 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2005
 
-- [6234688](2020/technical-preview-2005.md) <!--7141381,6024389,6024393,6234688,6024392,6503612,6479246-->
-- [6298093](2020/technical-preview-2005.md) <!--6298093-->
-- [3601237](2020/technical-preview-2005.md) <!--3601237-->
-- [5110009](2020/technical-preview-2005.md) <!--5110009,3601031-->
-- [6386392](2020/technical-preview-2005.md) <!--6386392-->
-- [4224406](2020/technical-preview-2005.md) <!--4224406-->
-- [5622909](2020/technical-preview-2005.md) <!--5622909-->
-- [6527576](2020/technical-preview-2005.md) <!--6527576-->
-- [6887878](2020/technical-preview-2005.md) <!--6887878-->
-- [6978300](2020/technical-preview-2005.md) <!--6978300-->
-- [6982226](2020/technical-preview-2005.md) <!--6982226-->
-- [6995601](2020/technical-preview-2005.md) <!--6995601-->
-- [7020519](2020/technical-preview-2005.md) <!--7020519,7233478-->
-- [6935376](2020/technical-preview-2005.md) <!--6935376-->
-- [6089922](2020/technical-preview-2005.md) <!--6089922-->
-- [6209223](2020/technical-preview-2005.md) <!--6209223-->
+- [Tenant attach: Device timeline in the admin console](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Tenant attach: Install an application from the admin center](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Tenant attach: CMPivot from the admin center](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Tenant attach: Run Scripts from the admin center](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN boundary type](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Azure AD authentication in Software Center](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Install and upgrade the client on a metered connection](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Task sequence media support for cloud-based content](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Improvements to cloud management gateway cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Community hub and GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365 Apps for enterprise](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Report setup and upgrade failures to Microsoft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Notification for Azure AD app secret key expiration](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Improvements to BitLocker task sequence steps](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Improvements to the content library cleanup tool](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Remove command prompt during Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
