@@ -468,6 +468,8 @@
     href: servers/manage/management-insights.md
   - name: CMPivot
     items:
+    - name: CMPivot overview
+      href: servers/manage/cmpivot-overview.md      
     - name: Use CMPivot
       href: servers/manage/cmpivot.md
     - name: Troubleshooting CMPivot

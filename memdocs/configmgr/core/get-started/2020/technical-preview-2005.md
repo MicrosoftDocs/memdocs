@@ -25,16 +25,18 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/2005/1234567.md)] -->
 
 [!INCLUDE [7141381,6024389,6024393,6234688,6024392,6503612,6479246](includes/2005/6234688.md)]
+[!INCLUDE [6024392](includes/2005/6024392.md)]
 <!--7141381,6024389,6024393,6234688,6024392,6503612,6479246-->
 
 [!INCLUDE [6024389](includes/2005/6024389.md)]
+[!INCLUDE [7141381](includes/2005/7141381.md)]
+
 [!INCLUDE [6298093](includes/2005/6298093.md)]
 [!INCLUDE [3601237](includes/2005/3601237.md)]
 [!INCLUDE [5110009,3601031](includes/2005/5110009.md)]
 <!--5110009,3601031-->
-
 [!INCLUDE [6386392](includes/2005/6386392.md)]
-[!INCLUDE [4224406](includes/2005/4224406.md)]
+[!INCLUDE [3555935](includes/2005/3555935.md)]
 [!INCLUDE [5622909](includes/2005/5622909.md)]
 [!INCLUDE [6527576](includes/2005/6527576.md)]
 [!INCLUDE [6887878](includes/2005/6887878.md)]
@@ -44,9 +46,11 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [7020519,7233478](includes/2005/7020519.md)]
 <!--7020519,7233478-->
 
-[!INCLUDE [7033501](includes/2005/7033501.md)]
+[!INCLUDE [6935376](includes/2005/6935376.md)]
 [!INCLUDE [6089922](includes/2005/6089922.md)]
 [!INCLUDE [6209223](includes/2005/6209223.md)]
+
+[!INCLUDE [2837795](includes/2005/2837795.md)]
 
 <!--
 ## General known issues

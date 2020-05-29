@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020 
+ms.date: 05/26/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,6 +37,19 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+
+## Week of May 18, 2020  
+### Update to icons in Company Portal app for iOS/iPadOS and macOS <!--6057697 -->  
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System.
+
+|Updated for iOS/iPadOS|Previously for iOS/iPadOS|   
+|---|---|   
+|![Image of Company Portal for iOS/iPadOS, highlighting updated icons in bottom menu.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Image of Company Portal for iOS, highlighting the former icons.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Updated for macOS|  
+|---|
+|![Image of Company Portal for macOS, Devices tab, highlighting updated icons.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## Week of May 4, 2020  

@@ -75,6 +75,8 @@ Example: `ccmsetup.exe /?`
 
 Specifies the file download location. Use a local or UNC path. The device downloads files using the server message block (SMB) protocol. To use  **/source**, the Windows user account for client installation needs **Read** permissions to the location.
 
+For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
+
 > [!TIP]  
 > You can use the **/source** parameter more than once in a command line to specify alternative download locations.  
 
@@ -83,6 +85,8 @@ Example: `ccmsetup.exe /source:"\\server\share"`
 ### /mp
 
 Specifies a source management point for computers to connect to. Computers use this management point to find the nearest distribution point for the installation files. If there are no distribution points, or computers can't download the files from the distribution points after four hours, they download the files from the specified management point.  
+
+For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
 
 > [!IMPORTANT]  
 > This parameter specifies an initial management point for computers to find a download source, and can be any management point in any site. It doesn't *assign* the client to the specified management point.

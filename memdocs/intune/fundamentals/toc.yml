@@ -158,6 +158,10 @@
         href: intune-endpoints.md
       - name: Intune US government endpoints
         href: intune-us-government-endpoints.md
+      - name: China endpoints
+        href: china-endpoints.md
+      - name: Intune operated by 21Vianet in China
+        href: china.md
     - name: Sign in to Intune
       href: account-sign-up.md
     - name: Configure domains

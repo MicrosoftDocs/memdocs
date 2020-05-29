@@ -131,7 +131,7 @@ The following features are available with the most recent Configuration Manager 
 - [6982226](2020/technical-preview-2005.md) <!--6982226-->
 - [6995601](2020/technical-preview-2005.md) <!--6995601-->
 - [7020519](2020/technical-preview-2005.md) <!--7020519,7233478-->
-- [7033501](2020/technical-preview-2005.md) <!--7033501-->
+- [6935376](2020/technical-preview-2005.md) <!--6935376-->
 - [6089922](2020/technical-preview-2005.md) <!--6089922-->
 - [6209223](2020/technical-preview-2005.md) <!--6209223-->
 

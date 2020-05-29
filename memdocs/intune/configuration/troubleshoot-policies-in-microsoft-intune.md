@@ -101,7 +101,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
         **Helpful links**: 
 
-        - [Ways to deploy device compliance policies](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Ways to deploy device compliance policies](../protect/device-compliance-get-started.md)
         - [Monitor device compliance policies](../protect/compliance-policy-monitor.md)
 
 ## You're unsure if a profile is correctly applied

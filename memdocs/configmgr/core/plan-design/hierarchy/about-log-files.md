@@ -208,7 +208,10 @@ For example, for the distribution point role:
 
 To change the verbose level of the AdminUI.log for the Configuration Manager console, use the following procedure:
 
-1. Open the console configuration file, **Microsoft.ConfigurationManagement.exe.config**, in an XML editor like Notepad. The default configuration file is in the following location: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Open the console configuration file, **Microsoft.ConfigurationManagement.exe.config**, in an XML editor like Notepad. The default configuration file is in the following location: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder.
 
 1. Under the **system.diagnostics** > **sources** > **source** element, change the **switchValue** attribute from `Error` to `Verbose`. For example:
 
@@ -238,7 +241,7 @@ The following locations are the defaults. If you customized the installation dir
 - Client: `C:\Windows\CCM\logs`
 - Server: `C:\Program Files\Microsoft Configuration Manager\Logs`
 - Management point: `C:\SMS_CCM\Logs`
-- Configuration Manager console: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager console: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS: `C:\inetpub\logs\logfiles\w3svc1`
 
 ### Task sequence log locations

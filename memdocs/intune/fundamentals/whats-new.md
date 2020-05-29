@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,37 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+## Week of May 25, 2020
+
+### App management
+
+#### Windows 32-bit (x86) apps on ARM64 devices<!-- 5477661 -->
+Windows 32-bit (x86) apps that are deployed as available to ARM64 devices will now be displayed in the Company Portal. For more information about Windows 32-bit apps, see [Win32 app management](../apps/apps-win32-app-management.md).
+
+#### Windows Company Portal app icon<!-- 7114635 -->
+The icon for the Windows Company Portal app has been updated. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+## Week of May 18, 2020
+
+### App management  
+
+#### Update to icons in Company Portal app for iOS/iPadOS and macOS<!--6057697 -->
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System. To see the updated icons, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
+
+### Device security
+
+#### Use Endpoint detection and response policy to onboard devices to Defender ATP<!-- 7130165  -->
+
+Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
+
+To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Set up includes:
+
+- Configure your Configuration manager for *tenant attach*.
+- Install an in-console update for Configuration Manager to enable support for the EDR policies. This update applies only to hierarchies that have enabled *tenant attach*.
+- Synchronize your device collections form your hierarchy to the Microsoft Endpoint Manager admin center.
+
+
 ## Week of May 11, 2020 (2005 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

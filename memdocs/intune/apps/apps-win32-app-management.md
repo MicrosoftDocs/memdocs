@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -62,7 +62,7 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 ### Available command-line parameters 
 
 |    **Command-line   parameter**    |    **Description**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    Folder for all setup files. All files in this folder will be compressed into *.intunewin* file.    |
 |    `-s <setup_file>`     |    Setup file (such as *setup.exe* or *setup.msi*).    |
@@ -72,7 +72,7 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 ### Example commands
 
 |    **Example command**    |    **Description**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    This command will show usage information for the tool.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command will generate the `.intunewin` file from the specified source folder and setup file. For the MSI setup file, this tool will retrieve required information for Intune. If `-q` is specified, the command will run in quiet mode, and if the output file already exists, it will be overwritten. Also, if the output folder does not exist, it will be created automatically.    |
 

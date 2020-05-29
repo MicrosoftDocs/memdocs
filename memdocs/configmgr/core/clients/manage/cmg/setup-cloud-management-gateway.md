@@ -221,11 +221,11 @@ You can connect systems to a recently configured CMG where the following conditi
 
 - Systems meet one of the following conditions:
 
- - Each has a valid, unique, and trusted client authentication certificate previously issued to it.
- 
- - Azure AD domain-joined
- 
- - Hybrid Azure AD domain-joined.
+  - Each has a valid, unique, and trusted client authentication certificate previously issued to it.
+
+  - Azure AD domain-joined
+
+  - Hybrid Azure AD domain-joined.
 
 - You don't wish to or can't completely reinstall the existing client agent.
 
