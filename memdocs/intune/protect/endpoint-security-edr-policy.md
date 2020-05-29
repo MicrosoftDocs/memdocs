@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,13 +44,13 @@ EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) th
 
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for Endpoint detection and response profiles](../protect/endpoint-security-edr-profile-settings.md).
+View [settings for Endpoint detection and response profiles](endpoint-security-edr-profile-settings.md).
 
 ## Prerequisites for EDR policies
 
 **General**:
 
-- **Tenant for Microsoft Defender Advanced Threat Protection** – Your Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender ATP](../protect/advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender Advanced Threat Protection** – Your Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
 
 **To support devices from Configuration Manager**:
 
@@ -73,7 +73,7 @@ To support using EDR policies with Configuration Manager devices, your Configura
 
 ## EDR profiles
 
-[View the settings](../protect/endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
+[View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
 
 **Intune** – The following are supported for devices you manage with Intune:
 
@@ -144,7 +144,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 
       When this option is selected, the Wizard presents additional pages to complete the setup of co-management. For more information, see [Enable co-management](../../configmgr/comanage/how-to-enable.md) in the Configuration Manager content.
 
-     ![Configure tenant attach](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Configure tenant attach](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync of collections to the Microsoft Endpoint Manager admin center.
 
@@ -166,7 +166,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 3. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
-     ![View the co-management properties tab](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![View the co-management properties tab](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. Sign in with your *Global Administrator* account when prompted.
 
@@ -202,7 +202,7 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
    - You can't select this option if your Configuration Manager hierarchy isn't tenant attached.
   
-   ![Configure cloud sync](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Configure cloud sync](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Select **OK** to save the configuration.
 
@@ -265,11 +265,17 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 
 - For policies that target the **Windows 10 and later** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
+  The **Devices with ATP sensor** chart displays only devices that successfully onboard to Defender ATP through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Defender ATP by external means, like Group Policy or PowerShell, are counted as **Devices without the ATP sensor**.
+
 - For policies that target the **Windows 10 and Windows Server** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
-[View the settings](../protect/endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
+
+
+
+
+[View the settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
 
 ## Next steps
 
-- [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Learn more about [endpoint detection and response](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender ATP documentation.
