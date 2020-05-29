@@ -50,7 +50,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
     4. You deploy compatibility updates to all target devices.  
 
-3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted using SSL and uses certificate pinning during transfer from the device to the Microsoft Data Management Service, hosted in the United States.  
+3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted over HTTPS and uses certificate pinning during transfer from the device to this service. The Microsoft Data Management Service is hosted in the United States.
 
 4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
 
