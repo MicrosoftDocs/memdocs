@@ -43,7 +43,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [7020519,7233478](includes/2005/7020519.md)]
 <!--7020519,7233478-->
 
-[!INCLUDE [7033501](includes/2005/7033501.md)]
+[!INCLUDE [6935376](includes/2005/6935376.md)]
 [!INCLUDE [6089922](includes/2005/6089922.md)]
 [!INCLUDE [6209223](includes/2005/6209223.md)]
 
