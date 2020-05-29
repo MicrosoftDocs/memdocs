@@ -265,11 +265,13 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 
 - For policies that target the **Windows 10 and later** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
+  The **Devices with ATP sensor** chart displays only devices that successfully onboard to Defender ATP through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Defender ATP by external means, like Group Policy or PowerShell, are counted as **Devices without the ATP sensor**.
+
 - For policies that target the **Windows 10 and Windows Server** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
-- The **Devices with ATP sensor** chart displays only devices that successfully onboard to Defender ATP through use of the EDR policy and onboarding profiles. To ensure you have full representation of your devices in this chart, deploy the onboarding policy to all devices.
 
-  Devices that onboard to Defender ATP by external means, like Group Policy or PowerShell, are counted as **Devices without the ATP sensor**.
+
+
 
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
 
