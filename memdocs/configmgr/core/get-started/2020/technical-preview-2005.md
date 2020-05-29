@@ -52,6 +52,8 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [2837795](includes/2005/2837795.md)]
 
+[!INCLUDE [6976145](includes/2005/6976145.md)]
+
 <!--
 ## General known issues
 
