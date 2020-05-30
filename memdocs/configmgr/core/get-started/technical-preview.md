@@ -118,7 +118,7 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2005
 
-- [Tenant attach: Device timeline in the admin console](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Tenant attach: Device timeline in the admin center](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
 - [Tenant attach: Install an application from the admin center](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
 - [Tenant attach: CMPivot from the admin center](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
 - [Tenant attach: Run Scripts from the admin center](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
