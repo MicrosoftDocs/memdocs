@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md#export-the-root-certificate-from-the-enterprise-ca):
 
-- Review the [requirements for using PKCS certificate profiles](../intune/protect/certficates-pfx-configure.md#requirements)
+- Review the [requirements for using PKCS certificate profiles](../protect/certficates-pfx-configure.md#requirements)
 - Export the root certificate from the Enterprise Certification Authority (CA)
 - Configure certificate templates on the certification authority
 - Install and configure the Intune Certificate Connector
@@ -144,7 +144,7 @@ The following common errors are each addressed in a following section:
 - [The parameter is incorrect 0x80070057](#the-parameter-is-incorrect-0x80070057)
 - [Denied by Policy Module](#denied-by-policy-module)
 - [Certificate profile stuck as Pending](#certificate-profile-stuck-as-pending)
-- [Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED](#error-2146875374-certsrv_e_subject_email_required)
+- [Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED](#error-2146875374-certsrv-e-subject-email-required)
 
 ### The RPC server is unavailable 0x800706ba
 
