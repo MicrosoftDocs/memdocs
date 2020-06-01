@@ -213,8 +213,8 @@ If a device is unenrolled from Jamf but not correctly removed from Intune, or se
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/\<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/\<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
