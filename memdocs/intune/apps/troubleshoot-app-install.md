@@ -115,7 +115,7 @@ There are specific requirements that must be followed to collect log files:
 
 App types that are supported on ARM64 devices include the following:
 - Web apps that do not require a managed browser to open. 
-- Microsoft Store for Business apps or Windows Universal LOB apps (`.appx`) with any of the following combination of `TargetDeviceFamily` and  `ProcessorArchitectures` properties:
+- Microsoft Store for Business apps or Windows Universal LOB apps (`.appx`) with any of the following combination of `TargetDeviceFamily` and  `ProcessorArchitectures` elements:
   - `TargetDeviceFamily` includes Desktop apps, Universal apps and Windows8x apps. Windows8x apps apply only as Online Microsoft Store for Business apps.
   - `ProcessorArchitecture` includes x86 apps, ARM apps, ARM64 apps, and neutral apps.
 - Windows Store apps
