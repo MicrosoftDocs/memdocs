@@ -100,7 +100,7 @@ There are two ways to build the app configuration policy for your VPN app. You c
 7. Click **Add** to bring up the list of configuration keys.
 8.	Select all the configuration keys you require for your chosen configuration. In this example, we use a minimal list to set for an AnyConnect VPN including certificate-based authentication and per-app VPN.
   
-  ![Example of using the Configuration Designer Flow - Configuration keys.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png)  
+  <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
 
 9. Enter appropriate values for the **Connection Name**, **Host, and **Protocol** keys.
 
@@ -141,7 +141,7 @@ Create a temporary profile:
 7.	Click **Add** to bring up the list of configuration keys.
 8.	Select any one of the keys with a **Value type** of **string**, and click **OK**.
 
-  ![Example of using the JSON Flow - Select a key.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png)  
+  <img alt="Example of using the JSON Flow - Select a key." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" width="350">
 
 9.	Now change the **Value type** from **string** to **certificate**. This will allow you to pick the correct client certificate profile to be used with VPN authentication.
 
@@ -240,6 +240,7 @@ The following is an example of JSON data for F5 Access VPN.
         }
     ]
 }
+```
 
 ## Summary
 
