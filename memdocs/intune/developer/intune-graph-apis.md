@@ -357,7 +357,7 @@ This example shows how to use C# to retrieve a list of devices associated with y
 4. Add the following statements to the top of **Program.cs**:
 
     ``` csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Net.Http;
     ```
 
