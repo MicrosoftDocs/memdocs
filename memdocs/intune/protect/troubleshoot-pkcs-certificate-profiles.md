@@ -144,7 +144,7 @@ The following common errors are each addressed in a following section:
 - [The parameter is incorrect 0x80070057](#the-parameter-is-incorrect-0x80070057)
 - [Denied by Policy Module](#denied-by-policy-module)
 - [Certificate profile stuck as Pending](#certificate-profile-stuck-as-pending)
-- [Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED](#error--2146875374-certsrv_e_-_subject_email_required)
+- [Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED](#error--2146875374-certsrv_e_subject_email_required)
 
 ### The RPC server is unavailable 0x800706ba
 
