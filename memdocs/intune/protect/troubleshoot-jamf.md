@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -208,14 +208,13 @@ If a device is unenrolled from Jamf but not correctly removed from Intune, or se
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
