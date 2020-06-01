@@ -324,29 +324,11 @@ If you want to give users more time to install required application or software 
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## Computer restart
 
-The following settings must be shorter in duration than the shortest maintenance window applied to the computer:
+For more information about these settings, see [Device restart notifications](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
-- **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
-
-
-For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
-
-- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
-  - The default value is 240 minutes.
-  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user can't dismiss.
-  - For more information, see [Device restart notifications](device-restart-notifications.md).
-
-**When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## Delivery Optimization 
+## Delivery Optimization
 
 <!-- 1324696 -->
 You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
