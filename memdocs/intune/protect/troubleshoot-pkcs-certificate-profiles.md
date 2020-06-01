@@ -114,7 +114,7 @@ You can also [Upload and email logs](../user-help/send-logs-to-your-it-admin-by-
 
 For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a Mac computer:
 
-1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app. 
+1. Connect the iOS/iPadOS device to Mac, and then go to **Applications** > **Utilities** to open the Console app.
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
@@ -141,10 +141,10 @@ The following common errors are each addressed in a following section:
 - [The RPC server is unavailable 0x800706ba](#the-rpc-server-is-unavailable-0x800706ba)
 - [An enrollment policy server cannot be located 0x80094015](#an-enrollment-policy-server-cannot-be-located-0x80094015)
 - [The submission is pending](#the-submission-is-pending)
-- [The parameter is incorrect 0x80070057](#the-parameter-is-incorrect-0x8007005)
-- [The submission failed: Denied by Policy Module](#the-submission-failed:-denied-by-policy-module)
+- [The parameter is incorrect 0x80070057](#the-parameter-is-incorrect-0x80070057)
+- [Denied by Policy Module](#denied-by-policy-module)
 - [Certificate profile stuck as Pending](#certificate-profile-stuck-as-pending)
-- [Error “-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED”](#error-“-2146875374-certsrv_e_subject_email_required”)
+- [Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED](#error-2146875374-certsrv_e_subject_email_required)
 
 ### The RPC server is unavailable 0x800706ba
 
@@ -158,7 +158,7 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094800
 
 #### Cause 1 - Incorrect configuration of the CA in Intune
 
-This issue can occur when the PKCS certificate profile in Intune specifies the wrong server, or contains spelling errors for the name or FQDN of the CA. The CA is specified in the following properties of the profile:
+This issue can occur when the PKCS certificate profile specifies the wrong server, or contains spelling errors for the name or FQDN of the CA. The CA is specified in the following properties of the profile:
 
 - Certification authority
 - Certification authority name
@@ -212,7 +212,7 @@ Manually configure the name of the certificate enrollment policy server on the c
 
 ### The submission is pending
 
-After you deploy a PKCS certificate profile to issue certificates to mobile devices, the certificates aren't acquired, and the NDESConnector log contains the string **The submission is pending**, as seen in the following example:
+After you deploy a PKCS certificate profile to mobile devices, the certificates aren't acquired, and the NDESConnector log contains the string **The submission is pending**, as seen in the following example:
 
 ```
 IssuePfx - The submission is pending: Taken Under Submission
@@ -260,7 +260,7 @@ Verify the following configurations for the PKCS profile, and then wait for the 
 
 For more information, see [Configure and use PKCS certificates with Intune](../protect/certficates-pfx-configure.md).
 
-### The submission failed: Denied by Policy Module
+### Denied by Policy Module
 
 When devices receive the trusted root certificate but don’t receive the PFX certificate and the NDESConnector log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
 
@@ -313,9 +313,9 @@ When you don’t find request files in the **Failed**, **Processing**, or **Succ
 1. Review your trusted certificate profile to ensure you’ve deployed the root certificate from your Enterprise CA to devices.
 2. Review your PKCS certificate profile to ensure it references the correct CA, certificate type, and the trusted certificate profile that deploys the root certificate to devices.
 
-For more information, see [Use certificates for authentication](../intune/protect/certificates-configure.md) in Microsoft Intune.
+For more information, see [Use certificates for authentication](../protect/certificates-configure.md) in Microsoft Intune.
 
-### Error “-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED”
+### Error -2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED
 
 PKCS certificates fail to deploy, and the certificate console on the issuing CA displays a message with the string **-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED**, as seen in the following example:
 
