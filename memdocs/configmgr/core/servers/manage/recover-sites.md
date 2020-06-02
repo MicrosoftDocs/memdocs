@@ -347,7 +347,7 @@ Repeat this process for all task sequences.
 
 ### Recreate bootable media and prestaged media in non-PKI environments
 
-In non-PKI environments self-signed certs in bootable media and prestaged media are based on the machine keys of the server they were created on. For this reasons if the hardware changes or the OS is reinstalled as part of a recovery, bootable media and prestaged media need to be recreated. For more information on how to create bootable media and prestaged media please see [Create bootable media](../../../osd/deploy-use/create-bootable-media.md) and [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md).
+In non-PKI environments self-signed certs in bootable media and prestaged media are based on the machine keys of the server where the media was created on. For this reasons if the hardware changes or the OS is reinstalled as part of a recovery, any bootable media and prestaged media that were created on that server need to be recreated. For more information on how to create bootable media and prestaged media please see [Create bootable media](../../../osd/deploy-use/create-bootable-media.md) and [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### Reenter sideloading keys
 
