@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 04/27/2020
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -18,7 +18,7 @@ manager: dougeby
 The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Configuration Manager Community hub** where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager Console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft. In the future, IT Admins will be able to upload content on their own, using their own GitHub account.
 
 > [!Note]  
-> Community hub is a pre-release feature. For information on enabling it, see [Pre-release features](pre-release-features.md). <!--add item to pre-relase article when we go live with hub--> 
+> Community hub is an optional feature. For information on enabling it, see [Optional features](install-in-console-updates.md#bkmk_options).
 
 ## About Community hub
 
@@ -43,7 +43,7 @@ Community hub supports the following objects:
 
 ## Permissions
 
-- To import a script: **Create** permission for SMS_Scripts class.
+- To import a script: **Create** permission for **SMS_Scripts** class.
 - To import a report: Full Administrator security role.
 
 
