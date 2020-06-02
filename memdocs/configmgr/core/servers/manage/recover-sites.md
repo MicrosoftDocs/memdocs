@@ -345,6 +345,10 @@ Repeat this process for any other PXE-enabled on-premises distribution point.
 
 Repeat this process for all task sequences.
 
+### Recreate bootable media and prestaged media in non-PKI environments
+
+In non-PKI environments self-signed certs in bootable media and prestaged media are based on the machine keys of the server they were created on. For this reasons if the hardware changes or the OS is reinstalled as part of a recovery, bootable media and prestaged media need to be recreated. For more information on how to create bootable media and prestaged media please see [Create bootable media] (../../../osd/deploy-use/create-bottable-media.md) and [Create prestaged media] (../../../osd/deploy-use/create-prestaged-media.md).
+
 ### Reenter sideloading keys
 
 After a site server recovery, reenter Windows sideloading keys specified for the site. These keys are reset during site recovery. After you reenter the sideloading keys, the site resets the count in the **Activations used** column for Windows sideloading keys.
