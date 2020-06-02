@@ -223,7 +223,7 @@ The following notifications are most applicable to the technical preview branch:
 - Console version mismatch (Critical): the console version doesn't match the site version  
 - Site upgrade is available (Warning): there's a new update package available  
 
-For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
 
 ## <a name="bkmk_doc-dashboard"></a> In-console documentation dashboard

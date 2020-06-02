@@ -358,7 +358,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
-Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
+Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. Enabling this setting also sets the Delivery Optimization download mode to the Group (2) option on targeted clients.
 
 > [!Note]
 > Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -504,13 +504,12 @@ Choose one of the following options for this setting:
 
     - Required deployments (when the installation deadline is reached)  
 
-    > [!IMPORTANT]  
-    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
-
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
 - **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
 
+> [!IMPORTANT]  
+> The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
 
 ## Power management  

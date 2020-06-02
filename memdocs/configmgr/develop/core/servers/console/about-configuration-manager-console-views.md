@@ -17,12 +17,12 @@ Configuration Manager console views are displayed in the results pane of the Con
 ## Creating the View Assembly  
  To create a view, you must define a class within that implements the **IConsoleView2** interface.  
 
- After you create the class and build the assembly, place it in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder where it is loaded by the Configuration Manager console.  
+ After you create the class and build the assembly, place it in the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin folder where it is loaded by the Configuration Manager console.  
 
  For more information, see [How to Create a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md).  
 
 ## Creating the Node XML  
- The view is integrated into the Configuration Manager console when you create an XML file that describes the location, queries, actions, and resources that are needed for the node that displays the view. The node XML file is placed in the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\ConsoleRoot\Extensions\Nodes folder, under a folder that is named with the GUID of the parent node for the node.  
+ The view is integrated into the Configuration Manager console when you create an XML file that describes the location, queries, actions, and resources that are needed for the node that displays the view. The node XML file is placed in the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\ConsoleRoot\Extensions\Nodes folder, under a folder that is named with the GUID of the parent node for the node.  
 
  For more information, see [How to Create Node XML for a Configuration Manager Administrator Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md).  
 

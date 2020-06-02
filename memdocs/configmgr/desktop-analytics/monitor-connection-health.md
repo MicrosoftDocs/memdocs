@@ -100,6 +100,9 @@ Configuration Manager detects one or more blocking issues that prevent device en
 
 For example, the Configuration Manager client isn't at least version 1902 (5.0.8790). Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
+> [!TIP]
+> There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
+
 Starting in version 2002, you can more easily identify client proxy configuration issues in two areas:
 
 - **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down into clients that are unable to enroll to see the endpoints to which clients can't connect due to proxy configuration issues. For more information, see [Endpoint connectivity checks](#endpoint-connectivity-checks).<!-- 4963230 -->
@@ -405,6 +408,9 @@ If this check is successful, then the DiagTrack component is properly configured
 Otherwise, it might display one of the following errors:
 
 - Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements  
+
+    > [!TIP]
+    > There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements  
 

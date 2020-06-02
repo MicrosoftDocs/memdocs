@@ -238,7 +238,7 @@ namespace ConfigurationManagerSnippets
  microsoft.configurationmanagement.managementprovider  
 
 > [!NOTE]
->  The assemblies are in the \<Program Files>\Microsoft Configuration Manager\AdminConsole\bin folder.  
+>  The assemblies are in the \<Program Files>\Microsoft Endpoint Manager\AdminConsole\bin folder.  
 
 ## Runtime Requirements  
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  

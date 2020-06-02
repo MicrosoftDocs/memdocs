@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -88,6 +88,18 @@ Intune app protection policies platform support aligns with Office mobile applic
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android. For more information, see the [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## App protection policy data protection framework
+
+The choices available in app protection policies (APP) enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+
+The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+
+- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
+- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
+
 ## How app protection policies protect app data
 
 ### Apps without app protection policies
@@ -147,13 +159,13 @@ The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authenticati
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
 
-- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have an Azure Active Directory (Azure AD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
 
 - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-- The end user must sign into the app using their AAD account.
+- The end user must sign into the app using their Azure AD account.
 
 ## App protection policies for Microsoft Office apps
 
@@ -211,7 +223,7 @@ For an example of work or "corporate" context, consider a user who starts the On
 Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
 
   >[!NOTE]
-  > Although Edge is in "corporate" context, user can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Specify allowed or blocked sites list for Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) and configure the allowed/blocked site list for Edge.
+  > Although Edge is in "corporate" context, user can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
 
 For more information about multi-identity in Intune, see [MAM and multi-identity](apps-supported-intune-apps.md).
 

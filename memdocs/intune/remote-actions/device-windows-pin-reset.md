@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high

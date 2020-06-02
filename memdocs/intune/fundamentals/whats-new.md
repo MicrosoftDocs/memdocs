@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,37 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+## Week of May 25, 2020
+
+### App management
+
+#### Windows 32-bit (x86) apps on ARM64 devices<!-- 5477661 -->
+Windows 32-bit (x86) apps that are deployed as available to ARM64 devices will now be displayed in the Company Portal. For more information about Windows 32-bit apps, see [Win32 app management](../apps/apps-win32-app-management.md).
+
+#### Windows Company Portal app icon<!-- 7114635 -->
+The icon for the Windows Company Portal app has been updated. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+## Week of May 18, 2020
+
+### App management  
+
+#### Update to icons in Company Portal app for iOS/iPadOS and macOS<!--6057697 -->
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System. To see the updated icons, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
+
+### Device security
+
+#### Use Endpoint detection and response policy to onboard devices to Defender ATP<!-- 7130165  -->
+
+Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
+
+To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Set up includes:
+
+- Configure your Configuration manager for *tenant attach*.
+- Install an in-console update for Configuration Manager to enable support for the EDR policies. This update applies only to hierarchies that have enabled *tenant attach*.
+- Synchronize your device collections form your hierarchy to the Microsoft Endpoint Manager admin center.
+
+
 ## Week of May 11, 2020 (2005 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -74,7 +105,7 @@ Apps that are published as Volume Purchase Program (VPP) available apps will be 
 
 
 #### Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal<!-- 4404429   -->
-*This feature is in progress and rolling out over the next few weeks. You may see the feature controls in the user interface, but the settings won’t take effect for up to a few weeks.*
+*This feature has been delayed.*
 On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Android Company Portal user experience<!-- 5736084  -->
@@ -172,6 +203,7 @@ When users select the push notification on their device, the Company Portal or I
 #### Endpoint security content and new features<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
 
 The documentation for Intune [Endpoint Security](../protect/endpoint-security.md) is now available. In the endpoint security node of the Microsoft Endpoint Manager admin center you can:
+
 - Create and deploy focused security policies to your managed devices
 - Configure integration with Microsoft Defender Advanced Threat Protection, and manage security tasks help remediate risks for at-risk devices as identified by your ATP team
 - Configure security baselines
@@ -185,13 +217,15 @@ In addition to the availability of content, the following are new for Endpoint S
   - In a new *public preview*, you can use the [**Microsoft Defender Firewall rules** profile](../protect/endpoint-security-firewall-policy.md#firewall-profiles) for Windows 10 Firewall policy. With each instance of this profile you can configure up to 150 firewall rules to compliment your Microsoft Defender Firewall profiles. 
   - Account protection security policy remains in preview. 
 
-- You can now [**create a duplicate of endpoint security policies**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplicates keep the settings configuration of the original policy, but get a new name, and don’t include any assignments to groups, until you edit them to add them.  
+- You can now [**create a duplicate of endpoint security policies**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplicates keep the settings configuration of the original policy, but get a new name. Then new policy instance doesn't include any assignments to groups until you edit the new policy instance to add them. You can duplicate the following policies:
   - Antivirus
   - Disk encryption
   - Firewall
   - Endpoint detection and response
   - Attack surface reduction
   - Account protection
+
+- You can now [**create a duplicate of a security baseline**](../protect/security-baselines.md#duplicate-a-security-baseline). Duplicates keep the settings configuration of the original baseline, but get a new name. The new baseline instance doesn't include any assignments to groups until you edit the new baseline instance to add them.
 
 - A new report for endpoint security antivirus policy is available: [**Windows 10 unhealthy endpoints**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). This report is a new page you can select when your viewing your endpoint security antivirus policy. The report displays the antivirus status of your MDM-managed Windows 10 devices.  
 

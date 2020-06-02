@@ -173,7 +173,7 @@ Intune can wipe app data in three different ways: full device wipe, selective wi
 Intune app protection depends on the identity of the user to be consistent between the application and the Intune App SDK. The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
 
 **Is there a secure way to open web links from managed apps?**<br></br>
-Yes! The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](../apps/app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
+Yes! The IT administrator can deploy and set app protection policy for the Microsoft Edge app. The IT administrator can require all web links in Intune-managed apps to be opened using the Microsoft Edge app.
 
 ## App experience on Android
 
