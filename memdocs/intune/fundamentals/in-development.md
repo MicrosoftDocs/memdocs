@@ -111,17 +111,6 @@ To see the settings you can currently configure, go to [macOS device feature set
 Applies to:
 - macOS
 
-### Allow websites using TLS 1.0 and 1.1 to open in Safari on iOS/iPadOS and macOS devices<!-- 6524777  -->
-On iOS/iPadOS and macOS devices, you can configure the **Allow deprecated TLS 1.0/1.1 behavior in Safari** setting (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Device restrictions** for profile type > **General**). 
-
-Websites are deprecating support for TLS 1.0 and 1.1, and are only supporting TLS 1.2. This restriction allows users to use websites in Safari that haven't upgraded to TLS 1.2.
-
-Applies to:
-- iOS/iPadOS 13.4 and newer
-- macOS 10.15.4 and newer
-
-To see the other settings you can restrict, see [iOS/iPadOS](../configuration/device-restrictions-ios.md) and [macOS](../configuration/device-restrictions-macos.md) device restrictions.
-
 ### New VPN settings for Windows 10 and newer devices<!-- 6602122  -->
 When you create a VPN profile using the IKEv2 connection type, there are new settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Base VPN**):
 
