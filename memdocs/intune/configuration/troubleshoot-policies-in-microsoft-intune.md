@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 ## Use built-in troubleshooting
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support**:
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**:
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
@@ -126,7 +126,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 - [Troubleshooting iOS/iPadOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
 - [Troubleshooting Windows 10 Intune policy failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (opens a blog)
-- [Troubleshoot CSP custom settings for Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opens another Microsoft site)
+- [Troubleshoot CSP custom settings for Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opens another Microsoft site)
 - [Windows 10 Group Policy vs Intune MDM policy](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opens another Microsoft site)
 
 ## Alert: Saving of Access Rules to Exchange has Failed
