@@ -21,9 +21,9 @@ Use the information in this topic to understand what operating systems and produ
 If not stated otherwise in this or the LTSB specific topics, the same configurations and limitations that apply to the Current Branch version 1606 apply to the LTSB.  When conflicts occur, use the information that applies to the edition you are using. Typically, the LTSB is more limited than the Current Branch.
 
 ## General statement of support
-The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not express an extension of support for any product or version beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/p/?LinkId=208270) website and read the [Microsoft Support Lifecycle Policy FAQ](https://go.microsoft.com/fwlink/p/?LinkId=31976).
+The following products and technologies are supported by this branch of Configuration Manager. However, their inclusion in this content does not express an extension of support for any product or version beyond that product's individual support lifecycle. Products that are beyond their support lifecycle are not supported for use with Configuration Manager. For more information, visit the [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle) website and read the Microsoft Support Lifecycle Policy FAQ.
 
-Additionally, products and product versions that are not listed in the following topics are not supported unless they have been announced on the [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
+Additionally, products and product versions that are not listed in the following topics are not supported unless they have been announced on the [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Limitations for future support:**
 The LTSB has limited support for future server and client operating systems and product dependencies. The platforms list for the LTSB is fixed for the life of the release:
@@ -69,7 +69,7 @@ You can use the LTSB to manage the following Windows computer operating systems 
 - The Server Core installation of Windows Server 2012 (x64) (Note 2)
 
 **(Note 1)** Datacenter releases are supported but not certified for Configuration Manager.  
-**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) in the Windows Server 2012 TechNet library.
+**(Note 2)** To support client push installation, the computer that runs this operating system version must run the File Server role service for the File and Storage Services server role. For information about installing Windows features on a Server Core computer, see [Install Server Roles and Features on a Server Core Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### Windows Embedded
 You can use the LTSB to manage the following Windows Embedded devices by installing the client software on the device.  For more information, see [Planning for client deployment to Windows Embedded devices](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -128,7 +128,7 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 ### Mac computers  
  You can use the LTSB to manage Mac OS X computers with the Configuration Manager client for Mac.
 
-The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
+The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
 
@@ -142,7 +142,7 @@ For more information, see [How to deploy clients to Macs](../clients/deploy/depl
 ## Linux and UNIX servers
 You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
 
-The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
+The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
 
 Support for Linux and UNIX operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
 

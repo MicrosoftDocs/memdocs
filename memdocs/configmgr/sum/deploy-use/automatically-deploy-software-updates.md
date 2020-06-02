@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -46,7 +46,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
          - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Office 365 Pro Plus clients.
              > [!Note]
-             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information on modifying your ADRs for the title change, see [Update channels for Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_channel). For more information about the name change, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - The **SCEP and Windows Defender Antivirus Updates** template provides common settings to use when you deploy Endpoint Protection definition updates.  
 
@@ -82,7 +82,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
      - The limit for software updates in the ADR is 1000 software updates.  
 
-     - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - Starting in version 1910, you can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
          - When using **Deployed** as a filter, be mindful that you may have already deployed the update to another collection, such as a pilot or test collection. <!--4852033-->
@@ -208,7 +208,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **Download software updates from the internet**: Select this setting to download the software updates from a specified location on the internet. This setting is enabled by default.  
 
-    -   **Download software updates from a location on the local network**: Select this setting to download the software updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard doesn't have internet access. Any computer with internet access can preliminarily download the software updates. Then store them in a location on the local network that's accessible from the computer that runs the wizard.  
+    -   **Download software updates from a location on the local network**: Select this setting to download the software updates from a local directory or shared folder. This setting is useful when the computer that runs the wizard doesn't have internet access. Any computer with internet access can preliminarily download the software updates. Then store them in a location on the local network that's accessible from the computer that runs the wizard. Another scenario could be when downloading content that is published through System Center Updates Publisher or a third-party patching solution. The WSUS content share on the top-level software update point can be entered as the network location to download from, such as `\\server\WsusContent`. <!--memdocs-issue-211-->
 
 14. On the **Language Selection** page, select the languages for which the site downloads the selected software updates. The site only downloads these updates if they're available in the selected languages. Software updates that aren't language-specific are always downloaded. By default, the wizard selects the languages that you've configured in the software update point properties. At least one language must be selected before proceeding to the next page. When you select only languages that a software update doesn't support, the download fails for the update.  
 

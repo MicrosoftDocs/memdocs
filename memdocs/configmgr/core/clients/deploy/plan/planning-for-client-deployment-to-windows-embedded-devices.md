@@ -42,11 +42,11 @@ manager: dougeby
 
  Configuration Manager supports managing the following types of write filters:  
 
-- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](https://go.microsoft.com/fwlink/?LinkID=204717).  
+- File-Based Write Filter (FBWF) -  For more information, see [File-Based Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)).  
 
-- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](https://go.microsoft.com/fwlink/?LinkId=204718).  
+- Enhanced Write Filter (EWF) RAM - For more information, see [Enhanced Write Filter](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
 
-- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](https://go.microsoft.com/fwlink/?LinkId=309236).  
+- Unified Write Filter (UWF) - For more information, see [Unified Write Filter](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Configuration Manager does not support write filter operations when the Windows Embedded device is in EWF RAM Reg mode.  
 

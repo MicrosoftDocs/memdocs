@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology:
@@ -80,7 +80,7 @@ The app you've created is displayed in the apps list, where you can assign it to
 > Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender ATP on macOS devices.
 
 ## Next steps
-- To learn how to configure Microsoft Defender ATP on macOS devices, see [Configure Microsoft Defender ATP on macOS devices](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences).
+- To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../protect/endpoint-security-antivirus-policy.md) 
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
-- [Assign apps to groups](apps-deploy.md)
+- To learn how to assign apps to groups in Intune, see [Assign apps to groups](apps-deploy.md).
 

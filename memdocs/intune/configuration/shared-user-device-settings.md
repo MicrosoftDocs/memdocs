@@ -8,8 +8,8 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -51,18 +51,39 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+   - **Platform**: Select **Windows 10 and later**.
+   - **Profile**: Select **Shared multi-user device**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
    - **Name**: Enter a descriptive name for the new profile.
    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-   - **Platform**: Select **Windows 10 and later**.
-   - **Profile type**: Select **Shared multi-user device**.
 
-4. Configure the settings for [Windows 10 and later](shared-user-device-settings-windows.md) or [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+6. Select **Next**.
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-5. Select **OK** > **Create** to save your changes.
+    - [Windows 10 and later](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Your profile is created and shown in the list, but it's not doing anything yet. Be sure to [assign the profile](device-profile-assign.md) to device groups in your organization.
+8. Select **Next**.
+
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the devices group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+    > [!NOTE]
+    > Be sure to assign the profile to device groups in your organization.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+The next time each device checks in, the policy is applied.
 
 ## Next steps
 
 - See all the settings for [Windows 10 and newer](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).

@@ -44,7 +44,7 @@ The following Microsoft management solutions are all now part of the Microsoft E
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Other features in the [Device Management Admin Console](https://go.microsoft.com/fwlink/?linkid=2109094)
+- Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
 
@@ -121,7 +121,7 @@ When you enable Microsoft Connected Cache on your Configuration Manager distribu
 For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md) (DOINC), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
+> Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
 >
 > When you install Connected Cache on a Configuration Manager distribution point, it offloads Delivery Optimization service traffic to local sources. Connected Cache does this behavior by efficiently caching content at the byte-range level.
 

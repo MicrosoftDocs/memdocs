@@ -1178,9 +1178,9 @@
 			<text x="5.9" y="605.84" class="st21">Enrolled in Intune</text>		</g>
 		<g id="shape171-287" transform="translate(100.124,-337.826)">
 			<title>Sheet.171</title>
-			<desc>Joined to AD Registered in AAD Enrolled in Intune</desc>
+			<desc>Joined to AD Joined to Azure AD Enrolled in Intune</desc>
 			<rect x="0" y="576.888" width="93.1875" height="35.1122" class="st3"/>
-			<text x="21.03" y="586.34" class="st21">Joined to AD <tspan x="10.39" dy="1.2em" class="st22">Registered in AAD </tspan><tspan
+			<text x="21.03" y="586.34" class="st21">Joined to AD <tspan x="10.39" dy="1.2em" class="st22">Joined to Azure AD </tspan><tspan
 						x="11.57" dy="1.2em" class="st22">Enrolled in Intune</tspan></text>		</g>
 		<g id="group172-292" transform="translate(115.874,-272.201)">
 			<title>Sheet.172</title>

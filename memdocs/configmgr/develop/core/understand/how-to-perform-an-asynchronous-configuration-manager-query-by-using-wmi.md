@@ -13,9 +13,9 @@ manager: dougeby
 
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
-In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) method and by implementing a sink method to handle query results.  
+In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](https://docs.microsoft.com/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execqueryasync) method and by implementing a sink method to handle query results.  
 
- To handle each returned object, create an [objWbemSink.OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) event subroutine.  
+ To handle each returned object, create an [objWbemSink.OnObjectReady](https://docs.microsoft.com/windows/win32/wmisdk/swbemsink-onobjectready) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](https://docs.microsoft.com/windows/win32/wmisdk/swbemsink-oncompleted) event subroutine.  
 
 > [!NOTE]
 >  Lazy properties are not returned in asynchronous queries. For more information, see [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md).  
@@ -24,11 +24,11 @@ In Configuration Manager, you perform an synchronous query for Configuration Man
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Create an [OnObjectReady](https://msdn.microsoft.com/library/aa393881.aspx) subroutine to handle objects by the query.  
+2.  Create an [OnObjectReady](https://docs.microsoft.com/windows/win32/wmisdk/swbemsink-onobjectready) subroutine to handle objects by the query.  
 
-3.  Create an [OnCompleted](https://msdn.microsoft.com/library/aa393879.aspx) subroutine to handle query completion.  
+3.  Create an [OnCompleted](https://docs.microsoft.com/windows/win32/wmisdk/swbemsink-oncompleted) subroutine to handle query completion.  
 
-4.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use [ExecQueryAsync](https://msdn.microsoft.com/library/aa392108.aspx) object to query Configuration Manager objects asynchronously.  
+4.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, use [ExecQueryAsync](https://docs.microsoft.com/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execqueryasync) object to query Configuration Manager objects asynchronously.  
 
 ## Example  
  The following VBScript code example asynchronously queries for all [SMS_Collection](../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) objects.  
@@ -78,7 +78,7 @@ End Sub
 |`connection`|[SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## See Also  
- [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
+ [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
  [Objects overview](configuration-manager-objects-overview.md)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   

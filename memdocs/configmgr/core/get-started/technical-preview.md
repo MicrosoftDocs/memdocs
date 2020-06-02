@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -70,7 +70,7 @@ The technical preview branch of Configuration Manager supports the following pro
 - The site supports up to 10 clients, which can run any [supported client OS version](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).
+> The inclusion of these products in this content doesn't imply an extension of support for a version that's beyond its support lifecycle. Configuration Manager doesn't support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle).
 
 ## <a name="bkmk_install"></a> Install and update
 
@@ -91,7 +91,7 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2002**: The Configuration Manager technical preview branch version 2002 is available as both an in-console update and as a new baseline version.
 
-Download a baseline version from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 
@@ -112,20 +112,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2004
+### Technical preview version 2005
 
-- [Microsoft Endpoint Manager tenant attach: ConfigMgr client details](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Notifications from Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Copy discovery data from the console](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Improvements to CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Support for PowerShell version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Improvement to Format and Partition Disk task sequence step](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Management insight rules for OS deployment](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [PowerShell cmdlets for task sequence deployment types](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [Tenant attach: Device timeline in the admin center](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Tenant attach: Install an application from the admin center](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Tenant attach: CMPivot from the admin center](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Tenant attach: Run Scripts from the admin center](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN boundary type](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Azure AD authentication in Software Center](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Install and upgrade the client on a metered connection](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Task sequence media support for cloud-based content](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Improvements to cloud management gateway cmdlets](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Community hub and GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365 Apps for enterprise](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Report setup and upgrade failures to Microsoft](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Notification for Azure AD app secret key expiration](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Improvements to BitLocker task sequence steps](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Improvements to the content library cleanup tool](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Remove command prompt during Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -142,6 +150,17 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2004
+
+- [Microsoft Endpoint Manager tenant attach: ConfigMgr client details](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Notifications from Microsoft](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Copy discovery data from the console](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Improvements to CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Support for PowerShell version 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Improvement to Format and Partition Disk task sequence step](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Management insight rules for OS deployment](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [PowerShell cmdlets for task sequence deployment types](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### Technical preview version 2003
 

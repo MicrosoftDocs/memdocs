@@ -114,7 +114,7 @@ Class SMS_ConfigMgrClientAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Indicates whether  [Windows 10 Device Health Attestation](https://technet.microsoft.com/itpro/windows/keep-secure/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) is enabled.  
+ Indicates whether [Windows 10 Device Health Attestation](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) is enabled.  
 
  `EnableThirdPartyOrchestration`  
  Data type: `UInt32`  

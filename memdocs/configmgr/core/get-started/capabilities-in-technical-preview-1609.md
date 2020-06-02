@@ -47,7 +47,6 @@ If enabled, Apple's Setup Assistant prompts for this service during device activ
 
 Upgrade analytics enables you to assess and analyze device readiness and compatibility with Windows 10, to allow easier and smoother upgrades. With the integration of Upgrade Analytics with Configuration Manager, you can access the upgrade compatibility data in the Configuration Manager admin console, and then, from the device list, target devices for upgrade or remediation.
 
-You can read more about Upgrade Analytics in [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## Native Connection Types for Windows 10 VPN Hybrid Profiles
 
@@ -345,7 +344,7 @@ The dashboard displays charts for the following:
 - Office 365 client versions
 - Office 365 client languages
 - Office 365 client channels     
-For more information, see [Overview of update channels for Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+For more information, see [Overview of update channels for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Automatic deployment rules that have Office 365 Client selected in the set of available products.
 
 You can take the following actions on the dashboard:

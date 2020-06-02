@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -63,11 +63,6 @@ Prerequisites for device compliance policy with MTD:
    - **Medium**: The device is compliant if the threats found on the device are low or medium level. If high-level threats are detected, the device is determined as noncompliant.
 
    - **High**: This level is the least secure. This allows all threat levels, and uses Mobile Threat Defense for reporting purposes only. Devices are required to have the MTD app activated with this setting.
-
-   > [!IMPORTANT]
-   > For Android Enterprise Device Owner, after you create and save a policy, you cannot later edit the policy to modify the threat level. Edits to change the device threat level for the Device Health setting of **Require the device to be at or under the Device Threat Level** fail to take effect. To change threat level value you must delete the current policy and create a new policy that sets the desired threat level.
-   >
-   > This is a known issue that will be resolved in a future update to Intune.
 
 6. Select **OK** twice, then select **Create** to create the policy.
 

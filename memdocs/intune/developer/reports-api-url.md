@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -80,7 +80,7 @@ The current version supports the following OData query parameters: `$filter`, `$
 > The filter examples assume today is 2/21/2019.
 
 |                             Filter                             |           Performance Optimization           |                                          Description                                          |
-|:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+|----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    Full                                      |    Return data with `DateKey` between 20180214 and 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Full                                      |    Return data with `DateKey` equal to 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Full                                      |    Return data with `DateKey` between 20180214 and 20180220.                                     |

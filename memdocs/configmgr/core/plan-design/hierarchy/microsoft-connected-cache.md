@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -21,7 +21,7 @@ manager: dougeby
 Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
 
 > [!NOTE]
-> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache (DOINC).
+> Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
 
 This cache server acts as an on-demand transparent cache for content downloaded by Delivery Optimization. Use client settings to make sure this server is offered only to the members of the local Configuration Manager boundary group.
 
@@ -103,6 +103,20 @@ To change the drive after you install Connected Cache:
 - Manually configure the distribution point properties to use a specific drive letter.
 
 - If set to automatic, first create the **no_sms_on_drive.sms** file. Then make some change to the distribution point properties to trigger a configuration change.
+
+### Automation
+
+<!-- SCCMDocs#1911 -->
+
+You can use the Configuration Manager SDK to automate the configuration of Microsoft Connected Cache settings on a distribution point. As is the case for all site roles, use the [SMS_SCI_SysResUse WMI class](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). For more information, see [Programming the site roles](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles).
+
+When you update the **SMS_SCI_SysResUse** instance for the distribution point, set the following properties:
+
+- **AgreeDOINCLicense**: Set to `1` to accept the license terms.
+- **Flags**: Enable `|= 4`, disable `&= ~4`
+- **DiskSpaceDOINC**: Set to `Percentage` or `GB`
+- **RetainDOINCCache**: Set to `0` or `1`
+- **LocalDriveDOINC**: Set to `Automatic`, or a specific drive letter, such as `C:` or `D:`
 
 ## Verify
 

@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -227,9 +227,9 @@ By default, Intune uses the value configured in the template. However, you can c
 
 1. On the CA, run the following commands:
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. On the issuing CA, use the Certification Authority snap-in to publish the certificate template. Select the **Certificate Templates** node, select **Action** > **New** > **Certificate Template to Issue**, and then select the certificate template you created in the previous section.
 

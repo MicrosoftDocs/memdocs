@@ -2,7 +2,7 @@
 title: What's new in version 2002
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
-ms.date: 04/01/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
+Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1810 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -325,6 +325,15 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
+## <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
+<!--5691658-->
+You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
+
+This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Endpoint Manager admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> You'll need the hotfix rollup, [KB4563473](https://support.microsoft.com/help/4563473), installed in your environment for this feature.
+
 ### Improvements to BitLocker management
 
 - The BitLocker management policy now includes additional settings, including policies for fixed and removable drives.<!-- 5925683 --> For more information, see [BitLocker settings reference](../../../protect/tech-ref/bitlocker/settings.md).
@@ -407,9 +416,9 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4556203).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -429,8 +438,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+As of May 11, 2020, version 2002 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 

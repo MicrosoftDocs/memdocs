@@ -22,7 +22,7 @@ You can create and deploy [Windows Defender Application Guard (Application Guard
 
 ## Prerequisites
 
-To create and deploy a Windows Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a network isolation policy. For more information, see the [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+To create and deploy a Windows Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a [network isolation policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). For more information, see the [Windows Defender Application Guard overview](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## Create a policy, and to browse the available settings
 

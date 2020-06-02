@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Create macOS kernel extensions device profile with Microsoft Intune - Azure | Microsoft Docs
+title: Create macOS system and kernel extensions with Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add or create a macOS device profile, and then configure kernel extensions to allow user override, add team identifier, and a bundle and team identifier in Microsoft Intune.
+description: Add or create a macOS device profile that configures system extensions or kernel extensions to allow user override, adds team identifier, and adds a bundle and team identifier in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: reference
+ms.date: 05/07/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -27,42 +27,60 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add macOS kernel extensions in Intune
+# Add macOS system and kernel extensions in Intune
 
 > [!NOTE]
 > macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-On macOS devices, you can add features at the kernel-level. These features access parts of the OS that regular programs can't access. Your organization may have specific needs or requirements that aren't available in an app, a device feature, and so on. 
+On macOS devices, you can add kernel extensions and system extensions. Both kernel extensions and system extensions allow users to install app extensions that extend the native capabilities of the operating system. Kernel extensions execute their code at the kernel level. System extensions run in a tightly controlled user-space.
 
-To add kernel extensions that are always allowed to load on your devices, add "kernel extensions" (KEXT) in Microsoft Intune, and then deploy these extensions to your devices.
+To add extensions that are always allowed to load on your devices, use Microsoft Intune. Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you then push or deploy the profile to macOS devices in your organization.
+
+This article describes system extensions and kernel extensions. It also shows you how to create a device configuration profile using extensions in Intune.
+
+## System extensions
+
+System extensions run in the user space, and don’t access the kernel. The goal is to increase security, provide more end user control, and limit kernel level attacks. These extensions can be:
+
+- Driver extensions, including drivers to USB, network interface cards (NIC), serial controllers, and human interface devices (HID)
+- Network extensions, including content filters, DNS proxies, and VPN clients
+- Endpoint security extensions, including endpoint detection, endpoint response, and antivirus
+
+System extensions are included in an app's bundle, and installed from the app.
+
+For more information on system extensions, see [system extensions](https://developer.apple.com/documentation/systemextensions) (opens Apple's web site).
+
+## Kernel extensions
+
+Kernel extensions add features at the kernel-level. These features access parts of the OS that regular programs can't access. Your organization may have specific needs or requirements that aren't available in an app, a device feature, and so on.
 
 For example, you have a virus scanning program that scans your device for malicious content. You can add this virus scanning program's kernel extension as an allowed kernel extension in Intune. Then, "assign" the extension to your macOS devices.
 
 With this feature, administrators can allow users to override kernel extensions, add team identifiers, and add specific kernel extensions in Intune.
 
-This feature applies to:
+For more information on kernel extensions, see [kernel extensions](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
 
-- macOS 10.13.2 and later
+## Prerequisites
 
-To use this feature, devices must be:
+- This feature applies to:
 
-- Enrolled in Intune using Apple's Device Enrollment Program (DEP). [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md) has more information.
+  - macOS 10.13.2 and newer (kernel extensions)
+  - macOS 10.15 and newer (system extensions)
 
-  OR
+  From macOS 10.15 to 10.15.4, kernel extensions and system extensions can run side by side.
 
-- Enrolled in Intune with "user approved enrollment" (Apple's term). [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site) has more information.
+- To use this feature, devices must be:
 
-Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to macOS devices in your organization.
+  - Enrolled in Intune using Apple's Device Enrollment Program (DEP). [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md) has more information.
 
-This article shows you how to create a device configuration profile using kernel extensions in Intune.
+    OR
 
-> [!TIP]
-> For more information on kernel extensions, see [kernel extension overview](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
+  - Enrolled in Intune with "user approved enrollment" (Apple's term). [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site) has more information.
 
 ## What you need to know
 
-- Unsigned legacy kernel extensions can be added.
-- Be sure to enter the correct team identifier and bundle ID of the kernel extension. Intune doesn't validate the values you enter. If you enter wrong information, the extension won't work on the device. A team identifier is exactly 10 alphanumeric characters long. 
+- Unsigned legacy kernel extensions and system extensions can be added.
+- Be sure to enter the correct team identifier and bundle ID of the extension. Intune doesn't validate the values you enter. If you enter wrong information, the extension won't work on the device. A team identifier is exactly 10 alphanumeric characters long.
 
 > [!NOTE]
 > Apple released information regarding signing and notarization for all software. On macOS 10.14.5 and newer, kernel extensions deployed through Intune don't have to meet Apple's notarization policy.
@@ -84,7 +102,7 @@ This article shows you how to create a device configuration profile using kernel
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add kernel extensions to devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add antivirus scanning to kernel extensions on devices**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.

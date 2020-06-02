@@ -29,7 +29,7 @@ You configure the Windows Server Update Services (WSUS) component settings, in C
  The following example method configures various Windows Server Update Services (WSUS) component settings by using the [SMS_SCI_Component](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md) class to connect to the site control file and change properties.  
 
 > [!NOTE]
->  For configuration related information and values, see the Configuring Software Updates section of the Configuration Manager documentation at [https://go.microsoft.com/fwlink/?LinkId=111682](https://go.microsoft.com/fwlink/?LinkId=111682).  
+> For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 

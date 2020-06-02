@@ -258,7 +258,7 @@ For more information, see [Upgrade operating system](../understand/task-sequence
 
 ### Convert from BIOS to UEFI
 
-If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+If you want to change the device from BIOS to UEFI during this task sequence, see [Convert from BIOS to UEFI during an in-place upgrade](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).  
 
 ### Manage BitLocker
 

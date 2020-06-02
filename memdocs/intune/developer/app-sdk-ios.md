@@ -126,7 +126,7 @@ To enable the Intune App SDK, follow these steps:
 2. Add these iOS frameworks to the project:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -252,7 +252,7 @@ Some of these settings might have been covered in previous sections, and some do
 Setting  | Type  | Definition | Required?
 --       |  --   |   --       |  --
 ADALClientId  | String  | The app's Azure AD client identifier. | Required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource. |
-ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. | Required if the app uses ADAL or MSAL to access a non-Intune AAD resource. If this value is absent, an Intune default is used.|
+ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. | Optional. Recommended if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used.|
 ADALRedirectUri  | String  | The app's Azure AD redirect URI. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource.  |
 ADALRedirectScheme  | String  | The app's Azure AD redirect scheme. This can be used in place of ADALRedirectUri if the application's redirect URI is in the format `scheme://bundle_id`. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource. |
 ADALLogOverrideDisabled | Boolean  | Specifies whether the SDK will route all ADAL/MSAL logs (including ADAL calls from the app, if any) to its own log file. Defaults to NO. Set to YES if the app will set its own ADAL/MSAL log callback. | Optional. |

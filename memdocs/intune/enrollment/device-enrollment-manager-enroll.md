@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -50,6 +50,8 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.
 
 ## Enrollment methods supported by DEM accounts
+
+You can use the following methods to enroll devices using DEM accounts:
 
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)

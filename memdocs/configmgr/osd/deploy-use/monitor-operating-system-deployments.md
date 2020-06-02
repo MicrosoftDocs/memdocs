@@ -2,7 +2,7 @@
 title: Monitor operating system deployments
 titleSuffix: Configuration Manager
 description: To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -42,6 +42,9 @@ The Configuration Manager console provides the following ways to help you monito
 3.  Click the task sequence  for which you want to monitor the deployment status.  
 
 4.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
+
+> [!NOTE]  
+> When an upgrade is initiated, status message 52200 is generated. This contains the user that did the upgrade.  
 
 ##  <a name="BKMK_TSReports"></a> Operating system deployment reports  
  There are many predefined operating system deployment reports available. They are organized in several categories and can be used to report on specific information about state migration and task sequence deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

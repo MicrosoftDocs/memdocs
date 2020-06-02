@@ -34,7 +34,7 @@ Provision an application with a Windows app package for all users on the device.
 > [!Important]  
 > Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-When provisioning an offline licensed app, Configuration Manager doesn't allow Windows to automatically update it from the Microsoft Store.  
+When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager supports app provisioning on all supported versions of Windows 10.<!--SCCMDocs-pr issue 2762-->
 
@@ -53,7 +53,7 @@ To configure a Windows app deployment type for this feature, enable the option t
 
 Configuration Manager supports the Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Windows 10 version 1809 or later support these formats.
 
-- For an overview of MSIX, see [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
+- For an overview of MSIX, see [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -74,7 +74,7 @@ Convert your existing Windows Installer (.msi) applications to the MSIX format.
 
   - Install the [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) from the Microsoft Store  
 
-  - Install the [MSIX packaging tool driver](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Install the [MSIX packaging tool driver](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Don't install any other apps or services on this device. It's your reference system.
 
@@ -99,7 +99,7 @@ If the process fails, the summary page points to the log file with more informat
 
 To use this MSIX app, you first need to digitally sign it so that clients trust it. For more information on this process, see the following articles:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).

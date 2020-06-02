@@ -6,8 +6,8 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger 
 ms.author: mandia 
 manager: dougeby 
-ms.date: 11/13/2019
-ms.topic: conceptual 
+ms.date: 05/28/2020
+ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,16 @@ With Intune, you can manage multiple devices per person, and the different platf
 - Using personal devices to access organizational resources
 
 For more information about Intune, see [What is Intune](what-is-intune.md).
+
+## Co-management
+
+Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [running remote actions](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [using Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), and more.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) is a solution platform that unifies several services. It includes [Microsoft Intune](what-is-intune.md) for cloud-based device management, and [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) for cloud-attach device management.
+
+If you use Configuration Manager, and you're ready to move some tasks to the cloud, then co-management is your answer.
+
+For more information about cloud-attaching your Configuration Manager, see [What is co-management](https://docs.microsoft.com/mem/configmgr/comanage/overview).
 
 ## Integration with secure-and-protect services
 

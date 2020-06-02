@@ -10,6 +10,7 @@ ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ---
 
 # Get support for Desktop Analytics

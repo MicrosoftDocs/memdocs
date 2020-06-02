@@ -2,7 +2,7 @@
 title: Site recovery
 titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -190,7 +190,7 @@ Use this option when no data loss has occurred on the Configuration Manager site
 
 Configuration Manager enables change tracking for the site database in SQL Server. Change tracking lets Configuration Manager query for information about the changes made to database tables after a previous point in time. The retention period specifies how long change tracking information is kept. By default, the site database is configured to have a retention period of five days. When you recover a site database, the recovery process proceeds differently if your backup is inside or outside the retention period. For example, if your SQL server fails, and your last backup is seven days old, it's outside the retention period.
 
-For more information about SQL Server change tracking internals, see the following blog posts from the SQL Server team: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) and [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2).
+For more information about SQL Server change tracking internals, see the following blog posts from the SQL Server team: [Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) and [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### Reinitialization of site or global data
 
@@ -344,6 +344,10 @@ Repeat this process for any other PXE-enabled on-premises distribution point.
     - **Run PowerShell Script**: If you use the option to **Run this step as the following account**, select **Set**. Enter and confirm the password, and then select **Verify**.
 
 Repeat this process for all task sequences.
+
+### Recreate bootable media and prestaged media in non-PKI environments
+
+In non-PKI environments, self-signed certs in bootable media and prestaged media are based on the machine keys of the server where the media was created. For this reason, if the hardware changes or the OS is reinstalled as part of a recovery, any bootable media and prestaged media created on that server need to be recreated. For more information on how to create bootable media and prestaged media, see [Create bootable media](../../../osd/deploy-use/create-bootable-media.md) and [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### Reenter sideloading keys
 

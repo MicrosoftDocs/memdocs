@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -96,7 +96,9 @@ Depending on the app type, you can install the app on a Windows 10 device in one
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will function as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
 
-Apps can only be installed in the device context when supported by the device and the Intune app type. You can install the following app types in the device context and assign these apps to a device group:
+Apps can only be installed in the device context when supported by the device and the Intune app type. Device context installs are supported on Windows 10 desktops and Teams devices, such as the Surface Hub. They aren't supported on devices running Windows Holographic for Business, such as the Microsoft HoloLens.
+
+You can install the following app types in the device context and assign these apps to a device group:
 
 - Win32 apps
 - Offline licensed Microsoft Store for Business apps

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -235,8 +235,16 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
 ### Applications
 
-- **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
-- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might force users to only access the apps the administrator makes available in the Google Play store, or apps required in [Client Apps](../apps/apps-add-android-for-work.md).
+- **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allow users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
+- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md).
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
+  
+  - Force users to only access the apps the administrator makes available in the Google Play store, or apps required in [Client Apps](../apps/apps-add-android-for-work.md). 
+  - Automatically uninstall any apps that are detected as being installed by users outside of the Google Play store.
+
+  If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
+
 - **App auto-updates**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
   - **Not configured**: Intune doesn't change or update this setting.
   - **User choice**: The OS might default to this option. Users can set their preferences in the managed Google Play app.

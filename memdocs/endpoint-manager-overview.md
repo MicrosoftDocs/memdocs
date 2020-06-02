@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: 
@@ -53,7 +53,7 @@ Endpoint Manager includes the following services:
 
   For more information, see [What is Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/what-is-intune).
 
-- **Configuration Manager**: Configuration Manager is an on-premises management solution to manage desktops, servers, and laptops that are on your network or internet-based. You can cloud-enable it to integrate with Intune, Azure AD, Microsoft Defender ATP, and other cloud services. Use Configuration Manager to deploy apps, software updates, and operating systems. You can also monitor compliance, query and act on clients in real time, and much more.
+- **Configuration Manager**: Configuration Manager is an on-premises management solution to manage desktops, servers, and laptops that are on your network or internet-based. You can cloud-enable it to integrate with Intune, Azure Active Directory (AD), Microsoft Defender ATP, and other cloud services. Use Configuration Manager to deploy apps, software updates, and operating systems. You can also monitor compliance, query and act on clients in real time, and much more.
 
   As part of Endpoint Manager, continue to use Configuration Manager as you always have. If you're ready to move some tasks to the cloud, consider [co-management](https://docs.microsoft.com/configmgr/comanage/).
 
@@ -77,7 +77,7 @@ Endpoint Manager includes the following services:
 
   For more information, see [Windows Autopilot overview](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) and [Enroll Windows devices in Intune](/mem/intune/enrollment/enrollment-autopilot).
 
-- **Azure AD Premium**: Azure AD is used by Endpoint Manager for devices, users, groups, dynamic groups, auto-enrollment, multi-factor authentication, and conditional access. These features are key to protecting devices, apps, and data.
+- **Azure Active Directory (AD)**: Azure AD is used by Endpoint Manager for identity of devices, users, groups, and multi-factor authentication (MFA). **Azure AD Premium**, which may be an additional cost, has [additional features](https://azure.microsoft.com/pricing/details/active-directory/) to help protect devices, apps, and data, including dynamic groups, auto-enrollment, and conditional access.
 
   For more information, see [add users](/mem/intune/fundamentals/users-add), [set up auto-enrollment](/mem/intune/enrollment/windows-enroll), and [about conditional access](/mem/intune/protect/conditional-access).
 
@@ -105,11 +105,11 @@ You can also think of Endpoint Manager in three parts: cloud, on-premises, and c
 
 ## What you need to get started
 
+Microsoft Endpoint Manager is a solution platform that unifies several technologies. It's not a new license. The services are licensed according to their individual licenses terms. For more information, see the [product licensing terms](https://www.microsoft.com/licensing/product-licensing/products).
+
 If you currently use Configuration Manager, you also get Microsoft Intune to co-manage your Windows devices. For other platforms, such as iOS/iPadOS and Android, then you'll need a separate Intune license.
 
-In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager, and Office 365.
-
-For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager, and Office 365. For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## Next steps
 

@@ -87,7 +87,7 @@ For more information, see [Site and site system prerequisites](../../plan-design
 **Review the version of the Windows Assessment and Deployment Kit (ADK) for Windows 10**
 The Windows 10 ADK should be version 1607 or later. If you must update the ADK, do so before you begin update of Configuration Manager. This ensures the default boot images are automatically updated to the latest version of Windows PE. (Custom boot images must be updated manually.)
 
-If you update the site before you update the ADK, see the blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) for a script that can be used to regenerate the boot images.
+If you update the site before you update the ADK, see the blog [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) for a script that can be used to regenerate the boot images.
 
 **Review the site and hierarchy status and verify that there are no unresolved issues:** 
 Before you update a site, resolve all operational issues for the site server, the site database server, and site system roles that are installed on remote computers. A site update can fail due to existing operational problems.

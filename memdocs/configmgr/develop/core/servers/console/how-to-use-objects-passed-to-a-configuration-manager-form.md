@@ -51,7 +51,7 @@ In Configuration Manager, you use the [SmsPageControl.PropertyManager](https://m
     MessageBox.Show(string.Format("The {0} package was selected", PropertyManager["Name"].StringValue));  
     ```  
 
-6.  Build the project and copy the assembly to the %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder.  
+6.  Build the project and copy the assembly to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin folder.  
 
 7.  Open the Configuration Manager console, and navigate to the **Packages** node under **Software Distribution**.  
 

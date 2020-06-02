@@ -10,8 +10,6 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # About client settings in Configuration Manager
@@ -322,9 +320,9 @@ If clients must install required software updates at the deployment deadline wit
 
 ### Grace period for enforcement after deployment deadline (hours)
 
-If you want to give users more time to install required application or software update deployments beyond the deadline, set this option to **Yes**. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
+If you want to give users more time to install required application or software update deployments beyond the deadline, set a value for this option. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
 
-Set a grace period of 1 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## Computer restart
@@ -360,7 +358,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
-Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content.
+Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. Enabling this setting also sets the Delivery Optimization download mode to the Group (2) option on targeted clients.
 
 > [!Note]
 > Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -506,13 +504,12 @@ Choose one of the following options for this setting:
 
     - Required deployments (when the installation deadline is reached)  
 
-    > [!IMPORTANT]  
-    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
-
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
 - **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
 
+> [!IMPORTANT]  
+> The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
 
 ## Power management  

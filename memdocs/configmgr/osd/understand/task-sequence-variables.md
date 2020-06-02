@@ -172,7 +172,7 @@ Specifies the make of the computer.
 
 ### <a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-Specifies the path defined by the [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) variable. When you define SMSTSLocalDataDrive before the task sequence starts, such as by setting a collection variable, Configuration Manager then defines the _SMSTSMDataPath variable once the task sequence starts.
+Specifies the path defined by the [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) variable. This path specifies where the task sequence stores temporary cache files on the destination computer while it's running. When you define SMSTSLocalDataDrive before the task sequence starts, such as by setting a collection variable, Configuration Manager then defines the _SMSTSMDataPath variable once the task sequence starts.
 
 ### <a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1587,9 +1587,9 @@ Use this variable to change the display language of a language neutral boot imag
 
 ### <a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-Specifies where the task sequence stores temporary files on the destination computer while it's running.
+Specifies where the task sequence stores temporary cache files on the destination computer while it's running.
 
-Set this variable before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the [_SMSTSMDataPath](#SMSTSMDataPath) variable once the task sequence starts.
+Set this variable before the task sequence starts, such as by setting a collection variable. Once the task sequence starts, Configuration Manager defines the [_SMSTSMDataPath](#SMSTSMDataPath) variable based on what the SMSTSLocalDataDrive variable was defined to.
 
 ### <a name="SMSTSMP"></a> SMSTSMP
 
@@ -1827,6 +1827,10 @@ Specify this variable to control the type of information that the task sequence 
 - `1`: Include the current step and total steps to the progress text. For example, **2 of 10**.
 - `2`: Include the current step, total steps, and percentage completed. For example, **2 of 10 (20% complete)**.
 - `3`: Include the percentage completed. For example, **(20% complete)**.
+
+### <a name="TSUEFIDrive"></a> TSUEFIDrive
+
+Use on the properties of a FAT32 partition in the **Variable** field. When the task sequence detects this variable, it prepares the disk for transition to UEFI before it restarts the computer. For more information, see [Task sequence steps to manage BIOS to UEFI conversion](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ### <a name="WorkingDirectory"></a> WorkingDirectory
 

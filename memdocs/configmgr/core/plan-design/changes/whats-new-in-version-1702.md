@@ -24,8 +24,8 @@ Update 1702 for Configuration Manager current branch is available as an in-conso
 > To install a new site, you must use a baseline version of Configuration Manager.  
 >
 > Learn more about:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
+> - [Installing updates at sites](../../servers/manage/updates.md)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
@@ -67,7 +67,7 @@ You can find the **Feedback** option:
 - When you right-click on any object in the console.   
    ![Righ-click option](./media/feedback-option.png)   
 
-  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://go.microsoft.com/fwlink/?linkid=617029).
+  Choosing **Feedback** opens your browser to the [Configuration Manager UserVoice feedback website](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  Changes for Updates and Servicing
@@ -188,7 +188,7 @@ You can now return to a previous page when you run a task sequence and there is 
 Beginning in version 1702, for available deployments of task sequences, you can choose to use pre-cache content. Pre-cache content gives you the option to allow the client to only download the applicable content as soon as it receives the deployment. Therefore, when the user clicks **Install** in Software Center, the content is ready and the installation starts quickly because the content is on the local hard drive. For details, see [Configure pre-cache content](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 ### Convert from BIOS to UEFI during an in-place upgrade
-Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduces a simple conversion tool that automates the process to repartition the hard disk for UEFI-enabled hardware and integrates the conversion tool into the Windows 7 to Windows 10 in-place upgrade process. When you combine this tool with your operating system upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI, you can convert your computers from BIOS to UEFI during an in-place upgrade to the Windows 10 Creators Update. For details, see [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### Improvements to the Install Applications task sequence step
 This version introduced the following improvements:

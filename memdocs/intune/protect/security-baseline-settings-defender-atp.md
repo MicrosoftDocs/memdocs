@@ -602,7 +602,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Not configured** - The Windows default is restored, is to not block creation of child processes.
+  - **Not configured** - The Windows default is restored, which is to not block creation of child processes.
   - **User defined**
   - **Enable** (*default*) - Office communication applications are blocked from creating child processes.
   - **Audit mode** - Windows events are raised instead of blocking child processes.
@@ -800,7 +800,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Enable network protection**  
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
-  - **Not configured** -The setting returns to the Windows default, which is disabled.
+  - **Not configured** - The setting returns to the Windows default, which is disabled.
   - **User defined**
   - **Enable** - Network protection is enabled for all users on the system.
   - **Audit mode** (*default*) - Users aren't blocked from dangerous domains and Windows events are raised instead.
