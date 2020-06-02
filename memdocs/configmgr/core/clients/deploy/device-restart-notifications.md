@@ -140,6 +140,43 @@ The following notification occurs when both the user experience setting allows n
 
 Once the deployment reaches its deadline, Software Center follows the behavior to [Install required software at or after the deadline](#install-required-software-at-or-after-the-deadline).
 
+## Example configurations
+
+The following examples describe how to configure the client settings to achieve specific behaviors.
+
+### Reminders are off
+
+| Setting | Value |
+|---------|---------|
+|Specify the amount of time after the deadline before a device gets restarted (minutes)|180|
+|Specify the amount of time that a user is presented a final countdown notification before a device gets restarted (minutes)|60|
+|Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)|240|
+|When a deployment requires a restart, show a dialog window to the user instead of a toast notification|No|
+
+The device will restart three hours (**180** minutes) after the deployment deadline. One hour (**60** minutes) before it restarts, the user sees a countdown that they can't close or snooze. The first reminder notification is set to start four hours (**240** minutes) after the deadline, which is after the restart. So the user doesn't see any reminders.
+
+### Low reminder frequency
+
+| Setting | Value |
+|---------|---------|
+|Specify the amount of time after the deadline before a device gets restarted (minutes)|7200|
+|Specify the amount of time that a user is presented a final countdown notification before a device gets restarted (minutes)|120|
+|Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)|900|
+|When a deployment requires a restart, show a dialog window to the user instead of a toast notification|Yes|
+
+The device will restart five days (**7200** minutes) after the deployment deadline. Two hours (**120** minutes) before it restarts, the user sees a countdown that they can't close or snooze. This configuration allows for 118 hours to show reminders (`(7200 - 120) / 60`). 15 hours (**900** minutes) after the deadline, Software Center displays the first reminder. It displays a maximum of six additional reminders every 15 hours (**900 minutes**). The user sees the reminder as a window on the screen, instead of a notification that disappears in a few seconds.
+
+### High reminder frequency
+
+| Setting | Value |
+|---------|---------|
+|Specify the amount of time after the deadline before a device gets restarted (minutes)|2880|
+|Specify the amount of time that a user is presented a final countdown notification before a device gets restarted (minutes)|60|
+|Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)|30|
+|When a deployment requires a restart, show a dialog window to the user instead of a toast notification|Yes|
+
+The device will restart two days (**2880** minutes) after the deployment deadline. One hour (**60** minutes) before it restarts, the user sees a countdown that they can't close or snooze. This configuration allows for 37 hours to show reminders (`(2880 - 60) / 60`). **30** minutes after the deadline, Software Center displays the first reminder. It displays a maximum of 72 additional reminders every **30 minutes**. The user sees the reminder as a window on the screen, instead of a notification that disappears in a few seconds.
+
 ## Device restart notifications (version 1902)
 
 <!--3555947-->
