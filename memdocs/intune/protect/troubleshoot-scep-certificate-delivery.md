@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot delivery of certificates to devices when you use SCEP with Microsoft Intune | Microsoft Docs
+title: Troubleshoot delivery of SCEP certificates for Intune | Microsoft Docs
 description: Troubleshoot the delivery of a certificate to a device from the CA when using SCEP certificate profiles with Intune to deploy certificates.
 keywords:
 author: brenduns
