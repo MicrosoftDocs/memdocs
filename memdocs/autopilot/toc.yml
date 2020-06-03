@@ -3,33 +3,39 @@
 - name: Overview
   expanded: true
   items:
-  - name: Need to modify for Autopilot
-    href: app-management.md
+  - name: Windows Autopilot overview
+    href: windows-autopilot.md
+  - name: Deployment processes
+    href: deployment-process.md
 - name: Quickstarts
   items:
-  - name: Add and assign an app
-    href: quickstart-add-assign-app.md
-  - name: Create and assign an app protection policy
-    href: quickstart-create-assign-app-policy.md    
+  - name: Demonostrate Autopilot deployment
+    href: demonstrate-deployment-on-vm.md  
+
 - name: Tutorials
   items:
-  - name: Protect email on managed devices
-    href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
-  - name: Protect email on unmanaged devices
-    href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
-  - name: Configure Slack to use Intune 
-    href: tutorial-configure-slack-enterprise-grid.md
+  - name: placeholder
+    href: placeholder.md
+
 - name: Concepts
   items:
-  - name: App lifecycle
+  - name: Requirements
     href: app-lifecycle.md
-  - name: App protection policies and work profiles (Android)
+  - name: Scenarios and capabilities
     href: android-deployment-scenarios-app-protection-work-profiles.md
-    displayName: app-we; without; without enrollment
-  - name: Use Intune without Google Mobile Services
-    href: manage-without-gms.md      
-  - name: MAM FAQ
-    href: mam-faq.md
+  - name: Deployment scenarios
+    items:
+    - name: User-driven mode
+      href: user-driven.md
+    - name: Self-deploying mode
+      href: self-deploying.md
+    - name: Windows Autopilot Reset
+      href: windows-autopilot-reset.md
+    - name: White glove
+      href: white-glove.md
+    - name: Support for existing devices
+      href: existing-devices.md
+
 - name: How-to guides
   items:
     - name: Add apps 
