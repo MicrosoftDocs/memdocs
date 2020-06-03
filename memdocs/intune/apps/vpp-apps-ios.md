@@ -184,7 +184,13 @@ To revoke the license of all VPP apps for a given VPP token, you must first revo
 
 ## Renewing app licenses
 
-You can renew an Apple VPP token by downloading a new token from Apple Business Manager or Apple School Manager and updating the existing token in Intune.
+You can renew an Apple VPP token by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
+
+To renew an Apple VPP token, use the following steps:
+
+1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
+2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
+3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**. Then, manually upload the token.
 
 ## Deleting a VPP app
 
