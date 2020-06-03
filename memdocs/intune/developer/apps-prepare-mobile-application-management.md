@@ -125,7 +125,6 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Configure app notification content for organization accounts|X|X|
 |Require use of approved keyboards (Android only)|X|X|
 |Require app protection policy (Conditional Access)|X||
-|Require approved client app (Conditional Access)|X||
 
 ## Next steps
 
