@@ -9,5 +9,11 @@
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-mtd-android.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
             "redirect_document_id": false
-        }   ]
+        },
+        {
+            "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
+            "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
+            "redirect_document_id": false
+        }
+    ]
 }
