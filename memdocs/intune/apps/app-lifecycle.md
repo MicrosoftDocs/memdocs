@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,7 +58,7 @@ Intune gives you many ways to help protect the data in your apps. The main metho
 
 ## Retire
 
-Eventually, it's likely that apps that you deployed become outdated and need to be removed. Intune makes it easy to [retire apps from service](../remote-actions/device-management.md).
+Eventually, it's likely that apps that you deployed become outdated and need to be removed. Intune makes it easy to uninstall apps.For more information, see [Uninstall an app](../apps/apps0add.md#uninstall-an-app).
 
 ## Next steps
 
