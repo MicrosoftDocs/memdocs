@@ -1,0 +1,123 @@
+### YamlMime:Landing
+
+title: Windows Autopilot documentation
+summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
+metadata:
+  title: Windows Autopilot documentation
+  description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: apps
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: dougeby
+  ms.author: dougeby
+  ms.manager: mtillman
+  ms.date: 06/02/2020  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Autopilot content.......
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App management overview
+        url: app-management.md  
+    - linkListType: quickstart
+      links:
+      - text: Add and assign an app
+        url: quickstart-add-assign-app.md 
+    - linkListType: concept
+      links:
+      - text: App lifecycle
+        url: app-lifecycle.md
+
+  # Card (optional)
+  - title: Add apps
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Add apps overview
+        url: apps-add.md
+      - text: Intune protected apps
+        url: apps-supported-intune-apps.md
+    - linkListType: how-to-guide
+      links: 
+      - text: Store apps
+        url: store-apps-android.md
+      - text: Line-of-business apps
+        url: lob-apps-android.md
+      - text: Win32 app management for Intune standalone
+        url: apps-win32-app-management.md
+      - text: Use PowerShell scripts on Windows 10 devices
+        url: intune-management-extension.md
+      - text: Assign apps to groups
+        url: apps-deploy.md
+
+  # Card (optional)
+  - title: Assign apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Assign apps to groups
+        url: apps-deploy.md
+      - text: Intune and exclude apps
+        url: apps-inc-exl-assignments.md
+      - text: Deploy Windows 10 apps
+        url: apps-windows-10-app-deploy.md
+      - text: Deploy apps to Government environments
+        url: apps-deploy-gcc-dod.md
+
+  # Card (optional)
+  - title: Configure apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Selectively wipe apps
+        url: apps-selective-wipe.md
+      - text: iOS managed devices
+        url: app-configuration-policies-use-ios.md
+      - text: Managed Android Enterprise devices
+        url: app-configuration-policies-use-android.md
+      - text: Managed apps without device enrollment
+        url: app-configuration-policies-managed-app.md
+      - text: Configure the Managed Browser
+        url: app-configuration-managed-browser.md
+      - text: Manage VPP apps and books
+        url: vpp-apps.md
+
+  # Card (optional)
+  - title: Protect apps
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App protection policies overview
+        url: app-protection-policy.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create and assign app protection policies
+        url: app-protection-policies.md
+      - text: Validate app protection policies
+        url: app-protection-policies-validate.md
+      - text: Monitor app protection user status
+        url: app-protection-policies-monitor.md
+      - text: Create & assign WIP app protection policies
+        url: windows-information-protection-policy-create.md
+      - text: Manage data transfer between iOS apps
+        url: data-transfer-between-apps-manage-ios.md
+
+  # Card (optional)
+  - title: Troubleshoot apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Troubleshoot app installation problems
+        url: troubleshoot-app-install.md
+      - text: Troubleshoot mobile application management
+        url: troubleshoot-mam.md
+      - text: Review app protection logs
+        url: app-protection-policy-settings-log.md
