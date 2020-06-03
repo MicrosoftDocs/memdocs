@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -194,7 +194,7 @@ Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
 
 Access to Apple VPP tokens and VPP apps can be controlled independently using permissions assigned to custom administrator roles in Intune.
 
-* To allow an Intune custom role to manage Apple VPP tokens under **Apps** > **Apple VPP tokens**, assign permissions for **Managed apps**.
+* To allow an Intune custom role to manage Apple VPP tokens, in Microsoft Endpoint Manager admin center, select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**, assign permissions for **Managed apps**.
 * To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
 
 ## Additional information
