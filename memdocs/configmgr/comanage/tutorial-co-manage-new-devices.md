@@ -5,7 +5,7 @@ description: Learn how to configure co-management for new internet-based Windows
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -232,11 +232,11 @@ Run the following procedure from the primary site server.
 
    1. Select the Web app you created.
 
-   2. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
+   2. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.  
 
    3. Select the Native Client app you created.
 
-   4. Go to **Settings > Required permissions**, select **Grant permissions**, and then select **Yes**.  
+   4. Go to **API Permissions** > select **Grant admin consent for** <your tenant>, and then select **Yes**.
 
 9. In the Configuration Manager console, go to **Administration > Overview > Cloud Services > Azure Services**, and select your Azure Service. Then right-click on **Azure Active Directory User Discover** and select **Run Full Discovery Now**. Select **Yes** to confirm the action.  
 
@@ -378,11 +378,11 @@ Then, when a previously unmanaged Windows 10 device enrolls with Intune, it auto
 
 ### Create an Intune app to install the Configuration Manager client
 
-1. From the primary site server, sign in to the [Azure portal](https://portal.azure.com/) and go to the **Intune > Client apps > Apps > Add**.
+1. From the primary site server, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com) and go to the **Apps** > **All Apps** > **Add**.
 
-2. For **App type**: Select **Line-of-business app**.
+2. For app type, select **Line-of-business app** under **Other**.
 
-3. Select **App package file**, and then browse to the location of the Configuration Manager file  **ccmsetup.msi**, and then select **Open > OK**.
+3. For the **App package file**, browse to the location of the Configuration Manager file  **ccmsetup.msi**, and then select **Open > OK**.
 For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Select **App Information**, and then specify the following details:
@@ -407,11 +407,11 @@ For example, *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup
 
 The following procedure deploys the app for installing the Configuration Manager client that you created in the previous procedure.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).  Select **All services > Intune > Client apps > Apps**, and then select **ConfigMgr Client Setup Bootstrap**, the app you created to deploy the Configuration Manager client.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). Select **Apps** > **All Apps** and then select **ConfigMgr Client Setup Bootstrap**, the app you created to deploy the Configuration Manager client.  
 
-2. Select **Assignments > Add group**.  Set **Assignment type** as **Required**, and then use **Included Groups** and **Excluded Groups** to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
+2. Click **Properties** then **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
 
-3. Select **OK** and then **Save** the configuration.
+3. Select **Review + save** and then **Save** the configuration.
 The app is now required by users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.
 
 ## Summary

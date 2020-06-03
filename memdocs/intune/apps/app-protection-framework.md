@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -59,7 +59,7 @@ As the above table indicates, all changes to the App Protection Policies should 
 
 When testing changes to an APP, be aware of the [delivery timing](app-protection-policy-delivery.md). The status of APP delivery for a given user can monitored. For more information, see [How to monitor app protection policies](app-protection-policies-monitor.md).
 
-Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Manage web access by using Microsoft Edge with Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Individual APP settings for each app can be validated on devices using Edge and the URL *about:Intunehelp*. For more information, see [Review client app protection logs](app-protection-policy-settings-log.md) and [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## APP Data Protection Framework settings
 
@@ -144,7 +144,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 
 Level 2 is the data protection configuration recommended as a standard for devices where users access more sensitive information. These devices are a natural target in enterprises today. These recommendations do not assume a large staff of highly skilled security practitioners, and therefore should be accessible to most enterprise organizations. This configuration expands upon the configuration in Level 1 by restricting data transfer scenarios and by requiring a minimum operating system version.
 
-The policy settings enforced in level 2 include all the policy settings recommended for level 1 and only adds to or updates the below policy settings to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
+The policy settings enforced in level 2 include all the policy settings recommended for level 1 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
 
 #### Data protection
 
@@ -171,7 +171,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 
 Level 3 is the data protection configuration recommended as a standard for organizations with large and sophisticated security organizations, or for specific users and groups who will be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries, and as such merit the additional constraints and controls described. This configuration expands upon the configuration in Level 2 by restricting additional data transfer scenarios, increasing the complexity of the PIN configuration, and adding mobile threat detection.  
 
-The policy settings enforced in level 3 include all the policy settings recommended for levels 2 and 1 and only adds to or updates the below policy settings to implement strict data protection configuration and controls. These policy settings can have a potentially significant impact to users or to applications, enforcing a level of security commensurate with the risks facing targeted organizations.  
+The policy settings enforced in level 3 include all the policy settings recommended for level 2 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 2. These policy settings can have a potentially significant impact to users or to applications, enforcing a level of security commensurate with the risks facing targeted organizations.  
 
 #### Data protection
 

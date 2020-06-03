@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -58,7 +58,7 @@ The following list provides the app platform type, the apps that are monitored f
 
 | Platform | For personally-owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | All apps installed on the device | Every 24 hours from device enrollment |
+| Windows 10 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
 | Windows 10 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows Phone 8 | Only managed apps | Only managed apps | Every 7 days from device enrollment |

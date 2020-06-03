@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,50 +38,79 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 
 ## Before you begin
 
-[Create the profile](kiosk-settings.md#create-the-profile).
+- [Create a Windows 10 kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
-## Single full-screen app kiosks
+  When you create a Windows 10 kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
-When you choose single app kiosk mode, enter the following settings:
+- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
 
-- **User logon type**: Select **Local user account** to enter the local (to the device) user account, or a Microsoft Account (MSA) account associated with the kiosk app. **Autologon** user account types aren't supported on Windows Holographic for Business.
+  1. Create this kiosk profile to run the device in kiosk mode.
+  2. Create the [device restrictions profile](device-restrictions-windows-holographic.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
 
-- **Application type**: Select **Store app**.
+> [!IMPORTANT]
+> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-holographic.md#microsoft-edge-browser).
 
-- **App to run in kiosk mode**: Choose **Add a store app**, and select an app from the list.
+## Single app, full-screen kiosk
+
+Runs only one app on the device. When the user signs in, a specific app starts. This mode also restricts the user from opening new apps, or changing the running app.
+
+- **User logon type**: Select the account type that runs the app. Your options:
+
+  - **Auto logon (Windows 10 version 1803 and newer)**: Not supported on Windows Holographic for Business.
+  - **Local user account**: Enter the local (to the device) user account. Or, enter a Microsoft Account (MSA) account associated with the kiosk app. The account you enter signs in to the kiosk.
+
+    For kiosks in public-facing environments, a user type with the least privilege should be used.
+
+- **Application type**: Select **Add Store app**.
+
+  - **App to run in kiosk mode**: Select an app from the list.
 
     Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
 
-    Select **OK** to save your changes.
+## Multi-app kiosk
 
-## Multi-app kiosks
+Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, both must be included in the allowed apps list.
 
-Apps in this mode are available on the start menu. These apps are the only apps the user can open. When you choose multi app kiosk mode, enter the following settings:
+- **Target Windows 10 in S mode devices**: Select **No**. S mode isn't supported on Windows Holographic for Business.
 
-- **Target Windows 10 in S mode devices**: Choose **No**. S mode isn't supported on Windows Holographic for Business.
+- **User logon type**: Add one or more user accounts that can use the apps you add. Your options:
 
-- **User logon type**: Add one or more user accounts that can use the apps you add. Your options: 
-
-  - **Auto logon**: Not supported on Windows Holographic for Business.
-  - **Local user accounts**: **Add** the local (to the device) user account. The account you enter is used to sign in to the kiosk.
+  - **Auto logon (Windows 10 version 1803 and newer)**: Not supported on Windows Holographic for Business.
+  - **Local user accounts**: **Add** the local (to the device) user account. The account you enter signs in to the kiosk.
   - **Azure AD user or group (Windows 10, version 1803 and later)**: Requires user credentials to sign in to the device. Select **Add** to choose Azure AD users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
   - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
+- **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
-  - **Add Store apps**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
-  - **Add Win32 app**: Not supported on Windows Holographic for Business.
-  - **Add by AUMID**: Use this option to add inbox Windows apps. Enter the following properties: 
+  - **Browsers**
+    - **Add Microsoft Edge**: Microsoft Edge is added to the app grid, and all applications can run on this kiosk. Select the Microsoft Edge kiosk mode type:
 
-    - **Application name**: Required. Enter a name for the application.
-    - **Application user model ID (AUMID)**: Required. Enter the Application user model ID (AUMID) of the Windows app. To get this ID, see [find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-    - **Tile size**: Required. Choose a Small, Medium, Wide, or Large app tile size.
+      - **Normal mode (full version of Microsoft Edge)**: Runs a full-version of Microsoft Edge with all browsing features. User data and state are saved between sessions.
+      - **Public browsing (InPrivate)**: Runs a multi-tab version of Microsoft Edge InPrivate with a tailored experience for kiosks that run in full-screen mode.
 
-- **Kiosk browser settings**: Not supported on Windows Holographic for Business.
+      For more information on these options, see [Deploy Microsoft Edge kiosk mode](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-- **Use alternative Start layout**: Choose **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export start layout](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) provides some guidance, and includes a specific XML file for Windows Holographic for Business devices.
+      > [!NOTE]
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, create a device restrictions profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10** for platform > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) lists and describes the available Holographic for Business settings.
+
+    - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
+
+  - **Applications**
+    - **Add store app**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
+    - **Add Win32 app**: Not supported on Windows Holographic for Business.
+    - **Add by AUMID**: Use this option to add inbox Windows apps, such as Notepad or Calculator. Enter the following properties:
+
+      - **Application name**: Required. Enter a name for the application.
+      - **Application user model ID (AUMID)**: Required. Enter the Application user model ID (AUMID) of the Windows app. To get this ID, see [find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+    - **AutoLaunch**: Optional. After you add your apps and browser, select one app or browser to automatically open when the user signs in. Only a single app or browser can be autolaunched.
+    - **Tile size**: Required. After you add your apps, select a Small, Medium, Wide, or Large app tile size.
+
+- **Use alternative Start layout**: Select **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export start layout](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) provides some guidance, and includes a specific XML file for Windows Holographic for Business devices.
 
 - **Windows Taskbar**: Not supported on Windows Holographic for Business.
+- **Allow Access to Downloads Folder**: Not supported on Windows Holographic for Business.
+- **Specify Maintenance Window for App Restarts**: Not supported on Windows Holographic for Business.
 
 ## Next steps
 

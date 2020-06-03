@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -54,7 +54,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
 | Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
-| Automatic   app update | As configured by Intune admin in Apple VPP token   settings where the app's assignment type is required.<p>If the assignment type is available   for enrolled devices, available app updates can be installed from Company   Portal. | As configured by end user in personal App Store   settings. This cannot be managed by Intune admin. |
+| Automatic   app update | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available   for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by end user in personal App Store settings. This cannot be managed by the Intune admin. |
 | User   Enrollment | Not supported. | Supported using Managed Apple IDs. |
 | Books | Not supported. | Supported. |
 | Licenses   used | 1 license per device. The license is associated with the   device. | 1 license for up to 5 devices using the same personal   Apple ID. The license is associated with the user.<p>An end user   associated with a personal Apple ID and a Managed Apple ID in Intune consumes   2 app licenses. |
@@ -91,8 +91,8 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 1. Invite VPP purchasers to join your organization and direct each user to select a unique location. 
 2. Ensure that all VPP purchasers within your organization have completed step 1 before proceeding.
 3. Verify that all purchased apps and licenses have migrated to Apps and Books in Apple Business Manager or Apple School Manager.
-4. Download new location token by going to **Apple Business (or School) Manager** > **Settings** > **Apps and Books** > **My Server Tokens**.
-5. Update location token in Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and sync the token.
+4. Download the new location token by going to **Apple Business (or School) Manager** > **Settings** > **Apps and Books** > **My Server Tokens**.
+5. Update the location token in Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and manually upload the token.
 
 ## Upload an Apple VPP or location token
 
@@ -112,7 +112,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
     - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
-        > Automatic app updates for Apple VPP apps will automatically update only apps deployed with **Required** install intent. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
+        > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
 5. When you are done, select **Create**. The token is displayed in the list of tokens pane.

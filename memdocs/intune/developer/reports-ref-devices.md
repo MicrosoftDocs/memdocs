@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -228,7 +228,7 @@ The **ManagementAgentType** entity represents the agents used to manage a device
 The **devices** entity lists all enrolled devices under management and their corresponding properties.
 
 |          Property          |                                                                                       Description                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Unique   identifier of the device in the data warehouse - surrogate key.                                                                                                               |
 | deviceId                   | Unique   identifier of the device.                                                                                                                                                     |
 | deviceName                 | Name   of the device on platforms that allow naming a device. On other platforms,   Intune creates a name from other properties. This attribute cannot be   available for all devices. |
@@ -265,13 +265,18 @@ The **devices** entity lists all enrolled devices under management and their cor
 | cellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | Integrated Circuit Card Identifier                                                                                                                                                     |
+| windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
+| ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
+| model                      | The device model.                                                                                                                                                                      |
+| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+
 
 ## devicePropertyHistories
 
 The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Reference to date table indicating the day.                                                                                                                                          |
 | deviceKey                  | Unique identifier of the device in the data warehouse -  surrogate key. This is a reference to the Device table that contains the   Intune device ID.                               |
 | deviceName                 | Name of the device on platforms that allow naming a   device. On other platforms, Intune creates a name from other properties. This   attribute cannot be available for all devices. |
@@ -283,4 +288,6 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | deviceCategoryKey          | Key of device category attribute for this device. 
+| physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
 

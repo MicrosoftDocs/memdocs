@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -30,8 +30,6 @@ ms.collection: M365-identity-device-management
 
 # Use the Take a Test app on Windows 10 devices in Microsoft Intune
 
-
-
 Education profiles in Intune are designed for students to take a test or exam on devices. This feature includes the **Take a Test** app and settings to add a test URL, choose how end-users sign in to the test, and more. This feature supports the following platform:
 
 - Windows 10 and later
@@ -46,21 +44,36 @@ This article lists the steps to create a device configuration profile  in Micros
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
+    - **Platform**: Select **Windows 10 and later**.
+    - **Profile**: Select **Secure assessment (Education)**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Choose **Education profile**.
 
-4. Enter the settings you want to configure:
+6. Select **Next**.
+7. In **Configuration settings**, enter the settings you want to configure:
 
     - [Windows 10 and later](education-settings-windows.md)
 
-5. Select **OK** > **Create** to save your changes.
+8. Select **Next**.
 
-After you enter your settings, and create the profile, your profile is shown in the profiles list. Next, [assign this profile to some groups](device-profile-assign.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+The next time each device checks in, the policy is applied.
 
 ## Next steps
 
 See a list of the [Windows 10 education settings](education-settings-windows.md) and their descriptions.
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).

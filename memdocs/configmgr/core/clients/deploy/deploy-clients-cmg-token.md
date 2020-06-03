@@ -20,7 +20,7 @@ manager: dougeby
 
 The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
-Starting in version 2002, Configuration Manager extends its device support with the following methods:
+To overcome these challenges, starting in version 2002, Configuration Manager extends its device support with the following methods:
 
 - Register on the internal network for a unique token
 
@@ -96,7 +96,29 @@ The token isn't stored on the client or the site. Make sure to copy the token fr
 
 Use with `/new` parameter to specify the token validity period of the token. Specify an integer value in minutes. The default value is 4,320 (three days). The maximum value is 10,080 (seven days).
 
-Example: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Example: `BulkRegistrationTokenTool.exe /lifetime 4320`
+
+## Bulk registration token management
+
+You can see previously created bulk registration tokens and their lifetimes in the Configuration Manager console and block their usage if necessary. The site database doesn't, however, store bulk registration tokens.
+
+#### To review a bulk registration token
+
+1. In the Configuration Manager console, click **Administration**.
+
+2. In the Administration workspace, expand **Security**, and click **Certificates**. The console lists all site-related certificates and bulk registration tokens in the details pane.
+
+3. Select the bulk registration token to review.
+
+You can identify specific bulk registration tokens based on their GUID. GUIDs for bulk registration tokens are displayed at token creation time. You can also filter or sort on the **Type** column if needed.
+
+#### To block a bulk registration token
+
+1. In the Configuration Manager console, click **Administration**.
+
+2. In the Administration workspace, expand **Security**, click **Certificates**, and select the bulk registration token to block.
+
+3. On the **Home** tab of the ribbon bar or the right-click content menu, select **Block**. Conversely, you can unblock previously blocked bulk registration tokens by selecting **Unblock** on the **Home** tab of the ribbon bar or the right-click content menu.
 
 ## See also
 

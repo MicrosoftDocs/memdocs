@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

@@ -2,13 +2,13 @@
 # required metadata
 
 title: Create iOS/iPadOS or macOS device profile with Microsoft Intune - Azure | Microsoft Docs
-description: Add or create an iOS, iPadOS, or macOS device profile, and then configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
+description: Add or create an iOS, iPadOS, or macOS device profile. Configure settings for AirPrint, layout of the home screen, app notifications, shared device, single sign-on, and web content filter settings in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -58,7 +58,7 @@ Applies to:
 
 ## App notifications
 
-Choose how apps on your iOS and iPadOS devices receive notifications. For example, from Intune, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
+Choose how apps on your iOS and iPadOS devices receive notifications. For example, send app notifications so they show in the notification center, show on the lock screen, or play a sound.
 
 For a list of the settings you can configure in Intune, see [App notifications on iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 

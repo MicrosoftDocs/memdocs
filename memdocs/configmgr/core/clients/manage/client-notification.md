@@ -10,8 +10,6 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Client notification in Configuration Manager
@@ -137,7 +135,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 
 - **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
-- **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
+- **Collect Client Logs** (starting in 2002): The site sends a client notification message to the selected clients to gather the CCM logs. The client sends the logs to the management point using the same channel as software inventory file collection. <!--4226618--> You don't need to enable software inventory in client settings.<!-- MEMDocs#305 -->
    - The size limit for the compressed client logs is 100 MB. <!--6366098-->
    - Use [Resource Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) manage and view these files.
 
@@ -150,6 +148,9 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 For more information about these settings, see [About log files](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Track the status of the task in the **diagnostics.log** on the client. When client logs are collected, additional information is logged in **MP_SinvCollFile.log** on the management point and **sinvproc.log** on the site server.
+
+> [!Tip]
+> Collected client logs are stored according to the software inventory file collection settings. The files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. There's no defined limit to the number of versions. The [Delete Aged Collected Files](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) site maintenance task deletes the files on a schedule, which by default is every 90 days.
 
 ### Prerequisites - Client diagnostics
 

@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -100,9 +100,9 @@ For more information, see [Client installation properties](../core/clients/deplo
 
 ### Create the app in Intune
 
-1. Go to the [Azure portal](https://portal.azure.com), and then open the Intune page.  
+1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), and then expand the left navigation pane.  
 
-2. Select **Client Apps** > **Apps** > **Add**.  
+2. Select **Apps** > **All Apps** > **Add**.  
 
 3. Under **Other**, select **Line-of-business app**.  
 

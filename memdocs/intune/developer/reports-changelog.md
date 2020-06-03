@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,6 +32,37 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Keep current on updates to the Intune Data Warehouse.
+
+## 2004 
+_Released April 2020_
+
+### Beta changes
+
+The following table lists the added property to the **device** entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Added    |    Windows Operating System edition.                                                                                                                                                                                                                                                                     |
+
+## 2003 
+_Released March 2020_
+
+### Beta changes
+
+The following table lists the added properties to the **device** entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Added    |    The unique network identifier of this device.                                                                                                                                                                                                                                                                     |
+|    model    |    Added    |    The device model.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Added    |    The version of Office 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
+
+The following table lists the added properties to the **devicePropertyHistory** entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Added    |    The physical memory in bytes.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Added    |    Total Storage in bytes.                                                                                                                                                                                                                                                                     |
 
 ## 1903 (Part 2)
 _Released April 2019_

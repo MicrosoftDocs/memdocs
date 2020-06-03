@@ -32,10 +32,10 @@ The following table lists the updates for each component on supported OS version
 | OS version | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Included | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Included | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Included | [Latest cumulative update](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Included | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Included <sup>[Note 1](#bkmk_note1)</sup> | [Latest cumulative update](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Note 2](#bkmk_note2)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Note 3](#bkmk_note3)</sup> | [Latest monthly rollup](https://support.microsoft.com/help/4009469) |
 
@@ -46,7 +46,7 @@ The following table lists the updates for each component on supported OS version
 
 ### <a name="bkmk_note1"></a> Note 1: Windows 10
 
-While Windows 10 includes these components by default, Windows 10 devices require the latest cumulative update to get the full functionality of Desktop Analytics. For example, to assess the device for compatibility against the latest OS version, and to get the near real-time information for deployments and enrollment status.
+While Windows 10 includes these components by default, Windows 10 devices require the latest cumulative update to get the full functionality of Desktop Analytics like assessing the device for compatibility against the latest OS version.
 
 ### <a name="bkmk_note2"></a> Note 2: Windows 8.1
 
@@ -121,7 +121,7 @@ There's an option in the Configuration Manager settings for Desktop Analytics to
 
 In general, use Configuration Manager collections to target Desktop Analytics settings and enrollment. Use direct membership or queries to include or exclude devices from the collection. For more information, see [How to create collections](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](group-policy-settings.md). Settings targeted by group policy take precedence over Configuration Manager settings.
+Configuration Manager only configures the Windows settings if a value doesn't already exist. If you need to configure different settings for a unique group of devices, you can use [group policy](group-policy-settings.md). Settings targeted by group policy take precedence over Configuration Manager settings. Devices targeted by group policy may not accurately reflect status in the [Connection health](monitor-connection-health.md) dashboard.
 
 When you configure the diagnostic data level, you set the upper boundary for the device. By default in Windows 10, version 1803 and later, users can choose to set a lower level. You can control this behavior using the group policy setting, **Configure telemetry opt-in setting user interface**. For more information, see [Group policy settings for Desktop Analytics](group-policy-settings.md).
 

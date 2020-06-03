@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,12 +41,12 @@ Use the email profile settings to configure the Mail app on your devices running
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`.
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
-    - **User domain name source**: Choose **AAD** (Azure Active Directory) or **Custom**.
+    - **User domain name source**: Select **AAD** (Azure Active Directory) or **Custom**.
 
-      When choosing to get the attributes from **AAD**, enter:
+      When getting the attributes from **AAD**, also enter:
       - **User domain name attribute from AAD**: Choose to get the **Full domain name** or the **NetBIOS name** attribute of the user.
 
-      When choosing to use **Custom** attributes, enter:
+      When using **Custom** attributes, also enter:
       - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
 - **Email address attribute from AAD**: Intune gets this attribute from Azure Active Directory (AAD). Choose how the email address for the user is generated. Your options:
@@ -59,12 +59,14 @@ Use the email profile settings to configure the Mail app on your devices running
 
 ### Synchronization
 
-- **Amount of email to synchronize**: Choose the number of days of email that you want to synchronize. When set to **Not configured** (default), Intune doesn't change or update this setting. Select **Unlimited** to synchronize all available email.
+- **Amount of email to synchronize**: Select the number of days of email that you want to synchronize. When set to **Not configured** (default), Intune doesn't change or update this setting. Select **Unlimited** to synchronize all available email.
 - **Sync schedule**: Select the schedule for devices to synchronize data from the Exchange server. You can also select **As Messages arrive**, which synchronizes data as soon as it arrives. Or, select **Manual** so the device user starts the synchronization.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 ### Content sync
 
-- **Content type to sync**: Select the content types that you want to synchronize to devices:
+- **Content type to sync**: Select the content types that you want to synchronize to devices. Your options:
   - **Contacts**: **On** syncs the contacts. **Off** doesn't automatically sync the contacts. Users manually sync.
   - **Calendar**: **On** syncs the calendar. **Off** doesn't automatically sync the contacts. Users manually sync.
   - **Tasks**: **On** syncs the tasks. **Off** doesn't automatically sync the tasks. Users manually sync.
@@ -73,4 +75,6 @@ Use the email profile settings to configure the Mail app on your devices running
 
 You can also configure the email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [iOS/iPadOS](email-settings-ios.md). 
 
-[Configure email settings in Intune](email-settings-configure.md).
+[Learn more about the email settings in Intune](email-settings-configure.md).
+
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).

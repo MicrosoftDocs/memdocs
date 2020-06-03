@@ -2,7 +2,7 @@
 title: What's new in version 2002
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1806 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
+Update 2002 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1810 or later. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 2002.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -324,6 +324,15 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
+<!--5691658-->
+You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
+
+This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Endpoint Manager admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> You'll need the hotfix rollup, [KB4563473](https://support.microsoft.com/help/4563473), installed in your environment for this feature.
 
 ### Improvements to BitLocker management
 

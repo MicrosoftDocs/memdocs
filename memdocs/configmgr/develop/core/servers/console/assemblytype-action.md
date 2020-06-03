@@ -24,7 +24,7 @@ The `AssemblyType` action defines the type and assembly for a method that is cal
 
 -   The `ActionAssembly` element has a number of child elements that are used to define the method and assembly.  
 
--   The `Assembly` element identifies the assembly that contains the method. If the assembly is in a folder other than %*ProgramFiles*%\Microsoft Configuration Manager\AdminConsole\bin folder then the `Assembly` element should include the assembly filename and the full path to the file.  
+-   The `Assembly` element identifies the assembly that contains the method. If the assembly is in a folder other than %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\bin folder then the `Assembly` element should include the assembly filename and the full path to the file.  
 
 -   The `Type` element contains the namespace and class for the method.  
 

@@ -2,7 +2,7 @@
 title: "Revise and supersede applications"
 titleSuffix: "Configuration Manager"
 description: "Learn how to work with Configuration Manager application versions and supersede applications."
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -55,8 +55,8 @@ In this topic, you'll learn how to work with Configuration Manager application v
 >  You can only delete the current application revision if the application is retired and has no references.  
 
 ##  Application supersedence  
- Application management in Configuration Manager lets you upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also decide whether to upgrade or uninstall the superseded application before the superseding application is installed.  
-
+ Application management in Configuration Manager lets you upgrade or replace existing applications by using a supersedence relationship. When you supersede an application, you can specify a new deployment type to replace the deployment type of the superseded application and also decide whether to upgrade or uninstall the superseded application before the superseding application is installed. Generally speaking, we recommend limiting supersedence chains to five levels deep at maximum.
+ 
 > [!IMPORTANT]  
 >  When the option to uninstall the superseded deployment type is selected, a deployment type cannot be superseded by a deployment type that was deployed to a different collection type.  For example, a deployment type that was deployed to a device collection cannot be superseded by a deployment type that was deployed to a user collection if the option to uninstall the superseded deployment type is selected.  
 
