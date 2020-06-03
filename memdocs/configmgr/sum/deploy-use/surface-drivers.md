@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Surface driver updates for depl
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -81,24 +81,27 @@ Most drivers belong to the following product groups:
 
 ## <a name="bkmk_models"></a> Surface models
 
-The following table contains the Surface models and versions of Windows 10 on which Configuration Manager can install drivers. Surface driver updates aren't available in Configuration Manager the same day they're published to the Microsoft Update catalog. Configuration Manager maintains its own list of which Surface drivers it will import. This list is published periodically and contains the drivers that were published on or before a certain date.  
+The following table contains the Surface models and versions of Windows 10 on which Configuration Manager can install drivers. Surface driver updates aren't available in Configuration Manager the same day they're published to the Microsoft Update catalog. Configuration Manager maintains its own list of which Surface drivers it will import. This list is published periodically and contains the drivers that were published on or before a certain date. Devices needing Windows 10 S products are noted.
 
-**Surface drivers published on or before April 1, 2020 are available in Configuration Manager**.
+**Surface drivers published on or before June 9, 2020 are available in Configuration Manager**. 
 
 
 |Surface Model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
-|Surface Pro 4|For drivers published on or before April 1, 2020| For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|
-|Surface Pro (5th Gen)|For drivers published on or before April 1, 2020| For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|For drivers published on or before April 1, 2020|
+|Surface Pro 4|Yes| Yes| Yes |Yes|Yes|
 |Surface Pro 6|N/A| Yes| Yes |Yes|Yes|
 |Surface Pro 7|N/A| N/A| N/A |Yes|Yes|
 |Surface Pro X|N/A| N/A| N/A |Yes|Yes|
 |Surface Book|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 2|Yes </br> Current to April 1, 2020| Yes </br> Current to April 1, 2020| Yes </br> Current to April 1, 2020 | Yes </br> Current to April 1, 2020 |Yes </br> Current to April 1, 2020|
-|Surface Book 3|N/A| N/A| N/A |N/A|N/A </br> </br>Launching May 20, 2020|
-|Surface Laptop|Yes </br></br> With the product "Windows 10 S version 1709 and later Servicing drivers" selected </br> </br>Current to April 1, 2020| Yes </br></br> With the product "Windows 10 S version 1803 and later Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|
-|Surface Laptop 2|Yes </br></br> With the product "Windows 10 Fall Creators Update and later Servicing drivers" selected </br> </br>Current to April 1, 2020| Yes </br></br> With the product "Windows 10 version 1803 and later Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 version 1809 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|
-|Surface Laptop 3|N/A| N/A|N/A|Yes </br></br> With the product "Windows 10 version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|Yes </br></br> With the product "Windows 10 version 1903 and later Upgrade & Servicing drivers" selected </br> </br>Current to April 1, 2020|
+|Surface Book 2|Yes| Yes| Yes |Yes|Yes|
+|Surface Book 3|N/A| N/A| N/A |N/A|Yes|
+|Surface Laptop|Yes </br></br> With the product "Windows 10 S version 1709 and later Servicing drivers" selected| Yes </br></br> With the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Laptop 2|Yes| Yes |Yes|Yes|Yes|
+|Surface Laptop 3|N/A| N/A|N/A|Yes |Yes|
+|Surface Go|N/A| Yes </br></br> With the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Go 2|N/A| Yes| Yes |Yes|Yes </br></br> With the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Studio|Yes| Yes| Yes |Yes|Yes|
+|Surface Studio 2|N/A| Yes| Yes |Yes|Yes|
 
 ## Verify the configuration
 
@@ -136,7 +139,7 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
 
 If you synchronize from an upstream Windows Server Update Services (WSUS) server instead of Microsoft Update, make sure that the upstream WSUS server is configured to support and synchronize Surface driver updates. All downstream servers are limited to updates that are present in the upstream WSUS server database.
 
-### After I follow the steps in this article, some Surface drivers are synchronized, but not the expected drivers. Why? 
+### After I follow the steps in this article, some Surface drivers are synchronized, but not the expected drivers. Why?
 
 The processing time for testing drivers and confirming them for deployment through WSUS and Configuration Manager varies. Therefore, Surface driver updates aren't necessarily available on the same day for both manual installation and Configuration Manager console deployment.
 

@@ -5,7 +5,7 @@ description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client

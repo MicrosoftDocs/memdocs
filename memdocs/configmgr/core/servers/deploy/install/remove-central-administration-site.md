@@ -2,7 +2,7 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 05/13/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
