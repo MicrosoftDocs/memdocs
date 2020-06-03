@@ -56,4 +56,4 @@ Review the following limitations specific to mobile devices:
 
 ## Next step
 
-To make changes, uninstall, or replace a deployed application with a new application, manage it the same as any app in Configuration Manager. For more information, see [Update and retire applications](../../apps/deploy-use/update-and-retire-applications.md).
+To make changes, uninstall, or replace a deployed application with a new application, manage it the same as any app in Configuration Manager. For more information, see [Revise and supersede applications](../../apps/deploy-use/revise-and-supersede-applications.md).

@@ -2,7 +2,7 @@
 title: Install the client with Azure AD
 titleSuffix: Configuration Manager
 description: Install and assign the Configuration Manager client on Windows 10 devices using Azure Active Directory for authentication
-ms.date: 03/20/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -33,9 +33,9 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
 - User requirements:  
 
-  - The logged on user must be an Azure AD identity.
+  - The signed in user must be an Azure AD identity.
 
-  - If the user is a federated or synchronized identity, you must use Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) as well as [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->  
+  - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
@@ -56,26 +56,29 @@ After you complete these actions, your Configuration Manager site is connected t
 
 ## Configure client settings
 
-These client settings help join Windows 10 devices with Azure AD. They also enable internet-based clients to use the CMG and cloud distribution point.
+These client settings help configure Windows 10 devices to be hybrid-joined. They also enable internet-based clients to use the CMG and cloud distribution point.
 
-1. Configure the following client settings in the **Cloud Services** section using the information in [How to configure client settings](configure-client-settings.md).  
+1. Configure the following client settings in the **Cloud Services** group. For more information, see [How to configure client settings](configure-client-settings.md).
 
     - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. If the content isn't available on the cloud distribution point, devices can retrieve the content from the CMG. The client installation bootstrap retries the cloud distribution point for four hours before it falls back to the CMG.<!--495533-->  
 
     - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
 
+        > [!TIP]
+        > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+
     - **Enable clients to use a cloud management gateway**: Set to **Yes** (default), or **No**.  
 
-2. Deploy the client settings to the required collection of devices. Do not deploy these settings to user collections.
+2. Deploy the client settings to the required collection of devices. Don't deploy these settings to user collections.
 
-To confirm the device is joined to Azure AD, run `dsregcmd.exe /status` in a command prompt. The **AzureAdjoined** field in the results shows **YES** if the device is Azure AD-joined.
+To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## Install and register the client using Azure AD identity
 
 To manually install the client using Azure AD identity, first review the general process on [How to install clients manually](deploy-clients-to-windows-computers.md#BKMK_Manual).
 
- > [!Note]  
- > The device needs access to the internet to contact Azure AD, but doesn't need to be internet-based.
+> [!Note]  
+> The device needs access to the internet to contact Azure AD, but doesn't need to be internet-based.
 
 The following example shows the general structure of the command line:
 `ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
@@ -90,7 +93,7 @@ The **/mp** parameter and **CCMHOSTNAME** property specify one of the following,
 
 The **SMSMP** property specifies either the on-premises or internet-based management point.
 
-This example uses a cloud management gateway. It substitutes sample values:
+This example uses a cloud management gateway. It replaces sample values:
 `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
 The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.<!--3607731-->
