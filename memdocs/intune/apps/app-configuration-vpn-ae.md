@@ -102,7 +102,7 @@ There are two ways to build the app configuration policy for your VPN app. You c
   
   <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
 
-9. Enter appropriate values for the **Connection Name**, **Host, and **Protocol** keys.
+9. Enter appropriate values for the **Connection Name**, **Host**, and **Protocol** keys.
 
   ![Example of using the Configuration Designer Flow - Configuration key selection.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png)  
 
