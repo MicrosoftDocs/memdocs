@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 06/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
@@ -14,15 +14,19 @@ ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager
 
+> [!IMPORTANT]
+> If you're using Microsoft Edge version 77 or later, and are trying to open the settings pane, enter `edge://settings/profiles` in the browser address bar instead of search. For more information, see [Get to know Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know).
+>
+> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Endpoint Configuration Manager.
+
 *Applies to: Configuration Manager (current branch)*
 
 <!-- 1357310 -->
 For customers who use the [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
 
-> [!IMPORTANT]
-> This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. <!--511552-->
->
-> For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](../../apps/deploy-use/deploy-edge.md). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
+This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. <!--511552-->
+
+For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](../../apps/deploy-use/deploy-edge.md). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
 
 ## Policy settings
 
