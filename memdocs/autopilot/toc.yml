@@ -61,13 +61,13 @@
     - name: Deployment processes
       href: deployment-process.md
       items: Support information
-      - name: FAQ
-        href: autopilot-faq.md
-      - name: Contacts
-        href: autopilot-support.md
-      - name: Registration authorization
-        href: registration-auth.md
-      - name: Device guidelines
-        href: autopilot-device-guidelines.md
-      - name: Motherboard replacement
-        href: autopilot-mbr.md
+        - name: FAQ
+          href: autopilot-faq.md
+        - name: Contacts
+          href: autopilot-support.md
+        - name: Registration authorization
+          href: registration-auth.md
+        - name: Device guidelines
+          href: autopilot-device-guidelines.md
+        - name: Motherboard replacement
+          href: autopilot-mbr.md
