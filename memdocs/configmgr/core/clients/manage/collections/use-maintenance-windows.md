@@ -44,7 +44,7 @@ When a client computer is a member of multiple device collections that have main
 
 When a user installs an application from Software Center, the client starts it immediately. It prioritizes the user's intent over the administrator's.
 
-If an application deployment with a purpose of **Required** reaches its installation deadline during the non-business hours that a user configures in Software Center, the client installs the application. It prioritizes the administrator's intent over the user's
+If an application deployment with a purpose of **Required** reaches its installation deadline during the non-business hours that a user configures in Software Center, the client installs the application. It prioritizes the administrator's intent over the user's.
 
 By default, with multiple maintenance windows, the client only installs software updates during **Software Update** type windows. It ignores any **All deployments** maintenance windows, unless they're the only type. You can configure this behavior with the following client setting in the **Software updates** group: **Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available**. For more information, see [About client settings](../../deploy/about-client-settings.md#bkmk_SUMMaint).<!-- SCCMDocs#1317 -->
 
