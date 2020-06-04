@@ -22,6 +22,6 @@ ms.topic: article
 
 Windows Autopilot deployment processes are summarized in the poster below. The poster is two pages in portrait mode (11x17). Click the image below to view a PDF in your browser.
 
-[![Deploy Windows 10 with Autopilot](../media/windows10-autopilot-flowchart.png)](../media/Windows10AutopilotFlowchart.pdf)
+[![Deploy Windows 10 with Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 
 **Note**: The Windows Autopilot for existing devices process is included in the [Microsoft Endpoint Configuration Manager deployment poster](../windows-10-deployment-posters.md#deploy-windows-10-with-microsoft-endpoint-configuration-manager). 

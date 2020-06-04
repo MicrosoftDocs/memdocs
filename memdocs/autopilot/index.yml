@@ -21,20 +21,20 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: Autopilot content.......
+  - title: Windows Autopilot deployment
     linkLists:
     - linkListType: overview
       links:
       - text: App management overview
-        url: app-management.md  
+        url: placeholder.md
     - linkListType: quickstart
       links:
       - text: Add and assign an app
-        url: quickstart-add-assign-app.md 
+        url: placeholder.md
     - linkListType: concept
       links:
       - text: App lifecycle
-        url: app-lifecycle.md
+        url: placeholder.md
 
   # Card (optional)
   - title: Add apps
@@ -42,21 +42,21 @@ landingContent:
     - linkListType: overview
       links:
       - text: Add apps overview
-        url: apps-add.md
+        url: placeholder.md
       - text: Intune protected apps
-        url: apps-supported-intune-apps.md
+        url: placeholder.md
     - linkListType: how-to-guide
       links: 
       - text: Store apps
-        url: store-apps-android.md
+        url: placeholder.md
       - text: Line-of-business apps
-        url: lob-apps-android.md
+        url: placeholder.md
       - text: Win32 app management for Intune standalone
-        url: apps-win32-app-management.md
+        url: placeholder.md
       - text: Use PowerShell scripts on Windows 10 devices
-        url: intune-management-extension.md
+        url: placeholder.md
       - text: Assign apps to groups
-        url: apps-deploy.md
+        url: placeholder.md
 
   # Card (optional)
   - title: Assign apps
@@ -64,13 +64,13 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Assign apps to groups
-        url: apps-deploy.md
+        url: placeholder.md
       - text: Intune and exclude apps
-        url: apps-inc-exl-assignments.md
+        url: placeholder.md
       - text: Deploy Windows 10 apps
-        url: apps-windows-10-app-deploy.md
+        url: placeholder.md
       - text: Deploy apps to Government environments
-        url: apps-deploy-gcc-dod.md
+        url: placeholder.md
 
   # Card (optional)
   - title: Configure apps
@@ -78,17 +78,17 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Selectively wipe apps
-        url: apps-selective-wipe.md
+        url: placeholder.md
       - text: iOS managed devices
-        url: app-configuration-policies-use-ios.md
+        url: placeholder.md
       - text: Managed Android Enterprise devices
-        url: app-configuration-policies-use-android.md
+        url: placeholder.md
       - text: Managed apps without device enrollment
-        url: app-configuration-policies-managed-app.md
+        url: placeholder.md
       - text: Configure the Managed Browser
-        url: app-configuration-managed-browser.md
+        url: placeholder.md
       - text: Manage VPP apps and books
-        url: vpp-apps.md
+        url: placeholder.md
 
   # Card (optional)
   - title: Protect apps
@@ -96,19 +96,19 @@ landingContent:
     - linkListType: overview
       links:
       - text: App protection policies overview
-        url: app-protection-policy.md
+        url: placeholder.md
     - linkListType: how-to-guide
       links:
       - text: Create and assign app protection policies
-        url: app-protection-policies.md
+        url: placeholder.md
       - text: Validate app protection policies
-        url: app-protection-policies-validate.md
+        url: placeholder.md
       - text: Monitor app protection user status
-        url: app-protection-policies-monitor.md
+        url: placeholder.md
       - text: Create & assign WIP app protection policies
-        url: windows-information-protection-policy-create.md
+        url: placeholder.md
       - text: Manage data transfer between iOS apps
-        url: data-transfer-between-apps-manage-ios.md
+        url: placeholder.md
 
   # Card (optional)
   - title: Troubleshoot apps
@@ -116,8 +116,8 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Troubleshoot app installation problems
-        url: troubleshoot-app-install.md
+        url: placeholder.md
       - text: Troubleshoot mobile application management
-        url: troubleshoot-mam.md
+        url: placeholder.md
       - text: Review app protection logs
-        url: app-protection-policy-settings-log.md
+        url: placeholder.md
