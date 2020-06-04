@@ -41,7 +41,6 @@ For more information about the options available with User Enrollment, see [User
 ## Prerequisites
 - [Mobile Device Management (MDM) Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
-- [Managed Apple IDs](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
 
 ## Create a User Enrollment profile in Intune
 
