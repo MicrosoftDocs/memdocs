@@ -164,7 +164,7 @@ New errors will be reported for iOS/iPadOS and macOS devices, including
 - A count of removed Apple Business Manager devices will be added to the overview page where you see the status of your devices.
 
 ### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
-This feature may be delayed.
+The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own 3rd party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 ### Shared iPads for Business<!--6367326 -->
 You'll be able to use Intune and Apple Business Manager to easily and securely set up Shared iPad so that multiple employees can share devices. Apple's [Shared iPad](https://developer.apple.com/education/shared-ipad/) provides a personalized experience for multiple users while preserving user data. Using a Managed Apple ID, users can access their apps, data, and settings after signing into any Shared iPad in their organization. Shared iPad works with federated identities.
