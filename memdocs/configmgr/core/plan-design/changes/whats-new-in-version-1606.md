@@ -194,7 +194,7 @@ Configuration Manager can help you manage Activation Lock in two ways:
 
 Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
 
-For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.

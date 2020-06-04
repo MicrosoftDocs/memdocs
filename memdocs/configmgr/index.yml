@@ -172,8 +172,8 @@ conceptualContent:
         - text: Windows Defender
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: WDATP
-          url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+        - text: ATP
+          url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
           url: ./protect/plan-design/bitlocker-management.md
