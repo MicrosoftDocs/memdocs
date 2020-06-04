@@ -88,6 +88,7 @@ The following table contains the Surface models and versions of Windows 10 on wh
 
 |Surface Model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
+|Surface Pro 3|Yes| Yes| Yes |Yes|Yes|
 |Surface Pro 4|Yes| Yes| Yes |Yes|Yes|
 |Surface Pro 6|N/A| Yes| Yes |Yes|Yes|
 |Surface Pro 7|N/A| N/A| N/A |Yes|Yes|
