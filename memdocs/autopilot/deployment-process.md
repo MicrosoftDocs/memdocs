@@ -4,7 +4,6 @@ description: View and download Windows 10 deployment process flows for Microsoft
 ms.reviewer: 
 manager: laurawi
 ms.audience: itpro
-author: greg-lindsay
 keywords: upgrade, in-place, configuration, deploy
 ms.prod: w10
 ms.mktglfcycl: deploy

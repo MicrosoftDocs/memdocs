@@ -8,7 +8,6 @@ ms.localizationpriority: low
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itproF
-author: greg-lindsay
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
