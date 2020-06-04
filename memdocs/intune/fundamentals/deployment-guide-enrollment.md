@@ -87,7 +87,7 @@ If devices are currently enrolled in another MDM provider, then unenroll the dev
 
 Depending on the platform, a factory reset may be required before enrolling in Intune:
 
----
+-----
 | Platform | Factory reset required? |
 | --- | --- |
 | Android device administrator | No |
@@ -97,7 +97,8 @@ Depending on the platform, a factory reset may be required before enrolling in I
 | iOS/iPadOS | Yes |
 | macOS | Yes |
 | Windows | No |
----
+
+-----
 
 On the platforms that don't require a factory reset, when these devices enroll in Intune, they'll start receiving your Intune policies. If you don't configure a setting in Intune, then Intune doesn't change or update that setting. So, it's possible that any previously configured settings remain configured on the device.
 
