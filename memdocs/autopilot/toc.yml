@@ -60,7 +60,8 @@
   items:
     - name: Deployment processes
       href: deployment-process.md
-      items: Support information
+    - name: Support information  
+      items: 
         - name: FAQ
           href: autopilot-faq.md
         - name: Contacts
