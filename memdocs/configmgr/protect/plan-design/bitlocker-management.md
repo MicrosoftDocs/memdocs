@@ -18,7 +18,7 @@ manager: dougeby
 
 <!-- 3601034 -->
 
-Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
+Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. Azure Active Directory joined or workgroup clients are not supported. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
