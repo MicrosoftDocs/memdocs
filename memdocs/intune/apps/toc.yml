@@ -145,6 +145,8 @@
           href: app-configuration-policies-outlook.md
         - name: Configure Google Chrome for Android
           href: apps-configure-chrome-android.md
+        - name: Configure a VPN for Android Enterprise
+          href: app-configuration-vpn-ae.md          
       - name: Volume-purchased apps and books
         items:
         - name: Volume-purchased overview

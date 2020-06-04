@@ -342,8 +342,11 @@ Second, here's a quick checklist to go through for troubleshooting:
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
 1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
 
+### Data collection for Intune-managed devices
 
-### <a name="bkmk_uea_endpoints"></a> Endpoints
+Endpoint Analytics leverages Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices . Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+
+#### <a name="bkmk_uea_endpoints"></a> Endpoints
 
 To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
 
@@ -359,15 +362,15 @@ To enable functional data sharing, configure your proxy server to allow the foll
 | `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### Proxy server authentication
+#### Proxy server authentication
 
 If your organization uses proxy server authentication for internet access, make sure that it doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
 
-#### Bypass (recommended)
+##### Bypass (recommended)
 
 Configure your proxy servers to not require proxy authentication for traffic to the data sharing endpoints. This option is the most comprehensive solution. It works for all versions of Windows 10.  
 
-#### User proxy authentication
+##### User proxy authentication
 
 Configure devices to use the signed-in user's context for proxy authentication. This method requires the following configurations:
 
@@ -380,7 +383,7 @@ Configure devices to use the signed-in user's context for proxy authentication. 
 > [!IMPORTANT]
 > The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### Device proxy authentication
+##### Device proxy authentication
 
 This approach supports the following scenarios:
 
