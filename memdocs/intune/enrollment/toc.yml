@@ -95,9 +95,10 @@
       href: device-enrollment-program-enroll-ios.md
       displayName: dep; ade; bulk enroll
     - name: User and Device enrollment
-      href: ios-user-enrollment.md
       items:
-      - name: User Enrollment supported actions and options
+      - name: Create the profile
+        href: ios-user-enrollment.md
+      - name: User enrollment supported actions
         href: ios-user-enrollment-supported-actions.md
     - name: Apple School Manager
       href: apple-school-manager-set-up-ios.md
