@@ -14,6 +14,11 @@
             "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
             "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md",
+            "redirect_url": "/mem/autopilot/windows-autopilot-for-existing-devices",
+            "redirect_document_id": false
         }
     ]
 }
