@@ -64,6 +64,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
 
+#### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
 - Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
 - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
