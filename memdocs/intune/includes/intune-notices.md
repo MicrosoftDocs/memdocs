@@ -35,7 +35,7 @@ Android device administrator management was released in Android 2.2 as a way to 
 Because of these changes by Google, in the fourth quarter of 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
 
 > [!NOTE]
-> TThis date was previously communicated as third quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> This date was previously communicated as third quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### Device types that will be impacted
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
@@ -88,7 +88,7 @@ Impacted compliance settings:
 - For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page and the device will be out of compliance, but stricter password requirements will not be enforced in the Settings app.
 
 #### Cause of impact 
-Devices will begin being impacted in the fourth quarter of 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 (as required by Google). 
+Devices will begin being impacted in the fourth quarter of 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 At that point, device administrator-managed devices that are not manufactured by Samsung will be impacted once the user completes both these actions:
 - Updates to Android 10 or later.
