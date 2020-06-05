@@ -54,7 +54,7 @@ You can create device groups when you need to perform administrative tasks based
 
 Device groups are useful for managing devices that do not have dedicated users, such as kiosk devices, devices shared by shift workers, or devices assigned to a specific location.
 
-By configuring device groups ahead of device enrollment, you can use device categories to automatically join devices to groups upon enrollment. Then they will receive their group’s device policies automatically. [Get started with groups](groups-get-started.md).
+By configuring device groups ahead of device enrollment, you can use device categories to automatically join devices to groups upon enrollment. Then they will receive their group's device policies automatically. [Get started with groups](groups-get-started.md).
 
 ### Task 2: Use resource access profiles (Wi-Fi, VPN, and email certificates)
 

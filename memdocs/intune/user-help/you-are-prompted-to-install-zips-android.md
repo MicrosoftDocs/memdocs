@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -57,7 +57,7 @@ If you have trouble with the installation, try the troubleshooting steps at the 
 
    * If no threats are found, all three threat types will appear green.
 
-11. The **Device Details** screen in the Company Portal shows that you are now in compliance with your company’s security requirements.
+11. The **Device Details** screen in the Company Portal shows that you are now in compliance with your company's security requirements.
 
     ![Your device is now in compliance with policies](./media/mtd-device-now-compliant-android.png)
 

@@ -6,8 +6,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
-ms.topic: conceptual
+ms.date: 06/01/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
 
 > [!IMPORTANT]
-> When deploying Win32 apps, consider using [Intune Management Extension](../apps/intune-management-extension.md) exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
+> When deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multi-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.co
 
 ### Process flow to create .intunewin file
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### Run the Microsoft Win32 Content Prep Tool
 
@@ -62,7 +62,7 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 ### Available command-line parameters 
 
 |    **Command-line   parameter**    |    **Description**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    Folder for all setup files. All files in this folder will be compressed into *.intunewin* file.    |
 |    `-s <setup_file>`     |    Setup file (such as *setup.exe* or *setup.msi*).    |
@@ -72,7 +72,7 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 ### Example commands
 
 |    **Example command**    |    **Description**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    This command will show usage information for the tool.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command will generate the `.intunewin` file from the specified source folder and setup file. For the MSI setup file, this tool will retrieve required information for Intune. If `-q` is specified, the command will run in quiet mode, and if the output file already exists, it will be overwritten. Also, if the output folder does not exist, it will be created automatically.    |
 
@@ -95,7 +95,7 @@ Much like a line-of-business (LOB) app, you can add a Win32 app to Microsoft Int
 
 The following steps provide guidance to help you add a Windows app to Intune.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
 
@@ -136,14 +136,18 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
         For example, if your app filename is **MyApp123**, add the following:<br>
         `msiexec /p "MyApp123.msp"`<p>
-        And, if the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) supported by the package. <br>For example:<br>
+        And, if the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) supported by the package. <br>
+        For example:<br>
         `ApplicationName.exe /quiet`<br>
         In the above command, the `ApplicationName.exe` package supports the `/quiet` command argument.<p> 
         For the specific arguments supported by the application package, contact your application vendor.
 
+        > [!IMPORTANT]
+        > Admins must be careful when they utilize the command tools. Unexpected or harmful commands may be passed using the the install and uninstall command field.
+
     - **Uninstall command**: Add the complete uninstall command line to uninstall the app based on the app's GUID. 
 
-        For example:
+        For example:<br>
         `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
     - **Install behavior**: Set the install behavior to either **System** or **User**.
@@ -312,7 +316,8 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
 3. In the **Select groups** pane, select to assign based on users or devices.
 4. After you have selected your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 5. If you want to exclude any groups of users from being affected by this app assignment, select **Included** under the **MODE** column. The **Edit assignment** pane will be displayed. You can set the **mode** from being **Included** to being **Excluded**. Click **OK** to close the **Edit assignment** pane.
-6. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
+6. In the **App settings** section, select the **Delivery optimization priority** for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment. 
+7. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
 
 ## Step 8 - Review + create
 
@@ -325,7 +330,7 @@ At this point, you have completed steps to add a Win32 app to Intune. For inform
 
 ## Delivery Optimization
 
-Windows 10 1709 and above clients will download Intune Win32 app content using a delivery optimization component on the Windows 10 client. Delivery optimization provides peer-to-peer functionality that it is turned on by default. Delivery optimization can be configured by group policy and via Intune Device configuration. For more information, see [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Windows 10 1709 and above clients will download Intune Win32 app content using a delivery optimization component on the Windows 10 client. Delivery optimization provides peer-to-peer functionality that it is turned on by default. You can configure the Delivery Optimization agent to download Win32 app content either in background or foreground mode based on assignment. Delivery optimization can be configured by group policy and via Intune Device configuration. For more information, see [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 > [!NOTE]
 > You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager - Support for Intune Win32 apps](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
@@ -348,9 +353,14 @@ Additionally, the Company Portal app shows additional app installation status me
 ## Set Win32 app availability and notifications
 You can configure the start time and deadline time for a Win32 app. At the start time, Intune management extension will start the app content download and cache it for required intent. The app will be installed at the deadline time. For available apps, start time will dictate when the app is visible in the Company Portal and content will be downloaded when the end user requests the app from the Company Portal. Additionally, you can enable a restart grace period. 
 
+> [!IMPORTANT]
+> The **Restart grace period** setting in the **Assignment** section is only available when the **Device restart behavior** of the **Program** section is set to either of the following options:
+> - **Determine behavior based on return codes**
+> - **Intune will force a mandatory device restart**
+
 Set the app availability based on a date and time for a required app using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Select an existing **Windows app (Win32)** from the list. 
 4. From the app pane, select **Properties** > **Edit** next to the **Assignments** section > **Add group** below the **Required** assignment type. 
@@ -396,6 +406,8 @@ Agent logs on the client machine are commonly in `C:\ProgramData\Microsoft\Intun
 > **On X86 client machines**:<br>
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> For more information, see [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### Detecting the Win32 app file version using PowerShell
 
@@ -440,7 +452,7 @@ In the above PowerShell command, replace `<path to binary file>` with your file 
 - Check OS Version – Windows 10 1607 and above.  
 - Check Windows 10 SKU - Windows 10 S, or Windows versions running with S-mode enabled, do not support MSI installation.
 
-For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](troubleshoot-app-install.md#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](../apps/troubleshoot-app-install.md#app-types-supported-on-arm64-devices).
 
 ## Next steps
 

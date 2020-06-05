@@ -5,7 +5,7 @@ description: Learn how to search the Intune docs, provide doc feedback, and cont
 ms.date: 03/03/2020
 ms.service: microsoft-intune 
 ms.subservice: fundamentals
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
@@ -112,11 +112,11 @@ Follow these general guidelines when contributing to Intune docs:
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, this documentation library was moved to [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). The Configuration Manager documentation library will later move to [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). All links will automatically redirect, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, the Intune and Configuration Manager documentation have been consolidated on the Microsoft Endpoint Manager site. The Intune documentation is now at [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) and the Configuration Manager documentation library is available at [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). All links will automatically redirect if you are using an old URL, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes are necessary:
 
-- Existing GitHub issues will remain in the original repository, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- Existing GitHub issues remained in the original repository, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) or [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/).
 
   - These issues won't show as open or closed issues in the Feedback section of the linked article.
 

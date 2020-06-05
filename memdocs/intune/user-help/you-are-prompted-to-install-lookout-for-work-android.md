@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -69,11 +69,11 @@ If you have trouble with the installation, try the troubleshooting steps at the 
 
    ![you are now connected to Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
-   Lookout for Work starts to check right away for security threats on your device. If no threats are found, you’ll see the following screen.
+   Lookout for Work starts to check right away for security threats on your device. If no threats are found, you'll see the following screen.
 
    ![Lookout for Work found no security threats](./media/lookout-scan-no-threats-found-android.png)
 
-   The Device Details screen in the Company Portal shows that you are now in compliance with your company’s security requirements.
+   The Device Details screen in the Company Portal shows that you are now in compliance with your company's security requirements.
 
     ![your device is now in compliance with policies](./media/mtd-device-now-compliant-android.png)
 

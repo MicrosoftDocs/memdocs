@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Integrate Check Point SandBlast MTD
+title: Integrate Check Point SandBlast MTD with Intune
+
 titleSuffix: Microsoft Intune
 description: How to set up CheckPoint SandBlast Mobile Threat Defense (MTD) with Intune to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +10,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -62,7 +63,7 @@ The Check Point SandBlast app authorization process consists of the following:
 
 - Allow the Check Point SandBlast Mobile service to communicate information related to device health state back to Intune.
 
-- CheckPoint SandBlast Mobile syncs with Azure AD Enrollment Group membership to populate its device’s database.
+- CheckPoint SandBlast Mobile syncs with Azure AD Enrollment Group membership to populate its device's database.
 
 - Allow Check Point SandBlast admin console to use Azure AD Single Sign On (SSO).
 

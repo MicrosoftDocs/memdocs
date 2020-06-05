@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 03/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -38,7 +38,7 @@ You can use Intune to add and deploy Mobile Threat Defense (MTD) apps so that en
 
 ## Before you begin
 
-Complete the following steps in Intune. Make sure you’re familiar with the process of:
+Complete the following steps in Intune. Make sure you're familiar with the process of:
 
 - [Adding an app into Intune](../apps/apps-add.md).
 - [Adding an iOS app configuration policy into Intune](../apps/app-configuration-policies-use-ios.md).
@@ -228,7 +228,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Sophos Mobile app configuration policy
 
-Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
+Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For additional information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://community.sophos.com/kb/133963) in the Sophos knowledge base.
 
 ### Wandera app configuration policy
 

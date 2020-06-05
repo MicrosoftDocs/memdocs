@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,9 +37,9 @@ Use the links at the right side of this page, under **In this article**, to find
 
 ## Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
-- Your device doesn't appear in the Company Portal anymore, and you can’t install apps from the Company Portal anymore.
+- Your device doesn't appear in the Company Portal anymore, and you can't install apps from the Company Portal anymore.
 
-- If you installed the Intune client software, it’s removed from your computer.
+- If you installed the Intune client software, it's removed from your computer.
 
 - The Intune Endpoint Protection software is removed from your computer. If your computer has other virus protection software installed and it is disabled, that software can be re-enabled after Intune Endpoint Protection is removed. Check your computer after removing it from the Company Portal.
 
@@ -52,9 +52,9 @@ Use the links at the right side of this page, under **In this article**, to find
 
 In addition, for Windows 8.1:
 
-- You can’t use company apps and company data on your device anymore.
+- You can't use company apps and company data on your device anymore.
 
-- Some email apps, like Windows Mail, can’t access company email that is stored on your device anymore.
+- Some email apps, like Windows Mail, can't access company email that is stored on your device anymore.
 
 - You might not be able to connect to your company network by using Wi-Fi or a virtual private network.
 
@@ -62,9 +62,9 @@ In addition, for Windows 8.1:
 
 ## Windows 10 mobile and Windows Phone 8.1
 
-- The Company Portal app is uninstalled from your device. This means that your device doesn’t appear in the Company Portal anymore, and you can't install apps from the Company Portal app or the Company Portal website.
+- The Company Portal app is uninstalled from your device. This means that your device doesn't appear in the Company Portal anymore, and you can't install apps from the Company Portal app or the Company Portal website.
 
-- You can’t use company apps and company data on your device anymore.
+- You can't use company apps and company data on your device anymore.
 
 - Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.
 
@@ -73,9 +73,9 @@ In addition, for Windows 8.1:
 
 ## Windows RT running Windows 8.1
 
-- The Company Portal app is uninstalled from your device. This means that your device doesn’t appear in the Company Portal anymore, and you can’t install apps from the Company Portal.
+- The Company Portal app is uninstalled from your device. This means that your device doesn't appear in the Company Portal anymore, and you can't install apps from the Company Portal.
 
-- You can’t use company apps and company data on your device anymore.
+- You can't use company apps and company data on your device anymore.
 
 - Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.
 
@@ -83,13 +83,13 @@ In addition, for Windows 8.1:
 
 - You might not have access to some company resources, like file shares or internal websites, on your device anymore.
 
-- Some email apps, like Windows Mail, can’t access company email that is stored on your device anymore.
+- Some email apps, like Windows Mail, can't access company email that is stored on your device anymore.
 
 When you remove your Windows RT device, the following happens:
 
-- The Company Portal app is uninstalled from your device. This means that your device doesn’t appear in the Company Portal anymore, and you can't install apps from the Company Portal.
+- The Company Portal app is uninstalled from your device. This means that your device doesn't appear in the Company Portal anymore, and you can't install apps from the Company Portal.
 
-- You can’t use company apps and company data on your device anymore.
+- You can't use company apps and company data on your device anymore.
 
 - Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.
 

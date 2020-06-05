@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -39,13 +39,13 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 ## To create a custom role
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 2. On the **Basics** page, enter a name and description for the new role, then choose **Next**.
 
 3. On the **Permissions** page, choose the permissions you want to use with this role.
 
-4. On the **Scope (Tags)** page, choose the tags for this role. This role can access resources that also have these tags. Choose **Next**.
+4. On the **Scope (Tags)** page, choose the tags for this role. When this role is assigned to a user, that user can access resources that also have these tags. Choose **Next**.
 
 5. On the **Review + create** page, when you're done, choose **Create**. The new role is displayed in the list on the **Intune roles - All roles** blade.
 
@@ -53,7 +53,7 @@ To create, edit, or assign roles, your account must have one of the following pe
 
 You can also copy an existing role.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > select the checkbox for a role in the list > **Duplicate**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > select the checkbox for a role in the list > **Duplicate**.
 
 2. On the **Basics** page, enter a name. Make sure to use a unique name.
 

@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -70,7 +70,7 @@ When your device is out-of-sync or no longer meets the requirements, its status 
 When you enroll your device, your company support or IT admin is given access to the device for limited and meaningful reasons. 
 They can:  
 
-* Reset your device back to the manufacturer’s defaults. As mentioned above, you also have access to reset your device. However, if you can't access the Company Portal app right away, your company can reset the device for you.  
+* Reset your device back to the manufacturer's defaults. As mentioned above, you also have access to reset your device. However, if you can't access the Company Portal app right away, your company can reset the device for you.  
 
 * Remove all company-related data. Your organization might remove company-related data from your device if you leave the company, or if your device becomes unmanaged. Your personal data and settings aren't removed, and will remain on the device.  
 

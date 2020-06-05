@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 2/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -58,7 +58,7 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 ### Wiping a device
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. Select the name of the device that you want to wipe.
 5. In the pane that shows the device name, select **Wipe**.
@@ -99,7 +99,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|
 
-### Android
+### Android device administrator
 
 |Data type|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -115,11 +115,11 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android work profile
+### Android Enterprise devices with a work profile
 
 Removing company data from an Android work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android work profiles.
 
-### Android enterprise kiosk devices
+### Android Enterprise dedicated devices
 
 You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
@@ -139,7 +139,7 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows Phone 8.1 and Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps originally installed through the Company Portal are uninstalled. Company app data is removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1703 (Creators Update) and later, Office 365 ProPlus apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
+|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps originally installed through the Company Portal are uninstalled. Company app data is removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
 |Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|Removed.|Not supported.|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Not supported.|Certificates are removed and revoked.|
@@ -151,7 +151,7 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
 ### Retire
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the **Devices** pane, select **All devices**.
 3. Select the name of the device that you want to retire.
 4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
@@ -162,12 +162,12 @@ If the device is on and connected, the **Retire** action propagates across all d
 
 If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 ### Automatically delete devices with cleanup rules
 You can configure Intune to automatically delete devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management.
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
@@ -190,10 +190,10 @@ You might need to delete devices from Azure AD due to communication issues or mi
 
 If you want to completely remove an Apple DEP device from management by Intune, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
 ![Screenshot for retire](./media/devices-wipe/retire.png)
-3. Visit [deploy.apple.com](http://deploy.apple.com) and search for the device by its serial number.
+3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
 
 5. Choose **Reassign**.

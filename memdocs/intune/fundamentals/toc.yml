@@ -158,6 +158,10 @@
         href: intune-endpoints.md
       - name: Intune US government endpoints
         href: intune-us-government-endpoints.md
+      - name: China endpoints
+        href: china-endpoints.md
+      - name: Intune operated by 21Vianet in China
+        href: china.md
     - name: Sign in to Intune
       href: account-sign-up.md
     - name: Configure domains
@@ -222,7 +226,7 @@
   - name: Error codes and descriptions
     items: 
     - name: Troubleshoot company resource access problems
-      href: troubleshoot-company-resource-access-problems.md     
+      href: troubleshoot-company-resource-access-problems.md
 - name: Resources
   items:
   - name: Archive
@@ -284,5 +288,5 @@
         href: troubleshoot-software-updates-in-microsoft-intune.md
       - name: Endpoint protection common errors 
         href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-  - name: Intune end user documentation  
-    href: /user-help/use-managed-devices-to-get-work-done  
+  - name: Intune end-user documentation  
+    href: ../user-help/use-managed-devices-to-get-work-done.md

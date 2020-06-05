@@ -6,8 +6,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -39,6 +39,7 @@ Intune supports a wide range of app types. The available options differ for each
 | Apps written in-house (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
 | Apps that are built-in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps on the web (web link) | Intune creates a shortcut to the web app on the device home screen. | App updates are automatic. |
+| Apps from other Microsoft services  | Intune creates a shortcut to the app in the Company Portal. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). | App updates are automatic. |
 
 ### Specific app type details
  
@@ -52,8 +53,8 @@ The following table lists the specific app types and how you can add them in the
 | Windows Phone 8.1 store apps  | Store app  | Select **Windows Phone 8.1** as the **app type**, and enter the Microsoft store URL for the app. |
 | Microsoft store apps  | Store app  | Select **Windows** as the **app type**, and enter the Microsoft store URL for the app. |
 | Managed Google Play apps | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. |
-| Office 365 apps for Windows 10  | Store app (Office 365) | Select **Windows 10** under **Office 365 Suite** as the **app type**, and then select the Office 365 app that you want to install.  |
-| Office 365 apps for macOS | Store app (Office 365) | Select **macOS** under **Office 365 Suite** as the **app type**, and then select the Office 365 app suite. |
+| Office 365 apps for Windows 10  | Store app (Office 365) | Select **Windows 10** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app that you want to install.  |
+| Office 365 apps for macOS | Store app (Office 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Office 365 app suite. |
 | Microsoft Edge, version 77 and later for Windows 10 | Store app | Select **Windows 10** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Microsoft Edge, version 77 and later for macOS | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Android line-of-business (LOB) apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
@@ -66,7 +67,6 @@ The following table lists the specific app types and how you can add them in the
 | Android Enterprise system apps  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | Windows app (Win32)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
 | macOS LOB apps | LOB app  | Select **Line-of-business** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunemac**.  |
-
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 
@@ -108,6 +108,7 @@ You can choose from the following app types:
 - **Apps from the store**: Apps that have been uploaded to either the Microsoft store, the iOS/iPadOS store, or the Android store are store apps. The provider of a store app maintains and provides updates to the app. You select the app in the store list and add it by using Intune as an available app for your users.
 - **Apps written in-house (line-of-business)**: Apps that are created in-house are line-of-business (LOB) apps. The functionality of this type of app has been created for one of the Intune supported platforms, such as Windows, iOS/iPadOS, macOS, or Android. Your organization creates and provides you with updates as a separate file. You provide updates of the app to users by adding and deploying the updates using Intune.
 - **Apps on the web**: Web apps are client-server applications. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web hosting platforms commonly offer security, load balancing, and other benefits. This type of app is separately maintained on the web. You use Intune to point to this app type. You also assign which groups of users can access the app. Note that Android does not support web apps.
+- **Apps from other Microsoft services**: Apps that have been sourced from either Azure AD or Office Online. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). You can hide or show Azure AD Enterprise and Office Online applications to end-users in the Company Portal. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. Select to **Hide** or **Show** either **Azure AD Enterprise applications** or **Office Online applications** in the Company Portal for each end-user. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). 
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
@@ -117,7 +118,7 @@ For more information about the types of apps that your organization needs, see "
 Intune lets you modify the functionality of apps that you deploy to help align them with your company's compliance and security policies. This control allows you to determine how your company data is protected. Intune-managed apps are enabled with a rich set of mobile application protection policies, such as:
 
 - Restricting copy-and-paste and save-as functions.
-- Configuring web links to open inside the Intune Managed Browser app.
+- Configuring web links to open inside the Microsoft Edge app.
 - Enabling multi-identity use and app-level Conditional Access.
 
 Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../developer/app-sdk.md).
@@ -157,7 +158,7 @@ App categories can be used to help you sort apps to make them easier for users t
 
 When you add an app to Intune, you are given the option to select the category you want. Use the platform-specific topics to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps** > **App categories**.  
     The **App categories** pane displays a list of current categories. 
 5. Do either of the following:
@@ -183,6 +184,25 @@ Intune will automatically reinstall, update, or remove a required app based on t
 - An admin targets an app as available to a user group and an end user installs the app from the company portal on the device. Later, the admin updates the app from v1 to v2. Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.   
 
+## Uninstall an app
+
+When you need to uninstall an app from user's devices, use the following steps.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > *the app* > **Assignments** > **Add group**.
+3. In the **Add group** pane, select **Uninstall**.
+4. Select **Included Groups** to select the groups of users that are affected by this app assignment.
+5. Select the groups that you want to apply the uninstall assignment.
+6. Click **Select** on the **Select groups** pane.
+7. Click **OK** on the **Assign** pane to set the assignment.
+8. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+9. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
+10. Select **OK** in the **Add group** pane.
+11. Select **Save** in the app **Assignments** pane.
+
+> [!IMPORTANT]
+> To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
+
 ## App installation errors
 
 For details about Intune app installation errors, see [App installation errors](troubleshoot-app-install.md).
@@ -203,6 +223,7 @@ To learn how to add apps for each platform to Intune, see:
 - [Windows LOB app](lob-apps-windows.md)
 - [Office 365 apps for Windows 10](apps-add-office365.md)
 - [Office 365 apps for macOS](apps-add-office365-macos.md)
+- [Managed Google Play apps](apps-add-android-for-work.md)
 - [Microsoft Edge for Windows 10](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)

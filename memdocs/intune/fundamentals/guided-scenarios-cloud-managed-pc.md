@@ -21,7 +21,7 @@ ms.collection: M365-identity-device-management
 
 # Guided scenario - Cloud-managed Modern Desktop
 
-The modern desktop is the state-of-the-art productivity platform for the Information Worker. Office 365 ProPlus and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender Advanced Threat Protection.
+The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender Advanced Threat Protection.
 
 Managing the modern desktop from the cloud brings the added benefit of internet-wide remote actions. Cloud-management utilizes the in-built Windows Mobile Device Management policies and removes dependencies on local Active Directory group policy.
 
@@ -42,7 +42,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Office ProPlus. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
 
 ### What you will need to continue
 
@@ -76,7 +76,7 @@ Users will manually set up and enroll their new devices in mobile device managem
 The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices click **Deploy** to complete the guided scenario. Once the guided scenario is complete, a table of resources is displayed. You can edit these resources later, however once you leave the summary view, the table will not be saved.
 
 > [!IMPORTANT]
-> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resouces will not be saved.
+> Once the guided scenario is complete it will display a summary. You can modify the resources listed in the summary later, however the table displaying these resources will not be saved.
 
 ### Verification
 
@@ -117,7 +117,7 @@ The guided scenario will also assign the user to the selected Autopilot device f
 
 Once the user joins the device to Azure Active Directory, the following configurations will be applied to the device:
 
-1. Office 365 ProPlus will be automatically installed on the Cloud-managed PC. It includes the applications that you're familiar with, including Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business, and Word. You can use these applications to connect with Office 365 services such as SharePoint Online, Exchange Online, and Skype for Business Online. Office 365 ProPlus is updated regularly with new features, unlike non-subscription versions of Office. For a list of new features, see What's new in Office 365.
+1. Microsoft 365 Apps will be automatically installed on the Cloud-managed PC. It includes the applications that you're familiar with, including Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business, and Word. You can use these applications to connect with Office 365 services such as SharePoint Online, Exchange Online, and Skype for Business Online. Microsoft 365 Apps is updated regularly with new features, unlike non-subscription versions of Office. For a list of new features, see What's new in Office 365.
 2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender Advanced Threat Protection, the guided scenario will also configure baseline settings for Defender. Defender Advanced Threat Protection provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses. 
 
 ## Next steps

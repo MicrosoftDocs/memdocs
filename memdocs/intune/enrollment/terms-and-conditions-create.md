@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/20/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -50,7 +50,7 @@ To learn which method is best for you, check out the [Choosing the right Terms s
 ## Create terms and conditions
 Complete these steps to create terms and conditions. The display name and description are for administrative use while terms properties are displayed to users in the Company Portal.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions**.
 2. Choose **Create**.
 3. On the **Basics** page, specify the following information:
 
@@ -87,7 +87,7 @@ The following example shows the terms and conditions in the admin console and th
 
 ## Monitor terms and conditions
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions**.
 2. In the list of terms and conditions, choose the terms you want to view acceptance for > **Acceptance Reporting**.
 
 ## Work with multiple versions of terms and conditions
@@ -97,7 +97,7 @@ You can edit your terms and conditions and manage their versions. Each time you 
 
 Keep the current version number if, for example, you're fixing typos or changing formatting.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions** > choose the terms and conditions you want to modify > **Properties**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Terms and Conditions** > choose the terms and conditions you want to modify > **Properties**.
 
 2. On the **Properties** pane, choose **Terms and Conditions** and then modify the **Title**, **Summary of Terms**, and **Terms and Conditions** as needed. If your changes make it necessary for users to reaccept the new terms, choose **Require users to re-accept, and increment the version number to**
 

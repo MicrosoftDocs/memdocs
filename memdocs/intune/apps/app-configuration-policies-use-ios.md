@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -110,7 +110,7 @@ The \{\{ and \}\} characters are used by token types only and must not be used f
 
 ### Allow only configured organization accounts in multi-identity apps 
 
-For iOS/iPadOS devices, use the following key/value pairs:
+As the Microsoft Intune administrator, you can control which user accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs:
 
 | **Key** | **Values** |
 |----|----|
@@ -118,7 +118,10 @@ For iOS/iPadOS devices, use the following key/value pairs:
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
 
    > [!NOTE]
-   > You must use OneDrive for iOS 10.34 or later, Outlook for iOS 2.99.0 or later or Edge for iOS 44.8.7 or later and the app must be targeted with [Intune app protection policies](app-protection-policy.md) when allowing only configured organization accounts with multi-identity.
+   > The following apps process the above app configuration and only allow organization accounts:
+   > - Edge for iOS (44.8.7 and later)
+   > - OneDrive for iOS (10.34 and later)
+   > - Outlook for (iOS 2.99.0 or later)
 
 ## Enter XML data
 

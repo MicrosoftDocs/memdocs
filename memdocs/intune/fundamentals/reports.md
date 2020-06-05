@@ -8,8 +8,8 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
-ms.topic: conceptual
+ms.date: 05/28/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -56,7 +56,7 @@ The Non-compliant devices report surfaces data typically used by Helpdesk or adm
 
 You can view the **Noncompliant devices** report using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Noncompliant devices**.
 
     ![Noncompliant device report](./media/intune-reports/intune-reports-02.png)
@@ -70,7 +70,7 @@ Device compliance reports are meant to be broad in nature and provide a more tra
 
 To see a generated report of device state, you can use the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** to view the reports summary.
 3. Select **Device compliance**.
 4. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
@@ -87,7 +87,7 @@ For related information, see [Enforce compliance for Microsoft Defender ATP with
 
 The device compliance report is available as the summary report in the **Reports** workload. Use the following steps to view the device compliance report:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** to view the reports summary.
 
     ![Intune Reports summary](./media/intune-reports/intune-reports-01.png)
@@ -100,7 +100,7 @@ A device compliance trend report for device compliance trends can show the trend
 
 You can view the **Trends** report using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Trends** to view device compliance over a 60 day trend.
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
@@ -115,7 +115,7 @@ An example specialist report would corelate device ownership data with platform 
 
 You can create and view custom reports using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](reports.md#diagnostic-settings).
 
     ![Intune Reports summary](./media/intune-reports/intune-reports-04.png)

@@ -68,7 +68,7 @@ Trying out Intune is free for 30 days. If you already have a work or school acco
 
 If you're not already signed in to the portal, complete the following steps:
 
-1. Open a new browser window and enter **https://devicemanagement.microsoft.com** in the address bar. 
+1. Open a new browser window and enter **https://endpoint.microsoft.com** in the address bar. 
 2. Use the user ID that you were given in the steps above to sign in (*yourID@yourdomain*.onmicrosoft.com).
 
     ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -130,7 +130,7 @@ As mentioned above, if your organization has its own custom domain that you want
 ## Admin experiences
 
 There are two portals that you will use most often:
-- The Microsoft Endpoint Manager admin center ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps

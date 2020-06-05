@@ -50,8 +50,8 @@ You can also make sure that the time and date on the user's device are set corre
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
-- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## General enrollment issues
@@ -66,9 +66,9 @@ These issues may occur on all device platforms.
 
 Check to see that the user isn't assigned more than the maximum number of devices by following these steps:
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
 
-2. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
 
 3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll any more until:
     - [Existing devices are removed](../remote-actions/devices-wipe.md), or
@@ -241,7 +241,7 @@ To verify a proper certificate installation, you can use the diagnostics tool av
 
 The follow steps describe just one of many methods and tools that you can use to validate that the certificate installed correctly.
 
-1. Go to the [free Digicert tool](ttps://www.digicert.com/help/).
+1. Go to the [free Digicert tool](https://www.digicert.com/help/).
 2. Enter your AD FS server's fully qualified domain name (for example, sts.contoso.com) and select **CHECK SERVER**.
 
 If the Server certificate is installed correctly, you see all check marks in the results. If the problem above exists, you see a red X in the "Certificate Name Matches" and the "SSL Certificate is correctly Installed" sections of the report.
@@ -290,9 +290,9 @@ To fix the issue, users must select the **Set up** button, which is to the right
 Once enrolled, the devices return to a healthy state and regain access to company resources.
 
 ### Verify WS-Trust 1.3 is enabled
-**Issue** Device Enrollment Program (DEP) iOS/iPadOS devices can't be enrolled
+**Issue** Automated Device Enrollment (ADE) iOS/iPadOS devices can't be enrolled
 
-Enrolling DEP devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
+Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -343,7 +343,7 @@ This issue can happen if:
 4. Tell the user to restart the enrollment process.
 
 #### Determine if there's something wrong with the VPP token
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
 2. Review the properties to see if any errors similar to the following appear:
     - This token has expired.
     - This token is out of Company Portal licenses.
@@ -353,13 +353,13 @@ This issue can happen if:
 3. Fix the issues for the token.
 
 #### Identify which devices are blocked by the VPP token
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
 2. Filter the **Profile status** column by **Blocked**.
 3. Make a note of the serial numbers for all the devices that are **Blocked**.
 
 #### Remotely wipe the blocked devices
 After you've fixed the issues with the VPP token, you must wipe the devices that are blocked.
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**. 
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > **Columns** > **Serial number** > **Apply**. 
 2. For each blocked device, choose it in the **All devices** list and then choose **Wipe** > **Yes**.
 
 #### Tell the users to restart the enrollment process
@@ -383,7 +383,7 @@ After you've wiped the blocked devices, you can tell the users to restart the en
 - If your organization turned on enrollment restrictions that block personal macOS devices, you must manually [add the personal device's serial number](corporate-identifiers-add.md#manually-enter-corporate-identifiers) to Intune.  
 - If the device is still assigned to another user in Intune, its former owner did not use the Company Portal app to remove or reset it. To clean up the stale device record from Intune:  
 
-    1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with your administrative credentials.
+    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with your administrative credentials.
     2. Choose **Devices** > **All devices**.  
     3. Find the device with the enrollment problem. Search by device name or MAC/HW Address to narrow your results.
     4. Select the device > **Delete**. Delete all other entries associated with the device.  

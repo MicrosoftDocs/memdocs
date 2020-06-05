@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -40,7 +40,7 @@ Mobile Application Management (MAM) app protection policies allows you to manage
 ## How you can protect app data
 Your employees use mobile devices for both personal and work tasks. While making sure your employees can be productive, you want to prevent data loss, intentional and unintentional. You'll also want to protect company data that is accessed from devices that are not managed by you.
 
-You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company’s data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
+You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
 
 ### App protection policies on devices
 
@@ -87,6 +87,18 @@ Intune app protection policies platform support aligns with Office mobile applic
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android. For more information, see the [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md#access-apps).
+
+## App protection policy data protection framework
+
+The choices available in app protection policies (APP) enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+
+The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+
+- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
+- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+
+To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
 ## How app protection policies protect app data
 
@@ -139,7 +151,7 @@ However, there are some limitations to be aware of, such as:
 
 Any app that has been integrated with the [Intune SDK](../developer/app-sdk.md) or wrapped by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) that have been built using these tools and are available for public use.
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, Xamarin.Forms, and Cordova platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
 The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authentication capabilities from the[Azure Active Directory Authentication Libraries](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) for both the 1st party and the 3rd party versions of the SDK. As such, [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) does not work well with many of our core scenarios such as authentication into the Intune App Protection service and conditional launch. Given that the overall guidance from Microsoft's Identity team is to switch to MSAL for all of the Microsoft Office apps, the [Intune SDK](../developer/app-sdk.md) will eventually need to support it, but there are no plans today.
 
@@ -147,13 +159,13 @@ The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authenticati
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
 
-- The end user must have an Azure Active Directory (AAD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have an Azure Active Directory (Azure AD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
 
 - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-- The end user must sign into the app using their AAD account.
+- The end user must sign into the app using their Azure AD account.
 
 ## App protection policies for Microsoft Office apps
 
@@ -171,7 +183,7 @@ The additional requirements to use the [Outlook mobile app](https://products.off
 ### Word, Excel, and PowerPoint
 The additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps include the following:
 
-- The end user must have a license for [Office 365 Business or Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
 
@@ -194,7 +206,7 @@ The settings, made available to the OneDrive Admin console, configure a special 
 
 Once enabled, the OneDrive and SharePoint apps for iOS/iPadOS and Android are protected with the selected settings by default. An IT Pro can edit this policy in the Intune console to add more targeted apps and to modify any policy setting. 
 
-By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../developer/intune-graph-apis.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn’t recommended because troubleshooting the implementation of such a policy can become complicated.
+By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../developer/intune-graph-apis.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn't recommended because troubleshooting the implementation of such a policy can become complicated.
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
@@ -209,6 +221,9 @@ For an example of "personal" context, consider a user who starts a new document 
 For an example of work or "corporate" context, consider a user who starts the OneDrive app by using their work account. In the work context, they can't move files to a personal storage location. Later, when they use OneDrive with their personal account, they can copy and move data from their personal OneDrive without restrictions.
 
 Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
+
+  >[!NOTE]
+  > Although Edge is in "corporate" context, user can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
 
 For more information about multi-identity in Intune, see [MAM and multi-identity](apps-supported-intune-apps.md).
 
@@ -252,7 +267,7 @@ If you observe the PIN being wiped on some devices, the following is likely happ
 **Setting a PIN twice on apps from the same publisher?**<br>
 MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
-In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. The two PINs (for each app) are not related in any way (i.e. they must adhere to the app protection policy that’s applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice. 
+In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. The two PINs (for each app) are not related in any way (i.e. they must adhere to the app protection policy that's applied to the app). As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice. 
 
 This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
 
@@ -303,7 +318,7 @@ If the user is using the app when selective wipe is initiated, the [Intune SDK](
 Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
 
 **Secure way to open web links from managed apps**<br>
-The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
+The IT administrator can deploy and set app protection policy for the [Microsoft Edge](app-configuration-managed-browser.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
 
 ## App protection experience for iOS devices
 
@@ -342,7 +357,7 @@ Intune leverages Google Play Protect SafetyNet APIs to add to our existing root 
 - Devices that fail basic integrity
 - Devices with an unlocked bootloader
 - Devices with a custom system image/ROM
-- Devices for which the manufacturer didn’t apply for, or pass, Google certification
+- Devices for which the manufacturer didn't apply for, or pass, Google certification
 - Devices with a system image built directly from the Android Open Source Program source files
 - Devices with a beta/developer preview system image
 

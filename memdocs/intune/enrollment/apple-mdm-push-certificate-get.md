@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ When a push certificate expires, you must renew it. When renewing, make sure to 
 
 
 ## Steps to get your certificate
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**, and then follow these steps.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**, and then follow these steps.
 
 ### Step 1. Grant Microsoft permission to send user and device information to Apple
 Select **I agree.** to give Microsoft permission to send data to Apple.
@@ -72,7 +72,7 @@ The Apple MDM push certificate is valid for one year and must be renewed annuall
 
 The certificate is associated with the Apple ID used to create it. Renew the MDM push certificate with the same Apple ID used to create it.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.
 2. Choose **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 3. Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. Find the certificate you want to renew and select **Renew**.
 4. On the **Renew Push Certificate** screen, provide notes to help you identify the certificate in the future, select **Choose File** to browse to the new request file you downloaded, and choose **Upload**.

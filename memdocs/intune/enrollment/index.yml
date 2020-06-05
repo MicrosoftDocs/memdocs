@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Enroll devices in Microsoft Intune
-summary: There are several methods to enroll your workforce’s devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
+summary: There are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
 metadata:
   title: Enrollment in Microsoft Intune
   description: Landing page for enrollment in Microsoft Intune
@@ -70,8 +70,6 @@ landingContent:
             url: connect-intune-android-enterprise.md
           - text: Set up enrollment of Android Enterprise work profile devices
             url: android-work-profile-enroll.md
-          - text: Set up enrollment of Android Enterprise work profile devices
-            url: android-work-profile-enroll.md
           - text: Set up enrollment of Android Enterprise dedicated devices
             url: android-kiosk-enroll.md
           - text: Set up Intune enrollment of Android Enterprise fully managed devices (preview)
@@ -91,7 +89,7 @@ landingContent:
         links:
           - text: Set up iOS/iPadOS enrollment
             url: ios-enroll.md
-          - text: Automatically enroll iOS/iPadOS devices with Apple's Device Enrollment Program
+          - text: Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment
             url: device-enrollment-program-enroll-ios.md
           - text: Set up iOS/iPadOS and iPadOS User Enrollment
             url: ios-user-enrollment.md
@@ -115,7 +113,7 @@ landingContent:
         links:
           - text: Set up macOS enrollment
             url: macos-enroll.md
-          - text: Automatically enroll macOS devices with the Device Enrollment Program or Apple School Manager
+          - text: Automatically enroll macOS devices with the Automated Device Enrollment or Apple School Manager
             url: device-enrollment-program-enroll-macos.md
           - text: Set up iOS/iPadOS device enrollment with Apple Configurator
             url: apple-configurator-enroll-ios.md

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -46,7 +46,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 
 ## How to log out the current user
 
-1. Sign into the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
 2. Choose an iOS/iPadOS device > **...** > **Logout current user**.
 
 ## Next steps

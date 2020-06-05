@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create a device-based Conditional Access policy
 
-With Intune, enhance Conditional Access in Azure Active Directory by adding mobile device compliance to the access controls. With Intune compliance policy that defines requirements for devices to be compliant, you can use a device’s compliance status to either allow or block access to your apps and services. You can do this by creating a Conditional Access policy that uses the setting **Require device to be marked as compliant**.
+With Intune, enhance Conditional Access in Azure Active Directory by adding mobile device compliance to the access controls. With Intune compliance policy that defines requirements for devices to be compliant, you can use a device's compliance status to either allow or block access to your apps and services. You can do this by creating a Conditional Access policy that uses the setting **Require device to be marked as compliant**.
 
 A Conditional Access policy specifies the app or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to. Although Conditional Access is an Azure AD premium feature, the Conditional Access node you access from *Intune* is the same node as accessed from *Azure AD*.
 
@@ -39,14 +39,14 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
 ## Create Conditional Access policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Conditional Access** > **Policies** > **New policy**.
   ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca.png)
 
 3. Under **Assignments**, select **Users and groups**.
 
-4. On the **Include** tab, identify the users or groups that this Conditional Access policy applies to. Once you’ve chosen groups or users to include, use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
+4. On the **Include** tab, identify the users or groups that this Conditional Access policy applies to. Once you've chosen groups or users to include, use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
 
    - **All users**: Select this option to apply the policy to all users and groups, including internal and guest users.
 
@@ -97,9 +97,9 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
 9. Select **Done**.
 
-10. Under **Access controls**, select **Grant**. Configure what happens based on the conditions you’ve set up.  You can select from the following options:
+10. Under **Access controls**, select **Grant**. Configure what happens based on the conditions you've set up.  You can select from the following options:
 
-    - **Block access**: The users specified in this policy will be denied access to the apps under the conditions you’ve specified.
+    - **Block access**: The users specified in this policy will be denied access to the apps under the conditions you've specified.
     - **Grant access**: The users specified in this policy will be granted access, but you can require any of the following further actions:
       - **Require multi-factor authentication**: The user will need to complete additional security requirements, like a phone call or text.
       - **Require device to be marked as compliant**: The device must be Intune compliant. If the device is noncompliant, the user will be given the option to enroll the device in Intune.

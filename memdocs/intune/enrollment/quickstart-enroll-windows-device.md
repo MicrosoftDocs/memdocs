@@ -95,7 +95,7 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
 ## Confirm your device enrollment in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
 3. Verify that you have an additional device enrolled within Intune.
 

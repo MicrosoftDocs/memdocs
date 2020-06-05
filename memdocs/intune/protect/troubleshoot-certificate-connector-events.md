@@ -50,8 +50,8 @@ Starting with version 6.1806.x.x, the Intune Connector Service logs events in th
 | 20102 | PkcsCertIssue_Failure  | Failed to issue a PKCS certificate. Review event details for the device ID, user ID, CA name, certificate template name, and certificate thumbprint related to this event. | 0x00000000, 0x00000400, 0x00000401, 0x0FFFFFFF |
 | 20200 | RevokeCert_Success  | Successfully revoked the certificate. Review event details for the device ID, user ID, CA name, and certificate serial number related to this event. | 0x00000000, 0x0FFFFFFF |
 | 20202 | RevokeCert_Failure | Failed to revoke the certificate. Review event details for the device ID, user ID, CA name, and certificate serial number related to this event. For additional information, see the NDES SVC Logs.   | 0x00000000, 0x00000402, 0x0FFFFFFF |
-| 20300 | Upload_Success | Successfully uploaded the certificate’s request or revocation data. Review the event details for the upload details. | 0x00000000, 0x0FFFFFFF |
-| 20302 | Upload_Failure | Failed to upload the certificate’s request or revocation data. Review the event details > Upload State to determine the point of failure.| 0x00000000, 0x0FFFFFFF |
+| 20300 | Upload_Success | Successfully uploaded the certificate's request or revocation data. Review the event details for the upload details. | 0x00000000, 0x0FFFFFFF |
+| 20302 | Upload_Failure | Failed to upload the certificate's request or revocation data. Review the event details > Upload State to determine the point of failure.| 0x00000000, 0x0FFFFFFF |
 | 20400 | Download_Success | Successfully downloaded request to sign a certificate, download a client certificate, or revoke a certificate. Review the event details for the download details.  | 0x00000000, 0x0FFFFFFF |
 | 20402 | Download_Failure | Failed to download request to sign a certificate, download client certificate, or revoke a certificate. Review the event details for the download details. | 0x00000000, 0x0FFFFFFF |
 | 20500 | CRPVerifyMetric_Success  | Certificate Registration Point successfully verified a client challenge | 0x00000000, 0x0FFFFFFF |

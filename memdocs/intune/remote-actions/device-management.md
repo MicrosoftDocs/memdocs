@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/14/2018
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -38,7 +38,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 
 ## Get to your devices
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
    - **Overview** shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
@@ -82,6 +82,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
+- [Bulk device actions](bulk-device-actions.md)
 
 ## Next steps
 

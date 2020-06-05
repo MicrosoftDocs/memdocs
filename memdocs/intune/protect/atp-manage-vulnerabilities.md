@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -61,7 +61,7 @@ An example workflow:
 
   ![Accept or reject a security task](./media/atp-manage-vulnerabilities/temp-accept-task.png)
 
-- The admin then remediates the task based on the guidance provided. The guidance varies depending on the type of remediation that’s needed. When available, remediation guidance includes links that open relevant panes for configurations in Intune.
+- The admin then remediates the task based on the guidance provided. The guidance varies depending on the type of remediation that's needed. When available, remediation guidance includes links that open relevant panes for configurations in Intune.
 
   Because the media player in this example isn't a managed app, Intune can only provide text instructions. If the app was managed, Intune could provide instructions to download an updated version, and provide a link to open the deployment for the app so that the updated files can be added to the deployment.
 
@@ -83,7 +83,7 @@ An example workflow:
 
 ## Work with security tasks
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security tasks**.
 
@@ -91,7 +91,7 @@ An example workflow:
 
    While viewing the security task resource window, you can select additional links:
 
-   - MANAGED APPS - View the app that is vulnerable. When the vulnerability applies to multiple apps, you’ll see a filtered list of apps.
+   - MANAGED APPS - View the app that is vulnerable. When the vulnerability applies to multiple apps, you'll see a filtered list of apps.
    - DEVICES - View a list of the *Vulnerable devices*, from which you can link through to an entry with more details for the vulnerability on that device.
    - REQUESTOR - Use the link to send mail to the admin who submitted this security task.
    - NOTES - Read custom messages submitted by the requestor when opening the security task.
@@ -100,7 +100,7 @@ An example workflow:
 
 5. After accepting a task, reopen the security task (if it closed), and follow the REMEDIATION details to remediate the vulnerability. The instructions provided by ATP in the security task details vary depending on the vulnerability involved.
 
-   When it’s possible to do so, the remediation instructions include links that open the relevant configuration objects in the Intune console.
+   When it's possible to do so, the remediation instructions include links that open the relevant configuration objects in the Intune console.
 
 6. After completing the remediation steps, open the security task and select **Complete Task**.  This action updates the security task status in both Intune and ATP.
 

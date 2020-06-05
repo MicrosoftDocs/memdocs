@@ -323,7 +323,7 @@ Intune marks all new devices as personal unless the IT admin takes action to mar
 ### Notices
 
 __Multi-Factor Authentication on Enrollment moving to the Azure portal__ <!--VSO 750545-->
-Previously, admins would go to either the Intune console or the Configuration Manager (earlier than release October 2016) console to set MFA for Intune enrollments. With this updated feature, you will now login to the [Microsoft Azure portal](https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. Learn more about this [here](https://aka.ms/mfa_ad).
+Previously, admins would go to either the Intune console or the Configuration Manager (earlier than release October 2016) console to set MFA for Intune enrollments. With this updated feature, you will now login to the [Microsoft Azure portal](https://manage.windowsazure.com) using your Intune credentials and configure MFA settings through Azure AD. Learn more about this [here](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __Company Portal app for Android now available in China__ <!--VSO 658093-->
 We are publishing the Company Portal app for Android for download in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android will be available for download on the following stores:
@@ -367,10 +367,10 @@ The new app will also allow users to leverage additional platform features like 
 > While you can deploy Android for Work apps with an action of __Required__, you can only deploy apps as __Available__ if your Intune groups have been migrated to the new Azure AD groups experience.
 
 __Intune App SDK for Cordova plugin now supports MAM without enrollment__
-App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS. The Intune App SDK for Cordova plugin can be found [here](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS.
 
 __Intune App SDK Xamarin component now supports MAM without enrollment__
-App developers can now use the Intune App SDK Xamarin component to enable MAM functionality without device enrollment in their Xamarin-based apps for Android and iOS/iPadOS. The Intune App SDK Xamarin component can be found [here](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+App developers can now use the Intune App SDK Xamarin component to enable MAM functionality without device enrollment in their Xamarin-based apps for Android and iOS/iPadOS. The Intune App SDK Xamarin component can be found [here](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam).
 
 ### Notices
 

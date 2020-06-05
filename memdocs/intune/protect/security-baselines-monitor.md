@@ -7,8 +7,8 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
-ms.topic: conceptual
+ms.date: 04/01/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -39,7 +39,7 @@ This article walks you through both monitoring options.
 
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. You can view these insights from the Overview pane of the security baseline in the Intune console.  It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
 
-To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
+To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
 
 The **Overview** pane provides two methods to monitor status:
 
@@ -114,7 +114,7 @@ Monitoring the profile gives you insight into the deployment state of your devic
 
 View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
 
-1. Sign in to the  sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the  sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to  **Devices** > **All devices** and select the device you want to view.
 
@@ -157,4 +157,8 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 
 ## Next steps
 
-[Monitor device profiles](../configuration/device-profile-monitor.md) and [see some common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+- [Learn about security baselines](security-baselines.md)
+- [Avoid conflicts](security-baselines.md#avoid-conflicts)
+- [Monitor device profiles](../configuration/device-profile-monitor.md) 
+- [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+- [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

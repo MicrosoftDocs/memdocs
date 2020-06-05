@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -58,7 +58,7 @@ After your device is enrolled, the Company Portal app will continue to make sure
 ### Setting notifications  
 If after enrollment your organization enforces a new security requirement, such as multi-factor authentication, the Company Portal app will notify you. You'll have the chance to adjust your settings so that you can continue to work from your device.  
 
-To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](https://docs.microsoft.com//user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
 ## Enroll your iOS device  
 
@@ -174,13 +174,13 @@ Pausing for more than a few minutes during enrollment might cause the app to clo
 
 8. On the **Sign in** screen, enter the password for your managed Apple ID. In most cases, these credentials will be the same ones you use to sign in to your work or school account, unless your organization provided you with a different set of credentials. 
 9. Tap **Sign in**.  
-10. A success message will appear on the screen briefly after the profile is installed. To verify that the profile is installed, go to the **Profiles & Device Management** settings. You should see the profile listed under **Mobile Device Management.**  
+10. A success message will appear on the screen briefly after the profile is installed. To verify that the profile is installed, go to the **Profiles & Device Management** settings. You should see the profile listed under **Mobile Device Management.**  
 
     ![Example screenshot of Settings app, Profiles & Device Management settings, showing the management profile.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Return to the Company Portal app. Company Portal will begin to sync and set up your device. Company Portal might prompt you to update additional device settings. If it does, tap **Continue**.    
 
-12. You'll know that setup is complete when all items in the list show a green checkmark. Tap **Done**.  
+12. You'll know that setup is complete when all items in the list show a green checkmark. Tap **Done**.  
 
 ## IT administrator support  
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). This article lists common errors, their causes, and steps to resolve them.  

@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -59,7 +59,7 @@ IIS logs include the same type of entries for all platforms.
 
      - See [The HTTP status code in IIS 7 and later versions](https://support.microsoft.com/help/943891) for information about less common error codes.
 
-   If the connection request isn’t logged at all, the contact from the device might be blocked on the network between the device and the NDES server.
+   If the connection request isn't logged at all, the contact from the device might be blocked on the network between the device and the NDES server.
 
 ## Review device logs for connections to NDES
 
@@ -141,7 +141,7 @@ The following sections can help with common connection issues from all device pl
 
 ### Status code 500
 
-Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn’t assigned to the IIS_IURS group on the NDES server. The status value of **500** appears at the end:
+Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IURS group on the NDES server. The status value of **500** appears at the end:
 
 ```
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
@@ -165,11 +165,11 @@ Connections that resemble the following example, with a status code of 500, indi
 
 Use the following steps to test the URL that is specified in the SCEP certificate profile.
 
-1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble *https://contoso.com/certsrv/mscep/msecp.dll*.
+1. In Intune, edit your SCEP certificate profile and copy the Server URL. The URL should resemble `https://contoso.com/certsrv/mscep/mscep.dll`.
 
 2. Open a web browser, and then browse to that SCEP server URL. The result should be: **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
-   If you don’t receive that error, select the link that resembles the error you see to view issue-specific guidance:
+   If you don't receive that error, select the link that resembles the error you see to view issue-specific guidance:
    - [I receive a general Network Device Enrollment Service message](#general-ndes-message)
    - [I receive "HTTP Error 503. The service is unavailable"](#http-error-503)
    - [I receive the "GatewayTimeout" error](#gatewaytimeout)
@@ -202,9 +202,9 @@ When you browse to the SCEP server URL, you receive the following error:
 
 ![HTTP Error 503. The service is unavailable](../protect/media/troubleshoot-scep-certificate-device-to-ndes/service-unavailable.png)
 
-This issue is usually because the **SCEP** application pool in IIS isn’t started. On the NDES server, open **IIS Manager** and go to **Application Pools**. Locate the **SCEP** application pool and confirm it’s started.
+This issue is usually because the **SCEP** application pool in IIS isn't started. On the NDES server, open **IIS Manager** and go to **Application Pools**. Locate the **SCEP** application pool and confirm it's started.
 
-If the SCEP application pool isn’t started, check the application event log on the server:
+If the SCEP application pool isn't started, check the application event log on the server:
 
 1. On the device, run **eventvwr.msc** to open **Event Viewer** and go to **Windows Logs** > **Application**.
 
@@ -247,13 +247,26 @@ If the SCEP application pool isn’t started, check the application event log on
 
   ![IIS permissions](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Cause 4**: The NDESPolicy module certificate has expired.
+
+  The CAPI2 log (see Cause 2's resolution) will show errors relating to the certificate referenced by 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' being outside of the certificate's validity period.
+
+  **Resolution**: Update the reference with the thumbprint of a valid certificate.
+  1. Identify a replacement certificate:
+     - Renew the existing certificate
+     - Select a different certificate with similar proprties (subject, EKU, key type and length, etc.)
+     - Enroll a new certificate
+  2. Export the `NDESPolicy` Registry key to back up the current values.
+  3. Replace the data of the `NDESCertThumbprint` Registry value with the thumbprint of the new certificate, removing all whitespace and converting the text to lowercase.
+  4. Restart the NDES IIS App Pools or execute `iisreset` from an elevated command prompt.
+
 #### GatewayTimeout
 
 When you browse to the SCEP server URL, you receive the following error:
 
 ![Gatewaytimeout error](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **Cause**: The **Microsoft AAD Application Proxy Connector** service isn’t started.
+- **Cause**: The **Microsoft AAD Application Proxy Connector** service isn't started.
 
   **Resolution**:  Run **services.msc**, and then make sure that the **Microsoft AAD Application Proxy Connector** service is running and **Startup Type** is set to **Automatic**.
 
@@ -289,7 +302,7 @@ You have Azure AD Application Proxy configured. When you browse to the SCEP serv
 
 `This page can't be displayed`
 
-- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is https://contoso.com/certsrv/mscep/mscep.dll.
+- **Cause**: This issue occurs when the SCEP external URL is incorrect in the Application Proxy configuration. An example of this URL is `https://contoso.com/certsrv/mscep/mscep.dll`.
 
   **Resolution**: Use the default domain of *yourtenant.msappproxy.net* for the SCEP external URL in the Application Proxy configuration.
 

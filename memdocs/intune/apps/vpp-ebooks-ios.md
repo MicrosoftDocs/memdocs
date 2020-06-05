@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -60,7 +60,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 
 ## To get and upload an Apple VPP token
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, click **Create**.
 5. On the **New VPP Token** pane, specify the following information:

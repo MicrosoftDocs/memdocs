@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 # Sync devices to get the latest policies and actions with Intune
 
 
-The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it. This feature can help you immediately validate and troubleshoot policies you’ve assigned, without waiting for the next scheduled check-in.
+The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it. This feature can help you immediately validate and troubleshoot policies you've assigned, without waiting for the next scheduled check-in.
 
 ## Supported platforms
 
@@ -43,7 +43,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 ## Sync a device
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 3. Select **Devices** > **All devices**.
 4. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 5. To confirm, select **Yes**.

@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
-ms.topic: conceptual
+ms.date: 04/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
 #ROBOTS: 
 #audience:
 
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,21 +31,28 @@ ms.collection: M365-identity-device-management
 
 # Enforce compliance on Macs managed with Jamf Pro
 
-When you [integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md), you can use Conditional Access policies to enforce compliance on your Mac devices with your organizational requirements.  This article will help you with the following tasks:  
+When you integrate Jamf Pro with Intune, you can use Conditional Access policies to enforce compliance on your Mac devices with your organizational requirements. This article will help you with the following tasks:  
 
 - Create Conditional Access policies.
 - Configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf.
 - Configure devices to register with Azure AD when the device user signs in to the Company Portal app they start from within the Jamf Self Service app. Device registration establishes an identity in Azure AD that allows the device to be evaluated by Conditional Access policies for access to company resources.  
  
 The procedures in this article require access to both the Intune and Jamf Pro consoles.
+Intune supports two methods to integrate Jamf Pro, which you configure separately from the procedures in this article:
+
+- Recommended: [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
+- [Manually configure integration of Jamf Pro with Intune](conditional-access-integrate-jamf.md)
 
 ## Set up device compliance policies in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the console and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
-3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. Jamf integration with Intune doesn’t support compliance policy that targets device groups.
+3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
+
+> [!NOTE]
+> Jamf integration with Intune only supports AAD user groups. Device compliance policies that are targeted to device groups will not apply.
 
 4. When you select **Save**, the policy deploys to the users.  
 
@@ -115,7 +122,7 @@ Should the connection test from the Jamf Pro console fail, review the Jamf confi
 
 ## Removing a Jamf-managed device from Intune
 
-To remove a Jamf-managed device, open the Microsoft Endpoint Manager Admin Center, and select **Devices** > **All devices**, select the device, and then select **Delete**.  Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
+To remove a Jamf-managed device, open the Microsoft Endpoint Manager admin center, and select **Devices** > **All devices**, select the device, and then select **Delete**.  Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
 
 Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). You can also file a support ticket with [Jamf support](https://www.jamf.com/support/) for additional help. 
 

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -38,15 +38,15 @@ Apple iOS/iPadOS supervised mode gives administrators more options when managing
 
 Intune supports supervised mode as part of the Apple [Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
-For a list of Apple controls that require supervision, see Apple’s [Payload settings reference](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
+For a list of Apple controls that require supervision, see Apple's [Payload settings reference](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
 
 ## Turn on supervised mode during enrollment
 
-In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
 
 ## Turn on supervised mode after enrollment
 
-After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can’t configure a device for Supervised mode in Intune after enrollment.
+After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can't configure a device for Supervised mode in Intune after enrollment.
 
 ## Identify a supervised device
 

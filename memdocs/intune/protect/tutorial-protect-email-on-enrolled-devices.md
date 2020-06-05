@@ -39,7 +39,7 @@ In this tutorial, you'll learn how to:
 > * Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
 > * Create an Azure Active Directory (Azure AD) Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
@@ -47,17 +47,17 @@ You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 
-- Office 365 Business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 Before you begin, create a test device profile for iOS devices by following the steps in [Quickstart: Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create the iOS device compliance policy
 
-Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we’ll create a device compliance policy for iOS devices. Compliance policies are platform-specific, so you need a separate compliance policy for each device platform you want to evaluate.
+Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for iOS devices. Compliance policies are platform-specific, so you need a separate compliance policy for each device platform you want to evaluate.
 
 1. In Intune, select **Devices** > **Compliance policies** > **Create policy**.
 
@@ -104,7 +104,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Create the Conditional Access policy
 
-Now we’ll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Azure AD portal or the Intune portal. Since we’re already in the Intune portal, we’ll create the policy here.
+Now we'll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Azure AD portal or the Intune portal. Since we're already in the Intune portal, we'll create the policy here.
 
 1. In Intune, select **Endpoint security** > **Conditional Access** > **New policy**.
 
@@ -166,7 +166,7 @@ Now we’ll create a Conditional Access policy that requires all device platform
 
 ## Try it out
 
-With the policies you’ve created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS/iPadOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You’ll be prompted to enroll the device and install the Outlook mobile app.
+With the policies you've created, any iOS device that attempts to sign in to Office 365 email will need to enroll in Intune and use the Outlook mobile app for iOS/iPadOS. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant. You'll be prompted to enroll the device and install the Outlook mobile app.
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 
@@ -181,7 +181,7 @@ With the policies you’ve created, any iOS device that attempts to sign in to O
 ## Clean up resources
 
 When the test policies are no longer needed, you can remove them.
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator.
 
 2. Select **Devices** > **Compliance policies**.
 

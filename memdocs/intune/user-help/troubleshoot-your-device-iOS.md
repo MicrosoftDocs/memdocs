@@ -7,8 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/02/2017
-ms.topic: article
+ms.date: 04/27/2020
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,9 +29,9 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Fix common issues with your iOS device
+# Fix common problems with your iOS device
 
-Sometimes issues can occur with your iOS device that may be able to be fixed through troubleshooting. Some common issues that we've seen that you can first try to fix yourself are listed below. For more complex problems, we recommend you reach out to your company support through their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Use the links in this article to find answers to common iOS enrollment questions or to troubleshoot iOS-related problems. If you have a question or need help with something that isn't listed here, contact your IT support person using the contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 - [I need to reconnect a compromised iOS device](how-to-reconnect-a-compromised-ios-device.md)
 - [I need to send errors to my company support](send-errors-to-your-it-admin-ios.md)
@@ -41,5 +41,5 @@ Sometimes issues can occur with your iOS device that may be able to be fixed thr
 - [How do I find the serial number on my device?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [I need to update my iOS device](you-need-to-update-your-ios-device.md)
 - [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
-- [I need to install a Mobile Threat Defense app on my iOS device](you-are-prompted-to-install-mtd-ios.md)
+- [I need to install a Mobile Threat Defense app on my iOS device](set-up-mobile-threat-defense.md)
 - [I need to resolve a threat that a Mobile Threat Defense app found on my iOS device](you-need-to-resolve-a-threat-found-by-mtd-ios.md)

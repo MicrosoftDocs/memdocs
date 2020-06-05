@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -78,7 +78,7 @@ Microsoft Store for Business apps are modern apps, purchased from the Microsoft 
 ### Categorize Microsoft Store for Business apps 
 To categorize Microsoft Store for Business apps: 
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**. 
 3. Select a Microsoft Store for Business app. Then select **Properties** > **App Information** > **Category**. 
 4. Select a category.
@@ -96,16 +96,18 @@ Depending on the app type, you can install the app on a Windows 10 device in one
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will function as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
 
-Apps can only be installed in the device context when supported by the device and the Intune app type. You can install the following app types in the device context and assign these apps to a device group:
+Apps can only be installed in the device context when supported by the device and the Intune app type. Device context installs are supported on Windows 10 desktops and Teams devices, such as the Surface Hub. They aren't supported on devices running Windows Holographic for Business, such as the Microsoft HoloLens.
+
+You can install the following app types in the device context and assign these apps to a device group:
 
 - Win32 apps
 - Offline licensed Microsoft Store for Business apps
 - LOB apps (MSI, APPX and MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 
-Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you’ve selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
+Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business apps (Offline apps) that you've selected to install in device context must be assigned to a device group. The installation fails if one of these apps is deployed in the user context. The following status and error appears in the admin console:
   - Status: Failed.
-  - Error: A user can’t be targeted with a device context install.
+  - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
 > When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).

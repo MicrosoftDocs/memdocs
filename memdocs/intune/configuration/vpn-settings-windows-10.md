@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,8 +29,6 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and Windows Holographic device settings to add VPN connections using Intune
 
-
-
 You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes commonly used settings and features when creating virtual private networks (VPNs). These VPN settings and features are used in device configuration profiles in Intune that are pushed or deployed to devices.
 
 As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a VPN vendor, enabling always on, using DNS, adding a proxy, and more.
@@ -50,11 +48,11 @@ Depending on the settings you choose, not all values may be configurable.
 
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 - **Servers**: Add one or more VPN servers that devices connect to. When you add a server, you enter the following information:
-  - **Description**: Enter a descriptive name for the server, such as **Contoso VPN server**
-  - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect to, such as **192.168.1.1** or **vpn.contoso.com**
+  - **Description**: Enter a descriptive name for the server, such as **Contoso VPN server**.
+  - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect to, such as **192.168.1.1** or **vpn.contoso.com**.
   - **Default server**: Enables this server as the default server that devices use to establish the connection. Set only one server as the default.
   - **Import**: Browse to a comma-separated file that includes a list of servers in the format: description, IP address or FQDN, Default server. Choose **OK** to import these servers into the **Servers** list.
-  - **Export**: Exports the list of servers to a comma-separated-values (csv) file
+  - **Export**: Exports the list of servers to a comma-separated-values (csv) file.
 
 - **Register IP addresses with internal DNS**: Select **Enable** to configure the Windows 10 VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
 
@@ -72,10 +70,10 @@ Depending on the settings you choose, not all values may be configurable.
   - **PPTP**
 
   When you choose a VPN connection type, you may also be asked for the following settings:  
-  - **Always On**: Choose **Enable** to automatically connect to the VPN connection when the following events happen: 
+  - **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
     - Users sign into their devices
     - The network on the device changes
-    - The screen on the device turns back on after being turned off 
+    - The screen on the device turns back on after being turned off
 
   - **Authentication method**: Select how you want users to authenticate to the VPN server. Using **certificates** provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
   - **Remember credentials at each logon**: Choose to cache the authentication credentials.
@@ -120,10 +118,11 @@ For more information about creating custom EAP XML, see [EAP configuration](http
 
   - **Associate a WIP with this connection**: Enter a **WIP domain for this connection**
   - **Associate apps with this connection**: You can **Restrict VPN connection to these apps**, and then add **Associated Apps**. The apps you enter automatically use the VPN connection. The type of app determines the app identifier. For a universal app, enter the package family name. For a desktop app, enter the file path of the app.
-  >[!IMPORTANT]
-  >We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
 
-- **Network traffic rules for this VPN connection**: Select which protocols, and which local & remote port and address ranges, are enabled for the VPN connection. If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled. After you create a rule, the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
+  > [!IMPORTANT]
+  > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
+
+- **Network traffic rules for this VPN connection**: Select the protocols, and the local & remote port and address ranges, are enabled for the VPN connection. If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled. After you create a rule, the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
 
 ## Conditional Access
 

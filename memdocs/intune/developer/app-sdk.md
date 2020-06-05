@@ -6,8 +6,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
-ms.topic: reference
+ms.date: 05/27/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
 ms.localizationpriority: medium
@@ -22,7 +22,7 @@ ms.collection: M365-identity-device-management
 ---
 
 # Microsoft Intune App SDK overview
-The Intune App SDK, available for both iOS and Android, enables your app to support Intune [app protection policies](../apps/app-protection-policy.md). When your app has app protection policies applied to it, it can be managed by Intune and is recognized by Intune as a managed app. The SDK strives to minimize the amount of code changes required from the app developer. You'll find that you can enable most of the SDK's features without changing your app’s behavior. For enhanced end-user and IT administrator experience, you can utilize the SDK's APIs to customize your app behavior to support features that require your app participation.
+The Intune App SDK, available for both iOS and Android, enables your app to support Intune [app protection policies](../apps/app-protection-policy.md). When your app has app protection policies applied to it, it can be managed by Intune and is recognized by Intune as a managed app. The SDK strives to minimize the amount of code changes required from the app developer. You'll find that you can enable most of the SDK's features without changing your app's behavior. For enhanced end-user and IT administrator experience, you can utilize the SDK's APIs to customize your app behavior to support features that require your app participation.
 
 Once you have enabled your app to support Intune app protection policies, IT administrators can deploy these policies to protect their corporate data within the app.
 
@@ -30,7 +30,7 @@ Once you have enabled your app to support Intune app protection policies, IT adm
 
 The following are examples of Intune app protection features that can be enabled with the SDK.
 
-### Control users’ ability to move corporate files
+### Control users' ability to move corporate files
 IT administrators can control where work or school data in the app can be moved. For instance, they can deploy a policy that disables the app from backing up corporate data to the cloud.
 
 ### Configure clipboard restrictions
@@ -40,7 +40,7 @@ IT administrators can configure the clipboard behavior in Intune-managed apps. F
 IT administrators can enforce a policy that ensures that data saved to the device by the app is encrypted.
 
 ### Remotely wipe corporate data
-IT administrators can remotely wipe corporate data from an Intune-managed app. This feature is identity-based and will only delete the files associated with the corporate identity of the end user. To do that, the feature requires the app’s participation. The app can specify the identity for which the wipe should occur based on user settings. In the absence of these specified user settings from the app, the default behavior is to wipe the application directory and notify the end user that access has been removed.
+IT administrators can remotely wipe corporate data from an Intune-managed app. This feature is identity-based and will only delete the files associated with the corporate identity of the end user. To do that, the feature requires the app's participation. The app can specify the identity for which the wipe should occur based on user settings. In the absence of these specified user settings from the app, the default behavior is to wipe the application directory and notify the end user that access has been removed.
 
 ### Enforce the use of a managed browser
 IT administrators can force web links in the app to be opened with the [Intune Managed Browser app](../apps/app-configuration-managed-browser.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
@@ -71,7 +71,7 @@ Many users with personal devices want to access corporate data without enrolling
 App protection without device enrollment allows the Microsoft Intune service to deploy app protection policy to an app directly, without relying on a device management channel to deploy the policy.
 
 ### On-demand application VPN connections with Citrix mVPN 
-You can manage devices and apps with a combination of Citrix XenMobile MDX and Microsoft Intune. This combination means that you can manage apps with Intune app protection policy while using Citrix’s mVPN technology. The integration with Citrix is available for the Intune App SDK for iOS and Android, and with the Intune App Wrapping Tool for iOS and Android (with the -citrix flag).
+You can manage devices and apps with a combination of Citrix XenMobile MDX and Microsoft Intune. This combination means that you can manage apps with Intune app protection policy while using Citrix's mVPN technology. The integration with Citrix is available for the Intune App SDK for iOS and Android, and with the Intune App Wrapping Tool for iOS and Android (with the -citrix flag).
  
 To learn more about Citrix MDX, see [About the MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [Citrix MDX app wrapper for iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html), and the [Citrix MDX app wrapper for Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
 

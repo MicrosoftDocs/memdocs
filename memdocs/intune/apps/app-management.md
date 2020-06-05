@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
-ms.topic: conceptual
+ms.date: 03/31/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -75,14 +75,14 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
 
 
 ## Get started
 
 You can find most app-related information in the **Apps** workload, which you can access by doing the following:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps**.
 
     ![The Apps workload pane](./media/app-management/apps-workload.png)
@@ -114,6 +114,11 @@ The top of the App workload navigation menu provide commonly used app details:
     - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](vpp-apps.md).
 - **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/help-desk-operators.md).
 
+### Try the interactive guide
+The [Manage and protect mobile and desktop applications with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage devices enrolled in Intune, enforce compliance with policies, and protect your organization's data.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+
 ## Additional information
 The following items within the console provide app related functionality:
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
@@ -122,7 +127,9 @@ The following items within the console provide app related functionality:
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
 - **Apple VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see [iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
 - **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
-- **Branding and customizing**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
+- **Customization**: Customize the Company Portal to give it your company branding. For more information, see [Company Portal configuration](company-portal-app.md).
+
+For more information about apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ## Next steps
 

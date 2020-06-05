@@ -26,6 +26,8 @@
   - name: App protection policies and work profiles (Android)
     href: android-deployment-scenarios-app-protection-work-profiles.md
     displayName: app-we; without; without enrollment
+  - name: Use Intune without Google Mobile Services
+    href: manage-without-gms.md      
   - name: MAM FAQ
     href: mam-faq.md
 - name: How-to guides
@@ -96,6 +98,8 @@
           href: apps-advanced-threat-protection-macos.md
       - name: PowerShell scripts
         href: intune-management-extension.md
+      - name: macOS shell scripts
+        href: macos-shell-scripts.md        
     - name: Assign apps
       items:
       - name: Assign apps to groups
@@ -141,12 +145,14 @@
           href: app-configuration-policies-outlook.md
         - name: Configure Google Chrome for Android
           href: apps-configure-chrome-android.md
+        - name: Configure a VPN for Android Enterprise
+          href: app-configuration-vpn-ae.md          
       - name: Volume-purchased apps and books
         items:
-        - name: Manage VPP apps and books
+        - name: Volume-purchased overview
           href: vpp-apps.md
           displayName: vpp; volume purchased
-        - name: iOS VPP apps
+        - name: Volume-purchased iOS apps
           href: vpp-apps-ios.md
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md
@@ -161,7 +167,7 @@
         - name: App protection policies overview
           href: app-protection-policy.md
           displayName: app; protection; policy
-        - name: Data protection framework using APP
+        - name: Data protection framework using app protection policies
           href: app-protection-framework.md
         - name: Create app protection policies
           items:
@@ -190,6 +196,8 @@
           href: windows-information-protection-policy-create.md
         - name: Manage data transfer between iOS apps
           href: data-transfer-between-apps-manage-ios.md
+      - name: Review app protection logs
+        href: app-protection-policy-settings-log.md          
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
@@ -202,6 +210,8 @@
         href: troubleshoot-mam.md
       - name: Review app protection logs
         href: app-protection-policy-settings-log.md
+      - name: Troubleshooting app protection policy deployment
+        href: troubleshoot-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Protect apps with Intune App SDK

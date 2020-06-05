@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -39,6 +39,8 @@ There are four types of Autopilot deployment:
 - [Autopilot for existing devices](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) enables you to easily deploy the latest version of Windows 10 to your existing devices
 - [User Driven Mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) for traditional users.
 
+This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and Hololens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
@@ -55,7 +57,7 @@ For more information, see the understanding powershell cmdlet.
 
 You can add Windows Autopilot devices by importing a CSV file with their information.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
     ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -77,7 +79,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 ## Create an Autopilot device group
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
 2. In the **Group** blade:
     1. For **Group type**, choose **Security**.
     2. Type a **Group name** and **Group description**.
@@ -94,7 +96,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 ## Create an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices. You can create up to 350 profiles per tenant.
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and Hololens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
     ![Screenshot of Basics page](./media/enrollment-autopilot/create-profile-basics.png)
@@ -143,7 +145,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 ## Edit an Autopilot deployment profile
 After you've created an Autopilot deployment profile, you can edit certain parts of the deployment profile.   
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
 2. Select the profile you would like to edit.
 3. Select **Properties** on the left to change the name or description of the deployment profile. Click **Save** after you make changes.
 5. Click **Settings** to make changes to the OOBE settings. Click **Save** after you make changes.
@@ -154,7 +156,7 @@ After you've created an Autopilot deployment profile, you can edit certain parts
 ## Edit Autopilot device attributes
 After you've uploaded an Autopilot device, you can edit certain attributes of the device.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
 2. Select the device you want to edit.
 3. In the pane on the right of the screen, you can edit the device name, group tag, or User Friendly Name (if you've assigned a user).
 4. Select **Save**.
@@ -166,11 +168,11 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.
 
-To see alerts for unassigned devices, in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
+To see alerts for unassigned devices, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.  
 
 ## Autopilot deployments report
 You can see details on each device deployed through Windows Autopilot.
-To see the report, go to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
+To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 The data is available for 30 days after deployment.
 
 This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. This means that any deployment that doesn't trigger a new Intune enrollment will not be picked up by this report. This includes any kind of reset that maintains enrollment and the user portion of Autopilot White glove.
@@ -184,7 +186,7 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
 
     ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
 
@@ -227,9 +229,9 @@ If you aren't interested in mobile device management, you can use Autopilot in o
 You can group Windows devices by a correlator ID when enrolling using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. The [Azure AD device attribute enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) is automatically set to equal "OfflineAutopilotprofile-\<correlator ID\>". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID by using the enrollmentprofileName attribute.
 
 >[!WARNING] 
-> Because the correlator ID is not pre-listed in Intune, the device may report any correlator ID they want. If the user creates a correlator ID matching an Autopilot or Apple DEP profile name, the device will be added to any dynamic Azure AD device group based off the enrollmentProfileName attribute. To avoid this conflict:
+> Because the correlator ID is not pre-listed in Intune, the device may report any correlator ID they want. If the user creates a correlator ID matching an Autopilot or Apple ADE profile name, the device will be added to any dynamic Azure AD device group based off the enrollmentProfileName attribute. To avoid this conflict:
 > - Always create dynamic group rules matching against the *entire* enrollmentProfileName value
-> - Never name Autopilot or Apple DEP profiles beginning with "OfflineAutopilotprofile-".
+> - Never name Autopilot or Apple ADE profiles beginning with "OfflineAutopilotprofile-".
 
 ## Next steps
 After you configure Windows Autopilot for registered Windows 10 devices, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)

@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ Use this article to create a default Windows Hello for Business policy that targ
 > [!IMPORTANT]
 > In Windows 10 desktop and mobile versions prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
-> - The **work PIN** was used to access Azure AD resources on user’s personal devices (BYOD).
+> - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
 > 
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.
@@ -56,7 +56,7 @@ Use this article to create a default Windows Hello for Business policy that targ
 
 ## Create a Windows Hello for Business policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices** >  **Enrollment** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
 

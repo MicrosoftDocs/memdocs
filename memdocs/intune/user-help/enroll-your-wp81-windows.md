@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/03/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -58,7 +58,7 @@ Enroll your device:
 1. On the device, open the **Microsoft Intune Company Portal** app.  
 
 
-2. Provide your credentials. You may be asked to accept your company’s Terms and Conditions, if applicable.  
+2. Provide your credentials. You may be asked to accept your company's Terms and Conditions, if applicable.  
 
 3. Swipe to **My Devices**.  
 

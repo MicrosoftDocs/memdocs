@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -50,7 +50,7 @@ Use App protection policies with the iOS **Open-in management** feature to prote
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
 Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account. The UPN configuration works with the app-protection policies you deploy from Intune. The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
 
-1. In the [Azure portal](https://portal.azure.com), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
 
 2. Deploy the apps and the email profile that you want managed through Intune or your third-party MDM solution using the following generalized steps. This experience is also covered by *Example 1*.
 
@@ -58,7 +58,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
-      Example: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Example: ['IntuneMAMUPN', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > In Intune, the App Configuration policy enrollment type must be set to **Managed Devices**.

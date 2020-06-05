@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/11/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -93,7 +93,7 @@ View a list of all apps installed on your device. The **Installed apps** page li
 * Name: The name of the app. Optional apps include a link to the **App details** page.
 * Assignment type: How the app is assigned and made available to you. 
 * Publisher: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
-* Date Published: The date that the app was made available to download. Publish date could show an app’s initial release or an app’s most recent update.
+* Date Published: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
 * Status: The current installation status of the app on your device. Apps can show as installing, installed, and install failed. Required apps could take up to 10 minutes to show an up-to-date status. See the note under [Install apps](#install-apps) for important details about installing a required app. 
 
 To get to this page, go to the navigation menu and select **Installed apps**.  

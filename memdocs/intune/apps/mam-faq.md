@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,9 +41,9 @@ MAM protects an organization's data within an application. With MAM without enro
 
 **What device configurations does MAM support?**<br></br>
 Intune MAM supports two configurations:
-- **Intune MDM + MAM**: IT administrators can only manage apps using MAM and app protection policies on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the Intune console in the Azure portal at https://portal.azure.com.
+- **Intune MDM + MAM**: IT administrators can only manage apps using MAM and app protection policies on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the Intune console in the Azure portal at [https://portal.azure.com](https://portal.azure.com). Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all.
+- **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all.
 
 
 ## App protection policies
@@ -57,6 +57,7 @@ See the [Android app protection policy settings](app-protection-policy-settings-
 **Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices? For example, if a user could be able to access their work resources from their own MAM-enabled machine, but also come to work and use an Intune MDM-managed device. Are there any caveats to this idea?**<br></br>
 If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to Target to all app types, you'd select No. Then do any of the following:
 - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
+-	Apply an equally strict MAM policy to Intune managed devices as to 3rd party managed devices.
 - Apply a MAM policy to unenrolled devices only.
 
 For more information, see [How to monitor app protection policies](app-protection-policies-monitor.md).
@@ -72,16 +73,16 @@ Any app that has been integrated with the [Intune App SDK](../developer/app-sdk.
 
 - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
-- The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the Intune console in the [Azure portal](https://portal.azure.com). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
+- The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 - The end user must sign into the app using their AAD account.
 
 **What if I want to enable an app with Intune App Protection but it is not using a supported app development platform?**
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, Xamarin.Forms, and Cordova platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
-**Does the Intune APP SDK support Microsoft Authentication Library (MSAL), or social accounts?**<br></br>
-The Intune APP SDK uses some advanced ADAL capabilities for both the 1st party and the 3rd party versions of the SDK. As such, MSAL does not work well with many of our core scenarios such as authentication into the Intune App Protection service and conditional launch. Given that the overall guidance from Microsoft's Identity team is to switch to MSAL for all of the Microsoft Office apps, the Intune SDK will eventually need to support it, but there are no plans today.
+**Does the Intune APP SDK support Microsoft Authentication Library (MSAL)?**<br></br>
+The Intune App SDK can use either the Azure Active Directory Authentication Library or the Microsoft Authentication Library for its authentication and conditional launch scenarios. It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 **What are the additional requirements to use the [Outlook mobile app](https://products.office.com/outlook)?**
 
@@ -94,7 +95,7 @@ The Intune APP SDK uses some advanced ADAL capabilities for both the 1st party a
 
 **What are the additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps?**
 
-- The end user must have a license for [Office 365 Business or Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
 
@@ -143,7 +144,7 @@ The Intune PIN works based on an inactivity-based timer (the value of 'Recheck t
 
 - **How does Intune protect the PIN against brute force attacks?**<br></br> As part of the app PIN policy, the IT administrator can set the maximum number of times a user can try to authenticate their PIN before locking the app. After the number of attempts has been met, the Intune App SDK can wipe the "corporate" data in the app.
   
-- **Why do I have to set a PIN twice on apps from same publisher?**<br></br> MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the Intune APP SDK for iOS/iPadOS. Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS/iPadOS v. 7.1.12. <br><br> In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS/iPadOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. <br><br> That being said, the two PINs (for each app) are not related in any way i.e. they must adhere to the app protection policy that’s applied to the app. As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may setup the same PIN twice. <br><br> This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
+- **Why do I have to set a PIN twice on apps from same publisher?**<br></br> MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the Intune APP SDK for iOS/iPadOS. Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS/iPadOS v. 7.1.12. <br><br> In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS/iPadOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. <br><br> That being said, the two PINs (for each app) are not related in any way i.e. they must adhere to the app protection policy that's applied to the app. As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may setup the same PIN twice. <br><br> This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
 
   >[!NOTE]
   > For example, if app A is built with a version prior to 7.1.12 and app B is built with a version greater than or equal to 7.1.12 from the same publisher, the end user will need to set up PINs separately for A and B if both are installed on an iOS/iPadOS device. <br><br> If an app C that has SDK version 7.1.9 is installed on the device, it will share the same PIN as app A. <br><br> An app D built with 7.1.14 will share the same PIN as app B. <br><br> If only apps A and C are installed on a device, then one PIN will need to be set. The same applies to if only apps B and D are installed on a device.
@@ -164,7 +165,7 @@ Intune can wipe app data in three different ways: full device wipe, selective wi
 
 - **What is selective wipe for MDM?**<br></br> See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
 
-- **What is selective wipe for MAM?**<br></br> Selective wipe for MAM simply removes company app data from an app. The request is initiated using the Intune Azure portal. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+- **What is selective wipe for MAM?**<br></br> Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
 - **How quickly does selective wipe for MAM happen?**<br></br> If the user is using the app when selective wipe is initiated, the Intune App SDK checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 
@@ -172,7 +173,7 @@ Intune can wipe app data in three different ways: full device wipe, selective wi
 Intune app protection depends on the identity of the user to be consistent between the application and the Intune App SDK. The only way to guarantee that is through modern authentication. There are scenarios in which apps may work with an on-prem configuration, but they are neither consistent nor guaranteed.
 
 **Is there a secure way to open web links from managed apps?**<br></br>
-Yes! The IT administrator can deploy and set app protection policy for the [Intune Managed Browser app](../apps/app-configuration-managed-browser.md), a web browser developed by Microsoft Intune that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using the Managed Browser app.
+Yes! The IT administrator can deploy and set app protection policy for the Microsoft Edge app. The IT administrator can require all web links in Intune-managed apps to be opened using the Microsoft Edge app.
 
 ## App experience on Android
 
@@ -180,7 +181,7 @@ Yes! The IT administrator can deploy and set app protection policy for the [Intu
 Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For MAM-WE, the end user just needs to have the Company Portal app installed on the device.
 
 **How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?**<br></br>
-Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence, then a dismissable warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access. 
+Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence, then a dismissible warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access. 
 
 When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
 
@@ -194,7 +195,7 @@ Intune leverages Google Play Protect SafetyNet APIs to add to our existing root 
 - Devices that fail basic integrity
 - Devices with an unlocked bootloader
 - Devices with a custom system image/ROM
-- Devices for which the manufacturer didn’t apply for, or pass, Google certification 
+- Devices for which the manufacturer didn't apply for, or pass, Google certification 
 - Devices with a system image built directly from the Android Open Source Program source files
 - Devices with a beta/developer preview system image
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add endpoint protection on macOS in Microsoft Intune - Azure | Microsoft Docs
-description: On macOS devices, use the gatekeeper to determine where apps can be installed, including the mac app store. Also enable or configure a firewall allow specific apps, blocks specifics apps, use stealth mode, and even block certain types of incoming connections using Microsoft Intune.
+title: Configure endpoint protection on macOS devices with Microsoft Intune | Microsoft Docs
+description: Use Intune to configure macOS devices use the built-in firewall to allow or block specific apps or to use stealth mode, to use Gatekeeper to determine where apps install, and to use FileVault disk encryption.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,107 +26,123 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# MacOS endpoint protection settings in Intune  
+# macOS endpoint protection settings in Intune
 
-This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](endpoint-protection-configure.md) in Intune.  
+This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](endpoint-protection-configure.md) in Intune.
 
-## Gatekeeper  
+## Before you begin
 
-- **Allow apps downloaded from these locations**  
-  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.  
+[Create a macOS endpoint protection profile](endpoint-protection-configure.md).
 
-  - **Not configured**  
-  - **Mac App Store**  
-  - **Mac App Store and identified developers**  
-  - **Anywhere**  
+## Firewall
 
-  **Default**: Not configured  
+Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.
 
-- **User can override Gatekeeper**  
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.  
- 
-  - **Not configured** - Users can Control-click to install apps.  
-  - **Block** - Prevents users from using Control-click to install apps.  
+- **Enable Firewall**
 
-  **Default**: Not configured  
+  Turn use of Firewall on macOS and then configure how incoming connections are handled in your environment.
 
-## Firewall  
+  - **Not configured** (*default*)
+  - **Yes**
 
-Use the firewall to control connections per-application, rather than per-port. Using per-application settings makes it easier to get the benefits of firewall protection. It also helps prevent undesirable apps from taking control of network ports that are open for legitimate apps.  
+- **Block all incoming connections**
 
-**General**
-- **Firewall**  
-  Enable Firewall to configure how incoming connections are handled in your environment.  
-  - **Not configured**  
-  - **Enable**  
+  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.
 
-  **Default**: Not configured  
+  - **Not configured** (*default*)
+  - **Yes**
 
-- **Incoming connections**  
-  Block all incoming connections except the connections required for basic Internet services, such as DHCP, Bonjour, and IPSec. This feature also blocks all sharing services, such as File Sharing and Screen Sharing. If you're using sharing services, then keep this setting as *Not configured*.  
-  - **Not configured**  
-  - **Block**  
+  When you set *Block all incoming connections* to *Not configured*, you can then configure which apps can or can't receive incoming connections.
 
-  **Default**: Not configured  
+  **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
 
-**Allow or block incoming connections for specific apps.**  
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-  - **Apps allowed**  
-    Select the apps that are explicitly allowed to receive incoming connections.  
+  **Apps blocked**: Configure a list of apps that have incoming connections blocked.
 
-  - **Apps blocked**  
-    Select the apps that should block incoming connections.  
+  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-  - **Stealth mode**  
-    To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.  
-    - **Not configured**  
-    - **Enable**  
+- **Enable stealth mode**
 
-    **Default**: Not configured  
+  To prevent the computer from responding to probing requests, enable stealth mode. The device continues to answer incoming requests for authorized apps. Unexpected requests, such as ICMP (ping), are ignored.
 
-## FileVault  
-For more information about Apple FileVault settings, see [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in the Apple developer content. 
+  - **Not configured** (*default*)
+  - **Yes**
 
-> [!IMPORTANT]  
-> As of macOS 10.15, FileVault configuration requires user approved MDM enrollment. 
+## Gatekeeper
 
-- **FileVault**  
-  You can *enable* Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later.  
-  - **Not configured**  
-  - **Enable**  
+- **Allow apps downloaded from these locations**
 
-  **Default**: Not configured  
+  Limit the apps a device can launch, depending on where the apps were downloaded from. The intent is to protect devices from malware, and allow apps from only the sources you trust.
 
-  - **Recovery key type**  
-    *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.  
+  - **Not configured** (*default*)
+  - **Mac App Store**
+  - **Mac App Store and identified developers**
+  - **Anywhere**
 
-    - **Location of personal recovery key** - Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their log in screen when prompted to enter their personal recovery key if a password is forgotten.  
+- **Do not allow user to override Gatekeeper**
 
-    - **Personal recovery key rotation** - Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.  
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
 
-- **Disable prompt at sign out**  
-   Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.  
-  - **Not configured**  
-  - **Disable** - Disable the prompt at sign-out.
+  - **Not configured** (*default*) - Users can Control-click to install apps.
+  - **Yes** - Prevents users from using Control-click to install apps.
 
-  **Default**: Not configured  
+## FileVault
 
-- **Number of times allowed to bypass**  
-  Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in. 
+For more information about Apple FileVault settings, see [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) in the Apple developer content.
 
-  - **Not configured** - Encryption on the device is required before the next sign-in is allowed.  
-  - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.  
-  - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.  
- 
-  **Default**: *Varies* - When the setting *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Disable**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+> [!IMPORTANT]
+> As of macOS 10.15, FileVault configuration requires user approved MDM enrollment.
 
-- **Hide recovery key**  
-  Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the iOS company portal app or from the company portal website. To view the key, from the app or website, go to device details and select *get recovery key*.
+- **Enable FileVault**  
 
-  - **Not configured** – The personal key is visible to the device user during encryption.
-  - **Yes** – The personal key is hidden from the device user during encryption. 
+  You can *enable* Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later.
 
-  **Default**: Not configured
+  - **Not configured** (*default*)
+  - **Yes**
 
-For more information about FileVault with Intune, see [FileVault recovery keys](encryption-monitor.md#filevault-recovery-keys).
+  When *Enable FileVault* is set to *Yes*, you can configure the following settings:
 
+  - **Recovery key type**
+  
+    *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.
+
+  - **Escrow location description of personal recovery key**
+  
+    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
+
+  - **Personal recovery key rotation**
+  
+    Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
+
+  - **Hide recovery key**  
+    Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the iOS company portal app or from the company portal website. To view the key, from the app or website, go to device details and select *get recovery key*.
+
+    - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
+    - **Yes** - The personal key is hidden from the device user during encryption.
+
+  - **Disable prompt at sign out**
+  
+    Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.
+
+    - **Not configured** (*default*)
+    - **Yes** - Disable the prompt at sign-out.
+
+  - **Number of times allowed to bypass**
+  
+    Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
+
+    - **Not configured** - Encryption on the device is required before the next sign-in is allowed.
+    - **0** - Require devices to encrypt the next time a user signs in to the device.
+    - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
+    - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
+
+    The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
+
+## Next steps
+
+[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
+
+You can also configure endpoint protection on [Windows 10 and newer devices](endpoint-protection-windows-10.md).

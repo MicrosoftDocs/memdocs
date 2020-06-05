@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/02/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -35,7 +35,7 @@ Starting in the new Azure portal, Conditional Access offers support for multiple
 
 ## Before you begin
 
-If you’re ready to move to the Azure portal, follow the steps in this topic to reassign the Conditional Access policies you previously created in the Intune classic portal:
+If you're ready to move to the Azure portal, follow the steps in this topic to reassign the Conditional Access policies you previously created in the Intune classic portal:
 
 - Gather the Conditional Access policies previously created, so you know what settings you need to reassign later.
 
@@ -90,7 +90,7 @@ The **Intune App Protection** blade in the Azure portal enables admins to set ap
     ![Image that compares user group UI between the Intune and Azure portals](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > The selection you make for the Azure portal should correspond to the selection you made for the Classic portal. For example, if you have all users selected in the Intune classic portal, select **All users** in the Azure portal. Additionally, if you’ve chosen the **Exempt groups** option in the Intune classic portal, also exclude those select groups in the Azure portal.
+    > The selection you make for the Azure portal should correspond to the selection you made for the Classic portal. For example, if you have all users selected in the Intune classic portal, select **All users** in the Azure portal. Additionally, if you've chosen the **Exempt groups** option in the Intune classic portal, also exclude those select groups in the Azure portal.
 
 5. After you choose your group, click **Select**, and then click **Done**.
 
@@ -158,7 +158,7 @@ If you have configured Exchange ActiveSync settings as part of an Exchange Onlin
     ![Image showing a user group UI comparison between the Azure and Intune portals](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > The selection you make for the Azure portal should correspond to the selection you made for the Azure portal. For example, if you have all users selected in the Intune classic portal, select **All users** in the Azure portal. Additionally, if you’ve chosen the **Exempt groups** option in the Intune classic portal, also exclude those select groups in the Azure portal.
+    > The selection you make for the Azure portal should correspond to the selection you made for the Azure portal. For example, if you have all users selected in the Intune classic portal, select **All users** in the Azure portal. Additionally, if you've chosen the **Exempt groups** option in the Intune classic portal, also exclude those select groups in the Azure portal.
 
 5. After you choose your group, click **Select**, and then click **Done**.
 
@@ -171,7 +171,7 @@ If you have configured Exchange ActiveSync settings as part of an Exchange Onlin
     > [!IMPORTANT] 
     > Conditional Access policies for EAS clients cannot include any other cloud app.
 
-8. On the **Conditions** blade, choose **Client apps**, and then choose the applicable client app. If you have chosen to block clients that aren’t supported by Intune, use the **Apply policy only to supported platforms** option.
+8. On the **Conditions** blade, choose **Client apps**, and then choose the applicable client app. If you have chosen to block clients that aren't supported by Intune, use the **Apply policy only to supported platforms** option.
 
     ![Image showing a client apps UI comparison between the Azure and Intune portals](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 

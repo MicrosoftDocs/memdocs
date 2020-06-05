@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -63,7 +63,7 @@ Default restrictions are automatically provided for both device type and device 
 
 ## Create a device type restriction
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device type restriction**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device type restriction**.
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Choose **Next** to go to the **Platform settings** page.
 4. Under **Platform**, choose **Allow** for the platforms that you want this restriction to allow.
@@ -87,27 +87,31 @@ Default restrictions are automatically provided for both device type and device 
 
 6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
-8. Choose **Next** to go to the **Assignments** page.
-9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+8. Choose **Next** to go to the **Scope tags** page.
+9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
+10. Choose **Next** to go to the **Assignments** page.
+11. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for choosing platform settings](./media/enrollment-restrictions-set/select-groups.png)
-10. Select **Next** to go to the **Review + create** page.
-11. Select **Create** to create the restriction.
-12. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+12. Select **Next** to go to the **Review + create** page.
+13. Select **Create** to create the restriction.
+14. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 
 ## Create a device limit restriction
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 3. Choose **Next** to go to the **Device limit** page.
 4. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Choose **Next** to go to the **Assignments** page.
-6. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+5. Choose **Next** to go to the **Scope tags** page.
+6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
+7. Choose **Next** to go to the **Assignments** page.
+8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. Select **Next** to go to the **Review + create** page.
-8. Select **Create** to create the restriction.
-9. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
+9. Select **Next** to go to the **Review + create** page.
+10. Select **Create** to create the restriction.
+11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).
 
 During BYOD enrollments, users see a notification that tells them when they've met their limit of enrolled devices. For example, on iOS:
 
@@ -130,7 +134,7 @@ During BYOD enrollments, users see a notification that tells them when they've m
 
 You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. Devices enrolled with [Intune PC agent](../fundamentals/manage-windows-pcs-with-microsoft-intune.md) can't be blocked with this feature.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
 3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.
 
@@ -147,7 +151,7 @@ The following methods qualify as being authorized as a Windows corporate enrollm
 - The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 - The device enrolls through [Windows Autopilot](enrollment-autopilot.md).
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
-- The device’s IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**. (Not supported for Windows Phone 8.1.)
+- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**. (Not supported for Windows Phone 8.1.)
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

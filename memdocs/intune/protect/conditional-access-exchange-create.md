@@ -8,8 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
-ms.topic: conceptual
+ms.date: 04/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -39,7 +39,7 @@ If you have an Exchange Online Dedicated environment and need to find out whethe
 
 Before you can configure Conditional Access, verify the following configurations exist:
 
-- Your Exchange version is **Exchange 2010 SP1 or later**. Exchange server Client Access Server (CAS) array is supported.
+- Your Exchange version is **Exchange 2010 SP3 or later**. Exchange server Client Access Server (CAS) array is supported.
 
 - You have installed and use the [Exchange ActiveSync on-premises Exchange connector](exchange-connector-install.md), which connects Intune to on-premises Exchange.
 
@@ -70,11 +70,14 @@ Before you can configure Conditional Access, verify the following configurations
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
+- **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
+
 - **EAS mail clients on Android work profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on Android work profile devices. For Conditional Access to work with Android work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app you can set up device-based Conditional Access.
+
 
 #### To set up Conditional Access for Android work profile devices
 
-  1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Deploy the Gmail or Nine Work app as **Required**.
 
@@ -101,7 +104,7 @@ The native **Mail** application on Windows 8.1 and later (when enrolled into MDM
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 
@@ -128,7 +131,7 @@ Before you can use the following procedure to set up Exchange on-premises access
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Edit Organization workflow for notifications](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
-   Modify the default email message that’s sent to users if their device isn't compliant and they want to access Exchange on-premises. The message template uses Markup language. You can also see the preview of how the message looks as you type
+   Modify the default email message that's sent to users if their device isn't compliant and they want to access Exchange on-premises. The message template uses Markup language. You can also see the preview of how the message looks as you type
 
    Select **Review + save**, and then **Save** to save your edits to complete configuration of Exchange on-premises access.
 
@@ -146,7 +149,7 @@ Before you can use the following procedure to set up Exchange on-premises access
 
      - **Block access** and **Quarantine** – All devices are immediately blocked from accessing Exchange on-premises initially. Devices that belong to users in the groups you configured as included in the previous procedure get access after the device enrolls in Intune and is evaluated as compliant.
 
-       Android devices that *do not* run Samsung Knox standard don’t support this setting and are always blocked.
+       Android devices that *do not* run Samsung Knox standard don't support this setting and are always blocked.
 
    - For **Device platform exceptions**, select **Add**, and then specify details as needed for your environment.
 

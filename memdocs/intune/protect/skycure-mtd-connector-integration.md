@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up Symantec integration with Microsoft Intune
+title: Set up Symantec Endpoint Protection Mobile integration with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up the Symantec Endpoint Protection Mobile solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -44,7 +44,7 @@ Complete the following steps to integrate the Symantec Endpoint Protection Mobil
 - The Azure AD account must be a global administrator account to perform the integration.
 ### Network Setup
 
-You can make sure your network is properly configured for integration with SEP Mobile setup by referring to the Symantec article [Configuring SEP Manager after installation](https://support.symantec.com/us/en/article.HOWTO80819.html).
+You can make sure your network is properly configured for integration with SEP Mobile setup by referring to the Symantec article [Configuring SEP Manager after installation](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html).
 
 ### Full integration vs. Read-only
 
@@ -111,7 +111,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 3. Choose **Properties**.
 
-4. Next to the **Directory ID**, choose the copy icon, and then paste it to a safe location. You’ll need this identifier in a later step.
+4. Next to the **Directory ID**, choose the copy icon, and then paste it to a safe location. You'll need this identifier in a later step.
 
     ![Image showing Directory ID in the Azure portal](./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png)
 

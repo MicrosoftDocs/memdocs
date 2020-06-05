@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 07/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -112,9 +112,11 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability or to support multiple Active Directory domains, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.
+The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.  Note that each connector must be able to create computer objects in any domain that you wish to support.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
+The Intune Connector requires the [same endpoints as Intune](../fundamentals/intune-endpoints.md).
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
 2. Follow the instructions to download the Connector.
 3. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 4. At the end of the setup, select **Configure**.
@@ -124,7 +126,7 @@ The Intune Connector for Active Directory must be installed on a computer that's
 7. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
-> After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
+> After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 
 ### Turn off IE Enhanced Security Configuration
 By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you are unable to sign in to the Intune Connector for Active Directory then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -135,7 +137,7 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 
 ## Create a device group
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
 1. In the **Group** pane, do the following:
 
@@ -190,7 +192,7 @@ After your Autopilot devices are enrolled, their names become the hostname of th
 ## Create and assign an Autopilot deployment profile
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 2. On the **Basics** page, type a **Name** and optional **Description**.
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices will not be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
 4. Select **Next**.
@@ -207,7 +209,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## (Optional) Turn on the enrollment status page
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 1. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
 1. In the **Show app and profile installation progress** box, select **Yes**.
 1. Configure the other options as needed.
@@ -215,7 +217,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## Create and assign a Domain Join profile
 
-1. In the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
 2. Enter the following properties:
    - **Name**: Enter a descriptive name for the new profile.
    - **Description**: Enter a description for the profile.
@@ -232,21 +234,14 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - OU=Mine,DC=contoso,DC=com
    
    Here are some examples that are not valid:
-   - CN=Computers,DC=contoso,DC=com  (you can’t specify a container, instead leave the value blank to use the default for the domain)
+   - CN=Computers,DC=contoso,DC=com  (you can't specify a container, instead leave the value blank to use the default for the domain)
    - OU=Mine  (you must specify the domain via the DC= attributes)
      
    > [!NOTE]
    > Don't use quotation marks around the value in **Organizational unit**.
 5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group)
-   - Deploying multiple Domain Join profiles
-   
-     a. Create a dynamic group that includes all your Autopilot devices with a specific Autopilot deployment profile, enter (device.enrollmentProfileName -eq "Autopilot Profile Name"). 
-     
-     b. Replace 'Autopilot Profile Name' with the display name of the profile created under [Create and assign an Autopilot deployment profile](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
-     
-     c. Create multiple Autopilot deployment profiles and assign that device to the profile specified in this dynamic group.
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join do not support variables such as %SERIAL% and only support prefixes for the computer name.

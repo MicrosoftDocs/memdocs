@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 ## Prerequisites for Windows devices bulk enrollment
 
-- Devices running Windows 10 Creator update (build 1703) or later
+- Devices running Windows 10 Creator update (build 1709) or later
 - [Windows automatic enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## Create a provisioning package
@@ -64,19 +64,21 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Click **Next** when **Bulk Token** is fetched successfully.
+8. In the **Use this account everywhere on this device** page, select **This app only**.
 
-9. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+9. Click **Next** when **Bulk Token** is fetched successfully.
 
-10. Optionally, you can password protect your provisioning package.  Click **Create**.
+10. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+
+11. Optionally, you can password protect your provisioning package.  Click **Create**.
     ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## Provision devices
 
 1. Access the provisioning package in the location specified in **Project folder** specified in the app.
 
-2. Choose how you’re going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
-   - Place the provisioning package on a USB drive, insert the USB drive into the device you’d like to bulk enroll, and apply it during initial setup
+2. Choose how you're going to apply the provisioning package to the device.  A provisioning package can be applied to a device one of the following ways:
+   - Place the provisioning package on a USB drive, insert the USB drive into the device you'd like to bulk enroll, and apply it during initial setup
    - Place the provisioning package on a network folder, and apply it after initial setup
 
    For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).

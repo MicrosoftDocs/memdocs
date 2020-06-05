@@ -8,8 +8,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,45 +33,71 @@ Using Microsoft Intune, you can add a property list file (.plist) for macOS devi
 
 This feature applies to:
 
-- macOS devices running 10.7 and newer
+- macOS 10.7 and newer
 
-Property list files typically include information about macOS applications. For more information, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
+Property list files include information about macOS applications. For more information, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-This article lists and describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add its .plist file.
+This article lists and describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add the app's .plist file.
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
-
-## Before you begin
-
-[Create the profile](device-profile-create.md).
 
 ## What you need to know
 
 - These settings aren't validated. Be sure to test your changes before assigning the profile to your devices.
-- If you’re not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured. Apple recommends removing non-manageable settings using Xcode before importing the file.
+- If you're not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured. Apple recommends removing non-manageable settings using Xcode before importing the file.
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
 
-## Preference file
+## Create the profile
 
-- **Preference domain name**: Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created. Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
-- **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
-- **File contents**: The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles** > **Create profile**.
+3. Enter the following properties:
 
-Be sure your file is formatted correctly. The file should only have key value pairs, and shouldn't be wrapped in `<dict>`, `<plist>`, or `<xml>` tags. For example, your property list file should be similar to the following file:
+    - **Platform**: Select **macOS**
+    - **Profile**: Select **Preference file**.
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
 
-Select **OK** > **Create** to save your changes. The profile is created and shown in the profiles list.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **macOS: Add preference file that configures Microsoft Defender ATP on devices**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+6. Select **Next**.
+
+7. In **Configuration settings**, configure your settings:
+
+    - **Preference domain name**: Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge`, or `com.microsoft.wdav`.
+
+      Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created.
+
+    - **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
+
+      The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
+
+    Be sure your file is formatted correctly. The file should only have key value pairs, and shouldn't be wrapped in `<dict>`, `<plist>`, or `<xml>` tags. For example, your property list file should be similar to the following file:
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 For more information on preference files for Microsoft Edge, see [Configure Microsoft Edge policy settings on macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

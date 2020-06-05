@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -37,7 +37,7 @@ Intune **discovered apps** is a list of detected apps on the Intune enrolled dev
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -47,7 +47,7 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.
@@ -58,7 +58,7 @@ The following list provides the app platform type, the apps that are monitored f
 
 | Platform | For personally-owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Only managed apps | Every 24 hours from device enrollment |
+| Windows 10 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
 | Windows 10 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows Phone 8 | Only managed apps | Only managed apps | Every 7 days from device enrollment |

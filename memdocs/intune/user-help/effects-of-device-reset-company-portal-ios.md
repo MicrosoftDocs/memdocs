@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -36,13 +36,13 @@ Resetting your iPhone or iPad through Company Portal might delete some apps and 
 
 If your organization manages your device, and you can access work and school emails, apps, and Wi-Fi:
 
-- Your device won’t appear in the Company Portal anymore.  
+- Your device won't appear in the Company Portal anymore.  
 
-- Your device will be reset to the manufacturer’s factory default settings. Your personal data, apps, and settings will be removed.
+- Your device will be reset to the manufacturer's factory default settings. Your personal data, apps, and settings will be removed.
 
 If your device is only set up to access work or school email:
 
-- Your device won’t appear in the Company Portal anymore.  
+- Your device won't appear in the Company Portal anymore.  
 
 - Your work or school email account will be deleted. Unsaved emails will be deleted.   
 

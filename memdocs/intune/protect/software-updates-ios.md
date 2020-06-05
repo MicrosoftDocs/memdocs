@@ -7,8 +7,8 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -31,14 +31,19 @@ ms.collection: M365-identity-device-management
 
 Software update policies let you force supervised iOS/iPadOS devices to automatically install OS updates. Supervised devices are those that enrolled using either Apple Business Manager or Apple School Manager. When configuring a policy to deploy updates, you can:
 
-- Choose to deploy the *latest update* that’s available, or choose to deploy a an older update by the update version number if you don't want to deploy the latest update. If you choose to deploy an older update, you must also set a Device Configuration policy to restrict visibility of software updates.
+- Choose to deploy the *latest update* that's available, or choose to deploy a an older update by the update version number if you don't want to deploy the latest update. If you choose to deploy an older update, you must also set a Device Configuration policy to restrict visibility of software updates.
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
 
 This feature applies to:
 
 - iOS 10.3 and later (supervised)
+- iPadOS 13.0 and later (supervised)
 
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check in within your schedule configuration. Although the update process does not typically involve any user interaction, if the device has a passcode the user must enter it in order to start a software update. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
+
+> [!NOTE]
+> If using [Autonomous Single App Mode (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behaviour may be undesirable.
+Consider testing to assess the impact of OS updates on the app you are running in ASAM.
 
 ## Configure the policy
 
@@ -59,7 +64,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - *Update at next check-in*: The update installs on the device the next time it checks in with Intune. This is the simplest option and has no additional configurations.
       - *Update during scheduled time*: You configure one or more windows of time during which the update will install upon check-in.
-      - *Update outside of scheduled time*: You configure one or more windows of time during which the updates won’t install upon check-in.
+      - *Update outside of scheduled time*: You configure one or more windows of time during which the updates won't install upon check-in.
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
@@ -69,14 +74,16 @@ By default, devices check in with Intune about every 8 hours. If an update is av
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. By using a start day and end day, overnight blocks are supported. Options include:
 
         - **Start day**: Choose the day on which the schedule window starts.
-        - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM will be the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM will be the start of a period of time that updates can’t install.
+        - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM will be the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM will be the start of a period of time that updates can't install.
         - **End day**: Choose the day on which the schedule window ends.
         - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM will be the time that updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM will be the start of a period of time that updates can install.
 
        If you do not configure times to start or end, the configuration results in no restriction and updates can install at any time.  
 
        > [!NOTE]
-       > To delay the visibility of software updates for a specific amount of time on your supervised iOS/iPadOS devices, configure those settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general). Software update policies override any device restrictions. When you set both a software update policy and restriction to delay visibility of software updates, the device forces a software update per the policy. The restriction applies so that users don't see the option to update the device themselves, and the update is pushed as defined by your iOS update policy.
+       > You can configure settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general) to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before its visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+       >
+       > When you use a device restriction to hide an update, review your software update policies to ensure they wont schedule the install of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
 
    After configuring *Update policy settings*, select **Next**.
 

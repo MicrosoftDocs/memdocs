@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -39,7 +39,7 @@ Complete the following steps to integrate the Pradeo Mobile Threat Defense solut
 ## Before you begin
 
 > [!NOTE]
-> The following steps are to be completed in the [Pradeo Security console](https://www.apps-security.com).
+> The following steps are to be completed in the [Pradeo Security console](https://pradeo-security.com/).
 
 Before starting the process of integrating Pradeo with Intune, make sure you have the following:
 
@@ -63,7 +63,7 @@ The Pradeo app authorization process follows:
 
 - Allow the Pradeo service to communicate information related to device health state back to Intune.
 
-- Pradeo syncs with Azure AD Enrollment Group membership to populate its device’s database.
+- Pradeo syncs with Azure AD Enrollment Group membership to populate its device's database.
 
 - Allow Pradeo admin console to use Azure AD Single Sign On (SSO).
 
@@ -71,7 +71,7 @@ The Pradeo app authorization process follows:
 
 ## To set up Pradeo integration
 
-1. Go to [Pradeo Security console](https://www.apps-security.com) and sign in with your credentials.
+1. Go to [Pradeo Security console](https://www.pradeo-security.com) and sign in with your credentials.
 
 2. Choose **Administration - Enterprise Mobility Management** from the menu.
 

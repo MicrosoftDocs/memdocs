@@ -8,8 +8,8 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/07/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,9 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-
-
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
@@ -60,9 +58,9 @@ This feature supports:
 
 [Certificates](../protect/certificates-configure.md) configure trusted, SCEP, and PKCS certificates that are assigned to devices. These certificates authenticate WiFi, VPN, and email profiles.
 
-This feature supports: 
+This feature supports:
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -76,7 +74,7 @@ This feature supports:
 
 This feature supports:
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -91,6 +89,15 @@ Use these settings to control how software updates are downloaded to devices in 
 This feature supports:
 
 - Windows 10 and later
+
+## Derived credential
+
+[Derived credentials](../protect/derived-credentials.md) are certificates on smart cards that can authenticate, sign, and encrypt. In Intune, you can create profiles with these credentials to use in apps, email profiles, connecting to VPN, S/MIME, and Wi-Fi.
+
+This feature supports:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## Device features
 
@@ -115,12 +122,20 @@ This feature supports:
 
 This feature supports:
 
-- Android
-- Android enterprise
+- Android device administrator
+- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 10 and later
 - Windows 10 Team
+
+## Domain join
+
+[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to hybrid Azure AD joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+
+This feature supports:
+
+- Windows 10 and later
 
 ## Edition upgrade
 
@@ -132,7 +147,7 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://education.microsoft.com/gettrained/win10takeatest). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -140,9 +155,9 @@ This feature supports:
 
 [Email settings](email-settings-configure.md) creates, assigns, and monitors Exchange ActiveSync email settings on the devices. Email profiles help with consistency, reduce support calls, and let end-users access company email on their personal devices, without any required setup on their part. 
 
-This feature supports: 
+This feature supports:
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -150,12 +165,13 @@ This feature supports:
 
 ## Endpoint protection
 
-[Endpoint protection settings for Windows 10](../protect/endpoint-protection-windows-10.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices.
+[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
 
 To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 
+- macOS
 - Windows 10 and later
 
 ## eSIM cellular - Public preview
@@ -168,7 +184,7 @@ This feature supports:
 
 ## Extensions
 
-[Kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs at the kernel-level on macOS devices. Configure these settings to trust all extensions from a specific developer or partner, or allow specific kernel extensions.
+[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
 
@@ -191,7 +207,15 @@ This feature supports:
 
 - Windows 10 and later
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
+
+## Microsoft Defender ATP
+
+[Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
+
+This feature supports:
+
+- Windows 10 and later
 
 ## OEMConfig
 
@@ -205,11 +229,18 @@ This feature supports:
 
 [PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md) uses the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
-
 This feature supports:
 
 - Windows 10 and later
 - Windows Holographic for Business
+
+## Preference file
+
+[Preference files](preference-file-settings-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
+
+This feature supports:
+
+- macOS
 
 ## Shared multi-user device
 
@@ -240,7 +271,7 @@ Virtual private networks (VPNs) give users secure remote access to your company 
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -254,19 +285,11 @@ This feature supports:
 
 This feature supports: 
 
-- Android
+- Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (import only)
-- Windows 10 and later
-
-## Windows Information Protection profile
-
-[Windows Information Protection](../protect/windows-information-protection-configure.md) helps protect against data leakage without interfering with the employee experience. It also helps protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees use at work. Using Windows Information Protection doesn't require changes to your environment or other apps.
-
-This feature supports:
-
 - Windows 10 and later
 
 ## Zebra Mobility Extensions (MX)
@@ -275,7 +298,7 @@ This feature supports:
 
 This feature supports:
 
-- Android (Mobility Extensions)
+- Android device administrator (Mobility Extensions)
 
 ## Manage and troubleshoot
 

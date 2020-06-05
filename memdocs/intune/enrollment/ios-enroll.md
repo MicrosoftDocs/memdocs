@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: conceptual
+ms.date: 04/23/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -39,9 +39,9 @@ As an Intune admin, you can set up enrollment for iOS/iPadOS and iPadOS devices 
 
 Before you can enable iOS/iPadOS devices, complete the following steps:
 
-- [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
+- [Make sure your devices are supported](../fundamentals/supported-devices-browsers.md).
 - [Set up Intune](../fundamentals/setup-steps.md) - These steps set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](../fundamentals/mdm-authority-set.md).
-- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOiOS/iPadOS and macOS devices.
+- [Get an Apple MDM Push certificate](apple-mdm-push-certificate-get.md) - Apple requires a certificate to enable management of iOS/iPadOS and macOS devices.
 
 ## User-owned iOS/iPadOS and iPadOS devices (BYOD)
 
@@ -50,29 +50,29 @@ You can let users enroll their personal devices for Intune management, know as "
 - Device Enrollment is what you may think of as typical BYOD enrollment. It provides admins with a wide range of management options.
 - User Enrollment is a more streamlined enrollment process that provides admins with a subset of device management options. This feature is currently in preview. 
 
-After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [privacy statement customization](../apps/company-portal-app.md#privacy-statement-customization).
+After you've completed the prerequisites and assigned user licenses, users can download the Intune Company Portal app from the App Store, and follow enrollment instructions in the app. You can customize the Company Portal privacy statement on iOS/iPadOS devices as explained in [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md#configuration).
 
 ## Company-owned iOS/iPadOS devices
 
 For organizations that buy devices for their users, Intune supports the following iOS/iPadOS company-owned device enrollment methods:
 
-- Apple's Device Enrollment Program (DEP)
+- Apple's Automated Device Enrollment (ADE)
 - Apple School Manager
 - Apple Configurator Setup Assistant enrollment
 - Apple Configurator direct enrollment
 
 You can also enroll company-owned iOS/iPadOS devices with a [device enrollment manager](device-enrollment-manager-enroll.md) account.
 
-## Device Enrollment Program
+## Automated Device Enrollment
 
-Organizations can purchase iOS/iPadOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Organizations can purchase iOS/iPadOS devices through Apple's Automated Device Enrollment (ADE). ADE lets you deploy an enrollment profile "over the air" to bring devices into management. For more information, see [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
 ## User enrollment
 User Enrollment gives admins a subset of management options compared to other enrollment methods. For more information, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md) and [Set up iOS/iPadOS and iPadOS User Enrollment](ios-user-enrollment.md).
 
 ## Apple School Manager
 
-Apple School Manager is a device purchase and enrollment program for schools. Like DEP, you can deploy a profile to enroll devices in management. Learn more about [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager is a device purchase and enrollment program for schools. Like ADE, you can deploy a profile to enroll devices in management. Learn more about [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## Apple Configurator
 
@@ -83,7 +83,7 @@ You can enroll iOS/iPadOS devices with Apple Configurator running on a Mac compu
 
 Learn more about [Apple Configurator enrollment](apple-configurator-enroll-ios.md).
 
-## Use the Company Portal on DEP-enrolled or Apple Configurator-enrolled devices
+## Use the Company Portal on ADE-enrolled or Apple Configurator-enrolled devices
 
 Devices configured with user affinity can install and run the Company Portal app to download apps and manage devices. After users receive their devices, they must complete a number of additional steps to complete the Setup Assistant and install the Company Portal app.
 

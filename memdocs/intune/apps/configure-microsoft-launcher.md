@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
-ms.topic: conceptual
+ms.date: 04/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -37,7 +37,7 @@ On Android Enterprise fully managed devices, Launcher allows enterprise IT admin
 
 ## How to configure the Microsoft Launcher app 
 
-Navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings. 
+Once the Microsoft Launcher application has been [added to Intune](../apps/apps-add.md), navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings. 
 
 ## Choosing a Configuration Settings Format 
 
@@ -50,6 +50,11 @@ There are two methods that you can use to define configuration settings for Micr
 If you add properties with **Configuration Designer**, you can automatically convert these properties to JSON by selecting **Enter JSON data** from the **Configuration settings format** dropdown list as shown below.
 
    ![Configuration settings format - Use configuration designer](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
+
+   > [!NOTE]
+   > Once properties are configured via the Configuration Designer, the JSON data will also be updated to only reflect these properties. To add additional configuration keys into the JSON Data, use the [JSON script example](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) to copy the necessary lines for each configuration key. 
+
+When editing previously created app configuration policies, if complex properties have been configured, the edit process will display the JSON Data editor. All previously configured settings will be preserved and you can switch to use the configuration designer to modify supported settings.
 
 ## Using Configuration Designer
 
@@ -68,6 +73,10 @@ The following table lists the Microsoft Launcher available configuration keys, v
 |    Set Device Wallpaper User Change   Allowed    |    Bool    |    True    |    Allows you to specify if the Set Device   Wallpaper setting can be changed by the end user.<ul><li>If set to **True**, the wallpaper in the policy will only be enforced for the initial deployment. Subsequently, the policy will not be enforced to respect any changes the user may have made.</li><li>If set to **False**, the wallpaper will be enforced on every sync.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Feed Enable    |    Boolean    |    True    |    Allows you to enable the launcher feed on the device when the user swipes to the right on the home screen.<ul><li>If set to **True**, the feed will be enabled.</li><li>If set to **False**, the feed will be disabled.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Feed Enable User Change Allowed    |    Boolean    |    True    |     Allows you to specify if the **Feed Enable** setting can be changed by the end user.<ul><li>If set to **True**, the feed will only be enforced for the initial deployment. Subsequently, the policy will not be enforced to respect any changes the user may have made.</li><li>If set to **False**, the feed will be enforced on every sync.</li></ul><br>JSON key name:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Search Bar Placement   |    String    |    Bottom    |  Allows you to specify the **placement of search bar** on the home screen. <ul><li>If set to **Bottom**, the search bar will be located on the bottom of the home screen.</li><li>If set to **Top**, the search bar will be located on the top of the home screen.</li><li>If set to **Hide**, the search bar will be removed from the home screen.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Search Bar Placement User Change Allowed   |    Bool    |    True    |  Allows you to specify if the **Search Bar Placement** setting can be changed by the end user. <ul><li>If set to **True**, the search bar placement will only be enforced for the initial deployment. Subsequently, the policy will not be enforced to respect any changes the user may have made.</li><li>If set to **False**, the placement of search bar will be enforced on every sync.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Dock Mode  |    String    |    Show    | Allows you to enable the dock on the device when the user swipes to the right on the home screen.<ul><li>If set to **Show**, the dock will be enabled.</li><li>If set to **Hide**, the dock will hide from the home screen, but the user can display it when it is needed.</li><li>If set to **Disabled**, the dock will be disabled.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Dock Mode User Change Allowed   |    String    |    True    |  Allows you to specify if the Dock Mode setting can be changed by the end user.<ul><li>If set to **True**, the dock mode setting will only be enforced for the initial deployment. Subsequently, the policy will not be enforced to respect any changes the user may have made.</li><li>If set to **False**, the dock mode setting will be enforced on every sync.</li></ul><br>JSON key name:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## Enter JSON Data
 
@@ -80,7 +89,9 @@ In addition to the list of configurable settings listed in the Configuration Des
 |    Configuration Key    |    Value type    |    Default value    |    Description     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Set Allow-Listed Applications<br>JSON key:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | See: [Set allow-listed applications](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Allows you to  define the set of apps visible on the home screen from amongst the apps   installed on the device. You can define the apps by entering the app package   name of the apps that you would like to make visible, for example, `com.android.settings` would make settings accessible on the home screen. The   apps that you allow-list in this section should already be installed on the   device in order to be visible on the home screen.<p>Properties:<ul><li>**Package:** The application package name</li><li>**Class:** The application activity, which is specific to a certain app page. It would use the default app page if this value is empty.</li></ul>      |
-|    Home Screen App Order<br>JSON key: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    See: [Home screen app order](configure-microsoft-launcher.md#home-screen-app-order)      |    Allows you to specify the app order on the home screen.<p>Properties:<br><ul><li>**Type:** The only type supported is `application`.</li><li>**Position:** The application icon slot on home screen. This starts from position 1 on the top left, and goes left to right, top to bottom.</li><li>**Package:** The application package name.</li><li>**Class:** The application activity, which is specific to a certain app page. The default app page will be used if this value is empty.</li></ul>    |
+|    Home Screen App Order<br>JSON key: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    See: [Home screen app order](configure-microsoft-launcher.md#home-screen-app-order)      |    Allows you to specify the app order on the home screen.<p>Properties:<br><ul><li>**Type:** If you want to specify positions of apps, tThe only type supported is `application`. If you want to specify positions of web links, the type is `weblink`.</li><li>**Position:** This specifies application icon slot on home screen. This starts from position 1 on the top left, and goes left to right, top to bottom.</li><li>**Package:** This is application package name used for specifying app order.</li><li>**Class:** The is an application activity, which is specific to a certain app page. The default app page will be used if this value is empty. This property is used for app.</li><li>**Label:** The is an application activity, which is specific to a certain app page. The default app page will be used if this value is empty. This property is used for app.</li><li>**Link:** The url to be launched after end user clicks the web link icon. This property is used for web link.</li></ul>    |
+|    Set Pinned Web Links<br>JSON key: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    See: [Set Pinned Web Links](configure-microsoft-launcher.md#set-pinned-web-link)      |    This key allows you to pin website to the home screen as quick launch icon. That way you can make sure that end user can have quick and easy access to essential websites. You can modify location of each web link icon in 'Home Screen App Order' configuration.<p>Properties:<br><ul><li>**•	Label:** The weblink title displayed on MS Launcher home screen.</li><li>**Link:** The url to be launched after end user clicks the web link icon.</li></ul>    |
+
 
 ### Set allow-listed applications
 
@@ -135,6 +146,57 @@ In addition to the list of configurable settings listed in the Configuration Des
     ]
 }
 ```
+
+### Set Pinned Web link
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### Microsoft Launcher configuration example
 
 The following is an example JSON script with all the available configuration keys included:
 
@@ -208,6 +270,23 @@ The following is an example JSON script with all the available configuration key
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -274,11 +353,32 @@ The following is an example JSON script with all the available configuration key
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## Next steps

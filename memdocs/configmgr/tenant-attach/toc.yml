@@ -1,0 +1,14 @@
+- name: Tenant attach documentation
+  href: index.yml
+- name: Deploy and use
+  items:
+  - name: Enable tenant attach
+    href: device-sync-actions.md
+  - name: Troubleshoot device actions
+    href: technical-reference.md
+- name: CMPivot for tenant attached devices (preview)
+  items:
+  - name: CMPivot overview
+    href: cmpivot-overview-attached.md
+  - name: CMPivot sample scripts
+    href: cmpivot-samples-attached.md

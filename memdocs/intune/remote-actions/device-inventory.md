@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
-ms.topic: conceptual
+ms.date: 03/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -38,28 +38,34 @@ This article shows you how to view all your devices, and their properties in the
 
 ## View the device details
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a bring-your-own-device (BYOD) device, check in time, and more. You can do the following on the device:
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device:
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
       - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Remote lock](device-remote-lock.md)
-      - [Synch](device-sync.md)
+      - [Sync](device-sync.md)
       - [Reset passcode](device-passcode-reset.md)
       - [Restart](device-restart.md) (Windows only)
       - [Fresh Start](device-fresh-start.md) (Windows only)
       - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
-       - [Rename device](device-rename.md)
-      - Start a remote assistance session
+      - Update Windows Defender security intelligence
+      - [BitLocker key rotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Rename device](device-rename.md)
+      - [New Remote Assistance Session](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
+   - **App configuration** 
+   - **Endpoint security configuration**
+   - **Recovery keys** shows available BitLocker keys found for the device
+   - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device. 
 
 ## Hardware device details
 Depending on the carrier used by the devices, not all details might be collected

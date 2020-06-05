@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,7 +35,7 @@ The following Intune Data Warehouse collections provides the properties, descrip
 The **appRevision** entity lists all the versions of apps.
 
 |          Property          |                                      Description                                      |                Example               |
-|:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
 | AppKey                     | Unique identifier of the App.                                                         | 123                                  |
 | ApplicationId              | Unique identifier of the App -   similar to AppKey, but this key is a natural.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revision                   | The version as mentioned by admin   during uploading of the binary.                   | 2                                    |
@@ -56,7 +56,7 @@ The **appRevision** entity lists all the versions of apps.
 The **appType** entity lists the installation source of an app.
 
 |   Property  |        Description        |
-|:-----------:|:-------------------------:|
+|-------------|---------------------------|
 | AppTypeID   | ID for the type           |
 | AppTypeKey  | Surrogate key for the key |
 | AppTypeName | App type                  |
@@ -64,14 +64,14 @@ The **appType** entity lists the installation source of an app.
 ### Example
 
 | AppTypeID |                Name               |                     Description                     |
-|:---------:|:---------------------------------:|:---------------------------------------------------:|
+|-----------|-----------------------------------|-----------------------------------------------------|
 | 0         | Android   store app               | An   Android store app.                             |
 | 1         | Android   LOB app                 | An   Android line-of-business app.                  |
 | 2         | Managed   Android store app (MAM) | An   Android store app that has management enabled. |
 | 3         | iOS   store app                   | An   iOS store app.                                 |
 | 4         | iOS   LOB app                     | An   iOS line-of-business app.                      |
 | 5         | Managed   iOS store app (MAM)     | An   iOSstore app that is management enabled.       |
-| 6         | O365   Pro Plus Suite             | The   Office 365 Pro Plus Suite for Windows 10.     |
+| 6         | O365   Pro Plus Suite             | The   Microsoft 365 Apps for Windows 10.     |
 | 7         | Web   app                         | A   web app.                                        |
 | 8         | Windows   Phone 8.1 store app     | A   Windows phone 8.1 store app.                    |
 | 9         | Windows   store app               | A   Windows store app.                              |
@@ -83,7 +83,7 @@ The **appType** entity lists the installation source of an app.
 The following table summarizes the assignment status of compliance policies to devices. It lists the count of devices found in each compliance state.
 
 |    Property   |                                                                                      Description                                                                                     |  Example |
-|:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey       | Date   key when the summary was created for the compliance policy.                                                                                                                   | 20161204 |
 | Unknown       | Number   of devices that are offline or failed to communicate with Intune or Azure AD   for other reasons.                                                                           | 5        |
 | NotApplicable | Number   of devices where device compliance policies targeted by the admin are not   applicable.                                                                                     | 201      |
@@ -96,7 +96,7 @@ The following table summarizes the assignment status of compliance policies to d
 The following table summarizes the assignment status of compliance policies to devices on a per policy and a per policy type basis. It lists the count of devices found in each compliance state for each assigned compliance policy.
 
 |      Property     |                                                                                      Description                                                                                     |  Example |
-|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey           | Date   key when the summary was created for the compliance policy.                                                                                                                   | 20161219 |
 | PolicyKey         | Key   for the compliance policy for which the summary was created.                                                                                                                   | 10178    |
 | PolicyPlatformKey | Key   for the platform type of the compliance policy for which the summary was   created.                                                                                            | 5        |
@@ -109,7 +109,7 @@ The following table summarizes the assignment status of compliance policies to d
 ## complianceStates
 
 |      Property      |                       Description                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 | complianceStatus   | Compliance status of devices with   mdmStatusKey       |
 | complianceStateKey | Compliance key to match device and   compliance status |
 | complianceStateID  | The ID to match this compliance   state                |
@@ -117,7 +117,7 @@ The following table summarizes the assignment status of compliance policies to d
 ### Example
 
 |  complianceStatus  |                       Description                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 |    Unknown         |    Unknown.                                                                        |
 |    Compliant       |    Compliant.                                                                      |
 |    Noncompliant    |       Device is non-compliant and is blocked from corporate resources.             |
@@ -130,7 +130,7 @@ The following table summarizes the assignment status of compliance policies to d
 The **date** entity represents dates that are referenced across multiple data warehouse entities.
 
 |     Property    |                       Description                      |    Example    |
-|:---------------:|:------------------------------------------------------:|:-------------:|
+|-----------------|--------------------------------------------------------|---------------|
 | DateKey         | Unique identifier for this date in the data warehouse. | 20160703      |
 | FullDate        | This date represented in full Date/Time format.        | 7/3/2016 0:00 |
 | DayOfWeek       | Day of week                                            | 1             |
@@ -153,7 +153,7 @@ The **date** entity represents dates that are referenced across multiple data wa
 ## deviceCategories
 
 |      Property      |                                    Description                                   |                Example               |
-|:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
+|--------------------|----------------------------------------------------------------------------------|--------------------------------------|
 | deviceCategoryID   | Unique identifier for the device category.                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | Unique identifier of the device category in the data   warehouse - surrogate key | 1                                    |
 | deviceCategoryName | Display name for the device category.                                            | Smartphones                          |
@@ -162,7 +162,7 @@ The **date** entity represents dates that are referenced across multiple data wa
 The **DeviceConfigurationProfileDeviceActivity** entity lists the number of devices in the succeeded, pending, failed, or error state per day. The number reflects the Device configuration profiles assigned to the entity. For example, if a device is in the succeeded state for all its assigned policies, it increments the succeeded counter up one for that day. If a device has two profiles assigned to it, one in the succeeded state and another in an error state, the entity increments the Succeeded counter and place the device in the error state. The entity lists how many devices are in which state on a given day over the last 30 days.
 
 |  Property |                                          Description                                          |  Example |
-|:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
+|-----------|-----------------------------------------------------------------------------------------------|----------|
 | DateKey   | Date Key when the Device Configuration Profile check-in   was recorded in the data warehouse. | 20160703 |
 | Pending   | Number of unique Devices in pending state.                                                    | 123      |
 | Succeeded | Number of unique Devices in success state.                                                    | 12       |
@@ -183,7 +183,7 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 ## devicePropertyHistories
 
 |          Property          |                                                                                      Description                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DateKey                    | Reference to date table indicating the day.                                                                                                                                          |
 | DeviceKey                  | Unique identifier of the device in the data warehouse -   surrogate key. This is a reference to the Device table that contains the   Intune device ID.                               |
 | DeviceName                 | Name of the device on platforms that allow naming a   device. On other platforms, Intune creates a name from other properties. This   attribute cannot be available for all devices. |
@@ -195,11 +195,13 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | JailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | DeviceCategoryKey          | Key of device category attribute for this device.                                                                                                                                    |
+
+
 ## deviceRegistrationStates
 The **DeviceRegistrationState** entity represents the registration type referenced by other data warehouse collections. 
 
 |           Property          |                                     Description                                     |
-|:---------------------------:|:-----------------------------------------------------------------------------------:|
+|-----------------------------|-------------------------------------------------------------------------------------|
 | deviceRegistrationStateID   | Unique identifier for registration state                                            |
 | deviceRegistrationStateKey  | Unique identifier of the registration state in the data   warehouse - surrogate key |
 | deviceRegistrationStateName | Registration state                                                                  |
@@ -216,7 +218,7 @@ The **DeviceRegistrationState** entity represents the registration type referenc
 The **device** entity lists all enrolled devices under management and their corresponding properties.
 
 |          Property          |                                                                                       Description                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DeviceKey                  | Unique   identifier of the device in the data warehouse - surrogate key.                                                                                                               |
 | DeviceId                   | Unique   identifier of the device.                                                                                                                                                     |
 | DeviceName                 | Name   of the device on platforms that allow naming a device. On other platforms,   Intune creates a name from other properties. This attribute cannot be   available for all devices. |
@@ -244,8 +246,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | AndroidSecurityPatchLevel  | Android security patch level                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Device supervised status                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Free Storage in Bytes.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Total Storage in Bytes.                                                                                                                                                                |
+| FreeStorageSpaceInBytes    | Free Storage in bytes.                                                                                                                                                                 |
 | EncryptionState            | Encryption state on the   device.                                                                                                                                                      |
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
@@ -258,7 +259,7 @@ The **device** entity lists all enrolled devices under management and their corr
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.
 
 |    Property    |                                  Description                                 |
-|:--------------:|:----------------------------------------------------------------------------:|
+|----------------|------------------------------------------------------------------------------|
 | DeviceTypeID   | Unique   identifier of the device type                                       |
 | DeviceTypeKey  | Unique   identifier of the device type in the data warehouse - surrogate key |
 | DeviceTypeName | Device   type                                                                |
@@ -266,7 +267,7 @@ The **deviceType** entity represents the device type referenced by other data wa
 ### Example
 
 | deviceTypeID |        Name       |                      Description                      |
-|:------------:|:-----------------:|:-----------------------------------------------------:|
+|--------------|-------------------|-------------------------------------------------------|
 | -1           | Not   Available   | The   device type is unavailable.                     |
 | 0            | Desktop           | Windows   Desktop device                              |
 | 1            | Windows           | Windows   device                                      |
@@ -295,7 +296,7 @@ The **deviceType** entity represents the device type referenced by other data wa
 The **deviceEnrollmentType** entity indicates how a device was enrolled. The enrollment type captures the method of enrollment. Examples list the different enrollment types and what they mean.
 
 |         Property         |                                    Description                                    |
-|:------------------------:|:---------------------------------------------------------------------------------:|
+|--------------------------|-----------------------------------------------------------------------------------|
 | deviceEnrollmentTypeID   | Unique   identifier of the enrollment type.                                       |
 | deviceEnrollmentTypeKey  | Unique   identifier of the enrollment type in the data warehouse - surrogate key. |
 | deviceEnrollmentTypeName | Enrollment   type name.                                                           |
@@ -303,7 +304,7 @@ The **deviceEnrollmentType** entity indicates how a device was enrolled. The enr
 ### Example
 
 | enrollmentTypeID |                Name                |                                        Description                                       |
-|:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
+|------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Unknown                            | Enrollment   type was not collected                                                      |
 | 1                | UserEnrollment                     | User driven enrollment through   BYOD channel.                                           |
 | 2                | DeviceEnrollmentManager            | User enrollment with a device   enrollment manager account.                              |
@@ -407,7 +408,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 The **intuneManagementExtension** lists the **intuneManagementExtension** health on each Windows 10 device per day. The data is retained for the last 60 days.
 
 |       Property      |                          Description                          | Example |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | DateKey             | Unique identifier of the Date.                                | 123     |
 | TenantKey           | Unique identifier of the Tenant.                              | 456     |
 | DeviceKey           | Unique identifier of the Device.                              | 789     |
@@ -418,7 +419,7 @@ The **intuneManagementExtension** lists the **intuneManagementExtension** health
 The **IntuneManagementExtensionHealthState** lists all possible health states of the **IntuneManagementExtension**.
 
 |      Property     |                   Description                  | Example |
-|:-----------------:|:----------------------------------------------:|:-------:|
+|-------------------|------------------------------------------------|---------|
 | ExtensionStateKey | Unique   identifier of health state.           | 2       |
 | ExtensionState    | Health   state of a IntuneManagementExtension. | Healthy |
 
@@ -426,7 +427,7 @@ The **IntuneManagementExtensionHealthState** lists all possible health states of
 The **IntuneManagementExtensionVersion** entity lists all the versions used by **IntuneManagementExtension**.
 
 |       Property      |                          Description                          | Example |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | ExtensionVersionKey | Unique identifier of the IntuneManagementExtension   version. | 1       |
 | ExtensionVersion    | The 4 digit version number.                                   | 1.0.2.0 |
 
@@ -513,7 +514,7 @@ The **MamPlatform** entity lists platform names and types on which a Mobile Appl
 The **managementAgentType** entity represents the agents used to manage a device.
 
 |         Property        |                                       Description                                       |
-|:-----------------------:|:---------------------------------------------------------------------------------------:|
+|-------------------------|-----------------------------------------------------------------------------------------|
 | ManagementAgentTypeID   | Unique identifier of the management agent type.                                         |
 | ManagementAgentTypeKey  | Unique identifier of the management agent type in the data   warehouse - surrogate key. |
 | ManagementAgentTypeName | Indicates what kind of agent is used to manage the device.                              |
@@ -521,7 +522,7 @@ The **managementAgentType** entity represents the agents used to manage a device
 ### Example
 
 | ManagementAgentTypeID |                Name               |                                  Description                                 |
-|:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
+|-----------------------|-----------------------------------|------------------------------------------------------------------------------|
 | 1                     | EAS                               | The   device is managed through Exchange Active Sync                         |
 | 2                     | MDM                               | The   device is managed using an MDM agent                                   |
 | 3                     | EasMdm                            | The   device is managed by both Exchange Active Sync and an MDM agent        |
@@ -538,7 +539,7 @@ The **managementAgentType** entity represents the agents used to manage a device
 The **ManagementState** entity provides details on the state of the device. Detail can be useful in the cases where remote actions are applied, the device is jailbroken, or rooted.
 
 |       Property      |                                     Description                                    |
-|:-------------------:|:----------------------------------------------------------------------------------:|
+|---------------------|------------------------------------------------------------------------------------|
 | managementStateID   | Unique   identifier of the management state.                                       |
 | managementStateKey  | Unique   identifier of the management state in the data warehouse - surrogate key. |
 | managementStateName | Indicates   the state of the remote action applied to this device.                 |
@@ -546,7 +547,7 @@ The **ManagementState** entity provides details on the state of the device. Deta
 ### Example
 
 | managementStateID |      Name      |                                                   Description                                                   |
-|:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
+|-------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | 0                 | Managed        | Managed   with no pending remote actions.                                                                       |
 | 1                 | RetirePending  | There   is a retire command pending for the device.                                                             |
 | 2                 | RetireFailed   | The   retire command failed on the device.                                                                      |
@@ -564,7 +565,7 @@ The **ManagementState** entity provides details on the state of the device. Deta
 The MobileAppInstallState entity represents the install state for a mobile application after it has been assigned to a group containing devices, users or both.
 
 |       Property      |                        Description                       |
-|:-------------------:|:--------------------------------------------------------:|
+|---------------------|----------------------------------------------------------|
 | AppInstallStateKey  | The unique ID of the app install state for your account. |
 | AppInstallState     | Enum value of the app install state.                     |
 | AppInstallStateName | Name of the app install state.                           |
@@ -573,7 +574,7 @@ The MobileAppInstallState entity represents the install state for a mobile appli
 Represents a mobile app install status for a given target device type using Mobile Application Management through Microsoft Intune.
 
 |      Property      |                                                          Description                                                          |
-|:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | DateKey            | Key of the date when the app install status was recorded.                                                                     |
 | AppKey             | Key of the mobile app used to identify an instance of   AppRevision.                                                          |
 | DeviceTypeKey      | Key of the Device Type associated with the Mobile   Application.                                                              |
@@ -585,7 +586,7 @@ Represents a mobile app install status for a given target device type using Mobi
 The **ownerType** entity indicates whether a device is corporate, personally owned, or unknown.
 
 |    Property   |                                                                                     Description                                                                                    |           Example          |
-|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | ownerTypeID   | Unique identifier of the owner type.                                                                                                                                               |                            |
 | ownerTypeKey  | Unique identifier of the owner type in the data warehouse   - surrogate key.                                                                                                       |                            |
 | ownerTypeName | Represents the owner type of the devices:  Corporate  -   Device is enterprise owned.  Personal -   Device is personally owned (BYOD).   Unknown  -   No information on this device. | Corporate   Personal Unknown |
@@ -597,7 +598,7 @@ The **ownerType** entity indicates whether a device is corporate, personally own
 The **Policy** entity lists device configuration profiles, app configuration profiles, and compliance policies. You can assign the policies with Mobile Device Management (MDM) to a group in your enterprise.
 
 |          Property          |                                                                       Description                                                                      |                Example               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | PolicyKey                  | Unique Key to represent the policy in the data warehouse.                                                                                              | 123                                  |
 | PolicyId                   | Unique identifier of the Policy in the data warehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName                 | Name of the Policy.                                                                                                                                    | "Windows 10 Baseline"                |
@@ -611,7 +612,7 @@ The **Policy** entity lists device configuration profiles, app configuration pro
 The following table lists the number of devices in the succeeded, pending, failed, or error state per day. The number reflects the data per Policy Type profiles. For example, if a device is in the succeeded state for all its assigned policies, it increments the succeeded counter up one for that day. If a device has two profiles assigned to it, one in the succeeded state and another in an error state, the entity increments the Succeeded counter and place the device in the error state. The **policyDeviceActivity** entity lists how many devices are in which state on a given day over the last 30 days.
 
 |  Property |                                           Description                                           |        Example        |
-|:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
+|-----------|-------------------------------------------------------------------------------------------------|-----------------------|
 | DateKey   | Date   Key when the Device Configuration Profile check-in was recorded in the data   warehouse. | 20160703              |
 | Pending   | Number   of unique Devices in pending state.                                                    | 123                   |
 | Succeeded | Number   of unique Devices in success state.                                                    | 12                    |
@@ -622,7 +623,7 @@ The following table lists the number of devices in the succeeded, pending, faile
 ## policyPlatformTypes
 
 |        Property        |                      Description                      |     Example    |
-|:----------------------:|:-----------------------------------------------------:|:--------------:|
+|------------------------|-------------------------------------------------------|----------------|
 | PolicyPlatformTypeKey  | The unique key for the policy   platform type.        | 20170519       |
 | PolicyPlatformTypeId   | The unique identifier for the   policy platform type. | 1              |
 | PolicyPlatformTypeName | The name for the policy platform   type.              | AndroidForWork |
@@ -631,7 +632,7 @@ The following table lists the number of devices in the succeeded, pending, faile
 The **PolicyTypeActivity** entity lists the cumulative number of devices in the succeeded, pending, failed, or error state. It lists these states with respect to a device configuration profile, app configuration profile, or compliance policy per day.
 
 |    Property   |                                          Description                                          |           Example           |
-|:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
+|---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | DateKey       | Date Key when the device Configuration profile check-in   was recorded in the data warehouse. | 20160703                    |
 | PolicyKey     | Policy Key, can be joined with Policy to get the   policyName.                                | Windows 10 baseline         |
 | PolicyTypeKey | Type of Policy Key, can be joined with Policy Type to get   the policy type name.             | Windows10 Compliance Policy |
@@ -644,7 +645,7 @@ The **PolicyTypeActivity** entity lists the cumulative number of devices in the 
 The **PolicyType** entity lists types of device configuration profiles, app configuration profiles, and Compliance policies. You can assign the policies with Mobile Device Management (MDM) to a group in your enterprise.
 
 |    Property    |                       Description                      |            Example            |
-|:--------------:|:------------------------------------------------------:|:-----------------------------:|
+|----------------|--------------------------------------------------------|-------------------------------|
 | PolicyTypeId   | Unique identifier of the policy in the source system.  | 123                           |
 | PolicyTypeKey  | Unique identifier of the policy in the data warehouse. | 1                             |
 | PolicyTypeName | Name of the policy type.                               | Windows 10 Compliance policy. |
@@ -653,7 +654,7 @@ The **PolicyType** entity lists types of device configuration profiles, app conf
 The following table lists the number of users in the succeeded, pending, failed, or error state per day. The number reflects the data per Policy Type profiles. For example, if a user is in the succeeded state for all their assigned policies, it moves up the succeeded counter by one for that day. If a user has two profiles assigned to them, one in the succeeded state and the other is in an error state, the user in the error state is counted. The **PolicyUserActivity** entity lists how many users are in which state on a given day over the last 30 days.
 
 |  Property |                                          Description                                          |       Example       |
-|:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
+|-----------|-----------------------------------------------------------------------------------------------|---------------------|
 | DateKey   | Date Key when the Device Configuration Profile check-in   was recorded in the data warehouse. | 20160703            |
 | Pending   | Number of unique Devices in pending state.                                                    | 123                 |
 | Succeeded | Number of unique Devices in success state.                                                    | 12                  |
@@ -681,7 +682,7 @@ A **termsAndConditions** entity represents the metadata and contents of a given 
 The **UserDeviceAssociation** entity contains user device associations in your organization.
 
 |        Name        |                                             Description                                            |     Example     |
-|:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
+|--------------------|----------------------------------------------------------------------------------------------------|-----------------|
 | UserKey            | Unique identifier of the user in the data warehouse.   (Surrogate key).                            | 123             |
 | DeviceKey          | Unique identifier of the device in the data warehouse.                                             | 123             |
 | CreatedDateTimeUTC | Date and time when the user device association was   created. Uses UTC format.                     | 11/23/2016 0:00 |
@@ -694,7 +695,7 @@ The **user** entity lists all the Azure Active Directory (Azure AD) users with a
 The **user** entity collection contains user data. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data from the prior month. You could create a report that would show the duration of the user's historic presence in your data.
 
 |          Property          |                                                                                                           Description                                                                                                          |                Example               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | UserKey                    | Unique identifier of the user in the data warehouse -   surrogate key.                                                                                                                                                         | 123                                  |
 | UserId                     | Unique identifier of the user - similar to UserKey, but is   a natural key.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Email address of the user.                                                                                                                                                                                                     | John@constoso.com                    |
@@ -719,7 +720,7 @@ A **userTermsAndConditionsAcceptance** entity represents the acceptance status o
 The **vppProgramType** entity lists possible VPP program types for an app.
 
 |      Property      |          Description         |
-|:------------------:|:----------------------------:|
+|--------------------|------------------------------|
 | VppProgramTypeID   | ID   for the type.           |
 | VppProgramTypeKey  | Surrogate   key for the key. |
 | VppProgramTypeName | VPP   Program type.          |
@@ -727,7 +728,7 @@ The **vppProgramType** entity lists possible VPP program types for an app.
 ### Example
 
 |             VppProgramID             |         Name        | Description                |
-|:------------------------------------:|:-------------------:|----------------------------|
+|--------------------------------------|---------------------|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Microsoft's   VPP program. |
 | 00000000-0000-0000-0000-000000000000 | Not   Yet Available | Default   value, No VPP.   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Apple's   VPP program.     |

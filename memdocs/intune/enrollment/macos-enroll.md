@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/16/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -55,7 +55,7 @@ You can let users enroll their own personal devices into Intune management. This
 - going to the [Company Portal website](https://portal.manage.microsoft.com) or
 - downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos).
+You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
 
 For information about other end-user tasks, see these articles:
 
@@ -64,7 +64,7 @@ For information about other end-user tasks, see these articles:
 
 ## Company-owned macOS devices
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
-- [Apple's Device Enrollment Program (DEP)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through Apple's Device Enrollment Program (DEP). DEP lets you deploy an enrollment profile "over the air" to bring devices into management.
+- [Apple's Automated Device Enrollment (ADE)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through ADE. ADE lets you deploy an enrollment profile "over the air" to bring devices into management.
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): You can use a DEM account to enroll up to 1,000 devices.
 
 ## Block macOS enrollment
@@ -87,7 +87,7 @@ User Approved MDM enrollment is a type of macOS enrollment that you can use to m
 During the BYOD enrollment process, the user will be asked to manually approve the Apple management profile. Instructions are provided in the Company Portal app for macOS. Although approval of the management profile is not required to complete enrollment, Intune recommends user approved enrollments. If the user does not approve the profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve**.    
 
 ### Find out if a device is User Approved
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices**> choose the device > **Hardware**.
 3. Check the **User approved enrollment** field.
 

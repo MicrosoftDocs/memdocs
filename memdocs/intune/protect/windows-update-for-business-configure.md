@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
-ms.topic: conceptual
+ms.date: 03/31/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -51,7 +51,7 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 - Windows 10 PCs must run the following Windows 10 versions:
   - **Windows 10 update rings**: version 1607 or later
-  - **Windows 10 feature updates**: version 1703 or later
+  - **Windows 10 feature updates**: version 1709 or later
 
 - Windows Update supports the following Windows 10 editions:
   - Windows 10
@@ -82,7 +82,7 @@ Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You
 
 ### Create and assign update rings
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create**.
 
@@ -214,7 +214,7 @@ When a device receives a Windows 10 feature updates policy:
 
 The following prerequisites must be met to use Windows 10 feature updates in Intune.
 
-- Devices must be enrolled in Intune MDM and Azure AD joined or Azure AD registered.
+- Devices must be enrolled in Intune MDM and be Hybrid AD joined, Azure AD joined, or Azure AD registered.
 - To use the Feature Updates policy with Intune, devices must have telemetry turned on, with a minimum setting of [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetry is configured under *Reporting and Telemetry* as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md).
   
   Devices that receive Feature Updates policy and that have telemetry set to *Not configured*, which means it's off, might install a later version of Windows than defined in the Feature Update policy. The prerequisite to require telemetry is under review as this feature moves towards general availability.
@@ -229,7 +229,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 ### Create and assign Windows 10 feature updates
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Windows 10 Feature updates** > **Create**.
 

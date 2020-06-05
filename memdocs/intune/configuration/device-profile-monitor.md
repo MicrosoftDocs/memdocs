@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -90,7 +90,7 @@ Now that you know the conflicting setting, and the policies that include that se
 > [!WARNING]
 > Monitoring DFCI profiles is currently being created. While DFCI is in public preview, monitoring data may be missing or incomplete.
 
-DFCI profiles are reported on a per-setting basis, just like other device configuration profiles. Depending on the manufacturer’s support of DFCI, some settings may not apply.
+DFCI profiles are reported on a per-setting basis, just like other device configuration profiles. Depending on the manufacturer's support of DFCI, some settings may not apply.
 
 With your DFCI profile settings, you may see the following states:
 
@@ -108,7 +108,7 @@ With your DFCI profile settings, you may see the following states:
   - UEFI doesn't allow DFCI to disable a setting, and the profile setting is **Disabled**.
   - The device lacks the hardware to disable the feature, and the profile setting is **Disabled**.
   - The device doesn't have the latest DFCI firmware version.
-  - DFCI was disabled before being enrolled in Intune using a local “opt-out” control in the UEFI menu.
+  - DFCI was disabled before being enrolled in Intune using a local "opt-out" control in the UEFI menu.
   - The device was enrolled to Intune outside of Autopilot enrollment.
   - The device wasn't registered to Autopilot by a Microsoft CSP, or registered directly by the OEM.
 

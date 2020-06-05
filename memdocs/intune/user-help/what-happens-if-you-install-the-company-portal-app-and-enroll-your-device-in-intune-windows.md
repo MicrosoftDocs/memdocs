@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,7 +37,7 @@ When you install the Company Portal app and then use it to enroll a Windows or W
 ## What happens to all Windows devices after enrollment
 Enrolling your Windows or Windows Phone device in Intune lets you:
 
-- Access the company’s network, and your email and work files.
+- Access the company's network, and your email and work files.
 
 - Get company apps from the Company Portal website. (__Note__: for Windows 7 and Windows Vista, you can only get company apps from the Company Portal website.)
 
@@ -47,9 +47,9 @@ Enrolling your Windows or Windows Phone device in Intune lets you:
 
 When you enroll your device, you are giving your company support permission to do things like:
 
-- Reset your device back to the manufacturer’s default settings. This is helpful if the device is lost or stolen.
+- Reset your device back to the manufacturer's default settings. This is helpful if the device is lost or stolen.
 
-- Remove only company-related files and business apps. *Your personal data and settings aren’t removed.*
+- Remove only company-related files and business apps. *Your personal data and settings aren't removed.*
 
 - Your company support can see the software installed on the device, including software you have personally installed.
 
@@ -67,7 +67,7 @@ When you enroll your device, you are giving your company support permission to d
 
 - Intune Endpoint Protection might be installed on your computer. This software checks for viruses and malware.
 
-- Your company support can collect or delete data from your computer’s hard drive.
+- Your company support can collect or delete data from your computer's hard drive.
 
 - Your company support can install apps and updates on your computer.
 

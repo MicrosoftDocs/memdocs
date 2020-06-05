@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/08/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,7 +37,7 @@ This section describes the tasks and information specific to the Company Portal 
 ## How to get Company Portal
 Company Portal is available in website version and also as an app download. To [access the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980), sign in with your work or school credentials.  
 
-See [Sign in to the Company Portal](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal) for detailed steps and screenshots.
+See [Sign in to the Company Portal](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) for detailed steps and screenshots.
 
 ## Supported versions
 

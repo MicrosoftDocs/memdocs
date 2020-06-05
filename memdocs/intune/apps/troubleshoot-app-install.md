@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,7 +38,7 @@ On Microsoft Intune MDM-managed devices, sometimes app installations can fail. W
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshoot + support**.
 3. Click **Select user** to select a user to troubleshoot. The **Select users** pane will be displayed.
 4. Select a user by typing the name or email address. Click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane. 
@@ -111,12 +111,24 @@ There are specific requirements that must be followed to collect log files:
 - Stored logs are encrypted to protect any personal identifiable information contained in the logs​.
 - While opening support tickets for Win32 app failures, attach the related failure logs using the steps provided above.
 
+## App types supported on ARM64 devices
+
+App types that are supported on ARM64 devices include the following:
+- Web apps that do not require a managed browser to open. 
+- Microsoft Store for Business apps or Windows Universal LOB apps (`.appx`) with any of the following combination of `TargetDeviceFamily` and  `ProcessorArchitectures` elements:
+  - `TargetDeviceFamily` includes Desktop apps, Universal apps and Windows8x apps. Windows8x apps apply only as Online Microsoft Store for Business apps.
+  - `ProcessorArchitecture` includes x86 apps, ARM apps, ARM64 apps, and neutral apps.
+- Windows Store apps
+- Mobile MSI LOB apps
+- Win32 apps with the requirement rule of 32-bit.
+- Windows Office click-to-run apps if 32-bit or x86 architecture is selected.
+
 ## Troubleshooting apps from the Microsoft Store
 
 The information in the topic [Troubleshooting packaging, deployment, and query of Microsoft Store apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) helps you troubleshoot common problems you might encounter when installing apps from the Microsoft Store, whether by using Intune, or by any other means.
 
 ## App troubleshooting resources
-- [Deploying Visio and Project as part of your Office Pro Plus Deployment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
+- [Deploying Visio and Project as part of your Microsoft 365 Apps Deployment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)
 - [Take Action to Ensure MSfB Apps deployed through Intune install on Windows 10 1903](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Take-Action-to-Ensure-MSfB-Apps-deployed-through/ba-p/658864)
 - [Troubleshooting MSI app deployments in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-MSI-App-deployments-in-Microsoft/ba-p/359125)
 - [Best practices for software distribution to Intune classic Windows PC agent](https://support.microsoft.com/en-us/help/2583929/best-practices-for-intune-software-distribution-to-windows-pc)

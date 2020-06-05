@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
-ms.topic: conceptual
+ms.date: 04/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -52,7 +52,7 @@ App configuration policies in Microsoft Intune supply settings to Managed Google
 8. Click **Add** to display the **Add permissions** pane.
 9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**. For more information about permissions, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md).
-11. In the dropdown box, select the **Configuration settings format**. Select one of the following methods to add configuration information:
+11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
     - **Enter JSON data**<br><br>
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
@@ -108,15 +108,18 @@ You can choose the following options if you choose variable as the value type:
 
 ### Allow only configured organization accounts in multi-identity apps 
 
-For Android devices, use the following key/value pairs:
+As the Microsoft Intune administrator, you can control which user accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs:
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Values** | <ul><li>One or more <code>;</code> delimited UPNs.</li><li>Only account(s) allowed are the managed user account(s) defined by this key.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul> |
 
    > [!NOTE]
-   > You must use Outlook for Android 2.2.222 and later, Word, Excel, PowerPoint for Android 16.0.9327.1000 and later or OneDrive for Android 5.28 and later when allowing only configured organization accounts with multi-identity.<p></p>
-   > As the Microsoft Intune administrator, you can control which user accounts are added to Microsoft Office applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts.<p></p>
+   > The following apps process the above app configuration and only allow organization accounts:
+   > - Edge for Android (42.0.4.4048 and later)
+   > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
+   > - OneDrive for Android (5.28 and later)
+   > - Outlook for Android (2.2.222 and later)
 
 ## Enter JSON data
 

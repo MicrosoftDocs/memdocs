@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -61,13 +61,13 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 ## How to create a policy set
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Policy Sets** > **Policy sets** > **Create**.
 3. On the **Basics** page, add the following values:
     - **Policy set name** - Provide a name for this policy set.
     - **Description** - Optionally, provide a description for the policy set.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Click **Next: Application management**.<br>
    On the **Application management** page you can optionally [add apps](../apps/apps-add.md), [app configuration policies](../apps/app-configuration-policies-overview.md), and [app protection policies](../apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../apps/app-management.md).
@@ -93,7 +93,7 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Office 365 ProPlus Suite (Windows 10)
+  - Microsoft 365 Apps (Windows 10)
   - Web link
   - Built-in iOS/iPadOS app
   - Built-in Android app
@@ -108,7 +108,7 @@ Policy sets, new to 1910, have the following known issues.
 
 - MAM policy types that support policy sets include the following: 
   - MAM WIP( Windows) MDM targeted managed app protection 
-  - MAM iiOS/iPadOSOS targeted managed app protection
+  - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
@@ -125,6 +125,7 @@ Policy sets, new to 1910, have the following known issues.
     If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
 
 - MAM does not support deployment to **All Users** and **All Devices** virtual groups for any policy types.
+- The Device Configuration Profile of type "Administrative Templates" cannot be selected as part of a policy set.
 
 ## Next steps
 

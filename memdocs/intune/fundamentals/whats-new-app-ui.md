@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020 
+ms.date: 05/26/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,10 +35,52 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Alert students and employees to app and enrollment changes.
 * Update your organization's documentation or helpdesk procedures.  
 
-If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/user-help/).  
+If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## Week of May 18, 2020  
+### Update to icons in Company Portal app for iOS/iPadOS and macOS <!--6057697 -->  
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System.
+
+|Updated for iOS/iPadOS|Previously for iOS/iPadOS|   
+|---|---|   
+|![Image of Company Portal for iOS/iPadOS, highlighting updated icons in bottom menu.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Image of Company Portal for iOS, highlighting the former icons.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Updated for macOS|  
+|---|
+|![Image of Company Portal for macOS, Devices tab, highlighting updated icons.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
+
+
+## Week of May 4, 2020  
+### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
+We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. 
+
+![Example image of Company Portal, Devices tab prompt to open badged version of Google Play.](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Users will also see a new **Get Apps** link in the Company Portal drawer on the left. 
+
+![Example image Company Portal left-hand drawer, highlighting Get apps menu item.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+To make way for these new and improved experiences, the **APPS** tab shown in the following image has been removed.  
+
+![Example image of the now removed Company Portal, Apps tab.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
+## Week of March 2, 2020   
+### Improved sign-in experience in Company Portal for Android   
+We've updated the layout of several sign-in screens in the Company Portal app for Android to make the experience more modern, simple, and clean for users. To see all Company Portal for Android enrollment instructions, go to [Enroll your Android device](../user-help/enroll-device-android-company-portal.md) or [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).   
+
+
+|Updated|Previous|   
+|---|---|   
+|![Example image of new Company Portal sign in screen, sign in button.](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Example image of previous Company Portal sign in page, showing busier design.](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Example image of new sign-in progress screen, showing one progress bar.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Example image of previous sign-in progress screen, showing a busier design.](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## Week of February 3, 2020
 
 ### Screen removed from Company Portal, Android work profile enrollment <!--6103987 -->
@@ -145,7 +187,7 @@ The Company Portal for iOS enrollment screens and steps have been updated to ali
 * Open the Settings app to install the management profile on their device.  
 * Return to the Company Portal app to complete enrollment.  
 
-For updated enrollment steps and screens, see [Enroll iOS device in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).  
+For updated enrollment steps and screens, see [Enroll iOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
 
 ### User experience update for the Company Portal app for iOS <!-- 2536024 -->
 The home page of the Company Portal app for iOS devices has been redesigned. With this change, the home page will better follow iOS UI patterns, and also provide improved discoverability for apps and ebooks.  
@@ -169,7 +211,7 @@ As the Microsoft Intune admin, you can upload a custom brand image which will be
 ## Week of August 27, 2018  
 
 ### New user experience update for the Company Portal website <!--2000968 -->  
-We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website) has been updated to reflect these changes.   
+We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) has been updated to reflect these changes.   
 
 Updates you'll see include:  
 
@@ -471,7 +513,7 @@ The device can still be enrolled into full management by tapping on the **action
 
 ### Improvements to app syncing with Windows 10 Creators Update <!--676505-->
 
-The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1703). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
+The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
 
 ![An image of the Windows 10 Company Portal app, where the download of Microsoft Word is in a pending state from the Company Portal's app store.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
@@ -611,6 +653,6 @@ These are the plans for ways we will be improving the user experience by updatin
 
 
 ## See also
-* [Microsoft Intune Blog](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Cloud Platform roadmap](https://www.microsoft.com/cloud-platform/roadmap)
 * [What's new in Intune](whats-new.md)

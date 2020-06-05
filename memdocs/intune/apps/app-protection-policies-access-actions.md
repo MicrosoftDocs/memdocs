@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
-ms.topic: conceptual
+ms.date: 04/01/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -33,11 +33,11 @@ ms.collection: M365-identity-device-management
 
 Using Intune app protection policies, you can configure settings to block end users from accessing a corporate app or account. These settings target data relocation and access requirements set by your organization for things like jail-broken devices and minimum OS versions.
  
-You can explicitly choose to wipe your company’s corporate data from the end user’s device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
+You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
 
 ## Create an app protection policy using conditional launch actions
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection Policies**.
 3. Click **Create policy** and select the platform of the device for your policy. 
 4. Click **Configure required settings** to see the list of settings available to be configured for the policy. 
@@ -63,7 +63,7 @@ For iOS/iPadOS, you will be able to configure actions for the following settings
 - Device model(s)
 - Max allowed device threat level
 
-To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier under the Device Type column in [HockeyApp's support documentation](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) or this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
+To use the **Device model(s)** setting, input a semi-colon separated list of iOS/iPadOS model identifiers. These values are not case-sensitive. Besides within Intune Reporting for the 'Device model(s)' input, you can find an iOS/iPadOS model identifier in this [3rd party GitHub repository](https://gist.github.com/adamawolf/3048717).<br>
 Example input: *iPhone5,2;iPhone5,3*
 
 On end-user devices, the Intune client would take action based on a simple matching of device model strings specified in Intune for Application Protection Policies. Matching depends entirely on what the device reports. You (the IT administrator) are encouraged to ensure that the intended behavior occurs by testing this setting based on a variety of device manufacturers and models, and targeted to a small user group. The default value is **Not configured**.<br>
@@ -113,7 +113,7 @@ To configure a setting, select a setting from the dropdown under the **Setting**
 
 The following list provides the common list of actions:
 - **Block access** – Block the end user from accessing the corporate app.
-- **Wipe data** – Wipe the corporate data from the end user’s device.
+- **Wipe data** – Wipe the corporate data from the end user's device.
 - **Warn** – Provide dialog to end user as a warning message.
 
 In some cases, such as the **Min OS version** setting, you can configure the setting to perform all applicable actions based on different version numbers. 

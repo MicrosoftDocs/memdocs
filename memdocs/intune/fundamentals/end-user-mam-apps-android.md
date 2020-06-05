@@ -82,7 +82,7 @@ The following file types are supported:
 
 |**pfile**|
 |----|
-|Pfile is a generic “wrapper” format for protected files that encapsulates the encrypted content and the Azure Information Protection licenses. It can be used to protect any file type.|
+|Pfile is a generic "wrapper" format for protected files that encapsulates the encrypted content and the Azure Information Protection licenses. It can be used to protect any file type.|
 
 ## Next steps
 [What to expect when your iOS/iPadOS app is managed by app protection policies](end-user-mam-apps-ios.md)

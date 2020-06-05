@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 02/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -39,6 +39,6 @@ You can use the following steps to set a PIN or password.
 
 2. Choose and confirm your new password.
 
-For certain devices, you may need to set a startup PIN in addition to your screen password. You can try to fix this issue by finding a location in your settings app to enable this option. For example, on the Samsung Galaxy S7, you enable Secure Startup by going to **Settings** > **Lock Screen and Security** > **Secure Startup**. You can find out more [here](/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
+For certain devices, you may need to set a startup PIN in addition to your screen password. You can try to fix this issue by finding a location in your settings app to enable this option. For example, on the Samsung Galaxy S7, you enable Secure Startup by going to **Settings** > **Lock Screen and Security** > **Secure Startup**. You can find out more [here](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

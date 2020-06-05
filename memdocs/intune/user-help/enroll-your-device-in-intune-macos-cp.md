@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/16/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -33,7 +33,7 @@ ms.collection:
 
 Enroll your macOS device with the Intune Company Portal app to gain secure access to your work or school email, files, and apps.
 
-Organizations typically require you to enroll your device before you can access proprietary data. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune. To get continuous access to work or school information on your device, you must configure your device to match your organization’s policy settings.  
+Organizations typically require you to enroll your device before you can access proprietary data. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune. To get continuous access to work or school information on your device, you must configure your device to match your organization's policy settings.  
 
 This article describes how to use the Company Portal app for macOS to enroll, configure, and maintain your device so that you meet your organization's requirements.  
 
@@ -96,7 +96,7 @@ After you report the problem to Microsoft, you can send the details of your expe
 Additionally, the Microsoft Intune Company Portal team would love to hear your feedback. Go to **Help** > **Send Feedback** to share your thoughts and ideas.  
 
 ## Unverified profiles  
-When you view the installed mobile device management (MDM) profiles in **System Preferences** > **Profiles**, some profiles might show an unverified status. As long as the management profile shows a verified status, you don’t need to be concerned.  
+When you view the installed mobile device management (MDM) profiles in **System Preferences** > **Profiles**, some profiles might show an unverified status. As long as the management profile shows a verified status, you don't need to be concerned.  
 
 The management profile is what defines the MDM channel connection. As long as the management profile is verified, any other profiles delivered to the machine via that channel inherit the security traits of the management profile.  
 

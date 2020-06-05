@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,14 +28,16 @@ ms.collection: M365-identity-device-management
 
 # Add VPN settings on Windows Phone 8.1 devices in Microsoft Intune
 
-
-
 This article shows you the Intune settings you can use to configure VPN connections on devices running Windows Phone 8.1. 
 
 Depending on the settings you choose, not all values in the following list are configurable.
 
 >[!IMPORTANT]
 >Windows Phone 8.1 VPN profiles are also applied to Windows 10 devices.
+
+## Before you begin
+
+[Create a VPN device configuration profile](vpn-settings-configure.md).
 
 ## Base VPN settings
 
@@ -55,7 +57,7 @@ Depending on the settings you choose, not all values in the following list are c
 - **Bypass VPN on company Wi-Fi network**: Enable this option to specify that the VPN connections aren't used when the device is connected to the company Wi-Fi network.
 - **Bypass VPN on home Wi-Fi network**: Enable this option to specify that the VPN connection isn't used when the device is connected to a home Wi-Fi network.
 
-- **Connection type**: Select the VPN connection type from the following list of vendors:
+- **Connection type**: Select the VPN connection type. Your options:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -95,7 +97,7 @@ Depending on the settings you choose, not all values in the following list are c
 
   For more information on writing custom XML commands, see the manufacturer's VPN documentation.
 
-- **Split tunneling**: **Enable** or **Disable** this option that lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing.
+- **Split tunneling**: **Enable** lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing. If you want all traffic to use the VPN tunnel when the VPN connection is active, then set to **Disable**.
 
 ## Proxy settings
 
@@ -108,6 +110,6 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.

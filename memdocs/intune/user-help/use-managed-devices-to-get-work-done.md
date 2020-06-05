@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/13/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -81,13 +81,13 @@ You can remove or reset a device from the Company Portal. There is a difference 
 
 During device removal, the Company Portal unenrolls and unregisters the device. That device loses access to the Company Portal. Work or school data might also be removed. 
 
-During a device reset, the Company Portal tries to reset your computer or device back to the manufacturer’s default settings. All work or school data and all personal data is removed from the device. A reset is useful if, for example, you lose your device. You can reset it remotely from the Company Portal website.  
+During a device reset, the Company Portal tries to reset your computer or device back to the manufacturer's default settings. All work or school data and all personal data is removed from the device. A reset is useful if, for example, you lose your device. You can reset it remotely from the Company Portal website.  
 
 ## Can you remove a device from the Microsoft Intune app?
 No, there's no way for you to remove a corporate-owned device from the Microsoft Intune app.  
 
 ## What if I can't see my device in the Company Portal or Microsoft Intune app?
-To see a device in Company Portal, it must first be enrolled. If after enrollment you still don't see all of your devices, try to sync or check access through the Company Portal. You won’t see devices that are owned and managed by your company.
+To see a device in Company Portal, it must first be enrolled. If after enrollment you still don't see all of your devices, try to sync or check access through the Company Portal. You won't see devices that are owned and managed by your company.
 
 In the Microsoft Intune app, you only see the device you're currently using. Other enrolled devices will not be visible to you in the app.  
 
@@ -113,5 +113,3 @@ If you're ready to access your work or school account, follow your organization'
 * [Enroll your organization-provided iOS device](enroll-your-device-dep-ios.md)
 * [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md)
 * [Enroll your organization-provided macOS device](enroll-company-device-macos.md)
-
-

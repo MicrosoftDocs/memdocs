@@ -5,7 +5,7 @@
   items:
   - name: Device enrollment overview
     href: device-enrollment.md
-    displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+    displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
   - name: Enrolled device management capabilities
     href: device-management-capabilities.md
   - name: Enrollment options
@@ -20,7 +20,7 @@
   items:
   - name: Use Autopilot to enroll Windows devices
     href: tutorial-use-autopilot-enroll-devices.md
-  - name: Use the DEP to enroll iOS/iPadOS devices 
+  - name: Use the ADE to enroll iOS/iPadOS devices 
     href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Concepts
   items:
@@ -28,6 +28,8 @@
     href: terms-and-conditions-create.md
   - name: Restrictions
     href: enrollment-restrictions-set.md
+  - name: Understand Intune and Azure AD device limits
+    href: device-limit-intune-azure.md
   - name: Apple MDM push certificate
     href: apple-mdm-push-certificate-get.md
   - name: Corporate identifiers
@@ -81,18 +83,23 @@
       href: android-enroll-device-administrator.md
     - name: Manage Android Enterprise work profile devices
       href: android-enterprise-overview.md        
+    - name: Move device administrator devices to work profile management
+      href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
       href: android-samsung-knox-mobile-enroll.md
       displayName: kda; kme
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
-    - name: Device Enrollment Program
+    - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-ios.md
-    - name: Set up iOS/iPadOS and iPadOS User Enrollment
-      href: ios-user-enrollment.md
-    - name: User Enrollment supported actions and options
-      href: ios-user-enrollment-supported-actions.md
+      displayName: dep; ade; bulk enroll
+    - name: User and Device enrollment
+      items:
+      - name: Create the profile
+        href: ios-user-enrollment.md
+      - name: User enrollment supported actions
+        href: ios-user-enrollment-supported-actions.md
     - name: Apple School Manager
       href: apple-school-manager-set-up-ios.md
     - name: Apple Configurator

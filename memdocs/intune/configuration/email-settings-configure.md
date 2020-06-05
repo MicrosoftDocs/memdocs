@@ -3,13 +3,13 @@
 
 title: Configure email settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create an email profile in Microsoft Intune, and deploy this profile to Android Enterprise, iOS, iPadOS, and Windows devices. Use an email profile to configure common email settings, including an email server and authentication method to connect to corporate email on devices you manage.
+description: Create an email profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including an email server and authentication methods to connect to corporate email on devices you manage.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -33,44 +33,57 @@ Microsoft Intune includes different email settings you can deploy to devices in 
 
 You can use email profiles to configure the built-in email settings for the following devices:
 
-- Android Samsung Knox Standard 4.0 and newer
+- Android device administrator on Samsung Knox Standard 5.0 and newer
 - Android Enterprise
-- iOS 8.0 and newer
+- iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - Windows Phone 8.1 and newer
 - Windows 10 (desktop) and Windows 10 Mobile
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
-## Create a device profile
+## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Email settings for all Windows devices**.
-    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    - **Platform**: Choose the platform of your devices. Your options:
+    - **Platform**: Choose the platform of your devices. Your options:  
 
-        - **Android** (Samsung Android Knox Standard only)
-        - **Android enterprise**
+        - **Android device administrator** (Samsung Android Knox Standard only)
+        - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 and later**
+        - **Windows Phone 8.1**
 
-    - **Profile type**: Select **Email**.
+    - **Profile**: Select **Email**.
 
-4. Depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
 
-    - [Android Samsung Knox Standard settings](email-settings-android.md)
-    - [Android Enterprise settings](email-settings-android-enterprise.md)
-    - [iOS/iPadOS settings](email-settings-ios.md)
-    - [Windows Phone 8.1 settings](email-settings-windows-phone-8-1.md)
-    - [Windows 10 settings](email-settings-windows-10.md)
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Email settings for all Windows 10 devices**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-5. When you're done, select **OK** > **Create** to save your changes.
+6. Select **Next**.
 
-After you enter your settings, and create the profile, your profile is shown in the profiles list. Next, [assign this profile to some groups](device-profile-assign.md).
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+
+    - [Android device administrator (Samsung Knox Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+    Select **Next**.
+
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    Select **Next**.
+
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Remove an email profile
 
@@ -86,6 +99,8 @@ You can help secure email profiles using the following options:
 
 - **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
 
+  If you use certificate based authentication for your email profile, deploy the email profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.
+
   For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
 
 - **User name and password**: The end user authenticates to the native mail server by entering a user name and password. The password doesn't exist in the email profile. So, the end user enters the password when connecting to email.
@@ -100,7 +115,7 @@ If the user already configured an email account, then the email profile is assig
 
 - **Android Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
 
-- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your users' devices. Then create and deploy the appropriate email profile. Email apps such as Nine Work may not be free. Review the app's licensing details, or contact the app company with any questions.
+- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your users' devices. Then create and deploy the appropriate email profile. You can use Gmail and Nine email configuration profiles that will work for both Work Profile and Device Owner enrollment types, including the use of certificate profiles on both email configuration types. Any Gmail or Nine policies that you have created under Device Configuration for Work Profiles will continue to apply to the device and it is not necessary to move them to app configuration policies. Email apps such as Nine Work may not be free. Review the app's licensing details, or contact the app company with any questions. 
 
 ## Changes to assigned email profiles
 
@@ -108,4 +123,4 @@ If you make changes to an email profile you previously assigned, end users may s
 
 ## Next steps
 
-Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md).
+Once the profile is created, it isn't doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

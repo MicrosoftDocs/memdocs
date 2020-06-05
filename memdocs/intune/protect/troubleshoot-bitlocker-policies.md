@@ -75,7 +75,7 @@ How do you confirm that the settings have been applied to the targeted device? F
 
 When you use Device Configuration policy to configure BitLocker, you can check the status of the policy in the Intune portal.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** and then select the profile that contains BitLocker settings.
 
@@ -178,11 +178,11 @@ You should now have a good idea how to confirm that the BitLocker policy success
      
 **Bitlocker Encryption is not performed silently** - You have configured an Endpoint Protection policy with the setting "Warning for other disk encryption" set to block and the encryption wizard still appears:
 
-- **Confirm the Windows version supports silent encryption** This requires a minimum of version 1803. If the user is not an administator on the device than it requires a minimum version of 1809. Additionally 1809 added support for devices that do not support Modern Standby
+- **Confirm the Windows version supports silent encryption** This requires a minimum of version 1803. If the user is not an administrator on the device than it requires a minimum version of 1809. Additionally 1809 added support for devices that do not support Modern Standby
 
-**Bitlocker encrypted device shows as Not Compliant for Intune Compliance policies** - The issue occurs when BitLocker encryption isn’t finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as Compliant. Devices can also become temporarily non compliant immediately following a recent installation of WIndows Updates.
+**Bitlocker encrypted device shows as Not Compliant for Intune Compliance policies** - The issue occurs when BitLocker encryption isn't finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as Compliant. Devices can also become temporarily non compliant immediately following a recent installation of WIndows Updates.
 
-**Devices are encrypted using 128 bit algorithim when policy specifices 256 bit** -- By default, Windows 10 will encrypt a drive with XTS-AES 128-bit encryption. See this guide for [Setting 256-bit encryption for BitLocker during Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+**Devices are encrypted using 128 bit algorithm when policy specifices 256 bit** -- By default, Windows 10 will encrypt a drive with XTS-AES 128-bit encryption. See this guide for [Setting 256-bit encryption for BitLocker during Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
 
 
 **Example investigation**

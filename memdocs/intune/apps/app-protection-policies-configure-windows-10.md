@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -29,7 +29,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Get ready to configure app protection policies for Windows 10 
+# Get ready for Windows Information Protection in Windows 10 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -37,7 +37,7 @@ Enable mobile application management (MAM) for Windows 10 by setting the MAM pro
 
 ## To configure the MAM provider
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **All services** and choose **M365 Azure Active Directory** to switch dashboards.
 3. Select **Azure Active Directory**.
 4. Choose **Mobility (MDM and MAM)** in the **Manage** group.
@@ -60,4 +60,4 @@ Enable mobile application management (MAM) for Windows 10 by setting the MAM pro
 
 ## Next steps
 
-[Create a WIP app protection policy](windows-information-protection-policy-create.md)
+[Create a WIP policy](windows-information-protection-policy-create.md)

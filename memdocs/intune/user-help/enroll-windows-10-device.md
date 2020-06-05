@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/21/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -59,11 +59,11 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 
     ![Add a work or school account](./media/w10-enroll-rs1-enter-your-credentials.png)  
 
-    You’ll eventually see a message that your company or school is registering your device.
+    You'll eventually see a message that your company or school is registering your device.
 
 6. If your organization requires you to set up a PIN for Windows Hello, you'll be prompted to enter a verification code. Enter the code and continue through the on-screen steps to create a PIN.  
 
-7. On the **You’re all set!** screen, select **Done**. Your device is now enrolled.  
+7. On the **You're all set!** screen, select **Done**. Your device is now enrolled.  
 
 8. To double-check your connection, go back to **Settings** > **Accounts** > **Access work or school**.  Your account should now be listed.  
 

@@ -5,8 +5,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
-ms.topic: conceptual
+ms.date: 04/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -48,14 +48,15 @@ The following on-premises infrastructure must run on servers that are domain-joi
 - **NDES server role** – You must configure a Network Device Enrollment Service (NDES) server role on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
   - The server that hosts NDES must be domain-joined and in the same forest as your Enterprise CA.
-  - You can't use NDES that’s installed on the server that hosts the Enterprise CA.
-  - You’ll install the Microsoft Intune Certificate connector on the same server that hosts NDES.
+  - You can't use NDES that's installed on the server that hosts the Enterprise CA.
+  - You'll install the Microsoft Intune Certificate connector on the same server that hosts NDES.
 
   To learn more about NDES, see [Network Device Enrollment Service Guidance](https://technet.microsoft.com/library/hh831498.aspx) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](https://technet.microsoft.com/library/dn473016.aspx).
 
 - **Microsoft Intune Certificate Connector** – The Microsoft Intune Certificate Connector is required to use SCEP certificate profiles with Intune. This article will guide you through [installing this connector](#install-the-intune-certificate-connector).
 
-  The connector supports Federal Information Processing Standard (FIPS) mode. FIPS isn’t required, but when it's enabled, you can issue and revoke certificates.
+  The connector supports Federal Information Processing Standard (FIPS) mode. FIPS isn't required, but when it's enabled, you can issue and revoke certificates.
+  - The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - The connector must run on the same server as the NDES server role, a server that runs Windows Server 2012 R2 or later.
   - The .NET 4.5 Framework is required by the connector and is automatically included with Windows Server 2012 R2.
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) and the Microsoft Intune Certificate Connector.
@@ -70,13 +71,13 @@ To allow devices on the internet to get certificates, you need to publish your N
 
   The server that hosts WAP [must install an update](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) that enables support for the long URLs that are used by the Network Device Enrollment Service. This update is included with the [December 2014 update rollup](https://support.microsoft.com/kb/3013769), or individually from [KB3011135](https://support.microsoft.com/kb/3011135).
 
-  The WAP server must have an SSL certificate that matches the name that’s published to external clients and trust the SSL certificate that’s used on the computer that hosts the NDES service. These certificates enable the WAP server to terminate the SSL connection from clients and create a new SSL connection to the NDES service.
+  The WAP server must have an SSL certificate that matches the name that's published to external clients and trust the SSL certificate that's used on the computer that hosts the NDES service. These certificates enable the WAP server to terminate the SSL connection from clients and create a new SSL connection to the NDES service.
 
   For more information, see [Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) and [general information about WAP servers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### Accounts
 
-- **NDES service account** - Before you set up NDES, identify a domain user account to use as the NDES service account. You’ll specify this account when you configure templates on your issuing CA, before you configure NDES.
+- **NDES service account** - Before you set up NDES, identify a domain user account to use as the NDES service account. You'll specify this account when you configure templates on your issuing CA, before you configure NDES.
 
   This account must have the following rights on the server that hosts NDES:
 
@@ -102,14 +103,14 @@ The following certificates and templates are used when you use SCEP.
 
 |Object    |Details    |
 |----------|-----------|
-|**SCEP Certificate Template**         |Template you’ll configure on your issuing CA used to fullfil the devices SCEP requests. |
+|**SCEP Certificate Template**         |Template you'll configure on your issuing CA used to fullfil the devices SCEP requests. |
 |**Client authentication certificate** |Requested from your issuing CA or public CA.<br /> You install this certificate on the computer that hosts the NDES service and it's used by the Intune Certificate Connector.<br /> If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate. You can then use the same certificate for server and client authentication. |
 |**Server authentication certificate** |Web Server certificate requested from your issuing CA or public CA.<br /> You install and bind this SSL certificate in IIS on the computer that hosts NDES.<br />If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate. You can then use the same certificate for server and client authentication. |
 |**Trusted Root CA certificate**       |To use a SCEP certificate profile, devices must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices. <br/><br/> **-**  Use a single Trusted Root CA certificate per operating system platform and associate that certificate with each trusted certificate profile you create. <br /><br /> **-**  You can use additional Trusted Root CA certificates when needed. For example, you might use additional certificates to provide a trust to a CA that signs the server authentication certificates for your Wi-Fi access points. Create additional Trusted Root CA certificates for issuing CAs.  In the SCEP certificate profile you create in Intune, be sure to specify the Trusted Root CA profile for the issuing CA.<br/><br/> For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. |
 
 ## Configure the certification authority
 
-In the following sections, you’ll:
+In the following sections, you'll:
 
 - Configure and publish the required template for NDES
 - Set the required permissions for certificate revocation.
@@ -226,9 +227,9 @@ By default, Intune uses the value configured in the template. However, you can c
 
 1. On the CA, run the following commands:
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. On the issuing CA, use the Certification Authority snap-in to publish the certificate template. Select the **Certificate Templates** node, select **Action** > **New** > **Certificate Template to Issue**, and then select the certificate template you created in the previous section.
 
@@ -362,7 +363,7 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 
 ### To install the Certificate Connector
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
@@ -420,7 +421,7 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 
    2. The account you use must be assigned a valid Intune license.
 
-   3. After you sign in, the Intune Certificate Connector downloads a certificate from Intune. This certificate is used for authentication between the connector and Intune. If the account you used doesn’t have an Intune license, the connector (NDESConnectorUI.exe) fails to get the certificate from Intune.  
+   3. After you sign in, the Intune Certificate Connector downloads a certificate from Intune. This certificate is used for authentication between the connector and Intune. If the account you used doesn't have an Intune license, the connector (NDESConnectorUI.exe) fails to get the certificate from Intune.  
 
       If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, select **Use proxy server**. Then enter the proxy server name, port, and account credentials to connect.
 

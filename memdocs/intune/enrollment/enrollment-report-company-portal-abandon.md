@@ -60,7 +60,7 @@ You can filter the date range, operating system, and enrollment section by choos
 At the top of the report, you can see the number and percentage of incomplete enrollments in relation to all enrollments.
 
 - Initiated enrollments: The number of enrollments attempted.
-- Incomplete enrollments: The number of attempted enrollments that didn’t result in a fully enrolled and compliant device.
+- Incomplete enrollments: The number of attempted enrollments that didn't result in a fully enrolled and compliant device.
 - Incomplete rate: The percentage of enrollment attempts that were abandoned (Abandoned enrollments / Initiated enrollments).
 
 ### Line graph
@@ -85,7 +85,7 @@ The following tables show the list of user actions that qualify as prompting an 
 | EnrollmentWrapUp | Enrolling device screen until finish of **Loading company resources** | iOS/Android | Took > 30 minutes |
 | DeviceCategory | Device Category selection (if admin configured) until click **Done** | iOS/Android | Took > 30 minutes |
 | PreEnrollmentWizard | Set up access screen when having started enrollment but returned to Set up access | iOS/Android| **Postpone** |
-| PreEnrollmentWizard | Set up access screen until clicking **Next** on the **What’s Next** screen | iOS/Android | Took > 30 minutes |
+| PreEnrollmentWizard | Set up access screen until clicking **Next** on the **What's Next** screen | iOS/Android | Took > 30 minutes |
 
 #### Platform screens section
 
@@ -93,7 +93,7 @@ The following tables show the list of user actions that qualify as prompting an 
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Prompt to show a configuration profile | iOS/iPadOS | **Ignore** |
 | iOSProfileLaunch | Installing profile screen | iOS/iPadOS | **Cancel** |
-| iOSProfileLaunch | Prompt to trust the profile’s source to enroll the device | iOS/iPadOS | **Cancel** |
+| iOSProfileLaunch | Prompt to trust the profile's source to enroll the device | iOS/iPadOS | **Cancel** |
 | iOSProfileLaunch | Install profile screen until profile is installed | iOS/iPadOS | Took > 30 minutes |
 | AndroidPermissions | Device administrator activation screen | Android | **Cancel** |
 | AndroidPermissions | From prompt for approval to make and manage phone calls until device administrator **Activate** | Android | Took > 30 minutes |

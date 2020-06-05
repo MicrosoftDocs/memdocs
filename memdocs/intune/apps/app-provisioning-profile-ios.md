@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -48,7 +48,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
 ## How to create an iOS mobile app provisioning profile
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **iOS app provisioning profiles** > **Create profile**.
 3. On the **Basics** page, add the following values:
     - **Name** - Provide a name for this mobile provisioning profile.
@@ -57,7 +57,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
    The **Expiration date** will be populated from a value in the Apple Mobile Configuration Profile file that you added above.<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Click **Next: Scope tags**.<br>
    On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).

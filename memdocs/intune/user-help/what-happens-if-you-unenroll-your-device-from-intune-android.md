@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/13/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,13 +34,13 @@ ms.collection:
 
 When you unenroll your Android device from Intune:
 
-- Your company support doesn’t manage the device anymore.
+- Your company support doesn't manage the device anymore.
 
 - You lose access to company data and resources.
 
-- Your device doesn’t appear in the Company Portal anymore.
+- Your device doesn't appear in the Company Portal anymore.
 
-- You can’t install apps from the Company Portal anymore.
+- You can't install apps from the Company Portal anymore.
 
 - Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.
 

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -20,7 +20,6 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 
 #ROBOTS:
 #audience:
-
 ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
@@ -58,7 +57,7 @@ This feature is supported for the following platforms:
 | Device admin managed Android OS v10 | Not supported | Not supported |
 | Other Android | Not supported | Supported |
 
-<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
 [Learn how to find an Apple device serial number](https://support.apple.com/HT204308).<br>
 [Learn how to find your Android device serial number](https://support.google.com/store/answer/3333000).
@@ -83,14 +82,14 @@ This .csv file when viewed in a text editor appears as:
 > [!IMPORTANT]
 > Some Android and iOS/iPadOS devices have multiple IMEI numbers. Intune only reads one IMEI number per enrolled device. If you import an IMEI number but it is not the IMEI inventoried by Intune, the device is classified as a personal device instead of a corporate-owned device. If you import multiple IMEI numbers for a device, uninventoried numbers display **Unknown** for enrollment status.<br>
 >Also note:
->Serial Numbers are the recommended form of identification for iiOS/iPadOSOS devices.
+>Serial Numbers are the recommended form of identification for iOS/iPadOSOS devices.
 >Android Serial numbers are not guaranteed to be unique or present. Check with your device supplier to understand if serial number is a reliable device ID.
 >Serial numbers reported by the device to Intune might not match the displayed ID in the Android Settings/About menus on the device. Verify the type of serial number reported by the device manufacturer.
 >Attempting to upload a file with serial numbers containing dots (.) will cause the upload to fail. Serial numbers with dots are not supported.
 
 ### Upload a .csv list of corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Upload CSV file**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Upload CSV file**.
 
 2. In the **Add identifiers** blade, specify the identifier type: **IMEI** or **Serial**.
 
@@ -100,7 +99,7 @@ This .csv file when viewed in a text editor appears as:
 
 ## Manually enter corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Enter manually**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Enter manually**.
 
 2. In the **Add identifiers** blade, specify the identifier type: **IMEI** or **Serial**.
 
@@ -114,7 +113,7 @@ Imported devices are not necessarily enrolled. Devices can have a state of eithe
 
 ## Delete corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
 2. Select the device identifiers you want to delete, and choose **Delete**.
 3. Confirm the deletion.
 
@@ -128,8 +127,14 @@ For detailed specifications about International Mobile Equipment Identifiers, se
 Devices properties display **Ownership** for each device records in Intune. As an admin, you can specify devices as **Personal** or **Corporate**. When a device's ownership type is changed from Corporate to Personal, Intune deletes all app information previously collected from that device within 7 days. If applicable, Intune will also delete the phone number on record. 
 
 **To change device ownership:**
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device.
 2. Choose **Properties**.
 3. Specify **Device ownership** as **Personal** or **Corporate**.
 
    ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)
+
+You can configure a push notification to send to both your Android and iOS Company Portal users when their device ownership type has been changed from **Personal** to **Corporate** as a privacy courtesy. 
+
+When a device's ownership type is changed from Corporate to Personal, Intune deletes all app information previously collected from that device within 7 days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
+
+This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager:
 ms.date: 03/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -65,7 +65,7 @@ When your company is successfully registered, you can create your MDM profile fo
 - To create an Android MDM profile, select **Device Admin** as the profile type in the Knox Portal. 
 - To create an Android Enterprise MDM profile, select **Device Owner** as the profile type in the Knox Portal.  
 
-### For Android
+### For Android Enterprise
 
 | MDM Profile Fields| Required? | Values | 
 |-------------------|-----------|-------| 
@@ -82,7 +82,7 @@ When your company is successfully registered, you can create your MDM profile fo
 
 \* This field is not required to complete profile creation in the Knox portal. However, Intune does require this field to be filled in so that the profile can successfully enroll the device in Intune.
 
-### For Android Enterprise
+### For Android device administrator 
 
 For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) instructions.
 

@@ -39,7 +39,7 @@ In this tutorial, you will:
 > - Create app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android work profile devices.
 > - Create Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 You'll need a test tenant with the following subscriptions for this tutorial:
@@ -52,10 +52,10 @@ You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/
 Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
 
 ## Sign in to Intune
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Set up Slack for EMM on iOS devices
-Add the iOS/iPadOS app Slack for EMM to your Intune tenant and create an app configuration policy to enable your organizations’ iOS/iPadOS users to access Slack with Intune as an EMM provider.
+Add the iOS/iPadOS app Slack for EMM to your Intune tenant and create an app configuration policy to enable your organizations' iOS/iPadOS users to access Slack with Intune as an EMM provider.
 
 ### Add Slack for EMM to Intune
 Add Slack for EMM as a managed iOS/iPadOS app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on Android devices.
@@ -88,7 +88,7 @@ Add an app configuration policy for the Slack for EMM iOS/iPadOS. App configurat
 12. Click **Save**.
 
 ### (Optional) Create an iOS device compliance policy
-Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we’ll create a device compliance policy for iOS/iPadOS devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on Android devices.
+Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for iOS/iPadOS devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on Android devices.
 1. In the admin center, select **Device compliance** > **Policies** > **Create Policy**.
 2. In Name, enter "iOS compliance policy test".
 3. In Description, enter "iOS compliance policy test".
@@ -106,7 +106,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 8. Click **Create**.
 
 ## Set up Slack on Android work profile devices
-Add the Slack Managed Google Play app to your Intune tenant and create an app configuration policy to enable your organizations’ Android users to access Slack with Intune as an EMM provider.
+Add the Slack Managed Google Play app to your Intune tenant and create an app configuration policy to enable your organizations' Android users to access Slack with Intune as an EMM provider.
 
 ### Add Slack to Intune
 Add Slack as a Managed Google play app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on iOS/iPadOS devices.
@@ -132,7 +132,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 5. Select **Associated app**.
 6. In the search bar, enter "Slack" and select the app.
 7. Select **OK**, and then select **Configuration settings**.
-    - For information on configuration keys and their values, consult the documentation on the “Technical” tab of [Slack’s AppConfig web page](https://www.appconfig.org/company/slack/).
+    - For information on configuration keys and their values, consult the documentation on the "Technical" tab of [Slack's AppConfig web page](https://www.appconfig.org/company/slack/).
 8. Click **OK**, and then select **Add**.
 9. In the search bar, enter "Slack app configuration policy test" and select the policy you just added.
 10. From Manage, select **Assignments**.
@@ -140,7 +140,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 12. Click **Save**.
 
 ### (Optional) Create an Android device compliance policy
-Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we’ll create a device compliance policy for Android devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on iOS/iPadOS devices.
+Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for Android devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on iOS/iPadOS devices.
 1. In Intune, select **Device compliance** > **Policies** > **Create Policy**.
 2. In Name, enter "Android compliance policy test".
 3. In Description, enter "Android compliance policy test".

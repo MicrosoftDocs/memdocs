@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -43,7 +43,7 @@ Devices that you manage in this way are enrolled in Intune without a user accoun
 
 Devices must meet these requirements to be managed as an Android Enterprise dedicated device:
 
-- Android OS version 5.1 and above.
+- Android OS version 6.0 and above.
 - Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 ## Set up Android Enterprise dedicated device management
@@ -63,7 +63,7 @@ To set up Android Enterprise dedicated device management, follow these steps:
 
 You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-dedicated-devices).
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
 2. Choose **Create** and fill out the required fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Token expiration date**: The date when the token expires. Google enforces a maximum of 90 days.
@@ -73,7 +73,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 
 You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic AAD device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -96,7 +96,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
 
 Replacing or revoking a token/QR code won't have any effect on devices that are already enrolled.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Coporate-owned dedicated devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
 2. Choose the profile that you want to work with.
 3. Choose **Token**.
 4. To replace the token, choose **Replace token**.

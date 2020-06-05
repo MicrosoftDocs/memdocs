@@ -37,7 +37,7 @@ By default, when Intune detects a device that isn't compliant, Intune immediatel
 
 One action to take when a device doesn't meet compliance is to send email to the devices user. You can also customize an email notification before sending it. Specifically, you can customize the recipients, subject, and message body, including company logo, and contact information. Intune also includes details about the noncompliant device in the email notification.
 
-If you don’t have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ When using device compliance policies to block devices from corporate resources,
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a notification message template
 
@@ -70,9 +70,9 @@ To send email to your users, create a notification message template. When a devi
 
 For details about setting your company name, company contact information, and company logo, see the following articles:
 
-- [Company information and privacy statement](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [Company information and privacy statement](../apps/company-portal-app.md#configuration)
 - [Support information](../apps/company-portal-app.md#support-information)
-- [Company identity branding customization](../apps/company-portal-app.md#company-identity-branding-customization).
+- [Customizing the user experience](../apps/company-portal-app.md#customizing-the-user-experience).
 
 ## Add a noncompliance policy
 

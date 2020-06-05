@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -27,11 +27,15 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Configure eSIM cellular profiles in Intune - Public preview
+# Configure eSIM cellular profiles in Intune (public preview)
 
 eSIM is an embedded SIM chip, and lets you connect to the Internet over a cellular data connection on an eSIM-capable device, such as the [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). With an eSIM, you don't need to get a SIM card from your mobile operator. As a global traveler, you can also switch between mobile operators and data plans to always stay connected.
 
 For example, you have a cellular data plan for work, and another data plan with a different mobile operator for personal use. When traveling, you can get Internet access by finding mobile operators with data plans in that area.
+
+This feature applies to:
+
+- Windows 10 and newer
 
 In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
 
@@ -54,21 +58,7 @@ This article guides you through these steps.
 
 ## eSIM capable devices
 
-The following devices have been announced as eSIM-capable, or are in-market today. Also, check if [your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows 10 PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## Step 1: Add cellular activation codes
 
@@ -97,11 +87,11 @@ When working with the csv file with the activation codes, be sure you or your mo
     1. First column is the unique ICCID (the identifier of the SIM chip)
     2. Second column is the Matching ID with only a comma separating them (no comma at the end). See the following example:
 
-        ![Mobile operator activation code sample csv file](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
 3. The csv file name becomes the cellular subscription pool name in the Endpoint Manager admin center. In the previous image, the file name is `UnlimitedDataSkynet.csv`. So, Intune names the subscription pool `UnlimitedDataSkynet.csv`:
 
-    ![Cellular subscription pool is named the activation code sample csv file name](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
 
 ## Step 2: Create an Azure AD device group
 
@@ -120,7 +110,7 @@ Assign the profile to the Azure AD group that includes your eSIM devices.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
-    ![Include the device group to assign the profile](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
 
 5. When you select your groups, you're choosing an Azure AD group. To select multiple groups, use the **Ctrl** key, and select the groups.
 6. When done, **Save** your changes.
@@ -173,7 +163,7 @@ You can monitor and view a detailed list of devices you can view in Device Statu
 2. Select **Cellular** > **Manage eSIM profiles**
 3. The eSIM profiles are listed:
 
-    ![View the eSIM profiles in your device settings](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings.":::
 
 ## Remove the eSIM profile from device
 
@@ -197,4 +187,5 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
 ## Next steps
+
 [Configure device profiles](device-profiles.md)

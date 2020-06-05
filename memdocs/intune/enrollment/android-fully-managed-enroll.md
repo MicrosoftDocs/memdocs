@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -60,16 +60,16 @@ To set up Android Enterprise fully managed device management, follow these steps
 
 ### Enable corporate owned user devices
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
 2. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**.
 
 > [!NOTE]
-> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* control and  applies to **All Cloud apps**, **Android** and **Browsers** - you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup processes uses a Chrome tab to authenticate your users during enrolment. For more information, see [Azure AD Conditional Access Documentation](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Azure AD Conditional Access documentation](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 When this setting is set to **Yes**, it provides you with an enrollment token (a random string) and a QR code for your Intune tenant. This single enrollment token is valid for all your users and won't expire. Depending on the Android OS and version of the device, you can use either the token or QR code to enroll the device.
 
 ## Enroll the fully managed devices
-You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md).
+You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md) (but not when using DEM accounts).
 
 ## Next steps
 - [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#device-owner-only)

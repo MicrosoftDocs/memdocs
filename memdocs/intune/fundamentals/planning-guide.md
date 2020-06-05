@@ -21,7 +21,7 @@ ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
 #ROBOTS:
 #audience:
 
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 A successful Microsoft Intune deployment starts with having a good plan and design. The purpose of this guide is to step you through the process of developing a deployment plan, creating a design, onboarding Intune, and conducting a production rollout.
 
-## What’s included in this guide?
+## What's included in this guide?
 
 This guide includes sections that will walk you through the end-to-end process of deploying Intune. Start with Section 1 to clarify your goals, objectives, and challenges. Then move on to Sections 2 – 7 in the order that best meets your needs. You don't need to work through these sections sequentially; you can complete them in parallel.
 
@@ -57,7 +57,10 @@ This guide includes sections that will walk you through the end-to-end process o
 
 This guide also provides additional technical information and table templates that can be used to assist you with the Intune deployment planning, design, and implementation process.
 
-- [Additional resources: Links and table templates](planning-guide-resources.md)
+### Additional resources
+
+- [Microsoft Endpoint Manager Proof of Concept (PoC) guide:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) this is intended to provide a framework and technical guidance on how to run a successful PoC within your organization.
+- [Links and table templates](planning-guide-resources.md)
 
 ## Assumptions
 
@@ -67,4 +70,4 @@ This guide also provides additional technical information and table templates th
 
 ## Next steps
 
-Let’s get started with the first section: [Determine deployment goals, objectives, and challenges](planning-guide-deployment-goals.md).
+Let's get started with the first section: [Determine deployment goals, objectives, and challenges](planning-guide-deployment-goals.md).

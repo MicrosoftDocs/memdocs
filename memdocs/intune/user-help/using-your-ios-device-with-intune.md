@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/01/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -34,7 +34,7 @@ This article lists tasks and information specific to the Company Portal for iOS.
 
 ## Supported versions
 
-The Company Portal for iOS currently supports iOS 10.0 and later.  
+The Company Portal for iOS currently supports iOS 11.0 and later.  
 
 
 ## Enrolling into Intune and installing the Company Portal
