@@ -104,5 +104,16 @@ landingContent:
       - text: Known issues
         url: known-issues.md
 
+  # Card (optional)
+  - title: Resources
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Introducing Windows Autopilot video
+        url: https://youtu.be/4K4hC5NchbE
+      - text: Windows Autopilot @ Windows IT Pro Blog
+        url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
+      - text: Windows Autopilot and Surface devices
+        url: https://docs.microsoft.com/surface/windows-autopilot-and-surface-devices
 
 
