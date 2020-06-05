@@ -28,30 +28,6 @@ Legacy PC management is going out of support on October 15, 2020. Upgrade device
 [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 
-### Decreasing support for Android device administrator<!--5857738-->
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
-
-#### How does this affect me?
-Because of these changes by Google, Intune users will be impacted in the following ways:  
-- Intune will only be able to provide full support for device administrator-managed Android devices running Android 10 and later through Q2 CY2020. Device administrator-managed devices that are running Android 10 or later after this time won't be able to be entirely managed. In particular, impacted devices won't receive new password requirements.
-    - Samsung Knox devices won't be impacted in this timeframe because extended support is provided through Intune's integration with the Knox platform. This gives you more time to plan the transition off device admin management.    
-- Device administrator-managed Android devices that remain on Android versions below Android 10 won't be impacted and can continue to be entirely managed with device administrator.    
-- For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:  
-    - Network access control for VPN will no longer work.   
-    - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned.  
-    - The IMEI and serial number will no longer be visible to IT admins in Intune. 
-        > [!NOTE]
-        > This only impacts device administrator-managed devices on Android 10 and later and does not affect devices being managed as Android Enterprise. 
-
-#### What do I need to do to prepare for this change?
-To avoid the reduction in functionality coming in Q3 CY2020, we recommend the following:
-- Don't onboard new devices into device administrator management.
-- If a device is expected to receive an update to Android 10, migrate it off of device administrator management to Android Enterprise management and/or app protection policies.
-
-#### Additional information
-- [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Google's documentation on the plan to deprecate the device administrator API](https://developers.google.com/android/work/device-admin-deprecation)
-
 ### Decreasing support for Android device administrator<!--7371518-->
 Android device administrator management was released in Android 2.2 as a way to manage Android devices. Then beginning with Android 5, the more modern management framework of [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) was released (for devices that can reliably connect to Google Mobile Services). Google is encouraging movement off of device administrator management by decreasing its management support in new Android releases.
 
