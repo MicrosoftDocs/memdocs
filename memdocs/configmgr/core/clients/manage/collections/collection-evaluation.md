@@ -15,9 +15,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. It's important to understand collection evaluation behavior so you can make appropriate collection design decisions.
+Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. 
 
-Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be convenient, since most Configuration Manager functionality is dependent on collections. Carefully consider both performance impacts and business requirements to formulate an appropriate collection evaluation plan.
+It's important to understand collection evaluation behavior so you can make appropriate collection design decisions. For collection evaluation guidance and recommendations, see [Best practices for collections](best-practices-for-collections.md).
 
 ## Evaluation process
 

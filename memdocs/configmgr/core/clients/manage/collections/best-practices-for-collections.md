@@ -1,7 +1,7 @@
 ---
 title: Collections best practices
 titleSuffix: Configuration Manager
-description: Get best practices for collections in Configuration Manager.
+description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
 ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -17,6 +17,8 @@ manager: dougeby
 # Best practices for collections in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
+
+Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. But updating collections frequently is convenient, since most Configuration Manager functionality is dependent on collections. Carefully consider both performance impacts and business requirements when you design and configure collections and collection evaluation.
 
 Use the following best practices for collections in Configuration Manager.  
 
@@ -42,16 +44,16 @@ When table data changes, a SQL trigger inserts a row in the **CollectionNotifica
 
 Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
 
-Enabling incremental updates for many collections might cause evaluation delays. It's best to limit the number of incrementally-updated collections to 200. The exact number depends on:
+Enabling incremental updates for many collections might cause evaluation delays. It's best to limit the number of incrementally updated collections to 200. The exact number depends on:
 
 - The total number of collections
 - The frequency of new resources being added and changed in the hierarchy
 - The number of clients in a hierarchy
 - The complexity of collection membership rules in a hierarchy
 
-If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could impact system performance. Reduce the number of incrementally-updated collections, or increase the time between incremental evaluation cycles.
+If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could impact system performance. Reduce the number of incrementally updated collections, or increase the time between incremental evaluation cycles.
 
-If an incrementally-updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update as you expect. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
+If an incrementally updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update as you expect. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
 
 Given the potential impacts of incremental collections, it's important to have a policy or procedure for creating the collections and assigning update schedules. Examples of policy considerations might be:
 
