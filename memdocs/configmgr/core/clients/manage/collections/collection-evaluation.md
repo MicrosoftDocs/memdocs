@@ -1,7 +1,7 @@
 ---
 title: Collection evaluation
 titleSuffix: Configuration Manager
-description: Learn about collection evaluation types and triggers, the collection evaluation graph and hierarchy, and other considerations and best practices.
+description: Learn about the collection evaluation process, types, and triggers. Understand the collection evaluation graph and hierarchy.
 ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -17,7 +17,7 @@ manager: dougeby
 
 Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. It's important to understand collection evaluation behavior so you can make appropriate collection design decisions.
 
-Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be very convenient, since most Configuration Manager functionality is dependent on collections. To formulate an appropriate collection evaluation plan, carefully consider both performance impacts and business requirements.
+Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be convenient, since most Configuration Manager functionality is dependent on collections. To formulate an appropriate collection evaluation plan, carefully consider both performance impacts and business requirements.
 
 ## Evaluation process
 
@@ -40,7 +40,7 @@ At a high level, each individual collection evaluation and update follows these 
    
 1. Compare the result set from evaluating the direct members and include collections with the results of evaluating the exclude collections.
 1. Write the changes to the database and perform updates.
-1. Trigger any dependent collections to update as well. Dependent collections are collections that refer to the current collection using include or exclude rules, or are limited to the current collection.
+1. Trigger any dependent collections to update as well. Dependent collections are collections that the current collection limits, or that refer to the current collection using include or exclude rules.
 
 ## Collection evaluation types and triggers
 
@@ -64,9 +64,9 @@ The following table describes collection evaluation triggers and their correspon
 
 A *collection evaluation graph* maps all collections that relate to the collection targeted for evaluation. A collection evaluation involves the targeted collection and any related collections in the collection evaluation graph.
 
-When collection evaluation starts, Configuration Manager builds a graph that includes all collections that could possibly need evaluating as a result of changes to the target collection, starting from the highest level in the cycle. The collection evaluator then moves through the graph in order, evaluating each collection membership in turn. After the collection is fully evaluated, the collection evaluator removes lower-level collections that won't be affected by this cycle from the collection evaluation graph.
+When collection evaluation starts, Configuration Manager builds a graph that includes all collections that could possibly need evaluating as a result of changes to the target collection, starting from the highest level in the cycle. The collection evaluator then moves through the graph in order, evaluating each collection membership in turn. After the collection is fully evaluated, the collection evaluator removes lower-level collections that aren't affected by this cycle from the collection evaluation graph.
 
-If one or more of the collections being evaluated has an include or exclude rule, the collection evaluator adds the collection being included or excluded to the graph, along with any collections limited by that collection. If there are any changes during the evaluation of the include and exclude collections, the graph continues on that branch before returning to the main branch.
+If one or more of the collections being evaluated has an include or exclude rule, the collection evaluator adds the included or excluded collection to the graph, along with any collections that collection limits. If there are any changes during the evaluation of the include and exclude collections, the graph continues on that branch before it returns to the main branch.
 
 Configuration Manager builds two types of evaluation graphs, *incremental* or *full*.
 
@@ -86,7 +86,7 @@ The following diagram shows how a scheduled or manual collection update request 
 
 ![Full collection evaluation graph example 1](media/full-collection-evaluation-graph-1.png)
 
-Not all collections are always evaluated during a full evaluation. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the corresponding referenced collection. In the following example, the installation of DNS on the existing server makes it a member of the **DNS Servers** collection, but because there was no update to its limiting **All Member Servers** collection, the **DNS Servers** collection isn't evaluated during this evaluation. The **DNS Servers** collection will be evaluated during the next incremental evaluation cycle, because it's an incremental collection.
+Not all collections are always evaluated during a full evaluation. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the corresponding referenced collection. In the following example, the installation of DNS on the existing server makes it a member of the **DNS Servers** collection, but because there was no update to its limiting **All Member Servers** collection, this evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
 
 ![Full collection evaluation graph example 2](media/full-collection-evaluation-graph-2.png)
 
