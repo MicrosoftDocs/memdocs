@@ -25,99 +25,80 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: App management overview
-        url: placeholder.md
+      - text: Overview of Windows Autopilot
+        url:  windows-autopilot.md
+      - text: Requirements
+        url:  windows-autopilot-requirements.md
     - linkListType: quickstart
       links:
-      - text: Add and assign an app
-        url: placeholder.md
+      - text: Demonstrate Autopilot on a VM
+        url: demonstrate-deployment-on-vm.md
     - linkListType: concept
       links:
-      - text: App lifecycle
-        url: placeholder.md
+      - text: Windows Autopilot scenarios and capabilities
+        url: windows-autopilot-scenarios.md
 
   # Card (optional)
-  - title: Add apps
+  - title: Deployment scenarios
     linkLists:
-    - linkListType: overview
+    - linkListType: concept
       links:
-      - text: Add apps overview
-        url: placeholder.md
-      - text: Intune protected apps
-        url: placeholder.md
-    - linkListType: how-to-guide
-      links: 
-      - text: Store apps
-        url: placeholder.md
-      - text: Line-of-business apps
-        url: placeholder.md
-      - text: Win32 app management for Intune standalone
-        url: placeholder.md
-      - text: Use PowerShell scripts on Windows 10 devices
-        url: placeholder.md
-      - text: Assign apps to groups
-        url: placeholder.md
+      - text: User-driven mode
+        url: user-driven.md
+      - text: Self-deploying mode
+        url: self-deploying.md
+      - text: Windows Autopilot Reset
+        url: windows-autopilot-reset.md
+      - text: White glove
+        url: white-glove.md
+      - text: Support for existing devices
+        url: existing-devices.md
 
   # Card (optional)
-  - title: Assign apps
+  - title: Administer Windows Autopilot
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Assign apps to groups
-        url: placeholder.md
-      - text: Intune and exclude apps
-        url: placeholder.md
-      - text: Deploy Windows 10 apps
-        url: placeholder.md
-      - text: Deploy apps to Government environments
-        url: placeholder.md
+      - text: Register devices
+        url: add-devices.md
+      - text: Configure device profiles
+        url: profiles.md
+      - text: Enrollment Status Page
+        url: enrollment-status.md
+      - text: BitLocker encryption
+        url: bitlocker.md
+      - text: DFCI management
+        url: dfci-management.md
+      - text: Windows Autopilot update
+        url: autopilot-update.md
 
   # Card (optional)
-  - title: Configure apps
+  - title: Troubleshoot Windows Autopilot
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Selectively wipe apps
-        url: placeholder.md
-      - text: iOS managed devices
-        url: placeholder.md
-      - text: Managed Android Enterprise devices
-        url: placeholder.md
-      - text: Managed apps without device enrollment
-        url: placeholder.md
-      - text: Configure the Managed Browser
-        url: placeholder.md
-      - text: Manage VPP apps and books
-        url: placeholder.md
+      - text: Troubleshooting Windows Autopilot
+        url: troubleshooting.md
+      - text: Policy conflicts
+        url: policy-conflicts.md
+      - text: Known issues
+        url: known-issues.md
 
   # Card (optional)
-  - title: Protect apps
+  - title: Support information
     linkLists:
-    - linkListType: overview
+    - linkListType: learn
       links:
-      - text: App protection policies overview
-        url: placeholder.md
-    - linkListType: how-to-guide
-      links:
-      - text: Create and assign app protection policies
-        url: placeholder.md
-      - text: Validate app protection policies
-        url: placeholder.md
+      - text: Frequenty asked questions
+        url: autopilot-faq.md
+      - text: Support contacts
+        url: autopilot-support.md
+      - text: Registration authorization
+        url: registration-auth.md
       - text: Monitor app protection user status
         url: placeholder.md
-      - text: Create & assign WIP app protection policies
-        url: placeholder.md
-      - text: Manage data transfer between iOS apps
-        url: placeholder.md
+      - text: Device guidelines
+        url: autopilot-device-guidelines.md
+      - text: Motherboard replacement guidance
+        url: autopilot-mbr.md
 
-  # Card (optional)
-  - title: Troubleshoot apps
-    linkLists:
-    - linkListType: how-to-guide
-      links:
-      - text: Troubleshoot app installation problems
-        url: placeholder.md
-      - text: Troubleshoot mobile application management
-        url: placeholder.md
-      - text: Review app protection logs
-        url: placeholder.md

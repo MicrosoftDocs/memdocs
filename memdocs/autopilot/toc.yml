@@ -7,6 +7,8 @@
   items:
   - name: Windows Autopilot overview
     href: windows-autopilot.md
+  - name: Requirements
+    href: windows-autopilot-requirements.md
 - name: Quickstarts
   items:
   - name: Demonostrate Autopilot deployment
@@ -14,8 +16,6 @@
 
 - name: Concepts
   items:
-  - name: Requirements
-    href: windows-autopilot-requirements.md
   - name: Scenarios and capabilities
     href: windows-autopilot-scenarios.md
   - name: Deployment scenarios
