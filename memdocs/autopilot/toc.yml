@@ -47,7 +47,7 @@
         href: dfci-management.md
       - name: Windows Autopilot update
         href: autopilot-update.md        
-    - name: Troubleshoot
+    - name: Troubleshoot Windows Autopilot
       items:
       - name: Troubleshooting Windows Autopilot
         href: troubleshooting.md

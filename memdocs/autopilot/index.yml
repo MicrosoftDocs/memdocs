@@ -21,7 +21,7 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: Windows Autopilot deployment
+  - title: Understand Windows Autopilot
     linkLists:
     - linkListType: overview
       links:
@@ -33,15 +33,15 @@ landingContent:
       links:
       - text: Demonstrate Autopilot on a VM
         url: demonstrate-deployment-on-vm.md
-    - linkListType: concept
-      links:
-      - text: Windows Autopilot scenarios and capabilities
-        url: windows-autopilot-scenarios.md
 
   # Card (optional)
   - title: Deployment scenarios
     linkLists:
     - linkListType: concept
+      links:
+      - text: Windows Autopilot scenarios and capabilities
+        url: windows-autopilot-scenarios.md
+    - linkListType: learn
       links:
       - text: User-driven mode
         url: user-driven.md
@@ -53,6 +53,24 @@ landingContent:
         url: white-glove.md
       - text: Support for existing devices
         url: existing-devices.md
+
+  # Card (optional)
+  - title: Support information
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Frequenty asked questions
+        url: autopilot-faq.md
+      - text: Support contacts
+        url: autopilot-support.md
+      - text: Registration authorization
+        url: registration-auth.md
+      - text: Monitor app protection user status
+        url: placeholder.md
+      - text: Device guidelines
+        url: autopilot-device-guidelines.md
+      - text: Motherboard replacement guidance
+        url: autopilot-mbr.md
 
   # Card (optional)
   - title: Administer Windows Autopilot
@@ -79,26 +97,12 @@ landingContent:
       links:
       - text: Troubleshooting Windows Autopilot
         url: troubleshooting.md
+    - linkListType: reference
+      links:
       - text: Policy conflicts
         url: policy-conflicts.md
       - text: Known issues
         url: known-issues.md
 
-  # Card (optional)
-  - title: Support information
-    linkLists:
-    - linkListType: learn
-      links:
-      - text: Frequenty asked questions
-        url: autopilot-faq.md
-      - text: Support contacts
-        url: autopilot-support.md
-      - text: Registration authorization
-        url: registration-auth.md
-      - text: Monitor app protection user status
-        url: placeholder.md
-      - text: Device guidelines
-        url: autopilot-device-guidelines.md
-      - text: Motherboard replacement guidance
-        url: autopilot-mbr.md
+
 
