@@ -109,6 +109,8 @@ landingContent:
     linkLists:
     - linkListType: reference
       links:
+      - text: Windows Autopilot deployment process poster
+        url: deployment-process.md
       - text: Introducing Windows Autopilot video
         url: https://youtu.be/4K4hC5NchbE
       - text: Windows Autopilot @ Windows IT Pro Blog
