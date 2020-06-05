@@ -76,14 +76,14 @@ Still, many organizations often have specific risks they're concerned about.  Th
 |Compromised user account | Block high risk users | Block high risk users |
 |Compromised user account | Device PIN | App PIN |
 | | | |
-| Compromised device or app | Require a compliant device | Jailbreak check on app launch |
+| Compromised device or app | Require a compliant device | Jailbreak/root check on app launch |
 | Compromised device or app | Encrypt device data | Encrypt app data |
 | | | |
 |Lost or stolen device | Remove all device data | Remove all app data|
 | | | |
-| Accidental data sharing or saving to unsecured locations | Restrict device data backups | Restrict cut/copy/paste|
+| Accidental data sharing or saving to unsecured locations | Restrict device data backups | Restrict backups of org data |
 | Accidental data sharing or saving to unsecured locations | Restrict save-as | Restrict save-as |
-|Accidental data sharing or saving to unsecured locations | Disable printing | n/a|
+|Accidental data sharing or saving to unsecured locations | Disable printing | Disable printing of org data |
 
 ## Next steps
 Now it's time to decide if you are going to enable BYOD in your organization by focusing on device management, app management, or a combination of the two. The implementation choice is yours, where you can rest assured that the identity and security features available with Azure AD will be available regardless.  

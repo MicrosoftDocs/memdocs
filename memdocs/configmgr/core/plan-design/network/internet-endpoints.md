@@ -33,7 +33,7 @@ Other Configuration Manager features may require additional endpoints from the s
 
 Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
 
-### <a name="bkmk_scp-updates"/> Updates and servicing
+### <a name="bkmk_scp-updates"></a> Updates and servicing
 
 For more information on this function, see [Updates and servicing for Configuration Manager](../../servers/manage/updates.md).
 
@@ -81,6 +81,18 @@ If you enroll Windows 10 devices to Microsoft Intune for co-management, make sur
 ## Microsoft Store for Business
 
 If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+
+## Delivery optimization
+
+If you use delivery optimization, clients need to communicate with its cloud service: `*.do.dsp.mp.microsoft.com`
+
+Distribution points that support Microsoft Connected Cache also require these endpoints.
+
+For more information, see the following articles:
+
+- [Delivery optimization FAQ](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Fundamental concepts for content management in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
 ## <a name="bkmk_cloud"></a> Cloud services
 
