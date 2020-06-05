@@ -72,7 +72,7 @@ This problem occurs when you have not authenticated your new tenant account thro
     > [!div class="mx-imgBorder"]
     > ![Open the management type selection page](./media/get-support/management-types.png)
 
-    Use the drop down to select the management type you want help with, which opens the applicable Help and Support page. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
+    Use the drop-down to select the management type you want help with, which opens the applicable Help and Support page. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
 
     - Configuration Manager
     - Intune
