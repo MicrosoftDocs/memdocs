@@ -1,0 +1,125 @@
+### YamlMime:Landing
+
+title: Windows Autopilot documentation
+summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
+metadata:
+  title: Windows Autopilot documentation
+  description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: apps
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: dougeby
+  ms.author: dougeby
+  ms.manager: mtillman
+  ms.date: 06/03/2020  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Understand Windows Autopilot
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Overview of Windows Autopilot
+        url:  windows-autopilot.md
+      - text: Requirements
+        url:  windows-autopilot-requirements.md
+      - text: What's new
+        url:  windows-autopilot-whats-new.md
+    - linkListType: quickstart
+      links:
+      - text: Demonstrate Autopilot on a VM
+        url: demonstrate-deployment-on-vm.md
+
+  # Card (optional)
+  - title: Deployment scenarios
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Windows Autopilot scenarios and capabilities
+        url: windows-autopilot-scenarios.md
+    - linkListType: learn
+      links:
+      - text: User-driven mode
+        url: user-driven.md
+      - text: Self-deploying mode
+        url: self-deploying.md
+      - text: Windows Autopilot Reset
+        url: windows-autopilot-reset.md
+      - text: White glove
+        url: white-glove.md
+      - text: Support for existing devices
+        url: existing-devices.md
+
+  # Card (optional)
+  - title: Support information
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Frequenty asked questions
+        url: autopilot-faq.md
+      - text: Support contacts
+        url: autopilot-support.md
+      - text: Registration authorization
+        url: registration-auth.md
+      - text: Monitor app protection user status
+        url: placeholder.md
+      - text: Device guidelines
+        url: autopilot-device-guidelines.md
+      - text: Motherboard replacement guidance
+        url: autopilot-mbr.md
+
+  # Card (optional)
+  - title: Administer Windows Autopilot
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Register devices
+        url: add-devices.md
+      - text: Configure device profiles
+        url: profiles.md
+      - text: Enrollment Status Page
+        url: enrollment-status.md
+      - text: BitLocker encryption
+        url: bitlocker.md
+      - text: DFCI management
+        url: dfci-management.md
+      - text: Windows Autopilot update
+        url: autopilot-update.md
+
+  # Card (optional)
+  - title: Troubleshoot Windows Autopilot
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Troubleshooting Windows Autopilot
+        url: troubleshooting.md
+    - linkListType: reference
+      links:
+      - text: Policy conflicts
+        url: policy-conflicts.md
+      - text: Known issues
+        url: known-issues.md
+
+  # Card (optional)
+  - title: Resources
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Windows Autopilot deployment process poster
+        url: deployment-process.md
+      - text: Participant device manufacturers
+        url: https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896
+      - text: Introducing Windows Autopilot video
+        url: https://youtu.be/4K4hC5NchbE
+      - text: Windows Autopilot @ Windows IT Pro Blog
+        url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
+      - text: Windows Autopilot and Surface devices
+        url: https://docs.microsoft.com/surface/windows-autopilot-and-surface-devices
+
+
