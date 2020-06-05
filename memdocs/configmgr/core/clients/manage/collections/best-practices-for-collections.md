@@ -20,7 +20,7 @@ manager: dougeby
 
 Use the following best practices for collections in Configuration Manager.  
 
-## Configure maintenance window size for software updates
+## Configure maintenance window for updates
 
 You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the attack mitigated by the software update.
 
@@ -75,13 +75,13 @@ A collection update from a CAS with multiple primary sites can be time consuming
 
 Once a collection evaluation thread is started and the evaluation graph is loaded, evaluation continues until the collection evaluation graph is emptied. The thread then terminates and becomes available for the next evaluation. However, if another collection evaluation cycle is queued while the thread is occupied evaluating collections, the thread is immediately restarted to attempt an evaluation of the "missed" evaluation cycle.
 
-Each evaluation method runs in its own thread. It's possible that within the thread, Configuration Manager may attempt to graph the same collection more than once. If this happens, Configuration Manager drops the second and subsequent requests.
+Each evaluation method runs in its own thread. It's possible that within the thread, Configuration Manager may attempt to graph the same collection more than once. Configuration Manager then drops the second and subsequent requests.
 
 To prevent these scenarios, avoid manual collection evaluations of large trees, especially when working from the CAS with multiple sites involved.
 
 ## Understand collection depth and cross-referencing
 
-To strike a balance between business requirements and performance, it's important to understand the collection structure you're creating and the dependencies it has on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, be aware that all of those collections will be evaluated to create the membership of this collection.
+To strike a balance between business requirements and performance, it's important to understand the collection structure you're creating and the dependencies it has on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, all of those collections will be evaluated to create the membership of this collection.
 
 The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. But if using include and exclude collections results in a high performance toll, you can use the WQL query method instead:
 
