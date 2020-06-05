@@ -29,6 +29,8 @@ landingContent:
         url:  windows-autopilot.md
       - text: Requirements
         url:  windows-autopilot-requirements.md
+      - text: What's new
+        url:  windows-autopilot-whats-new.md
     - linkListType: quickstart
       links:
       - text: Demonstrate Autopilot on a VM
@@ -111,6 +113,8 @@ landingContent:
       links:
       - text: Windows Autopilot deployment process poster
         url: deployment-process.md
+      - text: Participant device manufacturers
+        url: https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896
       - text: Introducing Windows Autopilot video
         url: https://youtu.be/4K4hC5NchbE
       - text: Windows Autopilot @ Windows IT Pro Blog
