@@ -82,12 +82,12 @@ conceptualContent:
           text: Protect your infrastructure and data
     - title: Windows Autopilot
       links:
-        - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+        - url: ./autopilot/index.yml
           itemType: concept
           text: Windows Autopilot documentation
         - url: /mem/intune/enrollment/enrollment-autopilot
           itemType: how-to-guide
           text: "Intune: Enroll Windows devices using Windows Autopilot"
-        - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+        - url: ./autopilot/windows-autopilot-for-existing-devices.md
           itemType: how-to-guide
           text: "Configuration Manager: Use Windows Autopilot for existing devices"         

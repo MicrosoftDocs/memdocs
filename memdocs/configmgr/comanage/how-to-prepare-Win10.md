@@ -43,7 +43,7 @@ For more information, see [Add devices in Intune](https://docs.microsoft.com/int
 
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available in Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices task sequence](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+For more information, see [Windows Autopilot for existing devices task sequence](../../autopilot/windows-autopilot-for-existing-devices.md).
 
 ## Install the Configuration Manager client
 
