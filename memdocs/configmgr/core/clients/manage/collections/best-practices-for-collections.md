@@ -22,7 +22,7 @@ Use the following best practices for collections in Configuration Manager.
 
 ## Configure maintenance window for updates
 
-You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the attack mitigated by the software update.
+You can configure maintenance windows for device collections to restrict the times that Configuration Manager can install software on these devices. If you configure the maintenance window to be too small, the client might not be able to install critical software updates, which leaves the client vulnerable to the issues the update mitigates.
 
 Important considerations to keep in mind when planning your maintenance windows:
 
@@ -32,13 +32,9 @@ Important considerations to keep in mind when planning your maintenance windows:
 
 ## Avoid frequent collection evaluation
 
-A full collection evaluation evaluates not only the targeted collection, but also any collections that the collection limits if an update occurs. Also, a collection with no schedule will still be evaluated if its limiting collection is updated. So it's possible that some collections may be evaluated more often than you expected.
+A full collection evaluation evaluates not only the targeted collection, but also any collections that the collection limits if an update occurs. Also, a collection with no schedule is still evaluated if its limiting collection updates. So it's possible that some collections may be evaluated more often than you expect.
 
 In a busy Configuration Manager environment, you can improve collection evaluation performance by scaling back schedules to avoid repeated collection evaluations. In a deep tree, you can decrease collection evaluation frequency as the collections descend deeper in the tree, because higher-level collection evaluations will also trigger lower-level collection evaluations.
-
-## Understand the collection evaluation graph
-
-If a collection configured for incremental evaluation updates on a schedule, referencing collections that aren't enabled for incremental evaluation may not update as expected. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
 
 ## <a name="bkmk_incremental"></a> Limit incremental updates
 
@@ -46,18 +42,18 @@ When table data changes, a SQL trigger inserts a row in the **CollectionNotifica
 
 Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
 
-Enabling incremental updates for many collections might cause evaluation delays. Best practice recommends a limit of 200 incremental collections. The exact number depends on:
+Enabling incremental updates for many collections might cause evaluation delays. It's best to limit the number of incrementally-updated collections to 200. The exact number depends on:
 
 - The total number of collections
 - The frequency of new resources being added and changed in the hierarchy
 - The number of clients in a hierarchy
 - The complexity of collection membership rules in a hierarchy
 
-If the incremental evaluation cycle is taking longer than the configured frequency of updates, then Configuration Manager is constantly processing collection evaluations, which could impact the performance of the rest of the system. Reduce the number of collections configured for incremental evaluation, or increase the time between incremental evaluation cycles.
+If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could impact system performance. Reduce the number of incrementally-updated collections, or increase the time between incremental evaluation cycles.
 
-If a collection configured for incremental evaluation updates on a schedule, referencing collections that aren't enabled for incremental evaluation may not update as expected. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
+If an incrementally-updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update as you expect. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
 
-Given the potential impacts of incremental collections, it's important to have a policy or procedure for creating collections and assigning collection update schedules. Examples of policy considerations might be:
+Given the potential impacts of incremental collections, it's important to have a policy or procedure for creating the collections and assigning update schedules. Examples of policy considerations might be:
 
 - Only use incremental updates for collections that are used for security scoping, client settings, and maintenance windows. These collection updates affect client behavior and access to resources.
 - For applications with no licensing approval, advertise applications to existing collections, and use global conditions to restrict availability.
@@ -65,7 +61,7 @@ Given the potential impacts of incremental collections, it's important to have a
 
 ## Avoid evaluation of large trees from the CAS
 
-In a Configuration Manager environment, the Central Administration Site (CAS) doesn't evaluate collection membership. Primary sites are the only sites that evaluate collections. Secondary sites act as proxies, using only data replicated from their associated primary sites.
+In a Configuration Manager environment, the Central Administration Site (CAS) doesn't evaluate collection membership. Primary sites are the only sites that evaluate collections. Secondary sites act as proxies that use only data they replicate from their primary site.
 
 To request a collection update, the CAS sends a request to each primary site. The primary sites evaluate the collection and send the results back to the CAS. The collection evaluation results appear only after all collection evaluation instructions replicate to all sites, all sites evaluate all collections, and all data returns to the CAS and consolidates.
 
@@ -75,15 +71,15 @@ The following diagram demonstrates the flow when the CAS requests a manual colle
 
 A collection update from a CAS with multiple primary sites can be time consuming. If a collection doesn't evaluate in a timely fashion, it's tempting to repeat the request.
 
-Once a collection evaluation thread begins and loads the evaluation graph, evaluation continues until the collection evaluation graph is empty. The thread then terminates and becomes available for the next evaluation. However, if another collection evaluation cycle queues while the thread is evaluating collections, the thread immediately restarts to attempt an evaluation of the "missed" evaluation cycle.
+Once a collection evaluation thread begins and loads the evaluation graph, evaluation continues until the collection evaluation graph is empty. The thread then terminates and becomes available for the next evaluation. However, if another collection evaluation cycle queues while the thread is evaluating collections, the thread immediately restarts to attempt an evaluation of the "missed" cycle.
 
 Each evaluation method runs in its own thread. It's possible that within the thread, Configuration Manager may attempt to graph the same collection more than once. Configuration Manager then drops the second and subsequent requests.
 
 To prevent these scenarios, avoid manual collection evaluations of large trees, especially when working from the CAS with multiple sites.
 
-## Assess collection depth and cross-referencing
+## Consider collection depth and cross-referencing
 
-To strike a balance between business requirements and performance, it's important to understand the collection structure you're creating and its dependencies on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, all of those collections will be evaluated to create the membership of the collection.
+To strike a balance between business requirements and performance, it's important to understand the collection structure you create, and its dependencies on other collections. If you create a collection with rules that reference one or more collections that also refer to other collections, all of those collections are evaluated to create the membership of the collection.
 
 The include and exclude collection rules in Configuration Manager make referencing collections easier than writing a custom WQL query. However, if using include and exclude collections results in a high performance toll, you can use the WQL query method instead:
 

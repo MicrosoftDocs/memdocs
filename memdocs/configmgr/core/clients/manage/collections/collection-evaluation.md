@@ -17,7 +17,7 @@ manager: dougeby
 
 Configuration Manager uses *collection evaluation* to update collection membership, based on the collection rules you define. Collection evaluation scope and timing differ depending on site and collection configuration and evaluation type. It's important to understand collection evaluation behavior so you can make appropriate collection design decisions.
 
-Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be convenient, since most Configuration Manager functionality is dependent on collections. To formulate an appropriate collection evaluation plan, carefully consider both performance impacts and business requirements.
+Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. However, updating collections frequently can be convenient, since most Configuration Manager functionality is dependent on collections. Carefully consider both performance impacts and business requirements to formulate an appropriate collection evaluation plan.
 
 ## Evaluation process
 
@@ -58,7 +58,7 @@ The following table describes collection evaluation triggers and their correspon
 |Manual|Single or Auxiliary|Manual is the highest priority collection evaluation. When an administrator requests a manual collection evaluation, the collection evaluator assigns the next available evaluation thread to the evaluation.|
 |Scheduled|Primary|The process of scheduled evaluation is the same as manual evaluation, except the evaluation is time-driven rather than event-driven.|
 |Staging|Single or Auxiliary|All collections directly or indirectly depend on **All Systems** or **All Users and User Groups**. Both of these collections do a full collection evaluation at 4:00 AM daily. A change to either of these collections triggers updates of dependent collections, based on a [full collection graph](#collection-evaluation-graph).
-|Incremental|Express|Incremental evaluation uses a collection evaluation graph to evaluate and update dependent collections if an update to the incremental collection membership changes. Configuration Manager monitors and updates resources objects in all collections that are configured for incremental updates. If a collection query is based on information that will be updated later, like hardware inventory, Configuration Manager only adds or removes the resource from the collection during the scheduled collection update.|
+|Incremental|Express|Incremental evaluation uses a collection evaluation graph to evaluate and update dependent collections if an update to the incremental collection membership changes. Configuration Manager monitors and updates resources objects in all collections that are configured for incremental updates.<br /><br />If a collection query is based on information that will be updated later, like hardware inventory, Configuration Manager only adds or removes the resource from the collection during the scheduled collection update.|
 
 ## Collection evaluation graph
 
@@ -74,7 +74,7 @@ Configuration Manager builds two types of evaluation graphs, *incremental* or *f
 
 An *incremental* collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
 
-For example, the following diagram shows newly discovered resources that are applicable to all collections. However, the collection evaluation only updates the **All Servers** and **All Domain Controllers** collections. The other collections aren't evaluated, because the **All Member Servers** collection isn't enabled for incremental evaluation.
+For example, the following diagram shows newly discovered resources that are applicable to all collections. However, collection evaluation only updates the **All Servers** and **All Domain Controllers** collections. The collection evaluator doesn't evaluate the other collections, because the **All Member Servers** collection isn't enabled for incremental evaluation.
 
 ![Incremental collection evaluation graph example](media/incremental-collection-evaluation-graph.png)
 
@@ -86,7 +86,7 @@ The following diagram shows how a scheduled or manual collection update request 
 
 ![Full collection evaluation graph example 1](media/full-collection-evaluation-graph-1.png)
 
-Not all collections are always evaluated during a full evaluation. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the corresponding referenced collection. In the following example, the installation of DNS on the existing server makes it a member of the **DNS Servers** collection, but because there was no update to its limiting **All Member Servers** collection, this evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
+A full evaluation doesn't always evaluate all collections. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the corresponding referenced collection. In the following example, installing DNS on the existing server makes it a member of the **DNS Servers** collection, but because there's no update to its limiting **All Member Servers** collection, the full evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
 
 ![Full collection evaluation graph example 2](media/full-collection-evaluation-graph-2.png)
 
