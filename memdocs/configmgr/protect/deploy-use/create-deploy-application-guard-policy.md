@@ -99,6 +99,6 @@ Devices running Windows 10, version 2004 will show failures in compliance report
 
 ## Next steps
 
-To read more about Microsoft Defender Application Guard:
- [Microsoft Defender Application Guard Overview](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
-[Microsoft Defender Application Guard FAQ](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).
+For more information about Microsoft Defender Application Guard, see
+ - [Microsoft Defender Application Guard Overview](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+- [Microsoft Defender Application Guard FAQ](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).
