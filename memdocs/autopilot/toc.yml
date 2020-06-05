@@ -1,0 +1,74 @@
+- name: Windows Autopilot deployment
+  href: index.yml
+- name: What's new
+  href: windows-autopilot-whats-new.md
+- name: Overview
+  expanded: true
+  items:
+  - name: Windows Autopilot overview
+    href: windows-autopilot.md
+  - name: Requirements
+    href: windows-autopilot-requirements.md
+- name: Quickstarts
+  items:
+  - name: Demonostrate Autopilot deployment
+    href: demonstrate-deployment-on-vm.md  
+
+- name: Concepts
+  items:
+  - name: Scenarios and capabilities
+    href: windows-autopilot-scenarios.md
+  - name: Deployment scenarios
+    items:
+    - name: User-driven mode
+      href: user-driven.md
+    - name: Self-deploying mode
+      href: self-deploying.md
+    - name: Windows Autopilot Reset
+      href: windows-autopilot-reset.md
+    - name: White glove
+      href: white-glove.md
+    - name: Support for existing devices
+      href: existing-devices.md
+
+- name: How-to guides
+  items:
+    - name: Administer Windows Autopilot
+      items:
+      - name: Register devices
+        href: add-devices.md
+      - name: Configure device profiles
+        href: profiles.md
+      - name: Enrollment Status Page
+        href: enrollment-status.md
+      - name: BitLocker encryption
+        href: bitlocker.md
+      - name: DFCI management
+        href: dfci-management.md
+      - name: Windows Autopilot update
+        href: autopilot-update.md        
+    - name: Troubleshoot Windows Autopilot
+      items:
+      - name: Troubleshooting Windows Autopilot
+        href: troubleshooting.md
+      - name: Policy conflicts
+        href: policy-conflicts.md
+      - name: Known issues
+        href: known-issues.md
+
+- name: Reference
+  items:
+    - name: Deployment processes
+      href: deployment-process.md
+    - name: Support information  
+      items: 
+        - name: FAQ
+          href: autopilot-faq.md
+        - name: Contacts
+          href: autopilot-support.md
+        - name: Registration authorization
+          href: registration-auth.md
+        - name: Device guidelines
+          href: autopilot-device-guidelines.md
+        - name: Motherboard replacement
+          href: autopilot-mbr.md
