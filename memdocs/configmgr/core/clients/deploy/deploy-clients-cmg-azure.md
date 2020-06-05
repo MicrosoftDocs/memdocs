@@ -91,7 +91,7 @@ The **/mp** parameter and **CCMHOSTNAME** property specify one of the following,
 - Cloud management gateway
 - Internet-based management point
 
-The **SMSMP** property specifies either the on-premises or internet-based management point.
+The **SMSMP** property specifies the on-premises management point. It's not required. It's recommended for Azure AD-joined devices that roam onto the intranet, so they can find an on-premises management point.
 
 This example uses a cloud management gateway. It replaces sample values:
 `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
