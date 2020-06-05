@@ -148,7 +148,7 @@ When you grant permission to Microsoft Graph, you can specify the following scop
 The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the Azure portal and the second column provides the permission scope name.
 
 _Enable Access_ setting | Scope name
-:--|:--
+:--|---
 __Perform user-impacting remote actions on Microsoft Intune devices__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
 __Read and write Microsoft Intune devices__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Read Microsoft Intune devices__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
@@ -357,7 +357,7 @@ This example shows how to use C# to retrieve a list of devices associated with y
 4. Add the following statements to the top of **Program.cs**:
 
     ``` csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Net.Http;
     ```
 
