@@ -53,20 +53,20 @@ Devices will not be impacted if they are any of the below:
 
 ###### Configuration profile device restriction settings
 
-- Block Camera
-- Set Minimum password length
-- Set Number of sign-in failures before wiping device (will not apply on devices without a password set, but will apply on devices with a password)
-- Set Password expiration (days)
-- Set Required password type
-- Set Prevent use of previous passwords
-- Block Smart Lock and other trust agents
+- Block **Camera**
+- Set **Minimum password length**
+- Set **Number of sign-in failures before wiping device** (will not apply on devices without a password set, but will apply on devices with a password)
+- Set **Password expiration (days)**
+- Set **Required password type**
+- Set **Prevent use of previous passwords**
+- Block **Smart Lock and other trust agents**
 
 ###### Compliance policy settings
 
-- Set Required password type
-- Set Minimum password length
-- Set Number of days until password expires
-- Set Number of previous passwords to prevent reuse
+- Set **Required password type**
+- Set **Minimum password length**
+- Set **Number of days until password expires**
+- Set **Number of previous passwords to prevent reuse**
 
 ###### Additional impacts based on Android OS version
 
@@ -74,6 +74,7 @@ Devices will not be impacted if they are any of the below:
 - Network access control for VPN will no longer work
 - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned
 - The IMEI and serial number will no longer be visible to IT admins in Intune
+
 **Android 11**: We are currently testing Android 11 support on the latest developer beta release to evaluate if it will cause impact on device administrator-managed devices.
 
 #### User experience of impacted settings on impacted devices
