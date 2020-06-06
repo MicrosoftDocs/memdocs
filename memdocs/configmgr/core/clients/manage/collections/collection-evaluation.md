@@ -70,15 +70,19 @@ If one or more of the collections being evaluated has an include or exclude rule
 
 Configuration Manager builds two types of evaluation graphs, *incremental* or *full*.
 
-### Incremental collection evaluation graph
+### Incremental collection evaluation
 
-An *incremental* collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
+When table data changes, a SQL trigger inserts a row in the **CollectionNotifications** table. The next time a collection evaluation schedule fires, it `AND`s the resource ID with the existing collection query and triggers updates on collections that are enabled for *incremental* collections.
+
+Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
+
+An incremental collection evaluation graph maps referenced collections only if they're enabled for incremental evaluation. If an incremental evaluation is limited to a collection that isn't enabled for incremental evaluation, the graph evaluates the collection based on the existing membership of the limiting collection. 
 
 For example, the following diagram shows newly discovered resources that are applicable to all collections. However, collection evaluation only updates the **All Servers** and **All Domain Controllers** collections. The collection evaluator doesn't evaluate the other collections, because the **All Member Servers** collection isn't enabled for incremental evaluation.
 
 ![Incremental collection evaluation graph example](media/incremental-collection-evaluation-graph.png)
 
-### Full collection evaluation graph
+### Full collection evaluation
 
 Manual or scheduled collection evaluations build a *full* collection evaluation graph of all dependent collections. The graph includes all collections that reference the collection that is updating and subsequent collections. Configuration Manager continues to evaluate down the graph as long as updates occur to the collections being processed.
 
@@ -86,7 +90,9 @@ The following diagram shows how a scheduled or manual collection update request 
 
 ![Full collection evaluation graph example 1](media/full-collection-evaluation-graph-1.png)
 
-A full evaluation doesn't always evaluate all collections. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the corresponding referenced collection. In the following example, installing DNS on the existing server makes it a member of the **DNS Servers** collection, but because there's no update to its limiting **All Member Servers** collection, the full evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
+A full evaluation doesn't always evaluate all collections. The collection evaluation graph only continues to evaluate dependent collections if an update occurs to the current referenced collection. If an incrementally updated collection updates during scheduled incremental evaluations, referencing collections that aren't enabled for incremental updates may not update. A full evaluation doesn't update the collection, ending the collection evaluation graph and any referencing collection evaluations for that cycle. 
+
+In the following example, installing DNS on the existing server makes it a member of the **DNS Servers** collection, but because there's no update to its limiting **All Member Servers** collection, the full evaluation doesn't evaluate the **DNS Servers** collection. The next incremental evaluation cycle will evaluate the **DNS Servers** collection, because it's an incremental collection.
 
 ![Full collection evaluation graph example 2](media/full-collection-evaluation-graph-2.png)
 

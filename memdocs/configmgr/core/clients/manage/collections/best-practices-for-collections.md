@@ -38,11 +38,11 @@ A full collection evaluation evaluates not only the targeted collection, but als
 
 In a busy Configuration Manager environment, you can improve collection evaluation performance by scaling back schedules to avoid repeated collection evaluations. In a deep tree, you can decrease collection evaluation frequency as the collections descend deeper in the tree, because higher-level collection evaluations will also trigger lower-level collection evaluations.
 
+## Understand the collection evaluation graph
+
+Be aware of how the collection evaluation graph works so you can design an appropriate collection structure. Full collection evaluation doesn't always update all collections. If an incrementally updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. For more information, see [Collection evaluation graph](collection-evaluation.md#collection-evaluation-graph).
+
 ## <a name="bkmk_incremental"></a> Limit incremental updates
-
-When table data changes, a SQL trigger inserts a row in the **CollectionNotifications** table. The next time a collection evaluation schedule fires, it `AND`s the resource ID with the existing collection query and triggers updates on collections that are enabled for incremental collections.
-
-Incremental collection evaluation executes one query per machine. The default site configuration for incremental collection evaluation is every five minutes.
 
 Enabling incremental updates for many collections might cause evaluation delays. It's best to limit the number of incrementally updated collections to 200. The exact number depends on:
 
@@ -52,8 +52,6 @@ Enabling incremental updates for many collections might cause evaluation delays.
 - The complexity of collection membership rules in a hierarchy
 
 If the incremental evaluation cycle is taking longer than the configured update frequency, then Configuration Manager is constantly processing collection evaluations, which could impact system performance. Reduce the number of incrementally updated collections, or increase the time between incremental evaluation cycles.
-
-If an incrementally updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update as you expect. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. Don't rely on the collection evaluation graph to perform updates to referencing collections, but be aware of how the graph works so you can design an appropriate collection structure.
 
 Given the potential impacts of incremental collections, it's important to have a policy or procedure for creating the collections and assigning update schedules. Examples of policy considerations might be:
 
