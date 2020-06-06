@@ -40,7 +40,7 @@ In a busy Configuration Manager environment, you can improve collection evaluati
 
 ## Understand the collection evaluation graph
 
-Be aware of how the collection evaluation graph works so you can design an appropriate collection structure. Full collection evaluation doesn't always update all collections. If an incrementally updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. For more information, see [Collection evaluation graph](collection-evaluation.md#collection-evaluation-graph).
+Be aware of how the collection evaluation graph works so you can design an appropriate collection structure. Don't rely on full collection evaluation to always update all collections. If an incrementally updated collection updates on a schedule, referencing collections that aren't enabled for incremental updates may not update. Because updates likely occurred during incremental evaluations, a full evaluation may not update the collection, ending the collection evaluation graph for that cycle. In that case, no referencing collection evaluations occur. For more information, see [Collection evaluation graph](collection-evaluation.md#collection-evaluation-graph).
 
 ## <a name="bkmk_incremental"></a> Limit incremental updates
 
