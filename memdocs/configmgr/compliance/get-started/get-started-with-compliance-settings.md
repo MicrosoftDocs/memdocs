@@ -99,11 +99,8 @@ The edition upgrade policy automatically upgrades devices that run certain versi
 
 For more information, see [Upgrade Windows devices with the edition upgrade policy](../deploy-use/upgrade-windows-version.md)
 
-
-
-## Microsoft Edge browser profiles
+## Microsoft Edge Legacy browser profiles
 <!-- 1357310 -->
-Starting in version 1802, for customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a compliance settings policy to configure several Microsoft Edge settings. 
+For customers who use the [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
 
-For more information, see [Microsoft Edge browser profiles](../deploy-use/browser-profiles.md).
-
+For more information, see [Microsoft Edge Legacy browser profiles](../deploy-use/browser-profiles.md).
