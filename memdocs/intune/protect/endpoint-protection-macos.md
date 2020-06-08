@@ -119,16 +119,18 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
 
   - **Hide recovery key**
 
-    Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the following locations:
-    - The iOS/iPadOS company portal app
-    - The Intune app
-    - The company portal website
-    - The Android company portal app
-
-    To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
+    Choose to hide the personal key from a device user during FileVault 2 encryption.
 
     - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
     - **Yes** - The personal key is hidden from the device user during encryption.
+
+    After encryption, device users can view a personal recovery key for an encrypted macOS device from the following locations:
+    - iOS/iPadOS company portal app
+    - Intune app
+    - company portal website
+    - Android company portal app
+
+    To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
 
   - **Disable prompt at sign out**
 
