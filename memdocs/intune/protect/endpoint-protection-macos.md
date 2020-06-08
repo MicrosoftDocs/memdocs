@@ -123,6 +123,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - The iOS/iPadOS company portal app
     - The Intune app
     - The company portal website
+    - The Android company portal app
 
     To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
 
