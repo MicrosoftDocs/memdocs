@@ -48,7 +48,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   - **Yes** - The virus and threat protection area in the Windows Security app is hidden from end-users. Virus and threat protection-related notifications are suppressed.
 
   - **Hide the Ransomware data recovery option in the Windows Security app**  
-    CSP: [](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
@@ -90,7 +90,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
   - **Yes** - The family options area in the Windows Security app is hidden from end-users. Also, notifications related to family options are suppressed.
 
 - **Windows Security app notifications**  
-  CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   Use this setting to block Windows Security notifications to your users for all of the preceding feature settings. Alternatively, you can manage the Windows Security app notifications per feature by using the proceeding settings.
 
