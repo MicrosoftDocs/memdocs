@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -130,22 +130,24 @@ To create a device compliance policy, see the following platform-specific guidan
 To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Compliance policies** > **Notifications** > **Create notification**.
+2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
 3. Under *Basics*, specify the following information:
 
    - **Name**
    - **Subject**
    - **Message**
 
-4. Also under *Basics*, configure the following options for the notification, which all default to *Enabled*:
+4. Also under *Basics*, configure the following options for the notification:
 
-   - **Email header – Include company logo**
-   - **Email footer – Include company name**
-   - **Email footer – Include contact information**
+   - **Email header – Include company logo** (default = *Enable*) - The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **Email footer – Include company name** (default = *Enable*)
+   - **Email footer – Include contact information** (default = *Enable*)
+   - **Company Portal Website Link** (default = *Disable*) - When set to *Enable*, the email includes a link to the Company Portal website.
 
-   The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
 
-   ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+
+   > [!div class="mx-imgBorder"]
+   > ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Select **Next** to continue.
 
