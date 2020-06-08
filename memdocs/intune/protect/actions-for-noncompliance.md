@@ -2,7 +2,7 @@
 # required metadata
 
 title: Noncompliant message and actions with Microsoft Intune - Azure | Microsoft Docs
-description: Create a notification email to send to non-compliant devices. Add actions after a device is  marked as non-compliant, such as add a grace period to get compliant, or create a schedule to block access until the device is compliant. Do this using Microsoft Intune in Azure.
+description: Create a notification email to send to non-compliant devices. Add actions to apply to devices that don't meet your compliance policies. Actions can include a grace period to get compliant, block access to network resources, or retire the noncompliant device.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -33,11 +33,11 @@ For devices that don't meet your compliance policies or rules, you can add **Act
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. Then, Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
-For each action you can set, you can configure a schedule that determines when that action takes effect based on the number of days after the device is marked as noncompliant. You can also configure multiple instances of an action. When you set multiple instances of an action in a policy, the action runs again at that later scheduled time if the device remains non-compliant.
+For each action you set, you can configure a schedule that determines when that action takes effect. The schedule is a number of days after the device is marked as noncompliant. You can also configure multiple instances of an action. When you set multiple instances of an action in a policy, the action runs again at that later scheduled time if the device remains non-compliant.
 
 Not all actions are available for all platforms.
 
@@ -52,7 +52,7 @@ Following are the available actions for noncompliance. Unless stated otherwise, 
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
 
-  - Select a *Notification message template* that this action sends. You must [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the subject, message body, and can include the company logo, company name, and additional contact information.
+  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the subject, message body, and can include the company logo, company name, and additional contact information.
   - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
 
 When the email is sent, Intune includes details about the noncompliant device in the email notification.
@@ -104,12 +104,12 @@ When the email is sent, Intune includes details about the noncompliant device in
   
   For example, you might schedule the first action for zero days and then add a second instance of the action set to three days. This delay before the second notification gives the user a few days to resolve the issue, and avoid the second notification.
 
-  To avoid spamming users with too many duplicate messages, review and streamline which compliance policies include a push notification for non-compliance, and review the schedules to avoid repeat notifications for the same issue being sent too often.
+  To avoid spamming users with too many duplicate messages, review and streamline which compliance policies include a push notification for non-compliance, and review the schedules to avoid repeat notifications for the same too often.
 
   Consider:
   - For a single policy that includes multiple instances of a push notification set for the same day, only a single notification is sent for that day.
 
-  - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, multiple notifications are sent to the same device on the same day.
+  - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, Intune sends multiple notifications to the same device on the same day.
 
 ## Before you begin
 
