@@ -144,8 +144,6 @@ To send email to your users, create a notification message template. When a devi
    - **Email footer – Include contact information** (default = *Enable*)
    - **Company Portal Website Link** (default = *Disable*) - When set to *Enable*, the email includes a link to the Company Portal website.
 
-
-
    > [!div class="mx-imgBorder"]
    > ![Example of a compliant notification message in Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -191,7 +189,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as non-compliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 
-  For more information on compliance, and the built-in actions, see the [compliance overview](device-compliance-get-started.md).
+   For more information on compliance, and the built-in actions, see the [compliance overview](device-compliance-get-started.md).
 
 6. When finished, select **Add** > **OK** to save your changes.
 
