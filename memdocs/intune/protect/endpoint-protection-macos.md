@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/05/2020
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -106,32 +106,38 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
   When *Enable FileVault* is set to *Yes*, you can configure the following settings:
 
   - **Recovery key type**
-  
+
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key.
 
   - **Escrow location description of personal recovery key**
-  
+
     Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
 
   - **Personal recovery key rotation**
-  
+
     Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
 
-  - **Hide recovery key**  
-    Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the iOS company portal app or from the company portal website. To view the key, from the app or website, go to device details and select *get recovery key*.
+  - **Hide recovery key**
+
+    Choose to hide the personal key from a device user during FileVault 2 encryption. Later, device users can view a personal recovery key for an encrypted macOS device from the following locations:
+    - The iOS/iPadOS company portal app
+    - The Intune app
+    - The company portal website
+
+    To view the key, from the app or website, go to device details of the encrypted macOS device and select *get recovery key*.
 
     - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
     - **Yes** - The personal key is hidden from the device user during encryption.
 
   - **Disable prompt at sign out**
-  
+
     Prevent the prompt to the user that requests they enable FileVault when they sign out.  When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.
 
     - **Not configured** (*default*)
     - **Yes** - Disable the prompt at sign-out.
 
   - **Number of times allowed to bypass**
-  
+
     Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
 
     - **Not configured** - Encryption on the device is required before the next sign-in is allowed.
