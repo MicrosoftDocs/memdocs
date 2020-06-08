@@ -82,6 +82,7 @@ This feature applies to:
 - iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
+Note: Please know that you should not add the same app to the dock and to a page, or to a folder on a page. Only one app icon can be added either to the dock, or to a page. Adding the same app to the dock and to a page will result in an error and the app will not be shown on the device. 
 
 ### Dock
 
