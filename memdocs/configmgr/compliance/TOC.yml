@@ -56,7 +56,7 @@
     href: deploy-use/create-remote-connection-profiles.md
   - name: Upgrade Windows devices to a new edition
     href: deploy-use/upgrade-windows-version.md
-  - name: Configure Microsoft Edge settings
+  - name: Configure Microsoft Edge Legacy settings
     href: deploy-use/browser-profiles.md
   - name: Monitor compliance settings
     href: deploy-use/monitor-compliance-settings.md
