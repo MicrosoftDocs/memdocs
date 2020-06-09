@@ -259,6 +259,8 @@ After setup completes, the following ports must stay open for Configuration Mana
 
 You can use custom ports for these configurations. Use the same custom ports by the endpoint and on all replicas in the availability group.
 
+For SQL to replicate data between sites, create a load balancing rule for each port in the Azure load balancer. For more information, see [Configure High Availability Ports for an internal load balancer](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+
 #### Listener
 
 The availability group must have at least one *availability group listener*. When you configure Configuration Manager to use the site database in the availability group, it uses the virtual name of this listener. Although an availability group can contain multiple listeners, Configuration Manager can only make use of one. For more information, see [Create or configure a SQL Server availability group listener](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).

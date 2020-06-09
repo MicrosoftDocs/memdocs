@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -82,6 +82,11 @@ This feature applies to:
 - iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
+
+> [!NOTE]
+> Only add one app to the dock, a page, or a folder on a page. Adding the same app in all places prevents the app from showing on devices, and may show reporting errors.
+>
+> For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 
 ### Dock
 

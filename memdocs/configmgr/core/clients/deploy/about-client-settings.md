@@ -93,7 +93,7 @@ Enables [peer cache](../../plan-design/hierarchy/client-peer-cache.md) for Confi
 Starting in version 1906, specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed.
 
 By default this value is 1,440 minutes (24 hours).
-The maximum value for this setting is 10,080 minutes (1 week).
+The maximum value for this setting is 10,080 minutes (one week).
 
 This setting gives you greater control over the client cache on different types of devices. You might reduce the value on clients that have small hard drives and don't need to keep existing content before another deployment runs.
 
@@ -109,7 +109,7 @@ Specifies how frequently the following Configuration Manager clients download cl
 - Mac computers  
 - Computers that run Linux or UNIX  
 
-This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With numerous clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
+This value is 60 minutes by default. Reducing this value causes clients to poll the site more frequently. With many clients, this behavior can have a negative impact on the site performance. The [size and scale guidance](../../plan-design/configs/size-and-scale-numbers.md) is based on the default value. Increasing this value causes clients to poll the site less often. Any changes to client policies, including new deployments, take longer for clients to download and process.<!-- SCCMDocs issue 823 -->
 
 ### Enable user policy on clients
 
@@ -271,7 +271,7 @@ Configure how users can install software, software updates, and task sequences:
 
 If computers require BitLocker PIN entry, then this option bypasses the requirement to enter a PIN when the computer restarts after a software installation.  
 
-- **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and has initiated a restart of the computer. This setting applies only to a computer restart initiated by Configuration Manager. This setting doesn't suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
+- **Always**: Configuration Manager temporarily suspends BitLocker after it has installed software that requires a restart, and it restarts the computer. This setting only applies when Configuration Manager restarts the computer. This setting doesn't suspend the requirement to enter the BitLocker PIN when the user restarts the computer. The BitLocker PIN entry requirement resumes after Windows startup.
 
 - **Never**: Configuration Manager doesn't suspend BitLocker after it has installed software that requires a restart. In this scenario, the software installation can't finish until the user enters the PIN to complete the standard startup process and load Windows.
 
@@ -324,29 +324,11 @@ If you want to give users more time to install required application or software 
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## Computer restart
 
-The following settings must be shorter in duration than the shortest maintenance window applied to the computer:
+For more information about these settings, see [Device restart notifications](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**
-- **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**
-
-
-For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
-
-- **Specify the snooze duration for computer restart countdown notifications (minutes)** (Starting in version 1906)<!--3976435-->
-  - The default value is 240 minutes.
-  - Your snooze duration value should be less than the temporary notification value minus the value for the notification the user can't dismiss.
-  - For more information, see [Device restart notifications](device-restart-notifications.md).
-
-**When a deployment requires a restart, show a dialog window to the user instead of a toast notification**<!--3555947-->: Starting in version 1902, configuring this setting to **Yes** changes the user experience to be more intrusive. This setting applies to all deployments of applications, task sequences, and software updates. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, under certain circumstances, the dialog box won't replace toast notifications. To resolve this issue, install the [update rollup for Configuration Manager version 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## Delivery Optimization 
+## Delivery Optimization
 
 <!-- 1324696 -->
 You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
@@ -358,7 +340,7 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
 
-Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the desired content. Enabling this setting also sets the Delivery Optimization download mode to the Group (2) option on targeted clients.
+Choose **Yes** to apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. Enabling this setting also sets the Delivery Optimization download mode to the Group (2) option on targeted clients.
 
 > [!Note]
 > Microsoft recommends allowing the client to configure this setting via local policy rather than group policy. This allows the boundary group identifier to be set as the Delivery Optimization group identifier on the client. For more information, see [Delivery Optimization](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -406,7 +388,7 @@ Choose **Yes** to suppress a computer restart after the Endpoint Protection clie
 
 ### Allowed period of time users can postpone a required restart to complete the Endpoint Protection installation (hours)
 
-If a restart is necessary after the Endpoint Protection client installs, this setting specifies the number of hours that users can postpone the required restart. This setting requires that the setting for **Suppress any required computer restarts after the Endpoint Protection client is installed** is **No**.  
+If a restart is necessary after the Endpoint Protection client installs, this setting specifies the number of hours that users can postpone the required restart. This setting requires that you disable the following setting: **Suppress any required computer restarts after the Endpoint Protection client is installed**.
 
 ### Disable alternate sources (such as Microsoft Windows Update, Microsoft Windows Server Update Services, or UNC shares) for the initial definition update on client computers
 
@@ -418,7 +400,7 @@ Choose **Yes** if you want Configuration Manager to install only the initial def
 
 ### Polling interval for mobile device legacy clients
 
-Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, Mac OS X, and Unix or Linux.
+Select **Set Interval** to specify the length of time, in minutes or hours, that legacy mobile devices poll for policy. These devices include platforms such as Windows CE, macOS, and Unix or Linux.
 
 ### Polling interval for modern devices (minutes)
 
@@ -504,13 +486,12 @@ Choose one of the following options for this setting:
 
     - Required deployments (when the installation deadline is reached)  
 
-    > [!IMPORTANT]  
-    > The client always permits software installations from Software Center, regardless of the metered internet connection settings.  
-
     If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
 
 - **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
 
+> [!IMPORTANT]  
+> The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
 
 ## Power management  
@@ -525,7 +506,7 @@ Choose **Yes** to let users of Software Center exclude their computer from any c
 
 ### Allow network wake-up
 
-Added in 1810. When set to **Enable**, configures the power settings on the network adapter to allow the network adapter to wake up the device. When set to **Disable**, the power settings on the network adapter are configured not to allow the network adapter to wake up the device.
+When you enable this setting, the client configures the power settings on the computer to allow the network adapter to wake up the device. If you disable this setting, the computer's network adapter can't wake up the device.
 
 ### Enable wake-up proxy
 
@@ -545,7 +526,7 @@ Then, configure the following additional settings as needed:
     > [!IMPORTANT]  
     > This number must match the number in the site **Properties**. If you change this number in one place, it isn't automatically updated in the other place.  
 
-- **Windows Defender Firewall exception for wake-up proxy**: The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Select **Configure** to specify the desired firewall profiles.  
+- **Windows Defender Firewall exception for wake-up proxy**: The Configuration Manager client automatically configures the wake-up proxy port number on devices that run Windows Defender Firewall. Select **Configure** to specify the firewall profiles.  
 
     If clients run a different firewall, manually configure it to allow the **Wake-up proxy port number (UDP)**.  
 
@@ -582,7 +563,7 @@ Before transferring content from the shared clipboard in a remote control sessio
 
 ### Grant Remote Control permission to local Administrators group
 
-Choose whether local admins on the server that initiates the remote control connection can establish remote control sessions to client computers.  
+Choose whether local admins on the server that starts the remote control connection can establish remote control sessions to client computers.  
 
 ### Access level allowed
 
@@ -616,7 +597,7 @@ Set this option to use sound to indicate when a remote control session is active
 
 Configure this setting to **Yes** to let Configuration Manager manage unsolicited Remote Assistance sessions.  
 
-In an unsolicited Remote Assistance session, the user at the client computer didn't request assistance to initiate the session.  
+In an unsolicited Remote Assistance session, the user at the client computer didn't request assistance to start the session.  
 
 ### Manage solicited Remote Assistance settings
 
@@ -626,7 +607,7 @@ In a solicited Remote Assistance session, the user at the client computer sent a
 
 ### Level of access for Remote Assistance
 
-Choose the level of access to assign to Remote Assistance sessions that are initiated in the Configuration Manager console. Select one of the following options:
+Choose the level of access to assign to Remote Assistance sessions that are started in the Configuration Manager console. Select one of the following options:
 
 - **None** (default)
 - **Remote Viewing**
@@ -667,7 +648,7 @@ When you enable this option, user-available applications that require approval a
 
 ### <a name="bkmk_HideInstalled"></a> Hide installed applications in Software Center
 
-When you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager 1802. Installed applications are still available for review under the installation status tab. <!--1357592-->
+When you enable this option, applications that are already installed no longer show in the Applications tab. This option is set as the default when you install or upgrade to Configuration Manager. Installed applications are still available for review under the installation status tab. <!--1357592-->
 
 ### <a name="bkmk_HideAppCat"></a> Hide Application Catalog link in Software Center
 
@@ -690,9 +671,9 @@ Available tabs:
 - **Installation Status**
 - **Device Compliance**
 - **Options**
-- Add up to 5 custom tabs by clicking the **Add tab** button.
+- Add up to five custom tabs by clicking the **Add tab** button.
   - Specify the **Tab name** and **Content URL** for your custom tab.
-  - Click **Delete Tab** to remove a custom tab.  
+  - Select **Delete Tab** to remove a custom tab.  
 
   >[!Important]  
   > - Some website features may not work when using it as a custom tab in Software Center. Make sure to test the results before deploying this to clients. <!--519659-->
@@ -727,9 +708,9 @@ For example, if your organization doesn't use compliance policies, and you want 
 
   - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.  
 
-- Set the **Default application view** as either **Tile view** or **List view**. 
+- Set the **Default application view** as either **Tile view** or **List view**.
 
-  - If a user changes this configuration, Software Center persists the user's preference in the future. 
+  - If a user changes this configuration, Software Center persists the user's preference in the future.
 
 
 ## Software deployment  
@@ -741,7 +722,7 @@ Configure a schedule for when Configuration Manager reevaluates the requirement 
 > [!IMPORTANT]  
 > This setting is more invasive to the local client than it is to the network or site server. A more aggressive reevaluation schedule negatively affects the performance of your network and client computers. Microsoft doesn't recommend setting a lower value than the default. If you change this value, closely monitor performance.  
 
-Initiate this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
+Start this action from a client as follows: in the **Configuration Manager** control panel, from the **Actions** tab, select **Application Deployment Evaluation Cycle**.  
 
 
 
@@ -850,9 +831,9 @@ Use this setting to enable software updates on Configuration Manager clients. Wh
 
 ### Software update scan schedule
 
-Select **Schedule** to specify how often the client initiates a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+Select **Schedule** to specify how often the client starts a compliance assessment scan. This scan determines the state for software updates on the client (for example, required or installed). For more information about compliance assessment, see [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
-By default, this scan uses a simple schedule to initiate every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
+By default, this scan uses a simple schedule to start every seven days. You can create a custom schedule. You can specify an exact start day and time, use Universal Coordinated Time (UTC) or the local time, and configure the recurring interval for a specific day of the week.  
 
 > [!NOTE]  
 > If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
@@ -864,16 +845,16 @@ By default, this scan uses a simple schedule to initiate every seven days. You c
 
 Select **Schedule** to configure how often the software updates client agent reevaluates software updates for installation status on Configuration Manager client computers. When previously installed software updates are no longer found on clients but are still required, the client reinstalls the software updates.
 
-Adjust this schedule based on company policy for software update compliance, and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to initiate the deployment re-evaluation scan every seven days.  
+Adjust this schedule based on company policy for software update compliance, and whether users can uninstall software updates. Every deployment re-evaluation cycle results in network and client computer processor activity. By default, this setting uses a simple schedule to start the deployment re-evaluation scan every seven days.  
 
 > [!NOTE]  
 > If you specify an interval of less than one day, Configuration Manager automatically defaults to one day.  
 
 ### When any software update deployment deadline is reached, install all other software update deployments with deadline coming within a specified period of time
 
-Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client initiates installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
+Set this option to **Yes** to install all software updates from required deployments with deadlines occurring within a specified period of time. When a required software update deployment reaches a deadline, the client starts installation for the software updates in the deployment. This setting determines whether to install software updates from other required deployments that have a deadline within the specified time.  
 
-Use this setting to expedite installation for required software updates. This setting also has the potential to increase client security, decrease notifications to the user, and decrease client restarts. By default, this setting is set to **No**.  
+Use this setting to speed up installation for required software updates. This setting also has the potential to increase client security, decrease notifications to the user, and decrease client restarts. By default, this setting is set to **No**.  
 
 ### Period of time for which all pending deployments with deadline in this time will also be installed
 
@@ -907,7 +888,7 @@ When you set this option to **Yes**, it enables the configuration of Office 365 
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
-Starting in version 1810, when you set this option to **Yes** and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window.
+When you set this option to **Yes**, and the client has at least one "Software Update" maintenance window defined, software updates will install during an "All deployments" maintenance window.
 
 By default, this setting is set to **No**. This value uses the same behavior as before: if both types exist, it ignores the window. <!--2839307-->
 
@@ -939,7 +920,7 @@ This client setting provides the following options:
 
     - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-- **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time out when using this option.  
+- **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
 
     - Removes the `/Priority` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 

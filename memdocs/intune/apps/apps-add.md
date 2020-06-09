@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -183,6 +183,25 @@ Intune will automatically reinstall, update, or remove a required app based on t
 - If a required app install fails or somehow the app is not present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
 - An admin targets an app as available to a user group and an end user installs the app from the company portal on the device. Later, the admin updates the app from v1 to v2. Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.   
+
+## Uninstall an app
+
+When you need to uninstall an app from user's devices, use the following steps.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All apps** > *the app* > **Assignments** > **Add group**.
+3. In the **Add group** pane, select **Uninstall**.
+4. Select **Included Groups** to select the groups of users that are affected by this app assignment.
+5. Select the groups that you want to apply the uninstall assignment.
+6. Click **Select** on the **Select groups** pane.
+7. Click **OK** on the **Assign** pane to set the assignment.
+8. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+9. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
+10. Select **OK** in the **Add group** pane.
+11. Select **Save** in the app **Assignments** pane.
+
+> [!IMPORTANT]
+> To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
 
 ## App installation errors
 
