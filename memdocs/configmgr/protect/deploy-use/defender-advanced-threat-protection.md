@@ -13,7 +13,7 @@ manager: dougeby
 
 
 ---
-# Microsoft Defender Advanced Threat Protection 
+# Microsoft Defender Advanced Threat Protection
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -130,7 +130,8 @@ Up-level clients require an onboarding configuration file for onboarding to ATP.
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
-   > [!Note] For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
+   > [!Note]
+   > For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
 
    - **None**
