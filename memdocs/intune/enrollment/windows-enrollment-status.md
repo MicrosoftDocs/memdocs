@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up an Enrollment Status Page
+title: Set up the Enrollment Status Page
 titleSuffix: Microsoft Intune
 description: Set up a greeting page for users enrolling Windows 10 devices.
 keywords:
@@ -31,27 +31,30 @@ ms.collection: M365-identity-device-management
 
 
  
-# Set up an Enrollment Status Page
+# Set up the Enrollment Status Page
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-The Enrollment Status Page (ESP) displays installation information about Windows 10 devices (version 1803 and later) during initial device enrollment. For example:
-- when using [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
-- or anytime a managed device is started for the first time after an Enrollment Status Page policy has been applied. 
+The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, as well as when new users sign into the device.  This enables IT administrators to optionally prevent (block) access to the device until it has been fully provisioned, while at the same time giving users information about the tasks remaining in the provisioning process.
 
-The Enrollment Status Page helps users understand the status of their device during device setup. You can create multiple Enrollment Status Page profiles and apply them to different groups that contain users. Profiles can be set to:
-- Show installation progress.
-- Block usage until installation completes.
-- Specify what a user can do if device setup fails.
+The Enrollment Status Page (ESP) can be used as part of any [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
 
-You can also set the priority order for each profile to account for conflicting profile assignments to the same user.
+You can create multiple Enrollment Status Page profiles with different configurations that specify:
 
-> [!NOTE]
-> The Enrollment Status Page can only be targeted to a user who belongs to an assigned group and the policy is set on the device at the time of enrollment for all users that use the device.  Device targeting for Enrollment Status Page profiles is not currently supported.
+- Showing installation progress.
+- Blocking access until the provisioning process is completed.
+- Time limits.
+- Allowed troubleshooting operations.
+
+These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
+
+- The highest-priority profile targeted to the device will be used first.
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user.  In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
 
- The following settings can be configured to customize behavior of the Enrollment Status Page:
+The following settings can be configured to customize behavior of the Enrollment Status Page:
 
 <table>
 <th align="left">Setting<th align="left">Yes<th align="left">No
@@ -86,7 +89,7 @@ To turn on the Enrollment Status Page, follow the steps below.
 
 ## Set the enrollment status page priority
 
-A user can be in many groups and have many Enrollment Status Page profiles. To handle such conflicts, you can set the priorities for each profile. While enrolling, if someone has more than one Enrollment Status Page profile, only the highest priority profile is applied to the enrolling device.
+A device or user can be in many groups and have multiple Enrollment Status Page profiles targeted. To control which profiles are considered first, you can set the priorities for each profile; those with higher priorities are considered first.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Hover over the profile in the list.
@@ -94,7 +97,7 @@ A user can be in many groups and have many Enrollment Status Page profiles. To h
 
 ## Block access to a device until a specific application is installed
 
-You can specify which apps need to be installed before the user can access the desktop.
+You can specify which apps must be installed before the Enrollment Status Page (ESP) completes.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Choose a profile > **Settings**.
@@ -105,7 +108,7 @@ You can specify which apps need to be installed before the user can access the d
 
 The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It does not specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
 
-A maximum of 25 apps can be specified.
+A maximum of 100 apps can be specified.
 
 ## Enrollment Status Page tracking information
 
@@ -114,14 +117,16 @@ There are three phases where the Enrollment Status Page tracks information for; 
 ### Device preparation
 
 For device preparation, the enrollment status page tracks:
-- Trusted Platform Module (TPM) key attestations (when applicable)
-- progress in joining Azure Active Directory
-- enrolling into Intune
-- installation of Intune management extensions
+
+- Trusted Platform Module (TPM) key attestation (when applicable)
+- Azure Active Directory join process
+- Intune (MDM) enrollment
+- Installation of the Intune Management Extensions (used to install Win32 apps)
 
 ### Device setup
 
-The Enrollment Status Page tracks the following device setup items (if they're assigned to All Devices or a device group in which the enrolling device is a member):
+The Enrollment Status Page tracks the following device setup items:
+
 - Security policies
   - One configuration service provider (CSP) for all enrollments.
   - Actual CSPs configured by Intune aren't tracked here.
@@ -135,7 +140,9 @@ The Enrollment Status Page tracks the following device setup items (if they're a
 - Certificate profiles that are assigned to **All Devices** or a device group in which the enrolling device is a member, but only for Autopilot devices
 
 ### Account setup
+
 For account setup, the Enrollment Status Page tracks the following items if they're assigned to the current logged in user:
+
 - Security policies
   - One CSP for all enrollments.
   - Actual CSPs configured by Intune aren't tracked here.
@@ -153,7 +160,8 @@ For account setup, the Enrollment Status Page tracks the following items if they
   - Certificate profiles that are assigned to All Users or a user group in which the user enrolling the device is a member.
 
 ### Troubleshooting
-Top questions for troubleshooting.
+
+The following are common questions for troubleshooting issues related to the Enrollment Status Page.
 
 - Why were my applications not installed and tracked using the Enrollment Status Page?
   - To guarantee applications are installed and tracked using the Enrollment Status Page, ensure that:
@@ -199,7 +207,9 @@ Top questions for troubleshooting.
       ```
 
 ### Known issues
-Below are known issues. 
+
+The following are known issues related to the Enrollment Status Page.
+
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. You must deploy OMA-URI to disable the ESP. See above for instructions on how to disable ESP using OMA-URI. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
@@ -214,4 +224,5 @@ Below are known issues.
   - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 
 ## Next steps
+
 After you set up Windows enrollment pages, learn how to manage Windows devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)
