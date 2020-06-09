@@ -36,7 +36,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 - **Intune subscription**: Intune is available as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](..//fundamentals/licenses.md).
 
-  In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Endpoint Manager](https://docs.microsoft.com/en-us/mem/endpoint-manager-overview), and Office 365.
+  In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview), and Office 365.
 
   You can also [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
