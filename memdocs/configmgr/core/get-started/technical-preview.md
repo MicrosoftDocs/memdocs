@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -112,9 +112,47 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
+
+### Technical preview version 2006
+
+- [3601213](2020/technical-preview-2006.md) <!--3601213-->
+- [3601237](2020/technical-preview-2006.md) <!--3601237-->
+- [4224406](2020/technical-preview-2006.md) <!--4224406-->
+- [4773948](2020/technical-preview-2006.md) <!--4773948-->
+- [4812909](2020/technical-preview-2006.md) <!--4812909-->
+- [5110009](2020/technical-preview-2006.md) <!--5110009-->
+- [6479246](2020/technical-preview-2006.md) <!--6479246-->
+- [6479284](2020/technical-preview-2006.md) <!--6479284-->
+- [6526313](2020/technical-preview-2006.md) <!--6526313-->
+- [6527576](2020/technical-preview-2006.md) <!--6527576-->
+- [6602347](2020/technical-preview-2006.md) <!--6602347-->
+- [6976145](2020/technical-preview-2006.md) <!--6976145-->
+- [6982226](2020/technical-preview-2006.md) <!--6982226-->
+- [6983320](2020/technical-preview-2006.md) <!--6983320-->
+- [6997525](2020/technical-preview-2006.md) <!--6997525-->
+- [7033501](2020/technical-preview-2006.md) <!--7033501-->
+- [7102873](2020/technical-preview-2006.md) <!--7102873-->
+- [7118523](2020/technical-preview-2006.md) <!--7118523-->
+- [7153654](2020/technical-preview-2006.md) <!--7153654-->
+
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
+
+## Features in recent technical previews
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2002:
+
+> [!TIP]
+> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### Technical preview version 2005
 
@@ -134,22 +172,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improvements to BitLocker task sequence steps](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [Improvements to the content library cleanup tool](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [Remove command prompt during Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
-
-## Features in recent technical previews
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2002:
-
-> [!TIP]
-> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### Technical preview version 2004
 
