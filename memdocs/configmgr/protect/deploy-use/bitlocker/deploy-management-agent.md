@@ -121,7 +121,7 @@ When you create more than one policy, you can configure their relative priority.
 
 1. If you want the device to potentially encrypt or decrypt its drives at any time, select the option to **Allow remediation outside the maintenance window**. If the collection has any maintenance windows, it still remediates this BitLocker policy.
 
-1. Configure a **Simple** or **Custom** schedule. By default, the client evaluates its compliance with this policy every 12 hours.
+1. Configure a **Simple** or **Custom** schedule. The client evaluates its compliance based on the settings specified in the schedule.
 
 1. Select **OK** to deploy the policy.
 

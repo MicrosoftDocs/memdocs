@@ -63,7 +63,7 @@ Desktop Analytics adds the following applications to your Azure AD:
 
 - **MALogAnalyticsReader**: Monitors your Azure Log Analytics workspace to ensure the daily snapshot has been copied successfully. For more information, see [MALogAnalyticsReader application role](#bkmk_MALogAnalyticsReader).  
 
-- **Office365 client Admin**: Enables Configuration Manager retrieval of deployment plan information and device readiness status from Desktop Analytics.
+- **Desktop Analytics**: Enables Configuration Manager retrieval of deployment plan information and device readiness status from Desktop Analytics.
 
 If you need to provision these apps after completing setup, go to the **Connected services** pane. Select **Configure users and apps access**, and provision the apps.  
 

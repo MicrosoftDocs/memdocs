@@ -671,21 +671,19 @@ By default, the client installer uses `PU`. It first checks the installation pro
 
 Example: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
-<!--
 ### SMSDIRECTORYLOOKUP
 
-Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.  
+Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.
 
- This property doesn't affect whether the client uses WINS for name resolution.  
+This property doesn't affect whether the client uses WINS for name resolution.
 
- You can configure two different modes for this property:  
+You can configure two different modes for this property:
 
--   NOWINS: This value is the most secure setting for this property and prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
+- **NOWINS**: This value is the most secure setting for this property. It prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet. For example, Active Directory Domain Services or DNS publishing.
 
--   WINSSECURE (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+- **WINSSECURE** (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
 
 Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
--->
 
 ### SMSMP
 

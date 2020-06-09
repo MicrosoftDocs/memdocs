@@ -158,7 +158,7 @@ conceptualContent:
         - text: Create configuration items
           url: ./compliance/deploy-use/create-configuration-items.md
           itemType: how-to-guide
-        - text: Microsoft Edge settings
+        - text: Microsoft Edge Legacy settings
           url: ./compliance/deploy-use/browser-profiles.md
           itemType: how-to-guide
         - text: Windows edition upgrade

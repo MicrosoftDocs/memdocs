@@ -96,7 +96,6 @@ For example, the following **Upgrade OS** step uses the English version:
 >
 > First add the language by selecting the **Operating System Language** condition. Then edit the WMI query to include the architecture clause.
 
-
 ### <a name="bkmk_deploy"></a> 3. Deploy the task sequence
 
 [Deploy the task sequence](deploy-a-task-sequence.md). For the pre-cache feature, configure the following settings:  
@@ -110,8 +109,7 @@ For example, the following **Upgrade OS** step uses the English version:
 - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content isn't pre-cached before a user starts the installation, the client uses these settings.  
 
     > [!Important]  
-    > For a task sequence that installs an OS image, don't use the deployment option to **Download content locally when needed by the running task sequence**. When the task sequence wipes the disk before it applies the OS image, it removes the client cache. Since the content is gone, the task sequence fails.<!-- SCCMDocs-PR #1338 -->
-
+    > For a task sequence that installs an OS image, don't use the deployment option to **Download content locally when needed by the running task sequence**. When the task sequence wipes the disk before it applies the OS image, it removes the client cache. Since the content is gone, the task sequence fails.<!-- SCCMDocs-PR #1338 --> These deployment options are dynamic based on other options you select for the deployment. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## User experience
 
@@ -120,7 +118,6 @@ For example, the following **Upgrade OS** step uses the English version:
 - When the client makes the deployment available to users, a notification displays to inform users about the new deployment. Now the task sequence is visible in Software Center. The user can go to Software Center and click **Install** to start the installation.  
 
 - If the client hasn't fully pre-cached the content when the user installs the task sequence, then the client uses the settings that you specify on the **Deployment Option** tab of the deployment.  
-
 
 ## See also
 

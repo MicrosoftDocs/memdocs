@@ -84,14 +84,7 @@ To configure the Company Portal to be in ASAM in the Microsoft Endpoint Manager,
 ## Device configuration
 
 ### Set device compliance state from third-party MDM partners<!-- 6361689   -->
-You’ll soon be able to allow the compliance state of iOS or Android devices managed by third-party Mobile Device Management (MDM) partners to be set in Azure Active Directory (Azure AD).
-
-When Intune is configured for partner compliance, compliance data for devices managed by the third-party MDM partner is sent to Intune for compliance evaluation. The results are then passed to Azure AD where the compliance data is used to enforce your conditional access policies for those devices.
-
-Support will soon include the following partners:
-- VMware WorkspaceONE (previously known as AirWatch)
-
-To enable a device compliance partner you’ll use a new node in the Microsoft Endpoint Manager admin center: **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** where you’ll select **Add Compliance Partner**.
+Microsoft 365 customers who own third-party MDM solutions will be able to enforce Conditional Access policies for Microsoft 365 apps on iOS and Android via integration with Microsoft Intune Device Compliance service. Third-party MDM vendor will leverage the Intune Device Compliance service to send device compliance data to Intune. Intune will then evaluate to determine if the device is trusted and set the conditional access attributes in Azure AD.  Customers will be required to set Azure AD Conditional Access policies from within the Microsoft Endpoint Manager admin center or the Azure AD portal.  
 
 ### Add a link to your company portal support website to emails for noncompliance<!-- 7225498    -->
 We're adding a new setting to the email notification template that will add the link to your company portal website to email notifications that are sent to users of non-compliant devices. (**Endpoint security** > **Device compliance** > **Notifications** > **Create notification**).  Users who receive an email due to having a noncompliant device can use the link to open a website to learn more about why their device isn’t compliant.
@@ -164,7 +157,7 @@ New errors will be reported for iOS/iPadOS and macOS devices, including
 - A count of removed Apple Business Manager devices will be added to the overview page where you see the status of your devices.
 
 ### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
-This feature may be delayed.
+The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own 3rd party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 ### Shared iPads for Business<!--6367326 -->
 You'll be able to use Intune and Apple Business Manager to easily and securely set up Shared iPad so that multiple employees can share devices. Apple's [Shared iPad](https://developer.apple.com/education/shared-ipad/) provides a personalized experience for multiple users while preserving user data. Using a Managed Apple ID, users can access their apps, data, and settings after signing into any Shared iPad in their organization. Shared iPad works with federated identities.
