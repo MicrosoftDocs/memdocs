@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create a device profile in Microsoft Intune
 
-Devices profiles allow you to add and configure settings, and then push these settings to devices in your organization. [Apply features and settings on your devices using device profiles](device-profiles.md) goes into more detail, including what you can do.
+Devices profiles allow you to add and configure settings, and then push these settings to devices in your organization. For more information, including what you can do, see [Apply features and settings on your devices using device profiles](device-profiles.md).
 
 This article:
 
@@ -182,7 +182,7 @@ When creating profiles, consider the following recommendations:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices.":::
 
-- Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from 4 characters to 6 characters, let your users know before your assign the policy.
+- Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 
 ## Next steps
 
