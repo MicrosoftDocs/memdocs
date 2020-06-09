@@ -43,8 +43,8 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 
 ## Prerequisites
 
-- [Intune subscription](../fundamentals/licenses.md)
-- [Windows automatic enrollment enabled](windows-enroll.md#enable-windows-10-automatic-enrollment)
+- [Intune subscription](../intune/fundamentals/licenses.md)
+- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## How to get the CSV for Import in Intune
@@ -59,14 +59,14 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
-    ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
+    ![Screenshot of Windows Autopilot devices](../media/enrollment-autopilot/autopilot-import-device.png)
 
 2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list the serial numbers, Windows product IDs, hardware hashes, optional group tags, and optional assigned user. You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/add-devices#device-identification). Use the header and line format shown below:
 
     `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-    ![Screenshot of Adding Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device2.png)
+    ![Screenshot of Adding Windows Autopilot devices](../media/enrollment-autopilot/autopilot-import-device2.png)
 
     >[!IMPORTANT]
     > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
@@ -99,7 +99,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and Hololens, see [Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
-    ![Screenshot of Basics page](./media/enrollment-autopilot/create-profile-basics.png)
+    ![Screenshot of Basics page](../media/enrollment-autopilot/create-profile-basics.png)
 
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices will not be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
 4. Select **Next**.
@@ -107,7 +107,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
     - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
 
-    ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-outofbox.png)
+    ![Screenshot of OOBE page](media/enrollment-autopilot/create-profile-outofbox.png)
 
    > [!NOTE]
    > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
@@ -126,7 +126,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **Language (Region)**\*: Choose the language to use for the device. This option is only available if you chose **Self-deploying** for **Deployment mode**.
     - **Automatically configure keyboard**\*: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is only available if you chose **Self-deploying** for **Deployment mode**.
 8. Select **Next**.
-9. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
 10. Select **Next**.
 11. On the **Assignments** page, choose **Selected groups** for **Assign to**.
 
@@ -209,7 +209,7 @@ You can delete Windows Autopilot devices that aren't enrolled into Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. This can all be done from Intune:
 
-1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
 2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
