@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/09/2020
 ms.topic: overview
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 
