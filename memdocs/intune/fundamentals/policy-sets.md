@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
