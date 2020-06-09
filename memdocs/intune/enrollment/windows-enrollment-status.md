@@ -161,7 +161,7 @@ For account setup, the Enrollment Status Page tracks the following items if they
 
 ### Troubleshooting
 
-The followin are common questions for troubleshooting issues related to the Enrollment Status Page.
+The following are common questions for troubleshooting issues related to the Enrollment Status Page.
 
 - Why were my applications not installed and tracked using the Enrollment Status Page?
   - To guarantee applications are installed and tracked using the Enrollment Status Page, ensure that:
