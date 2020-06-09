@@ -43,7 +43,7 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 
 ## Prerequisites
 
-- [Intune subscription](../intune/fundamentals/licenses.md)
+- [Intune subscription](../fundamentals/licenses.md)
 - [Windows automatic enrollment enabled](/intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -126,7 +126,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **Language (Region)**\*: Choose the language to use for the device. This option is only available if you chose **Self-deploying** for **Deployment mode**.
     - **Automatically configure keyboard**\*: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is only available if you chose **Self-deploying** for **Deployment mode**.
 8. Select **Next**.
-9. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
+9. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 10. Select **Next**.
 11. On the **Assignments** page, choose **Selected groups** for **Assign to**.
 
@@ -209,7 +209,7 @@ You can delete Windows Autopilot devices that aren't enrolled into Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune device, the Azure Active Directory device, and the Windows Autopilot device records. This can all be done from Intune:
 
-1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+1. If the devices are enrolled in Intune, you must first [delete them from the Intune All devices blade](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
 2. Delete the devices in Azure Active Directory devices at **Devices** > **Azure AD devices**.
 
@@ -234,4 +234,4 @@ You can group Windows devices by a correlator ID when enrolling using [Autopilot
 > - Never name Autopilot or Apple ADE profiles beginning with "OfflineAutopilotprofile-".
 
 ## Next steps
-After you configure Windows Autopilot for registered Windows 10 devices, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md)
+After you configure Windows Autopilot for registered Windows 10 devices, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)

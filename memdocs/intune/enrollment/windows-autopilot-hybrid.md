@@ -114,7 +114,7 @@ The organizational unit that's granted the rights to create computers must match
 
 The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.  Note that each connector must be able to create computer objects in any domain that you wish to support.
 
-The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
+The Intune Connector requires the [same endpoints as Intune](../fundamentals/intune-endpoints.md).
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
 2. Follow the instructions to download the Connector.
@@ -133,7 +133,7 @@ By default Windows Server has Internet Explorer Enhanced Security Configuration 
 
 ### Configure web proxy settings
 
-If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
+If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](autopilot-hybrid-connector-proxy.md).
 
 
 ## Create a device group
@@ -200,7 +200,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
 7. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 8. Select **Next**.
-9. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this this profile.
+9. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
 10. Select **Next**.
 11. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
 12. Select **Next** > **Create**.
@@ -241,11 +241,11 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    > Don't use quotation marks around the value in **Organizational unit**.
 5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-6. To assign the profile, follow the steps under [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
+6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join do not support variables such as %SERIAL% and only support prefixes for the computer name.
 
 ## Next steps
 
-After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).
+After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md).
