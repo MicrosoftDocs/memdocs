@@ -441,8 +441,11 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and aren't required to enter a Managed Apple ID or password. **Yes** prevents Shared iPad users from using temporary sessions. When set to **Yes**:
+- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and aren't required to enter a Managed Apple ID or password.
 
+  When set to **Yes**:
+
+  - Shared iPad users can't use temporary sessions.
   - Users must sign in to the device with their Managed Apple ID and password.
   - The Guest account option isn't shown on the lock screen on the devices.
 
