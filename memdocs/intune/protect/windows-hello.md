@@ -2,13 +2,13 @@
 # required metadata
 title: Integrate Windows Hello for Business with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Learn how to create a policy for controlling use of Windows Hello for Business on managed devices."
+description: Learn how to create a policy for controlling use of Windows Hello for Business on managed devices during device enrollment."
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
-ms.topic: conceptual
+ms.date: 06/08/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -29,18 +29,16 @@ ms.reviewer: shpate
 
 # Integrate Windows Hello for Business with Microsoft Intune  
 
-You can integrate Windows Hello for Business (formerly Microsoft Passport for Work) with Microsoft Intune.
+You can integrate Windows Hello for Business (formerly Microsoft Passport for Work) with Microsoft Intune, during device enrollment.
 
- Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. It lets you use a *user gesture* to sign in, instead of a password. A user gesture might be a PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.
+Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. It lets you use a *user gesture* to sign in, instead of a password. A user gesture might be a PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.
 
 Intune integrates with Hello for Business in two ways:
 
-- An Intune policy can be created under **Device enrollment**. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls. 
-- An identity protection profile can be created under **Device configuration**. This profile targets assigned users and devices, and is applied during check-in. 
+- **Tenant wide**: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Discrete groups**: You can deploy policies that manage Windows Hello for Business to devices that have enrolled with Intune. Policy types that can manage Windows Hello include *identity protection* profiles you create under *Device configuration*, various *security baselines*, and endpoint security *Account protection* profiles. These profile types target assigned users or devices, and apply during check-in.
 
 Use this article to create a default Windows Hello for Business policy that targets your entire organization. To create an identity protection profile that is applied to select user and device groups, see [Configure an identity protection profile](identity-protection-configure.md).  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > In Windows 10 desktop and mobile versions prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
@@ -62,8 +60,10 @@ Use this article to create a default Windows Hello for Business policy that targ
 
 3. Select from the following options for **Configure Windows Hello for Business**:
 
-    - **Disabled**. If you don't want to use Windows Hello for Business, select this setting. If disabled, users can't provision Windows Hello for Business except on Azure Active Directory joined mobile phones where provisioning may be required.
-    - **Enabled**. Select this setting if you want to configure Windows Hello for Business settings.  When you select *Enabled*, additional settings for WIndows Hello become visible.
+     - **Enabled**. Select this setting if you want to configure Windows Hello for Business settings.  When you select *Enabled*, additional settings for Windows Hello are visible and can be configured for devices.
+
+    - **Disabled**. If you don't want to enable Windows Hello for Business during device enrollment, select this option. When disabled, users can't provision Windows Hello for Business except on Azure Active Directory joined mobile phones where provisioning may be required. When set to *Disabled*, you can still configure the subsequent settings for Windows Hello for Business even though this policy won't enable Windows Hello for Business.
+
     - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10 devices isn't changed. All other settings on the pane are unavailable.
 
 4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10 and Windows 10 Mobile devices. After  you configure these settings, select **Save**.

@@ -29,8 +29,11 @@ conceptualContent:
   items:
     - title: Cloud-attached management
       links:
-        - text: Manage clients on the internet
-          url: ./core/clients/manage/manage-clients-internet.md
+        - text: Microsoft Endpoint Manager tenant attach
+          url: ./tenant-attach/index.yml
+          itemType: overview
+        - text: Plan for the cloud management gateway
+          url: ./core/clients/manage/cmg/plan-cloud-management-gateway.md
           itemType: overview
         - text: Plan for Azure AD
           url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
@@ -155,7 +158,7 @@ conceptualContent:
         - text: Create configuration items
           url: ./compliance/deploy-use/create-configuration-items.md
           itemType: how-to-guide
-        - text: Microsoft Edge settings
+        - text: Microsoft Edge Legacy settings
           url: ./compliance/deploy-use/browser-profiles.md
           itemType: how-to-guide
         - text: Windows edition upgrade

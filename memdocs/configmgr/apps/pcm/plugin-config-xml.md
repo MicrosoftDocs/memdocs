@@ -41,7 +41,10 @@ The following table describes the XML elements in the Configuration Manager conf
 ## Sample configuration XML
 
 This section provides an example of the Package Conversion Manager configuration XML elements in the Configuration Manager configuration file, **Microsoft.ConfigurationManagement.exe.config**. By default, this file is in the following path:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder. 
 
 In the sample, the elements related to Package Conversion Manager are inside the following element:
 `Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`

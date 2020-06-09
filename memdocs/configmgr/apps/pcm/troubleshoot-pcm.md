@@ -55,10 +55,13 @@ The details pane of the **Packages** node in the Configuration Manager console s
 
 ### Enable logging
 
-When you enable logging for Package Conversion Manager, it logs all of its actions, exceptions, and errors. 
+When you enable logging for Package Conversion Manager, it logs all of its actions, exceptions, and errors.
 
 To enable logging for this component in the Configuration Manager, modify **Microsoft.ConfigurationManagement.exe.Config**. By default, this configuration file is located in the following path:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder.
 
 Insert the following **switches** and **trace** XML elements in the **system.diagnostics** element after the last **sources** element:
 

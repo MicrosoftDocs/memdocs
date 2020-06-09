@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/07/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -107,6 +107,9 @@ The following table provides enrollment specific configuration details:
 > - Company Portal on iOS/iPadOS: version 4.4 or later
 > - Company Portal on Android: version 5.0.4715.0 or later 
 
+> [!IMPORTANT]
+> The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
+
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Available, with prompts    |    The default experience with prompts to enroll in all   possible locations.    |    Yes    |    Yes    |    Yes    |    Yes    |
@@ -181,7 +184,7 @@ End users can trigger navigation, app, and device actions in the Windows Company
 The following keyboard shortcuts are available in the Windows Company Portal app.
 
 | Area | Description | Keyboard shortcut |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | Navigation menu | Navigation | Alt+M |
 |  | Home | Alt+H |
 |  | All apps | Alt+A |

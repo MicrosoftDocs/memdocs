@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up Symantec integration with Microsoft Intune
+title: Set up Symantec Endpoint Protection Mobile integration with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: How to set up the Symantec Endpoint Protection Mobile solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

@@ -2,7 +2,7 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -260,7 +260,7 @@ You can discover user groups and members of those groups from Azure AD. When the
 
 ### Limitations
 
-Delta discovery for Azure AD user group discovery is currently disabled.
+Delta discovery for Azure AD user group discovery is disabled in version 1906. You can enable it starting in Configuration Manager version 1910.
 
 ### Log files
 
