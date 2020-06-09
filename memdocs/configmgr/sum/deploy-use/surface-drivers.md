@@ -19,13 +19,13 @@ ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
 
 System Center Configuration Manager allows you to synchronize drivers for Surface devices and deploy them like a software update. This functionality allows you to ensure that your Surface devices are running the latest available drivers. This synchronization was first introduced in version 1706 as a pre-release feature and it became a feature in 1710. <!--3684621, 3608197, 1098490-->
 
-## Prerequisites for synchronizing Surface Drivers
+## Prerequisites for synchronizing Surface drivers
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
 - Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
 
-## Enable sync for Surface Drivers
+## Enable sync for Surface drivers
 
 To enable synchronization of Surface drivers, do following steps:
 
