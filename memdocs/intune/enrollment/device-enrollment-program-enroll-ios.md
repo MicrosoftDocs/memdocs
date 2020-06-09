@@ -211,14 +211,14 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 12. If you chose **Enroll without User Affinity** and **Supervised** above, you must decide whether or not to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). By choosing **Yes** for the **Shared iPad**, multiple users will be able to sign into the same device. The users will authenticate with their Managed Apple ID and federated authentication accounts or through a temporary session. This option requires iOS/iPadOS 13.4 or later.
 
-If you chose to configure your devices to be Apple Shared iPad for Business devices, you must set **Maximum cached users**. Set this value to the number of users that you expect to use the Shared iPad. You can cache up to 24 users on a 32 GB or 64 GB device. If you choose a very low number, it may take a while for your user’s data to come down to the device after sign-in. If you choose a very high number, your users may not have enough disk space.  
+    If you chose to configure your devices to be Apple Shared iPad for Business devices, you must set **Maximum cached users**. Set this value to the number of users that you expect to use the Shared iPad. You can cache up to 24 users on a 32 GB or 64 GB device. If you choose a very low number, it may take a while for your user’s data to come down to the device after sign-in. If you choose a very high number, your users may not have enough disk space.  
 
-  > [!NOTE]
-  > If you want to set up Apple Shared iPad for Business, set the following: 
-  > - **User affinity** = **Enroll without User Affinity**. 
-  > - **Supervised** = **Yes**. 
-  > - **Shared iPad** = **Yes **.
-  > Temporary sessions are enabled by default and allow your users to log into a Shared iPad without a Managed Apple ID account. You can disable temporary sessions on Shared iPad by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
+    > [!NOTE]
+    > If you want to set up Apple Shared iPad for Business, set the following: 
+    > - **User affinity** = **Enroll without User Affinity**. 
+    > - **Supervised** = **Yes**. 
+    > - **Shared iPad** = **Yes **.
+    > Temporary sessions are enabled by default and allow your users to log into a Shared iPad without a Managed Apple ID account. You can disable temporary sessions on Shared iPad by configuring iOS/iPadOS Shared iPad [device restriction settings](../configuration/device-restrictions-ios.md).  
 
 13. Choose if you want the devices using this profile to be able to **Sync with computers**. If you choose **Allow Apple Configurator by certificate**, you must choose a certificate under **Apple Configurator Certificates**.
 
