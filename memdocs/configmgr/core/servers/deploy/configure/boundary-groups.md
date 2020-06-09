@@ -149,8 +149,16 @@ If you configure the content to distribute on-demand, and it isn't available on 
 
 ### <a name="bkmk_ccmsetup"></a> Client installation
 
+The Configuration Manager client installer, ccmsetup, can get installation content from a local source or via a management point. Its initial behavior depends upon the command-line parameters you use to install the client:<!-- MEMDocs#286 -->
+
+- If you don't use either **/mp** or **/source** parameters, ccmsetup tries to get a list of management points from Active Directory or DNS.
+- If you only specify **/source**, it forces the installation from the specified path. It doesn't discover management points. If it can't find ccmsetup.cab at the specified path, ccmsetup fails.
+- If you specify both **/mp** and **/source**, it checks the specified management points, and any it discovers. If it can't locate a valid management point, it falls back to the specified source path.
+
+For more information on these ccmsetup parameters, see [Client installation parameters and properties](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. The management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
+When ccmsetup contacts the management point to locate the necessary content, the management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
 
 1. Current boundary group  
 2. Neighbor boundary groups  

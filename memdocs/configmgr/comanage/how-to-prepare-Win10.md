@@ -74,7 +74,7 @@ Decide which command-line properties you require for your environment:
   - AADCLIENTAPPID  
   - AADRESOURCEURI  
 
-- If the client roams back to the intranet, the following property is required:  
+- If the client roams back to the intranet, use the following property:
   - SMSMP  
 
 - If using your own PKI certificate, and your CRL isn't published to the internet, the following parameter is required:  

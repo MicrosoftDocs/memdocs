@@ -119,7 +119,10 @@ Run RLA in either the Configuration Manager console or at a command prompt:
 
 - To run in the Configuration Manager console: Go to the **Monitoring** workspace, and select the **Database Replication** node. Select the replication link that you want to analyze, and then in ribbon, select **Replication Link Analyzer**.  
 
-- To run at a command prompt, type the following command: `%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- To run at a command prompt, type the following command: `%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder.
 
 When you run RLA, it detects problems by using a series of diagnostic rules and checks. You view the problems that the tool identifies. When it has instructions to resolve an issue, it displays them. If RLA can automatically remediate a problem, it presents you with that option.
 

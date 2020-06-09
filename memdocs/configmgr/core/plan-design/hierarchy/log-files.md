@@ -476,6 +476,7 @@ The following table lists the log files that contain information related to appl
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
+|TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.|Client|<!-- MEMDocs#336 -->
 
 #### Packages and programs
 

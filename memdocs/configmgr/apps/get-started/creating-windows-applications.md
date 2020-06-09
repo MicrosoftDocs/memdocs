@@ -34,7 +34,7 @@ Provision an application with a Windows app package for all users on the device.
 > [!Important]  
 > Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-When provisioning an offline licensed app, Configuration Manager doesn't allow Windows to automatically update it from the Microsoft Store.  
+When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager supports app provisioning on all supported versions of Windows 10.<!--SCCMDocs-pr issue 2762-->
 

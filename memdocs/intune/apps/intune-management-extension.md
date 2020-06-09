@@ -8,7 +8,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -71,7 +71,7 @@ The Intune management extension has the following prerequisites. Once the prereq
     
     - User signs in to the device using their Azure AD account, and then enrolls in Intune.
 
-  - Co-managed devices that use Configuration Manager and Intune. Be sure the **Apps** workload is set to **Pilot Intune** or **Intune**. See the following articles for guidance: 
+  - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. However, as noted above, the device must be an Azure AD or Hybrid Azure AD joined device and must be running Windows 10 version 1607 or later. See the following articles for guidance: 
   
     - [What is co-management](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Client apps workload](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
