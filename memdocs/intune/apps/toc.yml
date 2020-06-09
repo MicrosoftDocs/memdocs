@@ -141,7 +141,9 @@
           href: configure-microsoft-launcher.md
         - name: Configure Microsoft Edge
           href: manage-microsoft-edge.md
-        - name: Configure Outlook
+        - name: Configure Office
+          href: manage-microsoft-office.md
+          - name: Configure Outlook
           href: app-configuration-policies-outlook.md
         - name: Configure Microsoft Teams
           href: manage-microsoft-teams.md

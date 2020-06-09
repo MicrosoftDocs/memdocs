@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -67,7 +67,7 @@ To see the specific recommendations for each configuration level and the minimum
 
 Regardless of whether the device is enrolled in an unified endpoint management (UEM) solution, an Intune app protection policy needs to be created for both iOS and Android apps, using the steps in [How to create and assign app protection policies](app-protection-policies.md). These policies, at a minimum, must meet the following conditions:
 
-1. They include all Microsoft mobile applications, such as Outlook, OneDrive, Office, or Teams, as this will ensure that users can access and manipulate work or school data within any Microsoft app in a secure fashion.
+1. They include all Microsoft mobile applications, such as Outlook, OneDrive, Office, or Teams, as this ensures that users can access and manipulate work or school data within any Microsoft app in a secure fashion.
 
 2. They are assigned to all users. This ensures that all users are protected, regardless of whether they use Edge for iOS or Android.
 
@@ -385,7 +385,7 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
 
-## Deploy app configuration scenarios with Microsoft Endpoint Manager
+### Deploy app configuration scenarios with Microsoft Endpoint Manager
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
