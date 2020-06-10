@@ -629,7 +629,7 @@ Use these settings to configure iOS/iPadOS devices to run specific apps in auton
 
 - On iOS/iPadOS devices, the Company Portal app supports ASAM. When the Company Portal app is in ASAM, the device is locked in the Company Portal app until the user authenticates. When users sign in to the Company Portal app, they can use other apps and the Home screen button on the device. When they sign out of the Company Portal app, the device returns to single app mode, and locks on the Company Portal app.
 
-  To turn the Company Portal app into a 'sign in/sign out' app (enable ASAM), enter the Company Portal app name, such as `Contoso Company Portal app`, and the bundle ID (`com.microsoft.CompanyPortal`) in these settings. After this profile is assigned, you must open the Company Portal app so users can sign in and sign out of this app.
+  To turn the Company Portal app into a 'sign in/sign out' app (enable ASAM), enter the Company Portal app name, such as `Microsoft Intune Company Portal`, and the bundle ID (`com.microsoft.CompanyPortal`) in these settings. After this profile is assigned, you must open the Company Portal app to lock the app so users can sign in and sign out of it.
   
   When the device configuration profile is removed, and the user signs out, the device isn't locked in the Company Portal app.
 
