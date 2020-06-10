@@ -1,77 +1,103 @@
 ---
 title: Configure Microsoft Edge settings
 titleSuffix: Configuration Manager
-description: Configure settings for the Microsoft Edge web browser on Windows 10 clients
+description: Configure settings for the Microsoft Edge Legacy web browser on Windows 10 clients
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
-ms.topic: conceptual
+ms.date: 06/02/2020
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-
-
 ---
 
-# Configure Microsoft Edge settings in Configuration Manager
+# Configure Microsoft Edge Legacy settings in Configuration Manager
+
+> [!IMPORTANT]
+> If you're using Microsoft Edge version 77 or later, and are trying to open the settings pane, enter `edge://settings/profiles` in the browser address bar instead of search. For more information, see [Get to know Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know).
+>
+> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Endpoint Configuration Manager.
 
 *Applies to: Configuration Manager (current branch)*
 
 <!-- 1357310 -->
-Starting in version 1802, for customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. 
+For customers who use the [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
 
-This policy only applies to clients on Windows 10, version 1703 or later. <!--511552-->
+This policy only applies to clients on Windows 10, version 1703 or later, and Microsoft Edge Legacy version 45 and earlier. <!--511552-->
 
+For more information on managing Microsoft Edge version 77 or later with Configuration Manager, see [Deploy Microsoft Edge, version 77 and later](../../apps/deploy-use/deploy-edge.md). For more information on configuring policies for Microsoft Edge version 77 or later, see [Microsoft Edge - Policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
 
 ## Policy settings
+
 This policy currently includes the following settings:
+
 - **Set Microsoft Edge browser as default**: configures the Windows 10 default app setting for web browser to Microsoft Edge
-- **Allow address bar drop-down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Allow autofill**: For more information, see [AllowAutofill browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Allow cookies**: For more information, see [AllowCookies browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Allow extensions**: For more information, see [AllowExtensions browser policy](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
+- **Allow address bar drop-down**: Requires Windows 10, version 1703 or later. For more information, see [AllowAddressBarDropdown browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
 
-### Configure Windows Defender SmartScreen settings for Microsoft Edge
+- **Allow sync favorites between Microsoft browsers**: Requires Windows 10, version 1703 or later. For more information, see [SyncFavoritesBetweenIEAndMicrosoftEdge browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+
+- **Allow clear browsing data on exit**: Requires Windows 10, version 1703 or later. For more information, see [ClearBrowsingDataOnExit browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+
+- **Allow Do Not Track headers**: For more information, see [AllowDoNotTrack browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+
+- **Allow autofill**: For more information, see [AllowAutofill browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+
+- **Allow cookies**: For more information, see [AllowCookies browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+
+- **Allow pop-up blocker**: For more information, see [AllowPopups browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+
+- **Allow search suggestions in address bar**: For more information, see [AllowSearchSuggestionsinAddressBar browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+
+- **Allow send intranet traffic to Internet Explorer**: For more information, see [SendIntranetTraffictoInternetExplorer browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+
+- **Allow password manager**: For more information, see [AllowPasswordManager browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+
+- **Allow Developer Tools**: For more information, see [AllowDeveloperTools browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+
+- **Allow extensions**: For more information, see [AllowExtensions browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+
+> [!TIP]
+> For more information on using group policy to configure these and other settings, see [Microsoft Edge Legacy group policies](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+
+### Configure Windows Defender SmartScreen settings for Microsoft Edge Legacy
 <!--1353701-->
-Starting in version 1806, this policy adds three settings for [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). The policy now includes the following additional settings on the **SmartScreen Settings** page:
+This policy adds three settings for [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). The policy now includes the following additional settings on the **SmartScreen Settings** page:
 
 - **Allow SmartScreen**: Specifies whether Windows Defender SmartScreen is allowed. For more information, see the [AllowSmartScreen browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+
 - **Users can override SmartScreen prompt for sites**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about potentially malicious websites. For more information, see the [PreventSmartScreenPromptOverride browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+
 - **Users can override SmartScreen prompt for files**: Specifies whether users can override the Windows Defender SmartScreen Filter warnings about downloading unverified files. For more information, see the [PreventSmartScreenPromptOverrideForFiles browser policy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
+## Create the browser profile
 
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the **Microsoft Edge Browser Profiles** node. In the ribbon, select **Create Microsoft Edge profile**.
 
-## Create the Microsoft Edge browser profile
+2. Specify a **Name** for the policy, optionally enter a **Description**, and select **Next**.
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings** and select the **Microsoft Edge Browser Profiles** node. Click the ribbon option to **Create Microsoft Edge profile**.
-2. Specify a **Name** for the policy, optionally enter a **Description**, and click **Next**.
-3. On the **General Settings** page, change the value to **Configured** for the settings to include in this policy, and click **Next**. The setting to **Set Edge Browser as default** must be configured to continue.
-4. In version 1806 and later, configure settings on the **SmartScreen Settings** page, and then click **Next**. 
-5. On the **Supported Platforms** page, select the OS versions and architectures to which this policy applies, and click **Next**. 
+3. On the **General Settings** page, change the value to **Configured** for the settings to include in this policy. To continue the wizard, make sure to configure the setting to **Set Edge Browser as default**.
+
+4. Configure settings on the **SmartScreen Settings** page.
+
+5. On the **Supported Platforms** page, select the OS versions and architectures to which this policy applies.
+
 6. Complete the wizard.
-
-
 
 ## Deploy the policy
 
-1. Select your policy and click the ribbon option to **Deploy**.
-2. Click **Browse** to select the user or device collection to which to deploy the policy. 
-3. Select additional options as necessary.  
-     a. Generate alerts when the policy is not compliant.  
-     b. Set the schedule by which the client evaluates the device's compliance with this policy. 
-4. Click **OK** to create the deployment.
+1. Select your policy, and in the ribbon select **Deploy**.
 
+2. **Browse** to select the user or device collection to which to deploy the policy.
 
+3. Select additional options as necessary:
+
+    1. Generate alerts when the policy isn't compliant.
+
+    2. Set the schedule by which the client evaluates the device's compliance with this policy.
+
+4. Select **OK** to create the deployment.
 
 ## Next steps
 

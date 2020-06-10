@@ -286,7 +286,7 @@ For Configuration Manager version 1806, this level includes the following data:
 
 - Windows Hello for Business policy (created, deployed)  
 
-- ***[New]*** Count of deployed Microsoft Edge browser policies  
+- ***[New]*** Count of deployed Microsoft Edge Legacy browser policies  
 
 
 ### Content  
