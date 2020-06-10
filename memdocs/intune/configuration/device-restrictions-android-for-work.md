@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -91,93 +91,119 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
-### Dedicated devices
+### Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. These settings apply to Android Enterprise dedicated devices. They don't apply to Android Enterprise fully managed devices.
+Use these settings to configure a kiosk-style experience on your dedicated devices or fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
 
-**Kiosk mode**: Choose if the device runs one app or runs multiple apps.
+**Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or Microsoft Managed Home Screen on your devices. Your options:
 
-- **Not configured**: Intune doesn't change or update this setting.
-- **Single app**: Users can only access a single app on the device. When the device starts, only the specific app starts. Users are restricted from opening new apps or from changing the running app.
+- **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
+- **Dedicated device**: Configure a kiosk-style experience on your dedicated devices. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md) and [assign](../apps/apps-deploy.md) the apps you want on the devices.
 
-  - **Select a managed app**: Select the managed Google Play app from the list.
+  - **Kiosk mode**: Choose if the device runs one app or runs multiple apps. Your options:
 
-    If you don't have any apps listed, then [add some Android apps](../apps/apps-add-android-for-work.md) to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Single app**: Users can only access a single app on the device. When the device starts, only the specific app starts. Users are restricted from opening new apps or from changing the running app.
 
-  > [!IMPORTANT]
-  > When using single-app kiosk mode, dialer/phone apps may not function properly.
+      - **Select an app to use for kiosk mode**: Select the managed Google Play app from the list.
+
+      > [!IMPORTANT]
+      > When using single-app kiosk mode, dialer/phone apps may not work properly.
   
-- **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
+    - **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
-  > [!IMPORTANT]
-  > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
-  >   - [Added as a client app](../apps/apps-add-android-for-work.md) in Intune
-  >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
-  >
-  > The **Managed Home Screen** app isn't required to be in the configuration profile, but it is required to be added as a client app. When the **Managed Home Screen** app is added as a client app, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
-  >
-  > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
+      > [!IMPORTANT]
+      > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
+      >   - [Added in Intune](../apps/apps-add-android-for-work.md)
+      >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
+      >
+      > The **Managed Home Screen** app isn't required to be in the configuration profile, but it's required to be added as an app. When the **Managed Home Screen** app is added, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
+      >
+      > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
 
-  - **Add**: Select your apps from the list.
+      - **Add**: Select your apps from the list.
 
-    If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
+        If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
 
-    You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
+        You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
 
-  - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
+      - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
+        - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
+        - **Swipe up**: A home button shows when a user swipes up on the device.
+        - **Floating**: Shows a persistent, floating home button on the device.
 
-    - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
-    - **Swipe up**: A home button shows when a user swipes up on the device.
-    - **Floating**: Shows a persistent, floating home button on the device.
-
-  - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
+      - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
   
-    1. Continues to select the back button until the **Exit kiosk** button is shown. 
-    2. Selects the **Exit kiosk** button, and enters the **Leave kiosk mode code** PIN.
-    3. When finished, select the **Managed Home Screen** app. This step relocks the device into multi-app kiosk mode.
+        1. Continues to select the back button until the **Exit kiosk** button is shown. 
+        2. Selects the **Exit kiosk** button, and enters the **Leave kiosk mode code** PIN.
+        3. When finished, select the **Managed Home Screen** app. This step relocks the device into multi-app kiosk mode.
 
-      When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent administrators from pausing kiosk mode. If the administrator continues to select the back button, and selects the **Exit kiosk** button, then a message states that a passcode is required.
+        When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent administrators from pausing kiosk mode. If the administrator continues to select the back button, and selects the **Exit kiosk** button, then a message states that a passcode is required.
 
-    - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
+      - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
 
-  - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device. For example, enter `http://contoso.com/backgroundimage.jpg`.
+      - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device. For example, enter `http://contoso.com/backgroundimage.jpg`.
 
-    > [!NOTE]
-    > For most cases, we recommend starting with images of at least the following sizes:
-    >
-    > - Phone: 1080x1920 px
-    > - Tablet: 1920x1080 px
-    >
-    > For the best experience and crisp details, it's suggested that per device image assets be created to the display specifications.
-    >
-    > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
+        > [!NOTE]
+        > For most cases, we recommend starting with images of at least the following sizes:
+        >
+        > - Phone: 1080x1920 px
+        > - Tablet: 1920x1080 px
+        >
+        > For the best experience and crisp details, it's suggested that per device image assets be created to the display specifications.
+        >
+        > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-  - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
+      - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
 
-  - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
+      - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 
-  - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows users to turn the flashlight on or off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
+      - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows users to turn the flashlight on or off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
 
-  - **Media volume control**: **Enable** shows the media volume control on the Managed Home Screen, and allows users to adjust the device's media volume using a slider. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the media volume control on Managed Home Screen. It prevents users from adjusting the device's media volume while using the Managed Home Screen, unless their hardware buttons support it.
+      - **Media volume control**: **Enable** shows the media volume control on the Managed Home Screen, and allows users to adjust the device's media volume using a slider. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the media volume control on Managed Home Screen. It prevents users from adjusting the device's media volume while using the Managed Home Screen, unless their hardware buttons support it.
 
-  - **Screen saver mode**: **Enable** shows a screensaver on the Managed Home Screen when the device is locked or times out. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show a screensaver on the Managed Home Screen.
+      - **Screen saver mode**: **Enable** shows a screensaver on the Managed Home Screen when the device is locked or times out. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show a screensaver on the Managed Home Screen.
 
-    When enabled, also configure:
+        When enabled, also configure:
 
-    - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. For example, enter:
+        - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. If you don't enter a URL, then the device's default image is used, if there's a default image. 
+        
+          For example, enter:
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      If you don't enter a URL, then the device's default image is used, if there's a default image.
+          > [!TIP]
+          > Any file resource URL that can be turned into a bitmap is supported.
 
-      > [!TIP]
-      > Any file resource URL that can be turned into a bitmap is supported.
+        - **Number of seconds the device shows screen saver before turning off screen**: Choose how long the device shows the screensaver. Enter a value between 0-9999999 seconds. Default is `0` seconds. When left blank, or set to zero (`0`), the screen saver is active until a user interacts with the device.
+        - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
+        - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
 
-    - **Number of seconds the device shows screen saver before turning off screen**: Choose how long the device shows the screensaver. Enter a value between 0-9999999 seconds. Default is `0` seconds. When left blank, or set to zero (`0`), the screen saver is active until a user interacts with the device.
-    - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
-    - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
+- **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
+
+  - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 
 ### Password
 
@@ -235,7 +261,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
 ### Applications
 
-- **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allow users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
+- **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allows users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
 - **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md).
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
