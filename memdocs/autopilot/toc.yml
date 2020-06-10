@@ -41,6 +41,10 @@
         href: profiles.md
       - name: Enrollment Status Page
         href: enrollment-status.md
+      - name: Enroll Windows Autopilot devices in Intune
+        href: enrollment-autopilot.md
+      - name: Hybrid Azure AD with Autopilot
+        href: windows-autopilot-hybrid.md
       - name: BitLocker encryption
         href: bitlocker.md
       - name: DFCI management
