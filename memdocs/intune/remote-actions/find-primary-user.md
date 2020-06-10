@@ -96,5 +96,7 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 ## Primary user and Azure AD device owner
 In some cases, the Intune primary user may be different from the Azure AD Device's **Owner** property (viewable under **Devices** > **Azure AD Devices**). The Azure AD Device owner is added during a device's registration into Azure Active Directory.
 
+For newly-enrolled Azure AD devices, the Azure AD **Owner** property is automatically set at the same time that the Intune primary user is set.
+
 ## Next steps
 [Manage your Intune devices.](device-management.md)
