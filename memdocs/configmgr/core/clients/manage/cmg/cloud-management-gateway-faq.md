@@ -42,7 +42,7 @@ By scaling CMG to include two or more instances, you automatically benefit from 
 
 If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the cloud management gateway. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
 
-### Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
+### <a name="bkmk_tenant"></a> Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
 <!--SCCMDocs-pr issue #2873-->
 No, you can deploy CMG into any subscription that can host Azure cloud services.
 
@@ -63,11 +63,13 @@ If you're using Azure AD authentication for the users and devices managed over t
 
 #### Example 1: One tenant with multiple subscriptions
 
-The user accounts and Azure AD apps are all in the same tenant. You can choose which subscription the CMG uses. You can deploy multiple CMG services from one site into separate subscriptions. The site has a one-to-one relationship with the tenant. You decide which subscriptions to use for various reasons such as billing or logical separation.
+The user identities, device registrations, and app registrations are all in the same tenant. You can choose which subscription the CMG uses. You can deploy multiple CMG services from one site into separate subscriptions. The site has a one-to-one relationship with the tenant. You decide which subscriptions to use for various reasons such as billing or logical separation.
 
 #### Example 2: Multiple tenants
 
-In other words, your environment has more than one Azure AD. You need to attach the site to each tenant. This process requires an administrative account from each tenant to create the app registration in that tenant. One site can then host CMG services in multiple tenants. You can create a CMG in any available subscription in either tenant. Devices that are joined or hybrid joined to either Azure AD could use a CMG.
+In other words, your environment has more than one Azure AD. If you need to support user and device identities in both tenants, you need to attach the site to each tenant. This process requires an administrative account from each tenant to create the app registrations in that tenant. One site can then host CMG services in multiple tenants. You can create a CMG in any available subscription in either tenant. Devices that are joined or hybrid joined to either Azure AD could use a CMG.
+
+If the user and device identities are in one tenant, but the CMG's subscription is in another tenant, you need to attach the site to both tenants. Technically, the client app isn't needed for the second tenant that only has the CMG service. The client app only provides user and device authentication for clients that use the CMG service.<!-- SCCMDocs#1902 -->
 
 ### How does CMG affect my clients connected via VPN?
 
