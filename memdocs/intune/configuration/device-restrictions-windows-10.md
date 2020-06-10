@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -326,6 +326,9 @@ These settings use the [messaging policy CSP](https://docs.microsoft.com/windows
 ## Microsoft Edge Browser
 
 These settings use the [browser policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), which also lists the supported Windows editions.
+
+> [!NOTE]
+> Using the browser policy CSP applies to Microsoft Edge version 45 and earlier. For Microsoft Edge Enterprise version 77 and later, see [Configure Microsoft Edge policy settings with Microsoft Intune](/DeployEdge/configure-edge-with-intune).
 
 ### Use Microsoft Edge kiosk mode
 
