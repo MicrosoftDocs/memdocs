@@ -462,6 +462,8 @@
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure
   items:
+  - name: Community hub
+    href: servers/manage/community-hub.md  
   - name: Management insights
     href: servers/manage/management-insights.md
   - name: CMPivot
