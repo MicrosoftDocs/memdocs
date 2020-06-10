@@ -64,7 +64,7 @@ Configuration Manager provides support for clients in workgroups.
 Configuration Manager supports the use of data deduplication with distribution points on Windows Server 2012 or later.
 
 > [!IMPORTANT]  
-> The volume that hosts package source files can't be marked for data deduplication. This limitation is because data deduplication uses reparse points. Configuration Manager doesn't support using a content source location with files stored on reparse points.  
+> The folder(s) that host package source files can't be marked for data deduplication. This limitation is because data deduplication uses reparse points. Configuration Manager doesn't support using a content source location with files stored on reparse points.  
 
 For more information, see the following posts:
 
