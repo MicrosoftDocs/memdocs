@@ -1,7 +1,7 @@
 ---
-title: SQL Server cluster
+title: Always On Failover Cluster Insatnce
 titleSuffix: Configuration Manager
-description: Use a SQL Server cluster to host the Configuration Manager site database
+description: Use an Always On failover cluster instance to host the Configuration Manager site database
 ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,27 +12,27 @@ ms.author: aaroncz
 manager: dougeby
 ---
 
-# Use a SQL Server cluster for the site database
+# Use an Always On failover cluster instance for the site database
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use a SQL Server Failover cluster to host the Configuration Manager site database. A cluster provides failover support and improves the reliability of the site database. However, it doesn't provide additional processing or load-balancing benefits. Additionally, a SQL Server Failover cluster uses shared storage and introduces a single point of failure. Degradation in performance can occur, because the site server must find the active node of the SQL Server cluster before it connects to the site database.  
+You can use an Always On failover cluster instance (FCI) to host the Configuration Manager site database. FCIs provide failover support for the entire instance of SQL Server and improves the reliability of the site database. However, it doesn't provide additional processing or load-balancing benefits. Additionally, FCIs require the use of shared storage which is considered a single point of failure. Degradation in performance can occur, because the site server must find the active node of the SQL Server cluster before it connects to the site database.  
 
 > [!IMPORTANT]  
-> Successful set up of SQL Server clusters relies on documentation and procedures provided in the SQL Server documentation library.  
+> Successful set up of an FCI relies on documentation and procedures provided in the SQL Server documentation library.  
 
 
-Before you install Configuration Manager, prepare the SQL Server cluster to support Configuration Manager. For more information, see [Prepare a clustered SQL Server instance](#bkmk_prepare).
+Before you install Configuration Manager, prepare the FCI to support Configuration Manager. For more information, see [Prepare a clustered SQL Server instance](#bkmk_prepare).
 
-During Configuration Manager setup, the Windows Volume Shadow Copy Service writer installs on each physical computer node of the Microsoft Windows Server cluster. This service supports the **Backup Site Server** maintenance task.  
+During Configuration Manager setup, the Windows Volume Shadow Copy Service writer installs on each physical computer node of the Windows Server failover cluster (WSFC). This service supports the **Backup Site Server** maintenance task.  
 
-After the site installs, Configuration Manager checks for changes to the cluster node each hour. Configuration Manager automatically manages any changes that are found that affect its component installs. For example, a node failover, or the addition of a new node to the SQL Server cluster.  
+After the site installs, Configuration Manager checks for changes to the cluster node each hour. Configuration Manager automatically manages any changes that are found that affect its component installs. For example, a node failover, or the addition of a new node to the FCI.  
 
 
 
 ## Supported options
 
-The following options are supported for SQL Server failover clusters used as the site database:
+The following options are supported for FCIs used as the site database:
 
 - A single instance cluster  
 
@@ -58,11 +58,11 @@ Be aware of the following prerequisites:
 - To support Kerberos authentication, enable the **TCP/IP** network communication protocol for the network connection of each SQL Server cluster node. The **Named pipes** protocol isn't required, but can be used to troubleshoot Kerberos authentication issues. The network protocol settings are configured in **SQL Server Configuration Manager**, under **SQL Server Network Configuration**.  
 
 - There are specific certificate requirements when you use a SQL Server cluster for the site database. For more information, see the following articles:
-  - [Install a certificate in a SQL failover cluster configuration](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Install a certificate in an Always On failover cluster instance configuration](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
-  > If you don't pre-provision a certificate in SQL, Configuration Manager creates and provisions a self-signed certificate for SQL.<!-- 7099499 -->
+  > If you don't pre-provision a certificate in SQL Server, Configuration Manager creates and provisions a self-signed certificate for SQL Server.<!-- 7099499 -->
 
 ## Limitations
 
@@ -71,24 +71,24 @@ Consider the following limitations:
 
 ### Installation and configuration
 
-- Secondary sites can't use a SQL Server cluster.  
+- Secondary sites can't use a FCI.  
 
-- When you specify a SQL Server cluster, the option to specify non-default file locations for the site database isn't available.  
+- When you specify a FCI, the option to specify non-default file locations for the site database isn't available.  
 
 
 ### SMS Provider
 
-You can't install an instance of the SMS Provider on a SQL Server cluster. It's also not supported on a computer that runs as a clustered SQL Server node.  
+You can't install an instance of the SMS Provider on an FCI. It's also not supported on a computer that runs as a node participating in the FCI.  
 
 
 ### Data replication options
 
-If you use **Distributed Views**, you can't use a SQL Server cluster to host the site database.  
+If you use **Distributed Views**, you can't use an FCI to host the site database.  
 
 
 ### Backup and recovery
 
-Configuration Manager doesn't support Data Protection Manager (DPM) backup for a SQL Server cluster that uses a named instance. It does support DPM backup on a SQL Server cluster that uses the default instance of SQL Server.  
+Configuration Manager doesn't support Data Protection Manager (DPM) backup for FCIs that uses a named instance. It does support DPM backup on FCIs that are installed as a default instance.  
 
 
 
@@ -96,20 +96,20 @@ Configuration Manager doesn't support Data Protection Manager (DPM) backup for a
 
 Here are the main tasks to complete to prepare your site database:
 
-- Create the virtual SQL Server cluster to host the site database on an existing Windows Server cluster environment. For specific steps to install and set up a SQL Server cluster, see the documentation specific to your version of SQL Server. For more information, see [Create a new SQL Server Failover Cluster](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Create the FCI to host the site database on an existing WSFC environment. For specific steps to install and set up a FCI see the documentation specific to your version of SQL Server. For more information, see [Create a new Always On Failover Cluster Instance](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-always-on-failover-cluster-instance-setup?view=sql-server-2017).  
 
-- On each computer in the SQL Server cluster, place a file in the root folder of each drive where you don't want Configuration Manager to install site components. Name the file `NO_SMS_ON_DRIVE.SMS`. By default, Configuration Manager installs some components on each physical node, to support operations such as backup.  
+- On each computer in the FCI, place a file in the root folder of each drive where you don't want Configuration Manager to install site components. Name the file `NO_SMS_ON_DRIVE.SMS`. By default, Configuration Manager installs some components on each physical node, to support operations such as backup.  
 
-- Add the computer account of the site server to the local **Administrators** group of each Windows Server cluster node computer.  
+- Add the computer account of the site server to the local **Administrators** group of each WSFC node.  
 
-- In the virtual SQL Server instance, assign the **sysadmin** SQL Server role to the user account that runs Configuration Manager setup.  
+- In the FCI, assign the **sysadmin** SQL Server role to the user account that runs Configuration Manager setup.  
 
 
 ### To install a new site using a clustered SQL Server  
 
 To install a site that uses a clustered site database, run Configuration Manager setup following your normal process for installing a site, with the following alteration:  
 
-- On the **Database Information** page, specify the name of the virtual SQL Server cluster instance that will host the site database. The virtual instance replaces the name of the computer that runs SQL Server.  
+- On the **Database Information** page, specify the name of the FCI that will host the site database. The FCI name replaces the name of a local computer that runs SQL Server.  
 
     > [!IMPORTANT]  
-    > When you enter the name of the virtual SQL Server cluster instance, don't enter the virtual Windows Server name created by the Windows Server cluster. If you use the virtual Windows Server name, the site database installs on the local hard drive of the active Windows Server cluster node. This prevents successful failover if that node fails.  
+    > When you enter the name of the FCI, don't enter the name of the WSFC. If you use the WSFC name, the site database installs on the local hard drive of the active WSFC node. This prevents successful failover if that node fails.  
