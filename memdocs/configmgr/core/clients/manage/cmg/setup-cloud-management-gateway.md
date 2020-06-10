@@ -33,11 +33,11 @@ Use the following checklist to make sure you have the necessary information and 
 
 - You need the following requirements for an [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) deployment of CMG:  
 
-  - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
+  - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required. To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**.
 
   - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
-  - A subscription admin needs to sign in.  
+  - A **Subscription Owner** needs to sign in to deploy the CMG.
 
 - A globally unique name for the service. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
@@ -66,7 +66,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 2. Select **Create Cloud Management Gateway** in the ribbon.  
 
-3. On the General page of the wizard, select **Sign in**. Authenticate with an Azure subscription administrator account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
+3. On the General page of the wizard, select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
     > [!Note]  
     > Starting in version 1810, classic service deployments in Azure were deprecated in Configuration Manager. In version 1902 and earlier, select **Azure Resource Manager deployment** as the CMG deployment method.

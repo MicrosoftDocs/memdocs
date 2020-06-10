@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -154,7 +154,7 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 
 - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona can be the same as the Configuration Manager administrator, or separate. If separate, it doesn't require permissions in Configuration Manager.
 
-  - To deploy the CMG, you need a **Subscription Admin**
+  - To deploy the CMG, you need a **Subscription Owner**
   - To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.  
