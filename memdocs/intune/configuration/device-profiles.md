@@ -207,7 +207,7 @@ This feature supports:
 
 - Windows 10 and later
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## Microsoft Defender ATP
 
