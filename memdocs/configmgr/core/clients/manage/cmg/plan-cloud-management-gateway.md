@@ -149,6 +149,21 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 > [!TIP]
 > You don't need to deploy more than one cloud management gateway for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
 
+### Test environments
+<!-- SCCMDocs#1225 -->
+Many organizations have separate environments for production, test, development, or quality assurance. When you plan your CMG deployment, consider the following questions:
+
+- How many Azure AD tenants does your organization have?
+  - Is there a separate tenant for testing?
+  - Are user and device identities in the same tenant?
+
+- How many subscriptions are in each tenant?
+  - Are there subscriptions that are specific for testing?
+
+Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
+
+For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## Requirements
 
 - An **Azure subscription** to host the CMG.
