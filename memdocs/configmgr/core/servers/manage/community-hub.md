@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -33,8 +33,9 @@ Community hub supports the following objects:
 
 - The device running the Configuration Manager console used to access the hub needs the following items:
    - Windows 10 build 17110 or higher
+      - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
    - .NET Framework version 4.6 or higher
-
+   - The logged-in user account can't be the built-in administrator account
 
 - To download reports, you need to turn on the option **Use Configuration Manager-generated certificates for HTTP site systems** at the site you're importing into. For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
    1. Go to **Administration** > **Site Configuration** > **Sites**.
