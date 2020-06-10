@@ -49,7 +49,7 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 
 ## How to get the CSV for Import in Intune
 
-For more information, see the understanding PowerShell cmdlet.
+For more information, see the understanding Powerell cmdlet.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)
 

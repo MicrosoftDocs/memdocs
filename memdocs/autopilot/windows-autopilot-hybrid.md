@@ -49,23 +49,13 @@ The devices to be enrolled must also:
 
 ## Set up Windows 10 automatic enrollment
 
-1. Sign in to Azure, in the left pane, select **Azure Active Directory**.
+1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune** .
 
-   ![The Azure portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
-
-1. Select **Mobility (MDM and MAM)**.
-
-   ![The Azure Active Directory pane](./media/windows-autopilot-hybrid/auto-enroll-mdm.png)
-
-1. Select **Microsoft Intune**.
-
-   ![The Mobility (MDM and MAM) pane](./media/windows-autopilot-hybrid/auto-enroll-intune.png)
-
-1. Make sure that the users who deploy Azure AD-joined devices by using Intune and Windows are members of a group that's included in your **MDM User scope**.
+2. Make sure that the users who deploy Azure AD-joined devices by using Intune and Windows are members of a group that's included in your **MDM User scope**.
 
    ![The Mobility (MDM and MAM) Configure pane](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
 
-1. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
+3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
 ## Increase the computer account limit in the Organizational Unit
 
