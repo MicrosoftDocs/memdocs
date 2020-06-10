@@ -49,7 +49,7 @@ This article explains how to set up Autopilot for Windows PC. For more informati
 
 ## How to get the CSV for Import in Intune
 
-For more information, see the understanding powershell cmdlet.
+For more information, see the understanding PowerShell cmdlet.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)
 
@@ -66,7 +66,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
     `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-    ![Screenshot of Adding Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device2.png)
+    ![Screenshot of Adding Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device-2.png)
 
     >[!IMPORTANT]
     > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
@@ -107,7 +107,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
     - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
 
-    ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-outofbox.png)
+    ![Screenshot of OOBE page](./media/enrollment-autopilot/create-profile-out-of-box.png)
 
    > [!NOTE]
    > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
