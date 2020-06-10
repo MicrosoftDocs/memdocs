@@ -3,12 +3,12 @@
 
 title: Configure Wi-Fi settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create or add a WiFi device configuration profile for macOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
+description: Create or add a WiFi device configuration profile for macOS devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,14 +80,14 @@ This article describes these settings.
   - **EAP-TLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - **Client certificate for client authentication (Identity certificate)**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
@@ -105,7 +105,7 @@ This article describes these settings.
   - **PEAP**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
