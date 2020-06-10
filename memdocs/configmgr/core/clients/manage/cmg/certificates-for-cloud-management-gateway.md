@@ -23,7 +23,8 @@ Depending upon the scenario you use to manage clients on the internet with the c
   - [Server authentication certificate issued by public provider](#bkmk_serverauthpublic)  
   - [Server authentication certificate issued from enterprise PKI](#bkmk_serverauthpki)  
 
-- [Client authentication certificate](#bkmk_clientauth)  
+- [Client authentication certificate](#bkmk_clientauth)
+  - [CMG connection point](#bkmk_cmgcp)
   - [Client trusted root certificate to CMG](#bkmk_clientroot)  
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
