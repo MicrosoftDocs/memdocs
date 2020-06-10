@@ -124,7 +124,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
     **EAP-TLS, EAP-TTLS, and PEAP additional settings**:
 
     > [!NOTE]
-    > SCEP and PKCS SCEP certificate profiles are supported when using an EAP type.
+    > SCEP and PKCS certificate profiles are supported when using an EAP type.
 
     - **Server Trust**  
 
