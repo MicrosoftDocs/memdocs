@@ -441,7 +441,7 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and aren't required to enter a Managed Apple ID or password.
+- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
 
   When set to **Yes**:
 
@@ -449,7 +449,7 @@ This feature applies to:
   - Users must sign in to the device with their Managed Apple ID and password.
   - The Guest account option isn't shown on the lock screen on the devices.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a Shared iPad user to sign in to the device with the Guest account. When the user signs out, none of the user’s data is saved or synced to iCloud.
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS allows a Shared iPad user to sign in to the device with the Guest account. When the user signs out, none of the user’s data is saved or synced to iCloud.
 
 ## Show or hide apps
 
