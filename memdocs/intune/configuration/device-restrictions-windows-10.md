@@ -1102,7 +1102,8 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
 - **Detect potentially unwanted applications**: This feature identifies and blocks potentially unwanted applications (PUA) from downloading and installing in your network. These applications aren't considered viruses, malware, or other types of threats. But, they can run actions on endpoints that might affect their performance or use. Choose the level of protection when Windows detects PUAs. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, Microsoft Defender might disable this feature.
-  - **Block**: Microsoft Defender detects PUAs, and detected items are blocked. These items show in history along with other threats.
+  - **Off**: PUA Protection off.
+  - **Enable**: Microsoft Defender detects PUAs, and detected items are blocked. These items show in history along with other threats.
   - **Audit**: Microsoft Defender detects PUAs, but takes no action. You can review information about the applications Microsoft Defender would take action against. For example, search for events created by Microsoft Defender in the Event Viewer.
 
   For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).

@@ -96,9 +96,9 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Azure AD
 
-- Windows 10 devices must be joined to Azure AD. They can be either of the following types:  
+- Windows 10 devices must be connected to Azure AD. They can be either of the following types:  
 
-  - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and joined to your Azure Active Directory.  
+  - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
 
   - [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->  
 

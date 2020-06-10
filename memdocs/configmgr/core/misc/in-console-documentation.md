@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: May 11, 2020*
+*Last update: June 8, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -50,22 +50,22 @@ A curated list of important articles.
 
 ## Trending
 
-The most popular articles between April 1 and April 30, 2020.
+The most popular articles between May 1 and May 31, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 37071 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19105 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 17942 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15564 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 15389 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15316 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 15229 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 14978 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13017 | [Client settings](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
+| 22624 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 18451 | [What's new in version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 17763 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16718 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16004 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 13965 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 13398 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 13279 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13260 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr/) received 41,479 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr/) received 34,986 page views in this time period.
 
 ## Recently updated
 
@@ -73,16 +73,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 4/30/2020 | [Technical preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
-| 4/29/2020 | [Token-based authentication for CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
-| 4/28/2020 | [Orchestration Groups](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
-| 4/15/2020 | [Application approval process](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
-| 4/15/2020 | [Enroll devices in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
-| 4/10/2020 | [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
-| 4/8/2020 | [Integrate with Power BI Report Server](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
-| 4/8/2020 | [Release notes](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 4/1/2020 | [What is the administration service](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
-| 4/1/2020 | [What's new in version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/29/2020 | [Technical preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
+| 5/27/2020 | [Support for Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 5/26/2020 | [CMPivot overview](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
+| 5/26/2020 | [Tenant attached CMPivot overview](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
+| 5/26/2020 | [Tenant attached CMPivot sample scripts](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
+| 5/26/2020 | [What's new in version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/21/2020 | [Release notes](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 5/14/2020 | [Recommended hardware](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
+| 5/11/2020 | [Assets in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
+| 5/11/2020 | [What's new in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
 
 ## Troubleshooting articles
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -110,6 +110,18 @@ There are specific requirements that must be followed to collect log files:
 - Win32 app install log collection is enabled for apps that meet the required, available, and uninstall app assignment intent.
 - Stored logs are encrypted to protect any personal identifiable information contained in the logs​.
 - While opening support tickets for Win32 app failures, attach the related failure logs using the steps provided above.
+
+## App types supported on ARM64 devices
+
+App types that are supported on ARM64 devices include the following:
+- Web apps that do not require a managed browser to open. 
+- Microsoft Store for Business apps or Windows Universal LOB apps (`.appx`) with any of the following combination of `TargetDeviceFamily` and  `ProcessorArchitectures` elements:
+  - `TargetDeviceFamily` includes Desktop apps, Universal apps and Windows8x apps. Windows8x apps apply only as Online Microsoft Store for Business apps.
+  - `ProcessorArchitecture` includes x86 apps, ARM apps, ARM64 apps, and neutral apps.
+- Windows Store apps
+- Mobile MSI LOB apps
+- Win32 apps with the requirement rule of 32-bit.
+- Windows Office click-to-run apps if 32-bit or x86 architecture is selected.
 
 ## Troubleshooting apps from the Microsoft Store
 

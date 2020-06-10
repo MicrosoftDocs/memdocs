@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot

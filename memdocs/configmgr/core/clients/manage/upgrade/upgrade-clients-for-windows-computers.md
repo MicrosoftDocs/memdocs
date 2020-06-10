@@ -2,7 +2,7 @@
 title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -54,9 +54,6 @@ A client can automatically upgrade in the following scenarios:
 > To identify the different versions of the Configuration Manager client in your hierarchy, use the report **Count of Configuration Manager clients by client versions** in the report folder **Site - Client Information**.  
 
 Configuration Manager creates an upgrade package by default. It automatically sends the package to all distribution points in the hierarchy. If you make changes to the client package on the CAS, Configuration Manager automatically updates the package, and redistributes it. An example change is when you add a client language pack. If you enable automatic client upgrade, every client automatically installs the new client language package.
-
-> [!NOTE]  
-> Configuration Manager doesn't automatically send the client upgrade package to Configuration Manager cloud-based distribution points.  
 
 Enable automatic client upgrade across your hierarchy. This configuration keeps your clients up-to-date with less effort.  
 
