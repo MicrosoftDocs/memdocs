@@ -124,7 +124,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - **Not configured**  (*default*) – The personal key is visible to the device user during encryption.
     - **Yes** - The personal key is hidden from the device user during encryption.
 
-    After encryption, device users can view a personal recovery key for an encrypted macOS device from the following locations:
+    After encryption, device users can view their personal recovery key for an encrypted macOS device from the following locations:
     - iOS/iPadOS company portal app
     - Intune app
     - company portal website
