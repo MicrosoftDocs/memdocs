@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,6 +38,8 @@ This article describes these settings.
 [Create a device profile](wi-fi-settings-configure.md).
 
 ## Basic profile
+
+Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a pre-shared key to authenticate the connection.
 
 - **Wi-Fi type**: Choose **Basic**. 
 
@@ -74,6 +76,8 @@ This article describes these settings.
   - **Automatically configure**: Enter the URL pointing to a proxy autoconfiguration (PAC) script. For example, enter `http://proxy.contoso.com/proxy.pac`.
 
 ## Enterprise profile
+
+Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate Wi-Fi connections. EAP is often used by enterprises, as you can use certificates to authenticate and secure connections, and configure more security options.
 
 - **Wi-Fi type**: Choose **Enterprise**.
 
@@ -120,7 +124,7 @@ This article describes these settings.
     **EAP-TLS, EAP-TTLS, and PEAP additional settings**:
 
     > [!NOTE]
-    > Currently, only SCEP certificate profiles are supported when using an EAP type. PKCS certificate profiles are not supported. Anytime a user is asked to enter a certificate, be sure to choose an SCEP certificate.
+    > SCEP and PKCS SCEP certificate profiles are supported when using an EAP type.
 
     - **Server Trust**  
 
