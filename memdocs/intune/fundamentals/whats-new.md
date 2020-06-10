@@ -69,16 +69,16 @@ The icon for the Windows Company Portal app has been updated. For more informati
 
 ### Device management
 
-### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381  -->
+#### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381  -->
 When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline)  
 
-### Tenant attach: Install an application from the admin center<!-- 7220536, CM6024389  -->
+#### Tenant attach: Install an application from the admin center<!-- 7220536, CM6024389  -->
 You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Management admin center. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) 
 
-### Tenant attach: CMPivot from the admin center<!--7220536, CM6024392  -->
+#### Tenant attach: CMPivot from the admin center<!--7220536, CM6024392  -->
 You can bring the power of [CMPivot]((../../configmgr/tenant-attach/cmpivot-overview-attached.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) 
 
-### Tenant attach: Run Scripts from the admin center<!--7220536, CM6234688  -->
+#### Tenant attach: Run Scripts from the admin center<!--7220536, CM6234688  -->
 You can bring the power of the Configuration Manager on-premises [Run Scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) 
 
 ## Week of May 18, 2020
