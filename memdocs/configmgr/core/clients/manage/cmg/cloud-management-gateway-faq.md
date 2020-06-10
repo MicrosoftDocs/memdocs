@@ -5,13 +5,11 @@ description: Use this article to answer frequently asked questions regarding the
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-
-
 ---
 
 # Frequently asked questions about the cloud management gateway
@@ -20,13 +18,11 @@ ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 
 This article answers your frequently asked questions about the cloud management gateway. For more information, see [plan for cloud management gateway](plan-cloud-management-gateway.md).
 
-
 ## Frequently asked questions
 
 ### What certificates do I need?
 
 For more detailed information, see [certificates for cloud management gateway](certificates-for-cloud-management-gateway.md).
-
 
 ### Do I need Azure ExpressRoute?
 
@@ -38,30 +34,40 @@ No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you
 
 No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/security-paas-deployments).
 
-
 ### How can I ensure service continuity during service updates?
 
 By scaling CMG to include two or more instances, you automatically benefit from Update Domains in Azure. See [How to update a cloud service](/azure/cloud-services/cloud-services-update-azure-service).
-
 
 ### I'm already using IBCM. If I add CMG, how do clients behave?
 
 If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the cloud management gateway. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
 
-
 ### Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
 <!--SCCMDocs-pr issue #2873-->
-If your environment has more than one subscription, you can deploy CMG into any subscription that can host Azure cloud services. 
+No, you can deploy CMG into any subscription that can host Azure cloud services.
+
+To clarify terms:
+
+- The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+- A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
 
 This question is common in the following scenarios:  
 
-- When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription  
+- When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription.
 
-- Your use of Azure has grown organically across different teams  
+- Your use of Azure has grown organically across different teams
 
 When you're using a Resource Manager deployment, onboard the Azure AD tenant associated with the subscription. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
 
 If you're using Azure AD authentication for the users and devices managed over the CMG, onboard that Azure AD tenant. For more information on Azure services for cloud management, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md). When you onboard each Azure AD tenant, a single CMG can provide Azure AD authentication for multiple tenants, regardless of the hosting location.
+
+#### Example 1: One tenant with multiple subscriptions
+
+The user accounts and Azure AD apps are all in the same tenant. You can choose which subscription the CMG uses. You can deploy multiple CMG services from one site into separate subscriptions. The site has a one-to-one relationship with the tenant. You decide which subscriptions to use for various reasons such as billing or logical separation.
+
+#### Example 2: Multiple tenants
+
+In other words, your environment has more than one Azure AD. You need to attach the site to each tenant. This process requires an administrative account from each tenant to create the app registration in that tenant. One site can then host CMG services in multiple tenants. You can create a CMG in any available subscription in either tenant. Devices that are joined or hybrid joined to either Azure AD could use a CMG.
 
 ### How does CMG affect my clients connected via VPN?
 
