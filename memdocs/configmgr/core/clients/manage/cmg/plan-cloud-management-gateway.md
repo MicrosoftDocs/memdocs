@@ -331,6 +331,9 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 3. The client connects to the CMG over HTTPS port 443. It authenticates using Azure AD or the client authentication certificate.  
 
+    > [!NOTE]
+    > If you enable the CMG to serve content or use a cloud distribution point, the client connects directly to Azure blob storage over HTTPS port 443. For more information, see [Use a cloud-based distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. The CMG forwards the client communication over the existing connection to the on-premises CMG connection point. You don't need to open any inbound firewall ports.  
 
 5. The CMG connection point forwards the client communication to the on-premises management point and software update point.  
@@ -348,6 +351,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | CMG connection point | HTTPS | 443 | CMG service | Fallback protocol to build CMG channel to only one VM instance <sup>[Note 2](#bkmk_port-note2)</sup> |
 | CMG connection point | HTTPS | 10124-10139 | CMG service | Fallback protocol to build CMG channel to two or more VM instances <sup>[Note 3](#bkmk_port-note3)</sup> |
 | Client | HTTPS | 443 | CMG | General client communication |
+| Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Software update point | On-premises traffic, port depends upon software update point configuration |
 
