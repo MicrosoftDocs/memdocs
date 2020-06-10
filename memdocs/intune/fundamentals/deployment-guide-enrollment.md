@@ -223,6 +223,8 @@ These devices are organization-owned, and given to users. Apple has programs tha
 
 #### User and device enrollment
 
+Doesn't require resetting the devices
+
 Available starting with iOS 13 and newer. This enrollment option targets users or targets devices. Use this enrollment option when:
 
 - You have existing devices
@@ -234,13 +236,17 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 - **Administrators**:
 
   - Be sure your iOS/iPadOS devices are [supported](supported-devices-browsers.md).
-  - in Intune, you create the enrollment profile. When you creat the profile, you have the following options:
+  - in Intune, you create the enrollment profile. When you create the profile, you have the following options:
 
     - **Device enrollment**: Secures the entire device.??What does this mean??
+      - Creates an enrollment baseline that acts as default. Can deploy certs to whole device, but can't deploy updates as it required supervised.
+      - Requires a user be associated with the device. User could be a device enrollment mngr account. Not good for user-less devices, such as kiosk
 
       If your enrollment profile targets only organization-owned devices, then use this option.
 
     - **User enrollment**: Configures a specific set of features and organization apps. For the complete list, see [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md).
+
+      user partition on the devices, per-app certs, app protection policies
 
       If your enrollment profile targets only personal devices, then use **User enrollment** or **Determine based on user choice**.
 
@@ -248,7 +254,7 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 
       If your enrollment profile targets personal and organization-owned devices, then use **Determine based on user choice**. If your enrollment profile targets only personal devices, then use **User enrollment** or **Determine based on user choice**.
 
-  - Assign the enrollment profile to user groups. Don't assign to device groups.??Maybe this only applies to User enrollment option??
+  - Assign the enrollment profile to user groups. Don't assign to device groups.
 
 - **End users**: Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
 
@@ -267,6 +273,7 @@ Use this enrollment option when:
 
 - You need new devices that are owned by the organization
 - You need to enroll a large number of devices
+- Get supervised, such as deploying software updates, restrict features
 
 For more specific information on this enrollment type, see [Enroll iOS/iPadOS devices with Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
@@ -339,7 +346,10 @@ Enrolls iOS/iPadOS devices by connecting these devices to the USB port on a Mac 
 
 Use this enrollment option when:
 
--
+- If a country doesn't support ABM/ASM, then use this option.
+- May not want admins using ABm/asm portal, and don't want to set up all the requirements. Basically give admins less control.
+- May be easier with 3-4 devices
+- Need a wired connection, maybe have a network issue
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
@@ -355,6 +365,7 @@ For more specific information on this enrollment type, see [Apple Configurator e
 - **End users**:
 
   - **Setup Assistant enrollment**: Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md). Once installed, they'll can install apps, including LOB apps, used by your organization.
+    - Admins should push comp port app from VPP
   - **Direct enrollment**: Users can't use apps that require a user, including the Company Portal app. Be sure they don't install the Company Portal app from the Apple app store.
 
   Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
