@@ -80,9 +80,12 @@ Deployment and operation of the CMG includes the following components:
 
 - The [**service connection point**](../../../servers/deploy/configure/about-the-service-connection-point.md) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD. Make sure your service connection point is in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).  
 
-- The **management point** site system role services client requests per normal.  
+- The **management point** site system role services client requests per normal.
 
-- The **software update point** site system role services client requests per normal.  
+- The **software update point** site system role services client requests per normal.
+
+    > [!NOTE]
+    > Sizing guidance for management points and software update points doesn't change whether they service on-premises or internet-based clients. For more information, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - **Internet-based clients** connect to the CMG to access on-premises Configuration Manager components.
 
