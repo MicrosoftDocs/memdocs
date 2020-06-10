@@ -168,6 +168,9 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 - An **Azure subscription** to host the CMG.
 
+    > [!IMPORTANT]
+    > CMG doesn't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 -->
+
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona can be the same as the Configuration Manager administrator, or separate. If separate, it doesn't require permissions in Configuration Manager.
@@ -206,7 +209,7 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### Support for Configuration Manager features
 
