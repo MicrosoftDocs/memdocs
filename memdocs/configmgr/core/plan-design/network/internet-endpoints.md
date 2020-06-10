@@ -72,8 +72,8 @@ For more information on this function, see [Manage Windows as a service](../../.
 
 For more information on this function, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com` (Azure Public Cloud)
-- `management.usgovcloudapi.net` (Azure US Government Cloud)
+- `management.azure.com` (Azure public cloud)
+- `management.usgovcloudapi.net` (Azure US Government cloud)
 
 ## Co-management
 
@@ -129,14 +129,14 @@ For CMG/CDP service deployment, the service connection point needs access to:
 The CMG connection point needs access to the following service endpoints:
 
 - Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure Public Cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government Cloud)
+  - `<name>.cloudapp.net` (Azure public cloud)
+  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
 - Service Management endpoint: `https://management.core.windows.net/`  
 
 - Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure Public Cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government Cloud)
+  - `<name>.blob.core.windows.net` (Azure public cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
 <!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
 The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
@@ -144,22 +144,28 @@ The CMG connection point site system supports using a web proxy. For more inform
 ### Configuration Manager client
 
 - Cloud service name (for CMG or CDP):
-  - `<name>.cloudapp.net` (Azure Public Cloud)
-  - `<name>.usgovcloudapp.net` (Azure US Government Cloud)
+  - `<name>.cloudapp.net` (Azure public cloud)
+  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
 - Storage endpoint (for content-enabled CMG or CDP):
-  - `<name>.blob.core.windows.net` (Azure Public Cloud)
-  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government Cloud)
+  - `<name>.blob.core.windows.net` (Azure public cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
 
 - For Azure AD token retrieval, the Azure AD endpoint:
-  - `login.microsoftonline.com` (Azure Public Cloud)
-  - `login.microsoftonline.us` (Azure US Government Cloud)
+  - `login.microsoftonline.com` (Azure public cloud)
+  - `login.microsoftonline.us` (Azure US Government cloud)
 
 ### Configuration Manager console
 
 - For Azure AD token retrieval, the Azure AD endpoint:
-  - `login.microsoftonline.com` (Azure Public Cloud)
-  - `login.microsoftonline.us` (Azure US Government Cloud)
+
+  - Azure public cloud
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure US Government cloud
+    - `login.microsoftonline.us`
 
 ## <a name="bkmk_sum"></a> Software updates
 
