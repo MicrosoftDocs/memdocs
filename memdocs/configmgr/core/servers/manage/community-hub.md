@@ -32,9 +32,9 @@ Community hub supports the following objects:
 ## Prerequisites
 
 - The device running the Configuration Manager console used to access the hub needs the following items:
+   - .NET Framework version 4.6 or higher
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
-   - .NET Framework version 4.6 or higher
    - The logged-in user account can't be the built-in administrator account
 
 - To download reports, you need to turn on the option **Use Configuration Manager-generated certificates for HTTP site systems** at the site you're importing into. For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
