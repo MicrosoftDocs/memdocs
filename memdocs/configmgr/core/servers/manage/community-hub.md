@@ -31,7 +31,7 @@ Community hub supports the following objects:
 
 ## Prerequisites
 
-- The device running the Configuration Manager console used to access the hub needs the following items:
+- The device running the Configuration Manager console used to access the Community hub needs the following items:
    - .NET Framework version 4.6 or higher
    - Windows 10 build 17110 or higher
       - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
