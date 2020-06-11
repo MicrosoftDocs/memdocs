@@ -212,7 +212,7 @@ Otherwise, it might display one of the following errors:
 
 - Can't configure device app compatibility data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
 
-- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
+- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
 
 Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
 
@@ -338,7 +338,7 @@ The DisableEnterpriseAuthProxy setting is enabled by default for Windows 7. For 
 
 This property may display the following errors:
 
-- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Can't check for the Authentication proxy status. Check the logs for the exception details
 
