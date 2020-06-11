@@ -47,7 +47,7 @@ If you can't find Software Center in the Start menu, contact your IT administrat
 
 ## Applications
 
-:::image type="content" source="media/software-center-apps.png" alt-text="Software Center Applications tab":::
+:::image type="content" source="media/software-center-apps.png" alt-text="Software Center Applications tab" lightbox="media/software-center-apps.png":::
 
 Select the **Applications** tab (1) to find and install applications that your IT admin deploys to you or this computer.
 
@@ -98,7 +98,7 @@ Install more than one application at a time instead of waiting for one to finish
 
 To install more than one application at a time:
 
-1. Select the multi-select icon :::image type="icon" source="media/software-center-multi-select-apps.png" border="false"::: in the upper right corner.
+1. Select the multi-select icon in the upper right corner: :::image type="icon" source="media/software-center-multi-select-apps.png" border="false":::
 
 2. Select two or more apps to install. Select the checkbox to the left of each app in the list.
 
@@ -108,7 +108,7 @@ The apps install as normal, only now in succession.
 
 ### Share an application
 
-To share a link to a specific app, after you select the app, select the **Share** icon :::image type="icon" source="media/software-center-share-app-icon.png" border="false"::: in the upper right corner.
+To share a link to a specific app, after you select the app, select the **Share** icon in the upper right corner: :::image type="icon" source="media/software-center-share-app-icon.png" border="false":::
 
 :::image type="content" source="media/software-center-share-app-window.png" alt-text="Share an app from Software Center":::
 
@@ -116,7 +116,7 @@ To share a link to a specific app, after you select the app, select the **Share*
 
 ## Updates
 
-:::image type="content" source="media/software-center-updates.png" alt-text="Software Center Updates tab":::
+:::image type="content" source="media/software-center-updates.png" alt-text="Software Center Updates tab" lightbox="media/software-center-updates.png":::
 
 Select the **Updates** tab (1) to view and install software updates that your IT admin deploys to this computer.  
 
@@ -130,11 +130,12 @@ Select the **Updates** tab (1) to view and install software updates that your IT
 
 To install updates, select **Install All** (6).
 
-To only install specific updates, select the icon :::image type="icon" source="media/software-center-multi-select-apps.png" border="false"::: to enter multi-select mode (7). Check the updates to install, and then select **Install Selected**.
+To only install specific updates, select the icon to enter multi-select mode (7): :::image type="icon" source="media/software-center-multi-select-apps.png" border="false":::
+Check the updates to install, and then select **Install Selected**.
 
 ## Operating Systems
 
-:::image type="content" source="media/software-center-os.png" alt-text="Software Center Operating Systems tab":::
+:::image type="content" source="media/software-center-os.png" alt-text="Software Center Operating Systems tab" lightbox="media/software-center-os.png":::
 
 Select the **Operating Systems** tab (1) to view and install versions of Windows that your IT admin deploys to this computer.  
 
@@ -224,7 +225,7 @@ Specify remote access and remote control settings for your computer.
   - **Repeatedly during session**
   - **Never**
 
-## Custom tab in Software Center
+## Custom tabs
 
 Your IT admin can remove the default tabs or add additional tabs to Software Center. Custom tabs are named by your admin, and they open a web site that the admin specifies. For instance, you might have a tab called "Help Desk" that opens your IT organization's help desk web site. <!--1358132-->
 
