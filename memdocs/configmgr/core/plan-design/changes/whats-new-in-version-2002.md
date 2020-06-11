@@ -325,7 +325,7 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
-## <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
 <!--5691658-->
 You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
