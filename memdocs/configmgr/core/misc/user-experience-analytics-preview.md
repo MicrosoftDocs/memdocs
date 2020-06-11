@@ -818,7 +818,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 ### <a name="bkmk_uea_stop"></a> Stop gathering data
 
-- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](##bkmk_uea_gen) created during sign-up.
+- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](#bkmk_uea_gen) created during sign-up.
 
 - If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
 
