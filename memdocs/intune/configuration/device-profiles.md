@@ -302,7 +302,7 @@ This feature supports:
 
 ## Wired networks
 
-[Wired networks](wired-networks-configure.md) lets you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
 
 When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
 
