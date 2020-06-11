@@ -766,27 +766,30 @@ catch{
 
 ### Data flow
 
-The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
+The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
 
-[![User experience data flow diagram](media/dataflow.png)](media/dataflow.png#lightbox)
+[![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** Endpoint analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+1. An [Intune Service Administrator role](../../../intune/fundamentals/role-based-access-control.md) [starts gathering data](#bkmk_uea_start).
 
-2. Devices send required functional data.
+    - For Intune-managed devices, this step configures the **Intune data collection** policy. By default, this policy is assigned to "All Devices". You can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
 
-    - For Intune devices with the assigned policy, data is sent from the Intune management extension. For more information, see [requirements](#bkmk_uea_prereq).
-    - For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
+    - For Configuration Manager-managed devices, enable [Endpoint analytics data collection and enroll devices](#bkmk_uea_cm_enroll).
+
+1. Devices send required functional data.
+
+    - For Intune and co-managed devices with the assigned policy, devices send require functional data directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed in near real time. For more information, see [Endpoints required for Intune-managed devices](#bkmk_uea_endpoints).
+
+    - For Configuration Manager-managed devices, data flows to Microsoft Endpoint Management through the ConfigMgr connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the Configuration Manager connector sends data to the Gateway Service every hour.
+
+1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using MS Graph APIs. The maximum latency end to end is 25 hours and is gated by the time it takes to do the daily processing of insights and recommendations.
 
 > [!Note]  
-> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
-
-3. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using MS Graph APIs.
-
-The average latency end to end is about 12 hours and is gated by the time it takes to do the daily processing. All other parts of the data flow are near-real-time.
+> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](#bkmk_uea_profile), or [enable device upload](../../tenant-attach/device-sync-actions.md#enable-device-upload) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the admin console.
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../../../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../../../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
 #### Identified data
 
