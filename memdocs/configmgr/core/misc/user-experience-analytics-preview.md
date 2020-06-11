@@ -131,7 +131,7 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 ### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
 
-1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
+1. Go to `https://aka.ms/endpointanalytics`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
    - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
 
