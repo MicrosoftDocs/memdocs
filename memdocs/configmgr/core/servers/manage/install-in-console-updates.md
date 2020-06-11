@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud
-ms.date: 06/02/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -91,13 +91,13 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2006](checklist-for-installing-update-2006.md)
+
 - [Checklist for installing update 2002](checklist-for-installing-update-2002.md)
 
 - [Checklist for installing update 1910](checklist-for-installing-update-1910.md)  
 
 - [Checklist for installing update 1906](checklist-for-installing-update-1906.md)  
-
-- [Checklist for installing update 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="bkmk_step2"></a> Step 2: Run the prerequisite checker before installing an update  
 
@@ -357,13 +357,13 @@ Go to the **Monitoring** workspace, and select the **Site Servicing Status** nod
 
 After the site updates, review the post-update checklist for the applicable version:  
 
+- [Post-update checklist for version 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Post-update checklist for version 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Post-update checklist for version 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Post-update checklist for version 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Post-update checklist for version 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="bkmk_options"></a> Enable optional features from updates  
 
@@ -373,7 +373,7 @@ To view available features and their status, in the console go to the **Administ
 
 When a feature isn't optional, it's installed automatically. It doesn't appear in the **Features** node.  
 
-> [!Important]  
+> [!IMPORTANT]
 > In a multi-site hierarchy, enable optional or pre-release features only from the central administration site. This behavior ensures there are no conflicts across the hierarchy. <!--507197-->  
 
 When you enable a new feature or pre-release feature, the Configuration Manager hierarchy manager (HMAN) must process the change before that feature becomes available. Processing of the change is often immediate. Depending on the HMAN processing cycle, it can take up to 30 minutes to complete. After the change is processed, restart the console before you can use the feature.
@@ -386,7 +386,7 @@ The following features are optional in the latest version of Configuration Manag
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
@@ -411,7 +411,7 @@ The following features are optional in the latest version of Configuration Manag
 - [Servicing a cluster-aware collection (Server groups)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (previously known as *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > For more information on features that require consent to enable, see [pre-release features](pre-release-features.md).  
 >
 > For more information on features that are only available in the technical preview branch, see [Technical Preview](../../get-started/technical-preview.md).
