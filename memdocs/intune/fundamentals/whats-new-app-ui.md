@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2020 
+ms.date: 06/11/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,6 +45,19 @@ We've updated an informational screen in Company Portal for iOS/iPadOS to better
 
 
 [![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
+
+## Week of May 18, 2020  
+### Update to icons in Company Portal app for iOS/iPadOS and macOS <!--6057697 -->  
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System.
+
+|Updated for iOS/iPadOS|Previously for iOS/iPadOS|   
+|---|---|   
+|![Image of Company Portal for iOS/iPadOS, highlighting updated icons in bottom menu.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Image of Company Portal for iOS, highlighting the former icons.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Updated for macOS|  
+|---|
+|![Image of Company Portal for macOS, Devices tab, highlighting updated icons.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
+
 
 ## Week of May 4, 2020  
 ### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->

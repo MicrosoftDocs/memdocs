@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up your Lookout integration with Microsoft Intune
+title: Setup Lookout Mobile Endpoint Security with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn about integrating Intune with Lookout Mobile Endpoint Security, as a Mobile Threat Defense solution, to control mobile device access to your corporate resources.
 keywords:
@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 06/11/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

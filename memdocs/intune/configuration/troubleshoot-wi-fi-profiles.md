@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high

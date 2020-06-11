@@ -10,8 +10,6 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Client notification in Configuration Manager
@@ -137,7 +135,7 @@ Starting in version 1910, there are new device actions for **Client Diagnostics*
 
 - **Enable verbose logging**: Change the global log level for the CCM component to verbose, and enable debug logging.
 - **Disable verbose logging**: Change the global log level to default, and disable debug logging.
-- **Collect Client Logs** (starting in 2002): A client notification message is sent to the selected clients to gather the CCM logs. The logs are returned using software inventory file collection. <!--4226618-->
+- **Collect Client Logs** (starting in 2002): The site sends a client notification message to the selected clients to gather the CCM logs. The client sends the logs to the management point using the same channel as software inventory file collection. <!--4226618--> You don't need to enable software inventory in client settings.<!-- MEMDocs#305 -->
    - The size limit for the compressed client logs is 100 MB. <!--6366098-->
    - Use [Resource Explorer](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) manage and view these files.
 

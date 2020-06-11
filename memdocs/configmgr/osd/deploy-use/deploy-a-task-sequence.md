@@ -143,7 +143,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
-    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that perform operations in the standard OS.  
+    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.  
 
         - This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 
@@ -151,19 +151,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
 9. On the **Distribution Points** page, specify the following information:  
 
-    - **Deployment options**: Specify one of the following options:  
-
-        > [!NOTE]  
-        > When you use multicast to deploy an OS, download the content to the computers either as needed or before the task sequence runs.  
-
-        - **Download content locally when needed by the running task sequence**: Specify that clients download content from the distribution point as it's needed by the task sequence. The client starts the task sequence. When a step in the task sequence requires content, it's downloaded before the step runs.  
-
-        - **Download all content locally before starting task sequence**: Specify that clients download all the content from the distribution point before the task sequence runs. If you make the task sequence available to PXE and boot media deployments on the **Deployment Settings** page, this option isn't shown.  
-
-        - **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
-
-            > [!IMPORTANT]  
-            > For greatest security, select the options to **Download content locally when needed by the running task sequence** or **Download all content locally before starting task sequence**. When you select either of these options, Configuration Manager hashes the package, so that it can ensure package integrity. When you select the option to **Access content directly from a distribution point when needed by the running task sequence**, Configuration Manager doesn't verify the package hash prior to running the specified program. Because the site can't ensure package integrity, it's possible for users with administrative rights to alter or tamper with package contents.  
+    - **Deployment options**: For more information, see [Deployment options](#bkmk_deploy-options).
 
     - **When no local distribution point is available, use a remote distribution point**: Specify whether clients can use distribution points from a neighbor boundary group to download the content that's required by the task sequence.  
 
@@ -175,6 +163,63 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 10. To save these settings to use again, on the **Summary** tab select **Save As Template**. Supply a name for the template and select the settings to save.  
 
 11. Complete the wizard.  
+
+### <a name="bkmk_deploy-options"></a> Deployment options
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+These options are on the **Distribution Points** tab of the task sequence deployment. They're dynamic based upon other selections in the deployment and attributes of the task sequence. You may not always see all options.
+
+> [!NOTE]  
+> When you use multicast to deploy an OS, download the content to the computers either as needed or before the task sequence runs.  
+
+- **Download content locally when needed by the running task sequence**: Specify that clients download content from the distribution point as it's needed by the task sequence. The client starts the task sequence. When a step in the task sequence requires content, it's downloaded before the step runs.  
+
+- **Download all content locally before starting task sequence**: Specify that clients download all the content from the distribution point before the task sequence runs. If you make the task sequence available to PXE and boot media deployments on the **Deployment Settings** page, this option isn't shown.  
+
+- **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
+
+> [!IMPORTANT]  
+> For greatest security, select the options to **Download content locally when needed by the running task sequence** or **Download all content locally before starting task sequence**. When you select either of these options, Configuration Manager hashes the package, so that it can ensure package integrity. When you select the option to **Access content directly from a distribution point when needed by the running task sequence**, Configuration Manager doesn't verify the package hash prior to running the specified program. Because the site can't ensure package integrity, it's possible for users with administrative rights to alter or tamper with package contents.  
+
+#### Example 1: One deployment option
+
+You deploy an OS deployment task sequence that wipes the disk and applies an image. On the **Deployment Settings** page, you make it available to an option that includes media and PXE:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Deploy task sequence, make available to the following":::
+
+On the **Distribution Points** page, there's only one deployment option:
+
+- **Download content locally when needed by the running task sequence**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Deploy task sequence, one deployment option":::
+
+The option to **Download all content locally before starting task sequence** isn't available because the deployment is made available to media and PXE.
+
+The option to **Access content directly from a distribution point when needed by the running task sequence** isn't available. Not all of the referenced content uses a package share.
+
+#### Example 2: Two deployment options
+
+You deploy an OS deployment task sequence that wipes the disk and applies an image. On the **Deployment Settings** page, you make it available to **Only Configuration Manager clients**. On the **Distribution Points** page, there are two deployment options available:
+
+- **Download content locally when needed by the running task sequence**
+- **Download all content locally before starting task sequence**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Deploy task sequence, two deployment options":::
+
+The option to **Access content directly from a distribution point when needed by the running task sequence** isn't available. Not all of the referenced content uses a package share.
+
+#### Example 3: Three deployment options
+
+You have several packages with administrative scripts and associated content. On the **Data Access** tab of the package properties, you configure all of them to **Copy the content in this package to a package share on distribution points**.
+
+You create a task sequence that only has several **Install Package** steps for these script packages, and the deploy it. On the **Deployment Settings** page, the only option is to make available to **Only Configuration Manager clients**. This option is the only available. The task sequence isn't for OS deployment, because it doesn't have a boot image associated with it. On the **Distribution Points** page, there are three deployment options available:
+
+- **Download content locally when needed by the running task sequence**
+- **Download all content locally before starting task sequence**
+- **Access content directly from a distribution point when needed by the running task sequence**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Deploy task sequence, three deployment options":::
 
 ## Deploy Windows 10 in-place upgrade via CMG
 

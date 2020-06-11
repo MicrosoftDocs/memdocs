@@ -39,7 +39,7 @@ The Configuration Manager console has an XML-based architecture that can be easi
  You cannot create wizards by using the existing Configuration Manager console framework. You also cannot modify or remove steps from the existing Configuration Manager wizards.  
 
 ### Modification of Core Configuration Manager Console Items  
- Do not change or remove items in the core Configuration Manager console XML, because this could break the Configuration Manager console. The core XML is stored in *%ProgramFiles%*\Microsoft Configuration Manager\AdminConsole\XmlStorage\ConsoleRoot.  
+ Do not change or remove items in the core Configuration Manager console XML, because this could break the Configuration Manager console. The core XML is stored in *%ProgramFiles%*\Microsoft Endpoint Manager\AdminConsole\XmlStorage\ConsoleRoot.  
 
 ### SMS 2003 IMMF Interfaces  
  The Configuration Manager console is built by using managed code and does not support the SMS 2003 IMMF interfaces.  

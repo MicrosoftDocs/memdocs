@@ -5,7 +5,7 @@ description: Learn about the different digital certificates to use with the clou
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -23,7 +23,8 @@ Depending upon the scenario you use to manage clients on the internet with the c
   - [Server authentication certificate issued by public provider](#bkmk_serverauthpublic)  
   - [Server authentication certificate issued from enterprise PKI](#bkmk_serverauthpki)  
 
-- [Client authentication certificate](#bkmk_clientauth)  
+- [Client authentication certificate](#bkmk_clientauth)
+  - [CMG connection point](#bkmk_cmgcp)
   - [Client trusted root certificate to CMG](#bkmk_clientroot)  
 
 - [Enable management point for HTTPS](#bkmk_mphttps)  
@@ -68,7 +69,7 @@ This certificate requires a globally unique name to identify the service in Azur
     > [!Important]  
     > Don't create the service in the portal, just use this process to check the name availability.
 
-If you will also enable the CMG for content, confirm that the CMG service name is also a unique Azure storage account name. If the CMG cloud service name is unique, but the storage account name isn't, Configuration Manager fails to provision the service in Azure. Repeat the above process in the Azure portal with the following changes:
+If you also enable the CMG for content, confirm that the CMG service name is also a unique Azure storage account name. If the CMG cloud service name is unique, but the storage account name isn't, Configuration Manager fails to provision the service in Azure. Repeat the above process in the Azure portal with the following changes:
 
 - Search for **Storage account**
 - Test your name in the **Storage account name** field
@@ -85,7 +86,7 @@ Clients must trust the CMG server authentication certificate. There are two meth
 
   - You can also use Configuration Manager certificate profiles to provision certificates on clients. For more information, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-  - If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more see [Configure a certificate profile](https://docs.microsoft.com/intune/certificates-configure).
+  - If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more information, see [Configure a certificate profile](../../../../../intune/protect/certificates-configure.md).
 
 ### <a name="bkmk_serverauthpublic"></a> Server authentication certificate issued by public provider
 
@@ -124,18 +125,35 @@ Create a custom SSL certificate for the CMG the same as for a cloud distribution
 
 ## <a name="bkmk_clientauth"></a> Client authentication certificate
 
-*This certificate is required for internet-based clients running Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD). It's also required on the CMG connection point. It isn't required for Windows 10 clients joined to Azure AD.*
+Client authentication certificate requirements:
+
+- This certificate is required for internet-based clients running Windows 8.1, and Windows 10 devices not joined to Azure Active Directory (Azure AD).
+- It may be required on the CMG connection point. For more information, see [CMG connection point](#bkmk_cmgcp).
+- It isn't required for Windows 10 clients joined to Azure AD.
+- If your site is version 2002 or later, devices can use a token issued by the site. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
 
 The clients use this certificate to authenticate with the CMG. Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use Azure AD to authenticate.
 
 Provision this certificate outside of the context of Configuration Manager. For example, use Active Directory Certificate Services and group policy to issue client authentication certificates. For more information, see [Deploying the client certificate for Windows computers](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 
-To securely forward client requests, the CMG connection point requires a client authentication certificate that corresponds to the server authentication certificate on the HTTPS management point. If clients use Azure AD authentication, or you configure the management point for Enhanced HTTP, this certificate isn't required. For more information, see [Enable management point for HTTPS](#bkmk_mphttps).
-
 > [!NOTE]
 > Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 >
-> Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
+> Starting in version 2002,<!--5686290--> Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Azure AD, and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](../../deploy/deploy-clients-cmg-token.md).
+
+### <a name="bkmk_cmgcp"></a> CMG connection point
+
+To securely forward client requests, the CMG connection point requires a secure connection with the management point. Depending upon how you configure your devices and management points determines the CMG connection point configuration.
+
+- The management point is HTTPS
+
+  - Clients have a client authentication certificate: The CMG connection point requires a client authentication certificate that corresponds to the server authentication certificate on the HTTPS management point.
+
+  - Clients use Azure AD authentication or a Configuration Manager token: This certificate isn't required.
+
+- If you configure the management point for Enhanced HTTP: This certificate isn't required.
+
+For more information, see [Enable management point for HTTPS](#bkmk_mphttps).
 
 ### <a name="bkmk_clientroot"></a> Client trusted root certificate to CMG
 
@@ -145,8 +163,8 @@ You supply this certificate when creating the CMG in the Configuration Manager c
 
 The CMG must trust the client authentication certificates. To accomplish this trust, provide the trusted root certificate chain. Make sure to add all certificates in the trust chain. For example, if the client authentication certificate is issued by an intermediate CA, add both the intermediate and root CA certificates.
 
-> [!Note]  
-> When you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> When you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure AD for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.
 
@@ -188,7 +206,7 @@ Provision this certificate outside of the context of Configuration Manager. For 
 
 When using the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
-> [!Tip]  
+> [!TIP]
 > If you aren't using Enhanced HTTP, and your environment has multiple management points, you don't have to HTTPS-enable them all for CMG. Configure the CMG-enabled management points as **Internet only**. Then your on-premises clients don't try to use them.<!-- SCCMDocs#1676 -->
 
 ### Enhanced HTTP certificate for management points
@@ -233,15 +251,16 @@ Configure an on-premises management point with the following client connection m
 
 #### Legend of terms
 
-- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#bkmk_clientauth)  
-- *AD domain-joined*: You join the device to an on-premises Active Directory domain  
-- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure Active Directory tenant  
-- *Hybrid-joined*: You join the device to both an Active Directory domain and an Azure AD tenant  
-- *HTTP*: On the management point properties, you set the client connections to **HTTP**  
-- *HTTPS*: On the management point properties, you set the client connections to **HTTPS**  
-- *E-HTTP*: On the site properties, **Client Computer Communication** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).  
+- *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#bkmk_clientauth).
+- *AD domain-joined*: You join the device to an on-premises Active Directory domain.
+- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure AD tenant. For more information, see [Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Azure AD. For more information, see [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *HTTP*: On the management point properties, you set the client connections to **HTTP**.
+- *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
+- *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).
+
     > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+    > In version 1902 and earlier, this tab is called **Client Computer Communication**.<!-- SCCMDocs#1645 -->
 
 ## <a name="bkmk_azuremgmt"></a> Azure management certificate
 

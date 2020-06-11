@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,7 +56,8 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
-## Week of May 18, 2020  
+
+## Week of June 8, 2020  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->  
 
@@ -64,6 +65,52 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 An informational screen in Company Portal for iOS/iPadOS has been updated to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To see the updated screens, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
+
+## Week of May 25, 2020
+
+### App management
+
+#### Windows 32-bit (x86) apps on ARM64 devices<!-- 5477661 -->
+Windows 32-bit (x86) apps that are deployed as available to ARM64 devices will now be displayed in the Company Portal. For more information about Windows 32-bit apps, see [Win32 app management](../apps/apps-win32-app-management.md).
+
+#### Windows Company Portal app icon<!-- 7114635 -->
+The icon for the Windows Company Portal app has been updated. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+### Device management
+
+#### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381  -->
+When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline)  
+
+#### Tenant attach: Install an application from the admin center<!-- 7220536, CM6024389  -->
+You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Management admin center. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) 
+
+#### Tenant attach: CMPivot from the admin center<!--7220536, CM6024392  -->
+You can bring the power of [CMPivot]((../../configmgr/tenant-attach/cmpivot-overview-attached.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) 
+
+#### Tenant attach: Run Scripts from the admin center<!--7220536, CM6234688  -->
+You can bring the power of the Configuration Manager on-premises [Run Scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) 
+
+## Week of May 18, 2020
+
+### App management  
+
+#### Update to icons in Company Portal app for iOS/iPadOS and macOS<!--6057697 -->
+We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System. To see the updated icons, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md). 
+
+### Device security
+
+#### Use Endpoint detection and response policy to onboard devices to Defender ATP<!-- 7130165  -->
+
+Use endpoint security [policy for Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) to onboard and configure devices for your deployment of Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supports policy for Windows devices managed by Intune (MDM), and a separate policy for Windows devices managed by Configuration Manager. 
+
+To use the policy for Configuration Manager devices, you must [set up Configuration Manager to support the EDR policy](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Set up includes:
+
+- Configure your Configuration manager for *tenant attach*.
+- Install an in-console update for Configuration Manager to enable support for the EDR policies. This update applies only to hierarchies that have enabled *tenant attach*.
+- Synchronize your device collections form your hierarchy to the Microsoft Endpoint Manager admin center.
+
+
+
 ## Week of May 11, 2020 (2005 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -82,7 +129,7 @@ Apps that are published as Volume Purchase Program (VPP) available apps will be 
 
 
 #### Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal<!-- 4404429   -->
-*This feature is in progress and rolling out over the next few weeks. You may see the feature controls in the user interface, but the settings won’t take effect for up to a few weeks.*
+*This feature has been delayed.*
 On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows, iOS/iPadOS, and macOS Company Portals expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Android Company Portal user experience<!-- 5736084  -->

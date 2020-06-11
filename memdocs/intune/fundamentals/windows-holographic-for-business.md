@@ -119,7 +119,7 @@ In your profiles, you can use OMA-URI to customize some settings, create device 
 
 To configure OMA-URI (Open Mobile Alliance Uniform Resource Identifier) settings, you can create a custom profile in Intune. Use the OMA-URI settings to control different features on your Windows Holographic for Business devices, such as enabling VPN, or checking for updates on Microsoft Update.
 
-See an example that uses the [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) to allow or block apps from opening on HoloLens 2 devices.
+See an [example](../configuration/custom-profile-hololens.md) that uses the [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) to allow or block apps from opening on HoloLens 2 devices.
 
 ### [Configure kiosk mode](../configuration/kiosk-settings-holographic.md)
 

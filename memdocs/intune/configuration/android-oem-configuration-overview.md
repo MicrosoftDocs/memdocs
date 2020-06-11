@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority:
@@ -36,7 +36,7 @@ This feature applies to:
 
 - Android Enterprise
 
-For Android device administrator devices, use [Mobile extensions (MX)](android-zebra-mx-overview.md).
+To manage Zebra Technologies devices using Android device administrator, use [Zebra Mobile Extensions (MX)](android-zebra-mx-overview.md).
 
 This article describes OEMConfig, lists the prerequisites, shows how to create a configuration profile, and lists the supported OEMConfig apps in Intune.
 
@@ -153,7 +153,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 ## Supported OEMConfig apps
 
-Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas. Intune currently supports the following OEMConfig apps:
+Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas and functions. OEMs must register their OEMConfig apps with Google. If you don't register, these features may not work as expected. Intune currently supports the following OEMConfig apps:
 
 -----------------
 
@@ -166,6 +166,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
+| Panasonic | com.panasonic.mobile.oemconfig | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com.seuic.seuicoemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |

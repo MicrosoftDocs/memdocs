@@ -66,9 +66,6 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - An active global Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
-    > [!Important]  
-    > Desktop Analytics currently requires that you deploy an Office 365 service in your Azure AD tenant. This won't be a requirement in the future.
-
     - **Workspace owner** permissions to **Set up your workspace**, and the following roles:  
 
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) role.
@@ -89,7 +86,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
     >
     > - Use different Commercial IDs and Azure AD tenants.
-    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 minutes after you disconnect a hiearchy for the portal to reflect changes. 
+    > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hiearchy for the portal to reflect changes. 
 
 - Devices running Windows 7, Windows 8.1, or Windows 10  
 

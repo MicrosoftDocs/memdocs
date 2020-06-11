@@ -8,8 +8,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
-ms.topic: conceptual
+ms.date: 06/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 # How to monitor app protection policies
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-You can monitor the status of the app protection policies that you've applied to users from the Intune app protection pane in the [Azure portal](https://portal.azure.com). Additionally, you can find information about the users affected by app protection policies, policy compliance status, and any issues that your users might be experiencing.
+You can monitor the status of the app protection policies that you've applied to users from the Intune app protection pane in Intune. Additionally, you can find information about the users affected by app protection policies, policy compliance status, and any issues that your users might be experiencing.
 
 There are three different places to monitor app protection policies:
 - Summary view
@@ -47,10 +47,9 @@ The retention period for app protection data is 90 days. Any app instances that 
 ## Summary view
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps** > **Monitor** > **App protection status**.
+2. Select **Apps** > **Monitor** > **App protection status**.
 
-   ![Screenshot of the summary tile on the Intune mobile application management pane](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+The following list provides details about app protection status: 
 - **Assigned users**: The total number of assigned users in your company who are using an app that is associated with a policy in a work context and are protected and licensed, as well as the assigned users that are unprotected and unlicensed.
 - **Flagged users**: The number of users who are experiencing issues with their devices. Jailbroken (iOS/iPadOS) and rooted (Android) devices are reported under **Flagged users**. Also, users with devices that are flagged by the Google SafetyNet device attestation check (if turned on by the IT admin) are reported here. 
 - **Users with potentially harmful apps**: The number of users who may have a harmful app on their Android device detected by Google Play Protect. 

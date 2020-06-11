@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 
@@ -86,6 +87,5 @@ The final step allows you to review a summary of the settings you configured. On
 
 ## Next steps
 
-- Enhance the security of using Microsoft Edge by setting up Intune app protection policy integration. For more information, see [Application protection policies for Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- If you have intranet sites to include, explore protecting access with Azure Application Proxy integration. For more information, see [Configure Application Proxy settings for Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
-
+- Enhance the security of using Microsoft Edge by setting up Intune app protection policy integration. For more information, see [Create Intune app protection policies](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies).
+- If you have intranet sites to include, explore protecting access with Azure Application Proxy integration. For more information, see [Manage proxy configuration](../apps/manage-microsoft-edge.md#manage-proxy-configuration).
