@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Add Wi-Fi settings for macOS devices in Microsoft Intune
 
-You can create a profile with specific WiFi settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKS or SCEP certificate, and more.
+You can create a profile with specific Wi-Fi settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
-These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
+These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
 
 This article describes these settings.
 
@@ -43,6 +43,8 @@ This article describes these settings.
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
 ## Basic profiles
+
+Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a pre-shared key to authenticate the connection.
 
 - **Wi-Fi type**: Choose **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. This value is the name that users see when they browse the list of available connections on their device.
@@ -61,6 +63,8 @@ This article describes these settings.
   - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** (for example `http://proxy.contoso.com`) that contains the configuration file.
 
 ## Enterprise profiles
+
+Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate Wi-Fi connections. EAP is often used by enterprises, as you can use certificates to authenticate and secure connections, and configure more security options.
 
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
