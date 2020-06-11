@@ -93,3 +93,6 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
+
+> [!IMPORTANT]
+> Org allowed accounts mode will be supported in Teams for iOS and Android in late June. Check the above articles for the minimum app version.
