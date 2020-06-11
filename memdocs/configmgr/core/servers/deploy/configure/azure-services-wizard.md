@@ -2,7 +2,7 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 07/31/2019
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,22 +18,21 @@ manager: dougeby
 
 Use the **Azure Services Wizard** to simplify the process of configuring the Azure cloud services you use with Configuration Manager. This wizard provides a common configuration experience by using Azure Active Directory (Azure AD) web app registrations. These apps provide subscription and configuration details, and authenticate communications with Azure AD. The app replaces entering this same information each time you set up a new Configuration Manager component or service with Azure.
 
-
 ## Available services
 
 Configure the following Azure services using this wizard:  
 
 - **Cloud Management**: This service enables the site and clients to authenticate by using Azure AD. This authentication enables other scenarios, such as:  
 
-    - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-    - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
+  - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
-    - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
+  - [Configure Azure AD User Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-    - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
 
-    - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
+  - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Log Analytics Connector**: [Connect to Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
 
@@ -46,7 +45,7 @@ Configure the following Azure services using this wizard:
 
 The following table lists details about each of the services.  
 
-- **Tenants**: The number of service instances you can configure. Each instance must be a distinct Azure tenant.  
+- **Tenants**: The number of service instances you can configure. Each instance must be a distinct Azure AD tenant.  
 
 - **Clouds**: All services support the global Azure cloud, but not all services support private clouds, such as the Azure US Government cloud.  
 
@@ -79,7 +78,6 @@ For more information about Azure apps, start with the following articles:
 - [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/authentication-scenarios)  
 - [Register your application with your Azure Active Directory tenant](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
-
 ## Before you begin
 
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Azure AD administrator. Decide which of the following actions to take:
@@ -91,7 +89,6 @@ After you decide the service to which you want to connect, refer to the table in
 Some services require the Azure AD apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com).
 
 When configuring the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
-
 
 ## Start the Azure Services wizard
 
@@ -108,7 +105,6 @@ When configuring the Log Analytics Connector, give your newly registered web app
     3. Select the Azure service that you want to connect with Configuration Manager.  
 
 4. Select **Next** to continue to the [Azure app properties](#azure-app-properties) page of the Azure Services Wizard.  
-
 
 ## Azure app properties
 
@@ -146,15 +142,18 @@ After you select, import or create a web app, select **OK** to close the Server 
 
 When you select **Import** from the Server app dialog or the App page of the Azure Services Wizard, it opens the Import apps dialog. This page lets you enter information about an Azure AD web app that is already created in the Azure portal. It imports metadata about that web app into Configuration Manager. Specify the following information:
 
-- **Azure AD Tenant Name**
-- **Azure AD Tenant ID**
-- **Application Name**: A friendly name for the app.
-- **Client ID**
-- **Secret Key**
+- **Azure AD Tenant Name**: The name of your Azure AD tenant.
+- **Azure AD Tenant ID**: The GUID of your Azure AD tenant.
+- **Application Name**: A friendly name for the app, the display name in the app registration.
+- **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
+- **Secret Key**: You have to copy the secret key when you register the app in Azure AD.
 - **Secret Key Expiry**: Select a future date from the calendar.
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. The value is the **Application ID URI** of the app registration entry in the Azure AD portal. The format is similar to `https://ConfigMgrService`.
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to either the [App page](#azure-app-properties) of the Azure Services Wizard, or the [Server app dialog](#server-app-dialog).
+
+> [!TIP]
+> When you register the app in Azure AD, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
 
 #### Create Server Application dialog
 
@@ -162,7 +161,7 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 
 - **Application Name**: A friendly name for the app.
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
-- **App ID URI**: This value needs to be unique in your Azure AD tenant. It is in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+- **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
 Select **Sign in** to authenticate to Azure as an administrative user. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
@@ -197,7 +196,7 @@ After you select, import or create a native app, choose **OK** to close the Clie
 When you select **Import** from the Client App dialog, it opens the Import apps dialog. This page lets you enter information about an Azure AD native app that is already created in the Azure portal. It imports metadata about that native app into Configuration Manager. Specify the following information:
 
 - **Application Name**: A friendly name for the app.
-- **Client ID**
+- **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to the [Client App dialog](#client-app-dialog).
 
@@ -224,11 +223,7 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
-
 ## <a name="bkmk_renew"></a> Renew secret key
-
-> [!Note]
-> To renew the secret key of an Azure app in version 1802 and earlier, you need to recreate the app.
 
 ### Renew key for created app
 
@@ -242,16 +237,14 @@ Finally, complete the Azure Services Wizard through the Summary, Progress, and C
 
 If you imported the Azure app in Configuration Manager, use the Azure portal to renew. Note the new secret key and expiry date. Add this information on the **Renew Secret Key** wizard.  
 
-> [!Note]  
+> [!NOTE]
 > Save the secret key before closing the Azure application properties **Key** page. This information is removed when you close the page.
-
 
 ## View the configuration of an Azure service
 
 View the properties of an Azure service you've configured for use. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Services**. Select the service you want to view or edit, and then select **Properties**.
 
 If you select a service and then choose **Delete** in the ribbon, this action deletes the connection in Configuration Manager. It doesn't remove the app in Azure AD. Ask your Azure administrator to delete the app when it's no longer needed. Or run the Azure Service Wizard to import the app.<!--483440-->
-
 
 ## Cloud management data flow
 
