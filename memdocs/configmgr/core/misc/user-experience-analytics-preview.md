@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 05/11/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -62,7 +62,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 #### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled.
 
 #### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
@@ -816,6 +816,23 @@ Currently, the basic functionality of Endpoint analytics collects information as
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
 
+### <a name="bkmk_uea_stop"></a> Stop gathering data
+
+- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](#bkmk_uea_gen) created during sign-up.
+
+- If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
+
+   1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
+   1. Select **CoMgmtSettingsProd** then click **Properties**.
+   1. On the **Configure upload** tab, uncheck the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**.
+
+- Disable Endpoint analytics data collection in Configuration Manager (optional):
+
+   1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
+   1. Right-click and select **Properties** then select the **Computer Agent** settings.
+   1. Set **Enable Endpoint analytics data collection** to **No**.
+   > [!Important]
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
 
 ### Resources
 
