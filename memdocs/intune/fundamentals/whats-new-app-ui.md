@@ -46,6 +46,7 @@ We've updated an informational screen in Company Portal for iOS/iPadOS to better
 
 [![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
+
 ## Week of May 18, 2020  
 ### Update to icons in Company Portal app for iOS/iPadOS and macOS <!--6057697 -->  
 We've updated the icons in Company Portal to create a more modern look and feel that's supported on dual screen devices and aligns with the Microsoft Fluent Design System.
