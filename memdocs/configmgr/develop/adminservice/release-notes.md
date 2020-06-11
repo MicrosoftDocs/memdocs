@@ -2,7 +2,7 @@
 title: Admin service release notes
 titleSuffix: Configuration Manager
 description: Information about changes to the administration service with each Configuration Manager release
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -15,6 +15,9 @@ manager: dougeby
 # Administration service release notes
 
 *Applies to: Configuration Manager (current branch)*
+
+## <a name="bkmk_2006"></a> Changes in version 2006
+
 
 ## <a name="bkmk_2002"></a> Changes in version 2002
 
