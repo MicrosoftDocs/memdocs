@@ -62,7 +62,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 #### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled.
 
 #### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
