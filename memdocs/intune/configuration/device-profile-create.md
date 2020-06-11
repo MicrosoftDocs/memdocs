@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -88,6 +88,7 @@ Then, choose the profile type. Depending on the platform you choose, the setting
 - [Trusted certificate](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Wired networks (macOS)](wired-network-settings-macos.md)
 
 For example, if you select **iOS/iPadOS** for the platform, your profile options look similar to the following profile:
 

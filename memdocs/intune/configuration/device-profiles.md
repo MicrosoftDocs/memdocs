@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,7 @@ This article gives an overview of the different types of profiles you can create
 
 ## Administrative templates
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, OneDrive, remote desktop, Word, Excel, and other Office programs.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs.
 
 These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
 
@@ -137,7 +137,7 @@ This feature supports:
 
 - Windows 10 and later
 
-## Edition upgrade
+## Edition upgrade and mode switch
 
 [Windows 10 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows 10 to a newer edition.
 
@@ -209,6 +209,14 @@ This feature supports:
 
 Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices), and [ios/iPadOS](device-restrictions-ios.md#kiosk).
 
+## MX profile (Zebra)
+
+[Mobility extensions (MX)](android-zebra-mx-overview.md) expand on the built-in Intune settings to customize or add more settings specific to Zebra devices. Zebra devices are commonly used on factory floors, and retail environments. If you have hundreds or thousands of Zebra devices, you can use Intune to configure and manage these devices.
+
+This feature supports:
+
+- Android device administrator
+
 ## Microsoft Defender ATP
 
 [Microsoft Defender advanced threat protection (ATP)](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with conditional access, you can help prevent malicious activity in your organization.
@@ -219,7 +227,7 @@ This feature supports:
 
 ## OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) is a standard that allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way on Android Enterprise devices. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, allows Intune administrators to configure the settings in the schema.
+On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard that allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
 
 This feature supports:
 
@@ -227,7 +235,7 @@ This feature supports:
 
 ## PowerShell scripts
 
-[PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md) uses the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
@@ -283,7 +291,7 @@ This feature supports:
 
 [Wi-Fi settings](wi-fi-settings-configure.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves. 
 
-This feature supports: 
+This feature supports:
 
 - Android device administrator
 - Android Enterprise
@@ -291,6 +299,16 @@ This feature supports:
 - macOS
 - Windows 8.1 (import only)
 - Windows 10 and later
+
+## Wired networks
+
+[Wired networks](wired-networks-configure.md) lets you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+
+When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
+
+This feature supports:
+
+- macOS
 
 ## Zebra Mobility Extensions (MX)
 
