@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -80,9 +80,12 @@ Deployment and operation of the CMG includes the following components:
 
 - The [**service connection point**](../../../servers/deploy/configure/about-the-service-connection-point.md) site system role runs the cloud service manager component, which handles all CMG deployment tasks. Additionally, it monitors and reports service health and logging information from Azure AD. Make sure your service connection point is in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).  
 
-- The **management point** site system role services client requests per normal.  
+- The **management point** site system role services client requests per normal.
 
-- The **software update point** site system role services client requests per normal.  
+- The **software update point** site system role services client requests per normal.
+
+    > [!NOTE]
+    > Sizing guidance for management points and software update points doesn't change whether they service on-premises or internet-based clients. For more information, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - **Internet-based clients** connect to the CMG to access on-premises Configuration Manager components.
 
@@ -146,15 +149,33 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 > [!TIP]
 > You don't need to deploy more than one cloud management gateway for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
 
+### Test environments
+<!-- SCCMDocs#1225 -->
+Many organizations have separate environments for production, test, development, or quality assurance. When you plan your CMG deployment, consider the following questions:
+
+- How many Azure AD tenants does your organization have?
+  - Is there a separate tenant for testing?
+  - Are user and device identities in the same tenant?
+
+- How many subscriptions are in each tenant?
+  - Are there subscriptions that are specific for testing?
+
+Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
+
+For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## Requirements
 
 - An **Azure subscription** to host the CMG.
+
+    > [!IMPORTANT]
+    > CMG doesn't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 -->
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - An **Azure administrator** needs to participate in the initial creation of certain components, depending upon your design. This persona can be the same as the Configuration Manager administrator, or separate. If separate, it doesn't require permissions in Configuration Manager.
 
-  - To deploy the CMG, you need a **Subscription Admin**
+  - To deploy the CMG, you need a **Subscription Owner**
   - To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.  
@@ -188,7 +209,7 @@ As clients roam onto the internet, they communicate with the CMG in the West US 
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->  
 
-- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- CMG deployments using the Azure Resource Model don't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### Support for Configuration Manager features
 
@@ -328,6 +349,9 @@ The following diagram is a basic, conceptual data flow for the CMG:
 
 3. The client connects to the CMG over HTTPS port 443. It authenticates using Azure AD or the client authentication certificate.  
 
+    > [!NOTE]
+    > If you enable the CMG to serve content or use a cloud distribution point, the client connects directly to Azure blob storage over HTTPS port 443. For more information, see [Use a cloud-based distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. The CMG forwards the client communication over the existing connection to the on-premises CMG connection point. You don't need to open any inbound firewall ports.  
 
 5. The CMG connection point forwards the client communication to the on-premises management point and software update point.  
@@ -345,6 +369,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | CMG connection point | HTTPS | 443 | CMG service | Fallback protocol to build CMG channel to only one VM instance <sup>[Note 2](#bkmk_port-note2)</sup> |
 | CMG connection point | HTTPS | 10124-10139 | CMG service | Fallback protocol to build CMG channel to two or more VM instances <sup>[Note 3](#bkmk_port-note3)</sup> |
 | Client | HTTPS | 443 | CMG | General client communication |
+| Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Software update point | On-premises traffic, port depends upon software update point configuration |
 

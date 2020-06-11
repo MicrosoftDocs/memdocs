@@ -5,13 +5,11 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-
-
 ---
 
 # Set up cloud management gateway for Configuration Manager
@@ -22,7 +20,6 @@ This process includes the steps required to set up a cloud management gateway (C
 
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
-
 
 ## Before you begin
 
@@ -36,11 +33,11 @@ Use the following checklist to make sure you have the necessary information and 
 
 - You need the following requirements for an [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) deployment of CMG:  
 
-    - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
+  - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required. To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**.
 
-    - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
-    - A subscription admin needs to sign in.  
+  - A **Subscription Owner** needs to sign in to deploy the CMG.
 
 - A globally unique name for the service. This name is from the [CMG server authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
@@ -57,10 +54,9 @@ Use the following checklist to make sure you have the necessary information and 
     >
     > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud management gateway.<!-- 3605704 -->
 
-    - Azure subscription ID  
+  - Azure subscription ID  
 
-    - Azure management certificate  
-
+  - Azure management certificate  
 
 ## Set up a CMG
 
@@ -70,7 +66,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 2. Select **Create Cloud Management Gateway** in the ribbon.  
 
-3. On the General page of the wizard, select **Sign in**. Authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.
+3. On the General page of the wizard, select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
     > [!Note]  
     > Starting in version 1810, classic service deployments in Azure were deprecated in Configuration Manager. In version 1902 and earlier, select **Azure Resource Manager deployment** as the CMG deployment method.
@@ -89,7 +85,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 7. Select the **Region** drop-down list to choose the Azure region for this CMG.  
 
 8. Select a **Resource Group** option.
-   1. If you choose **Use existing**, then select an existing resource group from the drop-down list. The selected resource group must already exist in the region you selected in step 7. If you select an existing resource group and it is in a different region than the previously selected region, CMG will fail to provision.
+   1. If you choose **Use existing**, then select an existing resource group from the drop-down list. The selected resource group must already exist in the region you selected in step 7. If you select an existing resource group, and it is in a different region than the previously selected region, CMG will fail to provision.
    2. If you choose **Create new**, then enter the new resource group name.
 
 9. In the **VM Instance** field, enter the number of VMs for this service. The default is one, but you can scale up to 16 VMs per CMG.  
@@ -97,7 +93,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 10. Select **Certificates** to add client trusted root certificates. Add all of the certificates in the trust chain.  
 
     > [!Note]  
-    > Starting in version 1806, when you create a CMG, you're no longer required to provide a trusted root certificate on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->  
+    > A trusted root certificate isn't required when using Azure Active Directory (Azure AD) for client authentication. If you're using PKI client authentication certificates, then you need to add a trusted root certificate to the CMG.<!--SCCMDocs-pr issue #2872-->
     >
     > In version 1902 and earlier, you can only add two trusted root CAs and four intermediate (subordinate) CAs.<!-- SCCMDocs-pr#4022 -->
 
@@ -105,7 +101,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 12. Starting in version 1906, you can **Enforce TLS 1.2**. This setting only applies to the Azure cloud service VM. It doesn't apply to any on-premises Configuration Manager site servers or clients. For more information on TLS 1.2, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
-13. Starting in version 1806, by default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.  
+13. By default, the wizard enables the following option: **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.
 
 14. Select **Next**.  
 
@@ -113,9 +109,8 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 16. Review the settings, and choose **Next**. Configuration Manager starts setting up the service. After you close the wizard, it will take between five to 15 minutes to provision the service completely in Azure. Check the **Status** column for the new CMG to determine when the service is ready.  
 
-    > [!Note]  
+    > [!NOTE]
     > To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## Configure primary site for client certificate authentication
 
@@ -125,23 +120,21 @@ If you're using [client authentication certificates](certificates-for-cloud-mana
 
 2. Select the primary site to which your internet-based clients are assigned, and choose **Properties**.  
 
-3. Switch to the **Client Computer Communication** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
+3. Switch to the **Communication Security** tab of the primary site property sheet, check **Use PKI client certificate (client authentication) when available**.  
 
-    > [!Note]
-    > Starting in version 1906, this tab is called **Communication Security**.<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > In version 1902 and earlier, this tab is called **Client Computer Communication**.<!-- SCCMDocs#1645 -->
 
 4. If you don't publish a CRL, deselect the option for **Clients check the certificate revocation list (CRL) for site systems**.  
-
 
 ## Add the CMG connection point
 
 The CMG connection point is the site system role for communicating with the CMG. To add the CMG connection point, follow the general instructions to [install site system roles](../../../servers/deploy/configure/install-site-system-roles.md). On the System Role Selection page of the Add Site System Role Wizard, select **Cloud management gateway connection point**. Then select the **Cloud management gateway name** to which this server connects. The wizard shows the region for the selected CMG.
 
-> [!Important]
+> [!IMPORTANT]
 > The CMG connection point must have a [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth) in some scenarios.
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## Configure client-facing roles for CMG traffic
 
@@ -159,7 +152,6 @@ Configure the management point and software update point site systems to accept 
 
 Repeat these steps for additional management points as needed, and for any software update points.
 
-
 ## Configure boundary groups
 
 <!--3640932-->
@@ -169,17 +161,16 @@ For more information on boundary groups, see [Configure boundary groups](../../.
 
 When you [create or configure a boundary group](../../../servers/deploy/configure/boundary-group-procedures.md), on the **References** tab, add a cloud management gateway. This action associates the CMG with this boundary group.
 
-
 ## Configure clients for CMG
 
-Once the CMG and site system roles are running, clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](../../deploy/deploy-clients-cmg-azure.md). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.  
+Once the CMG and site system roles are running, clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](../../deploy/deploy-clients-cmg-azure.md). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request. To force the request, restart the SMS Agent Host service (ccmexec.exe) on the computer.
 
-> [!Note]
+> [!NOTE]
 > By default all clients receive CMG policy. Control this behavior with the client setting, [Enable clients to use a cloud management gateway](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway).
 
 The Configuration Manager client automatically determines whether it's on the intranet or the internet. If the client can contact a domain controller or an on-premises management point, it sets its connection type to **Currently intranet**. Otherwise, it switches to **Currently Internet**, and uses the location of the CMG service to communicate with the site.
 
->[!NOTE]
+> [!NOTE]
 > You can force the client to always use the CMG regardless of whether it's on the intranet or internet. This configuration is useful for testing purposes, or for clients that you want to force to always use the CMG. Set the following registry key on the client:
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -188,18 +179,20 @@ The Configuration Manager client automatically determines whether it's on the in
 >
 > This setting will always apply, even if the client roams into a location where boundary group configurations would otherwise leverage local resources.
 
-
 To verify that clients have the policy specifying the CMG, open a Windows PowerShell command prompt as an administrator on the client computer, and run the following command:
-`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.
 
-> [!Note]  
+> [!NOTE]  
 > To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ### Install off-premises clients using a CMG
 
-To install the client agent on systems not currently connected to your intranet, one of the following conditions must be true. In all cases, a local administrator account on the target systems is required.
+To install the Configuration Manager client on systems not currently connected to your intranet, one of the following conditions must be true. In all cases, a local administrator account on the target systems is required.
 
 1. The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
 
@@ -207,35 +200,37 @@ To install the client agent on systems not currently connected to your intranet,
 
 3. The site is running Configuration Manager version 2002 or later.
 
-For options 1 and 2, use the **/mp** parameter to specify the CMG's URL when calling **ccmsetup.exe**. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
+For options 1 and 2, when you run **ccmsetup.exe**, use the **/mp** parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
 
-For option 3, starting in Configuration Manager version 2002, you can install the client agent on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
 
 ### Configure off-premises clients for CMG
 
 You can connect systems to a recently configured CMG where the following conditions are true:  
 
-- Systems already have the Configuration Manager client agent installed.
+- Systems already have the Configuration Manager client installed.
 
 - Systems aren't connected and can't be connected to your intranet.
 
 - Systems meet one of the following conditions:
 
-  - Each has a valid, unique, and trusted client authentication certificate previously issued to it.
+  - Each has a valid, unique, and trusted client authentication certificate previously issued to it
 
   - Azure AD domain-joined
 
-  - Hybrid Azure AD domain-joined.
+  - Hybrid Azure AD domain-joined
 
-- You don't wish to or can't completely reinstall the existing client agent.
+- You don't want to or can't completely reinstall the existing client.
 
 - You have a method to change a machine registry value and restart the **SMS Agent Host** service using a local administrator account.
 
-To force the connection on these systems, create the registry value **CMGFQDNs** (of type REG_SZ) under **HKLM\Software\Microsoft\CCM**. Set this value to the URL of the CMG (for example, `https://contoso-cmg.contoso.com`). Once set, restart the **SMS Agent Host** service on the client system.
+To force the connection on these systems, create the **REG_SZ** registry entry `CMGFQDNs` in the key `HKLM\Software\Microsoft\CCM`. Set its value to the URL of the CMG, for example, `https://contoso-cmg.contoso.com`. Then restart the **SMS Agent Host** Windows service on the device.
 
-If the Configuration Manager client doesn't have a current CMG or internet-facing management point set in the registry, it automatically checks the **CMGFQDNs** registry value. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when it detects a network change. When the client connects to the site and learns of a CMG, it automatically updates this value.
+If the Configuration Manager client doesn't have a current CMG or internet-facing management point set in the registry, it automatically checks the `CMGFQDNs` registry value. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when it detects a network change. When the client connects to the site and learns of a CMG, it automatically updates this value.
 
 ## Modify a CMG
+
+### CMG properties
 
 After creating a CMG, you can modify some of its settings. Select the CMG in the Configuration Manager console and select **Properties**. Configure settings on the following tabs:  
 
@@ -247,18 +242,17 @@ After creating a CMG, you can modify some of its settings. Select the CMG in the
 
 - **Certificate file**: change the server authentication certificate for the CMG. This option is useful when updating the certificate before it expires.  
 
-- **VM Instance**: change the number of virtual machines that the service uses in Azure. This setting allows you to dynamically scale the service up or down based on utilization or cost considerations.  
+- **VM Instance**: change the number of virtual machines that the service uses in Azure. This setting allows you to dynamically scale the service up or down based on usage or cost considerations.  
 
 - **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.  
 
 - **Verify Client Certificate Revocation**: if you didn't originally enable this setting when creating the CMG, you can enable it afterwards once you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
-- **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: Starting in version 1806, this new option is enabled by default. Now a CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.<!--1358651-->  
+- **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: this option is enabled by default. A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs.<!--1358651-->
 
 #### Alerts
 
-Reconfigure the alerts at anytime after you create the CMG.
-
+Reconfigure the alerts at any time after you create the CMG.
 
 ### Redeploy the service
 
@@ -270,7 +264,7 @@ More significant changes, such as the following configurations, require redeploy
 - Private to public PKI
 - Region
 
-Always keep at least one active CMG for internet-based clients to receive updated policy. internet-based clients can't communicate with a removed CMG. Clients don't know about a new one until they roam back to the intranet. When creating a second CMG instance in order to delete the first, also create another CMG connection point.
+Always keep at least one active CMG for internet-based clients to receive updated policy. internet-based clients can't communicate with a removed CMG. Clients don't know about a new one until they roam back to the intranet. When creating a second CMG instance to delete the first, also create another CMG connection point.
 
 Clients refresh policy by default every 24 hours, so wait at least one day after creating a new CMG before you delete the old one. If clients are turned off or without an internet connection, you may need to wait longer.
 
@@ -294,7 +288,7 @@ If you have an existing CMG on the classic deployment method, you must deploy a 
 
     4. Delete the classic CMG.  
 
-> [!Tip]  
+> [!TIP]
 > To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->  
 >
 > 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
@@ -305,12 +299,11 @@ If you have an existing CMG on the classic deployment method, you must deploy a 
 
 ### Modifications in the Azure portal
 
-Only modify the CMG from the Configuration Manager console. Making modifications to the service or underlying VMs directly in Azure isn't supported. Any changes may be lost without notice. As with any PaaS, the service can rebuild the VMs at anytime. These rebuilds can happen for backend hardware maintenance, or to apply updates to the VM OS.
+Only modify the CMG from the Configuration Manager console. Making modifications to the service or underlying VMs directly in Azure isn't supported. Any changes may be lost without notice. As with any PaaS, the service can rebuild the VMs at any time. These rebuilds can happen for backend hardware maintenance, or to apply updates to the VM OS.
 
 ### Delete the service
 
 If you need to delete the CMG, also do so from the Configuration Manager console. Manually removing any components in Azure causes the system to be inconsistent. This state leaves orphaned information, and unexpected behaviors may occur.
-
 
 ## Next steps
 
