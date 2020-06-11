@@ -186,7 +186,7 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 Configuration Manager doesn't re-encrypt drives that are already protected with BitLocker Drive Encryption. If you deploy a BitLocker management policy that doesn't match the drive's current protection, it reports as non-compliant. The drive is still protected.
 
-For example, you used MBAM to encrypt the drive without PIN protection, but the Configuration Manager policy requires a PIN. The drive is non-compliant with the policy, even though the drive is encrypted.
+For example, you used MBAM to encrypt the drive with the AES-XTS 128 encryption algorithm, but the Configuration Manager policy requires AES-XTS 256. The drive is non-compliant with the policy, even though the drive is encrypted.
 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
 
@@ -196,7 +196,7 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-When you switch encryption management authorities, plan for [re-encryption](#re-encryption).
+When you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption) .
 
 For more information about managing BitLocker with Intune, see the following articles:
 
