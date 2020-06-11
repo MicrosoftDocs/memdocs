@@ -447,3 +447,4 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 ## Next steps
 
 - [What are app protection policies?](app-protection-policy.md) 
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

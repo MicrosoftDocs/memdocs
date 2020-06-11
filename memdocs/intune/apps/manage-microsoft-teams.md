@@ -96,3 +96,8 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 > [!IMPORTANT]
 > Org allowed accounts mode will be supported in Teams for iOS and Android in late June. Check the above articles for the minimum app version.
+
+## Next steps
+
+- [What are app protection policies?](app-protection-policy.md) 
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

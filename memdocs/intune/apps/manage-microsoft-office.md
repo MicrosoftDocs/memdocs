@@ -122,3 +122,8 @@ By default, Office enables users to share files with nearby users and transfer f
 ### Deploy app configuration scenarios with Microsoft Endpoint Manager
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, see [Add app configuration policies for managed apps without device enrollment](app-configuration-policies-managed-app.md) on how to create a  managed apps app configuration policy for the data protection app configuration scenarios. After the configuration is created, you can assign the policy to groups of users.
+
+## Next steps
+
+- [What are app protection policies?](app-protection-policy.md) 
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
