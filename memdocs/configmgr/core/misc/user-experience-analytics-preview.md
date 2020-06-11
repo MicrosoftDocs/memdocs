@@ -187,9 +187,11 @@ Your Microsoft-Intune managed devices are already enrolled in Azure AD. The reco
 
 ### <a name="bkmk_uea_intune"></a> Cloud management
 
-Microsoft Intune provides users with several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminates the need for and performance overhead of Group Policy, resulting in a better end-user experience. This metric measures the percent of PCs enrolled in Microsoft Intune. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+ConfigMgr and Intune provide integrated cloud-powered management tools, and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience. 
 
-The recommended remediation action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md).
+This metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+
+The recommended action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md) to unlock additional cloud-powered capabilities like conditional access.
 
 ### <a name="bkmk_uea_np"></a> No commercial median
 
