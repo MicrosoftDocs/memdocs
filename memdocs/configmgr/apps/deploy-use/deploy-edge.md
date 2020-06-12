@@ -108,7 +108,7 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
 - See how many clients have different versions of Microsoft Edge installed.
    - This chart doesn't include Canary Channel.
 - Have a view of the installed browsers across devices
-- Have a view of preferred browser by device <!--5907383-->
+- Have a view of preferred browser by device <!--5907383, 7423551-->
    - Currently for the 2002 release, this chart will be empty.
 
 ### Prerequisites for the dashboard
@@ -126,6 +126,8 @@ Enable the following properties in the below [hardware inventory](../../core/cli
 - **Browser Usage (SMS_BrowserUsage)**
    - BrowserName
    - UsagePercentage
+   > [!Note] 
+   > Currently for the 2002 release, the SMS_BrowserUsage class and charts that rely it aren't available. <!--7423551, 5907383-->
 
 ### View the dashboard
 
