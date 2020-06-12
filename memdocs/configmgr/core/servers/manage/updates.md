@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/15/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -55,13 +55,14 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9030) | July 31, 2020 | January 31, 2022 | No | Yes |
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 
-The **Availability date** is when the [early update ring](checklist-for-installing-update-2002.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
+The **Availability date** is when the [early update ring](checklist-for-installing-update-2006.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
 
 <a name="bkmk_note1"></a>
 
@@ -104,7 +105,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:  
 
-- New versions, like version 1906, 1910, or 2002.
+- New versions, like version 1910, 2002, or 2006.
 
 - Updates that include new features for your current version.
 

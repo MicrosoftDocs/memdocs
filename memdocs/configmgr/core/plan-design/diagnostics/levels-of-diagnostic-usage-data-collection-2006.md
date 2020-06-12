@@ -1,19 +1,18 @@
 ---
-title: Diagnostic and usage data for 1810
+title: Diagnostic and usage data for 2006
 titleSuffix: Configuration Manager
-description: Learn about the specific data that Configuration Manager collects at each level in version 1810.
-ms.date: 05/13/2019
+description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
+ms.assetid: ae8b48f8-391e-49d6-bb1a-9205378acef8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX
 ---
 
-# Diagnostic and usage data for version 1810
+# Diagnostic and usage data for version 2006
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -26,15 +25,15 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 
 ## <a name="bkmk_level1"></a> Level 1 - Basic
 
-For Configuration Manager version 1810, this level includes the following data:
+For Configuration Manager version 2006, this level includes the following data:
 
-- Statistics about Configuration Manager console connections: OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs
+- Statistics about Configuration Manager console connections: OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, console language packs, and capable authentication level
 
 - Basic application and deployment type counts: total apps, total apps with multiple deployment types, total apps with dependencies, total superseded apps, and count of deployment technologies in use
 
-- Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, and time zone
+- Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 
-- ***[Updated]*** Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version  
+- Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version  
 
 - Basic discovery statistics: discovery count, minimum/maximum/average group sizes, and when the site is running entirely with Azure Active Directory Services
 
@@ -54,7 +53,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 
-- ***[Updated]*** Count of Windows 10 devices by branch, build, and unique Active Directory forest  
+- Count of Windows 10 devices by branch, build, and unique Active Directory forest  
 
 - Count of Windows 10 clients that use Windows Update for Business  
 
@@ -66,17 +65,17 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Setup Information:  
 
-    - Build, install type, language packs, features that you enabled   
+  - Build, install type, language packs, features that you enabled
 
-    - Pre-release use, setup media type, branch type  
+  - Pre-release use, setup media type, branch type  
 
-    - Software Assurance expiration date  
+  - Software Assurance expiration date  
 
-    - Update pack deployment status and errors, download progress, and prerequisite errors 
+  - Update pack deployment status and errors, download progress, and prerequisite errors
 
-    - Use of update fast ring  
+  - Use of update fast ring  
 
-    - Version of post-upgrade script  
+  - Version of post-upgrade script  
 
 - SQL version, service pack level, edition, collation ID, and character set  
 
@@ -98,7 +97,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of clients by Windows OS age, to the nearest three-month interval  
 
-- ***[Updated]*** Top 10 processor names used on clients and servers  
+- Top 10 processor names used on clients and servers  
 
 - Count and processing rates of key Configuration Manager objects: data discovery records (DDR), state messages, status messages, hardware inventory, software inventory, and overall count of files in inboxes  
 
@@ -108,15 +107,41 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of crashes for Configuration Manager site server processes, and Watson signature ID, if available  
 
-- ***[New]*** Hashed list of top SQL queries by memory usage and lock count  
+- Hashed list of top SQL queries by memory usage and lock count  
 
-- ***[Moved, updated]*** Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors  
+- Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors  
 
+- Existence of Microsoft BitLocker Administration and Monitoring (MBAM) server-side extensions  
 
+- Count of categorized and uncategorized applications for asset intelligence
+
+- Status and health of the administration service
+
+- Hash of key site attributes (site ID, SQL broker ID, and site exchange key)
+
+- Count of Microsoft Edge installations
+
+- Count of Azure Active Directory applications and services connected to Configuration Manager
+
+- Site health information
+
+- Configuration Manager console crash locations
+
+- Configuration Manager console usage statistics
+
+- Cloud attach and detach actions
+
+- Status of last sync with Intune cloud service
+
+- Counts of errors from administration service
+
+- Use of the bulk registration token
+
+- Count of clients by default and preferred browser
 
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
-For Configuration Manager version 1810, this level includes the following data:
+For Configuration Manager version 2006, this level includes the following data:
 
 ### Application management  
 
@@ -188,10 +213,21 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Statistics of user install requests  
 
-- ***[New]*** Aggregated statistics on the use of the email approval feature  
+- Aggregated statistics on the use of the email approval feature  
 
-- ***[New]*** File count, content size, services count, and custom action count of MSIs in application catalog  
+- File count, content size, services count, and custom action count of MSIs in application catalog  
 
+- Count of devices by Office ProPlus readiness state
+
+- Aggregated statistics on the use of application groups
+
+- Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
+
+- Aggregated statistics on Office add-in health
+
+- Count and size of Office Pro Plus pilot collections
+
+- Number of Office Pro Plus devices sending Office health data
 
 ### Client  
 
@@ -209,7 +245,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Client deployment download errors  
 
-- Client health statistics and top issue summary by client version  
+- Client health statistics and top issue summary by client version, component, OS, and workload  
 
 - Client notification operation action status: how many times each is run, max number of targeted clients, and average success rate  
 
@@ -239,6 +275,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of Microsoft Surface devices by model  
 
+- Count of client health check failures by issue type
 
 ### Cloud Services  
 
@@ -246,25 +283,23 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager  
-
 - Count of collections synced to Azure Log Analytics  
 
 - Count of Upgrade Analytics Connectors  
 
 - Whether the Azure Log Analytics cloud connector is enabled  
 
-- Count of pull-distribution points with a cloud distribution point as a source location  
+- Count of pull-distribution points with a cloud distribution point as a source location
 
+- Usage of the cloud services onboarding wizard
 
 ### CMPivot
 
 - CMPivot usage statistics  
 
-- ***[New]*** Count of saved CMPivot queries  
+- Count of saved CMPivot queries  
 
-- ***[New]*** Count of queries by entity type  
-
+- Count of queries by entity type  
 
 ### Co-management  
 
@@ -274,7 +309,6 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Associated Microsoft Intune tenant  
 
-
 ### Collections  
 
 - Collection ID usage (not running out of IDs)  
@@ -283,6 +317,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Collections without a deployment  
 
+- Count of collections synchronized to Azure Active Directory
 
 ### Compliance settings  
 
@@ -304,6 +339,17 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of deployed Microsoft Edge Legacy browser policies  
 
+- Count of OneDrive policies (created, deployed)
+
+### Configuration Manager console
+
+- Count of non-critical console notifications
+
+- Count of folders
+
+- Console performance information
+
+- 25 most common actions, wizards, property sheets, and tree nodes accessed in the console
 
 ### Content  
 
@@ -327,12 +373,13 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Content library type, whether local or remote  
 
-- ***[New]*** Count of boundary groups by configuration  
+- Count of boundary groups by configuration
 
+- Count of subnets excluded from peer cache
 
 ### Endpoint Protection  
 
-- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed. 
+- Microsoft Defender Advanced Threat Protection (ATP) policies (formerly known as Windows Defender ATP): count of policies, and whether policies are deployed.
 
 - Count of alerts that are configured for Endpoint Protection feature  
 
@@ -342,13 +389,13 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Endpoint Protection deployment errors, count of Endpoint Protection policy deployment error codes  
 
-- Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.  
+- Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group). This data doesn't include any information about the settings included in the policy.
 
+- Aggregated statistics for Microsoft Defender Advanced Threat Protection policies
 
 ### Migration  
 
 - Count of migrated objects (use of migration wizard)  
-
 
 ### Mobile device management (MDM)  
 
@@ -356,12 +403,11 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of mobile device policies  
 
-- Count of mobile devices Configuration Manager and Microsoft Intune manages, and how you enrolled them (bulk, user-based)  
+- Count of mobile devices Configuration Manager manages, and how you enrolled them (bulk, user-based)  
 
 - Count of users who have multiple enrolled mobile devices  
 
 - Mobile device polling schedule and statistics for mobile device check-in duration  
-
 
 ### Microsoft Intune troubleshooting  
 
@@ -371,13 +417,11 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Full and delta user synchronization statistics for Microsoft Intune  
 
-
 ### On-premises mobile device management (MDM)  
 
 - Count of Windows 10 bulk enrollment packages and profiles  
 
 - Deployment success/failure statistics for on-premises MDM application deployments  
-
 
 ### OS deployment  
 
@@ -403,13 +447,17 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of image servicing tasks  
 
-- ***[New]*** Count of imported machines  
+- Count of imported machines  
 
+- Count of duplicate hardware identifiers (MAC address and SMBIOS GUID) excluded from PXE and client registration
+
+- Count of task sequences by type (OS deployment or generic task sequence)
+
+- Count of packages with pre-cache content settings
 
 ### Site updates  
 
 - Versions of installed Configuration Manager hotfixes  
-
 
 ### Software Updates  
 
@@ -465,14 +513,21 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of software updates deployed with and without content  
 
-- ***[New]*** Aggregated statistics on the number of UUP updates that are required, deployed, expired, superseded, and downloaded  
+- Aggregated statistics on the number of UUP updates that are required, deployed, expired, superseded, and downloaded  
 
-- ***[New]*** Use of UUP product categories  
+- Use of UUP product categories  
 
-- ***[New]*** Count of clients that have deployed at least one UUP quality update or UUP feature update  
+- Count of clients that have deployed at least one UUP quality update or UUP feature update  
 
-- ***[New]*** Top UUP error codes and count of affected devices  
+- Top UUP error codes and count of affected devices  
 
+- List of subscriptions to third-party software update catalogs
+
+- Use of WSUS maintenance settings
+
+- Orchestration group usage
+
+- Windows Update fallback configuration settings
 
 ### SQL/performance data  
 
@@ -492,16 +547,21 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - State and status message performance statistics including most common and most expensive message types  
 
-- ***[New]*** Management point traffic statistics (total bytes sent and received by endpoint)  
+- Management point traffic statistics (total bytes sent and received by endpoint)  
 
-- ***[New]*** Management point performance counter measurements  
+- Management point performance counter measurements  
 
+- Aggregated performance statistics of calls made to Software Center endpoints on the management point
+
+- SQL maintenance task configuration and status
+
+- Status of recent re-initialization requests
 
 ### Miscellaneous  
 
-- Configuration of data warehouse service point including synchronization schedule and average time  
+- Configuration of data warehouse service point including synchronization schedule, average time, and use of customized tables feature  
 
-- Count of scripts and run statistics  
+- Count of scripts and run/edit statistics  
 
 - Count of sites with Wake On LAN (WOL)  
 
@@ -513,11 +573,19 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of crashes for unique non-Configuration Manager processes on the site server, and Watson signature ID, if available  
 
+- Aggregated statistics on Desktop Analytics enrollment errors and usage
 
+- Aggregated system boot time statistics by OS, form-factor, and drive type
 
-##  <a name="bkmk_level3"></a> Level 3 - Full
+- Aggregated statistics on the use of Desktop Analytics
 
-For Configuration Manager version 1810, this level includes the following data:
+- Usage of the Azure migration tool
+
+- Count of clients with browser usage
+
+## <a name="bkmk_level3"></a> Level 3 - Full
+
+For Configuration Manager version 2006, this level includes the following data:
 
 - Automatic deployment rule evaluation schedule information  
 
@@ -565,4 +633,6 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Microsoft Store for Business application details: non-aggregate list of synced applications including AppID, online state or offline state, and total purchased license counts  
 
-- ***[New]*** Count of clients pushed with option to not allow fallback to NTLM  
+- Count of clients pushed with option to not allow fallback to NTLM  
+
+- List of Configuration Manager console extensions
