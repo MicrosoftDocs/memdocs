@@ -385,7 +385,7 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
 
-### Deploy app configuration scenarios with Microsoft Endpoint Manager
+## Deploy app configuration scenarios with Microsoft Endpoint Manager
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
