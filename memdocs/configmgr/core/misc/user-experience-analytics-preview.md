@@ -133,7 +133,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
-   - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 ## Overview page
 
@@ -198,7 +198,7 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
 > [!NOTE]
-> If you are not seeing startup performance data from all your devices, please see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+> If you are not seeing startup performance data from all your devices, please see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
@@ -325,23 +325,26 @@ You can compare your current scores and subscores to others by setting a baselin
 
 The sections below can be used to assist in troubleshooting issues you may encounter.
 
-### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting startup performance device enrollment
+### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
 If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
 
-First, here's a quick summary of limitations for startup performance data collection:
-1. Devices must be Windows 10 version 1903 or later.
-2. Devices must be Azure AD joined. We currently do not support Workplace Joined devices, although are actively investigating the feasibility of adding this functionality to Windows.
-3. Devices must be Windows 10 Enterprise edition. Windows 10 Home and Professional are not currently supported, although are actively investigating the feasibility of adding this functionality to Windows.
+First, ensure devices meet the [technical prerequisites](#technical-prerequisites)
 
-Note that these issues will not apply to data coming from the upcoming Configuration Manager connector; it will be able to collect data from any Configuration Manager client PC, regardless of version, edition, or directory configuration.
-
-Second, here's a quick checklist to go through for troubleshooting:
-1. Make sure you have the Windows Health Monitoring profile targeted to all the devices for which you want performance data. You can find a link to this profile from within the endpoint analytics setting page, or you navigate to it as you would any other Intune profile. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
-1. Have a look at which devices have been successfully configured for data collection. You can also see this information in the profiles overview page.  
+For Intune or co-managed devices configured with the Intune data collection policy:
+1. Make sure you have the [Intune data collection](#bkmk_uea_profile) policy is targetting all devices you want to see performance data. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
+1. Look for devices that have not been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
-1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
+1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](#data-flow)
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_uea_endpoints).
+
+For Configuration Manager-managed devices:
+1. Ensure all devices you want to see performance data are [enrolled](#bkmk_uea_cm_enroll)
+1. Check if the data upload from Configuration Manager to the Gateway Service was succesful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site server.
+1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client settings. Find the overriding client settings and enable endpoint analytics on it.  
+1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
+1. Check and resolve any errors ocurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
+
 
 ### <a name="bkmk_uea_endpoints"></a> Proxy configuration
 
