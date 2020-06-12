@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -110,11 +110,109 @@ This feature applies to:
 > [!TIP]
 > To troubleshoot, on your macOS device, open **System Preferences** > **Profiles**. Confirm the profile you created is in the device profiles list. If it's listed, be sure the **Associated Domains Configuration** is in the profile, and it includes the correct app ID and domains.
 
+## Content caching
+
+Content caching saves a local copy of content. This information can be retrieved by other Apple devices without connecting to the Internet. This caching accelerates downloads by saving software updates, apps, photos, and other content the first time they're downloaded. Since apps are downloaded once and shared to other devices, schools and organization with many devices save bandwidth.
+
+> [!NOTE]
+> Only use one profile for these settings. If you assign multiple profiles with these settings, an error occurs.
+>
+> For more information on monitoring content caching, see [View content caching logs and statistics](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (opens Apple's web site).
+
+This feature applies to:
+
+- macOS 10.13.4 and newer
+
+### Settings apply to: All enrollment types
+
+For more information on these settings, see [Content Caching payload settings](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (opens Apple's web site).
+
+**Enable content caching**: **Yes** turns on content caching, and users can't disable it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn it on.
+
+- **Type of content to cache**:  Your options:
+  - **All content**: Caches iCloud content and shared content.
+  - **User content only**: Caches user's iCloud content, including photos and documents.
+  - **Shared content only**: Caches apps and software updates.
+
+- **Maximum cache size**: Enter the maximum amount of disk space (in bytes) that's used to cache content. When left blank (default), Intune doesn't change or update this setting. By default, the OS might set this value to zero (`0`) bytes, which gives unlimited disk space to the cache.
+- **Cache location**: Enter the path to store the cached content. The default location is `/Library/Application Support/Apple/AssetCache/Data`. It's recommended that you don't change this location.
+
+  If you change this setting, your cached content isn't moved to the new location. To move it automatically, users need to change the location on the device (**System Preferences** > **Sharing** > **Content Caching**).
+
+- **Port**: Enter the TCP port number on devices for the cache to accept download and upload requests, from 0-65535. Enter zero (`0`) (default) to use whatever port is available.
+- **Block internet connection and cache content sharing**: Also known as tethered caching. **Yes** prevents Internet connection sharing, and prevents sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't enable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+- **Enable internet connection sharing**: Also known as tethered caching. **Yes** allows Internet connection sharing, and allows sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't disable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  This feature applies to:
+
+  - macOS 10.15.4 and newer
+
+- **Enable cache to log client details**: **Yes** logs the IP address and port number of the devices that request content. If you're troubleshooting device issues, this log file may help. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not log this information.
+
+- **Always keep content from the cache, even when the system needs disk space for other apps**: **Yes** keeps the cache content, and makes sure nothing is deleted, even when disk space is low. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might purge content from the cache automatically when it needs storage space for other apps.
+
+  This feature applies to:
+
+  - macOS 10.15 and newer
+
+- **Show status alerts**: **Yes** shows as alerts as system notifications. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show these alerts as system notifications.
+
+  This feature applies to:
+
+  - macOS 10.15 and newer
+
+- **Prevent the device from sleeping while caching is turned on**: **Yes** prevents the computer from going to sleep when caching is on. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to sleep.
+
+  This feature applies to:
+
+  - macOS 10.15 and newer
+
+- **Devices to cache**: Choose the devices that can cache content. Your options:
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Devices using the same local network**: The content cache offers content to devices on the same immediate local network. No content is offered to devices on other networks, including devices reachable by the content cache.
+  - **Devices using the same public IP address**: The content cache offers content to devices using the same public IP address. No content is offered to devices on other networks, including devices reachable by the content cache.
+  - **Devices using custom local networks**: The content cache provides content to devices in the IP ranges you enter.
+    - **Client listen ranges**: Enter the range of IP addresses that can receive the content cache.
+  - **Devices using custom local networks with fallback**: The content cache provides content to devices in the Peer listen ranges and Parents IP addresses.
+    - **Client listen ranges**: Enter the range of IP addresses that can receive the content cache.
+
+- **Custom public IP addresses**: Enter a range of public IP addresses. The cloud servers use this range to match client devices to caches.
+
+- **Share content with other caches**: When your network has more than one content cache, the content caches automatically become peers. They can consult and share cached software. When a requested item isn’t available on one content cache, it checks its peers for the item. If the item is available, it’s downloaded from the peer.
+
+  If it’s not available, the content cache downloads the item from:
+
+  - One of its parents, if any are configured
+  - Or from Apple through the Internet
+
+  Devices automatically select the right content cache when more than one is available.
+
+  Your options:
+
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Content caches using the same local networks**: Content cache only peers with other content caches on the same immediate local network.
+  - **Content caches using the same public IP address**: Content cache only peers with other content caches on the same public IP address.
+  - **Content caches using custom local networks**: Content cache only peers with other content caches in the IP address listen range you enter:
+
+    - **Peer listen ranges**: Enter the IPv4 or IPv6 start and ending IP addresses for your range. The content cache responds only to peer cache requests from content caches in the IP address ranges you enter.
+    - **Peer filter ranges**: Enter the IPv4 or IPv6 start and ending IP addresses for your range. The content cache filters its list of peers using the IP address ranges you enter.
+
+- **Parent IP addresses**: Enter the local IP address of another content cache to add as a parent cache. Your cache uploads and downloads content to these caches, instead of uploading/downloading directly with Apple.
+
+- **Parent selection policy**: When there are many parent caches, select how the parent IP address is chosen. Your options:
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Round robin**: Use the parent IP addresses in order. This option is good for load-balancing scenarios.
+  - **First available**: Always use the first available IP address in the list.
+  - **Hash**: Creates a hash value for the path portion of the requested URL. This option makes sure the same parent IP address is always used for the same URL.
+  - **Random**: Randomly use an IP address in the list. This option is good for load-balancing scenarios.
+  - **Sticky available**: Always use the first IP address in the list. If it's not available, then use the second IP address in the list. Continue to use the second IP address until it's not available, and so on.
+
 ## Login items
 
 ### Settings apply to: All enrollment types
 
-- **Add the files, folders, and custom apps that will launch at login**: **Add** the path of a file, folder, custom app, or system app you want to open when users sign in to their devices. Also enter:
+- **Add the files, folders, and custom apps that will launch at login**: **Add** the path of a file, folder, custom app, or system app that opens when users sign in to their devices. Also enter:
 
   - **Path of item**: Enter the path to the file, folder, or app. System apps, or apps built or customized for your organization are typically in the `Applications` folder, with a path similar to `/Applications/AppName.app`.
 
@@ -128,7 +226,7 @@ This feature applies to:
     When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item won't be opened when the user signs in.
 
   - **Hide**: Choose to show or hide the app. Your options:
-    - **Not configured**: This is the default. Intune doesn't change or update this setting. By default, the OS will show items in the Users & Groups login items list with the hide option unchecked.
+    - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show items in the Users & Groups login items list with the hide option unchecked.
     - **Yes**: Hides the app in the Users & Groups login items list.
 
 ## Login window
@@ -190,7 +288,7 @@ This feature applies to:
 - **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension uses SSO. When users are redirected to these URLs, the SSO app extension intervenes, and prompts for SSO.
 
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
-  - The URLs must begin with http:// or https://.
+  - The URLs must begin with `http://` or `https://`.
 
 - **Additional configuration** (Redirect and Credential): Enter additional extension-specific data to pass to the SSO app extension:
   - **Key**: Enter the name of the item you want to add, such as `user name`.
@@ -218,10 +316,10 @@ This feature applies to:
 - **Password sync** (Kerberos only): Choose **Enable** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
 - **Windows Server Active Directory password complexity** (Kerberos only): Choose **Require** to force user passwords to meet Active Directory's password complexity requirements. For more information, see [Password must meet complexity requirements](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
 - **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
-- **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that must be used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
-- **Minimum password age** (Kerberos only): Enter the number of days that a password must be used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
+- **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that are used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
+- **Minimum password age** (Kerberos only): Enter the number of days that a password is used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
 - **Password expiration notification** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
-- **Password expiration** (Kerberos only): Enter the number of days before the device password must be changed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
+- **Password expiration** (Kerberos only): Enter the number of days before the device password must change. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
 - **Password change URL** (Kerberos only): Enter the URL that opens when users start a Kerberos password change.
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
@@ -231,7 +329,7 @@ This feature applies to:
   
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
-- **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message is shown if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
+- **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
 - **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
 - **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certficates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
