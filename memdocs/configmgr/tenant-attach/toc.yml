@@ -12,3 +12,7 @@
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
+- name: Reference
+  items:
+  - name: Tenant attach data collection
+    href: data-collection.md
