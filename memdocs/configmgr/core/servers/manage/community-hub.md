@@ -42,7 +42,7 @@ Community hub supports the following objects:
    1. Select the site and choose **Properties** in the ribbon.
    1. On the **Communication Security** tab, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
-- If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../../plan-design/network/internet-endpoints.md#community-hub).
+- If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
 ## Permissions
 
