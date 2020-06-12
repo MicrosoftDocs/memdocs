@@ -135,6 +135,7 @@ For more information on these settings, see [Content Caching payload settings](h
   - **Shared content only**: Caches apps and software updates.
 
 - **Maximum cache size**: Enter the maximum amount of disk space (in bytes) that's used to cache content. When left blank (default), Intune doesn't change or update this setting. By default, the OS might set this value to zero (`0`) bytes, which gives unlimited disk space to the cache.
+Please be careful to not exceed the space available on the devices. See here for device storage capacity - https://support.apple.com/en-us/HT201402 (Apple's documentation)
 - **Cache location**: Enter the path to store the cached content. The default location is `/Library/Application Support/Apple/AssetCache/Data`. It's recommended that you don't change this location.
 
   If you change this setting, your cached content isn't moved to the new location. To move it automatically, users need to change the location on the device (**System Preferences** > **Sharing** > **Content Caching**).
@@ -198,7 +199,7 @@ For more information on these settings, see [Content Caching payload settings](h
     - **Peer listen ranges**: Enter the IPv4 or IPv6 start and ending IP addresses for your range. The content cache responds only to peer cache requests from content caches in the IP address ranges you enter.
     - **Peer filter ranges**: Enter the IPv4 or IPv6 start and ending IP addresses for your range. The content cache filters its list of peers using the IP address ranges you enter.
 
-- **Parent IP addresses**: Enter the local IP address of another content cache to add as a parent cache. Your cache uploads and downloads content to these caches, instead of uploading/downloading directly with Apple.
+- **Parent IP addresses**: Enter the local IP address of another content cache to add as a parent cache. Your cache uploads and downloads content to these caches, instead of uploading/downloading directly with Apple. You cannot add two of the same parent IP addresses. 
 
 - **Parent selection policy**: When there are many parent caches, select how the parent IP address is chosen. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
