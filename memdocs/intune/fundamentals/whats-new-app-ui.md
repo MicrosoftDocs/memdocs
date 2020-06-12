@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020 
+ms.date: 06/11/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,6 +38,14 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
 
+## Week of June 8, 2020 
+
+### Updates to informational screen in Company Portal for iOS/iPadOS <!-- 7032452 -->
+We've updated an informational screen in Company Portal for iOS/iPadOS to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To learn more about what's visible to an admin, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+
+
+[![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
+
 
 ## Week of May 18, 2020  
 ### Update to icons in Company Portal app for iOS/iPadOS and macOS <!--6057697 -->  
@@ -65,12 +73,6 @@ Users will also see a new **Get Apps** link in the Company Portal drawer on the 
 To make way for these new and improved experiences, the **APPS** tab shown in the following image has been removed.  
 
 ![Example image of the now removed Company Portal, Apps tab.](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## Week of March 2, 2020   
 ### Improved sign-in experience in Company Portal for Android   
