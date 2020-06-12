@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/10/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -235,18 +235,23 @@ Computers with the Configuration Manager console require access to the following
 
 For more information on this feature, see [Product feedback](../../understand/find-help.md#product-feedback).
 
-### Community workspace, Documentation node
+### Community workspace
+
+#### Documentation node
+
+For more information on this console node, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-For more information on this console node, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
+#### Community hub
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+For more information on this feature, see [Community hub](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### Monitoring workspace, Site Hierarchy node
 

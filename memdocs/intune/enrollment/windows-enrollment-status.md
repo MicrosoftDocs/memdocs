@@ -47,7 +47,7 @@ The Enrollment Status Page helps users understand the status of their device dur
 You can also set the priority order for each profile to account for conflicting profile assignments to the same user.
 
 > [!NOTE]
-> The Enrollment Status Page can only be targeted to a user who belongs to an assigned group and the policy is set on the device at the time of enrollment for all users that use the device.  Device targeting for Enrollment Status Page profiles is not currently supported.
+> The Enrollment Status Page can only be targeted to a user who belongs to an assigned group and the policy is set on the device at the time of enrollment for all users that use the device.  Device targeting for Enrollment Status Page profiles is not currently supported. If using Autopilot white glove or self-deploying mode, ensure that the default ESP policy (named 'All users and all devices') is enabled as per the first setting in the table below.
 
 ## Available settings
 
