@@ -165,7 +165,7 @@ This feature applies to:
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
-- **SSO app extension type**: Choose the type of credential SSO app extension. Your options:
+- **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
