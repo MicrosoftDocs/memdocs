@@ -133,7 +133,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 
 1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
-   - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 ## Overview page
 
@@ -198,7 +198,7 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
 > [!NOTE]
-> If you are not seeing startup performance data from all your devices, please see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+> If you are not seeing startup performance data from all your devices, please see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
