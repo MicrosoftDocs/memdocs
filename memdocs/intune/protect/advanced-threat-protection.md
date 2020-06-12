@@ -41,8 +41,6 @@ To be successful, use the following configurations in concert:
 
 When you integrate Intune with Microsoft Defender ATP, you can take advantage of Defender ATPs Threat & Vulnerability Management (TVM) and [use Intune to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
 
-You can also use Intune policy to modify some configurations for Microsoft Defender ATP on Android. For more information, see [Configure web protection on devices that run Android](#configure-web-protection-on-devices-that-run-android), later in this article.
-
 ## Example of using Microsoft Defender ATP with Intune
 
 The following example helps explain how these solutions work together to help protect your organization. For this example, Microsoft Defender ATP and Intune are already integrated.
@@ -59,6 +57,8 @@ Microsoft Defender ATP can help resolve security events like this scenario.
 - Based on these actions from the device, Defender ATP [classifies the device as high-risk](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) and includes a detailed report of suspicious activity in the Microsoft Defender Security Center portal.
 
 Because you have an Intune device compliance policy to classify devices with a *Medium* or *High* level of risk as noncompliant, the compromised device is classified as noncompliant. This classification allows your conditional access policy to kick in and block access from that device to your corporate resources.
+
+You can also use Intune policy to modify some configurations for Microsoft Defender ATP on Android. For more information, see [Configure web protection on devices that run Android](#configure-web-protection-on-devices-that-run-android), later in this article.
 
 ## Prerequisites
 
@@ -173,7 +173,7 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 ## Configure web protection on devices that run Android
 
-By default, Microsoft Defender ATP for Android includes and enables the web protection feature. [Web protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and helps you regulate unwanted content, like phishing attacks.
+By default, Microsoft Defender ATP for Android includes and enables the web protection feature. [Web protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
 
 While enabled by default, there are valid reasons to disable this protection on some Android devices. For example, you might choose to use only the Microsoft Defender ATP app scan feature, or to prevent web protection from using your VPN while it scans for harmful URLs.
 
