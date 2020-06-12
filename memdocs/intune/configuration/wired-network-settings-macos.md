@@ -36,7 +36,7 @@ This article describes the settings you can configure.
 
 ## Before you begin
 
-[Create a wired network device configuration profile](device-profile-create.md). For more information on this feature, see [wired networks](wired-networks-configure.md).
+[Create a wired network device configuration profile](wired-networks-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
