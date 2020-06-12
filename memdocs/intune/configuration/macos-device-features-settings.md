@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 06/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -127,7 +127,7 @@ This feature applies to:
 
 For more information on these settings, see [Content Caching payload settings](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (opens Apple's web site).
 
-**Enable content caching**: **Yes** turns on content caching, and users can't disable it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn it on.
+**Enable content caching**: **Yes** turns on content caching, and users can't disable it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn it off.
 
 - **Type of content to cache**:  Your options:
   - **All content**: Caches iCloud content and shared content.
@@ -142,7 +142,7 @@ For more information on these settings, see [Content Caching payload settings](h
 - **Port**: Enter the TCP port number on devices for the cache to accept download and upload requests, from 0-65535. Enter zero (`0`) (default) to use whatever port is available.
 - **Block internet connection and cache content sharing**: Also known as tethered caching. **Yes** prevents Internet connection sharing, and prevents sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't enable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-- **Enable internet connection sharing**: Also known as tethered caching. **Yes** allows Internet connection sharing, and allows sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't disable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **Enable internet connection sharing**: Also known as tethered caching. **Yes** allows Internet connection sharing, and allows sharing cached content with iOS/iPadOS devices USB-connected to their Mac. Users can't disable this feature. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn this off.
 
   This feature applies to:
 
@@ -169,24 +169,27 @@ For more information on these settings, see [Content Caching payload settings](h
   - macOS 10.15 and newer
 
 - **Devices to cache**: Choose the devices that can cache content. Your options:
-  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **Not configured** (default): Intune doesn't change or update this setting. 
   - **Devices using the same local network**: The content cache offers content to devices on the same immediate local network. No content is offered to devices on other networks, including devices reachable by the content cache.
   - **Devices using the same public IP address**: The content cache offers content to devices using the same public IP address. No content is offered to devices on other networks, including devices reachable by the content cache.
   - **Devices using custom local networks**: The content cache provides content to devices in the IP ranges you enter.
     - **Client listen ranges**: Enter the range of IP addresses that can receive the content cache.
-  - **Devices using custom local networks with fallback**: The content cache provides content to devices in the Peer listen ranges and Parents IP addresses.
+  - **Devices using custom local networks with fallback**: The content cache provides content to devices in the listen ranges, peer listen ranges, and parents IP addresses.
     - **Client listen ranges**: Enter the range of IP addresses that can receive the content cache.
 
 - **Custom public IP addresses**: Enter a range of public IP addresses. The cloud servers use this range to match client devices to caches.
 
-- **Share content with other caches**: When your network has more than one content cache, the content caches automatically become peers. They can consult and share cached software. When a requested item isn’t available on one content cache, it checks its peers for the item. If the item is available, it’s downloaded from the peer.
+- **Share content with other caches**: When your network has more than one content cache, the content caches on other devices automatically become peers. These devices can consult and share cached software. 
 
-  If it’s not available, the content cache downloads the item from:
+  When a requested item isn’t available on one content cache, it checks its peers for the item. If the item is available, it’s downloaded from the content cache on the peer device. If it’s still not available, the content cache downloads the item from:
 
-  - One of its parents, if any are configured
-  - Or from Apple through the Internet
+  - A parent IP address, if any are configured
+  
+    OR,
+    
+  - From Apple through the Internet
 
-  Devices automatically select the right content cache when more than one is available.
+  When more than one content cache is available, devices automatically select the right content cache. 
 
   Your options:
 
