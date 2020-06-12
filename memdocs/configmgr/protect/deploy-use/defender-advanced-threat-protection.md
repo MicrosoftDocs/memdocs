@@ -28,6 +28,7 @@ Microsoft Defender ATP is a service in the [Windows Defender Security Center](ht
 - Clients using an OS listed in the [Supported client operating systems](#bkmk_os) section below.
 
 ### <a name="bkmk_os"></a> Supported client operating systems
+
 Based on the version of Configuration Manager you're running, the following client operating systems can be onboarded:
 
 #### Configuration Manager version 1910 and prior
@@ -50,7 +51,7 @@ Starting in Configuration Manager version 2002, you can onboard the following op
 Different operating systems have different needs for onboarding to ATP. Windows 8.1 and other down-level operating system devices need the **Workspace key** and **Workspace ID** to onboard. Up-level devices such as Windows Server version 1803 need the onboarding configuration file.
 
 Up-level operating systems include:
-- Windows 10, version 1607 and later 
+- Windows 10, version 1607 and later
 - Windows Server 2016, version 1803 or later
 - Windows Server 2019
 
@@ -61,7 +62,7 @@ Down-level operating systems include:
 
 When you onboard devices to ATP with Configuration Manager, you deploy the ATP policy to a target collection or multiple collections. Sometimes the target collection contain devices running any number of the supported operating systems. The instructions for onboarding these devices varies based on if you're targeting a collection containing devices with operating systems that are up-level,down-level, or both.
 
-- If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended). 
+- If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
 - If your collection contains only up-level devices then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 - If  your collection contains only down-level devices then you can use the [down-level onboarding instructions](#bkmk_downlevel).
 
@@ -87,7 +88,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
 
 > [!IMPORTANT]
-> - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+> The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 
 ### Onboard the devices
 
@@ -122,7 +123,7 @@ Up-level clients require an onboarding configuration file for onboarding to ATP.
 1. Download the compressed archive (.zip) file and extract the contents.
 
 > [!IMPORTANT]
-> - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+> The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 
 
 ### Onboard the up-level devices
@@ -160,7 +161,7 @@ Down-level clients require **Workspace key** and **Workspace ID** for ATP onboar
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. Provide the **Workspace key** and **Workspace ID**.
-   > [!Note] 
+   > [!Note]
    > - For Configuration Manager version 2002, you'll need the configuration file even if you're onboarding only down-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 10** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188--> 
    > - The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
