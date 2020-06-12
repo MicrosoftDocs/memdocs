@@ -57,12 +57,17 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 
-## Week of June 8, 2020
 
-### App management
+## Week of June 8, 2020   
+
+### App management  
+
+#### Updates to informational screen in Company Portal for iOS/iPadOS <!--7032452 -->
+An informational screen in Company Portal for iOS/iPadOS has been updated to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To see the updated screens, go to [UI updates for Intune end-user apps](./whats-new-app-ui.md).
 
 #### Android Company Portal user experience<!-- 5736084 -->
 The 2006 release of the Android Company Portal has changes that build on the updates from the 2005 release. In 2005, we rolled out an update where end users of Android devices that are issued a warn, block, or wipe by an app protection policy see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issues. In 2006, first-time users of Android apps assigned an app protection policy will be taken through a guided flow to remediate issues that cause their app access to be blocked. 
+
 
 ## Week of May 25, 2020
 
@@ -106,6 +111,7 @@ To use the policy for Configuration Manager devices, you must [set up Configurat
 - Configure your Configuration manager for *tenant attach*.
 - Install an in-console update for Configuration Manager to enable support for the EDR policies. This update applies only to hierarchies that have enabled *tenant attach*.
 - Synchronize your device collections form your hierarchy to the Microsoft Endpoint Manager admin center.
+
 
 
 ## Week of May 11, 2020 (2005 Service release)
