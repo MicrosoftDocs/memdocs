@@ -32,7 +32,7 @@ ms.collection:
 
 # Sync your iOS device manually
 
-Sometimes an app may take too long to download from the Company Portal. When this occurs, try to manually sync your device. This will attempt to get the information your device was unable to download.
+Sometimes an app may take too long to download from Company Portal. When this occurs, try to manually sync your device. This will attempt to get the information your device was unable to download.
 
 1. Open the Company Portal app.
 
