@@ -5,7 +5,7 @@ description: Use the co-management dashboard to review information about co-mana
 ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
