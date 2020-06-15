@@ -141,7 +141,12 @@ When you established the connection to Microsoft Defender ATP, Intune received a
 7. Select **OK**, and then **Create** to save your changes, which creates the profile.
 8. [Assign the device configuration profile](../configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.
 
-## Create and assign the compliance policy
+## Onboard Android devices
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you must onboard managed devices to Defender ATP so data about their risk level can be collected and used.
+
+For detailed instructions for onboarding Android devices, including prerequisites for end users and administrators, see [Microsoft Defender Advanced Threat Protection for Android](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender ATP documentation.
+
+## Create and assign compliance policy to set device risk level
 
 For both Windows, and Android devices, the compliance policy determines the level of risk that you consider as acceptable for a device.
 
