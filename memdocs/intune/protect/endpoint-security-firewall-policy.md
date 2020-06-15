@@ -51,7 +51,7 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 **Windows 10 profiles**:
 
-- **Microsoft Defender Firewall** – Configure settings for with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
+- **Microsoft Defender Firewall** – Configure settings for WIndows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** *(Preview)* - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
