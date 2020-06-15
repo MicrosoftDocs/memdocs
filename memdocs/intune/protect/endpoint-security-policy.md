@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,7 +44,7 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault or BitLocker. This focus makes it easy for security admins to manage disk encryption settings without having to navigate a host of unrelated settings.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10. Built-in firewalls include BitLocker for Windows devices and FileVault for macOS.
+- [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10. 
 
 - [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Defender ATP with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Defender ATP.
 
