@@ -48,7 +48,7 @@ Starting in Configuration Manager version 2002, you can onboard the following op
 
 ## About onboarding to ATP with Configuration Manager
 
-Different operating systems have different needs for onboarding to ATP. Windows 8.1 and other down-level operating system devices need the **Workspace key** and **Workspace ID** to onboard. Up-level devices, such as Windows Server version 1803, need the onboarding configuration file.
+Different operating systems have different needs for onboarding to ATP. Windows 8.1 and other down-level operating system devices need the **Workspace key** and **Workspace ID** to onboard. Up-level devices, such as Windows Server version 1803, need the onboarding configuration file. Configuration Manager also installs the Microsoft Monitoring Agent (MMA) when needed by onboarded devices but it doesn't update the agent automatically.
 
 Up-level operating systems include:
 - Windows 10, version 1607 and later
@@ -66,7 +66,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 - If  your collection contains only down-level devices, then you can use the [down-level onboarding instructions](#bkmk_downlevel).
 
-> [!Important]
+> [!Warning]
 > - If your target collection contains up-level devices, and you use the instructions for down-level devices, then the up-level devices won't be onboarded.
 > - If your target collection contains down-level devices, and you use the instructions for up-level devices, then the down-level devices won't be onboarded.
 
@@ -81,14 +81,18 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
    - The onboarding file will be the same regardless of which of these options you choose.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Click **Download package**.
+   
+   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onborading configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
 1. Download the compressed archive (.zip) file and extract the contents.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1, 2012 R2 and 2016** from the list.
    - The **Workspace key** and **Workspace ID** will be the same regardless of which of these options you choose.
 1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
 
-> [!IMPORTANT]
-> The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+   > [!IMPORTANT]
+   > The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
+
+   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Onborading configuration file download" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 ### Onboard the devices
 
@@ -109,6 +113,8 @@ Up-level clients require an onboarding configuration file for onboarding to ATP.
 - Windows 10, version 1607 and later 
 - Windows Server 2016, version 1803 and later
 - Windows Server 2019
+
+If your target collection contains both up-level and down-level devices, or if you're not sure, then use the instructions to [onboard devices running any supported operating system (recommended)](#bkmk_any_os).
 
 ### Get an onboarding configuration file for up-level devices
 
@@ -143,6 +149,8 @@ Down-level clients require **Workspace key** and **Workspace ID** for ATP onboar
 - Windows 8.1
 - Windows Server 2012 R2
 - Windows Server 2016, version 1709 and earlier
+
+If your target collection contains both up-level and down-level devices, or if you're not sure, then use the instructions to [onboard devices running any supported operating system (recommended)](#bkmk_any_os).
 
 ### Get the Workspace ID and Workspace key for down-level devices
 
@@ -189,7 +197,8 @@ Down-level clients require **Workspace key** and **Workspace ID** for ATP onboar
 
 1. Sign in to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/).
 1. Select **Settings**, then select **Offboarding** under the **Device management** heading.
-1. Select **Windows 10** for the operating system and **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method. 
+1. Select **Windows 10** for the operating system and **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
+   - Using the **Windows 10** option ensures that all devices in the collection are offboarded and the MMA is uninstalled when needed.
 1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
