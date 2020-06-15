@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender Advanced Threat Protection, a new service that helps enterprises respond to advanced attacks.
-ms.date: 06/05/2020
+ms.date: 06/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -82,7 +82,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Click **Download package**.
    
-   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onborading configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
+   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
 1. Download the compressed archive (.zip) file and extract the contents.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1, 2012 R2 and 2016** from the list.
@@ -92,7 +92,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
    > [!IMPORTANT]
    > The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 
-   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Onborading configuration file download" lightbox="media/5229962-create-atp-policy-wizard.png":::
+   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender ATP Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 ### Onboard the devices
 
