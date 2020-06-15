@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -53,7 +53,7 @@ This article shows you how to view all your devices, and their properties in the
       - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
-      - Update Windows Defender security intelligence
+      - [Update Windows Defender security intelligence](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
       - [BitLocker key rotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [Rename device](device-rename.md)
       - [New Remote Assistance Session](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
