@@ -6,7 +6,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 05/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
