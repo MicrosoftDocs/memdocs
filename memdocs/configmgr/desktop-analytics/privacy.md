@@ -74,6 +74,8 @@ For more information about related privacy aspects, see the following articles:
 
 - [Windows 10, version 1709 enhanced diagnostic data events and fields used by Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
+- [Windows Setup error reporting](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+
 - [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
