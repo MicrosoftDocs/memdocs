@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,16 +33,16 @@ ms.collection:
 
 Enroll your macOS device with the Intune Company Portal app to gain secure access to your work or school email, files, and apps.
 
-Organizations typically require you to enroll your device before you can access proprietary data. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune. To get continuous access to work or school information on your device, you must configure your device to match your organization's policy settings.  
+Organizations typically require you to enroll your device before you can access proprietary data. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune. To get continuous access to work or school information on your device, you must set up your device to match your organization's policy settings.  
 
-This article describes how to use the Company Portal app for macOS to enroll, configure, and maintain your device so that you meet your organization's requirements.  
+This article describes how to use the Company Portal app for macOS to set up and maintain your device so that you meet your organization's requirements.  
 
 
 ## What to expect from the Company Portal app
 
 During initial setup, the Company Portal app requires you to sign in and authenticate yourself with your organization. Company Portal then informs you of any device settings you need to configure to meet your organization's requirements. For example, organizations often set minimum or maximum character password requirements that you'll be required to meet.    
 
-After you enroll your device, Company Portal will always make sure that your device is protected according to your organization's requirements. For example, if you install an app from an untrusted source, Company Portal will alert you and might restrict access to your organization's resources. App protection policies like this one are common. To regain access, you'll likely need uninstall the untrusted app. 
+After you enroll your device, Company Portal will always make sure that your device is protected according to your organization's requirements. For example, if you install an app from a source that's not trusted, Company Portal will alert you and might restrict access to your organization's resources. App protection policies like this one are common. To regain access, you'll likely need to uninstall the app. 
 
 If after enrollment your organization enforces a new security requirement, such as multi-factor authentication, Company Portal will notify you. You'll have the chance to adjust your settings so that you can continue to work from your device.  
 
@@ -70,19 +70,20 @@ Use the following steps to enroll your macOS device with your organization. Your
 
 1. Sign in to Company Portal with your work or school account.  
 2. When the app opens, select **Begin**.  
-3. Review what your organization can and can't see on your enrolled device. Then select **Continue**.
-4.  If prompted to, enter your device password on the **Install management profile** screen.
+3. Review [what your organization can and can't see](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) on your enrolled device. Then select **Continue**.
+4. On the **Install management profile** screen, select **Download profile**.  
 
-    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-1912.PNG)   
-5. On the **Confirm device management** screen, select **Open System Preferences**.  
+    ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-2006.png)   
 
-    ![Example screenshot of Confirm device management screen, highlighting "Open System Preferences" button.](./media/confirm-device-management-macos-1912.PNG)  
-6. Your device's system preferences will open. Select **Management Profile** from the device profiles list and then select **Approve** > **Approve**.  
-    ![Example screenshot of System Preferences, Management Profile screen, highlighting "Approve" button.](./media/management-profile-approve-macos-1912.PNG)   
-1. Return to Company Portal and select **Continue**.    
-2. Your organization might require you to update your device settings. When you're done updating settings, select **Check settings**.  
+5. Your device's system preferences will open.  
+    a. Select **Install** and then select **Install** again. 
+    b. If you’re prompted to, enter your device password.   
+6. Once the profile is installed, it will appear in the profiles list under **Management Profile**.
+    ![Example screenshot of System Preferences, Management Profile screen, highlighting "Approve" button.](./media/management-profile-approve-macos-2006.png)   
+7. Return to Company Portal.    
+8. Your organization might require you to update your device settings. When you're done updating settings, select **Retry**.  
 
-    ![Example screenshot of Company Portal, Update device settings screen, highlighting "Check settings" button.](./media/update-settings-mac-1911.PNG)  
+    ![Example screenshot of Company Portal, Update device settings screen, highlighting "Check settings" button.](./media/update-settings-mac-2006.PNG)  
 9. When setup is complete, select **Done**.  
 
 
