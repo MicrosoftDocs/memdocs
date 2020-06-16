@@ -94,8 +94,8 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 
 ### Onboard the devices
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies**.
-1. Select **Create Windows Defender ATP Policy** to open the Microsoft Defender ATP Policy Wizard. 
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies**.
+1. Select **Create Microsoft Defender ATP Policy** to open the Microsoft Defender ATP Policy Wizard. 
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
@@ -132,7 +132,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ### Onboard the up-level devices
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
    > [!Note]
@@ -162,7 +162,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ### Onboard the down-level devices
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
 1. Provide the **Workspace key** and **Workspace ID**.
    > [!Note]
@@ -183,7 +183,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
     - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
 
-    - **Windows Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
+    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
 
         - **Healthy** - Working properly  
 
@@ -201,7 +201,7 @@ If your target collection contains both up-level and down-level devices, or if y
    - Using the **Windows 10** option ensures that all devices in the collection are offboarded and the MMA is uninstalled when needed.
 1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Offboarding**.
 
