@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: esmich
+ms.reviewer: kakyker
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -32,13 +32,14 @@ ms.collection:
 
 # Sync your iOS device manually
 
-Sometimes an app may take too long to download from Company Portal. To fix lags and delays like this, you can try initiating a manual sync. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organiztion's requirements, and it can also help resolve downloads or other processes in progress.
+Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organization's requirements, and it can also help resolve downloads or other processes that are in progress.  
 
 1. Open the Company Portal app.
 
-2. Tap **Devices**. If you have multiple devices, you'll see a list of devices. Choose the device that you're currently using. If you only have one device, you will go directly to the device details screen.
+2. Tap **Devices**. 
+3. If you only have one device, you'll go directly to the device details screen and can skip to step 3. If you have multiple devices, you'll see all devices in a list. Tap the device that you're currently using. 
 
-    ![Screenshot of the Devices screen, showing three devices. The top device has text that says "This is the iPhone that you're currently using."](./media/ios-sync-1-company-portal-2006.png)
+    ![Screenshot of the Devices screen, showing three devices and highlighting the one that the user is currently using. The top device has text that says "This is the iPhone that you're currently using."](./media/ios-sync-1-company-portal-2006.png)
 
 3. Tap **Check Status** to sync your device. 
 
@@ -48,7 +49,7 @@ Sometimes an app may take too long to download from Company Portal. To fix lags 
 
        ![Screenshot of the Device details highlighting the loading bar after the user selected Check Settings.](./media/ios-sync-3-company-portal-2006.png)
 
-Once you've completed these steps, check to see if your initial problem is resolved. It may help to restart a stalled installation or task now that your device is up-to-date with your organization's requirements. 
+Once you've completed these steps, check to see if your initial problem is resolved. If it's not,it may help to restart the stalled installation or task now that your device is up-to-date with your organization's requirements. 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 
