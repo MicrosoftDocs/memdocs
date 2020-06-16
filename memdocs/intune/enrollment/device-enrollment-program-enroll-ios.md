@@ -89,7 +89,7 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOSiPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > **Add**.
 
     ![Get an enrollment program token.](./media/device-enrollment-program-enroll-ios/image01.png)
-
+z
 2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
    > [!NOTE]
@@ -343,7 +343,9 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
 6. Choose **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-8. Upload the newly downloaded token.  
+7. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
+
+8. Select **Next** and upload the newly downloaded token.  
 9. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
