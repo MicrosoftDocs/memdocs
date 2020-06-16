@@ -47,8 +47,8 @@ To send logs to Microsoft:
 
 3. Tap **Upload Logs Only**.
 
-  > [!NOTE]
-  > If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
+    > [!NOTE]
+    > If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
 
 4. After the upload is complete, you will receive an incident ID. Save the ID for your records.
 
