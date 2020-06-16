@@ -281,6 +281,12 @@ Make sure that the naming format meets the following requirements:
 #### Resolution
 Make sure that the required access to internet-based services for Autopilot isn't blocked. For more information, see [Windows Autopilot networking requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
+### Autopilot device enrollment failed with error HRESULT = 0x80180022
+
+**Cause:** The device being provisioned is running Windows Home Edition
+
+#### Resolution
+Update the device to Pro edition or higher
 
 ### Registering your device for mobile management (Failed:3, 0x801C03EA).
 
