@@ -86,18 +86,20 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 
 ### Step 1. Download the Intune public key certificate required to create the token.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOSiPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > **Add**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-ios/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-ios/ios-enroll.png)
 
-2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
+2. Choose **Enrollment Program Tokens** > **Add**.
+
+3. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
    > [!NOTE]
    > Once you progress beyond step 2 to download the Intune public key certificate, do not close the wizard or navigate away from this page. Doing so will invalidate the certificate you have downloaded, and you'll need to repeat this process again. If you encounter this situation, you'll typically note that the **Create** button on the **Review + create** tab is greyed out, and you can't complete the process.
 
    ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple portal.
+4. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple portal.
 
 
 ### Step 2. Use your key to download a token from Apple.
@@ -295,7 +297,9 @@ Assigning dynamic groups to enrollment profiles can lead to some delay in delive
 ## Sync managed devices
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
+
+2. Choose a token in the list > **Devices** > **Sync**.
    ![Screenshot of the Enrollment Program Devices node and Sync link.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
