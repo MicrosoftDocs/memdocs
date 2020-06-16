@@ -252,6 +252,21 @@ Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Cente
 > [!NOTE]  
 > `ClientUI` is the only value that the **/ExcludeFeatures** parameter supports.
 
+### /AlwaysExcludeUpgrade
+
+This parameter specifies whether or not a client will auto upgrade when [**Automatic client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate) is enabled. 
+
+Supported values:
+
+- `0`: Client will not be upgraded using **Automatic client upgrade**
+- `1`: Client will be upgraded using **Automatic client upgrade** (default)
+
+For example:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+For more information see [Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site](../../understand/interoperability-client#how-to-use-the-eic).
+
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
 The CCMSetup.exe command provides the following return codes. To troubleshoot, review `%WinDir%\ccmsetup\ccmsetup.log` on the client for context and additional detail about return codes.
