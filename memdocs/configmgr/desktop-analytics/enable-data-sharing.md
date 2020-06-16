@@ -30,8 +30,8 @@ The basic functionality of Desktop Analytics works at the **Basic** [diagnostic 
 
 - App usage
 - [Additional app insights](compat-assessment.md#additional-insights)
-- Deployment status data
-- Health monitoring data
+- [Deployment status data](deploy-prod.md#address-deployment-alerts)
+- [Health monitoring data](health-status-monitoring.md)
 
 Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it.
 
