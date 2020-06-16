@@ -50,7 +50,7 @@ Neither Apple Business Manager enrollment or Apple School Manager work with the 
 -->
 ## Prerequisites
 
-- Devices purchased in [Apple School Manager](https://school.apple.com/) or [Apple's Device Enrollment Program](http://deploy.apple.com)
+- Devices purchased in [Apple School Manager](https://school.apple.com/) or [Apple's Automated Device Enrollment](http://deploy.apple.com)
 - A list of serial numbers or a purchase order number.
 - [MDM Authority](../fundamentals/mdm-authority-set.md)
 - [Apple MDM Push certificate](../enrollment/apple-mdm-push-certificate-get.md)
@@ -72,13 +72,13 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
 2. Grant permission to Microsoft to send user and device information to Apple by selecting **I agree**.
 
-   ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple portal.
 
 ### Step 2. Use your key to download a token from Apple
 
-1. Choose **Create a token for Apple's Device Enrollment Program** or **Create a token via Apple School Manager** to open the appropriate Apple portal, and sign in with your company Apple ID. You can use this Apple ID to renew your token.
+1. Choose **Create a token for via Apple Business Manager** or **Create a token via Apple School Manager** to open the appropriate Apple portal, and sign in with your company Apple ID. You can use this Apple ID to renew your token.
 2. For DEP, in the Apple portal, choose **Get Started** for **Device Enrollment Program** > **Manage Servers** > **Add MDM Server**.
 3. For Apple School Manage, in the Apple portal, choose **MDM Servers** > **Add MDM Server**.
 4. Enter the **MDM Server Name**, and then choose **Next**. The server name is for your reference to identify the mobile device management (MDM) server. It is not the name or URL of the Microsoft Intune server.
@@ -99,7 +99,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), provide the Apple ID for future reference.
 
-![Screenshot of specifying the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/device-enrollment-program-enroll-macos/image03.png)
+![Screenshot of specifying the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### Step 4. Upload your token
 In the **Apple token** box, browse to the certificate (.pem) file, choose **Open**, and then choose **Create**. With the push certificate, Intune can enroll and manage macOS devices by pushing policy to enrolled devices. Intune automatically synchronizes with Apple to see your enrollment program account.
@@ -207,10 +207,10 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 4. Choose **Your Server Token**.  
 5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens** > choose the token.
-    ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+    ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Choose **Renew token** and enter the Apple ID used to create the original token.  
-    ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. Upload the newly downloaded token.  
 8. Choose **Renew token**. You'll see the confirmation that the token was renewed.
