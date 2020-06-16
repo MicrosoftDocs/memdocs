@@ -102,7 +102,7 @@ You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Appl
 
 ### Step 2. Use your key to download a token from Apple.
 
-1. Choose **Create a token for via Apple Business Manager** to open Apple's Business portal, and sign in with your company Apple ID. You can use this Apple ID to renew your ADE token.
+1. Choose **Create a token via Apple Business Manager** to open Apple's Business portal, and sign in with your company Apple ID. You can use this Apple ID to renew your ADE token.
 2. In Apple's [Business portal](https://business.apple.com), choose **Get Started** for **Device Enrollment Program**.
 
 3. On the **Manage Servers** page, choose **Add MDM Server**.
@@ -343,7 +343,9 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
 6. Choose **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-8. Upload the newly downloaded token.  
+7. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
+
+8. Select **Next** and upload the newly downloaded token.  
 9. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
