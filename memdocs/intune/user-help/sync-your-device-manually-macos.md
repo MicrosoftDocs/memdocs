@@ -32,7 +32,9 @@ ms.collection:
 
 # Sync your macOS device manually
 
-Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organization's requirements, and it can also help resolve downloads or other processes that are in progress.  
+Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. During a sync, Company Portal checks in with your device to make sure it's meeting your organization's requirements. It syncs your device with policies or updates that you may not have yet and can help resolve downloads or other processes that are in progress.  
+
+Company Portal regularly checks in with your device, but you can use the following steps to start a sync anytime from the app. 
 
 1. Open the Company Portal app.
 
@@ -47,9 +49,9 @@ Initiate a manual sync from Company Portal to fix lags and delays such as slow o
 
  4. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
 
-       ![Screenshot of the Device details highlighting the loading bar after the user selected Check Settings.](./media/macos-sync-3-company-portal-2006.png)
+       ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)
 
-Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task now that your device is up-to-date with your organization's requirements. 
+Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 
