@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,19 +32,23 @@ ms.collection:
 
 # Sync your iOS device manually
 
-Sometimes an app may take too long to download from the Company Portal. When this occurs, try to manually sync your device. This will attempt to get the information your device was unable to download.
+Sometimes an app may take too long to download from Company Portal. To fix lags and delays like this, you can try initiating a manual sync. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organiztion's requirements, and it can also help resolve downloads or other processes in progress.
 
 1. Open the Company Portal app.
 
 2. Tap **Devices**. If you have multiple devices, you'll see a list of devices. Choose the device that you're currently using. If you only have one device, you will go directly to the device details screen.
 
-    ![Screenshot of the Devices screen, showing two devices. The top device has text that says "This is the iPhone 6 Plus that you're currently using."](./media/ios_sync_1_CP_after_1804.png)
+    ![Screenshot of the Devices screen, showing three devices. The top device has text that says "This is the iPhone that you're currently using."](./media/ios-sync-1-company-portal-2006.png)
 
-3. Tap **Check Settings** to sync your device. A loading bar will appear on the screen until the sync is complete.
+3. Tap **Check Status** to sync your device. 
 
-    ![Screenshot of the Device details showing the device's last check-in time and Check Settings link.](./media/ios_sync_2_CP_after_1804.png)  
+    ![Screenshot of the Device details highlighting Check status link.](./media/ios-sync-2-company-portal-2006.png)  
 
-   ![Screenshot of the Device details showing the loading bar after the user clicked Check Settings.](./media/ios_sync_3_CP-after_1804.png)
+ 4. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
+
+       ![Screenshot of the Device details highlighting the loading bar after the user selected Check Settings.](./media/ios-sync-3-company-portal-2006.png)
+
+Once you've completed these steps, check to see if your initial problem is resolved. It may help to restart a stalled installation or task now that your device is up-to-date with your organization's requirements. 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 
