@@ -135,7 +135,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep  **All organizations (median)** baseline up-to-date. YOu can [stop gathering data](#bkmk_uea_stop) at any time.
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](#bkmk_uea_stop) at any time.
 
    - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
@@ -828,7 +828,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   
 > [!Important]  
-> Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep  **All organizations (median)** baseline up-to-date.
+> Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ### <a name="bkmk_uea_stop"></a> Stop gathering data
 
