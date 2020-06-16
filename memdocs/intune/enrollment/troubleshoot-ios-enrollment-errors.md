@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -69,25 +69,6 @@ Collect the following information about the problem:
 4. Under **Device Type Restrictions**, select the restriction that you want to set > **Properties** > **Select platforms** > select **Allow** for **iOS**, and then click **OK**.
 5. Select **Configure platforms**, select **Allow** for personally owned iOS/iPadOS devices, and then click **OK**.
 6. Re-enroll the device.
-
-**Cause:** The necessary CNAME records in DNS don't exist.
-
-#### Resolution
-Create CNAME DNS resource records for your company's domain. For example, if your company's domain is contoso.com, create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.
-
-Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
-
-If there's more than one verified domain, create a CNAME record for each domain. The CNAME resource records must contain the following information:
-
-|TYPE|Host name|Points to|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 Hr|
-
-If your company uses multiple domains for user credentials, create CNAME records for each domain.
-
-> [!NOTE]
-> Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
 
 **Cause:** You enroll a device that was previously enrolled with a different user account, and the previous user was not appropriately removed from Intune.
 

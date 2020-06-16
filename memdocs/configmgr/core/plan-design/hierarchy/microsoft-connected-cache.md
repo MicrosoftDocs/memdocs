@@ -32,7 +32,7 @@ This cache is separate from Configuration Manager's distribution point content. 
 
 ## How it works
 
-When you configure clients to use the Connected Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the cache server installed on the distribution point. The on-premises server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the Connected Cache server is unavailable, or the content isn't yet cached, clients download the content from the internet. Clients also use Delivery Optimization, so download portions of the content from peers in their network.
+When you configure clients to use the Connected Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the cache server installed on the distribution point. The on-premises server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the Connected Cache server is unavailable, or the content isn't yet cached, clients download the content from the internet. Clients also use Delivery Optimization to download portions of the content from peers in their network.
 
 ![Diagram of how Connected Cache works](media/3555764-microsoft-connected-cache.png)
 
