@@ -136,7 +136,7 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
 
 ## Frequently asked questions (FAQ)
 
-**After I follow the steps in this article, my Surface drivers are still not synchronized. Why?**
+### After I follow the steps in this article, my Surface drivers are still not synchronized. Why?
 
 If you synchronize from an upstream Windows Server Update Services (WSUS) server, instead of Microsoft Update, make sure that the upstream WSUS server is configured to support and synchronize Surface driver updates. All downstream servers are limited to updates that are present in the upstream WSUS server database.
 
@@ -146,11 +146,11 @@ If your Configuration Manager environment is offline, a new allow list is import
 
 If your Configuration Manager environment is online and able to detect new updates, you will receive updates to the list automatically. If you don’t see the expected drivers, please review the WCM.log and WsyncMgr.log for any synchronization failures.
 
-**My Configuration Manager environment is offline, can I manually import Surface drivers into WSUS?**
+### My Configuration Manager environment is offline, can I manually import Surface drivers into WSUS?
 
 No. Even if the update is imported into WSUS, the update won't be imported into the Configuration Manager console for deployment if it isn't listed in the allow list. You must use the [Service Connection Tool](../../core/servers/manage/use-the-service-connection-tool.md) to import servicing updates to Configuration Manager to update the allow list.
 
-**What alternative methods do I have to deploy Surface driver and firmware updates?**
+### What alternative methods do I have to deploy Surface driver and firmware updates?
 
 For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
