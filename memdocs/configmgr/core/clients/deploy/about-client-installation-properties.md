@@ -258,14 +258,14 @@ This parameter specifies whether or not a client will auto upgrade when [**Autom
 
 Supported values:
 
-- `0`: Client will not be upgraded using **Automatic client upgrade**
-- `1`: Client will be upgraded using **Automatic client upgrade** (default)
+- `TRUE`: Client will not be upgraded using **Automatic client upgrade**
+- `FALSE`: Client will be upgraded using **Automatic client upgrade** (default)
 
 For example:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
-For more information see [Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site](../../understand/interoperability-client#how-to-use-the-eic).
+For more information see [Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site](../../understand/interoperability-client).
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
