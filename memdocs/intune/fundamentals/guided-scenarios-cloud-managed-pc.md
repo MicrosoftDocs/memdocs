@@ -123,5 +123,5 @@ Once the user joins the device to Azure Active Directory, the following configur
 
 ## Next steps
 
-- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) to require Defender threat analysis to meet compliance.
+- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy-to-set-risk-level) to require Defender threat analysis to meet compliance.
 - Create a [Device-based Conditional Access policy](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) to block access if the device does not meet Intune compliance.
