@@ -44,7 +44,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
   When you integrate with Azure Active Directory (Azure AD) [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
-- **Integrate Intune with your Microsoft Defender ATP team**. By [integrating with Microsoft Defender ATP](#set-up-integration-with-defender-atp) you gain access to [security tasks](#review-security-tasks-from-defender-atp). Security tasks closely tie Microsoft Defender ATP and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
+- **Integrate Intune with your Microsoft Defender ATP team**. By [integrating with Microsoft Defender ATP](#set-up-integration-with-microsoft-defender-atp) you gain access to [security tasks](#review-security-tasks-from-microsoft-defender-atp). Security tasks closely tie Microsoft Defender ATP and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
 
 The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center, and the role-based access control (RBAC) permissions that are required to use them.
 
