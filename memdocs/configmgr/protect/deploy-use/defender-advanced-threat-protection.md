@@ -19,7 +19,7 @@ manager: dougeby
 
 Endpoint Protection can help manage and monitor [Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (formerly known as Windows Defender ATP). Microsoft Defender ATP helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 clients.
 
-Microsoft Defender ATP is a service in the [Windows Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender ATP agent health. Microsoft Defender ATP is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](https://docs.microsoft.com/intune/protect/advanced-threat-protection).
+Microsoft Defender ATP is a service in the [Microsoft Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender ATP agent health. Microsoft Defender ATP is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](https://docs.microsoft.com/intune/protect/advanced-threat-protection).
 
 ## Prerequisites
 
@@ -77,8 +77,7 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
 
 1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 10** or **Windows Server 1803 and 2019**.
-   - The onboarding file will be the same regardless of which of these options you choose.
+1. For the operating system, select **Windows 10**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Click **Download package**.
    
@@ -92,15 +91,17 @@ When you onboard devices to ATP with Configuration Manager, you deploy the ATP p
    > [!IMPORTANT]
    > The Microsoft Defender ATP configuration file contains sensitive information which should be kept secure.
 
-   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender ATP Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 ### Onboard the devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies**.
 1. Select **Create Windows Defender ATP Policy** to open the Microsoft Defender ATP Policy Wizard. 
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
-1. **Browse** to the configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
-1. Supply the **Workspace key** and **Workspace ID** then click **Next**. 
+1. **Browse** to the configuration file you extracted from the downloaded .zip file.
+1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
+
+   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender ATP Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
+
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
    - **None**
    - **All file types**  
@@ -120,8 +121,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. Go to the [Microsoft Defender ATP online service](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 10** or **Windows Server 1803 and 2019**.
-   - The onboarding file will be the same regardless of which of these options you choose.
+1. For the operating system, select **Windows 10**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Click **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
@@ -134,7 +134,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender ATP Policies** and select **Create Windows Defender ATP Policy**. The Microsoft Defender ATP Policy Wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Onboarding**.
-1. **Browse** to the configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
+1. **Browse** to the configuration file you extracted from the downloaded .zip file.
    > [!Note]
    > For Configuration Manager version 2002, you'll need the **Workspace key** and **Workspace ID** even if you're onboarding only up-level devices. Get these values by selecting **Settings** > **Onboarding** > **Windows 7 and 8.1** from the [Microsoft Defender ATP online service](https://securitycenter.windows.com/). <!--7054188-->
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
@@ -177,11 +177,11 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ## Monitor
 
-1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Windows Defender ATP**.  
+1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.  
 
 1. Review the Microsoft Defender Advanced Threat Protection dashboard.  
 
-    - **Windows Defender Agent Deployment Status**: The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
+    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender ATP policy onboarded  
 
     - **Windows Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender ATP agent  
 
@@ -205,7 +205,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. Type the **Name** and **Description** for the Microsoft Defender ATP policy and select **Offboarding**.
 
-1. **Browse** to the Configuration file provided by your organization's Microsoft Defender ATP cloud service tenant.
+1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 
 1. Review the summary and complete the wizard.  
 
