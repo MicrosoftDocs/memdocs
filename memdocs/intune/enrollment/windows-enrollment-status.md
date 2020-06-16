@@ -37,24 +37,24 @@ ms.collection: M365-identity-device-management
  
 The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, as well as when new users sign into the device.  This enables IT administrators to optionally prevent (block) access to the device until it has been fully provisioned, while at the same time giving users information about the tasks remaining in the provisioning process.
 
-The Enrollment Status Page (ESP) can be used as part of any [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
+The ESP can be used as part of any [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
 
 You can create multiple Enrollment Status Page profiles with different configurations that specify:
 
-- Showing installation progress.
-- Blocking access until the provisioning process is completed.
-- Time limits.
-- Allowed troubleshooting operations.
+- Showing installation progress
+- Blocking access until the provisioning process is completed
+- Time limits
+- Allowed troubleshooting operations
 
 These profiles are specified in a priority order; the highest priority that is applicable will be used.  Each ESP profile can be targeted to groups containing devices or users.  When determining which profile to use, the following criteria will be followed:
 
 - The highest-priority profile targeted to the device will be used first.
-- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user.  In white glove and self-deploying scenarios, only device targeting can be used.)
+- If there are no profiles targeted to the device, the highest priority profile targeted to the current user will be used.  (This only applies in scenarios where there is a user. In white glove and self-deploying scenarios, only device targeting can be used.)
 - If there are no profiles targeted to specific groups, then the default ESP profile will be used.
 
 ## Available settings
 
-The following settings can be configured to customize behavior of the Enrollment Status Page:
+The following settings can be configured to customize behavior of the Enrollment Status page:
 
 <table>
 <th align="left">Setting<th align="left">Yes<th align="left">No
@@ -215,8 +215,8 @@ The following are known issues related to the Enrollment Status Page.
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions less than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed in Windows 10 version 1903 and newer.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration defined in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP will take 40 minutes longer than the value set in the ESP profile. This delay gives time for the on-prem AD connector to create the new device record to Azure AD. 
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
-    - the user credentials aren't preserved
-    - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
+  - the user credentials aren't preserved
+  - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  
 - Configuring Microsoft Defender Application Control causes a prompt to reboot during Autopilot. Configuring Microsoft Defender Application (AppLocker CSP) requires a reboot. When this policy is configured, it may cause a device to reboot during Autopilot. Currently, there's no way to suppress or postpone the reboot.
 - When the DeviceLock policy (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.

@@ -32,7 +32,12 @@ ms.collection:
 
 # Sync your iOS device manually
 
+<<<<<<< HEAD
 Initiate a manual sync from Company Portal to fix lags and delays such as slow or stalled app installations. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organization's requirements, and it can also help resolve downloads or other processes that are in progress.  
+=======
+Sometimes an app may take too long to download from Company Portal. To fix lags and delays like this, you can try initiating a manual sync. A manual sync forces Company Portal to check in with your device to make sure it's meeting your organization's requirements, and it can also help resolve downloads or other processes in progress.
+
+>>>>>>> a99cd1b1ca9cc3c74bdedf8464aec46b2e52c670
 
 1. Open the Company Portal app.
 
