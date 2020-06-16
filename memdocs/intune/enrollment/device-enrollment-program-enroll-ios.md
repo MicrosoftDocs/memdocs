@@ -144,8 +144,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 > Devices will be blocked if there aren't enough Company Portal licenses for a VPP token, or if the token has expired. Intune will display an alert when a token is about to expire or licenses are running low.
  
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens**.
-2. Select a token, choose **Profiles** > **Create profile** > **iOS**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
+2. Select a token, choose **Profiles** > **Create profile** > **iOS/iPadOS**.
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-ios/image04.png)
 
@@ -295,7 +295,7 @@ Assigning dynamic groups to enrollment profiles can lead to some delay in delive
 ## Sync managed devices
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
    ![Screenshot of the Enrollment Program Devices node and Sync link.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
@@ -309,7 +309,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 >[!NOTE]
 >You can also assign serial numbers to profiles from the **Apple Serial Numbers** blade.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose a token in the list.
 2. Choose **Devices** > choose devices in the list > **Assign profile**.
 3. Under **Assign profile**, choose a profile for the devices > **Assign**.
 
@@ -317,7 +317,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 
 You can pick a default profile to be applied to all devices enrolling with a specific token.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose a token in the list.
 2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.
 
 ## Distribute devices
@@ -337,7 +337,7 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. Choose **Your Server Token**.  
-5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose the token.
+5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Choose **Renew token** and enter the Apple ID used to create the original token.  
