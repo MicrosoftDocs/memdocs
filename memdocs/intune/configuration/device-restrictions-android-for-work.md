@@ -127,12 +127,12 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
 
-      - **Folder icon**: Select the color and shape of the folder icon that's shown on the managed home screen. Your options:
+      - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
         - Dark theme rectangle
         - Dark theme circle
         - Light theme rectangle
         - Light theme circle
-      - **App and Folder icon size**: Select the size of the folder icon that's shown on the managed home screen. Your options:
+      - **App and Folder icon size**: Select the size of the folder icon that's shown on the Managed Home Screen. Your options:
         - Extra small
         - Small
         - Average
@@ -141,7 +141,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
           Depending on the screen size, the actual icon size may be different.
 
-      - **Screen orientation**: Select the direction the managed home screen is shown on devices. Your options:
+      - **Screen orientation**: Select the direction the Managed Home Screen is shown on devices. Your options:
         - Portrait
         - Landscape
         - Autorotate
@@ -185,8 +185,8 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         When enabled, also configure:
 
-        - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. If you don't enter a URL, then the device's default image is used, if there's a default image. 
-        
+        - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. If you don't enter a URL, then the device's default image is used, if there's a default image.
+
           For example, enter:
 
           - `http://www.contoso.com/image.jpg`
@@ -204,7 +204,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+<!-- MandiA (6.15.2020) The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
 
   - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
     - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
