@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Manage Edge for iOS and Android for iOS and Android with Intune 
+title: Manage Edge for iOS and Android with Intune 
 titleSuffix: 
-description: Use Intune app protection policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
+description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -67,7 +67,7 @@ To see the specific recommendations for each configuration level and the minimum
 
 Regardless of whether the device is enrolled in an unified endpoint management (UEM) solution, an Intune app protection policy needs to be created for both iOS and Android apps, using the steps in [How to create and assign app protection policies](app-protection-policies.md). These policies, at a minimum, must meet the following conditions:
 
-1. They include all Microsoft mobile applications, such as Outlook, OneDrive, Office, or Teams, as this will ensure that users can access and manipulate work or school data within any Microsoft app in a secure fashion.
+1. They include all Microsoft 365 mobile applications, such as Edge, Outlook, OneDrive, Office, or Teams, as this ensures that users can access and manipulate work or school data within any Microsoft app in a secure fashion.
 
 2. They are assigned to all users. This ensures that all users are protected, regardless of whether they use Edge for iOS or Android.
 
@@ -447,3 +447,4 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 ## Next steps
 
 - [What are app protection policies?](app-protection-policy.md) 
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
