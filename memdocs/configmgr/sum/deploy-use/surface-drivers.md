@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Surface driver updates for depl
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -95,12 +95,12 @@ The following table contains the Surface models and versions of Windows 10 on wh
 |Surface Pro X|N/A| N/A| N/A |Yes|Yes|
 |Surface Book|Yes| Yes| Yes |Yes|Yes|
 |Surface Book 2|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 3|N/A| N/A| N/A |N/A|Yes|
+|Surface Book 3|N/A| N/A| N/A |Yes|Yes|
 |Surface Laptop|Yes, with the product "Windows 10 S version 1709 and later Servicing drivers" selected| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Laptop 2|Yes| Yes |Yes|Yes|Yes|
+|Surface Laptop 2|N/A| Yes |Yes|Yes|Yes|
 |Surface Laptop 3|N/A| N/A|N/A|Yes |Yes|
 |Surface Go|N/A| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Go 2|N/A| Yes| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Go 2|N/A| N/A| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
 |Surface Studio|Yes| Yes| Yes |Yes|Yes|
 |Surface Studio 2|N/A| Yes| Yes |Yes|Yes|
 
