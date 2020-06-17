@@ -76,14 +76,14 @@ Use the following steps to enroll your macOS device with your organization. Your
     ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-2006.png)   
 
 5. Your device's system preferences will open.  
-    a. Select **Install** and then select **Install** again. 
+    a. Select **Install** and then select **Install** again.  
     b. If you’re prompted to, enter your device password.   
 6. Once the profile is installed, it will appear in the profiles list under **Management Profile**.
     ![Example screenshot of System Preferences, Management Profile screen, highlighting "Approve" button.](./media/management-profile-approve-macos-2006.png)   
 7. Return to Company Portal.    
 8. Your organization might require you to update your device settings. When you're done updating settings, select **Retry**.  
 
-    ![Example screenshot of Company Portal, Update device settings screen, highlighting "Check settings" button.](./media/update-settings-mac-2006.PNG)  
+    ![Example screenshot of Company Portal, Update device settings screen, highlighting Retry button.](./media/update-settings-mac-2006.png)  
 9. When setup is complete, select **Done**.  
 
 
