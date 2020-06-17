@@ -121,7 +121,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
       - Clicking **Clear** deletes a setting from the profile. If a setting isn't in the profile, its value on the device won't change when the profile is applied.
       
-      - Use the **Search for setting** to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
+      - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
 
       - If you create an empty (unconfigured) bundle in the configuration designer, it's deleted when switching to the JSON editor.
 

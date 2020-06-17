@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -52,8 +52,8 @@ Complete the following prerequisites before setting up macOS device enrollment:
 ## User-owned macOS devices (BYOD)
 
 You can let users enroll their own personal devices into Intune management. This is known as "bring your own device" or BYOD. After you've completed the prerequisites and assigned user licenses, your users can enroll their devices by:
-- going to the [Company Portal website](https://portal.manage.microsoft.com) or
-- downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
+- Going to the [Company Portal website](https://portal.manage.microsoft.com) or
+- Downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
 You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
 

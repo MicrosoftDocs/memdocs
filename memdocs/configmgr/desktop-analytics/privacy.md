@@ -52,6 +52,8 @@ The following illustration shows how diagnostic data flows from individual devic
 
 3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted over HTTPS and uses certificate pinning during transfer from the device to this service. The Microsoft Data Management Service is hosted in the United States.
 
+      - Application faults, kernel faults, unresponsive applications, and other application specific problems use the Windows Error Reporting API to send application-specific problem reports to Microsoft. See [Using WER](https://docs.microsoft.com/windows/win32/wer/using-wer) for specific details about this dataflow.
+      
 4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
 
 5. The snapshots are then copied to your Azure Log Analytics workspace. This data transfer happens over HTTPS through the webhook ingestion protocol, which is a feature of Log Analytics. Desktop Analytics doesn't have any read or write permissions to your Log Analytics storage. Desktop Analytics calls the webhook API with a shared access signature (SAS) URI. Then Log Analytics gets the data from the storage tables over HTTPS.
@@ -73,6 +75,8 @@ For more information about related privacy aspects, see the following articles:
 - [Windows 10, version 1809 basic level Windows diagnostic events and fields](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Windows 10, version 1709 enhanced diagnostic data events and fields used by Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows Setup error reporting](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 
