@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -161,6 +161,18 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
 
+      - **Quick access to MHS debug menu**: This setting controls how users access the debug menu. Your options:
+
+        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
+        - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
+
+        Using the debug menu, users can:
+
+        - See and upload Managed Home Screen logs​
+        - Open Google's Android Device Policy Manager app
+        - Open the [Microsoft Intune app](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Exit kiosk mode
+
       - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device. For example, enter `http://contoso.com/backgroundimage.jpg`.
 
         > [!NOTE]
@@ -177,11 +189,23 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
 
+        - **Wi-Fi allow list**: Create a list of valid wireless network names, also known as the service set identifier (SSID). Managed Home Screen users can only connect to the SSIDs you enter.
+
+          When left blank, Intune doesn't change or update this setting. By default, all available Wi-Fi networks are allowed.
+
+          **Import** a .csv file that includes a list of valid SSIDs.
+
+          **Export** your current list to a .csv file.
+
+        - **SSID**: You can also enter the Wi-Fi network names (SSID) that Managed Home Screen users can connect. Be sure to enter valid SSIDs.
+
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 
       - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows users to turn the flashlight on or off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
 
       - **Media volume control**: **Enable** shows the media volume control on the Managed Home Screen, and allows users to adjust the device's media volume using a slider. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the media volume control on Managed Home Screen. It prevents users from adjusting the device's media volume while using the Managed Home Screen, unless their hardware buttons support it.
+
+      - **Quick access to device information**: **Enable** allows users to swipe down to see the device information on the Managed Home Screen, such as the serial number, make and model number, and SDK level. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device information might not be shown.
 
       - **Screen saver mode**: **Enable** shows a screensaver on the Managed Home Screen when the device is locked or times out. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show a screensaver on the Managed Home Screen.
 
