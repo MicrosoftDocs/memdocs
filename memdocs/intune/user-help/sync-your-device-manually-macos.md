@@ -49,7 +49,7 @@ Company Portal regularly checks in with your device, but you can use the followi
 
  4. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
 
-       ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)
+      ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)
 
 Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task.  
 
