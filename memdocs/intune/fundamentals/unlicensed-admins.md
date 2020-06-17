@@ -35,8 +35,9 @@ You can grant Intune/Microsoft Endpoint Manager admin center access to admins wi
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Administrator licensing**.
 2. Choose **Allow access to unlicensed admins** > **Yes**.
-  >[!WARNING]
-  >You can’t undo this setting after clicking **Yes**.
+    >[!WARNING]
+    >You can’t undo this setting after clicking **Yes**.
+
 3. Henceforth, users who sign in to the Microsoft Endpoint Manager admin center don’t require an Intune license and their scope of access is determined by the roles assigned to them.
 
 Intune supports up to 350 unlicensed admins per secruity group. Admins above this limit will experience unpredictable behavior.
