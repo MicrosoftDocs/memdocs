@@ -25,6 +25,4 @@ Learn what's new  for Endpoint Analytics. Updates may take up to three days to r
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### User experience analytics has been renamed to Endpoint analytics
 
-User experience analytics has been renamed to Endpoint analytics. For more information, see [Endpoint Analytics private preview](user-experience-analytics-preview.md). 
-
-
+User experience analytics has been renamed to Endpoint analytics. For more information, see [Endpoint Analytics private preview](user-experience-analytics-preview.md).

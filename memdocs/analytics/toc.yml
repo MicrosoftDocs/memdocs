@@ -1,0 +1,15 @@
+- name: Endpoint analytics documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: What is Endpoint analytics?
+    href: overview.md
+  - name: What's new
+    href: whats-new.md
+- name: Quickstarts
+  items:
+  - name: Enroll Intune devices
+    href: enroll-intune.md
+- name: Concepts
+  items:
+  - name: Reccomended software

@@ -1,0 +1,65 @@
+### YamlMime:Hub 
+title: Microsoft Endpoint Manager Endpoint analytics documentation
+summary: "Official product documentation for the following components of Microsoft Endpoint Manager: Endpoint analytics"
+metadata:
+   ms.topic: hub-page
+
+highlightedContent: 
+  items: 
+    - title: What's new
+      itemType: learn
+      url: whats-new.md
+    - title: Enroll Intune devices
+      itemType: architecture
+      url: enroll-intune.md
+ additionalContent:
+   sections:
+   - title: Configuration Manager community & support
+     items:
+      - title: Configuration Manager blog
+        summary: News and announcements
+        url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+      - title: "Twitter: #ConfigMgr"
+        summary: Keep current with our active community on Twitter
+        url: https://twitter.com/hashtag/configmgr
+      - title: Configuration Manager forums
+        summary: Ask technical questions in the product forums
+        url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+      - title: UserVoice product feedback
+        summary: Share product ideas with the engineering team
+        url: https://configurationmanager.uservoice.com/forums/300492-ideas
+      - title: Product support
+        summary: Get professional help from Microsoft support
+        url: https://aka.ms/cmcbsupport
+      - title: System Center 2012 R2 Configuration Manager
+        summary: Documentation for the previous version of Configuration Manager
+        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+   - title: Other content
+     items:
+        - title: Develop
+          links:
+            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+              text: PowerShell
+            - url: ./develop/index.yml
+              text: Software development kit (SDK)
+            - url: ./develop/adminservice/index.yml
+              text: Administration service REST API
+            - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+              text: SQL views
+        - title: Tools
+          links:
+            - url: ./core/support/support-center.md
+              text: Support Center
+            - url: ./mdt/index.yml
+              text: MDT
+            - url: ./apps/pcm/package-conversion-manager.md
+              text: Package Conversion Manager
+            - url: ./core/support/tools.md
+              text: See more >
+        - title: Other community sites
+          links:
+            - url: https://www.reddit.com/r/sccm
+              text: ConfigMgr on Reddit
+            - url: https://www.facebook.com/groups/ConfigMgr2012
+              text: ConfigMgr Professionals Group on Facebook
+   footer: "Found a problem on our site? [Let us know](./core/understand/use-docs.md#bkmk_docfeedback)!"
