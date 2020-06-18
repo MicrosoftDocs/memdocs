@@ -350,7 +350,7 @@ This would have the following effects:
 ## Class and method replacements
 > [!NOTE] 
 > Apps *should* integrate with the SDK [build tooling](#build-tooling), which will perform all of these replacements automatically 
-> (except for [manifest replacements](#manifest-replacements])
+> (except for [manifest replacements](#manifest-replacements)
 
 Android base classes must be replaced with their respective MAM
 equivalents in order to enable Intune management. The SDK classes live
