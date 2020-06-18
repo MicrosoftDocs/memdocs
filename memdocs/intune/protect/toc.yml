@@ -90,7 +90,9 @@
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
     - name: Microsoft Defender ATP
-      href: advanced-threat-protection.md  
+      href: advanced-threat-protection.md
+    - name: Tenant attach
+      href: tenant-attach-intune.md
     - name: Encrypt disks
       items:
       - name: Manage BitLocker policy

@@ -31,7 +31,7 @@ ms.reviewer: mattsha
 
 # Configure tenant attach to support endpoint security policies from Intune
 
-When you use the Configuration Manager [tenant attach](../../configmgr/tenant-attach/device-sync-actions) scenario you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Endpoint Manager admin center to create and deploy policies.
+When you use the Configuration Manager tenant attach scenario, you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Endpoint Manager admin center to create and deploy policies.
 
 The following policy types are supported by Configuration Manager devices that are tenant attached:
 
@@ -44,7 +44,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 ### General requirements for tenant attach
 
-- **Configure Tenant attach** - Tenant attach lets you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy supported policies to those collections.
+- **Configure Tenant attach** - With the *tenant attach* scenario, you synchronize collections of devices from Configuration Manager to the Microsoft Endpoint Manager admin center. You can then use the admin center to deploy supported policies to those collections.
 
   Tenant attach is often configured with co-management, but you can configure tenant attach on its own.
 
@@ -52,8 +52,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
   After selecting collections to synchronize, you must enable them for use with endpoint security policies from Intune.
 
-- **Permissions to Azure AD** - To complete setup of tenant attach, and to configure the Configuration Manager collections you’ll synchronize with Microsoft Endpoint Manager admin center, you’ll need an account with Global Administrator permissions to your Azure subscription.
-
+- **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
 
 ### Specific requirements for Intune endpoint security policies
 
@@ -94,7 +93,7 @@ The following tasks are completed in the Configuration Manager console and to yo
 
 ### Task 1: Install the update for Configuration Manager
 
-If you use Configuration Manager current branch version 2002, you'll need to install an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center.
+If you use Configuration Manager current branch version 2002, install an update that adds support for the endpoint security policies you deploy from the Microsoft Endpoint Manager admin center.
 
 **Update details**:
 
