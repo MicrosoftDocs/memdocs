@@ -68,7 +68,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
   - **Configuration Manager** - The following environments are supported:
 
-    - **Configuration Manager technical preview 2005 or later** - Support for Intune Endpoint detection and response policies was added with this technical preview version.
+    - **Configuration Manager technical preview 2003 or later** - Support for Intune Endpoint detection and response policies was added with the technical preview version 2003.
 
     - **Configuration Manager current branch version 2002 or later** - If you use Configuration Manager with version 2002 you must install the in-console update **Configuration Manager 2002 Hotfix (KB4563473)**. This update enables support in Configuration Manager 2002 for using endpoint security policies.
 
