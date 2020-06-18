@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -521,7 +521,7 @@ incompatible types: android.support.v7.app.ActionBar cannot be converted to andr
 
 These errors can occur because your app references MAM support classes. MAM support classes wrap Android support 
 classes that have moved in AndroidX. To combat such errors, replace all MAM support class references with their 
-AndroidX equivalents. This can be acheived by first removing the MAM support library depedencies from your Gradle 
+AndroidX equivalents. This can be achieved by first removing the MAM support library dependencies from your Gradle 
 build files. The lines in question will look something like the following:
 
 ```Gradle
@@ -595,7 +595,7 @@ of MAM APIs or MAM-restricted platform APIs. It is loosely patterned
 after Android's StrictMode, and runs a set of checks which raise
 errors when they fail. It is not intended to be left enabled in
 production builds, but you are *strongly encouraged* to use it in your
-app's internal development, debug, and/or dogfood builds.
+app's internal development, debug, and/or testing builds.
 
 To enable, call
 

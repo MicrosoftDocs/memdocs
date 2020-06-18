@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,10 +35,10 @@ The Microsoft Intune App SDK for Android testing guide is designed to help you t
 ## Demo tenant setup
 If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
 1. Navigate to the [Microsoft CDX tenant creation site](https://cdx.transform.microsoft.com/my-tenants/create-tenant) and create a Microsoft 365 Enterprise tenant.
-2. [Set up Intune](setup-steps.md) to enable mobile device management (MDM).
-3. [Create users](users-add.md).
-4. [Create groups](groups-add.md).
-5. [Assign licenses](licenses-assign.md) as appropriate for your testing.
+2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
+3. [Create users](../fundamentals/users-add.md).
+4. [Create groups](../fundamentals/groups-add.md).
+5. [Assign licenses](../fundamentals/licenses-assign.md) as appropriate for your testing.
 
 
 ## Azure portal policy configuration
@@ -134,7 +134,7 @@ You can remotely wipe managed apps from containing corporate email and documents
 Integrating [multi-identity support](app-sdk-android.md#multi-identity-optional) 
 is a high risk change that needs to be thoroughly tested. The most common issues occur because
 of improperly setting the active identity (`Context` vs. thread level) or improperly tracking file
-identies (`MAMFileProtectionManager`).
+identities (`MAMFileProtectionManager`).
 
 Minimally, confirm that:
 
