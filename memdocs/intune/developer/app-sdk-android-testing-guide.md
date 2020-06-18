@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android testing guide
+title: Microsoft Intune App SDK for Android developer testing guide
 description: The Microsoft Intune App SDK for Android testing guide helps you test your Intune-managed Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -28,28 +28,28 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Microsoft Intune App SDK for Android testing guide
+# Microsoft Intune App SDK for Android developers testing guide
 
-This guide helps developers test their Intune-managed Android apps.  
+The Microsoft Intune App SDK for Android testing guide is designed to help you test your Intune-managed Android app.
 
-## Prerequisite test accounts
-You can create new accounts with or without pre-generated data. To create a new account:
-1. Go to the [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant) site. 
-2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
-3. [Create users](../fundamentals/users-add.md).
-4. [Create groups](../fundamentals/groups-add.md).
-5. [Assign licenses](../fundamentals/licenses-assign.md) as appropriate for your testing.
+## Demo tenant setup
+If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
+1. Navigate to the [Microsoft CDX tenant creation site](https://cdx.transform.microsoft.com/my-tenants/create-tenant) and create a Microsoft 365 Enterprise tenant.
+2. [Set up Intune](setup-steps.md) to enable mobile device management (MDM).
+3. [Create users](users-add.md).
+4. [Create groups](groups-add.md).
+5. [Assign licenses](licenses-assign.md) as appropriate for your testing.
 
 
 ## Azure portal policy configuration
 [Create and assign app protection policies](../apps/app-protection-policies.md) in the [Azure portal's Intune blade](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). You can also create and assign your [app configuration policy](../apps/app-configuration-policies-overview.md) in the Intune blade.
 
 > [!NOTE]
-> If your app isn't listed in the Azure portal, you can target it with a policy by selecting the **more apps** option, and providing the package name in the text box.
+> If your app isn't listed in the Azure portal, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.
 
-## Test cases
+## Test Cases
 
-The following test cases provide configuration and confirmation steps. Use this guidance to help troubleshoot Intune-managed Android app issues.
+The following test cases provide configuration and confirmation steps. Use these tests to verify your newly integrated Android app.
 
 ### Required PIN and corporate credentials
 
@@ -68,11 +68,30 @@ You can require a PIN to access corporate resources. Also, you can enforce corpo
 You can control data transfer between corporate managed applications, as follows:
 
 1. Set **Allow app to transfer data to other apps** to **Policy-managed apps**.
-2. Set **Allow app to receive data from other apps** to **All apps**. Use of intents and content providers are affected by these policies.
+2. Set **Allow app to receive data from other apps** to **All apps**. 
+
+Use of intents and content providers are affected by these policies.
 3. Confirm the following conditions:
     - Opening from an unmanaged app into your app functions correctly.
-    - Sharing content between managed apps is allowed.
-    - Sharing from managed apps to non-managed apps (for example, Chrome) is blocked.
+    - Sharing content between your app and managed apps is allowed.
+    - Sharing from your app to non-managed apps (for example, Chrome) is blocked.
+
+
+#### Restrict receiving data from other apps
+
+1. Set **Send org data to other apps** to **All apps**.
+2. Set **Receive data from other apps** to **Policy managed apps**. 
+3. Confirm the following conditions:
+    - Sending to an unmanaged app from your app functions correctly.
+    - Sharing content between your app and managed apps is allowed.
+    - Sharing from non-managed apps (for example, Chrome) to your app is blocked.
+
+If your app requires [integrated 'open from' controls](app-sdk-android.md#opening-data-from-a-local-or-cloud-storage-location), you can control **open from** functionality as follows:
+
+1. Set **Receive data from other apps** to **Policy managed apps**. 
+2. Set **Open data into org documents** to **Block**. 
+3. Confirm the following conditions:
+    - Opening is restricted to only appropriate managed locations.
 
 ### Restrict cut, copy, and paste
 You can restrict the system clipboard to managed applications, as follows:
@@ -82,49 +101,50 @@ You can restrict the system clipboard to managed applications, as follows:
     - Copying text from your app into an unmanaged app (for example, Messages) is blocked.
 
 ### Prevent save
-You can control **Save As** functionality, as follows:
+If your app requires [integrated Save As controls](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted), you can control **Save As** functionality, as follows:
 
-1. If your app requires [integrated Save As controls](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted), set **Prevent 'Save As'** to **Yes**.
+1. Set **Prevent 'Save As'** to **Yes**.
 2. Confirm the following conditions:
     - Save is restricted to only appropriate managed locations.
 
-### File encryption
+### File Encryption
 You can encrypt data on the device, as follows:
 
 1. Set **Encrypt app data** to **Yes**.
 2. Confirm the following conditions:
     - Normal application behavior isn't affected.
 
-### Prevent Android backups
+### Prevent Android Backups
 You can control app backup, as follows:
 
 1. If you have set [integrated backup restrictions](app-sdk-android.md#protecting-backup-data), set **Prevent Android backups** to **Yes**.
 2. Confirm the following conditions:
     - Backups are restricted.
 
-### Unenrollment
-You can remotely wipe managed apps from containing corporate email and documents, and personal data is decrypted when it's no longer administered. Here's how:
+### Wipe
+You can remotely wipe managed apps from containing corporate email and documents. Personal data is decrypted when it's no longer administered. Here's how:
 
 1. From the Azure portal, [issue a wipe](../apps/apps-selective-wipe.md).
 2. If your app doesn't register for any wipe handlers, confirm the following conditions:
     - A full wipe of the app occurs.
 3. If your app has registered for `WIPE_USER_DATA` or `WIPE_USER_AUXILARY_DATA`, confirm the following conditions:
-    - The managed content is removed from the app. For more information, see [Intune App SDK for Android developer guide - selective wipe](app-sdk-android.md#selective-wipe).
+    - The managed content is removed from the app. For more information, see [Intune App SDK for Android developer guide - Selective Wipe](app-sdk-android.md#selective-wipe).
 
-### Multi-identity support
-Integrating [multi-identity support](app-sdk-android.md#multi-identity-optional) is a high risk change that needs to be thoroughly tested. The most common issues occur because of improperly setting the identity (context vs. threat level), and tracking files (`MAMFileProtectionManager`).
+### Multi-Identity support
+Integrating [multi-identity support](app-sdk-android.md#multi-identity-optional) 
+is a high risk change that needs to be thoroughly tested. The most common issues occur because
+of improperly setting the active identity (`Context` vs. thread level) or improperly tracking file
+identies (`MAMFileProtectionManager`).
 
 Minimally, confirm that:
 
 - **Save As** policy is working correctly for managed identities.
 - Copy and paste restrictions are correctly enforced from managed to personal.
-- Only data belonging to the managed identity is encrypted, and personal files aren't modified.
+- Only data belonging to the managed identity is encrypted, and personal files are not modified.
 - Selective wipe during unenrollment only removes the managed identity data.
-- The user is prompted for conditional launch when changing from an unmanaged to a managed account (first time only).
+- The end user is prompted for conditional launch when changing from an unmanaged to a managed account (first time only).
 
 ### App configuration (optional)
 You can configure behavior of managed apps. If your app consumes any app configuration settings, you should test that your app correctly handles all values that you (as the admin) can set. You can create and assign [app configuration policies](../apps/app-configuration-policies-overview.md) in Intune.
 
-## Next steps
 
-- [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
