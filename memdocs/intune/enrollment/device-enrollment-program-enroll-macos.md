@@ -84,7 +84,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 3. For Apple School Manage, in the Apple portal, choose **MDM Servers** > **Add MDM Server**.
 4. Enter the **MDM Server Name**, and then choose **Next**. The server name is for your reference to identify the mobile device management (MDM) server. It is not the name or URL of the Microsoft Intune server.
 
-5. The **Add &lt;ServerName&gt;** dialog box opens, stating **Upload Your Public Key**. Choose **Choose File…** to upload the .pem file, and then choose **Next**.
+5. The **Add &lt;ServerName&gt;** dialog box opens, stating **Upload Your Public Key**. Select **Choose File…** to upload the .pem file, and then choose **Next**.
 
 6. Go to  **Deployment Programs** &gt; **Device Enrollment Program** &gt; **Manage Devices**.
 7. Under **Choose Devices By**, specify how devices are identified:
@@ -133,7 +133,7 @@ Now that you've installed your token, you can create an enrollment profile for d
 
 8. Select **Next** to go to the **Setup Assistant** page.
 
-9. On the **Setup Assisatnt** page, configure the following profile settings:
+9. On the **Setup Assistant** page, configure the following profile settings:
 
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
