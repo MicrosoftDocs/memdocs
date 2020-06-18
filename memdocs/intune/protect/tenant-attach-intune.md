@@ -40,7 +40,7 @@ The following policy types are supported by Configuration Manager devices that a
 
 ## Requirements to use Intune policy for tenant attach
 
-To support using Intune endpoint security policies with Configuration Manager devices, your Configuration Manager environment requires the following configurations. [Configuration guidance](#set-up-configuration-manager-to-support-edr-policy) is provided in this article:
+To support using Intune endpoint security policies with Configuration Manager devices, your Configuration Manager environment requires the following configurations. [Configuration guidance](#set-up-configuration-manager-to-support-intune-policies) is provided in this article:
 
 ### General requirements for tenant attach
 
@@ -83,7 +83,7 @@ The following tasks are completed in the Configuration Manager console and to yo
 1. [Install the update for Configuration Manager](#task-1-install-the-update-for-configuration-manager)
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
 3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
-4. [Enable collections to support Intune policies](#task-4-enable-collections-to-support-intune-policies)
+4. [Enable collections to support Intune policies](#task-4-enable-collections-for-endpoint-security-policies)
 
 > [!TIP]
 > To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
@@ -184,9 +184,9 @@ When tenant attach is configured, you can select collections to sync. If you hav
 
    The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
-### Task 4: Enable collections for endpoint security policies from Intune
+### Task 4: Enable collections for endpoint security policies
 
-After you configure collections to sync to Microsoft Endpoint Manager admin center, you enable those collections to be eligible for endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender ATP. 
+After you configure collections to sync to Microsoft Endpoint Manager admin center, you enable those collections to be eligible for endpoint security policies. When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender ATP.
 
 #### Enable collections for use with endpoint security policies
 
