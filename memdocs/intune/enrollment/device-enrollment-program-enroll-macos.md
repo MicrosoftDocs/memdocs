@@ -84,7 +84,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 3. For Apple School Manage, in the Apple portal, choose **MDM Servers** > **Add MDM Server**.
 4. Enter the **MDM Server Name**, and then choose **Next**. The server name is for your reference to identify the mobile device management (MDM) server. It is not the name or URL of the Microsoft Intune server.
 
-5. The **Add &lt;ServerName&gt;** dialog box opens, stating **Upload Your Public Key**. Choose **Choose File…** to upload the .pem file, and then choose **Next**.
+5. The **Add &lt;ServerName&gt;** dialog box opens, stating **Upload Your Public Key**. Select **Choose File…** to upload the .pem file, and then choose **Next**.
 
 6. Go to  **Deployment Programs** &gt; **Device Enrollment Program** &gt; **Manage Devices**.
 7. Under **Choose Devices By**, specify how devices are identified:
@@ -114,24 +114,27 @@ Now that you've installed your token, you can create an enrollment profile for d
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. Under **Create Profile**, enter a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. On the **Basics** page, enter a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this **Name** field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about [Azure Active Directory dynamic groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Profile name and description.](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
 4. For **Platform**, choose **macOS**.
 
-5. For **User Affinity**, choose whether or not devices with this profile must enroll with or without an assigned user.
+5. Select **Next** to go to the **Management Settings** page.
+
+6. For **User Affinity**, choose whether or not devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal app for services like installing apps. If using ADFS, user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints). [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).Multifactor authentication is not supported for macOS ADE devices with user affinity.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-6. Choose **Device Management Settings** and Choose whether or not you want locked enrollment for devices using this profile. **Locked enrollment** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
+6. If you chose **Enroll with User Affinity**, under **Authentication Method** you choose **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**.
 
-    ![Device Management Settings screenshot.](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
 
-7. Choose **OK**.
+8. Select **Next** to go to the **Setup Assistant** page.
 
-8. Choose **Setup Assistant Settings** to configure the following profile settings:
+9. On the **Setup Assistant** page, configure the following profile settings:
+
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Department settings | Description |
@@ -145,28 +148,28 @@ Now that you've installed your token, you can create an enrollment profile for d
 
     | Setup Assistant screen settings | If you choose **Show**, during setup the device will... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Passcode</strong> | Prompt the user for a passcode. Always require a passcode unless the device is secured or has access controlled in some other manner (that is, kiosk mode that restricts the device to one app). |
-    | <strong>Location Services</strong> | Prompt the user for their location. |
-    | <strong>Restore</strong> | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. |
-    | <strong>iCloud and Apple ID</strong> | Give the user the options to sign in with their **Apple ID** and use **iCloud**.                         |
-    | <strong>Terms and Conditions</strong> | Require the user to accept Apple's terms and conditions. |
-    | <strong>Touch ID</strong> | Give the user the option to set up fingerprint identification for the device. |
-    | <strong>Apple Pay</strong> | Give the user the option to set up Apple Pay on the device. |
-    | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. |
-    | <strong>Siri</strong> | Give the user the option to set up Siri. |
-    | <strong>Diagnostic Data</strong> | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. |
-    | <strong>FileVault</strong> | Give the user the option to set up FileVault encryption. |
-    | <strong>iCloud Diagnostics</strong> | Give the user the option to send iCloud diagnostic data to Apple. |
-    | <strong>iCloud Storage</strong> | Give the user the option to use iCloud storage. |    
-    | <strong>Display Tone</strong> | Give the user the option to turn on Display Tone. |
-    | <strong>Appearance</strong> | Display the Appearance screen to the user. |
-    | <strong>Registration</strong>| Require the user to register the device. |
-    | <strong>Privacy</strong>| Display the Privacy screen to the user. |
-    | <strong>Screen Time</strong>| Display the Screen Time screen to the user. |
+    | <strong>Passcode</strong> | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). For iOS/iPadOS 7.0 and later. |
+    | <strong>Location Services</strong> | Prompt the user for their location. For macOS 10.11 and later and iOS/iPadOS 7.0 and later. |
+    | <strong>Restore</strong> | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Apple ID</strong> | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
+    | <strong>Terms and Conditions</strong> | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Touch ID</strong> | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
+    | <strong>Apple Pay</strong> | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Zoom</strong> | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
+    | <strong>Siri</strong> | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>Diagnostic Data</strong> | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | <strong>FileVault</strong> | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
+    | <strong>iCloud diagnostics</strong> | Display the iCloud Analytics screen to the user. For macOS 10.12.4 and later. |
+    | <strong>iCloud Storage</strong> | Display the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
+    | <strong>Display Tone</strong> | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
+    | <strong>Appearance</strong> | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
+    | <strong>Registration</strong> | Display the registration screen to the user. For macOS 10.9 and later. |
+    | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
+    | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
+    
+10. Select **Next** to go to the **Review + create** page.
 
-9. Choose **OK**.
-
-10. To save the profile, choose **Create**.
+11. To save the profile, choose **Create**.
 
 ## Sync managed devices
 
