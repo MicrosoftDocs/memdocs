@@ -83,7 +83,7 @@
 ### [What happens if you reset your device using the Company Portal?](effects-of-device-reset-company-portal-ios.md)
 ### [Unenroll your device](unenroll-your-device-from-intune-ios.md)
 #### [What happens if you unenroll your device?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Manually sync your device](sync-your-device-manually-ios.md)
+### [Manually sync iOS device](sync-your-device-manually-ios.md)
 
 ### [Fixing common issues with iOS](troubleshoot-your-device-iOS.md)
 #### [Reconnect a compromised iOS device](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md)
 ### [Enroll your organization-provided macOS device](enroll-company-device-macos.md)  
 ### [Unenrolling your macOS device](unenroll-your-device-from-intune-macos.md)  
+### [Manually sync macOS device](sync-your-device-manually-macos.md)
 ### [Fixing common issues with macOS](troubleshoot-your-device-macos.md)
 #### [My version of macOS isn't yet supported](your-macos-version-isnt-yet-supported.md)
 #### [Updating your macOS device](you-need-to-update-your-macos-device.md)
