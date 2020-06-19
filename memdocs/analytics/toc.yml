@@ -25,7 +25,7 @@
 - name: How-to guides
   items:
   - name: Manage settings
-     href: settings.md
+    href: settings.md
   - name: Troubleshoot
     href: troubleshoot.md
 - name: Reference
