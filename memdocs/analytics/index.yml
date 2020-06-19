@@ -1,110 +1,53 @@
-### YamlMime:Hub 
-title: Microsoft Endpoint Manager Endpoint analytics (preview) documentation
+### YamlMime:Landing
+title: Endpoint analytics (preview) documentation
 summary: "Official product documentation for Endpoint analytics (preview) in Microsoft Endpoint Manager"
+ 
+
 metadata:
-   ms.topic: hub-page
+  title: Endpoint analytics (preview) documentation
+  titleSuffix: Configuration Manager
+  description: "Official product documentation for Endpoint analytics (preview) in Microsoft Endpoint Manager"
+  ms.product: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 06/25/2020
 
-highlightedContent: 
-  items: 
-    - title: What's new
-      itemType: learn
-      url: whats-new.md
-    - title: Enroll Intune devices
-      itemType: get-started
-      url: enroll-intune.md
-    - title: Enroll Configuration Manager devices
-      itemType: get-started
-      url: enroll-configmgr.md
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-conceptualContent:
-  items:
-    - title: Endpoint analytics (preview)
-      links:
-        - url: index.yml
-          itemType: overview
-          text: Endpoint analytics (preview) documentation 
-        - url: overview.md
-          itemType: overview
-          text: Endpoint analytics overview 
-        - url: startup-performance.md
-          itemType: concept
-          text: Startup-performance   
-        - url: proactive-remediations.md
-          itemType: concept
-          text: Proactive remediations
-        - url: recommended-software.md
-          itemType: concept
-          text: Recommended software         
-    - title: Microsoft Intune
-      links:
-        - url: ../intune/index.yml
-          itemType: overview
-          text: Microsoft Intune documentation 
-        - url: ../intune/fundamentals/index.yml
-          itemType: overview
-          text: Plan for and set up Intune   
-        - url: ../intune/enrollment/index.yml
-          itemType: overview
-          text: Enroll devices   
-        - url: ../intune/remote-actions/index.yml
-          itemType: overview
-          text: Remotely manage devices   
-        - url: ../intune/protect/index.yml
-          itemType: overview
-          text: Create compliance rules for users and devices 
-        - url: ../intune/configuration/index.yml
-          itemType: overview
-          text: Control device features and settings   
-        - url: ../intune/apps/index.yml
-          itemType: concept
-          text: Manage and protect apps
-    - title: Microsoft Endpoint Configuration Manager
-      links:
-        - url: ../configmgr/index.yml
-          itemType: get-started
-          text: Microsoft Endpoint Configuration Manager documentation
-        - url: ../configmgr/comanage/index.yml
-          itemType: concept
-          text: Manage device workloads in Configuration Manager and Intune
-        - url: ../configmgr/desktop-analytics/index.yml
-          itemType: overview
-          text: Use Desktop Analytics for update readiness                  
-        - url: ../configmgr/core/index.yml
-          itemType: overview
-          text: Manage your infrastructure
-        - url: ../configmgr/apps/index.yml
-          itemType: concept
-          text: Manage apps
-        - url: ../configmgr/osd/index.yml
-          itemType: concept
-          text: Operating system deployment
-        - url: ../configmgr/sum/index.yml
-          itemType: concept
-          text: Software updates
-        - url: ../configmgr/compliance/index.yml
-          itemType: concept
-          text: Manage configuration and compliance of devices
-        - url: ../configmgr/protect/index.yml
-          itemType: concept
-          text: Protect your infrastructure and data
+landingContent:
+  - title: About Endpoint analytics (preview)
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Endpoint analytics (preview) overview
+            url: overview.md
+      - linkListType: whats-new
+        links:
+          - text: What's new
+            url: whats-new.md
 
-additionalContent:
-   sections:
-   - title: Community & support
-     items:
-      - title: "Twitter: #ConfigMgr"
-        summary: Keep current with our active Configuration Manager community on Twitter
-        url: https://twitter.com/hashtag/configmgr
-      - title: "Twitter: #Intune"
-        summary: Keep current with our active Intune community on Twitter
-        url: https://twitter.com/hashtag/msintune
-      - title: Configuration Manager technical forums
-        summary: Ask technical questions in the Configuration Manager forums
-        url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
-      - title: Intune technical forums
-        summary: Ask technical questions in the Intune forums
-        url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
-      - title: Product support
-        summary: Get professional help from Microsoft support
-        url: get-support.md
-   footer: "Found a problem on our site? [Let us know](../configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Enroll Intune devices
+            url: enroll-intune.md
+          - text: Enroll Configuration Manager devices
+            url: enroll-configmgr.md
+      - linkListType: tutorial
+        links:
+          - text: Proactive remediations
+            url: proactive-remediations.md
+
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage settings
+            url: settings.md
+          - text: Troubleshoot
+            url: troubleshoot.md
