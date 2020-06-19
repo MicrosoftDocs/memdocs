@@ -10,18 +10,15 @@ highlightedContent:
       itemType: learn
       url: whats-new.md
     - title: Enroll Intune devices
-      itemType: architecture
+      itemType: get-started
       url: enroll-intune.md
     - title: Enroll Configuration Manager devices
-      itemType: architecture
-      url: enroll-configmgr.md
-    - title: Secure your remote workforce
       itemType: get-started
-      url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+      url: enroll-configmgr.md
 
 conceptualContent:
   items:
-    - title: Endpoint analytics
+    - title: Endpoint analytics (preview)
       links:
         - url: index.yml
           itemType: overview
