@@ -110,4 +110,4 @@ additionalContent:
       - title: Product support
         summary: Get professional help from Microsoft support
         url: get-support.md
-  footer: "Found a problem on our site? [Let us know](./configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"
+   footer: "Found a problem on our site? [Let us know](./configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"
