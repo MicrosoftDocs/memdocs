@@ -18,7 +18,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 
 This quickstart outlines prerequisites and instructions for enrolling Configuration Manager devices into Endpoint analytics.
 
-## <a name="bkmk_uea_prereq"></a> Prerequisites
+## <a name="bkmk_prereq"></a> Prerequisites
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
@@ -28,7 +28,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
-### <a name="bkmk_uea_endpoints"></a> Endpoints required for Configuration Manager-managed devices
+### <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
 Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they do not need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
 
@@ -46,7 +46,7 @@ Endpoint analytics is included in the following plans:
 
 ### Endpoint analytics permissions
 
-- The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_uea_start).
+- The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
@@ -57,11 +57,11 @@ Endpoint analytics is included in the following plans:
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
 
-## <a name="bkmk_uea_cm_enroll"></a> Enroll devices managed by Configuration Manager
+## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_uea_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
-#### <a name="bkmk_uea_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
+### <a name="bkmk_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
@@ -69,7 +69,7 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
    > [!Important] 
    > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
 
-#### <a name="bkmk_uea_cm_upload"></a> Enable data upload in Configuration Manager
+### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
 
 1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
 1. Select **CoMgmtSettingsProd** then click **Properties**.
@@ -77,16 +77,16 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
-### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
+### <a name="bkmk_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
 
 1. Go to `https://aka.ms/endpointanalytics`
-1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
+1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](#bkmk_uea_stop) at any time.
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](privacy.md#bkmk_stop) at any time.
 
-   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
+   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
 
 ## View the Overview page
@@ -96,7 +96,7 @@ Once your data is ready, you'll notice some information on the **Overview** page
 - The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We'll be expanding the set of subscores over time.
 
 - You can compare your current score to other scores by setting a baseline.
-  - As described in the [baseline](#bkmk_uea_baselines) section, there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
+  - As described in the [baseline settings](settings.md#bkmk_baselines), there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 

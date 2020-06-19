@@ -13,15 +13,15 @@ manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
-# <a name="bkmk_uea_set"></a> Endpoint analytics settings
+# <a name="bkmk_set"></a> Endpoint analytics settings
 
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
-## <a name="bkmk_uea_gen"></a> General settings
+## <a name="bkmk_gen"></a> General settings
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
 
-### <a name="bkmk_uea_profile"></a> Intune data collection policy
+### <a name="bkmk_profile"></a> Intune data collection policy
 
 To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
 
@@ -48,7 +48,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
   [![Endpoint analytics general settings page](media/settings-general.png)](media/settings-general.png#lightbox)
 
-## <a name="bkmk_uea_baselines"></a> Baseline management
+## <a name="bkmk_baselines"></a> Baseline management
 
 You can compare your current scores and subscores to others by setting a baseline.
 

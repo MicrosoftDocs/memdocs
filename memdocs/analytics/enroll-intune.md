@@ -18,7 +18,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 
 This quickstart outlines prerequisites and instructions for enrolling Intune devices into Endpoint analytics.
 
-## <a name="bkmk_uea_prereq"></a> Prerequisites
+## <a name="bkmk_prereq"></a> Prerequisites
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
@@ -33,7 +33,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](privacy.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
 ### Licensing Prerequisites
 
@@ -44,7 +44,7 @@ Endpoint analytics is included in the following plans:
 
 ### Endpoint analytics permissions
 
-- The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_uea_start).
+- The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
@@ -55,16 +55,16 @@ Endpoint analytics is included in the following plans:
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
 
-## <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
+## <a name="bkmk_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for Intune managed devices.
 
 1. Go to `https://aka.ms/endpointanalytics`
-1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
+1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](#bkmk_uea_stop) at any time.
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](privacy.md#bkmk_stop) at any time.
 
-   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
+   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
 ## View the Overview page
 
@@ -73,7 +73,7 @@ Once your data is ready, you'll notice some information on the **Overview** page
 - The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We'll be expanding the set of subscores over time.
 
 - You can compare your current score to other scores by setting a baseline.
-  - As described in the [baseline](#bkmk_uea_baselines) section, there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
+  - As described in the [baseline settings](settings.md#bkmk_baselines), there's a built-in baseline for *Commercial median* to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 

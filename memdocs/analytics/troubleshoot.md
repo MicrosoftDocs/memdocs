@@ -14,35 +14,35 @@ ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 
-# <a name="bkmk_uea_tshoot"></a> Troubleshooting Endpoint analytics
+# <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
 
 The sections below can be used to assist in troubleshooting issues you may encounter.
 
-## <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
+## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
 If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
 
 First, ensure devices meet the prerequisites:
-- [Prerequisites for Intune managed devices](#technical-prerequisites)
-- [Prerequisites for Configuration Manager managed devices](#technical-prerequisites)
-- [Prerequisites for Proactive remediations](#technical-prerequisites)
+- [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
+- [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
+- [Prerequisites for Proactive remediations](proactive-remediations.md#bkmk_prereq)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
-1. Make sure you have the [Intune data collection](#bkmk_uea_profile) policy is targetting all devices you want to see performance data. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
+1. Make sure you have the [Intune data collection](#bkmk_profile) policy is targetting all devices you want to see performance data. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
 1. Look for devices that have not been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](#data-flow)
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_uea_endpoints).
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
-1. Ensure all devices you want to see performance data are [enrolled](#bkmk_uea_cm_enroll).
+1. Ensure all devices you want to see performance data are [enrolled](#bkmk_cm_enroll).
 1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site server.
 1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client settings. Find the overriding client settings and enable endpoint analytics on it.  
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
-1. Check and resolve any errors ocurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
+1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
 
 
-## <a name="bkmk_uea_endpoints"></a> Proxy configuration
+## <a name="bkmk_endpoints"></a> Proxy configuration
 
 If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
 
@@ -61,7 +61,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](#bkmk_datacollection) to the Intune data collection endpoint. |
 
 > [!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
@@ -113,7 +113,7 @@ This approach is the most complex because it requires the following configuratio
 
 - Configure proxy servers to allow the computer accounts in Active Directory to access the data endpoints. This configuration requires proxy servers to support Windows Integrated Authentication.  
 
-## <a name="bkmk_uea_faq"></a> Frequently asked questions
+## <a name="bkmk_faq"></a> Frequently asked questions
 
 ### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
 
