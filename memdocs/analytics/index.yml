@@ -40,54 +40,54 @@ conceptualContent:
           text: Recommended software         
     - title: Microsoft Intune
       links:
-        - url: ./intune/index.yml
+        - url: ../intune/index.yml
           itemType: overview
           text: Microsoft Intune documentation 
-        - url: ./intune/fundamentals/index.yml
+        - url: ../intune/fundamentals/index.yml
           itemType: overview
           text: Plan for and set up Intune   
-        - url: ./intune/enrollment/index.yml
+        - url: ../intune/enrollment/index.yml
           itemType: overview
           text: Enroll devices   
-        - url: ./intune/remote-actions/index.yml
+        - url: ../intune/remote-actions/index.yml
           itemType: overview
           text: Remotely manage devices   
-        - url: ./intune/protect/index.yml
+        - url: ../intune/protect/index.yml
           itemType: overview
           text: Create compliance rules for users and devices 
-        - url: ./intune/configuration/index.yml
+        - url: ../intune/configuration/index.yml
           itemType: overview
           text: Control device features and settings   
-        - url: ./intune/apps/index.yml
+        - url: ../intune/apps/index.yml
           itemType: concept
           text: Manage and protect apps
     - title: Microsoft Endpoint Configuration Manager
       links:
-        - url: ./configmgr/index.yml
+        - url: ../configmgr/index.yml
           itemType: get-started
           text: Microsoft Endpoint Configuration Manager documentation
-        - url: ./configmgr/comanage/index.yml
+        - url: ../configmgr/comanage/index.yml
           itemType: concept
           text: Manage device workloads in Configuration Manager and Intune
-        - url: ./configmgr/desktop-analytics/index.yml
+        - url: ../configmgr/desktop-analytics/index.yml
           itemType: overview
           text: Use Desktop Analytics for update readiness                  
-        - url: ./configmgr/core/index.yml
+        - url: ../configmgr/core/index.yml
           itemType: overview
           text: Manage your infrastructure
-        - url: ./configmgr/apps/index.yml
+        - url: ../configmgr/apps/index.yml
           itemType: concept
           text: Manage apps
-        - url: ./configmgr/osd/index.yml
+        - url: ../configmgr/osd/index.yml
           itemType: concept
           text: Operating system deployment
-        - url: ./configmgr/sum/index.yml
+        - url: ../configmgr/sum/index.yml
           itemType: concept
           text: Software updates
-        - url: ./configmgr/compliance/index.yml
+        - url: ../configmgr/compliance/index.yml
           itemType: concept
           text: Manage configuration and compliance of devices
-        - url: ./configmgr/protect/index.yml
+        - url: ../configmgr/protect/index.yml
           itemType: concept
           text: Protect your infrastructure and data
 
@@ -110,4 +110,4 @@ additionalContent:
       - title: Product support
         summary: Get professional help from Microsoft support
         url: get-support.md
-   footer: "Found a problem on our site? [Let us know](./configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"
+   footer: "Found a problem on our site? [Let us know](../configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"

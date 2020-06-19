@@ -11,7 +11,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can enhance user experience.
+# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ---
 
 # Tutorial: Proactive remediations
