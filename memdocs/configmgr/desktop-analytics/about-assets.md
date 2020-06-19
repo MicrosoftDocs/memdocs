@@ -51,7 +51,7 @@ Configure the **Importance** of apps by setting one of the following categories:
 
 When the **App versions details** setting is off, the app details pane shows the number of app versions and languages that it combines. If you save any changes to the app details, it applies to all versions. For example, set the **Importance** or **Owner**. Some values will display "Multiple", which means there's not one consistent value across all versions.
 
-### <a name="bkmk_plan-autoapp" /> Automatic upgrade decision of system and store apps
+### <a name="bkmk_plan-autoapp"> </a> Automatic upgrade decision of system and store apps
 
 <!-- 3587232 -->
 Identifying **Importance** and **Upgrade Decision** is critical for all noteworthy apps in the Desktop Analytics workflow. To help reduce your efforts in annotating these apps, certain types of apps are automatically marked as *Not important*. The deployment plan upgrade decision for these apps is also marked as *Ready*. The following apps are compatible and should continue to work after you upgrade Windows:
