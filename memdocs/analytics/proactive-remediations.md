@@ -6,7 +6,7 @@ ms.date: 06/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
-ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
+ms.assetid: 1426b6e4-fd29-4a59-b6be-2302281118b0
 author: mestew
 ms.author: mstewart
 manager: dougeby

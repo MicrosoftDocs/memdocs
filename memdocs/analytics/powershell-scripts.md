@@ -6,7 +6,7 @@ ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
-ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
+ms.assetid: a47243a9-d880-4f0b-a4a5-2975a3a314b9
 author: mestew
 ms.author: mstewart
 manager: dougeby

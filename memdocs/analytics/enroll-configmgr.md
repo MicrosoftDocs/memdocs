@@ -6,7 +6,7 @@ ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
-ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
+ms.assetid: cbdd4a4a-2761-4e66-91eb-8602fb8b4926
 author: mestew  
 ms.author: mstewart
 manager: dougeby
