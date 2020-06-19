@@ -1,4 +1,4 @@
-- name: Endpoint analytics documentation
+- name: Endpoint analytics (preview) documentation
   href: index.yml
 - name: Overview
   items:
@@ -12,14 +12,16 @@
     href: enroll-intune.md
   - name: Enroll Configuration Manager devices
     href: enroll-configmgr.md
+- name: Tutorials
+  items:
+  - name: Proactive remediations
+    href: proactive-remediations.md
 - name: Concepts
   items:
   - name: Startup performance
     href: startup-performance.md
-  - name: Reccomended software
-    href: reccomended-software.md
-  - name: Reccomended software
-    href: reccomended-software.md
+  - name: Recommended software
+    href: recommended-software.md
 - name: How-to guides
   items:
   - name: Manage settings
@@ -28,7 +30,9 @@
     href: troubleshoot.md
 - name: Reference
   items:
+  - name: PowerShell scripts
+    href: powershell-scripts.md
   - name: Privacy
     href: privacy.md
   - name: Get support
-    href: support.md
+    href: get-support.md

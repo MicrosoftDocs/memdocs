@@ -1,11 +1,11 @@
 ---
-title: Endpoint analytics preview
+title: Endpoint analytics (preview) overview
 titleSuffix: Configuration Manager
-description: Instructions for Endpoint analytics preview.
+description: Overview for Endpoint analytics preview.
 ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
 author: mestew
 ms.author: mstewart
