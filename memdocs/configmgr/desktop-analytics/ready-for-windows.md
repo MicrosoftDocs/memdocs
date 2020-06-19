@@ -18,6 +18,24 @@ ROBOTS: NOINDEX
 
 <!-- placeholder -->
 
+## Ready for Windows adoption status
+
+The Adoption Status is based on information from commercial devices that share data with Microsoft. The status is integrated with support statements from software vendors.
+
+Desktop Analytics provides the adoption status for each version of an asset found in commercial devices. This status doesn't include data from consumer devices or devices that don't share data. The status may not be representative of the adoption rate across all Windows 10 devices.
+
+The possible categories are:
+
+- **Highly adopted**: At least 100,000 commercial Windows 10 devices have installed this app.
+
+- **Adopted**: At least 10,000 commercial Windows 10 devices have installed this app.
+
+- **Insufficient data**: Too few commercial Windows 10 devices are sharing information for this app for Microsoft to categorize its adoption.
+
+- **Contact developer**: There may be compatibility issues with this version of the app. Microsoft recommends contacting the software provider to learn more.
+
+- **Unknown**: There's no information available for this version of this application. Information may be available for other versions of the application.
+
 ## General
 
 ### What happened to the Ready for Windows website?
