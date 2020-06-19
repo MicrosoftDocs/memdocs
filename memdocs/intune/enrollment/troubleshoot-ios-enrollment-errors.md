@@ -224,6 +224,16 @@ When you turn on a ADE-managed device that is assigned an enrollment profile, th
 #### Resolution
 Disable MFA, and then re-enroll the device.
 
+### Authentication doesn’t redirect to the government cloud 
+
+Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
+
+**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
+
+#### Resolution 
+Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
+
+Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.  
 
 ## Next steps
 
