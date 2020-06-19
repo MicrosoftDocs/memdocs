@@ -55,7 +55,7 @@ Proactive remediations also requires one of the following licenses for the enrol
 
 ### Script requirements
 
-If the option **Enforce script signature check** is enabled in the [Settings](bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
+If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
 - Encoded in UTF-8 not UTF-8 BOM
 - Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
    - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
