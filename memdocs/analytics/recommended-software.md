@@ -36,7 +36,7 @@ Microsoft Autopilot provides a simpler initial provisioning experience for Windo
 
 This metric measures the percent of Windows 10 devices that are registered for Autopilot.
 
-The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](../intune/enrollment-autopilot.md).
+The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](../intune/enrollment/enrollment-autopilot.md).
 
 ## <a name="bkmk_aad"></a> Azure Active Directory
 
@@ -52,7 +52,7 @@ Configuration Manager and Intune provide integrated cloud-powered management too
 
 This metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
-The recommended action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md) to unlock additional cloud-powered capabilities like conditional access.
+The recommended action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../configmgr/comanage/overview.md) to unlock additional cloud-powered capabilities like conditional access.
 
 ## <a name="bkmk_np"></a> No commercial median
 

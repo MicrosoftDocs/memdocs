@@ -32,7 +32,7 @@ For Intune or co-managed devices configured with the Intune data collection poli
 1. Look for devices that have not been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](privacy.md#data-flow)
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](troubleshooting.md#bkmk_endpoints).
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).

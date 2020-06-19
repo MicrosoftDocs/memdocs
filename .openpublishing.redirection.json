@@ -14,6 +14,16 @@
             "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
             "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
+            "redirect_url": "/mem/analytics/whats-new",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/misc/user-experience-analytics-preview.md",
+            "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
         }
     ]
 }
