@@ -10,6 +10,25 @@
   items:
   - name: Enroll Intune devices
     href: enroll-intune.md
+  - name: Enroll Configuration Manager devices
+    href: enroll-configmgr.md
 - name: Concepts
   items:
+  - name: Startup performance
+     href: startup-performance.md
   - name: Reccomended software
+     href: reccomended-software.md         
+  - name: Reccomended software
+     href: reccomended-software.md
+- name: How-to guides
+  items:
+  - name: Manage settings
+     href: settings.md
+  - name: Troubleshoot
+    href: troubleshoot.md
+- name: Reference
+  items:
+  - name: Privacy
+    href: privacy.md
+  - name: Get support
+    href: support.md

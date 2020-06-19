@@ -47,7 +47,7 @@ This release is just the beginning. We'll be rapidly rolling out new insights fo
 
 To start using Endpoint analytics, verify the prerequisites, then start gathering data. 
 
-### Technical Prerequisites
+### Technical Prerequisites 
 
 For this preview, you can enroll devices via Configuration Manager or Microsoft Intune. 
 
