@@ -1,6 +1,6 @@
 ### YamlMime:Hub 
-title: Microsoft Endpoint Manager Endpoint analytics documentation
-summary: "Official product documentation for the following components of Microsoft Endpoint Manager: Endpoint analytics"
+title: Microsoft Endpoint Manager Endpoint analytics (preview) documentation
+summary: "Official product documentation for Endpoint analytics (preview) in Microsoft Endpoint Manager"
 metadata:
    ms.topic: hub-page
 
@@ -12,55 +12,102 @@ highlightedContent:
     - title: Enroll Intune devices
       itemType: architecture
       url: enroll-intune.md
-      
+    - title: Enroll Configuration Manager devices
+      itemType: architecture
+      url: enroll-configmgr.md
+    - title: Secure your remote workforce
+      itemType: get-started
+      url: https://docs.microsoft.com/enterprise-mobility-security/remote-work/
+
+conceptualContent:
+  items:
+    - title: Endpoint analytics
+      links:
+        - url: index.yml
+          itemType: overview
+          text: Endpoint analytics (preview) documentation 
+        - url: overview.md
+          itemType: overview
+          text: Endpoint analytics overview 
+        - url: startup-performance.md
+          itemType: concept
+          text: Startup-performance   
+        - url: proactive-remediations.md
+          itemType: concept
+          text: Proactive remediations
+        - url: recommended-software.md
+          itemType: concept
+          text: Recommended software         
+    - title: Microsoft Intune
+      links:
+        - url: ./intune/index.yml
+          itemType: overview
+          text: Microsoft Intune documentation 
+        - url: ./intune/fundamentals/index.yml
+          itemType: overview
+          text: Plan for and set up Intune   
+        - url: ./intune/enrollment/index.yml
+          itemType: overview
+          text: Enroll devices   
+        - url: ./intune/remote-actions/index.yml
+          itemType: overview
+          text: Remotely manage devices   
+        - url: ./intune/protect/index.yml
+          itemType: overview
+          text: Create compliance rules for users and devices 
+        - url: ./intune/configuration/index.yml
+          itemType: overview
+          text: Control device features and settings   
+        - url: ./intune/apps/index.yml
+          itemType: concept
+          text: Manage and protect apps
+    - title: Microsoft Endpoint Configuration Manager
+      links:
+        - url: ./configmgr/index.yml
+          itemType: get-started
+          text: Microsoft Endpoint Configuration Manager documentation
+        - url: ./configmgr/comanage/index.yml
+          itemType: concept
+          text: Manage device workloads in Configuration Manager and Intune
+        - url: ./configmgr/desktop-analytics/index.yml
+          itemType: overview
+          text: Use Desktop Analytics for update readiness                  
+        - url: ./configmgr/core/index.yml
+          itemType: overview
+          text: Manage your infrastructure
+        - url: ./configmgr/apps/index.yml
+          itemType: concept
+          text: Manage apps
+        - url: ./configmgr/osd/index.yml
+          itemType: concept
+          text: Operating system deployment
+        - url: ./configmgr/sum/index.yml
+          itemType: concept
+          text: Software updates
+        - url: ./configmgr/compliance/index.yml
+          itemType: concept
+          text: Manage configuration and compliance of devices
+        - url: ./configmgr/protect/index.yml
+          itemType: concept
+          text: Protect your infrastructure and data
+
 additionalContent:
    sections:
-   - title: Configuration Manager community & support
+   - title: Community & support
      items:
-      - title: Configuration Manager blog
-        summary: News and announcements
-        url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
       - title: "Twitter: #ConfigMgr"
-        summary: Keep current with our active community on Twitter
+        summary: Keep current with our active Configuration Manager community on Twitter
         url: https://twitter.com/hashtag/configmgr
-      - title: Configuration Manager forums
-        summary: Ask technical questions in the product forums
+      - title: "Twitter: #Intune"
+        summary: Keep current with our active Intune community on Twitter
+        url: https://twitter.com/hashtag/msintune
+      - title: Configuration Manager technical forums
+        summary: Ask technical questions in the Configuration Manager forums
         url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
-      - title: UserVoice product feedback
-        summary: Share product ideas with the engineering team
-        url: https://configurationmanager.uservoice.com/forums/300492-ideas
+      - title: Intune technical forums
+        summary: Ask technical questions in the Intune forums
+        url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
       - title: Product support
         summary: Get professional help from Microsoft support
-        url: https://aka.ms/cmcbsupport
-      - title: System Center 2012 R2 Configuration Manager
-        summary: Documentation for the previous version of Configuration Manager
-        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
-   - title: Other content
-     items:
-        - title: Develop
-          links:
-            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
-              text: PowerShell
-            - url: ./develop/index.yml
-              text: Software development kit (SDK)
-            - url: ./develop/adminservice/index.yml
-              text: Administration service REST API
-            - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
-              text: SQL views
-        - title: Tools
-          links:
-            - url: ./core/support/support-center.md
-              text: Support Center
-            - url: ./mdt/index.yml
-              text: MDT
-            - url: ./apps/pcm/package-conversion-manager.md
-              text: Package Conversion Manager
-            - url: ./core/support/tools.md
-              text: See more >
-        - title: Other community sites
-          links:
-            - url: https://www.reddit.com/r/sccm
-              text: ConfigMgr on Reddit
-            - url: https://www.facebook.com/groups/ConfigMgr2012
-              text: ConfigMgr Professionals Group on Facebook
-   footer: "Found a problem on our site? [Let us know](./core/understand/use-docs.md#bkmk_docfeedback)!"
+        url: get-support.md
+  footer: "Found a problem on our site? [Let us know](./configmgr/core/understand/use-docs.md#bkmk_docfeedback)!"

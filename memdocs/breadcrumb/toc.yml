@@ -75,3 +75,6 @@
         - name: Tenant attach
           tocHref: /mem/configmgr/tenant-attach/
           topicHref: /mem/configmgr/tenant-attach/
+      - name: Endpoint analytics
+        tocHref: /mem/analytics/
+        topicHref: /mem/analytics/
