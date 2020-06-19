@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Enroll Configuration Manager devices
+title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
 ms.date: 06/12/2020
@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
 ms.assetid: 00537b90-f6d2-45e9-a9a1-6b3ada466a16
-author: mestew
+author: mestew  
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW 

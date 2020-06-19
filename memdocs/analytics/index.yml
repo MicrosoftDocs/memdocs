@@ -12,7 +12,8 @@ highlightedContent:
     - title: Enroll Intune devices
       itemType: architecture
       url: enroll-intune.md
- additionalContent:
+      
+additionalContent:
    sections:
    - title: Configuration Manager community & support
      items:

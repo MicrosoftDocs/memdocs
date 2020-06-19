@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Enroll Intune devices
+title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
 ms.date: 06/12/2020
