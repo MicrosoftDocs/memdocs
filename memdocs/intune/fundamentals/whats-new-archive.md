@@ -3570,9 +3570,10 @@ End users can now remotely lock their devices from the Company Portal app for Wi
 End users with Windows devices will be able to tap the noncompliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue.
 
 <!-- ########################## -->
-## December 2017
+## 2017
 
-### Device configuration
+<!-- ########################## -->
+### December 2017
 
 #### New automatic redeployment setting<!-- 1469168 -->
 The **Automatic redeployment** setting allows users with administrative rights to delete all user data and settings using **CTRL + Win + R** at the device lock screen. The device is automatically reconfigured and reenrolled into management. This setting can be found under Windows 10 > Device restrictions > General > Automatic redeployment. For details, see [Intune device restriction settings for Windows 10](../configuration/device-restrictions-windows-10.md#general).
@@ -3606,9 +3607,6 @@ Each NDES connector pulls certificate requests from Intune.  If one NDES connect
 #### Customer subject name can use AAD_DEVICE_ID variable <!-- 1468599 -->
 
 When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the AAD device ID of the device making the certificate request.
-
-
-### Device management
 
 #### Manage Jamf-enrolled macOS devices with Intune's device compliance engine<!-- 1592747 -->
 You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state as well as other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Azure AD, including Office 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
@@ -3666,15 +3664,9 @@ The following are the settings administrators can configure:
 #### Install Office apps on macOS devices<!-- 1494311 -->
 You will now be able to install Office apps on macOS devices. This new app type will allow you to install Word, Excel, PowerPoint, Outlook, and OneNote. These apps also come with the Microsoft AutoUpdate (MAU), to help keep your apps secure and up-to-date.
 
-### App management
 
 #### Delete an iOS  Volume Purchasing Program token<!-- 820879 -->
 You can delete the iOS Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token.
-
-### Intune apps
-
-
-### Role-based access control
 
 #### A new entity collection named Current User is limited to currently active user data<!-- 1667026 -->
 
@@ -3686,15 +3678,9 @@ In contrast, the new **Current User** entity collection only contains users who 
 
 In this release, we've updated a few of the Graph API's for Intune that are in beta. Please check out the monthly [Graph API changelog](https://developer.microsoft.com/graph/docs/concepts/changelog) for more information.
 
-### Monitor and troubleshoot
 
 #### Intune supports Windows Information Protection (WIP) denied apps<!-- 1479103 -->
 You can specify denied apps in Intune. If an app is denied, it is blocked from accessing corporate information, effectively the opposite of the allowed apps list. For more information, see [Recommended deny list for Windows Information Protection](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp?f=255&MSPPError=-2147217396#recommended-deny-list-for-windows-information-protection).
-
-
-
-<!-- ########################## -->
-## 2017
 
 <!-- ########################## -->
 ### November 2017
@@ -4195,7 +4181,7 @@ Managed apps and the Company Portal app for Android will require Android 4.4 and
 We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](#september-2017).
 
 <!-- ########################## -->
-## September 2017
+### September 2017
 
 #### Intune supports iOS 11<!--1428975-->
 Intune supports iOS 11. This was previously announced on the [Intune Support blog](https://blogs.technet.microsoft.com/intunesupport/2017/09/12/support-tip-intune-support-for-ios-11/).
