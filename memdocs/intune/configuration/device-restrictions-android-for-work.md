@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -161,18 +161,6 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
 
-      - **Quick access to MHS debug menu**: This setting controls how users access the debug menu. Your options:
-
-        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
-        - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
-
-        Using the debug menu, users can:
-
-        - See and upload Managed Home Screen logs​
-        - Open Google's Android Device Policy Manager app
-        - Open the [Microsoft Intune app](https://play.google.com/store/apps/details?id=com.microsoft.intune)
-        - Exit kiosk mode
-
       - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device. For example, enter `http://contoso.com/backgroundimage.jpg`.
 
         > [!NOTE]
@@ -185,7 +173,19 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-      - **Shortcut to Managed Settings**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings.
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings.
+
+      - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
+
+        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
+        - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
+
+        Using the debug menu, users can:
+
+        - See and upload Managed Home Screen logs​
+        - Open Google's Android Device Policy Manager app
+        - Open the [Microsoft Intune app](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Exit kiosk mode
 
       - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
 
