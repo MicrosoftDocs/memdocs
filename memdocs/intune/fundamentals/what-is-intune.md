@@ -29,7 +29,9 @@ ms.collection: M365-identity-device-management
 ---
 # Microsoft Intune is an MDM and MAM provider for your devices
 
-Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and enables users to be productive while keeping your organization data protected. It integrates with other services, including Microsoft 365 and Azure Active Directory (Azure AD) to control who has access, and what they have access to, and Azure Information Protection for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices, while keeping your organization's information protected.
+Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). It allows you to have complete control over how your organization’s devices (like phones, tablets, and laptops) are used and configure fine-grained policies to determine how applications are used (i.e. preventing emails from being sent to people outside your organization). Intune even allows people in your organization to use their personal devices for work purposes while making sure your organization’s data stays fully protected and isolated from the personal data on their device. 
+
+Intune comes included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security). Intune integrates with Azure Active Directory (Azure AD) to control who has access and what they can access. It also integrates with Azure Information Protection for data protection. And it can be used with the Microsoft 365 suite of products, enabling people in your organization to be productive across all of their devices while keeping your organization’s information protected with policies that you decide.
 
 [![Image of Intune architecture](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
