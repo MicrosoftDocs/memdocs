@@ -49,7 +49,7 @@ To install the sample reports:
 1. Select **File** then **Open** and navigate to where you saved the extracted .pbit files.
 1. Select one of the .pbit files you extracted from the `ConfigMgrSamplePowerBIReports.exe` file.
 1. Specify your Configuration Manager database name and database server name when prompted, then select **Load**.
-   - When loading or applying the data model, ignore any errors if you encounter one.
+   - When loading or applying the data model, ignore any errors if you come across one.
    
     :::image type="complex" source="media/sample-report-database.png" alt-text="Specify the database and database server name" lightbox="media/sample-report-database.png":::
 :::image-end:::
