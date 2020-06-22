@@ -49,7 +49,7 @@ The devices to be enrolled must also:
 
 ## Set up Windows 10 automatic enrollment
 
-1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune** .
 
 2. Make sure that the users who deploy Azure AD-joined devices by using Intune and Windows are members of a group that's included in your **MDM User scope**.
 
@@ -104,24 +104,26 @@ The organizational unit that's granted the rights to create computers must match
 
 The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.  Note that each connector must be able to create computer objects in any domain that you wish to support.
 
-The Intune Connector requires the [same endpoints as Intune](../fundamentals/intune-endpoints.md).
+The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
-1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
-3. Follow the instructions to download the Connector.
-4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
-5. At the end of the setup, select **Configure**.
-6. Select **Sign In**.
-7. Enter the user Global Administrator or Intune Administrator role credentials.  
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
+2. Follow the instructions to download the Connector.
+3. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+4. At the end of the setup, select **Configure**.
+5. Select **Sign In**.
+6. Enter the user Global Administrator or Intune Administrator role credentials.  
    The user account must have an assigned Intune license.
-8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
+7. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 
+### Turn off IE Enhanced Security Configuration
+By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you are unable to sign in to the Intune Connector for Active Directory then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
+
 ### Configure web proxy settings
 
-If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](autopilot-hybrid-connector-proxy.md).
+If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
 
 
 ## Create a device group
@@ -186,13 +188,12 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join over VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) for additional information.
-8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
-9. Select **Next**.
-10. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
-11. Select **Next**.
-12. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
-13. Select **Next** > **Create**.
+7. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+8. Select **Next**.
+9. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this this profile.
+10. Select **Next**.
+11. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+12. Select **Next** > **Create**.
 
 It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
 
@@ -230,11 +231,11 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    > Don't use quotation marks around the value in **Organizational unit**.
 5. Select **OK** > **Create**.  
     The profile is created and displayed in the list.
-6. To assign the profile, follow the steps under [Assign a device profile](../configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
+6. To assign the profile, follow the steps under [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) and assign the profile to the same group used at this step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Alternatively, different groups can be used if there is a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join do not support variables such as %SERIAL% and only support prefixes for the computer name.
 
 ## Next steps
 
-After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md).
+After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).

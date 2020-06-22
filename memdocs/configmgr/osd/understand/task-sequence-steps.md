@@ -1594,7 +1594,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-The [Windows Autopilot for existing devices](../deploy-use/windows-autopilot-for-existing-devices.md) task sequence uses this step with this option.
+The [Windows Autopilot for existing devices](../../../autopilot/windows-autopilot-for-existing-devices.md) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 

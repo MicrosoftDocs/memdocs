@@ -94,5 +94,4 @@ For more information, see the following articles:
 
 [Use Intune to create Windows Autopilot profiles](https://docs.microsoft.com/intune/enrollment-autopilot)
 
-[Windows Autopilot for existing devices](../osd/deploy-use/windows-autopilot-for-existing-devices.md) task sequence
-
+[Windows Autopilot for existing devices](../../autopilot/windows-autopilot-for-existing-devices.md)
