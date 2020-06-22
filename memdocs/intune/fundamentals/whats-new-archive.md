@@ -530,7 +530,7 @@ In this update, the following features are being added:
 - **Dedicated devices** > **Multi-app**: **Media volume control** allows users to control the device's media volume using a slider. 
 - **Dedicated devices** > **Multi-app**:  **Enable a screensaver**, upload a custom image, and control when the screensaver is shown.
 
-To see the current settings, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#device-experience).
+To see the current settings, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Applies to:
 
@@ -1469,7 +1469,7 @@ Applies to:
 #### "Kiosk" devices are now called "Dedicated devices" on Android Enterprise devices<!-- 3598402   -->
 To align with Android terminology, **kiosk** is changed to **dedicated devices** for Android enterprise devices (**Device configuration** > **Profiles** > **Create profile** > **Android enterprise for platform > **Device Owner Only** > **Device Restrictions** > **Dedicated devices**).
 
-To see the available settings, go to [Device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md#device-experience).
+To see the available settings, go to [Device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Applies to:  
 Android Enterprise
@@ -3207,7 +3207,7 @@ End users can now remotely lock their devices from the Company Portal app for Wi
 End users with Windows devices will be able to tap the noncompliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue.
 
 <!-- ########################## -->
-### December 2017
+## December 2017
 
 ### Device configuration
 
@@ -3328,13 +3328,8 @@ In this release, we've updated a few of the Graph API's for Intune that are in b
 #### Intune supports Windows Information Protection (WIP) denied apps<!-- 1479103 -->
 You can specify denied apps in Intune. If an app is denied, it is blocked from accessing corporate information, effectively the opposite of the allowed apps list. For more information, see [Recommended deny list for Windows Information Protection](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp?f=255&MSPPError=-2147217396#recommended-deny-list-for-windows-information-protection).
 
-
 <!-- ########################## -->
-
-## 2017
-
-<!-- ########################## -->
-### November 2017
+## November 2017
 
 ### Troubleshoot enrollment issues <!-- 746324 -->
 
@@ -3625,7 +3620,7 @@ The device setup workflow has been improved in the Company Portal app for iOS. T
 The first version of the Intune Data Warehouse data model only contained recent, historical Intune data. Report makers could not capture the current state of a user. In this update, the **User entity** is populated with the latest user data.
 
 <!-- ########################## -->
-### October 2017
+## October 2017
 
 ### iOS and Android line-of-business app version number is visible<!-- 1380712 -->
 
@@ -3832,7 +3827,7 @@ Managed apps and the Company Portal app for Android will require Android 4.4 and
 We are adding **Ownership Type** to the Device Details screen on all Company Portal apps. This will allow users to find out more about privacy directly from the [What information can your company see?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) article. This will be rolling out across all Company Portal apps in the near future. We announced this for iOS in [September](#september-2017).
 
 <!-- ########################## -->
-### September 2017
+## September 2017
 
 ### Intune supports iOS 11<!--1428975-->
 Intune supports iOS 11. This was previously announced on the [Intune Support blog](https://blogs.technet.microsoft.com/intunesupport/2017/09/12/support-tip-intune-support-for-ios-11/).
@@ -3862,7 +3857,7 @@ The Windows 10 Company Portal app has been updated to support Windows Informatio
 
 
 <!-- ########################## -->
-### August 2017
+## August 2017
 
 ### Improvements to device overview<!-- 1404453 -->  
 Improvements to the device overview now display enrolled devices but excludes devices managed by Exchange ActiveSync. Exchange ActiveSync devices do not have the same management options as enrolled devices. To view the number of enrolled devices and number of enrolled devices by platform in Intune in the Azure portal, go **Devices** > **Overview**.
@@ -3934,7 +3929,7 @@ IT admins can now set app-based conditional policies via the new Conditional Acc
 - Learn more about [app-based Conditional Access on Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
 
 <!-- ########################## -->
-### July 2017
+## July 2017
 
 ### Restrict Android and iOS device enrollment restriction by OS version <!--- 1333256,  1245463 --->
 Intune now supports restricting iOS and Android enrollment by operating system version number. Under **Device Type Restriction**, the IT admin can now set a platform configuration to restrict enrollment between a minimum and maximum operating system value. Android operating system versions must be specified as Major.Minor.Build.Rev, where Minor, Build and Rev are optional. iOS versions must be specified as Major.Minor.Build where Minor and Build are optional. Learn more about [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
@@ -4001,7 +3996,7 @@ End users will be able to customize the color mode for the Company Portal app fo
 End users are now able to select which group their device belongs to by tagging it directly from within the Company Portal app for Windows 10.
 
 <!-- ########################## -->
-### June 2017
+## June 2017
 
 ### New role-based administration access for Intune admins  <!-- 1099990 -->  
 A new Conditional Access admin role is being added to view, create, modify, and delete Azure AD Conditional Access policies. Previously, only global admins and security admins had this permission. Intune admins can be granted with this role permission so that they have access to Conditional Access policies.
@@ -4092,7 +4087,7 @@ We updated the design of the app tiles on the homepage to reflect the branding c
 Users of iOS devices might see our new account picker when they sign into the Company Portal if they use their work or school account to sign into other Microsoft apps. For more information, see [what's new in app UI](whats-new-app-ui.md).
 
 <!-- ########################## -->
-### May 2017
+## May 2017
 
 ### Change your MDM authority without unenrolling managed devices<!--1103950-->
 You can now change your MDM authority without having to contact Microsoft Support, and without having to unenroll and reenroll your existing managed devices. In the Configuration Manager console, you can change your MDM authority from Set to Configuration Manager (hybrid) to Microsoft Intune (standalone) or vice versa.
@@ -4182,7 +4177,7 @@ When creating a PKCS certificate profile, for **Subject alternative name**, the 
 When an Android device is in kiosk mode, you could previously only configure one app that was allowed to run. You can now configure multiple apps using the app ID, store URL, or by selecting an Android app you already manage. For more information, see [Kiosk mode settings](../configuration/device-restrictions-android.md#kiosk).
 
 <!-- ########################## -->
-### April 2017
+## April 2017
 
 ### Support for managing the Apple Classroom app
 You can now manage the iOS Classroom app on iPad devices. Set up the Classroom app on the teachers iPad with the correct class and student data, then configure student iPads registered to a class, so that you can control them using the app.
@@ -4290,7 +4285,7 @@ Two new app settings are now available to help you with mobile application manag
 The new [troubleshooting portal](help-desk-operators.md) lets help desk operators and Intune administrators view users and their devices, and perform tasks to resolve Intune technical problems.
 
 <!-- ########################## -->
-### March 2017
+## March 2017
 
 ### Support for iOS Lost Mode<!--431695-->
 For iOS 9.3 and later devices, Intune added support for **Lost Mode**. You can now lock down a device to prevent all use and display a message and contact phone number of the device lock screen.
@@ -4332,7 +4327,7 @@ For Intune accounts created after January 2017, Intune has enabled direct access
 
 
 <!-- ########################## -->
-### February 2017
+## February 2017
 
 ### Ability to restrict mobile device enrollment<!--747600, 795782-->
 Intune is adding new enrollment restrictions that control which mobile device platforms are allowed to enroll. Intune separates mobile device platforms as iOS, macOS, Android, Windows and Windows Mobile.
