@@ -102,12 +102,10 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between March 20 and May 15, 2020.
+Support articles that are new or updated between May 16 and June 22, 2020.
 
-- [KB 4561494 Microsoft Edge application creation fails in Configuration Manager](https://support.microsoft.com/help/4561494)
-- [KB 4551059 Remote Configuration Manager console hangs for 20 seconds every 10 minutes](https://support.microsoft.com/help/4551059)
-- [KB 4556203 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4556203)
-- [KB 4553501 Update for Microsoft Endpoint Configuration Manager version 2002, early update ring](https://support.microsoft.com/help/4553501)
-- [KB 4561945 "The underlying connection was closed" error when the service connection tool downloads the ConfigMgr.AdminUIContent.cab file](https://support.microsoft.com/help/4561945)
+- [KB 4564442 Windows 10 deployments fail with Microsoft Deployment Toolkit on computers with BIOS type firmware](https://support.microsoft.com/help/4564442)
+- [KB 4563473 Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473)
+- [KB 4567007 PXE Boot failures or task sequence delays after updating to Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4567007)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
