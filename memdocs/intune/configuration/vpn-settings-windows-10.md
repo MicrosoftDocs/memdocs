@@ -2,12 +2,12 @@
 # required metadata
 
 title: Windows 10 VPN settings in Microsoft Intune - Azure | Microsoft Docs
-description: Learn and read about all the available VPN settings in Microsoft Intune, what they are used for, and what they do, including traffic rules, Conditional Access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
+description: Learn and read about all the available VPN settings in Microsoft Intune, what they are used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 10 and Windows Holographic device settings to add VPN connections using Intune
 
-You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes commonly used settings and features when creating virtual private networks (VPNs). These VPN settings and features are used in device configuration profiles in Intune that are pushed or deployed to devices.
+You can add and configure VPN connections for devices using Microsoft Intune. This article lists and describes common settings and features when creating virtual private networks (VPNs). These VPN settings and features are used in device configuration profiles in Intune that are pushed or deployed to devices.
 
 As part of your mobile device management (MDM) solution, use these settings to allow or disable features, including using a VPN vendor, enabling always on, using DNS, adding a proxy, and more.
 
@@ -69,16 +69,67 @@ Depending on the settings you choose, not all values may be configurable.
   - **L2TP**
   - **PPTP**
 
-  When you choose a VPN connection type, you may also be asked for the following settings:  
+  When you choose a VPN connection type, you may also be asked for the following settings:
+
   - **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
     - Users sign into their devices
     - The network on the device changes
     - The screen on the device turns back on after being turned off
 
-  - **Authentication method**: Select how you want users to authenticate to the VPN server. Using **certificates** provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
+    To use device tunnel connections, such as IKEv2, **Enable** this setting.
+
+  - **Authentication method**: Select how you want users to authenticate to the VPN server. Your options:
+    - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
+    - **Certificates**: Select an existing user client certificate profile to authenticate the user. This option provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
+
+      To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+
+    - **Machine certificates** (IKEv2 only): Select an existing device client certificate profile to authenticate the device.
+
+      If you use [device tunnel connections](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select this option.
+
+      To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+
+    - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
   - **Remember credentials at each logon**: Choose to cache the authentication credentials.
   - **Custom XML**: Enter any custom XML commands that configure the VPN connection.
-  - **EAP Xml**: Enter any EAP XML commands that configure the VPN connection
+  - **EAP XML**: Enter any EAP XML commands that configure the VPN connection. For more information, see [EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+
+  - **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to PCs joined to Azure Active Directory (AD).
+
+    To use this feature, the following are required:
+
+    - **Connection type** setting is set to **IKEv2**.
+    - **Always On** setting is set to **Enable**.
+    - **Authentication method** setting is set to **Machine certificates**.
+
+  **IKE Security Association Parameters** (IKEv2 only): These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
+
+  - **Encryption algorithm**: Select the encryption algorithm used on the VPN server. For example, if your VPN server uses AES 128 bit, then select **AES-128** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Integrity check algorithm**: Select the integrity algorithm used on the VPN server. For example, if your VPN server uses SHA1-96, then select **SHA1-96** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Diffie-Hellman group**: Select the Diffie-Hellman computation group used on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+  **Child Security Association Parameters** (IKEv2 only): These cryptography settings are used during child security association negotiations (also known as `quick mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
+
+  - **Cipher transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-CBC 128 bit, then select **CBC-AES-128** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Authentication transform algorithm**: Select the algorithm used on the VPN server. For example, if your VPN server uses AES-GCM 128 bit, then select **GCM-AES-128** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
+
+  - **Perfect forward secrecy (PFS) group**: Select the Diffie-Hellman computation group used for perfect forward secrecy (PFS) on the VPN server. For example, if your VPN server uses Group2 (1024 bits), then select **2** from the list.
+
+    When set to **Not configured**, Intune doesn't change or update this setting.
 
 ### Pulse Secure example
 
