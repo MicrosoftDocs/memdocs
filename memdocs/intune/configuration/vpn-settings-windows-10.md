@@ -103,6 +103,8 @@ Depending on the settings you choose, not all values may be configurable.
     - **Always On** setting is set to **Enable**.
     - **Authentication method** setting is set to **Machine certificates**.
 
+    Only assign one profile with **Device Tunnel** configured.
+
   **IKE Security Association Parameters** (IKEv2 only): These cryptography settings are used during IKE security association negotiations (also known as `main mode` or `phase 2`) for IKEv2 connections. These settings must match the VPN server settings. If the settings don't match, the VPN profile won't connect.
 
   - **Encryption algorithm**: Select the encryption algorithm used on the VPN server. For example, if your VPN server uses AES 128 bit, then select **AES-128** from the list.
