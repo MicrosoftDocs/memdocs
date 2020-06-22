@@ -205,7 +205,7 @@ The user interface has been updated to replace Apple's Device Enrollment Program
 The availability for macOS device remote lock pins has been increased from 7 days to 30 days.
 
 #### Change primary user on co-managed devices<!--7319183  -->
-You can change a device's primary user for co-managed Windows devices. For more information on how to find and change it, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
+You can change a device's primary user for co-managed Windows devices. For more information on how to find and change it, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md). This feature will be rolling out gradually over the next few weeks.
 
 #### Setting the Intune primary user also sets the Azure AD owner property<!--7319227 -->
 This new feature automatically sets the owner property on newly-enrolled Hybrid Azure AD joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
