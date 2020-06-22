@@ -187,7 +187,7 @@ To create these policies, browse to **Apps** > **App protection policies** in th
 
 ### Device types
 
-- **Unmanaged**: For iOS/iPadOS and macOS devices, an unmanaged device is any device where either Intune MDM management or a 3rd party MDM/EMM solution does not pass the `IntuneMAMUPN` key. For Android devices, an unmanaged device is any device where Intune MDM management does not pass the `IntuneMAMUPN` key.
+- **Unmanaged**: For iOS/iPadOS and macOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution does not pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
 - **Intune managed devices**: Managed devices are managed by Intune MDM.
 - **Android device administrator**: Intune-managed devices using the Android Device Administration API.
 - **Android Enterprise**: Intune-managed devices using Android Enterprise Work Profiles or Android Enterprise Full Device Management.
