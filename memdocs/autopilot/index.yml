@@ -67,8 +67,6 @@ landingContent:
         url: autopilot-support.md
       - text: Registration authorization
         url: registration-auth.md
-      - text: Monitor app protection user status
-        url: placeholder.md
       - text: Device guidelines
         url: autopilot-device-guidelines.md
       - text: Motherboard replacement guidance
