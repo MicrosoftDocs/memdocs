@@ -34,17 +34,17 @@ ms.collection:
 
 Install the Intune Company Portal app to access school or work resources from your Android device. The app is available in mainland China and can be installed from the following app stores: 
 
-* [Baidu](https://go.microsoft.com/fwlink/?linkid=2133565)
-   1. Go to https://shouji.baidu.com.  
-    2. Enter **公司门户** in the search bar.  
-    3. Select the **Company Portal** [![Company Portal icon](./media/company-portal-logo-small-2006.png)](./media/company-portal-logo-2006.png#lightbox) listing.  
-    4. Install the app.  
-* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
+* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 
-
+Company Portal is also available from the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). To find it:  
  
+   1. Go to https://shouji.baidu.com.  
+   2. Enter **公司门户** in the search bar.  
+   3. Select the **Company Portal** [![Company Portal icon](./media/company-portal-logo-small-2006.png)](./media/company-portal-logo-2006.png#lightbox) listing.  
+
 
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
