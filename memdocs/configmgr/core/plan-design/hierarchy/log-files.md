@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -379,7 +379,9 @@ The following table lists the log files that contain information related to the 
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|  
+|CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|
+|CCM_STS.log|Records activities for authentication tokens, either from Azure Active Directory or site-issued client tokens.|Site system server|
+|ClientAuth.log|Records signing and authentication activity.|Site system server|
 |MP_CliReg.log|Records the client registration activity processed by the management point.|Site system server|  
 |MP_Ddr.log|Records the conversion of XML.ddr records from clients, and then copies them to the site server.|Site system server|  
 |MP_Framework.log|Records the activities of the core management point and client framework components.|Site system server|  
@@ -389,6 +391,7 @@ The following table lists the log files that contain information related to the 
 |MP_Location.log|Records location request and reply activity from clients.|Site system server|  
 |MP_OOBMgr.log|Records the management point activities related to receiving an OTP from a client.|Site system server|  
 |MP_Policy.log|Records policy communication.|Site system server|  
+|MP_RegistrationManager.log|Records activities related to client registration, such as validating certificates, CRL, and tokens.|Site system server|
 |MP_Relay.log|Records the transfer of files that are collected from the client.|Site system server|  
 |MP_Retry.log|Records hardware inventory retry processes.|Site system server|  
 |MP_Sinv.log|Records details about the conversion of XML software inventory records from clients and the copy of those files to the site server.|Site system server|  
@@ -476,6 +479,7 @@ The following table lists the log files that contain information related to appl
 |SMSdpmon.log|Records details about the distribution point health monitoring scheduled task that is configured on a distribution point.|Site server|  
 |SoftwareCatalogUpdateEndpoint.log|Records activities for managing the URL for the Application Catalog shown in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Records activities related to Software Center prerequisite component validation.|Client|  
+|TSDTHandler.log|For the task sequence deployment type. It logs the process from app enforcement (install or uninstall) to the launch of the task sequence. Use it with AppEnforce.log and smsts.log.|Client|<!-- MEMDocs#336 -->
 
 #### Packages and programs
 

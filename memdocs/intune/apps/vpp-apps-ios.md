@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -138,7 +138,6 @@ You can synchronize the app names, metadata and license information for your pur
 > [!NOTE]  
 > Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
 > 
-> [Apple MDM Protocol Reference, page 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## End-User Prompts for VPP
 
@@ -192,6 +191,9 @@ To renew an Apple VPP token, use the following steps:
 2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**. Then, manually upload the token.
 
+>[!NOTE]
+>You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
+
 ## Deleting a VPP app
 
 Currently, you cannot delete an iOS/iPadOS VPP app from Microsoft Intune.
@@ -208,6 +210,8 @@ Access to Apple VPP tokens and VPP apps can be controlled independently using pe
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
 
 If **Assigned to external MDM** is indicated in the Intune portal, then you (the Admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
+
+If status is **Duplicate** for a token, then multiple tokens with the same **Token Location** have been uploaded. Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased may not be reflected once a token is marked as duplicate.
 
 ## Frequently asked questions
 

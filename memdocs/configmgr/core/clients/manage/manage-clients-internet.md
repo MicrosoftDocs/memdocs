@@ -2,7 +2,7 @@
 title: Manage clients on the internet
 titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
-ms.date: 03/22/2018
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.technology: configmgr-client
@@ -10,8 +10,6 @@ ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage clients on the internet with Configuration Manager
@@ -22,53 +20,53 @@ Typically in Configuration Manager, most of the managed computers and servers ar
 
 Configuration Manager provides two ways to manage internet-connected clients:
 
--   Cloud management gateway
+- Cloud management gateway
 
--   Internet-based client management
+- Internet-based client management
 
+> [!NOTE]
+> You can have a combination of both services for a single site. If a device gets policy from the site for both IBCM and CMG, then it randomizes between them for communication. The only mechanism available to control communication is client authentication. For example, if an Azure AD-joined client doesn't trust the server authentication certificate of the internet-based management point, it can only use the CMG. If a domain-joined client doesn't trust the server authentication certificate of the CMG, it can only use the internet-based management point.<!-- SCCMDocs#1541 -->
 
 ## Cloud management gateway
 
-The cloud management gateway provides management of internet-based clients. It uses a combination of a Microsoft Azure cloud service, and a new site system role that communicates with that service. Internet-based clients use the cloud service to communicate with the on-premises Configuration Manager.
+The cloud management gateway provides management of internet-based clients. It uses a combination of a Microsoft Azure cloud service, and an on-premises site system role that communicates with that service. Internet-based clients use the cloud service to communicate with the on-premises Configuration Manager.
 
-#### Advantages  
+### CMG advantages
 
--   No additional on-premises infrastructure investment required.  
+- No additional on-premises infrastructure investment required.  
 
--   Does not expose on-premises infrastructure to the internet.  
+- Does not expose on-premises infrastructure to the internet.  
 
--   Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.  
+- Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.  
 
--   Easily set up and configured in the Configuration Manager console.  
+- Easily set up and configured in the Configuration Manager console.  
 
-#### Disadvantages  
+### CMG disadvantages  
 
--   Cloud subscription cost.  
+- Cloud subscription cost.  
 
--   Management data sent through cloud service.  
+- Management data sent through cloud service.  
 
 For more information, see [Plan for cloud management gateway](cmg/plan-cloud-management-gateway.md).  
 
-
-
 ## Internet-based client management
 
-This method relies on internet-facing site system servers to which clients communicate for management purposes. It requires clients and site system servers to be configured for internet-based management.
+This method relies on internet-facing site system servers to which clients directly communicate for management purposes. It requires clients and site system servers to be configured for internet-based client management (IBCM).
 
-#### Advantages  
+### IBCM advantages
 
--   No cloud service dependency.  
+- No cloud service dependency.  
 
--   No additional cost associated with a cloud subscription.  
+- No additional cost associated with a cloud subscription.  
 
--   Full control of servers and roles providing the service.  
+- Full control of servers and roles providing the service.  
 
-#### Disadvantages  
+### IBCM disadvantages
 
--   Require additional infrastructure investment.  
+- Require additional infrastructure investment.  
 
--   Overhead and operational cost of additional infrastructure.  
+- Overhead and operational cost of additional infrastructure.  
 
--   Infrastructure must be exposed to the internet.  
+- Infrastructure must be exposed to the internet.  
 
 For more information, see [Plan for internet-based client management](plan-internet-based-client-management.md).  

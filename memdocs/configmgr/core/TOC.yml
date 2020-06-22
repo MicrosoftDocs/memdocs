@@ -464,6 +464,8 @@
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure
   items:
+  - name: Community hub
+    href: servers/manage/community-hub.md  
   - name: Management insights
     href: servers/manage/management-insights.md
   - name: CMPivot
@@ -777,6 +779,8 @@
       href: clients/manage/collections/prerequisites-for-collections.md
     - name: Best practices for collections
       href: clients/manage/collections/best-practices-for-collections.md
+    - name: Collection evaluation
+      href: clients/manage/collections/collection-evaluation.md
     - name: How to create collections
       href: clients/manage/collections/create-collections.md
     - name: How to manage collections

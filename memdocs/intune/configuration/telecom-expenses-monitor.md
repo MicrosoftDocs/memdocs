@@ -6,7 +6,7 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,9 +49,6 @@ To use the Datalert service with Intune, there are some configuration settings i
 ## Supported platforms
 
 - Android device administrator 4.4 and newer devices that are Knox capable (Samsung)
-
-  [Android versions that support Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (opens Samsung's web site) lists the Knox supported versions.
-
 - iOS 8.0 and newer
 - iPadOS 13.0 and newer
 

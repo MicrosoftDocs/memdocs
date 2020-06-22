@@ -57,7 +57,7 @@ The following tables list the ports and services that the Intune client accesses
 
 |Domains    |IP address      |
 |-----------|----------------|
-|login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| More information [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
+| login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | More information [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84<br>13.73.112.122<br>52.237.192.112|
 |Manage.microsoft.com <br>i.manage.microsoft.com <br>r.manage.microsoft.com <br>a.manage.microsoft.com <br>p.manage.microsoft.com <br>EnterpriseEnrollment.manage.microsoft.com <br>EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72<br>13.76.177.110<br>52.169.9.87<br>52.174.26.23<br>104.40.82.191<br>13.82.96.212<br>52.147.8.239<br>40.115.69.185|
@@ -77,7 +77,6 @@ The following tables list the ports and services that the Intune client accesses
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|enterpriseregistration.windows.net|52.175.211.189|
 |fef.amsua0102.manage.microsoft.com|52.242.211.0|
 |fef.amsua0702.manage.microsoft.com|52.232.225.75|
 |fef.amsub0502.manage.microsoft.com|40.67.219.144|
@@ -132,3 +131,20 @@ For Delivery Optimization metadata:
 |Various functionalities including accessing the World Wide Web, iTunes store, macOS app store, iCloud, messaging, etc. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 or 443   |
 
 For more information, see Apple's [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).  
+
+## Android port information
+
+Depending on how choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+
+[!NOTE]
+Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
+Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+
+### Google Android Enterprise 
+
+Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document. 
+
+### Android push notification
+
+Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+
