@@ -20,7 +20,7 @@ Starting in version 2002, you can integrate [Power BI Report Server](https://doc
 
 ## Prerequisites
 
-- Configuration Manager reporting services point with [Power BI Report Server integrated](powerbi-report-server)
+- Configuration Manager reporting services point with [Power BI Report Server integrated](powerbi-report-server.md)
 - [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later
 
     > [!IMPORTANT]
@@ -42,7 +42,7 @@ To install the sample reports:
 
 1. On the Power BI Report server, create a new folder called `Sample Reports` in the root Configuration Manager reporting folder.
    
-   :::image type="complex" source="media/create-sample-reports-folder.png" alt-text="Create Sample Report folder in the root Configuration Manager reporting folder" lightbox="media/create-sample-reports-folder.png":::
+   :::image type="content" source="media/create-sample-reports-folder.png" alt-text="Creating the Sample Report folder in the root Configuration Manager reporting folder from " lightbox="media/create-sample-reports-folder.png":::
 :::image-end:::
 
 1. Launch Microsoft Power BI Desktop (Optimized for Power BI Report Server).
@@ -51,21 +51,21 @@ To install the sample reports:
 1. Specify your Configuration Manager database name and database server name when prompted, then select **Load**.
    - When loading or applying the data model, ignore any errors if you come across one.
    
-    :::image type="complex" source="media/sample-report-database.png" alt-text="Specify the database and database server name" lightbox="media/sample-report-database.png":::
+    :::image type="content" source="media/sample-report-database.png" alt-text="Specify the database and database server name" lightbox="media/sample-report-database.png":::
 :::image-end:::
 1. When the report data is loaded, select **File** > **Save As**, then select **Power BI Report Server**.
    
-   :::image type="complex" source="media/save-powerbi-report-server.png" alt-text="Save as Power BI Report Server" lightbox="media/save-powerbi-report-server.png":::
+   :::image type="content" source="media/save-powerbi-report-server.png" alt-text="Save as Power BI Report Server" lightbox="media/save-powerbi-report-server.png":::
 
 1. Save the report to the `Sample Reports` folder you created on the reporting point.
      
-   :::image type="complex" source="media/save-sample-report.png" alt-text="Save to the Sample Reports folder" lightbox="media/save-sample-report.png":::
+   :::image type="content" source="media/save-sample-report.png" alt-text="Save to the Sample Reports folder" lightbox="media/save-sample-report.png":::
 
 1. Repeat the steps for any other sample reports. When you're done, close Microsoft Power BI Desktop (Optimized for Power BI Report Server).
 1. In the Configuration Manager console, go to **Monitoring** > **Power BI Reports** > **Sample Reports**.
 1. Right-click on one of the reports and select **Run in Browser** to launch the report.
 
-   :::image type="complex" source="media/view-powerbi-report.png" alt-text="Run the sample report from the Configuration Manager console" lightbox="media/view-powerbi-report.png":::
+   :::image type="content" source="media/view-powerbi-report.png" alt-text="Run the sample report from the Configuration Manager console" lightbox="media/view-powerbi-report.png":::
 
 ## Next steps
 
