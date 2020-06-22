@@ -10,7 +10,7 @@ ms.assetid: cbdd4a4a-2761-4e66-91eb-8602fb8b4926
 author: mestew  
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ---
 
@@ -22,7 +22,7 @@ This quickstart outlines prerequisites and instructions for enrolling Configurat
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-### Enrolling Configuration Manager devices requires:
+### Configuration Manager requirements
 
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
@@ -30,7 +30,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
-Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they do not need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
+Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
 
 | Endpoint  | Function  |
 |-----------|-----------|

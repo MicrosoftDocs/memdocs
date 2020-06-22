@@ -10,17 +10,17 @@ ms.assetid: d13ec899-6033-4579-9b80-c9bf755f2f98
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
 
-The sections below can be used to assist in troubleshooting issues you may encounter.
+The sections below can be used to assist in troubleshooting issues you may come across.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
-If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
+If the overview page shows a startup performance score of zero with a banner showing it's waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
 
 First, ensure devices meet the prerequisites:
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
@@ -28,16 +28,16 @@ First, ensure devices meet the prerequisites:
 - [Prerequisites for Proactive remediations](proactive-remediations.md#bkmk_prereq)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
-1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targetting all devices you want to see performance data. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
-1. Look for devices that have not been successfully configured for data collection. You can also see this information in the profiles overview page.  
-   - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
+1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
+   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](privacy.md#data-flow)
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
 1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site server.
-1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client settings. Find the overriding client settings and enable endpoint analytics on it.  
+1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
 
@@ -48,7 +48,7 @@ If your environment uses a proxy server, configure your proxy server to allow th
 
 ### Endpoints required for Configuration Manager-managed devices
 
-Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they do not need directly access to the Microsoft public cloud.
+Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud.
 
 | Endpoint  | Function  |
 |-----------|-----------|
@@ -57,7 +57,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ### Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics leverages Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices . Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
 | Endpoint  | Function  |
 |-----------|-----------|
@@ -117,7 +117,7 @@ This approach is the most complex because it requires the following configuratio
 
 ### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
 
-If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration will be lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled. 
+If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration will be lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled.
 
 ### Why are the scripts exiting with a code of 1?
 

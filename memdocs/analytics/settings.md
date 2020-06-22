@@ -5,12 +5,12 @@ description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.assetid: 266a84b2-7b8d-4b9c-919e-114c10a510e5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
@@ -19,7 +19,7 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 ## <a name="bkmk_gen"></a> General settings
 
-The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You have the option to go to the Intune data collection policy node to change the set of devices on which boot and sign-in records are collected.
+The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You can go to the Intune data collection policy node to change the set of devices on which boot and sign in records are collected.
 
 ### <a name="bkmk_profile"></a> Intune data collection policy
 

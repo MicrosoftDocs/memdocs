@@ -10,7 +10,7 @@ ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
@@ -67,7 +67,7 @@ The **Startup performance** page has reporting tabs that provide support for the
 
 - **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
 - **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. If you click through a device you can see its boot and sign-in history, which can help you identify if there was a recent regression
-- **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab (if visible; we've only flighted this to some of you as we are still developing this feature) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant.  
+- **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab (if visible; we've only flighted this tab to some customers) will show you which processes are impacting the sign-in "time to responsive desktop" phase; that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant.  
 
 ## Next steps
 

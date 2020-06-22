@@ -10,7 +10,7 @@ ms.assetid: 5e54bd84-fb5b-4b03-8d49-b355cace9f60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 # <a name="bkmk_rs"></a> Recommended software
@@ -18,13 +18,13 @@ ROBOTS: NOINDEX, NOFOLLOW
 > [!Important]  
 > Endpoint Analytics computes the **Software adoption** score for all your Intune and co-managed devices, regardless of whether they've been configured with the [Intune data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr.md#bkmk_cm_enroll).
 
-Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
+Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
 [![Endpoint analytics Recommended software page](media/recommended-software.png)](media/recommended-software.png#lightbox)
 
 ## <a name="bkmk_win10"></a> Windows 10
 
-Windows 10 provides a better user experience than older versions of Windows. See the [TEI whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf) for more information.
+Windows 10 provides a better user experience than older versions of Windows. For more information, see the [TEI whitepaper](https://vc2prod.blob.core.windows.net/vc-resources/TEIStudies/TEI%20of%20Windows%2010.pdf).
 
 This metric measures the percent of devices on Windows 10 versus an older version of Windows.
 
@@ -40,7 +40,7 @@ The recommended remediation action is to register existing devices in Autopilot 
 
 ## <a name="bkmk_aad"></a> Azure Active Directory
 
-Azure Active Directory (Azure AD) provides users with numerous productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming.
+Azure Active Directory (Azure AD) provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming.
 
 This metric measures the percent of devices enrolled in Azure AD.
 
@@ -48,9 +48,9 @@ Your Microsoft-Intune managed devices are already enrolled in Azure AD. The reco
 
 ## <a name="bkmk_intune"></a> Cloud management
 
-Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience.
+Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they're away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience.
 
-This metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+This metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. See how [Microsoft is enabling modern management for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
 
 The recommended action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../configmgr/comanage/overview.md) to unlock additional cloud-powered capabilities like conditional access.
 

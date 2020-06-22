@@ -27,7 +27,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 To request help for Endpoint analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Endpoint analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [administrator roles in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
-If the issue is more broadly for Intune than just Endpoint analytics, follow the instructions in the [How to get support for Microsoft Intune](../intune/fundamentals/get-support.md#create-an-online-support-ticket) article to open a new support request. If the issue is more broadly for Configuration Manager than just Endpoint analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request.
+If the issue is more broadly for Intune than just Endpoint analytics, follow the instructions in the [How to get support for Microsoft Intune](../intune/fundamentals/get-support.md#create-an-online-support-ticket) article to open a new support request. For an issue that is more broadly for Configuration Manager than just Endpoint analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request.
 
 ## <a name="bkmk_feedback"></a> Share product feedback
 
@@ -40,5 +40,5 @@ To share your feedback about Endpoint analytics, select the **Send a Smile** ico
 
 ## See also
 
-- [Find help for Configuration Manager](../core/understand/find-help.md)
+- [Find help for Configuration Manager](../configmgr/core/understand/find-help.md)
 - [Support for Microsoft Intune](../intune/fundamentals/get-support.md#create-an-online-support-ticket)

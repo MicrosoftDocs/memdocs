@@ -16,7 +16,7 @@ manager: dougeby
 
 # Tutorial: Proactive remediations
 
-Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediaitons to help increase your [User experience score](overview.md#bkmk_view).
+Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](overview.md#bkmk_view).
 
 
 In this tutorial, you learn how to:  
@@ -29,18 +29,18 @@ In this tutorial, you learn how to:
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-- Devices need to be enrolled into Endpoint analytics.
-   - For more information see, [Enroll Configuration Manager managed devices](enroll-configmgr.md) and [Enroll Intune managed devices](enroll-intune.md).
+- Devices enrolled into Endpoint analytics.
+   - For more information, see [Enroll Configuration Manager managed devices](enroll-configmgr.md) and [Enroll Intune managed devices](enroll-intune.md).
 
 Whether enrolling devices via Intune or Configuration Manager, Proactive remediation scripting has the following requirements:
-- Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
 - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
 - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
 - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Configuration Manager.
 
 ### Licensing
 
-Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) as well as one of the following licenses for the enrolled devices:
+Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) and one of the following licenses for the enrolled devices:
 
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
@@ -61,7 +61,7 @@ If the option **Enforce script signature check** is enabled in the [Settings](#b
 - Encoded in UTF-8 not UTF-8 BOM
 - Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
    - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
-   - Currently, this is a known issue.
+   - Currently, the encoding and line breaks are a known issue.
 
 ## <a name="bkmk_prs"></a> Proactive remediations
 
@@ -90,7 +90,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
    - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_stale_Group_Policies.ps1` detection script corresponds with the `Remediate_stale_GroupPolicies.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
-   - **Run this script using the logged-on credentials**: This is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
+   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
    - **Enforce script signature check**: No
    - **Run script in 64-bit PowerShell**: No
 1. Click **Next** then assign any **Scope tags** you need.

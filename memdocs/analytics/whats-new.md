@@ -10,7 +10,7 @@ ms.assetid: 8562dace-2ab8-4f66-b5b6-3ab25a39e0b2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 # What's new in Endpoint analytics

@@ -10,7 +10,7 @@ ms.assetid: 1be507b8-c3bf-46fd-b010-e2f432659a63
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
 ---
 
@@ -22,14 +22,14 @@ This quickstart outlines prerequisites and instructions for enrolling Intune dev
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-### Enrolling Intune devices requires:
+### Intune device requirements
 
 - Intune enrolled devices running Windows 10
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics leverages Windows 10 and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
 
 | Endpoint  | Function  |
 |-----------|-----------|

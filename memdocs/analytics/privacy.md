@@ -10,7 +10,7 @@ ms.assetid: 8036825c-1ae5-4bbe-b3be-3c09eabca19f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+
 ---
 
 # <a name="bkmk_privacy"></a> Endpoint analytics data privacy
@@ -79,7 +79,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **topProcesses:** List of processes loaded during boot with name, with cpu usage stats and app details (Name, publisher, version). For example *{\"ProcessName\":\"svchost\",\"CpuUsage\":43,\"ProcessFullPath\":\"C:\\\\Windows\\\\System32\\\\svchost.exe\",\"ProductName\":\"Microsoft&reg; Windows&reg; Operating System\",\"Publisher\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1\"}*
 - Device data not tied to a device or user (if this data is tied to a device or user, Intune treats it as identified data)
   - **ID:** Unique device ID used by Windows Update
-  - **localId:** A locally defined unique ID for the device. This is not the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
+  - **localId:** A locally defined unique ID for the device. This ID isn't the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   

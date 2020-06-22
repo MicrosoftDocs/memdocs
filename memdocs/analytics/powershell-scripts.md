@@ -10,7 +10,6 @@ ms.assetid: a47243a9-d880-4f0b-a4a5-2975a3a314b9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
 ---
 
 # PowerShell scripts for Proactive remediations
@@ -22,14 +21,17 @@ This table shows the script names, descriptions, detections, remediations, and c
 
 |Script name|Description|
 |---|---|
-|**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the 7-day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
-|**Restart Office Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Microsoft 365 Apps for enterprise won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
+|**Update stale Group Policies** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>Customize the seven day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
+|**Restart Microsoft 365 Apps Click-to-Run service** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Detects if the Click-to-Run service is set to automatically start and if the service is stopped. </br> </br> Remediates by setting the service to start automatically and starting the service if it's stopped. </br></br> Helps fix issues where Win32 Microsoft 365 Apps for enterprise won't launch because the Click-to-Run service is stopped. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Check network certificates** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. </br> Specify the CA by changing the value for `$strMatch` in the detection script. Specify 0 for `$expiringDays` to find expired certificates, or specify another number of days to find certificates near expiry.  </br></br>Remediates by raising a toast notification to the user. </br> Specify the `$Title` and `$msgText` values with the message title and text you want users to see. </br> </br> Notifies users of expired certificates that might need to be renewed. </br> </br> **Run the script using the logged-on credentials**: No|
 |**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
-## <a name="bkmk_ps_scripts"></a> PowerShell Scripts
+## <a name="bkmk_ps_scripts"></a> Update stale Group Policies script package
+
+This script package detects if last Group Policy refresh is greater than `7 days` ago. The script remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`.
 
 ### Detect_stale_Group_Policies.ps1
+
 
 ```powershell
 #=============================================================================================================================
@@ -91,13 +93,17 @@ catch{
 }
 ```
 
+## Restart Microsoft 365 Apps Click-to-Run service script package
+
+This script package detects if the Click-to-Run service is set to automatically start and if the service is stopped. The script remediates by setting the service to start automatically and starting the service if it's stopped.
+
 ### Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
 #
 # Script Name:     Detect_Click_To_Run_Service_State.ps1
-# Description:     Detect if Office 16 installed and if "Click to Run Service" is running.
+# Description:     Detect if Microsoft Apps 365 is installed and if "Click to Run Service" is running.
 # Notes:           No variable substitution should be necessary
 #
 #=============================================================================================================================
@@ -200,6 +206,10 @@ Catch{
 Return $curSvcStat
 ```
 
+## Check network certificates script package
+
+This script package detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. The script remediates by raising a toast notification to the user.
+
 ### Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
@@ -286,6 +296,10 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
+## Clear stale certificates script package
+
+This script package detects expired certificates issued by a CA in the current user's personal store. The script remediates by deleting expired certificates issued by a CA from the current user's personal store.
+
 ### Detect_Expired_User_Certificates.ps1
 
 ```powershell
@@ -348,3 +362,7 @@ catch{
     exit 1
 }
 ```
+
+## Next steps
+ 
+For information about deploying script packages, see [Proactive remediations](proactive-remediations.md).

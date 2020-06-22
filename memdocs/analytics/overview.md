@@ -1,5 +1,5 @@
 ---
-title: Endpoint analytics (preview) overview
+title: What is Endpoint analytics (preview)?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics preview.
 ms.date: 06/25/2020
@@ -10,10 +10,10 @@ ms.assetid: b3273525-dc40-40d7-adf0-6ed8b054bd7e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW 
+#Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
 ---
 
-# <a name="bkmk_overview"></a> Endpoint analytics (preview)
+# <a name="bkmk_overview"></a> What is Endpoint analytics (preview)?
 
 > [!Note]  
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
