@@ -39,7 +39,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 ## Create a provisioning package
 
-1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/en-us/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
+1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
    ![Screenshot of the Windows Configuration Designer app Store](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
