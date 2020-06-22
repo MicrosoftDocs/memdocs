@@ -2,7 +2,7 @@
 title: Get support for Endpoint analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Endpoint analytics
-ms.date: 01/16/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference

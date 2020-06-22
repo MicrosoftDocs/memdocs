@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Configuration Manager
 description: A tutorial on using Proactive remediations to enhance the user 
-ms.date: 06/13/2019
+ms.date: 06/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -16,15 +16,16 @@ manager: dougeby
 
 # Tutorial: Proactive remediations
 
+Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediaitons to help increase your [User experience score](overview.md#bkmk_view).
 
 
 In this tutorial, you learn how to:  
 
 > [!div class="checklist"]  
+> * Review prerequisites for Proactive remediations
 > * Enable Proactive remediations
-> * Connect C 
-> * Create 
-> * Use  
+> * Create a script package
+> * Monitor the script package  
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -37,9 +38,10 @@ Whether enrolling devices via Intune or Configuration Manager, Proactive remedia
 - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
 - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Configuration Manager.
 
-### Licensing 
+### Licensing
 
-Proactive remediations also requires one of the following licenses for the enrolled devices:
+Proactive remediations also requires the [licensing for Endpoint analytics](enroll-intune.md#bkmk_prereq) as well as one of the following licenses for the enrolled devices:
+
 - Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5

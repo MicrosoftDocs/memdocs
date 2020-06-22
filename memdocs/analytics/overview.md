@@ -2,7 +2,7 @@
 title: Endpoint analytics (preview) overview
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics preview.
-ms.date: 06/12/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -40,3 +40,11 @@ This initial release, focuses on three things:
 
 This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
 
+## <a name="bkmk_view"></a> About the Overview page
+
+[!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
+
+## Next steps
+
+- [Enroll Intune managed devices](enroll-intune.md)
+- [Enroll Configuration Manager managed devices](enroll-configmgr.md)

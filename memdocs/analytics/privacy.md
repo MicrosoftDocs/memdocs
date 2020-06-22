@@ -2,7 +2,7 @@
 title: Endpoint analytics data privacy
 titleSuffix: Configuration Manager
 description: Data privacy information for troubleshooting Endpoint analytics.
-ms.date: 06/12/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference

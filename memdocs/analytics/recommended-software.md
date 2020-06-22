@@ -2,7 +2,7 @@
 title: Recommended software in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about recommended software in Endpoint Analytics
-ms.date: 03/25/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual

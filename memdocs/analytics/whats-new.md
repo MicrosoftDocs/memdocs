@@ -2,7 +2,7 @@
 title: What's new in Endpoint analytics
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities in Endpoint analytics
-ms.date: 03/25/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual

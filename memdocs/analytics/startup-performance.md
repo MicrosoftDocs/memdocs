@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Configuration Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 03/25/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -22,7 +22,7 @@ The startup performance score helps IT get users from power-on to productivity q
 Startup performance insights are only available for:
 - Devices running version 1903 or later of Windows 10 Enterprise
    - Home and Pro editions aren't currently supported.
-- The devices must be Azure AD joined or hybrid Azure AD joined. 
+- The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
 
 ## <a name="bkmk_score"></a> Startup score
