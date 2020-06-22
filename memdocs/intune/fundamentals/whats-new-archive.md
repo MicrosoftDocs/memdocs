@@ -3207,7 +3207,7 @@ End users can now remotely lock their devices from the Company Portal app for Wi
 End users with Windows devices will be able to tap the noncompliance reason in the Company Portal app. When possible, this will take them directly to the correct location in the settings app to fix the issue.
 
 <!-- ########################## -->
-## December 2017
+### December 2017
 
 ### Device configuration
 
