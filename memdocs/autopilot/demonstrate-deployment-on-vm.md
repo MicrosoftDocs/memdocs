@@ -28,7 +28,7 @@ To get started with Windows Autopilot, you should try it out with a virtual mach
 In this topic you'll learn how to set-up a Windows Autopilot deployment for a VM using Hyper-V.
 
 > [!NOTE]
-> Although there are [multiple platforms](administer.md) available to enable Autopilot, this lab primarily uses Intune.
+> Although there are [multiple platforms](add-devices.md#registering-devices) available to enable Autopilot, this lab primarily uses Intune.
 
 > Hyper-V and a VM are not required for this lab. You can also use a physical device. However, the instructions assume that you are using a VM. To use a physical device, skip the instructions to install Hyper-V and create a VM. All references to 'device' in the guide refer to the client device, either physical or virtual.
 
@@ -43,7 +43,7 @@ The following video provides an overview of the process:
 
 These are the things you'll need to complete this lab:
 <table><tr><td>Windows 10 installation media</td><td>Windows 10 Professional or Enterprise (ISO file) for a supported version of Windows 10, semi-annual channel. If you do not already have an ISO to use, a link is provided to download an <a href="https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise" data-raw-source="[evaluation version of Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)">evaluation version of Windows 10 Enterprise</a>.</td></tr>
-<tr><td>Internet access</td><td>If you are behind a firewall, see the detailed <a href="windows-autopilot-requirements-network.md" data-raw-source="[networking requirements](windows-autopilot-requirements-network.md)">networking requirements</a>. Otherwise, just ensure that you have a connection to the Internet.</td></tr>
+<tr><td>Internet access</td><td>If you are behind a firewall, see the detailed <a href="windows-autopilot-requirements.md#networking-requirements" data-raw-source="[networking requirements](windows-autopilot-requirements.md#networking-requirements)">networking requirements</a>. Otherwise, just ensure that you have a connection to the Internet.</td></tr>
 <tr><td>Hyper-V or a physical device running Windows 10</td><td>The guide assumes that you will use a Hyper-V VM, and provides instructions to install and configure Hyper-V if needed. To use a physical device, skip the steps to install and configure Hyper-V.</td></tr>
 <tr><td>A Premium Intune account</td><td>This guide will describe how to obtain a free 30-day trial premium account that can be used to complete the lab.</td></tr></table>
 
@@ -110,9 +110,9 @@ When you are prompted to restart the computer, choose **Yes**. The computer migh
 
 > Alternatively, you can install Hyper-V using the Control Panel in Windows under **Turn Windows features on or off** for a client operating system, or using Server Manager's **Add Roles and Features Wizard** on a server operating system, as shown below:
 
-   ![Hyper-V feature](../images/hyper-v-feature.png)
+   ![Hyper-V feature](images/hyper-v-feature.png)
 
-   ![Hyper-V](../images/svr_mgr2.png)
+   ![Hyper-V](images/svr_mgr2.png)
 
 <P>If you choose to install Hyper-V using Server Manager, accept all default selections. Also be sure to install both items under <strong>Role Administration Tools\Hyper-V Management Tools</strong>.
 
