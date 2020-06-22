@@ -11,7 +11,7 @@
     href: windows-autopilot-requirements.md
 - name: Quickstarts
   items:
-  - name: Demonostrate Autopilot deployment
+  - name: Demonstrate Autopilot deployment
     href: demonstrate-deployment-on-vm.md  
 
 - name: Concepts
