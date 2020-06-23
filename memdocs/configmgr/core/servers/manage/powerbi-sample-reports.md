@@ -31,7 +31,7 @@ Starting in version 2002, you can integrate [Power BI Report Server](https://doc
 
 To download the sample reports:
 
-1. Download the Power BI sample reports from the [Microsoft Download Center](https://www.microsoft.com/download).
+1. Download the Power BI sample reports from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101452).
 1. Save the `ConfigMgrSamplePowerBIReports.exe` file. 
 1. Move the file to a computer with Microsoft Power BI Desktop (Optimized for Power BI Report Server) installed if you downloaded it from a different device.
 1. Run the `ConfigMgrSamplePowerBIReports.exe` file to extract the .pbit files.
