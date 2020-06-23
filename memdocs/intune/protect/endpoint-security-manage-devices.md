@@ -72,7 +72,7 @@ Consider the following fields:
 
     For example, you can use Intune to configure policy for Antivirus, Firewall, and Encryption. These policy types are considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
 
-  - **Workspace ONE** - These devices are managed by the third-party device compliance partner, Workspace ONE. For more information, see [device compliance partners](../protect/device-compliance/partners.md).
+  - **Workspace ONE** - These devices are managed by the third-party device compliance partner, Workspace ONE. For more information, see [device compliance partners](../protect/device-compliance-partners.md).
 
 - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to either Intune or Pilot Intune.  
 

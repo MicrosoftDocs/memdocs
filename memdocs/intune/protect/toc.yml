@@ -53,7 +53,7 @@
     - name: Compliance overview
       href: device-compliance-get-started.md
     - name: Device compliance partners
-      href: device-complince-partners.md
+      href: device-compliance-partners.md
     - name: Create a policy
       href: create-compliance-policy.md
     - name: Location-based compliance

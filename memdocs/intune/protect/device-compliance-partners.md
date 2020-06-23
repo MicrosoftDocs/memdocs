@@ -128,7 +128,7 @@ After you configure third-party device compliance partners and enroll devices wi
 
 Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **All devices**.  Devices that are managed by a third-party partner MDM authority, display the name of that partner in the **Managed by** column. 
 
-For more information about this view, see [Manage devices](../protect/endpoint-security-manage-devices).
+For more information about this view, see [Manage devices](../protect/endpoint-security-manage-devices.md).
 
 ## Next steps
 
