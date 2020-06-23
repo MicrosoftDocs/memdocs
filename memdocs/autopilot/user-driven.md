@@ -24,23 +24,23 @@ ms.topic: article
 Windows Autopilot user-driven mode is designed to enable new Windows 10 devices to be transformed from their initial state, directly from the factory, into a ready-to-use state without requiring that IT personnel ever touch the device.  The process is designed to be simple so that anyone can complete it, enabling devices to be shipped or distributed to the end user directly with simple instructions:
 
 - Unbox the device, plug it in, and turn it on.
-- Choose a language (only required when multiple languages are installed), locale and keyboard.
+- Choose a language (only required when multiple languages are installed), locale, and keyboard.
 - Connect it to a wireless or wired network with internet access.  If using wireless, the user must establish the Wi-Fi link.  
 - Specify your e-mail address and password for your organization account.
 
 After completing those simple steps, the remainder of the process is completely automated, with the device being joined to the organization, enrolled in Intune (or another MDM service), and fully configured as defined by the organization.  Any additional prompts during the Out-of-Box Experience (OOBE) can be suppressed; see [Configuring Autopilot Profiles](profiles.md) for options that are available.
 
-Windows Autopilot user-driven mode supports Azure Active Directory and Hybrid Azure Active Directory joined devices.  See [What is a device identity](https://docs.microsoft.com/azure/active-directory/devices/overview) for more information about these two join options.
+Windows Autopilot user-driven mode supports Azure Active Directory and Hybrid Azure Active Directory joined devices.  For more information about these two join options, see [What is a device identity](https://docs.microsoft.com/azure/active-directory/devices/overview).
 
 From a process flow perspective, the tasks performed during the user-driven process are as follows:
 
-- Once connected to a network, the device will download a Windows Autopilot profile specifying the settings that should be used (e.g. the prompts during OOBE that should be suppressed).
-- Windows 10 will check for critical OOBE updates, and if any are available they will be automatically installed (rebooting if required).
+- Once connected to a network, the device will download a Windows Autopilot profile specifying the settings that should be used (for example, the prompts during OOBE that should be suppressed).
+- Windows 10 will check for critical OOBE updates. If updates are available they will be automatically installed (rebooting if required).
 - The user will be prompted for Azure Active Directory credentials, with a customized user experience showing the Azure AD tenant name, logo, and sign-in text.
 - The device will join Azure Active Directory or Active Directory, based on the Windows Autopilot profile settings.
 - The device will enroll in Intune (or other configured MDM services).  (This occurs as part of the Azure Active Directory join process via MDM auto-enrollment, or before the Active Directory join process, as needed.)
 - If configured, the [enrollment status page](enrollment-status.md) (ESP) will be displayed.
-- Once the device configuration tasks have completed, the user will be signed into Windows 10 using the credentials they previously provided.  (Note that if the device reboots during the device ESP process, the user will need to re-enter their credentials as these are not persisted across reboots.)
+- Once the device configuration tasks have completed, the user will be signed into Windows 10 using the credentials they previously provided.  (Note: if the device reboots during the device ESP process, the user will need to reenter their credentials as these are not persisted across reboots.)
 - Once signed in, the enrollment status page will again be displayed for user-targeted configuration tasks.
 
 If any issues are encountered during this process, see the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
@@ -60,16 +60,16 @@ In order to perform a user-driven deployment using Windows Autopilot, the follow
 
 For each device that will be deployed using user-driven deployment, these additional steps are needed:
 
-- Ensure that the device has been added to Windows Autopilot.  This can be done automatically by an OEM or partner at the time the device is purchased, or it can be done through a manual harvesting process later.  See [Adding devices to Windows Autopilot](add-devices.md) for more information.
+- Ensure that the device has been added to Windows Autopilot.  This can be done automatically by an OEM or partner at the time the device is purchased, or it can be done through a manual harvesting process later.  For more information, see [Adding devices to Windows Autopilot](add-devices.md).
 - Ensure an Autopilot profile has been assigned to the device:
   - If using Intune and Azure Active Directory dynamic device groups, this can be done automatically.
   - If using Intune and Azure Active Directory static device groups, manually add the device to the device group.
-  - If using other methods (e.g. Microsoft Store for Business or Partner Center), manually assign an Autopilot profile to the device.
+  - If using other methods (for example, Microsoft Store for Business or Partner Center), manually assign an Autopilot profile to the device.
 
 
 ## User-driven mode for hybrid Azure Active Directory join
 
-Windows Autopilot requires that devices be Azure Active Directory joined. If you have an on-premises Active Directory environment and want to also join devices to your on-premises domain, you can accomplish this by configuring Autopilot devices to be [hybrid-joined to Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).  
+Windows Autopilot requires that devices be Azure Active Directory joined. If you have an on-premises Active Directory environment and also want to join devices to your on-premises domain, you can configure Autopilot devices to be [hybrid-joined to Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).  
 
 ### Requirements
 
@@ -85,7 +85,7 @@ To perform a user-driven hybrid Azure AD joined deployment using Windows Autopil
   - Note: The Intune Connector will perform an on-prem AD join, therefore users do not need on-prem AD-join permission, assuming the Connector is [configured to perform this action](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) on the user's behalf. 
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 
-**Azure AD device join**: The hybrid Azure AD join process uses the system context to perform device Azure AD join, therefore it is not affected by user based Azure AD join permission settings. In addition, all users are enabled to join devices to Azure AD by default.
+**Azure AD device join**: The hybrid Azure AD join process uses the system context to perform device Azure AD join, therefore it is not affected by user-based Azure AD join permission settings. In addition, all users are enabled to join devices to Azure AD by default.
 
 ### Step by step instructions
 

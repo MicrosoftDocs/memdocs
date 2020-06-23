@@ -21,14 +21,14 @@ ms.topic: article
 
 **Applies to: Windows 10**
 
-Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise, either due to configuration or other issues.  To assist with troubleshooting efforts, review the following information.
+Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise.  Review the following information to assist with troubleshooting efforts.
 
 ## Troubleshooting process
 
-Whether you are performing user-driven or self-deploying device deployments, the troubleshooting process is about the same.  It is always useful to understand the flow for a specific device:
+Whether you are performing user-driven or self-deploying device deployments, the troubleshooting process is about the same.  It's always useful to understand the flow for a specific device:
 
 - A network connection is established.  This can be a wireless (Wi-fi) or wired (Ethernet) connection.
-- The Windows Autopilot profile is downloaded.  Whether using a wired connection or manually establishing a wireless connection, the Windows Autopilot profile will be downloaded from the Autopilot deployment service as soon as the network connection is in place.
+- The Windows Autopilot profile is downloaded. When using a wired connection, or manually establishing a wireless connection, the Windows Autopilot profile is downloaded from the Autopilot deployment service as soon as the network connection is in place.
 - User authentication occurs.  When performing a user-driven deployment, the user will enter their Azure Active Directory credentials, which will be validated.
 - Azure Active Directory join occurs.  For user-driven deployments, the device will be joined to Azure AD using the specified user credentials.  For self-deploying scenarios, the device will be joined without specifying any user credentials.
 - Automatic MDM enrollment occurs.  As part of the Azure AD join process, the device will enroll in the MDM service configured in Azure AD (for example, Microsoft Intune).
@@ -38,7 +38,7 @@ For troubleshooting, key activities to perform are:
 
 - Configuration:  Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](windows-autopilot-requirements.md)?
 - Network connectivity:  Can the device access the services described in [Windows Autopilot networking requirements](windows-autopilot-requirements.md)?
-- Autopilot OOBE behavior:  Were only the expected out-of-box experience screens displayed?  Was the Azure AD credentials page customized with organization-specific details as expected?
+- Autopilot out-of-box (OOBE) behavior:  Were only the expected out-of-box experience screens displayed?  Was the Azure AD credentials page customized with organization-specific details as expected?
 - Azure AD join issues:  Was the device able to join Azure Active Directory?
 - MDM enrollment issues:  Was the device able to enroll in Microsoft Intune (or an equivalent MDM service)?
 
@@ -46,9 +46,9 @@ For troubleshooting, key activities to perform are:
 
 ### Clicking Import after selecting CSV does nothing, '400' error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'"**
 
-This error points to the device hash being incorrectly formatted. This could be caused by anything that corrupts the collected hash, but one possibility is that the hash itself (even if it is completely valid) fails to be decoded.
+This error points to the device hash being incorrectly formatted. This could be caused by anything that corrupts the collected hash, but one possibility is that the hash itself (even if it's completely valid) fails to be decoded.
 
-The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. In most cases, it seems the payload lines up to not require padding, so the process works, but sometimes it doesn't line up cleanly and padding is necessary. This is when you get the error above. PowerShell's Base64 decoder also expects padded Base64, so we can use that to validate that the hash is properly padded.
+The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. In most cases, the payload does not require padding and the process works. However, sometimes the payload doesn't line up cleanly and padding is necessary. This is when you get the error displayed above. PowerShell's Base64 decoder also expects padded Base64, so we can use this to validate that the hash is properly padded.
 
 The "A" characters at the end of the hash are effectively empty data - Each character in Base64 is 6 bits, A in Base64 is 6 bits equal to 0. Deleting or adding **A**'s at the end doesn't change the actual payload data.
 
@@ -84,16 +84,16 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Troubleshooting Autopilot OOBE issues
 
-If the expected Autopilot behavior does not occur during the out-of-box experience (OOBE), it is useful to see whether the device received an Autopilot profile and what settings that profile contained.  Depending on the Windows 10 release, there are different mechanisms available to do that.
+If the expected Autopilot behavior does not occur during the OOBE, it's useful to see whether the device received an Autopilot profile and what settings that profile contained.  Depending on the Windows 10 release, there are different mechanisms available to do that.
 
 ### Windows 10 version 1803 and above
 
-To see details related to the Autopilot profile settings and OOBE flow, Windows 10 version 1803 and above adds event log entries.  These can be viewed using Event Viewer, navigating to the log at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903, or **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot** for 1903 and above.  The following events may be recorded, depending on the scenario and profile configuration.
+To see details related to the Autopilot profile settings and OOBE flow, Windows 10 version 1803 and above adds event log entries.  These can be viewed using Event Viewer. Review the information at **Application and Services Logs –> Microsoft –> Windows –> Provisioning-Diagnostics-Provider –> Autopilot** for versions before 1903. For version 1903 and later,  see **Application and Services Logs –> Microsoft –> Windows –> ModernDeployment-Diagnostics-Provider –> Autopilot**.  The following events may be recorded, depending on the scenario and profile configuration:
 
 | Event ID | Type | Description |
 |----------|------|-------------| 
 | 100 | Warning | “Autopilot policy [name] not found.”  This is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
-| 101 | Info | “AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value [value].”  This shows Autopilot retrieving and processing numeric OOBE settings. |
+| 101 | Info | “AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].”  This shows Autopilot retrieving and processing numeric OOBE settings. |
 | 103 | Info | “AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].”  This shows Autopilot retrieving and processing OOBE setting strings such as the Azure AD tenant name. |
 | 109 | Info | “AutopilotGetOobeSettingsOverride succeeded:  OOBE setting [setting name]; state = [state].”  This shows Autopilot retrieving and processing state-related OOBE settings. |
 | 111 | Info | “AutopilotRetrieveSettings succeeded.”  This means that the settings stored in the Autopilot profile that control the OOBE behavior have been retrieved successfully. |
@@ -116,7 +116,7 @@ On Windows 10 version 1709 and above, information about the Autopilot profile se
 | AadTenantId | The GUID of the Azure AD tenant the user signed into.  This should match the tenant that the device was registered with; if it does not match the user will receive an error. |
 | CloudAssignedTenantDomain | The Azure AD tenant the device has been registered with, for example, “contosomn.onmicrosoft.com.”  If the device is not registered with Autopilot, this value will be blank. |
 | CloudAssignedTenantId | The GUID of the Azure AD tenant the device has been registered with (the GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value).  If the device isn’t registered with Autopilot, this value will be blank.|
-| IsAutopilotDisabled | If set to 1, this indicates that the device is not registered with Autopilot.  This could also indicate that the Autopilot profile could not be downloaded due to network connectivity or firewall issues, or network timeouts. |
+| IsAutopilotDisabled | If set to 1, this indicates that the device is not registered with Autopilot.  This could also indicate that the Autopilot profile could not be downloaded because of network connectivity or firewall issues, or network timeouts. |
 | TenantMatched | This will be set to 1 if the tenant ID of the user matches the tenant ID that the device was registered with.  If this is 0, the user would be shown an error and forced to start over. |
 | CloudAssignedOobeConfig | This is a bitmap that shows which Autopilot settings were configured.  Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16 |
 
@@ -142,14 +142,14 @@ If Autopilot Reset fails immediately with an error **Ran into trouble. Please si
 
 ## Profile download
 
-When an Internet-connected Windows 10 device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. Note: It is important that a profile exists at this stage so that a blank profile is not cached locally on the PC. To remove the currently cached local profile in Windows 10 version 1803 and earlier, it is necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. In Windows 10 version 1809 and later, you can retrieve a new profile by rebooting the PC.
+When an Internet-connected Windows 10 device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. Note: It's important that a profile exists at this stage so that a blank profile is not cached locally on the PC. To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. In Windows 10 version 1809 and later, you can retrieve a new profile by rebooting the PC.
 
 When a profile is downloaded depends upon the version of Windows 10 that is running on the PC. See the following table.
 
 | Windows 10 version | Profile download behavior |
 | --- | --- |
 | 1709 | The profile is downloaded after the OOBE network connection page. This page is not displayed when using a wired connection. In this case, the profile is downloaded just prior to the EULA screen. |
-| 1803 | The profile is downloaded as soon as possible.  If wired, it is downloaded at the start of OOBE. If wireless, it is downloaded after the network connection page. |
+| 1803 | The profile is downloaded as soon as possible.  If wired, it's downloaded at the start of OOBE. If wireless, it is downloaded after the network connection page. |
 | 1809 | The profile is downloaded as soon as possible (same as 1803), and again after each reboot. |
 
 If you need to reboot a computer during OOBE:
