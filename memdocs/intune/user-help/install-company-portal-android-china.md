@@ -43,7 +43,7 @@ Company Portal is also available from the [Baidu App Store](https://go.microsoft
  
    1. Go to the [Baidu App Store](https://shouji.baidu.com).  
    2. Search for the Company Portal app by entering **公司门户** in the search bar.  
-   3. Select the listing with the Company Portal [![Company Portal icon](./media/company-portal-logo-small-2006.png)](./media/company-portal-logo-2006.png#lightbox) icon.  
+   3. Select the listing with the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2006.png) icon.  
 
 
 ## Next steps  
