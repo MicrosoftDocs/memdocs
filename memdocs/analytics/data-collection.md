@@ -1,7 +1,7 @@
 ---
-title: Endpoint analytics data privacy
+title: Endpoint analytics data collection
 titleSuffix: Configuration Manager
-description: Data privacy information for troubleshooting Endpoint analytics.
+description: Data collection information for Endpoint analytics.
 ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -13,19 +13,9 @@ manager: dougeby
 
 ---
 
-# <a name="bkmk_privacy"></a> Endpoint analytics data privacy
+# <a name="bkmk_privacy"></a> Endpoint analytics data collection
 
-Endpoint analytics is fully committed to customer data privacy, centering on these tenets:
-
-- **Transparency:** We fully document the Windows diagnostic events. Review them with your company's security and compliance teams. The Windows Diagnostic Data Viewer lets you see diagnostic data sent from a given device. For more information, see [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
-
-- **Control:** You control the level of diagnostic data to share with Microsoft. Windows 10, version 1709, adds a new policy to limit enhanced diagnostic data to the minimum required by Endpoint analytics.  
-
-- **Security:** Microsoft protects your data with strong security and encryption.  
-
-- **Trust:** Endpoint analytics supports the Microsoft [Privacy Statement](https://privacy.microsoft.com/privacystatement) and [Online Service Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
-
-For more information, see [Windows services where Microsoft is the processor under the GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement).
 
 ## Data flow
 
@@ -52,7 +42,7 @@ The following illustration shows how required functional data flows from individ
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
 
 ### Identified data
 

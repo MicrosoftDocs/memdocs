@@ -40,9 +40,59 @@ This initial release, focuses on three things:
 
 This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
 
-## <a name="bkmk_view"></a> About the Overview page
+## <a name="bkmk_prereq"></a> Prerequisties
 
-[!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
+For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
+
+### <a name="bkmk_uea__intune_prereq"></a> To enroll devices via Intune, this preview requires:
+- Intune enrolled devices running Windows 10
+- Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined machines aren't currently supported.
+- Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](trobleshoot.md#bkmk_uea_endpoints).
+- The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_uea_start).
+   - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
+   - After clicking **Start** for gathering data, other read-only roles can view the data.
+
+### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
+- Configuration Manager version 2002 or newer
+- Clients upgraded to version 2002 or newer
+- [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+
+### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
+Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_uea_prs) has the following requirements:
+- Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
+- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
+- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Configuration Manager.
+
+## Licensing Prerequisites
+
+Endpoint analytics is included in the following plans:
+
+- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
+- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+
+Proactive remediations also require one of the following licenses for the managed devices:
+- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Virtual Desktop Access E3 or E5
+
+## Permissions
+
+### Endpoint analytics permissions
+
+The following permissions are used for Endpoint analytics:
+- **Read** under the **Device configurations** category.
+- **Read** under the **Organization** category. <!--temporary for pp-->
+- Permissions appropriate to the user's role under the **Endpoint Analytics** category.
+
+A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
+
+### Proactive remediations permissions
+
+For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
+
+An [Intune Service Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
+
 
 ## Next steps
 

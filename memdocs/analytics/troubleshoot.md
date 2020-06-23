@@ -31,7 +31,7 @@ For Intune or co-managed devices configured with the Intune data collection poli
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
 1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
-1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](privacy.md#data-flow)
+1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#data-flow)
 1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
@@ -61,7 +61,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](privacy.md#bkmk_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
 > [!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->

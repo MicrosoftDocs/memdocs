@@ -16,7 +16,7 @@ manager: dougeby
 
 # Quickstart: Enroll Intune devices into Endpoint analytics
 
-This quickstart outlines prerequisites and instructions for enrolling Intune devices into Endpoint analytics.
+This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -33,7 +33,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](privacy.md#bkmk_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
 ### Licensing Prerequisites
 
@@ -62,7 +62,7 @@ Onboarding from  the Endpoint analytics portal is required for Intune managed de
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  
-> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](privacy.md#bkmk_stop) at any time.
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
 
    - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 

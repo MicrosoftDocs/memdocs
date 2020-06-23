@@ -32,7 +32,7 @@
   items:
   - name: PowerShell scripts
     href: powershell-scripts.md
-  - name: Privacy
-    href: privacy.md
+  - name: Data collection
+    href: data-collection.md
   - name: Get support
     href: get-support.md

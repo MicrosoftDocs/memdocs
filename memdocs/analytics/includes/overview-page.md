@@ -8,7 +8,8 @@ ms.date: 06/25/2020
 
 ---
 <!--Don't apply H2 in this include file since they are context driven by article-->
-Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
+
+You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performace, the device needs to have been restarted at least once. Once your data is ready, you'll notice some information on the **Overview** page, explained in more detail below:
 
 - The **User experience score** is a 50/50 weighted average of the **Recommended software** and **Startup performance scores**. We'll be expanding the set of subscores over time.
 
