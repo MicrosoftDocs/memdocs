@@ -31,9 +31,9 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise framework deployment methodology
 
-[!INCLUDE [azure_portal](../includes/framework-deployment-methodology.md)]
+[!INCLUDE [framework methodology](../includes/framework-deployment-methodology.md)]
 
-When testing changes to Android Enterprise devices, be aware of the [delivery timing](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). The status of compliance policies for devices can monitored; for more information, see Monitor Intune device compliance policies   and Monitor device profiles in Microsoft Intune.
+When testing changes to Android Enterprise devices, be aware of the [delivery timing](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). The status of compliance policies for devices can be monitored. For more information, see [Monitor Intune device compliance policies](../protect/compliance-policy-monitor.md) and [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md). 
 
 ## Next steps
 
