@@ -128,7 +128,7 @@ A summary of each platform's capabilities is provided below.<br>
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/intune/enrollment-autopilot">Intune</a></td>
+<td><a href="enrollment-autopilot.md">Intune</a></td>
 <td>YES - 500 at a time max<b><sup>1</sup></b></td> 
 <td>YES<b><sup>12</sup></b></td> 
 <td>4K HH</td>
