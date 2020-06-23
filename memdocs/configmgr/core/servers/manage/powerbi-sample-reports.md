@@ -43,7 +43,7 @@ To install the sample reports:
 1. On the Power BI Report server, create a new folder called `Sample Reports` in the root Configuration Manager reporting folder.
    
    :::image type="content" source="media/create-sample-reports-folder.png" alt-text="Creating the Sample Report folder in the root Configuration Manager reporting folder from " lightbox="media/create-sample-reports-folder.png":::
-:::image-end:::
+
 
 1. Launch Microsoft Power BI Desktop (Optimized for Power BI Report Server).
 1. Select **File** then **Open** and navigate to where you saved the extracted .pbit files.
@@ -52,7 +52,7 @@ To install the sample reports:
    - When loading or applying the data model, ignore any errors if you come across one.
    
     :::image type="content" source="media/sample-report-database.png" alt-text="Specify the database and database server name" lightbox="media/sample-report-database.png":::
-:::image-end:::
+
 1. When the report data is loaded, select **File** > **Save As**, then select **Power BI Report Server**.
    
    :::image type="content" source="media/save-powerbi-report-server.png" alt-text="Save as Power BI Report Server" lightbox="media/save-powerbi-report-server.png":::
