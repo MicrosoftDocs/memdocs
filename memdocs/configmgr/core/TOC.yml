@@ -584,6 +584,8 @@
         href: servers/manage/introduction-to-reporting.md
       - name: Integrate with Power BI Report Server
         href: servers/manage/powerbi-report-server.md
+      - name: Install Power BI sample reports
+        href: servers/manage/powerbi-sample-reports.md
       - name: Plan for reporting
         items:
         - name: Plan for reporting
