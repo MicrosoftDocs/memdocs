@@ -21,7 +21,7 @@ ms.topic: article
 
 **Applies to: Windows 10, version 1809 or later**
 
-Windows Autopilot user-driven mode is designed to enable new Windows 10 devices to be transformed from their initial state, directly from the factory, into a ready-to-use state without requiring that IT personnel ever touch the device.  The process is designed to be simple so that anyone can complete it, enabling devices to be shipped or distributed to the end user directly with simple instructions:
+Windows Autopilot user-driven mode is designed to enable new Windows 10 devices to be transformed from their initial factory state into a ready-to-use state without requiring that IT personnel ever touch the device.  The process is designed to be simple so that anyone can complete it, enabling devices to be shipped or distributed to the end user directly with simple instructions:
 
 - Unbox the device, plug it in, and turn it on.
 - Choose a language (only required when multiple languages are installed), locale, and keyboard.
@@ -35,10 +35,10 @@ Windows Autopilot user-driven mode supports Azure Active Directory and Hybrid Az
 From a process flow perspective, the tasks performed during the user-driven process are as follows:
 
 - Once connected to a network, the device will download a Windows Autopilot profile specifying the settings that should be used (for example, the prompts during OOBE that should be suppressed).
-- Windows 10 will check for critical OOBE updates. If updates are available they will be automatically installed (rebooting if required).
+- Windows 10 will check for critical OOBE updates. If updates are available, they will be automatically installed (rebooting if required).
 - The user will be prompted for Azure Active Directory credentials, with a customized user experience showing the Azure AD tenant name, logo, and sign-in text.
 - The device will join Azure Active Directory or Active Directory, based on the Windows Autopilot profile settings.
-- The device will enroll in Intune (or other configured MDM services).  (This occurs as part of the Azure Active Directory join process via MDM auto-enrollment, or before the Active Directory join process, as needed.)
+- The device will enroll in Intune (or other configured MDM services).  (This happens as part of the Azure Active Directory join process via MDM auto-enrollment, or before the Active Directory join process, as needed.)
 - If configured, the [enrollment status page](enrollment-status.md) (ESP) will be displayed.
 - Once the device configuration tasks have completed, the user will be signed into Windows 10 using the credentials they previously provided.  (Note: if the device reboots during the device ESP process, the user will need to reenter their credentials as these are not persisted across reboots.)
 - Once signed in, the enrollment status page will again be displayed for user-targeted configuration tasks.

@@ -27,7 +27,7 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 
 Whether you are performing user-driven or self-deploying device deployments, the troubleshooting process is about the same.  It's always useful to understand the flow for a specific device:
 
-- A network connection is established.  This can be a wireless (Wi-fi) or wired (Ethernet) connection.
+- A network connection is established.  The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
 - The Windows Autopilot profile is downloaded. When using a wired connection, or manually establishing a wireless connection, the Windows Autopilot profile is downloaded from the Autopilot deployment service as soon as the network connection is in place.
 - User authentication occurs.  When performing a user-driven deployment, the user will enter their Azure Active Directory credentials, which will be validated.
 - Azure Active Directory join occurs.  For user-driven deployments, the device will be joined to Azure AD using the specified user credentials.  For self-deploying scenarios, the device will be joined without specifying any user credentials.
@@ -46,9 +46,9 @@ For troubleshooting, key activities to perform are:
 
 ### Clicking Import after selecting CSV does nothing, '400' error appears in network trace with error body **"Cannot convert the literal '[DEVICEHASH]' to the expected type 'Edm.Binary'"**
 
-This error points to the device hash being incorrectly formatted. This could be caused by anything that corrupts the collected hash, but one possibility is that the hash itself (even if it's completely valid) fails to be decoded.
+This error points to the device hash being incorrectly formatted. This error can be caused by anything that corrupts the collected hash, but one possibility is that the hash itself (even if it's completely valid) fails to be decoded.
 
-The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. In most cases, the payload does not require padding and the process works. However, sometimes the payload doesn't line up cleanly and padding is necessary. This is when you get the error displayed above. PowerShell's Base64 decoder also expects padded Base64, so we can use this to validate that the hash is properly padded.
+The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. In most cases, the payload does not require padding and the process works. However, sometimes the payload doesn't line up cleanly and padding is necessary. This is when you get the error displayed above. PowerShell's Base64 decoder also expects padded Base64, so we can use this decoder to validate that the hash is properly padded.
 
 The "A" characters at the end of the hash are effectively empty data - Each character in Base64 is 6 bits, A in Base64 is 6 bits equal to 0. Deleting or adding **A**'s at the end doesn't change the actual payload data.
 
@@ -92,18 +92,18 @@ To see details related to the Autopilot profile settings and OOBE flow, Windows 
 
 | Event ID | Type | Description |
 |----------|------|-------------| 
-| 100 | Warning | “Autopilot policy [name] not found.”  This is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
-| 101 | Info | “AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].”  This shows Autopilot retrieving and processing numeric OOBE settings. |
-| 103 | Info | “AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].”  This shows Autopilot retrieving and processing OOBE setting strings such as the Azure AD tenant name. |
-| 109 | Info | “AutopilotGetOobeSettingsOverride succeeded:  OOBE setting [setting name]; state = [state].”  This shows Autopilot retrieving and processing state-related OOBE settings. |
-| 111 | Info | “AutopilotRetrieveSettings succeeded.”  This means that the settings stored in the Autopilot profile that control the OOBE behavior have been retrieved successfully. |
-| 153 | Info | “AutopilotManager reported the state changed from [original state] to [new state].”  Typically this should say “ProfileState_Unknown” to “ProfileState_Available” to show that a profile was available for the device and downloaded, so the device is ready to be deployed using Autopilot. |
-| 160 | Info | “AutopilotRetrieveSettings beginning acquisition.”  This shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
+| 100 | Warning | “Autopilot policy [name] not found.”  This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
+| 101 | Info | “AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value].”  This message shows Autopilot retrieving and processing numeric OOBE settings. |
+| 103 | Info | “AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].”  This message shows Autopilot retrieving and processing OOBE setting strings such as the Azure AD tenant name. |
+| 109 | Info | “AutopilotGetOobeSettingsOverride succeeded:  OOBE setting [setting name]; state = [state].”  This message shows Autopilot retrieving and processing state-related OOBE settings. |
+| 111 | Info | “AutopilotRetrieveSettings succeeded.”  This message means that the settings stored in the Autopilot profile that control the OOBE behavior have been retrieved successfully. |
+| 153 | Info | “AutopilotManager reported the state changed from [original state] to [new state].”  Typically this message should say “ProfileState_Unknown” to “ProfileState_Available” to show that a profile was available for the device and downloaded, so the device is ready to be deployed using Autopilot. |
+| 160 | Info | “AutopilotRetrieveSettings beginning acquisition.”  This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
 | 161 | Info | “AutopilotManager retrieve settings succeeded.”  The Autopilot profile was successfully downloaded. |
 | 163 | Info | “AutopilotManager determined download is not required and the device is already provisioned.  Clean or reset the device to change this.”  This message indicates that an Autopilot profile is resident on the device; it typically would only be removed by the **Sysprep /Generalize** process. |
 | 164 | Info | “AutopilotManager determined Internet is available to attempt policy download.” |
 | 171 | Error | “AutopilotManager failed to set TPM identity confirmed.  HRESULT=[error code].”  This indicates an issue performing TPM attestation, needed to complete the self-deploying mode process. | 
-| 172 | Error | “AutopilotManager failed to set Autopilot profile as available.  HRESULT=[error code].”  This is typically related to event ID 171. |
+| 172 | Error | “AutopilotManager failed to set Autopilot profile as available.  HRESULT=[error code].”  This error is typically related to event ID 171. |
 
 In addition to the event log entries, the registry and ETW trace options described below also work with Windows 10 version 1803 and above.
 
