@@ -175,7 +175,7 @@ Applies to:
 The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own 3rd party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 #### Enrollment Status Page profiles can be set to device groups<!--3952138 -->
-Previously, Enrollment Status Page (ESP) profiles could only be targeted to user groups. Now you can also set them to target device groups. For more information, see {Set up an Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+Previously, Enrollment Status Page (ESP) profiles could only be targeted to user groups. Now you can also set them to target device groups. For more information, see [Set up an Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 #### Automated Device Enrollment sync errors<!-- 6988214 -->
 New errors will be reported for iOS/iPadOS and macOS devices, including
