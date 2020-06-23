@@ -45,7 +45,7 @@ If an existing device is already running a supported version of Windows 10 semi-
 
 For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
 
-Also note that when using the [Windows Autopilot for existing devices](windows-autopilot/existing-devices.md) scenario, it is not necessary to pre-register the devices with Windows Autopilot.  Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used; the device can be registered with Windows Autopilot after the fact using the same "Convert all targeted devices to Autopilot" setting.
+Also note that when using the [Windows Autopilot for existing devices](existing-devices.md) scenario, it is not necessary to pre-register the devices with Windows Autopilot.  Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used; the device can be registered with Windows Autopilot after the fact using the same "Convert all targeted devices to Autopilot" setting.
 
 ## Manual registration
 
