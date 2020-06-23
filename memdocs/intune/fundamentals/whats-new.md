@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,22 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 
+## Week of June 22, 2020
+
+### Device security
+
+### Use Microsoft Defender ATP in compliance policies for Android<!-- 4425686  -->
+
+You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance polices for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
+
+### Configure Defender ATP web protection for Android devices<!-- 6185563 WNReady -->
+
+When you use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) for Android devices, you can [configure Microsoft Defender ATP web protection](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) to disable the phishing scan feature, or prevent the scan from using VPN.
+
+Depending on how your Android device enrolls with Intune, the following options are available:
+
+- Android device administrator - Use custom OMA-URI settings to disable the web protection feature, or disable only the use of VPNs during scans.
+- Android Enterprise work profile - Use an app configuration profile and the configuration designer to disable all web protection capabilities.
 
 ## Week of June 15, 2020  (2006 Service release)
 
