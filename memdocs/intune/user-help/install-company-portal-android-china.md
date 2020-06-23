@@ -41,7 +41,7 @@ Install the Intune Company Portal app to access school or work resources from yo
 
 Company Portal is also available from the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). To find it:  
  
-   1. Go to the [Baidu App Store](https://shouji.baidu.com).  
+   1. Go to the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565).  
    2. Search for the Company Portal app by entering **公司门户** in the search bar.  
    3. Select the listing with the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2006.png) icon.  
 
