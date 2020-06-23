@@ -36,6 +36,7 @@ Install the Intune Company Portal app to access school or work resources from yo
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
+* OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 
