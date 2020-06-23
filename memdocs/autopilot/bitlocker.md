@@ -32,7 +32,7 @@ To ensure the desired BitLocker encryption algorithm is set before automatic enc
 1. Configure the [encryption method settings](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption) in the Windows 10 Endpoint Protection profile to the desired encryption algorithm. 
 2. [Assign the policy](https://docs.microsoft.com/intune/device-profile-assign) to your Autopilot device group. 
     - **IMPORTANT**: The encryption policy must be assigned to **devices** in the group, not users.
-3. Enable the Autopilot [Enrollment Status Page](https://docs.microsoft.com/windows/deployment/windows-autopilot/enrollment-status) (ESP) for these devices. 
+3. Enable the Autopilot [Enrollment Status Page](enrollment-status.md) (ESP) for these devices. 
     - **IMPORTANT**: If the ESP is not enabled, the policy will not apply before encryption starts.
 
 An example of Microsoft Intune Windows Encryption settings is shown below.

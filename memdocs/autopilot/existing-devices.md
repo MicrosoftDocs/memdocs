@@ -41,7 +41,7 @@ This topic describes how to convert Windows 7 or Windows 8.1 domain-joined compu
 
 ### Configure the Enrollment Status Page (optional)
 
-If desired, you can set up an [enrollment status page](https://docs.microsoft.com/windows/deployment/windows-autopilot/enrollment-status) for Autopilot using Intune.
+If desired, you can set up an [enrollment status page](enrollment-status.md) for Autopilot using Intune.
 
 To enable and configure the enrollment and status page:
 
@@ -208,7 +208,7 @@ See the following examples.
      > The Autopilot for existing devices task sequence will run the **Prepare Windows for capture** action which uses the System Preparation Tool (sysprep). This action will fail if the target machine is joined to a domain.
      
      >[!IMPORTANT]
-     > The System Preparation Tool (sysprep) will run with the /Generalize parameter which, on Windows 10 versions 1903 and 1909, will delete the Autopilot profile file and the machine will boot into OOBE phase instead of Autopilot phase. To fix this issue, please see [Windows Autopilot - known issues](https://docs.microsoft.com/windows/deployment/windows-autopilot/known-issues).
+     > The System Preparation Tool (sysprep) will run with the /Generalize parameter which, on Windows 10 versions 1903 and 1909, will delete the Autopilot profile file and the machine will boot into OOBE phase instead of Autopilot phase. To fix this issue, please see [Windows Autopilot - known issues](known-issues.md).
 
 5. Click **Next**, and then click **Next** again to accept the default settings on the Install Configuration Manager page.
 6. On the State Migration page, enter the following details:
@@ -252,7 +252,7 @@ See the following examples.
 25. Click **OK** to close the Task Sequence Editor.
 
 > [!NOTE]
-> On Windows 10 1903 and 1909, the **AutopilotConfigurationFile.json** is deleted by the **Prepare Windows for Capture** step. See [Windows Autopilot - known issues](https://docs.microsoft.com/windows/deployment/windows-autopilot/known-issues) for more information and a workaround.
+> On Windows 10 1903 and 1909, the **AutopilotConfigurationFile.json** is deleted by the **Prepare Windows for Capture** step. See [Windows Autopilot - known issues](known-issues.md) for more information and a workaround.
 
 ### Deploy Content to Distribution Points
 
@@ -311,13 +311,13 @@ The Task Sequence will download content, reboot, format the drives and install W
 ![refresh-3](images/up-3.png)
 
 >[!NOTE]
->If joining devices to Active Directory (Hybrid Azure AD Join), it is necessary to create a Domain Join device configuration profile that is targeted to "All Devices" (since there is no Azure Active Directory device object for the computer to do group-based targeting).  See [User-driven mode for hybrid Azure Active Directory join](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join) for more information.
+>If joining devices to Active Directory (Hybrid Azure AD Join), it is necessary to create a Domain Join device configuration profile that is targeted to "All Devices" (since there is no Azure Active Directory device object for the computer to do group-based targeting).  See [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join) for more information.
 
 ### Register the device for Windows Autopilot
 
 Devices provisioned through Autopilot will only receive the guided OOBE Autopilot experience on first boot. Once updated to Windows 10, the device should be registered to ensure a continued Autopilot experience in the event of PC reset. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile).
 
-Also see [Adding devices to Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/add-devices).
+Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 ## Speeding up the deployment process
 

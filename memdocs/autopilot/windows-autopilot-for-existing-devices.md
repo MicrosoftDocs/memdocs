@@ -17,9 +17,9 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-[Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) provides a way for organizations to ship fresh, untouched Windows 10 devices directly to the end user. You also define the provisioning flow the user goes through to get a secure, productive Windows 10 device. The device is registered with the Windows Autopilot service, so you can assign the necessary Windows Autopilot profile. This profile defines the out-of-box experience (OOBE) for that device.
+[Windows Autopilot](windows-autopilot.md) provides a way for organizations to ship fresh, untouched Windows 10 devices directly to the end user. You also define the provisioning flow the user goes through to get a secure, productive Windows 10 device. The device is registered with the Windows Autopilot service, so you can assign the necessary Windows Autopilot profile. This profile defines the out-of-box experience (OOBE) for that device.
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available with Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
+[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available with Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](user-driven.md) using a single, native Configuration Manager task sequence.
 
 ## Prerequisites
 
@@ -129,7 +129,7 @@ The Windows Autopilot for existing devices task sequence results in a device joi
 > 1. Disable the **Prepare Windows for Capture** step.
 > 1. Immediately after the disabled **Prepare Windows for Capture** step, add a new **Run Command Line** step. Configure it to run the following command line: `c:\windows\system32\sysprep\sysprep.exe /oobe /reboot`
 >
-> For more information, see [Windows Autopilot - known issues](https://docs.microsoft.com/windows/deployment/windows-autopilot/known-issues).
+> For more information, see [Windows Autopilot - known issues](known-issues.md).
 
 Use OneDrive for Business [known folder move](https://docs.microsoft.com/onedrive/redirect-known-folders) to make sure the user's data is backed up before the Windows 10 upgrade.
 

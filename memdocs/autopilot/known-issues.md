@@ -68,7 +68,7 @@ This happens because Windows 10, version 1903 and 1909 deletes the AutopilotConf
 - You are unable to install UWP apps from the Microsoft Store, causing failures during Windows Autopilot.  If you are deploying Company Portal as a blocking app during Windows Autopilot ESP, you’ve probably seen this error.
 - A user is not granted administrator rights in the Windows Autopilot user-driven Hybrid Azure AD join scenario.  This is another non-English OS issue.
 <td>Download and install the <a href="https://support.microsoft.com/help/4505903">KB4505903 update</a>. <br><br>See the section: <b>How to get this update</b> for information on specific release channels you can use to obtain the update.
-<tr><td>Windows Autopilot <a href="https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying">self-deploying mode</a> fails with an error code:
+<tr><td>Windows Autopilot <a href="self-deploying.md">self-deploying mode</a> fails with an error code:
 <td><table>
 <tr><td>0x800705B4<td>This is a general error indicating a timeout. A common cause of this error in self-deploying mode is that the device is not TPM 2.0 capable (ex: a virtual machine). Devices that are not TPM 2.0 capable cannot be used with self-deploying mode.
 <tr><td>0x801c03ea<td>This error indicates that TPM attestation failed, causing a failure to join Azure Active Directory with a device token.
