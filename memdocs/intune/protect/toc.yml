@@ -51,7 +51,9 @@
   - name: Set rules on devices to allow access to resources
     items:
     - name: Compliance overview
-      href: device-compliance-get-started.md    
+      href: device-compliance-get-started.md
+    - name: Device compliance partners
+      href: device-complince-partners.md
     - name: Create a policy
       href: create-compliance-policy.md
     - name: Location-based compliance
