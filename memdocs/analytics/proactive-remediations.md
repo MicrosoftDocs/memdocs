@@ -92,7 +92,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 ### <a name="bkmk_prs_ps1"></a> Copy the provided detection and remediation scripts
 
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
-    - Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`.
+    - Script files whose names start with `detect` are detection scripts. Remediation scripts start with `remediate`.
     - For a description of the scripts, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 1. Save each script using the provided name. The name is also in the comments at the top of each script.
     - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
