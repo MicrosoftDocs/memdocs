@@ -44,7 +44,7 @@ Use one of the following policy types to configure FileVault on your managed dev
 To manage BitLocker for Windows 10, see [Manage BitLocker policy](../protect/encrypt-devices.md).
 
 > [!TIP]
-> [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
+> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.
 
 After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
