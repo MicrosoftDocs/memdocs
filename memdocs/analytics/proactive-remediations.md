@@ -70,7 +70,7 @@ If the option **Enforce script signature check** is enabled in the [Settings](#b
    - Currently, the encoding and line breaks are a known issue.
 
 
-## Deploy built-in script packages
+## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 
 There are built-in script packages you can use to get started with Proactive remediations. The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours by default. The following built-in script packages just need to be assigned:
 
@@ -85,14 +85,14 @@ To assign the script package:
 1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
-## <a name="bkmk_prs_deploy"></a> Create and deploy custom script packages
+## Create and deploy custom script packages
 
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
 
 ### <a name="bkmk_prs_ps1"></a> Copy the provided detection and remediation scripts
 
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
-    - Script files whose names start with `detect` are detection scripts. Remediation scripts start with `remediate`.
+    - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
     - For a description of the scripts, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 1. Save each script using the provided name. The name is also in the comments at the top of each script.
     - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).

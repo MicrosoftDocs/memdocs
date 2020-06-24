@@ -52,6 +52,18 @@ While some devices may not show OS Version data in the **All devices** view, up-
 
 The fix for this issue is available in the Configuration Manager version 2002 update rollup (available around mid-July).
 
+### Error code -2016281112 (Remediation failed)
+
+There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
+
+### Script requirements for Proactive remediations
+
+If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
+- Encoded in UTF-8 not UTF-8 BOM
+- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
+   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
+   - Currently, the encoding and line breaks are a known issue.
+
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
 If the overview page shows a startup performance score of zero with a banner showing it's waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.

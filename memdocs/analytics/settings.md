@@ -41,16 +41,16 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
     
     - **Scope**: Select **Boot performance**
 
-  - Use the [Scope tags](/intune/configuration/device-profile-create#scope-tags) and [Applicability rules](/intune/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+  - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
-Once connected, you can [choose which devices you'd like to target](/mem/analytics/enroll-configmgr#bkmk_cm_enroll) for Endpoint Analytics in the Configuration Manager console.
+Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
 > [!NOTE] 
-> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
 
 ## <a name="bkmk_baselines"></a> Baseline management
