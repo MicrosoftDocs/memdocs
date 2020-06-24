@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Device management overview
 
-A key task of any Administrator is to protect and secure an organization's resources and data. This task is *device management*. Users have many devices where they open and share personal files, visit websites, and install apps and games. These same users are also employees and students. They want to use their devices to access work and school resources, such as email and OneNote.
+A key task of any Administrator is to protect and secure an organization’s resources and data on the devices of people in the organization. This task is device management. Users typically use their device for personal emails, visit websites while at home, and install apps and games. These users are also employees and students too, they want to have access to work and school resources, such as email and OneNote, in a convenient way for each of their devices. This means that an Administrator has to make it easy for users to access your organization’s resources across multiple devices and protect those resources at the same time.
 
 Device management enables organizations to protect and secure their resources and data, and from different devices.
 
