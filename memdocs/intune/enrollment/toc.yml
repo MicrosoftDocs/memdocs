@@ -97,11 +97,11 @@
         - name: Device enrollment restrictions
           href: device-enrollment-restrictions.md
         - name: Set app configuration policies
-          href: app-configuration-policies.md
+          href: android-app-configuration-policies.md
         - name: Android work profile security settings
           href: android-work-profile-settings.md
-        - name: Android device owner security settings
-          href: android-device-owner-settings.md         
+        - name: Android fully managed security settings
+          href: android-fully-managed-settings.md         
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
