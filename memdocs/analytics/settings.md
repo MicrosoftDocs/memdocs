@@ -21,6 +21,8 @@ From the settings page, you can select **General** or **Baseline**. Each of thes
 
 The **General** page in **Settings** allows you to see if Intune startup performance data collection has been enabled. It's automatically enabled for all your devices by default when you click **Start** to enable user-experience analytics. You can go to the Intune data collection policy node to change the set of devices on which boot and sign in records are collected.
 
+  [![Endpoint analytics general settings page](media/settings-general.png)](media/settings-general.png#lightbox)
+
 ### <a name="bkmk_profile"></a> Intune data collection policy
 
 To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
@@ -43,10 +45,13 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
 ### Configuration Manager data connector
 
-> [!NOTE]
-> There is a placeholder for instructions for configuring the Configuration Manager data connector. However, this functionality has not been implemented in this initial private preview.
+To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions). 
 
-  [![Endpoint analytics general settings page](media/settings-general.png)](media/settings-general.png#lightbox)
+Once connected, you can [choose which devices you'd like to target](/mem/analytics/enroll-configmgr#bkmk_cm_enroll) for Endpoint Analytics in the Configuration Manager console.
+
+> [!NOTE] 
+> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+
 
 ## <a name="bkmk_baselines"></a> Baseline management
 
