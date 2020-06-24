@@ -60,8 +60,8 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 #### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
-- Configuration Manager version 2002 or newer
-- Clients upgraded to version 2002 or newer
+- Configuration Manager Technical Preview 2005 or newer
+- Clients upgraded to Technical Preview 2005 or newer
 - [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled.
 
 #### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
