@@ -61,7 +61,7 @@ Startup performance provides an insight on the number of devices with slow boot 
 
 If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue was a regression and when it might have occurred.
 
-## Reporting tabs
+## <a name="bkmk_report"></a> Reporting tabs
 
 The **Startup performance** page has reporting tabs that provide support for the insights, including:
 

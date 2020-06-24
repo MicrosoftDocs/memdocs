@@ -13,11 +13,11 @@ manager: dougeby
 
 ---
 
-# <a name="bkmk_privacy"></a> Endpoint analytics data collection
+# Endpoint analytics data collection
 
 This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement).
 
-## Data flow
+## <a name="bkmk_flow"></a>Data flow
 
 The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
 

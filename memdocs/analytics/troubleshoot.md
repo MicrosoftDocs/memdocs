@@ -18,7 +18,7 @@ manager: dougeby
 
 The sections below can be used to assist in troubleshooting issues you may come across.
 
-## <a name="bkmk_known_issues"></a> Known issues
+## <a name="bkmk_known"></a> Known issues
 
 ### Startup processes data not available for some devices
 

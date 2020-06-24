@@ -85,11 +85,11 @@ To assign the script package:
 1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
-## Create and deploy custom script packages
+## <a name="bkmk_prs_ps1"></a> Create and deploy custom script packages
 
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
 
-### <a name="bkmk_prs_ps1"></a> Copy the provided detection and remediation scripts
+### Copy the provided detection and remediation scripts
 
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
     - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
@@ -115,7 +115,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 1. Complete the **Review + Create** step for your deployment.
 
 
-## Monitor your script packages
+## <a name="bkmk_prs_monitor"></a> Monitor your script packages
 
 1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
        [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)

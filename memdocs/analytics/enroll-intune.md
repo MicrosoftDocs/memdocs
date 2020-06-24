@@ -27,7 +27,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - Intune enrolled devices running Windows 10
 - The **Connected User Experiences and Telemetry** service on the device is running
 
-### Endpoints required for Intune-managed devices
+### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices
 
 To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
 
