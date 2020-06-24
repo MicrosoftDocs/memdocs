@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Device enrollment restrictions for the Android Enterprise security configuration framework
+title: Android Enterprise security configuration framework
 titleSuffix: Microsoft Intune
-description: Device enrollment restrictions for the Android Enterprise security configuration framework.
+description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
 keywords:
 author: ErikjeMS
 ms.author: erikje
@@ -29,38 +29,45 @@ ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Android Enterprise device enrollment restrictions
+# Android Enterprise security configuration framework
 
-Before enrolling devices for the [Android Enterprise security configuration framework](), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
-- approved devices.
-- a specified number of devices.
-- devices with specified platforms.
-- devices with specified operating systems.
-- devices from specified manufacturers.
+Security conscious organizations look at ways to ensure corporate data on mobile devices are protected. One method used to protect that data is through device enrollment. Device enrollment helps organizations deploy:
+- compliance policies (like PIN strength, jailbreak/root validation, and so on)
+- configuration policies (like WIFI, certificates, VPN).
+Device enrollment also enables organizations to manage the app lifecycle.
 
-For more information on device enrollment restrictions, see [Set enrollment restrictions](enrollment-restrictions-set.md).
+The number of device compliance and configuration policy settings help you tailor security protection to your specific needs. This flexibility might make it difficult to decide which policy settings are required to implement a complete scenario. To help you set up a complete security scenario, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](http://aka.ms/secconframework). Intune is using a similar taxonomy for its Android Enterprise security configuration framework, which is explained below and in the linked articles. 
 
-## Work profile basic (level 1) security restrictions
+## Android Enterprise enrollment modes
 
-For Android Enterprise work profile basic security (Level 1), the following device restrictions must be implemented:
+With Android 5.0, Google introduced Android Enterprise which includes two  enrollment modes:
+- [Fully managed devices (device owner)](android-fully-managed-enroll.md): For corporate-owned that are associated with a single user. Such devices are  exclusively for work and not personal use.
+- [Work profile (profile owner)](android-work-profile-enroll.md): Typically, for personally-owned devices where IT wants a clear boundary between work and personal data. Policies controlled by IT make sure that work data cannot be transferred into the personal profile.
 
-| Type | Platform | Version | Allows personal devices |
-|--------|--------|--------|--------|
-| Android Enterprise | Allow | Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers. For more informaiton, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
-| Android device administrator| Block | All versions | Yes |
+## Security configuration scenarios
 
-## Work profile high (level 3) security restrictions
-For Android Enterprise work profile high security (Level 3), the following device restrictions should be implemented:
+The Android Enterprise security configuration framework includes several distinct configuration scenarios for both work profile and fully managed  devices.
 
-| Type | Platform | Version | Allows personal devices |
-|--------|--------|--------|--------|
-| Android Enterprise | Allow | Android 8.0 and later | Yes |
-| Android device administrator| Block | All versions | Yes |
+### Work profile devices security configurations
 
-## Fully managed security restrictions
-Ensure the organization supports Android Enterprise fully managed device enrollment by reviewing Android Enterprise fully managed enrollment. 
+For personally-owned work profile devices, there are two recommended security configuration frameworks:
+
+- [Work profile basic security (level 1)](): The recommended minimum security configuration for personal devices where users access work or school data. This configuration is applicable to most mobile users. Some of the controls may impact user experience.
+- [Work profile high security (level 3)](): The recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
+
+
+> [!Note]
+> Because of the settings available for Android Enterprise work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
+
+
+### Fully managed devices security configurations
+
+For corporate owned fully managed devices, there are three recommended security configuration frameworks:
+
+- [Fully managed basic security (level 1](): The recommended minimum security configuration for an enterprise device. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
+- [Fully managed enhanced security (level 2](): The recommended configuration for devices where users access sensitive or confidential information. Some of the controls may impact user experience.
+- [Fully managed high security (level 3)](): The recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
 
 ## Next steps
 
-[Work profile security configuration framework settings](android-work-profile-settings.md)
-[Device owner security configuration framework settings](android-device-owner-settings.md)
+[Android Enteprise framework deployment methodology](framework-deployment-methodology.md)
