@@ -7,7 +7,7 @@ keywords: what is Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -27,9 +27,12 @@ search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
 ---
+
 # Microsoft Intune is an MDM and MAM provider for your devices
 
-Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and enables users to be productive while keeping your organization data protected. It integrates with other services, including Microsoft 365 and Azure Active Directory (Azure AD) to control who has access, and what they have access to, and Azure Information Protection for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices, while keeping your organization's information protected.
+Microsoft Intune is a cloud-based service that focuses on mobile device management (MDM) and mobile application management (MAM). You control how your organization’s devices are used, including mobile phones, tablets, and laptops. You can also configure specific policies to control applications. For example, you can prevent emails from being sent to people outside your organization. Intune also allows people in your organization to use their personal devices for school or work. On personal devices, Intune helps make sure your organization data stays protected, and can isolate organization data from personal data.
+
+Intune is part of Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security). Intune integrates with Azure Active Directory (Azure AD) to control who has access, and what they can access. It also integrates with Azure Information Protection for data protection. It can be used with the Microsoft 365 suite of products. For example, you can deploy Microsoft Teams, OneNote, and other Microsoft 365 apps to devices. This feature enables people in your organization to be productive on all of their devices, while keeping your organization’s information protected with policies you create.
 
 [![Image of Intune architecture](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
