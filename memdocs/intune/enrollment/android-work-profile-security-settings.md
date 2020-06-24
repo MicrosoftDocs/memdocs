@@ -113,7 +113,36 @@ Level 1 is the recommended minimum security configuration for personal devices w
 
 ## Work profile high security
 
-Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
+Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 1 by:
+- implementing mobile threat defense or Microsoft Defender ATP.
+- restricting work profile data scenarios.
+- enacting stronger password policies.
+
+The policy settings enforced in level 3 include all the policy settings recommended for level 1. However, the settings listed below include only those that have been added or changed. These settings may have a slightly higher impact to users or applications. They enforce a level of security more appropriate for risks facing users with access to sensitive information on mobile devices.
+
+| Section | Setting | Value | Notes |
+| ----- | ----- | ----- | ----- |
+| Microsoft Defender ATP | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender ATP. For more information, see Enforce compliance for [Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection).<br> Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both. |
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create).<br>Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both.|
+| Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 8.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
+| System Security | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
+| System Security | Number of previous passwords to prevent use | 5 | Organizations may need to update this setting to match their password policy. |
+
+| Section | Setting | Value | Notes |
+| ----- | ----- | ----- | ----- |
+| Work profile settings | Work profile notifications while device locked | Block | Blocking this setting ensures sensitive data is not exposed in work profile notifications, which may impact usability. |
+| Work profile settings | Contact sharing via Bluetooth | Not configured | By default, access to work contacts is not available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balance the usability scenarios with data protection concerns when implementing this setting. |
+| Work profile settings | Search work contacts from personal profile | Block | Blocking users from accessing work contacts from the personal profile may impact certain usability scenarios like text messaging and dialer experiences within the personal profile. Organizations should consider balance the usability scenarios with data protection concerns when implementing this setting. |
+| Work profile settings | Allow widgets from work profile apps | Not configured ||
+| Work profile settings | Number of sign-in failures before wiping the work profile | 5 | Organizations may need to update this setting to match their password policy. |
+| Work profile settings | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |
+| Work profile settings | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
+| Work profile settings | Smart Lock and other trust agents | Block ||
+| Device password | Number of sign-in failures before wiping device | 5 | This setting triggers a work profile wipe and not a wipe of the device. |
+| Device password | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |
+| Device password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
+
+
 
 
 ## Next steps
