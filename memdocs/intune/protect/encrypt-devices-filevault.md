@@ -63,9 +63,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 - **Rotate FileVault key**
   - Help Desk Operator
 
-## Create and deploy policy
-
-### Create an endpoint security policy for FileVault
+## Create an endpoint security policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -97,7 +95,7 @@ Select **Next**.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-### Create a device configuration policy for FileVault
+## Create a device configuration policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
