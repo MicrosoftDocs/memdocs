@@ -16,16 +16,22 @@ manager: dougeby
 
 # Tutorial: Proactive remediations
 
-Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](overview.md#bkmk_view).
+Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](enroll-intune.md#bkmk_view).
 
 
 In this tutorial, you learn how to:  
 
 > [!div class="checklist"]  
 > * Review prerequisites for Proactive remediations
-> * Enable Proactive remediations
-> * Create a script package
-> * Monitor the script package  
+> * Deploy a built-in script package
+> * Deploy a custom script package
+> * Monitor the script packages  
+
+## <a name="bkmk_prs"></a> About Proactive remediations
+
+Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
+
+Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your Endpoint analytics preview contact if you have any feedback on the script packages.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -63,13 +69,27 @@ If the option **Enforce script signature check** is enabled in the [Settings](#b
    - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
    - Currently, the encoding and line breaks are a known issue.
 
-## <a name="bkmk_prs"></a> Proactive remediations
 
-Proactive remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. These remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
+## Deploy built-in script packages
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you'll be able to deploy these script packages and see reports on their effectiveness. We're actively developing new script packages and would like to know your experiences using them. Reach out to your Endpoint analytics preview contact if you have any feedback on the script packages.
+There are built-in script packages you can use to get started with Proactive remediations. The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours by default. The following built-in script packages just need to be assigned:
 
-### <a name="bkmk_prs_ps1"></a> Get the detection and remediation scripts
+- **Update stale Group Policies** – Stale Group Policies can lead to helpdesk tickets related to connectivity and internal resource access.
+- **Restart Office Click-to-run service** – When the Click-to-run service is stopped, Office apps fail to start leading to helpdesk calls.
+
+To assign the script package:
+
+1. From the **Proactive remediations** node, select one of the built-in script packages.
+1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
+1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
+1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
+1. When you're done, select **Review + save**.
+
+## <a name="bkmk_prs_deploy"></a> Deploy custom script packages
+
+The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
+
+### <a name="bkmk_prs_ps1"></a> Copy the provided detection and remediation scripts
 
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
     - Script files whose names start with `det` are detection scripts. Remediation scripts start with `rem`.
@@ -77,17 +97,14 @@ Each script package consists of a detection script, a remediation script, and me
 1. Save each script using the provided name. The name is also in the comments at the top of each script.
     - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 
-
-## <a name="bkmk_prs_deploy"></a> Deploying and monitoring scripts
-
-The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. To deploy and monitor the scripts, follow the instructions below:
+### Deploy the script packages
 
 1. Go to the **Proactive remediations** node in the console.
 1. Click the **Create script package** button to create a script package.
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
-1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited. 
-1. On the **Settings** step, copy the text from the scripts you downloaded into the **Detection script** and **Remediation script** fields. 
-   - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_stale_Group_Policies.ps1` detection script corresponds with the `Remediate_stale_GroupPolicies.ps1` remediation script.
+1. In the **Basics** step, give the script package a **Name** and optionally, a **description**. The **Publisher** field can be edited, but defaults to your tenant name. **Version** can't be edited.
+1. On the **Settings** step, copy the text from the provided scripts or put your own scripts into the **Detection script** and **Remediation script** fields.
+   - You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
@@ -96,6 +113,10 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. Complete the **Review + Create** step for your deployment.
+
+
+## Monitor your script packages
+
 1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
        [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Click on **Device status** to get status details for each device in your deployment.
