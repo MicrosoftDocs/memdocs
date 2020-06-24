@@ -71,4 +71,5 @@ The **Startup performance** page has reporting tabs that provide support for the
 
 ## Next steps
 
-Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+- View [Recommended software](recommended-software.md).
+- Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

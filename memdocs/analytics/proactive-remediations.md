@@ -85,7 +85,7 @@ To assign the script package:
 1. If you would like to change the schedule, click the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.
 
-## <a name="bkmk_prs_deploy"></a> Deploy custom script packages
+## <a name="bkmk_prs_deploy"></a> Create and deploy custom script packages
 
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions below:
 
@@ -125,4 +125,5 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
-- Review [Recommended software](recommended-software.md).
+- View [Recommended software](recommended-software.md).
+- View [Startup performance](statup-performance.md)

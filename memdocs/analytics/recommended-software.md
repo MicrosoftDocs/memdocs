@@ -60,4 +60,5 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 ## Next steps
 
-Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+- View [Startup performance](statup-performance.md)
+- Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
