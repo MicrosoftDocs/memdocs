@@ -44,6 +44,8 @@ As an Intune administrator, you can enroll Android devices in the following ways
 
 To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
 
+For Android Enterprise, refer to the following support article from Google to ensure that Android Enterprise is available in your country or region: https://support.google.com/work/android/answer/6270910
+
 For devices manufactured by Zebra Technologies, you may need to grant the Company Portal additional permissions depending on the capabilities of the specific device. [Mobility Extensions on Zebra devices](../configuration/android-zebra-mx-overview.md) has more details.
 
 For Samsung Knox Standard devices, there are [more prerequisites](android-samsung-knox-mobile-enroll.md).
