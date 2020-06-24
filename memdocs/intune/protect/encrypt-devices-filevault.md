@@ -33,11 +33,11 @@ Intune supports macOS FileVault disk encryption. FileVault is a whole-disk encry
 
 Use one of the following policy types to configure FileVault on your managed devices:
 
-- **[Endpoint security policy for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
+- **[Endpoint security policy for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
 
   View the [FileVault settings that are available in profiles for disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Device configuration profile for endpoint protection for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Intune](../configuration/device-profile-create.md).
+- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Inunte](../configuration/device-profile-create.md).
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
 
@@ -63,7 +63,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 - **Rotate FileVault key**
   - Help Desk Operator
 
-## Create an endpoint security policy for FileVault
+## Create endpoint security policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -95,7 +95,7 @@ Select **Next**.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-## Create a device configuration policy for FileVault
+## Create device configuration policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
