@@ -44,20 +44,20 @@ This release is just the beginning. We'll be rapidly rolling out new insights fo
 
 For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
 
-### <a name="bkmk_uea__intune_prereq"></a> To enroll devices via Intune, this preview requires:
+### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune, this preview requires:
 - Intune enrolled devices running Windows 10
 - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise (Home and Pro editions aren't currently supported), and the devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined machines aren't currently supported.
-- Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_uea_endpoints).
+- Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](https://docs.microsoft.com/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_start).
    - By clicking **Start**, you agree to and acknowledge that your customer data may be stored outside the location you selected when you provisioned your Microsoft Intune tenant.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
-### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
+### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
-### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
+### <a name="bkmk_prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_prs) has the following requirements:
 - Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
 - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
