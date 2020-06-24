@@ -72,6 +72,11 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable the prompt to enable FileVault that appears at sign-out.
 
+  - **Hide recovery key**  
+     Hide the personal recovery key from the user of the macOS device during encryption. After the device is encrypted, a user can use any device to view their personal recovery key through the Intune Company Portal website, or company portal app on a supported platform.
+    - **Not configured** (*default*)
+    - **Yes** - Hide the personal recovery key during device encryption.
+
 ## BitLocker
 
 ### BitLocker – Base Settings
