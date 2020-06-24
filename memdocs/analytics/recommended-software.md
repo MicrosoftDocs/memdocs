@@ -60,5 +60,5 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 
 ## Next steps
 
-- View [Startup performance](statup-performance.md)
+- View [Startup performance](startup-performance.md)
 - Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

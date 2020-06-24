@@ -126,4 +126,4 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
 - View [Recommended software](recommended-software.md).
-- View [Startup performance](statup-performance.md)
+- View [Startup performance](startup-performance.md)
