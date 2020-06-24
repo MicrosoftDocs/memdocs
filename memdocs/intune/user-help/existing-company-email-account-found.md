@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: An existing company email account was found | Microsoft Docs
-description: Describes how to apply updates to your device so that you can access your work or school email again.
+title: Existing work email account was found | Microsoft Docs
+description: Describes how to update your device so that you can access your work or school email again.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/23/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,18 +29,17 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# An existing company email account was found
+# An existing email account was found
 
-You might have had mobile device access to your work or school email account *before* you got your device managed. If your device is now managed, we recommend that you:
+If you set up your work email on your device prior to enrollment, your organization may require you to remove it. 
 
-* Disconnect the existing work email account from your device.
-* Resync device settings from the Company Portal app.  
+Doing this allows your organization to set up an account for you that meets their network and security requirements. You'll have access to the new email account after you sync your device with Company Portal. 
 
-These steps will ensure that your device meets your company's security requirements, and that your emails remain secure.
+Complete the following steps to remove the existing account and update device settings. If you don't complete these steps, you may lose or have limited mobile access to your work account.
 
-1. On your device, go to **Settings** and find your connected accounts. On an iOS 11+ device, for example, select **Password & Accounts**.
+1. On your device, go to **Settings** and find your connected accounts. On an iOS 11+ device, for example, you'd select **Password & Accounts**.
  
-2. Select and remove your work email account.
+2. Select and remove the account that's linked to your work email. 
 
 3. Open the Company Portal app on your device.  
 
@@ -48,6 +47,8 @@ These steps will ensure that your device meets your company's security requireme
 
 5. Select **Check settings**. Within a few moments, your device will sync your new email settings.
 
-6. Sign in to your work or school email account.
+6. Sign in to your email account. 
+
+# Next steps
 
 Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
