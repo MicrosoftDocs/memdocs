@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,11 +33,11 @@ Intune supports macOS FileVault disk encryption. FileVault is a whole-disk encry
 
 Use one of the following policy types to configure FileVault on your managed devices:
 
-- **[Endpoint security policy for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
+- **[Endpoint security policy for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. The FileVault profile in *Endpoint security* is a focused group of settings that is dedicated to configuring FileVault.
 
   View the [FileVault settings that are available in profiles for disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Device configuration profile for endpoint protection for macOS FileVault](#create-an-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Intune](../configuration/device-profile-create.md).
+- **[Device configuration profile for endpoint protection for macOS FileVault](#create-endpoint-security-policy-for-filevault)**. FileVault settings are one of the available settings categories for macOS endpoint protection. For more information about using a device configuration profile, see [Create a device profile in Inunte](../configuration/device-profile-create.md).
 
   View the [FileVault settings that are available in endpoint protection profiles for device configuration policy](../protect/endpoint-protection-macos.md#filevault).
 
@@ -63,17 +63,15 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 - **Rotate FileVault key**
   - Help Desk Operator
 
-## Create and deploy policy
-
-### Create an endpoint security policy for FileVault
+## Create endpoint security policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
 3. On the **Basics** page, enter the following properties, and then choose **Next**.
-   1. **Platform**: macOS
-   2. **Profile**: FileVault
+   - **Platform**: macOS
+   - **Profile**: FileVault
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -97,33 +95,49 @@ Select **Next**.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-### Create a device configuration policy for FileVault
+## Create device configuration policy for FileVault
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
-3. Set the following options:
-   1. **Platform**: macOS
-   2. **Profile**: Endpoint protection
+3. On the **Create a profile** page, set the following options, and then click **Create**:
+   - **Platform**: macOS
+   - **Profile**: Endpoint protection
 
    ![Select the FileVault profile](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. Select **Settings** > **FileVault**.
+4. On the **Basics** page, enter the following properties:
 
-   ![FileVault settings](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name might include the profile type and platform.
 
-5. For *FileVault*, select **Enable**.
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-6. For *Recovery key type*, only **Personal key** is supported.
+5. On the **Configuration settings** page, select **FileVault** to expand the available settings:
 
-   Consider adding a message to help guide users on how to retrieve the recovery key for their device. This information can be useful for your users when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
+   > [!div class="mx-imgBorder"]
+   > ![FileVault settings](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   For example: To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to *Devices* and select the device that has FileVault enabled, and then select *Get recovery key*. The current recovery key is displayed.
+6. Configure the following settings:
+  
+   - For *Enable FileVault*, select **Yes**.
 
-7. Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **OK**.
+   - For *Recovery key type*, select **Personal key**.
 
-8. Complete configuration of additional settings, and then save the profile.
+   - For *Escrow location description of personal recovery key*, add a message to help guide users on how to retrieve the recovery key for their device. This information can be useful for your users when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
+
+     For example: To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to *Devices* and select the device that has FileVault enabled, and then select *Get recovery key*. The current recovery key is displayed.
+
+   Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **Next**.
+
+7. On the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
+
+   Select **Next** to continue.
+
+8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see Assign user and device profiles.
+Select **Next**.
+
+9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
 ## Manage FileVault
 
