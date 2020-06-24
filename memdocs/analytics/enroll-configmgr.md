@@ -57,6 +57,11 @@ Endpoint analytics is included in the following plans:
 
 A read-only user would only need the **Read** permission under both the **Device configurations** and **Endpoint Analytics** categories. An Intune administrator would typically need all permissions.
 
+### Limitations
+
+- Not all Endpoint analytics insights are available for devices running Windows Server editions. For instance, the **To responsive desktop** metric wouldn't be applicable to Windows Server Core.
+- Using multiple Configuration Manager hierarchies with a single endpoint analytics instance is expected to work but isn't currently fully supported.
+
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
 Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
