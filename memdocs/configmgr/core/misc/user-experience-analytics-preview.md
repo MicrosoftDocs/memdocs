@@ -2,7 +2,7 @@
 title: Endpoint analytics preview
 titleSuffix: Configuration Manager
 description: Instructions for Endpoint analytics preview.
-ms.date: 05/11/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -62,7 +62,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 #### <a name="bkmk_uea__cm_prereq"></a> To enroll devices via Configuration Manager, this preview requires:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled with an Azure tenant location of North America or Europe (we will be expanding to other regions soon)
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) enabled.
 
 #### <a name="bkmk_uea__prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](#bkmk_uea_prs) has the following requirements:
@@ -131,9 +131,13 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 ### <a name="bkmk_uea_onboard"></a> Onboard in the Endpoint analytics portal
 Onboarding from  the Endpoint analytics portal is required for both  Configuration Manager and Intune managed devices.
 
-1. Go to `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`
+1. Go to `https://aka.ms/endpointanalytics`
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](#bkmk_uea_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
-   - For more information about common issues, see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+
+> [!Important]  
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](#bkmk_uea_stop) at any time.
+
+   - For more information about common issues, see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 ## Overview page
 
@@ -146,8 +150,6 @@ Once your data is ready, you'll notice some information on the **Overview** page
    - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 
-- **Filters** will enable you to view your score on a subset of devices or users. However, the filter functionality isn't enabled in this preview.
-
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate to **Best practices** or **Recommended software**.
 
 [![Endpoint analytics overview page](media/overview-page.png)](media/overview-page.png#lightbox)
@@ -155,7 +157,7 @@ Once your data is ready, you'll notice some information on the **Overview** page
 ## <a name="bkmk_uea_rs"></a> Recommended software
 
 > [!Important]  
-> Endpoint Analytics computes the **Software adoption** score for all your Intune managed devices, regardless of whether they've been enrolled in Endpoint Analytics or not.
+> Endpoint Analytics computes the **Software adoption** score for all your Intune and co-managed devices, regardless of whether they've been configured with the [Intune data collection policy](#bkmk_uea_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](#bkmk_uea_cm_enroll) 
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100 that represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
@@ -187,9 +189,11 @@ Your Microsoft-Intune managed devices are already enrolled in Azure AD. The reco
 
 ### <a name="bkmk_uea_intune"></a> Cloud management
 
-Microsoft Intune provides users with several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminates the need for and performance overhead of Group Policy, resulting in a better end-user experience. This metric measures the percent of PCs enrolled in Microsoft Intune. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits, including enabling access to corporate resources even when they are away from the corporate network, and eliminating the need for and performance overhead of Group Policy, resulting in a better end-user experience. 
 
-The recommended remediation action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md).
+This metric measures the percent of PCs that have attached to the Microsoft 365 cloud to unlock additional capabilities. See how [Microsoft is enabling this for our employees](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+
+The recommended action for devices managed by Configuration Manager that aren't yet enrolled in Intune is to [co-manage them](../../comanage/overview.md) to unlock additional cloud-powered capabilities like conditional access.
 
 ### <a name="bkmk_uea_np"></a> No commercial median
 
@@ -198,7 +202,7 @@ The built-in baseline of **Commercial median** doesn't currently have metrics fo
 ## <a name="bkmk_uea_bp"></a> Startup performance
 
 > [!NOTE]
-> If you are not seeing startup performance data from all your devices, please see [Troubleshooting startup performance device enrollment](#bkmk_uea_enrollment_tshooter).
+> If you are not seeing startup performance data from all your devices, please see [Troubleshooting device enrollment and startup performance](#bkmk_uea_enrollment_tshooter).
 
 The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
 
@@ -325,45 +329,52 @@ You can compare your current scores and subscores to others by setting a baselin
 
 The sections below can be used to assist in troubleshooting issues you may encounter.
 
-### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting startup performance device enrollment
+### <a name="bkmk_uea_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
 If the overview page shows a startup performance score of zero accompanied by a banner showing it is waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
 
-First, here's a quick summary of limitations for startup performance data collection:
-1. Devices must be Windows 10 version 1903 or later.
-2. Devices must be Azure AD joined. We currently do not support Workplace Joined devices, although are actively investigating the feasibility of adding this functionality to Windows.
-3. Devices must be Windows 10 Enterprise edition. Windows 10 Home and Professional are not currently supported, although are actively investigating the feasibility of adding this functionality to Windows.
+First, ensure devices meet the [technical prerequisites](#technical-prerequisites)
 
-Note that these issues will not apply to data coming from the upcoming Configuration Manager connector; it will be able to collect data from any Configuration Manager client PC, regardless of version, edition, or directory configuration.
-
-Second, here's a quick checklist to go through for troubleshooting:
-1. Make sure you have the Windows Health Monitoring profile targeted to all the devices for which you want performance data. You can find a link to this profile from within the endpoint analytics setting page, or you navigate to it as you would any other Intune profile. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
-1. Have a look at which devices have been successfully configured for data collection. You can also see this information in the profiles overview page.  
+For Intune or co-managed devices configured with the Intune data collection policy:
+1. Make sure you have the [Intune data collection](#bkmk_uea_profile) policy is targetting all devices you want to see performance data. Look at the assignment tab to make sure it is assigned to the expected set of devices. 
+1. Look for devices that have not been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There is a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
-1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 24 hours after for the device to show up in the device performance tab.
-1. If your device has been successfully configured for data collection, has subsequently restarted, and after 24 hours you are still not seeing it, then it may be that the device can't reach our collection endpoints. This issue may happen if your company uses a proxy server and the endpoints have not been enabled in the proxy. For more information, see [Troubleshooting endpoints](#bkmk_uea_endpoints).
+1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](#data-flow)
+1. If your device has been successfully configured for data collection, has subsequently restarted, and after 25 hours you are still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_uea_endpoints).
 
-### Data collection for Intune-managed devices
+For Configuration Manager-managed devices:
+1. Ensure all devices you want to see performance data are [enrolled](#bkmk_uea_cm_enroll)
+1. Check if the data upload from Configuration Manager to the Gateway Service was succesful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site server.
+1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client settings. Find the overriding client settings and enable endpoint analytics on it.  
+1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
+1. Check and resolve any errors ocurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
 
-Endpoint Analytics leverages Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices . Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
 
-#### <a name="bkmk_uea_endpoints"></a> Endpoints
+### <a name="bkmk_uea_endpoints"></a> Proxy configuration
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft. If your environment uses a proxy server, use this information to help configure the proxy.
+If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
 
-To enable functional data sharing, configure your proxy server to allow the following endpoints:
+#### Endpoints required for Configuration Manager-managed devices
+
+Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they do not need directly access to the Microsoft public cloud.
+
+| Endpoint  | Function  |
+|-----------|-----------|
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+
+#### Endpoints required for Intune-managed devices
+
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics leverages Windows 10 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices . Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+
+| Endpoint  | Function  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
 
 > [!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
-| Endpoint  | Function  |
-|-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used to send [required functional data](#bkmk_uea_datacollection) to the Intune data collection endpoint. |
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics (on Configuration Manager Server role). For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics (on Configuration Manager Server role only). For more information, see [Configure the proxy for a site system server](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
-
-#### Proxy server authentication
+##### Proxy server authentication
 
 If your organization uses proxy server authentication for internet access, make sure that it doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in Desktop Analytics.
 
@@ -762,27 +773,30 @@ catch{
 
 ### Data flow
 
-The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. Data flows through our existing enterprise pipelines without reliance on Windows diagnostic data.
+The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
 
-[![User experience data flow diagram](media/dataflow.png)](media/dataflow.png#lightbox)
+[![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. Configure the **Intune data collection** policy for enrolled devices. By default, this policy is assigned to "All Devices" when you **Start** Endpoint analytics. However, you can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
+1. An [Intune Service Administrator role](../../../intune/fundamentals/role-based-access-control.md) [starts gathering data](#bkmk_uea_start).
 
-2. Devices send required functional data.
+    - For Intune-managed devices, this step configures the **Intune data collection** policy. By default, this policy is assigned to "All Devices". You can [change the assignment](#bkmk_uea_set) at any time to a subset of devices or no devices at all.
 
-    - For Intune devices with the assigned policy, data is sent from the Intune management extension. For more information, see [requirements](#bkmk_uea_prereq).
-    - For Configuration Manager managed devices, data can also flow to Microsoft Endpoint Management through the ConfigMgr connector. The ConfigMgr connector is cloud attached. It only requires connection to an Intune tenant, not turning on co-management.
+    - For Configuration Manager-managed devices, enable [Endpoint analytics data collection and enroll devices](#bkmk_uea_cm_enroll).
+
+1. Devices send required functional data.
+
+    - For Intune and co-managed devices with the assigned policy, devices send require functional data directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed in near real time. For more information, see [Endpoints required for Intune-managed devices](#bkmk_uea_endpoints).
+
+    - For Configuration Manager-managed devices, data flows to Microsoft Endpoint Management through the ConfigMgr connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the Configuration Manager connector sends data to the Gateway Service every hour.
+
+1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using MS Graph APIs. The maximum latency end to end is 25 hours and is gated by the time it takes to do the daily processing of insights and recommendations.
 
 > [!Note]  
-> The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been correctly assigned the policy to show the startup score on the admin console.  
-
-3. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using MS Graph APIs.
-
-The average latency end to end is about 12 hours and is gated by the time it takes to do the daily processing. All other parts of the data flow are near-real-time.
+> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](#bkmk_uea_profile), or [enable device upload](../../tenant-attach/device-sync-actions.md#enable-device-upload) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the admin console.
 
 ### <a name="bkmk_uea_datacollection"></a>Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) and [pseudonymized](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../../../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../../../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main datapoints currently being collected:
 
 #### Identified data
 
@@ -814,8 +828,25 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **orgId:** Unique GUID representing the Microsoft O365 Tenant
   
 > [!Important]  
-> Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the baselines up-to-date.
+> Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
+### <a name="bkmk_uea_stop"></a> Stop gathering data
+
+- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](#bkmk_uea_gen) created during sign-up.
+
+- If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
+
+   1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
+   1. Select **CoMgmtSettingsProd** then click **Properties**.
+   1. On the **Configure upload** tab, uncheck the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**.
+
+- Disable Endpoint analytics data collection in Configuration Manager (optional):
+
+   1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
+   1. Right-click and select **Properties** then select the **Computer Agent** settings.
+   1. Set **Enable Endpoint analytics data collection** to **No**.
+   > [!Important]
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
 
 ### Resources
 

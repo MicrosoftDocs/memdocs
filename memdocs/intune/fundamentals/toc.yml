@@ -164,6 +164,8 @@
         href: china.md
     - name: Sign in to Intune
       href: account-sign-up.md
+    - name: Unlicensed admins
+      href: unlicensed-admins.md
     - name: Configure domains
       href: custom-domain-name-configure.md
     - name: Add users

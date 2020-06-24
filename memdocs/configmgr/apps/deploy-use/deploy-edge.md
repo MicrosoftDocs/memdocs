@@ -123,7 +123,7 @@ Enable the following properties in the below [hardware inventory](../../core/cli
 - **Default Browser (SMS_DefaultBrowser)**
    - Browser Program ID
 
-- **SMS_BrowserUsage (SMS_BrowserUsage)**
+- **Browser Usage (SMS_BrowserUsage)**
    - BrowserName
    - UsagePercentage
 

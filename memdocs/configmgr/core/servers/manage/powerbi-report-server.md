@@ -38,6 +38,9 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
     > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report Server**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI integration uses the same role-based administration for reporting.
+    > [!NOTE]
+    > Power BI Report Server does not support RBAC enabled reports therefore all viewers of the reports will see the same results 
+    > regardless of their assigned scope.
 
 ## Configure the reporting services point
 

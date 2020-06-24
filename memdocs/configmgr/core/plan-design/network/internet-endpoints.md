@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,7 +72,8 @@ For more information on this function, see [Manage Windows as a service](../../.
 
 For more information on this function, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com` (Azure public cloud)
+- `management.usgovcloudapi.net` (Azure US Government cloud)
 
 ## Co-management
 
@@ -105,31 +106,66 @@ This section covers the following features:
 - Azure Active Directory (Azure AD) integration
 - Azure AD-based discovery
 
-For CMG/CDP service deployment, the **service connection point** needs access to:
+For more information on the CMG, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.  
+The following sections list the endpoints by role. Some endpoints refer to a service by `<name>`, which is the cloud service name of the CMG or CDP. For example, if your CMG is `GraniteFalls.CloudApp.Net`, then the actual storage endpoint is `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
 
-The **CMG connection point** needs access to the following service endpoints:
+### Service connection point
+
+For CMG/CDP service deployment, the service connection point needs access to:
+
+- Specific Azure endpoints are different per environment depending upon the configuration. Configuration Manager stores these endpoints in the site database. Query the **AzureEnvironments** table in SQL Server for the list of Azure endpoints.
+
+- [Azure services](#azure-services)
+
+- For Azure AD user discovery:
+
+  - Version 1902 and later: Microsoft Graph endpoint `https://graph.microsoft.com/`
+
+  - Version 1810 and earlier: Azure AD Graph endpoint `https://graph.windows.net/`  
+
+### CMG connection point
+
+The CMG connection point needs access to the following service endpoints:
+
+- Cloud service name (for CMG or CDP):
+  - `<name>.cloudapp.net` (Azure public cloud)
+  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
 - Service Management endpoint: `https://management.core.windows.net/`  
 
-- Storage endpoint: `<name>.blob.core.windows.net` and `<name>.table.core.windows.net`
+- Storage endpoint (for content-enabled CMG or CDP):
+  - `<name>.blob.core.windows.net` (Azure public cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Where `<name>` is the cloud service name of your CMG or CDP. For example, if your CMG is `GraniteFalls.CloudApp.Net`, then the first storage endpoint to allow is `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
+The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
 
-For Azure AD token retrieval by the **Configuration Manager console** and **client**:
+### Configuration Manager client
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- Cloud service name (for CMG or CDP):
+  - `<name>.cloudapp.net` (Azure public cloud)
+  - `<name>.usgovcloudapp.net` (Azure US Government cloud)
 
-For Azure AD user discovery, the **service connection point** needs access to:
+- Storage endpoint (for content-enabled CMG or CDP):
+  - `<name>.blob.core.windows.net` (Azure public cloud)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government cloud)
 
-- Version 1810 and earlier: Azure AD Graph endpoint `https://graph.windows.net/`  
+- For Azure AD token retrieval, the Azure AD endpoint:
+  - `login.microsoftonline.com` (Azure public cloud)
+  - `login.microsoftonline.us` (Azure US Government cloud)
 
-- Version 1902 and later: Microsoft Graph endpoint `https://graph.microsoft.com/`
+### Configuration Manager console
 
-The cloud management point (CMG) connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). The CMG connection point only needs to connect to the CMG service endpoints. It doesn't need access to other Azure endpoints.
+- For Azure AD token retrieval, the Azure AD endpoint:
 
-For more information on the CMG, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - Azure public cloud
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure US Government cloud
+    - `login.microsoftonline.us`
 
 ## <a name="bkmk_sum"></a> Software updates
 
@@ -199,18 +235,23 @@ Computers with the Configuration Manager console require access to the following
 
 For more information on this feature, see [Product feedback](../../understand/find-help.md#product-feedback).
 
-### Community workspace, Documentation node
+### Community workspace
+
+#### Documentation node
+
+For more information on this console node, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-For more information on this console node, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
+#### Community hub
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+For more information on this feature, see [Community hub](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### Monitoring workspace, Site Hierarchy node
 

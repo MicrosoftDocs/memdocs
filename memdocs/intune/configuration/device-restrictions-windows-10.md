@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -145,6 +145,10 @@ These settings use the [Bluetooth policy CSP](https://docs.microsoft.com/windows
 - **Bluetooth advertising**: **Block** prevents the device from sending out Bluetooth advertisements. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to send out Bluetooth advertisements.
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Bluetooth proximal connections**: **Block** prevents a device user from using Swift Pair and other proximity based scenarios. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the device to send out Bluetooth advertisements.
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth allowed services**: **Add** a list of allowed Bluetooth services and profiles as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
@@ -326,6 +330,9 @@ These settings use the [messaging policy CSP](https://docs.microsoft.com/windows
 ## Microsoft Edge Browser
 
 These settings use the [browser policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), which also lists the supported Windows editions.
+
+> [!NOTE]
+> Using the browser policy CSP applies to Microsoft Edge version 45 and earlier. For Microsoft Edge Enterprise version 77 and later, see [Configure Microsoft Edge policy settings with Microsoft Intune](/DeployEdge/configure-edge-with-intune).
 
 ### Use Microsoft Edge kiosk mode
 

@@ -2,7 +2,7 @@
 title: What's new in version 2002
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -325,7 +325,7 @@ For more information, see [Synchronize Office 365 updates from a disconnected so
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender ATP. For more information, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
-## <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center
 <!--5691658-->
 You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
@@ -382,6 +382,16 @@ For more information, see [Product feedback](../../understand/find-help.md#BKMK_
 <!--5891241-->
 
 Similar to improvements in previous releases, you can now use the **All Subfolders** search option from the **Configuration Items** and **Configuration Baselines** nodes.
+
+### Community hub
+
+<!--3555935, 3555936-->
+
+_First introduced in June 2020_
+
+The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
+
+For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 
 ## <a name="bkmk_tools"></a> Tools
 

@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -65,6 +65,16 @@ To verify, review the following log file for a similar entry:<!-- bug 7357499 --
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+To troubleshoot installation, review `%WinDir%\ccmsetup\logs\ccmsetup.log` on the client. After installation, review `%WinDir%\ccm\logs\ClientIDManagerStartup.log`.
+
+On the server, review the following logs:
+
+- [CMG logs](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- Management point
+  - CCM_STS.log
+  - MP_RegistrationManager.log
+  - ClientAuth.log
 
 ### Known issues
 

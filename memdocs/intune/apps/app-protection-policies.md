@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -187,14 +187,14 @@ To create these policies, browse to **Apps** > **App protection policies** in th
 
 ### Device types
 
-- **Unmanaged**: Unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
+- **Unmanaged**: For iOS/iPadOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution does not pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
 - **Intune managed devices**: Managed devices are managed by Intune MDM.
 - **Android device administrator**: Intune-managed devices using the Android Device Administration API.
 - **Android Enterprise**: Intune-managed devices using Android Enterprise Work Profiles or Android Enterprise Full Device Management.
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS/iPadOS, for the 'Device type' selection to be enforced to 'unmanaged' devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed - and that APP settings will not apply:
+For iOS/iPadOS, for the 'Device type' selection to be enforced to Intune managed devices, additional app configuration settings are required. These configurations will communicate to the APP service that a particular app is managed - and that APP settings will not apply:
 
 - **IntuneMAMUPN** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
