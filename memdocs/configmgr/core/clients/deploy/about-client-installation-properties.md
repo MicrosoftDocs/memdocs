@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -254,18 +254,18 @@ Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Cente
 
 ### /AlwaysExcludeUpgrade
 
-This parameter specifies whether or not a client will auto upgrade when [**Automatic client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers#bkmk_autoupdate) is enabled. 
+This parameter specifies whether or not a client will auto upgrade when you enable [**Automatic client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
 
 Supported values:
 
-- `TRUE`: Client will not be upgraded using **Automatic client upgrade**
-- `FALSE`: Client will be upgraded using **Automatic client upgrade** (default)
+- `TRUE`: The client won't automatically upgrade
+- `FALSE`: The client automatically upgrades (default)
 
 For example:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
-For more information see [Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site](../../understand/interoperability-client).
+For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
