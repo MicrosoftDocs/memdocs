@@ -40,7 +40,7 @@ This initial release, focuses on three things:
 
 This release is just the beginning. We'll be rapidly rolling out new insights for other key user-experiences soon after initial release. For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
 
-## <a name="bkmk_prereq"></a> Prerequisties
+## <a name="bkmk_prereq"></a> Prerequisites
 
 For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
 
