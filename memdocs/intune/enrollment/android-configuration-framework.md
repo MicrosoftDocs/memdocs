@@ -36,13 +36,13 @@ Security conscious organizations look at ways to ensure corporate data on mobile
 - configuration policies (like WIFI, certificates, VPN).
 Device enrollment also enables organizations to manage the app lifecycle.
 
-The number of device compliance and configuration policy settings help you tailor security protection to your specific needs. This flexibility might make it difficult to decide which policy settings are required to implement a complete scenario. To help you set up a complete security scenario, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](http://aka.ms/secconframework). Intune is using a similar taxonomy for its Android Enterprise security configuration framework. This taxonomy is explained below and in the following articles:
+The number of device compliance and configuration policy settings help you tailor security protection to your specific needs. This flexibility might make it difficult to decide which policy settings are required to implement a complete scenario. To help you set up a complete security scenario, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework). Intune is using a similar taxonomy for its Android Enterprise security configuration framework. This taxonomy is explained below and in the following articles:
 
 1. [Android Enterprise framework deployment methodology](framework-deployment-methodology.md): An explanation of a recommended configuration deployment methodology.
 2. [Android device enrollment restrictions](device-enrollment-restrictions.md): Pre-enrollment device restrictions for Android Enterprise devices.
 3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on these devices to disallow personal accounts.
-4. [Android Enterprise work profile security settings](android-work-profile-settings.md): Specific configuration settings for basic and high security on work profile devices.
-5. [Android Enterprise fully managed security settings](android-fully-managed-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
+4. [Android Enterprise work profile security settings](android-work-profile-security-settings.md): Specific configuration settings for basic and high security on work profile devices.
+5. [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
 
 
 

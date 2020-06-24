@@ -62,5 +62,5 @@ Ensure the organization supports Android Enterprise fully managed device enrollm
 
 ## Next steps
 
-[Work profile security configuration framework settings](android-work-profile-settings.md)
-[Device owner security configuration framework settings](android-device-owner-settings.md)
+[Work profile security configuration framework settings](android-work-profile-security-settings.md)
+[Device owner security configuration framework settings](android-device-owner-security-settings.md)

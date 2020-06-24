@@ -71,7 +71,7 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | System Security | Company Portal app runtime integrity | Require ||
 | System Security | Block USB debugging on device | Block | While this setting blocks debugging using a USB device, it also disables the ability to gather logs which may be useful in troubleshooting purposes. |
 | System Security | Minimum security patch level | Not configured | Android devices can receive monthly security patches, but the release is dependent on OEMs and/or carriers. Organizations should ensure that deployed Android devices do receive security updates before implementing this setting. For the latest patch releases, see [Android Security Bulletins](https://source.android.com/security/bulletin/). |
-| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance).|
+| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md).|
 
 ### Device restrictions
 
@@ -108,9 +108,8 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | System Security | Threat scan on apps | Require | This setting ensures that Google's Verify Apps scan is turned on for end user devices. If configured, the end user will be blocked from access until they turn on Google's app scanning on their Android device. |
 | System Security | Prevent app installations from unknown sources in the personal profile | Block ||
 
-
-
-
+> [!Note]
+> When Android Enterprise work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock may be disabled to separate work profile and device passcodes if necessary, under work profile settings.
 
 ## Work profile high security
 
@@ -119,4 +118,4 @@ Level 3 is the recommended configuration for devices used by users or groups who
 
 ## Next steps
 
-[Android Enterprise fully managed security settings](android-fully-managed-settings.md)
+[Android Enterprise fully managed security settings](android-fully-managed-security-settings.md)
