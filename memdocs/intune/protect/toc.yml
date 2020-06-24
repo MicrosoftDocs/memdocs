@@ -258,6 +258,8 @@
         href: troubleshoot-scep-certificate-delivery.md
       - name: Reporting for certificate deployment
         href: troubleshoot-scep-certificate-reporting.md
+    - name: Troubleshoot PKCS certificate profiles
+      href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot Exchange connectors
       items:
       - name: Troubleshoot Exchange connectors
