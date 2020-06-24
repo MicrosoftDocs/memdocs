@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,8 +61,10 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
  
 <!-- ***********************************************-->
-<!--## App management-->
+## App management
 
+### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
+The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
 
 <!-- ***********************************************-->
 ## Device configuration
