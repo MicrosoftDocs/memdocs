@@ -40,7 +40,7 @@ The number of device compliance and configuration policy settings help you tailo
 
 1. [Android Enterprise framework deployment methodology](framework-deployment-methodology.md): An explanation of a recommended configuration deployment methodology.
 2. [Android device enrollment restrictions](device-enrollment-restrictions.md): Pre-enrollment device restrictions for Android Enterprise devices.
-3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on these dvices to disallow personal accounts.
+3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on these devices to disallow personal accounts.
 4. [Android Enterprise work profile security settings](android-work-profile-settings.md): Specific configuration settings for basic and high security on work profile devices.
 5. [Android Enterprise fully managed security settings](android-fully-managed-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
 

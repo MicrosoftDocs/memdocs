@@ -99,9 +99,9 @@
         - name: Set app configuration policies
           href: android-app-configuration-policies.md
         - name: Android work profile security settings
-          href: android-work-profile-settings.md
-        - name: Android fully managed security settings
-          href: android-fully-managed-settings.md         
+          href: android-work-profile-security-settings.md
+        - name: Android fully managed-security settings
+          href: android-fully-managed-security-settings.md         
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
