@@ -167,8 +167,8 @@ This issue can occur when the PKCS certificate profile specifies the wrong serve
 
 Review the following settings, and fix if they're incorrect:
 
-1. The **Certification authority** property displays the internal FQDN of your CA server.
-2. The **Certification authority name** property displays the name of your CA.
+- The **Certification authority** property displays the internal FQDN of your CA server.
+- The **Certification authority name** property displays the name of your CA.
 
 #### Cause 2 - CA doesn’t support certificate renewal for requests signed by previous CA certificates
 
