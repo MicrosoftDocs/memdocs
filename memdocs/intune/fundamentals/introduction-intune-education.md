@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # How is Intune for Education different from the full device management experience in Intune?
 
-Intune for Education enables your teachers and students to be productive while protecting your school's data. Intune for Education is powered by Microsoft’s Intune service which is a cloud-based enterprise mobility management (EMM) service.
+Intune for Education enables your teachers and students to be productive while protecting your school's data. Intune for Education is powered by Microsoft’s Intune service, a cloud-based enterprise mobility management (EMM) service.
 
 ![Intune for Education console compared against Intune console.](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
