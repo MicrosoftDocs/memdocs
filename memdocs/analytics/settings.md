@@ -15,6 +15,11 @@ manager: dougeby
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
 
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
+
 From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
 
 ## <a name="bkmk_gen"></a> General settings
