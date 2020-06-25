@@ -16,6 +16,11 @@ manager: dougeby
 
 # Tutorial: Proactive remediations
 
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
+
 Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](enroll-intune.md#bkmk_view).
 
 
@@ -40,9 +45,8 @@ Each script package consists of a detection script, a remediation script, and me
 
 Whether enrolling devices via Intune or Configuration Manager, Proactive remediation scripting has the following requirements:
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
-- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
-- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Configuration Manager.
+  - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune.
+  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later. Co-managed devices on preceding versions of Windows 10 Enterprise will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to versions 1607).
 
 ### Licensing
 
