@@ -21,11 +21,10 @@ manager: dougeby
 
 Microsoft provides global technical, pre-sales, billing, and subscription support for Endpoint analytics. Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
-> [!TIP]
-> Before contacting Microsoft Support, first review the following articles:
->
-> - [Prerequisites](enroll-intune.md#bkmk_prereq)
-> - [Troubleshoot Endpoint analytics](troubleshoot.md)
+Before contacting Microsoft Support, first review the following articles:
+
+ - [Prerequisites](enroll-intune.md#bkmk_prereq)
+ - [Troubleshoot Endpoint analytics](troubleshoot.md)
 
 
 ## Help and support
