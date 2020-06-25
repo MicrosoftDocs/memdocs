@@ -109,6 +109,11 @@ SCEP certificate profiles directly reference a trusted certificate profile. PKCS
 
 Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
 
+> [!IMPORTANT]
+> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*. This is a known issue with the presentation of the platform for Trusted certificate profiles.
+>
+> To help avoid confusion about the applicability of these profiles at a later time, consider identifying the *Windows 10* platform in the name of the profile.
+
 ### To create a trusted certificate profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
