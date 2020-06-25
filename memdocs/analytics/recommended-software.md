@@ -15,12 +15,17 @@ manager: dougeby
 
 # <a name="bkmk_rs"></a> Recommended software
 
-> [!Important]  
-> Endpoint Analytics computes the **Software adoption** score for all your Intune and co-managed devices, regardless of whether they've been configured with the [Intune data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr.md#bkmk_cm_enroll).
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
 Certain software is known to improve the end-user experience, independent of lower-level health metrics. For example, Windows 10 has a much higher Net Promoter score than Windows 7. The **Software adoption** score is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed various recommended software. The current weighting is higher for Windows than for the other metrics since users interact with them more often. The metrics are described below: 
 
 [![Endpoint analytics Recommended software page](media/recommended-software.png)](media/recommended-software.png#lightbox)
+
+> [!Important]  
+> Endpoint Analytics computes the **Software adoption** score for all your Intune and co-managed devices, regardless of whether they've been configured with the [Intune data collection policy](settings.md#bkmk_profile) or not. For Configuration Manager-managed devices, scores are only computed for [enrolled devices](enroll-configmgr.md#bkmk_cm_enroll).
 
 ## <a name="bkmk_win10"></a> Windows 10
 
