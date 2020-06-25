@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), you must properly set app configuration policies for Android Enterprise devices.
 
-Android Enterprise work profile devicies are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
+Android Enterprise work profile devices are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
 
 ## Disallow personal accounts for Microsoft apps on Android Enterprise devices
 

@@ -38,7 +38,7 @@ Security conscious organizations look at ways to ensure corporate data on mobile
 - deploy configuration policies (like WIFI, certificates, VPN).
 - manage the app lifecycle.
 
-To help you set up a complete security scenario, Microsoft introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework). Intune is using a similar taxonomy for its Android Enterprise security configuration framework. They include recommended device compliance and device restricion settings for basic, enhanced, and high security. This taxonomy is explained in the following articles:
+To help you set up a complete security scenario, Microsoft introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework). Intune is using a similar taxonomy for its Android Enterprise security configuration framework. They include recommended device compliance and device restriction settings for basic, enhanced, and high security. This taxonomy is explained in the following articles:
 
 1. [Android Enterprise framework deployment methodology](framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
 2. [Android device enrollment restrictions](device-enrollment-restrictions.md): Pre-enrollment device restrictions for Android Enterprise devices.
