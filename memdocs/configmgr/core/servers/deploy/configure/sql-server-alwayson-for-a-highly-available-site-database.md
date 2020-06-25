@@ -251,11 +251,7 @@ Configuration Manager setup needs to connect to each replica. When you set up an
 
 - SQL over TCP: **TCP 1433**
 
-After setup completes, the following ports must stay open for Configuration Manager:  
-
-- SQL Server Service Broker: **TCP 4022**  
-
-- SQL over TCP: **TCP 1433**  
+After setup completes, these ports must stay open for Configuration Manager and replication link analyzer.<!-- MEMDocs#375 -->
 
 You can use custom ports for these configurations. Use the same custom ports by the endpoint and on all replicas in the availability group.
 
