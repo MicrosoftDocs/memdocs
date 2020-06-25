@@ -221,6 +221,8 @@ One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployme
 - Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Always use the most recent version of SetupDiag for the latest functionality and fixes to known issues. For more information, see [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## Additional recommendations
 
