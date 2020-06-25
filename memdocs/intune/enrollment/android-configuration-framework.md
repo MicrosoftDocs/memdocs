@@ -52,21 +52,6 @@ With Android 5.0, Google introduced Android Enterprise which includes two  enrol
 - [Fully managed devices (device owner)](android-fully-managed-enroll.md): For corporate-owned that are associated with a single user. Such devices are  exclusively for work and not personal use.
 - [Work profile (profile owner)](android-work-profile-enroll.md): Typically, for personally-owned devices where IT wants a clear boundary between work and personal data. Policies controlled by IT make sure that work data cannot be transferred into the personal profile.
 
-## Security configuration scenarios
-
-The Android Enterprise security configuration framework includes several distinct configuration scenarios for both work profile and fully managed  devices.
-
-### Work profile devices security configurations
-
-For personally-owned work profile devices, there are two recommended security configuration frameworks:
-
-- [Work profile basic security (level 1)](): The recommended minimum security configuration for personal devices where users access work or school data. This configuration is applicable to most mobile users. Some of the controls may impact user experience.
-- [Work profile high security (level 3)](): The recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
-
-
-> [!Note]
-> Because of the settings available for Android Enterprise work profile devices, there is no enhanced security (level 2) offering. The available settings don't justify a difference between level 1 and level 2.
-
 
 ### Fully managed devices security configurations
 

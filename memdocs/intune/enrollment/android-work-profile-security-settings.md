@@ -120,6 +120,8 @@ Level 3 is the recommended configuration for devices used by users or groups who
 
 The policy settings enforced in level 3 include all the policy settings recommended for level 1. However, the settings listed below include only those that have been added or changed. These settings may have a slightly higher impact to users or applications. They enforce a level of security more appropriate for risks facing users with access to sensitive information on mobile devices.
 
+### Device compliance
+
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
 | Microsoft Defender ATP | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender ATP. For more information, see Enforce compliance for [Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection).<br> Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both. |
@@ -127,6 +129,9 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 8.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 | System Security | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
 | System Security | Number of previous passwords to prevent use | 5 | Organizations may need to update this setting to match their password policy. |
+
+
+### Device restrictions
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
@@ -140,11 +145,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Work profile settings | Smart Lock and other trust agents | Block ||
 | Device password | Number of sign-in failures before wiping device | 5 | This setting triggers a work profile wipe and not a wipe of the device. |
 | Device password | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |
-| Device password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
-
-
-
+| Device password | Prevent reuse of previous passwords | 5 | Organizations may need to up
 
 ## Next steps
 
-[Android Enterprise fully managed security settings](android-fully-managed-security-settings.md)
+Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
