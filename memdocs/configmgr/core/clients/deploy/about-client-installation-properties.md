@@ -267,6 +267,13 @@ For example:
 
 For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
 
+> [!NOTE]  
+> When using the **/AlwaysExcludeUpgrade** parameter, the auto upgrade still runs. However when CCMSetup runs to perform the upgrade, it will note that **/AlwaysExcludeUpgrade** parameter has been set and will log the following line in the **ccmsetup.log**:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup will then immediately exit and not perform the upgrade.
+
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 
 The CCMSetup.exe command provides the following return codes. To troubleshoot, review `%WinDir%\ccmsetup\ccmsetup.log` on the client for context and additional detail about return codes.
