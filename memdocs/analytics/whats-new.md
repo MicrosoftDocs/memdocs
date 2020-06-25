@@ -22,3 +22,9 @@ Learn what's new for Endpoint analytics (preview). Updates may take up to three 
 ### Endpoint analytics (preview)
 
 Endpoint analytics (preview) is now in Microsoft Endpoint Manager. For more information, see [Endpoint analytics](overview.md).
+
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
+
