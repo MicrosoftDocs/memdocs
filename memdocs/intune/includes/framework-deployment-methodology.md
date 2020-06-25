@@ -2,7 +2,7 @@
 
 Before deploying the framework, Microsoft recommends using a ring methodology for testing validation. Defining deployment rings is generally a one-time event (or at least infrequent). However, IT should revisit these groups to ensure that the sequencing is still correct.
 
-Microsoft recommends the following deployment ring approach for the APP data protection framework:
+Microsoft recommends the following deployment ring approach for the framework:
 
 | Deployment ring  | Tenant  | Assessment teams  | Output  | Timeline  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
