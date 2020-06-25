@@ -40,7 +40,7 @@ The number of device compliance and configuration policy settings help you tailo
 
 1. [Android Enterprise framework deployment methodology](framework-deployment-methodology.md): An explanation of a recommended configuration deployment methodology.
 2. [Android device enrollment restrictions](device-enrollment-restrictions.md): Pre-enrollment device restrictions for Android Enterprise devices.
-3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on these devices to disallow personal accounts.
+3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
 4. [Android Enterprise work profile security settings](android-work-profile-security-settings.md): Specific configuration settings for basic and high security on work profile devices.
 5. [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
 
@@ -52,14 +52,6 @@ With Android 5.0, Google introduced Android Enterprise which includes two  enrol
 - [Fully managed devices (device owner)](android-fully-managed-enroll.md): For corporate-owned that are associated with a single user. Such devices are  exclusively for work and not personal use.
 - [Work profile (profile owner)](android-work-profile-enroll.md): Typically, for personally-owned devices where IT wants a clear boundary between work and personal data. Policies controlled by IT make sure that work data cannot be transferred into the personal profile.
 
-
-### Fully managed devices security configurations
-
-For corporate owned fully managed devices, there are three recommended security configuration frameworks:
-
-- [Fully managed basic security (level 1](): The recommended minimum security configuration for an enterprise device. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
-- [Fully managed enhanced security (level 2](): The recommended configuration for devices where users access sensitive or confidential information. Some of the controls may impact user experience.
-- [Fully managed high security (level 3)](): The recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
 
 ## Next steps
 
