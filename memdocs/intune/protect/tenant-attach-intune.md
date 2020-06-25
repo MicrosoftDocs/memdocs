@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,11 +56,11 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 ### Specific requirements for Intune endpoint security policies
 
-- **Antivirus policy**:
+- **Antivirus policy** (*preview*):
 
   - **Configuration Manager** - The following environments are supported:
 
-    - **Configuration Manager technical preview 2006 or later** - Support for Intune antivirus policies was added with this technical preview version.
+    - **Configuration Manager technical preview 2007 or later** - Support for Intune antivirus policies was added with this technical preview version.
 
   - **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,7 +50,9 @@ Antivirus policies include the same settings found in *endpoint protection* or *
   - For Intune to manage antivirus settings on a device, Microsoft Defender ATP must be installed on that device. See, [Microsoft Defender ATP for Windows](../protect/advanced-threat-protection.md), in the Intune documentation.
   - The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
 
-**Support for Configuration Manager clients**:
+**Support for Configuration Manager clients** (*preview*)
+
+*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying antivirus policy to devices managed by Configuration Manager, configure *tenant attach*. This includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
