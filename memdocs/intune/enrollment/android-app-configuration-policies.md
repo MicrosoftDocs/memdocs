@@ -31,19 +31,19 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise security configuration framework app configuration policies
 
-As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), you must properly set app configuration polices for Android Enterpise devices.
+As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), you must properly set app configuration policies for Android Enterprise devices.
 
-Android Enterprise work profile devcies are designed to make sure that work and personal data are isolated from each another. Android Enterprise fully managed devices are designed work or school data only. Therefore, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
+Android Enterprise work profile devicies are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
 
-## Disallow personal accounts for Microsoft apps on Android Enteprise devices
+## Disallow personal accounts for Microsoft apps on Android Enterprise devices
 
-1. Add the apps to Managed Google Play. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work).
+1. Add the apps to Managed Google Play. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 2. Create a policy for each Managed Google Play app as described in [Add app configuration policies for managed Android Enterprise devices]().
 3. Create the following single key in each policy:
 
     | Key | Values |
     | --- | --- |
-    | com.microsoft.intune.mam.AllowedAccountUPNs | One or more ; delimited UPNs.<br>Only account(s) allowed are the managed user account(s) defined by this key.<br>For Intune enrolled devices, the {{userprincipalname}} token may be used to represent the enrolled user account. |
+    | com.microsoft.intune.mam.AllowedAccountUPNs | One or more; delimited UPNs.<br>Only account(s) allowed are the managed user account(s) defined by this key.<br>For Intune enrolled devices, the {{userprincipalname}} token may be used to represent the enrolled user account. |
 
 
 ## Next steps
