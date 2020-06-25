@@ -38,7 +38,7 @@ When choosing your settings, be sure to review and categorize usage scenarios. T
 For corporate owned fully-managed devices, there are three recommended security configuration frameworks:
 
 - [Fully managed basic security (level 1)](#fully-managed-basic-security) 
-- [Fully managed enhanced security (level 1)](#fully-managed-enhanced-security)
+- [Fully managed enhanced security (level 2)](#fully-managed-enhanced-security)
 - [Fully managed high security (level 3)](#fully-managed-high-security) 
 
 ## Fully managed basic security
