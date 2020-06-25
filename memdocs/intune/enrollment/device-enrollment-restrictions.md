@@ -62,5 +62,4 @@ Ensure the organization supports Android Enterprise fully managed device enrollm
 
 ## Next steps
 
-[Work profile security configuration framework settings](android-work-profile-security-settings.md)
-[Fully managed security configuration framework settings](android-fully-managed-security-settings.md)
+[Set app configuration policies](android-app-configuration-policies.md)
