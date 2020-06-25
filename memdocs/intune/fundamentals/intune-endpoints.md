@@ -71,7 +71,6 @@ The following tables list the ports and services that the Intune client accesses
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub02.manage.microsoft.com|137.135.130.29|
 |fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
