@@ -60,9 +60,8 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 ### <a name="bkmk_prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_prs) has the following requirements:
 - Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune
-- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1607 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
-- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later with the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Configuration Manager.
+- A Windows 10 Enterprise, Professional, or Education device that is managed by Intune.
+- A [co-managed](../configmgr/comanage/overview.md) device running Windows 10 Enterprise, version 1903 or later. Co-managed devices on preceding versions of Windows 10 Enterprise will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to versions 1607).
 
 ## Licensing Prerequisites
 
