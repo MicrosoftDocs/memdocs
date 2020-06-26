@@ -67,7 +67,7 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 We're updating the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
 ### S/MIME for Outlook on iOS and Android Enterprise devices managed without enrollment<!-- 6517155  -->
-You'll be able to enable S/MIME for Outlook on iOS and Android Enterprise devices using app configuration polices for devices managed without enrollment. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed apps**. Additionally, you can choose whether or not to allow users to change this setting in Outlook. For more information about Outlook configuration settings, see [Microsoft Outlook configuration settings](../apps/app-configuration-policies-outlook.md).
+You'll be able to enable S/MIME for Outlook on iOS and Android Enterprise devices using app configuration policies for devices managed without enrollment. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed apps**. Additionally, you can choose whether or not to allow users to change this setting in Outlook. For more information about Outlook configuration settings, see [Microsoft Outlook configuration settings](../apps/app-configuration-policies-outlook.md).
 
 ### iOS Company Portal will support Apple's Automated Device Enrollment without user affinity<!-- 7282707  --> 
 iOS Company Portal will be supported on devices enrolled using Apple's Automated Device Enrollment without requiring an assigned user. An end user can sign in to the iOS Company Portal to establish themselves as the primary user on an iOS/iPadOS device enrolled without device affinity. For more information about Automated Device Enrollment, see [Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
@@ -76,7 +76,7 @@ iOS Company Portal will be supported on devices enrolled using Apple's Automated
 End users will be able to decide whether the applications shown in the [Microsoft Intune Web Company Portal](https://portal.manage.microsoft.com/) should be opened by the Company Portal app or the Web Company Portal. This option is only available if the end user has the Company Portal app installed and launches a Web Company Portal application outside of a browser.
 
 ### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
-The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
+The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This support will help administrators consolidate their different end-user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -88,7 +88,7 @@ Microsoft 365 customers who own third-party MDM solutions will be able to enforc
 ### New VPN settings for Windows 10 and newer devices<!-- 6602122  -->
 When you create a VPN profile using the IKEv2 connection type, there are new settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Base VPN**):
 
-- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user log on. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
+- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user logon. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
 - Cryptography suite settings: Configure the algorithms used to secure IKE and child security associations, which allow you to match client and server settings.
 
 To see the settings you can configure, go to [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
@@ -163,7 +163,7 @@ Today, if a customer reimages a device and then re-enrolls it, multiple records 
 
 ### Updates to the remote lock action for macOS devices<!--7032805 -->
 Updates to the remote lock action for macOS devices will include:
-- The recovery pin will be displayed for 30 days before deletion (instead of 7 days).
+- The recovery pin will be displayed for 30 days before deletion (instead of seven days).
 - If an admin has a second browser open and tries to trigger the command again from a different tab or browser, Intune will allow the command to go through. But the reporting status will be set to failed rather than generating a new pin.
 - The admin won't be able to issue another remote lock command if the previous command is still pending or if the device hasn’t checked back in.
 These changes are designed to prevent the correct pin from being overwritten after multiple remote lock commands.
@@ -190,7 +190,7 @@ The following properties are now exposed via the [devicePropertyHistories](../de
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 ### Power BI compliance report template V2.0<!-- 636958  -->
-Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that is being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
+Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that are being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
 ## Role-based access control
@@ -227,13 +227,13 @@ We're working to improve the display of details for security baseline settings, 
 ### Manage source locations for definition updates with endpoint security antivirus policy for Windows 10 devices<!-- 6347801  -->  
 We’re adding two new settings to the *Updates* category of endpoint security antivirus policy for Windows 10 devices what can help you manage how devices get update definitions (**Endpoint security** > ** Antivirus** > **Create Policy** > **Windows 10 and later** > **Microsoft Defender Antivirus**).
 
-With the new settings you’ll be able to add UNC file shares as download source locations for definition updates, and define the order in which different source locations are contacted. The new settings will manage the following Defender CSPs:
+With the new settings, you’ll be able to add UNC file shares as download source locations for definition updates, and define the order in which different source locations are contacted. The new settings will manage the following Defender CSPs:
 
 - [signatureupdatefilesharessources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 - [signatureupdatefallbackorder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
 ### Endpoint detection and response policy for onboarding Tenant Attached devices to MDATP is moving out of preview<!-- 7303816   -->
-As part of endpoint security in Intune, the Endpoint detection and response (EDR) policies support for use with devices managed by Configuration Manager will soon move out of preview and become Generally Available ( **Endpoint security** > **Endpoint detection and response** > **Create Policy** > **Windows 10 and windows Server**). When you configure [Tenant Attach for Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md), you can then use the EDR policies to onboard devices managed by Configuration Manager to Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). 
+As part of endpoint security in Intune, the Endpoint detection and response (EDR) policies support for use with devices managed by Configuration Manager will soon move out of preview and become Generally Available (**Endpoint security** > **Endpoint detection and response** > **Create Policy** > **Windows 10 and windows Server**). When you configure [Tenant Attach for Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md), you can then use the EDR policies to onboard devices managed by Configuration Manager to Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). 
 
 ### Improvements for the security baselines node<!-- 7433136   -->
 To improve the usability of the security baseline node in the Microsoft Endpoint Manager admin center, we’re removing the *Overview* tab for each baseline and will instead open the baselines **Profile** tab (**Endpoint security** > **Security baselines** > *baseline*).
@@ -246,7 +246,7 @@ As a public preview, we're working on a PowerShell based tool that will migrate 
 ### New settings for the Device Control profile in endpoint security Attack surface reduction policy<!--7032084 -->
 We’re adding several settings for Windows 10 devices to the Device control profile for endpoint security Attack surface Reduction policy (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Windows 10 and later** > **Device control**). 
 
-The new settings will be the same as those that are available today in [Device restriction profiles](../configuration/device-restrictions-windows-10.md) for *Device configuration*. The settings being added to the *Device control* profile should include various Bluetooth settings.  
+The new settings will be the same as those settings that are available today in [Device restriction profiles](../configuration/device-restrictions-windows-10.md) for *Device configuration*. The settings being added to the *Device control* profile should include various Bluetooth settings.  
 
 
 <!-- ***********************************************-->
