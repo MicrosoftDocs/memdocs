@@ -144,7 +144,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Work profile settings | Smart Lock and other trust agents | Block ||
 | Device password | Number of sign-in failures before wiping device | 5 | This setting triggers a work profile wipe and not a wipe of the device. |
 | Device password | Password expiration (days) | 365 | Organizations may need to update this setting to match their password policy. |
-| Device password | Prevent reuse of previous passwords | 5 | Organizations may need to up
+| Device password | Prevent reuse of previous passwords | 5 | Organizations may need to update this setting to match their password policy. |
 
 ## Next steps
 
