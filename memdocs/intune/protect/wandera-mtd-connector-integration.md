@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,22 +33,19 @@ ms.collection: M365-identity-device-management
 
 Complete the following steps to integrate the Wandera Mobile Threat Defense solution with Intune.  
 
-> [!NOTE]
-> This Mobile Threat Defense vendor is not supported for unenrolled devices.
-
 ## Before you begin  
 
 Before you start the process to integrate Wandera with Intune, make sure you have the following prerequisites in place:
-- Microsoft Intune subscription  
-- Azure Active Directory admin credentials to grant the following permissions:  
-  - Sign in and read user profile  
-  - Access the directory as the signed-in user  
-  - Read directory data  
-  - Send device information to Intune  
+-	Intune subscription
+-	Azure Active Directory administrator credentials and assigned role that is able to grant the following permissions:
+  - Sign in and read user profile
+  - Access the directory as the signed-in user
+  - Read directory data
+  - Send device risk information to Intune
+ 
+-	A valid Wandera subscription
+  -	An administrator account with super admin privileges
 
-- Wandera subscription:
-  - One or more Wandera accounts that are licensed for EMM Connect  
-  - An account with Super administrator privileges in Wandera  
  
 ### Wandera Mobile Threat Defense app authorization  
 
@@ -58,21 +55,22 @@ The Wandera Mobile Threat Defense app authorization process:
 - Allow the Wandera RADAR admin portal to use Azure AD Single Sign On (SSO).  
 - Allow the Wandera Mobile Threat Defense app to sign in using Azure AD SSO.  
 
-
 ## Set up Wandera Mobile Threat Defense integration  
-Setup of *EMM Connect* for Wandera requires a one-time configuration process that you complete in both the Intune and Wandera consoles. The configuration process takes about 15 minutes. You can complete the configuration without coordination with your Wandera technical account or support representative.  
+Setting up integration between Wandera and Intune does not require any support from Wandera staff and can be easily accomplished in a matter of minutes.
 
 ### Enable support for Wandera in Intune
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
 3. On the **Add Connector** page, use the dropdown and select **Wandera**. And then select **Create**.  
-4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the *Edit connector* pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 
-5. In the Wandera console, go to **Settings** > **EMM Integration**, and select the **EMM Connect** tab. Use the *EMM Vendor* drop-down and select *Microsoft Intune*.
+4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 
+5. In the Wandera RADAR console, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
+6.	You will be presented with a screen similar to the below, indicating the permission grants required to complete the integration:
+
 
    ![Select Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
 
-6. Select **Grant permissions** to open a connection to the Intune portal. Sign in using your Intune admin credentials, select the checkbox and then **Accept** the permissions request.  
+7. Select **Grant permissions** to open a connection to the Intune portal. Sign in using your Intune admin credentials, select the checkbox and then **Accept** the permissions request.  
 
    ![Accept permissions](./media/wandera-mtd-connector-integration/permissions.png) 
 
@@ -128,4 +126,4 @@ Repeat the following procedure for the Wandera app you created for iOS/iPadOS an
 5. Select **Included groups**, and then **Select groups to include**. Specify the group you created for Wandera synchronization, and then click **Select** > **OK** > **OK**. Select **Save** to complete the group assignment. 
 
 ## Next Steps  
-Now that you have configured the Integration, you can start configuring policies, set up advanced conditional access, and view reports in the Wandera admin console. To learn more about managing and configuring Wandera, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation. 
+Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation. 
