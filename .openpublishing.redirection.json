@@ -11,6 +11,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/intune/apps/app-configuration-managed-browser.md",
+            "redirect_url": "/mem/intune/apps/manage-microsoft-edge",
+            "redirect_document_id": false
+        },         
+        {
             "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
             "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
             "redirect_document_id": false
