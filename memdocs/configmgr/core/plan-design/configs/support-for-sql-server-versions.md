@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -69,7 +69,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2019: Standard, Enterprise
 
-Starting with Configuration Manager version 1910, you can use this version with any cumulative update, as long as your cumulative update version is supported by the SQL lifecycle.
+Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 This version of SQL can be used for the following sites:
 
@@ -77,9 +77,10 @@ This version of SQL can be used for the following sites:
 - A primary site
 - A secondary site
 
+<!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234--> with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
@@ -105,6 +106,7 @@ SQL Server version 2019 logs the following error:
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
 You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### SQL Server 2017: Standard, Enterprise
 
