@@ -43,6 +43,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [7102873](includes/2006/7102873.md)]
 [!INCLUDE [7118523](includes/2006/7118523.md)]
 [!INCLUDE [7153654](includes/2006/7153654.md)]
+[!INCLUDE [7518897](includes/2006/7518897.md)]
 [!INCLUDE [7020519](includes/2006/7020519.md)]
 
 <!--
