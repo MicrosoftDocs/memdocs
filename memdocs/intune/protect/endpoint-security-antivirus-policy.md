@@ -92,7 +92,8 @@ The following are supported for devices you manage with Configuration Manager th
 
 - Platform: **Windows 10 and windows Server**
 
-  - Profile: **Sccm Anti-virus Policy**
+  - Profile: **Sccm Anti-virus Policy** - Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+
 
 ## Antivirus policy reports
 
