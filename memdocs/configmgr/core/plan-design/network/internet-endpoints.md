@@ -265,6 +265,10 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
 
+## Tenant attach
+
+For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
 ## Microsoft public IP addresses
 
 For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
