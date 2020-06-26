@@ -13,6 +13,12 @@ manager: dougeby
 ---
 
 # PowerShell scripts for Proactive remediations
+
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
+
 Use the following information to create script packages for [Proactive remediations](proactive-remediations.md).
 
 

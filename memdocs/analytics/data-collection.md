@@ -15,6 +15,11 @@ manager: dougeby
 
 # Endpoint analytics data collection
 
+> [!Note]  
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+>
+> For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
+
 This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement).
 
 ## <a name="bkmk_flow"></a>Data flow
@@ -78,7 +83,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
-- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](settings.md#bkmk_gen) created during sign-up.
+- If you're enrolling Intune managed devices only, delete the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up.
 
 - If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
 
