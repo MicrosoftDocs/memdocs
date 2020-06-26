@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/12/2020
+ms.date: 06/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -224,6 +224,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 - `officecdn.microsoft.com` to synchronize the software update point for Microsoft 365 Apps for enterprise client updates
 
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
+
+- `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
 ## Configuration Manager console
 
