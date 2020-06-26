@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,9 +38,6 @@ The capabilities of Microsoft Defender ATP endpoint detection and response provi
 EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Microsoft Defender ATP. Onboarding packages are how devices are configured to work with Microsoft Defender ATP. After a device onboards, you can start to use threat data from that device.
 
 EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
-
-> [!TIP]
-> Support for devices you manage with Configuration Manager is in *public preview*.
 
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -80,10 +77,10 @@ To support using EDR policies with Configuration Manager devices, your Configura
 - Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
 - Profile: **Endpoint detection and response (MDM)**
 
-**Configuration Manager** *(In preview)* - The following are supported for devices you manage with Configuration Manager:
+**Configuration Manager** - The following are supported for devices you manage with Configuration Manager:
 
 - Platform: **Windows 10 and windows Server** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
-- Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
+- Profile: **Endpoint detection and response (ConfigMgr)**
 
 ## Set up Configuration Manager to support EDR policy
 
@@ -230,7 +227,7 @@ Before you can deploy policy to devices managed by Configuration Manager, [set u
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
      - Platform: **Windows 10 and windows Server**
-     - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
+     - Profile: **Endpoint detection and response (ConfigMgr)**
 
 4. Select **Create**.
 
