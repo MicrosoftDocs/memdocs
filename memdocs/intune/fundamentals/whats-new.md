@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,17 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- ########################## -->
 
 ## Week of June 22, 2020
+
+### App management
+
+#### Newly available protected apps for Intune<!-- 7248952 -->
+The following protected apps are now available:
+- BlueJeans Video Conferencing
+- Cisco Jabber for Intune
+- Tableau Mobile for Intune
+- ZERO for Intune
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Monitor and troubleshoot
 
