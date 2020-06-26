@@ -46,7 +46,7 @@ For Android Enterprise work profile basic security (Level 1), the following devi
 
 | Type | Platform | Version | Allows personal devices |
 |--------|--------|--------|--------|
-| Android Enterprise | Allow | Android 5.0 and later.<br>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
+| Android Enterprise | Allow | Android 5.0 and later.<p>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 8.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
 | Android device administrator| Block | All versions | Yes |
 
 ## Work profile high (level 3) security restrictions
