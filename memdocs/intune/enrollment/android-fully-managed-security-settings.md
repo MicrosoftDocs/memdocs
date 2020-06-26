@@ -31,14 +31,14 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise fully managed security configurations
 
-As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise fully managed mobile users. For more information on each policy setting, see [Android Enterprise device owner settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#device-owner).
+As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise fully managed mobile users. For more information on each policy setting, see [Android Enterprise device owner settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only).
 
 When choosing your settings, be sure to review and categorize usage scenarios. Then, configure users following the guidance for the chosen security level. You can adjust the suggested settings based on the needs of your organization. Make sure to have your security team evaluate the threat environment, risk appetite, and impact to usability.
 
 For corporate owned fully-managed devices, there are three recommended security configuration frameworks:
 
 - [Fully managed basic security (level 1)](#fully-managed-basic-security) 
-- [Fully managed enhanced security (level 1)](#fully-managed-enhanced-security)
+- [Fully managed enhanced security (level 2)](#fully-managed-enhanced-security)
 - [Fully managed high security (level 3)](#fully-managed-high-security) 
 
 ## Fully managed basic security
@@ -94,14 +94,15 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | General | Notification windows | Not Configured ||
 | General | Skip first use hints | Not Configured ||
 | System security | Threat scan on apps |Require ||
-| Dedicated devices | Kiosk mode | Not Configured ||
-| Device password | Disable lock screen | Not Configured ||
-| Device password | Disabled lock screen features | 0 selected ||
-| Device password | Required password type | Numeric Complex ||
-| Device password | Minimum password length | 6 ||
-| Device password | Number of days until password expires | Not configured ||
-| Device password | Number of passwords required before user can reuse a password | Not configured ||
-| Device password | Number of sign-in failures before wiping device | 10 ||
+| Device experience | Enrollment profile type | Fully managed ||
+| Device experience | Make Microsoft Launcher the default launcher | Not configured | Organizations may choose to implement Microsoft Launcher to ensure a consistent home screen experience on Fully managed devices. For more information, see [How to Setup Microsoft Launcher on Android Enterprise Fully Managed Devices with Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-launcher-on-android-enterprise-fully/ba-p/1482134) |
+| Password | Disable lock screen | Not Configured ||
+| Password | Disabled lock screen features | 0 selected ||
+| Password | Required password type | Numeric Complex ||
+| Password | Minimum password length | 6 ||
+| Password | Number of days until password expires | Not configured ||
+| Password | Number of passwords required before user can reuse a password | Not configured ||
+| Password | Number of sign-in failures before wiping device | 10 ||
 | Power settings | Time to lock screen | 5 ||
 | Power settings | Screen on while device plugged in | Not configured ||
 | Users and Accounts | Add new users | Not configured ||
@@ -131,7 +132,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
 | General | Factory reset protection emails | Google account email addresses ||
-| General | List of email addresses (Google account email addresses option only) | example@gmail.com | Manually update this policy to specify the email addresses of device administrators that can unlock the devices after they are wiped. |
+| General | List of email addresses (Google account email addresses option only) | example@gmail.com | Manually update this policy to specify the Google email addresses of device administrators that can unlock the devices after they are wiped. |
 | Device password | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
 | Device password | Number of passwords required before user can reuse a password | 5 | Organizations may need to update this setting to match their password policy. |
 | Device password | Number of sign-in failures before wiping device | 5 ||
@@ -160,8 +161,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender ATP. For more information, see Enforce compliance for [Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).<br> Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both. |
-| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<br>Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both.|
+| Microsoft Defender ATP | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender ATP. For more information, see Enforce compliance for [Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p> Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both. |
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender ATP or a mobile threat defense solution. It is not necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 10.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 8.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 
 ### Device restrictions
