@@ -118,25 +118,19 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2006
 
-- [3601213](2020/technical-preview-2006.md) <!--3601213-->
-- [3601237](2020/technical-preview-2006.md) <!--3601237-->
-- [4224406](2020/technical-preview-2006.md) <!--4224406-->
-- [4773948](2020/technical-preview-2006.md) <!--4773948-->
-- [4812909](2020/technical-preview-2006.md) <!--4812909-->
-- [5110009](2020/technical-preview-2006.md) <!--5110009-->
-- [6479246](2020/technical-preview-2006.md) <!--6479246-->
-- [6479284](2020/technical-preview-2006.md) <!--6479284-->
-- [6526313](2020/technical-preview-2006.md) <!--6526313-->
-- [6527576](2020/technical-preview-2006.md) <!--6527576-->
-- [6602347](2020/technical-preview-2006.md) <!--6602347-->
-- [6976145](2020/technical-preview-2006.md) <!--6976145-->
-- [6982226](2020/technical-preview-2006.md) <!--6982226-->
-- [6983320](2020/technical-preview-2006.md) <!--6983320-->
-- [6997525](2020/technical-preview-2006.md) <!--6997525-->
-- [7033501](2020/technical-preview-2006.md) <!--7033501-->
-- [7102873](2020/technical-preview-2006.md) <!--7102873-->
-- [7118523](2020/technical-preview-2006.md) <!--7118523-->
-- [7153654](2020/technical-preview-2006.md) <!--7153654-->
+- [Use the Company Portal app on co-managed devices](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Improvements to available apps via CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet clients can use a CMG software update point](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Improvements to task sequences via CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Management insights to optimize for remote workers](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Improvements to VPN boundary type](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [CMG support for endpoint protection policies](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Import previously created Azure AD application during tenant attach onboarding](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Improvements to client upgrade on a metered connection](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Improvements to managing device restarts](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Improved support for Windows Virtual Desktop](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Direct links to Configuration Manager Community hub items](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
