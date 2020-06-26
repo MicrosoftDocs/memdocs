@@ -165,6 +165,9 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
 - **Number of non-alphanumeric characters in password**: Enter the number of symbol characters, such as `#` or `@`, that must be included in the password, from 1-4. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
+  > [!NOTE]
+  > Selecting alphanumeric as the required password type could affect a paired Apple Watch. See [Apple Documentation](https://support.apple.com/en-us/HT204953) for more information
+
 - **Minimum password length**: Enter the minimum length the password must have, from 4-16 characters. On user enrolled devices, enter a length between 4 and 6 characters.
   
   > [!NOTE]
