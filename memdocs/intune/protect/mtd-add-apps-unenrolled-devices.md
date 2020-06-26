@@ -42,8 +42,8 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 >
 > - Better Mobile (Android,iOS/iPadOS)
 > - Lookout for Work (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
+> - Zimperium (Android,iOS/iPadOS)
 
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 
