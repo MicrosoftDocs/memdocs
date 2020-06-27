@@ -38,22 +38,20 @@ Complete the following steps to integrate the Wandera Mobile Threat Defense solu
 Before you start the process to integrate Wandera with Intune, make sure you have the following prerequisites in place:
 -	Intune subscription
 -	Azure Active Directory administrator credentials and assigned role that is able to grant the following permissions:
-  - Sign in and read user profile
-  - Access the directory as the signed-in user
-  - Read directory data
-  - Send device risk information to Intune
+    - Sign in and read user profile
+    - Access the directory as the signed-in user
+    - Read directory data
+    - Send device risk information to Intune
  
 -	A valid Wandera subscription
-  -	An administrator account with super admin privileges
+    -	An administrator account with super admin privileges
 
- 
-### Wandera Mobile Threat Defense app authorization  
-
-The Wandera Mobile Threat Defense app authorization process:  
-- Allow the Wandera Mobile Threat Defense service to communicate information related to device health state back to Intune.  
-- Wandera syncs with Azure AD Enrollment Group membership to populate its device's database.  
-- Allow the Wandera RADAR admin portal to use Azure AD Single Sign On (SSO).  
-- Allow the Wandera Mobile Threat Defense app to sign in using Azure AD SSO.  
+## Integration overview
+Enabling Mobile Threat Defense integration between Wandera and Endpoint Manager entails:
+- Enabling Wandera’s UEM Connect service to synchronize information with Azure and Endpoint Manager. This includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
+- Create Activation Profiles in Wandera to define device enrollment behavior.
+- Deploy Wandera over-the-air to managed iOS and Android devices.
+- Configure Wandera for end user self-service using MAM-WE on unmanaged iOS and Android devices.
 
 ## Set up Wandera Mobile Threat Defense integration  
 Setting up integration between Wandera and Intune does not require any support from Wandera staff and can be easily accomplished in a matter of minutes.
@@ -67,26 +65,33 @@ Setting up integration between Wandera and Intune does not require any support f
 5. In the Wandera RADAR console, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
 6.	You will be presented with a screen similar to the below, indicating the permission grants required to complete the integration:
 
+<---placeholder for image--->
 
-   ![Select Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
+7.	Next to Intune User and Device Sync, click the Grant button to start the process to provide consent for Wandera to perform Life Cycle Management (LCM) functions with Azure and Endpoint Manager. 
+8.	When prompted, select or enter your Azure admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, click Accept to authorize the LCM integration.
 
-7. Select **Grant permissions** to open a connection to the Intune portal. Sign in using your Intune admin credentials, select the checkbox and then **Accept** the permissions request.  
+<---placeholder for image--->
 
-   ![Accept permissions](./media/wandera-mtd-connector-integration/permissions.png) 
+10.	You will be automatically returned back to the RADAR admin console.  If the authorization was successful, you will see a green tick mark next to the Grant button.
+11.	Repeat the consent process for the remaining listed integrations by clicking on their corresponding Grant buttons until you have green tick marks next to each.
 
-7. Wandera completes the connection and returns you to the RADAR admin console. Repeat the process to **Grant** access for additional configurations, as needed.  
+<---placeholder for image--->
 
-   ![Integrations and permissions](./media/wandera-mtd-connector-integration/integrations-and-permissions.png) 
+12.	Return to the Intune console, and resume editing the Wandera MTD Connector. Set all of the available toggles to On, and then Save the configuration.
 
-8. While in the RADAR console, copy the name of the **SyncOnly** group that appears below **EMM Label**. You'll use this name to configure a group in Intune for synchronization with Wandera.
-
-   ![Synchronization group](./media/wandera-mtd-connector-integration/sync-group-name.png) 
-
-9. Return to the [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) console, and edit the Wandera MTD Connector. Set the available toggles to **On**, and the **Save** the configuration.  
-
-   ![Enable Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png) 
+<---placeholder for image--->
 
 Intune and Wandera are now connected.  
+
+## Create Activation Profiles in Wandera
+Endpoint Manager-based deployments are facilitated using Wandera Activation Profiles defined in RADAR.  Each Activation Profile defines specific configuration options like authentication requirements, service capabilities, and initial group membership.  
+
+After creating an Activation Profile in Wandera, you “assign” it to users and devices in Endpoint Manager.  While an Activation Profile is universal across device platforms and management strategies, the steps below define how to configure Endpoint Manager based upon these differences.
+
+The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Endpoint Manager to your target devices. Please see the [Activation Profiles Guide](missing) for more details on creating and using Wandera Activation Profiles.
+
+[> NOTE]
+> When creating Activation Profiles for deployment via Endpoint Manager or MAM-WE, be sure to set Associated User to the Authenticated by Identity Provider > Azure Active Directory option for maximum security, cross-platform compatibility, and a streamlined end user experience.
 
 ## Configure the Wandera applications and synchronization group  
 To deploy Wandera, you will add the Wandera mobile apps for the platforms you use (iOS and Android) to Intune, and assign them to a specific group for synchronization; the *SyncOnly* group. 
