@@ -17,6 +17,10 @@ ms.reviewer: acabello
 
 In the Desktop Analytics portal, view the status of security and feature updates. Select these nodes in the Monitor group of the Desktop Analytics main menu. These nodes give you insights into the status of these updates in your environment.
 
+<!--7362999-->
+
+> [!Important]
+> Security and Feature update status will be displayed for devices with the Commercial ID associated with your Desktop Analytics workspace regardless of wether those devices where enrolled by Configuration Manager or not. As a result, the number of total devices represented on these tiles may not match the number of enrolled devices in [**Connected Services**](monitor-connection-health.md#commercial-id-configuration)
 
 ## Security updates
 
