@@ -94,7 +94,7 @@ Endpoint Manager-based deployments are facilitated using Wandera Activation Prof
 
 After creating an Activation Profile in Wandera, you “assign” it to users and devices in Endpoint Manager.  While an Activation Profile is universal across device platforms and management strategies, the steps below define how to configure Endpoint Manager based upon these differences.
 
-The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Endpoint Manager to your target devices. Please see the [Activation Profiles Guide](missing) for more details on creating and using Wandera Activation Profiles.
+The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Endpoint Manager to your target devices. Please see the [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) for more details on creating and using Wandera Activation Profiles.
 
 > [!NOTE]
 > When creating Activation Profiles for deployment via Endpoint Manager or MAM-WE, be sure to set Associated User to the Authenticated by Identity Provider > Azure Active Directory option for maximum security, cross-platform compatibility, and a streamlined end user experience.
