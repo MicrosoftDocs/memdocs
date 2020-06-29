@@ -19,8 +19,8 @@ In the Desktop Analytics portal, view the status of security and feature updates
 
 <!--7362999-->
 
-> [!Important]
-> Security and Feature update status will be displayed for devices with the Commercial ID associated with your Desktop Analytics workspace regardless of wether those devices where enrolled by Configuration Manager or not. As a result, the number of total devices represented on these tiles may not match the number of enrolled devices in [**Connected Services**](monitor-connection-health.md#commercial-id-configuration)
+> [!IMPORTANT]
+> Desktop Analytics displays the security and feature update status for devices with the commercial ID associated with your Desktop Analytics workspace. This behavior happens whether or not you enrolled the devices with Configuration Manager. The number of total devices on these tiles may not match the number of enrolled devices in [**Connected Services**](monitor-connection-health.md#commercial-id-configuration).
 
 ## Security updates
 
