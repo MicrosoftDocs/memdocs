@@ -55,7 +55,7 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../apps/sto
 
 ## Configure your MTD apps with an app configuration policy
 
-To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](https://docs.microsoft.com/en-us/mem/intune/protect/mtd-add-apps-unenrolled-devices).
+To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
 
 ### Lookout for Work app configuration policy
 
@@ -167,14 +167,14 @@ To install the Mobile Threat Defense app on the end user device, you can follow 
 
 Choose the section that corresponds to your MTD provider:
 
-- [Lookout for Work](#configure-lookout-for-work-apps)
-- [Symantec Endpoint Protection Mobile (SEP Mobile)](#configure-symantec-endpoint-protection-mobile-apps)
-- [Check Point SandBlast Mobile](#configure-check-point-sandblast-mobile-apps)
-- [Zimperium](#configure-zimperium-apps)
-- [Pradeo](#configure-pradeo-apps)
-- [Better Mobile](#configure-better-mobile-apps)
-- [Sophos Mobile](#configure-sophos-apps)
-- [Wandera](#configure-wandera-apps)
+- [Lookout for Work](#assigning-lookout-for-work)
+- [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
+- [Check Point SandBlast Mobile](#assigning-check-point-sandblast-mobile)
+- [Zimperium](#assigning-zimperium)
+- [Pradeo](#assigning-pradeo)
+- [Better Mobile](#assigning-better-mobile)
+- [Sophos Mobile](#assigning-sophos)
+- [Wandera](#assigning-wandera)
 
 ### Assigning Lookout for Work
 
