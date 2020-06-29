@@ -49,6 +49,6 @@ Complete the following steps to disconnect the existing account and update devic
 
 6. Sign in to your email account. 
 
-# Next steps
+## Next steps
 
 Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
