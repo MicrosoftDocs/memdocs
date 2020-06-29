@@ -278,7 +278,7 @@ To learn more about the DigiCert Import tool, including how to obtain the tool, 
 
 ### KeyTalk
 
-If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete integration, you won’t need to follow the instructions in the section Import PFX Certificates to Intune that's detailed earlier in this article.
+If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) to Intune that's detailed earlier in this article.
 
 To learn more about KeyTalk’s integration with Intune, see https://keytalk.com/support in the KeyTalk knowledge base.
 
