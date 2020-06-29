@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -275,6 +275,11 @@ The following partners provide supported methods or tools you can use to import 
 If you use the DigiCert PKI Platform service, you can use the DigiCert **Import Tool for Intune S/MIME Certificates** to import PFX certificates to Intune. Use of this tool replaces the need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
 
 To learn more about the DigiCert Import tool, including how to obtain the tool, see https://knowledge.digicert.com/tutorials/microsoft-intune.html in the DigiCert knowledge base.
+
+### KeyTalk
+
+When you use KeyTalk, find technical information, software, and support at https://keytalk.com/support.
+
 
 ## Next steps
 
