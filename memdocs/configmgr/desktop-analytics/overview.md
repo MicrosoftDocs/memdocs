@@ -66,6 +66,9 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - An active global Azure subscription, with [Global Admin](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) permissions. [Microsoft Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.  
 
+> [!Important]
+> Desktop Analytics is a Windows service hosted in the Azure global that utilizes Windows diagnostic data.  Desktop Analytics is hosted in the Azure gobal  and is available to GCC customers; however, Desktop Analytics does not meet [GCC compliance](https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes.  A list of compliance offerings for Microsoft products and services can be found on the [Microsoft Trust Center](https://docs.microsoft.com/en-us/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics is not available for GCC High or DoD customers and the use of Azure Government subscriptions to host workspaces is not supported.
+
     - **Workspace owner** permissions to **Set up your workspace**, and the following roles:  
 
       - [**Desktop Analytics Administrator**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) role.
