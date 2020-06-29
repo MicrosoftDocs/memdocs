@@ -500,13 +500,14 @@ The `isSaveToAllowedForLocation` API provides constants to check whether the IT 
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed," like OneDrive for Business, or "personal." Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
 
-The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device.
+The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` should be used if the app is saving a photo to the camera roll.
 
-If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` location should always be paired with a `nil` account.
+If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
 
 ### Supported open locations
 
