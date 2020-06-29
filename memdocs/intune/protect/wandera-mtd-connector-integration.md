@@ -70,7 +70,7 @@ Setting up integration between Wandera and Intune does not require any support f
 5. In the Wandera RADAR console, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
 6. You will be presented with a screen similar to the below, indicating the permission grants required to complete the integration:
 
-   ![Integrations and permissions](./media/wandera-mtd-connector-integration/integrations-and-permissions.png 
+   ![Integrations and permissions](./media/wandera-mtd-connector-integration/integrations-and-permissions.png) 
 
 7. Next to Intune User and Device Sync, click the Grant button to start the process to provide consent for Wandera to perform Life Cycle Management (LCM) functions with Azure and Endpoint Manager.
 8. When prompted, select or enter your Azure admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, click Accept to authorize the LCM integration.
