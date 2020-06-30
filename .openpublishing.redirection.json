@@ -29,6 +29,11 @@
             "source_path": "memdocs/configmgr/core/misc/user-experience-analytics-preview.md",
             "redirect_url": "/mem/analytics/overview",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection.md",
+            "redirect_url": "/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection",
+            "redirect_document_id": false
         }
     ]
 }
