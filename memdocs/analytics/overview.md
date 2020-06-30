@@ -2,7 +2,7 @@
 title: What is Endpoint analytics (preview)?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics preview.
-ms.date: 06/25/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
