@@ -73,7 +73,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the Browser Usage (SMS_BrowerUsage) hardware inventory class.
+**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged and isn't transmitted to Microsoft.
 
 ### Script requirements for Proactive remediations
 
