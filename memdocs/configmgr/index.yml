@@ -169,10 +169,10 @@ conceptualContent:
         url: ./compliance/index.yml
     - title: Protect
       links:
-        - text: Windows Defender
+        - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: ATP
+        - text: Microsoft Defender Advanced Threat Protection
           url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
