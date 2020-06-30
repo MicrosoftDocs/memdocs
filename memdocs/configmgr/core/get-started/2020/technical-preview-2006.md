@@ -2,7 +2,7 @@
 title: Technical preview 2006
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2006.
-ms.date: 06/25/2020
+ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -38,11 +38,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improved support for Windows Virtual Desktop](includes/2006/6527576.md)]
 [!INCLUDE [Direct links to Configuration Manager Community hub items](includes/2006/4224406.md)]
 
-<!--
 ## General known issues
 
-[!INCLUDE [Can't delete collections](includes/2006/known-issue-6215446.md)]
--->
+[!INCLUDE [Azure AD authentication doesn't work](includes/2006/known-issue-7569264.md)]
 
 ## Next steps
 
