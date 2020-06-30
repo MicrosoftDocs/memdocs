@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,6 +34,8 @@ These settings are added to a device configuration profile in Intune, and then a
 
 > [!Note]
 > Not all options are available on all editions of Windows. To see the supported editions, refer to the [policy CSPs](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
+>  
+> Most configurable settings in a Windows 10 device restrictions profile are deployed at the device level. Policies that are deployed to user groups will take effect for both the targeted user and any other users who subsequently log on to that device and have an Intune license.
 
 ## Before you begin
 
