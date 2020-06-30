@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -75,7 +75,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - iOS 9.3 and newer
   - iPadOS 13.0 and newer
 
-- **Unprompted screen observation by Classroom app**: **Allow** lets teachers silently observe the screen of students' iOS/iPadOS devices using the Classroom app without the students knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course's teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent this feature.
+- **Unprompted screen observation by Classroom app**: **Allow** lets teachers silently observe students' iOS/iPadOS screens using the Classroom app without the students knowing. Student devices enrolled in a class using the Classroom app automatically give permission to that course's teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent this feature.
 
   To use this setting, set the **Screen capture** setting to **Block**.
 
@@ -201,7 +201,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **10**: Screen locks after 10 minutes of inactivity.
   - **15**: Screen locks after 15 minutes of inactivity.
 
-  If a value doesn't apply to iOS and iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This is an Apple limitation.
+  If a value doesn't apply to iOS and iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This behavior is an Apple limitation.
   
   > [!NOTE]
   > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
@@ -432,6 +432,25 @@ To add apps to these lists, you can:
 > [!IMPORTANT]
 > Device profiles that use the restricted app settings must be assigned to groups of users.
 
+## Shared iPad
+
+This feature applies to:
+
+- iPadOS 13.4 and newer
+- Shared iPad
+
+### Settings apply to: Automated device enrollment (supervised)
+
+- **Block Shared iPad temporary sessions​**: Temporary sessions allow users to sign in as Guest, and users aren't required to enter a Managed Apple ID or password.
+
+  When set to **Yes**:
+
+  - Shared iPad users can't use temporary sessions.
+  - Users must sign in to the device with their Managed Apple ID and password.
+  - The Guest account option isn't shown on the lock screen on the devices.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS allows a Shared iPad user to sign in to the device with the Guest account. When the user signs out, none of the user’s data is saved or synced to iCloud.
+
 ## Show or hide apps
 
 This feature applies to:
@@ -602,12 +621,17 @@ To add apps, you can:
 
 Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
-For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
+- For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
 
-> [!NOTE]
-> Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
+- Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
 
-For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- On iOS/iPadOS devices, the Company Portal app supports ASAM. When the Company Portal app is in ASAM, the device is locked in the Company Portal app until the user authenticates. When users sign in to the Company Portal app, they can use other apps and the Home screen button on the device. When they sign out of the Company Portal app, the device returns to single app mode, and locks on the Company Portal app.
+
+  To turn the Company Portal app into a 'sign in/sign out' app (enable ASAM), enter the Company Portal app name, such as `Microsoft Intune Company Portal`, and the bundle ID (`com.microsoft.CompanyPortal`) in these settings. After this profile is assigned, you must open the Company Portal app to lock the app so users can sign in and sign out of it.
+  
+  When the device configuration profile is removed, and the user signs out, the device isn't locked in the Company Portal app.
 
 ### Settings apply to: Automated device enrollment (supervised)
 

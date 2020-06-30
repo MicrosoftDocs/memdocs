@@ -34,10 +34,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 ## Internet endpoints
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## Enable device upload
 

@@ -27,6 +27,9 @@ Legacy PC management is going out of support on October 15, 2020. Upgrade device
 
 [Learn more](https://go.microsoft.com/fwlink/?linkid=2107122)
 
+### Move to the Microsoft Endpoint Manager admin center for all your Intune management
+In MC208118 posted last March, we introduced a new, simple URL for your Microsoft Endpoint Manager – Intune administration: [https://endpoint.microsoft.com](https://endpoint.microsoft.com). Microsoft Endpoint Manager is a unified platform that includes Microsoft Intune and Configuration Manager. **Starting August 1, 2020**, we will remove Intune administration at [https://portal.azure.com](https://portal.azure.com) and recommend you instead use [https://endpoint.microsoft.com](https://endpoint.microsoft.com) for all your endpoint management. 
+
 
 ### Decreasing support for Android device administrator<!--7371518-->
 Android device administrator management was released in Android 2.2 as a way to manage Android devices. Then beginning with Android 5, the more modern management framework of [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) was released (for devices that can reliably connect to Google Mobile Services). Google is encouraging movement off of device administrator management by decreasing its management support in new Android releases.
@@ -110,3 +113,8 @@ To avoid the reduction in functionality coming in the fourth quarter of 2020, we
 - [Google’s blog about what you need to know about Device Admin deprecation](https://www.blog.google/products/android-enterprise/da-migration/)
 - [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
 - [Google's documentation of deprecated device administrator APIs](https://developers.google.com/android/work/device-admin-deprecation)
+
+
+### Plan for Change: Intune Enrollment Flow Update for Apple’s Automated Device Enrollment for iOS/iPadOS
+In the July Company Portal release, we’ll be changing the iOS/iPadOS enrollment flow for Apple’s Automated Device Enrollment (formerly known as DEP). The enrollment flow change is only encountered during the “Enroll with User Affinity” flow. Previously, if you set the “Install Company Portal” to “no” as part of your configuration, users could still install the Company Portal app from the store which would then trigger enrollment where the user would add in the appropriate serial number. With this upcoming Company Portal release, we’ll be removing that serial number confirmation screen. Instead, you’ll want to create a corresponding app configuration policy to send down alongside the Company Portal to ensure that users can successfully enroll, or set the “Install Company Portal” to “Yes” as part of your configuration. 
+ - See the post [here](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-enrollment-flow-update-for-apple-s-automated-device/ba-p/1431629) for more info.

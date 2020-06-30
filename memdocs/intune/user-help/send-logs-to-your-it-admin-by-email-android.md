@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -38,6 +38,8 @@ The actual error details are kept on your device in a special document called a 
 
 > [!Note]
 > To make it easier for your company support to find the cause of the problem, turn on _verbose logging_ in Company Portal. If you're using the Microsoft Intune app, set the **Log detail level** to **Verbose**. Verbose logging records all details about an error and includes these details in the report. Find out how to [turn on verbose logging here](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
 
 ## Upload and email logs from Company Portal  
 

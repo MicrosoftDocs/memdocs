@@ -5,7 +5,7 @@ description: "Configuration Manager synchronizes Surface driver updates for depl
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -81,10 +81,9 @@ Most drivers belong to the following product groups:
 
 ## <a name="bkmk_models"></a> Surface models
 
-The following table contains the Surface models and versions of Windows 10 on which Configuration Manager can install drivers. Surface driver updates aren't available in Configuration Manager the same day they're published to the Microsoft Update catalog. Configuration Manager maintains its own list of which Surface drivers it will import. This list is published periodically and contains the drivers that were published on or before a certain date. Devices needing Windows 10 S products are noted.
+The following table contains the Surface models and versions of Windows 10 on which Configuration Manager can install drivers. Surface driver updates aren't available in Configuration Manager the same day they're published to the Microsoft Update catalog. Configuration Manager maintains its own list of which Surface drivers it will import. Devices needing Windows 10 S products are noted. Microsoft aims to get the Surface drivers added to the allow list on the second Tuesday each month to make them available for synchronization to Configuration Manager. For more information, see [Frequently asked questions](#bkmk_faq).
 
-**Surface drivers published on or before June 9, 2020 are available in Configuration Manager**. 
-
+</br>
 
 |Surface Model|Windows 10 1709| Windows 10 1803|Windows 10 1809|Windows 10 1903|Windows 10 1909|
 |----|----|----|----|----|----|
@@ -95,12 +94,12 @@ The following table contains the Surface models and versions of Windows 10 on wh
 |Surface Pro X|N/A| N/A| N/A |Yes|Yes|
 |Surface Book|Yes| Yes| Yes |Yes|Yes|
 |Surface Book 2|Yes| Yes| Yes |Yes|Yes|
-|Surface Book 3|N/A| N/A| N/A |N/A|Yes|
+|Surface Book 3|N/A| N/A| N/A |Yes|Yes|
 |Surface Laptop|Yes, with the product "Windows 10 S version 1709 and later Servicing drivers" selected| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Laptop 2|Yes| Yes |Yes|Yes|Yes|
+|Surface Laptop 2|N/A| Yes |Yes|Yes|Yes|
 |Surface Laptop 3|N/A| N/A|N/A|Yes |Yes|
 |Surface Go|N/A| Yes, with the product "Windows 10 S version 1803 and later Servicing drivers" selected|Yes, with the product "Windows 10 S version 1809 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
-|Surface Go 2|N/A| Yes| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
+|Surface Go 2|N/A| N/A| Yes |Yes|Yes, with the product "Windows 10 S version 1903 and later Upgrade & Servicing drivers" selected|
 |Surface Studio|Yes| Yes| Yes |Yes|Yes|
 |Surface Studio 2|N/A| Yes| Yes |Yes|Yes|
 
@@ -134,42 +133,25 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
 1. You can also wait until the next synchronization finishes. Then, check whether the Surface driver and firmware updates are listed in Software Updates in the Configuration Manager console. For example, the console might display the following information:
    ![Synchronized Surface drivers in Configuration Manger console](media/synchronized-surface-drivers.png)
 
-## Frequently asked questions (FAQ)
+##  <a name="bkmk_faq"></a> Frequently asked questions (FAQ)
 
 ### After I follow the steps in this article, my Surface drivers are still not synchronized. Why?
 
-If you synchronize from an upstream Windows Server Update Services (WSUS) server instead of Microsoft Update, make sure that the upstream WSUS server is configured to support and synchronize Surface driver updates. All downstream servers are limited to updates that are present in the upstream WSUS server database.
+If you synchronize from an upstream Windows Server Update Services (WSUS) server, instead of Microsoft Update, make sure that the upstream WSUS server is configured to support and synchronize Surface driver updates. All downstream servers are limited to updates that are present in the upstream WSUS server database.
 
-### After I follow the steps in this article, some Surface drivers are synchronized, but not the expected drivers. Why?
+There are more than 68,000 updates that are classified as drivers in WSUS. To prevent non-Surface related drivers from synchronizing to Configuration Manager, Microsoft filters driver synchronization against an allow list. After the new allow list is published and incorporated into Configuration Manager, the new drivers are added to the console following the next synchronization. Microsoft aims to get the Surface drivers added to the allow list on the second Tuesday each month to make them available for synchronization to Configuration Manager.
 
-The processing time for testing drivers and confirming them for deployment through WSUS and Configuration Manager varies. Therefore, Surface driver updates aren't necessarily available on the same day for both manual installation and Configuration Manager console deployment.
+If your Configuration Manager environment is offline, a new allow list is imported every time you import [servicing updates](../../core/servers/manage/use-the-service-connection-tool.md) to Configuration Manager. You will also have to import a [new WSUS catalog](../get-started/synchronize-software-updates-disconnected.md) that contains the drivers before the updates are displayed in the Configuration Manager console. Because a stand-alone WSUS environment contains more drivers than a Configuration Manager SUP, we recommend that you establish a Configuration Manager environment that has online capabilities, and that you configure it to synchronize Surface drivers. This provides a smaller WSUS export that closely resembles the offline environment.
 
-Additionally, there are more than 68,000 updates that are classified as drivers in WSUS. To prevent non-Surface related drivers from synchronizing to Configuration Manager, Microsoft filters driver synchronization against an allow list. Surface drivers must go through additional testing before they can be added to this list. After the new allow list is published and incorporated into Configuration Manager, the new drivers are added to the console following the next synchronization.
+If your Configuration Manager environment is online and able to detect new updates, you will receive updates to the list automatically. If you don’t see the expected drivers, please review the WCM.log and WsyncMgr.log for any synchronization failures.
 
-### Is the driver allow list published? Is it downloadable?
+### My Configuration Manager environment is offline, can I manually import Surface drivers into WSUS?
 
-The Surface driver allow list isn't published online. This list is delivered to Configuration Manager through the update and servicing channels. If your Configuration Manager environment is online and able to detect new updates, you'll receive updates to the list automatically.
+No. Even if the update is imported into WSUS, the update won't be imported into the Configuration Manager console for deployment if it isn't listed in the allow list. You must use the [Service Connection Tool](../../core/servers/manage/use-the-service-connection-tool.md) to import servicing updates to Configuration Manager to update the allow list.
 
-If your Configuration Manager environment is offline, a new allow list is imported every time you import servicing updates to Configuration Manager. You'll also have to import a new WSUS catalog that contains the drivers before the updates are displayed in the Configuration Manager console. Because a stand-alone WSUS environment contains more drivers than a Configuration Manager software update point, we recommend that you establish a Configuration Manager environment that has online capabilities, and that you configure it to synchronize Surface drivers. This provides a smaller WSUS export that closely resembles the offline environment.
+### What alternative methods do I have to deploy Surface driver and firmware updates?
 
-Another solution is to use [alternative methods](#bkmk_alt) to deploy Surface driver and firmware updates.
-
-### I require the latest firmware update, and I can't wait for it to be approved for import into Configuration Manager. Can I manually import the driver into WSUS? 
-
-No. Even if the update is imported into WSUS, the update won't be imported into the Configuration Manager console for deployment if it isn't listed in the allow list.
-
-Another solution is to use [alternative methods](#bkmk_alt) to deploy Surface driver and firmware updates.
-
-### Can I manually add a driver to the allow list? 
-
-No. The list is stored in the Configuration Manager database. Any changes to the list will be overwritten the next time that the CAB file is processed.
-
-
-### <a name="bkmk_alt"></a> What alternative methods do I have to deploy Surface driver and firmware updates?
-
-For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](https://docs.microsoft.com/surface/manage-surface-pro-3-firmware-updates).
-
-If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](https://blogs.technet.microsoft.com/thejoncallahan/2016/06/20/keeping-surface-firmware-updated-with-configuration-manager/).
+For information about how to deploy Surface driver and firmware updates through alternative channels, see [Manage Surface driver and firmware updates](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). If you want to download the .msi or .exe file, and then deploy through traditional software deployment channels, see [Keeping Surface Firmware Updated with Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## Next steps
 

@@ -78,6 +78,9 @@
   - name: Preference file on macOS
     href: preference-file-settings-macos.md
     displayName: property list files, plist
+  - name: Wired networks on macOS
+    href: wired-networks-configure.md
+    displayName: 802.1x
   - name: Mobility Extensions on Zebra devices
     displayName: mx, android, stagenow
     items:
@@ -183,6 +186,8 @@
         href: vpn-settings-macos.md
       - name: Wi-Fi
         href: wi-fi-settings-macos.md
+      - name: Wired networks
+        href: wired-network-settings-macos.md
     - name: Windows 10 and later
       items:
       - name: Custom
