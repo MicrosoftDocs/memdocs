@@ -30,6 +30,14 @@ To get notified when this page is updated, copy and paste the following URL into
 <!-- 7370207 -->
 In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
 
+### Improved support for viewing the portal from any device
+
+<!-- 6270240 -->
+
+You can now view the Desktop Analytics portal in the Microsoft Endpoint Manager admin center from a variety of device types. It now meets the Web Content Accessibility Guidelines (WCAG) 2.1 for a display resolution as low as 320 x 256 pixels. For example, the following image is of the portal from an Apple iPhone 8:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="Desktop Analytics portal on an iPhone 8":::
+
 ## June 2020
 
 ### Improvement to prerequisites
