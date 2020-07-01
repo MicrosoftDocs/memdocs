@@ -78,7 +78,7 @@ The following profiles are supported for devices you manage with Intune:
 
 - Platform: **Windows 10 profiles**
   
-  - Profile: **Microsoft Defender Antivirus** 
+  - Profile: **Microsoft Defender Antivirus**
 
     Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
 
@@ -94,7 +94,7 @@ The following profiles are supported for devices you manage with Intune:
 
 ### Devices managed by Configuration Manager *(In preview)*
 
-The following profiles are supported for devices you manage with Configuration Manager through the tenant attach scenario:
+The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:
 
 - Platform: **Windows 10 and windows Server**
 
