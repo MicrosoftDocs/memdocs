@@ -294,7 +294,7 @@ Users receive the app or email notification depending on the settings you specif
 
 ## Derived credentials for Windows
 
-You can use derived certificates as an authentication method for Wi-Fi and VPN profiles on Windows devices. The same providers that are supported by Android and iOS/iPadOS devices are supported as providers for Windows: 
+You can use derived certificates as an authentication method for Wi-Fi and VPN profiles on Windows devices. The same providers that are supported by Android and iOS/iPadOS devices are supported as providers for Windows:
 
 - **DISA Purebred**
 - **Entrust Datacard**
@@ -304,9 +304,9 @@ For Windows, users do not work through a smartcard registration process to obtai
 
 1. **Install the app from the Derived Credential providers on the Windows device**.
 
-   To install the derived credential certificate on a windows device, get the Windows app from the derived credential provider you use, and install it on the Windows device.
+   When you install the Windows app from a derived credential provider on a Windows device, the derived certificate is added to that devices Windows certificate store. After the certificate is added to the device, it becomes available for use a derived credential authentication method.
 
-   The app can be deployed to Users, or directly installed by the user of the device.  After the app installs, the derived credential certificate is added to the Windows certificate store on the device, which makes it available for use as a derived credential authentication method.
+   The app can be deployed to Users, or directly installed by the user of the device.
 
 2. **Configure Wi-Fi and VPN profiles to use derived credentials as the authentication method**.
 
