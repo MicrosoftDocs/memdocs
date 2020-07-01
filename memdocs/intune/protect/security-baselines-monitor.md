@@ -122,12 +122,12 @@ You can select a profile for a Security Baseline, and drill-in to view a list of
 
 After selecting a device, Microsoft Endpoint Manager admin center displays a list of the settings from that profile, including the category the setting is from, and the configuration state on the device. Configuration states include the following values:
 
-- **Success** – This setting was applied to the device.  
-- **Misconfigured** – This setting is in conflict with another policy, has an error, or is pending an update.  
-- **Not applicable** – This setting is not applied by the profile.
+- **Success** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Conflict** – The setting is in conflict with another policy, has an error, or is pending an update.
+- **Not applicable** – Te setting is not applied by the profile.
 
 > [!NOTE]
-> The status values for settings will update in a future release to provide additional details.
+> The status values for settings will update in a future release to provide more granular details.
 
 ## View Endpoint security configurations per device
 
