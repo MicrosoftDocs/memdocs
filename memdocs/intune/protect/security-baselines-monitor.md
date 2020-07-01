@@ -124,7 +124,7 @@ After selecting a device, Microsoft Endpoint Manager admin center displays a lis
 
 - **Success** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
 - **Conflict** – The setting is in conflict with another policy, has an error, or is pending an update.
-- **Not applicable** – Te setting is not applied by the profile.
+- **Not applicable** – The setting is not applied by the profile.
 
 > [!NOTE]
 > The status values for settings will update in a future release to provide more granular details.
