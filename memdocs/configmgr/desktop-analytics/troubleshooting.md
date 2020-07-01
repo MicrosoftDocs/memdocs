@@ -2,7 +2,7 @@
 title: Troubleshoot Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technical details to help you troubleshoot issues with Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -216,3 +216,39 @@ If you aren't seeing changes updated within the time frames indicated above, wai
 
 > [!IMPORTANT]
 > The Desktop Analytics option to **View recent data** is deprecated. This action will be removed in a future release of the Desktop Analytics service. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
+## Service notifications
+
+<!-- 4982509 -->
+
+The Desktop Analytics portal can display notification banners to administrators. These notifications allow Microsoft to communicate with you about important events and issues. The following sections detail the notifications that you might see.
+
+### See what's new this month in Desktop Analytics
+
+This informational notification makes you aware of changes to the service. For more information, see [What's new in Desktop Analytics](whats-new.md) (`https://aka.ms/danews`).
+
+### There are new prerequisites. To continue using Desktop Analytics, review the new requirements
+
+This informational notification makes you aware of changes to the prerequisites. For example, a new internet endpoint or software update. For more information, see [Prerequisites](overview.md#prerequisites) (`https://aka.ms/daprereqs`).
+
+### We're investigating an issue that impacts Desktop Analytics
+
+This warning notification indicates that Microsoft is aware of an issue that impacts the Desktop Analytics service. The issue is typically with generating snapshots. When you see this notification, Microsoft is investigating the issue to determine the scope and source of impact. You don't need to contact Microsoft Support. For more information, see [Data flow](privacy.md#data-flow).
+
+### We're investigating an issue with data latency. If you enrolled new devices or changed any assets in the last 24 hours, they may not appear right away
+
+This warning notification indicates that Microsoft is aware of an issue that impacts the Desktop Analytics service. Microsoft continuously monitors the service to confirm that all components update snapshots at the correct times. During this monitoring, one of these components didn't complete as expected. When you see this notification, Microsoft is investigating the issue. You don't need to contact Microsoft Support. For more information, see [Data flow](privacy.md#data-flow).
+
+If you recently [enrolled devices](enroll-devices.md) or changed [assets](about-assets.md), wait until Microsoft resolves the issue. You don't need to repeat any actions.
+
+### We've resolved a temporary issue with data latency. Daily refresh of portal data is delayed
+
+This notification lets you know that there was an issue with data latency. The service is still processing the snapshot, and the refresh of data is delayed. For more information, see [Data latency](#data-latency).
+
+### We've resolved an issue with data latency. If you enrolled new devices or changed any assets in the last 24 hours, they may not appear right away
+
+This notification lets you know that Microsoft resolved a previously reported issue with data latency. You may see stale data for tomorrow's snapshot. If you [enrolled devices](enroll-devices.md) or made device configuration changes in the last 24 hours, you won't see them right away in the portal. You can continue to use Desktop Analytics to categorize [assets](about-assets.md) and prepare [deployment plans](about-deployment-plans.md). These actions can use data from the previous snapshot.
+
+### We've resolved an issue with Desktop Analytics. Daily refresh of the portal data is on track
+
+This notification lets you know that Microsoft identified a snapshot component that stopped working during processing. Microsoft restarted the component, which will take time to process the snapshot. Microsoft continuously monitors the service to confirm that all components update snapshots at the correct times.

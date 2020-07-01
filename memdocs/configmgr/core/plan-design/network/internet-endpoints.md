@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/26/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -268,6 +268,10 @@ For more information on the required endpoints for the Desktop Analytics cloud s
 ## Tenant attach
 
 For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
+## Endpoint analytics
+
+For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
 
 ## Microsoft public IP addresses
 
