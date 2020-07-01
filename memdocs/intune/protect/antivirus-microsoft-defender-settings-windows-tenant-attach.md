@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings from Microsoft Defender Antivirusfor tenant attached devices | Microsoft Docs
+title: Windows 10 Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices | Microsoft Docs
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows 10 devices managed by Configuration Manager. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune after you configure tenant attach for Configuration Manager.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,8 +40,8 @@ View the Microsoft Defender Antivirus settings you can manage with the **Sccm An
   By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed. Turns off the Microsoft Active Protection Service.**
-  - **Allowed. Turns on the Microsoft Active Protection Service.**
+  - **Not allowed.** Turns off the Microsoft Active Protection Service.
+  - **Allowed.**  Turns on the Microsoft Active Protection Service.
 
 - **Cloud-delivered protection level**  
   CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -83,8 +83,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
   Require Defender on Windows 10 desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
-  - **Not allowed. Turns off the real-time monitoring service**
-  - **Allowed. Turns on and runs the real-time monitoring service.**
+  - **Not allowed.** Turns off the real-time monitoring service.
+  - **Allowed.** Turns on and runs the real-time monitoring service.
 
 - **Enable on access protection**  
   CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
@@ -92,7 +92,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure virus protection that's continuously active, as opposed to on demand.
 
   - **Not Configured** (*default*) - This policy doesn't alter the state of this setting on a device. The existing state on the device remains unchanged.
-  - **Not allowed. Turns off the real-time monitoring service**
+  - **Not allowed.** Turns off the real-time monitoring service.
   - **Allowed.**
 
 - **Monitoring for incoming and outgoing files**  
@@ -109,8 +109,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed. Tunrs off behaviormonitoring.**
-  - **Allowed. Turns on real-time behavior monitoring.**
+  - **Not allowed.** Turns off behavior monitoring.
+  - **Allowed.** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
   - **Not configured** (*default*) - The setting is restored to the system default.
@@ -141,8 +141,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan network files.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed. Turns off scanning of network files.**
-  - **Allowed. Scans network files.** 
+  - **Not allowed.** Turns off scanning of network files.
+  - **Allowed.** Scans network files.
 
 - **Scan emails**  
   CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
@@ -150,8 +150,8 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Configure Defender to scan incoming email.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Not allowed. Turns off email scanning**
-  - **Allowed. Turns on email scanning.** 
+  - **Not allowed.** Turns off email scanning.
+  - **Allowed.** Turns on email scanning.
 
 ## Remediation
 
@@ -174,38 +174,35 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
 
   - **Not configured** (*default*) - The setting is restored to the system default, which is PUA Protection OFF.
-  - **PUA Protection off. Windows Defender will not protect against potentially unwanted applications.**
-  - **PUA Protection on. Detected items are blocked. They will show in history along with other threats.**
-  - **Audit mode.** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
+  - **PUA Protection off.** Windows Defender will not protect against potentially unwanted applications.
+  - **PUA Protection on.** Detected items are blocked. They will show in history along with other threats.
+  - **Audit mode.** Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Create a system restore point before computers are cleaned**  
   - **Yes** (*default*)
   - **No**
   - **Not Configured**
 
-<!-- 
 - **Actions for detected threats**  
   CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
   
   Defender classifies malware that it detects as one of the following severity levels:
-  - **Low severity**
-  - **Moderate severity**
-  - **High severity**
-  - **Severe severity**
+  - **Low threat**
+  - **Moderate threat**
+  - **High threat**
+  - **Severe threat**
 
   For each level, specify the action to take. The default for each severity level is *Not configured*.
 
-  - **Not configured**
+  - **Not configured** (*default*)
   - **Clean** - The service tries to recover files and try to disinfect.
   - **Quarantine** - Moves files to quarantine.
   - **Remove** - Removes files from the device.
   - **Allow** - Allows the file and doesn't take other actions.
   - **User defined** - The device user makes the decision on which action to take.
   - **Block** - Blocks file execution.
-
--->
 
 ## Scan
 
@@ -216,16 +213,16 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable this.
 Learn more
-  - **No** - File archives aren't scanned. Device users can't change this setting.
-  - **Yes** - Enable scans of archive files. Device users can't change this setting.
+  - **Not allowed** Turns off scanning on archived files.
+  - **Allowed.** Scans teh archive files.
 
-- **Use low CPU priority for scheduled scans**  
+- **Enable low CPU priority for scheduled scans**  
   CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configure CPU priority for scheduled scans.
   - **Not configured** (*default*) - The setting returns to the system default, in which no changes to CPU priority are made.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Low CPU priority will be used during scheduled scans. Device users can't change this setting.
+  - **Disabled**
+  - **Enabled**
 
 - **Disable catch-up full scan**  
   CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
@@ -233,8 +230,8 @@ Learn more
   Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up scans for full scans, however the user can turn them off.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Disabled**
+  - **Enabled**
 
 - **Disable catchup quick scan**  
   CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
@@ -242,8 +239,8 @@ Learn more
   Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up quick scans, however the user can turn them off.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Disabled**
+  - **Enabled**
 
 - **CPU usage limit (0-100 percent) per scan**  
   CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
@@ -256,8 +253,8 @@ Learn more
   Configure Defender to scan mapped network drives.
 
   - **Not configured** (*default*) - The setting is restored to the system default, which disables scanning on mapped network drives.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Enable scans of mapped network drives. Device users can't change this setting.
+  - **Not allowed.** Disables scanning on mapped network drives.
+  - **Allowed.** Scans mapped network drives.
 
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
@@ -282,8 +279,8 @@ Learn more
 
 - **Check for signature updates before running scan**  
   - **Not Configured** (*default*)
-  - **No**
-  - **Yes**
+  - **Disabled**
+  - **Enabled**
 
 - **Randomize scheduled scan and security intelligence update start times**  
   -**Not Configured** (*default*)
@@ -292,10 +289,8 @@ Learn more
 
 - **Scan removable drives during full scan**
   - **Not Configured** (*default*)
-  - **Not allowed. Turns off scanning on removable drives.**
-  - **Allowed. Scans removable drives**
-
-- **Security Intelligencer Location (Device)**  
+  - **Not allowed.** Turns off scanning on removable drives.
+  - **Allowed.** Scans removable drives.
 
 ## Updates
 
@@ -304,25 +299,18 @@ Learn more
 
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 
-## User experience
+- **Signature Update Fallback Order (Device)**
 
-- **Allow user access to Microsoft Defender app**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
+- **Signature Update File Shares Sources (Device)**
 
-  - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
-  - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
-  - **Yes**
-
-- **Signature Update Fallback Order (Device)**  
-
-- **Signature Update File Shares Sources (Device)**  
+- **Security Intelligencer Location (Device)**  
 
 ## User experience
 
 - **Block user access to Microsoft Defender app**  
   - **Not Configured** (*default*)
-  - **Not allowed. Prevents users from accessing UI.**
-  - **Allowed. Lets users access UI.**
+  - **Not allowed.** Prevents users from accessing UI.
+  - **Allowed.** Lets users access UI.
 
 - **Show notifications messages on the client computer when the user needs to run a full scan, update security intelligence, or run Windows Defender Offline**  
   - **Not Configured** (*default*)
