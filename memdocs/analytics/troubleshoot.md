@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 06/30/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -62,7 +62,7 @@ The fix for this issue is available in the Configuration Manager version 2002 up
 There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
 
 ### Hardware inventory may fail to process
-
+<!--7535675-->
 Hardware inventory for devices may fail to process after enabling endpoint analytics. Errors similar to the one below may be seen in the Dataldr.log file:
 
 ```text
@@ -73,7 +73,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged and isn't transmitted to Microsoft.
+**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged by Endpoint analytics and isn't transmitted to Microsoft.
 
 ### Script requirements for Proactive remediations
 
