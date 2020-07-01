@@ -196,12 +196,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
-8. Select **Next**.
-9. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
-10. Select **Next**.
-11. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
-12. Select **Next** > **Create**.
+7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join over VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) for additional information.
+8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+9. Select **Next**.
+10. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
+11. Select **Next**.
+12. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+13. Select **Next** > **Create**.
 
 It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
 

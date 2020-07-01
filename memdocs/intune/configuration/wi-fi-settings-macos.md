@@ -3,12 +3,12 @@
 
 title: Configure Wi-Fi settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Create or add a WiFi device configuration profile for macOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
+description: Create or add a WiFi device configuration profile for macOS devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # Add Wi-Fi settings for macOS devices in Microsoft Intune
 
-You can create a profile with specific WiFi settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKS or SCEP certificate, and more.
+You can create a profile with specific Wi-Fi settings, and then deploy this profile to your macOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
-These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
+These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
 
 This article describes these settings.
 
@@ -43,6 +43,8 @@ This article describes these settings.
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
 ## Basic profiles
+
+Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a pre-shared key to authenticate the connection.
 
 - **Wi-Fi type**: Choose **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. This value is the name that users see when they browse the list of available connections on their device.
@@ -62,6 +64,8 @@ This article describes these settings.
 
 ## Enterprise profiles
 
+Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate Wi-Fi connections. EAP is often used by enterprises, as you can use certificates to authenticate and secure connections, and configure more security options.
+
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
@@ -80,14 +84,14 @@ This article describes these settings.
   - **EAP-TLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - **Client certificate for client authentication (Identity certificate)**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 
@@ -105,7 +109,7 @@ This article describes these settings.
   - **PEAP**: Also enter:
 
     - **Server Trust** - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network, and is used to authenticate the connection.
+    - **Root certificate for server validation**: Choose one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
 
     - **Client Authentication** - Choose an **Authentication method**. Your options:
 

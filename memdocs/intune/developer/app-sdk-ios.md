@@ -24,7 +24,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
+ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -124,17 +124,17 @@ To enable the Intune App SDK, follow these steps:
      ![Intune App SDK iOS: copy bundle resources](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Add these iOS frameworks to the project:  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices.framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices.framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. Enable keychain sharing (if it isn't already enabled) by choosing **Capabilities** in each project target and enabling the **Keychain Sharing** switch. Keychain sharing is required for you to proceed to the next step.
 
@@ -500,13 +500,14 @@ The `isSaveToAllowedForLocation` API provides constants to check whether the IT 
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed," like OneDrive for Business, or "personal." Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
 
-The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device.
+The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` constant should be used if the app is saving a photo to the camera roll.
 
-If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` location should always be paired with a `nil` account.
+If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
 
 ### Supported open locations
 
