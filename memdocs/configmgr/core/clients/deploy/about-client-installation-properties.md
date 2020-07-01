@@ -595,9 +595,9 @@ For more information, see [How to configure client status](configure-client-stat
 <!--5526972-->
 
 Starting in version 2002, use this property to start a task sequence on a client after it successfully registers with the site.
- 
- > [!NOTE]
- > Known Issue: Updates and Applications installation will require clients to have a valid client authentication certificate. Token authentication alone will not work.
+
+> [!NOTE]
+> If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. For more information, see [Release notes - OS deployment](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
       
 For example, you provision a new Windows 10 device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
 
