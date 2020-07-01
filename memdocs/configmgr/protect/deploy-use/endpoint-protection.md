@@ -77,7 +77,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 
 ## Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection manages and monitors Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. The Microsoft Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md).
+Endpoint Protection manages and monitors Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. The Microsoft Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
