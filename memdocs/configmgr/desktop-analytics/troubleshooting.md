@@ -200,7 +200,7 @@ Within the Desktop Analytics portal, there are two types of data: **Administrato
 
 - **Diagnostic data** refers to the system metadata uploaded from client devices to Microsoft. This data powers Desktop Analytics. It includes attributes such as device inventory, and security and feature update status.
 
-By default, all data in the Desktop Analytics portal is automatically refreshed daily. This refresh includes changes in diagnostics data and any changes that you make to the configuration (administrator data). It should be visible in your Desktop Analytics portal by 08:00 AM UTC each day.
+By default, all data in the Desktop Analytics portal is automatically refreshed daily. This refresh includes changes in diagnostics data from two days ago and any changes that you make to the configuration (administrator data). It should be visible in your Desktop Analytics portal by 08:00 AM UTC each day.
 
 When you make changes to administrator data, you can trigger an on-demand refresh of the administrator data in your workspace. From any page in the Desktop Analytics portal, open the data currency flyout:
 
