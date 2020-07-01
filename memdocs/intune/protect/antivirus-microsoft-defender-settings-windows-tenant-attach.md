@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune
 
-View the Microsoft Defender Antivirus settings you can manage with the **Sccm Anti-virus Policy** profile from Intune. The profile is available when you configure Intunes [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md), and deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
+View the Microsoft Defender Antivirus settings you can manage with the **Microsoft Defender Antivirus Policy (ConfigMgr)** profile from Intune. The profile is available when you configure Intunes [Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md), and deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../protect/tenant-attach-intune.md) scenario.
 
 ## Cloud protection
 
@@ -211,10 +211,10 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
   Configure Defender to scan archive files, like ZIP or CAB files.
 
-  - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable this.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable the scan.
 Learn more
   - **Not allowed** Turns off scanning on archived files.
-  - **Allowed.** Scans teh archive files.
+  - **Allowed.** Scans the archive files.
 
 - **Enable low CPU priority for scheduled scans**  
   CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
@@ -227,7 +227,7 @@ Learn more
 - **Disable catch-up full scan**  
   CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
-  Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that starts because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up scans for full scans, however the user can turn them off.
   - **Disabled**
@@ -236,7 +236,7 @@ Learn more
 - **Disable catchup quick scan**  
   CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
-  Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that starts because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up quick scans, however the user can turn them off.
   - **Disabled**
@@ -247,7 +247,7 @@ Learn more
 
   Specify as a percent from zero to 100, the average CPU load factor for the Defender scan.
 
-- **Enable mapped mapped network drives be scanned during a full scan**  
+- **Enable mapped network drives be scanned during a full scan**  
   CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Configure Defender to scan mapped network drives.
@@ -260,7 +260,7 @@ Learn more
   CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Select the time of day that Defender quick scans run.
-  By default, this is **Not configured**
+  By default, this option is **Not configured**
 
 - **Scan type**  
   CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
@@ -303,7 +303,7 @@ Learn more
 
 - **Signature Update File Shares Sources (Device)**
 
-- **Security Intelligencer Location (Device)**  
+- **Security Intelligence Location (Device)**  
 
 ## User experience
 
