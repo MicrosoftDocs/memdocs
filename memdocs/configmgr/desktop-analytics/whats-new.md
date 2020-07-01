@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -22,6 +22,28 @@ Learn what's new each month in Desktop Analytics.
 
 To get notified when this page is updated, copy and paste the following URL into your RSS feed reader: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## July 2020
+
+### Windows 10, version 2004, now available in Desktop Analytics
+
+<!-- 7370207 -->
+
+In the Desktop Analytics portal, when you monitor security and feature updates, you'll now see Windows 10, version 2004. When you create a deployment plan, you can select Windows 10, version 2004, as the target version.
+
+### Improved support for viewing the portal from any device
+
+<!-- 6270240 -->
+
+You can now view the Desktop Analytics portal in the Microsoft Endpoint Manager admin center from a variety of device types. It now meets the Web Content Accessibility Guidelines (WCAG) 2.1 for a display resolution as low as 320 x 256 pixels. For example, the following image is of the portal from an Apple iPhone 8:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="Desktop Analytics portal on an iPhone 8":::
+
+### Notifications for service-impacting events
+
+<!-- 4982509 -->
+
+The Desktop Analytics portal now can display notification banners. These notifications allow Microsoft to communicate with you about important events and issues. For example, known issues with the service, data latency, or new prerequisites. For more information, see [Service notifications](troubleshooting.md#service-notifications).
 
 ## June 2020
 
