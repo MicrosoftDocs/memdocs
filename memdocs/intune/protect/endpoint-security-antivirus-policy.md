@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/07/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,13 +62,15 @@ Antivirus policies include the same settings found in *endpoint protection* or *
 
 ### Devices managed by Intune
 
-The following are supported for devices you manage with Intune:
+The following profiles are supported for devices you manage with Intune:
 
 **macOS**:
 
 - Platform: **macOS**
 
-  - Profile: **Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS.
+  - Profile: **Antivirus** 
+
+    Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-macos.md) for macOS.
 
     When you use [Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of `.plist` files.
 
@@ -76,7 +78,9 @@ The following are supported for devices you manage with Intune:
 
 - Platform: **Windows 10 profiles**
   
-  - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
+  - Profile: **Microsoft Defender Antivirus** 
+
+    Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10.
 
     Defender Antivirus is the next-generation protection component of Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). Next-generation protection brings together machine learning, big-data analysis, in-depth threat resistance research, and cloud infrastructure to protect devices in your enterprise organization.
 
@@ -84,16 +88,27 @@ The following are supported for devices you manage with Intune:
   
     Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
-  - Profile: **Windows Security experience** – Manage the [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md) that end users can view in the Microsoft Defender Security center and the notifications they receive. The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
+  - Profile: **Windows Security experience**
+
+    Manage the [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md) that end users can view in the Microsoft Defender Security center and the notifications they receive. The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
 ### Devices managed by Configuration Manager *(In preview)*
 
-The following are supported for devices you manage with Configuration Manager through the tenant attach scenario:
+The following profiles are supported for devices you manage with Configuration Manager through the tenant attach scenario:
 
 - Platform: **Windows 10 and windows Server**
 
-  - Profile: **Sccm Anti-virus Policy** - Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+  - Profile: **Sccm Anti-virus Policy**
+  
+    Manage [Antivirus policy settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
 
+    This profile is supported with devices that are tenant attached and run the following platforms:
+    - Windows 10 and later (x86, x64, ARM64)
+    - Windows 8.1 (x84, x64)
+    - Windows Server 2019 and later (x64)
+    - Windows server 2016 (x64)
+    - Windows Server 2012 R2 (x64)
+    - Windows Server 2008 R2 SP1 (x65)
 
 ## Antivirus policy reports
 
