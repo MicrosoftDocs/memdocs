@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enroll devices using Windows Autopilot
+title: Enroll devices with Windows Autopilot
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Windows 10 devices using Windows Autopilot.
 keywords:
