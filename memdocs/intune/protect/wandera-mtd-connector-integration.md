@@ -105,9 +105,9 @@ For iOS and Android devices that are managed by Intune, Wandera can be deployed 
 * Adding Wandera configuration profiles to Intune and assigning to target devices.
 * Adding the Wandera app and respective app configurations to Intune and assigning to target devices.
 
-### Configure and deploy iOS Configuration Profiles
+### Configure and deploy iOS Configuration Profiles 
 
-In this section, you will download required iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices. The Wandera app provides essential functionality to compliment the pushed Device configuration profile(s). As such, the Device configuration profiles is strongly recommended for all device deployments on iOS.
+In this section, you will download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
 1.	In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then click the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
 2.	Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
@@ -144,5 +144,5 @@ Activation Profiles to be used with MAM-WE must have Associated User set to the 
 5.	Click **Save** in the upper-right corner of the page.
 
 ## Next Steps
-* With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
+* With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. The Wandera app config provides essential functionality to compliment the pushed Device configuration profile(s) and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
 * Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation.
