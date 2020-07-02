@@ -169,7 +169,7 @@ To assume management of previously encrypted device, the following conditions mu
 
    In this scenario, the policy doesn’t decrypt or re-encrypt the device. Instead, the policy enables Intune to assume management of the FileVault encryption that’s already enabled on the device.  You can use either endpoint security disk encryption policy, or a device configuration endpoint protection policy to encrypt devices with FileVault.
 
-   See [Create and deploy policy](../protect/encrypt-devices-filevault.md#create-and-deploy-policy).
+   See [Create and deploy policy](#create-device-configuration-policy-for-filevault).
 
 2. **Users upload their personal recovery key to Intune**.  After the device receives the FileVault policy, direct the device user that encrypted the device to upload their personal recovery key to Intune. If the key is entered successfully, Intune assumes management of the FileVault encryption, and a new personal recovery key is created for the device and user.
 
@@ -202,7 +202,7 @@ For a macOS device that has its FileVault encryption managed by Intune, end user
 - Android Company Portal app
 - Intune app
 
-Administrators can view personal recovery keys for encrypted macOS devices that are marked as a *corporate* devices. They can’t view the recovery key for personal devices.
+Administrators can view personal recovery keys for encrypted macOS devices that are marked as a *corporate* device. They can’t view the recovery key for a personal device.
 
 The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. Using the iOS Company Portal app, Android Company Portal app, the Android Intune app, or the Company Portal website, the user can see the **FileVault** recovery key needed to access their Mac devices.
 

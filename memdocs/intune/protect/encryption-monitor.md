@@ -177,7 +177,7 @@ This report can be of use in identifying problems for groups of devices. For exa
 For details on managing recovery keys, see the following in the Intune documentation:
 
 macOS FileVault:
-- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Rotate recovery keys](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Recover recovery keys](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
