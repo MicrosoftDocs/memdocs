@@ -86,6 +86,8 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## Common issues
 
+### <a name="bkmk_noauth"></a> Unauthorized to perform client action
+
 If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
 
 ```text
@@ -95,6 +97,26 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](device-sync-actions.md#prerequisites).
+
+
+### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
+
+**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
+
+**Possible causes:**
+
+
+### <a name="bkmk_noinfo"></a> Unable to get %1 information
+
+**Error message:** Unable to get %1 information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+
+**Possible causes:**
+
+### <a name="bkmk_1603"></a> Unexpected error occurred
+
+**Error message:** Unexpected error occurred
+
+**Possible causes:**
 
 ## Next steps
 
