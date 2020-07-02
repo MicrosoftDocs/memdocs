@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,17 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 ## Week of June 22, 2020
 
+### App management
+
+#### Newly available protected apps for Intune<!-- 7248952 -->
+The following protected apps are now available:
+- BlueJeans Video Conferencing
+- Cisco Jabber for Intune
+- Tableau Mobile for Intune
+- ZERO for Intune
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ### Monitor and troubleshoot
 
 #### Use Endpoint analytics to improve user productivity and reduce IT support costs<!-- 5653063 --> 
@@ -71,11 +82,11 @@ You can create and run script packages on end user devices to proactively find a
 
 ### Device security
 
-### Use Microsoft Defender ATP in compliance policies for Android<!-- 4425686  -->
+#### Use Microsoft Defender ATP in compliance policies for Android<!-- 4425686  -->
 
 You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance polices for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
 
-### Configure Defender ATP web protection for Android devices<!-- 6185563 WNReady -->
+#### Configure Defender ATP web protection for Android devices<!-- 6185563 WNReady -->
 
 When you use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) for Android devices, you can [configure Microsoft Defender ATP web protection](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) to disable the phishing scan feature, or prevent the scan from using VPN.
 
