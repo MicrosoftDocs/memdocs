@@ -1,18 +1,18 @@
 ---
-title: Troubleshoot device action
+title: Troubleshoot tenant attach
 titleSuffix: Configuration Manager
-description: "Troubleshoot device actions technical reference for Configuration Manager"
+description: "Troubleshoot tenant attach for Configuration Manager"
 ms.date: 04/01/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshooting device actions for Configuration Manager devices
+# Troubleshooting tenant attach
 
 *Applies to: Configuration Manager (current branch)*
 
