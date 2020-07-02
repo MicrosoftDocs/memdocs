@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/2/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,7 +29,6 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-
 # Wandera Mobile Threat Defense connector with Intune  
 
 Control mobile device access to corporate resources using conditional access based on risk assessment conducted by Wandera. Wandera is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune.  Risk is assessed based on telemetry collected from devices by the Wandera service, including:
@@ -47,6 +46,14 @@ Wandera's mobile app seamlessly installs using Microsoft Intune. This app captur
 The compliance policy in Intune includes a rule for MTD  based on Wandera's risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
 
 For devices that are noncompliant, access to resources like Office 365 can be blocked. Users on blocked devices receive guidance from the Wandera app to resolve the issue and regain access.
+
+Wandera will update Intune with each device’s latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously re-calculated by the Wandera Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
+
+These categories and their associated threat levels are configurable in Wandera's RADAR console such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
+
+* Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Wandera-reported threat level. This compliance flag subsequently drives Conditional Access Policies to allow or deny access to applications that utilize modern authentication.  See [Create Mobile Threat Defense (MTD) device compliance policy](https://docs.microsoft.com/en-us/mem/intune/protect/mtd-device-compliance-policy-create) with Intune for configuration details.
+
+* Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (e.g. Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Wandera-reported threat level.  These policies may also be used with unmanaged devices (MAM-WE) to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](https://docs.microsoft.com/en-us/mem/intune/protect/mtd-app-protection-policy) with Intune for configuration details.
 
 ## Supported platforms  
 
@@ -109,7 +116,6 @@ Detect threats to your network such as Man-in-the-middle attacks, and prevent sy
 
 ![Access granted on remediation for SharePoint example](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
 
-<!-- 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Wandera Mobile Threat Defense solution considers a device to be infected:
@@ -119,7 +125,6 @@ When the Wandera Mobile Threat Defense solution considers a device to be infecte
 Access is granted on remediation:
 
 ![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
--->
 
 ## Next steps
 
