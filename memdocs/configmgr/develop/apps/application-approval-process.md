@@ -1,7 +1,7 @@
 ---
 title: Application approval process
 titleSuffix: Configuration Manager
-ms.date: 04/15/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -190,7 +190,7 @@ Administrators can configure email notifications for application approval reques
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** -> **Sites**.
 1. Select the top-level site in your hierarchy and select **Configure Site Components** in the ribbon.
 1. Select **Email Notification** to open the **Properties** dialog.
-1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Office 365, you can use the [Office 365 SMTP server](https://docs.microsoft.com/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3#option-3-configure-a-connector-to-send-mail-using-office-365-smtp-relay).
+1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Office 365, you can use the [Office 365 SMTP server](https://docs.microsoft.com/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 1. Enter the FQDN or IP address of the SMTP server.
 1. Select to **Specify an account**, select **Set**, then select **New Account**.
 1. Provide a username and password for the new account and click **OK**.
