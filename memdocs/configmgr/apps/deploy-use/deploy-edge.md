@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -30,6 +30,8 @@ For clients targeted with a Microsoft Edge deployment:
 
 - PowerShell [Execution Policy](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
+
+- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, the Microsoft Edge installer and CMPivot won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
 
 The device running the Configuration Manager console needs access to the following endpoints:
 
