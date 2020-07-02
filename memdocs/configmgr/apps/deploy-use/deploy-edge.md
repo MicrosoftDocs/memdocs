@@ -31,6 +31,8 @@ For clients targeted with a Microsoft Edge deployment:
 - PowerShell [Execution Policy](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
 
+- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, the Microsoft Edge installer and CMPivot won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
+
 The device running the Configuration Manager console needs access to the following endpoints:
 
 |Location|Use|
