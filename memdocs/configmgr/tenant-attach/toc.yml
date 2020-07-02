@@ -4,8 +4,8 @@
   items:
   - name: Enable tenant attach
     href: device-sync-actions.md
-  - name: Troubleshoot device actions
-    href: technical-reference.md
+  - name: Troubleshoot tenant attach
+    href: troubleshoot.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview

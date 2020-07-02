@@ -116,4 +116,4 @@ Use the following logs located on the service connection point:
 
 ## Next steps
 
-For more information about the tenant attach log files, see [Troubleshoot tenant attach](technical-reference.md).
+For more information about the tenant attach log files, see [Troubleshoot tenant attach](troubleshoot.md).

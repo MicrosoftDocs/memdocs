@@ -34,6 +34,11 @@
             "source_path": "memdocs/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection.md",
             "redirect_url": "/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/tenant-attach/technical-reference.md",
+            "redirect_url": "/mem/configmgr/tenant-attach/troubleshoot",
+            "redirect_document_id": false
         }
     ]
 }

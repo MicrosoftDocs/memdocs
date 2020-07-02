@@ -27,4 +27,4 @@ landingContent:
       - linkListType: reference
         links:
           - text: Troubleshoot tenant attach
-            url: technical-reference.md
+            url: troubleshoot.md
