@@ -121,7 +121,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The device is already encrypted. Device user must decrypt the device to continue.
 
-    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../policy/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternately, but not recommended as the following can leave a device unencrypted for a time, the user can manually decrypt their device before so it can then be encrypted by Intune policy.*
+    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternately, but not recommended as the following can leave a device unencrypted for a time, the user can manually decrypt their device before so it can then be encrypted by Intune policy.*
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
