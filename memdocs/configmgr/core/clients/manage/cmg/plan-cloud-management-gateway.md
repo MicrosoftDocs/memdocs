@@ -222,15 +222,16 @@ The following table lists CMG support for Configuration Manager features:
 | Hardware and software inventory     | ![Supported](media/green_check.png) |
 | Client status and notifications     | ![Supported](media/green_check.png) |
 | Run scripts     | ![Supported](media/green_check.png) |
+| CMPivot     | ![Supported](media/green_check.png) |
 | Compliance settings     | ![Supported](media/green_check.png) |
-| Client install<br>(with Azure AD integration)     | ![Supported](media/green_check.png) |
+| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Supported](media/green_check.png) |
+| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
 | Software distribution (device-targeted)     | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, required)<br>(with Azure AD integration)     | ![Supported](media/green_check.png) |
 | Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supported](media/green_check.png) |
-| Windows 10 in-place upgrade task sequence      | ![Supported](media/green_check.png) |
-| Task sequences that aren't using boot images and are deployed with an option: **Download all content locally before starting task sequence**      | ![Supported](media/green_check.png) |
-| Task sequences that aren't using boot images  | ![Supported](media/green_check.png) (1910)|
-| CMPivot     | ![Supported](media/green_check.png) |
+| Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![Supported](media/green_check.png) |
+| Task sequences that aren't using boot images and are deployed with an option: **Download all content locally before starting task sequence** | ![Supported](media/green_check.png) |
+| Task sequences that aren't using boot images with [either download option](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Supported](media/green_check.png) (1910)|
 | Any other task sequence scenario     | ![Not supported](media/Red_X.png) |
 | Client push     | ![Not supported](media/Red_X.png) |
 | Automatic site assignment     | ![Not supported](media/Red_X.png) |
