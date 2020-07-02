@@ -127,6 +127,22 @@ In this section, you will download required iOS device configuration files and t
 > [!NOTE]
 > Wandera offers an enhanced deployment profile for supervised iOS devices. If you have a mixed fleet of supervised and unsupervised devices, repeat the above steps for the other profile type as needed. These same steps need to be followed for any future Activation Profiles that are to be deployed via Intune. Please contact Wandera support if you have a mixed fleet of supervised and unsupervised iOS devices and need assistance with supervised mode-based policy assignments. 
 
+## Deploying Wandera to MAM-WE Devices
+For devices that are not managed by Intune, and are (MAM-WE) devices, Wandera utilizes an integrated authentication-based onboarding experience to activate and protect company data within MAM-enabled apps. 
+
+The following sections describe how to configure Wandera and Intune to enable end users to seamlessly activate Wandera before being able to access company data. 
+
+### Configure Azure Device Provisioning in a Wandera Activation Profile
+Activation Profiles to be used with MAM-WE must have Associated User set to the Authenticated by Identity Provider > Azure Active Directory option.
+1.	In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that MAM-WE devices will use during enrollment in Devices > Activations. 
+2.	Click the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
+3.	Enter your **Azure AD Tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Azure AD in a new tab where you can easily copy this value to your clipboard.
+4.	(Optional) Specify **Group ID(s)** to limit user activations to specific groups.
+* If one or more **Group IDs** are defined, a user activating MAM-WE must be a member of at least one of the specified groups to activate using this Activation Profile.
+* You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.
+* You may configure a single “default” Activation Profile that doesn’t specify any Group IDs.  This group will serve as a catch-all for all activations in which the authenticated user isn’t a member of a group with an association to another Activation Profile.
+5.	Click **Save** in the upper-right corner of the page.
+
 ## Next Steps
 * With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
 * Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation.
