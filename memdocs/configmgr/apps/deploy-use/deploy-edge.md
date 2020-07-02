@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -147,7 +147,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently leveraged.
+**Mitigation:** To work around this issue, disable the collection of the Browser Usage (SMS_BrowerUsage) hardware inventory class. This class isn't currently leveraged.
 
 ## Next steps
 
