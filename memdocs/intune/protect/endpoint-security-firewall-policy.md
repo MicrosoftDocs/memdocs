@@ -61,7 +61,7 @@ Plan for Firewall policies to be applied to a device using only one policy. Use 
 
 - That form of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
 
-  Microsoft *Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
+  *Microsoft Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
 
 When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
 
