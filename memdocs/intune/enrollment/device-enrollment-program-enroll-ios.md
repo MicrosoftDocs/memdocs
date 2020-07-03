@@ -75,7 +75,7 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000
 - Maximum Automated Device Enrollment devices per token: The limit on the first sync is 75,000-80,000 devices. Intune will continue to sync with ABM or ASM with every 12 hour check-in to add another 80,000 devices every time. A manual sync with also add another additional 80,000 devices. Syncs will continue to occur and devices will keep getting synced from ABM/ASM over to Intune in 75,000-80,000 device batches. 
 
-## Get an Apple ADE token
+## Get an Apple Automated Device Enrollment token
 
 Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) file from Apple. This token lets Intune sync information about ADE devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
@@ -329,7 +329,7 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
-## Renew an ADE token  
+## Renew an Automated Device Enrollment token  
 
 > [!NOTE]
 > In addition to renewing your ADE token yearly, you'll need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
@@ -353,7 +353,7 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
 9. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## Delete an ADE token from Intune
+## Delete an Automated Device Enrollment token from Intune
 
 You can delete enrollment profile tokens from Intune as long as
 - no devices are assigned to the token
