@@ -96,7 +96,7 @@ Supported platforms and profiles:
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
-  - **Yes** - Allow printing print to local printers.
+  - **Yes** - Allow printing to local printers.
 
 - **Application guard allow print to network printers**  
 
@@ -118,7 +118,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Configure Windows network isolation policy.  
   
-  When set to *Configure*, you can configure the following settings.
+  When set to *Yes*, you can configure the following settings.
 
   - **IP ranges**  
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
