@@ -72,6 +72,9 @@ To modify this behavior, use one of the following parameters to change what file
 - **-downloadhotfix**: Download all hotfixes whatever the version of your site.
 - **-downloadsiteversion**: Downloads updates and hotfixes with a later version than the version of your site.
 
+    > [!IMPORTANT]
+    > Because of a known issue in Configuration Manager version 2002, the default behavior doesn't work as expected. Use the **-downloadsiteversion** parameter to download the necessary updates for version 2002.<!-- 7594517 -->
+
 For more information, see [Command-line parameters](#bkmk_cmd).
 
 > [!TIP]
