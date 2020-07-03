@@ -109,7 +109,7 @@ In this procedure, the command-line examples use the following file names and fo
     > [!NOTE]
     > If you'll upload data files from more than one hierarchy at the same time, give each data file a unique name. If necessary, you can rename files later.
 
-    The data in the file is based on the level of diagnostic and usage data that you configure for the site. For more information, see [Diagnostics and usage data](../../plan-design/diagnostics/diagnostics-and-usage-data.md).
+    The data in the file is based on the level of diagnostic and usage data that you configure for the site. For more information, see [Overview of diagnostics and usage data](../../plan-design/diagnostics/diagnostics-and-usage-data.md). You can use the tool to export the data to a CSV file to view the contents. For more information, see [-export](#-export).
 
 1. After the tool finishes exporting the usage data, copy the data file to a computer that has access to the internet.
 
@@ -146,7 +146,7 @@ In this procedure, the command-line examples use the following file names and fo
 
 1. After the import completes, close the command prompt. It only imports updates for the applicable hierarchy.
 
-1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node. Imported updates are now available to install. For more information, see  [Install in-console updates](install-in-console-updates.md).
+1. In the Configuration Manager console, go to the **Administration** workspace, and select the **Updates and Servicing** node. Imported updates are now available to install. For more information, see [Install in-console updates](install-in-console-updates.md).
 
 ## Log files
 
@@ -189,7 +189,7 @@ You can also use the following optional parameters:
 
 ### -dest
 
-A required parameter with the **-export** parameter to specify the path and file name of the CSV file to export. For more information, see [-export](#export).
+A required parameter with the **-export** parameter to specify the path and file name of the CSV file to export. For more information, see [-export](#-export).
 
 ### -downloadall
 
@@ -197,11 +197,11 @@ An optional parameter with the **-connect** parameter to download everything, in
 
 ### -downloadhotfix
 
-An optional parameter with the **-connect** parameter to only download all hotfixes, whatever the version of your site. For more information, see [-connect](#connect).
+An optional parameter with the **-connect** parameter to only download all hotfixes, whatever the version of your site. For more information, see [-connect](#-connect).
 
 ### -downloadsiteversion
 
-An optional parameter with the **-connect** parameter to only download updates and hotfixes that have a later version than the version of your site. For more information, see [-connect](#connect).
+An optional parameter with the **-connect** parameter to only download updates and hotfixes that have a later version than the version of your site. For more information, see [-connect](#-connect).
 
 ### -export
 
@@ -229,20 +229,26 @@ Use during the [Prepare](#prepare) phase on the service connection point to expo
 
 ### -proxyserveruri
 
-An optional parameter with the **-connect** parameter to specify the FQDN of your proxy server. For more information, see [-connect](#connect).
+An optional parameter with the **-connect** parameter to specify the FQDN of your proxy server. For more information, see [-connect](#-connect).
 
 ### -proxyusername
 
-An optional parameter with the **-connect** parameter to specify the username to authenticate with your proxy server. For more information, see [-connect](#connect).
+An optional parameter with the **-connect** parameter to specify the username to authenticate with your proxy server. For more information, see [-connect](#-connect).
 
 ### -updatepackdest
 
-A required parameter with the **-connect** parameter to specify a path for the downloaded updates. For more information, see [-connect](#connect).
+A required parameter with the **-connect** parameter to specify a path for the downloaded updates. For more information, see [-connect](#-connect).
 
 ### -updatepacksrc
 
-A required parameter with the **-import** parameter to specify a path of the downloaded updates. For more information, see [-import](#import).
+A required parameter with the **-import** parameter to specify a path of the downloaded updates. For more information, see [-import](#-import).
 
 ### -usagedatadest
 
-A required parameter with the **-prepare** parameter to specify a path and file name of the exported data file. For more information, see [-prepare](#prepare).
+A required parameter with the **-prepare** parameter to specify a path and file name of the exported data file. For more information, see [-prepare](#-prepare).
+
+## Next steps
+
+[Install in-console updates](install-in-console-updates.md)
+
+[How to view diagnostics and usage data](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)
