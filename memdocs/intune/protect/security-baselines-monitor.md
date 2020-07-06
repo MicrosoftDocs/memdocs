@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,11 +37,14 @@ This article walks you through both monitoring options.
 
 ## Monitor the baseline and your devices
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. You can view these insights from the Overview pane of the security baseline in the Intune console.  It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
+When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Profile* pane, select the profile instance for which you want to view details. This opens to the profiles *Properties* pane where you can then select any of the profile reports from the *Monitor* section. 
 
-To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
+It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
 
-The **Overview** pane provides two methods to monitor status:
+As you drill in to reports and devices, various details are available.
+
+<!-- UI is changing, unclear how yet: 
+
 
 - **Device view** – A summary of how many devices are in each status category for the baseline.
 - **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
@@ -91,17 +94,20 @@ The Overview pane displays a per-category chart for the baseline; **Security bas
 Status for **Matches baseline** does not display until 100% of devices report that status for the category.
 
 You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
+-->
 
 ## Monitor the profile
 
 Monitoring the profile gives you insight into the deployment state of your devices, but not the security state based on the baseline recommendations.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles created**.
+1. In Intune, select **Security Baselines** > select a baseline to open its *Profiles* pane.
+
+<!-- More churn  
 
 2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
 
    ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
-
+--> 
 3. Under **Manage** > **Properties**, a list of all the settings in the baseline are shown. You can also change any of these settings:
 
    ![See and update settings in the security baselines profile](./media/security-baselines-monitor/manage-settings.png)
@@ -126,7 +132,7 @@ View details about the security configurations that apply to an individual devic
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles created**.
+1. In Intune, select **Security Baselines** > select a baseline to open its *Profiles* pane.
 
 2. Select a profile > Under **Monitor** > **Per-setting status**.
 

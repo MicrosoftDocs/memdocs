@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -84,7 +84,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 - how many separate instances (versions) of the baseline type are available
 - a *Last Published* date that identifies when the latest version of the baseline template became available
 
-To view more information about the baseline versions you use, select a baseline to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
+To view more information about the baseline versions you use, select a baseline type, like *MDM Security Baseline* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
 You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
