@@ -29,6 +29,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [5110009](includes/2007/5110009.md)]
 [!INCLUDE [6479284](includes/2007/6479284.md)]
 [!INCLUDE [7319035](includes/2007/7319035.md)]
+[!INCLUDE [7102084](includes/2007/7102084.md)]
 
 <!--
 ## General known issues
