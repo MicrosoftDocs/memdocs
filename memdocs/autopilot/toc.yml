@@ -30,8 +30,6 @@
       href: white-glove.md
     - name: Support for existing devices
       href: existing-devices.md
-    - name: Windows Autopilot for existing devices
-      href: windows-autopilot-for-existing-devices.md
 
 - name: How-to guides
   items:
