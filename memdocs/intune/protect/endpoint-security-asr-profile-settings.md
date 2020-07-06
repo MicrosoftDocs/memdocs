@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -190,9 +190,9 @@ Supported platforms and profiles:
 - **Block users from ignoring SmartScreen warnings**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
-  - **Not configured** (*default*) - Returns the setting to the Windows default, which allows the user override.
-  - **Yes** - - SmartScreen won't present an option for the user to disregard the warning and run the app. The warning is presented, but the user won't able to bypass it.
+  - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
+  - **Yes** - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
+
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
