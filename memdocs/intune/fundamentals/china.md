@@ -54,7 +54,7 @@ Because the China services are operated by a partner from inside China, there ar
 - The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
-- Mobile Application Management (MAM) availability is conditional on those apps being available in mainland China.
+- Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
 
 ## You control customer data
 

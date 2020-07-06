@@ -96,7 +96,7 @@ Supported platforms and profiles:
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
-  - **Yes** - Allow printing print to local printers.
+  - **Yes** - Allow printing to local printers.
 
 - **Application guard allow print to network printers**  
 
@@ -118,7 +118,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes** - Configure Windows network isolation policy.  
   
-  When set to *Configure*, you can configure the following settings.
+  When set to *Yes*, you can configure the following settings.
 
   - **IP ranges**  
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
@@ -190,9 +190,8 @@ Supported platforms and profiles:
 - **Block users from ignoring SmartScreen warnings**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
-  - **Not configured** (*default*) - Returns the setting to the Windows default, which allows the user override.
-  - **Yes** - - SmartScreen won't present an option for the user to disregard the warning and run the app. The warning is presented, but the user won't able to bypass it.
+  - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
+  - **Yes** - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -432,7 +431,7 @@ Supported platforms and profiles:
 
   - **Not configured** (*default*)
   - **Yes** - Prevents the device from sending out Bluetooth advertisements.  
- 
+
 - **Block bluetooth proximal connections**  
   CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 Block users from using Swift Pair and other proximity-based scenarios

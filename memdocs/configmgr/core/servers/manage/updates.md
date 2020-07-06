@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -68,11 +68,11 @@ The **Availability date** is when the [early update ring](checklist-for-installi
 > [!Note]  
 > <sup>**Note 1:**</sup> The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
-> - System Center Config Mgr (current branch)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint Configmgr (current branch)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> For example, search the VLSC for `System Center Config Mgr (current branch)`. Find the baseline media in the list of files, and download for that release.  
+> For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.  
 
 #### Historical versions
 
