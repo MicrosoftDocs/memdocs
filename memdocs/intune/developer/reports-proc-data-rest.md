@@ -146,13 +146,13 @@ To get a new access token for Postman, you must add the Azure AD authorization U
 
 ## Create a REST client (C#) to get data from the Intune Data Warehouse
 
-The following sample contains a simple REST client. The code uses the **httpClient** class from the .Net library. Once the client gains credentials to Azure AD, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
+The following sample contains a simple REST client. The code uses the **httpClient** class from the .NET library. Once the client gains credentials to Azure AD, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
 
 > [!Note]  
 > You can access the following code [sample on GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Refer to the GitHub repo for the latest changes and updates to the sample.
 
 1. Open **Microsoft Visual Studio**.
-2. Choose **File** > **New Project**. Expand **Visual C#**, and choose **Console App (.Net Framework)**.
+2. Choose **File** > **New Project**. Expand **Visual C#**, and choose **Console App (.NET Framework)**.
 3. Name the project `IntuneDataWarehouseSamples`, browse to where you would like to save the project, and then select **OK**.
 4. Right-click the name of the solution in the Solution Explorer, and then select **Manage NuGet Packages for Solution**. Select **Browse**, and then type `Microsoft.IdentityModel.Clients.ActiveDirectory` in the search box.
 5. Choose the package, select the **IntuneDataWarehouseSamples** project under Manage Packages for Your Solution, and then select **Install**.
