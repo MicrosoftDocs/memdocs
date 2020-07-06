@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows 10 internet-based devices for co-
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -20,7 +20,7 @@ This article focuses on the second path to co-management, for new internet-based
 
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.  
 
-For more information, see [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
 
 To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -41,9 +41,9 @@ For more information, see [Add devices in Intune](https://docs.microsoft.com/int
 ### Autopilot for existing devices
 <!--1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available in Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
+[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available in Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](../../autopilot/user-driven.md) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices task sequence](../../autopilot/windows-autopilot-for-existing-devices.md).
+For more information, see [Windows Autopilot for existing devices task sequence](../../autopilot/existing-devices.md).
 
 ## Install the Configuration Manager client
 
