@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Get a recovery key for a macOS device from the Intune Company Portal website  
-description: View the recovery key for an enrolled, managed macOS device.   
+title: Store a recovery key   
+description: Store and retrieve a recovery key for your managed device.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -23,36 +23,38 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: 
+ms.reviewer: annochiva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Get a recovery key for a macOS device
+# Store a recovery key 
 
-Use the Company Portal website to get a recovery key for your locked macOS device. If you forget your device password, you can sign in to the Company Portal from another device to retrieve your key.  
+<what the user should do and why they would want to do it> 
 
-## Get recovery key from Company Portal website
+<What does this article include information and steps about >
 
-This option is available for devices that were encrypted by your organization using FileVault. It's not available for devices that you've personally encrypted.
+<What will they be able to do after they complete the steps in this article>
 
-1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) and select the **Menu** button > **Devices**.  
-2. Select the encrypted macOS device.  
-3. Select **Get recovery key**.  
+## Upload recovery key 
 
-    ![Screenshot of Company Portal website, highlighting Get recovery key section.](./media/1907-recovery2-cpweb-intune.PNG)  
+<Complete these steps to benefit reason for uploading recovery key. Mention any caveats and set expectations about what will happen before, during, and after uploading a key.>
 
-4. Your recovery key will appear.
+1.  
+2. 
+3. 
+4. 
+5. 
 
-    ![Screenshot of Company Portal website, showing recovery key.](./media/1907-recovery-cpweb-intune.PNG)  
+  ![alt text](./media/image.PNG)  
 
-    For security reasons, the key will disappear after five minutes. To see the key again, select **Get recovery key**.
 
-If a key isn't found but your device is properly encrypted, contact your organization's support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## Retrieve recovery key
 
-## Get recovery key from Company Portal app for iOS
+### Company Portal website 
+###  Company Portal app for iOS
 
 You can retrieve your personal recovery key (FileVault key) using the Company Portal app for iOS. Your device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune. This option is not available for devices that you've personally encrypted. 
 

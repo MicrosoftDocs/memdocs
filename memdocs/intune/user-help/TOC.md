@@ -10,6 +10,8 @@
 
 ## [Install Mobile Threat Defense app](set-up-mobile-threat-defense.md)  
 
+## [Store recovery key](store-recovery-key.md)
+
 ## Using your Android device
 ### [Why enroll your Android device](why-enroll-android-device.md)
 ### [Install Company Portal app in China](install-company-portal-android-china.md)
