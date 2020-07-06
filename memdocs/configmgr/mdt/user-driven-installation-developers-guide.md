@@ -1437,7 +1437,7 @@ pDrives->SetWhereClause(L"WHERE InterfaceType='USB'");
 |**Value**|On return, this parameter contains a variant value of the property|  
 
 ##### HRESULT GetCaption(size_t index,  LPBSTR pCaption)  
- This method retrieves the caption for a record witch is the same as the **Caption** property.  
+ This method retrieves the caption for a record which is the same as the **Caption** property.  
 
 #### IImageList Interface  
 
