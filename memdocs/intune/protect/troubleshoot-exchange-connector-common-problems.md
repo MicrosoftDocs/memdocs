@@ -7,7 +7,7 @@ description: Troubleshoot and resolve common problems for the on-premises Micros
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ Review the following sections to troubleshoot email notification issues.
    You can also test the Autodiscover service from the internet at https://testconnectivity.microsoft.com. Or test it from a local domain by using the Microsoft Connectivity Analyzer tool. For more information, see [Microsoft Connectivity Analyzer tool](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### Check Autodiscovery
+### Check Autodiscover
 
 If Autodiscover fails, try the following steps:
 
