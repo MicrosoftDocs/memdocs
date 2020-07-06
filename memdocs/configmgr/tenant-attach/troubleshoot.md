@@ -2,7 +2,7 @@
 title: Troubleshoot tenant attach
 titleSuffix: Configuration Manager
 description: "Troubleshoot tenant attach for Configuration Manager"
-ms.date: 04/01/2020
+ms.date: 07/07/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -124,14 +124,14 @@ Ensure the user running the action from the Microsoft Endpoint Manager admin cen
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
-1. Use the same account to sign in to the admin center. The on-premises identity has to be synchronized with and match the cloud identity.
+1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 
 
 ### <a name="bkmk_1603"></a> Unexpected error occurred
 
 **Error message:** Unexpected error occurred
 
-**Possible causes:** Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [adminstration service](../develop/adminservice/overview.md), or connectivity issues.
+**Possible causes:** Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../develop/adminservice/overview.md), or connectivity issues.
 
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
@@ -140,7 +140,25 @@ Ensure the user running the action from the Microsoft Endpoint Manager admin cen
 
 ## Known issues
 
+### Getting results timed out
 
+**Scenario:** If you have a remote service connection point and you installed 2002 early update ring before March 30, 2020, you'll see a timeout error in the admin center.
+
+**Error message:** Getting results timed out. Make sure the Configuration Manager service connection point is operational and has a connection to the cloud.
+
+**Workaround:** Copy the `Microsoft.ConfigurationManagement.ManagementProvider.dll` from site server's `bin\x64` folder to the remote service connection point's `bin\x64` folder.  Restart the `SMS_EXECUTIVE` service on the service connection point server.
+
+### Boundary groups list is empty
+
+**Error message**: No boundary groups found or the user may not have permissions to view boundary group information.
+
+This is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
+
+### Logged on user shows as ---
+
+The logged on user field shows `---` until the user signs out and then signs in on that device after the client is installed. This is a known issue for Configuration Manager version 2002.
+
+:::image type="content" source="media/known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is ---" lightbox="media/known-issue-device-details.png":::
 
 ## Next steps
 
