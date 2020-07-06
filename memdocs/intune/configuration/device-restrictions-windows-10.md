@@ -1112,7 +1112,7 @@ These settings use the [defender policy CSP](https://docs.microsoft.com/windows/
   - **Enable**: Microsoft Defender detects PUAs, and detected items are blocked. These items show in history along with other threats.
   - **Audit**: Microsoft Defender detects PUAs, but takes no action. You can review information about the applications Microsoft Defender would take action against. For example, search for events created by Microsoft Defender in the Event Viewer.
 
-  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
