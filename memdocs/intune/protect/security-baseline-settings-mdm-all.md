@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1974,7 +1974,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Turn on Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1986,7 +1986,9 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Setting this to Yes, SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it. Setting this to Not configured will return the setting to Windows default which is to allow the user override. This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
+  When set to Yes, SmartScreen is enabled and users cannot bypass warnings for files or malicious apps. When set to Not configured, users can ignore SmartScreen warnings for files and malicious apps.  
+
+  This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
 
   **Default**: Yes
 
