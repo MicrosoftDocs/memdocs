@@ -92,7 +92,7 @@ Intune and Wandera are now connected.
 
 Intune-based deployments are facilitated using Wandera Activation Profiles defined in RADAR.  Each Activation Profile defines specific configuration options like authentication requirements, service capabilities, and initial group membership.
 
-After creating an Activation Profile in Wandera, you “assign” it to users and devices in Intnune.  While an Activation Profile is universal across device platforms and management strategies, the steps below define how to configure Intune based upon these differences.
+After creating an Activation Profile in Wandera, you “assign” it to users and devices in Intune.  While an Activation Profile is universal across device platforms and management strategies, the steps below define how to configure Intune based upon these differences.
 
 The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Intune to your target devices. Please see the [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) for more details on creating and using Wandera Activation Profiles.
 
@@ -102,27 +102,25 @@ The steps from here assume you have created an Activation Profile in Wandera tha
 ## Deploying Wandera Over-the-Air to MDM-Managed Devices
 
 For iOS and Android devices that are managed by Intune, Wandera can be deployed over-the-air for rapid push-based activations. Be sure you have already created the Activation Profile(s) you need before proceeding with this section. Deploying Wandera to managed devices involves:
-* Adding Wandera configuration profiles to Intune and assigning to target devices.
-* Adding the Wandera app and respective app configurations to Intune and assigning to target devices.
+- Adding Wandera configuration profiles to Intune and assigning to target devices.
+- Adding the Wandera app and respective app configurations to Intune and assigning to target devices.
 
 ### Configure and deploy iOS Configuration Profiles 
 
 In this section, you will download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
-1.	In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then click the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
-2.	Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
-3.	Download the provided configuration profile(s) and prepare to upload them in a following step.
-4.	Open **Microsoft Intune admin console** and navigate to **Devices > iOS/iPadOS > Configuration profiles**.  Click **Create profile**.
-5.	In the panel that appears, choose **iOS/iPadOS** under **Platform**, then **Custom** under Profile. Then click **Create**.
-6.	In the **Name** field, provide a descriptive title for the configuration, ideally matching what you named the Activation Profile in RADAR. This will help ease cross referencing in the future. Alternatively, provide the Activation Profile code if desired. We recommend indicating if the configuration is for Supervised or Unsupervised devices by suffixing the name as such.
-7.	Optionally provide a **Description** providing more details for other administrators about the purpose/use of the configuration. Click **Next**.
-8.	Click **Select a file** and locate the downloaded configuration profile that corresponds to the appropriate Activation Profile downloaded in step 3. Take care to select the appropriate Supervised or Unsupervised profile if you downloaded both. Click **Next**.
-
-<--image placeholder-->
- 
-10.	Define **Scope tags** as required by your Intune RBAC practices.  Click **Next**.
-11.	**Assign** the configuration profile to groups of users or devices that should have Wandera installed.  We recommend starting with a test group then expanding after validating activations work correctly. Click **Next**.
-12.	Review the configuration for correctness editing as needed, the click **Create** to create and deploy the configuration profile.
+1. In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then click the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
+2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
+3. Download the provided configuration profile(s) and prepare to upload them in a following step.
+4. Open **Microsoft Intune admin console** and navigate to **Devices > iOS/iPadOS > Configuration profiles**.  Click **Create profile**.
+5. In the panel that appears, choose **iOS/iPadOS** under **Platform**, then **Custom** under Profile. Then click **Create**.
+6. In the **Name** field, provide a descriptive title for the configuration, ideally matching what you named the Activation Profile in RADAR. This will help ease cross referencing in the future. Alternatively, provide the Activation Profile code if desired. We recommend indicating if the configuration is for Supervised or Unsupervised devices by suffixing the name as such.
+7. Optionally provide a **Description** providing more details for other administrators about the purpose/use of the configuration. Click **Next**.
+8. Click **Select a file** and locate the downloaded configuration profile that corresponds to the appropriate Activation Profile downloaded in step 3. Take care to select the appropriate Supervised or Unsupervised profile if you downloaded both. Click **Next**.
+   <!-- image placeholder - ending future availability -->
+9.	Define **Scope tags** as required by your Intune RBAC practices.  Click **Next**.
+10.	**Assign** the configuration profile to groups of users or devices that should have Wandera installed.  We recommend starting with a test group then expanding after validating activations work correctly. Click **Next**.
+11.	Review the configuration for correctness editing as needed, the click **Create** to create and deploy the configuration profile.
 
 > [!NOTE]
 > Wandera offers an enhanced deployment profile for supervised iOS devices. If you have a mixed fleet of supervised and unsupervised devices, repeat the above steps for the other profile type as needed. These same steps need to be followed for any future Activation Profiles that are to be deployed via Intune. Please contact Wandera support if you have a mixed fleet of supervised and unsupervised iOS devices and need assistance with supervised mode-based policy assignments. 
@@ -134,15 +132,15 @@ The following sections describe how to configure Wandera and Intune to enable en
 
 ### Configure Azure Device Provisioning in a Wandera Activation Profile
 Activation Profiles to be used with MAM-WE must have Associated User set to the Authenticated by Identity Provider > Azure Active Directory option.
-1.	In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that MAM-WE devices will use during enrollment in Devices > Activations. 
-2.	Click the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
-3.	Enter your **Azure AD Tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Azure AD in a new tab where you can easily copy this value to your clipboard.
-4.	(Optional) Specify **Group ID(s)** to limit user activations to specific groups.
-* If one or more **Group IDs** are defined, a user activating MAM-WE must be a member of at least one of the specified groups to activate using this Activation Profile.
-* You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.
-* You may configure a single “default” Activation Profile that doesn’t specify any Group IDs.  This group will serve as a catch-all for all activations in which the authenticated user isn’t a member of a group with an association to another Activation Profile.
-5.	Click **Save** in the upper-right corner of the page.
+1. In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that MAM-WE devices will use during enrollment in Devices > Activations. 
+2. Click the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
+3. Enter your **Azure AD Tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Azure AD in a new tab where you can easily copy this value to your clipboard.
+4. (Optional) Specify **Group ID(s)** to limit user activations to specific groups.
+   - If one or more **Group IDs** are defined, a user activating MAM-WE must be a member of at least one of the specified groups to activate using this Activation Profile.
+   - You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.
+   - You may configure a single “default” Activation Profile that doesn’t specify any Group IDs.  This group will serve as a catch-all for all activations in which the authenticated user isn’t a member of a group with an association to another Activation Profile.
+5. Click **Save** in the upper-right corner of the page.
 
 ## Next Steps
-* With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. The Wandera app config provides essential functionality to compliment the pushed Device configuration profile(s) and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
-* Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation.
+- With your Wandera Activation Profiles loaded in RADAR, create client apps in Intune to deploy the Wandera app to Android and iOS/iPadOS devices. The Wandera app config provides essential functionality to compliment the pushed Device configuration profile(s) and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Wandera apps. 
+- Now that you have Wandera integrated with Endpoint Manager, you can now tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Wandera documentation.
