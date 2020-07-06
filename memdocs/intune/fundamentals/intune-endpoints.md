@@ -147,6 +147,6 @@ Google provides documentation of required network ports and destination host nam
 
 Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. This is required by both Android Device Administrator and Android Enterprise. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
-### Endpoint analytics
+## Endpoint analytics
 
 For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
