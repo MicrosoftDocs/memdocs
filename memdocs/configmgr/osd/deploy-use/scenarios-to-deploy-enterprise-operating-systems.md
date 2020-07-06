@@ -2,7 +2,7 @@
 title: Scenarios to deploy enterprise operating systems
 titleSuffix: Configuration Manager
 description: Learn about several scenarios to deploy enterprise operating systems with Configuration Manager.
-ms.date: 02/22/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -29,7 +29,7 @@ For more information, see [Upgrade Windows to the latest version](upgrade-window
 <!--3607717, fka 1358333-->
 Starting in version 1810, Windows Autopilot for existing devices is available with Windows 10 version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for Windows Autopilot user-driven mode using a single Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](../../../autopilot/windows-autopilot-for-existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](../../../autopilot/existing-devices.md).
 
 #### Refresh an existing computer with a new version of Windows
 This scenario partitions and formats (wipes) an existing computer and installs a new OS on the computer. You can migrate settings and user data after the OS is installed.  
