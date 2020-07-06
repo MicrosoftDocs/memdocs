@@ -154,7 +154,7 @@ For more information on this step, see [Run PowerShell Script](task-sequence-ste
 
 #### Example scenario with Run PowerShell Script step
 
-Your environment has users in multiple countries, so you want to query the OS language to set as a condition on multiple language-specific **Apply OS** steps.
+Your environment has users in multiple countries/regions, so you want to query the OS language to set as a condition on multiple language-specific **Apply OS** steps.
 
 1. Add an instance of the **Run PowerShell Script** to the task sequence before the **Apply OS** steps.
 
