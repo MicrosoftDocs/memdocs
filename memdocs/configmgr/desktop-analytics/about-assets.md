@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -48,6 +48,9 @@ Configure the **Importance** of apps by setting one of the following categories:
 - Ignore
 - Not reviewed
 - Not important<!-- 3587232 -->
+
+> [!NOTE]
+> If you deployed the app with Configuration Manager, Desktop Analytics automatically configures it as **important** by default. This behavior lets you configure the apps in your environment more quickly, to progress faster towards a production deployment.<!-- 4859763 -->
 
 When the **App versions details** setting is off, the app details pane shows the number of app versions and languages that it combines. If you save any changes to the app details, it applies to all versions. For example, set the **Importance** or **Owner**. Some values will display "Multiple", which means there's not one consistent value across all versions.
 

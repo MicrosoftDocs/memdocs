@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 07/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -24,6 +24,16 @@ To get notified when this page is updated, copy and paste the following URL into
 <!-- a locale is required for the RSS search string -->
 
 ## July 2020
+
+### Apps deployed from Configuration Manager are important by default
+
+<!-- 4859763 -->
+
+The **Importance** configuration of an app is essential for Desktop Analytics to determine the devices to include for pilot deployments. An administrator needed to manually configure the importance for all apps in Desktop Analytics. Only once you validate the pilot can you continue with a production deployment.
+
+Now for any app that you deploy with Configuration Manager, Desktop Analytics automatically configures it as important by default. This behavior lets you configure the apps in your environment more quickly, to progress faster towards a production deployment.
+
+For more information, see [Assets - Apps](about-assets.md#apps).
 
 ### Windows 10, version 2004, now available in Desktop Analytics
 
