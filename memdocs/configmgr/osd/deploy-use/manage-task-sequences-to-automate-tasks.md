@@ -185,7 +185,8 @@ When the task sequence starts, in most scenarios it records the currently enable
 
 <!-- 5554928 -->
 
-You need to create a new task sequence deployment to enable or disable this setting for high performance. The new setting appears on existing deployments, but it doesn't apply.<!-- SCCMDocs#2107 -->
+Usually, when you change settings in task sequence properties, it updates all existing deployments. When you change this performance setting in the task sequence properties, it doesn't affect any existing deployments of the task sequence. To enable or disable this setting for high performance, create a new task sequence deployment.
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="BKMK_DistributeTS"></a> Distribute referenced content  
 

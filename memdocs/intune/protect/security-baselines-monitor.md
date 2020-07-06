@@ -27,11 +27,17 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Monitor security baseline and profiles in Microsoft Intune
+# Monitor security baselines and profiles in Microsoft Intune
 
-Intune provides several options to monitor your security baselines. You can monitor the security baselines profile that applies to your users and devices. You can also monitor the actual baseline, and any devices that match (or don't match) the recommended values.
+Intune provides several options to monitor your security baselines. You can:
 
-This article walks you through both monitoring options.
+- Monitor a security baseline, and any devices that match (or don't match) the recommended values.
+- Monitor the security baselines profile that applies to your users and devices.
+- View how the settings from a selected profile are set on a selected device.
+
+You can also view the *Endpoint security configurations* that apply to individual devices, which include security baselines.
+
+This article walks you through these monitoring options.
 
 [Security baselines in Intune](security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
 
@@ -68,7 +74,7 @@ The Overview pane displays a chart-based summary of how many devices have a spec
 
 When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
 
-For example, if a device has a setting classified as *misconfigured* and one or more settings classified as *Does not match baseline*, the device is classified as *Misconfigured*.
+For example, if a device has a setting that's classified as *misconfigured* and one or more settings that are classified as *Does not match baseline*, the device is classified as *Misconfigured*.
 
 You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
 
@@ -87,23 +93,22 @@ Use this reporting to see any settings in a profile that are causing an issue. A
 
 ### Per category view
 
-The Overview pane displays a per-category chart for the baseline; **Security baseline posture by category**.  This view displays each category from the baseline and identifies the percentage of devices that fall into a status classification for each of those categories.
+The Overview pane displays a per-category chart for the baseline named **Security baseline posture by category**.  This view displays each category from the baseline, and identifies the percentage of devices that fall into a status classification for each of those categories.
 
 ![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
 
-Status for **Matches baseline** does not display until 100% of devices report that status for the category.
+Status for **Matches baseline** doesn't display until 100% of devices report that status for the category.
 
 You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
 -->
 
 ## Monitor the profile
 
-Monitoring the profile gives you insight into the deployment state of your devices, but not the security state based on the baseline recommendations.
+Monitoring the profile gives insight into the deployment state of your devices, but not the security state based on the baseline recommendations.
 
 1. In Intune, select **Security Baselines** > select a baseline to open its *Profiles* pane.
 
 <!-- More churn  
-
 2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
 
    ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
@@ -116,11 +121,24 @@ Monitoring the profile gives you insight into the deployment state of your devic
 
    ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
 
+## View settings from profiles that apply to a device
+
+You can select a profile for a Security Baseline, and drill-in to view a list of settings from that profile as they apply to an individual device.  To view that list, drill into **Endpoint security** > **Security baselines** > *select the security baseline type* > *select the Profile you want to view* > **Device status**. You can also view the list by going to **Endpoint Security** > **All devices** > *select a device* > **Endpoint security configuration** > *select a baseline version*.
+
+After selecting a device, Microsoft Endpoint Manager admin center displays a list of the settings from that profile, including the category the setting is from, and the configuration state on the device. Configuration states include the following values:
+
+- **Success** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Conflict** – The setting is in conflict with another policy, has an error, or is pending an update.
+- **Not applicable** – The setting is not applied by the profile.
+
+> [!NOTE]
+> The status values for settings will update in a future release to provide more granular details.
+
 ## View Endpoint security configurations per device
 
 View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
 
-1. Sign in to the  sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to  **Devices** > **All devices** and select the device you want to view.
 
@@ -132,7 +150,7 @@ View details about the security configurations that apply to an individual devic
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
 
-1. In Intune, select **Security Baselines** > select a baseline to open its *Profiles* pane.
+1. In Intune, select **Security Baselines** > select a baseline > **Profiles**.
 
 2. Select a profile > Under **Monitor** > **Per-setting status**.
 
