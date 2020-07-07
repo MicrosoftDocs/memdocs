@@ -7,7 +7,7 @@ description: Security baseline settings supported by Intune for managing Microso
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -866,9 +866,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   This setting requires the 'Enforce SmartScreen for apps and files' setting be enabled.
-  - **Yes** (*default*) - SmartScreen will not present an option for the user to disregard the warning and run the app. The warning will be presented, but the user will be able to bypass it.
-  - **Not configured** - Returns the setting to the Windows default, which allows the user override.
+   This setting requires the 'Turn on Windows SmartScreen' setting be set to Yes.
+  - **Yes** (*default*) - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
+  - **Not configured** - Users can ignore SmartScreen warnings for files and malicious apps.
 
 - **Require apps from store only**  
 
