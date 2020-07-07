@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,6 +58,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 
 <!-- ########################## -->
+
+## Week of July 7, 2020
+
+### Device management
+
+#### Tenant attach: ConfigMgr client details in the admin center (preview)<!-- 7552762 -->
+
+You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../configmgr/tenant-attach/client-details.md)
 
 ## Week of June 22, 2020
 
