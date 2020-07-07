@@ -300,7 +300,7 @@ You can use derived certificates as an authentication method for Wi-Fi and VPN p
 - **Entrust Datacard**
 - **Intercede**
 
-For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with windows, complete the following configurations:
+For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:
 
 1. **Install the app from the Derived Credential providers on the Windows device**.
 
