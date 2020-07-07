@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Overview of the Microsoft Intune mobile device management (MDM) lifecycle
 
-All devices that you manage have a *lifecycle*. Intune can help you manage this lifecycle: from enrollment, through configuration and protection, to retiring the device when it's no longer required.
+All devices that you manage have a *lifecycle*. Intune can help you manage this lifecycle: from enrollment, through configuration and protection, to retiring the device when it's no longer required. Here’s an example: an iPad bought by your company first needs to be enrolled with your Microsoft Intune account to allow your company to manage it; then, it needs to be configured to your company’s liking; then, the data that’s stored on it by a user needs to be protected; and finally, when that iPad is no longer needed, you must [retire or wipe](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) all sensitive data on it.
 
 ![The device lifecycle](./media/device-lifecycle/device-lifecycle.png "the Intune device lifecycle")
 
