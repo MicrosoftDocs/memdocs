@@ -300,13 +300,13 @@ You can use derived certificates as an authentication method for Wi-Fi and VPN p
 - **Entrust Datacard**
 - **Intercede**
 
-For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows from the derived credential provider. To use derived credentials with windows, complete the following configurations:
+For Windows, users do not work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with windows, complete the following configurations:
 
 1. **Install the app from the Derived Credential providers on the Windows device**.
 
    When you install the Windows app from a derived credential provider on a Windows device, the derived certificate is added to that devices Windows certificate store. After the certificate is added to the device, it becomes available for use a derived credential authentication method.
 
-   The app can be deployed to Users, or directly installed by the user of the device.
+   After you get the app from your chosen provider, the app can be deployed to Users, or directly installed by the user of the device.
 
 2. **Configure Wi-Fi and VPN profiles to use derived credentials as the authentication method**.
 
@@ -314,7 +314,7 @@ For Windows, users do not work through a smartcard registration process to obtai
 
 ## Renew a derived credential
 
-Derived credentials can't be extended or renewed. Instead, users must use the credential request workflow to request a new derived credential for their device.
+Derived credentials for Android or iOS/iPadOS devices can't be extended or renewed. Instead, users must use the credential request workflow to request a new derived credential for their device. For Windows devices, consult the documentation for the App from your derived credential provdier.
 
 If you configure one or more methods for **Notification type**, Intune automatically notifies users when the current derived credential reaches 80% of its life span. The notification directs users to go through the credential request process to get a new derived credential.
 
