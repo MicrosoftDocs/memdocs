@@ -14,7 +14,7 @@ ms.author: mstewart
 
 
 # <a name="bkmk_mem"></a> Tenant attach: ConfigMgr client details in the admin center (preview)
-<!--6374854, 6521921-->
+<!--6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
 
 You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center.
 
@@ -47,7 +47,9 @@ The user account needs the following permissions:
      - This launch is a preview experience.
 
    [![Launch the Admin Center Preview](media/6374854-start-admin-center.png)](media/6374854-start-admin-center.png#lightbox)
+1. In the admin center, view the client details for your ConfigMgr devices.
 
+   :::image type="content" source="media/known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is ---" lightbox="media/known-issue-device-details.png":::
 > [!NOTE]
 > Note the following behaviors for some of the client details:
 >
@@ -58,4 +60,3 @@ The user account needs the following permissions:
 ## Next steps
 
 [Troubleshoot client details](troubleshoot-client-details.md)
-
