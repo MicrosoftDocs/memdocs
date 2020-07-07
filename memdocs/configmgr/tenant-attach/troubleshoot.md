@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot tenant attach
+title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
-description: "Troubleshoot tenant attach for Configuration Manager"
+description: "Troubleshoot tenant attach and device actions for Configuration Manager"
 ms.date: 07/07/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshooting tenant attach
+# Troubleshooting tenant attach and device actions
 
 *Applies to: Configuration Manager (current branch)*
 

@@ -5,7 +5,7 @@
   - name: Enable tenant attach
     href: device-sync-actions.md
   - name: ConfigMgr client details (preview)
-    href: Client details.md
+    href: client-details.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview
@@ -14,7 +14,7 @@
     href: cmpivot-samples-attached.md
 - name: Troubleshoot
   items:
-  - name: Troubleshoot tenant attach
+  - name: Troubleshoot tenant attach and device actions
     href: troubleshoot.md
   - name: Troubleshoot client details
     href: troubleshoot-client-details.md

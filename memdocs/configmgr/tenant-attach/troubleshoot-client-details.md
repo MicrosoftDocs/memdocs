@@ -21,7 +21,7 @@ Use the following to troubleshoot ConfigMgr client details in the Microsoft Endp
 
 ## Common errors from the Microsoft Endpoint Manager admin center
 
-When viewing the ConfigMgr client details 
+When viewing the ConfigMgr client details, you may run across one of these errors.  
 
 ### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
 

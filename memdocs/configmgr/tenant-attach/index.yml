@@ -28,7 +28,7 @@ landingContent:
             url: client-details.md
       - linkListType: reference
         links:
-          - text: Troubleshoot tenant attach
+          - text: Troubleshoot tenant attach and device actions
             url: troubleshoot.md
           - text: Troubleshoot ConfigMgr client details
             url: troubleshoot-client-details.md
