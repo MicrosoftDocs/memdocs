@@ -31,10 +31,11 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 ### <a name="bkmk_noinfo"></a> Unable to get device or collection information
 
-**Error message:** Unable to get device (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
+1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
 1. Make sure that Configuration Manager has discovered the administrative user account you're using. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
@@ -48,7 +49,6 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
-1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 
 ### <a name="bkmk_1603"></a> Unexpected error occurred
 
@@ -77,11 +77,11 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 This is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
 
-### Logged on user shows as ---
+### Logged on user is blank
 
 The logged on user field shows `---` until the user signs out and then signs in on that device after the client is installed. This is a known issue for Configuration Manager version 2002.
 
-:::image type="content" source="media/known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is ---" lightbox="media/known-issue-device-details.png":::
+:::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is listed as ---" lightbox="media/6024387-known-issue-device-details.png":::
 
 ## Next steps
 

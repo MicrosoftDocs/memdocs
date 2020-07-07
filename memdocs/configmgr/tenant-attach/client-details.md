@@ -2,7 +2,7 @@
 title: Tenant attach - ConfigMgr client details in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 04/10/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -14,12 +14,12 @@ ms.author: mstewart
 
 
 # <a name="bkmk_mem"></a> Tenant attach: ConfigMgr client details in the admin center (preview)
-<!--6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
+<!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
 
 You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center.
 
 > [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 > - The boundary groups tab functions only for stand alone sites. The tab will be empty in the admin center for anything other than a standalone primary site.
 
 ## Prerequisites
@@ -49,7 +49,7 @@ The user account needs the following permissions:
    [![Launch the Admin Center Preview](media/6374854-start-admin-center.png)](media/6374854-start-admin-center.png#lightbox)
 1. In the admin center, view the client details for your ConfigMgr devices.
 
-   :::image type="content" source="media/known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is ---" lightbox="media/known-issue-device-details.png":::
+   :::image type="content" source="media/6024387-client-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-client-details.png":::
 > [!NOTE]
 > Note the following behaviors for some of the client details:
 >
