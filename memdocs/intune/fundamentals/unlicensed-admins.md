@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Sign up or sign in to Microsoft Intune
-description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
+title: Unlicensed admins in Microsoft Intune
+description: Learn how to give unlicensed admins permissions to access Intune.
 keywords:
 author: ErikjeMS
 ms.author: erikje
