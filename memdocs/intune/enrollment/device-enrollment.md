@@ -50,6 +50,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**[USB-Direct](#usb-direct)**| No | No | No|[More information](apple-configurator-enroll-ios.md)|
 
 ## macOS enrollment methods
+
 | **Method** |  **Reset Required** |  **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](macos-enroll.md)|
@@ -59,7 +60,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 ## Windows enrollment methods
 
 | **Method** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
 |**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
