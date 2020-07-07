@@ -8,7 +8,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,7 +72,7 @@ Choose one of the following options:
 
 - [Configure Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Install on-premises Exchange connector with Intune](../protect/exchange-connector-install.md)
+- [Configure Hybrid Modern Authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Set up app-based Conditional Access policies for Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 
