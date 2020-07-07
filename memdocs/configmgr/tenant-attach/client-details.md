@@ -2,7 +2,7 @@
 title: Tenant attach - ConfigMgr client details in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 07/07/2020
+ms.date: 07/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -41,21 +41,16 @@ The user account needs the following permissions:
 
 ## View ConfigMgr client details
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace and select the **Devices** node.
-1. Right-click on a device that's been uploaded to Microsoft Endpoint Manager.
-1. In the right-click menu, select **Start** > **Admin Center Preview** to open the preview in your browser.
-     - This launch is a preview experience.
-
-   [![Launch the Admin Center Preview](media/6374854-start-admin-center.png)](media/6374854-start-admin-center.png#lightbox)
-1. In the admin center, view the client details for your ConfigMgr devices.
+1. 1)	In a browser navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. Select **Devices** then **All Devices**. 
+1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
+1. Use the **Collections (preview)** and **Client details (preview)**.
 
    :::image type="content" source="media/6024387-client-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-client-details.png":::
-> [!NOTE]
-> Note the following behaviors for some of the client details:
->
-> - The primary site updates the following fields once an hour: **Last policy request**, **Last active time**, and **Last management point**.
->
-> - To populate the **Logged on user** field, at least one user needs to sign in to the device after you install the Configuration Manager client.
+
+1. Note the following behaviors for some of the client details:
+   - The primary site updates the following fields once an hour: **Last policy request**, **Last active time**, and **Last management point**.
+   - To populate the **Logged on user** field, at least one user needs to sign in to the device after you install the Configuration Manager client.
 
 ## Next steps
 
