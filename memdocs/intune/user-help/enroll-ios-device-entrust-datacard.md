@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -66,7 +66,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 
 ## Enroll device  
-1. Open the Company Portal app for iOS/iPadOS on your mobile device and sign in with your work account.  
+1. Open the Company Portal app for iOS/iPadOS on your mobile device and select the option to sign in from another device.  
 
 2. Write down the onscreen code.  
 
