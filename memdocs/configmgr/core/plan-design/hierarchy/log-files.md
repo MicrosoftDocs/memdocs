@@ -642,7 +642,7 @@ The following table lists the log files that contain information related to disc
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
 
-### <a name="#bkmk_analytics"></a> Endpoint analytics
+### <a name="bkmk_analytics"></a> Endpoint analytics
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
