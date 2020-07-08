@@ -45,11 +45,18 @@ The tool is run on a reference machine and migrates the current Windows Firewall
 
 1. Log on to the reference machine with local administrator privileges.
 2. Download `Script.ps1`.
-3. Run the `.\Script.ps1` script on the machine. When prompted, provide appropriate Intune administrator credentials. For required permissions, see **Required permissions**.
-4. Provide a policy name when prompted. This will be the Microsoft Endpoint Manager policy created in the **Endpoint security** > **Firewall** node. The policy name must be unique for the tenant.
-5. If more than 150 firewall rules are found, multiple policies will be created.
-6. Depending on the count of firewall rules found, the tool may take some time to run.
-7. Once complete, the tool will output a count of firewall rules that could not be automatically migrated. For more information, see **Unsupported configuration**.
+3. Run the `Script.ps1` script on the machine. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
+4. Provide a policy name when prompted. This policy will be visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane. 
+
+  > [!IMPORTANT]
+  > The policy name must be unique for the tenant.
+
+  If more than 150 firewall rules are found, multiple policies will be created.
+
+  > [!NOTE]
+  >  Depending on the count of firewall rules found, the tool may take some time to run.
+
+5. Once complete, the tool will output a count of firewall rules that could not be automatically migrated. For more information, see [Unsupported configuration](#unsupported-configuration).
 
 ## Unsupported configuration
 
@@ -91,9 +98,9 @@ The following setting values are not supported for migration:
 
 Once the tool has been run, a report will be generated with rules that were not successfully migrated. You can view any of these rules by viewing `RulesError.csv` found in `C:\<folder needed>`. 
 
-## Permissions 
-Endpoint Security Manager, Intune Service Admin or Global Admin users can migrate Windows Firewall rules to Endpoint security policies. Alternatively, a custom role may be used where Security baselines permissions are set with **Delete**, **Read**, **Assign**, **Create**, and **Update** grants are applied.  
+## Required Permissions
+Endpoint Security Manager, Intune Service Admin or Global Admin users can migrate Windows Firewall rules to Endpoint security policies. Alternatively, a custom role may be used where Security baselines permissions are set with **Delete**, **Read**, **Assign**, **Create**, and **Update** grants are applied. For more information, see [Grant admin permissions to Intune](../fundamentals/users-add.md#grant-admin-permissions).
 
 ## Next steps
 
-To learn more, see [Add custom Firewall rules for Windows 10 devices](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices).
+- Assign the rules to Azure AD groups to configure MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
