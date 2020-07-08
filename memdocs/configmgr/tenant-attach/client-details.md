@@ -1,5 +1,5 @@
 ---
-title: Tenant attach - ConfigMgr client details in the admin center
+title: Tenant attach - ConfigMgr client details (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "View client details for Configuration Manager devices from the admin center."
 ms.date: 07/08/2020
@@ -41,16 +41,20 @@ The user account needs the following permissions:
 
 ## View ConfigMgr client details
 
-1. 1)	In a browser navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
-1. Select **Devices** then **All Devices**. 
+1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Use the **Collections (preview)** and **Client details (preview)**.
+1. Select the **Client details (preview)**.
+   - The primary site updates the following fields once an hour:
+      - **Last policy request**
+      - **Last active time**
+      - **Last management point**.
 
-   :::image type="content" source="media/6024387-client-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-client-details.png":::
+   :::image type="content" source="media/6024387-device-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-details.png":::
 
-1. Note the following behaviors for some of the client details:
-   - The primary site updates the following fields once an hour: **Last policy request**, **Last active time**, and **Last management point**.
-   - To populate the **Logged on user** field, at least one user needs to sign in to the device after you install the Configuration Manager client.
+1. Select the **Collections (preview)** to list the client's collections.
+
+   :::image type="content" source="media/6024387-device-collections.png" alt-text="Client collections in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-collections.png":::
 
 ## Next steps
 

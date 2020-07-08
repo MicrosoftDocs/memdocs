@@ -75,13 +75,9 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 **Error message**: No boundary groups found or the user may not have permissions to view boundary group information.
 
-This is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
+The empty list is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
 
-### Logged on user is blank
-
-The logged on user field shows `---` until the user signs out and then signs in on that device after the client is installed. This is a known issue for Configuration Manager version 2002.
-
-:::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty and last logged on user is listed as ---" lightbox="media/6024387-known-issue-device-details.png":::
+:::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty" lightbox="media/6024387-known-issue-device-details.png":::
 
 ## Next steps
 
