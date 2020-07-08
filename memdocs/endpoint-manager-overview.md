@@ -46,7 +46,6 @@ Endpoint Manager includes the following services:
   If you have on-premises infrastructure, such as Exchange or an Active Directory, the Intune connectors are also available:
 
   - The **Intune Connector for Active Directory** adds entries to your on-premises Active Directory domain for computers that enroll using Windows Autopilot. For more information, see [Deploy hybrid Azure AD-joined devices](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - The **Intune Exchange connector** allows (or blocks) device access to your Exchange servers if devices are enrolled in Intune, and compliant with your policies. For more information, see [Set up the on-premises Intune Exchange connector](/mem/intune/protect/exchange-connector-install).
   - The **Intune certificate connector** processes certificate requests from devices that use certificates for authentication and S/MIME email encryption. For more information, see [Use certificates for authentication](/mem/intune/protect/certificates-configure).
 
   As part of Endpoint Manager, use Intune to create and check for compliance, and deploy apps, features, and settings to your devices using the cloud.
