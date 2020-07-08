@@ -48,13 +48,13 @@ The tool is run on a reference machine and migrates the current Windows Firewall
 3. Run the `Script.ps1` script on the machine. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
 4. Provide a policy name when prompted. This policy will be visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane. 
 
-  > [!IMPORTANT]
-  > The policy name must be unique for the tenant.
+    > [!IMPORTANT]
+    > The policy name must be unique for the tenant.
 
-  If more than 150 firewall rules are found, multiple policies will be created.
+    If more than 150 firewall rules are found, multiple policies will be created.
 
-  > [!NOTE]
-  >  Depending on the count of firewall rules found, the tool may take some time to run.
+    > [!NOTE]
+    >  Depending on the count of firewall rules found, the tool may take some time to run.
 
 5. Once complete, the tool will output a count of firewall rules that could not be automatically migrated. For more information, see [Unsupported configuration](#unsupported-configuration).
 
