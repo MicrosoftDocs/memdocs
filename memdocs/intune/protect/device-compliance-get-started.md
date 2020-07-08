@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,9 @@ Compliance policies in Intune:
 
 - Define the rules and settings that users and devices must meet to be compliant.
 - Include actions that apply to devices that are noncompliant. Actions for noncompliance can alert users to the conditions of noncompliance and safeguard data on noncompliant devices.
-- Can be [combined with Conditional Access](#integrate-with-conditional-access), which can then block users and devices that don't meet the rules.
+- Can [combine with Conditional Access](#integrate-with-conditional-access) to block users and devices that don't meet the rules and were marked as noncompliant.
+
+  Conditional access can also work with compliance state data from devices you manage with third-party mobile device management partners. To enable this capability, you add support for the partner to both Azure AD and Intune. For more information, see, Add support for device compliance partners. 
 
 There are two parts to compliance policies in Intune:
 

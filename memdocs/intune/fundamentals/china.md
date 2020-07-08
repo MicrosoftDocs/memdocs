@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Intune operated by 21Vianet only supports standalone deployments. Support for co-management with System Center Configuration Manager is currently in development.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
+- Derived Credentials are not supported with Intune operated by 21Vianet.
 - Intune operated by 21Vianet doesn't support the Intune agent and so doesn't support legacy PC management.
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
