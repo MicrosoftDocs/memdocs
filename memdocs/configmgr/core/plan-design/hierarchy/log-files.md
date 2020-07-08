@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,6 +72,8 @@ The following sections provide details about the different log files available t
 
   - [Discovery](#BKMK_DiscoveryLog)  
 
+  - [Endpoint analytics](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensions](#BKMK_Extensions)  
@@ -639,6 +641,15 @@ The following table lists the log files that contain information related to disc
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+
+### <a name="#bkmk_analytics"></a> Endpoint analytics
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
 
 ### <a name="BKMK_EPLog"></a> Endpoint Protection
 
