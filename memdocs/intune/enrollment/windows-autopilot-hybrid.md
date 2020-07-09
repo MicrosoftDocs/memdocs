@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
  
 
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
-You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
+You can use Intune and [Windows Autopilot](../../autopilot/index.yml) to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
 
 ## Prerequisites
 
@@ -153,15 +153,15 @@ Select one of the following ways to enroll your Autopilot devices.
 1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**. 
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
-For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+For more information, see [Create an Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 ### Register Autopilot devices that aren't enrolled
 
-If your devices aren't yet enrolled, you can register them yourself. For more information, see [Add devices](enrollment-autopilot.md#add-devices).
+If your devices aren't yet enrolled, you can register them yourself. For more information, see [Add devices](../../autopilot/enrollment-autopilot.md#add-devices).
 
 ### Register devices from an OEM
 
-If you're buying new devices, some OEMs can register the devices for you. For more information, see the [Windows Autopilot page](https://aka.ms/WindowsAutopilot).
+If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](../../autopilot/add-devices.md#oem-registration).
 
 When your Autopilot devices are *registered*, before they're enrolled into Intune, they're displayed in three places (with names set to their serial numbers):
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
@@ -186,7 +186,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join over VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) for additional information.
+7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join over VPN](../../autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) for additional information.
 8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 9. Select **Next**.
 10. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
