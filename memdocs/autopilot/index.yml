@@ -79,6 +79,10 @@ landingContent:
       links:
       - text: Register devices
         url: add-devices.md
+      - text: Enroll devices in Intune
+        url: enrollment-autopilot.md
+      - text: Deploy hybrid devices
+        url: windows-autopilot-hybrid.md
       - text: Configure device profiles
         url: profiles.md
       - text: Enrollment Status Page
