@@ -49,14 +49,14 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 2. [Connect your Intune tenant account to your Managed Google Play account](connect-intune-android-enterprise.md).
 3. [Create an enrollment profile.](#create-an-enrollment-profile)
 4. [Create a device group](#create-a-device-group).
-5. [Enroll the corporate-owned work profile devices](#enroll-the-dedicated-devices).
+5. [Enroll the corporate-owned work profile devices](#enroll-the-corporate-owned-work-profile-devices).
 
 ### Create an enrollment profile
 
 > [!NOTE]
 > If a token has expired, the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states. 
 
-You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-dedicated-devices).
+You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**.
 2. Choose **Create profile** and fill out the required fields.
