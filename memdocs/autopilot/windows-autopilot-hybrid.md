@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
  
 
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
-You can use Intune and [Windows Autopilot](../../autopilot/index.yml) to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
+You can use Intune and [Windows Autopilot](autopilot/index.yml) to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Successfully configure your [hybrid Azure AD-joined devices](https://docs.micros
 
 The devices to be enrolled must also:
 - Be running Windows 10 v1809 or greater.
-- Have access to the internet [following the documented Windows Autopilot network requirements](../../autopilot/windows-autopilot-requirements.md#networking-requirements).
+- Have access to the internet [following the documented Windows Autopilot network requirements](windows-autopilot-requirements.md#networking-requirements).
 - Have access to an Active Directory domain controller, so it must be connected to the organization's network (where it can resolve the DNS records for the AD domain and the AD domain controller, and communicate with the domain controller to authenticate the user. VPN connection not supported at this time).
 - Be able to ping the domain controller of the domain you are trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
@@ -153,15 +153,15 @@ Select one of the following ways to enroll your Autopilot devices.
 1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**. 
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
-For more information, see [Create an Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 ### Register Autopilot devices that aren't enrolled
 
-If your devices aren't yet enrolled, you can register them yourself. For more information, see [Add devices](../../autopilot/enrollment-autopilot.md#add-devices).
+If your devices aren't yet enrolled, you can register them yourself. For more information, see [Add devices](enrollment-autopilot.md#add-devices).
 
 ### Register devices from an OEM
 
-If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](../../autopilot/add-devices.md#oem-registration).
+If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](add-devices.md#oem-registration).
 
 When your Autopilot devices are *registered*, before they're enrolled into Intune, they're displayed in three places (with names set to their serial numbers):
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
@@ -186,7 +186,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join with VPN support](../../autopilot/user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support) for additional information.
+7. If you are deploying devices off of the organization's network leveraging VPN support, set the **Skip Domain Connectivity Check** option to **Yes**.  See [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support) for additional information.
 8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 9. Select **Next**.
 10. On the **Scope tags** page, select [scope tags](../fundamentals/scope-tags.md) for this this profile.
