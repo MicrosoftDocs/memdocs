@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -73,11 +73,11 @@ The co-management license lets Configuration Manager customers with Software Ass
 
 - If you enroll a Windows 10 device to Intune by other means, it still requires a full Intune license. For example, you use Autopilot to provision a device, or a user manually does self-service enrollment.
 
-- For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment requires an Azure AD Premium (AADP1) license, which is separate from Microsoft Endpoint Manager. In order for co-management to work in this scenario, it used to require that you assign both an AADP1 and an Intune license to each individual user. Co-management licensing changed starting on December 1, 2019. You now don't need to assign individual Intune licenses for this scenario, but they are still required in other enrollment scenarios. The AADP1 licensing requirement remains the same for auto-enrollment and co-management to work.
+- For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Intune. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Endpoint Manager now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
 
 - If you want to use Intune for managing iOS, Android, or macOS devices, then you need the appropriate Intune subscription through a standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
 
-- If you don't have any Intune-related subscription plan, to support co-management you need to purchase at least one Intune license. This license is for an administrator to access to the Microsoft Endpoint Manager admin center.
+- If you don't have any Intune-related subscription plan, to support co-management you need to purchase at least one Intune license. This license is for an administrator to activate the subscription plan and get access to the Microsoft Endpoint Manager admin center.
 
 - If you use the Microsoft 365 built-in [Basic Mobility and Security](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0), you can't use the new co-management license for a user that also has devices managed by Basic Mobility and Security. To use the co-management license for the user's Configuration Manager-managed device, do one of the following actions:
 
