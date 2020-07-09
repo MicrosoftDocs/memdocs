@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -152,6 +152,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Data Transfer |       Backup org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          <p>With   iOS/iPadOS, administrators can configure this value to be "Policy managed   apps", "Policy managed apps with OS sharing", or "Policy managed apps   with Open-In/Share filtering". </p><p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. </p><p>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. </p><p> For more information, see [iOS app protection policy   settings](app-protection-policy-settings-ios.md).</p> |
+| Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Allow   users to save copies to selected services  |          OneDrive   for Business, SharePoint Online |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Transfer telecommunication data to  |          All apps |          iOS/iPadOS,   Android  |                  |
