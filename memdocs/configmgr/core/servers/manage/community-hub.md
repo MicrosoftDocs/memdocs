@@ -64,17 +64,6 @@ Community hub supports the following objects:
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
 
-## <a name="bkmk_deeplink"></a> Directly link to items
-
-<!--4224406-->
-
-You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. For easier collaboration, share links to Community hub items with your colleagues.
-
-For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
-
-> [!NOTE]
-> These deep links are currently only for items in the Community hub node of the console.
-
 ## Next steps
 
 Learn more about creating and using the following objects:
