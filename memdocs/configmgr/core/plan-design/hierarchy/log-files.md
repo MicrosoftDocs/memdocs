@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,6 +72,8 @@ The following sections provide details about the different log files available t
 
   - [Discovery](#BKMK_DiscoveryLog)  
 
+  - [Endpoint analytics](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensions](#BKMK_Extensions)  
@@ -166,7 +168,10 @@ The following table lists the log files located on the Configuration Manager cli
 |SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
 |SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
@@ -339,7 +344,8 @@ The following table lists the log files that are on the Configuration Manager si
 |srsrpsetup.log|Records results of the reporting point installation process.|Site system server|  
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
-|swmproc.log|Records the processing of metering files and settings.|Site server|  
+|swmproc.log|Records the processing of metering files and settings.|Site server|
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|   
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 
@@ -639,6 +645,15 @@ The following table lists the log files that contain information related to disc
 |ddm.log|Records activities of the discovery data manager.|Site server|  
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
+
+### <a name="bkmk_analytics"></a> Endpoint analytics
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
 
 ### <a name="BKMK_EPLog"></a> Endpoint Protection
 
