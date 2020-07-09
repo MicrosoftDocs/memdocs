@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,8 +59,21 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 
-## Week of June 22, 2020
 
+## Week of July 06, 2020
+
+### App management
+
+#### Update to device icons in Company Portal and Intune apps on Android<!-- 6057023 -->
+We have updated the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+
+### Device management
+
+#### Tenant attach: ConfigMgr client details in the admin center (preview)<!-- 7552762 -->
+
+You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../configmgr/tenant-attach/client-details.md).
+
+## Week of June 22, 2020
 ### App management
 
 #### Newly available protected apps for Intune<!-- 7248952 -->
