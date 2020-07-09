@@ -64,7 +64,7 @@ Community hub supports the following objects:
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
 
-## <a name="bkmk_deeplink"></a> Directly link to Configuration Manager Community hub items
+## <a name="bkmk_deeplink"></a> Directly link to items
 
 <!--4224406-->
 
