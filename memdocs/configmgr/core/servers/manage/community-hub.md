@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 06/12/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -23,6 +23,7 @@ The IT Admin community has developed a wealth of knowledge over the years. Rathe
 ## About Community hub
 
 Community hub supports the following objects:
+- CMPivot queries
 - PowerShell Scripts
 - Reports
 - Task sequences
