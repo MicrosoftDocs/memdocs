@@ -237,4 +237,4 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## Next steps
 
-After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](..../intune/remote-actions/device-management.md).
+After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).
