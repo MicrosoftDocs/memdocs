@@ -37,7 +37,7 @@
       items:
       - name: Register devices
         href: add-devices.md
-      - name: Enroll Windows Autopilot devices in Intune
+      - name: Enroll devices in Intune
         href: enrollment-autopilot.md
       - name: Configure device profiles
         href: profiles.md

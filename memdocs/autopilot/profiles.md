@@ -45,5 +45,5 @@ The following profile settings are available:
 
 ## Related topics
 
-[Profile download](troubleshooting.md#profile-download)
+[Profile download](troubleshooting.md#profile-download)<br>
 [Registering devices](add-devices.md)
