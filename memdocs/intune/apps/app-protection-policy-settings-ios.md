@@ -79,7 +79,6 @@ There are some exempt apps and platform services that Intune app protection poli
 
 | App/service name(s) | Description |
 | ---- | --- |
-|<code>tel; telprompt</code> | Native phone app |
 | <code>skype</code> | Skype |
 | <code>app-settings</code> | Device settings |
 | <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | App Store |
