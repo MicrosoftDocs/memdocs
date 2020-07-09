@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -51,8 +51,9 @@ If you have co-management enabled currently, edit co-management properties to en
 1. Right-click your co-management settings and select **Properties**.
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 
-   [![Co-management Configuration Wizard](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Upload devices to Microsoft Endpoint Manager admin center](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Sign in with your *Global Administrator* account when prompted.
 1. Click **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
 1. Click **OK** to exit the co-management properties once you've done making changes.
@@ -72,6 +73,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md)
 1. Click **Summary** to review your selection, then click **Next**.
 1. When the wizard is complete, click **Close**.  
 
