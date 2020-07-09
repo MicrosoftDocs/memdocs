@@ -66,8 +66,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
 ### Step 1. Download the Intune public key certificate required to create the token
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS enrollment**. 
-> **Enrollment Program Tokens** > **Add**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS enrollment** > **Enrollment Program Tokens** > **Add**.
 
     ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -110,7 +109,7 @@ In the **Apple token** box, browse to the certificate (.pem) file, choose **Open
 Now that you've installed your token, you can create an enrollment profile for devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens**.
-2. Select a token, choose **Profiles**, and then choose **Create profile**.
+2. Select a token, choose **Profiles**, and then choose **Create profile** > **macOS**.
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -127,13 +126,11 @@ Now that you've installed your token, you can create an enrollment profile for d
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-6. If you chose **Enroll with User Affinity**, under **Authentication Method** you choose **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**.
+6. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
 
-7. For **Locked enrollment**, choose whether or not you want locked enrollment for devices using this profile. **Yes** disables macOS settings that allow the management profile to be removed from the **System Preferences** menu or through the **Terminal**. After device enrollment, you cannot change this setting without wiping the device.
+7. Select **Next** to go to the **Setup Assistant** page.
 
-8. Select **Next** to go to the **Setup Assistant** page.
-
-9. On the **Setup Assistant** page, configure the following profile settings:
+8. On the **Setup Assistant** page, configure the following profile settings:
 
     ![Setup Assistant Customization.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -167,9 +164,9 @@ Now that you've installed your token, you can create an enrollment profile for d
     | <strong>Screen Time</strong> | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | <strong>Privacy</strong> | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
     
-10. Select **Next** to go to the **Review + create** page.
+9. Select **Next** to go to the **Review + create** page.
 
-11. To save the profile, choose **Create**.
+10. To save the profile, choose **Create**.
 
 ## Sync managed devices
 
