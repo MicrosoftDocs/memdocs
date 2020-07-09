@@ -39,7 +39,7 @@
         href: add-devices.md
       - name: Enroll devices in Intune
         href: enrollment-autopilot.md
-      - name: Hybrid Azure AD with Autopilot
+      - name: Deploy hybrid Azure AD-joined devices
         href: windows-autopilot-hybrid.md
       - name: Configure device profiles
         href: profiles.md
