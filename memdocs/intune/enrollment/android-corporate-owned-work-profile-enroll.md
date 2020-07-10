@@ -107,8 +107,6 @@ Revoking a token/QR code won't have any effect on devices that are already enrol
 
 ## Enroll the corporate-owned work profile devices
 
-Shantthi, how should users enroll the devices? Like fully managed?
-
 Users can now [enroll their corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md).
 
 > [!NOTE]
