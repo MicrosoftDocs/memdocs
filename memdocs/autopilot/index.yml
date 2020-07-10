@@ -43,6 +43,8 @@ landingContent:
       links:
       - text: Windows Autopilot scenarios and capabilities
         url: windows-autopilot-scenarios.md
+      - text: Windows Autopilot update
+        url: autopilot-update.md
     - linkListType: learn
       links:
       - text: User-driven mode
@@ -91,8 +93,6 @@ landingContent:
         url: bitlocker.md
       - text: DFCI management
         url: dfci-management.md
-      - text: Windows Autopilot update
-        url: autopilot-update.md
 
   # Card (optional)
   - title: Troubleshoot Windows Autopilot
