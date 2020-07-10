@@ -7,8 +7,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 
 
