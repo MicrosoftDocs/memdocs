@@ -5,7 +5,7 @@ description: CMPivot overview for Microsoft Endpoint Manager tenant attached dev
 ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart 
