@@ -123,5 +123,7 @@ landingContent:
         url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
       - text: Windows Autopilot and Surface devices
         url: https://docs.microsoft.com/surface/windows-autopilot-and-surface-devices
+      - text: Out of Office Hours blog
+        url: https://oofhours.com/
 
 
