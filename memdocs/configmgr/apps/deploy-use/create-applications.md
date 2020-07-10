@@ -306,7 +306,7 @@ This procedure sets up a detection method that indicates the presence of the dep
 
         - **File or folder name** (Required): Specify the specific file or folder name to detect in the above path. If the client detects this file or folder on the device, it considers the application as installed on the device.  
 
-        - **This file or folder is associated with a 32-bit application on 64-bit systems**: This option is selected by default. The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
+        - **This file or folder is associated with a 32-bit application on 64-bit systems**: The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
 
     - **Registry**: Detect whether a specified registry key or registry value exists on a client device. This detection indicates that the application is installed. Specify the following additional details:  
 
