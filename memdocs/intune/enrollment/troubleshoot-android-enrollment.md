@@ -80,7 +80,7 @@ Samsung began enforcing this restriction on Android 8.0+ devices. Microsoft is c
 ### Wipe (Factory Reset) option isn't available for work profile enrolled device
 This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
 
-Wipe is supported for [Android Enterprise corporate-owned with work profile devices](android-corporate-owned-work-profile.md).
+Wipe is supported for [Android Enterprise corporate-owned with work profile devices](android-corporate-owned-work-profile-enroll.md).
 
 ### Is device passcode reset supported?
 For work profile enrolled devices, you can only reset the work profile passcode on Android 8.0 or later devices when:
