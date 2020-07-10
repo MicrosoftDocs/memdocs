@@ -29,7 +29,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# What is device enrollment?
+# What is device enrollment in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune lets you manage your workforce's devices and apps and how they access your company data. To use this mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
