@@ -31,7 +31,13 @@ ms.collection: M365-identity-device-management
 
 # Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile
 
-Android Enterprise supports Android Enterprise corporate-owned devices with a work profile. This scenario is for single user devices intended for corporate and personal use. 
+Android Enterprise corporate-owned devices with a work profile are single user devices intended for corporate and personal use.
+
+End users can keep their work and personal data separate and are guaranteed that their personal data and applications will remain private. Admins can control some settings and features for the entire device, including:
+
+- Setting requirements for the device password
+- Controlling Bluetooth and data roaming
+- Configuring factory reset protection
 
 Intune helps you deploy apps and settings to Android Enterprise corporate-owned devices with work profile. For specific details about Android Enterprise, see [Android enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
@@ -40,6 +46,7 @@ Intune helps you deploy apps and settings to Android Enterprise corporate-owned 
 Devices must meet these requirements to be managed as an Android Enterprise corporate-owned work profile devices:
 
 - Android OS version 8.0 and above.
+- Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 ## Set up Android Enterprise corporate-owned work profile device management
 
@@ -54,13 +61,14 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 ### Create an enrollment profile
 
 > [!NOTE]
-> If a token has expired, the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states. 
+> Tokens for corporate-owned devices with a work profile will not expire automatically. If an admin decides to revoke a token , the profile associated with it will not be displayed in **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states. 
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile (Preview)**.
-2. Choose **Create profile** and fill out the required fields.
+2. Choose **Create profile** and fill out the fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
+    - **Description**: Add a profile description (optional).
 3. Choose **Next**.
 4. On the **Scope tags** page, select the [scope tags](../fundamentals/scope-tags.md) that you want to apply to this profile.
 4. Choose **Next**.
