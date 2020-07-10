@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -90,8 +90,6 @@ The following Configuration Manager features support or require enhanced HTTP:
 - A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
 - Onboard the site to Azure AD for cloud management.  
-
-    - If you've already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then select **Update application setting** in the ribbon.  
 
 - *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 
