@@ -235,7 +235,7 @@ Examples:
 
 - `CCMSetup.exe /skipprereq:filename.exe`
 
-- `CCMSetup.exe /skipprereq:filename1.exe.exe;filename2.exe`
+- `CCMSetup.exe /skipprereq:filename1.exe;filename2.exe`
 
 For more information on client prerequisites, see [Windows client prerequisites](prerequisites-for-deploying-clients-to-windows-computers.md).
 
