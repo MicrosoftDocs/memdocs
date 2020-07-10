@@ -192,9 +192,8 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
   You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
 
-|||  
-|-|-|  
 |**Real-time protection option**|**Purpose**|  
+|-|-|  
 |Scan all downloads|This option monitors files and programs that are downloaded, including files that are automatically downloaded via Windows Internet Explorer and Microsoft Outlook® Express, such as ActiveX® controls and software installation programs. These files can be downloaded, installed, or run by the browser itself. Malicious software, including viruses, spyware, and other potentially unwanted software, can be included with these files and installed without your knowledge.<br /><br /> Using the real-time protection option, Windows Defender monitors your computer all the time and checks for any malicious files or programs that you may have downloaded. This monitoring feature means that Windows Defender doesn't need to slow down your browsing or e-mail experience by requiring a check of any files or programs you may want to download.|  
 |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
 |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
