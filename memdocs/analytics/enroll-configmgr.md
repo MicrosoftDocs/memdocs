@@ -77,7 +77,7 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
 1. Set **Enable Endpoint analytics data collection** to **Yes**.
    > [!Important] 
-   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the **Enable Endpoint analytics data collection** option in that custom setting then redeploy it to your machines for it to take effect.
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting then redeploy it to your machines for it to take effect.
 
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
 
