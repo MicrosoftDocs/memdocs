@@ -24,7 +24,11 @@ landingContent:
         links:
           - text: Enable tenant attach
             url: device-sync-actions.md
+          - text: View ConfigMgr client details (preview)
+            url: client-details.md
       - linkListType: reference
         links:
-          - text: Troubleshoot tenant attach
-            url: technical-reference.md
+          - text: Troubleshoot tenant attach and device actions
+            url: troubleshoot.md
+          - text: Troubleshoot ConfigMgr client details (preview)
+            url: troubleshoot-client-details.md
