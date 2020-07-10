@@ -1,18 +1,18 @@
 ---
-title: Troubleshoot device action
+title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
-description: "Troubleshoot device actions technical reference for Configuration Manager"
-ms.date: 04/01/2020
-ms.topic: conceptual
+description: "Troubleshoot tenant attach and device actions for Configuration Manager"
+ms.date: 07/07/2020
+ms.topic: troubleshooting
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshooting device actions for Configuration Manager devices
+# Troubleshooting tenant attach and device actions
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -86,6 +86,8 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## Common issues
 
+### <a name="bkmk_noauth"></a> Unauthorized to perform client action
+
 If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
 
 ```text
@@ -96,6 +98,8 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 
 Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](device-sync-actions.md#prerequisites).
 
+
 ## Next steps
 
+[Troubleshoot ConfigMgr client details](troubleshoot-client-details.md)
 [Enable co-management](../comanage/overview.md) to get additional cloud-powered capabilities like conditional access.

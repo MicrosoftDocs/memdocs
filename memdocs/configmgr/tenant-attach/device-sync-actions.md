@@ -5,7 +5,7 @@ description: "Upload your Configuration Manager devices to the cloud service and
 ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
@@ -118,4 +118,4 @@ Use the following logs located on the service connection point:
 
 ## Next steps
 
-For more information about the tenant attach log files, see [Troubleshoot tenant attach](technical-reference.md).
+For more information about the tenant attach log files, see [Troubleshoot tenant attach](troubleshoot.md).
