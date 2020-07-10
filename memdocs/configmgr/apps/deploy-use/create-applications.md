@@ -2,7 +2,7 @@
 title: Create applications
 titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -306,7 +306,7 @@ This procedure sets up a detection method that indicates the presence of the dep
 
         - **File or folder name** (Required): Specify the specific file or folder name to detect in the above path. If the client detects this file or folder on the device, it considers the application as installed on the device.  
 
-        - **This file or folder is associated with a 32-bit application on 64-bit systems**: This option is selected by default. The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
+        - **This file or folder is associated with a 32-bit application on 64-bit systems**: The client first checks 32-bit file locations for the specified file or folder. If the file or folder isn't found, the client then searches 64-bit locations.  
 
     - **Registry**: Detect whether a specified registry key or registry value exists on a client device. This detection indicates that the application is installed. Specify the following additional details:  
 
@@ -535,7 +535,7 @@ Configuration Manager verifies these requirements on devices before installing t
 
 3. In the **Condition** drop-down list, select the condition to assess whether the user or device meets the installation requirements. The contents of this list vary depending on the selected category.  
 
-4. In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition.  
+4. In the **Operator** drop-down list, select the operator to use. This operator compares the selected condition to the specified value. It assesses whether the user or device meets the installation requirement. The available operators vary depending on the selected condition. When using the `One Of` operator, the Values field has validation that you have to enter one entry per row.
 
     > [!Note]  
     > The available requirements differ depending on the device type that the deployment type uses.  
