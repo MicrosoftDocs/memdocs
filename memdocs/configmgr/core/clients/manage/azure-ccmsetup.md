@@ -51,7 +51,7 @@ A Windows 10 Azure AD domain-joined client uses Azure AD parameters to request a
 
 Once the client has an Azure AD token, it requests a Configuration Manager client (CCM) token.
 
-The following entries are logged in **ccmsetup.log** of the CMG virtual machine:
+The following entries are logged in **ccmsetup.log** of the client machine:
 
 ``` Log
 Getting CCM Token from STS server 'CloudManagementGateway.cloudapp.net/CCM_PROXY_MUTUALAUTH/XXXXXX037938216'
@@ -60,7 +60,7 @@ Getting CCM Token from https://CloudManagementGateway.cloudapp.net/CCM_PROXY_MUT
 
 #### 2.1 CMG gets request
 
-The following entries are logged in **IIS.log**:
+The following entries are logged in **IIS.log** of the CMG virtual machine:
 
 ``` Log
 RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
@@ -68,7 +68,7 @@ RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 
 
 #### 2.2 CMG forwards request to CMG connection point
 
-The following entries are logged in **CMGService.log**:
+The following entries are logged in **CMGService.log** of the CMG virtual machine and the site system hosting the CMG Connector role:
 
 ``` Log
 RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  RequestSize: 1081595 Bytes  ResponseCount: 769     ResponseSize: 36143 Bytes  AverageElapsedTime: 3945 ms
@@ -76,7 +76,7 @@ RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  Re
 
 #### 2.3 CMG connection point transforms CMG client request to management point client request
 
-The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log**:
+The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log** of the site system hosting the CMG Connector role:
 
 ``` Log
 MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
@@ -84,7 +84,7 @@ MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.CO
 
 #### 2.4 Management point verifies user token in site database
 
-The following entries are logged in **CCM_STS.log**:
+The following entries are logged in **CCM_STS.log** of the site system hosting the management point handling the request:
 
 ``` Log
 Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
@@ -95,7 +95,7 @@ Return token to client, token type: UDA, hierarchyId: XXXX4f9c-XXXX-46a5-XXXX-76
 
 ## Content location request
 
-Once the client gets a response with the CCM token, it caches and uses it to request site information and content location through the CMG. The following entries are logged in **ccmsetup.log**:
+Once the client gets a response with the CCM token, it caches and uses it to request site information and content location through the CMG. The following entries are logged in **ccmsetup.log** of the client machine:
 
 ``` Log
 Cached encrypted token for 'S-1-5-18'. Will expire at '00/99/2999 00:00:00'
@@ -131,7 +131,7 @@ Using /NoCRLCheck is only good for ccmsetup bootstrap. For the clients to be ful
 
 ### 1. Configuration Manager client request registration
 
-The following entries are logged in **ClientIDManagerStartup.log**:
+The following entries are logged in **ClientIDManagerStartup.log** of the client machine:
 
 ``` Log
 [RegTask] - Client is not registered. Sending registration request for GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX ...
@@ -140,7 +140,7 @@ Registering client using AAD auth.
 
 ### 2. Configuration Manager request Azure AD token to register client
 
-The following entries are logged in **ADALOperationProvider.log**:
+The following entries are logged in **ADALOperationProvider.log** of the client machine:
 
 ``` Log
 Getting AAD (user) token with: ClientId = f1f9b14e-XXXX-4f17-XXXX-2593f6eee91e, ResourceUrl = https://ConfigMgrService, AccountId = X49FC29A-ECE3-XXX-A3C1-XXXXXXF035A6E
@@ -149,7 +149,7 @@ Retrieved AAD token for AAD user '00000000-0000-0000-0000-000000000000'
 
 #### 2.1 Configuration Manager client is registered  
 
-The following entries are logged in **ClientIDManagerStartup.log**:
+The following entries are logged in **ClientIDManagerStartup.log** of the client machine:
 
 ``` Log
 [RegTask] - Client is registered. Server assigned ClientID is GUID:1XXXXXEF-5XX8-4XX3-XEDX-XXXFBFF78XXX. Approval status 3
@@ -163,7 +163,7 @@ The following entries are logged in **ClientIDManagerStartup.log**:
 
 Once the site registers the client, the client requests a CCM token. The CCM token is encrypted for the local System account (S-1-5-18) and cached for eight hours. After eight hours, the token expires, and the client requests token renewal.
 
-The following entries are logged in **ClientIDManagerStartup.log**:
+The following entries are logged in **ClientIDManagerStartup.log** of the client machine:
 
 ``` Log
 Getting CCM Token from STS server 'MP.MYCORP.COM'
@@ -174,7 +174,7 @@ Cached encrypted token for 'S-1-5-18'. Will expire at 'XX/XX/XX XX:XX:XX'
 
 #### 3.1 CMG gets request
 
-The following entries are logged in **IIS.log**:
+The following entries are logged in **IIS.log** of the CMG virtual machine:
 
 ``` Log
 RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 13.95.234.44 404 0 2 1477 154 15
@@ -182,7 +182,7 @@ RD0003FF74XX2 10.0.0.4 GET /CCM_STS - 443 - HTTP/1.1 python-requests/2.20.0 - - 
 
 #### 3.2 CMG forwards request to CMG connection point
 
-The following entries are logged in **CMGService.log**:
+The following entries are logged in **CMGService.log** of the CMG virtual machine and the site system hosting the CMG Connector role:
 
 ``` Log
 RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  RequestSize: 1081595 Bytes  ResponseCount: 769     ResponseSize: 36143 Bytes  AverageElapsedTime: 3945 ms
@@ -190,7 +190,7 @@ RequestUri: /CCM_PROXY_SERVERAUTH/XXXXXX037938216/CCM_STS  RequestCount: 769  Re
 
 #### 3.3 CMG connection point transforms CMG client request to management point client request
 
-The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log**:
+The following entries are logged in **SMS_CLOUD_PROXYCONNECTOR.log** of the site system hosting the CMG Connector role:
 
 ``` Log
 MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.COM/CCM_STS EndpointName: CCM_STS ResponseHeader: HTTP/1.1 200 OK ~~ ResponseBodySize: 0 ElapsedTime: 2 ms
@@ -198,7 +198,7 @@ MessageID: 3087bd34-b82c-4950-b972-e82bb0fb8385 RequestURI: https://MP.MYCORP.CO
 
 #### 3.4 Management point verifies user token in site database
 
-The following entries are logged in **CCM_STS.log**:
+The following entries are logged in **CCM_STS.log** of the site system hosting the management point handling the request:
 
 ``` Log
 Validated AAD token. TokenType: Device TenantId: XXXXe388-XXXX-485c-XXXX-e8e4eb41XXXX UserId: 00000000-0000-0000-0000-000000000000 DeviceId: 0XXXXX80-77XX-4XXa-X63X-67XXXXX64bb7 OnPrem_UserSid:  OnPrem_DeviceSid:
