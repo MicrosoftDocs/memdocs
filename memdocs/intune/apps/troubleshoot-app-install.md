@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -122,6 +122,9 @@ App types that are supported on ARM64 devices include the following:
 - Mobile MSI LOB apps
 - Win32 apps with the requirement rule of 32-bit.
 - Windows Office click-to-run apps if 32-bit or x86 architecture is selected.
+
+> [!NOTE]
+> To better recognize ARM64 apps in the Company Portal, consider adding **ARM64** to the name of your ARM64 apps. 
 
 ## Troubleshooting apps from the Microsoft Store
 

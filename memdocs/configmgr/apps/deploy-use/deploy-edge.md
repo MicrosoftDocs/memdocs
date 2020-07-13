@@ -139,7 +139,7 @@ From the **Software Library** workspace, click **Microsoft Edge Management** to 
 
 ### Hardware inventory may fail to process
 <!--7535675-->
-Hardware inventory for devices may fail to process. Errors similar to the one below may be seen in the Dataldr.log file:
+Hardware inventory for devices might fail to process. Errors similar to the one below may be seen in the Dataldr.log file:
 
 ```text
 Begin transaction: Machine=<machine>
@@ -149,7 +149,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the Browser Usage (SMS_BrowerUsage) hardware inventory class. This class isn't currently leveraged.
+**Mitigation:** To work around this issue, disable the collection of the Browser Usage (SMS_BrowerUsage) hardware inventory class.
 
 ## Next steps
 
