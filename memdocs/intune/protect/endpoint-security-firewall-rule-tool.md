@@ -67,8 +67,8 @@ The tool is run on a reference machine and migrates the current Windows Firewall
 
 You can use the following switches (parameters) to modify the tool's default functionality.
 
-`IncludeLocalRules` - Will include all locally created/default Windows firewall rules in the export. Note that enabling this switch may result in many included rules. 
-`IncludedDisabledRules` - Will include all enabled and disabled Windows firewall rules in the export. Note that enabling this switch may result in many included rules.
+- `IncludeLocalRules` - Using this switch will include all locally created/default Windows firewall rules in the export. Note that enabling this switch may result in many included rules. 
+- `IncludedDisabledRules` - Using this switch will include all enabled and disabled Windows firewall rules in the export. Note that enabling this switch may result in many included rules.
 
 ## Unsupported configuration
 
