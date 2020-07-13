@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -623,7 +623,9 @@ To add apps, you can:
 
 ## Autonomous single app mode (ASAM)
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app. The end user must manually launch the intended app in order for the ASAM configuration to take effect, this includes the Company Portal. 
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+
+For the ASAM configuration to apply, users must manually open the specific app. This task also applies to the Company Portal app.
 
 - For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
 
@@ -631,9 +633,9 @@ Use these settings to configure iOS/iPadOS devices to run specific apps in auton
 
   For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- On iOS/iPadOS devices, the Company Portal app supports ASAM. When the Company Portal app is in ASAM, the end user must launch the Company Portal manually and then the device is locked in the Company Portal app until the user authenticates. When users sign in to the Company Portal app, they can use other apps and the Home screen button on the device. When they sign out of the Company Portal app, the device returns to single app mode, and locks on the Company Portal app.
+- On iOS/iPadOS devices, the Company Portal app supports ASAM. When the Company Portal app is in ASAM, users must manually open the Company Portal app. Then the device is locked in the Company Portal app until the user authenticates. When users sign in to the Company Portal app, they can use other apps and the Home screen button on the device. When they sign out of the Company Portal app, the device returns to single app mode, and locks on the Company Portal app.
 
-  To turn the Company Portal app into a 'sign in/sign out' app (enable ASAM), enter the Company Portal app name, such as `Microsoft Intune Company Portal`, and the bundle ID (`com.microsoft.CompanyPortal`) in these settings. After this profile is assigned, you must open the Company Portal app to lock the app so users can sign in and sign out of it. Please note that the end user must launch the Company Portal in order for the ASAM configuration to take effect. 
+  To turn the Company Portal app into a 'sign in/sign out' app (enable ASAM), enter the Company Portal app name, such as `Microsoft Intune Company Portal`, and the bundle ID (`com.microsoft.CompanyPortal`) in these settings. After this profile is assigned, you must open the Company Portal app to lock the app so users can sign in and sign out of it. For the ASAM configuration to apply, users must manually open the Company Portal app.
   
   When the device configuration profile is removed, and the user signs out, the device isn't locked in the Company Portal app.
 
