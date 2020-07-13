@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,8 +39,8 @@ Successfully configure your [hybrid Azure AD-joined devices](https://docs.micros
 
 The devices to be enrolled must also:
 - Be running Windows 10 v1809 or greater.
-- Have access to the internet [following the documented Windows Autopilot network requirements](windows-autopilot-requirements.md#networking-requirements).
-- Have access to an Active Directory domain controller, so it must be connected to the organization's network (where it can resolve the DNS records for the AD domain and the AD domain controller, and communicate with the domain controller to authenticate the user. VPN connection not supported at this time).
+- Have access to the internet [following the documented Windows Autopilot network requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Have access to an Active Directory domain controller, so it must be connected to the organization's network (where it can resolve the DNS records for the AD domain and the AD domain controller, and communicate with the domain controller to authenticate the user.
 - Be able to ping the domain controller of the domain you are trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).

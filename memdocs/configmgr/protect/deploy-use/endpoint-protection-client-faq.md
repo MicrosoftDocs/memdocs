@@ -2,7 +2,7 @@
 title: "Endpoint Protection client frequently asked questions"
 titleSuffix: "Configuration Manager"
 description: "Get answers to frequently asked questions about Windows Defender and Endpoint Protection."
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -30,7 +30,6 @@ This FAQ is for computer users whose IT administrator has deployed Windows Defen
 -   [Where do viruses, spyware, and other potentially unwanted software come from?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Can I get malicious software without knowing it?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Why is it important to review license agreements before installing software?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [What's the difference between Endpoint Protection and Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Why doesn't Windows Defender detect cookies?](#why-doesnt-windows-defender-detect-cookies)  
 -   [How can I prevent malware?](#how-can-i-prevent-malware)  
 -   [What are virus and spyware definitions?](#what-are-virus-and-spyware-definitions)  
@@ -128,9 +127,6 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 ##  Why is it important to review license agreements before installing software?  
  When you visit websites, do not automatically agree to download anything the site offers. If you download free software, such as file sharing programs or screen savers, read the license agreement carefully. Look for clauses that say that you must accept advertising and pop-ups from the company, or that the software will send certain information back to the software publisher.  
 
-##  What's the difference between Endpoint Protection and Windows Defender?  
- Endpoint Protection is antimalware software, which means that it's designed to detect and help protect your computer against a wide range of malicious software, including viruses, spyware, and other potentially unwanted software. Windows Defender, which is automatically installed with your Windows operating system, is software that detects and stops spyware.  
-
 ##  Why doesn't Windows Defender detect cookies?  
  Cookies are small text files that websites put on your computer to store information about you and your preferences. Websites use cookies to offer you a personalized experience and to gather information about website use. Windows Defender doesn't detect cookies because it doesn't consider them a threat to your privacy or to the security of your computer. Most internet browser programs allow you to block cookies.  
 
@@ -196,9 +192,8 @@ To remove all unwanted or potentially harmful items that Windows Defender detect
 
   You can choose the software and settings that you want Windows Defender to monitor, but we recommend that you turn on real-time protection and enable all real-time protection options. The following table explains the available options.  
 
-|||  
-|-|-|  
 |**Real-time protection option**|**Purpose**|  
+|-|-|  
 |Scan all downloads|This option monitors files and programs that are downloaded, including files that are automatically downloaded via Windows Internet Explorer and Microsoft Outlook® Express, such as ActiveX® controls and software installation programs. These files can be downloaded, installed, or run by the browser itself. Malicious software, including viruses, spyware, and other potentially unwanted software, can be included with these files and installed without your knowledge.<br /><br /> Using the real-time protection option, Windows Defender monitors your computer all the time and checks for any malicious files or programs that you may have downloaded. This monitoring feature means that Windows Defender doesn't need to slow down your browsing or e-mail experience by requiring a check of any files or programs you may want to download.|  
 |Monitor file and program activity on your computer|This option monitors when files and programs start running on your computer, and then it alerts you about any actions they perform and actions taken on them. This is important, because malicious software can use vulnerabilities in programs that you have installed to run malicious or unwanted software without your knowledge. For example, spyware can run itself in the background when you start a program that you frequently use. Windows Defender monitors your programs and alerts you if it detects suspicious activity.|  
 |Enable behavior monitoring|This option monitors collections of behavior for suspicious patterns that might not be detected by traditional antivirus detection methods.|  
