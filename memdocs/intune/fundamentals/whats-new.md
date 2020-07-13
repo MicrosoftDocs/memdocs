@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
-ms.topic: conceptual
+ms.date: 07/10/2020
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -59,8 +59,26 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 <!-- ########################## -->
 
-## Week of June 22, 2020
 
+## Week of July 06, 2020
+
+### Device enrollment
+
+#### iOS Company Portal will support Apple's Automated Device Enrollment without user affinity<!-- 7282707 --> 
+The iOS Company Portal is now supported on devices enrolled using Apple's Automated Device Enrollment without requiring an assigned user. An end user can sign in to the iOS Company Portal to establish themselves as the primary user on an iOS/iPadOS device enrolled without device affinity. For more information about Automated Device Enrollment, see [Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
+
+### App management
+
+#### Update to device icons in Company Portal and Intune apps on Android<!-- 6057023 -->
+We have updated the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+
+### Device management
+
+#### Tenant attach: ConfigMgr client details in the admin center (preview)<!-- 7552762 -->
+
+You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../configmgr/tenant-attach/client-details.md).
+
+## Week of June 22, 2020
 ### App management
 
 #### Newly available protected apps for Intune<!-- 7248952 -->

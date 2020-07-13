@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/28/2020
-ms.topic: archived
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -1610,7 +1610,7 @@ This feature has been delayed and is planned for a future release.
 When V1.0 was first introduced in 1808, it differed in some significant ways from the beta API. In 1903 those changes will be reflected back into the beta API version. If you have important reports that use the beta API version, we strongly recommend switching those reports to V1.0 to avoid breaking changes. For more information, see [Change log for the Intune Data Warehouse API](../developer/reports-changelog.md#1903-part-2).
 
 #### Monitor Security Baseline status (public preview) <!-- 3082047 --> 
-We've added a [per-category view](../protect/security-baselines-monitor.md#per-category-view) to the monitoring of security baselines. (Security baselines remain in preview). The per-category view displays each category from the baseline along with the percentage of devices that fall into each status group for that category. You can now see how many devices don't match the individual categories, are misconfigured, or are not applicable.
+We've added a [per-category view](../protect/security-baselines-monitor.md) to the monitoring of security baselines. (Security baselines remain in preview). The per-category view displays each category from the baseline along with the percentage of devices that fall into each status group for that category. You can now see how many devices don't match the individual categories, are misconfigured, or are not applicable.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control

@@ -182,6 +182,9 @@ If the '-o' parameter is not specified, the input file will be modified in-place
 
 ## Configure ADAL/MSAL
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 The Intune App SDK can use either the [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) or the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 Typically, ADAL/MSAL require apps to register with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your app already uses ADAL or MSAL to authenticate users, the app must use its existing registration values and override the Intune App SDK default values. This ensures that users are not prompted for authentication twice (once by the Intune App SDK and once by the app).
@@ -291,6 +294,9 @@ To receive Intune app protection policy, apps must initiate an enrollment reques
 > The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by App Protection Policies. All apps will need to have a current SDK version to allow protected data sharing.
 
 ### Apps that already use ADAL or MSAL
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Apps which already use ADAL or MSAL should call the `registerAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
 
@@ -471,7 +477,7 @@ The Intune App SDK has several APIs you can call to get information about the In
 Class | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity](app-sdk-ios.md#enable-multi-identity-optional). |
-IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. These policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. The only one that the app should implement is the Save-as control. This class exposes some APIs needed to implement Save-as. |
+IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. Most of these policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. However, there are some exceptions. App developers should review the comments in this header to determine which APIs are applicable to their application's scenarios. |
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |
 
@@ -482,6 +488,12 @@ Intune lets IT admins specify which accounts can be logged into by the user. App
 To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
+
+## Implement File Encryption Required
+
+The `isFileEncryptionRequired` API defined in `IntuneMAMPolicy.h` informs applications when the IT administrator requires that applications use Intune encryption on any files saved to disk. If `isFileEncryptionRequired` is true, then it is the app's responsibility to ensure that any files saved to disk by the app are encrypted using the APIs in `IntuneMAMFile.h`, `IntuneMAMFileProtectionManager.h`, and `IntuneMAMFDataProtectionManager.h`.
+
+Apps can react to changes in this policy by observinbg the `IntuneMAMDataProtectionDidChangeNotification` notification defined in `IntuneMAMFDataProtectionManager.h`.
 
 ## Implement save-as and open-from controls
 

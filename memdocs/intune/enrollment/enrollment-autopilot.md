@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: how-to
+ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
