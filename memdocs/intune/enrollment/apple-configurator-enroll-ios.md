@@ -52,15 +52,17 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 
 A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Profiles** > **Create**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
 
-    ![Create a profile for Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Create a profile for Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. Under **Create Enrollment Profile**, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
+2. Choose **Profiles** > **Create**.
+
+3. Under **Create Enrollment Profile**, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
 
     ![Screenshot of the create profile screen with Enroll with user affinity selected](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
+4. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
 
     - **Enroll with user affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. The device must be affiliated with a user with Setup Assistant and can then access company data and email. Only supported for Setup Assistant enrollment. User affinity requires [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints). [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -69,7 +71,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
      > [!NOTE]
      > When **Enroll with user affinity** is selected, make sure that the device is affiliated with a user with Setup Assistant within the first 24 hours of the device being enrolled. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
 
-4. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
+5. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
 
     > [!NOTE]
     > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -92,7 +94,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
     DLXQPCWVGHMJ,device details
 
    Learn [how to find an iOS/iPadOS device serial number](https://support.apple.com/HT204073).
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
+2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
 
 5. Select an **Enrollment profile** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.
 6. Under **Import Devices**, browse to the csv file of serial numbers, and select **Add**.
@@ -104,18 +106,18 @@ You can assign an enrollment profile when you import iOS/iPadOS serial numbers f
 - **AC profiles**
 
 #### Assign from Apple Configurator devices
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Devices** > choose the serial numbers > **Assign profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > choose the serial numbers > **Assign profile**.
 2. Under **Assign Profile**, choose the **New profile** you want to assign, and then choose **Assign**.
 
 #### Assign from profiles
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Profiles** > choose a profile.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** > choose a profile.
 2. In the profile, choose **Devices assigned**, and then choose **Assign**.
 3. Filter to find device serial numbers you want to assign to the profile, select the devices, and then choose **Assign**.
 
 ### Export the profile
 After you create the profile and assign serial numbers, you must export the profile from Intune as a URL. You then import it into Apple Configurator on a Mac for deployment to devices.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export.
 2. On the profile, select **Export Profile**.
 3. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.
 
@@ -151,7 +153,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ### Export the profile as .mobileconfig to iOS/iPadOS devices
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
 2. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment profile file is only valid for two weeks at which time you must re-create it.
 3. Transfer the file to a Mac computer running [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to push directly as a management profile to iOS/iPadOS devices.
 4. Prepare the device with Apple Configurator by using the following steps:

@@ -2,7 +2,7 @@
 title: Product and licensing FAQ
 titleSuffix: Configuration Manager
 description: Find answers for common product and license questions for Configuration Manager.
-ms.date: 02/12/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -63,19 +63,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
 
-### <a name="bkmk_mem"></a> Does anything change with the rebrand to Microsoft Endpoint Manager?
+### <a name="bkmk_mem"></a> What changes with licensing for co-management in Microsoft Endpoint Manager?
 
-Yes. Effective December 1, 2019, if you're already licensed for Configuration Manager, then you're also automatically licensed for Intune for enrolling Windows PCs in [co-management](../../comanage/overview.md). This change makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
+<!-- 7202432 -->
 
-A new license is now available that lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase an additional Intune license for co-management. You no longer need to purchase and assign individual Intune licenses to your users.
+The co-management license lets Configuration Manager customers with Software Assurance get Intune PC management rights without having to purchase and assign individual Intune licenses to users. This license makes it easier for you to manage Windows devices with Microsoft Endpoint Manager.
 
-- Devices managed by Configuration Manager and enrolled into co-management have almost the same rights as an Intune standalone-managed PC. However, after resetting they can't be re-provisioned by using AutopIlot.
+- Devices already managed by Configuration Manager that you enroll to Intune for co-management have almost the same rights as an Intune standalone-managed PC. If you reset Windows on this device, you can't provision it with Windows Autopilot. Autopilot requires a full Intune license.
 
-- Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
+- If you enroll a Windows 10 device to Intune by other means, it still requires a full Intune license. For example, you use Autopilot to provision a device, or a user manually does self-service enrollment.
 
-- If you want to use Intune for managing iOS, Android, or macOS devices, then you do need the appropriate Intune subscription through standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
+- For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Intune. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Endpoint Manager now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
+
+- If you want to use Intune for managing iOS, Android, or macOS devices, then you need the appropriate Intune subscription through a standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
+
+- If you don't have any Intune-related subscription plan, to support co-management you need to purchase at least one Intune license. This license is for an administrator to activate the subscription plan and get access to the Microsoft Endpoint Manager admin center.
+
+- If you use the Microsoft 365 built-in [Basic Mobility and Security](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0), you can't use the new co-management license for a user that also has devices managed by Basic Mobility and Security. To use the co-management license for the user's Configuration Manager-managed device, do one of the following actions:
+
+  - Assign a full Intune license to the user, and manage their devices through Intune.
+  - Unenroll the devices from Basic Mobility and Security.
 
 - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
+
+|Feature | Co-management license | Full Intune license |
+|---------|---------|---------|
+|Windows 10 enrollment|Yes (only for existing ConfigMgr-managed devices)|Yes|
+|iOS, Android, macOS enrollment|No|Yes|
+|Autopilot|No|Yes|
+|Mobile Application Management (MAM)|No|Yes|
+|Conditional access<br>(additional AADP1 required)|Yes|Yes|
+|Device profiles|Yes|Yes|
+|Software update management|Yes|Yes|
+|Inventory|Yes|Yes|
+|App management|Yes|Yes|
+|Remote assistance<br>(TeamViewer license required)|Yes|Yes|
+|Desktop analytics<br>(Windows subscription licenses required|Yes|N/A|
+|Tenant attach|Yes|N/A|
+|Endpoint analytics|Yes|Yes|
+
+For more information, see the following articles:
+
+- [Co-management prerequisites](../../comanage/overview.md#prerequisites)
+- [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Desktop analytics prerequisites](../../desktop-analytics/overview.md#prerequisites)
+- [Tenant attach prerequisites](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
+- [Use conditional access with Intune](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [TeamViewer prerequisites](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="bkmk_ems-expires"></a> I have Enterprise Mobility + Security and it expired, what must I do now?  
 

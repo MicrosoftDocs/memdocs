@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Intune operated by 21Vianet only supports standalone deployments. Support for co-management with System Center Configuration Manager is currently in development.
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
+- Derived Credentials are not supported with Intune operated by 21Vianet.
 - Intune operated by 21Vianet doesn't support the Intune agent and so doesn't support legacy PC management.
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
@@ -54,7 +55,7 @@ Because the China services are operated by a partner from inside China, there ar
 - The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
-- Mobile Application Management (MAM) availability is conditional on those apps being available in mainland China.
+- Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
 
 ## You control customer data
 

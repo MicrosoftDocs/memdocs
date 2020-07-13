@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattsha
 
 # Firewall policy for endpoint security in Intune
 
-Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10. Built-in firewalls include BitLocker for Windows devices and FileVault for macOS.
+Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10.
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
@@ -61,7 +61,7 @@ Plan for Firewall policies to be applied to a device using only one policy. Use 
 
 - That form of policy conflict applies to the **Microsoft Defender Firewall** profile, which can conflict with other Microsoft Defender Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
 
-  Microsoft *Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
+  *Microsoft Defender Firewall profiles* don't conflict with *Microsoft Defender Firewall rules* profiles.
 
 When you use **Microsoft Defender Firewall rules** profiles, you can apply multiple rules profiles to the same device. However, when different rules exist for the same thing with different configurations, both are sent to the device and create a conflict, on that device.
 

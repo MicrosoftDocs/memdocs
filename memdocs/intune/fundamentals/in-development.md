@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2020
-ms.topic: conceptual
+ms.date: 06/26/2020
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.assetid: 25b3c26e-cf4e-4152-8306-bf4be4af2ad1
@@ -63,22 +63,20 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 <!-- ***********************************************-->
 ## App management
 
-### Improvements to Devices page of iOS/iPadOS and macOS Company Portals<!-- 6055001  -->
-We have made several improvements to the user experience of the **Devices** page of the Company Portal app for iOS/iPadOS and Mac. We revamped the **Devices** page to have a more modern feel and a better organization of device information. By using a single column with defined section headers, your organization's iOS/iPadOS and macOS users will be able to easily check the status of their devices to ensure they stay secure and maintain access to their organization's resources. Additionally, we added clearer messaging and additional troubleshooting steps for users whose devices fall out of compliance. For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+### Update to device icons in Company Portal and Intune apps on Android<!-- 6057023  -->
+We're updating the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
-### Improvements to the Company Portal for macOS enrollment experience<!-- 6444452  -->
-The Company Portal for macOS enrollment experience will have a simpler enrollment process that aligns more closely with the Company Portal for iOS enrollment experience. Device users will see:  
-- A sleeker user interface.  
-- An improved enrollment checklist.  
-- Clearer instructions about how to enroll their devices.  
-- Improved troubleshooting options.  
+### S/MIME for Outlook on iOS and Android Enterprise devices managed without enrollment<!-- 6517155  -->
+You'll be able to enable S/MIME for Outlook on iOS and Android Enterprise devices using app configuration policies for devices managed without enrollment. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed apps**. Additionally, you can choose whether or not to allow users to change this setting in Outlook. For more information about Outlook configuration settings, see [Microsoft Outlook configuration settings](../apps/app-configuration-policies-outlook.md).
 
-For more information about the Company Portal, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+### iOS Company Portal will support Apple's Automated Device Enrollment without user affinity<!-- 7282707  --> 
+iOS Company Portal will be supported on devices enrolled using Apple's Automated Device Enrollment without requiring an assigned user. An end user can sign in to the iOS Company Portal to establish themselves as the primary user on an iOS/iPadOS device enrolled without device affinity. For more information about Automated Device Enrollment, see [Automatically enroll iOS/iPadOS devices with Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
-### Use Autonomous Single App Mode settings to configure the iOS Company Portal to be a sign-in/sign-out app<!-- 7055619  -->
-You will be able to configure the iOS Company Portal to use autonomous single app mode (ASAM). You can use the ASAM settings in the Microsoft Endpoint Manager console to configure the iOS Company Portal to go in and out of single app mode upon sign-out and sign-in. When the Company Portal is in ASAM, users will not be able to use any other app or the home button on the device until they sign into the Company Portal. Upon sign-out, the Company Portal will go back into single app mode. 
+### Win32 app installation notifications and the Company Portal<!-- 7485945  -->
+End users will be able to decide whether the applications shown in the [Microsoft Intune Web Company Portal](https://portal.manage.microsoft.com/) should be opened by the Company Portal app or the Web Company Portal. This option is only available if the end user has the Company Portal app installed and launches a Web Company Portal application outside of a browser.
 
-To configure the Company Portal to be in ASAM in the Microsoft Endpoint Manager, select **Devices** > **Configuration profiles** > **Create profile**. Select **iOS/iPadOS** as the platform and select **Device restrictions** as the profile. In the **Configuration Settings** tab, select **Autonomous Single App Mode**. Set the **App name** to `Company Portal` and set the **App Bundle ID** to `com.app.CompanyPortal`. For more information, see [Autonomous single app mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) and [single app mode](https://support.apple.com/guide/mdm/single-app-mode-mdm80a981/1/web/1).
+### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
+The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This support will help administrators consolidate their different end-user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
 
 <!-- ***********************************************-->
 ## Device configuration
@@ -86,28 +84,11 @@ To configure the Company Portal to be in ASAM in the Microsoft Endpoint Manager,
 ### Set device compliance state from third-party MDM partners<!-- 6361689   -->
 Microsoft 365 customers who own third-party MDM solutions will be able to enforce Conditional Access policies for Microsoft 365 apps on iOS and Android via integration with Microsoft Intune Device Compliance service. Third-party MDM vendor will leverage the Intune Device Compliance service to send device compliance data to Intune. Intune will then evaluate to determine if the device is trusted and set the conditional access attributes in Azure AD.  Customers will be required to set Azure AD Conditional Access policies from within the Microsoft Endpoint Manager admin center or the Azure AD portal.  
 
-### Add a link to your company portal support website to emails for noncompliance<!-- 7225498    -->
-We're adding a new setting to the email notification template that will add the link to your company portal website to email notifications that are sent to users of non-compliant devices. (**Endpoint security** > **Device compliance** > **Notifications** > **Create notification**).  Users who receive an email due to having a noncompliant device can use the link to open a website to learn more about why their device isn’t compliant.
-
-### New FileVault setting for macOS Endpoint Protection device configuration policy<!-- 5459801   -->
-We're adding a new setting to the FileVault category within the [macOS Endpoint Protection](../protect/endpoint-protection-macos.md) template: Hide recovery key. (**Devices** > **Configuration profiles** > **Create profile**, select **macOS** for the *Platform* and then **Endpoint protection** for the *Profile type*). This setting hides the personal key from the end user during FileVault 2 encryption. A device user can view their personal recovery key at any time from the iOS company portal app or from the company portal website for the encrypted macOS device. To view the personal recovery key they can go to device details, and click on *get recovery key*.
-
-This setting won't be available in previously created policy. You'll need to re-create FileVault policies to configure this setting to make use of it. 
-
-### Configure content caching on macOS devices<!-- 7106872 -->
-On macOS devices, you can create a configuration profile that configures content caching (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile). Use these settings to delete cache, allow shared cache, set a cache limit on the disk, and more.
-
-For more information on content caching, see [ContentCaching](https://developer.apple.com/documentation/devicemanagement/contentcaching) (opens Apple's web site).
-
-To see the settings you can currently configure, go to [macOS device feature settings in Intune](../configuration/macos-device-features-settings.md).
-
-Applies to:
-- macOS
 
 ### New VPN settings for Windows 10 and newer devices<!-- 6602122  -->
 When you create a VPN profile using the IKEv2 connection type, there are new settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **VPN** for profile > **Base VPN**):
 
-- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user log on. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
+- **Device Tunnel**: Allows devices to automatically connect to VPN without requiring any user interaction, including user logon. This feature requires you to enable **Always On**, and use **Machine certificates** as the authentication method.
 - Cryptography suite settings: Configure the algorithms used to secure IKE and child security associations, which allow you to match client and server settings.
 
 To see the settings you can configure, go to [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
@@ -115,75 +96,55 @@ To see the settings you can configure, go to [Windows device settings to add VPN
 Applies to:
 - Windows 10 and newer
 
-### Block Shared iPad temporary sessions on Shared iPad devices<!-- 6613794 -->
-In Intune, there's a new **Block Shared iPad temporary sessions** setting that blocks temporary sessions on Shared iPad devices (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device restrictions** for profile type > **Shared iPad**). When enabled, end users can't use the Guest account. They must sign in to the device with their Managed Apple ID and password. 
+### New features for Managed Home Screen on Android Enterprise device owner dedicated devices (COSU)<!-- 7414175 7133328 7133720 7134873 7135184  -->
+On Android Enterprise devices, administrators will be able to use device configuration profiles to customize the Managed Home Screen on dedicated devices using multi-app kiosk mode (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device Owner Only** > **Device Restrictions** for profile > **Device experience**).
 
-For more information on the settings you can configure, see [iOS and iPadOS device settings to allow or restrict features](../configuration/device-restrictions-ios.md).
+Specifically, you can:
 
-Applies to:
-- Shared iPad devices running iOS/iPadOS 13.4 and newer
+- Customize icons, change the screen orientation, and show app notifications on badge icons <!--7414175-->
+- Hide the Managed Settings entry point <!--7133328-->
+- Easier access the debug menu <!--7133720-->
+- Create an allowed list of Wi-Fi networks <!-- 7134873-->
+- Easier access to the device information <!-- 7135184-->
 
-### Use Microsoft Launcher as the default launcher for fully managed Android Enterprise devices<!-- 4927976  -->
-On Android Enterprise device owner devices, you can set Microsoft Launcher as the default launcher for fully managed devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device owner** > **Device restrictions** for profile > **Device experience**). To configure all other Microsoft Launcher settings, use app configuration policies. 
-
-Also, there are some other UI updates, including **Dedicated devices** being renamed to **Device experience**.
-
-To see all the settings you can restrict, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md). 
+For more information, see [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
-- Android Enterprise device owner fully managed devices (COBO)
 
-### Add new schema settings, and search for existing schema settings using OEMConfig on Android Enterprise<!-- 6394386  -->
-In Intune, you can use OEMConfig to manage settings on Android Enterprise devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile). When you use the **Configuration designer**, the properties in the app schema are shown. Now, in the **Configuration designer**, you can:
-- Add new settings to the app schema.
-- Search for new and existing settings in the app schema.
-
-For more information on OEMConfig profiles in Intune, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
-
-Applies to:
-- Android Enterprise
+- Android Enterprise device owner, dedicated devices (COSU)
 
 <!-- ***********************************************-->
 ## Device enrollment
 
-### Automated Device Enrollment sync errors<!-- 6988214 -->
-New errors will be reported for iOS/iPadOS and macOS devices, including
-- Invalid characters in the phone number or if that field is empty. 
-- Invalid or empty configuration name for the profile. 
-- Invalid/expired cursor value or if no cursor is found.
-- Rejected or expired token. 
-- The department field is empty or the length is too long. 
-- Profile is not found by Apple and a new one needs to be created. 
-- A count of removed Apple Business Manager devices will be added to the overview page where you see the status of your devices.
+### Corporate-owned, personally enabled devices (preview)<!--4442275 -->
+Intune will support Android Enterprise corporate-owned devices with a work profile for OS versions Android 8 and above. Corporate-owned devices with a work profile is one of the corporate management scenarios in the Android Enterprise solution set. This scenario is for single user devices intended for corporate and personal use. This corporate-owned, personally-enabled (COPE) scenario offers:
 
-### Bring-your-own-devices can use VPN to deploy<!--5015344 -->
-The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own 3rd party Win32 VPN client. To see the new toggle, go to [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
+- work and personal profile containerization
+- device-level control for admins
+- a guarantee for end users that their personal data and applications will remain private
 
-### Shared iPads for Business<!--6367326 -->
-You'll be able to use Intune and Apple Business Manager to easily and securely set up Shared iPad so that multiple employees can share devices. Apple's [Shared iPad](https://developer.apple.com/education/shared-ipad/) provides a personalized experience for multiple users while preserving user data. Using a Managed Apple ID, users can access their apps, data, and settings after signing into any Shared iPad in their organization. Shared iPad works with federated identities.
+The first public preview release will include a subset of the features that will be included in the generally available release. Additional features will be added on a rolling basis. The features that will be available in the first preview include:
 
-To see this feature, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > choose a token > **Profiles** > **Create profile** > **iOS**. On the **Management Settings** page, select **Enroll without User Affinity** and you'll see the **Shared iPad** option.
+- Enrollment: Admins can create multiple enrollment profiles with unique tokens that do not expire. Device enrollment can be done through NFC, token entry, QR code, Zero Touch, or Knox Mobile Enrollment.
+- Device configuration: A subset of the existing fully managed and dedicated device settings.
+- Device compliance: The compliance policies that are currently available for fully managed devices.
+- Device Actions: Delete device (factory reset), reboot device, and lock device.  
+- App management: App assignments, app configuration, and the associated reporting capabilities 
+- Conditional Access
 
-**Applies to:** iPadOS 13.4 and later. This release added support for temporary sessions with Shared iPad so that users can access a device without a Managed Apple ID. Upon logout, the device erases all user data so that the device is immediately ready for use, eliminating the need for a device wipe. 
+
 
 <!-- ***********************************************-->
 ## Device management
 
-### Change primary user on co-managed devices<!--7319183 -->
-You'll be able to change a device's primary user for co-managed Windows devices. For more information on how to find and change it, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
+### Device compliance logs now in English<!--6014904 -->
+The IntuneDeviceComplianceOrg logs only have enumerations for ComplianceState, OwnerType, and DeviceHealthThreatLevel. In a future update, these logs will have English information in the columns.
 
 ### PowerShell scripts support for BYOD devices<!-- 1862833  -->
 PowerShell scripts will support Azure AD registered devices in Intune. For more information about PowerShell, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md). This functionality does not support devices running Windows 10 Home edition.
 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
-
-### Setting the Intune primary user also sets the Azure AD owner property<!--7319227 -->
-This upcoming feature automatically sets the owner property on newly-enrolled Hybrid Azure AD joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
-
-This is a change to the enrollment process and only applies to newly enrolled devices. For existing Hybrid Azure AD Joined devices, you must manually update the Azure AD Owner property. To do this, you can use the [Change primary user feature](../remote-actions/find-primary-user.md#change-a-devices-primary-user) or [a script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
-
-When Windows 10 devices become Hybrid Azure Azure Directory Joined, the first user of the device becomes the primary user in Endpoint Manager.  Currently, the user isn't set on the corresponding Azure AD device object. This causes an inconsistency when comparing the *owner* property from an Azure AD portal with the *primary user* property in Microsoft Endpoint Manager admin center. The Azure AD owner property is used for securing access to BitLocker recovery keys. The property isn't populated on Hybrid Azure AD Joined devices. This limitation prevents set up of self-service of BitLocker recovery from Azure AD. This upcoming feature solves this limitation.
 
 ### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381 -->
 When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline).  
@@ -200,8 +161,15 @@ You'll be able to bring the power of the Configuration Manager on-premises [Run 
 ### New merge logic for Windows 10 devices<!--179048-->
 Today, if a customer reimages a device and then re-enrolls it, multiple records for the device will appear in the Microsoft Endpoint Manager admin console. New merge logic is in development to merge such duplicate records for Windows 10 devices.
 
-### Remote lock pin availability for macOS devices<!--7281557-->
-The availability for macOS device remote lock pins will be increased from 7 days to 30 days.
+### Updates to the remote lock action for macOS devices<!--7032805 -->
+Updates to the remote lock action for macOS devices will include:
+- The recovery pin will be displayed for 30 days before deletion (instead of seven days).
+- If an admin has a second browser open and tries to trigger the command again from a different tab or browser, Intune will allow the command to go through. But the reporting status will be set to failed rather than generating a new pin.
+- The admin won't be able to issue another remote lock command if the previous command is still pending or if the device hasn’t checked back in.
+These changes are designed to prevent the correct pin from being overwritten after multiple remote lock commands.
+
+### Deploy Software Updates to macOS devices <!-- 3194876 -->
+You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -210,16 +178,75 @@ The availability for macOS device remote lock pins will be increased from 7 days
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ## Monitor and troubleshoot
 
+### Additional Data Warehouse v1.0 properties<!-- 6125732   -->
+Additional properties are available using the Intune Data Warehouse v1.0. The following properties are now exposed via the [devices](../developer/reports-ref-devices.md#devices) entity:
+- `ethernetMacAddress` -  The unique network identifier of this device.
+- `office365Version` - The version of Office 365 that is installed on the device.
+
+The following properties are now exposed via the [devicePropertyHistories](../developer/reports-ref-devices.md#devicepropertyhistories) entity:
+- `physicalMemoryInBytes` - The physical memory in bytes.
+- `totalStorageSpaceInBytes` - Total storage capacity in bytes.
+
+For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
+
 ### Power BI compliance report template V2.0<!-- 636958  -->
-Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that is being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
+Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that are being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
-<!--
 ## Role-based access control
--->
+
+### Scope tag support for customization policies<!--6182440 -->
+You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options.
+
+### Assign profile and Update profile permission changes<!--7177586 -->
+Role-based access control permissions will be changing for Assign profile and Update profile:
+- Assign profile: Admins with this permission will be able to also assign the profiles to tokens and assign a default profile to a token.
+- Update profile: Admins with this permission will be able to update existing profiles only.
 
 <!-- ***********************************************-->
-<!--## Security-->
+## Security
+
+### App protection policy support for Symantec Endpoint Security and Check Point Sandblast<!--  4452423, 4731168 -->
+
+In October of 2019, Intune app protection policy added the capability to use data from some of our Microsoft Threat Defense partners (MTD partners). We are adding support for the following partners, to use an app protection policy to block, or selectively wipe the user's corporate data based on the health of a device:
+
+- **Check Point Sandblast** on Android, iOS and iPadOS
+- **Symantec Endpoint Security** on Android, iOS and iPadOS
+
+For information about using app protection policy with MTD partners, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+### Store the recovery key for a macOS device that was encrypted with FileVault before enrolling with Intune<!--5239424   -->
+Soon, end users of a macOS device that wasn’t encrypted by FileVault policy from Intune, or was encrypted prior to being enrolled with Intune, won’t need to decrypt their device so it can then be re-encrypted by Intune. Instead, the current encryption can stay in place and the user can go to the Company Portal website where they can choose *Store recovery key* to submit their personal recovery key for the encrypted macOS device. Upon submission of a valid key, Intune will rotate the personal key to generate a new key, which remains available to the user through the Company Portal website, the iOS/ Company Portal, the Android Company Portal, or the Intune app. Users can then access those locations from any device to view the key should they become locked out of their macOS device.
+
+### Hide the personal recovery key from a device user during macOS FileVault disk encryption<!--  5475632  -->
+We’re adding a new setting called *Hide recovery key* to the endpoint security disk encryption policy for FileVault (**Endpoint security** > **Disk encryption** > **Create profile** > **macOS** > **FileVault**). When you enable the new setting, Intune hides the personal recovery key from the user of the macOS device during encryption. By hiding the key at this time, you can help keep it secure as users won’t be able to write it down while waiting for the device to encrypt. Instead, if recovery is needed, a user can always use any device to view their personal recovery key through the Intune Company Portal website.
+
+### Improved view of security baseline details for devices<!-- 5536846   -->
+We're working to improve the display of details for security baseline settings, when you drill into the details for a device (**Endpoint security** > **Devices**).  For each assigned security baseline, you’ll be able to view a flat list of details for each setting that includes setting categories, setting names, and the state of each setting on that device.
+
+### Manage source locations for definition updates with endpoint security antivirus policy for Windows 10 devices<!-- 6347801  -->  
+We’re adding two new settings to the *Updates* category of endpoint security antivirus policy for Windows 10 devices what can help you manage how devices get update definitions (**Endpoint security** > ** Antivirus** > **Create Policy** > **Windows 10 and later** > **Microsoft Defender Antivirus**).
+
+With the new settings, you’ll be able to add UNC file shares as download source locations for definition updates, and define the order in which different source locations are contacted. The new settings will manage the following Defender CSPs:
+
+- [signatureupdatefilesharessources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+- [signatureupdatefallbackorder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+### Endpoint detection and response policy for onboarding Tenant Attached devices to MDATP is moving out of preview<!-- 7303816   -->
+As part of endpoint security in Intune, the Endpoint detection and response (EDR) policies support for use with devices managed by Configuration Manager will soon move out of preview and become Generally Available (**Endpoint security** > **Endpoint detection and response** > **Create Policy** > **Windows 10 and windows Server**). When you configure [Tenant Attach for Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md), you can then use the EDR policies to onboard devices managed by Configuration Manager to Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP). 
+
+### Improvements for the security baselines node<!-- 7433136   -->
+To improve the usability of the security baseline node in the Microsoft Endpoint Manager admin center, we’re removing the *Overview* tab for each baseline and will instead open the baselines **Profile** tab (**Endpoint security** > **Security baselines** > *baseline*).
+
+The *Overview* page for each baseline displays charts and tiles that aggregate results from the last baseline version you deployed. That information is duplicated from what you see if you drill-in to a version for more details. After the *Overview* page is removed, those charts and aggregate details will remain available when you drill into the version directly.  
+
+### Firewall rule migration tool preview<!-- 6423187  -->
+As a public preview, we're working on a PowerShell based tool that will migrate Windows Defender Firewall rules. When you install and run the tool, it automatically creates Endpoint security Firewall Rule policies for Intune that are based on the current configuration of a Windows 10 client.
+
+### New settings for the Device Control profile in endpoint security Attack surface reduction policy<!--7032084 -->
+We’re adding several settings for Windows 10 devices to the Device control profile for endpoint security Attack surface Reduction policy (**Endpoint security** > **Attack surface reduction** > **Create Policy** > **Windows 10 and later** > **Device control**). 
+
+The new settings will be the same as those settings that are available today in [Device restriction profiles](../configuration/device-restrictions-windows-10.md) for *Device configuration*. The settings being added to the *Device control* profile should include various Bluetooth settings.  
 
 
 <!-- ***********************************************-->

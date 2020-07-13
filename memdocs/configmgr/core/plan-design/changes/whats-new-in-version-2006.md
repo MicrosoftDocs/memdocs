@@ -45,11 +45,23 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Tenant attach: Run Scripts from the admin center
 <!--6234688-->
 
+### Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center
+<!--7518897-->
+
+### Import previously created Azure AD application during tenant attach onboarding
+<!--6479246-->
+
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### VPN boundary type
 <!--7020519-->
+
+### Management insights to optimize for remote workers
+<!--6982226-->
+
+### Improved support for Windows Virtual Desktop
+<!--6527576-->
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
@@ -96,6 +108,10 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ### Improvements to Microsoft Edge Management dashboard
 <!--5907383-->
 
+### Improvements to available apps via CMG
+<!--7033501-->
+
+
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -123,16 +139,26 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ### Task sequence media support for cloud-based content
 <!--6209223-->
 
+### Improvements to task sequences via CMG
+<!--6983320-->
 
-## <a name="bkmk_userxp"></a> Software Center
+## <a name="bkmk_userxp"></a> User experience
+
+### Use the Company Portal app on co-managed devices
+<!--3601237-->
 
 ### Azure AD authentication in Software Center
 <!--6935376-->
 
+### Improvements to managing device restarts
+<!--3601213-->
 
-<!-- 
+
 ## <a name="bkmk_sum"></a> Software updates
--->
+
+### Intranet clients can use a CMG software update point
+<!--7102873-->
+
 
 
 ## <a name="bkmk_o365"></a> Office management
@@ -141,9 +167,13 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 <!--6298093-->
 
 
-<!-- 
 ## Protection
 
+### CMG support for endpoint protection policies
+<!--4773948-->
+
+
+<!-- 
 ## Reporting
 -->
 
@@ -151,6 +181,9 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ### Community hub and GitHub
 <!--3555935-->
+
+### Direct links to Configuration Manager Community hub items
+<!--4224406-->
 
 ### New feedback wizard
 <!--3180826-->
