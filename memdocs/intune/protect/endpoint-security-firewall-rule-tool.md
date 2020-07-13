@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 07/13/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,13 +39,16 @@ To help customers move their firewall rule configuration to Endpoint security po
 
 Customers can run the **Endpoint security firewall rule migration tool** on a reference/pre-configured Windows 10 client, and automatically create Endpoint security firewall rule policies in Endpoint Manager. Once created, administrators can target these rules to Azure AD groups to configure MDM and co-managed clients.
 
+Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
+<a href="https://aka.ms/EndpointSecurityFWRuleMigrationTool"><img alt="Download the tool" src="./media/endpoint-security-firewall-rule-tool/downloadtool.png"></a>
+
 ## Tool usage
 
 The tool is run on a reference machine and migrates the current Windows Firewall rule configuration. Running the tool will export all enabled firewall rules present on the device, and automatically create new Intune policies with the collected rules.
 
 1. Log on to the reference machine with local administrator privileges.
-2. Download `Script.ps1`.
-3. Run the `Script.ps1` script on the machine. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
+2. Download `Export-FirewallRules.ps1`.  
+3. Run the `Export-FirewallRules.ps1` script on the machine. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
 4. Provide a policy name when prompted. This policy will be visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane. 
 
     > [!IMPORTANT]
@@ -54,9 +57,18 @@ The tool is run on a reference machine and migrates the current Windows Firewall
     If more than 150 firewall rules are found, multiple policies will be created.
 
     > [!NOTE]
-    >  Depending on the count of firewall rules found, the tool may take some time to run.
+    > Only enabled firewall rules will be migrated by default and only firewall rules created by GPO will be migrated by default. Switches are provided to modify these default values. For more information, see [Switches](#switches).
+    >
+    > Depending on the count of firewall rules found, the tool may take some time to run.
 
 5. Once complete, the tool will output a count of firewall rules that could not be automatically migrated. For more information, see [Unsupported configuration](#unsupported-configuration).
+
+## Switches
+
+You can use the following switches (parameters) to modify the tool's default functionality.
+
+`IncludeLocalRules` - Will include all locally created/default Windows firewall rules in the export. Note that enabling this switch may result in many included rules. 
+`IncludedDisabledRules` - Will include all enabled and disabled Windows firewall rules in the export. Note that enabling this switch may result in many included rules.
 
 ## Unsupported configuration
 
