@@ -41,6 +41,7 @@ The **Remote lock** device action locks the device. To unlock the device, the de
 - Android
 - Android Enterprise kiosk devices
 - Android Enterprise work profile devices
+- Android Enterpise fully managed devices
 - Android Enterprise corporate-owned with work profile devices
 - iOS
 - macOS
