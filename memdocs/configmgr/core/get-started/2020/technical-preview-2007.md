@@ -24,11 +24,24 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2007/1234567.md)] -->
 
+<<<<<<< HEAD
 [!INCLUDE [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](includes/2007/6479284.md)]
 [!INCLUDE [Improvements to client data sources dashboard](includes/2007/7102084.md)]
 [!INCLUDE [Fixed-width font now used in some console areas](includes/2007/7632637.md)]
 [!INCLUDE [Manage task sequence policy size](includes/2007/6888853.md)]
 [!INCLUDE [Improvements to device timeline in the admin center](includes/2007/7141381.md)]
+=======
+[!INCLUDE [4385028](includes/2007/4385028.md)]
+[!INCLUDE [7632637](includes/2007/7632637.md)]
+[!INCLUDE [4812909](includes/2007/4812909.md)]
+[!INCLUDE [5110009](includes/2007/5110009.md)]
+[!INCLUDE [6479284](includes/2007/6479284.md)]
+[!INCLUDE [6888853](includes/2007/6888853.md)]
+[!INCLUDE [7319035](includes/2007/7319035.md)]
+[!INCLUDE [7102084](includes/2007/7102084.md)]
+[!INCLUDE [7141381](includes/2007/7141381.md)]
+
+>>>>>>> 3301cf076b59ddc991ec0ea0a437d2ce729ad283
 
 <!--
 ## General known issues
