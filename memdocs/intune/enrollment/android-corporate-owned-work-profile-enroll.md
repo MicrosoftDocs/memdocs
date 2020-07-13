@@ -70,8 +70,6 @@ You must create an enrollment profile so that users can enroll corporate-owned w
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Description**: Add a profile description (optional).
 3. Choose **Next**.
-4. On the **Scope tags** page, select the [scope tags](../fundamentals/scope-tags.md) that you want to apply to this profile.
-4. Choose **Next**.
 5. On the **Review + create** page, choose **Create** to create the policy.
 
 ### Create a device group
