@@ -37,7 +37,7 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 
 [Create a device profile](wi-fi-settings-configure.md).
 
-## Device owner only
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 Select this option if you are deploying to an Android Enterprise dedicated or fully managed device.  Android Enterprise dedicated and fully managed devices currently support SCEP certificate deployment, but not PKCS.
 
