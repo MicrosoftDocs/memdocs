@@ -315,7 +315,7 @@ For Windows, users do not work through a smartcard registration process to obtai
 
 ## Renew a derived credential
 
-Derived credentials for Android or iOS/iPadOS devices can't be extended or renewed. Instead, users must use the credential request workflow to request a new derived credential for their device. For Windows devices, consult the documentation for the App from your derived credential provdier.
+Derived credentials for Android or iOS/iPadOS devices can't be extended or renewed. Instead, users must use the credential request workflow to request a new derived credential for their device. For Windows devices, consult the documentation for the App from your derived credential provider.
 
 If you configure one or more methods for **Notification type**, Intune automatically notifies users when the current derived credential reaches 80% of its life span. The notification directs users to go through the credential request process to get a new derived credential.
 
