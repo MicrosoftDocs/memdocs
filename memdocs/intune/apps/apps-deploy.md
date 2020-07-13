@@ -40,7 +40,7 @@ After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the
 
 The following table lists the various options for assigning apps to users and devices:
 
-|   | Devices enrolled with Intune | Devices not enrolled with Intune |
+| Option  | Devices enrolled with Intune | Devices not enrolled with Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Assign to users | Yes | Yes |
 | Assign to devices | Yes | No |
