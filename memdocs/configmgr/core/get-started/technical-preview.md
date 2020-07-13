@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 07/09/2020
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -119,11 +119,11 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2007
 
-- [4385028](2020/technical-preview-2007.md) <!--4385028-->
-- [4812909](2020/technical-preview-2007.md) <!--4812909-->
-- [5110009](2020/technical-preview-2007.md) <!--5110009-->
-- [6479284](2020/technical-preview-2007.md) <!--6479284-->
-- [7319035](2020/technical-preview-2007.md) <!--7319035-->
+- [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Improvements to client data sources dashboard](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Fixed-width font now used in some console areas](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Manage task sequence policy size](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Improvements to device timeline in the admin center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
