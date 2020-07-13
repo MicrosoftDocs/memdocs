@@ -79,7 +79,7 @@ Selecting **Managed apps** as the **Device Enrollment Type** specifically refers
 
 ## Android app configuration policies
 
-For Android app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type (Work profile or Device Owner). This update provides the following:
+For Android app configuration policies, you can select the device enrollment type before creating an app configuration profile. You can account for certificate profiles that are based on enrollment type (Work profile, fully managed, dedicated, and corporate-owned work profile). This update provides the following:
 
 1. If a new profile is created and Work Profile and Device Owner Profile are selected for device enrollment type, you will not be able to associate a certificate profile with the app config policy.
 2. If a new profile is created and Work Profile only is selected, Work Profile certificate policies created under Device Configuration can be utilized.

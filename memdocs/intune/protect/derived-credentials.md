@@ -66,6 +66,7 @@ Intune supports derived credentials on the following platforms:
 
 - iOS/iPadOS
 - Android Enterprise - fully managed devices (version 7.0 and above)
+- Android Enterprise - corporate-owned work profile
 - Windows 10 and later
 
 ### Supported issuers
@@ -284,7 +285,7 @@ Use derived credentials for certificate-based authentication to web sites and ap
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Derived credential for Android Enterprise devices profile**.
    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
    - **Platform**: Select **Android Enterprise**.
-   - **Profile type**: Under *Device Owner Only*, select **Derived credential**.
+   - **Profile type**: Under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**.
 
 4. Select **OK** to save your changes.
 5. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
