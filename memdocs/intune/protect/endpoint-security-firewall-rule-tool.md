@@ -39,8 +39,8 @@ To help customers move their firewall rule configuration to Endpoint security po
 
 Customers can run the **Endpoint security firewall rule migration tool** on a reference/pre-configured Windows 10 client, and automatically create Endpoint security firewall rule policies in Endpoint Manager. Once created, administrators can target these rules to Azure AD groups to configure MDM and co-managed clients.
 
-Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
-<a href="https://aka.ms/EndpointSecurityFWRuleMigrationTool"><img alt="Download the tool" src="./media/endpoint-security-firewall-rule-tool/downloadtool.png"></a>
+Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):<br>
+<a href="https://aka.ms/EndpointSecurityFWRuleMigrationTool"><img alt="Download the tool" src="./media/endpoint-security-firewall-rule-tool/downloadtool.png" width="100"></a>
 
 ## Tool usage
 
