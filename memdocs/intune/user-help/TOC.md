@@ -10,8 +10,6 @@
 
 ## [Install Mobile Threat Defense app](set-up-mobile-threat-defense.md)  
 
-## [Store recovery key](store-recovery-key.md)
-
 ## Using your Android device
 ### [Why enroll your Android device](why-enroll-android-device.md)
 ### [Install Company Portal app in China](install-company-portal-android-china.md)
@@ -173,6 +171,7 @@
 
 ## [Using the Intune Company Portal website](using-the-intune-company-portal-website.md)
 ### [Manage apps](manage-apps-cpweb.md)  
+### [Store recovery key](store-recovery-key.md)
 ### [Get recovery key](get-recovery-key-cpweb.md)
 ### [Remote lock device](remote-lock-your-device-cpwebsite.md)  
 ### [Rename device](rename-your-device-cpwebsite.md)  

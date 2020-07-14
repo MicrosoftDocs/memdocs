@@ -38,7 +38,7 @@ Upload and store a personal recovery key for your encrypted macOS device. Storin
 * Ask your IT support person for help if you need to retrieve or rotate the key and can't access the approved apps to do it yourself.
 
 > [!NOTE]
-> IT support people with admin access in Intune can rotate FileVault keys. They can only view the personal recovery keys that belong to corporate-owned devices. They can't view keys that belong to personal devices. (*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
+> IT support people with admin access in Intune can rotate personal recovery keys for device users. They can also view keys, but only those that belong to corporate-owned devices. They can't view the keys that belong to personal devices. (*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
 
 Should you get locked out of your device, you'll be able to retrieve your key from the following locations:
    
