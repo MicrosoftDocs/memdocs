@@ -113,7 +113,7 @@ The following setting values are not supported for migration:
 
 Once the tool has been run, a report will be generated with rules that were not successfully migrated. You can view any of these rules by viewing `RulesError.csv` found in `C:\<folder needed>`. 
 
-## Required Permissions
+## Required permissions
 Endpoint Security Manager, Intune Service Admin or Global Admin users can migrate Windows Firewall rules to Endpoint security policies. Alternatively, a custom role may be used where Security baselines permissions are set with **Delete**, **Read**, **Assign**, **Create**, and **Update** grants are applied. For more information, see [Grant admin permissions to Intune](../fundamentals/users-add.md#grant-admin-permissions).
 
 ## Next steps
