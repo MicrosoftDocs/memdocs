@@ -27,15 +27,23 @@ Before you can monitor Configuration Manager clients and remediate problems, con
     > [!NOTE]
     > If a client doesn't meet any of the settings, the site marks it as inactive.
 
-    - **Client policy requests during the following days:** Specify the number of days since the client requested policy from the site. The default value is `7` days. Compare this value to the **Client policy polling interval** setting in the **Client Policy** group of client settings, which by default is 60 minutes. By default, a client should poll the site for policy every hour. If it doesn't request policy after one week, the site marks it as inactive.
+    - **Client policy requests during the following days:** Specify the number of days since the client requested policy from the site. The default value is `7` days.
 
-    - **Heartbeat discovery during the following days:** Specify the number of days since the client sent a heartbeat discovery record to the site. The default value is `7` days. Compare this value to the schedule for the [Heartbeat discovery method](../../servers/deploy/configure/about-discovery-methods.md). By default, the site runs Heartbeat Discovery once a week.
+      Compare this value to the **Client policy polling interval** setting in the **Client Policy** group of client settings. Its default is 60 minutes. In other words, a client should poll the site for policy every hour. If it doesn't request policy after one week, the site marks it as inactive.
 
-    - **Hardware inventory during the following days:** Specify the number of days since the client sent a hardware inventory record to the site. The default value is `7` days. Compare this value to the **Hardware inventory schedule** setting in the **Hardware Inventory** group of client setings, which by default is seven days.
+    - **Heartbeat discovery during the following days:** Specify the number of days since the client sent a heartbeat discovery record to the site. The default value is `7` days.
 
-    - **Software inventory during the following days:** Specify the number of days since the client sent a software inventory record to the site. The default value is `7` days. Compare this value to the **Schedule software inventory and file collection** setting in the **Software Inventory** group of client settings, which by default is seven days.
+      Compare this value to the schedule for the [Heartbeat discovery method](../../servers/deploy/configure/about-discovery-methods.md). By default, the site runs heartbeat discovery once a week.
 
-    - **Status messages during the following days:** Specify the number of days since the client sent any status messages to the site. The default value is `7` days. The client can send status messages for a variety of activities, such as running a task sequence. The site deletes old status messages as part of the maintenance task, **Delete Aged Status Messages**.
+    - **Hardware inventory during the following days:** Specify the number of days since the client sent a hardware inventory record to the site. The default value is `7` days.
+
+      Compare this value to the **Hardware inventory schedule** setting in the **Hardware Inventory** group of client settings. Its default is seven days.
+
+    - **Software inventory during the following days:** Specify the number of days since the client sent a software inventory record to the site. The default value is `7` days.
+
+      Compare this value to the **Schedule software inventory and file collection** setting in the **Software Inventory** group of client settings. Its default is seven days.
+
+    - **Status messages during the following days:** Specify the number of days since the client sent any status messages to the site. The default value is `7` days. The client can send status messages for different kinds of activities, such as running a task sequence. The site deletes old status messages as part of the maintenance task, **Delete Aged Status Messages**.
 
 1. Specify the following value to determine how long the site keeps client status history data:
 
