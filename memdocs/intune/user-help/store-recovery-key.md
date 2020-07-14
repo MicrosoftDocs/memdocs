@@ -30,15 +30,15 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Store a recovery key 
+# Store your personal FileVault key 
 
-Store a personal recovery key to complete encryption for your already-encrypted device. In addition to satisfying encryption requirements, storing your key in Intune under the management of your IT admin lets you:
+Use the Company Portal website to store a FileVault key for your personally encrypted maccOS device. In addition to satisfying encryption requirements, storing your key in Intune enables you to:
 
-* Easily and quickly retrieve or rotate the key for your encrypted device from any device. 
+* Easily and quickly retrieve or rotate the key from any device. 
 * Ask your IT support person for help if you need to retrieve or rotate the key and can't access the apps to do it yourself.
 
 > [!NOTE]
-> IT support people with admin access in Intune can rotate personal recovery keys for device users. They can also view keys, but only those that belong to corporate-owned devices. They can't view the keys that belong to personal devices. (*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
+> IT support people with administrator access to Intune can rotate your personal recovery keys for you. They can also view keys, but only those that belong to corporate-owned devices. They can't view keys that belong to personal devices. (*LN:  Why would an IT person want to see the recovery key? Just to tell the user what it is? Did I interpret this correctly--admin docs say "devices marked as corporate" and I put "corporate-owned" thinking they're they same....*) 
 
 Should you get locked out of your device, you'll be able to retrieve your key from the following locations:
    
