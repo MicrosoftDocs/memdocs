@@ -35,9 +35,18 @@ This article lists and describes the different settings you can control on Andro
 
 [Create a device configuration profile](device-restrictions-configure.md).
 
-## Device owner only
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise Fully Managed or Dedicated devices.
+These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
+
+Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates which enrollment types can use that setting.
+
+![Setting headers.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are makred with *(work profile-level)* descriptor in the user interface.
+
+![Setting headers.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### General
 
@@ -289,7 +298,7 @@ End of comment -->
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
   > [!NOTE]
-  > Device Owner devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
+  > Fully managed, dedicated, and corporate-owned work profile devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
 
 ### Power settings
 
@@ -304,7 +313,7 @@ End of comment -->
 - **Account changes** (dedicated devices only): **Block** prevents users from modifying accounts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
 
   > [!NOTE]
-  > This setting isn't honored on device owner (fully managed) devices. If you configure this setting, then the setting is ignored, and has no impact.
+  > This setting isn't honored on fully managed, dedicated, and corporate-owned work profile devices. If you configure this setting, then the setting is ignored, and has no impact.
 
 - **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.
