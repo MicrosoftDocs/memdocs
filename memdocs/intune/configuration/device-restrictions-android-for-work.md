@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -93,7 +93,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 ### Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated devices or fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
+Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
 
 **Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or Microsoft Managed Home Screen on your devices. Your options:
 
