@@ -80,7 +80,7 @@ The following lists summarize the differences between *binary differential repli
 - *Block*-level differences
 - Always enabled for apps
 - Optional on legacy packages
-- If a file already exists on the distribution point, and there's a change, the site uses BDR to replicate the block-level change instead of the entire file.
+- If a file already exists on the distribution point, and there's a change, the site uses BDR to replicate the block-level change instead of the entire file. This behavior only applies when you enable the object to use BDR.<!-- SCCMDocs#2026 -->
 
 #### Summary of delta replication
 
