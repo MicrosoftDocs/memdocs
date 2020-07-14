@@ -244,7 +244,7 @@ Each replica member must have the following configuration:
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.
 
 > [!NOTE]
-> If you're using an Azure virtual machine for the SQL server, enable **floating IP**. For more information, see [SQL Server on Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-intlistener).<!-- SCCMDocs#1928 -->
+> If you're using an Azure virtual machine for the SQL server, enable **floating IP**. For more information, see [Configure a load balancer for a SQL Server Always On availability group in Azure virtual machines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager setup needs to connect to each replica. When you set up an availability group in Azure, and the group is behind an internal or external load balancer, open the following default ports:
 
