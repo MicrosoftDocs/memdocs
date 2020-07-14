@@ -32,22 +32,20 @@ ms.collection:
 
 # Store a recovery key 
 
-Upload and store a personal recovery key for your encrypted macOS device. Storing your key ensures that you can [retrieve it]
-(#retrieve-a-personal-recovery-key) or rotate it as needed, and also protects against unauthorized access.
+Upload and store a personal recovery key for your encrypted macOS device. Storing the key in Intune under the management of your organization is secure and private. By storing the key in Intune, you can:
 
- For example, should you get locked out of your Mac, you'll be able to access your key on any device from the following locations:
+* Easily and quickly retrieve or rotate the key for your encrypted device. 
+* Ask your IT support person for help if you need to retrieve or rotate the key and can't access the approved apps to do it yourself.
+
+> [!NOTE]
+> IT support people with admin access in Intune can rotate FileVault keys. They can only view the personal recovery keys that belong to corporate-owned devices. They can't view keys that belong to personal devices. (*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
+
+Should you get locked out of your device, you'll be able to retrieve your key from the following locations:
    
 - Company Portal website
 - Company Portal app for iOS/iPadOS 
 - Company Portal app for Android
 - Intune app
-
-
-After you upload a key, it's stored and managed in Intune (the device management provider your organization uses). (*LN: This may be clunky. I'm trying to think of how I'd explain where the key is being stored to my friends or family without making them skeptical. What do you think of this?*) An IT support person who has access to Intune can help you regain or troubleshoot access to your Mac. They can:
-
-* Rotate the FileVault recovery key for you.  (*LN: Why is this useful? Is there a good/common example for doing this? Will the user for sure have a managed device if they're taking these steps?*)
-* View the personal recovery key, but only if your device is marked as *corporate*. An IT support person can’t see keys that belong to personal devices.  
-(*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
 
 
 ## Do I need to upload a key?
