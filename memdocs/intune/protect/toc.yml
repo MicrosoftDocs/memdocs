@@ -91,6 +91,8 @@
           href: endpoint-security-account-protection-policy.md
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
+    - name: Firewall rule migration
+      href: endpoint-security-firewall-rule-tool.md  
     - name: Encrypt disks
       items:
       - name: Manage BitLocker policy
