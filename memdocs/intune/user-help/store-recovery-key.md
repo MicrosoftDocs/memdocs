@@ -32,8 +32,10 @@ ms.collection:
 
 # Store a recovery key 
 
-Upload and store your personal recovery key in Intune to meet your organization's security requirements and protect your device. Storing your key ensures that you can [retrieve it]
-(#retrieve-a-personal-recovery-key) later if the need arises. Should you get locked out of your device, for example, you can access your key on any device from the following locations:
+Upload and store a personal recovery key for your encrypted macOS device. Storing your key ensures that you can [retrieve it]
+(#retrieve-a-personal-recovery-key) or rotate it as needed, and also protects against unauthorized access.
+
+ For example, should you get locked out of your Mac, you'll be able to access your key on any device from the following locations:
    
 - Company Portal website
 - Company Portal app for iOS/iPadOS 
@@ -41,13 +43,12 @@ Upload and store your personal recovery key in Intune to meet your organization'
 - Intune app
 
 
-Your personal recovery key is stored in Intune and managed by an IT administrator. An admin can:
+After you upload a key, it's stored and managed in Intune (the device management provider your organization uses). (*LN: This may be clunky. I'm trying to think of how I'd explain where the key is being stored to my friends or family without making them skeptical. What do you think of this?*) An IT support person who has access to Intune can help you regain or troubleshoot access to your Mac. They can:
 
 * Rotate the FileVault recovery key for you.  (*LN: Why is this useful? Is there a good/common example for doing this? Will the user for sure have a managed device if they're taking these steps?*)
 * View the personal recovery key, but only if your device is marked as *corporate*. An IT support person can’t see keys that belong to personal devices.  
 (*LN: does "marked as corporate" = these macOS devices are "corporate-owned?" I wonder if the current phrase could cause confusion? I could imagine the device user/reader might say "well, the org could just mark my device as corporate and steal my recovery key." Why would an IT person want to see the recovery key?*) 
 
-This article is especially helpful to people who encrypted their device before setting it up at work. Rather than start over with encryption, your organization may only ask you to upload your recovery key to Company Portal.  (*LN: Should I add that not all orgs do this? That this may not be available to them (if that's true)? Or don't mention that?*)
 
 ## Do I need to upload a key?
 Someone from IT will let you know if you're required to upload a personal recovery key. They may contact you over email, phone, or some other IT communication channel that's used in your organization. You won't receive a notification from the Intune or Company Portal apps. 
@@ -55,7 +56,7 @@ Someone from IT will let you know if you're required to upload a personal recove
 Depending on your organization's policies, you might be blocked from accessing corporate resources on your device until you've uploaded your key.  
 
 ## Upload personal recovery key 
-Complete these steps to upload a personal recovery key for your encrypted macOS device.
+Complete these steps to upload a personal recovery key for your encrypted Mac device.
 
  (*LN: Will they receive  notification about encryption at all? How will they know anything is wrong if they missed the comms from their IT team? Will they get the standard "your device isn't encrypted" message?*)
 
@@ -70,11 +71,11 @@ Complete these steps to upload a personal recovery key for your encrypted macOS 
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption for macOS devices in you organization, see [Use device encryption with Intune](/intune/protect/encrypt-devices).
+If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in you organization, see [Use device encryption with Intune](/intune/protect/encrypt-devices).
 
 ## Next steps
 
-To learn how to access your recovery key, see [Get recovery key](get-recovery-key-cpweb.md).
+Using the Company Portal website, the Intune app, and the Company Portal apps for iOS and Android, you can retrieve the recovery key and use it to access your Mac device.To learn how to retrieve your recovery key, see [Get recovery key](get-recovery-key-cpweb.md).
 
 Find out what else you can do in the Company Portal website. See [Using the Intune Company Portal website](using-the-intune-company-portal-website.md) for a list of actions.  
 
