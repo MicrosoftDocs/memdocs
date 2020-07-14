@@ -190,17 +190,26 @@ A connection was successfully established with the server, but then an error occ
 
 To work around this issue, use the following steps to configure certificates:
 
-1. On the computer that hosts the data warehouse database:
+1. On the server that hosts the data warehouse database:
 
-    1. Open IIS, select **Server Certificates**, and then right-click on **Create Self-Signed Certificate**. Then specify the "friendly name" of the certificate name as **Data Warehouse SQL Server Identification Certificate**. Select the certificate store as **Personal**.
+    1. Create a self-signed certificate. Open IIS, select **Server Certificates**, and then select the **Create Self-Signed Certificate** action. Specify the "friendly name" of the certificate name as **Data Warehouse SQL Server Identification Certificate**. Select the certificate store as **Personal**.
 
-    1. Open **SQL Server Configuration Manager**. Under **SQL Server Network Configuration**, right-click to select **Properties** under **Protocols for MSSQLSERVER**. Switch to the **Certificate** tab, select **Data Warehouse SQL Server Identification Certificate** as the certificate, and then save the changes.
+      > [!TIP]
+      > If this server doesn't already have IIS, install it first.
 
-    1. In **SQL Server Configuration Manager**, under **SQL Server Services**, restart the **SQL Server service**. If SQL Reporting Services is also installed on the server that hosts the data warehouse database, restart **Reporting Service** services as well.
+    1. Manage the certificate. Open the Microsoft Management Console (MMC), and add the **Certificates** snap-in. Select **Computer account** of the local machine. Expand the **Personal** folder, and select **Certificates**.
 
-    1. Open the Microsoft Management Console (MMC), and add the **Certificates** snap-in. Select **Computer account** of the local machine. Expand the **Personal** folder, and select **Certificates**. Export the **Data Warehouse SQL Server Identification Certificate** as a **DER encoded binary X.509 (.CER)** file.
+        1. Give the SQL Server service account read permissions to the certificate. Select the **Data Warehouse SQL Server Identification Certificate** certificate, then go to the **Action** menu, select **All Tasks**, and select **Manage Private Keys**. Add the SQL Server service account, and allow **Read** permission.<!-- SCCMDocs#1805 -->
 
-1. On the computer that hosts SQL Server Reporting Services, open the MMC, and add the **Certificates** snap-in. Select **Computer account**. Under the **Trusted Root Certificate Authorities** folder, import the **Data Warehouse SQL Server Identification Certificate**.
+        1. Export the **Data Warehouse SQL Server Identification Certificate** as a **DER encoded binary X.509 (.CER)** file.
+
+    1. Reconfigure SQL. Open **SQL Server Configuration Manager**.
+
+        1. Under **SQL Server Network Configuration**, right-click to select **Properties** under **Protocols for MSSQLSERVER**. Switch to the **Certificate** tab, select **Data Warehouse SQL Server Identification Certificate** as the certificate, and then save the changes.
+
+        1. Under **SQL Server Services**, restart the **SQL Server service**. If SQL Reporting Services is also installed on the server that hosts the data warehouse database, restart **Reporting Service** services as well.
+
+1. On the server that hosts SQL Server Reporting Services, open the MMC, and add the **Certificates** snap-in. Select **Computer account**. Under the **Trusted Root Certificate Authorities** folder, import the **Data Warehouse SQL Server Identification Certificate**.
 
 ## Data flow
 
