@@ -236,7 +236,7 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Device groups**: Select one or more groups from the Configuration Manager tab, and then select **Set as Target Groups**. These groups are collections synchronized from Configuration Manager.  
 
-    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **WIndows OS** and configure the following settings:  
+    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **Windows OS** and configure the following settings:  
 
         - **My computers automatically get drivers from Windows Update**: The default setting is **Off**, which is recommended when deploying with Configuration Manager.  
 
