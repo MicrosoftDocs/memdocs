@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -161,6 +161,17 @@ The following actions are available:
 
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies. 
+
+## Opening Web Company Portal applications
+For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 
+
+Upon selecting the Company Portal, the user will be directed to the corresponding page in the application when the URI path is one of the following:
+
+- `/apps` - The Web Company Portal will open the Apps page that lists all of the apps.
+- `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
+- *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
+
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
