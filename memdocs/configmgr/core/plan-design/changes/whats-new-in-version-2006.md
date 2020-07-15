@@ -170,8 +170,12 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ## Protection
 
 ### CMG support for endpoint protection policies
+
 <!--4773948-->
 
+While the cloud management gateway (CMG) has supported endpoint protection policies, devices required access to on-premises domain controllers. Starting in this release, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.
+
+For more information, see [CMG support for Configuration Manager features](../../clients/manage/cmg/plan-cloud-management-gateway.md#support-for-configuration-manager-features).
 
 <!-- 
 ## Reporting
