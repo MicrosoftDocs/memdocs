@@ -151,7 +151,13 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 <!--6935376-->
 
 ### Improvements to managing device restarts
+
 <!--3601213-->
+
+Configuration Manager provides many options to manage device restart notifications. You can now configure client settings to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
+
+For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
+
 
 
 ## <a name="bkmk_sum"></a> Software updates
