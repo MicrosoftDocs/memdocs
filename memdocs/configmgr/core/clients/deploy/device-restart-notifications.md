@@ -60,7 +60,7 @@ If the user proactively installs required software before the deadline, and it r
 
 When you don't use toast notifications, the dialog for software marked as **Available** is similar to proactively installed software. For **Available** software, the notification doesn't have a deadline for the restart and the user can choose their own snooze interval. For more information, see [Approval settings](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Software marked as "Available" doesn't have a deadline for restart in the notification":::
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Available software doesn't have a deadline for restart in the notification":::
 
 ### Software Center notification of required restart
 
