@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -121,7 +121,8 @@ As the Microsoft Intune administrator, you can control which work or school acco
    > The following apps process the above app configuration and only allow organization accounts:
    > - Edge for iOS (44.8.7 and later)
    > - OneDrive for iOS (10.34 and later)
-   > - Outlook for (iOS 2.99.0 or later)
+   > - Outlook for iOS (2.99.0 and later)
+   > - Teams for iOS (2.0.15 and later)
 
 ## Enter XML data
 
