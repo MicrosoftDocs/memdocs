@@ -43,7 +43,7 @@ Some settings are not supported by all enrollment types. To see which settings a
 
 ![Setting headers.](./media/device-restrictions-android-for-work/setting-headers.png)
 
-Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are makred with *(work profile-level)* descriptor in the user interface.
+Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are marked with *(work profile-level)* descriptor in the user interface.
 
 ![Setting headers.](./media/device-restrictions-android-for-work/work-profile-level.png)
 
