@@ -1528,10 +1528,10 @@ For more information, see [Policy CSP - Search](https://docs.microsoft.com/windo
   **Default**: Yes
   
 ## Smart Screen  
-For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.  
+For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation. 
 
 - **Block execution of unverified files**  
-  Block user from running unverified files. 
+  Block user from running unverified files.
   - *Not Configured* - Employees can ignore SmartScreen warnings and run malicious files. 
   - *Yes* – Employees can't ignore SmartScreen warnings and run malicious files.
 

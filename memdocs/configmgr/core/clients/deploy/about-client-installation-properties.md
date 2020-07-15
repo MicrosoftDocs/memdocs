@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 06/14/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -233,9 +233,9 @@ This parameter specifies that CCMSetup.exe doesn't install the specified prerequ
 
 Examples:
 
-- `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe`
+- `CCMSetup.exe /skipprereq:filename.exe`
 
-- `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`
+- `CCMSetup.exe /skipprereq:filename1.exe;filename2.exe`
 
 For more information on client prerequisites, see [Windows client prerequisites](prerequisites-for-deploying-clients-to-windows-computers.md).
 
@@ -596,7 +596,11 @@ For more information, see [How to configure client status](configure-client-stat
 
 Starting in version 2002, use this property to start a task sequence on a client after it successfully registers with the site.
 
+> [!NOTE]
+> If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. For more information, see [Release notes - OS deployment](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 For example, you provision a new Windows 10 device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
+
 
 Use the following process:
 
@@ -612,6 +616,8 @@ Use the following process:
       > This method may have additional prerequisites. For example, enrolling the site to Azure Active Directory, or creating a content-enabled cloud management gateway.
 
 After the client installs and properly registers with the site, it starts the referenced task sequence. If client registration fails, the task sequence won't start.
+
+
 
 ### RESETKEYINFORMATION
 

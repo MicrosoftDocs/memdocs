@@ -50,6 +50,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**[USB-Direct](#usb-direct)**| No | No | No|[More information](apple-configurator-enroll-ios.md)|
 
 ## macOS enrollment methods
+
 | **Method** |  **Reset Required** |  **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](macos-enroll.md)|
@@ -59,7 +60,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 ## Windows enrollment methods
 
 | **Method** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
 |**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
@@ -82,7 +83,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](corporate-identifiers-add.md)|
 |**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
-|**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes; No if [DEM](device-enrollment.md#device-enrollment-manager) initiated | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## Bring your own device
