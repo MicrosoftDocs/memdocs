@@ -28,7 +28,7 @@ You can now see ConfigMgr client details including collections, boundary group m
 - One of the following browsers:
   - Microsoft Edge, version 77 and later
   - Google Chrome
-- The user account has been discovered with both [Azure Active Directory (Azure AD) user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](/../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- The user account has been discovered with both [Azure Active Directory (Azure AD) user discovery](../core/servers/deploy/configure/about-discovery-methods#azureaddisc) and [Active Directory user discovery](/../core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
   - Meaning the user account needs to be a synced user object in Azure.
 
 ## Permissions
