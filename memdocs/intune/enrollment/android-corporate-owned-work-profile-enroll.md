@@ -45,7 +45,7 @@ Intune helps you deploy apps and settings to Android Enterprise corporate-owned 
 
 Devices must meet these requirements to be managed as an Android Enterprise corporate-owned work profile devices:
 
-- Android OS version 8.0 and above. 
+- Android OS version 8.0 and above.
 - Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 ## Set up Android Enterprise corporate-owned work profile device management
