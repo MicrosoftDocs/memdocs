@@ -33,6 +33,9 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
+> [!Important]  
+> If you have co-management enabled, enrolled devices that meet Intune requirements will send required functional data directly to Microsoft public cloud. See [requirements](overview.md#bkmk_intune_prereq)
+
 ### <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
 Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
