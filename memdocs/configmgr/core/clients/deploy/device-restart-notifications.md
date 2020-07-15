@@ -2,7 +2,7 @@
 title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager. 
-ms.date: 06/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -28,25 +28,25 @@ The [Computer restart client settings](#client-settings) change the user experie
 
 ## Restart notification types
 
-When a device requires a restart, the client shows a notification to the end user of the upcoming restart. There are four general notifications users can receive.
+When a device requires a restart, the client shows a notification to the end user of the upcoming restart.
 
 ### Toast notification
 
 A Windows toast notification informs the user that the device needs to restart. The information in the toast notification can be different depending on which version of Configuration Manager you're running. This type of notification is native to the Windows OS. You may also see third-party software using this type of notification.
 
-![Toast notification of pending restart](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Toast notification of pending restart":::
 
 ### Software Center notification with snooze
 
 Software Center shows a notification with a snooze option and the time remaining before it forces the devices to restart. The message may be different depending on your version of Configuration Manager.
 
-![Pending restart Software Center notification with snooze button](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Pending restart Software Center notification with snooze button":::
 
 ### Software Center final countdown notification
 
 Software Center shows this final countdown notification that the user can't close or snooze.
 
-![Software Center final countdown notification](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center final countdown notification":::
 
 Starting in version 1906, the user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
 
@@ -54,17 +54,44 @@ Starting in version 1906, the user won't see a progress bar in the restart notif
 
 If the user proactively installs required software before the deadline, and it requires a restart, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notification for proactively installed software":::
 
 #### Available apps
 
 When you don't use toast notifications, the dialog for software marked as **Available** is similar to proactively installed software. For **Available** software, the notification doesn't have a deadline for the restart and the user can choose their own snooze interval. For more information, see [Approval settings](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-![Software marked as "Available" doesn't have a deadline for restart in the notification.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Available software doesn't have a deadline for restart in the notification":::
+
+### Software Center notification of required restart
+
+<!--3601213-->
+
+Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. When a required deployment needs the device to restart, but you disable the client setting **Configuration Manager can force a device to restart**, you see the following notification:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Software Center notification to restart your computer":::
+
+If you **Snooze** this notification, it will show again based on how you configure the frequency of restart reminder notifications. The device won't restart until you select **Restart** or manually restart Windows.
+
+> [!NOTE]
+> By default, Configuration Manager can still force devices to restart.
 
 ## Client settings
 
 To control the client restart behaviors, configure the following device client settings in the **Computer Restart** group. For more information, see [How to configure client settings](configure-client-settings.md).
+
+### Configuration Manager can force a device to restart
+
+<!--3601213-->
+
+Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. Configuration Manager enables this setting by default.
+
+> [!IMPORTANT]
+> This client setting applies to all application, software update, and package deployments to the device. Until a user manually restarts the device:
+>
+> - Software updates and app revisions may not be fully installed
+> - Additional software installs may not happen
+
+When you disable this setting, you can't specify the amounts of time after the deadline that the device is restarted or the user is presented a final countdown notification.
 
 ### Specify the amount of time after the deadline before a device gets restarted (minutes)
 
@@ -118,17 +145,17 @@ If the setting **When a deployment requires a restart, show a dialog window to t
 
   - If the restart is greater than 24 hours away, it shows an estimated restart time. The timing of this notification is based on the setting: **Specify the amount of time after the deadline before a device gets restarted (minutes)**.
 
-    ![Restart time is greater than 24 hours away](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="Restart time is greater than 24 hours away":::
 
   - If the restart is less than 24 hours away, it shows a progress bar. The timing of this notification is based on the setting: **Specify the amount of time after the deadline before a device gets restarted (minutes)**.
 
-    ![Restart time is less than 24 hours away](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="Restart time is less than 24 hours away":::
 
 If the user selects **Snooze**, another temporary notification shows after the snooze period elapses. This behavior assumes it hasn't yet reached the final countdown. The timing of the next notification is based on the setting: **Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)**. If the user selects **Snooze**, and your snooze interval is one hour, then Software Center notifies the user again in 60 minutes. This behavior assumes it hasn't yet reached the final countdown.
 
 When it reaches the final countdown, Software Center shows the user a notification they can't close. The progress bar is in red and the user can't **Snooze** it.
 
-![Software Center final countdown notification in version 1906](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Software Center final countdown notification in version 1906":::
 
 ### Proactively install required software before the deadline
 
@@ -136,7 +163,7 @@ If the user proactively installs required software that needs restart before the
 
 The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment:
 
-![Notification for proactively installed software](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notification for proactively installed software":::
 
 Once the deployment reaches its deadline, Software Center follows the behavior to [Install required software at or after the deadline](#install-required-software-at-or-after-the-deadline).
 
@@ -188,25 +215,25 @@ In the [Computer Restart](#client-settings) group of client settings, enable the
 
 Configuring this client setting changes the user experience for all required deployments that require a restart from toast notifications:
 
-![Toast notification that Restart required](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Toast notification that Restart required":::
 
 To the more intrusive Software Center dialog window:
 
-![Dialog window to restart your computer](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Dialog window to restart your computer":::
 
 If the user didn't restart their device after the installation, then they'll get a notification as a reminder. This temporary reminder will appear to the user based on the client setting: **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**. This setting is the overall time the user has to restart the machine before a restart is forced.
 
 - Temporary notification when you use toast notifications:
 
-  ![Toast notification of pending restart](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Toast notification of pending restart":::
 
 - Temporary notification when you use Software Center dialog window, not toast:
 
-  ![Pending restart Software Center notification with snooze button](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Pending restart Software Center notification with snooze button":::
 
 If the user doesn't restart after the temporary notification, they'll be given the final countdown notification that they can't close. The timing of when the final notification appears is based on the client setting: **Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes)**. For instance, if the setting is 60, then an hour before a reboot is forced, the final notification appears to the user:
 
-![Software Center final countdown notification](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center final countdown notification":::
 
 The following settings must be shorter in duration than the shortest [maintenance window](../manage/collections/use-maintenance-windows.md) applied to the computer:
 
