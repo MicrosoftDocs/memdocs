@@ -84,7 +84,7 @@
     - name: Manage Android Enterprise work profile devices
       href: android-enterprise-overview.md 
     - name: Enroll Android Enterprise corporate-owned work profile devices
-    - href: android-corporate-owned-work-profile-enroll.md       
+      href: android-corporate-owned-work-profile-enroll.md       
     - name: Move device administrator devices to work profile management
       href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
