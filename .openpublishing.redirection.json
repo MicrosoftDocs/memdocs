@@ -54,6 +54,11 @@
             "source_path": "memdocs/configmgr/tenant-attach/technical-reference.md",
             "redirect_url": "/mem/configmgr/tenant-attach/troubleshoot",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/privacy-statement-cmdlet-library.md",
+            "redirect_url": "https://docs.microsoft.com/powershell/sccm/privacy-statement?view=sccm-ps",
+            "redirect_document_id": false
         }
     ]
 }
