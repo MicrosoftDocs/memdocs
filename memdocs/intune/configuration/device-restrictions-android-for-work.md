@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -148,7 +148,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       - **App notification badges**: **Enable** shows the number of new and unread notifications on app icons. When set to **Not configured**, Intune doesn't change or update this setting.
       - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
         - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
-        - **Swipe up**: A home button shows when a user swipes up on the device.
+        - **Swipe-up**: A home button shows when a user swipes up on the device.
         - **Floating**: Shows a persistent, floating home button on the device.
 
       - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
@@ -217,7 +217,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Any file resource URL that can be turned into a bitmap is supported.
@@ -229,9 +229,6 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 - **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
-
-<!-- MandiA (6.15.2020) The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
-
   - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
     - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
     - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
@@ -251,8 +248,8 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Bottom**: Search bar is shown at the bottom of devices.
     - **Hide**: Search bar is hidden.
 
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### Password
