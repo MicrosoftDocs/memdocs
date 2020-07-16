@@ -87,7 +87,7 @@ For more information about the messages you may see during this process, see [Co
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage File Vault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](/intune/protect/encrypt-devices-filevault).  
+If you're an IT support person and want to configure and manage File Vault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
 
 ## Next steps
 
