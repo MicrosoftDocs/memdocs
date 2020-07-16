@@ -2,12 +2,10 @@
 title: View BitLocker reports
 titleSuffix: Configuration Manager
 description: Learn about the BitLocker management reports in Configuration Manager
-ms.date: 11/29/2019
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-
-
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
@@ -46,7 +44,7 @@ You can access all of these reports directly from the reporting services point w
 
 Use this report to collect information that's specific to a computer. It provides detailed encryption information about the OS drive and any fixed data drives. To view the details of each drive, expand the Computer Name entry. It also indicates the policy that's applied to each drive type on the computer.
 
-[![Example screenshot of BitLocker computer compliance report](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="Example screenshot of BitLocker computer compliance report" lightbox="media/bitlocker-computer-compliance.png":::
 
 You can also use this report to determine the last known BitLocker encryption status of lost or stolen computers. Configuration Manager determines compliance of the device based on the BitLocker policies that you deploy. Before you try to determine the BitLocker encryption state of a device, verify the policies that you've deployed to it.
 
@@ -97,7 +95,7 @@ This report provides the following graphs, which show BitLocker compliance statu
 
 - Compliance status distribution by drive type
 
-[![Example screenshot of BitLocker enterprise compliance dashboard](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="Example screenshot of BitLocker enterprise compliance dashboard" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### Compliance status distribution
 
@@ -145,7 +143,7 @@ This bar chart shows the current BitLocker compliance status by drive type. The 
 
 This report shows information about the overall BitLocker compliance across your organization for the collection of computers to which you deployed the BitLocker management policy.
 
-[![Example screenshot of BitLocker enterprise compliance details](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="Example screenshot of BitLocker enterprise compliance details" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Column name|Description|
 |--- |--- |
@@ -177,7 +175,7 @@ This report shows information about the overall BitLocker compliance across your
 
 Use this report to show the overall BitLocker compliance across your organization. It also shows the compliance for individual computers to which you deployed the BitLocker management policy.
 
-[![Example screenshot of BitLocker enterprise compliance summary](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="Example screenshot of BitLocker enterprise compliance summary" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Column name|Description|
 |--- |--- |
@@ -196,9 +194,7 @@ Use this report to show the overall BitLocker compliance across your organizatio
 ## <a name="bkmk-audit"></a> Recovery audit report
 
 > [!NOTE]
-> This report is also available from the [BitLocker administration and monitoring website](helpdesk-portal.md#reports).
->
-> To view this report in the Configuration Manager console, go to the **Monitoring** workspace. In the navigation pane, expand the **Reporting** node, expand **Reports**, and then expand the **BitLocker Management** folder. Select the subfolder for the localized version of the report, for example, **en-us**.
+> Starting in version 2002, this report is only available from the [BitLocker administration and monitoring website](helpdesk-portal.md#reports).<!-- 7629549 -->
 
 Use this report to audit users who have requested access to BitLocker recovery keys. You can filter on the following criteria:
 
@@ -207,7 +203,7 @@ Use this report to audit users who have requested access to BitLocker recovery k
 - The specific type of key requested: Recovery Key Password, Recovery Key ID, or TPM Password Hash
 - A date range during which the retrieval occurred
 
-[![Example screenshot of BitLocker Recovery audit report](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="Example screenshot of BitLocker Recovery audit report" lightbox="media/bitlocker-recovery-audit-report.png":::
 
 |Column&nbsp;name|Description|
 |----------------|----|
