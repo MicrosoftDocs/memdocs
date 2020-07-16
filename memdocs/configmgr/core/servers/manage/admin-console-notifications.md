@@ -21,13 +21,16 @@ Starting in Configuration Manager version 1902, the Configuration Manager consol
 
 - When an update is available for Configuration Manager itself
 - When lifecycle and maintenance events occur in the environment
+
+The following event notifications are configurable:
+- Non-critical site health changes
 - Messages from Microsoft (starting in version 2006)
 
 This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
 ![Notification bar and flag in console](./media/1318035-notify-eval-version-expired.png)
 
-## <a name="bkmk_notify"></a> Configure a site to show non-critical notifications
+## <a name="bkmk_noncrit"></a> Configure a site to show non-critical notifications
 
 You can configure each site to show non-critical notifications in the properties of the site.
 
@@ -59,8 +62,21 @@ The following notifications are most applicable to the technical preview branch:
 
 For more information and troubleshooting assistance, see the **SmsAdminUI.log** file on the console computer. By default, this log file is at the following path: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
 
-## Configure a site to receive messages from Microsoft
+## <a name="bkmk_msft"></a> Configure a site to receive messages from Microsoft
  <!--3953121-->
+
+Starting in version 2006, you can choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
+
+### Configure notification settings for Microsoft messages
+
+1. Navigate to **Administration** > **Site Configuration** > **Sites**.
+1. Right-click on a site and select **Properties**.
+1. In the **Alerts** tab, enable the notifications by selecting **Receive messages from Microsoft**. You can deselect any of the following notifications if you prefer not to receive them:  
+   - **Prevent/fix**: Known issues affecting your organization that may require you to take action.
+   - **Plan for change**: Changes to Configuration Manager that may require you to take action.
+   - **Stay informed**: Informs you of new or updated features that are available.
+
+     [ ![Notification from Microsoft options in site properties](./media/3953121-microsoft-notifications.png)](./media/3953121-microsoft-notifications.png#lightbox)
 
 
 
