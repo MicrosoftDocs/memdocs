@@ -67,11 +67,11 @@ You now have an app defined in Azure. Grant access from the native app to the Mi
 6. Select **Delegated Permissions** box and click the **Get data warehouse information from Microsoft Intune** box.
 7. Click **Add permissions**.
 8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-9. Select **Certificates & secrets** > **+New client secret** and generate a new secret. Make sure to copy it some place safe as you will not be able to access it again.
+9. Select **Certificates & secrets** > **+ New client secret** and generate a new secret. Make sure to copy it someplace safe because you won't be able to access it again.
 
 ## Get data from the Microsoft Intune API with Postman
 
-You can work with the Intune Data Warehouse API with a generic REST client such as Postman. Postman can  provide insight into the features of the API, the underlying OData data model, and troubleshoot your  connection to the API resources. In this section, you can find information about generating an Auth2.0 token for your local client. The client will need the token to authenticate with Azure AD and access the API resources.
+You can work with the Intune Data Warehouse API with a generic REST client such as Postman. Postman can  provide insight into the features of the API, the underlying OData data model, and troubleshoot your connection to the API resources. In this section, you can find information about generating an Auth2.0 token for your local client. The client will need the token to authenticate with Azure AD and access the API resources.
 
 ### Information you will need to make the call
 
@@ -134,7 +134,7 @@ To get a new access token for Postman, you must add the Azure AD authorization U
 
      `Ksml3dhDJs+jfK1f8Mwc8 `
 
-12. Select **Authorization Code**, and Request access token locally.
+12. Select **Authorization Code** and **Request access token locally**.
 
 13. Select **Request Token**.
 
