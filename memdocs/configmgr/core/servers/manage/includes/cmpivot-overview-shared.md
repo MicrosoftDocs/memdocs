@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
+ms.date: 07/13/2020
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -15,7 +15,7 @@ Queries can be used to search terms, identify trends, analyze patterns, and prov
 In the following example, the entity is `CCMRecentlyUsedApplications` (a reference to the recently used applications), and the operator is where (which filter out records from its input according to some per-record predicate):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## Entities

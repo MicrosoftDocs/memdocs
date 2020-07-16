@@ -2,7 +2,7 @@
 title: What is Endpoint analytics (preview)?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics preview.
-ms.date: 07/01/2020
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -15,8 +15,10 @@ manager: dougeby
 
 # <a name="bkmk_overview"></a> What is Endpoint analytics (preview)?
 
+Endpoint analytics is part of the [Microsoft Productivity Score](https://docs.microsoft.com/microsoft-365/admin/productivity/productivity-score). These analytics gives you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and proactively make changes without disrupting end users or generating a help desk ticket. For more information on the Microsoft Productivity Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).
+
 > [!Note]  
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md).
 
@@ -28,7 +30,7 @@ It's not uncommon for end users to experience long boot times or other disruptio
 - Software configurations that aren't optimized for the end-user experience
 - Issues caused by configuration changes and updates
 
-These issues and other end-user experience problems persist because IT doesn't have much visibility into the end-user experience. Generally, the only visibility into these issues come from a slow costly support channel that doesn't usually provide clear information about what needs to be optimized. It's not only IT support bearing the cost of these problems. The time information workers spend dealing with issues is also costly. Performance, reliability, and support issues that reduce user productivity can have a large impact on an organization's bottom line as well.
+These issues and other end-user experience problems persist because IT doesn't have much visibility into the end-user experience. Generally, the only visibility into these issues comes from a slow costly support channel that doesn't usually provide clear information about what needs to be optimized. It's not only IT support bearing the cost of these problems. The time information workers spend dealing with issues is also costly. Performance, reliability, and support issues that reduce user productivity can have a large impact on an organization's bottom line as well.
 
 **Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
@@ -45,7 +47,7 @@ This release is just the beginning. We'll be rapidly rolling out new insights fo
 For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
 
 ### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune, this preview requires:
-- Intune enrolled devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise or Windows 10 Education. Windows 10 Home is not supported.
+- Intune enrolled devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
    - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education (Windows 10 Pro isn't currently supported.)
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
@@ -60,7 +62,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 
 ### <a name="bkmk_prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_prs) has the following requirements:
-- Devices must be must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - A Windows 10 Enterprise, Professional, or Education device that is managed by Intune.
   - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
 

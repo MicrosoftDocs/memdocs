@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -440,7 +440,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 2. Type `about:intunehelp` in the address box.
 3. Edge for iOS and Android launches troubleshooting mode.
 
-For a list of the settings stored in the app logs, see [Review app protection logs in the Managed Browser](app-protection-policy-settings-log.md).
+For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md).
 
 To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
