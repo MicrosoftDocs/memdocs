@@ -134,7 +134,7 @@ To get a new access token for Postman, you must add the Azure AD authorization U
 
      `Ksml3dhDJs+jfK1f8Mwc8 `
 
-12. Select **Authorization Code** and **Request access token locally**.
+12. Select **Authorization Code** as the Grant Type.
 
 13. Select **Request Token**.
 
