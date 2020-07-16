@@ -67,6 +67,7 @@ You now have an app defined in Azure. Grant access from the native app to the Mi
 6. Select **Delegated Permissions** box and click the **Get data warehouse information from Microsoft Intune** box.
 7. Click **Add permissions**.
 8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+9. Select **Certificates & secrets** > **+New client secret** and generate a new secret. Make sure to copy it some place safe as you will not be able to access it again.
 
 ## Get data from the Microsoft Intune API with Postman
 
@@ -83,6 +84,7 @@ You need the following information to make a REST call using Postman:
 | Auth URL         | This is the URL used to authenticate. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Access Token URL | This is the URL used to grant the token.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | Client ID        | You created, and noted this when creating the native app in Azure.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Client Secret        | You created, and noted this when creating the native app in Azure.                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | Scope (Optional) | Blank                                                                                                                                                                               | You can leave the field blank.                                                                     |
 | Grant Type       | The token is an authorization code.                                                                                                                                                  | Authorization code                                                                            |
 
@@ -128,14 +130,18 @@ To get a new access token for Postman, you must add the Azure AD authorization U
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Select **Authorization Code**, and Request access token locally.
+11. Add the **Client Secret** you generated from within the native app that you created in Azure. It should look something like:  
 
-12. Select **Request Token**.
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. Select **Authorization Code**, and Request access token locally.
+
+13. Select **Request Token**.
 
     ![Information for the access token](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Type your credentials in the Active AD authorization page. The list of tokens in Postman now contains the token named `Bearer`.
-14. Select **Use Token**. The list of headers contains the new key value of Authorization and the value `Bearer <your-authorization-token>`.
+14. Type your credentials in the Active AD authorization page. The list of tokens in Postman now contains the token named `Bearer`.
+15. Select **Use Token**. The list of headers contains the new key value of Authorization and the value `Bearer <your-authorization-token>`.
 
 #### Send the call to the endpoint using Postman
 
