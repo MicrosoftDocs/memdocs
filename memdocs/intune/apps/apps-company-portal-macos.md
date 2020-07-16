@@ -34,9 +34,9 @@ ms.collection: M365-identity-device-management
 To manage devices, install optional apps, and gain access to resources protected by Conditional Access on macOS devices with user affinity, users must install and sign in to the Company Portal app. You can provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.
 
 You can use any of the following options to install the Company Portal for macOS app:
-1. [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal)
-2. [Install Company Portal for macOS as a macOS LOB app](#install-company-portal-for-macos-as-a-macos-lob-app)
-3. [Install Company Portal for macOS by using a macOS Shell Script](#install-company-portal-for-macos-by-using-a-macos-shell-script)
+- [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal)
+- [Install Company Portal for macOS as a macOS LOB app](#install-company-portal-for-macos-as-a-macos-lob-app)
+- [Install Company Portal for macOS by using a macOS Shell Script](#install-company-portal-for-macos-by-using-a-macos-shell-script)
 
 To help keep the apps more secure and up to date once installed, the Company Portal app comes with Microsoft AutoUpdate (MAU).
 
