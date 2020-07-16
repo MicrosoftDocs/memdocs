@@ -242,6 +242,9 @@ After creating a CMG, you can modify some of its settings. Select the CMG in the
 
 - **Certificate file**: change the server authentication certificate for the CMG. This option is useful when updating the certificate before it expires.  
 
+  > [!NOTE]
+  > When you renew the server authentication certificate for the CMG, the FQDN specified for the certificate's Common Name (CN) is case-sensitive.  For example, if the certificate currently in use has a CN of `https://contoso-cmg.contoso.com`, create the new certificate with the same lowercase CN. The wizard won't accept a certificate with the CN `https://CONTOSO-CMG.CONTOSO.COM`.
+
 - **VM Instance**: change the number of virtual machines that the service uses in Azure. This setting allows you to dynamically scale the service up or down based on usage or cost considerations.  
 
 - **Certificates**: add or remove trusted root or intermediate CA certificates. This option is useful when adding new CAs, or retiring expired certificates.  

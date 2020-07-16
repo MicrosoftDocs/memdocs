@@ -151,7 +151,13 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 <!--6935376-->
 
 ### Improvements to managing device restarts
+
 <!--3601213-->
+
+Configuration Manager provides many options to manage device restart notifications. You can now configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
+
+For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
+
 
 
 ## <a name="bkmk_sum"></a> Software updates
@@ -170,8 +176,12 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ## Protection
 
 ### CMG support for endpoint protection policies
+
 <!--4773948-->
 
+While the cloud management gateway (CMG) has supported endpoint protection policies, devices required access to on-premises domain controllers. Starting in this release, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.
+
+For more information, see [CMG support for Configuration Manager features](../../clients/manage/cmg/plan-cloud-management-gateway.md#support-for-configuration-manager-features).
 
 <!-- 
 ## Reporting

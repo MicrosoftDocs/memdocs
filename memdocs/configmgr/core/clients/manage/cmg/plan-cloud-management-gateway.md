@@ -2,7 +2,7 @@
 title: Plan for cloud management gateway
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 06/10/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -49,7 +49,7 @@ There are several scenarios for which a CMG is beneficial. The following scenari
 
 - Install the Configuration Manager client on Windows 10 devices over the internet. Using Azure AD allows the device to authenticate to the CMG for client registration and assignment. You can install the client manually, or using another software distribution method, such as Microsoft Intune.  
 
-- New device provisioning with co-management. When auto-enrolling existing clients, CMG isn't required for co-management. It is required for new devices involving Windows AutoPilot, Azure AD, Microsoft Intune, and Configuration Manager. For more information, see [Paths to co-management](../../../../comanage/quickstart-paths.md).
+- New device provisioning with co-management. When auto-enrolling existing clients, CMG isn't required for co-management. It is required for new devices involving Windows Autopilot, Azure AD, Microsoft Intune, and Configuration Manager. For more information, see [Paths to co-management](../../../../comanage/quickstart-paths.md).
 
 ### Specific use cases
 
@@ -218,7 +218,7 @@ The following table lists CMG support for Configuration Manager features:
 |Feature  |Support  |
 |---------|---------|
 | Software updates     | ![Supported](media/green_check.png) |
-| Endpoint protection     | ![Supported](media/green_check.png) <sup>[Note 1](#bkmk_note1)</sup> |
+| Endpoint protection     | ![Supported](media/green_check.png) <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
 | Hardware and software inventory     | ![Supported](media/green_check.png) |
 | Client status and notifications     | ![Supported](media/green_check.png) |
 | Run scripts     | ![Supported](media/green_check.png) |
@@ -252,12 +252,18 @@ The following table lists CMG support for Configuration Manager features:
 |![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
 
 #### <a name="bkmk_note1"></a> Note 1: Support for endpoint protection
+
+Starting in version 2006, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.<!--4773948-->
+
 <!-- 4350561 -->
-For domain-joined devices to apply endpoint protection policy, they require access to the domain. Devices with infrequent access to the internal network may experience delays in applying endpoint protection policy. If you require that devices immediately apply endpoint protection policy after they receive it, consider one of the following options:
+In version 2002 and earlier, for domain-joined devices to apply endpoint protection policy, they require access to the domain. Devices with infrequent access to the internal network may experience delays in applying endpoint protection policy. If you require that devices immediately apply endpoint protection policy after they receive it, consider one of the following options:
+
+- Update the site and clients to version 2006.
 
 - Use co-management and switch the [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) to Intune, and manage [Microsoft Defender Antivirus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) from the cloud.
 
 - Use [configuration items](../../../../compliance/deploy-use/create-configuration-items.md) instead of the native [antimalware polices](../../../../protect/deploy-use/endpoint-antimalware-policies.md) feature to apply endpoint protection policy.
+
 
 ## Cost
 
