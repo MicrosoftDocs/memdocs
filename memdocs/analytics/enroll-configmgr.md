@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 06/25/2020
+ms.date: 07/16/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -34,7 +34,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
 > [!Important]  
-> If you have co-management enabled, enrolled devices that meet Intune requirements will send required functional data directly to Microsoft public cloud. See [requirements](overview.md#bkmk_intune_prereq)
+> If you have co-management enabled, enrolled devices that meet the Intune requirements will send required functional data directly to Microsoft public cloud. For more information, see [requirements for devices managed by Intune](overview.md#bkmk_intune_prereq).
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
