@@ -37,14 +37,15 @@ Store a FileVault key for your personally encrypted macOS device. In addition to
 * Easily and quickly retrieve or rotate the key from any device. 
 * Ask your support person for help if you need to retrieve or rotate the key and can't access the apps or website to do it yourself.
 
+
+## Retrieve or rotate the key
+
 If you get locked out of your device, you can retrieve your key from the following locations:
    
 - Company Portal website
 - Company Portal app for iOS/iPadOS 
 - Company Portal app for Android
 - Intune app
-
-## Recovery key visibility and privacy
  
  IT support people with administrator access to Intune can rotate your personal recovery key for you if you get locked out of your device. 
 
