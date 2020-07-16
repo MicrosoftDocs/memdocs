@@ -96,7 +96,7 @@ the support libraries.
 
 #### ProGuard
 
-If [ProGuard](http://proguard.sourceforge.net/) (or any other shrinking/obfuscation mechanism) is used as a build step, 
+If [ProGuard](https://www.guardsquare.com/en/products/proguard) (or any other shrinking/obfuscation mechanism) is used as a build step, 
 the SDK has additional configuration rules which must be included. When including the .AAR in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
