@@ -136,7 +136,7 @@ Starting in version 1806, the following columns are available in the **Devices**
     > [!NOTE]  
     > Viewing the currently logged on user requires [user discovery](../deploy/configure/configure-discovery-methods.md#bkmk_config-adud) and [user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
 
-For more information on how to show a non-default column, see [Columns](#columns).
+For more information on how to show a non-default column, see [How to use the admin console](admin-console.md#columns).
 
 ### Improvement to device search performance
 
