@@ -128,7 +128,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       >
       > The **Managed Home Screen** app isn't required to be in the configuration profile, but it's required to be added as an app. When the **Managed Home Screen** app is added, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
       >
-      > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
+      > When using multi-app kiosk mode, dialer/phone apps may not function properly.
+      >
+      > For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Add**: Select your apps from the list.
 
