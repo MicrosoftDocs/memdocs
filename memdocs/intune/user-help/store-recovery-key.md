@@ -51,15 +51,13 @@ If you get locked out of your device, you can retrieve your key from the followi
 
 
 ## Do I need to store my key?  
-An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android if that is how your organization's IT people communicates with you. You won't receive a notification from the Intune or Company Portal apps. 
+An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android, if that's how your organization's IT department normally communicates with you. 
 
 We only recommend uploading a recovery key if you fall into one of the following categories:
 * You encrypted your device before you enrolled it with your organization. 
-* You encrypted your device manually through the System Preferences app. 
+* You encrypted your device manually through macOS system preferences.   
 
 Depending on your organization's policies, you might be blocked from accessing corporate resources on your device until you've uploaded your key.  
-
-
 
 ## Upload personal recovery key 
 Complete these steps to save the personal FileVault key for your encrypted Mac device.  
