@@ -47,6 +47,7 @@ Intune supports import of PFX certificates for the following platforms:
 - Android - Device Administrator
 - Android Enterprise - Fully Managed
 - Android Enterprise - Work profile
+- Android Enterprise - Corporate-owned work profile
 - iOS/iPadOS
 - macOS
 - Windows 10
