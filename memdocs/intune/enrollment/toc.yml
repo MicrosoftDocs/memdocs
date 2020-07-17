@@ -77,7 +77,7 @@
     - name: Android Enterprise fully managed enrollment
       href: android-fully-managed-enroll.md
       displayName: gms
-    - name: Enroll Android Enterprise dedicated devices or fully managed devices
+    - name: Enroll dedicated, fully managed, or corporate-owned work profile devices
       href: android-dedicated-devices-fully-managed-enroll.md
     - name: Android device administrator enrollment
       href: android-enroll-device-administrator.md
