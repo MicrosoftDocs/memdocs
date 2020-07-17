@@ -82,7 +82,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 9. Complete the wizard.
 10. You can deploy or edit the application from **Software Library** > **Overview** > **Application Management** > **Applications**.
 
-After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager won't manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#deploy-office-365-updates).
+After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager won't manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#bkmk_update).
 
 After you deploy Microsoft 365 Apps, you can create automatic deployment rules to maintain the apps. To create an automatic deployment rule for Microsoft 365 Apps, click **Create an ADR** from the [Office 365 Client Management dashboard](office-365-dashboard.md). Select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](automatically-deploy-software-updates.md).
 
@@ -126,7 +126,7 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 >
 > If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
 >
-> If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#updating-office-365-proplus-in-a-task-sequence).
+> If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
 When you deploy an update to an Microsoft 365 Apps client, the restart behavior and client notifications are different depending on the version of Configuration Manager. The following table provides information about the end-user experience when the client receives an Microsoft 365 Apps update:
@@ -197,8 +197,8 @@ Use the following procedure on the software update point at the central administ
 11. Now when you download Microsoft 365 Apps updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and look for files with the language code in the filename.  
     ![Filenames with additional languages](../media/5-verification.png)
 
-## Updating Microsoft 365 Apps in a task sequence
-When using [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step to Install Microsoft 365 Apps updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once (see the note in [Deploy Microsoft 365 Apps updates](manage-office-365-proplus-updates.md#deploy-office-365-updates)). For example, this might happen if Microsoft 365 Apps was installed immediately before running this step.
+## <a name="bkmk_ts"></a> Updating Microsoft 365 Apps in a task sequence
+When using [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step to Install Microsoft 365 Apps updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once (see the note in [Deploy Microsoft 365 Apps updates](manage-office-365-proplus-updates.md#bkmk_update)). For example, this might happen if Microsoft 365 Apps was installed immediately before running this step.
 
 To ensure that the update channel is set so that deployed updates will be properly detected, use one of the following methods:
 

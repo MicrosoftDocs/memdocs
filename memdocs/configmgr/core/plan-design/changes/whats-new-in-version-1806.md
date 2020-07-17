@@ -291,7 +291,7 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 <!--1358149-->
 The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
 
-For more information, see [Deploy Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+For more information, see [Deploy Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### Support for new Windows app package formats
