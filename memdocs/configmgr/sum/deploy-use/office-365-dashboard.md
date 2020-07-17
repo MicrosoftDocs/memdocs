@@ -154,11 +154,11 @@ After verifying you have the [prerequisites](#prerequisites), use the following 
 1. Select the **Microsoft 365 Apps Upgrade Readiness** node.
 1. Change the **Collection** and **Target Office Architecture** to change the information relayed in the dashboard.
 
-![Microsoft 365 Apps upgrade readiness dashboard](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![Microsoft 365 Apps upgrade readiness dashboard](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Microsoft 365 Apps upgrade readiness dashboard](./media/4021125-office-365-to-add-ins.png)
+[![Microsoft 365 Apps upgrade readiness dashboard add ins](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Microsoft 365 Apps upgrade readiness dashboard](./media/4021125-office-365-macro-advisories.png)
+[![Microsoft 365 Apps upgrade readiness dashboard macro advisories](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### Device Readiness information
 
