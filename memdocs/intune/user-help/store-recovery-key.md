@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Store a recovery key   
+title: Store a recovery key in Intune through the Company Portal website 
 description: Upload and store your device recovery key from the Company Portal website.   
 keywords:
 author: lenewsad
@@ -51,7 +51,7 @@ If you get locked out of your device, you can retrieve your key from the followi
 
 
 ## Do I need to store my key?  
-An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android, if that's how your organization's IT department normally communicates with you. 
+An IT support person will let you know if you're required to upload a personal recovery key. You may receive a notification from the Company Portal apps for iOS/iPadOS or Android if that's how your organization's IT department normally communicates with you. 
 
 We only recommend uploading a recovery key if you fall into one of the following categories:
 * You encrypted your device before you enrolled it with your organization. 
@@ -63,12 +63,12 @@ Depending on your organization's policies, you might be blocked from accessing c
 Complete these steps to save the personal FileVault key for your encrypted Mac device.  
 
 
-1. Go to the [Company Portal website](https://portal.manage.microsoft.com) and sign  with your school or work account. 
+1. Go to the [Company Portal website](https://portal.manage.microsoft.com) and sign in with your school or work account. 
 2. Select your encrypted device.
 3. Select **Store recovery key**.  
 4. Enter your 24-character, alphanumeric FileVault key.  
 5. Enter the key again. Then select **Save**.
-6. Company Portal will attempt to verify, rotate, and save your personal recovery key. No further action is needed once the key has been saved. If you leave the website before the upload is complete, the status will be available on the device details page the next time you sign in.  
+6. Company Portal will attempt to verify, rotate, and save your personal recovery key. No further action is needed once the key has been saved. If you leave the website before the upload is complete, you can view its status on the device details page the next time you sign in.  
 
 For more information about the messages you may see during this process, see [Company Portal messages](store-recovery-key.md#company-portal-messages).  
 
@@ -85,7 +85,7 @@ For more information about the messages you may see during this process, see [Co
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage File Vault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
+If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
 
 ## Next steps
 
