@@ -72,6 +72,6 @@ When this setting is set to **Yes**, it provides you with an enrollment token (a
 You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md) (but not when using DEM accounts).
 
 ## Next steps
-- [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Configure app configuration policies for Android Enterprise fully managed devices](../apps/app-configuration-policies-use-android.md)
 
