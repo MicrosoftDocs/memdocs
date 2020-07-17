@@ -43,9 +43,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
    - **Platform**: Choose the platform of your devices.
    - **Profile**: Select **SCEP certificate**
 
-     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Device Owner Only* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
 
-     SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
+     SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
       1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
 
@@ -115,7 +115,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
          That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
          
-         \* For Android Device Owner Only profiles, the **CN={{UserPrincipalName}}** setting will not work. Android Device Owner Only profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
+         \* For Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles, the **CN={{UserPrincipalName}}** setting will not work. Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
 
       - **Device certificate type**
 
