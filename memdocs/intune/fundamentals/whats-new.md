@@ -192,7 +192,7 @@ You can now use derived credentials with your Windows devices. This will  expand
 Support for Widows includes use of a derived credential to authenticate to Wi-Fi or VPN profiles. For Windows devices, the derived credential is issued from the client app that's provided by the derived credential provider that you use.
 
 #### Manage FileVault encryption for devices that were encrypted by the device user and not by Intune<!--5239424  -->
-Intune can now [assume management of FileVault disk encryption on a macOS device that was encrypted by the device user](../policy/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices), and not by Intune policy.  This scenario requires:
+Intune can now [assume management of FileVault disk encryption on a macOS device that was encrypted by the device user](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices), and not by Intune policy.  This scenario requires:
 - The device to receive disk encryption policy from Intune that enables FileVault.
 - The device user to use the Company Portal website to upload their personal recovery key for the encrypted device to Intune. To upload the key, they select the *Store recovery key* option for their encrypted macOS device.
 
@@ -203,7 +203,7 @@ After the user uploads their recovery key, Intune rotates the key to confirm it 
 - Intune app
 
 #### Hide the personal recovery key from a device user during macOS FileVault disk encryption<!--  5475632-->
-When you use endpoint security policy to configure macOS FileVault disk encryption, use the [**Hide recovery key**](../protect/endpoint-securitydisk-encryption-profile-settings.md#filevault) setting to prevent display of the *personal recovery key* to the device user, while the device is being encrypted. By hiding the key during encryption, you can help keep it secure as users won’t be able to write it down while waiting for the device to encrypt. 
+When you use endpoint security policy to configure macOS FileVault disk encryption, use the [**Hide recovery key**](..protect/endpoint-security-disk-encryption-profile-settings#filevault) setting to prevent display of the *personal recovery key* to the device user, while the device is being encrypted. By hiding the key during encryption, you can help keep it secure as users won’t be able to write it down while waiting for the device to encrypt. 
 
 Later, if recovery is needed, a user can always use any device to view their personal recovery key through the Intune Company Portal website, the iOS/iPadOS Company Portal, the Android Company Portal, or the Intune app.
 
