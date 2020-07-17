@@ -103,8 +103,11 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between May 16 and June 22, 2020.
+Support articles that are new or updated between May 16 and July 17, 2020.
 
+- [KB 4560496 Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513 "Not found" error when you try to edit Update Application Catalog Tables](https://support.microsoft.com/help/4569513)
+- [KB 4574419 Timeout error in the Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4574416)
 - [KB 4564442 Windows 10 deployments fail with Microsoft Deployment Toolkit on computers with BIOS type firmware](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473)
 - [KB 4567007 PXE Boot failures or task sequence delays after updating to Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4567007)
