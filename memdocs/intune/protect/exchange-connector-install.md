@@ -8,7 +8,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 07/17/2020
+
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,6 +32,13 @@ ms.collection: M365-identity-device-management
 
 # Set up the on-premises Intune Exchange connector
 
+> [!IMPORTANT]
+> The information in this article applies to customers who are supported to use an Exchange Connector.
+>
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
+>
+>Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+
 To help protect access to Exchange, Intune relies on an on-premises component that's known as the Microsoft Intune Exchange connector. This connector is also called the *Exchange ActiveSync on-premises connector* in some locations of the Intune console.
 
 > [!IMPORTANT]
@@ -52,6 +60,35 @@ Follow these general steps to set up a connection that enables Intune to communi
 2. Install and configure the Exchange connector on a computer in the on-premises Exchange organization.
 3. Validate the Exchange connection.
 4. Repeat these steps for each additional Exchange organization you want to connect to Intune.
+
+## How conditional access for Exchange on-premises works
+
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
+
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
+
+> [!div class="mx-imgBorder"]
+> ![Exchange on-premises with CA flow-chart](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
+
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
+
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
+
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
+
+5. The device gets enrolled into Intune.
+
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
+
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
+
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
 
 ## Intune Exchange connector requirements
 

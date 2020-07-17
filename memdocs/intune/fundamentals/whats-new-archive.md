@@ -805,7 +805,7 @@ We've added the following support for Android Fully Managed devices:
     - link SCEP certificates to DO Email profiles for authentication (via AppConfig)
 - System apps are supported on Android Enterprise devices. In Intune, add an Android Enterprise system app by selecting **Client apps** > **Apps** > **Add**. In the **App type** list, select **Android Enterprise system app**. For more information, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md). <!-- 4062195 -->
 - In **Device compliance** > **Android Enterprise** > **Device Owner**, you can create a compliance policy that sets the Google SafetyNet attestation level.   <!-- 4631425 -->
-- On Android Enterprise fully managed devices, the mobile threat defense providers is supported. In **Device compliance** > **Android Enterprise** > **Device Owner**, you can choose an acceptable threat level. <!-- 4631440 --> [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) lists the current settings.
+- On Android Enterprise fully managed devices, the mobile threat defense providers is supported. In **Device compliance** > **Android Enterprise** > **Device Owner**, you can choose an acceptable threat level. <!-- 4631440 --> [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md) lists the current settings.
 - On Android Enterprise fully managed devices, the Microsoft Launcher app can now be configured via app configuration policies to allow a standardized end-user experience on the fully managed device. The Microsoft Launcher app can be used to personalize your Android device. Using the app along with a Microsoft account or work/school account, you can access your calendar, documents, and recent activities in your personalized feed. <!-- 5334044 -->
 
 With this update we are happy to announce that Intune support for Android Enterprise Fully Managed is now generally available.
@@ -837,7 +837,7 @@ Use Intune Endpoint Protection settings to configure [Client-driven recovery pas
 This setting initiates a client-driven recovery password refresh after an OS drive recovery (either by using bootmgr or WinRE) and recovery password unlock on a Fixed data drive. This setting refreshes the specific recovery password that was used, and other unused passwords on the volume remain unchanged. For more information see the BitLocker CSP documentation for [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### Tamper Protection for Windows Defender Antivirus<!-- 4705448        -->
-Use Intune to manage *Tamper Protection* for Windows Defender Antivirus. You'll find the [setting for Tamper Protection](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in the Microsoft Defender Security Center group when you use device configuration profiles for Windows 10 endpoint protection. You can set Tamper Protection to *Enabled* to turn on Temper Protection restrictions, set *Disabled* to turn them off, or set*Not configured* to leave a devices current configuration in place.  
+Use Intune to manage *Tamper Protection* for Windows Defender Antivirus. You'll find the [setting for Tamper Protection](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) in the Microsoft Defender Security Center group when you use device configuration profiles for Windows 10 endpoint protection. You can set Tamper Protection to **Enabled** to turn on Temper Protection restrictions, set **Disabled** to turn them off, or set **Not configured** to leave a device's current configuration in place.  
 
 For more information about Tamper Protection, see [Prevent security settings changes with tamper protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) in the Windows documentation.
 
@@ -1630,7 +1630,7 @@ You can now deploy Microsoft Visio Pro for Office 365 and Microsoft Project Onli
 **Microsoft Visio Pro for Office 365** will now be known as **Microsoft Visio Online Plan 2**.  For more information about Microsoft Visio, see [Visio Online Plan 2](https://products.office.com/visio/visio-online-plan-2). For more information about Office 365 apps for Windows 10 devices, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
 
 #### Intune app protection policy (APP) character limit setting<!-- 3291302  -->
-Intune admins can specify an exception to the Intune APP  **Restrict cut, copy, and paste with other apps** policy setting.  As the admin, you can specify the number of characters that may be cut or copied from a managed app. This setting will allow sharing of the specified number of characters to any app, regardless of the "Restrict cut, copy, and paste with other apps" setting. Note that the Intune Company Portal app version for Android requires version 5.0.4364.0 or later. For more information, see [iOS data protection](../apps/app-protection-policy-settings-ios.md#data-protection), [Android data protection](../apps/app-protection-policy-settings-android.md#data-protection), and [Review client app protection logs](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings).
+Intune admins can specify an exception to the Intune APP  **Restrict cut, copy, and paste with other apps** policy setting.  As the admin, you can specify the number of characters that may be cut or copied from a managed app. This setting will allow sharing of the specified number of characters to any app, regardless of the "Restrict cut, copy, and paste with other apps" setting. Note that the Intune Company Portal app version for Android requires version 5.0.4364.0 or later. For more information, see [iOS data protection](../apps/app-protection-policy-settings-ios.md#data-protection), [Android data protection](../apps/app-protection-policy-settings-android.md#data-protection), and [Review client app protection logs](../apps/app-protection-policy-settings-log.md).
 
 #### Office Deployment Tool (ODT) XML for Office ProPlus deployment<!-- 3192477   -->
 You will be able to provide Office Deployment Tool (ODT) XML when creating an instance of Office Pro Plus in the Intune admin console. This will allow greater customizability if the existing Intune UI options do not meet your needs. For more information, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md) and [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
@@ -3934,7 +3934,7 @@ You can define enterprise cloud resources, IP address ranges, and internal proxy
 #### Two additional settings for Windows Defender Antivirus<!-- 1338409 -->  
 **File blocking level**
 
-| | |
+| Setting | Details |
 |---|---|
 | Not Configured | **Not Configured** uses the default Windows Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. |
 | High | **High** applies a strong level of detection.
@@ -3946,7 +3946,7 @@ We recommend you set File blocking level to the default, **Not configured**.
 
 **Time out extension for file scanning by the cloud**  
 
-| | |
+| Setting | Detail |
 |--|--|
 | Number of seconds (0-50) | Specify the maximum amount of time that Windows Defender Antivirus should block a file while waiting for a result from the cloud. The default amount is 10 seconds: any additional time specified here (up to 50 seconds) is added to those 10 seconds. In most cases, the scan takes much less time than the maximum. Extending the time allows the cloud to thoroughly investigate suspicious files. We recommend that you enable this setting and specify at least 20 additional seconds. |
 

@@ -72,7 +72,7 @@ Wi-Fi profiles support the following device platforms:
 
       > [!TIP]
       >
-      > - For **Android Enterprise** devices running as a dedicated device (kiosk), choose **Device owner only** > **Wi-Fi**.
+      > - For **Android Enterprise** devices running as a dedicated device (kiosk), choose **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi**.
       > - For **Windows 8.1 and newer**, you can choose **Wi-Fi import**. This option lets you import Wi-Fi settings as an XML file that you previously exported from a different device.
 
 4. Select **Create**.
