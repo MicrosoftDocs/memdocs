@@ -202,7 +202,7 @@ After the user uploads their recovery key, Intune rotates the key to confirm it 
 - Company Portal app for Android
 - Intune app
 
-#### Hide the personal recovery key from a device user during macOS FileVault disk encryption<!--  5475632   -->
+#### Hide the personal recovery key from a device user during macOS FileVault disk encryption<!--  5475632-->
 When you use endpoint security policy to configure macOS FileVault disk encryption, use the [**Hide recovery key**](../protect/endpoint-securitydisk-encryption-profile-settings.md#filevault) setting to prevent display of the *personal recovery key* to the device user, while the device is being encrypted. By hiding the key during encryption, you can help keep it secure as users won’t be able to write it down while waiting for the device to encrypt. 
 
 Later, if recovery is needed, a user can always use any device to view their personal recovery key through the Intune Company Portal website, the iOS/iPadOS Company Portal, the Android Company Portal, or the Intune app.
