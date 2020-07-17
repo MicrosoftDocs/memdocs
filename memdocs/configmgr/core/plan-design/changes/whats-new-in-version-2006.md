@@ -171,7 +171,13 @@ For more information, see [device restart notifications](../../clients/deploy/de
 
 ### Microsoft 365 Apps for enterprise
 <!--6298093-->
+Office 365 ProPlus was renamed to Microsoft 365 Apps for enterprise on April 21, 2020. Starting in version 2006, the following changes have been made:
 
+- The Configuration Manager console has been updated to use the new name.
+   - This change also includes update channel names for Microsoft 365 Apps.
+- A banner notification was added to the console to notify you if one or more automatic deployment rules reference obsolete channel names in the **Title** criteria for Microsoft 365 Apps updates.
+
+For more information, see [Microsoft 365 Apps channel names](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) and [Microsoft 365 Apps readiness dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 ## Protection
 
