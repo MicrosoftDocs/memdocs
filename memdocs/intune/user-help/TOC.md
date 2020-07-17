@@ -171,6 +171,7 @@
 
 ## [Using the Intune Company Portal website](using-the-intune-company-portal-website.md)
 ### [Manage apps](manage-apps-cpweb.md)  
+### [Store recovery key](store-recovery-key.md)
 ### [Get recovery key](get-recovery-key-cpweb.md)
 ### [Remote lock device](remote-lock-your-device-cpwebsite.md)  
 ### [Rename device](rename-your-device-cpwebsite.md)  
