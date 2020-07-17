@@ -2,10 +2,10 @@
 title: Set up BitLocker portals
 titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
@@ -26,7 +26,9 @@ To use the following BitLocker management components in Configuration Manager, y
 You can install the portals on an existing site server or site system server with IIS installed, or use a standalone web server to host them.
 
 > [!NOTE]
-> Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
+> Starting in version 2006, you can install the BitLocker self-service portal and the administration and monitoring website at the central administration site.<!-- 5925693 -->
+>
+> In version 2002 and earlier, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 Before you start, confirm the [prerequisites](../../plan-design/bitlocker-management.md#prerequisites) for these components.
 

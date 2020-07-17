@@ -183,6 +183,15 @@ While the cloud management gateway (CMG) has supported endpoint protection polic
 
 For more information, see [CMG support for Configuration Manager features](../../clients/manage/cmg/plan-cloud-management-gateway.md#support-for-configuration-manager-features).
 
+### BitLocker management support for hierarchies
+
+<!-- 5925693 -->
+
+You can now install the BitLocker self-service portal and the administration and monitoring website at the central administration site.
+
+For more information, see [Set up BitLocker portals](../../../protect/deploy-use/bitlocker/setup-websites.md).
+
+
 <!-- 
 ## Reporting
 -->
