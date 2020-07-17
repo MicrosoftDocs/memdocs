@@ -334,23 +334,29 @@ See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program]
 > [!NOTE]
 > In addition to renewing your ADE token yearly, you'll need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
 
-1. Go to business.apple.com.  
-2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
-3. Choose **Generate New Token**.
+1. Go to business.apple.com. 
+2. Click on Settings (Bottom Left) 
+3. Under **MDM Servers**, choose your MDM server associated with the token file that you want to renew.
+4. Choose **Download Token**
 
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Choose **Your Server Token**.  
-5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose the token.
+5. At the prompt select "Download Server Token"
+
+>[!NOTE]
+>Do not click "Download server token" if you do not intent to renew the token, as mentioned in the prompt, doing so will invalidate the token currently being used by Intune (or any other MDM solution for that matter). If you already downloaded the token, makes sure you continue with the next steps until the token is renewed.
+
+6. Choose **Your Server Token**.  
+7. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Choose **Renew token** and enter the Apple ID used to create the original token.  
+8. Choose **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
+9. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
 
-8. Select **Next** and upload the newly downloaded token.  
-9. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
+10. Select **Next** and upload the newly downloaded token.  
+11. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## Delete an ADE token from Intune
