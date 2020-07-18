@@ -223,7 +223,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices. Your options:
      - Android device administrator
-     - Android Enterprise > Device owner only
+     - Android Enterprise > Fully Managed, Dedicated, and Corporate-Owned Work Profile
      - Android Enterprise > Work profile only
      - iOS/iPadOS
      - macOS
