@@ -62,7 +62,7 @@ When the email is sent, Intune includes details about the noncompliant device in
   The following platforms support this action:
   - Android:
     - Android device administrator
-    - Android Enterprise Device Owner
+    - Android Fully Managed, Dedicated, and Corporate-Owned Work Profile
     - Android Enterprise Work Profile
     - Android Enterprise kiosk devices
   - iOS/iPadOS

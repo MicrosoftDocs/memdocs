@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,9 +37,7 @@ Supported platforms and profiles:
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows 10 and Windows Server**: Use this platform for policy you deploy to devices managed by Configuration Manager.
-  - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
-  
-  *This platform and profile are in Public Preview*.
+  - Profile: **Endpoint detection and response (ConfigMgr)**
 
 ## Endpoint detection and response (MDM)
 
@@ -74,7 +72,7 @@ Supported platforms and profiles:
   - **Not configured**   (*default*)
   - **Yes** - Increase the Microsoft Defender Advanced Threat Protection telemetry reporting frequency.
 
-## Endpoint detection and response (ConfigMgr) (Preview)
+## Endpoint detection and response (ConfigMgr)
 
 **Endpoint detection and response**:
 

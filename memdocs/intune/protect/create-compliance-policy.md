@@ -79,7 +79,7 @@ To use device compliance policies, be sure you:
    - *Windows 10 and later*
 
     For *Android Enterprise*, you also select a **Policy type**:
-     - *Android device owner compliance policy*
+     - *Android fully managed, dedicated, and corporate-owned work profile policy*
      - *Android work profile compliance policy*
 
     Then, select **Create** to open the **Create policy** configuration window.
