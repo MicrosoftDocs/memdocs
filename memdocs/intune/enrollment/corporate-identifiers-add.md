@@ -53,7 +53,7 @@ This feature is supported for the following platforms:
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
 | Windows | Supported (Windows Phone) | Not supported |
-| iOS/macOS | Supported (not recommended)  | Supported (recommended) |
+| iOS/macOS | Not supported (see Important below)  | Supported |
 | Device admin managed Android OS v10 | Not supported | Not supported |
 | Other Android | Not supported | Supported |
 
