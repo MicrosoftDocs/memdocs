@@ -118,7 +118,8 @@ When you unenroll or wipe the device, the certificates are removed. The certific
 The following third-party certification authorities support Intune:
 
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [EJBCA](https://www.ejbca.org/)- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
+- [EJBCA](https://www.ejbca.org/)
+- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
