@@ -165,7 +165,7 @@ Validates a SCEP certificate request.
 
 **Parameters**:
 
-- **transactionId** - The SCEP Transaction Id
+- **transactionId** - The SCEP Transaction ID
 - **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
 
 **Throws**:
@@ -202,7 +202,7 @@ Notifies Intune that a certificate is created as part of processing a SCEP reque
 
 **Parameters**:
 
-- **transactionId** - The SCEP Transaction Id
+- **transactionId** - The SCEP Transaction ID
 - **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
 - **certThumprint** - SHA1 hash of the thumbprint of the provisioned certificate
 - **certSerialNumber** - Serial number of the provisioned certificate
@@ -241,7 +241,7 @@ Notifies Intune that an error occurred while processing a SCEP request. This met
 
 **Parameters**:
 
-- **transactionId** - The SCEP Transaction Id
+- **transactionId** - The SCEP Transaction ID
 - **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
 - **hResult** - Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](https://msdn.microsoft.com/library/cc231199.aspx)
 - **errorDescription** - Description of the error encountered
@@ -275,7 +275,7 @@ Use this method to inform the client that it must use the specified SSL socket f
 
 **Parameters**:
 
-1- **factory** - The SSL socket factory that the client should use for HTTPS requests
+- **factory** - The SSL socket factory that the client should use for HTTPS requests
 
 **Throws**:
 
