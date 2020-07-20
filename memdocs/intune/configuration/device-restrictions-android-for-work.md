@@ -139,11 +139,13 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
 
       - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
+        - Not configured 
         - Dark theme rectangle
         - Dark theme circle
         - Light theme rectangle
         - Light theme circle
       - **App and Folder icon size**: Select the size of the folder icon that's shown on the Managed Home Screen. Your options:
+        - Not configured 
         - Extra small
         - Small
         - Average
@@ -153,6 +155,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
           Depending on the screen size, the actual icon size may be different.
 
       - **Screen orientation**: Select the direction the Managed Home Screen is shown on devices. Your options:
+        - Not configured
         - Portrait
         - Landscape
         - Autorotate
@@ -208,7 +211,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
           **Export** your current list to a .csv file.
 
-        - **SSID**: You can also enter the Wi-Fi network names (SSID) that Managed Home Screen users can connect. Be sure to enter valid SSIDs.
+        - **SSID**: You can also enter the Wi-Fi network names (SSID) that Managed Home Screen users can connect to. Be sure to enter valid SSIDs.
 
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 
