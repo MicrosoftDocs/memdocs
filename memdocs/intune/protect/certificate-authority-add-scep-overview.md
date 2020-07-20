@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,10 +103,6 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
    
    The app registration process in Azure AD is complete.
 
-
-
-
-
 ### Configure and deploy a SCEP certificate profile
 As the administrator, create a SCEP certificate profile to target to users or devices. Then, assign the profile.
 
@@ -121,15 +117,16 @@ When you unenroll or wipe the device, the certificates are removed. The certific
 ## Third-party certification authority partners
 The following third-party certification authorities support Intune:
 
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [EJBCA](https://www.ejbca.org/)
 - [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
-- [EJBCA GitHub open-source version](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
-- [Sectigo](https://sectigo.com/products)
-- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [Sectigo](https://sectigo.com/products)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
