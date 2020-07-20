@@ -252,7 +252,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     If you see an error in the log, copy the time stamp of the error and unfilter the log. Then, use the "find" option with the time stamp to see what happened right before the error.
 
-### Issue 2: The Wi-Fi profile is deployed to the device, but the device can't connect to the network
+### The Wi-Fi profile is deployed to the device, but the device can't connect to the network
 
 Typically, this issue is caused by something outside of Intune. The following tasks may help you understand and troubleshoot connectivity issues:
 
