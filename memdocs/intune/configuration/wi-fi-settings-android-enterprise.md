@@ -37,14 +37,14 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 
 [Create a device profile](wi-fi-settings-configure.md).
 
-## Device owner only
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 Select this option if you are deploying to an Android Enterprise dedicated or fully managed device.  Android Enterprise dedicated and fully managed devices currently support SCEP certificate deployment, but not PKCS.
 
 ### Basic
 
 - **Wi-Fi type**: Choose **Basic**.
-- **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-FI connections. For example, enter **Contoso WiFi**.
+- **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **Wi-Fi type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:

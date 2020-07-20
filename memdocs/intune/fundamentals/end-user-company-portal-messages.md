@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high

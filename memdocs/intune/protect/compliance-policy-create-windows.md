@@ -248,7 +248,7 @@ Windows Holographic for Business uses the **Windows 10 and later** platform. Win
 
 - **System Security** > **Encryption** > **Encryption of data storage on device**.
 
-To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
+To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](https://docs.microsoft.com/hololens/security-encryption-data-protection).
 
 ## Surface Hub
 
