@@ -94,7 +94,7 @@ When Azure AD is configured to support a device compliance partner for *Mobility
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
-4. On **Assignments**, select the user groups that will have devices managed by this partner. With this assignment, you'll change the MDM authority for applicable devices to use this partner.
+4. On **Assignments**, select the user groups that will have devices managed by this partner. With this assignment, you'll change the MDM authority for applicable devices to use this partner. Users who have devices managed by the partner must also be assigned a license for Intune.
 
 5. On the **Review + create** page, review your selections, and then select **Create** to complete this configuration.
 
@@ -126,7 +126,10 @@ Refer to device compliance partners documentation for how to enroll devices with
 
 After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data,  you can view details about the devices in the Microsoft Endpoint Manager admin center.  
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **All devices**.  Devices that are managed by a third-party partner MDM authority, display the name of that partner in the **Managed by** column. 
+Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **All devices**.  Devices that are managed by a third-party partner MDM authority, display the name of that partner in the **Managed by** column.
+
+> [!NOTE]
+> Not all third-party compliance partners are identified in the admin center. If your devices aren't listed, you can sign in to the [Azure portal](https://portal.azure.com) to access your Intune subscription and view them.
 
 For more information about this view, see [Manage devices](../protect/endpoint-security-manage-devices.md).
 
