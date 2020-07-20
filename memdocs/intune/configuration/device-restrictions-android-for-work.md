@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,9 +35,18 @@ This article lists and describes the different settings you can control on Andro
 
 [Create a device configuration profile](device-restrictions-configure.md).
 
-## Device owner only
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise Fully Managed or Dedicated devices.
+These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
+
+Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates which enrollment types can use that setting.
+
+![Setting headers.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are marked with *(work profile-level)* descriptor in the user interface.
+
+![Setting headers.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### General
 
@@ -93,7 +102,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 ### Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated devices or fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
+Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
 
 **Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or Microsoft Managed Home Screen on your devices. Your options:
 
@@ -119,7 +128,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
       >
       > The **Managed Home Screen** app isn't required to be in the configuration profile, but it's required to be added as an app. When the **Managed Home Screen** app is added, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
       >
-      > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
+      > When using multi-app kiosk mode, dialer/phone apps may not function properly.
+      >
+      > For more information on the Managed Home screen, see [setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Add**: Select your apps from the list.
 
@@ -127,9 +138,31 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
 
+      - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
+        - Not configured 
+        - Dark theme rectangle
+        - Dark theme circle
+        - Light theme rectangle
+        - Light theme circle
+      - **App and Folder icon size**: Select the size of the folder icon that's shown on the Managed Home Screen. Your options:
+        - Not configured 
+        - Extra small
+        - Small
+        - Average
+        - Large
+        - Extra large
+
+          Depending on the screen size, the actual icon size may be different.
+
+      - **Screen orientation**: Select the direction the Managed Home Screen is shown on devices. Your options:
+        - Not configured
+        - Portrait
+        - Landscape
+        - Autorotate
+      - **App notification badges**: **Enable** shows the number of new and unread notifications on app icons. When set to **Not configured**, Intune doesn't change or update this setting.
       - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
         - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
-        - **Swipe up**: A home button shows when a user swipes up on the device.
+        - **Swipe-up**: A home button shows when a user swipes up on the device.
         - **Floating**: Shows a persistent, floating home button on the device.
 
       - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
@@ -154,7 +187,31 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >
         > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still swipe down to access the settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can also swipe down to access these settings.
+
+      - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
+
+        - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
+        - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
+
+        Using the debug menu, users can:
+
+        - See and upload Managed Home Screen logs​
+        - Open Google's Android Device Policy Manager app
+        - Open the [Microsoft Intune app](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Exit kiosk mode
+
       - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
+
+        - **Wi-Fi allow list**: Create a list of valid wireless network names, also known as the service set identifier (SSID). Managed Home Screen users can only connect to the SSIDs you enter.
+
+          When left blank, Intune doesn't change or update this setting. By default, all available Wi-Fi networks are allowed.
+
+          **Import** a .csv file that includes a list of valid SSIDs.
+
+          **Export** your current list to a .csv file.
+
+        - **SSID**: You can also enter the Wi-Fi network names (SSID) that Managed Home Screen users can connect to. Be sure to enter valid SSIDs.
 
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
 
@@ -162,17 +219,19 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Media volume control**: **Enable** shows the media volume control on the Managed Home Screen, and allows users to adjust the device's media volume using a slider. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the media volume control on Managed Home Screen. It prevents users from adjusting the device's media volume while using the Managed Home Screen, unless their hardware buttons support it.
 
+      - **Quick access to device information**: **Enable** allows users to swipe down to see the device information on the Managed Home Screen, such as the serial number, make and model number, and SDK level. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device information might not be shown.
+
       - **Screen saver mode**: **Enable** shows a screensaver on the Managed Home Screen when the device is locked or times out. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show a screensaver on the Managed Home Screen.
 
         When enabled, also configure:
 
-        - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. If you don't enter a URL, then the device's default image is used, if there's a default image. 
-        
+        - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. If you don't enter a URL, then the device's default image is used, if there's a default image.
+
           For example, enter:
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Any file resource URL that can be turned into a bitmap is supported.
@@ -184,9 +243,6 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 - **Fully managed**: Configures the Microsoft Launcher app on fully managed devices.
 
   - **Make Microsoft Launcher the default launcher**: **Enable** sets Microsoft Launcher as the default launcher on the home screen. If you make Launcher the default, users can't use another launcher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Microsoft Launcher isn't forced as the default launcher.
-
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
-
   - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
     - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
     - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
@@ -206,8 +262,8 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Bottom**: Search bar is shown at the bottom of devices.
     - **Hide**: Search bar is hidden.
 
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### Password
@@ -244,7 +300,7 @@ End of comment -->
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
   > [!NOTE]
-  > Device Owner devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
+  > Fully managed, dedicated, and corporate-owned work profile devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
 
 ### Power settings
 
@@ -259,7 +315,7 @@ End of comment -->
 - **Account changes** (dedicated devices only): **Block** prevents users from modifying accounts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
 
   > [!NOTE]
-  > This setting isn't honored on device owner (fully managed) devices. If you configure this setting, then the setting is ignored, and has no impact.
+  > This setting isn't honored on fully managed, dedicated, and corporate-owned work profile devices. If you configure this setting, then the setting is ignored, and has no impact.
 
 - **User can configure credentials**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.

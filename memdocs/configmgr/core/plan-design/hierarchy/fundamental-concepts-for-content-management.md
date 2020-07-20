@@ -2,7 +2,7 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Fundamental concepts for content management in Configuration Manager
@@ -82,7 +80,7 @@ The following lists summarize the differences between *binary differential repli
 - *Block*-level differences
 - Always enabled for apps
 - Optional on legacy packages
-- If a file already exists on the distribution point, and there's a change, the site uses BDR to replicate the block-level change instead of the entire file.
+- If a file already exists on the distribution point, and there's a change, the site uses BDR to replicate the block-level change instead of the entire file. This behavior only applies when you enable the object to use BDR.<!-- SCCMDocs#2026 -->
 
 #### Summary of delta replication
 
@@ -144,7 +142,7 @@ For more information, see [Support for Windows BranchCache](../configs/support-f
 <!-- 1324696 -->
 You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings.
 
-Delivery Optimization is the recommended technology to optimize Windows 10 update delivery of express installation files for Windows 10 quality updates. Starting in Configuration Manager version 1910, DeliveryInternet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Delivery Optimization is the recommended technology to optimize Windows 10 update delivery of express installation files for Windows 10 quality updates. Starting in Configuration Manager version 1910, Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## Microsoft Connected Cache
@@ -217,7 +215,9 @@ The following are locations that clients access content from:
 
 ## Content source priority
 
-When a client needs content, it makes a content location request to the management point. The management point returns a list of source locations that are valid for the requested content. This list varies depending upon the specific scenario, technologies in use, site design, boundary groups, and deployment settings. The following list contains all of the possible content source locations that a client can use, in the order in which it prioritizes them:  
+When a client needs content, it makes a content location request to the management point. The management point returns a list of source locations that are valid for the requested content. This list varies depending upon the specific scenario, technologies in use, site design, boundary groups, and deployment settings. For example, when a task sequence runs, the full Configuration Manager client isn't always running, so the behaviors may differ.<!-- SCCMDocs#1960 -->
+
+The following list contains all of the possible content source locations that the Configuration Manager client can use, in the order in which it prioritizes them:  
 
 1. The distribution point on the same computer as the client
 2. A peer source in the same network subnet

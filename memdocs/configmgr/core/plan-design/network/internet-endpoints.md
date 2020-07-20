@@ -2,7 +2,7 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 06/12/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -17,6 +17,13 @@ manager: dougeby
 Some Configuration Manager features rely on internet connectivity for full functionality. If your organization restricts network communication with the internet using a firewall or proxy device, make sure to allow these endpoints.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager uses the following Microsoft URL forwarding services throughout the product:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+Even if they're not explicitly listed in the sections below, you should always allow these endpoints.
 
 ## <a name="bkmk_scp"></a> Service connection point
 
@@ -225,6 +232,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
 
+- `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
+
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
@@ -262,6 +271,22 @@ If you use the **Geographical View**, allow access to the following endpoint:
 ## Desktop Analytics
 
 For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## Tenant attach
+
+For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
+## Endpoint analytics
+
+For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+## Asset intelligence
+
+<!-- memdocs#470 -->
+If you use [asset intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md), allow the following endpoints for the service to synchronize:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## Microsoft public IP addresses
 

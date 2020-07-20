@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,6 +41,7 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
+- CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and the Microsoft Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
 
 - Permissions for CMPivot:
   - **Read** permission on the **SMS Scripts** object
@@ -51,6 +52,8 @@ The following components are required to use CMPivot:
 
 >[!NOTE]
 > **Run Scripts** is a super set of the **Run CMPivot** permission.
+
+CMPivot and the Edge installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**.
  
 ## Limitations
 

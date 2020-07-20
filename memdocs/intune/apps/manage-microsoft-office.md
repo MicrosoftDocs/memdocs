@@ -112,7 +112,13 @@ These settings can be deployed to the app regardless of device enrollment status
 
 ### Manage file transfers
 
-By default, Office enables users to share files with nearby users and transfer files to the desktop systems.
+By default, Office for iOS and Android enables users to share content using a variety of mechanisms:
+
+- If the file is hosted in OneDrive or SharePoint, users can initiate a share request directly within the file.
+- Users can transfer files to desktop systems using the **Transfer Files** action.
+- Users can share files to nearby mobile devices using the **Share Nearby** action.
+
+The **Transfer Files** and **Share Nearby** actions only work with media, local files, and files that are not protected by an App Protection Policy. 
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|

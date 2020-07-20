@@ -232,8 +232,6 @@
       href: plan-design/security/plan-for-security.md
     - name: Security best practices and privacy information
       href: plan-design/security/security-best-practices-and-privacy-information.md
-    - name: Privacy statement - Configuration Manager Cmdlet Library
-      href: plan-design/security/privacy-statement-cmdlet-library.md
     - name: Additional privacy information
       href: plan-design/security/additional-privacy.md
     - name: Configure security
@@ -264,16 +262,14 @@
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2007 features
+      href: get-started/2020/technical-preview-2007.md
+    - name: 2006 features
+      href: get-started/2020/technical-preview-2006.md
     - name: 2005 features
       href: get-started/2020/technical-preview-2005.md
     - name: 2004 features
       href: get-started/2020/technical-preview-2004.md
-    - name: 2003 features
-      href: get-started/2020/technical-preview-2003.md
-    - name: 2002.2 features
-      href: get-started/2020/technical-preview-2002-2.md
-    - name: 2002 features
-      href: get-started/2020/technical-preview-2002.md
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -584,6 +580,8 @@
         href: servers/manage/introduction-to-reporting.md
       - name: Integrate with Power BI Report Server
         href: servers/manage/powerbi-report-server.md
+      - name: Install Power BI sample reports
+        href: servers/manage/powerbi-sample-reports.md
       - name: Plan for reporting
         items:
         - name: Plan for reporting

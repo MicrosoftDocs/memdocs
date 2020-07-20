@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/29/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -87,9 +87,10 @@ Microsoft supports each technical preview version up until three successive vers
 
 ### Active baseline versions
 
-Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version.
+Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version. The following Configuration Manager technical preview branch versions are available as both in-console updates and as new baseline versions:
 
-- **Technical preview version 2002**: The Configuration Manager technical preview branch version 2002 is available as both an in-console update and as a new baseline version.
+- **Technical preview version 2007**
+- **Technical preview version 2002**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -112,9 +113,49 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
+
+### Technical preview version 2007
+
+- [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Improvements to client data sources dashboard](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Fixed-width font now used in some console areas](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Manage task sequence policy size](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Improvements to device timeline in the admin center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+
+> [!NOTE]
+> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
+
+## Features in recent technical previews
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2002:
+
+> [!TIP]
+> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2006
+
+- [Use the Company Portal app on co-managed devices](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Improvements to available apps via CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranet clients can use a CMG software update point](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Improvements to task sequences via CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Management insights to optimize for remote workers](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Improvements to VPN boundary type](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [CMG support for endpoint protection policies](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Import previously created Azure AD application during tenant attach onboarding](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Improvements to client upgrade on a metered connection](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Improvements to managing device restarts](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Improved support for Windows Virtual Desktop](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Direct links to Configuration Manager Community hub items](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### Technical preview version 2005
 
@@ -134,22 +175,6 @@ The following features are available with the most recent Configuration Manager 
 - [Improvements to BitLocker task sequence steps](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [Improvements to the content library cleanup tool](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [Remove command prompt during Windows 10 in-place upgrade](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
-
-## Features in recent technical previews
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 2002:
-
-> [!TIP]
-> When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### Technical preview version 2004
 

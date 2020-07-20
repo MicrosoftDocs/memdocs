@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group with Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -243,6 +243,9 @@ Each replica member must have the following configuration:
 
 Either host all replicas in an availability group on-premises, or host them all on Microsoft Azure. A group that includes an on-premises member and a member in Azure isn't supported.
 
+> [!NOTE]
+> If you're using an Azure virtual machine for the SQL server, enable **floating IP**. For more information, see [Configure a load balancer for a SQL Server Always On availability group in Azure virtual machines](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+
 Configuration Manager setup needs to connect to each replica. When you set up an availability group in Azure, and the group is behind an internal or external load balancer, open the following default ports:
 
 - RPC Endpoint Mapper: **TCP 135**
@@ -251,11 +254,7 @@ Configuration Manager setup needs to connect to each replica. When you set up an
 
 - SQL over TCP: **TCP 1433**
 
-After setup completes, the following ports must stay open for Configuration Manager:  
-
-- SQL Server Service Broker: **TCP 4022**  
-
-- SQL over TCP: **TCP 1433**  
+After setup completes, these ports must stay open for Configuration Manager and replication link analyzer.<!-- MEMDocs#375 -->
 
 You can use custom ports for these configurations. Use the same custom ports by the endpoint and on all replicas in the availability group.
 

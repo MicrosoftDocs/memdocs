@@ -90,6 +90,8 @@
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
+        - name: Company Portal app - macOS
+          href: apps-company-portal-macos.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
@@ -135,8 +137,6 @@
           href: app-configuration-managed-home-screen-app.md
         - name: Configure the Company Portal
           href: company-portal-app.md
-        - name: Configure the Managed Browser
-          href: app-configuration-managed-browser.md
         - name: Configure Microsoft Launcher
           href: configure-microsoft-launcher.md
         - name: Configure Microsoft Edge

@@ -40,13 +40,15 @@ Possible configurations are:
 
 - **Intune co-management** - integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Mobile Device Management for Office 365** - If you have MDM for Office 365 activated, you will see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
+- **Basic Mobility and Security for Office 365** - If you have this configuration activated, you will see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
 
-- **Office 365 MDM Coexistence** - You can add Intune to your tenant if you are already using MDM for Office 365 and set the management authority to either Intune or MDM for Office 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by MDM for Office. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by MDM for Office, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace MDM for Office prior to switching users to Intune, otherwise their devices will lose MDM for Office configuration and will not receive any replacement from Intune.
+- **Basic Mobility and Security for Office 365 Coexistence** - You can add Intune to your tenant if you are already using Basic Mobility and Security for Office 365 and set the management authority to either Intune or Basic Mobility and Security for Office 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by Basic Mobility and Security for Office 365. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Office 365, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace Basic Mobility and Security for Office 365 prior to switching users to Intune, otherwise their devices will lose Basic Mobility and Security for Office 365 configuration and will not receive any replacement from Intune.
 
 ## Set MDM authority to Intune
 
-If you haven't yet set the MDM authority, follow the steps below.
+For tenants using the 1911 service release and later, the MDM authority is automatically set to Intune.
+
+For pre-1911 service release tenants, if you haven't yet set the MDM authority, follow the steps below.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:
@@ -81,7 +83,7 @@ The MDM certificate is renewed automatically when mobile devices are communicati
 
 ## Remove MDM authority
 
-The MDM authority can't be changed back to Unknown. The MDM authority is used by the service to determine which portal enrolled devices report to (Microsoft Intune or Office 365 MDM).
+The MDM authority can't be changed back to Unknown. The MDM authority is used by the service to determine which portal enrolled devices report to (Microsoft Intune or Basic Mobility and Security for Office 365).
 
 ## What to expect after changing the MDM authority
 

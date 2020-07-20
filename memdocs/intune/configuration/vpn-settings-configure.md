@@ -61,7 +61,7 @@ You can create VPN profiles using the following connection types:
 - Cisco AnyConnect
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise (fully managed and corporate-owned work profile)
   - iOS/iPadOS
   - macOS
 
@@ -84,7 +84,7 @@ You can create VPN profiles using the following connection types:
 - F5 Access
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise (fully managed and corporate-owned work profile)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -109,7 +109,7 @@ You can create VPN profiles using the following connection types:
 - Pulse Secure
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise device owner (fully managed)
+  - Android Enterprise (fully managed and corporate-owned work profile)
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1

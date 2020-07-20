@@ -51,9 +51,7 @@
   - name: Set rules on devices to allow access to resources
     items:
     - name: Compliance overview
-      href: device-compliance-get-started.md
-    - name: Device compliance partners
-      href: device-compliance-partners.md
+      href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
     - name: Location-based compliance
@@ -93,6 +91,8 @@
           href: endpoint-security-account-protection-policy.md
     - name: Microsoft Defender ATP
       href: advanced-threat-protection.md  
+    - name: Firewall rule migration
+      href: endpoint-security-firewall-rule-tool.md  
     - name: Encrypt disks
       items:
       - name: Manage BitLocker policy
@@ -260,6 +260,8 @@
         href: troubleshoot-scep-certificate-delivery.md
       - name: Reporting for certificate deployment
         href: troubleshoot-scep-certificate-reporting.md
+    - name: Troubleshoot PKCS certificate profiles
+      href: troubleshoot-pkcs-certificate-profiles.md
     - name: Troubleshoot Exchange connectors
       items:
       - name: Troubleshoot Exchange connectors

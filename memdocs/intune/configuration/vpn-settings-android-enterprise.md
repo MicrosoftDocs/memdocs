@@ -41,7 +41,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 [Create a device configuration profile](vpn-settings-configure.md), and choose **Android Enterprise**.
 
-## Device owner only
+## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the available VPN connections. For example, enter `Contoso VPN`.
 - **IP address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter **192.168.1.1** or **vpn.contoso.com**.

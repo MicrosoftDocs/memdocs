@@ -11,8 +11,53 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/intune/apps/app-configuration-managed-browser.md",
+            "redirect_url": "/mem/intune/apps/manage-microsoft-edge",
+            "redirect_document_id": false
+        },         
+        {
             "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
             "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
+            "redirect_url": "/mem/analytics/whats-new",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/misc/user-experience-analytics-preview.md",
+            "redirect_url": "/mem/analytics/overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection.md",
+            "redirect_url": "/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/tenant-attach/technical-reference.md",
+            "redirect_url": "/mem/configmgr/tenant-attach/troubleshoot",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/security/privacy-statement-cmdlet-library.md",
+            "redirect_url": "https://docs.microsoft.com/powershell/sccm/privacy-statement?view=sccm-ps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/getting-started-with-configuration-manager-and-windows-powershell.md",
+            "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/windows-powershell-basics.md",
+            "redirect_url": "https://docs.microsoft.com/powershell/scripting/learn/ps101/00-introduction?view=powershell-7",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md",
+            "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
             "redirect_document_id": false
         }
     ]

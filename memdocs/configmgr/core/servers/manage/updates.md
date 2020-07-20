@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -58,7 +58,7 @@ The following supported versions of Configuration Manager are currently availabl
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | April 1, 2020 | October 1, 2021 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | November 29, 2019 | May 29, 2021 | No | Yes |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | July 26, 2019 | January 26, 2021 | No | Yes |
-| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
+| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | March 27, 2019 | September 27, 2020 | Yes | Yes |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | November 27, 2018 | December 1, 2020 | No | Yes |
 
 The **Availability date** is when the [early update ring](checklist-for-installing-update-2002.md#early-update-ring) is released. Baseline media will be available on the Volume License Service Center after the update is globally available.
@@ -68,11 +68,11 @@ The **Availability date** is when the [early update ring](checklist-for-installi
 > [!Note]  
 > <sup>**Note 1:**</sup> The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
-> - System Center Config Mgr (current branch)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint Configmgr (current branch)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> For example, search the VLSC for `System Center Config Mgr (current branch)`. Find the baseline media in the list of files, and download for that release.  
+> For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.  
 
 #### Historical versions
 
