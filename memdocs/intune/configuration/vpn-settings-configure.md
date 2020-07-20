@@ -52,6 +52,7 @@ You can create VPN profiles using the following connection types:
 - Check Point Capsule VPN
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise (fully managed and corporate-owned work profile): Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -70,8 +71,8 @@ You can create VPN profiles using the following connection types:
 
 - Citrix SSO
   - Android device administrator
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
-  - Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise owner (fully managed and corporate-owned work profiles): Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -99,7 +100,8 @@ You can create VPN profiles using the following connection types:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise (fully managed and corporate-owned work profile): Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -118,6 +120,7 @@ You can create VPN profiles using the following connection types:
 - SonicWall Mobile Connect
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise (fully managed and corporate-owned work profile)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -125,7 +128,8 @@ You can create VPN profiles using the following connection types:
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise (fully managed and corporate-owned work profile): Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
