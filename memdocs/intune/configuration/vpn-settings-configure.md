@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,6 +52,7 @@ You can create VPN profiles using the following connection types:
 - Check Point Capsule VPN
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -61,7 +62,7 @@ You can create VPN profiles using the following connection types:
 - Cisco AnyConnect
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise (fully managed and corporate-owned work profile)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
 
@@ -70,8 +71,8 @@ You can create VPN profiles using the following connection types:
 
 - Citrix SSO
   - Android device administrator
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
-  - Android Enterprise device owner (fully managed): Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -84,7 +85,7 @@ You can create VPN profiles using the following connection types:
 - F5 Access
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise (fully managed and corporate-owned work profile)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -99,7 +100,8 @@ You can create VPN profiles using the following connection types:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -109,7 +111,7 @@ You can create VPN profiles using the following connection types:
 - Pulse Secure
   - Android device administrator
   - Android Enterprise work profiles
-  - Android Enterprise (fully managed and corporate-owned work profile)
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -118,6 +120,7 @@ You can create VPN profiles using the following connection types:
 - SonicWall Mobile Connect
   - Android device administrator
   - Android Enterprise work profiles
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -125,7 +128,8 @@ You can create VPN profiles using the following connection types:
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
+  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -139,8 +143,8 @@ You can create VPN profiles using the following connection types:
 
     - **Platform**: Choose the platform of your devices. Your options:
       - **Android device administrator**
-      - **Android Enterprise** > **Device owner only**
-      - **Android Enterprise** > **Work profile only**
+      - **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile**
+      - **Android Enterprise** > **Work profile**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 and later**
