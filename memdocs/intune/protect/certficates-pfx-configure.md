@@ -61,7 +61,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **Microsoft Intune Certificate Connector** (also called the *NDES Certificate Connector*):  
   In the Intune portal, go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install the connector for PKCS #12*. Use the download link in the portal to start download of the certificate connector installer **NDESConnectorSetup.exe**.  
 
-  Intune supports up to 100 instances of this connector per tenant. Each instance of the connecter must be on a separate Windows server. You can install an instance of this connector on the same server as an instance of the PFX Certificate Connector for Microsoft Intune. When you use multiple connectors, the connector infrastructure supports high availability and load balancing as any available connector instance can process your PKCS certificate requests. 
+  Intune supports up to 100 instances of this connector per tenant. Each instance of the connecter must be on a separate Windows server. You can install an instance of this connector on the same server as an instance of the PFX Certificate Connector for Microsoft Intune. When you use multiple connectors, the connector infrastructure supports redundancy and load balancing as any available connector instance can process your PKCS certificate requests. 
 
   This connector processes PKCS certificate requests used for authentication or S/MIME email signing.
 
@@ -70,9 +70,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **PFX Certificate Connector for Microsoft Intune**:  
   If you plan to use S/MIME email encryption, use the Intune portal to download the *PFX Certificate Connector* that supports import of PFX certificates.  Go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install connector for Imported PFX certificates*. Use the download link in the portal to start download of the installer **PfxCertificateConnectorBootstrapper.exe**.
 
-  Each Intune tenant supports a single instance of this connector. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
-
-  This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.  
+  This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector. 
 
   This connector can automatically update itself when new versions become available. To use the update capability, you must:
   - Install the PFX Certificate Connector for Microsoft Intune on your server.  
