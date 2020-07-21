@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -79,15 +79,35 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [What you need to know](#what-you-need-to-know) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
+## What you need to know
+
+- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment.
+
+- Microsoft Outlook for iOS/iPadOS and Android devices don't support email profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
+
+  On Android Enterprise devices, deploy Gmail or Nine for Work using the managed Google Play Store. [Add Managed Google Play apps](../apps/apps-add-android-for-work.md) lists the steps.
+
+- Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
+
+  - If the email profile includes user certificates, then assign the email profile to user groups. You may have multiple user certificate profiles that are assigned. These multiple profiles create a chain of profile deployments. Deploy this profile chain to user groups.
+
+    If one profile in this chain is deployed to a device group, users may be continuously prompted to enter their password.
+
+  - Device groups are typically used when there's not a primary user, or if you don't know who the user will be. Email profiles targeted to device groups (not user groups) may not be delivered to the device.
+
+    For example, if your email profile targets an all iOS/iPadOS devices group, be sure all these devices have a user. If any device doesn't have a user, the email profile may not deploy. Then, you limit the profile, and could miss some devices. If the device has a primary user, then deploying to device groups should work.
+
+    For more information on possible issues with using device groups, see [Common issues with email profiles](troubleshoot-email-profiles-in-microsoft-intune.md).
+
 ## Remove an email profile
 
-Email profiles are assigned to device groups, not user groups. There are different ways to remove an email profile from a device, even when there's only one email profile on the device:
+There are different ways to remove an email profile from a device, even when there's only one email profile on the device:
 
 - **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
@@ -99,7 +119,7 @@ You can help secure email profiles using the following options:
 
 - **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
 
-  If you use certificate based authentication for your email profile, deploy the email profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.
+  If you use certificate-based authentication for your email profile, then deploy the email profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure each device can recognize the legitimacy of your certificate authority.
 
   For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
 
@@ -115,7 +135,7 @@ If the user already configured an email account, then the email profile is assig
 
 - **Android Samsung Knox Standard**: An existing, duplicate email profile is detected based on the email address, and overwrites it with the Intune profile. Android doesn't use host name to identify the profile. Don't create multiple email profiles using the same email address on different hosts. The profiles overwrite each other.
 
-- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install in the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your users' devices. Then create and deploy the appropriate email profile. You can use Gmail and Nine email configuration profiles that will work for both Work Profile and Fully Managed, Dedicated, and Corporate-owned Work Profile enrollment types, including the use of certificate profiles on both email configuration types. Any Gmail or Nine policies that you have created under Device Configuration for Work Profiles will continue to apply to the device and it is not necessary to move them to app configuration policies. Email apps such as Nine Work may not be free. Review the app's licensing details, or contact the app company with any questions. 
+- **Android work profiles**: Intune provides two Android work email profiles: one for the Gmail app, and one for the Nine Work app. These apps are available in the Google Play Store, and install on the device work profile. These apps don't create duplicate profiles. Both apps support connections to Exchange. To use email connectivity, deploy one of these email apps to your user devices. Then, create and deploy the email profile. You can use Gmail and Nine email configuration profiles that work for Work Profile and Fully Managed, Dedicated, and Corporate-owned Work Profile enrollment types, including using certificate profiles on both email configuration types. Any Gmail or Nine policies that you create in Device Configuration for Work Profiles continue to apply to the device. It's not necessary to move them to app configuration policies. Email apps, such as Nine Work, may not be free. Review the app's licensing details, or contact the app company with any questions.
 
 ## Changes to assigned email profiles
 
