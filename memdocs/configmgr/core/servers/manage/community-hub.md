@@ -72,7 +72,8 @@ You can easily navigate to and reference items in the Configuration Manager cons
 
 For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`). If you have the Configuration Manager 2006 console installed, follow that link, and then select **Launch the Community hub**. The console opens directly to the script in the Community hub.
 
-> [!NOTE] You can't use the the local built-in administrator account when following a Community hub link.
+> [!Note]
+> You can't use the the local built-in administrator account when following a Community hub link.
 
 
 ## Next steps
