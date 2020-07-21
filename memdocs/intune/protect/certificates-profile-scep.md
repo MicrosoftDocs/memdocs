@@ -76,7 +76,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
      > [!NOTE]
      > On macOS, certificates you provision with SCEP are always placed in the *system keychain* of the device.
-
+ 
    - **Subject name format**:
 
      Select how Intune automatically creates the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
