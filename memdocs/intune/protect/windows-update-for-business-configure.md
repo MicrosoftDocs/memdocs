@@ -227,7 +227,7 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
 
 - Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
 
-- During the public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
+- While Windows 10 feature updates remains in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
 
 ### Create and assign Windows 10 feature updates
 
