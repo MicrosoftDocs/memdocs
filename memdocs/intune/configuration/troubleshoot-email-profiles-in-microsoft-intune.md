@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,25 +32,37 @@ ms.collection: M365-identity-device-management
 
 Review some common email profile issues, and how to troubleshoot and resolve them.
 
-## What you need to know
+## Users are repeatedly prompted to enter their password
 
-- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment. [Add email settings to devices](email-settings-configure.md) may be a good resource.
-- For Android Enterprise, deploy Gmail or Nine for Work using the managed Google Play Store. [Add Managed Google Play apps](../apps/apps-add-android-for-work.md) lists the steps.
-- Microsoft Outlook for iOS/iPadOS and Android don't support email profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
-- Email profiles targeted to device groups (not user groups) may not be delivered to the device. When the device has a primary user, then device targeting should work. If the email profile includes user certificates, be sure to target user groups.
-- Users may be repeatedly prompted to enter their password for the email profile. In this scenario, check all the certificates referenced in the email profile. If one of the certificates isn't targeted to a user, then Intune retries to deploy the email profile.
+Users are repeatedly prompted to enter their password for the email profile. If certificates are used to authenticate and authorize the user, check the assignments of all the certificate profiles. Typically, these certificate profiles are assigned to user groups, not device groups. If one of the certificate profiles isn't targeted to a user, then Intune keeps retrying to deploy the email profile.
+
+If the email profile chain is assigned to user groups, be sure your certificate profiles are also assigned to user groups.
+
+## Profiles deployed to device groups show errors and latency
+
+Email profiles are typically assigned to user groups. There may be some cases when they're assigned to device groups.
+
+- For example, you want to deploy a certificate-based email profile to only Surface devices, not desktops. In this scenario, device groups might make sense. Know that these devices may show as not compliant, may return errors, and may not get your email profiles immediately.
+
+  In this example, you create the email profile, and assign the profile to device groups. The device restarts, and there's a delay before a user signs in. During this delay, your PKCS certificate profile, which is assigned to user groups, is deployed. Since there's no user yet, the PKCS certificate profile causes the device to be not compliant. The Event Viewer may also show errors on the device.
+
+  To get compliant, the user signs in to the device, and syncs with Intune to receive the policies. Users can resync manually, or wait for the next sync.
+
+- For example, you're using dynamic groups. If Azure AD doesn't update the dynamic groups immediately, then these devices may show as uncompliant.
+
+In these scenarios, you decide if it's more important to use device groups, or more important to show all policies as compliant.
 
 ## Device already has an email profile installed
 
 If users create an email profile before enrolling in Intune or Office 365 MDM, the email profile deployed by Intune may not work as expected:
 
-- **iOS/iPadOS**: Intune detects an existing, duplicate email profile based on hostname and email address. The user-created email profile blocks the deployment of the Intune-created profile. This is a common problem as iOS/iPadOS users typically create an email profile, then enroll. The Company Portal app states that the user isn't compliant, and may prompt the user to remove the email profile.
+- **iOS/iPadOS**: Intune detects an existing, duplicate email profile based on hostname and email address. The user-created email profile blocks the deployment of the Intune-created profile. This scenario is a common problem as iOS/iPadOS users typically create an email profile, then enroll. The Company Portal app states that the user isn't compliant, and may prompt the user to remove the email profile.
 
   The user should remove their email profile so the Intune profile can be deployed. To prevent this issue, instruct your users to enroll, and allow Intune to deploy the email profile. Then, users can create their email profile.
 
 - **Windows**: Intune detects an existing, duplicate email profile based on hostname and email address. Intune overwrites the existing email profile created by the user.
 
-- **Samsung KNOX Standard**: Intune identifies a duplicate email account based on the email address, and overwrites it with the Intune profile. If the user configures that account, it's overwritten again by the Intune profile. This may cause some confusion to the user whose account configuration gets overwritten.
+- **Samsung KNOX Standard**: Intune identifies a duplicate email account based on the email address, and overwrites it with the Intune profile. If the user configures that account, it's overwritten again by the Intune profile. This behavior may cause some confusion to the user whose account configuration gets overwritten.
 
 Samsung KNOX doesn't use hostname to identify the profile. We recommend you don't create multiple email profiles to deploy to the same email address on different hosts, as they overwrite each other.
 
