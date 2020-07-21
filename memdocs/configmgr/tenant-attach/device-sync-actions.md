@@ -64,7 +64,7 @@ If you don't have co-management enabled, use the **Configure co-management** wiz
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 1. In the ribbon, click **Configure co-management** to open the wizard.
-1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
+1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China Cloud aren't supported.
 1. Click **Sign In**. Use your *Global Administrator* account to sign in.
 1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
