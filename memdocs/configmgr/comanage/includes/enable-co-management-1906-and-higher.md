@@ -9,7 +9,7 @@ ms.date: 07/31/2020
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
-1. On the **Subscription** page of the wizard, configure the The **Azure environment** to use. Choose one of the following environments:
+1. On the **Tenant onboarding** page of the wizard, configure the The **Azure environment** to use. Choose one of the following environments:
 
    - Azure Public Cloud
    - Azure US Government Cloud.<!--4075452-->
