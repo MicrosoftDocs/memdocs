@@ -75,7 +75,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
      > [!NOTE]
-     > On macOS, certificates you provision with SCEP are always placed in the *system keychain* of the device.
+     > On macOS, certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
  
    - **Subject name format**:
 
