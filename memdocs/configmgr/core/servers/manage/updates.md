@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -35,7 +35,7 @@ After you install a baseline version, additional versions of Configuration Manag
 
 - You install in-console updates to update the version of your top-level site.  
 
-- Updates you install at the central administration site automatically install at child primary sites. Control this timing by using a maintenance window at the primary site.  
+- Updates you install at the central administration site automatically install at child primary sites. Control this timing by using a service window at the primary site. For more information, see [Service Windows](service-windows.md).  
 
 - Manually update secondary sites to a new update version from within the console.  
 
