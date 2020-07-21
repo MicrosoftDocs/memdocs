@@ -74,15 +74,15 @@ Starting in version 2006, to simplify managing remote clients, create a boundary
 
 You can configure a VPN boundary in several ways:
 
-- **Auto detect VPN**: Configuration Manager detects any VPN solution that uses the point-to-point tunneling protocol (PPTP). If it doesn't detect your VPN, use one of the other options. The boundary value in the console list will be `AUT:1`.
+- **Auto detect VPN**: Configuration Manager detects any VPN solution that uses the point-to-point tunneling protocol (PPTP). If it doesn't detect your VPN, use one of the other options. The boundary value in the console list will be `Auto:On`.
 
-- **Connection name**: Specify the name of the VPN connection on the device. It's the name of the network adapter in Windows for the VPN connection. Configuration Manager matches the first 251 characters of the string, but doesn't support wildcard characters or partial strings. The boundary value in the console list will be `NAM:<name>`, where `<name>` is the connection name that you specify.
+- **Connection name**: Specify the name of the VPN connection on the device. It's the name of the network adapter in Windows for the VPN connection. Configuration Manager matches the first 250 characters of the string, but doesn't support wildcard characters or partial strings. The boundary value in the console list will be `Name:<name>`, where `<name>` is the connection name that you specify.
 
-  For example, you run the `ipconfig` command on the device, and one of the sections starts with: `PPP adapter ContosoVPN:`. Use the string `ContosoVPN` as the **Connection name**. It displays in the list as `NAM:ContosoVPN`.
+  For example, you run the `ipconfig` command on the device, and one of the sections starts with: `PPP adapter ContosoVPN:`. Use the string `ContosoVPN` as the **Connection name**. It displays in the list as `Name:CONTOSOVPN`.
 
-- **Connection description**: Specify the description of the VPN connection. Configuration Manager matches the first 251 characters of the string, but doesn't support wildcard characters or partial strings. The boundary value in the console list will be `DES:<description>`, where `<description>` is the connection description that you specify.
+- **Connection description**: Specify the description of the VPN connection. Configuration Manager matches the first 243 characters of the string, but doesn't support wildcard characters or partial strings. The boundary value in the console list will be `Description:<description>`, where `<description>` is the connection description that you specify.
 
-  For example, you run the `ipconfig /all` command on the device, and one of the connections includes the following line: `Description . . . . . . . . . . . : ContosoMainVPN`. Use the string `ContosoMainVPN` as the **Connection description**. It displays in the list as `DES:ContosoMainVPN`.
+  For example, you run the `ipconfig /all` command on the device, and one of the connections includes the following line: `Description . . . . . . . . . . . : ContosoMainVPN`. Use the string `ContosoMainVPN` as the **Connection description**. It displays in the list as `Description:CONTOSOMAINVPN`.
 
 > [!IMPORTANT]
 > To take full advantage of this feature, after you update the site, also update clients to the latest version. New functionality appears in the Configuration Manager console when you update the site and console. The complete scenario isn't functional until the client version is also the latest.
