@@ -65,7 +65,16 @@ Now when a client sends a location request, it includes additional information a
 For more information, see [Define boundaries](../../servers/deploy/configure/boundaries.md).
 
 ### Management insights to optimize for remote workers
+
 <!--6982226-->
+
+This release adds a new group of management insights, **Optimize for remote workers**. These insights help you create better experiences for remote workers and reduce load on your infrastructure. The insights in this release primarily focus on VPN:
+
+- **Define VPN boundary groups**
+- **Configure VPN connected clients to prefer cloud based content sources**
+- **Disable peer to peer content sharing for VPN connected clients**
+
+For more information, see [Management insights](../../servers/manage/management-insights.md).
 
 ### Improved support for Windows Virtual Desktop
 <!--6527576-->

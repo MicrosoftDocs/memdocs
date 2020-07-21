@@ -2,7 +2,7 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 05/07/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -20,55 +20,53 @@ Management insights in Configuration Manager provide information about the curre
 
 ## Review management insights
 
-To view the rules, your account needs the **read** permission on the **site** object.
+To view the insights, your account needs the **Read** permission on the **Site** object.
 
-1. Open the Configuration Manager Console.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.
 
-2. Go to the **Administration** workspace, expand **Management Insights**, and select **All Insights**.  
+    > [!NOTE]
+    > When you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).
 
-    > [!Note]  
-    > When you select the **Management Insights** node, it shows the [Management insights dashboard](#bkmk_insights).  
+1. Open the management insights group name you want to review.
 
-3. Open the management insights group name you want to review. Select **Show Insights** in the ribbon.  
+1. In the ribbon, select **Show Insights**.
 
 The following four tabs are available for review:
 
-- **All Rules**: Gives the complete list of rules for the management insight group chosen.  
+- **All Rules**: Gives the complete list of insights for the chosen group.
 
-- **Complete**:  Lists rules where no action is needed.  
+- **Complete**:  Lists insights where no action is needed.
 
-- **In Progress**: Shows rules where some, but not all, prerequisites are complete.  
+- **In Progress**: Shows insights where some, but not all, prerequisites are complete.
 
-- **Action Needed**: Rules needing actions taken are listed. Select **More Details** to retrieve specific items where action is needed.  
+- **Action Needed**: This tab lists insights that need you to take action. Select **More Details** to show specific items where action is needed.
 
-The **Prerequisites** pane lists the required items needed to run the rule.
+The **Prerequisites** pane lists any required items needed to run the selected insight.
 
-### All rules and prerequisites for the cloud services group
+For example, the following screenshot shows an example of the **All Rules** tab for the **Cloud Services** group:
 
-![Management insights- All rules and prerequisites for cloud services group](./media/Management-insights-all-cloud-rules.png)
+:::image type="content" source="media/management-insights-all-cloud-rules.png" alt-text="Management insights: All rules and prerequisites for Cloud Services group":::
 
-Select a rule and then select **More Details** to see the rule details.
+To see the details, select an insight, and then select **More Details**.
 
 ## Operations
 
-The management insight rules reevaluate their applicability on a weekly schedule. To reevaluate a rule on-demand, right-click the rule and select **Re-evaluate**.
+The site reevaluates the applicability of the management insights on a weekly schedule. To manually reevaluate an insight, right-click the insight, and select **Re-evaluate**.
 
-The log file for management insight rules is **SMS_DataEngine.log** on the site server.
+The log file for management insights is **SMS_DataEngine.log** on the site server.
 
 <!--1357930-->
-Some rules let you take action. Select a rule, select **More Details**, and then if available select **Take action**.
+Some insights let you take action. Select an insight, select **More Details**, and then if available select **Take action**. Depending upon the insight, this action has one of the following behaviors:
 
-Depending upon the rule, this action has one of the following behaviors:  
+- Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the **Client Settings** node. Then take further action by modifying the default or a custom client settings object.
 
-- Automatically navigate in the console to the node where you can take further action. For example, if the management insight recommends changing a client setting, taking action navigates to the Client Settings node. Then take further action by modifying the default or a custom client settings object.  
-
-- Navigate to a filtered view based on a query. For example, taking action on the empty collections rule shows just these collections in the list of collections. Then take further action, such as deleting a collection or modifying its membership rules.  
+- Navigate to a filtered view based on a query. For example, taking action on the empty collections insight shows just these collections in the list of collections. Then take further action, such as deleting a collection or modifying its membership rules.
 
 ## <a name="bkmk_insights"></a> Management insights dashboard
 
 <!--1357979-->
 
-The **Management Insights** node includes a graphical dashboard. This dashboard displays an overview of the rule states, which makes it easier for you to show your progress.
+Select the **Management Insights** node to display a graphical dashboard. This dashboard displays an overview of the insight states, which makes it easier for you to show your progress.
 
 Use the following filters at the top of the dashboard to refine the view:
 
@@ -79,23 +77,23 @@ Use the following filters at the top of the dashboard to refine the view:
 
 The dashboard includes the following tiles:  
 
-- **Management insights index**: Tracks overall progress on management insights rules. The index is a weighted average. Critical rules are worth the most. This index gives the least weight to optional rules.  
+- **Management insights index**: Tracks overall progress on management insights. The index is a weighted average. Critical insights are worth the most. This index gives the least weight to optional insights.
 
-- **Management insights groups**: Shows percent of rules in each group, honoring the filters. Select a group to drill down to the specific rules in this group.  
+- **Management insights groups**: Shows percent of insights in each group, honoring the filters. Select a group to drill down to the specific insights in this group.
 
-- **Management insights priority**: Shows percent of rules by priority, honoring the filters.  
+- **Management insights priority**: Shows percent of insights by priority, honoring the filters.
 
-- **All insights**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
+- **Top 10 applicable insight rules**: A table of insights including priority and state. Use the **Filter** field at the top of the table to match strings in any of the available columns. The dashboard sorts the table in the following order:
 
   - Status: Action Needed, Completed, Unknown  
   - Priority: Critical, Recommended, Optional  
   - Last Changed: older dates on top  
 
-![Screenshot of management insights dashboard](media/1357979-management-insights-dashboard.png)
+:::image type="content" source="media/1357979-management-insights-dashboard.png" alt-text="Screenshot of management insights dashboard" lightbox="media/1357979-management-insights-dashboard.png":::
 
-## Groups and rules
+## Groups and insights
 
-Rules are organized into the following management insight groups:
+Insights are organized into the following management insight groups:
 
 - [Applications](#applications)
 - [Cloud services](#cloud-services)
@@ -107,43 +105,45 @@ Rules are organized into the following management insight groups:
 - [Software Center](#software-center)
 - [Windows 10](#windows-10)
 
+> [!NOTE]
+> Your site may not show all of the following groups and insights. Some insights don't appear when you've already configured the site for the recommendation.
+
 ### Applications
 
 Insights for your application management.
 
-- **Applications without deployments**: Lists the applications in your environment that don't have active deployments. This rule helps you find and delete unused applications to simplify the list of applications displayed in the console. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md).  
+- **Applications without deployments**: Lists the applications in your environment that don't have active deployments. This insight helps you find and delete unused applications to simplify the list of applications displayed in the console. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md).  
 
 ### Cloud services
 
 Helps you integrate with many cloud services, which enable modern management of your devices.
 
-- **Assess co-management readiness**: Helps you understand what steps are needed to enable co-management. This rule has prerequisites. For more information, see [Co-management overview](../../../comanage/overview.md).  
+- **Assess co-management readiness**: Helps you understand what steps are needed to enable co-management. This insight has prerequisites. For more information, see [Co-management overview](../../../comanage/overview.md).
 
-- **Devices not uploaded to Azure AD**: Starting in version 2002, this rule lists devices that aren't uploaded to Azure AD because the site isn't properly configured for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this rule doesn't appear.
+- **Devices not uploaded to Azure AD**: Starting in version 2002, this insight lists devices that the site hasn't uploaded to Azure Active Directory (Azure AD) because you haven't configured it for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.
 
-- **Configure Azure services for use with Configuration Manager**: This rule helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](../deploy/configure/azure-services-wizard.md).  
+- **Configure Azure services for use with Configuration Manager**: This insight helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](../deploy/configure/azure-services-wizard.md).
 
-- **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials while ensuring devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview).  
+- **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).
 
-- **Sites that don't have proper HTTPS configuration**: Starting in version 2002, this rule lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure Active Directory (Azure AD) groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this rule doesn't appear.
+- **Sites that don't have proper HTTPS configuration**: Starting in version 2002, this insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure AD groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.
 
-- **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Key articles about adopting Windows as a service](../../understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).  
+- **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Key articles about adopting Windows as a service](../../understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
 
 ### Collections
 
 Insights that help simplify management by cleaning up and reconfiguring collections.
 
-- **Empty Collections**: Lists collections in your environment that have no members. For more information, see [How to manage collections](../../clients/manage/collections/manage-collections.md).  
+- **Empty Collections**: Lists collections in your environment that have no members. For more information, see [How to manage collections](../../clients/manage/collections/manage-collections.md).
 
-Starting in version 1902, there are new rules with recommendations on managing collections.<!--3555752--> Use these insights to simplify management and improve performance:
+<!--3555752-->
+- **Collections with no query rules and no direct members**: To simplify the list of collections in your hierarchy, delete these collections.
 
-- **Collections with no query rules and no direct members**: To simplify the list of collections in your hierarchy, delete these collections.  
-
-- **Collections with the same re-evaluation start time**: These collections have the same re-evaluation time as other collections. Modify the re-evaluation time so they don't conflict.  
+- **Collections with the same re-evaluation start time**: These collections have the same re-evaluation time as other collections. Modify the re-evaluation time so they don't conflict.
 
 - **Collections with query time over 5 minutes**: Review the query rules for this collection. Consider modifying or deleting the collection.
 
-- The following rules include configurations that potentially cause unnecessary load on the site. Review these collections, then either delete them, or disable rule evaluation:  
+- The following insights include configurations that potentially cause unnecessary load on the site. Review these collections, then either delete them, or disable collection rule evaluation:
 
   - **Collections with no query rules and incremental updates enabled**  
 
@@ -155,7 +155,7 @@ Starting in version 1902, there are new rules with recommendations on managing c
 
 <!--3607758-->
 
-Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These rules are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
+Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These insights are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
 
 - **Active Directory Security Group Discovery is configured to run too frequently**: You typically don't need to configure Active Directory Security Group Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory group discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).
 
@@ -175,7 +175,7 @@ Starting in version 2002, this group is courtesy of Microsoft Premier Field Engi
 
 - **Update all sites to the same version**: Use the same version of Configuration Manager in a hierarchy. This configuration makes sure all sites provide the same functionality. Sites of different versions in the same hierarchy introduce interoperability scenarios. Later versions of Configuration Manager include new features and resolve known issues. For more information, see [Interoperability between different versions](../../plan-design/hierarchy/interoperability-between-different-versions.md).
 
-For more information on these rules, see [Remediation steps for Configuration Manager management insights](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+For more information on these insights, see [Remediation steps for Configuration Manager management insights](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
@@ -185,7 +185,7 @@ For more information on these rules, see [Remediation steps for Configuration Ma
 ### Proactive maintenance
 
 <!--1352184-->
-The rules in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.
+The insights in this group highlight potential configuration issues to avoid through upkeep of Configuration Manager objects.
 
 - **Boundary groups with no assigned site systems**: Without assigned site systems, boundary groups can only be used for site assignment. For more information, see [Configure boundary groups](../deploy/configure/boundary-groups.md).  
 
@@ -205,7 +205,7 @@ The rules in this group highlight potential configuration issues to avoid throug
 
 Insights for improving the security of your infrastructure and devices.
 
-- **NTLM fallback is enabled**:<!--4572953--> Starting in version 1906, this rule detects if you enabled the less secure NTLM authentication fallback method for the site. When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
+- **NTLM fallback is enabled**:<!--4572953--> Starting in version 1906, this insight detects if you enabled the less secure NTLM authentication fallback method for the site. When using the client push method of installing the Configuration Manager client, the site can require Kerberos mutual authentication. This enhancement helps to secure the communication between the server and the client. For more information, see [How to install clients with client push](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
 - **Unsupported antimalware client versions**: More than 10% of clients are running versions of System Center Endpoint Protection that aren't supported. For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).  
 
@@ -213,11 +213,11 @@ Insights for improving the security of your infrastructure and devices.
 
 Insights that help you simplify the day-to-day management of your environment.
 
-- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This rule makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates).
+- **Connect the site to the Microsoft cloud for Configuration Manager updates**: This insight makes sure your Configuration Manager service connection point has connected to the Microsoft cloud within the past seven days. This connection is to download content for regular updates. Review DMPDownloader.log and hman.log. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#bkmk_scp-updates).
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md).  
 
-- **Update clients to a supported Windows 10 version**: Starting in version 1902, this rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
+- **Update clients to a supported Windows 10 version**: This insight reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
 
 ### Software Center
 
@@ -231,14 +231,10 @@ Insights for managing Software Center.
 
 - **Client settings aren't configured to allow clients to download delta content**: Some software updates synchronized in your environment include delta content. Enable the client setting, **Allow clients to download delta content when available**. If you don't enable this setting, when you deploy these updates, client will unnecessarily download more content than they require. For more information, see [Client settings - Software updates](../../clients/deploy/about-client-settings.md#software-updates).
 
-- **Enable the software updates product category 'Windows 10, version 1903 and later'**: There's a new software updates product category for Windows 10, version 1903 and later. If you synchronize Windows 10 updates and have Windows 10, version 1903 or later clients, select the **Windows 10, version 1903 and later** product category in the software update point component properties. For more information, see[Configure classifications and products to synchronize](../../../sum/get-started/configure-classifications-and-products.md).
+- **Enable the software updates product category 'Windows 10, version 1903 and later'**: There's a new software updates product category for Windows 10, version 1903 and later. If you synchronize Windows 10 updates, and have Windows 10, version 1903 or later clients, select the **Windows 10, version 1903 and later** product category in the software update point component properties. For more information, see[Configure classifications and products to synchronize](../../../sum/get-started/configure-classifications-and-products.md).
 
 ### Windows 10
 
 Insights related to the deployment and servicing of Windows 10. The Windows 10 management insight group is only available when more than half of clients are running Windows 7, Windows 8, or Windows 8.1.
 
 - **Configure Windows diagnostic data and commercial ID key**: To use data from Desktop Analytics, configure devices with a Commercial ID key and enable collection of diagnostic data. Set Windows 10 devices to **Enhanced (Limited)** level or higher. For more information, see [Enable data sharing for Desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).
-
-#### Windows 10 management insights rules
-
-![Management insights- Rules for Windows 10](./media/Windows-10-insights-group.png)
