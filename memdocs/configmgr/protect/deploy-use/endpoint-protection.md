@@ -29,13 +29,13 @@ Endpoint Protection manages antimalware policies and Windows Firewall security f
 -   Use Configuration Manager software updates to download the latest antimalware definition files to keep client computers up-to-date  
 -   Send email notifications, use in-console monitoring, and view reports. These actions inform administrative users when malware is detected on client computers.  
 
-Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is already installed. For these operating systems, a management client for Windows Defender is installed when the Configuration Manager client installs. On Windows 8.1 and earlier computers, the Endpoint Protection client is installed with the Configuration Manager client. Windows Defender and the Endpoint Protection client have the following capabilities:  
+Beginning with Windows 10 and Windows Server 2016 computers, Microsoft Defender Antivirus is already installed. For these operating systems, a management client for Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) is installed when the Configuration Manager client installs. On Windows 8.1 and earlier computers, the Endpoint Protection client is installed with the Configuration Manager client. Microsoft Defender ATP and the Endpoint Protection client have the following capabilities:  
 
 -   Malware and spyware detection and remediation  
 -   Rootkit detection and remediation  
 -   Critical vulnerability assessment and automatic definition and engine updates  
 -   Network vulnerability detection through Network Inspection System  
--   Integration with Cloud Protection Service to report malware to Microsoft. When you join this service, the Endpoint Protection client or Windows Defender downloads the latest definitions from the Malware Protection Center when unidentified malware is detected on a computer.  
+-   Integration with Cloud Protection Service to report malware to Microsoft. When you join this service, the Endpoint Protection client or Microsoft Defender ATP downloads the latest definitions from the Malware Protection Center when unidentified malware is detected on a computer.  
 
 > [!NOTE]  
 >  The Endpoint Protection client can be installed on a server that runs Hyper-V and on guest virtual machines with supported operating systems. To prevent excessive CPU usage, Endpoint Protection actions have a built-in randomized delay so that protection services do not run simultaneously.  
@@ -77,7 +77,7 @@ Beginning with Windows 10 and Windows Server 2016 computers, Windows Defender is
 
 ## Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection manages and monitors Microsoft Defender Advanced Threat Protection (ATP), formerly known as Windows Defender ATP. The Microsoft Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](defender-advanced-threat-protection.md).
+Endpoint Protection manages and monitors Microsoft Defender ATP, formerly known as Windows Defender ATP. The Microsoft Defender ATP service helps enterprises detect, investigate, and respond to advanced attacks on the corporate network. For more information, see [Microsoft Defender Advanced Threat Protection](defender-advanced-threat-protection.md).
 
 ## Endpoint Protection Workflow  
  Use the following diagram to help you understand the workflow to implement Endpoint Protection in your Configuration Manager hierarchy.  
