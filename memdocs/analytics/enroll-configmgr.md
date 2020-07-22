@@ -102,7 +102,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
 1. Set **Enable Endpoint analytics data collection** to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection.
 
-You may also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a sepcific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
+You may also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a specific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
 
    > [!Important] 
    > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting then redeploy it to your machines for it to take effect.
