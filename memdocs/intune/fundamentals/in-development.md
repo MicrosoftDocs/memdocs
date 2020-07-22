@@ -117,7 +117,7 @@ The Microsoft Azure AD team created a redirect single sign-on (SSO) app extensio
 
 To achieve SSO with the Microsoft Azure AD SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices. 
 
-For more information about macOS SSO app extensions, see [Single sign-on app extension](~/configuration/device-features-configure.md#single-sign-on-app-extension).
+For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
 
 Applies to:
 - macOS 10.15 and newer
