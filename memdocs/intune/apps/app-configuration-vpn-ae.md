@@ -31,13 +31,13 @@ ms.collection: M365-identity-device-management
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune
 
-In Microsoft Intune, you can deploy VPN client apps to Android Enterprise devices using an app configuration policy. In the policy, add your VPN client app. Then, deploy the VPN client app, and its VPN configuration to Android Enterprise devices in your organization.
+Virtual private networks (VPN) allow users to access organization resources remotely, including from home, hotels, cafes, and more. In Microsoft Intune, you can deploy VPN client apps to Android Enterprise devices using an app configuration policy. In the policy, add your VPN client app. Then, deploy the VPN client app, and its VPN configuration to devices in your organization.
+
+You can also create VPN policies that are used by specific apps. This feature is called per-app VPN. When the app is active, it can connect to the VPN, and access resources through the VPN. When the app isn't active, the VPN isn't used.
 
 This feature applies to:
 
 - Android Enterprise
-
-You can also deploy VPN policies used by specific apps. This feature is called per-app VPN. To access organization resources, VPN policies allow network traffic from the device, and from specific apps.
 
 There are two ways to build the app configuration policy for your VPN client app:
 
@@ -62,17 +62,17 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
   - Pulse Secure
   - SonicWall Mobile Connect
 
-- The Configuration designer and JSON data can successfully use certificate-based authentication. If authentication access to the VPN requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
+- The Configuration designer and JSON data can successfully use certificate-based authentication. If VPN authentication requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
 
-  Android Enterprise work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates.
+  Android Enterprise work profile devices support SCEP and PKCS certificates. Android Enterprise fully managed, dedicated, and corporate-owned work profile devices only support SCEP certificates. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 ## Per-app VPN overview
 
 When creating and testing per-app VPN, the basic flow includes the following steps:
 
 1. Select the VPN client application. [Before you begin](#before-you-begin) (in this article) lists the supported apps.
-2. Get the application package IDs of the apps that will use the VPN connection.
-3. If you use certificates to authenticate the VPN connection, then create and deploy the certificate profiles before you deploy the VPN policy. Make sure the certificate profiles deploy successfully.
+2. Get the application package IDs of the apps that will use the VPN connection. [Get the app package ID](#get-the-app-package-id) (in this article) shows you how.
+3. If you use certificates to authenticate the VPN connection, then create and deploy the certificate profiles before you deploy the VPN policy. Make sure the certificate profiles deploy successfully. For more information, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 4. Add the [VPN client application](apps-add-android-for-work.md) to Intune, and deploy the app to your users and devices.
 5. Create the VPN app configuration policy. Use the app package IDs and certificate information in the policy.
 6. Deploy the new VPN policy.
@@ -97,7 +97,7 @@ For more information on certificates, see [Use certificates for authentication i
 
 When your client authentication certificate profile is deployed, it creates a certificate token in the certificate profile. This token is used to create the VPN app configuration policy.
 
-If you’re not familiar with creating app configuration policies, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+If you’re not familiar with creating app configuration policies, see [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
 
 ## Use the Configuration Designer
 
@@ -296,7 +296,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 
 ## Additional information
 
-- [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md)
+- [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md)
 - [Android Enterprise device settings to configure VPN in Intune](../configuration/vpn-settings-android-enterprise.md)
 
 ## Next steps
