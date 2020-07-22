@@ -208,7 +208,7 @@ Soon, Microsoft Defender ATP can raise an Endpoint Manager Security task (**Endp
 
 For more information on security tasks, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender ATP](../protect/atp-manage-vulnerabilities.md).
 
-### Changes for Endpoint security Antivirus policy exclusions<--5583940, 6018119  -->
+### Changes for Endpoint security Antivirus policy exclusions<!--5583940, 6018119  -->
 We’re introducing two changes for managing the Microsoft Defender Antivirus exclusion lists you configure as part of an Endpoint Security Antivirus policy. (**Endpoint security** > **Antivirus** > **Create Policy** > **Windows 10 and later** for platform). These two changes help prevent conflicts between policies, and existing policies that were in conflict will no longer be in conflict for the list of exclusions:
 
 - First, we are adding a new profile type for Windows 10 and later; **Microsoft Defender Antivirus exclusions**.  This new profile type includes only the settings for specifying a list of Defender *processes*, *file extensions*, and *files* and *folders* that you don’t want Microsoft Defender to scan. This can help you simplify management of your exclusion lists by separating them from other policy configurations.
