@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -264,7 +264,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile.For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
