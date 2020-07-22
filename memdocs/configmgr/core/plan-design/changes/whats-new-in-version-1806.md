@@ -541,7 +541,7 @@ The following areas of the **Monitoring** workspace now support copying text:
 
 Right-click the asset, and select **Copy**. This action copies the selected assets as a comma-delimited list that includes the full details. The keyboard shortcut **CTRL** + **C** also works in these views. 
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### Improvements to the Surface dashboard
@@ -563,7 +563,7 @@ For more information, see [Surface dashboard](../../clients/manage/surface-devic
 <!--1358202-->
 Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### Submit feedback from the Configuration Manager console  
@@ -571,7 +571,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Send a smile! You can now directly tell the Configuration Manager team about your experiences. Sending feedback is easy from the Configuration Manager console. We want to hear all of your feedback: praise, problems, and suggestions. In the Configuration Manager console, click the smile button in the upper right corner above the ribbon. This feedback goes directly to the Microsoft product team for Configuration Manager. While using the Windows 10 Feedback Hub is still supported, you're encouraged to use the in-console feedback mechanism.  
 
-For more information, see [Console improvements in version 1806](../../servers/manage/admin-console.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
+For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#send-feedback) and [Product feedback](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 

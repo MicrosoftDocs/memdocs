@@ -222,6 +222,9 @@ For more information, see [Set up BitLocker portals](../../../protect/deploy-use
 
 ### Notifications from Microsoft
 <!--3953121-->
+You can now choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
+
+For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
 
 ### Report setup and upgrade failures to Microsoft
 <!--5622909-->
