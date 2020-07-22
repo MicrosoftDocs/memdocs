@@ -120,9 +120,11 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Assess co-management readiness**: Helps you understand what steps are needed to enable co-management. This insight has prerequisites. For more information, see [Co-management overview](../../../comanage/overview.md).
 
+- **Configure Azure services for use with Configuration Manager**: This insight helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](../deploy/configure/azure-services-wizard.md).
+
 - **Devices not uploaded to Azure AD**: Starting in version 2002, this insight lists devices that the site hasn't uploaded to Azure Active Directory (Azure AD) because you haven't configured it for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.
 
-- **Configure Azure services for use with Configuration Manager**: This insight helps you onboard Configuration Manager to Azure AD, which enables clients to authenticate with the site using Azure AD. For more information, see [Configure Azure services](../deploy/configure/azure-services-wizard.md).
+- **Enable cloud management gateway**: The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. By deploying the CMG as a cloud service in Microsoft Azure, you can continue to manage and serve content to clients that roam onto the internet. With CMG, you don't need any additional on-premises infrastructure exposed to the internet. For more information, see [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 - **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).
 
@@ -181,6 +183,18 @@ For more information on these insights, see [Remediation steps for Configuration
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
 >
 > For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/enterprise/services/support).
+
+### Optimize for remote workers
+
+<!--6982226-->
+
+Starting in version 2006, the following insights help you create better experiences for remote workers and reduce load on your infrastructure:
+
+- **Configure VPN connected clients to prefer cloud based content sources**: To reduce traffic on the VPN, enable the boundary group option to **Prefer cloud based sources over on-premises sources**. This option allows clients to download content from the internet instead of distribution points across the VPN. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions4).
+
+- **Define VPN boundary groups**: Create a VPN boundary and associate it to a boundary group. Associate VPN-specific site systems to the group, and configure the settings for your environment. This insight checks for at least one boundary group with at least one VPN boundary in it. From the properties of this insight, select **Review Actions** to go to the **Boundary Groups** node. For more information, see [VPN boundary type](../deploy/configure/boundaries.md#vpn).
+
+- **Disable peer to peer content sharing for VPN connected clients**: To prevent unnecessary peer-to-peer traffic that likely doesn't benefit the remote clients, disable the boundary group option to **Allow peer downloads in this boundary group**. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions1).
 
 ### Proactive maintenance
 
