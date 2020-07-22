@@ -100,7 +100,7 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ## <a name="bkmk_comgmt"></a> Co-management
 
-### Use the Azure China Cloud for co-management
+### Use Microsoft Azure China 21Vianet for co-management
 <!--7133238-->
 You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
 
