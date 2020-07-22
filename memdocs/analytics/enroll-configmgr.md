@@ -80,8 +80,8 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
 
-> [!Note]
-> When you enable Endpoint analytics data upload, your default and custom client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. To configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](enroll-configmgr.md#bkmk_cm_enable).
+> [!Important]
+> When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](enroll-configmgr.md#bkmk_cm_enable).
 
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
