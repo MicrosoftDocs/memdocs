@@ -99,7 +99,7 @@ For more information on the Intune feature, see [Create a device profile in Micr
 
 <!--1357841-->
 
-This workload manages Office 365 apps on co-managed devices.
+This workload manages Microsoft 365 Apps on co-managed devices.
 
 - After moving the workload, the app shows up in the **Company Portal** on the device  
 
