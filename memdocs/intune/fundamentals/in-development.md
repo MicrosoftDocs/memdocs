@@ -105,7 +105,7 @@ On Windows 10 devices, you can create Wi-Fi profiles using the Extensible Authen
 
 - **Perform server validation in PEAP phase 1**: In PEAP negotiation phase 1, devices validate the certificate, and verify the server.
   - **Disable user prompts for server validation in PEAP phase 1**: In PEAP negotiation phase 1, user prompts asking to authorize new PEAP servers for trusted certification authorities aren't shown.
-- **Require cryptographic binding**: Prevents connections to PEAP servers that don't use cryptobinding during the PEAP negotiation.
+- **Require cryptographic binding**: Prevents connections to PEAP servers that don't use crypto binding during the PEAP negotiation.
 
 To see the settings you can currently configure, go to [Add Wi-Fi settings for Windows 10 and later devices](../configuration/wi-fi-settings-windows.md).
 
@@ -132,8 +132,8 @@ To see the current SSO app extension settings you can configure, go to [Single s
 Applies to:
 - iOS/iPadOS
 
-### Improvement to **Update device settings** page in Company Portal app for Android to shows descriptions<!-- 7414768 -->
-In the Company Portal app on Android devices, the **Update device settings** page lists the settings a user needs to update to be compliant. We have improved the user experience so that listed settings are expanded by default to show the description and the RESOLVE button (when applicable). Previously, they defaulted to collapsed. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
+### Improvement to Update device settings page in Company Portal app for Android to show descriptions<!-- 7414768 -->
+In the Company Portal app on Android devices, the **Update device settings** page lists the settings a user needs to update to be compliant. We have improved the user experience so that listed settings are expanded by default to show the description and the **Resolve** button (when applicable). Previously, they defaulted to collapsed. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
