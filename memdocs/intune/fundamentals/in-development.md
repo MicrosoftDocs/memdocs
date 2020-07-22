@@ -173,6 +173,9 @@ A new remote action, *Collect logs*, will let you collect the logs from corporat
 
 The new remote action will be located at [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **All devices** > choose a device > **Collect logs**.
 
+### Associated licenses revoked before deletion of Apple VPP token<!--6195322 -->
+In a future update, when you delete an Apple VPP token in Microsoft Endpoint Manager, all Intune-assigned licenses associated with that token will be automatically revoked before the deletion.
+
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
