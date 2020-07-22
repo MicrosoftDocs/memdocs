@@ -87,10 +87,7 @@ After you assign the policy to your Android device or user groups, users should 
     - **Data type**: Enter **String**.
     - **Value**: Enter a semicolon-separated list of packages to associate with the profile. For example, if you want Excel and the Google Chrome browser to use the VPN connection, enter `com.microsoft.office.excel;com.android.chrome`.
 
-    :::image type="content" source="media/image.png" alt-text="Alt text here.":::
-
-    > [!div class="mx-imgBorder"]
-    >![Example Android device administrator per-app VPN custom policy](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android device administrator per-app VPN custom policy in Microsoft Intune":::
 
 ### Set your blocked and allowed app list (optional)
 
