@@ -360,7 +360,7 @@ With the Azure configurations, site system roles, and client settings in place, 
 
 ### Enable co-management starting in version 1906
 
-To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
+When enabling co-management, you can use the Azure Public Cloud, Azure US Government Cloud, or Azure China 21Vianet (added in version 2006). To enable co-management starting in Configuration Manager version 1906, follow the instructions below:
 
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 

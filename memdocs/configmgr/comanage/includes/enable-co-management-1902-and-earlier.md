@@ -9,6 +9,8 @@ ms.date: 07/31/2020
 
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+To enable co-management for Configuration Manager version 1902 and earlier, follow the instructions below:
+
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
 2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
