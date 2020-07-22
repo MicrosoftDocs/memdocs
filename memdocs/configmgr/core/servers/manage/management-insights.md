@@ -99,10 +99,12 @@ Insights are organized into the following management insight groups:
 - [Cloud services](#cloud-services)
 - [Collections](#collections)
 - [Configuration Manager Assessment](#configuration-manager-assessment)
+- [Optimize for remote workers](#optimize-for-remote-workers)
 - [Proactive maintenance](#proactive-maintenance)
 - [Security](#security)
 - [Simplified management](#simplified-management)
 - [Software Center](#software-center)
+- [Software updates](#software-updates)
 - [Windows 10](#windows-10)
 
 > [!NOTE]
@@ -239,7 +241,7 @@ Insights for managing Software Center.
 
 - **Use the new version of Software Center**: The previous version of Software Center is no longer supported. Set up clients to use the new Software Center by enabling the client setting **Use new Software Center** in the **Computer Agent** group. For more information, see [About client settings](../../clients/deploy/about-client-settings.md#use-new-software-center).<!-- A9BCA10D-834F-4F39-89F5-CDCCE8F80C56 -->
 
-### Software Updates
+### Software updates
 
 - **Client settings aren't configured to allow clients to download delta content**: Some software updates synchronized in your environment include delta content. Enable the client setting, **Allow clients to download delta content when available**. If you don't enable this setting, when you deploy these updates, client will unnecessarily download more content than they require. For more information, see [Client settings - Software updates](../../clients/deploy/about-client-settings.md#software-updates).<!-- 3E2E9E10-1CDC-47E3-BFC9-3A46AB7FE1BD -->
 
