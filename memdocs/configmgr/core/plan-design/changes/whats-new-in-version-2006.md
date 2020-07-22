@@ -55,7 +55,14 @@ To take full advantage of new Configuration Manager features, after you update t
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### VPN boundary type
+
 <!--7020519-->
+
+To simplify managing remote clients, you can now create a new boundary type for VPNs. Previously, you had to create boundaries for VPN clients based on the IP address or subnet. This configuration could be challenging or not possible because of the subnet configuration or the VPN design.
+
+Now when a client sends a location request, it includes additional information about its network configuration. Based on this information, the server determines whether the client is on a VPN.
+
+For more information, see [Define boundaries](../../servers/deploy/configure/boundaries.md).
 
 ### Management insights to optimize for remote workers
 <!--6982226-->
