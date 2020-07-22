@@ -35,7 +35,7 @@ After you install a baseline version, additional versions of Configuration Manag
 
 - You install in-console updates to update the version of your top-level site.  
 
-- Updates you install at the central administration site automatically install at child primary sites. Control this timing by using a maintenance window at the primary site.  
+- Updates you install at the central administration site automatically install at child primary sites. Control this timing by using a service window at the primary site. For more information, see [Service Windows](service-windows.md).  
 
 - Manually update secondary sites to a new update version from within the console.  
 
