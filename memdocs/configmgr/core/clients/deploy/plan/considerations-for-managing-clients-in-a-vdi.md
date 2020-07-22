@@ -46,7 +46,7 @@ Because the VM might only be operational for a short length of time, some Config
 
 ## Windows Virtual Desktop
 
-For more information, see [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+For more information, see [Supported operating systems for clients and devices](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## Other considerations
 
@@ -54,4 +54,4 @@ Because virtualization supports running multiple Configuration Manager clients o
 
 Except for Windows Embedded clients in servicing mode, Configuration Manager clients not in virtualized environments also use this randomized delay. This behavior helps avoid peaks in network bandwidth. It also reduces the CPU processing on site systems, such as the management point and site server. The delay interval varies according to the Configuration Manager capability. For example, see [About client settings - Disable deadline randomization](../about-client-settings.md#disable-deadline-randomization).
 
-To help with Configuration Manager client performance in virtual environments that support multiple user sessions, it disables user policy by default. Starting in version 1910, you can enable user policy in this scenario. For more information, see [About client settings - Enable user policy for multiple user sessions](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
+To help with Configuration Manager client performance in virtual environments that support multiple user sessions, it disables user policy by default. Starting in version 1910, you can enable user policy in this scenario. For more information, see [About client settings - Enable user policy for multiple user sessions](../about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
