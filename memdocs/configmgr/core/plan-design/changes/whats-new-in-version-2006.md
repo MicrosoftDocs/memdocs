@@ -68,8 +68,12 @@ For more information, see [Define boundaries](../../servers/deploy/configure/bou
 <!--6982226-->
 
 ### Improved support for Windows Virtual Desktop
+
 <!--6527576-->
 
+The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
