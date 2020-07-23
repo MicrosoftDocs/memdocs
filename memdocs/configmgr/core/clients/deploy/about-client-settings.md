@@ -2,10 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/21/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
@@ -458,41 +458,40 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
 > [!NOTE]  
 > This setting is available only in the default client settings.
 
+## Metered internet connections
 
+Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered internet connection.
 
-## Metered internet connections  
-
-Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered internet connection.  
-
-> [!NOTE]  
-> The configured client setting isn't applied in the following scenarios:  
+> [!NOTE]
+> The configured client setting isn't applied in the following scenarios:
 >
 > - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.  
 > - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
 
 ### Client communication on metered internet connections
 
-Choose one of the following options for this setting:  
+Choose one of the following options for this setting:
 
-- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.  
+- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.
 
-- **Limit**: Only the following client communications are allowed over the metered internet connection:  
+- **Limit**: The client only communicates over the metered internet connection for the following behaviors:
 
-    - Client policy retrieval  
+  - Download client policy
 
-    - Client state messages to send to the site  
+  - Send client state messages
 
-    - Software installation requests from Software Center  
+  - Request software installs from Software Center
 
-    - Required deployments (when the installation deadline is reached)  
+  - Download additional policy and content for required deployments at the installation deadline
 
-    If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+  If the client reaches the data transfer limit for the metered internet connection, the client no longer communicates with the site.
 
-- **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
+- **Block**: When the device is on a metered internet connection, the Configuration Manager client doesn't try to communicate with the site. This option is the default.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
+Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
