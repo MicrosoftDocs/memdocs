@@ -119,7 +119,7 @@ For Reporting Services-based reports, Configuration Manager uses Microsoft SQL S
 
  The Report Builder installation adds support for over 20 languages. When you run Report Builder, it displays data in the language of the local computer's OS. If Report Builder doesn't support the language, it displays the data in English. Report Builder supports the full capabilities of SQL Server Reporting Services, which includes the following capabilities:
 
-- Delivers an intuitive report authoring environment with an appearance similar to Microsoft Office.  
+- Delivers an intuitive report authoring environment with an appearance similar to Microsoft 365 Apps.  
 
 - Offers the flexible report layout of SQL Server report definition language (RDL).  
 

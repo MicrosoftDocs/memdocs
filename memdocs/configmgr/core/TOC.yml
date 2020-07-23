@@ -14,12 +14,18 @@
       href: understand/find-help.md
     - name: How to use the docs
       href: understand/use-docs.md
-    - name: How to use the console
-      href: servers/manage/admin-console.md
     - name: Accessibility features
       href: understand/accessibility-features.md
     - name: Software Center user guide
       href: understand/software-center.md
+  - name: How to use the console
+    items:
+    - name: How to use the console
+      href: servers/manage/admin-console.md
+    - name: Console notifications
+      href: servers/manage/admin-console-notifications.md
+    - name: Console changes and tips
+      href: servers/manage/admin-console-tips.md
   - name: Fundamentals
     items: 
     - name: Configuration Manager fundamentals

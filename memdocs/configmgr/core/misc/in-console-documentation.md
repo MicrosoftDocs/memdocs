@@ -44,7 +44,7 @@ A curated list of important articles.
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [Plan for BitLocker management](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge management](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
-- [Manage Office 365 ProPlus updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
 - [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
 - [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
@@ -103,8 +103,11 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between May 16 and June 22, 2020.
+Support articles that are new or updated between May 16 and July 17, 2020.
 
+- [KB 4560496 Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513 "Not found" error when you try to edit Update Application Catalog Tables](https://support.microsoft.com/help/4569513)
+- [KB 4574419 Timeout error in the Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4574416)
 - [KB 4564442 Windows 10 deployments fail with Microsoft Deployment Toolkit on computers with BIOS type firmware](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473)
 - [KB 4567007 PXE Boot failures or task sequence delays after updating to Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4567007)

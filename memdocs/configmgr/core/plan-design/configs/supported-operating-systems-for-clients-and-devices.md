@@ -54,6 +54,16 @@ If you require user policy in this scenario, and accept any potential performanc
 > [!Note]  
 > You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
 
+Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
+
+> [!NOTE]
+> If you previously selected the top-level **Windows 10** platform, this action automatically selected all child platforms. This new platform isn't automatically selected. If you want to add **Windows 10 Enterprise multi-session**, manually select it in the list.
+
+For more information, see the following articles:
+
+- [Support for virtualization environments](support-for-virtualization-environments.md)
+- [Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
+
 ### Supported server OS versions
 
 - **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>  

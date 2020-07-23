@@ -503,7 +503,7 @@ The **View Required** hyperlink is available in the following locations:
    - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
-For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="bkmk_o365"></a> Office management
@@ -536,7 +536,7 @@ For more information, see [Create and deploy Windows Defender Application Guard 
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### Add SMBIOS GUID column to device and device collection nodes
 

@@ -65,16 +65,37 @@ Now when a client sends a location request, it includes additional information a
 For more information, see [Define boundaries](../../servers/deploy/configure/boundaries.md).
 
 ### Management insights to optimize for remote workers
+
 <!--6982226-->
 
+This release adds a new group of management insights, **Optimize for remote workers**. These insights help you create better experiences for remote workers and reduce load on your infrastructure. The insights in this release primarily focus on VPN:
+
+- **Define VPN boundary groups**
+- **Configure VPN connected clients to prefer cloud based content sources**
+- **Disable peer to peer content sharing for VPN connected clients**
+
+For more information, see [Management insights](../../servers/manage/management-insights.md).
+
 ### Improved support for Windows Virtual Desktop
+
 <!--6527576-->
 
+The **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.
+
+For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Notification for Azure AD app secret key expiration
+
 <!--6386392-->
+
+If you configure Azure services to cloud-attach your site, the Configuration Manager console now displays notifications for the following circumstances:
+
+- One or more Azure AD app secret keys will expire soon
+- One or more Azure AD app secret keys have expired
+
+For more information, see [Renew secret key](../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
 ### Improvements to cloud management gateway cmdlets
 <!--6978300-->
@@ -101,7 +122,17 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ## <a name="bkmk_client"></a> Client management
 
 ### Install and upgrade the client on a metered connection
+
 <!--6976145-->
+
+Previously, if the device was connected to a metered network, new clients wouldn't install. Existing clients only upgraded if you allowed all client communication. For devices that are frequently roaming on a metered network, they would be unmanaged or on an older client version. Starting in this release, client install and upgrade both work when you set the client setting **Client communication on metered internet connections** to **Allow** or **Limit**. With this setting, you can allow the client to stay current, but still manage the client communication on a metered network.
+
+To define the behavior for a new client installation, there's a new ccmsetup parameter **/AllowMetered**. When you allow client communication on a metered network for ccmsetup, it downloads the content, registers with the site, and downloads the initial policy. Any further client communication follows the configuration of the client setting from that policy.
+
+For more information, see the following articles:
+
+- [About client settings](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)
+- [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered)
 
 
 <!--
@@ -178,7 +209,13 @@ For more information, see [device restart notifications](../../clients/deploy/de
 
 ### Microsoft 365 Apps for enterprise
 <!--6298093-->
+Office 365 ProPlus was renamed to Microsoft 365 Apps for enterprise on April 21, 2020. Starting in version 2006, the following changes have been made:
 
+- The Configuration Manager console has been updated to use the new name.
+   - This change also includes update channel names for Microsoft 365 Apps.
+- A banner notification was added to the console to notify you if one or more automatic deployment rules reference obsolete channel names in the **Title** criteria for Microsoft 365 Apps updates.
+
+For more information, see [Microsoft 365 Apps channel names](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) and [Microsoft 365 Apps readiness dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 ## Protection
 
@@ -206,10 +243,13 @@ For more information, see [Set up BitLocker portals](../../../protect/deploy-use
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
 ### Community hub and GitHub
-<!--3555935-->
+<!--3555935, 3555936, deep link included 4224406-->
 
-### Direct links to Configuration Manager Community hub items
-<!--4224406-->
+*(First introduced in June 2020)*
+
+The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft.
+
+For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 
 ### New feedback wizard
 <!--3180826-->
@@ -222,6 +262,9 @@ For more information, see [Set up BitLocker portals](../../../protect/deploy-use
 
 ### Notifications from Microsoft
 <!--3953121-->
+You can now choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
+
+For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
 
 ### Report setup and upgrade failures to Microsoft
 <!--5622909-->
