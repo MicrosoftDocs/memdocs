@@ -38,15 +38,18 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
     
   - **Platform**: Select **Windows 10 and later**
    
-  - **Profile type**: Select **Windows Health monitoring**
+  - **Profile type**: Select **[Windows Health monitoring]**(https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicehealthmonitoring)
    
   - Configure the **Settings**:
    
-       - **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+       - **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices. 
     
-    - **Scope**: Select **Boot performance**
+    - **Scope**: Select **Boot performance**. See [Data collection](data-collection.md#bkmk_datacollection) for a description of the data associated with boot performance 
 
   - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+
+> [!NOTE] 
+> This policy is only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro isn't currently supported. Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported. See [**Prerequisites**](enroll-intune.md#bkmk_prereq)
 
 ### Configuration Manager data connector
 
