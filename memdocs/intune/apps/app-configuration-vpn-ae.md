@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune
 
-Virtual private networks (VPN) allow users to access organization resources remotely, including from home, hotels, cafes, and more. In Microsoft Intune, you can configure VPN client apps to Android Enterprise devices using an app configuration policy. Then, deploy this policy with its VPN configuration to devices in your organization.
+Virtual private networks (VPN) allow users to access organization resources remotely, including from home, hotels, cafes, and more. In Microsoft Intune, you can configure VPN client apps on Android Enterprise devices using an app configuration policy. Then, deploy this policy with its VPN configuration to devices in your organization.
 
 You can also create VPN policies that are used by specific apps. This feature is called per-app VPN. When the app is active, it can connect to the VPN, and access resources through the VPN. When the app isn't active, the VPN isn't used.
 
@@ -62,7 +62,7 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
   - Pulse Secure
   - SonicWall Mobile Connect
 
-- When you create the VPN policy in Intune, you'll select different keys to configure. These key names vary with the different VPN client apps. So, the key name examples in the article may be different in your environment.
+- When you create the VPN policy in Intune, you'll select different keys to configure. These key names vary with the different VPN client apps. So, the key names in your environment may be different than the examples in this article.
 
 - The Configuration designer and JSON data can successfully use certificate-based authentication. If VPN authentication requires client certificates, then create the certificate profiles before you create the VPN policy. The VPN app configuration policies use the values from the certificate profiles.
 
