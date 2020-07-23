@@ -232,6 +232,8 @@ Starting in version 2006, the Configuration Manager console displays notificatio
 - One or more Azure AD app secret keys will expire soon
 - One or more Azure AD app secret keys have expired
 
+To mitigate both cases, renew the secret key.
+
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
 ### Renew key for created app
