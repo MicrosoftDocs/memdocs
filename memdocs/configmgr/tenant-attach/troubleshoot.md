@@ -2,7 +2,7 @@
 title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
 description: "Troubleshoot tenant attach and device actions for Configuration Manager"
-ms.date: 07/07/2020
+ms.date: 07/31/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -28,13 +28,36 @@ The available actions are:
   
 When an admin runs an action from Microsoft Endpoint Manager admin center, the notification request is forwarded to Configuration Manager site, and from the site to the client.
 
-## Configuration Manager components
+## Log files
+
+Use the following logs located on the service connection point:
+
+- **CMGatewaySyncUploadWorker.log**
+- **CMGatewayNotificationWorker.log**
+
+Use the following logs located on the management point:
+
+- **BgbServer.log**
+
+Use the following logs located on the client:
+
+- **CcmNotificationAgent.log**
+
+## <a name="bkmk_review"></a> Review your upload
+
+1. Open **CMGatewaySyncUploadWorker.log** from &lt;ConfigMgr install directory>\Logs.
+1. The next sync time is noted by log entries similar to `Next run time will be at approximately: 02/28/2020 16:35:31`.
+1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of devices uploaded to the cloud.
+1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Endpoint Manager admin center**.
+
+
+## Configuration Manager components and log flow
 
 - **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
 - **SMS_NOTIFICATION_SERVER**: Gets the notification and creates a client notification.
 - **BgbAgent**: The client gets task and runs the requested action.
 
-## SMS_SERVICE_CONNECTOR
+### SMS_SERVICE_CONNECTOR
 
 When an action is initiated from the Microsoft Endpoint Manager admin center, **CMGatewayNotificationWorker.log** processes the request.  
 
@@ -65,7 +88,7 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
     ```
 
 
-## SMS_NOTIFICATION_SERVER
+### SMS_NOTIFICATION_SERVER
 
 Once the message is sent to the SMS_NOTIFICATION_SERVER, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log**, which is on the management point:
 
@@ -74,7 +97,7 @@ Get one push message from database.
 Starting to send push task (PushID: 7 TaskID: 8 TaskGUID: A43DD1B3-A006-4604-B012-5529380B3B6F TaskType: 1 TaskParam: ) to 1 clients  with throttling (strategy: 1 param: 42)
 ```
 
-## BgbAgent
+### BgbAgent
 
 The last step occurs on the client and can be seen in the **CcmNotificationAgent.log**. Once the task is received, it will request scheduler to perform the action. When the action is performed, you'll see a confirmation message:
 
@@ -97,6 +120,18 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](device-sync-actions.md#prerequisites).
+
+## Known issues
+
+### Specific devices don't synchronize
+
+<!--7099564-->
+It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the service.
+
+**Impacted devices:**
+If a device is a distribution point that uses the same PKI certificate for both the distribution point functionality and its client agent, then the device won't be included in the tenant attach device sync.
+
+**Behavior:** When performing tenant attach during the on-boarding phase, a full sync is performed the first time. Subsequent sync cycles are delta synchronizations. Any update to the impacted devices will cause the device to be removed from the sync.
 
 
 ## Next steps
