@@ -87,7 +87,15 @@ For more information on Configuration Manager's support for Windows Virtual Desk
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
 ### Notification for Azure AD app secret key expiration
+
 <!--6386392-->
+
+If you configure Azure services to cloud-attach your site, the Configuration Manager console now displays notifications for the following circumstances:
+
+- One or more Azure AD app secret keys will expire soon
+- One or more Azure AD app secret keys have expired
+
+For more information, see [Renew secret key](../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
 ### Improvements to cloud management gateway cmdlets
 <!--6978300-->
