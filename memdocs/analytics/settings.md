@@ -62,7 +62,11 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 
 You can compare your current scores and subscores to others by setting a baseline.
 
-1. There's a built-in baseline for **Commercial median**, which allows you to compare your scores to a typical enterprise.
+1. There's a built-in baseline for **All organizations (median)**, which allows you to compare your scores to a typical enterprise.
+
+> [!Important]  
+> We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
+
 1. You can create new baselines based on your current metrics to track progress or view regressions over time. Click the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it's easier to select from the drop-down in the reports pages.
 1. There's a limit of 100 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
