@@ -187,10 +187,9 @@ In a future update, when you delete an Apple VPP token in Microsoft Endpoint Man
 Admins will be able to update the Power BI compliance report template version from V1.0 to V2.0. V2.0 will include an improved design, as well as changes to the calculations and data that are being surfaced as part of the template. For related information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md).
 
 <!-- ***********************************************-->
+<!--
 ## Role-based access control
-
-### Scope tag support for customization policies<!--6182440 -->
-You'll be able to assign scope tags to Customization policies. To do so, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration**> **Customization** where you will see **Scope tags** configuration options.
+-->
 
 <!-- ***********************************************-->
 ## Security
