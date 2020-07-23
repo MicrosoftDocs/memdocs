@@ -216,8 +216,6 @@ We’re introducing two changes for managing the Microsoft Defender Antivirus ex
 - First, we are adding a new profile type for Windows 10 and later; **Microsoft Defender Antivirus exclusions**.  This new profile type includes only the settings for specifying a list of Defender *processes*, *file extensions*, and *files* and *folders* that you don’t want Microsoft Defender to scan. This can help you simplify management of your exclusion lists by separating them from other policy configurations.
 - The second change is that the list of exclusions you define in different profiles will merge into a single list of exclusions for each device or user, based on the individual policies that apply to a specific user or device. For example, when you target a user with three separate policies, the exclusion lists from those three policies are merged into a single superset of Microsoft Defender Antivirus exclusions, which are then applied to the user. This merge includes the exclusions lists from the new profile type were adding, as well as from any existing policies you have that were configured in a *Microsoft Defender Antivirus* profile.
 
-### Add tri-state support to additional settings in the Microsoft Defender Firewall profile<!-- 7122957  -->
-We're updating settings in the Microsoft Defender Firewall profile, which is part of the endpoint security Firewall policy for windows 10. (**Endpoint security** > **Firewall** > **Create Policy** > **Windows 10 and later** > **Microsoft Defender Firewall**)  This update will add support for a third option of *No* to the settings that currently support only *Yes* and *Not configured*.
 
 
 <!-- ***********************************************-->
