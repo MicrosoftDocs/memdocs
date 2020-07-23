@@ -53,6 +53,11 @@ Notifications follow the permissions of role-based administration. For example, 
 
 Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer.
 
+Starting in version 2006, if you configure Azure services to cloud-attach your site, you'll see notifications with an action to [renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew).<!--6386392--> The site evaluates the state of the following alerts once per hour:
+
+- One or more Azure AD app secret keys will expire soon
+- One or more Azure AD app secret keys have expired
+
 The following notifications are most applicable to the technical preview branch:  
 
 - Evaluation version is within 30 days of expiration (Warning): the current date is within 30 days of the expiration date of the evaluation version  
