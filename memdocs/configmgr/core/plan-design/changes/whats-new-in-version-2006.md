@@ -32,7 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
-During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#b#bkmk_aad_app).
+During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
