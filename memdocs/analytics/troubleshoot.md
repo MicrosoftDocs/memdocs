@@ -25,6 +25,16 @@ The sections below can be used to assist in troubleshooting issues you may come 
 
 ## <a name="bkmk_known"></a> Known issues
 
+### User experience blade not available in All Devices report for some devices
+
+When viewing the Devices -> All Devices report in Intune, the "User experience" blade may not be available for some devices that are enrolled in Endpoint analytics.
+
+**Impacted devices:**
+This issue impacts co-managed devices. Devices enrolled only via Intune or only via Configuration Manager are not affected. 
+
+**Workaround:**
+The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Simply navigate to Startup performance -> Device performance, and click to drill down into a device.
+
 ### Startup processes data not available for some devices
 
 Startup processes data, which power the "time to responsive desktop" insights, may not be available for some devices that are enrolled via Configuration Manager.
