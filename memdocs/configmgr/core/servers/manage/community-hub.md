@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -63,6 +63,17 @@ Community hub supports the following objects:
 1. View all items downloaded from the hub by your organization by clicking on **Your downloads** from the **Community hub** node.
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
+
+## <a name="bkmk_deeplink"></a> Direct links to Community hub items
+<!--4224406-->
+*(Introduced in version 2006)*
+
+You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. The intention for this feature is for easier collaboration and being able to share links to Community hub items with your colleagues. Currently, you'll see these links shared by the Configuration Manager team and in the documentation. These deep links are currently only for items in the Community hub node of the console.
+
+For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`). If you have the Configuration Manager 2006 console installed, follow that link, and then select **Launch the Community hub**. The console opens directly to the script in the Community hub.
+
+> [!Note]
+> You can't use the the local built-in administrator account when following a Community hub link.
 
 
 ## Next steps
