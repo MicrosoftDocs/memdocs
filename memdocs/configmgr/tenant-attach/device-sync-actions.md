@@ -76,7 +76,6 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. Select **Summary** to review your selection, then choose **Next**.
 1. When the wizard is complete, select **Close**.  
 
-
 ## Perform device actions
 
 1. In a browser, navigate to `endpoint.microsoft.com`
