@@ -122,7 +122,17 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 ## <a name="bkmk_client"></a> Client management
 
 ### Install and upgrade the client on a metered connection
+
 <!--6976145-->
+
+Previously, if the device was connected to a metered network, new clients wouldn't install. Existing clients only upgraded if you allowed all client communication. For devices that are frequently roaming on a metered network, they would be unmanaged or on an older client version. Starting in this release, client install and upgrade both work when you set the client setting **Client communication on metered internet connections** to **Allow** or **Limit**. With this setting, you can allow the client to stay current, but still manage the client communication on a metered network.
+
+To define the behavior for a new client installation, there's a new ccmsetup parameter **/AllowMetered**. When you allow client communication on a metered network for ccmsetup, it downloads the content, registers with the site, and downloads the initial policy. Any further client communication follows the configuration of the client setting from that policy.
+
+For more information, see the following articles:
+
+- [About client settings](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)
+- [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered)
 
 
 <!--
