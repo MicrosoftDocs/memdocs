@@ -2,12 +2,10 @@
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to the computers in a collection.  
-ms.date: 11/29/2019
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
@@ -143,9 +141,16 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
     - **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later. When you deploy a task sequence to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window.  
 
-    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client. Operations that require a boot media, such as the installation of an OS, aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.  
+    - **Allow task sequence to run for client on the Internet**: Specify whether the task sequence is allowed to run on an internet-based client.
 
-        - This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway. For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        This setting is supported for deployments of a Windows 10 in-place upgrade task sequence to internet-based clients through the cloud management gateway (CMG). For more information, see [Deploy Windows 10 in-place upgrade via CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        Starting in version 2006, you can deploy a task sequence with a boot image to a device that communicates through the CMG. The user needs to start the task sequence from Software Center.<!--6997525-->
+
+        In version 2002 and earlier, operations that require a boot media aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.
+
+        > [!NOTE]
+        > For all internet-based task sequence scenarios, start the task sequence from Software Center. They don't support Windows PE, PXE, or task sequence media.
 
 8. On the **Alerts** page, specify the alert settings that you want for this task sequence deployment.  
 
