@@ -137,4 +137,4 @@ The following list provides details about how a boot image is selected for clien
 
 ## Next steps
 
-[User experiences for OS deployment](../understand/user-experience#pxe)
+[User experiences for OS deployment](../understand/user-experience.md#pxe)
