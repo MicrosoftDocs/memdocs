@@ -43,7 +43,7 @@ Monitor the state of devices that have the Microsoft Defender ATP compliance pol
 
 You can also use the *operational* report for noncompliant devices from the same location:
 
-1. Select **Devices** > **Monitor** > **Noncompliant devices**.
+- Select **Devices** > **Monitor** > **Noncompliant devices**.
 
 For more information about reports, see [Intune reports](../fundamentals/reports.md).
 
