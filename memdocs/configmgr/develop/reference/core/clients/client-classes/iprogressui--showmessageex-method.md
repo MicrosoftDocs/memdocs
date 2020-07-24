@@ -79,7 +79,7 @@ An `HRESULT` code. Possible values include, but aren't limited to, the following
 S_OK  
 The method succeeded.  
 
-To evaluate the user's response to the message box, use the [pResult](#pResult) parameter.
+To evaluate the user's response to the message box, use the [pResult](#presult) parameter.
 
 ## Example
 

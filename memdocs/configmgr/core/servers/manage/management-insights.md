@@ -194,7 +194,7 @@ Starting in version 2006, the following management insights help you manage the 
 
 - **Total policy size for task sequences exceeds policy limit**: Clients can't process the policy for these task sequences because it's too large. Reduce the size of the task sequence policy to allow the deployment to run on clients.<!-- 6568F6A3-D1D8-4E63-940B-FE44F8349802 -->
 
-For more information, see [Reduce the size of task sequence policy](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 > [!TIP]
 > In version 2006, the existing insight for **Unused boot images** moved to this group from the **Proactive Maintenance** group.
