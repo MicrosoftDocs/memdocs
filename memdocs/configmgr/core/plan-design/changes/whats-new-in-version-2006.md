@@ -202,17 +202,11 @@ When the size of the task sequence policy exceeds 32 MB, the client fails to pro
 
 For more information, see [management insight](../../servers/manage/management-insights.md#operating-system-deployment).
 
-### Improvement to Format and Partition Disk task sequence step
-
-<!--6610288-->
-
-You can now use a task sequence variable to specify the target of the **Format and Partition Disk** step. This new variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.
-
-For more information, see [Task sequence steps - Format and partition disk](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk)
-
 ### Improvements to OS deployment
 
 This release includes the following additional improvements to OS deployment:
+
+- Use a task sequence variable to specify the target of the [Format and Partition Disk](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) step. This new variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.<!--6610288-->
 
 - The [Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness) step now includes a check to determine if the device uses UEFI. It also includes a new read-only task sequence variable, **_TS_CRUEFI**.<!--6452769-->
 
@@ -220,13 +214,7 @@ This release includes the following additional improvements to OS deployment:
 
 - Previously, during a task sequence to upgrade a device to Windows 10, a command prompt window opened during one of the final Windows configuration phases. The window was on top of the Windows out-of-box experience (OOBE), and users could interact with it to disrupt the upgrade process. Now the SetupCompleteTemplate.cmd and SetupRollbackTemplate.cmd scripts from Configuration Manager include a change to hide this command prompt window.<!--2837795-->
 
-### New SDK method for task sequence progress
-
-<!--6448458-->
-
-Some customers build custom task sequence interfaces using the **IProgressUI::ShowMessage** method, but it doesn't return a value for the user's response. This release adds the **IProgressUI::ShowMessageEx** method. This new method is similar to the existing method, but also includes a new integer result variable, **pResult**.
-
-For more information, see [IProgressUI::ShowMessageEx method](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md).
+- Some customers build custom task sequence interfaces using the **IProgressUI::ShowMessage** method, but it doesn't return a value for the user's response. This release adds the [IProgressUI::ShowMessageEx](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md) method. This new method is similar to the existing method, but also includes a new integer result variable, **pResult**.<!--6448458-->
 
 ## <a name="bkmk_userxp"></a> User experience
 

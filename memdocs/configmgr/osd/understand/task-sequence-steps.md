@@ -768,7 +768,6 @@ Capture the registered user and organization names from the computer.
 Capture the time zone setting on the computer.  
 
 
-
 ## <a name="BKMK_CheckReadiness"></a> Check Readiness
 
 Use this step to verify that the target computer meets the specified deployment prerequisite conditions.  
@@ -786,6 +785,8 @@ Starting in version 2002, this step includes eight new checks. None of these new
 - **Network adapter connected**
   - **Network adapter is not wireless**
 
+Starting in version 2006, this step includes includes a check to determine if the device uses UEFI, **Computer is in UEFI mode**.<!--6452769-->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -799,14 +800,15 @@ Use the following task sequence variables with this step:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (starting in version 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (starting in version 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (starting in version 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (starting in version 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (starting in version 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (starting in version 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (starting in version 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (starting in version 2002)
 
 ### Cmdlets for Check Readiness
 
@@ -864,6 +866,10 @@ Starting in version 2002, verify that the device is plugged in and not on batter
 #### Network adapter connected
 
 Starting in version 2002, verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
+
+#### Computer is in UEFI mode
+
+Starting in version 2006, determine whether the device is configured for UEFI or BIOS.
 
 ### Options for Check Readiness
 
