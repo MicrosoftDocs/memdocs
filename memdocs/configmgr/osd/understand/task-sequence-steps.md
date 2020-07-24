@@ -1185,6 +1185,31 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.  
 
+#### Variable name to store disk number
+
+<!--6610288-->
+
+Starting in version 2006, use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.
+
+If you select this property, enter a custom variable name. Add an earlier step in the task sequence to set the value of this custom variable to an integer value for the physical disk.
+
+The following mock steps show one example:
+
+- **Run PowerShell Script**: a custom script to collect target disks
+  - Sets `myOSDisk` to `1`
+  - Sets `myDataDisk` to `2`
+
+- **Format and Partition Disk** for OS disk: specifies `myOSDisk` variable
+  - Configures disk 1 as the system disk
+
+- **Format and Partition Disk** for data disk: specifies `myDataDisk` variable
+  - Configures disk 2 for raw storage
+
+A variation of this example uses disk numbers and partitioning plans for different hardware types.
+
+> [!NOTE]
+> You can still use the existing task sequence variable **OSDDiskIndex**. However, each instance of the **Format and Partition Disk** step uses the same index value. If you want to programmatically set the disk number for multiple instances of this step, use this variable property.
+
 #### Disk Type
 
 The type of the disk to format. There are two options to select from the drop-down list:
