@@ -90,7 +90,15 @@
         - name: Account protection
           href: endpoint-security-account-protection-policy.md
     - name: Microsoft Defender ATP
-      href: advanced-threat-protection.md  
+      items:
+      - name: Microsoft Defender ATP
+        href: advanced-threat-protection.md  
+      - name: Configure Defender ATP
+        href: advanced-threat-protection-configure.md
+      - name: Android web protection
+        href: advanced-threat-protection-manage-android.md
+      - name: Monitor Defender ATP
+        href: advanced-threat-protection-monitor.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Encrypt disks

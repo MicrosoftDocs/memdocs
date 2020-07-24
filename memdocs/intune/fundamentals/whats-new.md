@@ -293,11 +293,11 @@ You can create and run script packages on end user devices to proactively find a
 
 #### Use Microsoft Defender ATP in compliance policies for Android<!-- 4425686  -->
 
-You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance polices for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
+You can now use Intune to [onboard Android devices to Microsoft Defender Advanced Threat Protection](../protect/advanced-threat-protection-configure.md#onboard-devices) (MicrosoftDefender ATP). After your enrolled devices are onboarded, your compliance polices for Android can use the *threat level* signals from Microsoft Defender ATP. These are the same signals that you could previously use for Windows 10 devices.
 
 #### Configure Defender ATP web protection for Android devices<!-- 6185563  -->
 
-When you use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) for Android devices, you can [configure Microsoft Defender ATP web protection](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) to disable the phishing scan feature, or prevent the scan from using VPN.
+When you use Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) for Android devices, you can [configure Microsoft Defender ATP web protection](../protect/advanced-threat-protection-manage-android.md) to disable the phishing scan feature, or prevent the scan from using VPN.
 
 Depending on how your Android device enrolls with Intune, the following options are available:
 
