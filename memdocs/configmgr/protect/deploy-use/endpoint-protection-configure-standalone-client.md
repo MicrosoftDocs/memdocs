@@ -18,7 +18,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-Your organization may have a number of stanalone clients that you cannot manage or protect with the Microsoft Endpoint Configuration Manager system. Without any endpoint protection in place, these standalone clients are vulnerable to potential malware attacks. To protect such standalone clients, you can manually configure them with Endpoint Protection, as described in this topic.
+Your organization may have a number of standalone clients that you cannot manage or protect with Microsoft Endpoint Configuration Manager. Without any endpoint protection in place, these standalone clients are vulnerable to potential malware attacks. To protect such standalone clients, you can manually configure them with Endpoint Protection, as described in this topic.
 
 To configure Endpoint Protection on a standalone client manually:
 
@@ -28,9 +28,9 @@ To configure Endpoint Protection on a standalone client manually:
 
 ## Create an antimalware policy for the standalone client
 
-In this step, you create a custom antimalware policy in the Configuration Manager console and then transfer it to the standalone client computer.
+In this step, you create a custom antimalware policy in the Configuration Manager console and then transfer it to the standalone client.
 
-When creating the antimalware policy, you must also configure the definition update source to keep the policy definitions up to date on the standalone client. You can configure the definition update source as [Microsoft Update](endpoint-definitions-microsoft-updates.md) and [Microsoft Malware Protection Center](endpoint-definitions-protection-center.md), if your standalone client is connected to the internet. Alternatively, you can select [network share](endpoint-definitions-network.md) as the definition distribution source, which you must periodically update with the latest definition update package. 
+When creating the antimalware policy, you must also configure the definition update source to keep the policy definitions up to date on the standalone client. You can configure the definition update source as [Microsoft Update](endpoint-definitions-microsoft-updates.md) and [Microsoft Malware Protection Center](endpoint-definitions-protection-center.md), if your standalone client is connected to the internet. Alternatively, select [network share](endpoint-definitions-network.md) as the definition distribution source and update it periodically with the latest definition update package. 
 
 To create an antimalware policy for the standalone client:
 
@@ -41,17 +41,17 @@ To create an antimalware policy for the standalone client:
 5. In the **Create Antimalware Policy** dialog box, configure the settings that you require for this antimalware policy, and then click **OK**. For a list of settings that you can configure, see [List of Antimalware Policy Settings](endpoint-antimalware-policies.md#list-of-antimalware-policy-settings).
     > [!NOTE]
     > For the **Definition Updates** setting, select **Updates distributed from Microsoft Update** and **Updates distributed from Microsoft Malware Protection Center** if your standalone client is connected to the internet.  
-    > Alternatively, you can select **Updates from UNC file shares** to distribute the policy definitions through network share. 
+    > Alternatively, select **Updates from UNC file shares** to distribute the policy definitions through network share. Then, add one or more UNC paths to the location of the definition updates files on a network share.
 
 6. Export the newly created policy as an XML:
-    1. In the **Antimalware Policies** list, right-click the policy you just created.
+    1. In the **Antimalware Policies** list, right-click your policy.
     1. Select **Export**.
     1. Save the policy as an XML, for example, **standalone.xml**.
-7. Transfer the new antimalware policy XML to the target standalone client computer on which you want to configure Endpoint Protection.
+7. Transfer the new antimalware policy XML to the target standalone client on which you want to configure Endpoint Protection.
 
 ## Transfer Endpoint Protection client installation package to the standalone client
 
-In this step, you copy the Endpoint Protection client installation package (**scepinstall.exe**) in the Configuration Manager server and transfer it to the standalone client computer on which you want to configure Endpoint Protection.
+In this step, you copy the Endpoint Protection client installation package (**scepinstall.exe**) from the Configuration Manager server and transfer it to the standalone client.
 
 1. Log in to the Configuration Manager server.
 2. Navigate to the **Client** folder of the Configuration Manager installation folder.
@@ -77,13 +77,13 @@ To install Endpoint Protection on the standalone client:
 
 4. Follow the on-screen instructions to complete the client installation.
 
-    On the last screen of the installation wizard, the option to scan the computer for potential threats after getting the latest updates is selected by default. If this update check succeeds, you don't have to manually install the latest definition update package. 
+    On the last screen of the installation wizard, the option to scan the computer for potential threats after getting the latest updates is selected by default. You can clear the checkbox to skip the scanning. 
 
 ## Change antimalware policy settings on a standalone client configured with Endpoint Protection
 
-After your standalone client is configured with Endpoint Protection, for any future policy setting changes, you must apply them manually. 
+To change or update the antimalware policy on your Endpoint Protection-configured standalone client: 
 
-1. Create a new policy or update an existing one in the Configuration Manager console. Export the policy as an XML file and transfer it to the standalone client. See [Create an antimalware policy for the standalone client](#create-an-antimalware-policy-for-the-standalone-client) for instructions.
+1. [Create an antimalware policy for the standalone client](#create-an-antimalware-policy-for-the-standalone-client).
 2. Run the following command on the standalone client:
 
 ```cmd
