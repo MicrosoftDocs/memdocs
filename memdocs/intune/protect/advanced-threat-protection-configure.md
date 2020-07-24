@@ -36,7 +36,7 @@ The information and procedures in this article will help you to configure integr
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your desired risk levels
 
-Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#rerequisites) to use Microsoft Defender ATP with Intune.
+Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender ATP with Intune.
 
 ## Enable Microsoft Defender ATP in Intune
 

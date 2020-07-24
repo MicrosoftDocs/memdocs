@@ -53,5 +53,4 @@ To view the onboarding status of all Intune-managed devices, you can go to **End
 
 ## Next steps
 
-[Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-treat-protection.md)
- 
+[Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](../protect/advanced-threat-protection.md)

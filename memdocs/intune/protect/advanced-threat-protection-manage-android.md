@@ -126,10 +126,11 @@ To configure web protection on devices, use the following procedures to create a
 
 ## Next steps
 
-[Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+[Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
 
-[Microsoft Defender ATP risk dashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+[Use security tasks with ATPs Vulnerability Management to remediate issues on devices](../protect/atp-manage-vulnerabilities.md)
 
-[Use security tasks with ATPs Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md).
+Learn more from the Microsoft Defender documentation:
 
-[Get started with device compliance policies](device-compliance-get-started.md)
+-[Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP risk dashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
