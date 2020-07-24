@@ -2,10 +2,10 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
@@ -1049,12 +1049,9 @@ If you configure the [task sequence properties](../deploy-use/manage-task-sequen
 
 ## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker
 
-Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
+BitLocker drive encryption provides low-level encryption of the contents of a disk volume. Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
 
-Use the **Pre-provision BitLocker** step to enable BitLocker on a drive while in Windows PE. For more information, see [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> BitLocker drive encryption provides low-level encryption of the contents of a disk volume.  
+To enable BitLocker on a drive while in Windows PE, use the [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker) step.
 
 This step runs only in the full OS. It doesn't run in Windows PE.
 
@@ -1066,7 +1063,9 @@ When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN*
 - Activated  
 - Ownership Allowed  
 
-This step completes any remaining TPM initialization. The remaining steps don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization steps, if necessary:  
+Starting in version 2006, you can skip this step for computers that don't have a TPM or when the TPM isn't enabled. A new setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.<!--6995601-->
+
+This step completes any remaining TPM initialization. The remaining actions don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization actions, if necessary:
 
 - Create endorsement key pair  
 - Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
@@ -1113,6 +1112,18 @@ Specifies the drive to encrypt. To encrypt the current OS drive, select **Curren
 
 To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
 
+#### Disk encryption mode
+
+<!--6995601-->
+Starting in version 2006, select one of the following encryption algorithms:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+By default or if not specified, the step continues to use the default encryption method for the OS version. If the step runs on a version of Windows that doesn't support the specified algorithm, it falls back to the OS default. In this circumstance, the task sequence engine sends status message 11911.
+
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1131,6 +1142,10 @@ Select this option to allow BitLocker drive encryption to complete prior to runn
 
 The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
 
+#### Skip this step for computers that do not have a TPM or when TPM is not enabled
+
+<!--6995601-->
+Starting in version 2006, select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
 
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
@@ -1630,6 +1645,18 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the drive for which you want to enable BitLocker. BitLocker only encrypts the used space on the drive.  
 
+#### Disk encryption mode
+
+<!--6995601-->
+Starting in version 2006, select one of the following encryption algorithms:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+By default or if not specified, the step continues to use the default encryption method for the OS version. If the step runs on a version of Windows that doesn't support the specified algorithm, it falls back to the OS default. In this circumstance, the task sequence engine sends status message 11911.
+
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1637,7 +1664,7 @@ By default, this step only encrypts used space on the drive. This default behavi
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
 
-Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine.  
+Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is enabled for the **Pre-provision BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. Starting in version 2006, if the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
 
 
 
