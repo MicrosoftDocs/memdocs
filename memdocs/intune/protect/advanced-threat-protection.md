@@ -77,14 +77,14 @@ To use Microsoft Defender ATP with Intune, be sure you have the following config
 
 ## Next steps
 
-To connect Microsoft Defender ATP to Intune, onboard devices, and configure conditional access policies, see [Configure Microsoft Defender ATP in Intune](../protect/advanced-threat-protection-configure.md).
+- To connect Microsoft Defender ATP to Intune, onboard devices, and configure conditional access policies, see [Configure Microsoft Defender ATP in Intune](../protect/advanced-threat-protection-configure.md).
 
 Learn more from the Intune documentation:
 
 - [Use security tasks with ATPs Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
 - [Get started with device compliance policies](device-compliance-get-started.md)
 
-Learn more from the Microsoft Defender documentation:
+Learn more from the Microsoft Defender ATP documentation:
 
 - [Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
 - [Microsoft Defender ATP risk dashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

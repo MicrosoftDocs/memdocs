@@ -123,14 +123,12 @@ To configure web protection on devices, use the following procedures to create a
 
 9. On **Review + create**, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-
 ## Next steps
 
-[Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
+- [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
+- [Use security tasks with ATPs Vulnerability Management to remediate issues on devices](../protect/atp-manage-vulnerabilities.md)
 
-[Use security tasks with ATPs Vulnerability Management to remediate issues on devices](../protect/atp-manage-vulnerabilities.md)
+Learn more from the Microsoft Defender ATP documentation:
 
-Learn more from the Microsoft Defender documentation:
-
--[Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
 - [Microsoft Defender ATP risk dashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
