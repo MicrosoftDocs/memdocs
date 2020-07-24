@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Monitor integration of Microsoft Defender ATP in Microsoft Intune - Azure | Microsoft Docs
-description: Montitor Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, including device compliance and onboarding status.
+title: Monitor integration of Microsoft Defender Advanced Threat Protection (ATP) in Microsoft Intune - Azure | Microsoft Docs
+description: Monitor Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) with Intune, including device compliance and onboarding status.
 keywords:
 author: brenduns 
 ms.author: brenduns
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Monnitor device status when you integrate Microsoft Defender ATP with Intune
+# Monitor device status when you integrate Microsoft Defender ATP with Intune
 
-When you integrate Microsoft Intune and Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), you can view information about device compliance and onboarding in the Microsoft Endpoint Manager admin center.
+When you integrate Microsoft Intune and Microsoft Defender Advanced Threat Protection (ATP), you can view information about device compliance and onboarding in the Microsoft Endpoint Manager admin center.
 
 ## Monitor device compliance
 
@@ -49,7 +49,7 @@ For more information about reports, see [Intune reports](../fundamentals/reports
 
 ## View onboarding status
 
-To view the onboarding status of all Intune-managed devices, you can go to **Endpoint security** > **Microsoft Defender ATP**. From this page, you can also start the creation of a device configuration profile for onboarding more devices to Microsoft Defender ATP.
+To view the onboarding status of your Intune-managed devices, go to **Endpoint security** > **Microsoft Defender ATP**. From this page, you can also create a device configuration profile to onboard more devices to Microsoft Defender ATP.
 
 ## Next steps
 

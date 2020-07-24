@@ -34,13 +34,13 @@ The information and procedures in this article will help you to configure integr
 - Enable Microsoft Defender ATP for your tenant
 - Onboard devices that run Windows and Android
 - Use compliance policies to set device risk levels
-- Use conditional access policies to block devices that exceed your desired risk levels
+- Use conditional access policies to block devices that exceed your expected risk levels
 
 Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender ATP with Intune.
 
 ## Enable Microsoft Defender ATP in Intune
 
-The first step you take is to set up the service-to-service connection between Intune and Microsoft Defender ATP. This requires administrative access to both the Microsoft Defender Security Center, and to Intune.
+The first step you take is to set up the service-to-service connection between Intune and Microsoft Defender ATP. Set up requires administrative access to both the Microsoft Defender Security Center, and to Intune.
 
 You only need to enable Microsoft Defender ATP a single time per tenant.
 
@@ -82,7 +82,7 @@ You only need to enable Microsoft Defender ATP a single time per tenant.
 
 ## Onboard devices
 
-When you enabled support for Microsoft Defender ATP in Intune, you establish a service-to-service connection between Intune and Microsoft Defender ATP. You can then onboard devices you manage with Intune to Microsoft Defender ATP which enables collection of data about device risk levels.
+When you enabled support for Microsoft Defender ATP in Intune, you establish a service-to-service connection between Intune and Microsoft Defender ATP. You can then onboard devices you manage with Intune to Microsoft Defender ATP, which enables collection of data about device risk levels.
 
 ### Onboard Windows devices
 
@@ -116,7 +116,7 @@ After you onboard a device using the configuration package, you don't need to do
 
 ### Onboard Android devices
 
-After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard Android devices to Microsoft Defender ATP so that data about their risk level can be collected and used.
+After you establish the service-to-service connection between Intune and Microsoft Defender ATP, you can onboard Android devices to Microsoft Defender ATP. Onboarding configures devices to communicate with Defender ATP, which then collects data about the devices risk level.
 
 Unlike for Windows devices, there isn't a configuration package for devices that run Android. Instead, see [Overview of Microsoft Defender ATP for Android](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender ATP documentation for prerequisites and onboarding instructions for Android.
 

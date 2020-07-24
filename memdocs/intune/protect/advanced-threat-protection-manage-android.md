@@ -28,9 +28,9 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Defender ATP on Android devices you manage with Intune
 
-When you integrate Microsoft Intune and Microsoft Defender Advanced Threat Protection (ATP), you can use device configuration profiles to modify some settings of Microsoft Defender ATP on Android devices. 
+When you integrate Microsoft Intune and Microsoft Defender Advanced Threat Protection (ATP), you can use device configuration profiles to modify some settings of Microsoft Defender ATP on Android devices.
 
-Before preceding you must successfully [Configure Microsoft Defender ATP in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Microsoft Defender ATP.
+Before preceding, you must successfully [Configure Microsoft Defender ATP in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Microsoft Defender ATP.
 
 ## Configure web protection on devices that run Android
 
