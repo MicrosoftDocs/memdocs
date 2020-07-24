@@ -165,11 +165,6 @@ Today, if a customer reimages a device and then re-enrolls it, multiple records 
 ### Deploy Software Updates to macOS devices <!-- 3194876 -->
 You'll be able to deploy Software Updates to groups of macOS devices. This feature includes critical, firmware, configuration file, and other updates. You'll be able to send updates on the next device check-in or select a weekly schedule to deploy updates in or out of time windows that you set. This helps when you want to update devices outside standard work hours or when your help desk is fully staffed. You'll also get a detailed report of all macOS devices with updates deployed. You can drill into the report on a per-device basis to see the statuses of particular updates.
 
-### Collect logs remote actions<!--2167272 -->
-A new remote action, *Collect logs*, will let you collect the logs from corporate devices without interrupting or waiting for the end user. Collected logs will include MDM, Autopilot, event viewers, key, Configuration Manager client, networking, and other critical troubleshooting logs.
-
-The new remote action will be located at [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **All devices** > choose a device > **Collect logs**.
-
 ### Associated licenses revoked before deletion of Apple VPP token<!--6195322 -->
 In a future update, when you delete an Apple VPP token in Microsoft Endpoint Manager, all Intune-assigned licenses associated with that token will be automatically revoked before the deletion.
 
