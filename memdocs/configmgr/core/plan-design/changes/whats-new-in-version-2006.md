@@ -200,7 +200,7 @@ When the size of the task sequence policy exceeds 32 MB, the client fails to pro
 > [!TIP]
 > These rules are in a new group for **Operating System Deployment**. The existing rule for **Unused boot images** is now in this group too.
 
-For more information, see [management insight](../../servers/manage/management-insights.md).
+For more information, see [management insight](../../servers/manage/management-insights.md#operating-system-deployment).
 
 ### Improvement to Format and Partition Disk task sequence step
 

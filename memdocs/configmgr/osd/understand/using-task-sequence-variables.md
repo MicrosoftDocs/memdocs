@@ -2,7 +2,7 @@
 title: How to use task sequence variables
 titleSuffix: Configuration Manager
 description: Learn about how to use the variables in a Configuration Manager task sequence.
-ms.date: 11/29/2019
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # How to use task sequence variables in Configuration Manager
@@ -75,7 +73,7 @@ When you specify a name for a new task sequence variable, follow these guideline
 
 - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
 
-There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 32 MB.  
+There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 8 KB. For more information, see [Reduce the size of task sequence policy](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="bkmk_read-only"></a> Read-only variables
 

@@ -2,10 +2,10 @@
 title: Manage task sequences
 titleSuffix: Configuration Manager
 description: Create, edit, deploy, import, and export task sequences to manage them and automate tasks in your environment.
-ms.date: 02/26/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
@@ -35,6 +35,30 @@ Create task sequences by using the Create Task Sequence Wizard. This wizard can 
 ## <a name="BKMK_ModifyTaskSequence"></a> Edit  
 
 Modify a task sequence by adding or removing steps, adding or removing groups, or by changing the order of the steps. For more information, see [Use the task sequence editor](../understand/task-sequence-editor.md).
+
+## <a name="bkmk_policysize"></a> Reduce the size of task sequence policy
+
+<!--6982275-->
+When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
+
+The size of the task sequence as stored in the site database is smaller, but can still cause problems if too large. When the client processes the entire task sequence policy, the expanded size can cause problems over 32 MB.
+
+Starting in version 2006, to check for the 32-MB task sequence policy size on clients, use [management insights](../../core/servers/manage/management-insights.md#operating-system-deployment).
+
+To help reduce the overall size of policy of a task sequence deployment, take the following actions:
+
+- Separate functional segments into child task sequences, and use the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. Each task sequence has a separate 32-MB limit on its policy size.
+
+    > [!NOTE]
+    > Reducing the total number of steps and groups in a task sequence has minimal impact on the policy size. Each step is generally a couple of KB in policy. Moving groups of steps to a child task sequence is more impactful.
+
+- Reduce the number of software updates in deployments to the same collection as the task sequence.
+
+- Instead of entering a script in the [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step, reference it via a package.
+
+- There's an 8-KB limit on the size of the task sequence environment when it runs. Review the usage of custom task sequence variables, which can also contribute to the policy size.
+
+- As a last resort, split a complex, dynamic task sequence into separate task sequences with distinct deployments to different collections.
 
 ## <a name="bkmk_prop-general"></a> Software Center properties
 
