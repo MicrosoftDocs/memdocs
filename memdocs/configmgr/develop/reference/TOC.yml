@@ -484,6 +484,8 @@
           href: core/clients/client-classes/iprogressui--showerrordialog-method.md
         - name: IProgressUI ShowMessage method
           href: core/clients/client-classes/iprogressui--showmessage-method.md
+        - name: IProgressUI ShowMessageEx method
+          href: core/clients/client-classes/iprogressui--showmessageex-method.md
         - name: IProgressUI ShowRebootDialog method
           href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
         - name: IProgressUI ShowSwapMediaDialog method
