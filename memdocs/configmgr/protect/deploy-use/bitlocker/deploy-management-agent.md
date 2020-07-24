@@ -174,7 +174,13 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - The BitLocker management settings are fully compatible with MBAM group policy settings. If devices receive both group policy settings and Configuration Manager policies, configure them to match.
 
+> [!NOTE]
+> If a GPO setting exists for stand-alone MBAM, it will override the equivalent setting attempted by Configuration Manager. GPOs for stand-alone MBAM come from the domain while the policies for Configuration Manager BitLocker Management are local. Domain GPOs will override the local Configuration Manager BitLocker Management policies. Therefore if the stand-alone MBAM GPO does not match the Configuration Manager BitLocker Management policy, it will cause Configuration Manager BitLocker Management to fail. For example if a GPO sets the key recovery services server to the stand-alone MBAM server, Configuration Manager BitLocker Management will be unable to set the same setting to the MP instead. This will cause clients to fail to report up their keys to the Configuration Manager BitLocker Management key recovery services MP.
+
 - Configuration Manager doesn't implement all MBAM group policy settings. If you configure additional settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
+
+> [!NOTE]
+> It is recommended not to set a GPO for a setting that Configuration Manager BitLocker Management already handles, nor is there any need to do so. Only set GPOs for settings that do not currently exist in Configuration Manager BitLocker Management. Configuration Manager 2002 is feature parity with stand-alone MBAM. In most instances, with Configuration Manager 2002 and newer, there should be no reason to set domain GPOs to configure Configuration Manager BitLocker Management policies. Avoid doing so to prevent conflicts and problems and instead configure all policies through Configuration Manager BitLocker Management policies.
 
 ### TPM password hash
 
