@@ -5,13 +5,11 @@ description: Recommendations for using the task sequence step Install Software U
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Install Software Updates

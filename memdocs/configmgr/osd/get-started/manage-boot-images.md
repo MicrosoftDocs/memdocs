@@ -5,13 +5,11 @@ description: In Configuration Manager, learn to manage the Windows PE boot image
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage boot images with Configuration Manager

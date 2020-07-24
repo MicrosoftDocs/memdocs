@@ -5,9 +5,7 @@ description: Understand how to use the task sequence editor in the Configuration
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
