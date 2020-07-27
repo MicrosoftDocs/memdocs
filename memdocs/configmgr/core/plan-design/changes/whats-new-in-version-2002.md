@@ -437,7 +437,8 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Endpoint Configuration Manager admin center | 23 July 2020 | No |
+| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | 24 July 2020 | No |
 
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
