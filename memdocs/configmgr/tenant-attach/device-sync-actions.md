@@ -105,7 +105,7 @@ From the **Tenant onboarding** page in the **Co-management Configuration Wizard*
 - Secret key expiry
 - App ID URI
 
-### Azure AD app permissions
+### Azure AD application permissions and configuration
 
 Using a previously created application during onboarding to tenant attach requires the following permissions:
 
@@ -117,7 +117,12 @@ Using a previously created application during onboarding to tenant attach requir
    - Directory.Read.All [Applications permission](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
    - Directory.Read.All [Delegated directory permission](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
 
-- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+
+- The imported application needs to be configured as follows:
+   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   -  Has a valid application ID URI and secret
+
 
 
 ## Next steps
