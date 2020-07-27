@@ -93,7 +93,9 @@ When co-management isn't enabled, use the instructions below to enable device up
 <!--6479246-->
 *(Introduced in version 2006)*
 
-During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. From the **Tenant onboarding** page in the **Co-management Configuration Wizard**, select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
+During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
+
+From the **Tenant onboarding** page in the **Co-management Configuration Wizard**, select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
 
 - Azure AD tenant name
 - Azure AD tenant ID
@@ -102,6 +104,21 @@ During a [new onboarding](#bkmk_config), an administrator can specify a previous
 - Secret key
 - Secret key expiry
 - App ID URI
+
+### Azure AD app permissions
+
+Using a previously created application during onboarding to tenant attach requires the following permissions:
+
+- Configuration Manager Microservice permissions:
+   - CmCollectionData.read
+   - CmCollectionData.write
+
+- Microsoft Graph permissions:
+   - Directory.Read.All [Applications permission](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
+   - Directory.Read.All [Delegated directory permission](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+
+- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+
 
 ## Next steps
 
