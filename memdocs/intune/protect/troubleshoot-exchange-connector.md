@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,6 +31,13 @@ ms.collection: M365-identity-device-management
 # Troubleshoot the Intune Exchange Connector
 
 This article describes how to troubleshoot issues related to the Intune Exchange Connector.
+
+> [!IMPORTANT]
+>
+> Beginning in July of 2020, support for the Exchange Connector is deprecated, and replaces with Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA), and the ability to add an Exchange Connector to Intune is removed.
+>
+> Customers who previously configured and use the Exchange Connector as have continued support for the connector.
+
 
 ## Before you start
 

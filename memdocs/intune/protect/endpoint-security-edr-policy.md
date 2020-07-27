@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,9 +39,6 @@ EDR policies include platform-specific profiles to manage settings for EDR. The 
 
 EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
 
-> [!TIP]
-> Support for devices you manage with Configuration Manager is in *public preview*.
-
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 View [settings for Endpoint detection and response profiles](endpoint-security-edr-profile-settings.md).
@@ -62,7 +59,68 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
 
-### Devices managed by Intune
+**Intune** – The following are supported for devices you manage with Intune:
+
+- Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
+- Profile: **Endpoint detection and response (MDM)**
+
+**Configuration Manager** - The following are supported for devices you manage with Configuration Manager:
+
+- Platform: **Windows 10 and windows Server** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
+- Profile: **Endpoint detection and response (ConfigMgr)**
+
+## Set up Configuration Manager to support EDR policy
+
+Before you can deploy EDR policies to Configuration Manager devices, complete the configurations detailed in the following sections.
+
+These configurations are made within the Configuration Manager console and to your Configuration Manager deployment. If you’re not familiar with Configuration Manager, plan to work with a Configuration Manager admin to complete these tasks.  
+
+The following sections cover the required tasks:
+
+1. [Install the update for Configuration Manager](#task-1-install-the-update-for-configuration-manager)
+2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
+3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
+4. [Enable collections for Microsoft Defender ATP](#task-4-enable-collections-for-microsoft-defender-atp)
+
+> [!TIP]
+> To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
+>
+> - [Onboard Configuration Manager clients to Microsoft Defender ATP via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
+
+### Task 1: Install the update for Configuration Manager
+
+Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center.
+
+**Update details**:
+
+- **Configuration Manager 2002 Hotfix (KB4563473)**
+
+You’ll find this update as an *in-console update* for Configuration Manager 2002.
+
+To install this update, follow the guidance from [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
+
+After installing the update, return here to continue configuring your environment to support EDR policy from the Microsoft Endpoint Manager admin center.
+
+### Task 2: Configure tenant attach and synchronize collections
+
+If co-management was previously enabled, then tenant attach is already set up and you can skip ahead to [Task 3](#task-3-select-collections-to-synchronize).
+
+With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
+
+For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
+
+#### Enable tenant attach when co-management hasn’t been enabled
+
+> [!TIP]
+> You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don’t need to enable co-management.
+
+If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
+
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
+2. In the ribbon, click **Configure co-management** to open the wizard.
+3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
+   1. Click **Sign In**. Use your *Global Administrator* account to sign in.
 
 The following are supported for devices you manage with Intune:
 
@@ -99,7 +157,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
      - Platform: **Windows 10 and windows Server**
-     - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
+     - Profile: **Endpoint detection and response (ConfigMgr)**
 
 4. Select **Create**.
 

@@ -168,7 +168,7 @@ The following personal enrollment methods will also be blocked:
 
 ## Blocking personal iOS/iPadOS devices
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- Registered with a serial number or IMEI.
+- [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 
 

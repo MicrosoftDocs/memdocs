@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,15 +43,15 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
    - **Platform**: Choose the platform of your devices.
    - **Profile**: Select **SCEP certificate**
 
-     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Device Owner Only* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+     For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
 
-     SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
+     SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
       1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
 
       2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority.
 
-      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration and authentication only.  SCEP certificate profiles on Android Enterprise dedicated devices are not supported for VPN or app authentication.
+      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices are not supported for app authentication.
 
 4. Select **Create**.
 
@@ -74,6 +74,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
+     > [!NOTE]
+     > On macOS, certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+ 
    - **Subject name format**:
 
      Select how Intune automatically creates the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
@@ -115,7 +118,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
          That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
          
-         \* For Android Device Owner Only profiles, the **CN={{UserPrincipalName}}** setting will not work. Android Device Owner Only profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
+         \* For Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles, the **CN={{UserPrincipalName}}** setting will not work. Android Fully Managed, Dedicated, and Corporate-Owned Work Profile profiles can be used for devices without User so this profile will not be able to get the user principal name of the user. If you really need this option for devices with users, you can use a workaround like this: **CN={{UserName}}\@contoso.com** It will provide the User Name and the domain you added manually, such as janedoe@contoso.com
 
       - **Device certificate type**
 
