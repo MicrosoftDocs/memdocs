@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 07/22/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
