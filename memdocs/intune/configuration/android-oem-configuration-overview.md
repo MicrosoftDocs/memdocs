@@ -164,7 +164,6 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Archos | com.archos.oemconfig | |
 | Ascom | com.ascom.myco.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
-| Cipherlab | com.cipherlab.oemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
