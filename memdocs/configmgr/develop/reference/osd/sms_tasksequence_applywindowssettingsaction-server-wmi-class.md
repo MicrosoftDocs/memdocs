@@ -1,25 +1,25 @@
 ---
-title: "SMS_TaskSequence_ApplyWindowsSettingsAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_ApplyWindowsSettingsAction class
+titleSuffix: Configuration Manager
+ms.date: 07/31/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62494ccd-da4c-430d-bad5-ed18c3067240
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_ApplyWindowsSettingsAction Server WMI Class
-The `SMS_TaskSequence_ApplyWindowsSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies Windows settings configuration information for the target computer.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_ApplyWindowsSettingsAction server WMI class
+
+The `SMS_TaskSequence_ApplyWindowsSettingsAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that applies Windows settings configuration information for the target computer.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
-```  
+```MOF
 Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action  
 {  
     String AdminPassword;  
@@ -28,6 +28,7 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
     Boolean ContinueOnError;  
     String Description;  
     Boolean Enabled;  
+    String InputLocale;
     String Name;  
     String ProductKey;  
     Boolean RandomAdminPassword;  
@@ -35,181 +36,252 @@ Class SMS_TaskSequence_ApplyWindowsSettingsAction : SMS_TaskSequence_Action
     String RegisteredUserName;  
     UInt32 ServerLicenseConnectionLimit;  
     String ServerLicenseMode;  
+    String SystemLocale;
     String SupportedEnvironment;  
     UInt32 Timeout;  
     String TimeZone;  
+    string UILanguage;
+    string UILanguageFallback;
+    string UserLocale;
+
 };  
 ```  
 
-## Methods  
- The `SMS_TaskSequence_ApplyWindowsSettingsAction` class does not define any methods.  
+## Methods
 
-## Properties  
- `AdminPassword`  
- Data type: `String`  
+The `SMS_TaskSequence_ApplyWindowsSettingsAction` class doesn't define any methods.
 
- Access type: Read/Write  
+## Properties
 
- Qualifiers: [VariableName("OSDLocalAdminPassword"), Secret, AllowedLen("0-255")]  
+### `AdminPassword`
 
- Local administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it is ignored if the `RandomAdminPassword` property is set to `true`.  
+Data type: `String`  
 
- The task sequence variable associated with this property is OSDLocalAdminPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDLocalAdminPassword).  
+Access type: Read/Write  
 
- `ComputerName`  
- Data type: `String`  
+Qualifiers: `[VariableName("OSDLocalAdminPassword"), Secret, AllowedLen("0-255")]`
 
- Access type: Read/Write  
+The local Administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it's ignored if the `RandomAdminPassword` property is set to `true`.
 
- Qualifiers: None  
+The task sequence variable associated with this property is [OSDLocalAdminPassword](../../../osd/understand/task-sequence-variables.md#OSDLocalAdminPassword#OSDLocalAdminPassword).
 
- Name assigned to the target computer. The default name is "%_SMSTSMachineName%".  
+### `ComputerName`
 
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+Data type: `String`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: None  
+Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Name assigned to the target computer. The default value is `"%_SMSTSMachineName%"`.
 
- `ContinueOnError`  
- Data type: `Boolean`  
+### `Condition`
 
- Access type: Read/Write  
+Data type: `SMS_TaskSequence_Condition`  
 
- Qualifiers: None  
+Access type: Read/Write  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: None  
 
- `Description`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Access type: Read/Write  
+### `ContinueOnError`
 
- Qualifiers: [AllowedLen("0-255")]  
+Data type: `Boolean`  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write  
 
- `Enabled`  
- Data type: `Boolean`  
+Qualifiers: None  
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Qualifiers: None  
+### `Description`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`  
 
- `Name`  
- Data type: `String`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: `[AllowedLen("0-255")]`
 
- Qualifiers: [AllowedLen("1-100")]  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `Enabled`
 
- `ProductKey`  
- Data type: `String`  
+Data type: `Boolean`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: [QuasiSecret]  
+Qualifiers: None  
 
- The product code for the new operating system.  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `RandomAdminPassword`  
- Data type: `Boolean`  
+### `InputLocale`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [not_null]  
+Access type: Read/write
 
- `true` (default) to set the administrator password to a randomly generated value and disable the account in the operating system that is being deployed. The local administrator account, specified by `AdminPassword`, is disabled on the target computer. Set this property to `false` to enable the local administrator account and set the password as specified by the `AdminPassword` property. This property must be set.  
+Specify the default keyboard layout. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
- `RegisteredOrgName`  
- Data type: `String`  
+### `Name`
 
- Access type: Read/Write  
+Data type: `String`  
 
- Qualifiers: [Not_Null, AllowedLen("1-255")]  
+Access type: Read/Write  
 
- Registered organization name in the new operating system. The name length can be between 1 and 255 characters. This property must be set.  
+Qualifiers: `[AllowedLen("1-100")]`
 
- `RegisteredUserName`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Access type: Read/Write  
+### `ProductKey`
 
- Qualifiers: [Not_Null, AllowedLen("1-255")]  
+Data type: `String`  
 
- Registered user name in the new operating system. The name length can be between 1 and 255 characters. This property must be set.  
+Access type: Read/Write  
 
- `ServerLicenseConnectionLimit`  
- Data type: `UInt32`  
+Qualifiers: `[QuasiSecret]`
 
- Access type: Read/Write  
+The product code for the new OS.
 
- Qualifiers: [ValueRange("5-9999")]  
+### `RandomAdminPassword`
 
- Limit on server license connections. The value can be between 5 and 9999. Use this property to configure server licensing on Windows Server 2003.  
+Data type: `Boolean`  
 
- `ServerLicenseMode`  
- Data type: `String`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: `[not_null]`
 
- Qualifiers: None  
+- Set `true` (default) to set the Administrator password to a randomly generated value. It also disables the account in the new OS.
+- Set `false` to enable the local Administrator account. It also sets the password as specified by the `AdminPassword` property.
 
- The server licensing mode. Possible values for Windows Server 2003 are:  
+This property is required.
 
-- PerSeat  
+### `RegisteredOrgName`
 
-- PerServer  
+Data type: `String`  
 
-  `SupportedEnvironment`  
-  Data type: `String`  
+Access type: Read/Write  
 
-  Access type: Read/Write  
+Qualifiers: `[Not_Null, AllowedLen("1-255")]`
 
-  Qualifiers: [Not_Null:ToInstance]  
+Registered organization name in the new OS. The name length can be between 1 and 255 characters. This property is required.
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `RegisteredUserName`
 
-  The default value of this property for this task sequence action is WinPE.  
+Data type: `String`  
 
-  `Timeout`  
-  Data type: `UInt32`  
+Access type: Read/Write  
 
-  Access type: Read/Write  
+Qualifiers: `[Not_Null, AllowedLen("1-255")]`
 
-  Qualifiers: None  
+Registered user name in the new OS. The name length can be between 1 and 255 characters. This property is required.
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `ServerLicenseConnectionLimit`
 
-  `TimeZone`  
-  Data type: `String`  
+Data type: `UInt32`  
 
-  Access type: Read/Write  
+Access type: Read/Write  
 
-  Qualifiers: [Not_Null]  
+Qualifiers: `[ValueRange("5-9999")]`
 
-  Time zone for the new operating system. This property must be set to an English language string. A non-English localized string causes the time zone setting to fail and default to Universal Coordinated Time (UTC).  
+Limit on server license connections. The value can be between 5 and 9999. Use this property to configure server licensing on Windows Server.
 
-## Remarks  
- Class qualifiers for this class include:  
+### `ServerLicenseMode`
 
- [CommandLine("osdwinsettings.exe /config"),VariablePrefix("OSD"),  
+Data type: `String`  
 
- ActionCategory{"Settings,4,7"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "ApplyWindowsSettingsControl", "TaskSequenceOptionControl"}]  
+Access type: Read/Write  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Qualifiers: None  
+
+The server licensing mode. Possible values for Windows Server are:  
+
+- `PerSeat`  
+
+- `PerServer`  
+
+### `SystemLocale`
+
+Data type: `String`
+
+Access type: Read/write
+
+Specify system locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+
+### `SupportedEnvironment`
+
+Data type: `String`  
+
+Access type: Read/Write  
+
+Qualifiers: `[Not_Null:ToInstance]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+The default value of this property for this task sequence action is WinPE.
+
+### `Timeout`
+
+Data type: `UInt32`  
+
+Access type: Read/Write  
+
+Qualifiers: None  
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+
+### `TimeZone`
+
+Data type: `String`  
+
+Access type: Read/Write  
+
+Qualifiers: `[Not_Null]`
+
+Time zone for the new OS. Set this property to an English language string. A non-English localized string causes the time zone setting to fail and default to Universal Coordinated Time (UTC).  
+
+### `UILanguage`
+
+Data type: `String`
+
+Access type: Read/write
+
+Specify the Windows UI language. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+
+### `UILanguageFallback`
+
+Data type: `String`
+
+Access type: Read/write
+
+Specify the fallback language for the Windows UI. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+
+### `UserLocale`
+
+Data type: `String`
+
+Access type: Read/write
+
+Specify the user locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+
+## Remarks
+
+Class qualifiers for this class include:  
+
+```
+[CommandLine("osdwinsettings.exe /config"),VariablePrefix("OSD"),  
+
+ActionCategory{"Settings,4,7"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "ApplyWindowsSettingsControl", "TaskSequenceOptionControl"}]  
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property     qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
 ## Requirements  
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).
