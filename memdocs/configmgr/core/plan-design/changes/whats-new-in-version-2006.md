@@ -204,6 +204,12 @@ For more information, see [device restart notifications](../../clients/deploy/de
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
 
+Intranet clients can now access a CMG software update point when it's assigned to the boundary group. Admins can allow intranet devices to scan against a CMG software update point in the following scenarios:
+
+- When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
+- If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
+
+For more information, see [](setup-cloud-managment-gateway.md#bkmk_role)
 
 
 ## <a name="bkmk_o365"></a> Office management

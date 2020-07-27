@@ -120,6 +120,11 @@ You can create multiple CMG services in Azure, and you can create multiple CMG c
 
 Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to [boundary group relationships](../../../servers/deploy/configure/boundary-groups.md). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
 
+Starting in version 2006, intranet clients can access a CMG software update point when it's assigned to the boundary group. Admins can allow intranet devices to scan against a CMG software update point in the following scenarios:<!--7102873-->
+
+- When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
+- If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
+
 > [!NOTE]
 > Internet-based clients don't fall into any boundary group.
 >
