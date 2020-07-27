@@ -54,7 +54,7 @@ To create an antimalware policy for the standalone client:
 In this step, you copy the Endpoint Protection client installation package (**scepinstall.exe**) from the Configuration Manager server and transfer it to the standalone client.
 
 1. Log in to the Configuration Manager server.
-2. Navigate to the **Client** folder of the Configuration Manager installation folder.
+2. Navigate to the **Client** folder of the Configuration Manager installation folder (**C:\Program Files\Microsoft Configuration Manager\Client**).
 3. Copy **scepinstall.exe**.
 4. Transfer **scepinstall.exe** to the target standalone client on which you want to install the Endpoint Protection client software.
 
