@@ -102,8 +102,6 @@ After installing the update, return here to continue configuring your environmen
 
 ### Task 2: Configure tenant attach and synchronize collections
 
-If co-management was previously enabled, then tenant attach is already set up and you can skip ahead to [Task 3](#task-3-select-collections-to-synchronize).
-
 With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
 
 For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
