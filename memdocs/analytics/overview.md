@@ -59,7 +59,7 @@ For this preview, you can enroll devices via Configuration Manager or Microsoft 
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
-- [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgrmd#bkmk_cm_upload)
+- [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgr.md#bkmk_cm_upload).
 
 ### <a name="bkmk_prs_prereq"></a> Proactive remediation scripting requires:
 Whether enrolling devices via Intune or Configuration Manager, [**Proactive remediation scripting**](proactive-remediations.md#bkmk_prs) has the following requirements:
