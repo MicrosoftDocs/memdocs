@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -151,8 +151,12 @@ To send email to your users, create a notification message template. When a devi
 
 5. Under **Review + create**, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.
 
-> [!NOTE]
-> You can also select an existing notification template you previously created, and **Edit** its information to update the template.
+### View and edit notifications
+
+Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
+
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance
 
