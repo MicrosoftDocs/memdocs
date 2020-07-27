@@ -180,6 +180,10 @@ This approach is the most complex because it requires the following configuratio
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 
+### If my devices are co-managed, should I enroll them via Intune, Configuration Manager, or both?
+
+We recommend using Intune to enroll eligible co-managed devices. Devices that do not meet the device requirements for Intune enrollment (such as Windows Home devices or devices running older versions of Windows) can be enrolled via Configuration Manager. Note that deduplication logic in our back end prevents devices enrolled via both Intune and Configuration Manager from appearing multiple times in the Endpoint analytics portal.
+
 ### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
 
 If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration will be lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled.
