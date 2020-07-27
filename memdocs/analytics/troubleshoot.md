@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 07/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -24,6 +24,16 @@ manager: dougeby
 The sections below can be used to assist in troubleshooting issues you may come across.
 
 ## <a name="bkmk_known"></a> Known issues
+
+### User experience blade not available in All Devices report for some devices
+
+When viewing the **Devices** > **All Devices** report in Intune, the **User experience** blade may not be available for some devices that are enrolled in Endpoint analytics.
+
+**Impacted devices:**
+This issue impacts co-managed devices. Devices enrolled only via Intune or only via Configuration Manager are not affected.
+
+**Workaround:**
+The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
 
 ### Startup processes data not available for some devices
 
