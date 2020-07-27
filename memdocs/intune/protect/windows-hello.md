@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,13 +35,21 @@ Hello for Business is an alternative sign-in method that uses Active Directory o
 
 Intune integrates with Hello for Business in two ways:
 
-- **Tenant wide**: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
-- **Discrete groups**: You can deploy policies that manage Windows Hello for Business to devices that have enrolled with Intune. Policy types that can manage Windows Hello include *identity protection* profiles you create under *Device configuration*, various *security baselines*, and endpoint security *Account protection* profiles. These profile types target assigned users or devices, and apply during check-in.
+- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Discrete groups**: For devices that have previously enrolled with Intune, use a device configuration [**Identity protection**](../protect/identity-protection-configure.md) profile to configure devices for Windows Hello for Business. Identity protection profiles can target assigned users or devices, and apply during check-in.
 
-Use this article to create a default Windows Hello for Business policy that targets your entire organization. To create an identity protection profile that is applied to select user and device groups, see [Configure an identity protection profile](identity-protection-configure.md).  
+In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
+
+- [**Security baselines**](../protect/security-baselines.md). The following baselines include settings for Windows Hello for Business:
+  - [Microsoft Defender Advanced Threat Protection baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Windows MDM security baseline settings](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- Endpoint security [**Account protection**](../protect/endpiont-security-account=protection-policy) policy. View the [Account protection settings](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).t
+
+The remainder of this article focuses on creating a default Windows Hello for Business policy that targets your entire organization.
 
 > [!IMPORTANT]
 > In Windows 10 desktop and mobile versions prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
+>
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
 > - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
 > 
