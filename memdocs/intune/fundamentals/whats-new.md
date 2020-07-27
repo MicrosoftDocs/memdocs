@@ -7,13 +7,8 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-<<<<<<< HEAD
 ms.date: 07/09/2020
 ms.topic: conceptual
-=======
-ms.date: 07/17/2020
-ms.topic: reference
->>>>>>> 51de3b336db5c0985310ab7f58e12cd33978fbca
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -269,17 +264,6 @@ The iOS Company Portal is now supported on devices enrolled using Apple's Automa
 #### Tenant attach: ConfigMgr client details in the admin center (preview)<!-- 7552762 -->
 
 You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Endpoint Manager admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../configmgr/tenant-attach/client-details.md).
-
-## Week of July 6, 2020
-
-### Device security
-
-#### Deploy endpoint security Antivirus policy to tenant attached devices (preview)<!-- 5475441  -->
-As a preview, you can deploy endpoint security [policy for Antivirus](../protect/endpoint-security-antivirus-policy.md) to devices you manage with Configuration Manager Technical Preview 2007. This scenario requires you to configure a tenant attach between a supported version of Configuration Manager and your Intune subscription. The following versions of Configuration Manager are supported:
-
-- Configuration Manager Technical Preview 2007 and later
-
-For more information, see the [requirements for Intune endpoint security policies](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) to support Tenant Attach.
 
 ## Week of June 22, 2020
 

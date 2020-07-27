@@ -79,8 +79,6 @@ The following sections cover the required tasks:
 
 1. [Install the update for Configuration Manager](#task-1-install-the-update-for-configuration-manager)
 2. [Enable tenant attach](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [Select collections to synchronize](#task-3-select-collections-to-synchronize)
-4. [Enable collections for Microsoft Defender ATP](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > To learn more about using Microsoft Defender ATP with Configuration Manager, see the following articles in the Configuration Manager content:
