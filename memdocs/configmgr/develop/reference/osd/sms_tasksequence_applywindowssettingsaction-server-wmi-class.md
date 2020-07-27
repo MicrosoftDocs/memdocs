@@ -63,7 +63,7 @@ Qualifiers: `[VariableName("OSDLocalAdminPassword"), Secret, AllowedLen("0-255")
 
 The local Administrator password. The name can be between 0 and 255 characters in length. This property must be set, but it's ignored if the `RandomAdminPassword` property is set to `true`.
 
-The task sequence variable associated with this property is [OSDLocalAdminPassword](../../../osd/understand/task-sequence-variables.md#OSDLocalAdminPassword#OSDLocalAdminPassword).
+The task sequence variable associated with this property is [OSDLocalAdminPassword](../../../osd/understand/task-sequence-variables.md#OSDLocalAdminPassword).
 
 ### `ComputerName`
 

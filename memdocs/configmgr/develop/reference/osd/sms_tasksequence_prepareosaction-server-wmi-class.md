@@ -51,7 +51,7 @@ Qualifiers: `[not_null, VariableName("OSDBuildStorageDriverList")]`
 
 Set `true` to build a mass-storage device driver list. The default value is `false`.
 
-The task sequence variable associated with this property is [OSDBuildStorageDriverList](../../../osd/understand/task-sequence-variables.md#OSDBuildStorageDriverList).
+This property is deprecated. It only applies to Windows XP and Windows Server 2003.
 
 ### `Condition`
 
