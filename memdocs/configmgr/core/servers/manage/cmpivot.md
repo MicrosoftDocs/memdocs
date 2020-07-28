@@ -149,7 +149,8 @@ The CMPivot window contains the following elements:
 
    - Right-click on a device name to take the following additional actions on the device:  
 
-      - **Pivot to**: Query for another entity on this device.  
+      - **Pivot to**: Query for another entity on this device.
+         - Starting in version 2006, **Pivot to** is called **Device Pivot**. For more information, see [CMPivot starting in version 2006](#bkmk_2006).
 
       - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](../../../apps/deploy-use/create-deploy-scripts.md#run-a-script).  
 
@@ -737,6 +738,24 @@ When using CMPivot outside of the Configuration Manager console, you can query j
 We've made it easier to navigate CMPivot entities. Starting in Configuration Manager version 2002, you can search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
 ![Searching CMPivot entities](./media/5870934-search-cmpivot-entities.png)
+
+## <a name="bkmk_2006"></a> CMPivot starting in version 2006
+<!--6518631-->
+
+Starting in version 2006, CMPivot standalone and CMPivot launched from the admin console have converged. When you launch CMPivot from the admin console, it uses the same underlying technology as CMPivot standalone to give you scenario parity.
+
+You can run CMPivot from an individual device or multiple devices from the devices node without needing to select a device collection. This improvement makes it easier for people, such as those working as the Helpdesk persona, to create CMPivot queries for specific devices outside a pre-created collection.
+
+You can start CMPivot for an individual device in two ways. The device name is at the top of the CMPivot window so you can differentiate it from others. To start CMPivot for a device:
+
+- Select an individual device or multi-select devices in a device collection then select **Start CMPivot**.
+- Within an existing CMPivot operation, right-click a device in the device output and pivot using the **Device Pivot** option.
+   - This action launches a separate CMPivot instance on that individually selected device.
+
+
+Additionally, upon returning devices within a query list view, you can select **Device Pivot** on one or more devices and then pivot and query on just those devices to drill in further. This change allows you to drill in without querying the larger set of devices from the original collection.
+
+
 
  
 ## Inside CMPivot
