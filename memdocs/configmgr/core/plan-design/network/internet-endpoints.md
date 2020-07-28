@@ -2,10 +2,10 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 07/07/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
@@ -195,8 +195,6 @@ Allow the active software update point to access the following endpoints so that
 - `http://download.microsoft.com`  
 
 - `http://*.download.windowsupdate.com`  
-
-- `http://test.stats.update.microsoft.com`  
 
 - `http://ntservicepack.microsoft.com`  
 
