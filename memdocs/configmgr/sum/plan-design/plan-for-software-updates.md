@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 07/31/2020
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -148,7 +148,7 @@ When you need to manage devices that roam off your network onto the internet, de
 #### Cloud management gateway
 Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service. 
 
-For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+For more information, see [Plan for the cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### Internet-based client management
 Place a software update point in an internet-facing network and enable it to allow traffic from internet-based clients. As clients roam onto the internet, they switch to this software update point for scanning. All internet-based clients always get content from the Microsoft Update cloud service.

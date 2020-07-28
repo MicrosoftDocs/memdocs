@@ -307,7 +307,7 @@ In version 1902, this setting is now titled **Prefer cloud based sources over on
 - Cloud distribution points
 - Microsoft Update (added in version 1902)
 
-## Software update points
+## <a name="bkmk_sup></a> Software update points
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
@@ -367,7 +367,6 @@ Starting in version 2006, intranet clients can  access a CMG software update poi
 
 - When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
 - If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
-
 
 ## Management points
 
