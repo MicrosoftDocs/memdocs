@@ -30,27 +30,9 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-### Tenant attach: ConfigMgr client details
-<!--6374854-->
-
-### Tenant attach: Device timeline in the admin center
-<!--7141381-->
-
-### Tenant attach: Install an application from the admin center
-<!--6024389-->
-
-### Tenant attach: CMPivot from the admin center
-<!--6024392-->
-
-### Tenant attach: Run Scripts from the admin center
-<!--6234688-->
-
-### Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center
-<!--7518897-->
-
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
-
+During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -135,12 +117,11 @@ For more information, see the following articles:
 - [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered)
 
 
-
+<!--
 ## <a name="bkmk_comgmt"></a> Co-management
+-->
 
-### Use Microsoft Azure China 21Vianet for co-management
-<!--7133238-->
-You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
+
 
 ## <a name="bkmk_app"></a> Application management
 
@@ -148,8 +129,14 @@ You can now select the Azure China Cloud as your Azure environment when enabling
 <!--5907383-->
 
 ### Improvements to available apps via CMG
-<!--7033501-->
 
+<!--7033501-->
+An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
+
+<!--6935376-->
+This release also fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
+
+For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 
 ## <a name="bkmk_osd"></a> OS deployment
@@ -185,9 +172,6 @@ You can now select the Azure China Cloud as your Azure environment when enabling
 
 ### Use the Company Portal app on co-managed devices
 <!--3601237-->
-
-### Azure AD authentication in Software Center
-<!--6935376-->
 
 ### Improvements to managing device restarts
 
