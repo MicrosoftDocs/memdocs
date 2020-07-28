@@ -52,7 +52,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - Configuration Manager client version 1902 with update rollup (4500571) or later  
 
-- Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
+- Business approval to configure Windows diagnostic data level to **Optional (limited)** on the pilot devices  
 
     For more information, see [Desktop Analytics privacy](privacy.md).
 
@@ -189,7 +189,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
+    - **Windows 10 diagnostic data level**: select at least **Optional (limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   

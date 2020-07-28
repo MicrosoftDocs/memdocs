@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -54,6 +54,9 @@ Install the latest version of [Power BI Desktop](https://aka.ms/intune/datawareh
 ## Load the data and reports using the Power BI Intune Compliance Data Warehouse App
 
 The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app contains information for your tenant and a set of prebuilt reports based on the Data Warehouse data model.
+
+> [!NOTE]
+> The Power BI Intune Compliance Data Warehouse app is not supported for Azure Government cloud environments.
 
 1. Navigate to the **AppSource** page of the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app to begin the installation process.
 2. Click the **Get It Now** button, and then click **Continue**.
