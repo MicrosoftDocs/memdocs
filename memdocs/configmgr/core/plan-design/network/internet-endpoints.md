@@ -274,7 +274,9 @@ For more information, see [Enable data sharing](../../../desktop-analytics/enabl
 
 ## Tenant attach
 
-For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+For more information, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## Endpoint analytics
 
