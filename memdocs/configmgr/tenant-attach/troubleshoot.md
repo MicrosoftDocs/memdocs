@@ -47,7 +47,7 @@ Use the following logs located on the client:
 
 1. Open **CMGatewaySyncUploadWorker.log** from &lt;ConfigMgr install directory>\Logs.
 1. The next sync time is noted by log entries similar to `Next run time will be at approximately: 02/28/2020 16:35:31`.
-1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of devices uploaded to the cloud.
+1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of changed devices uploaded since the last upload.
 1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Endpoint Manager admin center**.
 
 
