@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Virtual private networks (VPNs) give users secure remote access to your organiza
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. Then, you assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
 > [!NOTE]
-> User enrollment for iOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
+> User enrollment for iOS/iPadOS and macOS only supports [per-app VPN](vpn-setting-configure-per-app.md).
 
 > [!NOTE]
 > You can use [Intune custom configuration policies](custom-settings-configure.md) to create VPN profiles for the following platforms:
