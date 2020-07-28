@@ -2,7 +2,7 @@
 title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -19,32 +19,40 @@ To enroll devices to Desktop Analytics, they need to send diagnostic data to Mic
 
 ## Diagnostic data levels
 
-![Diagram of diagnostic data levels for Desktop Analytics](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="Diagram of diagnostic data levels for Desktop Analytics":::
 
 When you integrate Configuration Manager with Desktop Analytics, you also use it to manage the diagnostic data level on devices. For the best experience, use Configuration Manager.
 
-> [!Important]  
+> [!IMPORTANT]
 > In most circumstances, only use Configuration Manager to configure these settings. Don't also apply these settings in domain group policy objects. For more information, see [Conflict resolution](enroll-devices.md#conflict-resolution).
 
-The basic functionality of Desktop Analytics works at the **Basic** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). If you don't configure the **Enhanced (Limited)** level in Configuration Manager, you won't get the following features of Desktop Analytics:
+The basic functionality of Desktop Analytics works at the **Required** [diagnostic data level](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). If you don't configure the **Optional (limited)** level in Configuration Manager, you won't get the following features of Desktop Analytics:
 
 - App usage
 - [Additional app insights](compat-assessment.md#additional-insights)
 - [Deployment status data](deploy-prod.md#address-deployment-alerts)
 - [Health monitoring data](health-status-monitoring.md)
 
-Microsoft recommends that you enable the **Enhanced (Limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it.
+Microsoft recommends that you enable the **Optional (limited)** diagnostic data level with Desktop Analytics to maximize the benefits you get from it.
 
-> [!Tip]
-> The **Enhanced (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy available on devices running Windows 10, version 1709 and later.
+> [!TIP]
+> The **Optional (Limited)** setting in Configuration Manager is the same setting as **Limit Enhanced diagnostic data to the minimum required by Windows Analytics** policy available on devices running Windows 10, version 1709 and later.
 >
-> Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices fall back to the **Basic** level.
+> Devices running Windows 10, version 1703 and earlier, Windows 8.1, or Windows 7 don't have this policy setting. When you configure the **Optional (limited)** setting in Configuration Manager, these devices fall back to the **Required** level.
 >
-> Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Enhanced (Limited)** setting in Configuration Manager, these devices also fall back to the **Basic** level.
+> Devices running Windows 10, version 1709 have this policy setting. However, when you configure the **Optional (limited)** setting in Configuration Manager, these devices also fall back to the **Required** level.
+>
+> In Configuration Manager version 2002 and earlier, the settings had different names:<!-- 7363467 -->
+>
+> |Version 2006 and later|Version 2002 and earlier|
+> |---------|---------|
+> |Required|Basic|
+> |Optional (limited)|Enhanced (Limited)|
+> |Optional|Full|
 
-For more information about diagnostic data shared with Microsoft with **Enhanced (Limited)**, see [Windows 10 enhanced diagnostic data events and fields](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
-> [!Important]
+> [!IMPORTANT]
 > Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, while Desktop Analytics supports Windows 8.1 devices, Microsoft doesn't collect Windows diagnostic data from Windows 8.1 devices located in European countries (EEA and Switzerland).
 
 For more information, see [Desktop Analytics privacy](privacy.md).
@@ -55,8 +63,8 @@ The following articles are also good resources for better understanding Windows 
 
 - [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> Clients configured to Limit Enhanced diagnostic data will send approximately 2 MB of data to the Microsoft cloud on the initial full scan. The daily delta varies between 250-400 KB per day.
+> [!NOTE]
+> Clients configured to send **Optional (limited)** diagnostic data will send approximately 2 MB of data to the Microsoft cloud on the initial full scan. The daily delta varies between 250-400 KB per day.
 >
 > The daily delta scan happens at 3:00 AM (device local time). Some events are sent at the first available time throughout the day. These times aren't configurable.
 >
@@ -66,7 +74,7 @@ The following articles are also good resources for better understanding Windows 
 
 To enable data sharing, configure your proxy server to allow the following internet endpoints.
 
-> [!Important]  
+> [!IMPORTANT]
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the diagnostic data endpoints. SSL interception and inspection aren't possible. To use Desktop Analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 Starting in version 2002, if the Configuration Manager site fails to connect to required endpoints for a cloud service, it raises a critical status message ID 11488. When it can't connect to the service, the SMS_SERVICE_CONNECTOR component status changes to critical. View detailed status in the [Component Status](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) node of the Configuration Manager console.<!-- 5566763 -->
