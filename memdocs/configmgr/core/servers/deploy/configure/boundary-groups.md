@@ -307,7 +307,7 @@ In version 1902, this setting is now titled **Prefer cloud based sources over on
 - Cloud distribution points
 - Microsoft Update (added in version 1902)
 
-## <a name="bkmk_sup></a> Software update points 
+## <a name="bkmk_sup"></a> Software update points 
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
