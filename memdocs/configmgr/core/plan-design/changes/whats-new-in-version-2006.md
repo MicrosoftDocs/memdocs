@@ -183,7 +183,7 @@ This release includes the following improvements to deploy task sequences to dev
 
 You can now specify the disk encryption mode on the **Enable BitLocker** and **Pre-provision BitLocker** task sequence steps. By default, the steps continue to use the default encryption method for the OS version.
 
-The **Enable BitLocker** step also now includes a setting to **Skip this step for computers that do not have a TPM or when TPM is not enabled**. When you enable this setting, the step fails on a device without a TPM or a TPM that doesn't initialize. This setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.
+The **Enable BitLocker** step also now includes a setting to **Skip this step for computers that do not have a TPM or when TPM is not enabled**. When you enable this setting, the step logs an error on a device without a TPM or a TPM that doesn't initialize, and the task sequence continues. This setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.
 
 For more information, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md).
 

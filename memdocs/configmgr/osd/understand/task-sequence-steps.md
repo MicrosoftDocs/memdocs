@@ -1151,7 +1151,7 @@ The encryption process can take hours to complete when encrypting a large hard d
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
 
 <!--6995601-->
-Starting in version 2006, select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
+Starting in version 2006, select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs an error to smsts.log and sends status message 11912. The task sequence continues past this step.
 
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
