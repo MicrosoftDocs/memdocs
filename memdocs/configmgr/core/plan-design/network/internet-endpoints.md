@@ -278,7 +278,9 @@ For more information on the required endpoints for tenant attach features, see [
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## Asset intelligence
 
