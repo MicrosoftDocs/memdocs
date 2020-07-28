@@ -26,11 +26,18 @@ To configure Endpoint Protection on a standalone client manually:
 - [Transfer Endpoint Protection client installation package to the standalone client](#transfer-endpoint-protection-client-installation-package-to-the-standalone-client)
 - [Install Endpoint Protection on the standalone client](#install-endpoint-protection-on-the-standalone-client)
 
+## Prerequisites
+
+The following are the prerequisites for configuring Endpoint Protection on a standalone client:
+
+- You must have access to the Endpoint Protection client installation package, **scepinstall.exe**. You can find this package in the **C:\Program Files\Microsoft Configuration Manager\Client** folder. 
+- Make sure that the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie) is installed. 
+
 ## Create an antimalware policy for the standalone client
 
 In this step, you create a custom antimalware policy in the Configuration Manager console and then transfer it to the standalone client.
 
-When creating the antimalware policy, you must also configure the definition update source to keep the policy definitions up to date on the standalone client. You can configure the definition update source as [Microsoft Update](endpoint-definitions-microsoft-updates.md) and [Microsoft Malware Protection Center](endpoint-definitions-protection-center.md), if your standalone client is connected to the internet. Alternatively, select [network share](endpoint-definitions-network.md) as the definition distribution source and update it periodically with the latest definition update package. 
+When creating the antimalware policy, you must configure the definition update source to keep the policy definitions up to date on the standalone client. You can configure the definition update source as [Microsoft Update](endpoint-definitions-microsoft-updates.md) and [Microsoft Malware Protection Center](endpoint-definitions-protection-center.md), if your standalone client is connected to the internet. Alternatively, select [network share](endpoint-definitions-network.md) as the definition distribution source and update it periodically with the latest definition update package. 
 
 To create an antimalware policy for the standalone client:
 
@@ -78,8 +85,6 @@ To install Endpoint Protection on the standalone client:
 4. Follow the on-screen instructions to complete the client installation.
 
     On the last screen of the installation wizard, the option to scan the computer for potential threats after getting the latest updates is selected by default. You can clear the checkbox to skip the scanning.
-
-5. Make sure that the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie) is installed on your standalone client.
 
 ## Change antimalware policy settings on a standalone Endpoint Protection client
 
