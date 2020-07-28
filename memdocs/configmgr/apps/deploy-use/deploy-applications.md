@@ -283,6 +283,9 @@ If you deploy applications as available to users, they can browse and install th
 
   - Clients must resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point  
 
+  > [!NOTE]
+  > For a client detected as on the intranet, but communicating via the cloud management gateway (CMG), in Configuration Manager version 2002 and earlier, Software Center uses Windows authentication. When it tried to get the list of user-available apps via CMG, it would fail. Starting in version 2006, it uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.<!--6935376-->
+
 ### Internet-based domain-joined devices
 
 <!--7033501-->
