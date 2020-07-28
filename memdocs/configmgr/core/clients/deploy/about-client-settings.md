@@ -969,9 +969,9 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
-## Windows Analytics
+## Windows Diagnostic Data
 
-> [!Important]  
-> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> This group was previously called **Windows Analytics**. Microsoft retired the Windows Analytics service on January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics is the evolution of Windows Analytics. Use Desktop Analytics to manage Windows diagnostic data settings. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
