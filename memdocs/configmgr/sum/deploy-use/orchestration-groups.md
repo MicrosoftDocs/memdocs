@@ -2,7 +2,7 @@
 title: Orchestration Groups
 titleSuffix: Configuration Manager
 description: Create orchestration groups and deploy updates to them. 
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -84,7 +84,7 @@ The **Orchestration Groups** feature is the evolution of the [Server Groups](ser
 
 1. On the **Pre-Script** page, enter a PowerShell script to run on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
 
-1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs. The behavior is otherwise the same as the PreScript.
+1. On the **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
 
 1. Complete the wizard.
 
@@ -118,7 +118,8 @@ To delete the orchestration group, select it then click **Delete** in the ribbon
        - Enter a PowerShell script that runs on each device *before* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
        
    - **Post-Script**:
-      - Enter a PowerShell script to run on each device *after* the deployment runs. The script should return a value of `0` for success, or `3010` for success with restart.
+      - Enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The script should return a value of `0` for success, or `3010` for success with restart.
+  
    > [!WARNING]
    > Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached.
 

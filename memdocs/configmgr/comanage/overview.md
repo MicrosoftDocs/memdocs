@@ -5,7 +5,7 @@ description: Learn how to concurrently manage Windows 10 devices by using both C
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -84,7 +84,7 @@ Co-management has these prerequisites in the following areas:
     > [!Tip]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message "User not recognized".
     >
-    > You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > You may not need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### Configuration Manager
 
@@ -96,9 +96,9 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Azure AD
 
-- Windows 10 devices must be joined to Azure AD. They can be either of the following types:  
+- Windows 10 devices must be connected to Azure AD. They can be either of the following types:  
 
-  - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and joined to your Azure Active Directory.  
+  - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
 
   - [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->  
 

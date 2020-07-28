@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -82,6 +82,11 @@ This feature applies to:
 - iPadOS 13.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
+
+> [!NOTE]
+> Only add one app to the dock, a page, or a folder on a page. Adding the same app in all places prevents the app from showing on devices, and may show reporting errors.
+>
+> For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 
 ### Dock
 
@@ -214,7 +219,7 @@ This feature applies to:
 
 - **Lock screen footnote**: If devices are lost or stolen, enter a note that might help get the device returned. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
-  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceName` or any other device-specific value.
+  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `DEVICENAME` or any other device-specific value.
 
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix. 
@@ -318,6 +323,10 @@ This feature applies to:
 - **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
   For more information about shared device mode and how to enable it, see [Overview of shared device mode](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+
+  This feature applies to:
+  
+  - iOS/iPadOS 13.5 and newer
 
 - **Extension ID** (Redirect and Credential): Enter the bundle identifier that identifies your SSO app extension, such as `com.apple.extensiblesso`.
 

@@ -2,7 +2,7 @@
 title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
 description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Create a task sequence to upgrade an OS in Configuration Manager
@@ -219,8 +217,10 @@ One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployme
 - In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.  
 
 - Add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step to this group of your task sequence. Use the **Package** option to reference the tool. The following string is an example **Command line**:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Always use the most recent version of SetupDiag for the latest functionality and fixes to known issues. For more information, see [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## Additional recommendations
 
@@ -248,13 +248,17 @@ Use the **SMSTSDownloadRetryCount** [task sequence variable](../understand/task-
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    This command causes the command prompt to exit with the specified non-zero exit code, which the task sequence considers a failure.
+
 1. On the **Options** tab, add the following condition:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-This return code is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns this code, the task sequence skips this step. Otherwise, if the assessment step returns any other return code, this step fails the task sequence with the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+    This condition means that the task sequence only runs this **Run Command Line** step if the return code isn't a success code.
 
-For more information, see [Upgrade operating system](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+The return code `3247440400` is the decimal equivalent of MOSETUP_E_COMPAT_SCANONLY (0xC1900210), which is a successful compatibility scan with no issues. If the *Upgrade Assessment* step succeeds and returns `3247440400`, the task sequence skips this **Run Command Line** step, and continues. If the assessment step returns any other return code, this **Run Command Line** step runs. Because the command exits with a non-zero return code, the task sequence also fails. The task sequence log and status messages include the return code from the Windows Setup compatibility scan. For more information on **_SMSTSOSUpgradeActionReturnCode**, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+
+For more information, see the [Upgrade operating system](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step.
 
 ### Convert from BIOS to UEFI
 

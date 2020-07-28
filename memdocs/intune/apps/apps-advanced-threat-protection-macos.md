@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 05/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

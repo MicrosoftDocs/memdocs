@@ -31,7 +31,7 @@ Use the following search tips to help you find the information that you need:
 
 - When using your preferred search engine to locate content for Configuration Manager, include `ConfigMgr` along with your search keywords.
 
-  - Look for results from `docs.microsoft.com/configmgr` for Configuration Manager current branch. Results from `docs.microsoft.com/previous-versions` are for older product versions.
+  - Look for results from `docs.microsoft.com/mem/configmgr` for Configuration Manager current branch. Results from `docs.microsoft.com/previous-versions` are for older product versions.
 
   - To further focus the search results to the current content library, include `site:docs.microsoft.com` to scope the search engine.
 

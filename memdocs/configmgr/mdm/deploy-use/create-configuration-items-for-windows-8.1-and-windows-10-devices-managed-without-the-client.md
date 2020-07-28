@@ -322,7 +322,7 @@ These settings are only for devices running Windows 10 Team.
 
 For more information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### Microsoft Edge
+### Microsoft Edge Legacy
 
 These settings are only for devices running Windows 10 and later.  
 

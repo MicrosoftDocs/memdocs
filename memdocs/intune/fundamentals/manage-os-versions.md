@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage operating system versions with Microsoft Intune
+title: Manage operating system versions with Intune
 titleSuffix: Microsoft Intune
 description: Learn how to manage operating system versions across platforms with Microsoft Intune. 
 keywords:

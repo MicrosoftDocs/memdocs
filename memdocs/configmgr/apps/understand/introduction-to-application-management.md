@@ -90,7 +90,7 @@ When you make *revisions* to an application or a deployment type, Configuration 
 - Restore a previous version of an application
 - Delete an old version
 
-For more information, see [Update and retire applications](../deploy-use/update-and-retire-applications.md).  
+For more information, see [Revise applications](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
 
 ### Detection method
 

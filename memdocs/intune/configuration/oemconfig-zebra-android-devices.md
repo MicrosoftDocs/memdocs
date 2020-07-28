@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,18 +58,26 @@ In another example, you assigned an OEMConfig profile that configured some Zebra
 
 ## Ordering
 
-With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site). Let's look at an example.
+With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site). 
 
-You want to turn on Bluetooth for all newly-enrolled Zebra devices before configuring any other setting on these devices. You create two profiles:
+To summarize, if order matters, use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site). If order doesn't matter, use multiple Intune profiles. 
 
-- **Profile 1**: Turns on Bluetooth. This profile is assigned on Monday to the **All Devices** group.
-- **Profile 2**: Configures another setting. This profile is assigned on Tuesday to the **All Devices** group.
+Let's look at some examples:
 
-On Wednesday, you enroll 10 new Zebra devices with Intune. Profile 1 and Profile 2 are assigned to the **All Devices** group. After the new devices sync with Intune, they receive the profiles. These devices may get Profile 2 before Profile 1.
+- You want to turn on Bluetooth for all newly-enrolled Zebra devices before configuring any other setting on these devices. To run operations in sequence, use the **Steps** feature in Zebra’s schema.
 
-To complete this task, use the **Steps** feature in Zebra’s schema. This feature confirms that operations run in sequence. In this case, you create one profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMConfig app receives the profile, it runs the steps in order.
+  Create one Intune profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMConfig app receives the profile, it runs the steps in order.
 
-For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site).
+  For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/10-0/mc/) (opens Zebra's web site).
+
+- You want all Zebra devices to display time in 24-hour format. For some of these devices, you want to turn the camera off. The time and camera settings don't depend on each other.
+
+  Create two Intune profiles:
+
+  - **Profile 1**: Displays the time in 24-hour format. On Monday, this profile is assigned to the **All Zebra AE devices** group.
+  - **Profile 2**: Turns off the camera. On Tuesday, this profile is assigned to the **Zebra AE factory devices** group.
+
+  On Wednesday, you enroll 10 new Zebra devices with Intune. Profile 1 and Profile 2 are assigned. After the new devices sync with Intune, they receive the profiles. The devices may get Profile 2 before getting Profile 1.
 
 ## Enhanced reporting
 

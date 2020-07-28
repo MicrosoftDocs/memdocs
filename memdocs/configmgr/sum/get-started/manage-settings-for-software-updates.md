@@ -2,7 +2,7 @@
 title: Manage settings for software updates
 titleSuffix: "Configuration Manager"
 description: "Learn about the client settings that are appropriate for software updates at your site after you install the software update point."
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -110,13 +110,13 @@ On the **Supersedence Information** tab, you can view the following information 
 In the properties, you can configure software update settings for one or more software updates. You can configure most software update settings only at the central administration site or stand-alone primary site. The following sections will help you to configure settings for software updates.  
 
 ####  <a name="BKMK_SetMaxRunTime"></a> Set maximum run time  
-In the **Maximum Run Time** tab, set the maximum amount of time a software update is allotted to complete on client computers. If the update takes longer than the maximum run-time value, Configuration Manager creates a status message and stops monitoring the deployment for the software updates installation. You can configure this setting only on the central administration site or a stand-alone primary site.  
+In the **Maximum Run Time** tab, set the maximum amount of time a software update is allotted to complete on client computers. If the update takes longer than the maximum run-time value, Configuration Manager creates a status message and stops the software updates installation. You can configure this setting only on the central administration site or a stand-alone primary site.  
 
 Configuration Manager also uses this setting to determine whether to initiate the software update installation within a configured maintenance window. If the maximum run-time value is greater than the available remaining time in the maintenance window, the software updates installation is postponed until the start of the next maintenance window. When there are multiple software updates to be installed on a client computer with a configured maintenance window (timeframe), the software update with the lowest maximum run time installs first, then the software update with the next lowest maximum run time installs next, and so on. Before it installs each software update, the client verifies that the available maintenance window will provide enough time to install the software update. After a software update starts installing, it will continue to install even if the installation goes beyond the end of the maintenance window. For more information about maintenance windows, see the [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 On the **Maximum Run Time** tab, you can view and configure the following settings:  
 
-- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is no longer monitored by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs. For other software update types, the default is 10 minutes if you did a fresh install of Configuration Manager version 1511 or higher and 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.  
+- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is stopped by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs. For other software update types, the default is 10 minutes if you did a fresh install of Configuration Manager version 1511 or higher and 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.  
 
 > [!IMPORTANT]  
 >  Be sure to set the maximum run time value smaller than the configured maintenance window time or increase the maintenance window time to a value greater than the maximum run time. Otherwise, the software update installation will never initiate.  

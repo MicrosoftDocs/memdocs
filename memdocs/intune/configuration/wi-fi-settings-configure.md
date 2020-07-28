@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,7 +72,7 @@ Wi-Fi profiles support the following device platforms:
 
       > [!TIP]
       >
-      > - For **Android Enterprise** devices running as a dedicated device (kiosk), choose **Device owner only** > **Wi-Fi**.
+      > - For **Android Enterprise** devices running as a dedicated device (kiosk), choose **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi**.
       > - For **Windows 8.1 and newer**, you can choose **Wi-Fi import**. This option lets you import Wi-Fi settings as an XML file that you previously exported from a different device.
 
 4. Select **Create**.
@@ -105,9 +105,8 @@ Wi-Fi profiles support the following device platforms:
 > [!TIP]
 > If you use certificate based authentication for your Wi-Fi profile, deploy the Wi-Fi profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.  For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
-
 ## Next steps
 
-The profile is created, but it's not doing anything. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
+The profile is created, but may not be doing anything. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
 [Troubles Wi-Fi profiles in Intune](troubleshoot-wi-fi-profiles.md).

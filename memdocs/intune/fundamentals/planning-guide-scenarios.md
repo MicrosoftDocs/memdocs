@@ -64,7 +64,6 @@ Here are a few examples of use-case and sub-use-case scenarios:
 | BYOD | Information worker |           
 | BYOD | Executives |
 
-You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to enter your organization's use-case and sub-use-case scenarios.
 
 ## Organizational groups for your scenarios
 

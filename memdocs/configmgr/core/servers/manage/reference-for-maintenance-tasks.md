@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -93,6 +93,7 @@ Use this task to delete from the site database all aged data for client operatio
 
 - Aged or expired client notifications, like download requests for machine or user policy
 - Endpoint Protection, like requests by an administrative user for clients to run a scan or download updated definitions
+- Run Scripts status results
 
 |||
 |---------|---------|

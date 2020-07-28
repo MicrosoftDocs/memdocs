@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -50,10 +50,10 @@ The following scenarios benefit from these improvements:
 ### <a name="bkmk_scenario1"></a> Scenario 1: Client to management point
 
 <!--1356889-->
-[Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.
+[Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
 > [!Note]  
-> This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for Azure AD-joined clients communicating through a cloud management gateway. For more information, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
 
@@ -90,8 +90,6 @@ The following Configuration Manager features support or require enhanced HTTP:
 - A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
 
 - Onboard the site to Azure AD for cloud management.  
-
-    - If you've already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then select **Update application setting** in the ribbon.  
 
 - *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
 

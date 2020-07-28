@@ -2,16 +2,14 @@
 title: Upgrade Windows devices to a different version
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to automatically upgrade Windows 10 devices to a different Windows edition.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Upgrade Windows devices to a new edition with Configuration Manager
@@ -34,7 +32,7 @@ Before you begin to upgrade devices to the latest version, review the following 
 
 - For desktop editions of Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
 
-- For Windows 10 Mobile: An XML license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy.
+- For Windows 10 Mobile: An XML license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy. Download the ISO file for **Windows 10 Mobile Enterprise**, which includes the licensing XML.<!-- SCCMDocs#2033 -->
 
 - To manage this policy type, you must be in the Configuration Manager **Full Administrator** security role.
 

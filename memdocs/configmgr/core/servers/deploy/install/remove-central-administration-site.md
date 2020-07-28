@@ -2,7 +2,7 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -138,7 +138,7 @@ After you remove the CAS, review the following steps as they apply to your envir
 
 - If you connect Configuration Manager with [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), you need to reset the connection. The first step to resolve any issues is to [renew the secret key](../configure/azure-services-wizard.md#bkmk_renew). If that doesn't resolve the issue, recreate the connection.<!-- 5584635 -->
 
-- In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Include Microsoft Surface drivers and firmware updates](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
+- In version 2002, if you enable synchronization of Surface drivers, reconfigure this feature after you remove the CAS. For more information, see [Microsoft Surface drivers and firmware updates](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - If you manage third-party software updates:
 

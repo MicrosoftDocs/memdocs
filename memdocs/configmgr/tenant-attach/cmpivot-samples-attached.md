@@ -5,7 +5,7 @@ description: Script samples for CMPivot for Microsoft Endpoint Manager tenant at
 ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: sample
 ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart 

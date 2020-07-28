@@ -311,7 +311,7 @@ For Configuration Manager version 1906, this level includes the following data:
 
 - Windows Hello for Business policy (created, deployed)  
 
-- Count of deployed Microsoft Edge browser policies  
+- Count of deployed Microsoft Edge Legacy browser policies  
 
 - Count of OneDrive policies (created, deployed)
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -68,7 +68,7 @@ This article lists and describes all the email settings available for devices ru
 - **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server.
 - **OAuth**: **Enable** uses Open Authorization (OAuth) communication when sending emails, receiving emails, and communicating with Exchange. If your OAuth server uses certificate authentication, choose **Certificate** as the **Authentication method**, and include the certificate with the profile. Otherwise, choose **Username and password** as the **Authentication method**. When using OAuth, be sure to:
 
-  - Confirm your email solution supports OAuth before targeting this profile to your users. Office 365 Exchange online support OAuth. On-premises Exchange and other partner or third-party solutions may not support OAuth. On-premises Exchange can be configured for Modern Authentication (see the [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) blog post).
+  - Confirm your email solution supports OAuth before targeting this profile to your users. Office 365 Exchange online support OAuth. On-premises Exchange and other partner or third-party solutions may not support OAuth. On-premises Exchange can be configured for Modern Authentication. For more information, see [Hybrid modern authentication overview and prerequisites for on-premises Skype for Business and Exchange servers](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
     If the email profile uses Oauth, and the email service doesn't support it, then the **Re-Enter password** option appears broken. For example, nothing happens when the user selects **Re-Enter password** in Apple's device settings.
 

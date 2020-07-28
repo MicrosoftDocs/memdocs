@@ -23,7 +23,7 @@ To use the following BitLocker management components in Configuration Manager, y
 - User self-service portal
 - Administration and monitoring website (helpdesk portal)
 
-You can install the portals on an existing site server with IIS, or use a standalone web server to host them.
+You can install the portals on an existing site server or site system server with IIS installed, or use a standalone web server to host them.
 
 > [!NOTE]
 > Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.

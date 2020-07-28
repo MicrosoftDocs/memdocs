@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 
@@ -42,7 +43,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender Advanced Threat Protection, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
 
 ### What you will need to continue
 
@@ -122,5 +123,5 @@ Once the user joins the device to Azure Active Directory, the following configur
 
 ## Next steps
 
-- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) to require Defender threat analysis to meet compliance.
-- Create a [Device-based Conditional Access policy](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) to block access if the device does not meet Intune compliance.
+- If you are using Microsoft Defender Advanced Threat Detection, create an [Intune Compliance policy](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) to require Defender threat analysis to meet compliance.
+- Create a [Device-based Conditional Access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy) to block access if the device does not meet Intune compliance.

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,7 +24,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: 
+ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -39,13 +39,13 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Prerequisites
 
-* You will need a Mac OS computer that runs OS X 10.8.5 or later, and also has Xcode 9 or later installed.
+- You will need a Mac OS computer that runs OS X 10.12.6 or later, and also has Xcode 9 or later installed.
 
-* Your app must be targeted for iOS 11 or above.
+- Your app must be targeted for iOS 11 or above.
 
-* Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
+- Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
-* Download the files for the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
+- Download the files for the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## What's in the SDK Repository
 
@@ -124,17 +124,17 @@ To enable the Intune App SDK, follow these steps:
      ![Intune App SDK iOS: copy bundle resources](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Add these iOS frameworks to the project:  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices.framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices.framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. Enable keychain sharing (if it isn't already enabled) by choosing **Capabilities** in each project target and enabling the **Keychain Sharing** switch. Keychain sharing is required for you to proceed to the next step.
 
@@ -181,6 +181,9 @@ To enable the Intune App SDK, follow these steps:
 If the '-o' parameter is not specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
 
 ## Configure ADAL/MSAL
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 The Intune App SDK can use either the [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) or the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on ADAL/MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
@@ -291,6 +294,9 @@ To receive Intune app protection policy, apps must initiate an enrollment reques
 > The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by App Protection Policies. All apps will need to have a current SDK version to allow protected data sharing.
 
 ### Apps that already use ADAL or MSAL
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Apps which already use ADAL or MSAL should call the `registerAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
 
@@ -471,7 +477,7 @@ The Intune App SDK has several APIs you can call to get information about the In
 Class | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity](app-sdk-ios.md#enable-multi-identity-optional). |
-IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. These policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. The only one that the app should implement is the Save-as control. This class exposes some APIs needed to implement Save-as. |
+IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. Most of these policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. However, there are some exceptions. App developers should review the comments in this header to determine which APIs are applicable to their application's scenarios. |
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |
 
@@ -482,6 +488,12 @@ Intune lets IT admins specify which accounts can be logged into by the user. App
 To query for allowed accounts, the App should check the `allowedAccounts` property on the `IntuneMAMEnrollmentManager`. The `allowedAccounts` property is either an array containing the allowed accounts or nil. If the property is nil then no allowed accounts have been specified.
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
+
+## Implement File Encryption Required
+
+The `isFileEncryptionRequired` API defined in `IntuneMAMPolicy.h` informs applications when the IT administrator requires that applications use Intune encryption on any files saved to disk. If `isFileEncryptionRequired` is true, then it is the app's responsibility to ensure that any files saved to disk by the app are encrypted using the APIs in `IntuneMAMFile.h`, `IntuneMAMFileProtectionManager.h`, and `IntuneMAMFDataProtectionManager.h`.
+
+Apps can react to changes in this policy by observinbg the `IntuneMAMDataProtectionDidChangeNotification` notification defined in `IntuneMAMFDataProtectionManager.h`.
 
 ## Implement save-as and open-from controls
 
@@ -500,13 +512,14 @@ The `isSaveToAllowedForLocation` API provides constants to check whether the IT 
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 Apps should use the constants in `isSaveToAllowedForLocation` to check if data can be saved to locations considered "managed," like OneDrive for Business, or "personal." Additionally, the API should be used when the app can't check whether a location is "managed" or "personal."
 
-The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device.
+The `IntuneMAMSaveLocationLocalDrive` constant should be used when the app is saving data to any location on the local device. Similarly, the `IntuneMAMSaveLocationCameraRoll` constant should be used if the app is saving a photo to the camera roll.
 
-If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` location should always be paired with a `nil` account.
+If the account for the destination location is unknown, `nil` should be passed. The `IntuneMAMSaveLocationLocalDrive` and `IntuneMAMSaveLocationCameraRoll` locations should always be paired with a `nil` account.
 
 ### Supported open locations
 
@@ -754,7 +767,7 @@ If your app integrates with Siri Intents, please make sure to read the comments 
 ## Notifications
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
 ## Displaying Web Content Within Application
-If your application has the ability to display websites within a web view and the displayed web pages have the ability to navigate to arbitrary sites, the application is responisble for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine.
+If your application has the ability to display websites within a web view and the displayed web pages have the ability to navigate to arbitrary sites, the application is responsible for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine.
 Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setUIPolicyIdentity passing in the current identity.
 Single identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setCurrentThreadIdentity passing in nil.
 

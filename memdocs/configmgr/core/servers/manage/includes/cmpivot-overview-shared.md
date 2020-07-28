@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
+ms.date: 07/13/2020
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -15,7 +15,7 @@ Queries can be used to search terms, identify trends, analyze patterns, and prov
 In the following example, the entity is `CCMRecentlyUsedApplications` (a reference to the recently used applications), and the operator is where (which filter out records from its input according to some per-record predicate):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## Entities
@@ -123,7 +123,6 @@ Entities are objects that can be queried from the client. We currently support t
 |ProtectedVolumeInformation|Protected Volume Information|
 |Protocol|Protocol|
 |QuickFixEngineering|Quick Fix Engineering|
-|Registry()|All values for a specific registry key|
 |SCSIController|SCSI Controller|
 |SerialPortConfiguration|Serial Port Configuration|
 |SerialPorts|Serial Ports|
@@ -265,4 +264,5 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |Entity|FileContent()|Content of a specific file|
 |Entity|NAPClient|NAP Client|
 |Entity|NAPSystemHealthAgent|NAP System Health Agent|
+|Entity|Registry()|All values for a specific registry key<!--7371183-->|
 |Table operator|render|Renders results as graphical output|

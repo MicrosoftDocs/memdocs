@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # What are common ways to use Conditional Access with Intune?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 There are two types of conditional access with Intune: device-based conditional access and app-based conditional access. You need to configure the related compliance policies to drive conditional access compliance at your organization. Conditional access is commonly used to do things like allow or block access to Exchange, control access to the network, or integrate with a Mobile Threat Defense solution.
  
@@ -118,6 +115,16 @@ Any device used to access Exchange on-premises is checked for compliance when de
 
 When devices don't meet the conditions set, the end user is guided through the process of enrolling the device to fix the issue that is making the device noncompliant.
 
+> [!NOTE]
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA). Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+>
+> If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. See [Install Exchange on-premises connector](../protect/exchange-connector-install.md) for more information. You can continue to use the connector or configure HMA and then uninstall your connector.
+>
+> Hybrid Modern Authentication provides functionality that was previously provided by the Exchange Connector for Intune: Mapping of a device identity to its Exchange record.  This mapping now happens outside of a configuration you make in Intune or the requirement of the Intune connector to bridge Intune and Exchange. With HMA, the requirement to use the ‘Intune' specific configuration (the connector) has been removed.
+
+
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
+
 #### How conditional access for Exchange on-premises works
 
 Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
@@ -145,7 +152,7 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
 
 10. Exchange server sends the notification to EAS client so the user can access e-mail.
-
+-->
 
 #### What's the Intune role?
 
@@ -163,7 +170,5 @@ Exchange server provides API and infrastructure to move devices to quarantine.
 [How to configure Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Set up app-based conditional access policies](app-based-conditional-access-intune-create.md)
-
-[How to install on-premises Exchange connector with Intune](exchange-connector-install.md).
 
 [How to create a Conditional Access policy for Exchange on-premises](conditional-access-exchange-create.md)

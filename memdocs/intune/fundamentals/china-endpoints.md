@@ -67,6 +67,10 @@ Intune operated by 21Vianet depends on the following partner service endpoints:
 - MS Graph: https:\//microsoftgraph.chinacloudapi.cn
 - ADRS: https:\//enterpriseregistration.partner.microsoftonline.cn
 
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
+
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
+
 ## Next steps
 [Learn more about Intune operated by 21Vianet in China](china.md)
 

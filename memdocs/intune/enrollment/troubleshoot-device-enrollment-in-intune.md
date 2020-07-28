@@ -343,7 +343,7 @@ This issue can happen if:
 4. Tell the user to restart the enrollment process.
 
 #### Determine if there's something wrong with the VPP token
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment program tokens** > token name > **Profiles** > profile name > **Manage** > **Properties**.
 2. Review the properties to see if any errors similar to the following appear:
     - This token has expired.
     - This token is out of Company Portal licenses.
@@ -353,7 +353,7 @@ This issue can happen if:
 3. Fix the issues for the token.
 
 #### Identify which devices are blocked by the VPP token
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS**k > **iOS enrollment** > **Enrollment program tokens** > token name > **Devices**.
 2. Filter the **Profile status** column by **Blocked**.
 3. Make a note of the serial numbers for all the devices that are **Blocked**.
 

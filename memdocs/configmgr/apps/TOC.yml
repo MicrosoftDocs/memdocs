@@ -77,10 +77,6 @@
       href: deploy-use/create-app-v-virtual-environments.md
     - name: Import and export applications
       href: deploy-use/import-export-applications.md
-  - name: Update and retire applications
-    items:
-    - name: Update and retire applications
-      href: deploy-use/update-and-retire-applications.md
     - name: Revise and supersede applications
       href: deploy-use/revise-and-supersede-applications.md
     - name: Uninstall applications

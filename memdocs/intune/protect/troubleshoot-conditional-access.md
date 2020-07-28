@@ -10,6 +10,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 07/23/2019
 ms.topic: troubleshooting
+ms.subservice: protect
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology:
@@ -75,7 +76,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 - Certain Android devices might appear to be encrypted, however the Company Portal app recognizes these devices as not encrypted and marks them as noncompliant. In this scenario, the user will see a notification in the Company Portal app asking them to set a start-up passcode for the device. After tapping the notification and confirming the existing PIN or password, choose the **Require PIN to start device** option on the **Secure start-up** screen, then tap the **Check Compliance** button for the device from the Company Portal app. The device should now be detected as encrypted. 
 
   > [!NOTE]
-  > Some device manufacturers encrypt their devices bu using a default PIN instead of a PIN set by the user. Intune views encryption that uses a default PIN as insecure and marks those devices as noncompliant until the user creates a new, non-default PIN.
+  > Some device manufacturers encrypt their devices by using a default PIN instead of a PIN set by the user. Intune views encryption that uses a default PIN as insecure and marks those devices as noncompliant until the user creates a new, non-default PIN.
 
 - An Android device that's enrolled and compliant might still be blocked and receive a quarantine notice when first trying to access corporate resources. If this occurs, make sure the Company Portal app isn't running, then select the **Get Started Now** link in the quarantine email to trigger evaluation. This should only need to be done when conditional access is first enabled.
 

@@ -5,7 +5,7 @@ description: Review information about Surface devices using the dashboard.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -55,7 +55,7 @@ The Surface device dashboard shows three graphs for your environment.
 
 For more information about Surface devices, see the [Surface](https://www.microsoft.com/surface) website.
 
-For more information about deploying Surface firmware updates in Configuration Manager, see [How to manage Surface driver updates](https://support.microsoft.com/help/4098906).
+For more information about deploying Surface firmware updates in Configuration Manager, see [Managing Surface driver updates](../../../sum/deploy-use/surface-drivers.md).
 
 
 
