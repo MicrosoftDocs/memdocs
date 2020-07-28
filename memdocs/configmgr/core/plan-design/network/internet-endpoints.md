@@ -270,7 +270,7 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
 
-[!INCLUDE [Desktop Analytics endpoints](includes/desktop-analytics-endpoints.md)]
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## Tenant attach
 
