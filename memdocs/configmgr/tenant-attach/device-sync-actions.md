@@ -33,8 +33,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 
 ## Internet endpoints
 
-- `https://aka.ms/configmgrgateway`
-- `https://*.manage.microsoft.com` <!--7424742-->
+[!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
