@@ -2,7 +2,7 @@
 title: What's new in version 2002
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
-ms.date: 07/15/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -430,16 +430,17 @@ Aside from new features, this release also includes additional changes such as b
 
 The following update rollup (4560496) is available in the console starting on July 15, 2020: [Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496).
 
-<!--
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Endpoint Configuration Manager admin center | July 23, 2020 | No |
+| [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
 
-> [!NOTE]  
+<!--
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
