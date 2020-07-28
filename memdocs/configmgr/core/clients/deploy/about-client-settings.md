@@ -239,7 +239,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### Use new Software Center
 
