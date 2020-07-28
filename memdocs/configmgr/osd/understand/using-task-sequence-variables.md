@@ -185,10 +185,10 @@ You can define custom task sequence variables for devices and collections. Varia
 
 For example, device XYZ is a member of collection ABC. You assign MyVariable to collection ABC with a value of 1. You also assign MyVariable to device XYZ with a value of 2. The variable that's assigned to XYZ has higher priority than the variable that's assigned to collection ABC. When a task sequence with this variable runs on XYZ, MyVariable has a value of 2.
 
-You can hide per-device and per-collection variables so that they aren't visible in the Configuration Manager console. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable isn't displayed in the console. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
+You can hide per-device and per-collection variables so that they aren't visible in the Configuration Manager console. When you use the option **Do not display this value in the Configuration Manager console**, the value of the variable isn't displayed in the console. The task sequence log file (**smsts.log**) or the task sequence debugger won't show the variable value either. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
 
 > [!WARNING]  
-> The setting to **Do not display this value in the Configuration Manager console** only applies to the Configuration Manager console. The values for the variables are still displayed in the task sequence log file (**smsts.log**).
+> If you include variables in the **Run Command Line** step's command line, the task sequence log file displays the full command line including the variable values. To prevent potentially sensitive data from appearing in the log file, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`.
 
 You can manage per-device variables at a primary site or at a central administration site. Configuration Manager doesn't support more than 1,000 assigned variables for a device.  
 

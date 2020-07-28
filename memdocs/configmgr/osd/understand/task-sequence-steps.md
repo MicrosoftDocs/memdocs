@@ -2294,15 +2294,19 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
 
     Specify one or more variables to set for a rule that evaluates to true, or set variables without using a rule. Select an existing variable, or create a custom variable.  
 
-    - **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables aren't available to select.  
+  - **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables aren't available to select.  
 
-    - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
+  - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
 
-After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
+After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Do not display this value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
 
 > [!IMPORTANT]  
-> Configuration Manager removes any variable values marked as a **Secret value** when you import a task sequence with the **Set Dynamic Variables** step. Re-enter the value for the dynamic variable after you import the task sequence.  
+> When you import a task sequence with the **Set Dynamic Variables** step, Configuration Manager removes any variable values marked as **Do not display this value**. After you import the task sequence, re-enter the value for the dynamic variable.
 
+When you use the option **Do not display this value**, the value of the variable isn't displayed in the task sequence editor. The task sequence log file (**smsts.log**) or the task sequence debugger won't show the variable value either. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
+
+> [!WARNING]  
+> If you include variables in the **Run Command Line** step's command line, the task sequence log file displays the full command line including the variable values. To prevent potentially sensitive data from appearing in the log file, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`.
 
 
 ## <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable
@@ -2342,8 +2346,13 @@ Specify the name of a task sequence built-in or action variable, or specify your
 <!--1358330-->
 Enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password.
 
-> [!Note]  
+> [!NOTE]
 > Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800-->
+
+When you use the option **Do not display this value**, the value of the variable isn't displayed in the task sequence editor. The task sequence log file (**smsts.log**) or the task sequence debugger won't show the variable value either. The variable can still be used by the task sequence when it runs. If you no longer want this variable to be hidden, delete it first. Then redefine the variable without selecting the option to hide it.
+
+> [!WARNING]
+> If you include variables in the **Run Command Line** step's command line, the task sequence log file displays the full command line including the variable values. To prevent potentially sensitive data from appearing in the log file, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`.<!-- 6963278 -->
 
 #### Value  
 
