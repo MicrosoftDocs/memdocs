@@ -268,7 +268,9 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 ## Desktop Analytics
 
-For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Desktop Analytics endpoints](includes/desktop-analytics-endpoints.md)]
 
 ## Tenant attach
 
