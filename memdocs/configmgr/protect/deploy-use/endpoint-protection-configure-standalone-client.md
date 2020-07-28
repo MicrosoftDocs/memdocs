@@ -79,12 +79,11 @@ To install Endpoint Protection on the standalone client:
 
     On the last screen of the installation wizard, the option to scan the computer for potential threats after getting the latest updates is selected by default. You can clear the checkbox to skip the scanning.
 
-    > ![IMPORTANT]
-    > Make sure that the latest [antimalware platform update](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie) is installed on your standalone client.
+5. Make sure that the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie) is installed on your standalone client.
 
-## Change antimalware policy settings on a standalone client configured with Endpoint Protection
+## Change antimalware policy settings on a standalone Endpoint Protection client
 
-To change or update the antimalware policy on your Endpoint Protection-configured standalone client: 
+To change or update the antimalware policy on your standalone Endpoint Protection client: 
 
 1. [Create an antimalware policy for the standalone client](#create-an-antimalware-policy-for-the-standalone-client).
 2. Run the following command on the standalone client:
