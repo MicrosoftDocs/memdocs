@@ -39,10 +39,7 @@ Community hub supports the following objects:
       - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
    - The logged-in user account can't be the built-in administrator account
 
-- To download reports, you need to turn on the option **Use Configuration Manager-generated certificates for HTTP site systems** at the site you're importing into. For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Go to **Administration** > **Site Configuration** > **Sites**.
-   1. Select the site and choose **Properties** in the ribbon.
-   1. On the **Communication Security** tab, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+- The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
