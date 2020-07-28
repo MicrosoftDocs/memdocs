@@ -17,6 +17,7 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
    - Azure Public Cloud
    - Azure US Government Cloud.<!--4075452-->
    - Azure China Cloud (added in version 2006)<!--7133238-->
+      - Update the Configuration Manager client to the latest version on your devices before onboarding to Azure China Cloud. <!--7630213--> 
 
    When you select Azure China Cloud or Azure US Government Cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](../../tenant-attach/device-sync-actions.md) is disabled.
 

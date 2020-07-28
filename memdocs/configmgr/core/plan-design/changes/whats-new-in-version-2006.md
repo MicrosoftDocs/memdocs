@@ -117,10 +117,11 @@ For more information, see the following articles:
 - [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered)
 
 
-<!--
 ## <a name="bkmk_comgmt"></a> Co-management
--->
 
+### Use Microsoft Azure China 21Vianet for co-management
+<!--7133238-->
+You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
 
 
 ## <a name="bkmk_app"></a> Application management
