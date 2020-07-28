@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -363,11 +363,10 @@ For more information, see [Manually switch clients to a new software update poin
 
 ### <a name="bkmk_cmg-sup"></a> Intranet clients can use a CMG software update point
 <!--7102873-->
-Starting in version 2006, intranet clients can  access a CMG software update point when it's assigned to the boundary group and the **Allow Configuration Manager cloud management gateway traffic** option is enabled on the software update point. Admins can allow intranet devices to scan against a CMG software update point in the following scenarios:
+Starting in version 2006, intranet clients can  access a CMG software update point when it's assigned to the boundary group and the [**Allow Configuration Manager cloud management gateway traffic** option is enabled](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) on the software update point. You can allow intranet devices to scan against a CMG software update point in the following scenarios:
 
 - When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
 - If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
-
 
 
 ## Management points
