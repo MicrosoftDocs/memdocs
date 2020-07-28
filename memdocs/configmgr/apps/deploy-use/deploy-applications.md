@@ -246,12 +246,16 @@ After clients receive the deployment, the following behavior applies:
 
 - If you deployed the application as **Required**, and didn't specify to **Automatically close any running executables you specified on the install behavior tab of the deployment type properties dialog box**, then the installation of the app fails if one or more of the specified applications are running.  
 
-## Deploy user-available applications on Azure AD-joined devices
+## Deploy user-available applications
 
+When you deploy applications as **Available** to user collections, then users can browse Software Center and install the apps they need. For on-premises domain-joined clients, Software Center uses the user's domain credentials to get the list of available applications from the management point.
+
+There are additional requirements for clients that are internet-based, joined to Azure Active Directory (Azure AD), or both.
+
+### Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can browse and install them through Software Center on Azure Active Directory (Azure AD) devices.  
 
-### Prerequisites
+If you deploy applications as available to users, they can browse and install them through Software Center on Azure AD devices. Configure the following prerequisites to enable this scenario:
 
 - Enable HTTPS on the management point  
 
@@ -261,23 +265,39 @@ If you deploy applications as available to users, they can browse and install th
 
 - Deploy an application as available to a collection of users from Azure AD  
 
-- Distribute any application content to a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
-
 - Enable the client setting **Use new Software Center** in the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group  
 
 - The client OS must be Windows 10, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.  
 
 - To support internet-based clients:  
 
-  - [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+  - [Cloud management gateway](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG)
+
+  - Distribute any application content to a content-enabled CMG or a [cloud distribution point](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
   - Enable the client setting: **Enable user policy requests from Internet clients** in the [Client Policy](../../core/clients/deploy/about-client-settings.md#client-policy) group  
 
 - To support clients on the intranet:  
 
-  - Add the cloud distribution point to a boundary group used by the clients  
+  - Add the content-enabled CMG or cloud distribution point to a boundary group used by the clients  
 
   - Clients must resolve the fully qualified domain name (FQDN) of the HTTPS-enabled management point  
+
+### Internet-based domain-joined devices
+
+<!--7033501-->
+
+Starting in version 2006, an internet-based, domain-joined device that isn't joined to Azure AD and communicates via a cloud management gateway (CMG) can get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
+
+Configure the following prerequisites to enable this functionality:
+
+- Windows 10 device
+
+  - Joined to your on-premises Active Directory domain
+
+  - Communicate via [CMG](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)
+
+- The site has discovered the user by both [Active Directory](../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 
 ## Next steps
 

@@ -383,7 +383,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Co-management](../../../comanage/overview.md)  
 
-- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)  
+- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)
 
 - [Microsoft Store for Business online apps](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 
