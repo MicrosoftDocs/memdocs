@@ -147,7 +147,7 @@ The CMPivot window contains the following elements:
    - Right-click on a device name to take the following additional actions on the device:  
 
       - **Pivot to**: Query for another entity on this device.
-         - Starting in version 2006, **Pivot to** is called **Device Pivot**. For more information, see [CMPivot changes for version 2006](cmpivot-changes.md#bkmk_2006).
+         - Starting in version 2006, **Pivot to** was changed to **Device Pivot**. For more information, see [CMPivot changes for version 2006](cmpivot-changes.md#bkmk_2006).
 
       - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](../../../apps/deploy-use/create-deploy-scripts.md#run-a-script).  
 
