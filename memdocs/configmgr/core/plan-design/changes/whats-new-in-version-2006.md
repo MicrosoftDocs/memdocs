@@ -98,7 +98,7 @@ The following improvements have been made in CMPivot:
 - Run CMPivot from an individual device or multiple devices without having to select or create a collection
 - From CMPivot query results, you can select an individual device or multiple devices then launch a separate CMPivot instance for your selection.
 
-For more information, see [CMPivot starting in version 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006)
+For more information, see [CMPivot starting in version 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006).
 
 
 <!--
