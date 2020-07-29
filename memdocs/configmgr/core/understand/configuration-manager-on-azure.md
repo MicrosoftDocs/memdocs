@@ -81,7 +81,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 
 ## Performance
 ### What factors affect performance in this scenario?
-[Azure VM size and type](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
+[Azure VM size and type](/azure/virtual-machines/sizes), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
 
 ### So, tell me more about Azure virtual machines; what size VMs should I use?
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](../plan-design/configs/recommended-hardware.md). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
@@ -156,7 +156,7 @@ Hard to say since every environment is different. The best thing to do is to cos
 https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
-- Azure Machine sizes: https://docs.microsoft.com/en-us/azure/virtual-machines/sizes  
+- Azure Machine sizes: https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
@@ -168,7 +168,7 @@ https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-
 
 **Availability:**
 - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Availability Sets Explained: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability
+- Availability Sets Explained: https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Connectivity:**
 - Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
