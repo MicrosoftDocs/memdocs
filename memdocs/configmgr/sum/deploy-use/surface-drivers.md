@@ -159,4 +159,4 @@ For more information about Surface drivers, see the following articles:
 
 - [Considerations for Surface and System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface Update History](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Download the latest firmware and drivers for Surface devices](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Download the latest firmware and drivers for Surface devices](https://docs.microsoft.com/en-us/surface/manage-surface-driver-and-firmware-updates)
