@@ -23,7 +23,7 @@ Configuration Manager supports using availability groups:
 - At primary sites and the central administration site.
 - On-premises, or in Microsoft Azure.
 
-When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability).
+When you use availability groups in Microsoft Azure, you can further increase availability of your site database by using *Azure Availability Sets*. For more information on Azure Availability Sets, see [Manage the availability of virtual machines](/azure/virtual-machines/windows/manage-availability).
 
 > [!Important]
 > Before you continue, be comfortable with configuring SQL Server and SQL Server availability groups. The information that follows references the SQL Server documentation library and procedures.
