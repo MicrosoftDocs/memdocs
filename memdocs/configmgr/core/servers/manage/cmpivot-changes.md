@@ -19,18 +19,20 @@ Use the following information to learn about changes made to [CMPivot](cmpivot.m
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
 <!--6518631-->
 
-Starting in version 2006, CMPivot standalone and CMPivot launched from the admin console have converged. When you launch CMPivot from the admin console, it uses the same underlying technology as CMPivot standalone to give you scenario parity.
+Starting in version 2006, the following improvements have been made for CMPivot:
 
-You can run CMPivot from an individual device or multiple devices from the devices node without needing to select a device collection. This improvement makes it easier for people, such as those working as the Helpdesk persona, to create CMPivot queries for specific devices outside a pre-created collection.
+- [CMPivot standalone](cmpivot.md#bkmk_standalone) and CMPivot launched from the admin console have converged. When you launch CMPivot from the admin console, it uses the same underlying technology as CMPivot standalone to give you scenario parity.
+- 
 
-You can start CMPivot for an individual device in two ways. The device name is at the top of the CMPivot window so you can differentiate it from others. To start CMPivot for a device:
+- You can run CMPivot from an individual device or multiple devices from the devices node without needing to select a device collection. This improvement makes it easier for people, such as those working as the Helpdesk persona, to create CMPivot queries for specific devices outside a pre-created collection.
+   - Select an individual device or multi-select devices in a device collection or then select **Start CMPivot**.
 
-- Select an individual device or multi-select devices in a device collection then select **Start CMPivot**.
-- Within an existing CMPivot operation, right-click a device in the device output and pivot using the **Device Pivot** option.
-   - This action launches a separate CMPivot instance on that individually selected device.
+- Upon returning devices within a query list view, you can select **Device Pivot** on one or more devices and then pivot and query on just those devices to drill in further. This change allows you to drill in without querying the larger set of devices from the original collection.
+   - Within an existing CMPivot operation, select an individual device or multi-select devices from the output. Right-click and pivot using the **Device Pivot** option. This action launches a separate CMPivot instance for your device selection.
 
+- When you run CMPivot for an individual device, the device name is listed at the top of the window. For multiple devices, the number of devices selected is listed at the top of the window.
 
-Additionally, upon returning devices within a query list view, you can select **Device Pivot** on one or more devices and then pivot and query on just those devices to drill in further. This change allows you to drill in without querying the larger set of devices from the original collection.
+![Device pivot for multiple devices using CMPivot](./media/6518631-cmpivot-multi-select.png)
 
 
 ## <a name="bkmk_2002"></a> CMPivot changes for version 2002
@@ -187,7 +189,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
     ```
 
     > [!TIP]
-    > For this link to work, [install CMPivot standalone](#install-cmpivot-standalone).
+    > For this link to work, [install CMPivot standalone](cmpivot.md#bkmk_standalone).
 
 - In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
 
@@ -203,7 +205,7 @@ Starting in version 1906, the following items were added to CMPivot:
 
 - [Joins, additional operators, and aggregators](#bkmk_cmpivot_joins)
 - [Added CMPivot permissions to the Security Administrator role](#bkmk_cmpivot_secadmin1906)
-- [CMPivot standalone](#bkmk_standalone)
+- [CMPivot standalone](cmpivot.md#bkmk_standalone)
 
 ### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
 <!--4054074-->

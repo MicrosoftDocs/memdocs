@@ -24,7 +24,7 @@ Occasionally, you might need to troubleshoot CMPivot. For example, if a state me
 
 In Configuration Manager versions 1902 and later, you can run CMPivot from the central administration site (CAS) in a hierarchy. The primary site still handles the communication to the client.
 
-When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](cmpivot.md#bkmk_cmpivot1902).
+When you run CMPivot from CAS, it uses the high-speed message subscription channel to communicate with the primary site. CMPivot doesn't use standard SQL replication between sites. If your SQL Server instance or your SQL provider is remote, or if you use SQL Server Always On, you'll have a "double hop scenario" for CMPivot. For information on how to define constrained delegation for a "double hop scenario", see [CMPivot starting in version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
 
 >[!IMPORTANT]
 > When troubleshooting CMPivot, enable verbose logging on your management points (MPs) and on the site server's SMS_MESSAGE_PROCESSING_ENGINE to get more information. Also, if the client's output is larger than 80 KB, enable verbose logging on the MP and the site server's SMS_STATE_SYSTEM component. For information about how to enable verbose logging, see [Site server logging options](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site).
@@ -42,7 +42,7 @@ Look in `smsprov.log` for these lines:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` is the Script-Guid for CMPivot. You can also see this GUID in [CMPivot audit status messages](cmpivot.md#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` is the Script-Guid for CMPivot. You can also see this GUID in [CMPivot audit status messages](cmpivot-changes.md#cmpivot-audit-status-messages).
 
 Next, find the ID in the CMPivot window. This ID is the `ClientOperationID`.
 

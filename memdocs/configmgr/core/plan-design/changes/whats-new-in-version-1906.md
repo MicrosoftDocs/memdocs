@@ -147,7 +147,7 @@ For more information, see [Logs collector](../../../desktop-analytics/log-collec
 
 For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### CMPivot standalone
 
@@ -169,7 +169,7 @@ The following permissions have been added to Configuration Manager's built-in [*
 - Run CMPivot on Collection
 - Read on Inventory Report
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="bkmk_content"></a> Content management

@@ -43,17 +43,19 @@ The following components are required to use CMPivot:
 
 - CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and the Microsoft Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
 
-- Permissions for CMPivot:
-  - **Read** permission on the **SMS Scripts** object
-  - **Run Scripts** permission on the **Collection**
-    - Alternatively, starting in version 1906, you can use **Run CMPivot** on **Collection**.
-  - **Read** permission on **Inventory Reports**
-  - The default scope.
+## Permissions
+
+The following permissions are needed for CMPivot:
+
+- **Read** permission on the **SMS Scripts** object
+- **Run Scripts** permission on the **Collection**
+   - Alternatively, starting in version 1906, you can use **Run CMPivot** on **Collection**.
+- **Read** permission on **Inventory Reports**
+- The default scope.
 
 >[!NOTE]
 > **Run Scripts** is a super set of the **Run CMPivot** permission.
 
-CMPivot and the Edge installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**.
  
 ## Limitations
 
