@@ -203,7 +203,7 @@ For more information, see [device restart notifications](../../clients/deploy/de
 
 ### Intranet clients can use a CMG software update point
 <!--7102873-->
-Intranet clients can now access a CMG software update point when it's assigned to the boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
+Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
 
 
 ## <a name="bkmk_o365"></a> Office management
