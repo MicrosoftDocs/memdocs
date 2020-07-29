@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/79/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -104,4 +104,4 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
-- [Microsoft Defender](https://docs.microsoft.com/en-us/mem/intune/protect/advanced-threat-protection)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)
