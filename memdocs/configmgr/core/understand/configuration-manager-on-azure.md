@@ -168,7 +168,7 @@ https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-
 
 **Availability:**
 - Azure IaaS Uptime SLA's: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Availability Sets Explained: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Availability Sets Explained: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability
 
 **Connectivity:**
 - Express route vs. Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
