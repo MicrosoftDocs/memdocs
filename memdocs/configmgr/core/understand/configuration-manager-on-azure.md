@@ -81,7 +81,7 @@ While Configuration Manager is not tested with Azure load balancers, if the func
 
 ## Performance
 ### What factors affect performance in this scenario?
-[Azure VM size and type](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
+[Azure VM size and type](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes), Azure VM disks (premium storage is recommended, especially for SQL Server), networking latency, and speed are the most important areas.
 
 ### So, tell me more about Azure virtual machines; what size VMs should I use?
 In general, your compute power (CPU and Memory) need to meet the [recommended hardware for Configuration Manager](../plan-design/configs/recommended-hardware.md). But there are some differences between regular computer hardware and Azure VMs, especially when it comes to the disks these VMs use.  What size VMs you use depends on the size of your environment but here are some recommendations:
