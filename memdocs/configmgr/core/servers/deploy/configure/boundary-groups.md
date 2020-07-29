@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -307,7 +307,7 @@ In version 1902, this setting is now titled **Prefer cloud based sources over on
 - Cloud distribution points
 - Microsoft Update (added in version 1902)
 
-## Software update points
+## <a name="bkmk_sup"></a> Software update points 
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
@@ -360,6 +360,13 @@ When you switch to a new server, the devices use fallback to find that new serve
 Review your boundary group configurations. Before you start this change, make sure that your software update points are in the correct boundary groups.
 
 For more information, see [Manually switch clients to a new software update point](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
+
+### <a name="bkmk_cmg-sup"></a> Intranet clients can use a CMG software update point
+<!--7102873-->
+Starting in version 2006, intranet clients can  access a CMG software update point when it's assigned to a boundary group and the [**Allow Configuration Manager cloud management gateway traffic** option is enabled](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) on the software update point. You can allow intranet devices to scan against a CMG software update point in the following scenarios:
+
+- When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
+- If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
 
 ## Management points
 
