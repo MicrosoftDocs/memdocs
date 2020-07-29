@@ -156,7 +156,7 @@ Hard to say since every environment is different. The best thing to do is to cos
 https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM Machine Types:**
-- Azure Machine sizes: https://github.com/v-rajagt/memdocs-pr/blob/master/memdocs/configmgr/core/understand/configuration-manager-on-azure.md  
+- Azure Machine sizes: https://docs.microsoft.com/en-us/azure/virtual-machines/sizes  
 - VM Pricing: https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Storage Pricing: https://azure.microsoft.com/pricing/details/storage/
 
