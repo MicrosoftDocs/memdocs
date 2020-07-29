@@ -46,7 +46,9 @@ Possible configurations are:
 
 ## Set MDM authority to Intune
 
-If you haven't yet set the MDM authority, follow the steps below.
+For tenants using the 1911 service release and later, the MDM authority is automatically set to Intune.
+
+For pre-1911 service release tenants, if you haven't yet set the MDM authority, follow the steps below.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:

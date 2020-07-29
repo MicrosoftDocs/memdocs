@@ -32,6 +32,7 @@ Beginning with version 1806, the **Third-Party Software Update Catalogs** node i
     - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
     - Third-party updates use the same proxy settings as the SUP.
+- For Configuration Manager versions prior to 1910, the **Software Updates Manager** security role can't sync third-party catalogs. You'll need the **Full Administrator** security role to sync the catalogs.
 
 
 ## Additional requirements when the SUP is remote from the top-level site server 

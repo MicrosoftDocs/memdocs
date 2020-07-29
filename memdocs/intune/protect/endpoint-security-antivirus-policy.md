@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,8 +45,7 @@ Antivirus policies include the same settings found in *endpoint protection* or *
   - For Intune to manage antivirus settings on a device, Microsoft Defender ATP must be installed on that device. See. [Microsoft Defender ATP for macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender ATP documentation)
 
 - **Windows 10 and later**
-  - For Intune to manage antivirus settings on a device, Microsoft Defender ATP must be installed on that device. See, [Microsoft Defender ATP for Windows](../protect/advanced-threat-protection.md), in the Intune documentation.
-  - The Windows Security app is installed on all devices that run Window 10, and no additional prerequisites are required.
+  - No additional prerequisites are required. 
 
 ## Antivirus profiles
 

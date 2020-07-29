@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 07/15/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -45,12 +45,12 @@ There are a few settings you may need to change on your Windows Defender to fix 
 
 ## Turn on Real-time Protection
 
-Check to make sure that Real-time Protection is turned on by going to **Start** and searching for **Windows Defender Security Center**. Select **Virus and threat protection settings** and confirm that both **Real-time protection** and **Cloud-delivered protection** are switched to **On**. If these options aren't appearing, do the following to enable them:
+Check to make sure that Real-time Protection is turned on by going to **Start** and searching for **Windows Security**. Select **Virus and threat protection settings** and confirm that both **Real-time protection** and **Cloud-delivered protection** are switched to **On**. If these options aren't appearing, do the following to enable them:
 
 1. In **Start**, open **Control Panel**.
 2. Open **Administrative Tools** > **Edit group policy**. This will open the **Local Group Policy Editor** in a new window.
-3. Open **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Security Center** > **Virus and threat protection**.
-4. Open the setting **Virus and threat protection area** and set it to **Disabled**.
+3. Open **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Security** > **Virus and threat protection**.
+4. Open the setting **Hide the Virus and threat protection area** and set it to **Disabled**.
 
 ## Update your antivirus definitions
 

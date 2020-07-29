@@ -68,9 +68,7 @@ The following tables list the ports and services that the Intune client accesses
 |fef.msua01.manage.microsoft.com|138.91.243.97|
 |fef.msua02.manage.microsoft.com|52.177.194.236|
 |fef.msua04.manage.microsoft.com|23.96.112.28|
-|fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
-|fef.msub01.manage.microsoft.com|137.135.128.214|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -134,8 +132,8 @@ For more information, see Apple's [TCP and UDP ports used by Apple software prod
 
 Depending on how choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
 
-[!NOTE]
-Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
+> [!NOTE]
+> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
 Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### Google Android Enterprise 

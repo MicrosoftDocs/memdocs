@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,8 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device enrollment restrictions
 
-Before enrolling devices for the [Android Enterprise security configuration framework](), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
+Before enrolling devices for the [Android Enterprise security configuration framework](android-configuration-framework.md), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
+
 - approved devices.
 - a specified number of devices.
 - devices with specified platforms.
@@ -58,7 +59,12 @@ For Android Enterprise work profile high security (Level 3), the following devic
 | Android device administrator| Block | All versions | Yes |
 
 ## Fully managed security restrictions
-Ensure the organization supports Android Enterprise fully managed device enrollment by reviewing Android Enterprise fully managed enrollment. 
+Ensure the organization supports Android Enterprise fully managed device enrollment by reviewing [Enroll the fully managed devices](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 
+
+## Conditional access policies
+Organizations can use use Azure AD Conditional Access policies to ensure that users can only access work or school content on enrolled Android devices. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require managed devices for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+
+Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), which ensures that only enrolled mobile devices that are compliant can connect to  Office 365 endpoints.
 
 ## Next steps
 

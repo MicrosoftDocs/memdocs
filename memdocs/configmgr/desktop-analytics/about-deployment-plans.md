@@ -2,7 +2,7 @@
 title: Deployment plans in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about deployment plans in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -42,6 +42,8 @@ As part of your deployment plan, you do the following actions:
 By default, Desktop Analytics refreshes deployment plan data daily. Any changes you make within a deployment plan, such as assigning importance to an app or choosing a device to include in a pilot, takes up to 24 hours to process. To speed up this process, request an on-demand data refresh. For more information, see [Desktop Analytics FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 After connecting Desktop Analytics to Configuration Manager, select your collections in the deployment plans. This integration then lets you deploy Windows to a collection based on the Desktop Analytics data.
+
+Deployment plans support targeting the three most recent Windows 10 versions. Desktop Analytics will add support for a new Windows 10 version within 45 days after it's available. At that time, the service will also drop the oldest version. You won't be able to use any deployment plans that target the oldest version. If you have any ongoing deployment plans that target the oldest supported version in Desktop Analytics, complete the deployment within 45 days after a new windows 10 version is available.
 
 ## Readiness rules
 

@@ -25,7 +25,7 @@ ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 # How to use Azure AD to access the Intune APIs in Microsoft Graph

@@ -85,7 +85,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 |--|--|--|--|---|
 | Android device administrator | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) |   | ![Supported](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  |   | ![Supported](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  |   |
 | Android Enterprise <br> - Work Profile    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
@@ -113,6 +113,9 @@ Create a separate trusted certificate profile for each device platform you want 
 > Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*. 
 >
 > This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10 and later.
+
+> [!NOTE]
+> The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Intune portal. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
 
 ### To create a trusted certificate profile
 
