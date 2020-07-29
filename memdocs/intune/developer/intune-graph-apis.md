@@ -356,11 +356,11 @@ This example shows how to use C# to retrieve a list of devices associated with y
   > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 
-    1. Right-click the Solution Explorer.
-    2. Choose **Manage NuGet Packages…** &gt; **Browse**.
-    3. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
+   1. Right-click the Solution Explorer.
+   2. Choose **Manage NuGet Packages…** &gt; **Browse**.
+   3. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Add the following statements to the top of **Program.cs**:
 
