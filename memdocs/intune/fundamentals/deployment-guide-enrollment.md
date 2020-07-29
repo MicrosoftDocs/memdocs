@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -140,7 +140,18 @@ These Android devices are personal or BYOD (bring your own device) devices that 
 
 ### Android Enterprise dedicated devices
 
-These devices are organization-owned, with a sole purpose of being a kiosk-style. These devices are commonly used to scan items, print tickets, digitally sign, manage inventory, and more. They're commonly referred to as COSU (corporate-owned, single-use) devices.
+These devices are organization-owned, with a sole purpose of being a kiosk-style. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more. They're commonly referred to as COSU (corporate-owned, single-use) devices.
+
+Use this enrollment option when:
+
+- Your devices are owned by the organization.
+- Your devices are shared devices, and aren't associated with a single or specific user.
+- You have existing or new devices.
+- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+
+Don't use this enrollment option when:
+
+- Your devices are personal or BYOD.
 
 - **Administrator tasks**:
 
@@ -158,6 +169,16 @@ These devices are organization-owned, with a sole purpose of being a kiosk-style
 
 These devices are organization-owned, and have one user. They are used exclusively for organization work; not personal use. They're commonly referred to as COBO (corporate-owned, business only) devices.
 
+Use this enrollment option when:
+
+- Your devices are owned by the organization, and are associated with a single user.
+- You have existing or new devices.
+- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+
+Don't use this enrollment option when:
+
+- Your devices are personal or BYOD.
+
 - **Administrator tasks**:
 
   1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
@@ -173,6 +194,16 @@ These devices are organization-owned, and have one user. They are used exclusive
 ### Android Enterprise work profile
 
 These devices are personal or BYOD (bring your own devices) Android devices that can access work or school email, apps, and other data.
+
+Use this enrollment option when:
+
+- Your devices are personal or BYOD.
+- You have existing or new devices.
+- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+
+Don't use this enrollment option when:
+
+- Your devices are owned by the organization.
 
 - **Administrator tasks**:
 
@@ -193,68 +224,62 @@ These devices are personal or BYOD (bring your own devices) Android devices that
 
 You can enroll personal BYOD and organization-owned devices in Intune. For an overview, see [Enroll iOS/iPadOS devices](../enrollment/ios-enroll.md).
 
-### Personal devices
+### User and Device enrollment
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access work or school email, apps, and other data.
 
-- **Administrator tasks**:
-
-  1. Be sure you have an [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md). This certificate is a required to enroll iOS/iPadOS devices.
-  2. Choose the type of enrollment. Your options:
-
-      - **Apple user enrollment**: Starting with iOS 13 and newer. This option gives you a specific set of features you can configure, such as password, VPN, Wi-Fi, Siri, and more. For the complete list of what you can and can't do, see [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md).
-
-        For the specific user enrollment steps, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
-
-      - **Apple device enrollment**: If you want to have full control over users' personal devices, then you can use this option. Many users may not want to give you, their ID aministrators, full control over their personal devices. There are pros and cons to having full control.
-
-        For some guidance, see [Planning guide: Task 2: Inventory your devices](intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
-
-  3. Be sure your devices are [supported](supported-devices-browsers.md).
-
-- **End users**: Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
-
-  1. Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md).
-  2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
-
-      Users may have enter more information. For more specific steps, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
-
-  Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
-
-### Organization-owned devices
-
-These devices are owned by your organization, and given to users. Apple has programs that ship devices to users, and uses your pre-configured settings to enroll devices.
-
-#### User and device enrollment
-
 Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices. Use this enrollment option when:
 
-- You have existing devices
-- Don't need bulk enrollment
-- Have personal devices
+- Your devices are personal or BYOD.
+- You have new or existing devices.
+- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+- You want to help protect a specific feature on the device, such as per-app VPN.
 
 Don't use this enrollment option when:
 
-- ??
+- Not recommended for organization-owned devices.
 
 For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).??Need to update the title of this article, is it applies to User enrollment and Device enrollment??
 
 - **Administrator tasks**:
 
+  - Be sure you have an [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md). This certificate is a required to enroll iOS/iPadOS devices.
   - Be sure your iOS/iPadOS devices are [supported](supported-devices-browsers.md).
   - In Intune, you create the enrollment profile. When you create the profile, you have the following options:
 
-    - **Device enrollment**: Secures the entire device.??What does this mean??
-      - Creates an enrollment baseline that acts as default. Can deploy certs to whole device, but can't deploy updates as it required supervised.
-      - Requires a user be associated with the device. User could be a device enrollment mngr account. Not good for user-less devices, such as kiosk
+    - **Apple user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, such as password, VPN, Wi-Fi, Siri, and more. For the complete list of what you can and can't do, see [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md).
 
-      If your enrollment profile targets only organization-owned devices, then use this option.
+      For the specific user enrollment steps, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).
 
-    - **User enrollment**: Configures a specific set of features and organization apps. For the complete list, see [Intune actions and options supported with Apple User Enrollment](../enrollment/ios-user-enrollment-supported-actions.md).
-
-      user partition on the devices, per-app certs, app protection policies
+      It creates a work partition on the devices, per-app certs, app protection policies
 
       If your enrollment profile targets only personal devices, then use **User enrollment** or **Determine based on user choice**.
+
+    Only need a very specific set of functionality. The key thing is per-app VPN. Recommendations:
+
+      - Deploy all MSFT apps, and all apps with MAM SDK outside of corporate partition. Basically, deploy to user partition. Users must download from Apple app store. Then, preferably, protect these apps with app protect policies.
+
+      Recommend not using this enrollment method. App protect policies provides specific set of
+
+      - For LOB apps, deploy to corp partition. That is a key feature that app protect policies don't have. 
+
+      Ensure a certain app is managed using MDM. User enrollment can't move app from unmanaged to managed. User donwloads outlook, CA is blocked by CA, and must enroll. If user enrollment, Outlook can't be taken over by MDM. Users would have to delete Outlook app from device.
+
+      Has a very scoped subset of features. There's no easy path from user enrollment to device enrollment. User must enroll, and then re-enroll. 
+
+      The real goal is friendlier to end users, less scary warnings. Admin has a scope set of things, so users can't factory reset personal partition. Admins can reset corp partition.
+
+      If you use user enrollment, we suggest also using app protection policies. W/o app protect policy, can't manage existing apps on device installed before user enrollment. If user has outlook or edge prior to enroll, user enrollment won't work. So, admin can't protect those apps. user would have to manually remove the app, and admins would have to deploy outlook/edge as managed app. Push outlook as required app.  limited on security
+
+    - **Apple device enrollment**: This is t typical enrollment for BYOD/personal. If you want to have full control over users' personal devices, then you can use this option. Many users may not want to give you, their ID administrators, full control over their personal devices. There are pros and cons to having full control.
+
+      For some guidance, see [Planning guide: Task 2: Inventory your devices](intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
+
+      Secures the entire device.??What does this mean??
+      - Creates an enrollment baseline that acts as default. Can deploy certs to whole device, but can't deploy updates as it required supervised.
+      - Requires a user be associated with the device. User could be a device enrollment mngr account. Not good for user-less devices, such as kiosk.
+
+      MAMWE is the standard of ios personal devices.
 
     - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.
 
@@ -265,15 +290,15 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 - **End users**: Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
 
   1. Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md).
-  2. Open the Company Portal app, and sign in with their organization credentials, such as `user@contoso.com`. When they sign-in, the enrollment profile you configured is applied.
+  2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
-      Depending on the option you chose in the enrollment profile, users may have enter more information.
+      Users may have enter more information. For more specific steps, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md). 
 
   Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
 
-#### Automated Device Enrollment (ADE) (supervised)
+### Automated Device Enrollment (ADE) (supervised)
 
-Previously called Apple Device Enrollment Program (DEP). Use Apple Business Manager (ABM) or Apple School Manager (ASM) to enroll a large number of devices, without you ever touching the devices. These devices are purchased from Apple, and can be shipped directly to users or schools.
+Previously called Apple Device Enrollment Program (DEP). Use Apple Business Manager (ABM) or Apple School Manager (ASM) to enroll a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your pre-configured settings, and can be shipped directly to users or schools.
 
 Use this enrollment option when:
 
@@ -337,14 +362,14 @@ For more specific information on this enrollment type, see:
 
   Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
 
-#### Apple Configurator enrollment
+### Apple Configurator enrollment
 
 Enrolls iOS/iPadOS devices by physically connecting these devices to the USB port on a Mac computer. Use this enrollment option when:
 
 - You need a wired connection, or are having a network issue.
 - You're enrolling a few devices.
 - A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM).
-- Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements. The idea of not using these portals is to give administrators less control.
+- Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements. The idea of *not* using these portals is to give administrators less control.
 
 Don't use this enrollment option when:
 
