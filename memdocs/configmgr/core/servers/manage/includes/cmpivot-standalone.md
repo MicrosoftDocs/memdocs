@@ -18,7 +18,7 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 
 #### Install CMPivot standalone
 
-1. Set up the permissions needed to run CMPivot. For more information, see [prerequisites](../cmpivot.md#prerequisites). You can also use the [Security Administrator role](../cmpivot.md#bkmk_cmpivot_secadmin1906) if the permissions are appropriate for the user.
+1. Set up the permissions needed to run CMPivot. For more information, see [prerequisites](../cmpivot.md#prerequisites). You can also use the [Security Administrator role](../cmpivot-changes.md#bkmk_cmpivot_secadmin1906) if the permissions are appropriate for the user.
 2. Find the CMPivot app installer in the following path: `<site install path>\tools\CMPivot\CMPivot.msi`. You can run it from that path, or copy it to another location.
 3. When you run the CMPivot standalone app, you'll be asked to connect to a site. Specify the fully qualified domain name or computer name of either the Central Administration or primary site server.
    - Each time you open CMPivot standalone you'll be prompted to connect to a site server.
@@ -28,4 +28,4 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 
 > [!NOTE]
 > - Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMPivot standalone does include the ability to connect to Microsoft Defender Security Center. <!--5605358-->
-> - Starting in version 1910, you can do [local device query evaluation using CMPivot standalone](cmpivot-changes.md#bkmk_local-eval). <!--3197353--> 
+> - Starting in version 1910, you can do [local device query evaluation using CMPivot standalone](../cmpivot-changes.md#bkmk_local-eval). <!--3197353--> 

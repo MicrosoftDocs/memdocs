@@ -41,6 +41,8 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
+For versions of Configuration Manager prior to 2006:<!--7372925-->
+
 - CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and the Microsoft Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
 
 ## Permissions
@@ -53,9 +55,9 @@ The following permissions are needed for CMPivot:
 - **Read** permission on **Inventory Reports**
 - The default scope.
 
->[!NOTE]
-> **Run Scripts** is a super set of the **Run CMPivot** permission.
-
+> [!NOTE]
+> - **Run Scripts** is a super set of the **Run CMPivot** permission.
+> - Starting in version 1906, [permissions for CMPivot were added](cmpivot-changes.md#bkmk_cmpivot_secadmin1906) to Configuration Manager's built-in **Security Administrator** role.
  
 ## Limitations
 
@@ -75,14 +77,9 @@ The following permissions are needed for CMPivot:
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool.  
-
-    > [!Tip]  
-    > If you don't see this option, check the following configurations:  
-    > 
-    > - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
-    > 
-    > - Connect the console to a *primary site*.  
+1. In the Configuration Manager console, connect to the primary site. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+   - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
+   - Connect the console to a *primary site*.  
 
 2. The interface provides further information about using the tool.  
 
@@ -92,10 +89,8 @@ The following permissions are needed for CMPivot:
 
      - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
 
-3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.  
-
-    > [!Note]  
-    > If the query has been sent, then clients still send a state message response to the server.  
+3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.
+   - If the query has been sent, then clients still send a state message response to the server.  
 
 
 
@@ -235,7 +230,7 @@ You need to temporarily store a large file on a network file server, but aren't 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-### <a name="bkmk_standalone"></a> CMPivot standalone
+## <a name="bkmk_standalone"></a> CMPivot standalone
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 

@@ -22,7 +22,7 @@ Use the following information to learn about changes made to [CMPivot](cmpivot.m
 Starting in version 2006, the following improvements have been made for CMPivot:
 
 - [CMPivot standalone](cmpivot.md#bkmk_standalone) and CMPivot launched from the admin console have converged. When you launch CMPivot from the admin console, it uses the same underlying technology as CMPivot standalone to give you scenario parity.
-- 
+- For CMPivot, you no longer need to verify that the **Microsoft Code Signing** certificate is in the **Trusted Publishers** store when when the PowerShell execution policy is set to **AllSigned**. <!--7372925-->
 
 - You can run CMPivot from an individual device or multiple devices from the devices node without needing to select a device collection. This improvement makes it easier for people, such as those working as the Helpdesk persona, to create CMPivot queries for specific devices outside a pre-created collection.
    - Select an individual device or multi-select devices in a device collection or then select **Start CMPivot**.
@@ -138,7 +138,7 @@ EPStatus
 
 ### <a name="bkmk_local-eval"></a> Local device query evaluation using CMPivot standalone
 <!--3197353-->
-When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is only available in English. For more information about CMPivot standalone, see [CMPivot standalone](cmpivot.md#bkmk_standalone).
+When using CMPivot outside of the Configuration Manager console, you can query just the local device without the need for the Configuration Manager infrastructure. You can now leverage the CMPivot Azure Log Analytics queries to quickly view WMI information on the local device. This also enables validation and refinement of CMPivot queries, before running them in a larger environment. CMPivot standalone is only available in English. For more information about CMPivot standalone, see [CMPivot standalone](#bkmk_standalone).
 
 #### Known issues for local device query evaluation
 
@@ -189,7 +189,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
     ```
 
     > [!TIP]
-    > For this link to work, [install CMPivot standalone](cmpivot.md#bkmk_standalone).
+    > For this link to work, [install CMPivot standalone](#bkmk_standalone).
 
 - In query results, if the device is enrolled in Microsoft Defender Advanced Threat Protection (ATP), right-click the device to launch the **Microsoft Defender Security Center** online portal.
 
@@ -205,7 +205,7 @@ Starting in version 1906, the following items were added to CMPivot:
 
 - [Joins, additional operators, and aggregators](#bkmk_cmpivot_joins)
 - [Added CMPivot permissions to the Security Administrator role](#bkmk_cmpivot_secadmin1906)
-- [CMPivot standalone](cmpivot.md#bkmk_standalone)
+- [CMPivot standalone](#bkmk_standalone)
 
 ### <a name="bkmk_cmpivot_joins"></a> Add joins, additional operators, and aggregators in CMPivot
 <!--4054074-->
@@ -288,7 +288,10 @@ Starting in version 1906, the following permissions have been added to Configura
 
 >[!NOTE]
 > **Run Scripts** is a super set of the **Run CMPivot** permission.
- 
+
+### <a name="bkmk_standalone"></a> CMPivot standalone
+
+[!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)] 
 
 ## <a name="bkmk_cmpivot1902"></a> CMPivot changes for version 1902
 <!--3610960-->
