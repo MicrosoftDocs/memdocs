@@ -1,5 +1,5 @@
 ---
-title: RemoveBoundary method class SMS_BoundaryGroup
+title: RemoveBoundary method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
