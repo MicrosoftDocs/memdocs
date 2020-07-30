@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Registered device limit has been reached | Microsoft Docs
+title: Registered macOS device limit has been reached
 titlesuffix: Intune Company Portal
 description:
 keywords:
