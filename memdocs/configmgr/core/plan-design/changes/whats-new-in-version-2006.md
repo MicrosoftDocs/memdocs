@@ -34,6 +34,15 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--6479246-->
 During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
+## <a name="bkmk_ea"></a> Endpoint analytics
+
+### Endpoint analytics data collection enabled by default
+
+The **Enable Endpoint analytics data collection** client setting is now enabled by default, allowing your managed endpoints to send data such as startup performance insights to your Configuration Manager site server. Note that this change to the default value affects default client settings, as well as any custom client settings created after upgrading to version 2006. In addition, if you upgrade to version 2006 from a version of Configuration Manager older than version 2002, any pre-existing custom client settings that contain the Computer Agent group of settings will inherit the new default of **Enable Endpoint analytics data collection** set to **Yes**. If you are upgrading from version 2002 to version 2006, existing custom client settings values will be retained. The default value for **Enable Endpoint analytics data collection** in Configuration Manager version 2002 is **No**.
+
+> [!Note] 
+> This change affects local data collection only. No Endpoint analytics data is uploaded to the Microsoft Endpoint Manager admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr#bkmk_cm_upload).
+
 ## <a name="bkmk_infra"></a> Site infrastructure
 
 ### VPN boundary type
