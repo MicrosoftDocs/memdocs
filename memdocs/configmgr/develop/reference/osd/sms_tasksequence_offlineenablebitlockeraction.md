@@ -125,7 +125,7 @@ Qualifiers: none
 
 For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-### EncryptFullDisk
+### `EncryptFullDisk`
 
 Data type: `Boolean`
 
@@ -133,7 +133,7 @@ Access type: Read/write
 
 Configure the step to use full disk encryption. The default value is `false`.
 
-### EncryptMethod
+### `EncryptMethod`
 
 Data type: `UInt32`
 

@@ -196,8 +196,7 @@ Starting in version 2006, the following management insights help you manage the 
 
 For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
-> [!TIP]
-> In version 2006, the existing insight for **Unused boot images** moved to this group from the **Proactive Maintenance** group.
+In version 2006, the following insight moved to this group from the **Proactive Maintenance** group:
 
 - **Unused boot images**: Boot images not referenced for PXE boot or task sequence use. For more information, see [Manage boot images](../../../osd/get-started/manage-boot-images.md).<!-- 4C1FBA51-AD56-4CA8-8326-066F65D24F0E -->
 
