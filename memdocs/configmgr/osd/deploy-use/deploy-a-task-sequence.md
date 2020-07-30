@@ -147,6 +147,11 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
         Starting in version 2006, you can deploy a task sequence with a boot image to a device that communicates through the CMG. The user needs to start the task sequence from Software Center.<!--6997525-->
 
+          > [!NOTE]
+          > When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+          >
+          > When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the **CCMHOSTNAME** property in the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step.
+
         In version 2002 and earlier, operations that require a boot media aren't supported with this setting. Use this option only for generic software installations or script-based task sequences that run operations in the standard OS.
 
         > [!NOTE]
