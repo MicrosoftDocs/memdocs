@@ -2,7 +2,7 @@
 title: Create a task sequence for non-OS deployments
 titleSuffix: Configuration Manager
 description: Create task sequences that aren't for deploying an OS, such as distributing software or automating tasks
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -35,6 +35,8 @@ The power of task sequences lies in their flexibility and how you use them. They
 - Divide the actions across multiple task sequences
 - Take a phased approach to creating and testing the task sequence
 
+## Supported steps
+
 The following steps are supported for use in a non-OS deployment custom task sequence:  
 
 - [Check Readiness](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
@@ -60,3 +62,7 @@ The following steps are supported for use in a non-OS deployment custom task seq
 - [Set Dynamic Variables](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
 - [Set Task Sequence Variable](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+
+## Next steps
+
+[Create a custom task sequence](create-a-custom-task-sequence.md)

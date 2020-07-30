@@ -1,31 +1,32 @@
 ---
-title: "SMS_TaskSequence_PartitionDiskAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_PartitionDiskAction class
+titleSuffix: Configuration Manager
+ms.date: 07/31/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 17c5d9c3-b561-432c-bd69-7277c94f347c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_PartitionDiskAction Server WMI Class
-The `SMS_TaskSequence_PartitionDiskAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that formats and partitions a specified disk on a target computer.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_PartitionDiskAction server WMI class
+
+The `SMS_TaskSequence_PartitionDiskAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that formats and partitions a specified disk on a target computer.  
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
 ## Syntax  
 
-```  
+```MOF
 Class SMS_TaskSequence_PartitionDiskAction : SMS_TaskSequence_Action  
 {  
       SMS_TaskSequence_Condition Condition;  
       Boolean ContinueOnError;  
       String Description;  
       UInt32 DiskIndex;  
+      String DiskIndexVariable;
       Boolean DiskpartBiosCompatibilityMode;  
       String DiskType;  
       Boolean Enabled;  
@@ -38,156 +39,180 @@ Class SMS_TaskSequence_PartitionDiskAction : SMS_TaskSequence_Action
 };  
 ```  
 
-## Methods  
- The `SMS_TaskSequence_PartitionDiskAction` class does not define any methods.  
+## Methods
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+The `SMS_TaskSequence_PartitionDiskAction` class doesn't define any methods.
 
- Access type: Read/Write  
+## Properties
 
- Qualifiers: None  
+### `Condition`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `SMS_TaskSequence_Condition`  
 
- `ContinueOnError`  
- Data type: `Boolean`  
+Access type: Read/Write  
 
- Access type: Read/Write  
+Qualifiers: None  
 
- Qualifiers: None  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `ContinueOnError`
 
- `Description`  
- Data type: `String`  
+Data type: `Boolean`  
 
- Access type: Read/Write  
+Access type: Read/Write  
 
- Qualifiers: [AllowedLen("0-255")]  
+Qualifiers: None  
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- `DiskIndex`  
- Data type: `UInt32`  
+### `Description`
 
- Access type: Read/Write  
+Data type: `String`  
 
- Qualifiers: [Not_Null]  
+Access type: Read/Write  
 
- The number of the physical disk to partition and format.  
+Qualifiers: `[AllowedLen("0-255")]`
 
- `DiskpartBiosCompatibilityMode`  
- Data type: `Boolean`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
- Access type: Read/Write  
+### `DiskIndex`
 
- Qualifiers: None  
+Data type: `UInt32`  
 
- `true` to set registry keys to disable sector alignment when partitioning the disk for compatibility with the target computer BIOS. The default value is `false`.  
+Access type: Read/Write  
 
- `DiskType`  
- Data type: `String`  
+Qualifiers: `[Not_Null]`
 
- Access type: Read/Write  
+The number of the physical disk to partition and format.  
 
- Qualifiers: None  
+### `DiskIndexVariable`
 
- Deprecated and should not be used.  
+Data type: `String`
 
- The type of disk. Possible values are:  
+Access type: Read/write
 
-- DYNAMIC  
+Use a task sequence variable to specify the disk to format and partition.
 
-- BASIC  
+### `DiskpartBiosCompatibilityMode`
 
-  `Enabled`  
-  Data type: `Boolean`  
+Data type: `Boolean`  
 
-  Access type: Read/Write  
+Access type: Read/Write  
 
-  Qualifiers: None  
+Qualifiers: None  
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Set `true` to disable sector alignment when partitioning the disk for compatibility with the target computer BIOS. The default value is `false`.
 
-  `GPTBootDisk`  
-  Data type: `Boolean`  
+### `DiskType`
 
-  Access type: Read/Write  
+Data type: `String`  
 
-  Qualifiers: None  
+Access type: Read/Write  
 
-  `true` to create an extensible firmware interface (EFI) partition so that an EFI system can boot from the disk. The default value is `false`. Set this property if `PartitionStyle` is set to GPT.  
+Qualifiers: None  
 
-  `Name`  
-  Data type: `String`  
+Deprecated, don't use.
 
-  Access type: Read/Write  
+### `Enabled`
 
-  Qualifiers: [AllowedLen("1-100")]  
+Data type: `Boolean`  
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write  
 
-  `Partitions`  
-  Data type: `SMS_TaskSequence_PartitionSettings`Array  
+Qualifiers: None  
 
-  Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
-  Qualifiers: [Not_null]  
+### `GPTBootDisk`
 
-  [SMS_TaskSequence_PartitionSettings Server WMI Class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md) objects representing partition settings.  
+Data type: `Boolean`  
 
-  `PartitionStyle`  
-  Data type: `String`  
+Access type: Read/Write  
 
-  Access type: Read/Write  
+Qualifiers: None  
 
-  Qualifiers: [Not_null]  
+Set `true` to create an extensible firmware interface (EFI) partition so that an EFI system can boot from the disk. The default value is `false`. Set this property if `PartitionStyle` is set to GPT.
 
-  The partition style. Possible values are:  
+### `Name`
 
-- GPT. GUID partition table format.  
+Data type: `String`  
 
-- MBR. Master boot record format.  
+Access type: Read/Write  
 
-  `SupportedEnvironment`  
-  Data type: `String`  
+Qualifiers: `[AllowedLen("1-100")]`
 
-  Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
 
-  Qualifiers: [Not_Null:ToInstance]  
+### `Partitions`
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `SMS_TaskSequence_PartitionSettings` array  
 
-  The default value of this property for this task sequence action is WinPE.  
+Access type: Read/Write  
 
-  `Timeout`  
-  Data type: `UInt32`  
+Qualifiers: `[Not_null]`
 
-  Access type: Read/Write  
+For more information on the objects representing partition settings, see [SMS_TaskSequence_PartitionSettings server WMI class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md).
 
-  Qualifiers: None  
+### `PartitionStyle`
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`  
 
-## Remarks  
- Class qualifiers for this class include:  
+Access type: Read/Write  
 
- [CommandLine("osddiskpart.exe"),VariablePrefix("OSD"),  
+Qualifiers: `[Not_null]`
 
- ActionCategory{"Disks,1,3"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "PartitionDiskControl", "TaskSequenceOptionControl"}]  
+The partition style. Possible values are:  
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+- `GPT`: GUID partition table format.  
 
-## Requirements  
+- `MBR`: Master boot record format.  
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### `SupportedEnvironment`
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+Data type: `String`  
 
-## See Also  
- [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)   
- [SMS_TaskSequence_PartitionSettings Server WMI Class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md)
+Access type: Read/Write  
+
+Qualifiers: `[Not_Null:ToInstance]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+
+The default value of this property for this task sequence action is `WinPE`.  
+
+### `Timeout`
+
+Data type: `UInt32`  
+
+Access type: Read/Write  
+
+Qualifiers: None  
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+
+## Remarks
+
+Class qualifiers for this class include:  
+
+```
+[CommandLine("osddiskpart.exe"),VariablePrefix("OSD"),  
+
+ActionCategory{"Disks,1,3"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "PartitionDiskControl", "TaskSequenceOptionControl"}]  
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+### Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).
+
+## See also
+
+- [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)
+
+- [SMS_TaskSequence_PartitionSettings server WMI class](../../../develop/reference/osd/sms_tasksequence_partitionsettings-server-wmi-class.md)

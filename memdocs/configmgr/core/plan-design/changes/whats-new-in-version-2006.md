@@ -142,32 +142,67 @@ For more information, see [Deploy user-available apps](../../../apps/deploy-use/
 
 ## <a name="bkmk_osd"></a> OS deployment
 
-### New SDK method for task sequence progress
-<!--6448458-->
-
-### Improvements to OS deployment
-<!--6452769-->
-
-### PowerShell cmdlets for task sequence deployment types
-<!--7019342-->
-
-### Improvement to Format and Partition Disk task sequence step
-<!--6610288-->
-
-### Management insight rules for OS deployment
-<!--6982275-->
-
-### Remove command prompt during Windows 10 in-place upgrade
-<!--2837795-->
-
-### Improvements to BitLocker task sequence steps
-<!--6995601-->
-
 ### Task sequence media support for cloud-based content
+
 <!--6209223-->
 
+Task sequence media can now download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
+
+> [!NOTE]
+> The device still needs an intranet connection to the management point.
+
+For more information, see [Use bootable media to deploy Windows over the network](../../../osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
+
 ### Improvements to task sequences via CMG
-<!--6983320-->
+
+This release includes the following improvements to deploy task sequences to devices that communicate via a cloud management gateway (CMG):
+
+- Support for OS deployment<!--6997525-->: With a task sequence that uses a boot image to deploy an OS, you can deploy it to a device that communicates via CMG. The user needs to start the task sequence from Software Center. For more information, see [Plan for CMG - Specifications](../../clients/manage/cmg/plan-cloud-management-gateway.md#specifications).
+
+- This release fixes the two [known issues](../../servers/deploy/install/release-notes.md#task-sequences-cant-run-over-cmg) from Configuration Manager current branch version 2002.<!-- 6983320 --> You can now run a task sequence on a device that communicates via CMG in the following circumstances:
+
+  - A workgroup device that you register with a [bulk registration token](../../clients/deploy/deploy-clients-cmg-token.md)
+
+  - You configure the site for [Enhanced HTTP](../hierarchy/enhanced-http.md) and the management point is HTTP
+
+### Improvements to BitLocker task sequence steps
+
+<!--6995601-->
+
+You can now specify the disk encryption mode on the **Enable BitLocker** and **Pre-provision BitLocker** task sequence steps. By default, the steps continue to use the default encryption method for the OS version.
+
+The **Enable BitLocker** step also now includes a setting to **Skip this step for computers that do not have a TPM or when TPM is not enabled**. When you enable this setting, the step logs an error on a device without a TPM or a TPM that doesn't initialize, and the task sequence continues. This setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.
+
+For more information, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md).
+
+### Management insight rules for OS deployment
+
+<!--6982275-->
+
+When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment. To help you manage the policy size of task sequences, this release includes the following management insights:
+
+- **Large task sequences may contribute to exceeding maximum policy size**
+
+- **Total policy size for task sequences exceeds policy limit**
+
+> [!TIP]
+> These rules are in a new group for **Operating System Deployment**. The existing rule for **Unused boot images** is now in this group too.
+
+For more information, see [management insight](../../servers/manage/management-insights.md#operating-system-deployment).
+
+### Improvements to OS deployment
+
+This release includes the following additional improvements to OS deployment:
+
+- Use a task sequence variable to specify the target of the [Format and Partition Disk](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) step. This new variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.<!--6610288-->
+
+- The [Check Readiness](../../../osd/understand/task-sequence-steps.md#BKMK_CheckReadiness) step now includes a check to determine if the device uses UEFI. It also includes a new read-only task sequence variable, **_TS_CRUEFI**.<!--6452769-->
+
+- If you enable the [task sequence progress window](../../../osd/understand/user-experience.md#task-sequence-progress) to show more detailed progress information, it now doesn't count enabled steps in a disabled group. This change helps make the progress estimate more precise.<!--6448412-->
+
+- Previously, during a task sequence to upgrade a device to Windows 10, a command prompt window opened during one of the final Windows configuration phases. The window was on top of the Windows out-of-box experience (OOBE), and users could interact with it to disrupt the upgrade process. Now the SetupCompleteTemplate.cmd and SetupRollbackTemplate.cmd scripts from Configuration Manager include a change to hide this command prompt window.<!--2837795-->
+
+- Some customers build custom task sequence interfaces using the **IProgressUI::ShowMessage** method, but it doesn't return a value for the user's response. This release adds the [IProgressUI::ShowMessageEx](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md) method. This new method is similar to the existing method, but also includes a new integer result variable, **pResult**.<!--6448458-->
 
 ## <a name="bkmk_userxp"></a> User experience
 
