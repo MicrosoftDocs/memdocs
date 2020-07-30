@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the app to users and devices. It is important to note that you can assign an app to a device whether or not the device is managed by Intune.
 
 > [!NOTE]
-> The Available deployment intent is not supported for device groups, only user groups are supported.
+> For Android Enterprise devices, the **Available** deployment intent is supported for device and user groups targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
 
 The following table lists the various options for assigning apps to users and devices:
 
