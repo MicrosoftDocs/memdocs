@@ -324,6 +324,11 @@ If you want to give users more time to install required application or software 
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
+
+### Enable Endpoint analytics data collection
+
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+
 ## Computer restart
 
 For more information about these settings, see [Device restart notifications](device-restart-notifications.md).<!-- 7182335 -->
