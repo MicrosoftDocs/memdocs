@@ -53,9 +53,8 @@ public void CreateRole(WqlConnectionManager connection, string computerName, str
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`computerName`|`String`|The name of the site server.|  
 |`siteCode`|`String`|The site code.|  
