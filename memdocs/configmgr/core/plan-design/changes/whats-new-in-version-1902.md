@@ -119,7 +119,7 @@ For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-c
 <!--3610960-->
 Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### Edit or copy PowerShell scripts
 

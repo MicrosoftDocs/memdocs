@@ -476,6 +476,8 @@
       href: servers/manage/cmpivot-overview.md      
     - name: Use CMPivot
       href: servers/manage/cmpivot.md
+    - name: CMPivot changes
+      href: servers/manage/cmpivot-changes.md
     - name: Troubleshooting CMPivot
       href: servers/manage/cmpivot-tsg.md
   - name: Maintenance tasks
