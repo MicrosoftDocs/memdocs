@@ -93,6 +93,9 @@ Starting in version 2006, you can configure client settings to prevent devices f
 
 When you disable this setting, you can't specify the amounts of time after the deadline that the device is restarted or the user is presented a final countdown notification.
 
+> [!NOTE]
+> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
 ### Specify the amount of time after the deadline before a device gets restarted (minutes)
 
 This setting must be shorter in duration than the shortest maintenance window applied to the computer. For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
