@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Configuration Manager
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 07/27/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
@@ -24,6 +24,16 @@ manager: dougeby
 The sections below can be used to assist in troubleshooting issues you may come across.
 
 ## <a name="bkmk_known"></a> Known issues
+
+### Custom client settings may incorrectly indicate Endpoint analytics data collection is enabled
+
+When you enable Endpoint analytics data upload in Configuration Manager, data collection is automatically enabled in your hierarchy's default client settings. Afterwards, any pre-existing custom [client settings](../configmgr/core/clients/deploy/about-client-settings.md#computer-agent) that include the **Computer Agent** group of settings may appear to have the **Enable Endpoint analytics data collection** set to **Yes** in the Configuration Manager console, but this setting may not have been deployed to targeted devices.
+
+**Impacted devices:**
+This issue impacts custom client settings objects that include the **Computer Agent** group of settings and were created and deployed prior to onboarding to Endpoint analytics. If you view Resultant Client Settings for devices targeted by such a custom client setting, you may find that Endpoint analytics data collection is not enabled.
+
+**Mitigation:**
+To properly configure devices governed by custom client settings for Endpoint analytics, manually set the **Enable Endpoint analytics data collection** setting to **No** and select **OK** to close the settings. Then, reopen the custom client settings and change the **Enable Endpoint analytics data collection** setting back to **Yes** and select **OK**. This change will force the custom client settings to update on targeted devices.
 
 ### User experience blade not available in All Devices report for some devices
 
