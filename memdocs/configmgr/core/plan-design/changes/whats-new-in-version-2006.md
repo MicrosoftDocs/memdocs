@@ -275,11 +275,13 @@ You can now choose to receive notifications from Microsoft in the Configuration 
 For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
 
 
+<!--
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-<!-- ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956--> -->
+### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
+
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
 
