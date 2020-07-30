@@ -51,7 +51,7 @@ SInt32 ManageDeploymentForDevice (
 
  Activate or deactivate deployment. Possible values are:  
 
-|||  
+|Value|Activate or deactivate|  
 |-|-|  
 |1|Activate|  
 |2|Deactivate|  
