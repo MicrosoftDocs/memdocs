@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How do I find the serial number on my device?
+# How do I find the serial number on my iOS device?
 
 The serial number for your device uniquely identifies it, and can help your company support with certain tasks, like replacing your device with a new one. To locate the serial number:
 
