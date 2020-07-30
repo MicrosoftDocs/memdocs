@@ -79,9 +79,6 @@ If you configure Azure services to cloud-attach your site, the Configuration Man
 
 For more information, see [Renew secret key](../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
-### Improvements to cloud management gateway cmdlets
-<!--6978300-->
-
 
 <!--
 ## <a name="bkmk_da"></a> Desktop Analytics
@@ -130,9 +127,6 @@ You can now select the Azure China Cloud as your Azure environment when enabling
 
 
 ## <a name="bkmk_app"></a> Application management
-
-### Improvements to Microsoft Edge Management dashboard
-<!--5907383-->
 
 ### Improvements to available apps via CMG
 
@@ -211,9 +205,6 @@ This release includes the following additional improvements to OS deployment:
 
 ## <a name="bkmk_userxp"></a> User experience
 
-### Use the Company Portal app on co-managed devices
-<!--3601237-->
-
 ### Improvements to managing device restarts
 
 <!--3601213-->
@@ -277,32 +268,11 @@ The IT admin community has developed a wealth of knowledge over the years. Rathe
 
 For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 
-### New feedback wizard
-<!--3180826-->
-
-### Query for feedback sent to Microsoft
-<!--6488450-->
-
-### Copy discovery data from the console
-<!--6890051-->
-
 ### Notifications from Microsoft
 <!--3953121-->
 You can now choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
 
 For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
-
-### Report setup and upgrade failures to Microsoft
-<!--5622909-->
-
-
-## Tools
-
-### Support for PowerShell version 7
-<!--6023299-->
-
-### Improvements to the content library cleanup tool
-<!--6887878-->
 
 
 ## Other updates
