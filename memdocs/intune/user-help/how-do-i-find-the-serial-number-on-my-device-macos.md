@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: How do I find the serial number on my iOS device? | Microsoft Docs
+title: How do I find the serial number on my macOS device?
 description:
 keywords:
 author: lenewsad

@@ -1,5 +1,5 @@
 ---
-title: "Refresh Method"
+title: Refresh method in class SMS_SiteInstallMap
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
