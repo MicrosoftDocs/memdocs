@@ -22,16 +22,17 @@ Use the following information to learn about changes made to [CMPivot](cmpivot.m
 Starting in version 2006, the following improvements have been made for CMPivot:
 
 - [CMPivot standalone](cmpivot.md#bkmk_standalone) and CMPivot launched from the admin console have converged. When you launch CMPivot from the admin console, it uses the same underlying technology as CMPivot standalone to give you scenario parity.
-- For CMPivot, you no longer need to verify that the **Microsoft Code Signing** certificate is in the **Trusted Publishers** store when the PowerShell execution policy is set to **AllSigned**. <!--7372925-->
+
+- Improvements for keyboard navigation in CMPivot.
 
 - You can run CMPivot from an individual device or multiple devices from the devices node without needing to select a device collection. This improvement makes it easier for people, such as those working as the Helpdesk persona, to create CMPivot queries for specific devices outside a pre-created collection.
    - Select an individual device or multi-select devices in a device collection or then select **Start CMPivot**.
 
-- Upon returning devices within a query list view, you can select **Device Pivot** on one or more devices and then pivot and query on just those devices to drill in further. This change allows you to drill in without querying the larger set of devices from the original collection.
-   - Within an existing CMPivot operation, select an individual device or multi-select devices from the output. Right-click and pivot using the **Device Pivot** option. This action launches a separate CMPivot instance for your device selection.
+- Upon returning devices within a query list view, you can select **Device Pivot** on one or more devices and then pivot and query on just those devices to drill in further. This change allows you to drill in without querying the larger set of devices from the original collection. **Device Pivot** replaced **Pivot to**.
+   - Within an existing CMPivot operation, select an individual device or multi-select devices from the output. Right-click and pivot using the **Device Pivot** option. This action launches a separate CMPivot instance scoped to just the devices you selected. This makes it easier to pivot and just query on devices desired without needing to create a collection for them.
 
 - When you run CMPivot for an individual device, the device name is listed at the top of the window. For multiple devices, the number of devices selected is listed at the top of the window.
-- The **Create Collection** option in the Query Summary tab was removed since CMPivot no longer requires querying against a collection.
+- The **Create Collection** option in the Query Summary tab was removed since CMPivot no longer requires querying against a collection. Perform a **Device Pivot** to open a new instance of CMPivot scoped to just the devices you want to query on. **Create Collection** is still available on the main menu.
 
 ![Device pivot for multiple devices using CMPivot](./media/6518631-cmpivot-multi-select.png)
 

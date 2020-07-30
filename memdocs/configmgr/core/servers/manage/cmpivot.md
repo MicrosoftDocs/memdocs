@@ -41,8 +41,6 @@ The following components are required to use CMPivot:
   - IPConfig
   - SMBConfig
 
-For versions of Configuration Manager prior to 2006:<!--7372925-->
-
 - CMPivot and the [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) installer are signed with the **Microsoft Code Signing** certificate. If that certificate isn't listed in the **Trusted Publishers** store, you'll need to add it. Otherwise, CMPivot and the Microsoft Edge installer won’t run when the PowerShell execution policy is set to **AllSigned**. <!--7585106-->
 
 ## Permissions
@@ -147,7 +145,7 @@ The CMPivot window contains the following elements:
    - Right-click on a device name to take the following additional actions on the device:  
 
       - **Pivot to**: Query for another entity on this device.
-         - Starting in version 2006, **Pivot to** was changed to **Device Pivot**. For more information, see [CMPivot changes for version 2006](cmpivot-changes.md#bkmk_2006).
+         - Starting in version 2006, **Pivot to** was replaced by **Device Pivot**. For more information, see [CMPivot changes for version 2006](cmpivot-changes.md#bkmk_2006).
 
       - **Run Script**: Launch the Run Script wizard to run an existing PowerShell script on this device. For more information, see [Run a script](../../../apps/deploy-use/create-deploy-scripts.md#run-a-script).  
 
