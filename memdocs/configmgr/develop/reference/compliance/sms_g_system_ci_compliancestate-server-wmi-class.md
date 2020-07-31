@@ -89,7 +89,7 @@ Class SMS_G_System_CI_ComplianceState : SMS_G_System
 
  The readable name of the compliance state. Possible values are:  
 
-|||  
+|Value|Compliance state|  
 |-|-|  
 |0|Compliance State Unknown|  
 |1|Compliant|  

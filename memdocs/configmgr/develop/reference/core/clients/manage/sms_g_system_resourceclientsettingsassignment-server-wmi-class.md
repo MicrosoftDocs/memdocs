@@ -100,7 +100,7 @@ Class SMS_G_System_ResourceClientSettingsAssignment : SMS_G_System
 
  Settings type. Possible values are:  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|Device|  
 |2|User|  
