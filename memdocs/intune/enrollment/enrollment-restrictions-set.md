@@ -180,6 +180,10 @@ When you create a restriction, it's added to the list just above the default.
 
 Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.
 
+>[!NOTE]
+>Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
+
+
 You can change the priority of any non-default restriction.
 
 1. Sign in to the Azure portal.
