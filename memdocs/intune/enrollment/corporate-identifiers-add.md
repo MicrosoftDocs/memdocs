@@ -70,10 +70,8 @@ To create the list, create a two-column, comma-separated value (.csv) list witho
 
 **Upload a .csv file that has serial numbers** – Create a two-column, comma-separated value (.csv) list without a header, and limit the list to 5,000 devices or 5 MB per .csv file.
 
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;Device #1 Details&gt;|
-|&lt;ID #2&gt;|&lt;Device #2 Details&gt;|
+&lt;ID #1&gt;,&lt;Device #1 Details&gt;
+&lt;ID #2&gt;,&lt;Device #2 Details&gt;
 
 This .csv file when viewed in a text editor appears as:
 
