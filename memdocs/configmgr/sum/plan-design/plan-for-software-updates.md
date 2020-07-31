@@ -458,7 +458,8 @@ When there's a pending restart for a Configuration Manager software update, the 
 
 ## <a name="bkmk_ssu"></a> Evaluate software updates after a servicing stack update
 <!--4639943-->
-Starting in version 2002, Configuration Manager detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first.
+Starting in version 2002, Configuration Manager detects if a servicing stack update (SSU) is part of an installation for multiple updates. When an SSU is detected, it's installed first. After install of the SSU, a software update evaluation cycle runs to install the remaining updates. This change allows a dependent cumulative update to be installed after the servicing stack update. The device doesn't need to restart between installs, and you don't need to create an additional maintenance window. SSUs are installed first only for non-user initiated installs. For instance, if a user initiates an installation for multiple updates from Software Center, the SSU might not be installed first. Installation of SSUs first isn't available for Windows Server operating systems when using Configuration Manager version 2002. <!--7813007-->This functionality was added in Configuration Manager version 2006 for Windows Server operating systems.
+
 
 
 ## Next steps
