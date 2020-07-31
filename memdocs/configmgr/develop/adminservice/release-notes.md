@@ -18,6 +18,8 @@ manager: dougeby
 
 ## <a name="bkmk_2006"></a> Changes in version 2006
 
+<!-- 7463616 -->
+The WMI route is now case-insensitive. For example, in version 2002, you had to specify `AdminService/wmi/SMS_Site`. Now in version 2006, you can also use `AdminService/wmi/sms_site`
 
 ## <a name="bkmk_2002"></a> Changes in version 2002
 

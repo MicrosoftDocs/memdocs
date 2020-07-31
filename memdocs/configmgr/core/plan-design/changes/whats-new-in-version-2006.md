@@ -77,7 +77,15 @@ The **Windows 10 Enterprise multi-session** platform is available in the list of
 
 For more information on Configuration Manager's support for Windows Virtual Desktop, see [Supported OS versions for clients and devices](../configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
+### Intranet clients can use a CMG software update point
+<!--7102873-->
+Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
+
 ## <a name="bkmk_cloud"></a> Cloud-attached management
+
+### Use Microsoft Azure China 21Vianet for co-management
+<!--7133238-->
+You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
 
 ### Notification for Azure AD app secret key expiration
 
@@ -90,32 +98,21 @@ If you configure Azure services to cloud-attach your site, the Configuration Man
 
 For more information, see [Renew secret key](../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
-### Improvements to cloud management gateway cmdlets
-<!--6978300-->
-
-
-<!--
-## <a name="bkmk_da"></a> Desktop Analytics
+### Desktop Analytics
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
--->
 
 ## <a name="bkmk_real"></a> Real-time management
 
 ### Improvements to CMPivot
 <!--6518631-->
 The following improvements have been made in CMPivot:
+
 - CMPivot from the console and CMPivot standalone have been converged
 - Run CMPivot from an individual device or multiple devices without having to select or create a collection
 - From CMPivot query results, you can select an individual device or multiple devices then launch a separate CMPivot instance for your selection.
 
 For more information, see [CMPivot starting in version 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006).
-
-
-<!--
-## <a name="bkmk_content"></a> Content management
--->
-
 
 ## <a name="bkmk_client"></a> Client management
 
@@ -123,7 +120,7 @@ For more information, see [CMPivot starting in version 2006](../../servers/manag
 
 <!--6976145-->
 
-Previously, if the device was connected to a metered network, new clients wouldn't install. Existing clients only upgraded if you allowed all client communication. For devices that are frequently roaming on a metered network, they would be unmanaged or on an older client version. Starting in this release, client install and upgrade both work when you set the client setting **Client communication on metered internet connections** to **Allow** or **Limit**. With this setting, you can allow the client to stay current, but still manage the client communication on a metered network.
+Previously, if the device was connected to a metered network, new clients wouldn't install. Existing clients only upgraded if you allowed all client communication. For devices that are frequently roaming on a metered network, they would be unmanaged or on an older client version. Starting in this release, you can install and upgrade the client when you set the client setting **Client communication on metered internet connections** to **Allow** or **Limit**. With this setting, you can allow the client to stay current, but still manage the client communication on a metered network.
 
 To define the behavior for a new client installation, there's a new ccmsetup parameter **/AllowMetered**. When you allow client communication on a metered network for ccmsetup, it downloads the content, registers with the site, and downloads the initial policy. Any further client communication follows the configuration of the client setting from that policy.
 
@@ -132,18 +129,15 @@ For more information, see the following articles:
 - [About client settings](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)
 - [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered)
 
+### Improvements to managing device restarts
 
-## <a name="bkmk_comgmt"></a> Co-management
+<!--3601213-->
 
-### Use Microsoft Azure China 21Vianet for co-management
-<!--7133238-->
-You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
+Configuration Manager provides many options to manage device restart notifications. You can now configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
 
+For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
 
 ## <a name="bkmk_app"></a> Application management
-
-### Improvements to Microsoft Edge Management dashboard
-<!--5907383-->
 
 ### Improvements to available apps via CMG
 
@@ -155,6 +149,15 @@ This release also fixes an issue with Software Center and Azure Active Directory
 
 For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
+### Microsoft 365 Apps for enterprise
+<!--6298093-->
+Office 365 ProPlus was renamed to Microsoft 365 Apps for enterprise on April 21, 2020. Starting in version 2006, the following changes have been made:
+
+- The Configuration Manager console has been updated to use the new name.
+  - This change also includes update channel names for Microsoft 365 Apps.
+- A banner notification was added to the console to notify you if one or more automatic deployment rules reference obsolete channel names in the **Title** criteria for Microsoft 365 Apps updates.
+
+For more information, see [Microsoft 365 Apps channel names](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) and [Microsoft 365 Apps readiness dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 ## <a name="bkmk_osd"></a> OS deployment
 
@@ -220,40 +223,6 @@ This release includes the following additional improvements to OS deployment:
 
 - Some customers build custom task sequence interfaces using the **IProgressUI::ShowMessage** method, but it doesn't return a value for the user's response. This release adds the [IProgressUI::ShowMessageEx](../../../develop/reference/core/clients/client-classes/iprogressui--showmessageex-method.md) method. This new method is similar to the existing method, but also includes a new integer result variable, **pResult**.<!--6448458-->
 
-## <a name="bkmk_userxp"></a> User experience
-
-### Use the Company Portal app on co-managed devices
-<!--3601237-->
-
-### Improvements to managing device restarts
-
-<!--3601213-->
-
-Configuration Manager provides many options to manage device restart notifications. You can now configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
-
-For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
-
-
-
-## <a name="bkmk_sum"></a> Software updates
-
-### Intranet clients can use a CMG software update point
-<!--7102873-->
-Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
-
-
-## <a name="bkmk_o365"></a> Office management
-
-### Microsoft 365 Apps for enterprise
-<!--6298093-->
-Office 365 ProPlus was renamed to Microsoft 365 Apps for enterprise on April 21, 2020. Starting in version 2006, the following changes have been made:
-
-- The Configuration Manager console has been updated to use the new name.
-   - This change also includes update channel names for Microsoft 365 Apps.
-- A banner notification was added to the console to notify you if one or more automatic deployment rules reference obsolete channel names in the **Title** criteria for Microsoft 365 Apps updates.
-
-For more information, see [Microsoft 365 Apps channel names](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) and [Microsoft 365 Apps readiness dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
-
 ## Protection
 
 ### CMG support for endpoint protection policies
@@ -272,11 +241,6 @@ You can now install the BitLocker self-service portal and the administration and
 
 For more information, see [Set up BitLocker portals](../../../protect/deploy-use/bitlocker/setup-websites.md).
 
-
-<!-- 
-## Reporting
--->
-
 ## <a name="bkmk_admin"></a> Configuration Manager console
 
 ### Community hub and GitHub
@@ -288,44 +252,34 @@ The IT admin community has developed a wealth of knowledge over the years. Rathe
 
 For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 
-### New feedback wizard
-<!--3180826-->
-
-### Query for feedback sent to Microsoft
-<!--6488450-->
-
-### Copy discovery data from the console
-<!--6890051-->
-
 ### Notifications from Microsoft
 <!--3953121-->
 You can now choose to receive notifications from Microsoft in the Configuration Manager console. These notifications help you stay informed about new or updated features, changes to Configuration Manager and attached services, and issues that require action to remediate.
 
 For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
 
-### Report setup and upgrade failures to Microsoft
-<!--5622909-->
-
-
-## Tools
-
-### Support for PowerShell version 7
-<!--6023299-->
-
-### Improvements to the content library cleanup tool
-<!--6887878-->
-
+<!-- Unused sections in this release:
+## Reporting
+## <a name="bkmk_userxp"></a> User experience
+## <a name="bkmk_sum"></a> Software updates
+## Office management
+## <a name="bkmk_content"></a> Content management
+## <a name="bkmk_comgmt"></a> Co-management
+-->
 
 ## Other updates
 
+<!--
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-<!-- ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956--> -->
+### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
+-->
 
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2006).
 
+<!--
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
 
 <!--
