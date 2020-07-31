@@ -51,9 +51,9 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
 3. Verify that the device is running Windows 10, version 1709 or a later version.
 
-4. Verify that the devices are set to **hybrid Azure AD joined**. This means that the devices are both domain-joined and Azure AD-joined.
+4. Verify that the devices are set to **hybrid Azure AD joined**. This setting means that the devices are both domain-joined and Azure AD-joined.
 
-   To do this, run **dsregcmd /status** at the command line. Then, verify the following status values in the output:
+   To verify the settings, run **dsregcmd /status** at the command line. Then, verify the following status values in the output:
 
    - Device State
  
@@ -72,7 +72,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![List of Azure AD-joined devices](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-5. If you have both the **Microsoft Intune** and **Microsoft Intune Enrollment** entries under **Mobility (MDM and MAM)** in the Azure AD blade, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
+5. Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If this is the case, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
 
 6. Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
 
@@ -80,7 +80,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    You can contact your domain administrators to verify that the Group Policy policy setting is deployed successfully.
 
-7. Make sure that the device is not enrolled in Intune by using the classic PC agent.
+7. Make sure that the device isn't enrolled in Intune by using the classic PC agent.
 8. Verify the following settings in Azure AD and Intune:
 
    **In Azure AD Device settings:**
@@ -104,7 +104,7 @@ If the issue persists, examine the MDM logs on the device in the following locat
 
 Look for Event ID 75 (Event message "Auto MDM Enroll: Succeeded"). This event indicates that the auto-enrollment succeeded.
 
-Event ID 75 is not logged in the following situations:
+Event ID 75 isn't logged in the following situations:
 
 - The enrollment fails.
 
@@ -112,7 +112,7 @@ Event ID 75 is not logged in the following situations:
 
   For a resolution to this error, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
 
-- The enrollment wasn't triggered at all. In this case, neither event ID 75 nor event ID 76 is logged.
+- The enrollment wasn't triggered at all. In this case, event ID 75 event ID 76 aren't logged.
   
   The auto-enrollment process is triggered by the "**Schedule created by enrollment client for automatically enrolling in MDM from AAD**" task that's located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
 
@@ -126,12 +126,12 @@ Event ID 75 is not logged in the following situations:
 
   When the task is triggered on the scheduler, Event ID 107 is logged.
 
-  When the task is completed, Event ID 102 is logged. This occurs regardless of whether auto enrollment succeeds.
+  When the task is completed, Event ID 102 is logged. The event is logged whether or not auto enrollment succeeds.
 
   > [!NOTE]
   > You can use the task scheduler log to check whether auto-enrollment is triggered. However, you can't use the log to determine whether auto-enrollment succeeded.
 
-  The following situation may cause the Schedule created by enrollment client for automatically enrolling in MDM from AAD task not to be initiated:
+  The following situation may cause the Schedule created by enrollment client for automatically enrolling in MDM from AAD task not to be started:
 
   - The device is already enrolled in another MDM solution. In this case, Event ID 7016 together with error code 2149056522 is logged in the **Applications and Services Logs** > **Microsoft** > **Windows** > **Task Scheduler** > **Operational** event log.
 
