@@ -55,7 +55,10 @@ This feature is supported for the following platforms:
 | Windows | Supported (Windows Phone) | Not supported |
 | iOS/macOS | Not supported (see Important below)  | Supported |
 | Device admin managed Android OS v10 | Not supported | Not supported |
-| Other Android | Not supported | Supported |
+| Android Enterprise work profile | Not supported | Supported |
+| Android Enterprise fully managed | Not supported | Supported |
+| Android Enterprise dedicated devices | Not supported | Not supported |
+| Android Enterprise corporate-owned work profile | Not supported | Supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
