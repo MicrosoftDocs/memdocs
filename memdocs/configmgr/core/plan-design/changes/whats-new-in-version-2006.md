@@ -104,7 +104,12 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 
 ### Improvements to CMPivot
 <!--6518631-->
-<!-- include changes from 2003 and 2004 -->
+The following improvements have been made in CMPivot:
+- CMPivot from the console and CMPivot standalone have been converged
+- Run CMPivot from an individual device or multiple devices without having to select or create a collection
+- From CMPivot query results, you can select an individual device or multiple devices then launch a separate CMPivot instance for your selection.
+
+For more information, see [CMPivot starting in version 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006).
 
 
 <!--

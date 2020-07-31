@@ -98,6 +98,10 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 
 ### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
 
+The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Endpoint Manager admin center.
+
+Starting in Configuration Manager version 2006, the **Enable Endpoint analytics data collection** setting is enabled by default for devices targeted by only the default client settings. If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can enable or disable data collection by following the instructions below:
+
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
 1. Set **Enable Endpoint analytics data collection** to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection.
@@ -105,7 +109,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 You may also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a specific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
 
    > [!Important] 
-   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting then redeploy it to your machines for it to take effect.
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting and click Ok for it to take effect.
 
 
 ## <a name="bkmk_view"></a> View the Overview page
