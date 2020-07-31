@@ -68,7 +68,8 @@ Devices will not be impacted if they are any of the below:
 - Set **Number of days until password expires**
 - Set **Number of previous passwords to prevent reuse**
 
-:::image type="content" source="/media/notices/android-compliance-settings.png" alt-text="Screencap of Android compliance policy page" :::
+
+![Screencap of Android compliance policy page](./media/notices/android-compliance-settings.png)
 
 ###### Additional impacts based on Android OS version
 
