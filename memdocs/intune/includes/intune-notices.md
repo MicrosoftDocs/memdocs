@@ -69,7 +69,7 @@ Devices will not be impacted if they are any of the below:
 - Set **Number of previous passwords to prevent reuse**
 
 
-![Screencap of Android compliance policy page](./media/notices/android-compliance-settings.png)
+![Screencap of Android compliance policy page](media/notices/android-compliance-settings.png)
 
 ###### Additional impacts based on Android OS version
 
