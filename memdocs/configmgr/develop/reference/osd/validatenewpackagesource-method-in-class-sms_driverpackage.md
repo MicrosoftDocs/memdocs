@@ -1,5 +1,5 @@
 ---
-title: "ValidateNewPackageSource Method"
+title: ValidateNewPackageSource method in class SMS_DriverPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
