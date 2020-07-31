@@ -72,7 +72,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![List of Azure AD-joined devices](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-5. Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If this is the case, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
+5. Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If both are present, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
 
 6. Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
 
@@ -112,7 +112,7 @@ Event ID 75 isn't logged in the following situations:
 
   For a resolution to this error, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
 
-- The enrollment wasn't triggered at all. In this case, event ID 75 event ID 76 aren't logged.
+- The enrollment wasn't triggered at all. In this case, event ID 75 and event ID 76 aren't logged.
   
   The auto-enrollment process is triggered by the "**Schedule created by enrollment client for automatically enrolling in MDM from AAD**" task that's located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
 
