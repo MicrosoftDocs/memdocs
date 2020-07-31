@@ -408,7 +408,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
  For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share  
- You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple item into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
+ You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple items into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
 
  The following table lists the MDT Windows PowerShell cmdlets used to import items into a deployment share and provides a brief description of each cmdlet. Examples of how to use each cmdlet is provided in the section that corresponds to each cmdlet.  
 
@@ -3474,8 +3474,8 @@ New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deploymen
 New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose  
 ```  
 
-    > [!NOTE]
-    >  Adding "`remove-psdrive`" to the script ensures that the background process finishes before proceeding.  
+> [!NOTE]
+> Adding `remove-psdrive` to the script ensures that the background process finishes before proceeding.  
 
 ###  <a name="DeleteFolder"></a> Deleting a Folder  
  The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.  

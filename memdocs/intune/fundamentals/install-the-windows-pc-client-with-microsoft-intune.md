@@ -210,42 +210,46 @@ Using an elevated command prompt, run one of the following commands.
 
 **Method 1**:
 
-    "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```console
+"C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```
 
 **Method 2** Note that all of these agents are installed on every SKU of Windows:
 
-    wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
-    wmic product where name="Microsoft Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Microsoft Online Management Policy Agent" call uninstall
-    wmic product where name="Microsoft Policy Platform" call uninstall
-    wmic product where name="Microsoft Security Client" call uninstall
-    wmic product where name="Microsoft Online Management Client" call uninstall
-    wmic product where name="Microsoft Online Management Client Service" call uninstall
-    wmic product where name="Microsoft Easy Assist v2" call uninstall
-    wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Microsoft Intune Center" call uninstall
-    wmic product where name="Microsoft Online Management Update Manager" call uninstall
-    wmic product where name="Microsoft Online Management Agent Installer" call uninstall
-    wmic product where name="Microsoft Intune" call uninstall
-    wmic product where name="Windows Endpoint Protection Management Components" call uninstall
-    wmic product where name="Windows Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Windows Online Management Policy Agent" call uninstall
-    wmic product where name="Windows Policy Platform" call uninstall
-    wmic product where name="Windows Security Client" call uninstall
-    wmic product where name="Windows Online Management Client" call uninstall
-    wmic product where name="Windows Online Management Client Service" call uninstall
-    wmic product where name="Windows Easy Assist v2" call uninstall
-    wmic product where name="Windows Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Windows Intune Center" call uninstall
-    wmic product where name="Windows Online Management Update Manager" call uninstall
-    wmic product where name="Windows Online Management Agent Installer" call uninstall
-    wmic product where name="Windows Intune" call uninstall
+```console
+wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
+wmic product where name="Microsoft Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Microsoft Online Management Policy Agent" call uninstall
+wmic product where name="Microsoft Policy Platform" call uninstall
+wmic product where name="Microsoft Security Client" call uninstall
+wmic product where name="Microsoft Online Management Client" call uninstall
+wmic product where name="Microsoft Online Management Client Service" call uninstall
+wmic product where name="Microsoft Easy Assist v2" call uninstall
+wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Microsoft Intune Center" call uninstall
+wmic product where name="Microsoft Online Management Update Manager" call uninstall
+wmic product where name="Microsoft Online Management Agent Installer" call uninstall
+wmic product where name="Microsoft Intune" call uninstall
+wmic product where name="Windows Endpoint Protection Management Components" call uninstall
+wmic product where name="Windows Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Windows Online Management Policy Agent" call uninstall
+wmic product where name="Windows Policy Platform" call uninstall
+wmic product where name="Windows Security Client" call uninstall
+wmic product where name="Windows Online Management Client" call uninstall
+wmic product where name="Windows Online Management Client Service" call uninstall
+wmic product where name="Windows Easy Assist v2" call uninstall
+wmic product where name="Windows Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Windows Intune Center" call uninstall
+wmic product where name="Windows Online Management Update Manager" call uninstall
+wmic product where name="Windows Online Management Agent Installer" call uninstall
+wmic product where name="Windows Intune" call uninstall
+```
 
 > [!TIP]
 > Client unenrollment will leave a stale server-side record for the affected client. The unenrollment process is asynchronous, and there are nine agents to uninstall, so it may take up to 30 mins to complete.
@@ -263,7 +267,9 @@ Check "%ProgramFiles%\Microsoft\OnlineManagement" and ensure that only the follo
 
 The unenrollment process does not remove the OnlineManagement folder. Wait 30 minutes after the uninstall, and then run this command. If you run it too soon, the uninstall could be left in an unknown state. To remove the folder, start an elevated prompt and run:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+```console
+rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
+```
 
 ## Next steps
 [Common Windows PC management tasks with the Intune software client](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

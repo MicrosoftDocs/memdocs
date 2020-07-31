@@ -112,9 +112,9 @@ Collect the following information about the problem:
 1. Remove the Company Portal app from the device.
 2. Download and install the **Microsoft Intune Company Portal** app from **App Store**.
 3. Re-enroll the device.
+
  > [!NOTE]
-    > This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow
-    the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
+> This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
 
 ### Device Cap Reached
 
