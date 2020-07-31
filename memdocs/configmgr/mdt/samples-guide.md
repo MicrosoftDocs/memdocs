@@ -1546,9 +1546,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 ### Complex Conditions  
  Multiple conditions can be grouped using **IF** statements to create complex conditions. For instance, imagine that a particular step should only be run for Contoso 1950 computers running Windows Server 2003 or Windows Server 2008. Written as a programmatic **IF** statement, it would look similar to the following:  
 
-```  
-IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))  
-```  
+`IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))`
 
  **To add a complex condition**  
 
@@ -2535,7 +2533,7 @@ ParameterCondition=OR
 
  **Example Script Using ZTIUtility Logging: ZTI_Example.wsf**  
 
-```vbs  
+```vbscript
 <job id="ZTI_Example">  
 <script language="VBScript" src="ZTIUtility.vbs"/>  
 <script language="VBScript">  
