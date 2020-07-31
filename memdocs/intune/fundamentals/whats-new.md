@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,6 +57,14 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## Week of July 27, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Power BI compliance report template V2.0<!-- 636958 -->
+Power BI template apps enable Power BI partners to build Power BI apps with little or no coding, and deploy them to any Power BI customer. Admins can update the version of the Power BI compliance report template from V1.0 to V2.0. V2.0 includes an improved design, as well as changes to the calculations and data that is surfaced as part of the template. For more information, see [Connect to the Data Warehouse with Power BI](../developer/reports-proc-get-a-link-powerbi.md) and [Update a template app](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Additionally, see the blog post [Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## Week of July 13, 2020  (2007 Service release)
