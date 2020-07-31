@@ -74,7 +74,7 @@ On the computer(s) on which the client software is going to be installed, go to 
 
 1. In the folder that contains the files **Microsoft_Intune_Setup.exe** and **MicrosoftIntune.accountcert**, run the following command to extract the Windows Installer-based installation programs for 32-bit and 64-bit computers:
 
-    ```
+    ```cmd
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
@@ -210,13 +210,13 @@ Using an elevated command prompt, run one of the following commands.
 
 **Method 1**:
 
-```console
+```cmd
 "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
 ```
 
 **Method 2** Note that all of these agents are installed on every SKU of Windows:
 
-```console
+```cmd
 wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
 wmic product where name="Microsoft Intune Notification Service" call uninstall
 wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
@@ -267,7 +267,7 @@ Check "%ProgramFiles%\Microsoft\OnlineManagement" and ensure that only the follo
 
 The unenrollment process does not remove the OnlineManagement folder. Wait 30 minutes after the uninstall, and then run this command. If you run it too soon, the uninstall could be left in an unknown state. To remove the folder, start an elevated prompt and run:
 
-```console
+```cmd
 rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
 ```
 

@@ -603,7 +603,7 @@ ForEach-Object ($App in $List) {
 
 6.  Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](https://technet.microsoft.com/library/ee176914.aspx):  
 
-    ```  
+    ```powershell
     New-Item "DS002:\Operating Systems\Windows_7" -Type directory  
     ```  
 
@@ -611,7 +611,7 @@ ForEach-Object ($App in $List) {
 
 7.  Verify that the folder is created correctly by typing the following command:  
 
-    ```  
+    ```powershell
     Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
@@ -1186,7 +1186,8 @@ Parameters=USZip
 ```  
 
  Executing this code produces output similar to the following:
-```  
+
+```output
 Added new custom property USZIP  
 Added new custom property CITY  
 Added new custom property STATE  
@@ -1230,7 +1231,7 @@ Obtained AREA_CODE value from web service:  AREA_CODE = 425
 
  Using the ZTIConnect.wsf script, you can connect to other servers and access resources on them. The syntax for the ZTIConnect.wsf script is as follows (where *unc_path* is a Universal Naming Convention [UNC] path to connect to the server):  
 
-```  
+```cmd
 cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path  
 ```  
 
