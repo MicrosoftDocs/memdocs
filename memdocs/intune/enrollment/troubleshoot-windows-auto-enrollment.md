@@ -104,8 +104,6 @@ If the issue persists, examine the MDM logs on the device in the following locat
 
 Look for Event ID 75 (Event message "Auto MDM Enroll: Succeeded"). This event indicates that the auto-enrollment succeeded.
 
- ![Event ID 75](./media/troubleshoot-windows-auto-enrollment/event-id-75.png)
- 
 Event ID 75 is not logged in the following situations:
 
 - The enrollment fails.
