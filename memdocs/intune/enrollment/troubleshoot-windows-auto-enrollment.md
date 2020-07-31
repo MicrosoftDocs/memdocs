@@ -39,19 +39,19 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
 1. Verify that a valid Intune license is assigned to the user who is trying to enroll the device.
 
-   ![Verify Intune license](./media/fix-group-policy-based-auto-enrollment/intune-license.png)
+   ![Verify Intune license](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
 2. Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
-   ![Verify auto-enrollment](./media/fix-group-policy-based-auto-enrollment/verify-auto-enrollment.png)
+   ![Verify auto-enrollment](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
    - Verify that **MDM user scope** is set to **All** to allow all users to enroll a device in Intune.
    - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
    - Verify that **MDM discovery URL** is set to **https://enrollment.manage.microsoft.com/enrollmentserver/discovery**.
 
-4. Verify that the device is running Windows 10, version 1709 or a later version.
+3. Verify that the device is running Windows 10, version 1709 or a later version.
 
-5. Verify that the devices are set to **hybrid Azure AD joined**. This means that the devices are both domain-joined and Azure AD-joined.
+4. Verify that the devices are set to **hybrid Azure AD joined**. This means that the devices are both domain-joined and Azure AD-joined.
 
    To do this, run **dsregcmd /status** at the command line. Then, verify the following status values in the output:
 
@@ -68,30 +68,24 @@ Before you start troubleshooting, it's best to verify that everything is configu
      AzureAdPrt: YES
      ```
 
-   The following is a sample screenshot:
-
-   ![Device and SSO States](./media/fix-group-policy-based-auto-enrollment/status.png)
-
    You can find this same information in the list of Azure AD-joined devices:
 
-   ![List of Azure AD-joined devices](./media/fix-group-policy-based-auto-enrollment/ad-joined-devices.png)
+   ![List of Azure AD-joined devices](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-6. If you have both the **Microsoft Intune** and **Microsoft Intune Enrollment** entries under **Mobility (MDM and MAM)** in the Azure AD blade, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
+5. If you have both the **Microsoft Intune** and **Microsoft Intune Enrollment** entries under **Mobility (MDM and MAM)** in the Azure AD blade, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
 
-    ![Microsoft Intune in Mobility](./media/fix-group-policy-based-auto-enrollment/mobility.png)
-
-7. Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
+6. Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
 
    **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **MDM** > **Enable automatic MDM enrollment using default Azure AD credentials**
 
    You can contact your domain administrators to verify that the Group Policy policy setting is deployed successfully.
 
-8. Make sure that the device is not enrolled in Intune by using the classic PC agent.
-9. Verify the following settings in Azure AD and Intune:
+7. Make sure that the device is not enrolled in Intune by using the classic PC agent.
+8. Verify the following settings in Azure AD and Intune:
 
    **In Azure AD Device settings:**
 
-   ![Azure AD Device settings](./media/fix-group-policy-based-auto-enrollment/device-setting.png)
+   ![Azure AD Device settings](./media/troubleshoot-windows-auto-enrollment/device-setting.png)
 
    - The **Users may join devices to Azure AD** setting is set to **All**.
    - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
@@ -100,7 +94,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    - Enrollment of Windows devices is allowed.
 
-     ![Allowed Enrollment of Windows devices](./media/fix-group-policy-based-auto-enrollment/restrictions.png)
+     ![Allowed Enrollment of Windows devices](./media/troubleshoot-windows-auto-enrollment/restrictions.png)
 
 ## Troubleshooting
 
@@ -110,7 +104,7 @@ If the issue persists, examine the MDM logs on the device in the following locat
 
 Look for Event ID 75 (Event message "Auto MDM Enroll: Succeeded"). This event indicates that the auto-enrollment succeeded.
 
- ![Event ID 75](./media/fix-group-policy-based-auto-enrollment/event-id-75.png)
+ ![Event ID 75](./media/troubleshoot-windows-auto-enrollment/event-id-75.png)
  
 Event ID 75 is not logged in the following situations:
 
@@ -118,15 +112,13 @@ Event ID 75 is not logged in the following situations:
 
   To verify this error, look for Event ID 76 (Event message: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x8018002b)). This event indicates a failed auto-enrollment.
 
-  ![Event ID 76](./media/fix-group-policy-based-auto-enrollment/event-id-76.png)
-
   For a resolution to this error, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
 
 - The enrollment wasn't triggered at all. In this case, neither event ID 75 nor event ID 76 is logged.
   
   The auto-enrollment process is triggered by the "**Schedule created by enrollment client for automatically enrolling in MDM from AAD**" task that's located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
 
-  ![Enrollment wasn't triggered](./media/fix-group-policy-based-auto-enrollment/enterprisemgmt.png)
+  ![Enrollment wasn't triggered](./media/troubleshoot-windows-auto-enrollment/trigger.png)
 
   This task is created when the **Enable automatic MDM enrollment using default Azure AD credentials** Group Policy policy setting is successfully deployed to the target device. The task is scheduled to run every 5 minutes during 1 day.
 
@@ -136,11 +128,7 @@ Event ID 75 is not logged in the following situations:
 
   When the task is triggered on the scheduler, Event ID 107 is logged.
 
-  ![Event ID 107](./media/fix-group-policy-based-auto-enrollment/event-id-107.png)
-
   When the task is completed, Event ID 102 is logged. This occurs regardless of whether auto enrollment succeeds.
-
-   ![Event ID 102](./media/fix-group-policy-based-auto-enrollment/event-id-102.png)
 
   > [!NOTE]
   > You can use the task scheduler log to check whether auto-enrollment is triggered. However, you can't use the log to determine whether auto-enrollment succeeded.
