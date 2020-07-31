@@ -97,10 +97,10 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
    - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
 ### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
-The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Endpoint Manager admin center. 
 
-> [!Note]
-> Starting in Configuration Manager version 2006, the Endpoint analytics data collection setting is enabled by default for devices targeted only by default client settings. Additionally, if you are upgrading to version 2006 from a version of Configuration Manager older than version 2002 (such as versions 1906 or 1910), the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can disable data collection by following the instructions below if desired.
+The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Endpoint Manager admin center.
+
+Starting in Configuration Manager version 2006, the **Enable Endpoint analytics data collection** setting is enabled by default for devices targeted by only the default client settings. If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can enable or disable data collection by following the instructions below:
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
