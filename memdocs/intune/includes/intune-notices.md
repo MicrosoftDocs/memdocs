@@ -71,6 +71,9 @@ Devices will not be impacted if they are any of the below:
 - Set **Number of days until password expires**
 - Set **Number of previous passwords to prevent reuse**
 
+
+![Screencap of Android compliance policy page](../fundamentals/media/notices/android-compliance-settings.png)
+
 ###### Additional impacts based on Android OS version
 
 **Android 10**: For all device administrator-managed devices (including Samsung) running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:
