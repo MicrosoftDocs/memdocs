@@ -44,7 +44,7 @@ Class SMS_ClientDeploymentCollectionBucket: SMS_BaseClass
 
  The baseline type. Possible values are:  
 
-|||  
+|Value|Baseline type|  
 |-|-|  
 |1|Product Baseline|  
 |2|Staging Baseline|  
@@ -93,7 +93,7 @@ Class SMS_ClientDeploymentCollectionBucket: SMS_BaseClass
 
  The feature type. Possible values are:  
 
-|||  
+|Value|Feature type|  
 |-|-|  
 |3|Client Deployment|  
 

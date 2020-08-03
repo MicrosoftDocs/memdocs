@@ -42,8 +42,8 @@ SInt32 ChangeOwnership(
 
  The new owner of the machines.  
 
-|||  
-|-|-|  
+| Value | Device owner |
+| ----- | ------------ |
 |1|Company|  
 |2|Personal|  
 
