@@ -13,6 +13,7 @@ manager: dougeby
 
 
 ---
+# Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
 
 **Applies to:**
 
@@ -27,23 +28,12 @@ manager: dougeby
     - Windows Server 2008 SP2
     - Windows Vista
 
-**Does not apply to:**
-
-Microsoft Defender Antivirus on the following operating systems:
-- Windows Server 2019
-- Windows Server 2016
-- Windows 10
-
-For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
-
 > [!NOTE]
-> The registry keys to configure Microsoft Defender Antivirus policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Windows Defender**.
+> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
-# Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
+You may have a number of down-level or legacy Windows devices that are enabled with Endpoint Protection—but outside of your Configuration Manager hierarchy. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions. 
 
-This topic describes how to use Group Policies to manage Endpoint Protection in the down-level Windows devices that are not managed by Configuration Manager. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions.
-
-To use Group Policy settings to manage Endpoint Protection in previous versions of Windows:
+You can manage Endpoint Protection in such devices using Group Policy settings, described as follows:
 
 - [Copy Endpoint Protection policy definitions](#copy-endpoint-protection-policy-definitions)
 - Load Endpoint Protection policy definitions into any of the following locations:
@@ -112,4 +102,4 @@ Instead of using Central Store for loading Endpoint Protection policy definition
 
 ## Next steps
 - For an overview on Endpoint Protection, see [Endpoint Protection](endpoint-protection.md).
-- For information on how to configure Endpoint Protection on a standalone client manually, see Configure Endpoint Protection on a standalone client.
+- For information on configuring Endpoint Protection on a standalone client manually, see [Configure Endpoint Protection on a standalone client](endpoint-protection-configure-standalone-client.md).
