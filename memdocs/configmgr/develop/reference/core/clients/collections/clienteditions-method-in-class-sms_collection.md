@@ -34,8 +34,8 @@ SInt32 ClientEditions(
 
  Edition of the client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client edition |
+| ----- | -------------- |
 |0|Desktop|  
 |1|Windows RT|  
 |2|Windows Mobile 6|  

@@ -60,8 +60,8 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Client certificate type. Possible values are:  
 
-|Self-signed Certificate|  
-|PKI Certificate|  
+- Self-signed Certificate  
+- PKI Certificate  
 
  `ClientType`  
  Data type: `UInt32`  
