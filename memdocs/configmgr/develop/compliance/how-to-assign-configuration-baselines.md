@@ -155,9 +155,8 @@ public void DCMCreateAssignment(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |-   `connection`<br />-   `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`applyToSubTargets`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|`true` to apply the configuration item assignment to a subcollection.|  
 |`assignmentAction`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Action associated with the configuration item assignment.|  

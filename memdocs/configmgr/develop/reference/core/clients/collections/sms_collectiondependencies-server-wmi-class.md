@@ -50,8 +50,8 @@ Class SMS_CollectionDependencies : SMS_BaseClass
 
  Dependency relationship, how the dependent collection uses the source.  
 
-|||  
-|-|-|  
+| Value | Relationship type |
+| ----- | ----------------- |
 |1|LIMITING|  
 |2|INCLUDE|  
 |3|EXCLUDE|  

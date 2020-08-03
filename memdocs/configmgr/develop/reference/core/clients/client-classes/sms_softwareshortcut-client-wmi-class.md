@@ -190,8 +190,8 @@ Class SMS_SoftwareShortcut
 
  The type of shortcut. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Shortcut type |
+| ----- | ------------- |
 |1|Shortcut to Folder|  
 |2|Shortcut to File (EXE or DLL)|  
 |3|Application Reference (.appref-ms)|  

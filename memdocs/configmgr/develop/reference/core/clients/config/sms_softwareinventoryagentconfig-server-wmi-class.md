@@ -163,7 +163,7 @@ Class SMS_SoftwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  The reporting details. Possible values are:  
 
-|||  
+|Value|Report options|  
 |-|-|  
 |1|Product Only|  
 |2|File Only|  

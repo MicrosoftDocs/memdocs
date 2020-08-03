@@ -56,6 +56,8 @@
         href: deploy-use/endpoint-antimalware-policies.md
       - name: Configure client
         href: deploy-use/endpoint-protection-configure-client.md
+      - name: How to configure Endpoint Protection on a standalone client
+        href: deploy-use/endpoint-protection-configure-standalone-client.md
       - name: Manage Endpoint Protection using Group Policies
         href: deploy-use/endpoint-protection-group-policies.md
     - name: Windows Firewall policies

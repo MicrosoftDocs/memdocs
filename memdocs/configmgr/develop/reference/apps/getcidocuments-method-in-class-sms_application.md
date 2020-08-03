@@ -49,7 +49,7 @@ sint32 GetCIDocuments (
 
  Type of document. Possible values are:  
 
-|||  
+|Value|Type of document|  
 |-|-|  
 |1|Represent a manifest document.|  
 |2|Represents a properties document.|  

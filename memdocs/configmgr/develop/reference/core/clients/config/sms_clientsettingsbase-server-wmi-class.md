@@ -160,7 +160,7 @@ Class SMS_ClientSettingsBase : SMS_BaseClass
 
  Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|Device|  
 |2|User |  

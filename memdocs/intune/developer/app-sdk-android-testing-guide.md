@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 The Microsoft Intune App SDK for Android testing guide is designed to help you test your Intune-managed Android app.
 
 ## Demo tenant setup
-If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
+If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner](https://partner.microsoft.com/business-opportunities/why-microsoft) to access Microsoft CDX. To create a new account:
 1. Navigate to the [Microsoft CDX tenant creation site](https://cdx.transform.microsoft.com/my-tenants/create-tenant) and create a Microsoft 365 Enterprise tenant.
 2. [Set up Intune](../fundamentals/setup-steps.md) to enable mobile device management (MDM).
 3. [Create users](../fundamentals/users-add.md).

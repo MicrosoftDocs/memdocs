@@ -18,8 +18,8 @@ Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager s
 ## Loading Smscstat.dll  
  Applications need to explicitly load Smscstat.dll by using the Win32 **LoadLibrary()** API. **LoadLibrary** requires the full path to Smscstat.dll.  
 
-|||  
-|-|-|  
+| Client | Path |
+| ------ | ---- |
 |SMS 2003 Advanced Client|%*windir*%\system32\ccm|  
 |Configuration Manager client|%*windir*%\system32\ccm|  
 

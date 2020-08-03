@@ -181,7 +181,7 @@ You can delete an Apple Volume Purchasing Program (VPP) token using the console.
 <!-- 820870 -->  
 To revoke the license of all VPP apps for a given VPP token, you must first revoke all app licenses associated with the token, then delete the token.
 
-## Renewing app licenses
+## Renewing VPP tokens
 
 You can renew an Apple VPP token by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
 

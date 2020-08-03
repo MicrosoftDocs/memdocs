@@ -87,7 +87,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Type of the asset. Possible values are:  
 
-|||  
+|Value|Asset type|  
 |-|-|  
 |0|USER|  
 |1|MACHINE|  
@@ -164,7 +164,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Type of client. Possible values are:  
 
-|||  
+|Value|Client type|  
 |-|-|  
 |1|WINDOWS_CLIENT|  
 |2|WINDOWS_MOBILE|  
@@ -334,7 +334,7 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Status of the deployment to the targeted asset. Possible values are:  
 
-|||  
+|Value|Deployment status|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  
@@ -347,9 +347,9 @@ Class SMS_DCMDeploymentCompliantDetailsPerAsset : SMS_BaseClass
 
  Qualifiers: [key, not_null, read]  
 
- Sub status type. Possible values are:  
+ Substatus type. Possible values are:  
 
-|||  
+|Value|Substatus type|  
 |-|-|  
 |0|Compliant|  
 |1|Not-Applicable|  
