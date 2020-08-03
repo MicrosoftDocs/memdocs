@@ -44,8 +44,8 @@ Class SMS_StatMsgAttributes : SMS_BaseClass
 
  Type of attribute that is defined by the `AttributeValue` property. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Attribute ID |
+| ----- | ------------ |
 |400|Package ID|  
 |401|Advertisement ID|  
 |402|Collection ID|  
