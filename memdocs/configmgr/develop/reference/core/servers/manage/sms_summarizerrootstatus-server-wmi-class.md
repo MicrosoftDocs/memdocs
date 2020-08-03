@@ -43,8 +43,8 @@ Class SMS_SummarizerRootStatus : SMS_BaseClass
 
  Value indicating the overall health of the site hierarchy. Possible values are listed below. Determining the overall status for the site hierarchy is based on the status of the child sites.  
 
-|||  
-|-|-|  
+| Value | Properties |
+| ----- | ---------- |
 |GREEN(0)|OK. All the child sites reported a GREEN status.|  
 |YELLOW(1)|Warning. One or more child sites reported a YELLOW status, but no RED status was reported by a child site.|  
 |RED(2)|Critical. One or more of the child sites reported a RED status.|  
