@@ -112,4 +112,4 @@ Instead of using Central Store for loading Endpoint Protection policy definition
 
 ## Next steps
 - For an overview on Endpoint Protection, see [Endpoint Protection](endpoint-protection.md).
-- For information on how to configure Endpoint Protection on a standalone client manually, see [Configure Endpoint Protection on a standalone client]().
+- For information on how to configure Endpoint Protection on a standalone client manually, see Configure Endpoint Protection on a standalone client.
