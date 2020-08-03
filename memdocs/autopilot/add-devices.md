@@ -102,7 +102,7 @@ The commands can also be run remotely, as long as WMI permissions are in place a
 
 ## Registering devices
 
-<img src="./images/image2.png" width="511" height="249" />
+<img src="./images/image2.png" width="511" height="249" alt="process" />
 
 
 Once the hardware IDs have been captured from existing devices, they can be uploaded through a variety of means. See the detailed documentation for each available mechanism.
