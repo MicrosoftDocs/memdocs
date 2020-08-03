@@ -14,8 +14,6 @@ manager: dougeby
 
 ---
 
-# Use Group Policy settings to configure and manage Endpoint Protection
-
 **Applies to:**
 
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2O8jv)
@@ -39,69 +37,66 @@ Microsoft Defender Antivirus on the following operating systems:
 For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 > [!NOTE]
-> The registry keys to configure Microsoft Defender Antivirus policy settings are located in `Hkey_Local_Machine\Software\Policies\Microsoft\Windows Defender`.
+> The registry keys to configure Microsoft Defender Antivirus policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Windows Defender**.
 
 # Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
 
-This topic describes how to use Group Policy settings to manage Endpoint Protection in the down-level or legacy Windows devices that are not managed by Configuration Manager.
-
-For example, down-level Windows devices in a perimeter network (also known as a DMZ, demilitarized zone, and screened subnet) or devices integrated during a merger and acquisition, which are outside of your Configuration Manager hierarchy.
+This topic describes how to use Group Policies to manage Endpoint Protection in the down-level Windows devices that are not managed by Configuration Manager. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions.
 
 To use Group Policy settings to manage Endpoint Protection in previous versions of Windows:
 
 - [Copy Endpoint Protection policy definitions](#copy-endpoint-protection-policy-definitions)
-- Load Endpoint Protection policy definitions and configure them. You can load the Endpoint Protection policy definition files into any of the following locations:
-    - [Central Store on a Domain Controller (Recommended)](#load-and-configure-endpoint-protection-group-policy-settings-in-a-central-store-on-a-domain-controller)
-    - [Local device](#load-and-configure-endpoint-protection-group-policy-settings-in-your-local-device)
+- Load Endpoint Protection policy definitions into any of the following locations:
+    - [Central Store on a Domain Controller (Recommended)](#load-endpoint-protection-group-policy-settings-into-a-central-store-on-a-domain-controller)
+    - [Local device](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> The registry keys to configure Endpoint Protection in previous Windows versions are located in `Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware`.
+> The registry keys to configure Endpoint Protection policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware**.
 
 ## Copy Endpoint Protection policy definitions
 
-On a legacy Windows system that is managed by Endpoint Protection, copy the Endpoint Protection policy definitions.
+On a down-level Windows device that is managed by Endpoint Protection, copy the Endpoint Protection policy definitions.
 
 1. Go to **C:\Program Files\Microsoft Security Client\Admx**. 
 
-2. Compress the following into a zip file, for example **SCEP_admx.zip**:
-    - **en-us**
+2. Compress the following files into a zip file, for example **SCEP_admx.zip**:
     - **EndPointProtection.adml**
     - **EndPointProtection.admx**
 3. Copy the zip file into a temporary folder. For example, **C:\temp_SCEP_GPO_admx**.
 4. Extract the file. 
 
-## Load and configure Endpoint Protection Group Policy settings in a Central Store on a Domain Controller
+## Load Endpoint Protection Group Policy settings into a Central Store on a Domain Controller
 
 If you are using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), perform the following steps to load and configure Endpoint Protection Group policy settings. This is the recommended method.
 
 1. Go to the folder where you extracted the Endpoint Protection policy definition files.
 2. Copy the .admx and .adml files into the **PolicyDefinitions** folder on the domain controller:
-    1. Copy **EndPointProtection.admx** into \\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions. 
-    2. Copy **EndPointProtection.adml** into \\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions\\en-US.  
+    1. Copy **EndPointProtection.admx** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions**. 
+    2. Copy **EndPointProtection.adml** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions\\en-US**.  
 
     For example:
     
-    - Copy **EndPointProtection.admx** into \\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions
-    - Copy **EndPointProtection.adml** into \\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions\en-US
+    - Copy **EndPointProtection.admx** into **\\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions**.
+    - Copy **EndPointProtection.adml** into **\\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions\en-US**.
     
-    where `DC` is the name of your Domain Controller and `contoso.com` is your domain.
+    where **DC** is the name of your Domain Controller and **contoso.com** is your domain.
 
 3. Open the [Group Policy Management Console](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) and create a new Group Policy Object (GPO) in your domain, for example **Endpoint Protection**.
-5. Right-click the GPO for Endpoint Protection and click **Edit**.
-6. In the Group Policy Management Editor, go to **Computer Configuration** > **Policies** > **Administrative Templates: Policy definitions** > **Windows Components** > **Endpoint Protection**.  
-    The list of Endpoint Protection Group Policies is displayed.
-7. Expand the section that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+4. Right-click the GPO for Endpoint Protection and click **Edit**.
+5. In the Group Policy Management Editor, go to **Computer Configuration** > **Policies** > **Administrative Templates: Policy definitions** > **Windows Components** > **Endpoint Protection**.
 
-## Load and configure Endpoint Protection Group Policy settings in your local device
+   The list of Endpoint Protection Group Policies is displayed.
+
+6. Expand the section that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+
+## Load Endpoint Protection Group Policy settings into your local device
 
 Instead of using Central Store for loading Endpoint Protection policy definitions, you can store them locally into your device.
 
-To load and configure Endpoint Protection Group Policy settings on your local device:
-
 1. Go to the folder where you extracted the Endpoint Protection policy definition files.
 2. Copy the .admx and .adml files into your local PolicyDefinitions folder.
-    1. Copy **EndPointProtection.admx** into %SystemRoot%/PolicyDefinitions. 
-    2. Copy **EndPointProtection.adml** into %SystemRoot%/PolicyDefinitions/en-US.
+    1. Copy **EndPointProtection.admx** into **%SystemRoot%/PolicyDefinitions**. 
+    2. Copy **EndPointProtection.adml** into **%SystemRoot%/PolicyDefinitions/en-US**.
     
     For example:
 
@@ -109,6 +104,12 @@ To load and configure Endpoint Protection Group Policy settings on your local de
     - Copy **EndPointProtection.adml** into **C:\Windows\PolicyDefinitions\en-US**.
     
 3. Open Local Group Policy Editor.
-4. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Endpoint Protection**.  
+4. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Endpoint Protection**.
+
     The list of Endpoint Protection Group Policies is displayed.
+
 5. Expand the section that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+
+## Next steps
+- For an overview on Endpoint Protection, see [Endpoint Protection](endpoint-protection.md).
+- For information on how to configure Endpoint Protection on a standalone client manually, see [Configure Endpoint Protection on a standalone client]().
