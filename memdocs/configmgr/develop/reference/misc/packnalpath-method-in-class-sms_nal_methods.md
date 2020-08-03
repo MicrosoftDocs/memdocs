@@ -56,7 +56,7 @@ SInt32 PackNALPath(
 
  The network operating system path. Possible values are:  
 
-|Provider|`NetworkOSPath`|  
+|Provider|NetworkOSPath|  
 |--------------|---------------------|  
 |Windows NT user names|\<domain>\\<user name\>|  
 |Windows NT group names|\<domain>\group=\<group name>|  
