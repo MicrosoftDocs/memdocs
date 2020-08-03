@@ -28,7 +28,7 @@ Windows Autopilot user-driven mode is designed to enable new Windows 10 devices 
 - Connect it to a wireless or wired network with internet access.  If using wireless, the user must establish the Wi-Fi link.  
 - Specify your e-mail address and password for your organization account.
 
-After completing those simple steps, the remainder of the process is completely automated, with the device being joined to the organization, enrolled in Intune (or another MDM service), and fully configured as defined by the organization.  Any additional prompts during the Out-of-Box Experience (OOBE) can be suppressed; see [Configuring Autopilot Profiles](profiles.md) for options that are available.
+After completing those simple steps, the remainder of the process is automated, with the device being joined to the organization, enrolled in Intune (or another MDM service), and fully configured as defined by the organization.  Any additional prompts during the Out-of-Box Experience (OOBE) can be suppressed; see [Configuring Autopilot Profiles](profiles.md) for options that are available.
 
 Windows Autopilot user-driven mode supports Azure Active Directory and Hybrid Azure Active Directory joined devices.  For more information about these two join options, see [What is a device identity](https://docs.microsoft.com/azure/active-directory/devices/overview).
 
@@ -54,7 +54,7 @@ For more information on the available join options, see the following sections:
 
 In order to perform a user-driven deployment using Windows Autopilot, the following preparation steps need to be completed:
 
-- Ensure that the users who will be performing user-driven mode deployments are able to join devices to Azure Active Directory.  See [Configure device settings](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) in the Azure Active Directory documentation for more information.
+- Ensure that the users who will be performing user-driven mode deployments are able to join devices to Azure Active Directory.  For more information, see [Configure device settings](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) in the Azure Active Directory documentation.
 - Create an Autopilot profile for user-driven mode with the desired settings.  In Microsoft Intune, this mode is explicitly chosen when creating the profile. With Microsoft Store for Business and Partner Center, user-driven mode is the default and does not need to be selected.
 - If using Intune, create a device group in Azure Active Directory and assign the Autopilot profile to that group.
 
@@ -102,9 +102,9 @@ The following additional requirements apply for Hybrid Azure AD Join with VPN su
   - Windows 10 1909 + December 10th Cumulative update (KB4530684, OS build 18363.535) or higher  
   - Windows 10 2004 or later 
 - Enable the new “Skip domain connectivity check” toggle in the Hybrid Azure AD Join Autopilot profile.
-- A VPN configuration that can be deployed via Intune that enables the user to manualy establish a VPN connection from the Windows logon screen, or one that automatically establishes a VPN connection as needed.  
+- A VPN configuration that can be deployed via Intune that enables the user to manually establish a VPN connection from the Windows logon screen, or one that automatically establishes a VPN connection as needed.  
 
-The specific VPN configuration required depends on the VPN software and authentication being used.  For third-party (non-Microsoft) VPN solutions, this typically would involve deploying a Win32 app (containing the VPN client software itself as well as any specific connection information, e.g. VPN endpoint host names) via Intune Management Extensions.  Consult your VPN provider's documentation for configuration details specific to that provider.
+The specific VPN configuration required depends on the VPN software and authentication being used.  For third-party (non-Microsoft) VPN solutions, this typically would involve deploying a Win32 app (containing the VPN client software itself as well as any specific connection information, for example: VPN endpoint host names) via Intune Management Extensions.  Consult your VPN provider's documentation for configuration details specific to that provider.
 
 > [!NOTE]
 > The VPN requirements are not specific to Windows Autopilot. For example, if you have already implemented a VPN configuration to enable remote password resets, where a user needs to log on to Windows with a new password when not on the organization's network, that same configuration can be used with Windows Autopilot.  Once the user has signed in to cache their credentials, subsequent log-on attempts do not need connectivity since the cached credentials can be used. 
@@ -132,7 +132,7 @@ For VPN configurations that automatically connect, the validation steps may be d
 To validate the end-to-end process, ensure the needed Windows 10 cumulative update has been installed on Windows 10 1903 or Windows 10 1909. This can be done manually during OOBE by first downloading the latest cumulative from https://catalog.update.microsoft.com and then manually installing it:
 
 - Press Shift-F10 to open a command prompt.
-- Insert a USB key containing the donwloaded update.
+- Insert a USB key containing the downloaded update.
 - Install the update using the command (substituting the real file name): WUSA.EXE <filename>.msu /quiet
 - Reboot the computer using the command: shutdown.exe /r /t 0
 
