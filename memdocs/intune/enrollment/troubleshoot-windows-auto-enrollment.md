@@ -37,11 +37,11 @@ You can use group policy to trigger auto-enrollment to MDM for Active Directory 
 
 Before you start troubleshooting, it's best to verify that everything is configured correctly. If the issue can’t be fixed during verification, you can troubleshoot further by checking some important log files.
 
-1. Verify that a valid Intune license is assigned to the user who is trying to enroll the device.
+- Verify that a valid Intune license is assigned to the user who is trying to enroll the device.
 
    ![Verify Intune license](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-2. Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Verify auto-enrollment](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -49,9 +49,9 @@ Before you start troubleshooting, it's best to verify that everything is configu
    - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
    - Verify that **MDM discovery URL** is set to **https://enrollment.manage.microsoft.com/enrollmentserver/discovery**.
 
-3. Verify that the device is running Windows 10, version 1709 or a later version.
+- Verify that the device is running Windows 10, version 1709 or a later version.
 
-4. Verify that the devices are set to **hybrid Azure AD joined**. This setting means that the devices are both domain-joined and Azure AD-joined.
+- Verify that the devices are set to **hybrid Azure AD joined**. This setting means that the devices are both domain-joined and Azure AD-joined.
 
    To verify the settings, run **dsregcmd /status** at the command line. Then, verify the following status values in the output:
 
@@ -72,16 +72,16 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![List of Azure AD-joined devices](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-5. Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If both are present, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
+- Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If both are present, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
 
-6. Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
+- Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
 
    **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **MDM** > **Enable automatic MDM enrollment using default Azure AD credentials**
 
    You can contact your domain administrators to verify that the Group Policy policy setting is deployed successfully.
 
-7. Make sure that the device isn't enrolled in Intune by using the classic PC agent.
-8. Verify the following settings in Azure AD and Intune:
+- Make sure that the device isn't enrolled in Intune by using the classic PC agent.
+- Verify the following settings in Azure AD and Intune:
 
    **In Azure AD Device settings:**
 
@@ -142,3 +142,6 @@ Event ID 75 isn't logged in the following situations:
     **gpupdate /force**
 
     If the issue persists, do additional troubleshooting in Active Directory.
+
+## Next steps
+[Troubleshoot Windows device enrollment](troubleshoot-windows-enrollment-errors)
