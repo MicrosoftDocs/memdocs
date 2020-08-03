@@ -41,7 +41,7 @@ SInt32 AddSiteSystem(
 
  Identifies the network connection speed between the site system server and the connecting clients. Possible values are:  
 
-|||  
+|Value|Connection speed|  
 |-|-|  
 |0|Fast|  
 |1|Slow|  
