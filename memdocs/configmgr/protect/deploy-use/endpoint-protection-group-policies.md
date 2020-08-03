@@ -18,7 +18,7 @@ manager: dougeby
 **Applies to:**
 
 - [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2O8jv)
-- System Center Endpoint Protection on the following operating systems:
+- System Center Endpoint Protection on the following down-level devices:
     - Windows Server 2012 R2
     - Windows 8.1
     - Windows Server 2012
@@ -28,10 +28,7 @@ manager: dougeby
     - Windows Server 2008 SP2
     - Windows Vista
 
-> [!NOTE]
-> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
-
-You may have a number of down-level or legacy Windows devices that are enabled with Endpoint Protection—but outside of your Configuration Manager hierarchy. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions. 
+You may have a number of down-level or legacy Windows devices that are enabled with Endpoint Protection—but are outside of your Configuration Manager hierarchy. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions. 
 
 You can manage Endpoint Protection in such devices using Group Policy settings, described as follows:
 
@@ -41,11 +38,11 @@ You can manage Endpoint Protection in such devices using Group Policy settings, 
     - [Local device](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> The registry keys to configure Endpoint Protection policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware**.
+> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## Copy Endpoint Protection policy definitions
 
-On a down-level Windows device that is managed by Endpoint Protection, copy the Endpoint Protection policy definitions.
+On a down-level Windows device that is managed by Endpoint Protection, copy the Endpoint Protection policy definition files.
 
 1. Go to **C:\Program Files\Microsoft Security Client\Admx**. 
 
@@ -54,6 +51,9 @@ On a down-level Windows device that is managed by Endpoint Protection, copy the 
     - **EndPointProtection.admx**
 3. Copy the zip file into a temporary folder. For example, **C:\temp_SCEP_GPO_admx**.
 4. Extract the file. 
+
+> [!NOTE]
+> The registry keys to configure Endpoint Protection policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware**.
 
 ## Load Endpoint Protection Group Policy settings into a Central Store on a Domain Controller
 
