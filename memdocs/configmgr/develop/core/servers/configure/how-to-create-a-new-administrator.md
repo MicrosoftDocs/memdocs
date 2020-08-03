@@ -71,9 +71,8 @@ public void CreateSMSAdmin(WqlConnectionManager connection, string distinguished
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`distinguishedName`|-   Managed: `String`|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
 |`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account .|  

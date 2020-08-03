@@ -127,6 +127,10 @@ When you create more than one policy, you can configure their relative priority.
 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
 
+> [!IMPORTANT]
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
+
+
 ## Monitor
 
 View basic compliance statistics about the policy deployment in the details pane of the **BitLocker Management** node:

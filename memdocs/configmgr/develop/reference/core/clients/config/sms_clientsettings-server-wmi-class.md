@@ -119,9 +119,9 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [notnull]  
 
- Indicates if the settings is applied to regular `SMS_ClientSettings` or `SMS_AntimalwareSettings`. The default value is 2 when you create `SMS_ClientSettings`. Possible values are:  
+ Indicates if the settings are applied to regular `SMS_ClientSettings` or `SMS_AntimalwareSettings`. The default value is 2 when you create `SMS_ClientSettings`. Possible values are:  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|SMS_AntimalwareSettings|  
 |2|SMS_ClientSettings|  
@@ -189,7 +189,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
 
-|||  
+|Value|Settings type|  
 |-|-|  
 |1|Device|  
 |2|User|  
