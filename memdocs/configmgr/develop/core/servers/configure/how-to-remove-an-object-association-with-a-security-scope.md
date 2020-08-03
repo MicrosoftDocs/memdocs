@@ -70,9 +70,8 @@ public void RemoveObjectScope(WqlConnectionManager connection, string scopeId, s
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeId`|`String`|The identifier of the security scope.|  
 |objectKey|`String`|The key property value of the object.|  

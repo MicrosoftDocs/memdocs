@@ -157,9 +157,11 @@ In many cases, the default configuration and behavior is sufficient. The Configu
 
 3.  The certificate is valid, not revoked, and not expired. The validity check also verifies that the private key is accessible.  
 
-4.  The certificate has client authentication capability, or it's issued to the computer name.  
+4.  The certificate has client authentication capability.
 
-5.  The certificate has the longest validity period.  
+5.  The certificate Subject Name contains the local computer name as a substring.  
+
+6.  The certificate has the longest validity period.  
 
 Configure clients to use the certificate issuers list by using the following mechanisms:  
 
@@ -205,7 +207,10 @@ The following table shows the attribute values that Configuration Manager suppor
 |2.5.4.12|T or Title|Title|  
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
-|2.5.29.17|(no value)|Subject Alternative Name|  
+|2.5.29.17|(no value)|Subject Alternative Name| 
+
+  > [!NOTE]
+  > If you configure either of the above alternate certificate selection methods, the certificate Subject Name does not need to contain the local computer name.
 
 If more than one appropriate certificate is located after the selection criteria are applied, you can override the default configuration to select the certificate that has the longest validity period and instead, specify that no certificate is selected. In this scenario, the client won't be able to communicate with IIS site systems with a PKI certificate. The client sends an error message to its assigned fallback status point to alert you to the certificate selection failure so that you can change or refine your certificate selection criteria. The client behavior then depends on whether the failed connection was over HTTPS or HTTP:  
 

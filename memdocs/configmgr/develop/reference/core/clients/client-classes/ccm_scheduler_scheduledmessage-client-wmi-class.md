@@ -137,8 +137,8 @@ Class CCM_Scheduler_ScheduledMessage : CCM_Policy
 
   Defines the system resource conditions to fire this schedule. The default value is 1. Possible values are a combination of the following:  
 
-|||  
-|-|-|  
+| Value | Launch Condition type |
+| ----- | --------------------- |
 |0|eTaskCondition_None|  
 |1|eTaskCondition_AboveCriticalBattery|  
 |2|eTaskCondition_AboveLowBattery|  

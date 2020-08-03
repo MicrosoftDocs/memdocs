@@ -170,7 +170,7 @@ Class SMS_DeploymentSummary : SMS_BaseClass
 
  Feature type. Possible values are:  
 
-|||  
+|Value|Feature type|  
 |-|-|  
 |1|Application|  
 |2|Program|  
@@ -266,7 +266,7 @@ Class SMS_DeploymentSummary : SMS_BaseClass
 
  Secured object class ID. Possible values are:  
 
-|||  
+|Value|Secured object class ID|  
 |-|-|  
 |200|SMS_CIAssignment|  
 |201|SMS_Advertisement|  
