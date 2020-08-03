@@ -114,7 +114,9 @@ In Configuration Manager, baselines are used to define the configuration of a pr
 
   The properties that are available to each configuration item depend on the configuration item type. For example, you can configure an operating system configuration item to check for the exact version of the operating system. This property is not applicable to the other configuration items, so you do not see the Windows Version property that is available for other configuration items. The following table lists the configurable properties of a configuration item in Configuration Manager, and it shows whether the configurable property is available for each configuration item type.  
 
-:::row:::
+Key:
+- √ = Available property
+- Ø = Property not available
     :::column:::
         Key:
     :::column-end:::
@@ -150,4 +152,3 @@ In Configuration Manager, baselines are used to define the configuration of a pr
  A duplicate configuration item is an exact copy of another configuration item that does not retain any relationship to the original configuration item. You can therefore use a duplicate configuration item as a template to modify just a few properties and independently retain both configuration items, or you can use it when you have imported a read-only configuration item (for example, from a Best Practices configuration baseline) and want to use the configuration item with modification and not retain any inheritance from the original configuration item.  
 
  Additionally, if you want to use an imported configuration item but delete from it objects or settings (or their related validation criteria), your only editing choice is to create a duplicate configuration item and edit that duplicate configuration item accordingly.  
-
