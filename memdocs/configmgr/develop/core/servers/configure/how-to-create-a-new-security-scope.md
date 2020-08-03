@@ -62,9 +62,8 @@ public void CreateSecurityScope(WqlConnectionManager connection, string scopeNam
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeName`|`String`|The name of security scope.|  
 |`scopeDescription`|`String`|The description of security scope.|  
