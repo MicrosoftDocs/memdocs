@@ -163,7 +163,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 
  Type is used to indicate if this setting is 'Device', 'User' or 'Default'. For `SMS_ClientSettingsDefault`, it is 0 meaning 'Default'.  
 
-|||  
+|Value|Setting type|  
 |-|-|  
 |0|Default|  
 |1|Device|  

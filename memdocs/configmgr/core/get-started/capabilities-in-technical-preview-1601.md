@@ -126,8 +126,8 @@ A client is online if it is currently connected to a Configuration Manager manag
 
 ### Icons for client status  
 
-|||  
-|-|-|  
+| Icon | Description |
+| ---- | ----------- |
 |![online status icon for clients](media/online-status-icon.png)|Client is online.|  
 |![offline status icon for clients](media/offline-status-icon.png)|Client is offline.|  
 |![unknown status icon for clients](media/unknown-status-icon.png)|Client status is unknown.|  

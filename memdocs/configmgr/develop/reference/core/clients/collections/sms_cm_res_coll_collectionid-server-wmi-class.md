@@ -55,8 +55,8 @@ Class SMS_CM_RES_COLL_CollectionID : SMS_CollectionMember
 
  Type of client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client type |
+| ----- | ----------- |
 |1|Advanced|  
 |3|Device|  
 
@@ -96,8 +96,8 @@ Class SMS_CM_RES_COLL_CollectionID : SMS_CollectionMember
 
  Whether the resource is approved. Possible values are:   
 
-|||  
-|-|-|  
+| Value | Approval type |
+| ----- | ------------- |
 |0|Not approved|  
 |1|Approved|  
 |2|Not applicable|  

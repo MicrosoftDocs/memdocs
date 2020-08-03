@@ -138,7 +138,7 @@ Class SMS_LicensedVppApps : SMS_BaseClass
 
  The type of license. Possible values are:  
 
-|||  
+|Value|License type|  
 |-|-|  
 |0|Online|  
 |1|Offline|  
@@ -152,7 +152,7 @@ Class SMS_LicensedVppApps : SMS_BaseClass
 
  The platform on which the application runs. Possible values are:  
 
-|||  
+|Value|Platform|  
 |-|-|  
 |0 or 1|Windows|  
 |2|iOS|  
