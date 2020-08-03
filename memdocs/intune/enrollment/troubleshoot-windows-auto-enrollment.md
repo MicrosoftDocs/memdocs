@@ -144,4 +144,4 @@ Event ID 75 isn't logged in the following situations:
     If the issue persists, do additional troubleshooting in Active Directory.
 
 ## Next steps
-[Troubleshoot Windows device enrollment](troubleshoot-windows-enrollment-errors)
+[Troubleshoot Windows device enrollment](troubleshoot-windows-enrollment-errors.md)
