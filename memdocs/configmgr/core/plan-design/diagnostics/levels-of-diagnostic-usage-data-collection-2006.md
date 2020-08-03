@@ -5,7 +5,7 @@ description: Learn about the specific data that Configuration Manager collects a
 ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ae8b48f8-391e-49d6-bb1a-9205378acef8
 author: aczechowski
 ms.author: aaroncz

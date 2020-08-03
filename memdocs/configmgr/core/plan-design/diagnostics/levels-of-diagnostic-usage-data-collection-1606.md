@@ -11,9 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1606 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
