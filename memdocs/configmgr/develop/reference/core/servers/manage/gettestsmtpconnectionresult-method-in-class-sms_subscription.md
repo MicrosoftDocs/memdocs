@@ -41,8 +41,8 @@ sint32 GetTestSmtpConnectionResult(
 
  Represents the test results. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Error code |
+| ----- | ---------- |
 |0|Success.|  
 |1|The test is initializing.|  
 |2|Email address formatting error.|  

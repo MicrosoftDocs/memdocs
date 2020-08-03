@@ -44,8 +44,8 @@ SInt32 PackNALPath(
 
  The NAL type specified by the network operating system. Possible values are:  
 
-|||  
-|-|-|  
+| Value | NAL type |
+| ----- | -------- |
 |GENERIC|All providers accept this account specification. Use this value only when you specify a user or group name.|  
 |MSWNET|Windows NT.|  
 

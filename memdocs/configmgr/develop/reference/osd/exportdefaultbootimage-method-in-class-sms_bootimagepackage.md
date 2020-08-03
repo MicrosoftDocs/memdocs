@@ -35,8 +35,8 @@ SInt32 ExportDefaultBootImage(
 
  Operating system architecture of the boot image. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Architecture |
+| ----- | ------------ |
 |x86|I386 32-bit microprocessor|  
 |ia64|Itanium 64-bit microprocessor|  
 |x64|X86-64 64-bit microprocessor|  
