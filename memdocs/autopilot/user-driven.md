@@ -38,9 +38,9 @@ From a process flow perspective, the tasks performed during the user-driven proc
 - Windows 10 will check for critical OOBE updates. If updates are available, they will be automatically installed (rebooting if required).
 - The user will be prompted for Azure Active Directory credentials, with a customized user experience showing the Azure AD tenant name, logo, and sign-in text.
 - The device will join Azure Active Directory or Active Directory, based on the Windows Autopilot profile settings.
-- The device will enroll in Intune (or other configured MDM services).  (This happens as part of the Azure Active Directory join process via MDM auto-enrollment, or before the Active Directory join process, as needed.)
+- The device will enroll in Intune (or other configured MDM services).  (This enrollment happens as part of the Azure Active Directory join process via MDM auto-enrollment, or before the Active Directory join process, as needed.)
 - If configured, the [enrollment status page](enrollment-status.md) (ESP) will be displayed.
-- Once the device configuration tasks have completed, the user will be signed into Windows 10 using the credentials they previously provided.  (Note: if the device reboots during the device ESP process, the user will need to reenter their credentials as these are not persisted across reboots.)
+- Once the device configuration tasks have completed, the user will be signed into Windows 10 using the credentials they previously provided.  (Note: if the device reboots during the device ESP process, the user will need to reenter their credentials as these details are not persisted across reboots.)
 - Once signed in, the enrollment status page will again be displayed for user-targeted configuration tasks.
 
 If any issues are encountered during this process, see the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
@@ -60,9 +60,9 @@ In order to perform a user-driven deployment using Windows Autopilot, the follow
 
 For each device that will be deployed using user-driven deployment, these additional steps are needed:
 
-- Ensure that the device has been added to Windows Autopilot.  This can be done automatically by an OEM or partner at the time the device is purchased, or it can be done through a manual harvesting process later.  For more information, see [Adding devices to Windows Autopilot](add-devices.md).
+- Ensure that the device has been added to Windows Autopilot.  This addition can be done automatically by an OEM or partner at the time the device is purchased, or it can be done through a manual harvesting process later.  For more information, see [Adding devices to Windows Autopilot](add-devices.md).
 - Ensure an Autopilot profile has been assigned to the device:
-  - If using Intune and Azure Active Directory dynamic device groups, this can be done automatically.
+  - If using Intune and Azure Active Directory dynamic device groups, this assignment can be done automatically.
   - If using Intune and Azure Active Directory static device groups, manually add the device to the device group.
   - If using other methods (for example, Microsoft Store for Business or Partner Center), manually assign an Autopilot profile to the device.
 
@@ -109,9 +109,9 @@ The specific VPN configuration required depends on the VPN software and authenti
 > [!NOTE]
 > The VPN requirements are not specific to Windows Autopilot. For example, if you have already implemented a VPN configuration to enable remote password resets, where a user needs to log on to Windows with a new password when not on the organization's network, that same configuration can be used with Windows Autopilot.  Once the user has signed in to cache their credentials, subsequent log-on attempts do not need connectivity since the cached credentials can be used. 
 
-In cases where certificate authentication is required by the VPN software, the needed machine certificate should also be deployed via Intune.  This can be done using the Intune certificate enrollment capabilities, targeting the certificate profiles to the device.
+In cases where certificate authentication is required by the VPN software, the needed machine certificate should also be deployed via Intune.  This deployment can be done using the Intune certificate enrollment capabilities, targeting the certificate profiles to the device.
 
-Note that user certificates are not supported because these certificates cannot be deployed until the user logs in.  Also, third-party UWP VPN plug-ins delivered from the Windows Store are also not supported because these are not installed until after the user signs in.
+Note that user certificates are not supported because these certificates cannot be deployed until the user logs in.  Also, non-Microsoft UWP VPN plug-ins delivered from the Windows Store are also not supported because these plug-ins are not installed until after the user signs in.
 
 ### Validation
 
@@ -129,7 +129,7 @@ For VPN configurations that automatically connect, the validation steps may be d
 > [!NOTE]
 > Always On VPN can be used for this scenario.  See the [Deploy Always On VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) documentation for more information.  Note that Intune cannot yet deploy the needed per-machine VPN profile. 
 
-To validate the end-to-end process, ensure the needed Windows 10 cumulative update has been installed on Windows 10 1903 or Windows 10 1909. This can be done manually during OOBE by first downloading the latest cumulative from https://catalog.update.microsoft.com and then manually installing it:
+To validate the end-to-end process, ensure the needed Windows 10 cumulative update has been installed on Windows 10 1903 or Windows 10 1909. This update can be done manually during OOBE by first downloading the latest cumulative from https://catalog.update.microsoft.com and then manually installing it:
 
 - Press Shift-F10 to open a command prompt.
 - Insert a USB key containing the downloaded update.
