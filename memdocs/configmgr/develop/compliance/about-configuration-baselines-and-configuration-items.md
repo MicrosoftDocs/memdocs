@@ -114,26 +114,18 @@ In Configuration Manager, baselines are used to define the configuration of a pr
 
   The properties that are available to each configuration item depend on the configuration item type. For example, you can configure an operating system configuration item to check for the exact version of the operating system. This property is not applicable to the other configuration items, so you do not see the Windows Version property that is available for other configuration items. The following table lists the configurable properties of a configuration item in Configuration Manager, and it shows whether the configurable property is available for each configuration item type.  
 
-Key:
-- √ = Available property
-- Ø = Property not available
-    :::column:::
-        Key:
-    :::column-end:::
-    :::column:::
-        √ = Available property
-    :::column-end:::
-    :::column:::
-        Ø = Property not available
-    :::column-end:::
-:::row-end:::
-
 |Configuration Item Type|General|Windows Version|Objects|Settings|Detection Method|Applicability|Security|  
 |-----------------------------|-------------|---------------------|-------------|--------------|----------------------|-------------------|--------------|  
 |General|√|Ø|√|√|Ø|√|√|  
 |Application|√|Ø|√|√|√|√|√|  
 |Operating System|√|√|√|√|Ø|Ø|√|  
 |Software Updates|√|Ø|Ø|Ø|Ø|Ø|√|  
+
+Key:
+
+- √ = Available property
+
+- Ø = Property not available
 
  With the exception of software updates configuration items, you can view and edit the properties of each configuration item in the **Configuration Items** node under **Desired Configuration Management** in the Configuration Manager console. Use the **Software Updates** node to view and edit software updates configuration items.  
 
