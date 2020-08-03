@@ -77,8 +77,8 @@ Class CCM_PolicyAgent_Configuration : CCM_Policy
 
  Method used by the Policy Agent to download policy files. Possible values are listed below. This value can only be NULL if `PolicyRequestTarget` is NULL. This value should not be changed.  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |FILECOPY|Copy policy files using standard file copy operations. Policy paths must be local or Universal Naming Convention (UNC) file paths. This value is intended for testing only.|  
 |HTTP|Download policy files synchronously by using direct HTTP. Policy paths must be HTTP URLs.|  
 |BITS|Drizzle policy files asynchronously by using the Data Transfer Service. Policy paths must be HTTP URLs.|  

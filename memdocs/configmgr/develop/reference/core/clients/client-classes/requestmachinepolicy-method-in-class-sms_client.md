@@ -33,8 +33,8 @@ UInt32 RequestMachinePolicy(
 
  Flags identifying the policy. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|A machine policy retrieval cycle is initiated.|  
 |1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies are not in agreement, then a resynchronization is initiated.|  
 

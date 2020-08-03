@@ -69,8 +69,8 @@ Class SMS_CollectionBucket : SMS_BaseClass
 
  Identifier of feature type.  
 
-|||  
-|-|-|  
+| Value | Feature Type |
+| ----- | ------------ |
 |1|EndPoint Protection|  
 |2|Client Check|  
 
