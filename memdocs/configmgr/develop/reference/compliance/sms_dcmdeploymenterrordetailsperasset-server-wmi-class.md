@@ -201,7 +201,7 @@ Class SMS_DCMDeploymentErrorDetailsPerAsset : SMS_BaseClass
 
  Error type. Possible values are:  
 
-|||  
+|Value|Error type|  
 |-|-|  
 |1|INFRASTRUCTURAL|  
 |2|DISCOVERY|  
@@ -262,7 +262,7 @@ Class SMS_DCMDeploymentErrorDetailsPerAsset : SMS_BaseClass
 
  Object type. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |1|CI|  
 |2|SETTING|  

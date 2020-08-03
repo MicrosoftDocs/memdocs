@@ -134,7 +134,7 @@ Class SMS_AppDependencyData : SMS_BaseClass
 
  Enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  

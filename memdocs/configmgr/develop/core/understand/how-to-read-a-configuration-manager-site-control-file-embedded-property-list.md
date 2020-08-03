@@ -97,9 +97,8 @@ public bool GetScfEmbeddedPropertyList(
 
  The sample method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|The site control file resource that contains the embedded property.|  
 |`propertyListName`|-   Managed: `String`<br />-   VBScript: `String`|The embedded property list to be read.|  
 |`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The `SMS_EmbeddedProperty` class Values property. An array of string values.|  

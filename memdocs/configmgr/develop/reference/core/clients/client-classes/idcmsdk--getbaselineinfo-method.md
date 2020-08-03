@@ -49,8 +49,8 @@ HRESULT GetBaselineInfo(
 
  Flags identifying the configuration item. Possible values are:  
 
-|||  
-|-|-|  
+| Value | dwFlags type and descriptions |
+| ----- | ----------------------------- |
 |0|ciinfoAll. Retrieve all properties. Requires administrator privileges.|  
 |1|ciinfoPublic. Retrieve only public properties. The detailed compliance report is not a public property.|  
 

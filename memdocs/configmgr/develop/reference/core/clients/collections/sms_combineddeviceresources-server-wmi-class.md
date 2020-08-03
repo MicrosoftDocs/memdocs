@@ -136,8 +136,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Comes from Client Health.  
 
-|||  
-|-|-|  
+| Value | Client activity status |
+| ----- | ---------------------- |
 |0|Client is inactive|  
 |1|Client is healthy|  
 
@@ -150,8 +150,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Client certificate type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client certificate type |
+| ----- | ----------------------- |
 |1|Self-signed Certificate|  
 |2|PKI Certificate|  
 
@@ -164,8 +164,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Comes from Client Health.  
 
-|||  
-|-|-|  
+| Value | Client health check status |
+| ----- | -------------------------- |
 |1|Client is healthy|  
 |2|Client is unhealthy|  
 
@@ -178,8 +178,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Comes from Client Health.  
 
-|||  
-|-|-|  
+| Value | Client recommendation status |
+| ----- | ---------------------------- |
 |1|Client remediation succeeded|  
 |2|Client remediation failed|  
 
@@ -192,8 +192,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Edition of the client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client edition |
+| ----- | -------------- |
 |0|Not Installed|  
 |1|Windows RT|  
 |2|Windows Mobile 6|  
@@ -217,8 +217,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Type of client. Possible value are:  
 
-|||  
-|-|-|  
+| Value | Client type |
+| ----- | ----------- |
 |1|Client|  
 |3|Device|  
 
@@ -273,8 +273,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Owner of the device.  
 
-|||  
-|-|-|  
+| Value | Device owner |
+| ----- | ------------ |
 |1|Company|  
 |2|Personal|  
 
@@ -314,8 +314,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Indicates if the mobile device is newly enrolled or if the UDA has been created.  Possible values are:  
 
-|||  
-|-|-|  
+| Value | Enrollment status |
+| ----- | ----------------- |
 |1|Newly enrolled.|  
 |2|UDA has been created.|  
 
@@ -411,8 +411,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Deployment state. Possible values are:  
 
-|||  
-|-|-|  
+| Value | EP Deployment state |
+| ----- | ------------------- |
 |1|Unmanaged|  
 |2|To Be Installed|  
 |3|Managed|  
@@ -446,8 +446,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Endpoint Protection infection status. Possible values are:  
 
-|||  
-|-|-|  
+| Value | EP Infection status |
+| ----- | ------------------- |
 |0|Unknown|  
 |1|None|  
 |2|Cleaned|  
@@ -579,8 +579,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Policy application state.  
 
-|||  
-|-|-|  
+| Value | EP Policy application state |
+| ----- | --------------------------- |
 |1|Success|  
 |2|Failed|  
 
@@ -604,8 +604,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Product status. Possible values are:  
 
-|||  
-|-|-|  
+| Value | EP Product status |
+| ----- | ----------------- |
 |0|No status flags are set.|  
 |0|Service not running.|  
 |1|Service started without any malware protection engine.|  
@@ -941,8 +941,8 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
  Wipe status of the device, as reported through Exchange Active Sync (EAS).  
 
-|||  
-|-|-|  
+| Value | Wipe status |
+| ----- | ----------- |
 |1|Wipe Pending|  
 |2|Wipe Cancelling|  
 |3|Wipe Confirmed/Registered|  
