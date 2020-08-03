@@ -56,6 +56,8 @@
         href: deploy-use/endpoint-antimalware-policies.md
       - name: Configure client
         href: deploy-use/endpoint-protection-configure-client.md
+      - name: How to manage Endpoint Protection using Group Policies
+        href: deploy-use/endpoint-protection-group-policies.md
     - name: Windows Firewall policies
       href: deploy-use/create-windows-firewall-policies.md
     - name: Microsoft Defender Advanced Threat Protection

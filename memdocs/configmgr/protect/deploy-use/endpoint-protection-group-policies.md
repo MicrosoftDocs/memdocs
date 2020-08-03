@@ -43,9 +43,9 @@ For information on how to use Group Policy settings to manage Microsoft Defender
 
 # Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
 
-This topic describes how to use Group Policy settings to manage Endpoint Protection in the down-level or legacy systems that are not managed by Configuration Manager.
+This topic describes how to use Group Policy settings to manage Endpoint Protection in the down-level or legacy Windows devices that are not managed by Configuration Manager.
 
-For example, suppose that you have legacy devices enabled with Endpoint Protection in a perimeter network (also known as a DMZ, demilitarized zone, and screened subnet) or devices integrated during a merger and acquisition. These devices are also not part of your Configuration Manager hierarchy. In order to manage and configure Endpoint Protection in devices with previous versions of Windows, you can use Group Policy settings.
+For example, down-level Windows devices in a perimeter network (also known as a DMZ, demilitarized zone, and screened subnet) or devices integrated during a merger and acquisition, which are outside of your Configuration Manager hierarchy.
 
 To use Group Policy settings to manage Endpoint Protection in previous versions of Windows:
 
@@ -75,7 +75,7 @@ On a legacy Windows system that is managed by Endpoint Protection, copy the Endp
 If you are using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), perform the following steps to load and configure Endpoint Protection Group policy settings. This is the recommended method.
 
 1. Go to the folder where you extracted the Endpoint Protection policy definition files.
-2. Copy the .admx and .adml files into the PolicyDefinitions folder on the domain controller:
+2. Copy the .admx and .adml files into the **PolicyDefinitions** folder on the domain controller:
     1. Copy **EndPointProtection.admx** into \\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions. 
     2. Copy **EndPointProtection.adml** into \\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions\\en-US.  
 
