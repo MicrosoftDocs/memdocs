@@ -87,9 +87,8 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`resourceID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The resource identifier. You can obtain this from the [SMS_Resource](../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md) class `ResourceId` property.|  
 

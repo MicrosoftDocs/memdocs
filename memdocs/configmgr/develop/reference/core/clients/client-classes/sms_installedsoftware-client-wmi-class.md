@@ -72,8 +72,8 @@ Class SMS_InstalledSoftware
 
  Numeric code that represents the channel through which the software product was acquired. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|Full Packaged Product (Retail)|  
 |1|Compliance Checked Product|  
 |2|OEM|  
@@ -128,8 +128,8 @@ Class SMS_InstalledSoftware
 
  Numeric code that provides additional information about the inventoried software. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |1|Because the `InstalledLocation` property was not available in any of the data sources, a check was not possible.|  
 |2|An executable file was found in the directory specified by the `InstalledLocation` property or in one of its subdirectories.|  
 |3|A file was found in the directory specified by the `InstalledLocation` property or in one of its subdirectories, but no executable file was found.|  

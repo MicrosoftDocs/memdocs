@@ -1,132 +1,156 @@
 ---
-title: "SMS_TaskSequence_DisableBitLockerAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_DisableBitLockerAction class
+titleSuffix: Configuration Manager
+ms.date: 07/31/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f72e8ac9-1b99-408b-9462-bbbd6d673212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_DisableBitLockerAction Server WMI Class
-The `SMS_TaskSequence_DisableBitLockerAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that disables the BitLocker encryption on the specified drive.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_DisableBitLockerAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_DisableBitLockerAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that disables the BitLocker encryption on the specified drive.
 
-```  
-Class SMS_TaskSequence_DisableBitLockerAction : SMS_TaskSequence_Action  
-{  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      String Name;  
-      String SupportedEnvironment;  
-      String TargetDrive;  
-      UInt32 Timeout;  
-};  
-```  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Methods  
- The `SMS_TaskSequence_DisableBitLockerAction` class does not define any methods.  
+## Syntax
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+```MOF
+Class SMS_TaskSequence_DisableBitLockerAction : SMS_TaskSequence_Action
+{
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean Enabled;
+      String Name;
+      UInt32 RebootCount;
+      String SupportedEnvironment;
+      String TargetDrive;
+      UInt32 Timeout;
+};
+```
 
- Access type: Read/Write  
+## Methods
 
- Qualifiers: None  
+The `SMS_TaskSequence_DisableBitLockerAction` class doesn't define any methods.
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+## Properties
 
- `ContinueOnError`  
- Data type: `Boolean`  
+### `Condition`
 
- Access type: Read/Write  
+Data type: `SMS_TaskSequence_Condition`
 
- Qualifiers: None  
+Access type: Read/Write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: None
 
- `Description`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Access type: Read/Write  
+### `ContinueOnError`
 
- Qualifiers: [AllowedLen("0-255")]  
+Data type: `Boolean`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
- `Enabled`  
- Data type: `Boolean`  
+Qualifiers: None
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers: None  
+### `Description`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`
 
- `Name`  
- Data type: `String`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: `[AllowedLen("0-255")]`
 
- Qualifiers: [AllowedLen("1-100")]  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `Enabled`
 
- `SupportedEnvironment`  
- Data type: `String`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The default value of this property for this task sequence action is FullOS.  
+### `Name`
 
- `TargetDrive`  
- Data type: `String`  
+Data type: `String`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [CommandLineArg(1)]  
+Qualifiers: `[AllowedLen("1-100")]`
 
- Drive letter of the volume on which to disable the BitLocker encryption. Set this property to `null` to use the current operating system volume.  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Timeout`  
- Data type: `UInt32`  
+### `RebootCount`
 
- Access type: Read/Write  
+Data type: `UInt32`
 
- Qualifiers: None  
+Access type: Read/write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+The default value is `1`. Specify the number of restarts to keep BitLocker disabled.
 
-## Remarks  
- Class qualifiers for this class include:  
+### `SupportedEnvironment`
 
- [CommandLine("OSDBitLocker.exe /disable \<?1: /drive:%1>"),  
+Data type: `String`
 
- ActionCategory{"Disks,5,3"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "DisableBitLockerControl", "TaskSequenceOptionControl"}, VariablePrefix("OSDBitLocker")]  
+Access type: Read/Write
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Qualifiers: `[Not_Null:ToInstance]`
 
-## Requirements  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+The default value of this property for this task sequence action is `FullOS`.
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### `TargetDrive`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: `[CommandLineArg(1)]`
+
+Drive letter of the volume on which to disable the BitLocker encryption. To use the current OS volume, set this property to `null`.
+
+### `Timeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+## Remarks
+
+Class qualifiers for this class include:
+
+```
+[CommandLine("OSDBitLocker.exe /disable \<?1: /drive:%1>"),
+
+ActionCategory{"Disks,5,3"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "DisableBitLockerControl", "TaskSequenceOptionControl"}, VariablePrefix("OSDBitLocker")]
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+### Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

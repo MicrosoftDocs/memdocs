@@ -161,7 +161,7 @@ Class SMS_DCMDeploymentErrorStatus : SMS_BaseClass
 
  Type of error.  Possible value are:  
 
-|||  
+|Value|Error type|  
 |-|-|  
 |1|INFRASTRUCTURAL|  
 |2|DISCOVERY|  
@@ -213,7 +213,7 @@ The description of the error type.
 
  Object type. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |1|CI|  
 |2|SETTING|  
@@ -237,7 +237,7 @@ The description of the error type.
 
  Object type. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |1|CI|  
 |2|SETTING|  

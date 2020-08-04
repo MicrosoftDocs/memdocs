@@ -81,7 +81,7 @@ Class SMS_UserApplicationRequest :
 
  Current state of the application request. Possible values are:  
 
-|||  
+|Value|Current state|  
 |-|-|  
 |1|Requested|  
 |2|Canceled|  

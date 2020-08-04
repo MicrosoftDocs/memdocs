@@ -5,13 +5,11 @@ description: Use phased deployments to automate the rollout of software to sever
 ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Create phased deployments with Configuration Manager

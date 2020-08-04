@@ -1,170 +1,210 @@
 ---
-title: "SMS_TaskSequence_OfflineEnableBitLockerAction"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_OfflineEnableBitLockerAction class
+titleSuffix: Configuration Manager
+ms.date: 07/31/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 596e92ca-fc30-47b2-b249-cf61d5c76121
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_OfflineEnableBitLockerAction
-The `SMS_TaskSequence_OfflineEnableBitLockerAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that pre-provisions BitLocker for the operating system drive.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_OfflineEnableBitLockerAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_OfflineEnableBitLockerAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that pre-provisions BitLocker for the OS drive.
 
-```  
-Class SMS_TaskSequence_OfflineEnableBitLockerAction : SMS_TaskSequence_Action  
-{  
-    Object Condition;  
-    Boolean ContinueOnError;  
-    String Description;  
-    UInt32 DestinationDisk;  
-    String DestinationLogicalDrive;  
-    UInt32 DestinationPartition;  
-    String DestinationVariable;  
-    Boolean Enabled;  
-    String Name;  
-    Boolean SkipWhenTPMInvalid;  
-    String SupportedEnvironment;  
-    UInt32 Timeout;  
-};  
-```  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Methods  
- The `SMS_TaskSequence_OfflineEnableBitLockerAction` class does not define any methods.  
+## Syntax
 
-## Properties  
- `Condition`  
- Data type: `Object`  
+```MOF
+Class SMS_TaskSequence_OfflineEnableBitLockerAction : SMS_TaskSequence_Action
+{
+    Object Condition;
+    Boolean ContinueOnError;
+    String Description;
+    UInt32 DestinationDisk;
+    String DestinationLogicalDrive;
+    UInt32 DestinationPartition;
+    String DestinationVariable;
+    Boolean Enabled;
+    Boolean EncryptFullDisk;
+    UInt32 EncryptMethod;
+    String Name;
+    Boolean SkipWhenTPMInvalid;
+    String SupportedEnvironment;
+    UInt32 Timeout;
+};
+```
 
- Access type: Read/Write  
+## Methods
 
- Qualifiers: none  
+The `SMS_TaskSequence_OfflineEnableBitLockerAction` class doesn't define any methods.
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+## Properties
 
- `ContinueOnError`  
- Data type: `Boolean`  
+### `Condition`
 
- Access type: Read/Write  
+Data type: `Object`
 
- Qualifiers: none  
+Access type: Read/Write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: none
 
- `Description`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Access type: Read/Write  
+### `ContinueOnError`
 
- Qualifiers: [allowedlen]  
+Data type: `Boolean`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
- `DestinationDisk`  
- Data type: `UInt32`  
+Qualifiers: none
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers: [commandlinearg(1), valuerange("0-99")]  
+### `Description`
 
- Index of the disk for which to pre-provision BitLocker. The index can have a value of 1 through 99.  
+Data type: `String`
 
- `DestinationLogicalDrive`  
- Data type: `String`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: `[allowedlen]`
 
- Qualifiers: [commandlinearg(3), valuemap {"C:","D:","E:","F:","G:","H:","I:","J:","K:","L:","M:","N:","O:","P:","Q:","R:","S:","T:","U:","V:","W:","X:","Y:","Z:"}]  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Logical drive letter of the volume to which to provision BitLocker. Possible values are A-Z.  
+### `DestinationDisk`
 
- `DestinationPartition`  
- Data type: `UInt32`  
+Data type: `UInt32`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [commandlinearg(2), requiredifnotnull("DesinationDisk"), valuerange("1-99")]  
+Qualifiers: `[commandlinearg(1), valuerange("0-99")]`
 
- Index of the partition on the target disk specified by `DestinationDisk` to which to pre-provision BitLocker. The index can have a value of 1 through 99.  
+Index of the disk for which to pre-provision BitLocker. The index can have a value of 1 through 99.
 
- `DestinationVariable`  
- Data type: `String`  
+### `DestinationLogicalDrive`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [commandlinearg]  
+Access type: Read/Write
 
- Task sequence variable containing the logical drive letter of the volume to which to pre-provision BitLocker.  
+Qualifiers: `[commandlinearg(3), valuemap {"C:","D:","E:","F:","G:","H:","I:","J:","K:","L:","M:","N:","O:","P:","Q:","R:","S:","T:","U:","V:","W:","X:","Y:","Z:"}]`
 
- `Enabled`  
- Data type: `Boolean`  
+Logical drive letter of the volume to which to provision BitLocker. Possible values are A-Z.
 
- Access type: Read/Write  
+### `DestinationPartition`
 
- Qualifiers: none  
+Data type: `UInt32`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
- `Name`  
- Data type: `String`  
+Qualifiers: `[commandlinearg(2), requiredifnotnull("DesinationDisk"), valuerange("1-99")]`
 
- Access type: Read/Write  
+Index of the partition on the target disk specified by `DestinationDisk` to which to pre-provision BitLocker. The index can have a value of 1 through 99.
 
- Qualifiers: [allowedlen("1-100")]  
+### `DestinationVariable`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`
 
- `SkipWhenTPMInvalid`  
- Data type: `Boolean`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: `[commandlinearg]`
 
- Qualifiers: [commandlinearg(5), not_null]  
+Task sequence variable containing the logical drive letter of the volume to which to pre-provision BitLocker.
 
- `true` to skip this step for computers that do not have a TPM or when TPM is not enabled.  
+### `Enabled`
 
- `SupportedEnvironment`  
- Data type: `String`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [not_null, valuemap]  
+Qualifiers: none
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md). The default value of this property for this task sequence action is WinPE.  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Timeout`  
- Data type: `UInt32`  
+### `EncryptFullDisk`
 
- Access type: Read/Write  
+Data type: `Boolean`
 
- Qualifiers: none  
+Access type: Read/write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Configure the step to use full disk encryption. The default value is `false`.
 
-## Remarks  
- Class qualifiers for this class include:  
+### `EncryptMethod`
 
- [CommandLine(     "OSDOfflineBitlocker.exe /enable \<?1: /disk:%1>\<?2: /part:%2>\<?3: /drive:%3>\<?4: /drive:%%%4%%>\<?5: /ignoretpm:%5>"     ),  
+Data type: `UInt32`
 
- ActionCategory{"Disks,6,3"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "OfflineBitlockerControl", "TaskSequenceOptionControl"},     VariablePrefix("OSDBitLocker")     ]  
+Access type: Read/write
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Specify the disk encryption mode. Set `0` to not specify the mode, which is the default.
 
-## Requirements  
+### `Name`
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+Data type: `String`
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+Access type: Read/Write
 
-## See Also  
- [SMS_TaskSequence_ApplyDataImageAction Server WMI Class](../../../develop/reference/osd/sms_tasksequence_applydataimageaction-server-wmi-class.md)
+Qualifiers: `[allowedlen("1-100")]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+### `SkipWhenTPMInvalid`
+
+Data type: `Boolean`
+
+Access type: Read/Write
+
+Qualifiers: `[commandlinearg(5), not_null]`
+
+Set `true` to skip this step for computers that don't have a TPM or when TPM isn't enabled.
+
+### `SupportedEnvironment`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: `[not_null, valuemap]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+The default value of this property for this task sequence action is `WinPE`.
+
+### `Timeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: none
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+## Remarks
+
+Class qualifiers for this class include:
+
+```
+[CommandLine(     "OSDOfflineBitlocker.exe /enable \<?1: /disk:%1>\<?2: /part:%2>\<?3: /drive:%3>\<?4: /drive:%%%4%%>\<?5: /ignoretpm:%5>"     ),
+
+ActionCategory{"Disks,6,3"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "OfflineBitlockerControl", "TaskSequenceOptionControl"},     VariablePrefix("OSDBitLocker")     ]
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+## Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).
+
+## See also
+
+[SMS_TaskSequence_ApplyDataImageAction server WMI class](../../../develop/reference/osd/sms_tasksequence_applydataimageaction-server-wmi-class.md)

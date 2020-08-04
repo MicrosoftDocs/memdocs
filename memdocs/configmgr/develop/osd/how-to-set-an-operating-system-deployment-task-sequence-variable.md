@@ -97,9 +97,8 @@ public void AddTaskSequenceVariable(
 
  This example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|-|-|-|
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
 |`taskSequence`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|-   The task sequence the variable is added to.|  
 |`variableName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable.|  
