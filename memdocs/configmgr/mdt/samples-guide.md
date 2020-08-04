@@ -405,7 +405,7 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 ###  <a name="ManageItemDeployShare"></a> Managing Items in a Deployment Share Using Windows PowerShell  
  A deployment share contains items that are used to perform deployments, such as operating systems, applications, device drivers, operating system packages, and task sequences. These items can managed using cmdlets from Windows PowerShell and those provided with MDT.  
 
- For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
+ For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://docs.microsoft.com/powershell/scripting/samples/manipulating-items-directly). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share  
  You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple item into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
@@ -561,7 +561,7 @@ ForEach-Object ($App in $List) {
      For more information on the MDT cmdlets used for importing items into a deployment share, see [Import an Item into a Deployment Share](#ImportItemDeployShare).  
 
 ###  <a name="ManageDeployShareFolder"></a> Managing Deployment Share Folders Using Windows PowerShell  
- You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx).  
+ You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://docs.microsoft.com/powershell/scripting/samples/manipulating-items-directly).  
 
 #### Create a Folder in a Deployment Share Using Windows PowerShell  
  **To create a folder in a deployment share using Windows PowerShell**  
