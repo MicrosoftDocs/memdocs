@@ -80,8 +80,8 @@ Class SMS_CM_UpdatePackageSiteStatus : SMS_BaseClass
 
  Prerequisite flag. Possible values are: bits:  
 
-|||  
-|-|-|  
+| Flag value | Description |  
+| ---------- | ----------- |  
 |0x1|Prereq only|  
 |0x2|CONTINUE_ON_PREREQ_WARNING|  
 

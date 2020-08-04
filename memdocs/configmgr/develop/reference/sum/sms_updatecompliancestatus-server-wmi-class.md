@@ -81,8 +81,8 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
  Source of the compliance enforcement action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Source |  
+| ----- | ------ |  
 |0|NONE|  
 |1|SMS|  
 |2|USER|  
@@ -186,8 +186,8 @@ Class SMS_UpdateComplianceStatus : SMS_BaseClass
 
  The status of the target computer.  Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |0|Detection state unknown|  
 |1|Update is not required|  
 |2|Update is required|  
