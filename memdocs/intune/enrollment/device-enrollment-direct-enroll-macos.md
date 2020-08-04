@@ -58,7 +58,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 6. Choose **Create** to save the profile.
 
 ## Direct enrollment
-Apps requiring user affiliation, including the Company Portal app used for installing line-of-business apps, cannot be installed.
+Because direct enrollment only supports enrollment without user affinity, the company portal cannot be used to install available applications.
 
 ### Export the profile and install on macOS devices
 
@@ -66,7 +66,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 2. Under **Direct enrollment**, choose **Download profile**, and save the file. 
 
      > [!NOTE]
-     > An enrollment profile file is only valid for two weeks at which time you must re-create it.
+     > A downloaded enrollment profile is valid for two weeks after download. You can download as many enrollment profiles using this link as you need. Downloading a new profile does not render the previous one invalid, however it also doesn't extend the previously downloaded file expiry time.
          
 3. Transfer the file to a macOS computer to install it directly.
 4. Double-click on the saved **.mobileconfig** to open the file in Profiles.
