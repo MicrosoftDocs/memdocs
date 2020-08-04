@@ -65,8 +65,8 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
 2. Under **Direct enrollment**, choose **Download profile**, and save the file. 
 
-         > [!NOTE]
-         > An enrollment profile file is only valid for two weeks at which time you must re-create it.
+     > [!NOTE]
+     > An enrollment profile file is only valid for two weeks at which time you must re-create it.
          
 3. Transfer the file to a macOS computer to install it directly.
 4. Double-click on the saved **.mobileconfig** to open the file in Profiles.
