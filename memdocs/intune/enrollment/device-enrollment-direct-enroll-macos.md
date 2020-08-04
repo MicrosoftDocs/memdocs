@@ -29,7 +29,7 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Set up macOS device enrollment with Direct Enrollment
+# Use Direct Enrollment for macOS devices
 
 Intune supports the enrollment of macOS devices using direct enrollment for corporate devices. Direct enrollment does not wipe the device. It enrolls the device through macOS settings. This method only supports devices with **no user affinity**.
 
