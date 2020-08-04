@@ -68,7 +68,7 @@ Class SMS_MigrationJobEntityRelation : SMS_BaseClass
 
  Enums for rich entity status.  
 
-|||  
+|Value|Enums status|  
 |-|-|  
 |0|Available to migrate|  
 |1|Migrated|  
@@ -90,7 +90,7 @@ Class SMS_MigrationJobEntityRelation : SMS_BaseClass
 
  Enums for entity status, not job related.  
 
-|||  
+|Value|Enums status|  
 |-|-|  
 |0|Not started|  
 |1|completed|  
@@ -108,13 +108,13 @@ Class SMS_MigrationJobEntityRelation : SMS_BaseClass
 
  Enums for job entity status.  
 
-|||  
+|Value|Enums status|  
 |-|-|  
 |0|Not started|  
 |1|completed|  
 |2|running|  
 |3|failed|  
-|4|excluded (never happen)|  
+|4|excluded (never happens)|  
 |5|skipped|  
 
  `JobID`  

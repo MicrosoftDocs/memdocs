@@ -593,7 +593,7 @@ Class SMS_R_System : SMS_Resource
 
  Wipe status of the device, as reported through Exchange Active Sync (EAS).  
 
-|||  
+|Value|Wipe status|  
 |-|-|  
 |1|Wipe Pending|  
 |2|Wipe Cancelling|  
