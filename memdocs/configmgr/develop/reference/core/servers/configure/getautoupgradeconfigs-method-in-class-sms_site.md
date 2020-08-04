@@ -95,7 +95,7 @@ SInt32 GetAutoUpgradeConfigs(
 
  Download options in slow network. Possible values are:  
 
-|||  
+|Value|Download option|  
 |-|-|  
 |0|Do not download.|  
 |1|Download from distribution point and run locally.|  

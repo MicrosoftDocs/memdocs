@@ -366,7 +366,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 
  Job status. Possible values are:  
 
-|||  
+|Value|Job status|  
 |-|-|  
 |0|NotStarted|  
 |1|Completed|  
@@ -392,7 +392,7 @@ Class SMS_MigrationJob : SMS_BaseClass
 
  The type of job. Possible values are:  
 
-|||  
+|Value|Job type|  
 |-|-|  
 |1|Object|  
 |2|Client|  
