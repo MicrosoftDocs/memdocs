@@ -3475,7 +3475,7 @@ New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "Thi
 ```  
 
     > [!NOTE]
-    > Adding "`remove-psdrive`" to the script ensures that the background process finishes before proceeding.  
+    > Adding "remove-psdrive" to the script ensures that the background process finishes before proceeding.  
 
 ###  <a name="DeleteFolder"></a> Deleting a Folder  
  The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.  
