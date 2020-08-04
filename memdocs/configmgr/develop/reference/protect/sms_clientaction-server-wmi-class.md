@@ -67,8 +67,8 @@ Class SMS_ClientAction :
 
  The linked object type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |1|AM Policy|  
 
  `LinkedObjectUniqueID`  
@@ -89,8 +89,8 @@ Class SMS_ClientAction :
 
  State of the client action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action state |  
+| ----- | ------------ |  
 |0|Inactive|  
 |1|Active|  
 |2|Decommission|  
@@ -131,8 +131,8 @@ Class SMS_ClientAction :
 
  The target object type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |1|Threat|  
 
  `Type`  
@@ -144,8 +144,8 @@ Class SMS_ClientAction :
 
  Action type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action type |  
+| ----- | ----------- |  
 |1|Full Scan|  
 |2|Quick Scan|  
 |3|Download Definition|  
