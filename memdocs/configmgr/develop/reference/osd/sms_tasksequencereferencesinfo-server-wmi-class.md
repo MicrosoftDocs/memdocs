@@ -91,8 +91,8 @@ Class SMS_TaskSequenceReferencesInfo : SMS_BaseClass
 
  The type of the reference package. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Package type |  
+| ----- | ------------ |  
 |0 (0x0000)|PKG_TYPE_REGULAR|  
 |3 (0x0003)|PKG_TYPE_DRIVER|  
 |4 (0x0004)|PKG_TYPE_TASK_SEQUENCE|  
