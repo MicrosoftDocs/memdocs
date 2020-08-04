@@ -24,11 +24,10 @@ class CCM_ServiceWindowManager();
 ```  
 
 ## Methods  
- The following table shows the methods in the `CCM_ServiceWindowManager` class.  
+The following table shows the methods in the `CCM_ServiceWindowManager` class.  
 
-|||  
+|Method|Description|  
 |-|-|  
-|**Method**|**Description**|  
 |[GetCurrentWindowAvailableTime Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/getcurrentwindowavailabletime-method-in-class-ccm_servicewindowmanager.md)|Gets the time remaining in a currently-active service window for a specified type.|  
 |[GetNextServiceWindowID Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/getnextservicewindowid-method-in-class-ccm_servicewindowmanager.md)|Gets the identifier of the next service window closest to the current time.|  
 |[IsFutureWindowAvailable Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/isfuturewindowavailable-method-in-class-ccm_servicewindowmanager.md)|Determines whether a service window of a specified type and a given duration is going to be available.|  
