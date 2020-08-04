@@ -63,7 +63,7 @@ Class SMS_Content : SMS_BaseClass
 
  This specifies additional attributes for content instance.  
 
-|||  
+|Value|Content flag|  
 |-|-|  
 |8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|  
 |12|DOWNLOAD_FROM_LOCAL_DISPPOINT|  

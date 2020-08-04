@@ -159,7 +159,7 @@ Class SMS_CMSiteConfiguration : SMS_BaseClass
 
  State.   
 
-|||  
+|Value|State|  
 |-|-|  
 |0|Valid|  
 |1|Failed without Remediation|  

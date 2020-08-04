@@ -43,7 +43,7 @@ UInt32 GetAvailableScopes(
 
  Type of scope, could be RBA security category (29) or collection(1). The default value is 29.  
 
-|||  
+|Value|Scope type|  
 |-|-|  
 |1|Collection|  
 |29|Secured scope.|  
