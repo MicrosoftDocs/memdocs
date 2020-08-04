@@ -145,8 +145,8 @@ Class SMS_Subscription : SMS_BaseClass
 
  Type of subscription. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Type |
+| ----- | ---- |
 |1|Alert subscriptions.|  
 
  The default value is 1.  

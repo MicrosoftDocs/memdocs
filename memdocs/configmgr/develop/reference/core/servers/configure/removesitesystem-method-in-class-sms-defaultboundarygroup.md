@@ -1,5 +1,5 @@
 ---
-title: "RemoveSiteSystem Method"
+title: RemoveSiteSystem method in class SMS_DefaultBoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"

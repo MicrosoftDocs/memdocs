@@ -21,6 +21,21 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md",
+            "redirect_url": "/mem/autopilot/existing-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-autopilot.md",
+            "redirect_url": "/mem/autopilot/enrollment-autopilot",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/windows-autopilot-hybrid.md",
+            "redirect_url": "/mem/autopilot/windows-autopilot-hybrid",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/core/misc/whats-new-endpoint-analytics.md",
             "redirect_url": "/mem/analytics/whats-new",
             "redirect_document_id": false
