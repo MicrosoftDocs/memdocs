@@ -86,8 +86,8 @@ Class SMS_ObjectContainerItem : SMS_BaseClass
 
  The type of the folder. Possible values are listed below.  
 
-|||  
-|-|-|  
+| Value | Object type |
+| ----- | ----------- |
 |2|TYPE_PACKAGE|  
 |3|TYPE_ADVERTISEMENT|  
 |7|TYPE_QUERY|  

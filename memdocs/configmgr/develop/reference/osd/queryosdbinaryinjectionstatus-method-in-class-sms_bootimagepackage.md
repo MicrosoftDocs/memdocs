@@ -46,8 +46,8 @@ SInt32 QueryOSDBinaryInjectionStatus(
 
  The current status of binary injection. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |0|Complete|  
 |1|In progress|  
 |2|Error|  

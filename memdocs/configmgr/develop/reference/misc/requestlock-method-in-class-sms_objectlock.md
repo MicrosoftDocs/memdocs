@@ -88,8 +88,8 @@ SInt32 RequestLock(
 
  Indicates the current state of the requested lock. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Lock state |
+| ----- | ---------- |
 |0|Unassigned|  
 |1|Assigned|  
 |2|Requested|  

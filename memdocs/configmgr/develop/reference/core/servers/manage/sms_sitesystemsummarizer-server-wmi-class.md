@@ -85,8 +85,8 @@ Class SMS_SiteSystemSummarizer : SMS_BaseClass
 
  Type of object for which the status is being reported. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |
+| ----- | ----------- |
 |0|NALPATH. A directory.|  
 |1|SQL_DB. An SQL Server database.|  
 |2|SQL_LOG. An SQL Server transaction log.|  
@@ -161,8 +161,8 @@ Class SMS_SiteSystemSummarizer : SMS_BaseClass
 
   Status value indicating the health of the component. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |GREEN(0)|OK. The storage objects are well below their thresholds.|  
 |YELLOW(1)|Warning. The storage objects are approaching their thresholds.|  
 |RED(2)|Critical. The storage objects have exceeded their thresholds.|  
