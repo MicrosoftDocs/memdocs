@@ -239,7 +239,7 @@ Class SMS_GlobalCondition : SMS_ConfigurationItemBaseClass
 
  Type of the global condition.  
 
-|||  
+|Value|Global condition type|  
 |-|-|  
 |1|Setting|  
 |2|Expression|  

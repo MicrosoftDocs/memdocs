@@ -40,8 +40,8 @@ Class SMS_RoleInObjectType : SMS_BaseClass
 
  Secured object class ID. Possible values are listed below.  
 
-|||  
-|-|-|  
+| Value | Object type ID |
+| ----- | -------------- |
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  
 |18|SMS_ImagePackage|  

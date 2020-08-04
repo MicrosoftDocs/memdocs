@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise security configuration framework
+title: Android Enterprise security configurations work profile
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
 keywords:

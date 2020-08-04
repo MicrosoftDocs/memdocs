@@ -327,7 +327,7 @@ Class SMS_ApplicationAssignment : SMS_CIAssignmentBaseClass
 
  Offer flags. Possible values are:  
 
-|||  
+|Value|Offer flag|  
 |-|-|  
 |1|PREDEPLOY|  
 |2|ONDEMAND|  
@@ -345,7 +345,7 @@ Class SMS_ApplicationAssignment : SMS_CIAssignmentBaseClass
 
  Type of offer. Possible values are:  
 
-|||  
+|Value|Offer type|  
 |-|-|  
 |0|REQUIRED|  
 |2|AVAILABLE|  
@@ -377,7 +377,7 @@ Class SMS_ApplicationAssignment : SMS_CIAssignmentBaseClass
 
  Priority for installation of the application. Possible values are:  
 
-|||  
+|Value|Installation priority|  
 |-|-|  
 |0|LOW|  
 |1|MEDIUM|  

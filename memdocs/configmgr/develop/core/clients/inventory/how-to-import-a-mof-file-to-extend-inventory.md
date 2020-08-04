@@ -38,9 +38,8 @@ An example MOF file.================================[ SMS_Report (TRUE),  SMS_Gr
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`siteCode`|-   Managed: `String`|The site code.|  
 |`fileName`|-   Managed: `String`|The name of the MOF file to import.|  
 |`inventoryReportID`|-   Managed: `String`|Inventory report identifier.|  

@@ -72,7 +72,7 @@ Class SMS_ClientBaselineItem: SMS_BaseClass
 
  The platform of the client baseline item. Possible values are:  
 
-|||  
+|Value|Platform|  
 |-|-|  
 |1|x86|  
 |2|x64|  
@@ -86,7 +86,7 @@ Class SMS_ClientBaselineItem: SMS_BaseClass
 
  The client baseline item type. Possible values are:  
 
-|||  
+|Value|Baseline item type|  
 |-|-|  
 |1|Patch or CU|  
 |2|Language Pack|  
