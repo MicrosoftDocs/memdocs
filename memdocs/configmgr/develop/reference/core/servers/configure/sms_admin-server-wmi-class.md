@@ -64,7 +64,7 @@ Class SMS_Admin : SMS_BaseClass
 
  The type of account. The possible values are:  
 
-|||  
+|Value|Account type|  
 |-|-|  
 |0|User|  
 |1|Group|  

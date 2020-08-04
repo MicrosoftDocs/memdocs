@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Custom per-app VPN profile for Android in Microsoft Intune - Azure | Microsoft Docs
-description: Learn how to create a per-app VPN profile for Android device administrator devices managed by Microsoft Intune.
+title: Custom per-app VPN profile for Android device administrator in Microsoft Intune - Azure | Microsoft Docs
+description: Use a custom profile for per-app VPN profiles on Android device administrator with the Pulse Secure or Citrix VPN connection types in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,14 +32,17 @@ ms.collection: M365-identity-device-management
 
 You can create a per-app VPN profile for Android 5.0 and later devices that are managed by Intune. First, create a VPN profile that uses either the Pulse Secure or Citrix connection type. Then, create a custom configuration policy that associates the VPN profile with specific apps.
 
-> [!NOTE]
-> To use per-app VPN on Android Enterprise devices, you can also use these steps. But, it's recommended to use an [app configuration policy](../apps/app-configuration-vpn-ae.md) for your VPN client app.
+This feature applies to:
+
+- Android device administrator
+
+To use per-app VPN on Android Enterprise devices, use an [app configuration policy](../apps/app-configuration-vpn-ae.md). App configuration policies support more VPN client apps. On Android Enterprise devices, you can use the steps in this article. But, it's not recommended, and you're limited to only Pulse Secure and Citrix VPN connections.
 
 After you assign the policy to your Android device or user groups, users should start the Pulse Secure or Citrix VPN client. Then, the VPN client allows only traffic from the specified apps to use the open VPN connection.
 
 > [!NOTE]
 >
-> Only the Pulse Secure and Citrix connection types are supported for this profile.
+> Only the Pulse Secure and Citrix connection types are supported for Android device administrator. On Android Enterprise devices, use an [app configuration policy](../apps/app-configuration-vpn-ae.md).
 
 ## Step 1: Create a VPN profile
 
@@ -84,10 +87,9 @@ After you assign the policy to your Android device or user groups, users should 
     - **Data type**: Enter **String**.
     - **Value**: Enter a semicolon-separated list of packages to associate with the profile. For example, if you want Excel and the Google Chrome browser to use the VPN connection, enter `com.microsoft.office.excel;com.android.chrome`.
 
-    > [!div class="mx-imgBorder"]
-    >![Example Android device administrator per-app VPN custom policy](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android device administrator per-app VPN custom policy in Microsoft Intune":::
 
-### Set your app list to blacklist or whitelist (optional)
+### Set your blocked and allowed app list (optional)
 
 Use the **BLACKLIST** value to enter a list of apps that *cannot* use the VPN connection. All other apps connect through the VPN. Or, use the **WHITELIST** value to enter a list of apps that *can* use the VPN connection. Apps that aren't on the list don't connect through the VPN.
 

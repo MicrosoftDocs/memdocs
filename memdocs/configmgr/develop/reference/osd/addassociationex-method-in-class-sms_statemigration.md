@@ -50,8 +50,8 @@ SInt32 AddAssociationEx(
 
  Migration behavior. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration behavior |
+| ----- | ------------------ |
 |0|CAPTUREANDRESTOREALL|  
 |1|CAPTUREALLRESTORESPECIFIED|  
 |2|CAPTUREANDRESTORESPECIFIED|  

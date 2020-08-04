@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Configuration Manager devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
-ms.date: 06/25/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -21,7 +21,7 @@ manager: dougeby
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
-This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics.
+This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](enroll-intune.md#intune-device-requirements), we recommend [using Intune to enroll them into Endpoint analytics](enroll-intune.md) instead of following the instructions in this quickstart.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -32,6 +32,9 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - Configuration Manager version 2002 or newer
 - Clients upgraded to version 2002 or newer
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+
+> [!Important]  
+> If you have co-management enabled, enrolled devices that meet the Intune requirements will send required functional data directly to Microsoft public cloud. For more information, see [requirements for devices managed by Intune](overview.md#bkmk_intune_prereq).
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Configuration Manager-managed devices
 
@@ -71,19 +74,14 @@ A read-only user would only need the **Read** permission under both the **Device
 <!--6051638, 5924760-->
 Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
-### <a name="bkmk_cm_enable"></a> Enable Endpoint analytics data collection in Configuration Manager
-
-1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
-1. Right-click and select **Properties** then select the **Computer Agent** settings.
-1. Set **Enable Endpoint analytics data collection** to **Yes**.
-   > [!Important] 
-   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting then redeploy it to your machines for it to take effect.
-
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
 
 1. In the Configuration Manager console, go to **Administration** > **Cloud Services** > **Co-management**.
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
+
+> [!Important]
+> When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](#bkmk_cm_enable).
 
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
 
@@ -97,6 +95,17 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 > We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
 
    - For more information about common issues, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
+
+### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
+
+1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
+1. Right-click and select **Properties** then select the **Computer Agent** settings.
+1. Set **Enable Endpoint analytics data collection** to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection.
+
+You may also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a specific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
+
+   > [!Important] 
+   > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting then redeploy it to your machines for it to take effect.
 
 
 ## <a name="bkmk_view"></a> View the Overview page

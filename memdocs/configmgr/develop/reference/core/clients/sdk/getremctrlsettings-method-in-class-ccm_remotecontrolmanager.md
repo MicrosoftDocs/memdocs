@@ -85,7 +85,7 @@ uint32 GetRemCtrlSettings
 
  Access level allowed. Possible values are:   
 
-|||  
+|Value|Access level|  
 |-|-|  
 |0|No access|  
 |1|View only|  
@@ -98,7 +98,7 @@ uint32 GetRemCtrlSettings
 
  Value indicating if a control beep should be sounded during a remote control session to signify that the computer is being remotely controlled. This is only for Remote Control, not Remote Assistance. Possible values are:   
 
-|||  
+|Value|Remote control beep|  
 |-|-|  
 |0|None|  
 |1|Beginning and end of session|  

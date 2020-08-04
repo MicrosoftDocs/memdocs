@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -109,6 +109,8 @@ The following table provides enrollment specific configuration details:
 
 > [!IMPORTANT]
 > The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
+> 
+> The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App details status    (of an app that   requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -162,6 +164,17 @@ The following actions are available:
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies. 
 
+## Opening Web Company Portal applications
+For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 
+
+Upon selecting the Company Portal, the user will be directed to the corresponding page in the application when the URI path is one of the following:
+
+- `/apps` - The Web Company Portal will open the Apps page that lists all of the apps.
+- `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
+- *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
+
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
+
 ## Company Portal derived credentials for iOS/iPadOS devices
 
 Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS/iPadOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
@@ -171,9 +184,9 @@ Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC
 
 For more information about derived credentials for iOS/iPadOS devices, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
-## Dark Mode for iOS/iPadOS Company Portal
+## Dark Mode for the Company Portal
 
-Dark Mode is available for the iOS/iPadOS Company Portal. Users can download apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS/iPadOS Company Portal will automatically match the end user's device settings for dark or light mode.
+Dark Mode is available for the iOS/iPadOS, macOS, and Windows Company Portal. Users can download apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS/iPadOS, macOS, and Windows Company Portal will automatically match the end user's device settings for dark or light mode.
 
 ## Windows Company Portal keyboard shortcuts
 

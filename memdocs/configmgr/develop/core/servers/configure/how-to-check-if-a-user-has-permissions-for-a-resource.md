@@ -67,9 +67,8 @@ public bool CheckUserPermissions(ConnectionManagerBase connectionManager, string
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`resourceID`|`String`|Unique ID, supplied by Configuration Manager, for the resource.|  
 

@@ -168,7 +168,7 @@ The following personal enrollment methods will also be blocked:
 
 ## Blocking personal iOS/iPadOS devices
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- Registered with a serial number or IMEI.
+- [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 
 
@@ -179,6 +179,10 @@ Priority is used when a user exists in multiple groups that are assigned restric
 When you create a restriction, it's added to the list just above the default.
 
 Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.
+
+>[!NOTE]
+>Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
+
 
 You can change the priority of any non-default restriction.
 

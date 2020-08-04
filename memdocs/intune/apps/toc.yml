@@ -90,6 +90,8 @@
           href: store-apps-company-portal-autopilot.md
         - name: Company Portal app - Download
           href: store-apps-company-portal-app.md
+        - name: Company Portal app - macOS
+          href: apps-company-portal-macos.md          
         - name: Microsoft Edge for Windows 10
           href: apps-windows-edge.md
         - name: Microsoft Edge for macOS
@@ -147,7 +149,7 @@
           href: manage-microsoft-teams.md
         - name: Configure Google Chrome for Android
           href: apps-configure-chrome-android.md
-        - name: Configure a VPN for Android Enterprise
+        - name: VPN and per-app VPN on Android Enterprise
           href: app-configuration-vpn-ae.md          
       - name: Volume-purchased apps and books
         items:

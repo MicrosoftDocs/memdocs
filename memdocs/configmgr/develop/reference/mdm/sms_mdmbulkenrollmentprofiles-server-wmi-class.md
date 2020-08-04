@@ -82,8 +82,8 @@ Class SMS_MDMBulkEnrollmentProfiles : SMS_BaseClass
 
  Specifies the type of URL for all enrollment proxy points. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Enrollment Proxy Point type |
+| ----- | --------------------------- |
 |0|NONE|  
 |1|INTERNET|  
 |2|INTRANET|  

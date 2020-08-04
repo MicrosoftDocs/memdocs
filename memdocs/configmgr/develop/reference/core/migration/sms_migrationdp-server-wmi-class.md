@@ -175,7 +175,7 @@ Class SMS_MigrationDP : SMS_DistributionPointInfoBase
 
  Distribution point flags.  
 
-|||  
+|Value|Distribution point flags|  
 |-|-|  
 |0|DP_TYPE_READONLY|  
 

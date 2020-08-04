@@ -44,6 +44,9 @@ This article shows you how to create a per-app VPN profile, and assign this prof
 Some VPNs allow username and password authentication with per-app VPN. Meaning, users need to enter a username and password to connect to the VPN.
 
 > [!IMPORTANT]
+> There's a known issue in iOS 13 preventing per-app VPN profiles from connecting in user enrollment environments when certificate-based authentication is used. Apple plans to fix this in a future release of iOS.
+
+> [!IMPORTANT]
 > Per-app VPN is not supported for IKEv2 VPN profiles for iOS/iPadOS.
 
 ## Per-app VPN with Zscaler

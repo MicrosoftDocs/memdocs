@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Your device is missing a certificate | Microsoft Docs
+title: Install missing required certificate
 description:
 keywords:
 author: lenewsad
@@ -47,7 +47,7 @@ Complete these steps to enable browser access. After you've enabled access, Comp
 
 1. In the Company Portal app, go to the right-hand corner and select the menu.  
 2. Select **Settings**.  
-3. Next to **Enable Browser Access** select **Enable**.  
+3. Next to **Enable Browser Access**, select **Enable**.  
 4. On the Device Administrator screen, select **ACTIVATE**. 
 
 ## Identify and download the missing certificate through web search

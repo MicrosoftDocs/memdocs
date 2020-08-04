@@ -224,11 +224,12 @@ You can enable the synchronization of collection memberships to an Azure Active 
 
 The Azure AD synchronization happens every five minutes. It's a one-way process, from Configuration Manager to Azure AD. Changes made in Azure AD aren't reflected in Configuration Manager collections, but aren't overwritten by Configuration Manager. For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after synchronization the Azure AD group has five devices.
 
-
 ### Prerequisites
 
-- [Cloud Management](../../../servers/deploy/configure/azure-services-wizard.md)
+- Integration with Azure AD for [Cloud Management](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- An HTTPS or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) enabled management point
+- Access to the **All Systems** collection
 
 ### Create a group and set the owner in Azure AD
 
@@ -250,7 +251,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 1. In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **Device Collections**.
 1. Right-click on the collection to sync, then click **Properties**. 
-1. In the **AAD Group Sync** tab, click **Add**.
+1. In the **Cloud Sync** tab, click **Add**.
 1. From the drop-down menu, select the **Tenant** where you created your Azure AD group.
 1. Type in your search criteria in the **Name starts with** field, then click **Search**.
   - If you are prompted to sign in, use the identity you specified as the owner for the Azure AD group.

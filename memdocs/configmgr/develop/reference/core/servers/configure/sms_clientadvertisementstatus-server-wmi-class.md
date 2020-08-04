@@ -81,7 +81,7 @@ Class SMS_ClientAdvertisementStatus : SMS_BaseClass
 
  The severity of the last acceptance status message. Possible values are:  
 
-|||  
+|Value|Status message severity|  
 |-|-|  
 |0x40000000|Error(3221225472)|  
 |0x80000000|Warning(2147483648)|  
