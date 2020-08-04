@@ -140,7 +140,7 @@ Class SMS_AzureService : SMS_BaseClass
 
  Management certificate type. Possible values are:  
 
-|||  
+|Value|Management certificate type|  
 |-|-|  
 |0|PAIR|  
 |1|PUBLICONLY|  

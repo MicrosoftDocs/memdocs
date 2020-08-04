@@ -148,9 +148,8 @@ class CCM_SoftwareUpdate : CCM_SoftwareBase
 
  The following table shows the values for the **EvaluationState**property for software updates.  
 
-|||  
+|Value|State|  
 |-|-|  
-|**Value**|**State**|  
 |0|ciJobStateNone|  
 |1|ciJobStateAvailable|  
 |2|ciJobStateSubmitted|  

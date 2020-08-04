@@ -48,7 +48,7 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
 
  Action type. Possible values are:    
 
-|||  
+|Value|Action type|  
 |-|-|  
 |1|Update|  
 |2|Delete|  
@@ -93,7 +93,7 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
 
  Message level. Possible values are:    
 
-|||  
+|Value|Message level|  
 |-|-|  
 |0|Informational|  
 |1|Warning|  
@@ -162,7 +162,7 @@ Class CCM_InstanceEvent : __ExtrinsicEvent
 
  Verbosity. Possible values are:  
 
-|||  
+|Value|Verbosity|  
 |-|-|  
 |10|Low|  
 |20|Medium_Low|  

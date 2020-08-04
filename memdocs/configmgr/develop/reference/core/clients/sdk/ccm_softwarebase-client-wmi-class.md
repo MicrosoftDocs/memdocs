@@ -98,7 +98,7 @@ Class CCM_SoftwareBase :
 
  Software enforcement state, such as downloading content, waiting servicewindow, and so on.  
 
-||||  
+|Value|Software enforcement state|State description|  
 |-|-|-|  
 |0|Unknown|No state information is available.|  
 |1|Enforced|Application is enforced to desired/resolved state.|  

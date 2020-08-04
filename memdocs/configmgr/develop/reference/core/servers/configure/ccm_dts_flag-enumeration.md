@@ -36,7 +36,7 @@ CCM_DTS_FLAG;
 
 ## Members  
 
-|||  
+|CTS flag|Description|  
 |-|-|  
 |CCM_DTS_FLAG_SINGLEFILE|Reserved.|  
 |CCM_DTS_FLAG_DIRECTORY|Indicates that `szRemotePath` is a directory and that all of its contents should be downloaded. This should always be specified in the case of alternate providers.|  

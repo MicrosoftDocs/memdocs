@@ -68,7 +68,7 @@ Class CCM_RequestedAppPolicy :
 
  Enforce preference. Possible values are:   
 
-|||  
+|Value|Enforce preference|  
 |-|-|  
 |0|Immediate|  
 |1|Non-business Hours|  
