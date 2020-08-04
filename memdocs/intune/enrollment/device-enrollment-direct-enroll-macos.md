@@ -60,7 +60,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 ## Direct enrollment
 Apps requiring user affiliation, including the Company Portal app used for installing line-of-business apps, cannot be installed.
 
-### Export the profile as .mobileconfig and install on macOS devices
+### Export the profile and install on macOS devices
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
 2. Under **Direct enrollment**, choose **Download profile**, and save the file. 
