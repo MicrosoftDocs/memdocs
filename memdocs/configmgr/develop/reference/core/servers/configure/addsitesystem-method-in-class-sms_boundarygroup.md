@@ -1,5 +1,5 @@
 ---
-title: "AddSiteSystem Method"
+title: AddSiteSystem method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
