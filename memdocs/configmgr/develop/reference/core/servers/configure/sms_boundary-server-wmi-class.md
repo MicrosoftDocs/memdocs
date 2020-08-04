@@ -52,7 +52,7 @@ Class SMS_Boundary : SMS_BaseClass
 
  Specifies the connection type of the boundary. Possible values are:  
 
-|||  
+|Value|Connection type|  
 |-|-|  
 |0|FAST|  
 |1|SLOW|  
@@ -75,7 +75,7 @@ Class SMS_Boundary : SMS_BaseClass
 
  Boundary type.  
 
-|||  
+|Value|Boundary type|  
 |-|-|  
 |0|IPSUBNET|  
 |1|ADSITE|  
