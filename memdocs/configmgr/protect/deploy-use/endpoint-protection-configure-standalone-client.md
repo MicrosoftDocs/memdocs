@@ -98,3 +98,7 @@ C:\Program Files\Microsoft Security Client\ConfigSecurityPolicy.exe <full path>\
 ```
 
 Replace `full path` with the path where you saved the new antimalware policy XML file and `policy file` with the antimalware policy file name.
+
+## Next steps
+
+For information on how to use Endpoint Protection to manage security and malware on Configuration Manager client computers, see [Configure Endpoint Protection](endpoint-protection-configure.md).

@@ -92,7 +92,7 @@ Class SMS_DPGroupContentInfo : SMS_BaseClass
 
  Object type.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |0|PKG_TYPE_REGULAR|  
@@ -115,7 +115,7 @@ Class SMS_DPGroupContentInfo : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |2|SMS_Package|  

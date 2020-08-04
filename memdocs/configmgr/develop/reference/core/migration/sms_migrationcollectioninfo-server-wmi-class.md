@@ -92,7 +92,7 @@ Class SMS_MigrationCollectionInfo : SMS_BaseClass
 
  The type of the collection.  
 
-|||  
+|Value|Collection type|  
 |-|-|  
 |0|Mixed|  
 |1|User|  

@@ -160,7 +160,7 @@ Class SMS_ClassicDeploymentStatus : SMS_BaseClass
 
  Status Type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

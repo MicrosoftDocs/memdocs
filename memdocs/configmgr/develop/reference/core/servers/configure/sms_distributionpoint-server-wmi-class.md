@@ -137,7 +137,7 @@ Qualifiers: [enumeration, read]
 
 Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  
@@ -260,7 +260,7 @@ Qualifiers: [read, enumeration]
 
 Current status of the package on the distribution point. Possible values are listed below. For more information, see [Remarks](#remarks).  
 
-|||  
+|Value|DP package status|  
 |-|-|  
 |0|NONE|  
 |1|UPDATED|  
