@@ -84,6 +84,15 @@ To open a shared link:
 1. Select **Launch the Community hub** when prompted.
 1. The console opens directly to the script in the Community hub.
 
+## <a name="bkmk_known"></a> Known issues
+
+### Unable to access Community hub node when running console as a different user
+<!--7826897-->
+If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node. 
+
+### Downloaded reports don't get removed from your downloads page
+<!--7851305-->
+If you delete a downloaded report from the **Monitoring** > **Reports** node, the report isn't deleted from the **Community hub** > **Your downloads** page and you're unable to download the report again.  
 
 ## Next steps
 
