@@ -81,7 +81,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |2|SMS_DistributionStatus|  
 |14|SMS_OperatingSystemInstallPackage|  
@@ -110,7 +110,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 
  Status Type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

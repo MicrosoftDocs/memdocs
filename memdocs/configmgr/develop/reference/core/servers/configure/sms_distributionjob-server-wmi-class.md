@@ -53,7 +53,7 @@ Class SMS_DistributionJob : SMS_BaseClass
 
  Current job action. Possible values are:  
 
-|||  
+|Value|Job action|  
 |-|-|  
 |1|DISTSRC_ACTION_UPDATE|  
 |2|DISTSRC_ACTION_ADD|  
@@ -185,7 +185,7 @@ Class SMS_DistributionJob : SMS_BaseClass
 
  Date of the last status update.  
 
-|||  
+|Value|Job state|  
 |-|-|  
 |0|DISTSRC_STATE_PENDING|  
 |1|DISTSRC_STATE_READY|  
