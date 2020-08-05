@@ -85,7 +85,7 @@ There are some exempt apps and platform services that Intune app protection poli
 | <code>calshow</code> | Native Calendar |
 
 > [!IMPORTANT]
-> App Protection policies created before June 15, 2020 include *tel* and *telprompt* protocols as part of the default data transfer exemptions. These protocols allowed managed apps to initiate the dialer. The App Protection policy setting **Transfer telecommunication data to** has replaced this functionality. Administrators should remove *tel;telprompt;* from the data transfer exemptions and rely on the App Protection policy setting, provided the managed apps that initiate dialer functionality include the Intune SDK 12.7.0 or later.
+> App Protection policies created before June 15, 2020 include *tel* and *telprompt* URL scheme as part of the default data transfer exemptions. These URL schemes allow managed apps to initiate the dialer. The App Protection policy setting **Transfer telecommunication data to** has replaced this functionality. Administrators should remove *tel;telprompt;* from the data transfer exemptions and rely on the App Protection policy setting, provided the managed apps that initiate dialer functionality include the Intune SDK 12.7.0 or later.
 
 ## Access requirements
 
