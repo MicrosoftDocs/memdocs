@@ -78,7 +78,7 @@ Class SMS_ReplicationGroup : SMS_BaseClass
 
  Replication pattern. Possible values are:  
 
-|||  
+|Value|Replication pattern|  
 |-|-|  
 |Global|The data is replicated across all primary sites and CAS in the hierarchy.|  
 |Site|The data is replicated up to the CAS in the hierarchy.|  
