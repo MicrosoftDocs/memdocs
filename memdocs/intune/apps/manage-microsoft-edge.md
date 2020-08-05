@@ -250,8 +250,8 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |    Key    |    Value    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** enables kiosk mode for Edge for Android<br>**false** (default) disables kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar in kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar in kiosk mode    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar when kiosk mode is enabled    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar when kiosk mode is enabled    |
 
 ## Data protection app configuration scenarios
 
