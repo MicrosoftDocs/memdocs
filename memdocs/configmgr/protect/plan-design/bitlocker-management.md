@@ -77,7 +77,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 
   For more information, see [Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md).
 
-- The BitLocker recovery service won't install on a management point that uses a database replica. Clients won't encrypt or try to escrow recovery keys. To use the recovery service, you need at least one management point not in a replica configuration.<!-- 7813149 -->
+- Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](../../core/servers/manage/configuring-reporting.md).
 
