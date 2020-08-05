@@ -35,7 +35,7 @@ You create a software updates deployment package, in Configuration Manager, by c
 
  Example of the subroutine call in Visual Basic:  
 
-```vbs
+```vbscript
 
 Call CreateSUMDeploymentPackage(swbemServices,                  _  
                                 "New SUM Deployment Package",   _  
@@ -47,7 +47,7 @@ Call CreateSUMDeploymentPackage(swbemServices,                  _
 
  Example of the method call in C#:  
 
-```c#
+```csharp
 
 SUMSnippets.CreateSUMDeploymentPackage(WMIConnection,  
                                        "New SUM Deployment Package",  
@@ -56,7 +56,7 @@ SUMSnippets.CreateSUMDeploymentPackage(WMIConnection,
                                        "\\\\ServerOne\\SUM_TestPackageSource");  
 ```  
 
-```vbs  
+```vbscript  
 
 Sub CreateSUMDeploymentPackage(connection,                 _  
                                newPackageName,             _  
@@ -83,7 +83,7 @@ Sub CreateSUMDeploymentPackage(connection,                 _
 
 ```  
 
-```c#  
+```csharp  
 
 public void CreateSUMDeploymentPackage(WqlConnectionManager connection,  
                                        string newPackageName,  

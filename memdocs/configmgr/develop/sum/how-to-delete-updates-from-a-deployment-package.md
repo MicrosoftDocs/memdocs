@@ -33,7 +33,7 @@ You remove updates from a software updates deployment package, in Configuration 
 
  Example of the method call in C#:  
 
-```c# 
+```csharp
 
 // Prework for RemoveUpdatesfromSUMDeploymentPackage.  
 // Define the array of Content IDs to load into the content parameters.  
@@ -51,7 +51,7 @@ RemoveUpdatesfromSUMDeploymentPackage(WMIConnection,
 
 ```  
 
-```c#  
+```csharp
 
 public void RemoveUpdatesfromSUMDeploymentPackage(WqlConnectionManager connection,  
                                                   string existingSUMPackageID,  

@@ -38,7 +38,7 @@ You change the deployment package source for a software updates deployment packa
 
  Example of the subroutine call in Visual Basic:  
 
-```  
+```vbscript
 
 ' PREWORK FOR ChangeDeploymentPackageSource  
 
@@ -53,7 +53,7 @@ Call ChangeDeploymentPackageSource(swbemServices,             _
 
  Example of the method call in C#:  
 
-```c#
+```csharp
 
 //PREWORK FOR ChangeDeploymentPackageSource.  
 
@@ -72,7 +72,7 @@ SUMSnippets.ChangeDeploymentPackageSource(WMIConnection,
 
 ```  
 
-```vbs  
+```vbscript  
 
 Sub ChangeDeploymentPackageSource(connection,                   _  
                                   existingSUMPackageID,         _  
@@ -111,7 +111,7 @@ Sub ChangeDeploymentPackageSource(connection,                   _
 
 ```  
 
-```c#  
+```csharp 
 
 public void ChangeDeploymentPackageSource(WqlConnectionManager connection,  
                                           string existingSUMPackageId,  

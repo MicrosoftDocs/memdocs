@@ -36,7 +36,7 @@ You add updates to a software updates deployment package, in Configuration Manag
 
  Example of the method call in C#:  
 
-```c#
+```csharp
 // PREWORK FOR AddUpdatesToSUMDeploymentPackage  
 
 // Define the array of Content Ids to load into addUpdateContentParameters.  
@@ -56,7 +56,7 @@ AddUpdatestoSUMDeploymentPackage(WMIConnection,
                                  addUpdateContentParameters);  
 ```  
 
-```c#
+```csharp
 public void AddUpdatestoSUMDeploymentPackage(WqlConnectionManager connection,  
                                             string existingSUMPackageID,  
                                             Dictionary<string, object> addUpdateContentParameters)  
