@@ -3473,9 +3473,8 @@ Add-PSSnapIn Microsoft.BDD.PSSnapIn
 New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
 New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose  
 ```  
-
-    > [!NOTE]
-    > Adding "remove-psdrive" to the script ensures that the background process finishes before proceeding.  
+> [!NOTE]
+> Adding "remove-psdrive" to the script ensures that the background process finishes before proceeding.  
 
 ###  <a name="DeleteFolder"></a> Deleting a Folder  
  The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.  
@@ -3487,7 +3486,7 @@ Remove-item -path "DS002:\Applications\Adobe" -Verbose
 ```  
 
 > [!NOTE]
->  The script will fail if the folder is not empty.  
+> The script will fail if the folder is not empty.  
 
 ###  <a name="ImportDeviceDriver"></a> Importing a Device Driver  
  The following Windows PowerShell commands will import the Dell 2407 WFP monitor device driver into the Production deployment share.  
