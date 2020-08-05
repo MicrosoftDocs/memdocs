@@ -121,6 +121,8 @@
     items:
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-macos.md
+    - name: Direct Enrollment for macOS devices
+      href: device-enrollment-direct-enroll-macos.md      
   - name: Incomplete enrollment report
     href: enrollment-report-company-portal-abandon.md
 
