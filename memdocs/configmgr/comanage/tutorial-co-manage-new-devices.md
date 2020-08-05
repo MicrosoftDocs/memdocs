@@ -122,7 +122,7 @@ Request a version 2 key provider type when you generate a CSR. Only version 2 ce
 >
 > If you use any additional, separate CDPs, you need to request separate certificates for each additional CDP. To request a public certificate for a CDP, use the same details as for the cloud management gateway CSR. You need to only change the common name so that it is unique for each CDP.
 >
-> **Note:** Using an additional, separate CDP is deprecated and no longer recommended. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
+> Using an additional, separate CDP is deprecated and no longer recommended. For more information, see [Deprecated features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### Details for the cloud management gateway CSR
 
@@ -411,7 +411,7 @@ The following procedure deploys the app for installing the Configuration Manager
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). Select **Apps** > **All Apps** and then select **ConfigMgr Client Setup Bootstrap**, the app you created to deploy the Configuration Manager client.  
 
-2. Click **Properties** then **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
+2. Select **Properties** then **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure Active Directory (AD) groups that have users and devices that you want to participate in co-management.  
 
 3. Select **Review + save** and then **Save** the configuration.
 The app is now required by users and devices you assigned it to. After the app installs the Configuration Manager client on a device, it's managed by co-management.
