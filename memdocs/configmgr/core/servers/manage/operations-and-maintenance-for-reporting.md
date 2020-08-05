@@ -28,7 +28,7 @@ Configuration Manager stores its reports in SQL Server Reporting Services. The r
 When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)
+> Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Use the following procedures to run a Configuration Manager report.
 
