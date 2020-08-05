@@ -60,9 +60,8 @@ public void SynchronizeSoftwareUpdatePoint(WqlConnectionManager connection)
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  

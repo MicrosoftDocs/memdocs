@@ -36,8 +36,7 @@ You add updates to a software updates deployment package, in Configuration Manag
 
  Example of the method call in C#:  
 
-```  
-
+```c#
 // PREWORK FOR AddUpdatesToSUMDeploymentPackage  
 
 // Define the array of Content Ids to load into addUpdateContentParameters.  
@@ -55,11 +54,9 @@ addUpdateContentParameters.Add("bRefreshDPs", false);
 AddUpdatestoSUMDeploymentPackage(WMIConnection,  
                                  "ABC00001",  
                                  addUpdateContentParameters);  
-
 ```  
 
-```c#  
-
+```c#
 public void AddUpdatestoSUMDeploymentPackage(WqlConnectionManager connection,  
                                             string existingSUMPackageID,  
                                             Dictionary<string, object> addUpdateContentParameters)  
@@ -83,14 +80,12 @@ public void AddUpdatestoSUMDeploymentPackage(WqlConnectionManager connection,
         throw;  
     }  
 }  
-
 ```  
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`|The package ID for an existing software updates deployment package.|  
 |`addUpdateContentParameters`|-   Managed: `dictionary` object|The set of parameters (`ContentIDs`, `ContentSourcePath`, `bRefreshDPs`) that is passed into the method and used with the `AddUpdateContent` method call.|  

@@ -77,8 +77,8 @@ When a boot image is based on a different version of the Windows ADK installed o
 
 During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the supported version of the Windows ADK. Depending on the version of Configuration Manager, you can add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE. The following list is the currently supported Windows ADK and WinPE versions:
 
-|  |  |
-|---------|---------|
+| Windows type | Supported versions |
+|--------------|--------------------|
 | Windows ADK version | Windows ADK for Windows 10 |
 | Windows PE versions for boot images customizable from the Configuration Manager console | Windows PE 10 |
 | Supported Windows PE versions for boot images *not customizable* from the Configuration Manager console | - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
