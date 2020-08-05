@@ -9,10 +9,6 @@
     href: windows-autopilot.md
   - name: Requirements
     href: windows-autopilot-requirements.md
-- name: Quickstarts
-  items:
-  - name: Demonstrate Autopilot deployment
-    href: demonstrate-deployment-on-vm.md  
 
 - name: Concepts
   items:
@@ -35,22 +31,20 @@
 
 - name: How-to guides
   items:
-    - name: Administer Windows Autopilot
-      items:
-      - name: Register devices
-        href: add-devices.md
-      - name: Enroll devices in Intune
-        href: enrollment-autopilot.md
-      - name: Deploy hybrid Azure AD-joined devices
-        href: windows-autopilot-hybrid.md
-      - name: Configure device profiles
-        href: profiles.md
-      - name: Enrollment Status Page
-        href: enrollment-status.md
-      - name: BitLocker encryption
-        href: bitlocker.md
-      - name: DFCI management
-        href: dfci-management.md
+    - name: Register devices
+      href: add-devices.md
+    - name: Enroll devices in Intune
+      href: enrollment-autopilot.md
+    - name: Deploy hybrid Azure AD-joined devices
+      href: windows-autopilot-hybrid.md
+    - name: Configure device profiles
+      href: profiles.md
+    - name: Enrollment Status Page
+      href: enrollment-status.md
+    - name: BitLocker encryption
+      href: bitlocker.md
+    - name: DFCI management
+      href: dfci-management.md
        
     - name: Troubleshoot Windows Autopilot
       items:
