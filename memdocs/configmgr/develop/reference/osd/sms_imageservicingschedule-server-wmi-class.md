@@ -47,8 +47,8 @@ Class SMS_ImageServicingSchedule : SMS_BaseClass
 
  Action for software update.  
 
-|||  
-|-|-|  
+| Value | Update action |  
+| ----- | ------------- |  
 |0|None.|  
 |1|Install software update immediately.|  
 |2|Cancel software update installation.|  
@@ -118,8 +118,8 @@ Class SMS_ImageServicingSchedule : SMS_BaseClass
 
  State for software update installation at this scheduled time.  
 
-|||  
-|-|-|  
+| Value | Installation state |  
+| ----- | ------------------ |  
 |0|None|  
 |1|Scheduled|  
 |2|Running|  
