@@ -16,11 +16,12 @@ ms.author: mstewart
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
-
 > [!Important]
 > - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
+
+   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
 
 ## Prerequisites
 
@@ -29,10 +30,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
 
-Additionally, you'll need the following for user targeted applications:
+Additionally, you'll need the following for installing [user targeted applications](#bkmk_user):
 
 - Configuration Manager version 2006 and the corresponding version of the console installed
-- At least one application deployed to the signed in user with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
+- At least one application deployed to the user currently logged on to the device with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
    - User targeted applications or applications without the approval option set don't appear in the application list.
 
 ## Permissions
@@ -44,21 +45,31 @@ The user account needs the following permissions:
 - The **Approve** permission for **Application** in Configuration Manager.
 - The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
   - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
+    - The [Application Administrator role in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
 
 ## Deploy an application to a device
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace and select the **Devices** node.
-1. Right-click on a device that's been uploaded to Microsoft Endpoint Manager.
-1. In the right-click menu, select **Start** > **Admin Center Preview** to open the preview in your browser.
-1. Go to **Applications** in the admin center preview.
+
+1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. Select **Devices** then **All Devices**.
+1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
+1. Select **Applications**.
 1. Select the application and click **Install**.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
-
-## Deploy an application to a user
-
+   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
 
 ## Application status
+The following status 
+
+## <a name="bkmk_user"></a> Deploy an application to a user
+<!--7518897-->
+Starting in Configuration Manager version 2006, user available applications appear in the **Applications** node for a ConfigMgr device. The application list in the admin center includes applications deployed to the user currently logged on to the device.
+
+   - Multi-user session scenarios aren't supported.
+   - Azure AD joined devices aren't currently supported, only AD joined devices.
+
+
+
 
 
 ## Next steps
