@@ -127,7 +127,7 @@ Class SMS_PDF_Package : SMS_BaseClass
 
  Load status of the package definition file. Possible values are:  
 
-|||  
+|Value|Load status|  
 |-|-|  
 |0|Loaded|  
 |1|RequiresIcon|  

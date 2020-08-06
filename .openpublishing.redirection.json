@@ -74,6 +74,11 @@
             "source_path": "memdocs/configmgr/develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md",
             "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/demonstrate-deployment-on-vm.md",
+            "redirect_url": "https://docs.microsoft.com/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
+            "redirect_document_id": false
         }
     ]
 }

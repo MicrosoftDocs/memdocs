@@ -55,7 +55,7 @@ Class SMS_CIContentFiles : SMS_BaseClass
 
  Access type: Read-only  
 
- Qualifiers: [read ,key, Not_null]  
+ Qualifiers: [read, key, Not_null]  
 
  ID for the software update content. See the `ContentID` property of [SMS_CIToContent Server WMI Class](../../../develop/reference/sum/sms_citocontent-server-wmi-class.md).  
 
@@ -140,8 +140,8 @@ Class SMS_CIContentFiles : SMS_BaseClass
 
  Secured object class ID. Possible values are listed below.  
 
-|||  
-|-|-|  
+| ID value | Object type |  
+| -------- | ----------- |  
 |0|PKG_TYPE_REGULAR|  
 |3|PKG_TYPE_DRIVER|  
 |4|PKG_TYPE_TASK_SEQUENCE|  
