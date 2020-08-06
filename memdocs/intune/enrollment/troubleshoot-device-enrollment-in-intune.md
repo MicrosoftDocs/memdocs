@@ -70,7 +70,7 @@ Check to see that the user isn't assigned more than the maximum number of device
 
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
 
-3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll any more until:
+3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
     - [Existing devices are removed](../remote-actions/devices-wipe.md), or
     - You increase the device limit by [setting device restrictions](enrollment-restrictions-set.md).
 
@@ -229,7 +229,7 @@ To fix the issue, import the certificates into the Computers Personal Certificat
 4. Choose the **Certification Path** tab to see the certificate's parent certificate/s.
 5. On each parent certificate, choose **View Certificate**.
 6. Choose **Details** > **Copy to file…**.
-7. Follow the wizard prompts to export or save the public key of the parent certificate to the a file location of your choice.
+7. Follow the wizard prompts to export or save the public key of the parent certificate to the file location of your choice.
 8. Right-click **Certificates** > **All Tasks** > **Import**.
 9. Follow the wizard prompts to import the parent certificate(s) to **Local Computer\Personal\Certificates**.
 10. Restart the AD FS servers.
@@ -294,7 +294,9 @@ Once enrolled, the devices return to a healthy state and regain access to compan
 
 Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 For more information, see [Get-AdfsEndpoint documentation](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -426,7 +428,7 @@ The account certificate of the previous account is still present on the computer
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |The clock on the client computer isn't set to the correct time.|Make sure that the clock and the time zone on the client computer are set to the correct time and time zone.|
 |0x80240438, 0x80CF0438, 0x80CF402C|can't connect to the Intune service. Check the client proxy settings.|Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
-|0x80240438, 0x80CF0438|Proxy settings in Internet Explorer and Local System aren't configured.|can't connect to the Intune service. Check the client proxy settings.Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
+|0x80240438, 0x80CF0438|Proxy settings in Internet Explorer and Local System aren't configured.|can't connect to the Intune service. Check the client proxy settings. Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Enrollment package is out of date.|Download and install the current client software package from the Administration workspace.|
 |0x80043002, 0x80CF3002|Account is in maintenance mode.|You can't enroll new client computers when the account is in maintenance mode. To view your account settings, sign in to your account.|
 |0x80043003, 0x80CF3003|Account is deleted.|Verify that your account and subscription to Intune is still active. To view your account settings, sign in to your account.|
