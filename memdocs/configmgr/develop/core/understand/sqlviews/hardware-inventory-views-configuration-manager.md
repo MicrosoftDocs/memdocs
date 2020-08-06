@@ -538,7 +538,7 @@ Select
     SBS.LatestBootDuration0 as 'Latest Boot Duration',
     SBS.LatestCoreBootDuration0 as 'Latest Core Boot Duration',
     SBS.LatestEventLogStart0 as 'Latest Event Log Start',
-    SBS.LatestGPDuration0 as 'Latest Group Ploci Duration',
+    SBS.LatestGPDuration0 as 'Latest Group Policy Duration',
     SBS.LatestUpdateDuration0 as 'Latest Update Duration'
 from
     dbo.v_R_System_Valid RV

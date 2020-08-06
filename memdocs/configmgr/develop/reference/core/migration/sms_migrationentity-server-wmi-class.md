@@ -66,7 +66,7 @@ Class SMS_MigrationEntity : SMS_BaseClass
 
  Entity dashboard state. Possible values are:  
 
-|||  
+|Value|Entity dashboard state|  
 |-|-|  
 |0|Remaining|  
 |1|Migrated|  
@@ -171,7 +171,7 @@ Class SMS_MigrationEntity : SMS_BaseClass
 
  Entity migration status. Possible values are:  
 
-|||  
+|Value|Entity migration status|  
 |-|-|  
 |0|AVAILABLETOMIGRATE|  
 |1|MIGRATED|  

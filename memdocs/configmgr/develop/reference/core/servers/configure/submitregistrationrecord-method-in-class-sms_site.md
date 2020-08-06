@@ -72,9 +72,9 @@ SInt32 SubmitRegistrationRecord(
 
  Qualifiers: [in, optional]  
 
- UdaSetting. . The default value for this parameter is Disabled (0).  
+ UdaSetting. The default value for this parameter is Disabled (0).  
 
-|||  
+|Value|UdaSetting|  
 |-|-|  
 |0|Disabled|  
 |1|Pending|  

@@ -56,7 +56,7 @@ Class SMS_ADForestDiscoveryStatus : SMS_BaseClass
 
  Discovery status. Possible values are:  
 
-|||  
+|Value|Discovery status|  
 |-|-|  
 |0|SUCCEEDED|  
 |1|COMPLETED|  
@@ -109,7 +109,7 @@ Class SMS_ADForestDiscoveryStatus : SMS_BaseClass
 
  Publishing status. Possible values are:  
 
-|||  
+|Value|Publishing status|  
 |-|-|  
 |0|UNKNOWN|  
 |1|SUCCEEDED|  

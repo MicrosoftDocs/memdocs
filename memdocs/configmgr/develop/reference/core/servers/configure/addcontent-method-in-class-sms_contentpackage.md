@@ -59,7 +59,7 @@ sint32 AddContent (
 
  This specifies additional attributes for the content instance.  
 
-|||  
+|Value|Content flag|  
 |-|-|  
 |8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|  
 |12|DOWNLOAD_FROM_LOCAL_DISPPOINT|  

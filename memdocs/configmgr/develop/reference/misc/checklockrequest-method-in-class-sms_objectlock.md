@@ -55,8 +55,8 @@ SInt32 CheckLockRequest(
 
  The state of the lock request. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Request state |
+| ----- | ------------- |
 |0|Unknown|  
 |2|Requested|  
 |3|RequestCanceled|  
@@ -80,8 +80,8 @@ SInt32 CheckLockRequest(
 
  Indicates the current state of the requested lock. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Lock state |
+| ----- | ---------- |
 |0|Unassigned|  
 |1|Assigned|  
 |2|Requested|  

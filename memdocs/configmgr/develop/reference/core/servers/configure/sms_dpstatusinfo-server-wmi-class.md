@@ -106,7 +106,7 @@ Class SMS_DPStatusInfo : SMS_BaseClass
 
  State of the message.  
 
-|||  
+|Value|Message state|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

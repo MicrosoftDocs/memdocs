@@ -38,8 +38,8 @@ uint32 SubmitCertificate
 
  Required. Certificate type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Certificate type |  
+| ----- | ---------------- |  
 |1|Windows Intune Subscription|  
 
  `CertData`  
