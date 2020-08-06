@@ -5,7 +5,7 @@ description: Learn about the specific data that Configuration Manager collects a
 ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ae8b48f8-391e-49d6-bb1a-9205378acef8
 author: aczechowski
 ms.author: aaroncz
@@ -139,6 +139,14 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of clients by default and preferred browser
 
+- ***[Moved]*** Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
+
+- ***[Moved]*** SQL AlwaysOn replica information, usage, and health status  
+
+- ***[New]*** Admin console notification configuration and status
+
+- ***[New]*** Site health check configuration and status
+
 ## <a name="bkmk_level2"></a> Level 2 - Enhanced
 
 For Configuration Manager version 2006, this level includes the following data:
@@ -265,7 +273,7 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - OS age in months  
 
-- Number of hardware inventory classes, software inventory rules, and file collection rules  
+- ***[Updated]*** - ***[New]***  software inventory rules, file collection rules, and overall health status
 
 - Statistics for device health attestation: most common error codes, number of on-premises servers, and counts of devices in various states  
 
@@ -277,11 +285,11 @@ For Configuration Manager version 2006, this level includes the following data:
 
 - Count of client health check failures by issue type
 
+- ***[New]*** Summarized count of Endpoint Analytics event
+
 ### Cloud Services  
 
 - Azure Active Directory discovery statistics  
-
-- Configuration and usage statistics of Cloud Management Gateway: counts of regions and environments, and authentication/authorization statistics  
 
 - Count of collections synced to Azure Log Analytics  
 
@@ -340,6 +348,8 @@ For Configuration Manager version 2006, this level includes the following data:
 - Count of deployed Microsoft Edge Legacy browser policies  
 
 - Count of OneDrive policies (created, deployed)
+
+- ***[New]*** Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
 
 ### Configuration Manager console
 
@@ -538,8 +548,6 @@ For Configuration Manager version 2006, this level includes the following data:
 - Discovery operational statistics (count of objects found)  
 
 - Discovery types, enabled, and schedule (full, incremental)  
-
-- SQL AlwaysOn replica information, usage, and health status  
 
 - SQL change tracking performance issues, retention period, and autocleanup state  
 

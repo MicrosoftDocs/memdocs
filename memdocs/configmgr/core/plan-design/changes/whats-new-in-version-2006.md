@@ -133,7 +133,7 @@ For more information, see the following articles:
 
 <!--3601213-->
 
-Configuration Manager provides many options to manage device restart notifications. You can now configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
+Configuration Manager provides many options to manage device restarts and restart notifications. You can now configure a client setting to prevent devices from automatically restarting when a deployment requires it. This setting gives you more control in unique situations. By default, the client setting **Configuration Manager can force a device to restart** is enabled, so Configuration Manager can still force devices to restart. This setting only applies to application, software update, and package deployments that require a restart.
 
 For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
 

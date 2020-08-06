@@ -2,7 +2,7 @@
 title: Levels of diagnostic usage data
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 04/01/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -58,11 +58,11 @@ To change the data collection level, you need **Modify** permissions on the **Si
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
+- [Diagnostic and usage data for 2006](levels-of-diagnostic-usage-data-collection-2006.md)
 - [Diagnostic and usage data for 2002](levels-of-diagnostic-usage-data-collection-2002.md)
 - [Diagnostic and usage data for 1910](levels-of-diagnostic-usage-data-collection-1910.md)
 - [Diagnostic and usage data for 1906](levels-of-diagnostic-usage-data-collection-1906.md)
 - [Diagnostic and usage data for 1902](levels-of-diagnostic-usage-data-collection-1902.md)
-- [Diagnostic and usage data for 1810](levels-of-diagnostic-usage-data-collection-1810.md)
 
 ## Next steps
 
