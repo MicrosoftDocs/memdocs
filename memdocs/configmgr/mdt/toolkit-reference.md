@@ -3716,11 +3716,11 @@ cscript.exe LiteTouch.vbs /debug:true
 </DomainOUs>  
 ```  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3736,11 +3736,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3760,11 +3760,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3782,11 +3782,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, there are two sections for each of the computer manufacturers [Mfgr01] and [Mfgr02]. Two driver groups are defined for the manufacturer Mfgr01: Mfgr01 Video Drivers and Mfgr01 Network Drivers. For the manufacturer Mfgr02, one driver group is defined, Mfgr02 Drivers. One driver group, Shared Drivers, is applied to all computers found in the [Default] section.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3799,11 +3799,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="DriverInjectionMode"></a> DriverInjectionMode  
  This property is used to control the device drivers that are injected by the [Inject Drivers](#InjectDrivers) task sequence step.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3817,11 +3817,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="DriverPaths"></a> DriverPaths  
  A list of UNC paths to shared folders where additional device drivers are located. These device drivers are installed with the target operating system on the target computer. The MDT scripts copy the contents of these folders to the C:\Drivers folder on the target computer. The **DriverPaths** property is a list of text values that can be any non-blank value. The **DriverPaths** property has a numeric suffix (for example, **DriverPaths001** or **DriverPaths002**).  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3834,11 +3834,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="DriverSelectionProfile"></a> DriverSelectionProfile  
  Profile name used during driver installation.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3851,11 +3851,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="EventService"></a> EventService  
  The **EventService** property specifies the URL where the MDT monitoring service is running. By default, the service uses TCP port 9800 to communicate. The MDT monitoring service collects deployment information on the deployment process that can be viewed in the Deployment Workbench and using the [Get-MDTMonitorData](#Get-MDTMonitorData) cmdlet.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -3870,11 +3870,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  By default, the shared folder is created in C:\Events.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3893,11 +3893,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase so that the deployment scripts can read it properly.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3916,11 +3916,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
   Besides controlling the method used to install these operating systems, this property affects which operating system task sequences are listed in the Deployment Wizard for a specific processor architecture boot image. When the value of this property is set to **NEVER**, only operating system task sequences that match the processor architecture of the boot image are displayed. If the value of this property is set to any other value or is blank, all task sequences that can use the imagex.exe installation method are shown, regardless of the processor architecture.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3935,11 +3935,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="ForestLevel"></a> ForestLevel  
  This entry specifies the forest functional level when a new domain is created in a new forest.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3955,11 +3955,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This value is different from the user credentials created after the operating system is deployed. The **FullName** property is provided as information to systems administrators about the user running applications on the target computer.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3979,11 +3979,11 @@ cscript.exe LiteTouch.vbs /debug:true
 |Windows 7 with SP1|Win7SP1-MDTGPOPack|  
 |Windows Server 2008 R2|WS2008R2SP1-MDTGPOPack|  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -3996,11 +3996,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="Groups"></a> Groups  
  The list of local groups on the target computer whose membership will be captured. This group membership is captured during the State Capture Phase and is restored during the State Restore Phase. (The default groups are Administrators and Power Users.) The **Groups** property is a list of text values that can be any non-blank value. The **Groups** property has a numeric suffix (for example, **Groups001** or **Groups002**).  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -4016,11 +4016,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can be used with the **DisableTaskMgr** property to help prevent users from interrupting the LTI task sequence. For more information, see the [DisableTaskMgr](#DisableTaskMgr) property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -4034,11 +4034,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="Home_Page"></a> Home_Page  
  The URL to be used as the Windows Internet Explorer&reg; home page after the target operating system is deployed.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -4054,11 +4054,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This is the computer name of the target computer, not the NetBIOS computer name of the target computer. The NetBIOS computer name can be shorter than the computer name. Also, this property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4074,11 +4074,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|
 |-|-|  
@@ -4093,11 +4093,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Exclude this setting in the Windows User State Migration Tool (USMT) when backing up and restoring user state information. Otherwise, the settings in the user state information will override the values specified in the *InputLocale* property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|  
@@ -4113,11 +4113,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4130,11 +4130,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="Instance"></a> Instance  
  The instance of SQL Server used for querying property values from columns in the table specified in the **Table** property. The database resides on the computer specified in the **SQLServer** property. The instance of SQL Server on the computer is specified in the **Instance** property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|-||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 | **Value** | **Description** |
 |-----------|-----------------|
@@ -4150,11 +4150,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4173,11 +4173,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4211,11 +4211,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The IsVM property should be used to determine whether the target computer is a virtual or physical machine.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4235,11 +4235,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4253,11 +4253,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="IsServer"></a> IsServer  
  Indicator of whether the computer is a server, because the **Win32\_SystemEnclosure ChassisType** property value is **23** or **28**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4274,11 +4274,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4295,11 +4295,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4316,11 +4316,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4351,11 +4351,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4369,11 +4369,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="JoinDomain"></a> JoinDomain  
  The domain that the target computer joins after the target operating system is deployed. This is the domain where the computer account for the target computer is created. The **JoinDomain** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinDomain** property cannot be blank or contain spaces.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4386,11 +4386,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="JoinWorkgroup"></a> JoinWorkgroup  
  The workgroup that the target computer joins after the target operating system is deployed. The **JoinWorkgroup** property can contain alphanumeric characters, hyphens \(\-\), and underscores \(\_\). The **JoinWorkgroup** property cannot be blank or contain spaces.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4408,11 +4408,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|-||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4432,11 +4432,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  For this property to function properly, it must be configured in both CustomSettings.ini and BootStrap.ini. BootStrap.ini is processed before a deployment share (which contains CustomSettings.ini) has been selected.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|-||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4453,11 +4453,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="LanguagePacks"></a> LanguagePacks  
  A list of the GUIDs for the language packs to be deployed on the target computer. Deployment Workbench specifies these language packs on the OS Packages node. These GUIDs are stored in the Packages.xml file. The **LanguagePacks** property has a numeric suffix (for example, **LanguagePacks001** or **LanguagePacks002**).  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4475,11 +4475,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  Do not add any of the following command-line arguments when configuring this property: **/hardlink**, **/nocompress**, **/decrypt**, **/key**, or **/keyfile**. The MDT scripts will add these command-line arguments if applicable to the current deployment scenario.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4498,11 +4498,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  Then the scripts parse each section that corresponds to the locations returned in the query. For example, the value `[Springfield]`and the section `[Springfield-123 Oak Street-4th Floor]` in CustomSettings.ini can represent the corresponding locations. This is an example of how one computer can belong to two locations. The `[Springfield]`section is for all computers in a larger geographic area (an entire city), and the `[Springfield-123 Oak Street-4th Floor]` section is for all computers on the fourth floor at 123 Oak Street, in Springfield.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|-||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |          **Value**           |                                    **Description**                                     |
 |------------------------------|----------------------------------------------------------------------------------------|
@@ -4515,11 +4515,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="LongDistanceAccess"></a> LongDistanceAccess  
  The dialing digits to gain access to an outside line to dial long distance. The property can contain only numeric digits. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4532,11 +4532,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="MACAddress"></a> MACAddress  
  The media access control (MAC) layer address of the primary network adapter of the target computer. The **MACAddress** property is included on the **Priority** line so that property values specific to a target computer can be provided. Create a section for each MAC address for each of the target computers (such as `[00:0F:20:35:DE:AC]`or `[00:03:FF:FE:FF:FF]`) that contain target computer–specific settings.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4555,11 +4555,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  If a computer object already exists in AD DS, specifying **MachineObjectOU** will not cause the computer object to be moved to the specified OU.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4575,11 +4575,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4592,11 +4592,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="MandatoryApplications"></a> MandatoryApplications  
  A list of application GUIDs that will be installed on the target computer. These applications are specified on the Applications node in the Deployment Workbench. The GUIDs are stored in the Applications.xml file. The **MandatoryApplications** property is a list of text values that can be any non\-blank value. The **MandatoryApplications** property has a numeric suffix \(for example, **MandatoryApplications001** or **MandatoryApplications002**\).  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4612,11 +4612,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4632,11 +4632,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by MDT scripts and cannot have its value set in CustomSettings.ini or the MDT DB. Treat this property as read only. However, you can use this property within CustomSettings.ini or the MDT DB, as shown in the following examples, to aid in defining the configuration of the target computer.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4649,11 +4649,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="NetLib"></a> NetLib  
  The protocol to be used to communicate with the computer running SQL Server specified in the **SQLServer** property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|\-||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4667,11 +4667,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="NewDomain"></a> NewDomain  
  Indicates the type of a new domain: whether a new domain in a new forest, the root of a new tree in an existing forest, or a child of an existing domain.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4686,11 +4686,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="NewDomainDNSName"></a> NewDomainDNSName  
  Specifies the required name of a new tree in an existing domain or when Setup installs a new forest of domains.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4705,11 +4705,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  For example, if **Order\=Sequence** is specified in the CustomSettings.ini file, then an **ORDER BY** sequence clause is added to the query. **Specifying Order\=Make**, **Model** adds an **ORDER BY Make, Model** clause to the query.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|\-||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4722,11 +4722,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OrgName"></a> OrgName  
  The name of the organization that owns the target computer. This value is inserted into the appropriate configuration settings in Unattend.xml.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4742,11 +4742,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4763,11 +4763,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4784,11 +4784,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4806,11 +4806,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0Description** or **OSDAdapter1Description**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4826,11 +4826,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSDomain** or **OSDAdapter1DNSDomain**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI||  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4846,11 +4846,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSServerList** or **OSDAdapter1DNSServerList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4866,11 +4866,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0DNSSuffix** or **OSDAdapter1DNSSuffix**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4886,11 +4886,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDHCP** or **OSDAdapter1EnableDHCP**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4907,11 +4907,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableDNSRegistration** or **OSDAdapter1EnableDNSRegistration**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4928,11 +4928,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableFullDNSRegistration** or **OSDAdapter1EnableFullDNSRegistration**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4949,11 +4949,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero-based array that contains network adapter information, such as **OSDAdapter0EnableLMHosts** or **OSDAdapter1EnableLMHosts**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI|-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4969,11 +4969,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  The*x*in this property's name is a placeholder for a zero-based array that contains network adapter information, such as *OSDAdapter0EnableIPProtocolFiltering* or **OSDAdapter1EnableIPProtocolFiltering**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -4990,11 +4990,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this property's name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPFiltering** or **OSDAdapter1EnableTFiltering**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5011,11 +5011,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0EnableTCPIPFiltering** or **OSDAdapter1EnableTCPIPFiltering**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5035,11 +5035,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5056,11 +5056,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0GatewayCostMetric** or **OSDAdapter1GatewayCostMetric**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5076,11 +5076,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Gateways** or **OSDAdapter1Gateways**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5096,11 +5096,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPAddressList** or **OSDAdapter1IPAddressList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5116,11 +5116,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0IPProtocolFilterList** or **OSDAdapter1IPProtocolFilterList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5136,11 +5136,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0MacAddress** or **OSDAdapter1MacAddress**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5156,11 +5156,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0Name** or **OSDAdapter1Name**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI||  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5176,11 +5176,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0SubnetMask** or **OSDAdapter1SubnetMask**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5196,11 +5196,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPFilterPortList** or **OSDAdapter1TCPFilterPortList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5216,11 +5216,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0TCPIPNetBiosOptions** or **OSDAdapter1TCPIPNetBiosOptions**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5237,11 +5237,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0UDPFilterPortList** or **OSDAdapter1UDPFilterPortList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5257,11 +5257,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x*in this properties name is a placeholder for a zero\-based array that contains network adapter information, such as **OSDAdapter0WINSServerList** or **OSDAdapter1WINSServerList**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5274,11 +5274,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDAdapterCount"></a> OSDAdapterCount  
  Specifies the number of network connections that are to be configured.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5294,11 +5294,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5314,11 +5314,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5340,11 +5340,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
 -   An external startup key  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5360,11 +5360,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword  
  Instead of generating a random recovery password, the **Enable BitLocker** task sequence action uses the specified value as the recovery password. The value must be a valid numerical BitLocker recovery password.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5377,11 +5377,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey  
  Instead of generating a random startup key for the key management option **Startup Key on USB only**, the **Enable BitLocker** task sequence action uses the value as the startup key. The value must be a valid, Base64\-encoded BitLocker startup key.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5394,11 +5394,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDBitLockerStartupKeyDrive"></a> OSDBitLockerStartupKeyDrive  
  The location for storing the BitLocker recovery key and startup key.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5411,11 +5411,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDBitLockerTargetDrive"></a> OSDBitLockerTargetDrive  
  Specifies the drive to be encrypted. The default drive is the drive that contains the operating system.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5431,11 +5431,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5452,11 +5452,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can also be set within a task sequence using a customized **Set Task Sequence Variable** task sequence step.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5472,11 +5472,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property can be used in conjunction with the **OSDDiskOffset** property to set the **offset** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskOffset](#OSDDiskOffset) property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5489,11 +5489,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDDiskIndex"></a> OSDDiskIndex  
  Specifies the disk index that will be configured.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5508,11 +5508,11 @@ cscript.exe LiteTouch.vbs /debug:true
 
  This property can be used in conjunction with the **OSDDiskAlign** property to set the **align** parameter for the **create partition primary** command in the **DiskPart** command. For more information, see the [OSDDiskAlign](#OSDDiskAlign) property.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5525,11 +5525,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDDiskPartBiosCompatibilityMode"></a> OSDDiskPartBiosCompatibilityMode  
  This property specifies whether to disable cache alignment optimizations when partitioning the hard disk for compatibility with certain types of BIOS.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5546,11 +5546,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5566,11 +5566,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5586,11 +5586,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5606,11 +5606,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5626,11 +5626,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5646,11 +5646,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  This property is dynamically set by the MDT scripts and is not configured in CustomSettings.ini or the MDT DB. Treat this property as read only.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|||||  
-|MDT DB|||ZTI|\-|  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5663,11 +5663,11 @@ cscript.exe LiteTouch.vbs /debug:true
 ####  <a name="OSDPartitions"></a> OSDPartitions  
  Specifies the number of defined partitions configurations. The maximum number of partitions that can be configured is two. The default is **None**.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|\-|  
-|CustomSettings.ini|\-||||  
-|MDT DB|\-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5683,11 +5683,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!NOTE]
 >  The*x* in this properties name is a placeholder for a zero-based array that contains partition configurations.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5707,11 +5707,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
@@ -5730,11 +5730,11 @@ cscript.exe LiteTouch.vbs /debug:true
 > [!CAUTION]
 >  This property value must be specified in uppercase letters so that the deployment scripts can properly read it.  
 
-|**Property configured by**|||**Property applies to**||  
-|-|-|-|-|-|  
-|BootStrap.ini|||LTI|-|  
-|CustomSettings.ini|-||||  
-|MDT DB|-||ZTI||  
+|Property configured by|Property applies to|  
+|-|-|  
+|BootStrap.ini|LTI|  
+|CustomSettings.ini|-|  
+|MDT DB|ZTI|  
 
 |**Value**|**Description**|  
 |-|-|
