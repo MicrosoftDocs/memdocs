@@ -72,9 +72,6 @@ Power BI template apps enable Power BI partners to build Power BI apps with litt
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-#### Win32 app installation notifications and the Company Portal<!-- 7485945  -->
-End users can now decide whether the applications shown in the [Microsoft Intune Web Company Portal](https://portal.manage.microsoft.com/) should be opened by the Company Portal app or the Company Portal website. This option is only available if the end user has the Company Portal app installed and launches a Web Company Portal application outside of a browser. 
-
 #### Exchange On-Premises Connector support<!-- 7138486  -->
 Intune is removing support for the Exchange On-Premises Connector feature from the Intune service beginning in the 2007 (July) release. Existing customers with an active connector will be able to continue with the current functionality at this time. New customers and existing customers that do not have an active connector will no longer be able to create new connectors or manage Exchange ActiveSync (EAS) devices from Intune. For those customers, Microsoft recommends the use of Exchange [hybrid modern authentication (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) to protect access to Exchange on-premises. HMA enables both Intune App Protection Policies (also known as MAM) and Conditional Access through Outlook Mobile for Exchange on-premises.
 

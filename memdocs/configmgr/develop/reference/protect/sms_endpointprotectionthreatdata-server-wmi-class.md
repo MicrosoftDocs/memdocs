@@ -43,8 +43,8 @@ Class SMS_EndpointProtectionThreatData : SMS_BaseClass
 
  Identifier of the action the EndPoint Protection agent will take for this particular threat.  
 
-|||  
-|-|-|  
+| Value | Default action |  
+| ----- | -------------- |  
 |0|Recommend|  
 |2|Quarantine|  
 |3|Remove|  

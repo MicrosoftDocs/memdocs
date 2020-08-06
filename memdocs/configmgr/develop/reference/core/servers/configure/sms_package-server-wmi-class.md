@@ -114,7 +114,7 @@ Class SMS_Package : SMS_PackageBaseclass
 
  A flag that indicates the package type. Possible values are:  
 
-|||  
+|Value|Package type|  
 |-|-|  
 |2|USMT|  
 
@@ -508,7 +508,7 @@ Class SMS_Package : SMS_PackageBaseclass
 
  Possible values are:  
 
-|||  
+|Value|Transform readiness|  
 |-|-|  
 |0|Unknown|  
 |1|NotApplicable|  

@@ -82,8 +82,8 @@ Class SMS_CIRelation : SMS_BaseClass
 
  Type of relationship between configuration items. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Relationship type |  
+| ----- | ----------------- |  
 |1|Bundled|  
 |2|Required|  
 |3|Prohibited|  
