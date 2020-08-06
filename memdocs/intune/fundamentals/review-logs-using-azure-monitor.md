@@ -143,8 +143,8 @@ The following tables show a cost estimate depending on the size of the tenant. I
 
 **Audit log with 100,000 users**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Events per day| 1.5 million|
 |Estimated volume of data per month| 90 GB|
 |Estimated cost per month (USD)| $1.93|
@@ -152,8 +152,8 @@ The following tables show a cost estimate depending on the size of the tenant. I
 
 **Audit log with 1,000 users**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Events per day| 15,000|
 |Estimated volume of data per month| 900 MB|
 |Estimated cost per month (USD)| $0.02|
@@ -169,8 +169,8 @@ The following table contains estimated costs per month for a basic event hub in 
 
 **Audit log with 100,000 users**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Events per second| 18|
 |Events per five-minute interval| 5,400|
 |Volume per interval| 10.8 MB|
@@ -180,8 +180,8 @@ The following table contains estimated costs per month for a basic event hub in 
 
 **Audit log with 1,000 users**
 
-| | |
-|---|---|
+| Category | Value |
+| -------- | ----- |
 |Events per second|0.1 |
 |Events per five-minute interval| 52|
 |Volume per interval|104 KB |
