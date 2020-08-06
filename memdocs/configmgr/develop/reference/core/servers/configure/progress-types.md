@@ -33,7 +33,7 @@ static const WCHAR S_DTS_PROGRESS_DOWNLOADING_DATA[]        = L"DownloadingData"
 
 ## Types  
 
-|||  
+|Progress type|Description|  
 |-|-|  
 |S_DTS_PROGRESS_DOWNLOADING_MANIFEST|Determining list of files to download.|  
 |S_DTS_PROGRESS_PROCESSING_MANIFEST|Processing list of files.|  

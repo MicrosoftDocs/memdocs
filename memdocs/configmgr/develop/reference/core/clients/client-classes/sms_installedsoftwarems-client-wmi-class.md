@@ -46,8 +46,8 @@ Class SMS_InstalledSoftwareMS
 
  The procurement channel for the product. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|Full Packaged Product|  
 |1|Compliance Checked Product|  
 |2|OEM|  

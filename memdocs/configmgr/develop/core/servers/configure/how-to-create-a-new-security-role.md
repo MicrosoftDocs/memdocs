@@ -61,9 +61,8 @@ public void CreateRole(WqlConnectionManager connection, string roleName, string 
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |roleName|-   Managed: `String`|A name for the new role.|  
 |`originalRoleID`|-   Managed: `String`|The identifier of the original security role.|  

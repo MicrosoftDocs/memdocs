@@ -49,8 +49,8 @@ Class SMS_SummarizerSiteStatus : SMS_BaseClass
 
  Value indicating the overall health of the site. Possible values are listed below. Determining the overall status for the site hierarchy is based on the status of Configuration Manager components and storage objects.  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |GREEN(0)|OK. There are no warning or error messages.|  
 |YELLOW(1)|Warning. Warning messages were generated, but error messages were not generated. This status also indicates that the storage objects are approaching their threshold.|  
 |RED(2)|Critical. There are error messages, or the storage objects have exceeded their thresholds.|  

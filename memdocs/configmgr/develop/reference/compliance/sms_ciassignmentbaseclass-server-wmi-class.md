@@ -92,7 +92,7 @@ Class SMS_CIAssignmentBaseClass : SMS_BaseClass
 
  Action associated with the configuration item assignment. Possible values are:  
 
-|||  
+|Value|Assignment action|  
 |-|-|  
 |1|DETECT|  
 |2|APPLY|  
@@ -133,7 +133,7 @@ Class SMS_CIAssignmentBaseClass : SMS_BaseClass
 
  Type of assignment. Possible values are:  
 
-|||  
+|Value|Assignment type|  
 |-|-|  
 |0|CIA_TYPE_DCM_BASELINE|  
 |1|CIA_TYPE_UPDATES|  
@@ -177,7 +177,7 @@ Class SMS_CIAssignmentBaseClass : SMS_BaseClass
 
  The type of the configuration item. Possible values are:  
 
-|||  
+|Value|Configuration item type|  
 |-|-|  
 |1|REQUIRED|  
 |2|NOT_ALLOWED|  
@@ -379,7 +379,7 @@ Class SMS_CIAssignmentBaseClass : SMS_BaseClass
 
  Priority of state message to be reported from client. The default value is 5.  
 
-|||  
+|Value|State message priority|  
 |-|-|  
 |0|URGENT|  
 |1|HIGH|  
@@ -404,7 +404,7 @@ Class SMS_CIAssignmentBaseClass : SMS_BaseClass
 
  Value indicating whether the client should not reboot the computer, if there is a reboot pending after the configuration item is applied. Possible values are:  
 
-|||  
+|Value|Suppress reboot|  
 |-|-|  
 |0|SUPPRESS_REBOOT_WORKSTATIONS|  
 |1|SUPPRESS_REBOOT_SERVERS|  

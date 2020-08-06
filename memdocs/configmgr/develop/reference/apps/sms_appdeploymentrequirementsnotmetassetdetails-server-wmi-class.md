@@ -201,7 +201,7 @@ Class SMS_AppDeploymentRequirementsNotMetAssetDetails : SMS_BaseClass
 
  Enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement state unknown|  
 |1|Enforcement started|  
@@ -318,7 +318,7 @@ Class SMS_AppDeploymentRequirementsNotMetAssetDetails : SMS_BaseClass
 
  Type of requirement that has not been met. Possible values are:  
 
-|||  
+|Value|Type of requirement violation|  
 |-|-|  
 |0|Constraint violation|  
 |1|Conflict violation|  

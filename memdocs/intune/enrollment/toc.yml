@@ -56,10 +56,6 @@
       href: windows-bulk-enroll.md
     - name: Enrollment Status Page
       href: windows-enrollment-status.md
-    - name: Windows Autopilot Deployment Program
-      href: enrollment-autopilot.md
-    - name: Hybrid Azure AD with Autopilot
-      href: windows-autopilot-hybrid.md
     - name: Configure proxy for Intune AD Connector
       href: autopilot-hybrid-connector-proxy.md
   - name: Set up Android enrollment
@@ -125,6 +121,8 @@
     items:
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-macos.md
+    - name: Direct Enrollment for macOS devices
+      href: device-enrollment-direct-enroll-macos.md      
   - name: Incomplete enrollment report
     href: enrollment-report-company-portal-abandon.md
 
@@ -137,5 +135,7 @@
       href: troubleshoot-ios-enrollment-errors.md
     - name: Troubleshoot Windows device enrollment
       href: troubleshoot-windows-enrollment-errors.md
+    - name: Troubleshoot Windows auto-enrollment
+      href: troubleshoot-windows-auto-enrollment.md
     - name: Troubleshoot Android device enrollment
       href: troubleshoot-android-enrollment.md

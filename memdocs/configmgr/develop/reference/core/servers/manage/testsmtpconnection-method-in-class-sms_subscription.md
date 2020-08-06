@@ -68,8 +68,8 @@ sint32 TestSmtpConnection(
 
  Authentication type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Authentication type |
+| ----- | ------------------- |
 |0|Anonymous access.|  
 |1|Use the computer account of the site server.|  
 |2|Use the specified user name and password.|  
