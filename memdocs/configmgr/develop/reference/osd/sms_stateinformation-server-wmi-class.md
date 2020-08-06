@@ -69,8 +69,8 @@ Class SMS_StateInformation : SMS_BaseClass
 
  State message topic type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Topic type |  
+| ----- | ---------- |  
 |500|Software update detection|  
 |501|Software update scan status|  
 |403|Settings management scan status|  

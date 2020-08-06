@@ -73,7 +73,7 @@ Class SMS_Permission : SMS_BaseClass
 
  The type of the category. Possible values are listed below. The default value is 29.  
 
-|||  
+|Value|Category type|  
 |-|-|  
 |1|Collection|  
 |29|SecuredScope|  

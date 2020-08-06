@@ -59,8 +59,8 @@ Class SMS_ImageServicingScanRequest : SMS_BaseClass
 
  Status for this offline image installation  
 
-|||  
-|-|-|  
+| Value | Installation status |  
+| ----- | ------------------- |  
 |1|Success|  
 |2|Failed|  
 

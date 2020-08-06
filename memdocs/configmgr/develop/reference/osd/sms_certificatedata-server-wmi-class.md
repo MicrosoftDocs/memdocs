@@ -56,8 +56,8 @@ Class SMS_CertificateData : SMS_BaseClass
 
  Certificate type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Certificate type |  
+| ----- | ---------------- |  
 |1|Windows Intune Subscription|  
 
  `Description`  
