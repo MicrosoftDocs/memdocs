@@ -14,6 +14,8 @@ ms.author: mstewart
 
 # Troubleshoot ConfigMgr client details in the admin center (preview)
 <!--6374854, 6521921-->
+*Applies to: Configuration Manager (current branch)*
+
 Use the following to troubleshoot ConfigMgr client details in the Microsoft Endpoint Manager admin center:
 
 > [!Important]

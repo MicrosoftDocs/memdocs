@@ -14,6 +14,8 @@ ms.author: mstewart
 
 # Troubleshoot applications for uploaded devices in the admin center (preview)
 <!--6374854, 6521921-->
+*Applies to: Configuration Manager (current branch)*
+
 Use the following to troubleshoot Configuration Manager applications in the Microsoft Endpoint Manager admin center:
 
 > [!Important]
