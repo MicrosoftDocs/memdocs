@@ -7,7 +7,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -61,7 +61,7 @@ Xamarin apps built with the Intune App SDK Xamarin Bindings can now receive Intu
 
 Review the [license terms](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
 
-The Intune SDK relies on [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+The Intune SDK relies on [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory, ensure the steps to give your Xamarin app permissions to the Intune Mobile Application Management (MAM) service are followed. Use the instructions in the "[Give your app access to the Intune app protection service](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" section of the [getting started with the Intune SDK guide](app-sdk-get-started.md).
 
