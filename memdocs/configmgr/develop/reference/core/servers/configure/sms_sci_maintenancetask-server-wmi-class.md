@@ -68,7 +68,7 @@ Class SMS_SCI_MaintenanceTask : SMS_SiteControlItem
 
  Days of the week on which the maintenance task executes. Possible values are listed below. The default value is SUNDAY (0).  
 
-|||  
+|Value|Maintenance task day|  
 |-|-|  
 |0|SUNDAY|  
 |1|MONDAY|  
