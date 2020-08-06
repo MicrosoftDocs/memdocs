@@ -59,8 +59,8 @@ Class SMS_TaskSequence_Reference
 
  The type of reference. The possible values are:  
 
-|||  
-|-|-|  
+| Value | Reference type |  
+| ----- | -------------- |  
 |0|Package Reference|  
 |1|Application Reference|  
 

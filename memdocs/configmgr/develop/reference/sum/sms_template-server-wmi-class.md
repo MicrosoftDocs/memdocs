@@ -99,8 +99,8 @@ Class SMS_Template : SMS_BaseClass
 
  The type of the template. Currently the only possible value is:  
 
-|||  
-|-|-|  
+| Value | Template type |  
+| ----- | ------------- |  
 |0|SUM_DEPLOYMENT|  
 
 ## Remarks  

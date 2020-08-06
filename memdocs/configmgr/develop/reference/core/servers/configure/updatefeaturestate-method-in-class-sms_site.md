@@ -42,7 +42,7 @@ SInt32 UpdateFeatureState (
 
  Feature identifier. Possible values are:  
 
-|||  
+|Value|Feature identifier|  
 |-|-|  
 |1|SleepServer|  
 

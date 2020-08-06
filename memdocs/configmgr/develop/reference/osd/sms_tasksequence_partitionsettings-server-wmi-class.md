@@ -98,8 +98,8 @@ Class SMS_TaskSequence_PartitionSettings
 
   Units in which the `Size` property is specified. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Size units |  
+| ----- | ---------- |  
 |MB|Megabytes|  
 |GB|Gigabytes|  
 |Percent|Percentage of free space remaining on disk|  
