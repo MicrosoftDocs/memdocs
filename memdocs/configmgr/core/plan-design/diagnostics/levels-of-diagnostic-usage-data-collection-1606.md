@@ -345,7 +345,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
 - ***[New]*** **Miscellaneous**
 
-    - ***[New]*** Count of sites with Wake On Lan (WOL)
+    - ***[New]*** Count of sites with Wake on LAN (WOL)
 
 
 

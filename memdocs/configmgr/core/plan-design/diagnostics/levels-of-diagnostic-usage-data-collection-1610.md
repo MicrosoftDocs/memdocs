@@ -360,7 +360,7 @@ For Configuration Manager version 1610, this level includes the following:
 
 - **Miscellaneous**
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - ***[New]*** Reporting usage and performance statistics  
 

@@ -391,7 +391,7 @@ For Configuration Manager version 1702, this level includes the following:
 
     - ***[New]*** Configuration of Data Warehouse Service Point including synchronization schedule and average time
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - Reporting usage and performance statistics  
 

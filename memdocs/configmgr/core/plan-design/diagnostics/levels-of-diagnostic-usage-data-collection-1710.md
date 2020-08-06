@@ -441,7 +441,7 @@ For Configuration Manager version 1710, this level includes the following:
 
     - Count of Scripts and run statistics
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - Reporting usage and performance statistics  
 
