@@ -2,7 +2,7 @@
 title: Technical preview 2008
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2008.
-ms.date: 08/06/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,13 +24,13 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2008/1234567.md)] -->
 
-[!INCLUDE [4385028](includes/2008/4385028.md)]
-[!INCLUDE [6251274](includes/2008/6251274.md)]
-[!INCLUDE [6503308](includes/2008/6503308.md)]
-[!INCLUDE [7380401](includes/2008/7380401.md)]
-[!INCLUDE [7645732](includes/2008/7645732.md)]
-[!INCLUDE [7699463](includes/2008/7699463.md)]
-[!INCLUDE [6601203](includes/2008/6601203.md)]
+[!INCLUDE [Collection query preview](includes/2008/7380401.md)]
+[!INCLUDE [Analyze SetupDiag errors for feature updates](includes/2008/4385028.md)]
+[!INCLUDE [Monitor scenario health](includes/2008/7699463.md)]
+[!INCLUDE [Collection evaluation view](includes/2008/6251274.md)]
+[!INCLUDE [See task sequence size in the console](includes/2008/7645732.md)]
+[!INCLUDE [Delete Aged Collected Diagnostic Files task](includes/2008/6503308.md)]
+[!INCLUDE [Import objects to current folder](includes/2008/6601203.md)]
 
 <!--
 ## General known issues
