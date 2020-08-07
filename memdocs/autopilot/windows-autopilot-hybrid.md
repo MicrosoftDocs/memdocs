@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -45,7 +45,6 @@ The devices to be enrolled must also:
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
-
 
 ## Set up Windows 10 automatic enrollment
 
@@ -103,6 +102,9 @@ The organizational unit that's granted the rights to create computers must match
 ## Install the Intune Connector
 
 The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors.  Note that each connector must be able to create computer objects in any domain that you wish to support.
+
+> [!NOTE]
+> If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that's able to create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
 
 The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
