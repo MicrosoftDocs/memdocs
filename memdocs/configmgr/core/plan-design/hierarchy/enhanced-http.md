@@ -2,7 +2,7 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Enhanced HTTP
@@ -113,11 +111,13 @@ Starting in version 1902, you can also enable enhanced HTTP for the central admi
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
-## Validating the Certificate
-When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**, issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS Default Web site bound to port 443. The log mpcontrol.log will show the status of the configuration.
-
 For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## Validate the certificate
+
+When you enable enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS default web site bound to port 443.
+
+To see the status of the configuration, review **mpcontrol.log**.
 
 ## See also
 
