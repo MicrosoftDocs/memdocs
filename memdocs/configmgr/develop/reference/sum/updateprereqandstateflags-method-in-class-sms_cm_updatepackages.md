@@ -35,8 +35,8 @@ SInt32 UpdatePrereqAndStateFlags(
 
  Pre-requisites  flag for an update package. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  
@@ -48,8 +48,8 @@ SInt32 UpdatePrereqAndStateFlags(
 
  Installation state of an update package. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Installation state |  
+| ----- | ------------------ |  
 |0x2|ENABLED|  
 |0x00040001|DOWNLOAD_IN_PROGRESS|  
 |0x00040002|DOWNLOAD_SUCCESS|  

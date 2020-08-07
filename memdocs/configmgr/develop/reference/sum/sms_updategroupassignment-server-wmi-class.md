@@ -294,7 +294,7 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  Qualifiers: [not_null]  
 
- See [SMS_CIAssignmentBaseClass Server WMI Class](../../../develop/reference/compliance/sms_ciassignmentbaseclass-server-wmi-class.md)..  
+ See [SMS_CIAssignmentBaseClass Server WMI Class](../../../develop/reference/compliance/sms_ciassignmentbaseclass-server-wmi-class.md).
 
  `OverrideServiceWindows`  
  Data type: `Boolean`  
@@ -377,8 +377,8 @@ Class SMS_UpdateGroupAssignment : SMS_CIAssignmentBaseClass
 
  Verbosity of state messages sent for this deployment.  
 
-|||  
-|-|-|  
+| Value | Message verbosity |  
+| ----- | ----------------- |  
 |0|NONE|  
 |1|ERRORS|  
 |5|SUCCESSES|  
