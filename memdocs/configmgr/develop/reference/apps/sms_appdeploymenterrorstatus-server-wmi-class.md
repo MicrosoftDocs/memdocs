@@ -157,7 +157,7 @@ Class SMS_AppDeploymentErrorStatus : SMS_BaseClass
 
  Enforcement state. Possible values are:  
 
-|||  
+|Value|Description|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  
