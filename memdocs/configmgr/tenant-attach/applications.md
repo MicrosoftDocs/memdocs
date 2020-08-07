@@ -72,7 +72,7 @@ You can filter the application list based on the status.The application status c
 - **Failed**: The application installation failed.
 - **Requirements not met**: The application requirements have not been met.
 - **Not installed**: The application isn't currently installed. Typically this status is seen if a different deployment or a user removed the application.
-**Restart pending**: The application is installed but needs a restart to complete (starting in version 2006).
+- **Restart pending**: The application is installed but needs a restart to complete (starting in version 2006).
 
 ## <a name="bkmk_user"></a> Deploy an application to a user
 <!--7518897-->
