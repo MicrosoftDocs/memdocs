@@ -29,7 +29,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed
 - Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
-   - User targeted applications or applications without the approval option set don't appear in the application list.
+   - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
 
 Additionally, you'll need the following for installing [user targeted applications](#bkmk_user):<!--7518897-->
 
