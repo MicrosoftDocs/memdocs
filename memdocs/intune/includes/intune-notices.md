@@ -11,8 +11,8 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### End Support for Windows Phone 8.1<!-- 3544909 -->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1.
+### Microsoft Intune ends support for Windows Phone 8.1<!-- 3544909 -->
+Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. As of August 10, Intune will stop new enrollments for Windows Phone 8.1 and Windows Phone 8.1 will be reomved from the Intune UI.
 
 #### How does this affect me?
 Our telemetry indicates there are organizations that have Windows Phone 8.1 devices deployed in their organization. After February 20, 2020 these devices will not receive any security updates, and you will not be able to enroll any new Windows Phone 8.1 devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment will not be supported after this date, as many components, such as third party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
@@ -20,15 +20,14 @@ Our telemetry indicates there are organizations that have Windows Phone 8.1 devi
 #### What do I need to do to prepare for this change?
 You can check your Intune reporting to see what devices or users may be affected. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices and filter by OS**. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
 
-### Microsoft Intune support for Windows 10 Mobile ending<!--3544938-->
-Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
+### Microsoft Intune ends support for Windows 10 Mobile<!--3544938, 3544909 -->
+Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in the support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
 
 #### How does this affect me?
-If you have Windows 10 Mobile devices deployed in your organization, between now and August 10, 2020 you can enroll new devices, add, or remove policies and apps, or update any management settings. After August 10, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
+As of August 10, Intune will stop new enrollments for Windows 10 Mobile. Also, Windows 10 Mobile management will be reomved from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
 
 #### What do I need to do to prepare for this change?
-You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
-
+You can check your Intune reporting to see what devices or users may be affected. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
 
 ### End of support for legacy PC management
 
