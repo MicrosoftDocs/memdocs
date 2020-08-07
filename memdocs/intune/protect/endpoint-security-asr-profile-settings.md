@@ -185,10 +185,11 @@ Supported platforms and profiles:
   - **Enforce Components and Store Apps**
   - **Audit Components and Store Apps**
   - **Enforce Components, Store Apps, and Smartlocker**
-  - **Audit Components, Store Apps, and SMartlocker**
+  - **Audit Components, Store Apps, and Smartlocker**
+  CSP: [AppLocker CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/applocker-csp)
 
 - **Block users from ignoring SmartScreen warnings**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
   - **Yes** - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.
