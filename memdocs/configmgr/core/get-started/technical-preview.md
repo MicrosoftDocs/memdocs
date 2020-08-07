@@ -90,7 +90,6 @@ Microsoft supports each technical preview version up until three successive vers
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version. The following Configuration Manager technical preview branch versions are available as both in-console updates and as new baseline versions:
 
 - **Technical preview version 2007**
-- **Technical preview version 2002**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -119,7 +118,7 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2008
 
-- [Collection query preview](2020/technical-preview-2007.md#collection-query-preview) <!--7380401-->
+- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
 - [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
 - [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
 - [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
