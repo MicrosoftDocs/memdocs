@@ -12,10 +12,10 @@ ms.custom: include file
 These notices provide important information that can help you prepare for future Intune changes and features.
 
 ### End Support for Windows Phone 8.1<!-- 3544909 -->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017, and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Microsoft Intune will now end support on February 20, 2020 for Windows Phone 8.1.
+Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1.
 
 #### How does this affect me?
-Our telemetry indicates you have Windows Phone 8.1 devices deployed in your organization. After February 20, 2020 these devices will not receive any security updates, and you will not be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment will not be supported after this date, as many components, such as third-party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
+Our telemetry indicates there are organizations that have Windows Phone 8.1 devices deployed in their organization. After February 20, 2020 these devices will not receive any security updates, and you will not be able to enroll any new Windows Phone 8.1 devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment will not be supported after this date, as many components, such as third party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
 
 #### What do I need to do to prepare for this change?
 You can check your Intune reporting to see what devices or users may be affected. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices and filter by OS**. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
