@@ -31,9 +31,8 @@ class CCM_SoftwareUpdatesManager();
 ## Methods  
  The following table shows the methods in the `CCM_SoftwareUpdatesManager` class.  
 
-|||  
-|-|-|  
-|**Method**|**Description**|  
+|Method|Description|  
+|-|-|   
 |[CancelDownload Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md)|Cancels an in-progress download of software updates during a deployment.|  
 |[GetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md)|Gets the user experience mode that determines how software updates are displayed on a target computer.|  
 |[InstallUpdates Method in Class CCM_SoftwareUpdatesManager](../../../../../develop/reference/core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md)|Installs the software updates.|  
