@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot applications
+title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: "Troubleshooting applications for Configuration Manager tenant attach"
+description: "Troubleshooting application installation for Configuration Manager tenant attach"
 ms.date: 08/10/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshoot applications for uploaded devices in the admin center (preview)
+# Troubleshoot application installation for devices uploaded to the admin center (preview)
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
@@ -65,9 +65,11 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 **Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
-**Possible cause:** This error typically occurs when newly onboarding to tenant attach with Configuration Manager version 2006. Wait 15 minutes for the information to synchronize.
+**Possible causes:**
+- This error typically occurs when newly onboarding to tenant attach with Configuration Manager version 2006. Wait 15 minutes for the information to synchronize.
+- This error may also appear if the central administration site has been upgraded to 2006 but some child primary sites haven't been upgraded yet.
 
-### <a name="bkmk_installed"></a> The site information hasn't yet synchronized
+### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment
 
 **Symptom:** An application is shown as installed in the Microsoft Endpoint Manager admin center after creating a new device available requires approval deployment or a user available deployment.
 
