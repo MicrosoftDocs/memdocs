@@ -64,7 +64,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Device management
 
 #### Tenant attach: Install an application from the admin center <!-- IN7220536 CM6024389-->
-You can now initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Management admin center. For more information, see [Tenant attach: Install an application from the admin center](../../configmgr/tenant-attach/applications.md).
+You can now initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Manager admin center. For more information, see [Tenant attach: Install an application from the admin center](../../configmgr/tenant-attach/applications.md).
 
 <!-- ########################## -->
 ## Week of July 27, 2020
