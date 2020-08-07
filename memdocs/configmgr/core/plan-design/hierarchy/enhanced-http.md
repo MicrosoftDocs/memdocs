@@ -113,6 +113,9 @@ Starting in version 1902, you can also enable enhanced HTTP for the central admi
 
 You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
 
+## Validating the Certificate
+When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**, issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS Default Web site bound to port 443. The log mpcontrol.log will show the status of the configuration.
+
 For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
 
