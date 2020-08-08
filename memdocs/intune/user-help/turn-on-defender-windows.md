@@ -48,7 +48,7 @@ Comlpete the following steps to turn on Windows Defender on your device.
 7. Select **Apply** > **OK**.  
 
 
-## Turn on Real-time and cloud-delivered protection
+## Turn on real-time and cloud-delivered protection
 
 Complete the following steps to turn on real-time and cloud-delivered protection. Together, these antivirus features protect you against spyware and can deliver fixes for malware issues via the cloud. 
 
@@ -72,7 +72,7 @@ Complete the following steps to update your antivirus definitions.
 1. Select the **Start** menu,
 2. In the search bar, type **Windows Security**. Select the matching result. 
 3. Select **Virus & threat protection**.
-4. Under **Virus & threat protection updates**, select **Check for updates**. If you don't see this option on your screen, complete the first set of steps in [Turn on Real-time Protection](turn-on-defender-windows.md#turn-on-real-time-protection). Then try checking for updates again. 
+4. Under **Virus & threat protection updates**, select **Check for updates**. If you don't see this option on your screen, complete the first set of steps in [Turn on Real-time Protection](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection). Then try checking for updates again. 
 
 ## Next steps  
 
