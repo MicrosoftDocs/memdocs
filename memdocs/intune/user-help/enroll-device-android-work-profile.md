@@ -32,7 +32,7 @@ ms.collection:
 
 # Enroll device with Android work profile
 
-Enroll your personal Android device to get access to work or school email, apps, and other data. During enrollment, you'll set up an Android work profile, which separates the personal data on your device from your work data. If this type of setup is something you're required to do, your organization will let you know through their preferred communication channel, which could be help documentation, email, or an Intune Company Portal notification. 
+Enroll your personal Android device to get access to work or school email, apps, and other data. During enrollment, you'll set up an Android work profile, which separates the personal data on your device from your work data. If this type of setup is something you're required to do, your organization will let you know through their preferred communication channel or Intune Company Portal app. 
 
 After your profile is set up, your organization will manage the work-side of it, which consists of only the work files and work data. Your company support can't manage the personal data on your device.  
 </br>
