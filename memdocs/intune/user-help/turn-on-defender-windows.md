@@ -37,7 +37,7 @@ Organizations want to ensure that devices accessing their resources are secured 
 This article describe how to update your device settings to meet your organization's antivirus requirements and resolve access problems. 
 
 ## Turn on Windows Defender
-Comlpete the following steps to turn on Windows Defender on your device. 
+Complete the following steps to turn on Windows Defender on your device. 
 
 1. Select the **Start** menu.
 2. In the search bar, type **group policy**.
@@ -58,7 +58,7 @@ Complete the following steps to turn on real-time and cloud-delivered protection
 4. Under **Virus & threat protection settings**, select **Manage settings**.
 5. Flip each switch under **Real-time protection** and **Cloud-delivered protection** to turn them on. 
 
-If you don't see these options on your screen, they may be hidden. Complete the following steps to make them visibe.  
+If you don't see these options on your screen, they may be hidden. Complete the following steps to make them visible.  
 
 1. Select the **Start**, open **Control Panel**.
 2. In the search bar, type **group policy**.
