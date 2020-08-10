@@ -1,29 +1,29 @@
 ---
-title: Troubleshoot client details
+title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: "Troubleshoot client details for Configuration Manager tenant attach"
-ms.date: 07/08/2020
+description: "Troubleshooting application installation for Configuration Manager tenant attach"
+ms.date: 08/10/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
+ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshoot ConfigMgr client details in the admin center (preview)
+# Troubleshoot application installation for devices uploaded to the admin center (preview)
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot ConfigMgr client details in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot Configuration Manager applications in the Microsoft Endpoint Manager admin center:
 
 > [!Important]
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Common errors from the Microsoft Endpoint Manager admin center
 
-When viewing the ConfigMgr client details, you may run across one of these errors.  
+When viewing or installing applications from the Microsoft Endpoint Manager admin center, you may run across one of these errors.  
 
 ### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
 
@@ -31,9 +31,9 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
 **Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
 
-### <a name="bkmk_noinfo"></a> Unable to get device or collection information
+### <a name="bkmk_noinfo"></a> Unable to get application information
 
-**Error message 1:** Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get application information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -51,7 +51,6 @@ When viewing the ConfigMgr client details, you may run across one of these error
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
-
 ### <a name="bkmk_1603"></a> Unexpected error occurred
 
 **Error message:** Unexpected error occurred
@@ -61,25 +60,52 @@ When viewing the ConfigMgr client details, you may run across one of these error
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
-1. Verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
+
+### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
+
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
+
+**Possible causes:**
+- This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
+- This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
+
+### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment
+
+**Symptom:** An application is shown as installed in the Microsoft Endpoint Manager admin center after creating a new device available requires approval deployment or a user available deployment.
+
+**Possible cause:** The application state shown for that device is from another active or past deployment.
+
+### <a name="bkmk_hfru"></a> Errors when searching or retrying an installation
+
+**Symptom:** Errors occur when performing the following actions:
+- Use search
+- Select **Retry installation**
+
+**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
 
 ## Known issues
 
-### Getting results timed out
+### Unexpected error occurred when getting applications
 
-**Scenario:** If you have a remote service connection point and you installed 2002 early update ring before March 30, 2020, you'll see a timeout error in the admin center.
+**Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002 and you see `unexpected error occurred`.
 
-**Error message:** Getting results timed out. Make sure the Configuration Manager service connection point is operational and has a connection to the cloud.
+**Error message:** AdminService.log will contain:
 
-**Workaround:** Copy the `Microsoft.ConfigurationManagement.ManagementProvider.dll` from site server's `bin\x64` folder to the remote service connection point's `bin\x64` folder.  Restart the `SMS_EXECUTIVE` service on the service connection point server.
+```log 
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
+System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+System.ComponentModel.Win32Exception: The wait operation timed out
+```
 
-### Boundary groups list is empty
+**Workaround:** Currently, a workaround isn't available.
 
-**Error message**: No boundary groups found or the user may not have permissions to view boundary group information.
+### Application installation times out if application requires restart
 
-The empty list is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
+**Scenario:** If you're running Configuration Manager version 2002 and an application requires a restart to complete the installation process, the installation may time out.
 
-:::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty" lightbox="media/6024387-known-issue-device-details.png":::
+**Symptoms:** The user will see `restart pending` notifications and in Software Center. From the Microsoft Endpoint Manager admin center, the application stays in the `Installing` state.  
+
+**Workaround:** Once the user restarts the device, the correct status is displayed in the admin center.
 
 ## Next steps
 
