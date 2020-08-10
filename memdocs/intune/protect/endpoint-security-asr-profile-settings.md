@@ -186,7 +186,7 @@ Supported platforms and profiles:
   - **Audit Components and Store Apps**
   - **Enforce Components, Store Apps, and Smartlocker**
   - **Audit Components, Store Apps, and Smartlocker**
-  CSP: [AppLocker CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/applocker-csp)
+    CSP: [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **Block users from ignoring SmartScreen warnings**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
