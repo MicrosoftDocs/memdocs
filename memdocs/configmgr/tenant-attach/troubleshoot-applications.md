@@ -81,7 +81,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 - Use search
 - Select **Retry installation**
 
-**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisties for installing an application from the admin center](applications.md#prerequisites).
+**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
 
 ## Known issues
 
