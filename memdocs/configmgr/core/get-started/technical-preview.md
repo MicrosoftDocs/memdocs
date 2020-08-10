@@ -90,7 +90,6 @@ Microsoft supports each technical preview version up until three successive vers
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version. The following Configuration Manager technical preview branch versions are available as both in-console updates and as new baseline versions:
 
 - **Technical preview version 2007**
-- **Technical preview version 2002**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -117,13 +116,15 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2007
+### Technical preview version 2008
 
-- [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [Improvements to client data sources dashboard](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [Fixed-width font now used in some console areas](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [Manage task sequence policy size](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [Improvements to device timeline in the admin center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [See task sequence size in the console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Delete Aged Collected Diagnostic Files task](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Import objects to current folder](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -141,9 +142,13 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2006
+### Technical preview version 2007
 
-- [title](2020/technical-preview-2007.md) <!--ID-->
+- [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Improvements to client data sources dashboard](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [Fixed-width font now used in some console areas](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Manage task sequence policy size](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Improvements to device timeline in the admin center](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ## Features in previous technical previews
 
