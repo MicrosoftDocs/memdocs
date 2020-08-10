@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -128,9 +128,6 @@ To see the current SSO app extension settings you can configure, go to [Single s
 
 Applies to:
 - iOS/iPadOS
-
-### Improvement to Update device settings page in Company Portal app for Android to show descriptions<!-- 7414768 -->
-In the Company Portal app on Android devices, the **Update device settings** page lists the settings a user needs to update to be compliant. We have improved the user experience so that listed settings are expanded by default to show the description and the **Resolve** button (when applicable). Previously, they defaulted to collapsed. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
