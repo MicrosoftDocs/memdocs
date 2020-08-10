@@ -37,7 +37,7 @@ ms.collection: M365-identity-device-management
  
 The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, as well as when new users sign into the device.  This enables IT administrators to optionally prevent (block) access to the device until it has been fully provisioned, while at the same time giving users information about the tasks remaining in the provisioning process.
 
-The ESP can be used as part of any [Windows Autopilot](../../autopilot/) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
+The ESP can be used as part of any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
 
 You can create multiple Enrollment Status Page profiles with different configurations that specify:
 
