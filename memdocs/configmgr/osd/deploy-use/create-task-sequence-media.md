@@ -2,7 +2,7 @@
 title: Create task sequence media
 titleSuffix: Configuration Manager
 description: Create task sequence media to deploy an OS to a destination computer in your Configuration Manager environment.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual

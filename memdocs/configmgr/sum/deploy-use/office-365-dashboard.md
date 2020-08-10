@@ -5,7 +5,7 @@ description: "Review Microsoft 365 Apps client information from the Office 365 C
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

@@ -2,7 +2,7 @@
 title: Use multicast to deploy Windows over the network
 titleSuffix: Configuration Manager
 description: Use multicast in your Configuration Manager environment so that multiple computers can simultaneously download the OS image.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
