@@ -52,7 +52,7 @@ The following OS versions are no longer supported.
 |Windows Server 2003 R2|July 10, 2015|Version 1511|
 |Windows Server 2003|July 10, 2015|Version 1511|
 |Windows XP|July 10, 2015|Version 1511|  
-|Mac OS X  10.6 - 10.8|July 10, 2015|Version 1511|  
+|macOS X  10.6 - 10.8|July 10, 2015|Version 1511|  
 |Windows Mobile 6.0 - 6.5|July 10, 2015|Version 1511|  
 |Nokia Symbian Belle|July 10, 2015|Version 1511|  
 |Windows CE 5.0 - 6.0|July 10, 2015|Version 1511|  
