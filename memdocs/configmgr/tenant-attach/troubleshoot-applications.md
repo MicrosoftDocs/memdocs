@@ -85,7 +85,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 ## Known issues
 
-### Getting results timed out
+### Unexpected error occurred when getting applications
 
 **Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002 and you see `unexpected error occurred`.
 
