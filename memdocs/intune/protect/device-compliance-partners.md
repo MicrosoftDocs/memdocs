@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/17/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,7 +49,7 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 ## Supported device compliance partners
 
-- VMWare Workspace ONE (formerly AirWatch)
+- VMWare Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
 
@@ -69,7 +69,7 @@ To enable support for devices that are managed by third-party device compliance 
 
 2. On the **Add an application** blade, select the tile for your device compliance partner, and then select **Add**.
 
-   - For *Workspace ONE*, select **AirWatch by VMware**
+   - For *Workspace ONE UEM*, select **AirWatch by VMware**
 
 3. On the *Mobility (MDM and MAM)* blade, select your compliance partner to open the **Configure** blade and configure the available options.  Options include the **MDM user scope**, **MDM terms of use URL**, and **MDM discovery URL**. When the user scope is set to **Some**, you select the Azure AD user groups that can enroll devices with this compliance partner.
 
@@ -112,11 +112,22 @@ Your configuration now appears on the Partner compliance management page.
 
 5. Select **Review + save** and then **Save** to save your edits.
 
+6. *This step only applies when you use VMWare Workspace ONE*:
+
+   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Endpoint Manager admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
+
+   To manually sync from Azure Services:
+   1. Sign in to your VMWare Workspace ONE UEM console.
+   2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
+   3. For *Sync Azure Services*, click **SYNC**.
+
+      All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.  
+
 ## Configure your compliance partner to work with Intune
 
 To enable a device compliance partner to work with Intune, you must complete configurations specific to that partner. For information on this task, see the documentation for the applicable partner:
 
-- [VMware Workspace ONE](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
+- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
 
 ## Enroll your iOS or Android devices to that device compliance partner
 
