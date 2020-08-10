@@ -49,6 +49,8 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 ## Supported device compliance partners
 
+In public preview:
+
 - VMWare Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
