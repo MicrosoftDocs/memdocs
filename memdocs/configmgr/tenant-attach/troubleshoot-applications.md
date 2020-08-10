@@ -66,8 +66,8 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 **Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
 **Possible causes:**
-- This error typically occurs when newly onboarding to tenant attach with Configuration Manager version 2006. Wait 15 minutes for the information to synchronize.
-- This error may also appear if the central administration site has been upgraded to 2006 but some child primary sites haven't been upgraded yet.
+- This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
+- This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
 
 ### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment
 
@@ -75,13 +75,22 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 **Possible cause:** The application state shown for that device is from another active or past deployment.
 
+### <a name="bkmk_hfru"></a> Errors when searching or retrying an installation
+
+**Symptom:** Errors occur when performing the following actions:
+- Use search
+- Select **Retry installation**
+
+**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisties for installing an application from the admin center](applications.md#prerequisites).
+
 ## Known issues
 
 ### Getting results timed out
 
-**Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002.
+**Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002 and you see `unexpected error occurred`.
 
-**Error message:** AdminService.log will contain SQL Timeout message:
+**Error message:** AdminService.log will contain:
+
 ```log 
 System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
 System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
