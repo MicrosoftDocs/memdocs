@@ -79,6 +79,11 @@
             "source_path": "memdocs/autopilot/demonstrate-deployment-on-vm.md",
             "redirect_url": "https://docs.microsoft.com/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/your-device-is-missing-a-preinstalled-certificate-android.md",
+            "redirect_url": "/mem/intune/user-help/your-device-is-missing-an-IT-required-certificate-android",
+            "redirect_document_id": false
         }
     ]
 }

@@ -331,7 +331,7 @@ The intent of this process is to continue keeping your organization's data withi
 You can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **managed apps only** or **no apps**. Intune app protection policy cannot control the iOS/iPadOS share extension without managing the device. Therefore, Intune _**encrypts "corporate" data before it is shared outside the app**_. You can validate this encryption behavior by attempting to open a "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
 
 ### Universal Links support
-By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/universal-links/). 
+By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/). 
 
 Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to user Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
 
