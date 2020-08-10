@@ -71,7 +71,7 @@ You can use app configuration policies with managed apps that support the Intune
 
 ## Configuration values for using tokens
 
-Intune can generate certain tokens and send them to the managed application. For example, if your app configuration can use an email setting, you can add a dynamic email by using a token. Type the name expected by the app in the **Name** field, and then type `\{\{mail\}\}` in the **Value** field.
+Intune can generate certain tokens and send them to the managed application. For example, if your app configuration can use an email setting, you can add a dynamic email by using a token. Type the name expected by the app in the **Name** field, and then type `{{mail}}` in the **Value** field.
 
 Intune supports the following token types in the configuration settings. Other custom key/value pairs are not supported.
 
