@@ -241,7 +241,7 @@ Class SMS_SCI_SiteDefinition : SMS_SiteControlItem
 
   For this class, the default value is PRIMARY (2).  
 
-|||  
+|Value|Site type|  
 |-|-|  
 |1|Secondary|  
 |2|Primary|  

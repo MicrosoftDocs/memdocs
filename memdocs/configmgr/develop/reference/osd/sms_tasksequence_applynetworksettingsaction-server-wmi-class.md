@@ -179,8 +179,8 @@ Class SMS_TaskSequence_ApplyNetworkSettingsAction : SMS_TaskSequence_Action
 
  The type of network join supported by the target computer. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Network join type |  
+| ----- | ----------------- |  
 |0|Domain|  
 |1|Workgroup|  
 

@@ -37,7 +37,7 @@ You create an update list that contains a set of software updates, in Configurat
 
  The following example shows the subroutine call in Visual Basic:  
 
-```  
+```vbscript
 
 ' Prework for CreateSUMUpdateList  
 ' Create the array of CI_IDs.  
@@ -64,7 +64,7 @@ Call CreateSUMUpdateList(swbemServices,       _
 
  The following example shows the method call in C#:  
 
-```  
+```csharp
 
 // Prework for CreateSUMUpdateList  
 // Create array list (to hold the array of Localized Properties).  
@@ -90,7 +90,7 @@ SUMSnippets.CreateSUMUpdateList(WMIConnection,
 
 ```  
 
-```vbs  
+```vbscript  
 
 Sub CreateSUMUpdateList(connection,         _  
                         newUpdates,         _  
@@ -114,7 +114,7 @@ Sub CreateSUMUpdateList(connection,         _
 End Sub  
 ```  
 
-```c#  
+```csharp  
 
 public void CreateSUMUpdateList(WqlConnectionManager connection,                                   
                                  int [] newUpdates,  
@@ -150,9 +150,8 @@ public void CreateSUMUpdateList(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newUpdates`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the updates that is associated with the Update List.|  
 |`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type `LocalizedInformation`.|  

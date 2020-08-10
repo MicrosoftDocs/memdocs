@@ -171,8 +171,8 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
  For this class, the default value is REQUIRED (1).  
 
-|||  
-|-|-|  
+| Value | Type |  
+| ----- | ---- |  
 |1|REQUIRED|  
 |2|NOT_ALLOWED|  
 
@@ -378,8 +378,8 @@ Class SMS_UpdatesAssignment : SMS_CIAssignmentBaseClass
 
  Verbosity of state messages sent for this deployment.  
 
-|||  
-|-|-|  
+| Value | Message verbosity |  
+| ----- | ----------------- |  
 |0|NONE|  
 |1|ERRORS|  
 |5|SUCCESSES|  

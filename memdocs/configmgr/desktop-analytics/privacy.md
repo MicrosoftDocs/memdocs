@@ -90,6 +90,4 @@ For more information about related privacy aspects, see the following articles:
 
 - [Trust Center](https://www.microsoft.com/trustcenter)  
 
-- [Privacy Shield](https://www.privacyshield.gov/)  
-
 Separate from Desktop Analytics, Configuration Manager sends diagnostic and usage data to Microsoft. Microsoft uses this data to improve the installation experience, quality, and security of future releases of Configuration Manager. For more information, see [Diagnostics and usage data for Configuration Manager](../core/plan-design/diagnostics/diagnostics-and-usage-data.md).
