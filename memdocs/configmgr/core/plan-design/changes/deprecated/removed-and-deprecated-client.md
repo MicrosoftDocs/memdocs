@@ -37,12 +37,12 @@ The following OS versions are no longer supported.
 
 |OS version|Deprecation first announced|Support removed|  
 |-|-|-|
-|Windows 7||January 14, 2020|
-|Windows Server 2008||January 14, 2020|
-|Windows Server 2008 R2||January 14, 2020|
 |Windows CE 7.0|July 19, 2019|Version 2006|
 |Windows 10 Mobile|July 19, 2019|Version 2006|
 |Windows 10 Mobile Enterprise|July 19, 2019|Version 2006|
+|Windows 7||January 14, 2020|
+|Windows Server 2008||January 14, 2020|
+|Windows Server 2008 R2||January 14, 2020|
 |Linux and UNIX|March 22, 2018|Version 1902|
 |Windows 8: Professional, Enterprise|January 12, 2016|Version 1802|
 |Windows Embedded 8 Pro|January 12, 2016|Version 1802|
