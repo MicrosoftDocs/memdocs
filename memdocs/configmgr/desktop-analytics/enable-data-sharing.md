@@ -44,11 +44,14 @@ Microsoft recommends that you enable the **Optional (limited)** diagnostic data 
 >
 > In Configuration Manager version 2002 and earlier, the settings had different names:<!-- 7363467 -->
 >
-> |Version 2006 and later|Version 2002 and earlier|
+> | Version 2006 and later | Version 2002 and earlier |
 > |---------|---------|
-> |Required|Basic|
-> |Optional (limited)|Enhanced (Limited)|
-> |Optional|Full|
+> | Required | Basic |
+> | Optional (limited) | Enhanced (Limited) |
+> | N/A | Enhanced |
+> | Optional | Full |
+>
+> If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
 
 For more information about diagnostic data shared with Microsoft with **Optional (limited)**, see [Windows 10 enhanced diagnostic data events and fields](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
