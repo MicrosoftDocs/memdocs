@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

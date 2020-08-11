@@ -2,7 +2,7 @@
 title: Enable co-management
 titleSuffix: Configuration Manager
 description: Quickly enable co-management in Configuration Manager to gain immediate value.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to

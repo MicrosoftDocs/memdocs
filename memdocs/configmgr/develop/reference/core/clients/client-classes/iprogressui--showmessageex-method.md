@@ -2,7 +2,7 @@
 title: IProgressUI::ShowMessageEx
 titleSuffix: Configuration Manager
 description: IProgressUI::ShowMessageEx method
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference

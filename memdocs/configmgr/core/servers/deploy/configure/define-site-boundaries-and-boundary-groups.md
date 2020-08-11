@@ -2,7 +2,7 @@
 title: Use boundaries and boundary groups
 titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

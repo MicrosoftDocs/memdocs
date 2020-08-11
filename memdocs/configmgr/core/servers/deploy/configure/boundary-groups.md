@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 title: Define boundaries
 titleSuffix: Configuration Manager
 description: Understand how to define network locations on your intranet that can contain devices you want to manage.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

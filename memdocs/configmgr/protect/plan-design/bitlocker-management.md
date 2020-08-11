@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

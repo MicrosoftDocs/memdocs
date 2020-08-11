@@ -2,7 +2,7 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
