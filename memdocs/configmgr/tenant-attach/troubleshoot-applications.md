@@ -55,11 +55,28 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 **Error message:** Unexpected error occurred
 
-**Possible causes:** Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../develop/adminservice/overview.md), or connectivity issues.
+#### Error code 500 with an unexpected error occurred message
+
+1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. Install [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
+   ```log 
+   System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
+   System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   System.ComponentModel.Win32Exception: The wait operation timed out
+   ```
+
+#### Error code 3 with an unexpected error occurred message
+
+The Admin Service isn't running or IIS isn't installed. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
+
+#### Other possible causes of unexpected errors
+
+Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../develop/adminservice/overview.md), or connectivity issues.
 
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
+
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
@@ -84,20 +101,6 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 **Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
 
 ## Known issues
-
-### Unexpected error occurred when getting applications
-
-**Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002 and you see `unexpected error occurred`.
-
-**Error message:** AdminService.log will contain:
-
-```log 
-System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
-System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
-System.ComponentModel.Win32Exception: The wait operation timed out
-```
-
-**Workaround:** Apply [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782).
 
 ### Application installation times out if application requires restart
 
