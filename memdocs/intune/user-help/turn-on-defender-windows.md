@@ -40,8 +40,7 @@ This article describe how to update your device settings to meet your organizati
 Complete the following steps to turn on Windows Defender on your device. 
 
 1. Select the **Start** menu.
-2. In the search bar, type **group policy**.
-3. Select **Edit group policy**. The Local Group Policy Editor will open.
+2. In the search bar, type **group policy**. Then select **Edit group policy** from the listed results. The Local Group Policy Editor will open.
 4. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Defender Antivirus**. 
 5. Scroll to the bottom of the list and select **Turn off Windows Defender Antivirus**.  
 6. Select **Disabled** or **Not configured**. It might feel counter-intuitive to select these options because the names suggest that you're turning Windows Defender off. Don't worry, these options actually ensure that it's turned on. 
@@ -61,7 +60,7 @@ Complete the following steps to turn on real-time and cloud-delivered protection
 If you don't see these options on your screen, they may be hidden. Complete the following steps to make them visible.  
 
 1. Select the **Start** menu.  
-2. In the search bar, type **group policy**. Select **Edit group policy**. The Local Group Policy Editor will open.
+2. In the search bar, type **group policy**. Then select **Edit group policy** from the listed results. The Local Group Policy Editor will open.
 3. Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows Security** > **Virus and threat protection**.
 4. Select **Hide the Virus and threat protection area**.
 5. Select **Disabled** > **Apply** > **OK**.  
