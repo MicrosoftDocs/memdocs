@@ -97,7 +97,7 @@ System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout peri
 System.ComponentModel.Win32Exception: The wait operation timed out
 ```
 
-**Workaround:** Currently, a workaround isn't available.
+**Workaround:** Apply [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782).
 
 ### Application installation times out if application requires restart
 
