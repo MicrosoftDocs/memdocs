@@ -438,6 +438,7 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Endpoint Configuration Manager admin center | July 23, 2020 | No |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
+| [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Endpoint Manager admin center | August 11, 2020 | No |
 
 <!--
 > [!NOTE]
