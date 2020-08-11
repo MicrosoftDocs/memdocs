@@ -49,7 +49,7 @@ Once deployed, you can manage Windows 10 devices with:
 - Microsoft Endpoint Configuration Manager
 - or other similar tools.
 
-With Windows Autopilot you can quickly prepare a device for a new user with Windows Autopilot Reset. You can also use Reset in break/fix scenarios to quickly bring a device back to a business-ready state.
+With Windows Autopilot, you can quickly prepare a device for a new user with Windows Autopilot Reset. You can also use Reset in break/fix scenarios to quickly bring a device back to a business-ready state.
 
 Windows Autopilot enables you to:
 * Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join). For more information about the differences between these two join options, see [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
@@ -60,7 +60,7 @@ Windows Autopilot enables you to:
 
 ## Benefits of Windows Autopilot
 
-Traditionally, IT pros spend a lot of time building and customizing images that will later be deployed to devices. Windows Autopilot introduces a new approach.
+Traditionally, IT pros spend significant time building and customizing images that will later be deployed to devices. Windows Autopilot introduces a new approach.
 
 From the user's perspective, it only takes a few simple operations to make their device ready to use.
 
