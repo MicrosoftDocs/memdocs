@@ -2,7 +2,7 @@
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
 description: "Troubleshooting application installation for Configuration Manager tenant attach"
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
