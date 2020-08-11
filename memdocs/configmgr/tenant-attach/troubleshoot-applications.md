@@ -57,7 +57,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 #### Error code 500 with an unexpected error occurred message
 
-1. If you see `System.Security.SecurityException` in the **adminservice.log**, verify that your user principal name (UPN) isn't set to a cloud UPN rather than an on-premises UPN or no value. A cloud UPN is typically in the format of `user@<string>.onmicrosoft.com` where an on-premises UPN is typically formatted as `user@domainFQDN.com`. The suffix may also be adjusted in an on-premises Active Directory.
+1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) for [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN or no value. A cloud UPN is typically in the format of `user@<string>.onmicrosoft.com` where an on-premises UPN is typically formatted as `user@domainFQDN.com`. The suffix may also be adjusted in an on-premises Active Directory.
 1. Install [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
