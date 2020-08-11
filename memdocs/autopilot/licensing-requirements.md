@@ -26,7 +26,7 @@ ms.custom:
 
 Windows Autopilot depends on specific capabilities available in Windows 10 and Azure Active Directory. It also requires an MDM service such as Microsoft Intune. These capabilities can be obtained through various editions and subscription programs:
 
-To provide needed Azure Active Directory (automatic MDM enrollment and company branding features) and MDM functionality, one of the following is required:
+To provide needed Azure Active Directory (automatic MDM enrollment and company branding features) and MDM functionality, one of the following subscriptions is required:
 - [Microsoft 365 Business Premium subscription](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline)
 - [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)

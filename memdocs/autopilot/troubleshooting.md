@@ -36,8 +36,8 @@ Whether you are performing user-driven or self-deploying device deployments, the
 
 For troubleshooting, key activities to perform are:
 
-- Configuration:  Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](windows-autopilot-requirements.md)?
-- Network connectivity:  Can the device access the services described in [Windows Autopilot networking requirements](windows-autopilot-requirements.md)?
+- Configuration:  Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
+- Network connectivity:  Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
 - Autopilot out-of-box (OOBE) behavior:  Were only the expected out-of-box experience screens displayed?  Was the Azure AD credentials page customized with organization-specific details as expected?
 - Azure AD join issues:  Was the device able to join Azure Active Directory?
 - MDM enrollment issues:  Was the device able to enroll in Microsoft Intune (or an equivalent MDM service)?
@@ -126,7 +126,7 @@ On devices running a [supported version](https://docs.microsoft.com/windows/rele
 
 ## Troubleshooting Azure AD Join issues
 
-The most common issue joining a device to Azure AD is related to Azure AD permissions.  Ensure [the correct configuration is in place](windows-autopilot-requirements.md) to allow users to join devices to Azure AD.  Errors can also happen if the user has exceeded the number of devices that they are allowed to join, as configured in Azure AD.
+The most common issue joining a device to Azure AD is related to Azure AD permissions.  Ensure [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD.  Errors can also happen if the user has exceeded the number of devices that they are allowed to join, as configured in Azure AD.
 
 An Azure AD device is created upon import - it's important that this object is not deleted. It acts as Autopilot's anchor in AAD for group membership and targeting (including the profile) and can lead to join errors if it's deleted. Once this object has been deleted, to fix the issue, deleting and reimporting this autopilot hash will be necessary so it can recreate the associated object.
 

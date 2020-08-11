@@ -28,7 +28,7 @@ landingContent:
       - text: Overview of Windows Autopilot
         url:  windows-autopilot.md
       - text: Requirements
-        url:  windows-autopilot-requirements.md
+        url:  software-requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
 

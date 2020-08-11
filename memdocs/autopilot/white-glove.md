@@ -33,7 +33,7 @@ Enabled with Microsoft Intune in Windows 10, version 1903 and later, white glove
 
 ## Prerequisites
 
-In addition to [Windows Autopilot requirements](windows-autopilot-requirements.md), Windows Autopilot for white glove deployment adds the following:
+In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for white glove deployment adds the following:
 
 - Windows 10, version 1903 or later is required.
 - An Intune subscription.

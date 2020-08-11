@@ -24,7 +24,7 @@ ms.custom:
 
 **Applies to: Windows 10**
 
-Windows Autopilot depends on specific capabilities available in Windows 10, Azure Active Directory, and MDM services such as Microsoft Intune. In order to use Windows Autopilot and leverage these capabilities, some software requirements must be met.
+Windows Autopilot depends on specific features available in Windows 10, Azure Active Directory, and MDM services, such as Microsoft Intune. To use Windows Autopilot and access these features, some software requirements must be met.
 
 **Note**: For a list of OEMs that currently support Windows Autopilot, see the Participant device manufacturers section at [Windows Autopilot](https://aka.ms/windowsAutopilot).
 
@@ -44,5 +44,5 @@ Windows Autopilot depends on specific capabilities available in Windows 10, Azur
 
 ## Next steps
 
-[Windows Autopilot networking requirements](network-requirements.md)
+[Windows Autopilot networking requirements](networking-requirements.md)
 

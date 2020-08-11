@@ -54,7 +54,7 @@ From the IT pro's perspective, the only interaction required from the end user i
 
 ## Requirements
 
-A [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel is required to use Windows Autopilot. Windows 10 Enterprise LTSC 2019 is also supported. See [Windows Autopilot requirements](windows-autopilot-requirements.md) for detailed information on software, configuration, network, and licensing requirements.
+A [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel is required to use Windows Autopilot. Windows 10 Enterprise LTSC 2019 is also supported. For more informaiton, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
 
 ## Related topics
 
