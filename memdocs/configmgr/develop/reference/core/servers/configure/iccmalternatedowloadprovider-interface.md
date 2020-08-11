@@ -29,7 +29,7 @@ The **ICcmAlternateDownloadProvider** interface, in Configuration Manager, defin
 ## Methods  
  The **ICcmAlternateDownloadProvider** interface defines the following methods.  
 
-|||  
+|Method|Description|  
 |-|-|  
 |[ICcmAlternatedownloadProvider : CancelJob Method](../../../../../develop/reference/core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md)|Cancels a job.|  
 |[ICcmAlternatedownloadProvider : DownloadContent Method](../../../../../develop/reference/core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md)|Instructs the provider to download content.|  

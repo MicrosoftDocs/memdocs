@@ -79,8 +79,8 @@ Class SMS_ImageUpdateHistory : SMS_BaseClass
 
  Software update installation status.  
 
-|||  
-|-|-|  
+| Value | Installation status |  
+| ----- | ------------------- |  
 |2|Success|  
 |3|Failed|  
 

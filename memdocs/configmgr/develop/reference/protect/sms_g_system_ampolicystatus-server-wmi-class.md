@@ -113,8 +113,8 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  Policy type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Policy type |  
+| ----- | ----------- |  
 |1|Default AM Policy|  
 |2|Customized AM Policy|  
 
@@ -145,8 +145,8 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  The state of this policy on this computer.  
 
-|||  
-|-|-|  
+| Value | Policy state |  
+| ----- | ------------ |  
 |1|Success|  
 |2|Failure|  
 

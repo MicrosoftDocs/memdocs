@@ -93,7 +93,7 @@ Class SMS_DistributionPointDriveInfo : SMS_BaseClass
 
  Object type. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |0|PKG_TYPE_REGULAR|  

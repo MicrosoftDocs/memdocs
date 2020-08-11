@@ -1,7 +1,7 @@
 ---
 title: SMS_TaskSequence_PrestartCheckAction class
 titleSuffix: Configuration Manager
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference

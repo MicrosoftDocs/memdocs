@@ -2,7 +2,7 @@
 title: What's new in version 2006
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2006 of Configuration Manager current branch.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -110,7 +110,7 @@ The following improvements have been made in CMPivot:
 
 - CMPivot from the console and CMPivot standalone have been converged
 - Run CMPivot from an individual device or multiple devices without having to select or create a collection
-- From CMPivot query results, you can select an individual device or multiple devices then launch a separate CMPivot instance for your selection.
+- From CMPivot query results, you can select an individual device or multiple devices then launch a separate CMPivot instance scoped to your selection.
 
 For more information, see [CMPivot starting in version 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006).
 
@@ -133,7 +133,7 @@ For more information, see the following articles:
 
 <!--3601213-->
 
-Configuration Manager provides many options to manage device restart notifications. You can now configure the client setting **Configuration Manager can force a device to restart** to prevent devices from automatically restarting when a deployment requires it. By default, Configuration Manager can still force devices to restart.
+Configuration Manager provides many options to manage device restarts and restart notifications. You can now configure a client setting to prevent devices from automatically restarting when a deployment requires it. This setting gives you more control in unique situations. By default, the client setting **Configuration Manager can force a device to restart** is enabled, so Configuration Manager can still force devices to restart. This setting only applies to application, software update, and package deployments that require a restart.
 
 For more information, see [device restart notifications](../../clients/deploy/device-restart-notifications.md).
 
@@ -141,11 +141,8 @@ For more information, see [device restart notifications](../../clients/deploy/de
 
 ### Improvements to available apps via CMG
 
-<!--7033501-->
-An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
-
 <!--6935376-->
-This release also fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
+This release fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
 
 For more information, see [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
@@ -270,6 +267,16 @@ For more information, see [Configure a site to receive messages from Microsoft](
 ## <a name="bkmk_content"></a> Content management
 ## <a name="bkmk_comgmt"></a> Co-management
 -->
+
+## <a name="bkmk_deprecated"></a> Deprecated operating systems
+
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+
+As first announced in version 1906, version 2006 drops support for the following client OS versions:  
+
+- Windows CE 7.0
+- Windows 10 Mobile
+- Windows 10 Mobile Enterprise
 
 ## Other updates
 

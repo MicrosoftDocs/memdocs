@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual

@@ -268,8 +268,8 @@ Starting with 1702, Hybrid mobile device management with Microsoft Intune now su
 
 You can now deploy licensed apps to devices as well as users. Depending on the apps ability to support device licensing, an appropriate license will be claimed when you deploy it, as follows:
 
-|Configuration Manager version|App supports device licensing?|Deployment collection type|Claimed license|
-|-|-|-|-|
+| Configuration Manager version | App supports device licensing? | Deployment collection type | Claimed license |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Earlier than 1702|Yes|User|User license|
 |Earlier than 1702|No|User|User license|
 |Earlier than 1702|Yes|Device|User license|

@@ -80,8 +80,8 @@ Class SMS_ImageServicingProgress : SMS_BaseClass
 
  Status for software update installation.  
 
-|||  
-|-|-|  
+| Value | Installation status |  
+| ----- | ------------------- |  
 |1|Running|  
 |2|Success|  
 |3|Failed|  

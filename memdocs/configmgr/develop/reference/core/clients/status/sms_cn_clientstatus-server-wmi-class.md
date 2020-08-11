@@ -47,7 +47,7 @@ Class SMS_CN_ClientStatus : SMS_BaseClass
 
  Channel type. Possible values are:  
 
-|||  
+|Value|Channel type|  
 |-|-|  
 |0|TCP|  
 |1|HTTP|  
@@ -70,7 +70,7 @@ Class SMS_CN_ClientStatus : SMS_BaseClass
 
  Online status. Possible values are:  
 
-|||  
+|Value|Online status|  
 |-|-|  
 |0|Offline|  
 |1|Online|  

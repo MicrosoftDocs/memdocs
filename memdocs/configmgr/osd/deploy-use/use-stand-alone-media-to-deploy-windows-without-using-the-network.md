@@ -2,7 +2,7 @@
 title: Use standalone media to deploy Windows
 titleSuffix: Configuration Manager
 description: Use standalone media in Configuration Manager to deploy Windows where bandwidth is limited as an option to refresh, install, or upgrade computers.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to

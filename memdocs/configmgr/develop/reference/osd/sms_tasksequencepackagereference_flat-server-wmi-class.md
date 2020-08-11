@@ -75,8 +75,8 @@ Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass
 
  The type of reference or dependent object. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |0|Classic Package|  
 |3|Driver Package|  
 |5|Software Update Package|  
@@ -121,8 +121,8 @@ Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass
 
  The type of reference or dependent object. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |0|Classic Package|  
 |3|Driver Package|  
 |5|Software Update Package|  

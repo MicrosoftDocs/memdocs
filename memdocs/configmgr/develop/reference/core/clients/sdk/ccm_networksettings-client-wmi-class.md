@@ -39,7 +39,7 @@ Class CCM_NetworkSettings :
 
  Client communications on metered Internet connections. Possible values are:   
 
-|||  
+|Value|Metered network usage policy|  
 |-|-|  
 |0|Allow|  
 |1|Limit|  

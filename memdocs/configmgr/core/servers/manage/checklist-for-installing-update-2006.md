@@ -2,7 +2,7 @@
 title: Checklist for 2006
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2006.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

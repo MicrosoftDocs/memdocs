@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -1646,7 +1646,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-The [Windows Autopilot for existing devices](../deploy-use/windows-autopilot-for-existing-devices.md) task sequence uses this step with this option.
+The [Windows Autopilot for existing devices](../../../autopilot/existing-devices.md) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
