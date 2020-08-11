@@ -2,7 +2,7 @@
 title: Technical preview 2007
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2007.
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -29,6 +29,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Fixed-width font now used in some console areas](includes/2007/7632637.md)]
 [!INCLUDE [Manage task sequence policy size](includes/2007/6888853.md)]
 [!INCLUDE [Improvements to device timeline in the admin center](includes/2007/7141381.md)]
+[!INCLUDE [Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center](includes/2007/4812909.md)]
 
 <!--
 ## General known issues

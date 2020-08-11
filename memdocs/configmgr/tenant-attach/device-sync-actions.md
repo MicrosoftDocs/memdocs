@@ -36,7 +36,7 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 - `https://aka.ms/configmgrgateway`
 - `https://*.manage.microsoft.com` <!--7424742-->
 
-## Enable device upload
+## <a name="bkmk_upload"></a> Enable device upload
 
 - If you have co-management enabled currently, [Edit co-management properties](#bkmk_edit) to enable device upload.
 - If you don't have co-management enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload.
