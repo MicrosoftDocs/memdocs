@@ -264,6 +264,16 @@ For more information, see [Configure a site to receive messages from Microsoft](
 ## <a name="bkmk_comgmt"></a> Co-management
 -->
 
+## <a name="bkmk_deprecated"></a> Deprecated operating systems
+
+Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+
+As first announced in version 1906, version 2006 drops support for the following client OS versions:  
+
+- Windows CE 7.0
+- Windows 10 Mobile
+- Windows 10 Mobile Enterprise
+
 ## Other updates
 
 <!--
