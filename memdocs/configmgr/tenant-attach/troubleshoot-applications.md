@@ -102,20 +102,6 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 ## Known issues
 
-### Unexpected error occurred when getting applications
-
-**Scenario:** Retrieving the list of applications takes longer than expected when you're running Configuration Manager version 2002 and you see `unexpected error occurred`.
-
-**Error message:** AdminService.log will contain:
-
-```log 
-System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
-System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
-System.ComponentModel.Win32Exception: The wait operation timed out
-```
-
-**Workaround:** Apply [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782).
-
 ### Application installation times out if application requires restart
 
 **Scenario:** If you're running Configuration Manager version 2002 and an application requires a restart to complete the installation process, the installation may time out.
