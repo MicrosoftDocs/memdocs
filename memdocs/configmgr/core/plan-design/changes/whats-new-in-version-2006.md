@@ -102,6 +102,23 @@ For more information, see [Renew secret key](../../servers/deploy/configure/azur
 
 For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
+#### Change to diagnostic data labels
+
+<!-- 7363467 -->
+
+To better align with the Desktop Analytics requirements for Windows diagnostic data, these settings have new labels:
+
+| Version 2006 and later | Version 2002 and earlier |
+|---------|---------|
+| Required | Basic |
+| Optional (limited) | Enhanced (Limited) |
+| N/A | Enhanced |
+| Optional | Full |
+
+If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
+
+For more information, see [Enable data sharing for Desktop Analytics](../../../desktop-analytics/enable-data-sharing.md).
+
 ## <a name="bkmk_real"></a> Real-time management
 
 ### Improvements to CMPivot
