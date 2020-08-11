@@ -61,17 +61,38 @@ Community hub supports the following objects:
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
 ## <a name="bkmk_deeplink"></a> Direct links to Community hub items
 <!--4224406-->
 *(Introduced in version 2006)*
+You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. The intention for this feature is for easier collaboration and being able to share links to Community hub items with your colleagues. These deep links are currently only for items in the Community hub node of the console.
 
-You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. The intention for this feature is for easier collaboration and being able to share links to Community hub items with your colleagues. Currently, you'll see these links shared by the Configuration Manager team and in the documentation. These deep links are currently only for items in the Community hub node of the console.
+### Prerequisites for direct links
 
-For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`). If you have the Configuration Manager 2006 console installed, follow that link, and then select **Launch the Community hub**. The console opens directly to the script in the Community hub.
+- Configuration Manager console version 2006 or later
+- You can't use the local built-in administrator account when following a Community hub link.
 
-> [!Note]
-> You can't use the the local built-in administrator account when following a Community hub link.
+### Sharing and opening direct links
 
+To share an item:
+1. Go the item in the hub and select **Share**.
+1. Paste the copied link and share it with others.
+
+To open a shared link:
+1. Click the link from a machine that has the Configuration Manager console installed.
+   - For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
+1. Select **Launch the Community hub** when prompted.
+1. The console opens directly to the script in the Community hub.
+
+## <a name="bkmk_known"></a> Known issues
+
+### Unable to access Community hub node when running console as a different user
+<!--7826897-->
+If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
+
+### Downloaded reports don't get removed from your downloads page
+<!--7851305-->
+If you delete a downloaded report from the **Monitoring** > **Reports** node, the report isn't deleted from the **Community hub** > **Your downloads** page and you're unable to download the report again. 
 
 ## Next steps
 
