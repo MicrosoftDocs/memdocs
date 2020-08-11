@@ -2,7 +2,7 @@
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
 description: "Troubleshooting application installation for Configuration Manager tenant attach"
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -97,7 +97,7 @@ System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout peri
 System.ComponentModel.Win32Exception: The wait operation timed out
 ```
 
-**Workaround:** Currently, a workaround isn't available.
+**Workaround:** Apply [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782).
 
 ### Application installation times out if application requires restart
 
