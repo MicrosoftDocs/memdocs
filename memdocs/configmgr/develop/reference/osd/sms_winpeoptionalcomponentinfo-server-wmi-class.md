@@ -124,8 +124,8 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 
  The unique ID of WinPE optional component. Possible values are:  
 
-|||  
-|-|-|  
+| ID value | WinPE component |
+| -------- | --------------- |
 |X86||  
 |1|WinPE-DismCmdlets.cab|  
 |2|WinPE-Dot3Svc.cab|  
@@ -154,8 +154,8 @@ Class SMS_WinPEOptionalComponentInfo : SMS_BaseClass
 |25|WinPE-WinReCfg.cab|  
 |26|WinPE-WMI.cab|  
 
-|||  
-|-|-|  
+| ID value | WinPE component |
+| -------- | --------------- |
 |X64||  
 |27|WinPE-DismCmdlets.cab|  
 |28|WinPE-Dot3Svc.cab|  

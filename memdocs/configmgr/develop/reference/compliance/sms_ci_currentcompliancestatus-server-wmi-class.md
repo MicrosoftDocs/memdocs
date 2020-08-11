@@ -91,7 +91,7 @@ Class SMS_CI_CurrentComplianceStatus : SMS_BaseClass
 
  The readable name of the compliance state. Possible values are:  
 
-|||  
+|Value|Compliance state|  
 |-|-|  
 |0|Compliance State Unknown|  
 |1|Compliant|  
@@ -134,7 +134,7 @@ Class SMS_CI_CurrentComplianceStatus : SMS_BaseClass
 
  The enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  

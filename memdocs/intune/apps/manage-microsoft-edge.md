@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -250,12 +250,12 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |    Key    |    Value    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** enables kiosk mode for Edge for Android<br>**false** (default) disables kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar in kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar in kiosk mode    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar when kiosk mode is enabled    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar when kiosk mode is enabled    |
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy:
 
 - Manage account synchronization
 - Manage restricted web sites
@@ -324,7 +324,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Matches a single page    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Matches a single page    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/*;`   |    Matches all URLs that begin with `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://www.contoso.com/*`   |    Matches all URLs that begin with `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
     |    `http://*.contoso.com/*`    |    Matches all subdomains under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
     |    `http://*contoso.com/*`    |    Matches all subdomains ending with `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Matches a single folder    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |

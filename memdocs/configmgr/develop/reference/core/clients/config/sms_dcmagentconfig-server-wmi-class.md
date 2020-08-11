@@ -83,7 +83,7 @@ Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Priority of the Settings Management evaluation job. Possible values are:  
 
-|||  
+|Value|Settings scan priority|  
 |-|-|  
 |priIdle|Idle|  
 |priNormal|Normal (recommended)|  

@@ -1,5 +1,5 @@
 ---
-title: "AddDistributionPoints Method"
+title: AddDistributionPoints method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -250,7 +250,7 @@ Class SMS_Application : SMS_ConfigurationItemBaseClass
 
  If any of the contained deployment type of dependent deployment types is user context, this application is user context.  
 
-|||  
+|Value|Execution context|  
 |-|-|  
 |0|System|  
 |1|User|  
@@ -444,7 +444,7 @@ Class SMS_Application : SMS_ConfigurationItemBaseClass
 
  Requirement for user logon to setup. Possible values are:  
 
-|||  
+|Value|Logon required?|  
 |-|-|  
 |0|Others|  
 |1|LogonRequired|  

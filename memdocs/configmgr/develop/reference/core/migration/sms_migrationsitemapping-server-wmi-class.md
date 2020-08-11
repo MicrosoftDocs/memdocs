@@ -281,7 +281,7 @@ Class SMS_MigrationSiteMapping : SMS_BaseClass
 
  Site mapping synchronization status.  
 
-|||  
+|Value|Site mapping status|  
 |-|-|  
 |0|Have not gathered data|  
 |1|Ready for next data gathering process|  

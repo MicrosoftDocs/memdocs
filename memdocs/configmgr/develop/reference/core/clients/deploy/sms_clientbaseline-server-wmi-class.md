@@ -63,7 +63,7 @@ Class SMS_ClientBaseline: SMS_BaseClass
 
  The client baseline type. Possible values are:  
 
-|||  
+|Value|Client baseline type|  
 |-|-|  
 |1|Production|  
 |2|Staging|  

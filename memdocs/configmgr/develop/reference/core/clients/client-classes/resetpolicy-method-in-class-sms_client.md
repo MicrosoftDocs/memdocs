@@ -33,8 +33,8 @@ UInt32 ResetPolicy(
 
  Flags identifying the policy. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|The next policy request will be for a full policy instead of the change in policy since the last policy request.|  
 |1|The existing policy will be purged completely.|  
 

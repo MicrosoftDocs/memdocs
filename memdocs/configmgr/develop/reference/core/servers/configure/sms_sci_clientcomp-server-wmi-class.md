@@ -65,7 +65,7 @@ Class SMS_SCI_ClientComp : SMS_SiteControlItem
 
  Client component flag identifying whether a component is enabled or not. Possible values are:  
 
-|||  
+|Value|Enabled flag|  
 |-|-|  
 |0|Not enabled|  
 |1|Enabled|  

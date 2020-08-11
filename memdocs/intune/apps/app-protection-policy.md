@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -329,6 +329,11 @@ The intent of this process is to continue keeping your organization's data withi
   
 ### iOS share extension
 You can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **managed apps only** or **no apps**. Intune app protection policy cannot control the iOS/iPadOS share extension without managing the device. Therefore, Intune _**encrypts "corporate" data before it is shared outside the app**_. You can validate this encryption behavior by attempting to open a "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
+
+### Universal Links support
+By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/). 
+
+Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to user Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
 
 ### Multiple Intune app protection access settings for same set of apps and users
 Intune app protection policies for access will be applied in a specific order on end-user devices as they try to access a targeted app from their corporate account. In general, a wipe would take precedence, followed by a block, then a dismissible warning. For example, if applicable to the specific user/app, a minimum iOS/iPadOS operating system setting that warns a user to update their iOS/iPadOS version will be applied after the minimum iOS/iPadOS operating system setting that blocks the user from access. So, in the scenario where the IT admin configures the min iOS operating system to 11.0.0.0 and the min iOS operating system (Warning only) to 11.1.0.0, while the device trying to access the app was on iOS 10, the end user would be blocked based on the more restrictive setting for min iOS operating system version that results in blocked access.

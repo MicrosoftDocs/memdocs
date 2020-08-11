@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -95,13 +95,15 @@ For additional help or to find out your organization's specific requirements, co
 | Password has expired. | Set a new password. Your organization requires you to change your password after a certain number of days. |
 | Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
-## Next steps
+## Update password, passcode, PIN
 
-See the following articles to create or change your device password, passcode, or PIN.  
+The following articles step you through how to change your device password, passcode, or PIN. For the most up-to-date instructions, refer to the help documentation from the device manufacturer. 
 
 - [Set Windows 10 device password](set-or-change-your-password-windows.md)  
 - [Set iOS device passcode](set-or-change-your-passcode-ios.md)  
 - [Set Android device PIN or password](set-your-pin-or-password-android.md)  
+
+## Next steps
 
 Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

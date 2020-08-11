@@ -130,8 +130,8 @@ Class SMS_DeviceEnrollmentProfile : SMS_BaseClass
 
  The type of the profile.  
 
-|||  
-|-|-|  
+| Value | Profile type |
+| ----- | ------------ |
 |1|DM|  
 |2|AMT|  
 

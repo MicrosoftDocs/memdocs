@@ -444,7 +444,7 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
 - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
@@ -472,7 +472,7 @@ These password settings apply to personal profiles on devices that use a work pr
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 - **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
   - **Device default**
