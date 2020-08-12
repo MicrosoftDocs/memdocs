@@ -2,7 +2,7 @@
 title: Tenant attach - Applications (preview) in the admin center
 titleSuffix: Configuration Manager
 description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -30,6 +30,11 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
    - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
+
+Additionally, you'll need the following for installing [user targeted applications](#bkmk_user):<!--7518897-->
+
+- Configuration Manager version 2006 and the corresponding version of the console installed.
+
 
 ## Permissions
 
@@ -67,7 +72,16 @@ You can filter the application list based on the status.The application status c
 - **Failed**: The application installation failed.
 - **Requirements not met**: The application requirements have not been met.
 - **Not installed**: The application isn't currently installed. Typically this status is seen if a different deployment or a user removed the application.
+- **Restart pending**: The application is installed but needs a restart to complete (starting in version 2006).
 
+## <a name="bkmk_user"></a> Deploy an application to a user
+<!--7518897-->
+Starting in Configuration Manager version 2006, user available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
+
+Deploying applications to a user has the following limitations:
+- Multi-user session scenarios aren't supported.
+- Azure AD joined devices aren't currently supported.
+   - Devices which are both domain joined and Azure AD joined are supported.
 
 ## Next steps
 

@@ -79,7 +79,7 @@ The final layer of security is based on permissions to objects in the site datab
 
  An administrator assigns *security roles* to administrative users and group permissions. The permissions are connected to different Configuration Manager object types, for example, to create or change client settings. 
 
- *Security scopes* group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft Office. 
+ *Security scopes* group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft 365 Apps. 
 
  The combination of security roles, security scopes, and collections define the objects that an administrative user can view and manage. Configuration Manager installs some default security roles for typical management tasks. Create your own security roles to support your specific business requirements.  
 

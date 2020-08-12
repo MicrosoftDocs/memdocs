@@ -5,9 +5,7 @@ description: A technical reference for the possible BitLocker (MBAM) client entr
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
-
-
+ms.topic: reference
 ms.assetid: c38b6963-cb1f-40ed-a888-e19d401ec3fc
 author: aczechowski
 ms.author: aaroncz

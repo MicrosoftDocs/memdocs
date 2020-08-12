@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -326,6 +326,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
+|SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
@@ -345,7 +346,7 @@ The following table lists the log files that are on the Configuration Manager si
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
 |swmproc.log|Records the processing of metering files and settings.|Site server|
-|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|   
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 

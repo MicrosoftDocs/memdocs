@@ -237,7 +237,7 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
-2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
 4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
 
