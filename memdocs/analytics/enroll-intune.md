@@ -30,7 +30,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 ### Intune device requirements
 
 - Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
-   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro isn't currently supported.
+   - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro and Windows 10 long-term servicing channel (LTSC) aren't supported.
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
