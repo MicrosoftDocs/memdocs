@@ -41,7 +41,7 @@ MFA works by requiring any two or more of the following verification methods:
 - Something you have (a trusted device that is not easily duplicated, like a phone).
 - Something you are (biometrics, like a fingerprint).
 
-MFA is supported for iOS/iPadOS, Android, Windows 8.1 or later, Windows Phone 8.1, or Windows 10 Mobile or later devices.
+MFA is supported for iOS/iPadOS, Android, Windows 8.1 or later devices.
 
 When you enable MFA, end users must supply two forms of credentials to enroll a device.
 

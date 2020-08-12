@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -48,7 +48,7 @@ Wi-Fi profiles support the following device platforms:
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - macOS X 10.12 and newer
-- Windows 10 and newer, Windows 10 Mobile, and Windows Holographic for Business
+- Windows 10 and newer, and Windows Holographic for Business
 
 > [!NOTE]
 > For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device.

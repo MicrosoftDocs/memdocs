@@ -220,7 +220,7 @@ The DO cache server adds the following rewrite rules:
 Disk space required for each DO cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
 
 - A feature update
-- Two to three months of quality and Office updates
+- Two to three months of quality and Microsoft 365 Apps updates
 - Microsoft Intune apps and Windows inbox apps
 
 The DO cache server shouldn't consume much system memory or processor time. After you install the DO cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.

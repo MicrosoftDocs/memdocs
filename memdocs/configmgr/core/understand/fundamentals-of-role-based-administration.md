@@ -23,7 +23,7 @@ With Configuration Manager, you use role-based administration to secure the acce
 
 - *Security roles* are assigned to administrative users to provide those users (or groups of users) permission to different Configuration Manager objects. For example, permission to create or change client settings.  
 
-- *Security scopes* are used to group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft Office 2010.  
+- *Security scopes* are used to group specific instances of objects that an administrative user is responsible to manage, like an application that installs Microsoft 365 Apps.  
 
 - *Collections* are used to specify groups of user and device resources that the administrative user can manage.  
 

@@ -136,7 +136,7 @@ The CMG connection point is the site system role for communicating with the CMG.
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## Configure client-facing roles for CMG traffic
+## <a name="bkmk_role"></a> Configure client-facing roles for CMG traffic
 
 Configure the management point and software update point site systems to accept CMG traffic. Do this procedure on the primary site, for all management points and software update points that service internet-based clients.  
 
@@ -153,7 +153,7 @@ Configure the management point and software update point site systems to accept 
 Repeat these steps for additional management points as needed, and for any software update points.
 
 ## Configure boundary groups
-
+ 
 <!--3640932-->
 Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships.
 
