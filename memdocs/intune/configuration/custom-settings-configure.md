@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use custom device settings in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a profile to use custom settings for Windows Phone, Windows 8.1, Windows 10 and later, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
+description: Add or create a profile to use custom settings for Windows 8.1, Windows 10 and later, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,6 @@ This article shows you how to create a custom profile for Android device adminis
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 and later**
-        - **Windows Phone 8.1**
 
     - **Profile**: Select **Custom**.
 
@@ -69,7 +68,6 @@ This article shows you how to create a custom profile for Android device adminis
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
