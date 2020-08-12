@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,9 +18,8 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 
 # optional metadata
 
-#ROBOTS:
 #audience:
-
+#ROBOTS: 
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -30,9 +29,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # What is Microsoft Intune app management?
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. This goal can be a challenge because:
 - There are a wide range of device platforms and app types.
@@ -55,22 +51,22 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Add and assign   apps to devices and users | Yes | Yes | Yes | Yes | Yes |
-| Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No | No |
-| Use app   configuration policies to control the startup behavior of apps | Yes | Yes | No | No | No |
-| Use mobile app   provisioning policies to renew expired apps | No | Yes | No | No | No |
-| Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> | No |
-| Remove only   corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes | Yes |
-| Monitor app   assignments | Yes | Yes | Yes | Yes | Yes |
-| Assign and   track volume-purchased apps from an app store | No | No | No | Yes | No |
-| Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes | Yes |
-| Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes | Yes |
-| Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes | Yes |
-| In-house   (line-of-business) apps | Yes | Yes | Yes | Yes | No |
-| Apps from a   store | Yes | Yes | No | Yes | Yes |
-| Update apps | Yes | Yes | No | Yes | Yes |
+| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Add and assign   apps to devices and users | Yes | Yes | Yes | Yes |
+| Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No |  |
+| Use app   configuration policies to control the startup behavior of apps | Yes | Yes | No | No |
+| Use mobile app   provisioning policies to renew expired apps | No | Yes | No | No |
+| Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |
+| Remove only   corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes |
+| Monitor app   assignments | Yes | Yes | Yes | Yes |
+| Assign and   track volume-purchased apps from an app store | No | No | No | Yes |
+| Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes |
+| Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes |
+| Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes |
+| In-house   (line-of-business) apps | Yes | Yes | Yes | Yes |
+| Apps from a   store | Yes | Yes | No | Yes |
+| Update apps | Yes | Yes | No | Yes |
 
 <sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
@@ -123,7 +119,7 @@ The [Manage and protect mobile and desktop applications with Microsoft Endpoint 
 The following items within the console provide app related functionality:
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
 - **Windows enterprise certificate**: Apply or view the status of a code-signing certificate that's used to distribute line-of-business apps to your managed Windows devices.
-- **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate, which is needed to distribute XAP and WP8.x appx files to Windows 10 Mobile devices.
+- **Windows Symantec certificate**: Apply or view the status of a Symantec code-signing certificate.
 - **Windows side loading keys**: Add a Windows side-loading key that can be used to install an app directly to devices rather than publishing and downloading the app from the Windows store. For more information, see [Side-load a Windows app](app-sideload-windows.md).
 - **Apple VPP tokens**: Apply and view your iOS/iPadOS Volume Purchase Program (VPP) licenses. For more information, see [iOS/iPadOS volume-purchased apps](vpp-apps-ios.md).
 - **Managed Google Play**: Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).

@@ -280,6 +280,18 @@ You can now choose to receive notifications from Microsoft in the Configuration 
 
 For more information, see [Configure a site to receive messages from Microsoft](../../servers/manage/admin-console-notifications.md#bkmk_msft).
 
+### Power BI sample reports
+<!--5679791-->
+
+*(First introduced in June 2020)*
+
+When you integrate Power BI Report Server with Configuration Manager reporting, there are now sample Power BI reports available. Download and install the following sample reports:
+
+- Software Update Compliance Status
+- Software Update Deployment Status
+
+For more information, see [Install Power BI sample reports](../../servers/manage/powerbi-sample-reports.md).
+
 <!-- Unused sections in this release:
 ## Reporting
 ## <a name="bkmk_userxp"></a> User experience
