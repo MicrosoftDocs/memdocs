@@ -58,7 +58,7 @@ If you deploy the app as required to users or devices then you do not need the I
 If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to the Intune portal:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certifcates**.
+2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certificates**.
 3. Select a file under **Code-signing certificate file**.
 4. Select your *.cer* file and click **Open**.
 5. Click **Upload** to add your certificate file to Intune.
