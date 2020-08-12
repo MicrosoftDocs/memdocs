@@ -18,9 +18,8 @@ ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 
 # optional metadata
 
-#ROBOTS:
 #audience:
-
+ROBOTS: NOINDEX
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
@@ -31,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add Windows Phone 8.1 store apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. 
 

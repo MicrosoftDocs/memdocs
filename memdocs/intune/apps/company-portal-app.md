@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -242,8 +242,6 @@ Some platforms and configurations do not allow self-service device actions. This
 | Wipe | Available | Available<sup>(5)</sup><sup>(9)</sup> | NA | Available<sup>(7)</sup> |
 | Rename<sup>(4)</sup> | Available | Available | Available | Available |
 | Sync | Available | Available | Available | Available |
-| Remote Lock | Windows Phone only | Available | Available | Available |
-| Reset Passcode | Windows Phone only | Available<sup>(8)</sup> | NA | Available<sup>(6)</sup> |
 | Key Recovery | NA | NA | Available<sup>(2)</sup> | NA |
 
 <sup>(1)</sup> **Retire** is always blocked on Azure AD Joined Windows devices.<br>
