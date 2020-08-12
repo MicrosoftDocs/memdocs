@@ -2,10 +2,10 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
@@ -211,6 +211,9 @@ Select this option to have the destination computer join the specified workgroup
 #### Join a domain
 
 Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as `fabricam.com`. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
 
 #### Account
 
@@ -768,7 +771,6 @@ Capture the registered user and organization names from the computer.
 Capture the time zone setting on the computer.  
 
 
-
 ## <a name="BKMK_CheckReadiness"></a> Check Readiness
 
 Use this step to verify that the target computer meets the specified deployment prerequisite conditions.  
@@ -786,6 +788,8 @@ Starting in version 2002, this step includes eight new checks. None of these new
 - **Network adapter connected**
   - **Network adapter is not wireless**
 
+Starting in version 2006, this step includes includes a check to determine if the device uses UEFI, **Computer is in UEFI mode**.<!--6452769-->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -799,14 +803,15 @@ Use the following task sequence variables with this step:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (starting in version 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (starting in version 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (starting in version 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (starting in version 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (starting in version 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (starting in version 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (starting in version 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (starting in version 2002)
 
 ### Cmdlets for Check Readiness
 
@@ -864,6 +869,10 @@ Starting in version 2002, verify that the device is plugged in and not on batter
 #### Network adapter connected
 
 Starting in version 2002, verify that the device has a network adapter that's connected to the network. You can also select the dependent check to verify that the **Network adapter is not wireless**.
+
+#### Computer is in UEFI mode
+
+Starting in version 2006, determine whether the device is configured for UEFI or BIOS.
 
 ### Options for Check Readiness
 
@@ -1049,12 +1058,9 @@ If you configure the [task sequence properties](../deploy-use/manage-task-sequen
 
 ## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker
 
-Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
+BitLocker drive encryption provides low-level encryption of the contents of a disk volume. Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
 
-Use the **Pre-provision BitLocker** step to enable BitLocker on a drive while in Windows PE. For more information, see [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> BitLocker drive encryption provides low-level encryption of the contents of a disk volume.  
+To enable BitLocker on a drive while in Windows PE, use the [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker) step.
 
 This step runs only in the full OS. It doesn't run in Windows PE.
 
@@ -1066,7 +1072,9 @@ When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN*
 - Activated  
 - Ownership Allowed  
 
-This step completes any remaining TPM initialization. The remaining steps don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization steps, if necessary:  
+Starting in version 2006, you can skip this step for computers that don't have a TPM or when the TPM isn't enabled. A new setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.<!--6995601-->
+
+This step completes any remaining TPM initialization. The remaining actions don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization actions, if necessary:
 
 - Create endorsement key pair  
 - Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
@@ -1113,6 +1121,18 @@ Specifies the drive to encrypt. To encrypt the current OS drive, select **Curren
 
 To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
 
+#### Disk encryption mode
+
+<!--6995601-->
+Starting in version 2006, select one of the following encryption algorithms:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+By default or if not specified, the step continues to use the default encryption method for the OS version. If the step runs on a version of Windows that doesn't support the specified algorithm, it falls back to the OS default. In this circumstance, the task sequence engine sends status message 11911.
+
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1131,6 +1151,10 @@ Select this option to allow BitLocker drive encryption to complete prior to runn
 
 The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
 
+#### Skip this step for computers that do not have a TPM or when TPM is not enabled
+
+<!--6995601-->
+Starting in version 2006, select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs an error to smsts.log and sends status message 11912. The task sequence continues past this step.
 
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
@@ -1169,6 +1193,31 @@ On the **Properties** tab for this step, configure the settings described in thi
 #### Disk Number
 
 The physical disk number of the disk to format. The number is based on Windows disk enumeration ordering.  
+
+#### Variable name to store disk number
+
+<!--6610288-->
+
+Starting in version 2006, use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.
+
+If you select this property, enter a custom variable name. Add an earlier step in the task sequence to set the value of this custom variable to an integer value for the physical disk.
+
+The following mock steps show one example:
+
+- **Run PowerShell Script**: a custom script to collect target disks
+  - Sets `myOSDisk` to `1`
+  - Sets `myDataDisk` to `2`
+
+- **Format and Partition Disk** for OS disk: specifies `myOSDisk` variable
+  - Configures disk 1 as the system disk
+
+- **Format and Partition Disk** for data disk: specifies `myDataDisk` variable
+  - Configures disk 2 for raw storage
+
+A variation of this example uses disk numbers and partitioning plans for different hardware types.
+
+> [!NOTE]
+> You can still use the existing task sequence variable **OSDDiskIndex**. However, each instance of the **Format and Partition Disk** step uses the same index value. If you want to programmatically set the disk number for multiple instances of this step, use this variable property.
 
 #### Disk Type
 
@@ -1484,6 +1533,9 @@ If one of the updates unexpectedly restarts the computer, retry this step. The s
 
 Use this step to add the destination computer to a workgroup or domain.  
 
+> [!NOTE]
+> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **General**, and select **Join Domain or Workgroup**.
@@ -1594,7 +1646,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-The [Windows Autopilot for existing devices](../deploy-use/windows-autopilot-for-existing-devices.md) task sequence uses this step with this option.
+The [Windows Autopilot for existing devices](../../../autopilot/existing-devices.md) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
@@ -1630,6 +1682,18 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the drive for which you want to enable BitLocker. BitLocker only encrypts the used space on the drive.  
 
+#### Disk encryption mode
+
+<!--6995601-->
+Starting in version 2006, select one of the following encryption algorithms:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+By default or if not specified, the step continues to use the default encryption method for the OS version. If the step runs on a version of Windows that doesn't support the specified algorithm, it falls back to the OS default. In this circumstance, the task sequence engine sends status message 11911.
+
 #### Use full disk encryption
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1637,7 +1701,7 @@ By default, this step only encrypts used space on the drive. This default behavi
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
 
-Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine.  
+Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is enabled for the **Pre-provision BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. Starting in version 2006, if the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
 
 
 
@@ -2164,10 +2228,10 @@ Consider the following points when you add a child task sequence to a task seque
 
 Starting in version 1906, manage this step with the following PowerShell cmdlets:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 For more information, see [1906 release notes - New cmdlets](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
@@ -2236,15 +2300,19 @@ To set a dynamic variable for use in the task sequence, add a rule. Then set a v
 
     Specify one or more variables to set for a rule that evaluates to true, or set variables without using a rule. Select an existing variable, or create a custom variable.  
 
-    - **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables aren't available to select.  
+  - **Existing task sequence variables**: Select one or more variables from a list of existing task sequence variables. Array variables aren't available to select.  
 
-    - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
+  - **Custom task sequence variables**: Define a custom task sequence variable. You can also specify an existing task sequence variable. This setting is useful to specify an existing variable array, such as **OSDAdapter**, since variable arrays aren't in the list of existing task sequence variables.  
 
-After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Secret value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
+After you select the variables for a rule, provide a value for each variable. The variable is set to the specified value when the rule evaluates to true. For each variable, you can select **Do not display this value** to hide the value of the variable. By default, some existing variables hide values, such as the **OSDCaptureAccountPassword** variable.  
 
 > [!IMPORTANT]  
-> Configuration Manager removes any variable values marked as a **Secret value** when you import a task sequence with the **Set Dynamic Variables** step. Re-enter the value for the dynamic variable after you import the task sequence.  
+> When you import a task sequence with the **Set Dynamic Variables** step, Configuration Manager removes any variable values marked as **Do not display this value**. After you import the task sequence, re-enter the value for the dynamic variable.
 
+When you use the option **Do not display this value**, the value of the variable isn't displayed in the task sequence editor. The task sequence log file (**smsts.log**) or the task sequence debugger won't show the variable value either. The variable can still be used by the task sequence when it runs. If you no longer want these variables to be hidden, delete them first. Then redefine the variables without selecting the option to hide them.  
+
+> [!WARNING]  
+> If you include variables in the **Run Command Line** step's command line, the task sequence log file displays the full command line including the variable values. To prevent potentially sensitive data from appearing in the log file, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`.
 
 
 ## <a name="BKMK_SetTaskSequenceVariable"></a> Set Task Sequence Variable
@@ -2284,8 +2352,13 @@ Specify the name of a task sequence built-in or action variable, or specify your
 <!--1358330-->
 Enable this option to mask sensitive data stored in task sequence variables. For example, when specifying a password.
 
-> [!Note]  
+> [!NOTE]
 > Enable this option and then set the value of the task sequence variable. Otherwise the variable value isn't set as you intend, which may cause unexpected behaviors when the task sequence runs.<!--SCCMdocs issue #800-->
+
+When you use the option **Do not display this value**, the value of the variable isn't displayed in the task sequence editor. The task sequence log file (**smsts.log**) or the task sequence debugger won't show the variable value either. The variable can still be used by the task sequence when it runs. If you no longer want this variable to be hidden, delete it first. Then redefine the variable without selecting the option to hide it.
+
+> [!WARNING]
+> If you include variables in the **Run Command Line** step's command line, the task sequence log file displays the full command line including the variable values. To prevent potentially sensitive data from appearing in the log file, set the task sequence variable **OSDDoNotLogCommand** to `TRUE`.<!-- 6963278 -->
 
 #### Value  
 
@@ -2383,6 +2456,8 @@ If there's a pre-production client package available, and the computer is a memb
 The task sequence step automatically specifies site assignment and the default configuration. Use this field to specify any additional installation properties to use when you install the client. To enter multiple installation properties, separate them with a space.  
 
 Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
+
+When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) property in the **Setup Windows and ConfigMgr** step. For example, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### Options for Setup Windows and ConfigMgr
 

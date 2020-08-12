@@ -6,6 +6,8 @@
     href: device-sync-actions.md
   - name: Client details (preview)
     href: client-details.md
+  - name: Install applications (preview)
+    href: applications.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview
@@ -18,3 +20,5 @@
     href: troubleshoot.md
   - name: Client details (preview)
     href: troubleshoot-client-details.md
+  - name: Application installation (preview)
+    href: troubleshoot-applications.md

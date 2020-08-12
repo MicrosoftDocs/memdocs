@@ -5,13 +5,11 @@ description: Learn how to use Configuration Manager to upgrade an OS from Window
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Upgrade Windows to the latest version with Configuration Manager

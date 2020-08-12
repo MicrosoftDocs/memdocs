@@ -47,7 +47,7 @@ Class CCM_RequestedAppPolicyActivation :
 
  Activation action. Possible value are:  
 
-|||  
+|Value|Activation action|  
 |-|-|  
 |0|default|  
 |1|By-pass Activation|  

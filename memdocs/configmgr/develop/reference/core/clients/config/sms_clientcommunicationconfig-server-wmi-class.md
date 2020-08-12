@@ -40,7 +40,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 
  Set metered network usage behavior. Possible values are:  
 
-|||  
+|Value|Metered network usage policy|  
 |-|-|  
 |1|Allow metered network use.|  
 |2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client will decide whether or not to use the metered network for the deployment.|  

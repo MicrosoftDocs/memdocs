@@ -5,13 +5,11 @@ description: Learn about the levels of diagnostics and usage data collected in v
 ms.date: 05/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ROBOTS: NOINDEX
 ---
 # Levels of diagnostic usage data collection for version 1802 of Configuration Manager

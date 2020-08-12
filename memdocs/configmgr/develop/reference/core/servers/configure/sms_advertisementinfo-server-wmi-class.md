@@ -127,7 +127,7 @@ Class SMS_AdvertisementInfo : SMS_BaseClass
 
  The type of advertisement.  
 
-|||  
+|Value|Advertisement type|  
 |-|-|  
 |0|Required Advertisement.|  
 |2|Available advertisement.|  

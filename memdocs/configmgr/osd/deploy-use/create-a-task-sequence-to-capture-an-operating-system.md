@@ -5,13 +5,11 @@ description: A build-and-capture task sequence builds a reference computer that 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Create a task sequence to capture an OS

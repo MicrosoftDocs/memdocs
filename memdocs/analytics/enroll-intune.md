@@ -21,7 +21,7 @@ manager: dougeby
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
-This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics.
+This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](#bkmk_prereq) below, we recommend using the instructions in this quickstart to enroll them to Endpoint analytics via Intune. Note that you do not need to move any co-management workloads to Intune to enroll eligible devices via Intune.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
@@ -29,7 +29,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Intune device requirements
 
-- Intune enrolled devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
+- Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
    - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education. Windows 10 Pro or Windows 10 long-term servicing channel (LTSC) aren't supported.
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.

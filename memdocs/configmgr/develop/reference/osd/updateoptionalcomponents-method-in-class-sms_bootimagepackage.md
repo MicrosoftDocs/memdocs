@@ -36,8 +36,8 @@ SInt32 UpdateOptionalComponents(
 
  Component identifiers. The following are possible values:  
 
-|||  
-|-|-|  
+| ID value | WinPE component |  
+| -------- | --------------- |  
 |X86||  
 |1|WinPE-DismCmdlets.cab|  
 |2|WinPE-Dot3Svc.cab|  
@@ -66,8 +66,8 @@ SInt32 UpdateOptionalComponents(
 |25|WinPE-WinReCfg.cab|  
 |26|WinPE-WMI.cab|  
 
-|||  
-|-|-|  
+| ID value | WinPE component |  
+| -------- | --------------- |  
 |X64||  
 |27|WinPE-DismCmdlets.cab|  
 |28|WinPE-Dot3Svc.cab|  

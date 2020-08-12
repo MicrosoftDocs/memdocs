@@ -60,8 +60,8 @@ Class SMS_ClientActionStatus : SMS_BaseClass
 
  State of the client action.  Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action state |  
+| ----- | ------------ |  
 |0|Inactive|  
 |1|Active|  
 |2|Decommission|  
@@ -75,8 +75,8 @@ Class SMS_ClientActionStatus : SMS_BaseClass
 
  Action type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action type |  
+| ----- | ----------- |  
 |1|Full Scan|  
 |2|Quick Scan|  
 |3|Download Definition|  

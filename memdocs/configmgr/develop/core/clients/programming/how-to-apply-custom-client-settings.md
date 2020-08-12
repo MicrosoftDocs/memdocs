@@ -40,9 +40,8 @@ public void ApplyCustomClientSettings(WqlConnectionManager connection,          
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`targetCollectionID`|-   Managed: `String`|The target collection for the custom client settings deployment.|  
 

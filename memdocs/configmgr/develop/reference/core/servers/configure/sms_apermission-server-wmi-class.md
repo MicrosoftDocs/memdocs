@@ -61,7 +61,7 @@ Class SMS_APermission :
 
  The type of category. The default value is 29.  
 
-|||  
+|Value|Category type|  
 |-|-|  
 |1|Collection|  
 |29|SecuredScope|  

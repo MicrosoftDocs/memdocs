@@ -405,10 +405,10 @@ Add-PSSnapin -Name Microsoft.BDD.PSSnapIn
 ###  <a name="ManageItemDeployShare"></a> Managing Items in a Deployment Share Using Windows PowerShell  
  A deployment share contains items that are used to perform deployments, such as operating systems, applications, device drivers, operating system packages, and task sequences. These items can managed using cmdlets from Windows PowerShell and those provided with MDT.  
 
- For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
+ For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://docs.microsoft.com/powershell/scripting/samples/manipulating-items-directly). The folder structure for a deployment share can also be managed using Windows PowerShell. For more information, see [Managing Deployment Share Folders Using Windows PowerShell](#ManageDeployShareFolder).  
 
 ####  <a name="ImportItemDeployShare"></a> Import an Item into a Deployment Share  
- You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple item into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
+ You can import each type of item, such as operating systems, applications, or device drivers, using MDT cmdlets. For each type of item, there is a specific MDT cmdlet. If you want to import multiple items into a deployment share using Windows PowerShell, see [Automating Population of a Deployment Share](#AutomatePopulateDeployShare).  
 
  The following table lists the MDT Windows PowerShell cmdlets used to import items into a deployment share and provides a brief description of each cmdlet. Examples of how to use each cmdlet is provided in the section that corresponds to each cmdlet.  
 
@@ -561,7 +561,7 @@ ForEach-Object ($App in $List) {
      For more information on the MDT cmdlets used for importing items into a deployment share, see [Import an Item into a Deployment Share](#ImportItemDeployShare).  
 
 ###  <a name="ManageDeployShareFolder"></a> Managing Deployment Share Folders Using Windows PowerShell  
- You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://technet.microsoft.com/library/dd315266.aspx).  
+ You can manage folders in a deployment share using command-line tools, such as the **mkdir** command, or using Windows PowerShell cmdlets, such as the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet and the MDTProvider Windows PowerShell provider. The same folder structure of deployment shares can also be seen and managed in the Deployment Workbench. For more information about manipulating items directly using Windows PowerShell cmdlets, see [Manipulating Items Directly](https://docs.microsoft.com/powershell/scripting/samples/manipulating-items-directly).  
 
 #### Create a Folder in a Deployment Share Using Windows PowerShell  
  **To create a folder in a deployment share using Windows PowerShell**  
@@ -603,7 +603,7 @@ ForEach-Object ($App in $List) {
 
 6.  Create a folder named *Windows_7* folder in the Operating Systems folder in a deployment share using the [New-Item](https://technet.microsoft.com/library/hh849795) cmdlet, as shown in the following example and described in [Using the New-Item Cmdlet](https://technet.microsoft.com/library/ee176914.aspx):  
 
-    ```  
+    ```powershell
     New-Item "DS002:\Operating Systems\Windows_7" -Type directory  
     ```  
 
@@ -611,7 +611,7 @@ ForEach-Object ($App in $List) {
 
 7.  Verify that the folder is created correctly by typing the following command:  
 
-    ```  
+    ```powershell
     Get-ChildItem "DS002:\Operating Systems"  
     ```  
 
@@ -1186,7 +1186,8 @@ Parameters=USZip
 ```  
 
  Executing this code produces output similar to the following:
-```  
+
+```output
 Added new custom property USZIP  
 Added new custom property CITY  
 Added new custom property STATE  
@@ -1230,7 +1231,7 @@ Obtained AREA_CODE value from web service:  AREA_CODE = 425
 
  Using the ZTIConnect.wsf script, you can connect to other servers and access resources on them. The syntax for the ZTIConnect.wsf script is as follows (where *unc_path* is a Universal Naming Convention [UNC] path to connect to the server):  
 
-```  
+```cmd
 cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path  
 ```  
 
@@ -1545,9 +1546,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 ### Complex Conditions  
  Multiple conditions can be grouped using **IF** statements to create complex conditions. For instance, imagine that a particular step should only be run for Contoso 1950 computers running Windows Server 2003 or Windows Server 2008. Written as a programmatic **IF** statement, it would look similar to the following:  
 
-```  
-IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))  
-```  
+`IF ((Computer Model IS "Contoso 1950") AND (operating system=2003 OR operating system=2008))`
 
  **To add a complex condition**  
 
@@ -2534,7 +2533,7 @@ ParameterCondition=OR
 
  **Example Script Using ZTIUtility Logging: ZTI_Example.wsf**  
 
-```vbs  
+```vbscript
 <job id="ZTI_Example">  
 <script language="VBScript" src="ZTIUtility.vbs"/>  
 <script language="VBScript">  
@@ -3473,9 +3472,8 @@ Add-PSSnapIn Microsoft.BDD.PSSnapIn
 New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
 New-item -path "DS002:\Applications" -enable "True" -Name "Adobe" -Comments "This folder contains Adobe software" -ItemType "folder" -Verbose remove-psdrive DS001 -Verbose  
 ```  
-
-    > [!NOTE]
-    >  Adding "`remove-psdrive`" to the script ensures that the background process finishes before proceeding.  
+> [!NOTE]
+> Adding "remove-psdrive" to the script ensures that the background process finishes before proceeding.  
 
 ###  <a name="DeleteFolder"></a> Deleting a Folder  
  The following Windows PowerShell commands delete the Deployment Workbench\/Deployment Shares\/Production\/Applications\/Adobe folder.  
@@ -3487,7 +3485,7 @@ Remove-item -path "DS002:\Applications\Adobe" -Verbose
 ```  
 
 > [!NOTE]
->  The script will fail if the folder is not empty.  
+> The script will fail if the folder is not empty.  
 
 ###  <a name="ImportDeviceDriver"></a> Importing a Device Driver  
  The following Windows PowerShell commands will import the Dell 2407 WFP monitor device driver into the Production deployment share.  

@@ -75,8 +75,8 @@ Class InventoryAction : SMS_InventoryAgent_Policy
 
   Unique ID for the inventory action. Possible values are:  
 
-|||  
-|-|-|  
+| Inventory Action ID type | Value |
+| ------------------------ | ----- |
 |Discovery|{00000000-0000-0000-0000-000000000003}|  
 |Hardware Inventory|{00000000-0000-0000-0000-000000000001}|  
 |Software Inventory|{00000000-0000-0000-0000-000000000002}|  
@@ -173,8 +173,8 @@ Class InventoryAction : SMS_InventoryAgent_Policy
 
  Type of inventory report. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |Full|Report contains all instances collected by the associated `InventoryDataItem` queries.|  
 |Delta|Report contains instances that have changed since the last report|  
 |Resync|Report contains instances in full report and also is triggered by a site policy resynchronization request|  

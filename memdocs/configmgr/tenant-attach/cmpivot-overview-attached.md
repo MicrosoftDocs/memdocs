@@ -2,7 +2,7 @@
 title:  Tenant attached CMPivot overview 
 titleSuffix: Configuration Manager
 description: CMPivot overview for Microsoft Endpoint Manager tenant attached devices.
-ms.date: 07/13/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -29,6 +29,10 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 - Use `project` if you only need specific columns.
 - Use `take` to return up to the specified number of rows.
 - Use `top` to return the first N records sorted by specified columns.
+
+> [!Important]
+> When using CMPivot to query a device, if there isn't a response within 10 minutes, the query will timeout. <!--7802754-->
+
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
