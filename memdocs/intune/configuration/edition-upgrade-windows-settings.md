@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,7 +44,7 @@ For more information on this feature, see [Upgrade Windows 10 editions or enable
 
 - **Edition to upgrade to**: Select the Windows 10 edition that you're upgrading to. The devices targeted by this policy are upgraded to the edition you choose.
 - **Product Key**: Enter the product key that you received from Microsoft. After you create the policy with the product key, the key can't be updated, and is hidden for security reasons. To change the product key, enter the entire key again.
-- **License File**: For **Windows 10 Holographic for Business** or **Windows 10 Mobile edition**, choose **Browse** to select the license file you received from Microsoft. This license file includes license information for the editions you're upgrading the devices to.
+- **License File**: For **Windows 10 Holographic for Business**, choose **Browse** to select the license file you received from Microsoft. This license file includes license information for the editions you're upgrading the devices to.
 
 ## Mode switch
 
