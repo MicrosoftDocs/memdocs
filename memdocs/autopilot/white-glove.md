@@ -51,7 +51,7 @@ Devices slated for white glove provisioning are registered for Autopilot via the
 
 To be ready to try out Windows Autopilot for white glove deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
 
-- User-driven Azure AD join. Make sure that you can deploye devices using Windows Autopilot and join them to an Azure Active Directory tenant.
+- User-driven Azure AD join. Make sure that you can deploy devices using Windows Autopilot and join them to an Azure Active Directory tenant.
 - User-driven with Hybrid Azure AD join. Make sure that you can deploy devices using Windows Autopilot, join them to an on-premises Active Directory domain, and register them with Azure Active Directory to enable the Hybrid Azure AD join features.
 
 If these scenarios can't be completed, Windows Autopilot for white glove deployment will also not succeed since it builds on top of these scenarios.
