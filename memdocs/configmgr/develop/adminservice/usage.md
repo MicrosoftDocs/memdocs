@@ -61,7 +61,7 @@ https://SMSProviderFQDN/AdminService/wmi/$metadata#SMS_Site   {@{@odata.etag=FC1
 The following example drills down to more specific values:
 
 ```powershell
-((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials`).value).Version
+((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials).value).Version
 ```
 
 The output of this command is the specific version of the site: `5.00.8968.1000`
