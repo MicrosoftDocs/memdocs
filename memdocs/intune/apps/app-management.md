@@ -51,22 +51,22 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |  |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- |  |
-| Add and assign   apps to devices and users | Yes | Yes | Yes | Yes |  |
+| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Add and assign   apps to devices and users | Yes | Yes | Yes | Yes |
 | Assign apps to   devices not enrolled with Intune | Yes | Yes | No | No |  |
-| Use app   configuration policies to control the startup behavior of apps | Yes | Yes | No | No |  |
-| Use mobile app   provisioning policies to renew expired apps | No | Yes | No | No |  |
-| Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |  |
-| Remove only   corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes |  |
-| Monitor app   assignments | Yes | Yes | Yes | Yes |  |
-| Assign and   track volume-purchased apps from an app store | No | No | No | Yes |  |
-| Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes |  |
-| Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes |  |
-| Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes |  |
-| In-house   (line-of-business) apps | Yes | Yes | Yes | Yes |  |
-| Apps from a   store | Yes | Yes | No | Yes |  |
-| Update apps | Yes | Yes | No | Yes |  |
+| Use app   configuration policies to control the startup behavior of apps | Yes | Yes | No | No |
+| Use mobile app   provisioning policies to renew expired apps | No | Yes | No | No |
+| Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |
+| Remove only   corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes |
+| Monitor app   assignments | Yes | Yes | Yes | Yes |
+| Assign and   track volume-purchased apps from an app store | No | No | No | Yes |
+| Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes |
+| Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes |
+| Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes |
+| In-house   (line-of-business) apps | Yes | Yes | Yes | Yes |
+| Apps from a   store | Yes | Yes | No | Yes |
+| Update apps | Yes | Yes | No | Yes |
 
 <sup>1</sup> Consider using [Windows Information Protection](../protect/windows-information-protection-configure.md) to protect apps on devices that run Windows 10.<br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
