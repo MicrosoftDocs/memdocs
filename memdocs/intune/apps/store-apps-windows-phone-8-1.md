@@ -47,7 +47,7 @@ You can add a Windows Phone 8.1 store app to Intune from the Azure portal by doi
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
-    - **Appstore URL**: Type the App Store URL of the app that you want to create.
+    - **App Store URL**: Type the App Store URL of the app that you want to create.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.
