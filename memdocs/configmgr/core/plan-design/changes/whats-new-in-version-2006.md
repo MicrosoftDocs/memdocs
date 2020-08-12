@@ -30,6 +30,12 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
+### Tenant attach: CMPivot from the admin center
+<!--6024392-->
+Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+
+For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### Install applications from the admin center
 <!--7518897, 6024389-->
 You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Manager admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  

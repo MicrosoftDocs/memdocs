@@ -14,10 +14,9 @@ manager: dougeby
 
 # Tenant attach: CMPivot sample scripts
 <!---->
-*Applies to: Configuration Manager (technical preview branch)*
+*Applies to: Configuration Manager (current branch)*
 
-> [!Important]
-> This article applies to the technical preview branch for Configuration Manager. For more information see, [Configuration Manager technical preview version 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
+Starting in Configuration Manager 2006, you can run CMPivot from Microsoft Endpoint Manager admin center. Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
 
 Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
 
@@ -25,4 +24,4 @@ Below are a few common query needs and how CMPivot can be used to meet them. CMP
 
 ## Next steps
 
-For more information on entities for your queries, see [Microsoft Endpoint Manager tenant attach: CMPivot overview](cmpivot-overview-attached.md).
+For more information on entities for your queries, see [Microsoft Endpoint Manager tenant attach: CMPivot usage overview](cmpivot-overview-attached.md).

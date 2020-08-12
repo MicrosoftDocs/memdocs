@@ -1,5 +1,5 @@
 ---
-title:  Tenant attached CMPivot overview 
+title:  Tenant attached CMPivot usage overview 
 titleSuffix: Configuration Manager
 description: CMPivot overview for Microsoft Endpoint Manager tenant attached devices.
 ms.date: 08/11/2020
@@ -12,14 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Tenant attach: CMPivot overview
+# Tenant attach: CMPivot usage overview
 
-*Applies to: Configuration Manager (technical preview branch)*
+*Applies to: Configuration Manager (current branch)*
 
-> [!Important]
-> This article applies to the technical preview branch for Configuration Manager. For more information see, [Configuration Manager technical preview version 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
-
-CMPivot allows you to quickly assess the state of a device in your environment and take action. When you enter a query, CMPivot will run a query in real time on the currently connected device. The data returned can then be filtered, grouped, and refined to answer business questions, troubleshoot issues in your environment, or respond to security threats. For more information about using CMPivot, see [Use CMPivot](../core/servers/manage/cmpivot.md).
+Starting in Configuration Manager 2006, you can run CMPivot from Microsoft Endpoint Manager admin center. CMPivot allows you to quickly assess the state of a device in your environment and take action. When you enter a query, CMPivot will run a query in real time on the currently connected device. The data returned can then be filtered, grouped, and refined to answer business questions, troubleshoot issues in your environment, or respond to security threats. For more information about using CMPivot, see [Use CMPivot](../core/servers/manage/cmpivot.md).
 
 ## <a name="bkmk_refine"></a> Refine CMPivot queries
 
