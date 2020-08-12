@@ -20,7 +20,7 @@ Starting in Configuration Manager version 1902, you can create OneDrive for Busi
 
 ## Prerequisites
 
-- [Find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Find your Microsoft 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
@@ -41,7 +41,7 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 5. On the **Settings** page:
 
-    1. Specify your Office 365 tenant ID.  
+    1. Specify your Microsoft 365 tenant ID.  
 
     2. Select one of the following options to move the known folders to OneDrive:  
 

@@ -143,7 +143,7 @@ For more information, see [Monitor connection health](../../../desktop-analytics
 
 We've made it easier to navigate CMPivot entities. You can now search CMPivot entities. New icons have also been added to easily differentiate the entities and the entity object types.
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
+For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -387,9 +387,9 @@ Similar to improvements in previous releases, you can now use the **All Subfolde
 
 <!--3555935, 3555936-->
 
-_First introduced in June 2020_
+*(First introduced in June 2020)*
 
-The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
+The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft.
 
 For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 

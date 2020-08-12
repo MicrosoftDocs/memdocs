@@ -5,15 +5,14 @@ description: "Learn about the levels of diagnostics and usage data that Configur
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1702 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -392,7 +391,7 @@ For Configuration Manager version 1702, this level includes the following:
 
     - ***[New]*** Configuration of Data Warehouse Service Point including synchronization schedule and average time
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - Reporting usage and performance statistics  
 
