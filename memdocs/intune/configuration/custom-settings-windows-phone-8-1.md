@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.technology:
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
 #audience:
 
 ms.suite: ems
@@ -28,6 +28,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Use custom settings for Windows Phone 8.1 devices in Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Using Microsoft Intune, you can add or create custom settings for your Windows Phone 8.1 devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 

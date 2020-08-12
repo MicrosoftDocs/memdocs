@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -64,7 +64,6 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 and later
 
@@ -78,7 +77,6 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 
 ## Delivery optimization
 
@@ -160,7 +158,6 @@ This feature supports:
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 and later
 
 ## Endpoint protection
@@ -192,7 +189,7 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
@@ -283,7 +280,6 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 and later
 
