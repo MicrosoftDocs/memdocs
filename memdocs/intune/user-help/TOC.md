@@ -135,7 +135,6 @@
 #### [Get started with Windows enrollment](windows-enrollment-company-portal.md)
 #### [Enroll Windows 10 device](enroll-windows-10-device.md)
 #### [Enroll Windows 8.1 or Windows RT 8.1 device](enroll-your-w81-or-rt81-windows.md)
-#### [Enroll Windows Phone 8.1 device](enroll-your-wp81-windows.md)
 ### [Encrypt your device](encrypt-your-device-windows.md)
 ### [Set or change device password](set-or-change-your-password-windows.md)
 ### [Remove your device from Intune](unenroll-your-device-from-intune-windows.md)
