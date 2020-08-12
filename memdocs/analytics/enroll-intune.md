@@ -21,7 +21,7 @@ manager: dougeby
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
-This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics.
+This quickstart outlines prerequisites and instructions for enrolling Intune managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](#bkmk_prereq) below, we recommend using the instructions in this quickstart to enroll them to Endpoint analytics via Intune. Note that you do not need to move any co-management workloads to Intune to enroll eligible devices via Intune.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
