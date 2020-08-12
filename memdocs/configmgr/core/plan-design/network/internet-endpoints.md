@@ -2,10 +2,10 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
@@ -196,8 +196,6 @@ Allow the active software update point to access the following endpoints so that
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 For more information on software updates, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md).
@@ -219,7 +217,7 @@ You might need to add endpoints to a firewall that's between two site systems in
 
 - `https://<FQDN for software update point on parent site>`  
 
-## Manage Office 365
+## Manage Microsoft 365 Apps
 
 > [!NOTE]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
@@ -270,15 +268,21 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 ## Desktop Analytics
 
-For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## Tenant attach
 
-For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+For more information, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## Asset intelligence
 

@@ -5,7 +5,7 @@ description: Use a task sequence to automatically upgrade from Windows 7 or late
 ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz

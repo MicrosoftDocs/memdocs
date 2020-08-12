@@ -121,7 +121,7 @@ Yes, the following Windows Analytics features were either retired or aren't yet 
 #### Upgrade Readiness
 
 - Internet Explorer Site Discovery data
-- Office add-in insights (now [available in Configuration Manager](#bkmk_office))
+- Microsoft 365 Apps add-in insights (now [available in Configuration Manager](#bkmk_office))
 - Feedback Hub insights
 
 #### Update Compliance
@@ -146,9 +146,9 @@ Yes, the following Windows Analytics features were either retired or aren't yet 
 
 ## Other
 
-### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Office 365 ProPlus upgrades?
+### <a name="bkmk_office"></a> Can I use Desktop Analytics for my Microsoft 365 Apps upgrades?
 
-No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with many customers. Customer feedback is about how Desktop Analytics improves their ability to confidently manage Windows deployments. They also tell us they want [Office 365 ProPlus readiness](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) more closely integrated with Office management tools in Configuration Manager and Intune. Microsoft continues to invest in those areas, while focusing on Windows scenarios in Desktop Analytics.
+No, Desktop Analytics is focused on Windows. Microsoft developed Desktop Analytics in close collaboration with many customers. Customer feedback is about how Desktop Analytics improves their ability to confidently manage Windows deployments. They also tell us they want [Microsoft 365 Apps readiness](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) more closely integrated with Microsoft 365 Apps management tools in Configuration Manager and Intune. Microsoft continues to invest in those areas, while focusing on Windows scenarios in Desktop Analytics.
 
 ### How can I provide feedback about Desktop Analytics?
 

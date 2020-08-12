@@ -5,13 +5,11 @@ description: In Configuration Manager, learn to manage the Windows PE boot image
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage boot images with Configuration Manager
@@ -77,11 +75,15 @@ When a boot image is based on a different version of the Windows ADK installed o
 
 During site installation, Configuration Manager automatically adds boot images that are based on a WinPE version from the supported version of the Windows ADK. Depending on the version of Configuration Manager, you can add boot images based on a different WinPE version from the supported version the Windows ADK. An error occurs when you try to add a boot image that contains an unsupported version of WinPE. The following list is the currently supported Windows ADK and WinPE versions:
 
-| Windows type | Supported versions |
-|--------------|--------------------|
-| Windows ADK version | Windows ADK for Windows 10 |
-| Windows PE versions for boot images customizable from the Configuration Manager console | Windows PE 10 |
-| Supported Windows PE versions for boot images *not customizable* from the Configuration Manager console | - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
+- Windows ADK version: Windows ADK for Windows 10
+
+- Windows PE versions for boot images customizable from the Configuration Manager console: Windows PE 10
+
+- Supported Windows PE versions for boot images *not customizable* from the Configuration Manager console
+
+  - Windows PE 3.1<sup>[Note 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 For example, use the Configuration Manager console to customize boot images based on Windows PE 10 from the Windows ADK for Windows 10. For a boot image based on Windows PE 5, customize it from a different computer using the version of DISM from the Windows ADK for Windows 8. Then add the custom boot image to the Configuration Manager console. For more information, see the following articles:
 
