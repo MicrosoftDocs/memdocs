@@ -30,7 +30,7 @@ The process is simple so that anyone can complete it. Devices can be shipped or 
 3. Connect it to a wireless or wired network with internet access. If using wireless, the user must establish the Wi-Fi link. 
 4. Specify your e-mail address and password for your organization account.
 
-The remainder of the process is automated, as the device:
+The rest of the process is automated, as the device:
 1. Joins the organization.
 2. Enrolls in Intune (or another MDM service)
 3. Is configured as defined by the organization.
@@ -52,19 +52,19 @@ From a process flow perspective, the tasks performed during the user-driven proc
 - After the device configuration tasks complete, the user is signed into Windows 10 using the credentials they previously provided. (If the device reboots during the device ESP process, the user must reenter their credentials as these details aren't persisted across reboots.)
 - After sign in, the enrollment status page displays for user-targeted configuration tasks.
 
-If any issues are encountered during this process, see the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
+If any issues are found during this process, see the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
 
 For more information on the available join options, see the following sections:
 
-- [Azure Active Directory join](#user-driven-mode-for-azure-active-directory-join) is available if devices do not need to be joined to an on-prem Active Directory domain.
+- [Azure Active Directory join](#user-driven-mode-for-azure-active-directory-join) is available if devices don't need to be joined to an on-prem Active Directory domain.
 - [Hybrid Azure Active Directory join](#user-driven-mode-for-hybrid-azure-active-directory-join) is available for devices that must be joined to both Azure Active Directory and your on-prem Active Directory domain.
 
 ## User-driven mode for Azure Active Directory join
 
-In order to perform a user-driven deployment using Windows Autopilot, the following preparation steps need to be completed:
+To perform a user-driven deployment using Windows Autopilot, the following preparation steps need to be completed:
 
 - Ensure that the users who will be performing user-driven mode deployments are able to join devices to Azure Active Directory. For more information, see [Configure device settings](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) in the Azure Active Directory documentation.
-- Create an Autopilot profile for user-driven mode with the desired settings. In Microsoft Intune, this mode is explicitly chosen when creating the profile. With Microsoft Store for Business and Partner Center, user-driven mode is the default and does not need to be selected.
+- Create an Autopilot profile for user-driven mode with the desired settings. In Microsoft Intune, this mode is explicitly chosen when creating the profile. With Microsoft Store for Business and Partner Center, user-driven mode is the default and doesn't need to be selected.
 - If using Intune, create a device group in Azure Active Directory and assign the Autopilot profile to that group.
 
 For each device that will be deployed using user-driven deployment, these additional steps are needed:
@@ -96,7 +96,7 @@ To perform a user-driven hybrid Azure AD joined deployment using Windows Autopil
  - Note: The Intune Connector will perform an on-prem AD join. Therefore, users don't need on-prem AD-join permission. This assumes the Connector is [configured to perform this action](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) on the user's behalf. 
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 
-**Azure AD device join**: The hybrid Azure AD join process uses the system context to perform device Azure AD join. Therefore, it's not affected by user-based Azure AD join permission settings. In addition, all users are enabled to join devices to Azure AD by default.
+**Azure AD device join**: The hybrid Azure AD join process uses the system context to perform device Azure AD join. Therefore, it's not affected by user-based Azure AD join permission settings. Also, all users are enabled to join devices to Azure AD by default.
 
 ## User-driven mode for hybrid Azure Active Directory join with VPN support
 
@@ -118,10 +118,10 @@ The following additional requirements apply for Hybrid Azure AD Join with VPN su
   - can be deployed with Intune and lets the user manually establish a VPN connection from the Windows logon screen, or
   - one that automatically establishes a VPN connection as needed. 
 
-The specific VPN configuration required depends on the VPN software and authentication being used. For third-party (non-Microsoft) VPN solutions, this typically would involve deploying a Win32 app (containing the VPN client software itself as well as any specific connection information, for example: VPN endpoint host names) via Intune Management Extensions. Consult your VPN provider's documentation for configuration details specific to that provider.
+The specific VPN configuration required depends on the VPN software and authentication being used. For third-party (non-Microsoft) VPN solutions, this typically would involve deploying a Win32 app (containing the VPN client software itself and any specific connection information, for example: VPN endpoint host names) via Intune Management Extensions. Consult your VPN provider's documentation for configuration details specific to that provider.
 
 > [!NOTE]
-> The VPN requirements aren't specific to Windows Autopilot. For example, if you have already implemented a VPN configuration to enable remote password resets, where a user needs to log on to Windows with a new password when not on the organization's network, that same configuration can be used with Windows Autopilot. Once the user has signed in to cache their credentials, subsequent log-on attempts do not need connectivity since the cached credentials can be used. 
+> The VPN requirements aren't specific to Windows Autopilot. For example, if you have already implemented a VPN configuration to enable remote password resets, where a user needs to log on to Windows with a new password when not on the organization's network, that same configuration can be used with Windows Autopilot. Once the user has signed in to cache their credentials, subsequent log-on attempts don't need connectivity since the cached credentials can be used. 
 
 In cases where certificate authentication is required by the VPN software, the needed machine certificate should also be deployed via Intune. This deployment can be done using the Intune certificate enrollment capabilities, targeting the certificate profiles to the device.
 
@@ -136,7 +136,7 @@ Next, validate that the VPN configuration (Win32 app, certs, and any other requi
 - From PowerShell, verify that at least one per-machine VPN connection has been created using the "Get-VpnConnection -AllUserConnection" command.
 - Attempt to manually start the VPN connection using the command: RASDIAL.EXE "ConnectionName"
 - Log out and verify that the "VPN connection" icon can be seen on the Windows logon page.
-- Move the device off the corporate network and attempt to establish the connection using the icon on the Windows logon page, signing into an account that does not have cached credentials.
+- Move the device off the corporate network and attempt to establish the connection using the icon on the Windows logon page, signing into an account that doesn't have cached credentials.
 
 For VPN configurations that automatically connect, the validation steps may be different.
 
@@ -150,7 +150,7 @@ To validate the end-to-end process, ensure the needed Windows 10 cumulative upda
 - Install the update using the command (substituting the real file name): WUSA.EXE <filename>.msu /quiet
 - Reboot the computer using the command: shutdown.exe /r /t 0
 
-Alternatively, you can invoke Windows Update to install the latest updates through this process:
+Instead, you can invoke Windows Update to install the latest updates through this process:
 
 - Press Shift-F10 to open a command prompt.
 - Run the command "start ms-settings:"
