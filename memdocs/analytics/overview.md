@@ -2,7 +2,7 @@
 title: What is Endpoint analytics (preview)?
 titleSuffix: Configuration Manager
 description: Overview for Endpoint analytics preview.
-ms.date: 07/13/2020
+ms.date: 08/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -47,7 +47,7 @@ This release is just the beginning. We'll be rapidly rolling out new insights fo
 For this preview, you can enroll devices via Configuration Manager or Microsoft Intune.
 
 ### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune, this preview requires:
-- Intune enrolled devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
+- Intune enrolled or co-managed devices running Windows 10 Pro, Windows 10 Pro Education, Windows 10 Enterprise, or Windows 10 Education. Windows 10 Home isn't supported.
    - Startup performance insights are only available for devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education (Windows 10 Pro and Windows 10 long-term servicing channel (LTSC) aren't supported.)
 - Windows 10 devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
