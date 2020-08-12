@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -96,10 +96,10 @@ After you onboard a device using the configuration package, you don't need to do
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter a **Name** and **Description**.
-4. For **Platform**, select **Windows 10 and later**
-5. For **Profile type**, select **Microsoft Defender ATP (Windows 10 Desktop)**.
-6. Configure the settings:
+3. For **Platform**, select **Windows 10 and later**
+4. For **Profile type**, select **Microsoft Defender ATP (Windows 10 Desktop)**, and then select **Create**.
+5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
+6. On the **Configuration settings** page, configure the following:
 
    - **Microsoft Defender ATP client configuration package type**: Select **Onboard** to add the configuration package to the profile. Select **Offboard** to remove the configuration package from the profile.
   
@@ -111,8 +111,14 @@ After you onboard a device using the configuration package, you don't need to do
 
      [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on these Microsoft Defender ATP settings.
 
-7. Select **OK**, and then **Create** to save your changes, which creates the profile.
-8. [Assign the device configuration profile](../configuration/device-profile-assign.md) to devices you want to assess with Microsoft Defender ATP.
+7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
+
+8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next**.
+
+9. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+ **OK**, and then **Create** to save your changes, which creates the profile.
 
 ### Onboard Android devices
 
