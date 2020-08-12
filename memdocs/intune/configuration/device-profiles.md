@@ -189,7 +189,7 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 and Windows 10 Mobile devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 

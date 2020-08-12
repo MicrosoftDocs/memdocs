@@ -41,7 +41,6 @@ For example, you want to configure all iOS/iPadOS devices with the required sett
 > * Android 4 and later
 > * Enrolled devices that run Windows 8.1 and later
 > * Enrolled devices that run Windows 10 desktop
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## VPN connection types

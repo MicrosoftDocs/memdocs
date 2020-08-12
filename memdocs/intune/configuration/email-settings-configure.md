@@ -37,7 +37,7 @@ You can use email profiles to configure the built-in email settings for the foll
 - Android Enterprise
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
-- Windows 10 (desktop) and Windows 10 Mobile
+- Windows 10 (desktop)
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
