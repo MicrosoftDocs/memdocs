@@ -112,7 +112,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 - **Enable pre-authentication**: Pre-authentication allows the profile to authenticate to all access points for the network in the profile before connecting. When moving between access points, pre-authentication reconnects the user or devices more quickly. Choose **Yes** for the profile to authenticate to all access points for this network that are within range. Choose **No** to require the user or device to authenticate to each access point separately.
 
-  To use the **Enable pre-authentication** setting, select **Yes**.
+  To use this setting, set **Enable pairwise master key (PMK) caching** to **Yes**.
 
   - **Maximum pre-authentication attempts**: Enter the number of tries to preauthenticate, from 1-16.
 
