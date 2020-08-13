@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -131,12 +131,12 @@ This section provides recommendations on the Android and Android Enterprise enro
 
 These Android devices are personal or BYOD (bring your own device) devices that can access work or school email, apps, and other data.
 
-#### Administrator tasks
+#### Administrator tasks: Android device administrator
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), enable device administrator enrollment. For the specific steps, see [Android device administrator enrollment](../enrollment/android-enroll-device-administrator.md).
 
-#### End users
+#### End user tasks: Android device administrator
 
 Your users must do the following. For more specific steps, see [enroll the device](../user-help/enroll-device-android-company-portal.md).
 
@@ -162,13 +162,13 @@ Don't use this enrollment option when:
 - Not recommended for organization-owned devices. Organization-owned devices should be enrolled in Intune.
 - You're using user-less devices, such as kiosk or dedicated device. User-less devices should be enrolled in Intune.
 
-#### Administrator tasks
+#### Administrator tasks: Android Enterprise work profile
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an [enrollment restriction](../enrollment/enrollment-restrictions-set.md), and **allow** devices that support Android Enterprise work profiles. For the specific steps, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
 
-#### End users
+#### End user tasks: Android Enterprise work profile
 
 Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
 
@@ -194,7 +194,7 @@ Don't use this enrollment option when:
 
 - Your devices are personal or BYOD.
 
-#### Administrator tasks
+#### Administrator tasks: Android Enterprise dedicated devices
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Factory reset the devices. This step is required.
@@ -204,7 +204,7 @@ Don't use this enrollment option when:
 
   On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
 
-#### End users
+#### End user tasks: Android Enterprise dedicated devices
 
 It's not recommended for users to enroll Android Enterprise dedicated devices. This task should be completed by administrators.
 
@@ -222,7 +222,7 @@ Don't use this enrollment option when:
 
 - Your devices are personal or BYOD.
 
-#### Administrator tasks
+#### Administrator tasks: Android Enterprise fully managed
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Factory reset the devices. This step is required.
@@ -232,7 +232,7 @@ Don't use this enrollment option when:
 
   On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
 
-#### End users
+#### End user task: Android Enterprise fully managed
 
 It's not recommended for users to enroll Android Enterprise fully managed devices. This task should be completed by administrators.
 
@@ -264,12 +264,12 @@ Don't use this enrollment option when:
 
 For more information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
 
-#### Administrator tasks
+#### Administrator tasks: MAM-WE
 
 - Be sure your iOS/iPadOS devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md), optionally create [app configuration policies](../apps/app-configuration-policies-use-ios.md), and create [app protection policies](../apps/app-protection-policy-settings-ios.md). Deploy these policies to the devices.
 
-#### End users
+#### End user tasks: MAM-WE
 
 ??Is Company Portal app required???
 ??How do they get work apps, Outlook???
@@ -297,7 +297,7 @@ When you create the enrollment profile, you're asked to to choose **User enrollm
 
 For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).??Need to update the title of this article, is it applies to user enrollment and Device enrollment??
 
-#### Administrator tasks
+#### Administrator tasks: User and Device enrollment
 
 - Be sure you have an [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md). This certificate is required to enroll iOS/iPadOS devices.
 - Be sure your iOS/iPadOS devices are [supported](supported-devices-browsers.md).
@@ -335,7 +335,7 @@ For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS
 
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
-#### End users
+#### End user tasks: User and Device enrollment
 
 Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
 
@@ -367,7 +367,7 @@ For more specific information on this enrollment type, see:
 
   For more information on Apple School Manager, see [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
 
-#### Administrator tasks
+#### Administrator tasks: ADE
 
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Have the Apple token (.p7m) ready.
@@ -399,7 +399,7 @@ For more specific information on this enrollment type, see:
 
   For more information on this enrollment option, see [Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
-#### End users
+#### End user tasks: ADE
 
 When you create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (with user affinity), or have shared devices (without user affinity).
 
@@ -431,7 +431,7 @@ Don't use this enrollment option when:
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
-#### Administrator tasks
+#### Administrator tasks: Apple Configurator
 
 - Requires access to a Mac computer with a USB port.
 - Have the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) ready. This certificate is required to enroll iOS/iPadOS devices.
@@ -452,7 +452,7 @@ For more specific information on this enrollment type, see [Apple Configurator e
 
 For more information on this enrollment option, and its prerequisites, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
-#### End users
+#### End user tasks: Apple Configurator
 
 - **Setup Assistant enrollment**: Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md). Once installed, they'll can install apps, including LOB apps, used by your organization.
   - Admins should push comp port app from VPP
@@ -483,7 +483,7 @@ Don't use this enrollment option when:
 
 - Not recommended for devices owned by the organization.
 
-#### Administrator tasks
+#### Administrator tasks: Device enrollment
 
 - Have the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) ready. This certificate is required to enroll macOS devices.
 - Be sure your devices are [supported](supported-devices-browsers.md).
@@ -505,7 +505,7 @@ Don't use this enrollment option when:
 
     For more specific information on the end user steps, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
-#### End user tasks
+#### End user tasks: Device enrollment
 
 These tasks depend on how you, the administrator, tell users to install the Company Portal app. Typically, the less end users must do to enroll, the higher chance they'll want to enroll.
 
@@ -541,7 +541,7 @@ Don't use this enrollment option when:
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md) and [Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
 
-#### Administrator tasks
+#### Administrator tasks: Apple Configurator macOS
 
 - Have the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) ready. This certificate is required to enroll macOS devices.
 - Be sure your devices are [supported](supported-devices-browsers.md).
@@ -584,7 +584,7 @@ For more specific information on this enrollment type, see [Apple Configurator e
 
 - When the profile is ready, USB connect the devices to the Mac, and open the **Apple Configurator** app. When the app opens, it detects the USB connected device, and deploys the Intune enrollment profile you created.
 
-#### End user tasks
+#### End user tasks: Apple Configurator macOS
 
 These tasks depend on how you, the administrator, tell users to install the Company Portal app. Typically, the less end users must do to enroll, the higher chance they'll want to enroll.
 
@@ -624,11 +624,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 
 - **User enrollment**: Use for personal/BYOD and organization-owned devices running all supported Windows versions, including Windows 10 and newer. This option doesn't require Azure AD Premium. Users open the account settings on the device, and sign in with their work or school account. They're prompted for specific information that you must give them, including the Intune server name or CNAME record (`EnterpriseEnrollment.contoso.com`).
 
-- **Autopilot**: Use organization-owned devices running Windows 10 and newer. Windows Autopilot uses the Windows 10 OEM version preinstalled on the device.
-
-  Instead of re-imaging the device, your existing Windows 10 installation can be transformed into a “business-ready” state, applying settings and policies, installing apps, and even changing the edition of Windows 10 being used (e.g. from Windows 10 Pro to Windows 10 Enterprise) to support advanced features.
-
-  https://docs.microsoft.com/mem/autopilot/windows-autopilot
+- **Windows Autopilot**: Use on organization-owned devices running Windows 10 and newer. Windows Autopilot uses the Windows 10 OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic Enrollment, and uses the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile that joins the device to Azure AD. When users sign in with their work or school account, they're automatically enrolled.
 
 - **Group policy**: https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy
 
@@ -650,7 +646,7 @@ Don't use this option when:
 - You don't have Azure AD Premium, or aren't planning to get it.
 - You'll use Conditional Access on devices bulk-enrolled. Bulk-enrolled devices don't support conditional access.
 
-#### Automatic enrollment administrator tasks
+#### Administrator tasks: Automatic enrollment
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile, and choose which users can automatically enroll. In the account settings on the device, users sign in with their work or school account, and then are automatically enrolled.
@@ -660,7 +656,7 @@ Don't use this option when:
 
   If your end users are familiar with running a file from these locations, they can complete the enrollment. For more information, see [automatic bulk enrollment](../enrollment/windows-bulk-enroll.md).
 
-#### Automatic enrollment end user tasks
+#### End user tasks: Automatic enrollment
 
 - Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**. Users sign in with work or school email address and password. Once they sign in, they're enrolled. The device is registered in Azure AD, and is ready to receive the policies and profiles you create.
 
@@ -685,14 +681,14 @@ Don't use this option when:
 - You have Azure AD Premium. If you have Azure AD Premium, use Windows 10 Automatic enrollment. It's a better end user experience.
 - You require features only available in Azure AD Premium, such as Conditional Access.
 
-#### User enrollment administrator tasks
+#### Administrator tasks: User enrollment
 
 Other than having Intune setup, there are minimal administrator tasks with this enrollment method. This is why it's called "user enrollment".
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure its configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 
-#### User enrollment end user tasks
+#### End user tasks: User enrollment
 
 - Users open the **Settings** app > **Accounts** > **Access work or school** > **Connect**. They sign in with work or school email address and password. They're asked for more information, including the Intune server name or CNAME record. Be sure to give them all the information they need to enter.
 
@@ -708,34 +704,42 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-### AutoPilot
+### Windows Autopilot
 
 Use this enrollment option when:
 
 - You have new or existing devices.
 - Your devices are owned by the organization or school.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+- You need to enroll a small number of devices, or a large number of devices.
+- Devices are hybrid Azure AD joined. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune.
+- You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program.
+- You have remote workers, and want to send devices directly to these users.
 
-#### Autopilot adminstrator tasks
+Don't use this option when:
+
+- Your devices are personal or BYOD. Windows Autopilot is only for organization-owned devices.
+- You don't have Azure AD Premium, or aren't planning to get it. Azure AD Premium is required by Automatic enrollment. Windows Autopilot uses Automatic enrollment.
+
+For more information on Windows Autopilot, see:  
+
+- [Windows Autopilot overview](https://docs.microsoft.com/mem/autopilot/windows-autopilot)
+- [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md)
+
+#### Administrator tasks: Windows Autopilot
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](https://docs.microsoft.com/mem/autopilot/windows-autopilot-requirements).
+- For 100% cloud devices, you'll:
+  - Work with the OEM, reseller, or distributor to register the devices with the [Windows Autopilot deployment service](https://aka.ms/windowsautopilot).
+  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the devices, and create an enrollment profile that joins the devices to Azure AD. The profile also configures the out-of-box deployment user experience, including [user driven](https://docs.microsoft.com/mem/autopilot/user-driven), [white glove](https://docs.microsoft.com/mem/autopilot/white-glove), and more. For more specific information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/mem/autopilot/enrollment-autopilot).
+  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a profile that configures startup behaviors, such as disabling the local administrator, and skipping the EULA. For more specific information, see [Configure Autopilot profiles](https://docs.microsoft.com/mem/autopilot/profiles).
 
-**Option 1 - Windows only**: You can set up [hybrid Active Directory and Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune.
+- For hybrid Azure AD joined devices, you'll register the devices, and create profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
 
-  Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+  For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](https://docs.microsoft.com/mem/autopilot/windows-autopilot-hybrid).
 
-**Option 2 - All platforms**: Reset the device, and enroll the device in Intune. It's considered a new device, and receives the policies and profiles you create. 
+#### End user tasks: Windows Autopilot
 
-## AutoPilot
 
-Admin's enroll
-Use AutoPilot to enroll - See Erik's articles.
-
-Remote workers, which includes supported Home SKU
-
-[Tutorial: Use Autopilot to enroll Windows devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md)
-
-OEMs that support AUtopilot: https://www.microsoft.com/microsoft-365/windows/windows-autopilot
 
 ## Common issues and resolutions
 
@@ -746,5 +750,3 @@ In this section, add extra information provided by CSS and PFE teams.
 ## Next steps
 
 [Intune setup deployment guide](deployment-guide-intune-setup.md)  
-[Compliance and configuration deployment guide](deployment-guide-compliance-configuration.md)  
-App deployment guide (MFA)
