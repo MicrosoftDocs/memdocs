@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -107,7 +107,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Click **Next** to display the **Assignments** page.<br>
-   The **Assignments** page allows you to assign the app protection policy to groups of users.
+   The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
 
@@ -115,6 +115,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     > [!TIP]
     > These policy settings are enforced only when using apps in the work context. When end users use the app to do a personal task, they aren't affected by these policies. Note that when you create a new file it is considered a personal file.
+
+    > [!IMPORTANT]
+    > It can take time for app protection plicies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
 * [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
