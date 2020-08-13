@@ -105,12 +105,12 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **Maximum time to authenticate before timeout**: Enter the maximum number of seconds to wait before authenticating to the network, from 1-120 seconds.
   - **Allow Windows to prompt user for additional authentication credentials**: Choosing **Yes** allows the Windows system to prompt the user for additional credentials if the authentication method requires it. Choose **No** to hide these prompts.
 
-- **Enable pairwise master key (PMK) caching**: Select **Yes** to cache the PMK used in authentication. This caching typically allows authentication to the network to complete faster. Choose **No** to force the authentication handshake when connecting to the Wi-Fi network every time.
+- **Enable pairwise master key (PMK) caching**: Select **Yes** to cache the PMK used in authentication. This caching typically allows authentication to the network to complete faster. Choose **No** to force the authentication handshake when connecting to the Wi-Fi network every time. This must be set to **Yes** to use pre-authentication.
 
   - **Maximum time a PMK is stored in cache**: Enter the number of minutes a pairwise master key (PMK) is stored in the cache, from 5-1440 minutes.
   - **Maximum number of PMKs stored in cache**: Enter the number of keys stored in cache, from 1-255.
 
-- **Enable pre-authentication**: Pre-authentication allows the profile to authenticate to all access points for the network in the profile before connecting. When moving between access points, pre-authentication reconnects the user or devices more quickly. Choose **Yes** for the profile to authenticate to all access points for this network that are within range. Choose **No** to require the user or device to authenticate to each access point separately.
+- **Enable pre-authentication**: Pre-authentication allows the profile to authenticate to all access points for the network in the profile before connecting. When moving between access points, pre-authentication reconnects the user or devices more quickly. Choose **Yes** for the profile to authenticate to all access points for this network that are within range. Choose **No** to require the user or device to authenticate to each access point separately. You must also enable PMK caching to use pre-authentication.
 
   - **Maximum pre-authentication attempts**: Enter the number of tries to preauthenticate, from 1-16.
 
