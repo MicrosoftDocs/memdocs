@@ -84,7 +84,7 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Troubleshooting Autopilot OOBE issues
 
-When OOBE inclues unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
+When OOBE includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
 ### Windows 10 version 1803 and above
 
