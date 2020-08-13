@@ -28,7 +28,7 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 Whether you're performing user-driven or self-deploying device deployments, the troubleshooting process is about the same. It's useful to understand the flow for a specific device:
 
 1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
-2. The Windows Autopilot profile is downloaded. When you use a wired connection, or manually establish a wireless connection, the profile downloadeds from the Autopilot deployment service as soon as the network connection is in place.
+2. The Windows Autopilot profile is downloaded. When you use a wired connection, or manually establish a wireless connection, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
 3. User authentication occurs. When performing a user-driven deployment, the user will enter their Azure Active Directory credentials, which will be validated.
 4. Azure Active Directory join occurs. For user-driven deployments, the device will be joined to Azure AD using the specified user credentials. For self-deploying scenarios, the device will be joined without specifying any user credentials.
 5. Automatic MDM enrollment occurs. As part of the Azure AD join process, the device will enroll in the MDM service configured in Azure AD (for example, Microsoft Intune).
@@ -48,9 +48,9 @@ For troubleshooting, key activities to perform are:
 
 This error points to the device hash being incorrectly formatted. Anything that corrupts the collected hash can cause this error. One possibility is that the hash itself (even if it's valid) fails to be decoded.
 
-The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. In most cases, the payload doesn't require padding and the process works. Sometimes, however, the payload doesn't line up cleanly and padding is necessary. In this case, get the error displayed above. PowerShell's Base64 decoder also expects padded Base64, so we can use this decoder to validate that the hash is properly padded.
+The device hash is Base64. At the device level, it's encoded as unpadded Base64, but Autopilot expects padded Base64. Usually, the payload doesn't require padding and the process works. Sometimes, however, the payload doesn't line up cleanly and padding is necessary. In this case, you get the error displayed above. PowerShell's Base64 decoder also expects padded Base64, so we can use this decoder to validate that the hash is properly padded.
 
-The "A" characters at the end of the hash are effectively empty data - Each character in Base64 is 6 bits, A in Base64 is 6 bits equal to 0. Deleting or adding **A**s at the end doesn't change the actual payload data.
+The "A" characters at the end of the hash are effectively empty data. Each character in Base64 is 6 bits, A in Base64 is 6 bits equal to 0. Deleting or adding **A**s at the end doesn't change the actual payload data.
 
 To fix this issue, we'll need to modify the hash, then test the new value, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error "Invalid length for a Base-64 char array or string". 
 
@@ -84,7 +84,7 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Troubleshooting Autopilot OOBE issues
 
-If the expected Autopilot behavior doesn't occur during the OOBE, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
+When OOBE inclues unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows 10 release, there are different mechanisms available to do that.
 
 ### Windows 10 version 1803 and above
 
@@ -97,7 +97,7 @@ Windows 10 version 1803 and above adds event log entries. You can use the og ent
 | 103 | Info | “AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value].” This message shows Autopilot retrieving and processing OOBE setting strings such as the Azure AD tenant name. |
 | 109 | Info | “AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state].” This message shows Autopilot retrieving and processing state-related OOBE settings. |
 | 111 | Info | “AutopilotRetrieveSettings succeeded.” This message means that the settings stored in the Autopilot profile that control the OOBE behavior have been retrieved successfully. |
-| 153 | Info | “AutopilotManager reported the state changed from [original state] to [new state].” Usualyl, this message should say “ProfileState_Unknown” to “ProfileState_Available”. This case indicates that a profile was available and downloaded for the device. So, the device is ready to deploy using Autopilot. |
+| 153 | Info | “AutopilotManager reported the state changed from [original state] to [new state].” Usually, this message should say “ProfileState_Unknown” to “ProfileState_Available”. This case indicates that a profile was available and downloaded for the device. So, the device is ready to deploy using Autopilot. |
 | 160 | Info | “AutopilotRetrieveSettings beginning acquisition.” This message shows that Autopilot is getting ready to download the needed Autopilot profile settings. |
 | 161 | Info | “AutopilotManager retrieve settings succeeded.” The Autopilot profile was successfully downloaded. |
 | 163 | Info | “AutopilotManager determined download isn't required and the device is already provisioned. Clean or reset the device to change this.” This message indicates that an Autopilot profile is resident on the device; it typically would only be removed by the **Sysprep /Generalize** process. |
@@ -109,7 +109,7 @@ In addition to the event log entries, the registry and ETW trace options below w
 
 ### Windows 10 version 1709 and above
 
-On Windows 10 version 1709 and above, Autopilot profile settings information received from the Autopilot deployment service are stored in the device's registry. This information can be found at **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Available registry entries include:
+Autopilot profile settings received from the Autopilot deployment service are stored in the device's registry. This information can be found at **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Available registry entries include:
 
 | Value | Description |
 |-------|-------------|
@@ -128,13 +128,15 @@ On devices running a [supported version](https://docs.microsoft.com/windows/rele
 
 The most common issue joining a device to Azure AD is related to Azure AD permissions. Make sure that [the correct configuration is in place](configuration-requirements.md) to allow users to join devices to Azure AD. Errors can also happen if the user exceeds the number of devices that they're allowed to join. This limit is configured in Azure AD.
 
-An Azure AD device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Azure AD for group membership and targeting (including the profile). Deleting it can lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
+An Azure AD device is created upon import. It's important this object isn't deleted. The object acts as Autopilot's anchor in Azure AD for group membership and targeting (including the profile). Deleting it may lead to join errors. If this object is deleted, you can fix the issue by deleting and reimporting this autopilot hash so it can recreate the associated object.
 
 Error code 801C0003 will typically be reported on an error page titled "Something went wrong". This error means that the Azure AD join failed.
 
 ## Troubleshooting Intune enrollment issues
 
-See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues include incorrect or missing licenses assigned to the user or too many devices enrolled for the user.
+See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues can include"
+- incorrect or missing licenses assigned to the user.
+- too many devices enrolled for the user.
 
 Error code 80180018 will typically be reported on an error page titled "Something went wrong". This error means that the MDM enrollment failed.
 
