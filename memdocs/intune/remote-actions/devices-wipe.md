@@ -172,7 +172,8 @@ You can configure Intune to automatically delete devices that appear to be inact
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-
+> [!NOTE]
+> Device cleanup rules are not available for Android Enterprise scenarios like: [Fully Managed](https://docs.microsoft.com/en-us/mem/intune/enrollment/android-fully-managed-enroll), [Dedicated](https://docs.microsoft.com/en-us/mem/intune/enrollment/android-kiosk-enroll) or [Corporate-Owned with Work Profile](https://docs.microsoft.com/en-us/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
 
 ## Delete devices from the Azure Active Directory portal
 
