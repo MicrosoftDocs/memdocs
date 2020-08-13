@@ -8,7 +8,7 @@ ms.date: 08/14/2020
 ---
 <!--Don't apply H2 in this include file since they are context driven by article-->
 
-### When the SMS provider is remote from the CAS, you may encounter an internal server error from the admin console
+### <a name="bkmk_dblhop"></a> When the SMS provider is remote from the CAS, you may encounter an internal server error from the admin console
 
 **Error message:** On-prem error code: 500 internal server error
 
@@ -20,7 +20,7 @@ ms.date: 08/14/2020
 
 **Workaround:** Follow the instructions for the [CAS has a remote provider](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
 
-### When multi-factor authentication is enabled, most tenant attach features don't work
+### <a name="bkmk_mfa"></a> When multi-factor authentication is enabled, most tenant attach features don't work
 
 **Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console.
 
