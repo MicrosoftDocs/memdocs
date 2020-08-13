@@ -8,9 +8,9 @@
     href: client-details.md
   - name: Install applications (preview)
     href: applications.md
-- name: CMPivot for tenant attached devices
+- name: CMPivot (preview) for tenant attached devices
   items:
-  - name: Launch CMPivot
+  - name: Launch CMPivot (preview)
     href: cmpivot-start.md
   - name: CMPivot usage overview
     href: cmpivot-overview-attached.md

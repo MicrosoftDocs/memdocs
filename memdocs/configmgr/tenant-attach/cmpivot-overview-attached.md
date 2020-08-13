@@ -12,9 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# Tenant attach: CMPivot usage overview
+# Tenant attach: CMPivot (preview) usage overview
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!Important]
+> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Starting in Configuration Manager 2006, you can run CMPivot from Microsoft Endpoint Manager admin center. CMPivot allows you to quickly assess the state of a device in your environment and take action. When you enter a query, CMPivot will run a query in real time on the currently connected device. The data returned can then be filtered, grouped, and refined to answer business questions, troubleshoot issues in your environment, or respond to security threats. For more information about using CMPivot, see [Use CMPivot](../core/servers/manage/cmpivot.md).
 

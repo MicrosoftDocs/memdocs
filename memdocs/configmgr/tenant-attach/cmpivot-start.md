@@ -1,5 +1,5 @@
 ---
-title:  Launch tenant attached CMPivot
+title:  Launch tenant attached CMPivot (preview)
 titleSuffix: Configuration Manager
 description: CMPivot overview for Microsoft Endpoint Manager tenant attached devices.
 ms.date: 07/31/2020
@@ -12,9 +12,12 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# <a name="bkmk_cmpivot"></a> Launch CMPivot from the admin center
+# <a name="bkmk_cmpivot"></a> Launch CMPivot (preview) from the admin center
 
 *Applies to: Configuration Manager (current branch)* 
+
+> [!Important]
+> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 <!--6024392-->
 Starting in Configuration Manager 2006, you can run CMPivot from Microsoft Endpoint Manager admin center. Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
@@ -48,12 +51,13 @@ The user account needs the following permissions:
   - **Read** permission on **Inventory Reports**
   - The default scope.
 
-## Launch CMPivot
+## <a name="bkmk_launch"></a> Launch CMPivot
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace and select the **Devices** node.
-1. Right-click on a device that's been uploaded to Microsoft Endpoint Manager.
-1. In the right-click menu, select **Start** > **Admin Center Preview** to open the preview in your browser.
-1. Select **CMPivot**, type your query in the script pane, then select **Run**.
+1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. Select **Devices** then **All Devices**.
+1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
+1. Select **CMPivot (preview)**.
+1. Type your query in the script pane, then select **Run**.
 
 ## Next steps
 
