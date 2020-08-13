@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/12/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -117,8 +117,6 @@ To learn how to add apps for each platform to Intune, see:
 - [iOS store apps](store-apps-ios.md)
 - [iOS LOB apps](lob-apps-ios.md)
 - [Web apps (for all platforms)](web-app.md)
-- [Windows Phone 8.1 store apps](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB apps](lob-apps-windows-phone.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
 - [Office 365 apps for Windows 10](apps-add-office365.md)

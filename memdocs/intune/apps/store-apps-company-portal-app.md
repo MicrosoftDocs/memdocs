@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -75,7 +75,7 @@ For more information about how Intune handles dependencies for Universal apps, s
 
 ## Frequently asked questions 
 ### How do I update the Company Portal app on my users' devices if they have already installed the older apps from the store?
-If your users have already installed the Windows 8.1 or Windows Phone 8.1 Company Portal apps from the Microsoft Store, their apps should be automatically updated to the latest version with no action required from you or your users. If the update does not happen, ask your users to confirm that they have enabled auto-updates for Store apps on their devices.   
+If your users have already installed the Windows 8.1 Company Portal apps from the Microsoft Store, their apps should be automatically updated to the latest version with no action required from you or your users. If the update does not happen, ask your users to confirm that they have enabled auto-updates for Store apps on their devices.   
 
 ### How do I upgrade my sideloaded Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
 Our recommended migration path is to delete the assignment for the Windows 8.1 Company Portal app by setting the assignment action to **Uninstall**. After you select this setting, you can assign the Windows 10 Company Portal app by using any of the previously discussed options.  
@@ -84,8 +84,8 @@ If you need to sideload the app and you assigned the Windows 8.1 Company Portal 
 
 If you need to sideload the app and you signed and assigned the Windows 8.1 Company Portal app with the Symantec code-signing certificate, follow the steps in the next section.
 
-### How do I upgrade my signed and sideloaded Windows Phone 8.1 Company Portal app or Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
-Our recommended migration path is to delete the existing assignment for the Windows Phone 8.1 Company Portal app or the Windows 8.1 Company Portal app by setting the assignment action to **Uninstall**. After you select this setting, you can assign the Windows 10 Company Portal app normally.  
+### How do I upgrade my signed and sideloaded Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
+Our recommended migration path is to delete the existing assignment for the Windows 8.1 Company Portal app by setting the assignment action to **Uninstall**. After you select this setting, you can assign the Windows 10 Company Portal app normally.  
 
 Otherwise, the Windows 10 Company Portal app must be appropriately updated and signed to ensure that the upgrade path is respected.  
 
@@ -103,7 +103,7 @@ Here's how you sign and assign the app in this way:
 |---|---|
 | InputWin10AppxBundle  |  The path to the source appxbundle file. |
 | OutputWin10AppxBundle | The output path for the signed appxbundle file. 
-| Win81Appx  | The path to the Windows 8.1 or Windows Phone 8.1 Company Portal (.APPX) file. |
+| Win81Appx  | The path to the Windows 8.1 Company Portal (.APPX) file. |
 | PfxFilePath  |  The path to the Symantec Enterprise Mobile Code Signing Certificate (.PFX) file.  |
 | PfxPassword  | The password of the Symantec Enterprise Mobile Code Signing Certificate. |
 | PublisherId | The Publisher ID of the enterprise. If it is absent, the Subject field of the Symantec Enterprise Mobile Code Signing Certificate is used. |
