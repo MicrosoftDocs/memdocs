@@ -22,7 +22,7 @@ ms.date: 08/14/2020
 
 ### When multi-factor authentication is enabled, most tenant attach features don't work
 
-**Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console.
+**Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console.
 
 **Workaround:** Configure the hierarchy to the default authentication level of **Windows authentication**. For more information, see the [Authentication section in the SMS provider article](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
 
