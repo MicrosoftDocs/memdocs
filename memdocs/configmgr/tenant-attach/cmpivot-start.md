@@ -20,13 +20,14 @@ manager: dougeby
 > - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 <!--6024392-->
-Starting in Configuration Manager 2006, you can run CMPivot from Microsoft Endpoint Manager admin center. Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
 
 ## Prerequisites
 
 The following items are required to use CMPivot from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md)
+- A minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 - Target clients require a minimum of PowerShell version 4.
 - To gather data for the following entities, target clients require PowerShell version 5.0:  
