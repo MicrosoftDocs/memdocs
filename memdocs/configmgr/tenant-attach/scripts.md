@@ -13,7 +13,7 @@ ms.author: mstewart
 ---
 
 # <a name="bkmk_scripts"></a> Tenant attach: Run scripts (preview) from the admin center
-<!--6234688-->
+<!--CM6234688, IN7220536-->
 *Applies to: Configuration Manager (current branch)*
 
 Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
