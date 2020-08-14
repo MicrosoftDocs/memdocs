@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,7 +215,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows Phone 8.1, Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to Android, Android enterprise, Windows 8.1 and later, and Windows 10 and later)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
 
