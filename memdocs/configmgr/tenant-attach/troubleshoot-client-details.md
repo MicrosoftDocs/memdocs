@@ -81,6 +81,8 @@ The empty list is a known issue for Configuration Manager version 2002 when you 
 
 :::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty" lightbox="media/6024387-known-issue-device-details.png":::
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
+
 ## Next steps
 
 [Troubleshoot tenant attach](troubleshoot.md)

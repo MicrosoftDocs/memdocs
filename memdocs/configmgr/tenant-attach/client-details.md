@@ -55,7 +55,7 @@ The user account needs the following permissions:
 
    :::image type="content" source="media/6024387-device-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-details.png":::
 
-1. Select the **Collections (preview)** to list the client's collections.
+1. Select the **Collections (preview)** to list the client's collections. <!--6024390-->
 
    :::image type="content" source="media/6024387-device-collections.png" alt-text="Client collections in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-collections.png":::
 
