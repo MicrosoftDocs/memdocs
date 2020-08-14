@@ -21,8 +21,8 @@ ms.date: 08/14/2020
 **Workaround:** Follow the instructions for the [CAS has a remote provider](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
 
 ### <a name="bkmk_mfa"></a> When multi-factor authentication is enabled, most tenant attach features don't work
+<!--7986450, 7988266-->
+**Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console. You'll receive error code 403, forbidden.  
 
-**Scenario:** If the [SMS provider](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md) machine that communicates with the [service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md) are configured to use multi-factor authentication, you'll be unable to install applications, run CMPivot queries, and perform other actions from the admin console.
-
-**Workaround:** Configure the hierarchy to the default authentication level of **Windows authentication**. For more information, see the [Authentication section in the SMS provider article](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
+**Workaround:** The current workaround is to configure the hierarchy to the default authentication level of **Windows authentication**. For more information, see the [Authentication section in the SMS provider article](../../core/plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth).
 
