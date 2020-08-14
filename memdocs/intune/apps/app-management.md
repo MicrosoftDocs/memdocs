@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -114,7 +114,9 @@ The top of the App workload navigation menu provide commonly used app details:
 ### Try the interactive guide
 The [Manage and protect mobile and desktop applications with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage devices enrolled in Intune, enforce compliance with policies, and protect your organization's data.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## Additional information
 The following items within the console provide app related functionality:

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,8 +67,6 @@ When the email is sent, Intune includes details about the noncompliant device in
     - Android Enterprise kiosk devices
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
 - **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
 
@@ -79,8 +77,6 @@ When the email is sent, Intune includes details about the noncompliant device in
     - Android Enterprise Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
