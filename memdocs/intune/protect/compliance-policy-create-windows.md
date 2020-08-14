@@ -110,6 +110,8 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Require** - Require all settings (configuration items) in Configuration Manager to be compliant.
 
     For example, you require all software updates to be installed on devices. In Configuration Manager, this requirement has the "Installed" state. If any programs on the device are in an unknown state, then the device is non-compliant in Intune.
+  > [!NOTE]
+  > The **Require device compliance from Configuration Manager** setting is supposed to be used only when Compliance workload is set to Configuration Manager. This setting should not be checked when Compliance workload is set to Intune as same can affect overall compliance evaluation.
 
 ## System Security
 
