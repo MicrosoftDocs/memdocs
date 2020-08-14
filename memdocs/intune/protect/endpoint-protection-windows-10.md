@@ -650,7 +650,7 @@ These settings apply specifically to operating system data drives.
     **Default**: Not configured  
 
     - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in AAD.  
+    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.  
 
   - **BitLocker recovery Information stored to Azure Active Directory**  
     **Default**: Backup recovery passwords and key packages  
@@ -747,7 +747,7 @@ These settings apply specifically to fixed data drives.
     **Default**: Not configured  
 
     - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in AAD.
+    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.
 
   - **BitLocker recovery Information stored to Azure Active Directory**  
     **Default**: Backup recovery passwords and key packages  
