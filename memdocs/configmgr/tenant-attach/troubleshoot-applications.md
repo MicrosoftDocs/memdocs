@@ -110,6 +110,9 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 **Workaround:** Once the user restarts the device, the correct status is displayed in the admin center.
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
+
+
 ## Next steps
 
 [Troubleshoot tenant attach](troubleshoot.md)
