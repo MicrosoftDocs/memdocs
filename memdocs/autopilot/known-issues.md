@@ -55,7 +55,7 @@ This happens because Windows 10, version 1903 and 1909 deletes the AutopilotConf
 - Windows Autopilot for existing devices feature does not properly suppress “Activities” page during OOBE.  (Because of this, you’ll see that extra page during OOBE).
 - TPM attestation state is not cleared by sysprep /generalize, causing TPM attestation failure during later OOBE flow.  (This isn’t a particularly common issue, but you could run into it while testing if you are running sysprep /generalize and then rebooting or reimaging the device to go back through an Autopilot white glove or self-deploying scenario).
 - TPM attestation may fail if the device has a valid AIK cert but no EK cert.  (This is related to the previous item).
-- If TPM attestation fails during the Windows Autopilot white glove process, the landing page appears to be hung.  (Basically, the white glove landing page, where you click “Provision” to start the white glove process, isn’t reporting errors properly).
+- If TPM attestation fails during the Windows Autopilot white glove process, the landing page appears to be unresponsive.  (Basically, the white glove landing page, where you click “Provision” to start the white glove process, isn’t reporting errors properly).
 - TPM attestation fails on newer Infineon TPMs (firmware version > 7.69).  (Prior to this fix, only a specific list of firmware versions was accepted).
 - Device naming templates may truncate the computer name at 14 characters instead of 15.
 - Assigned Access policies cause a reboot which can interfere with the configuration of single-app kiosk devices.
