@@ -58,6 +58,15 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
+## Week of ???
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Tenant attach: Device timeline in the admin center
+<!--7220536, CM7141381-->
+When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../configmgr/tenant-attach/timeline.md).
+
+<!-- ########################## -->
 ## Week of August 10, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

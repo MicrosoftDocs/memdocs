@@ -8,6 +8,8 @@
     href: client-details.md
   - name: Install applications (preview)
     href: applications.md
+  - name: Device timeline (preview)
+    href: timeline.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview
