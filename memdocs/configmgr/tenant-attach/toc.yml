@@ -8,6 +8,8 @@
     href: client-details.md
   - name: Install applications (preview)
     href: applications.md
+  - name: Run scripts (preview)
+    href: scripts.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview
