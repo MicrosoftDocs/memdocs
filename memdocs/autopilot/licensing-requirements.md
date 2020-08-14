@@ -42,7 +42,7 @@ Additionally, the following are also recommended (but not required):
 - [Microsoft 365 Apps for enterprise](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0), which can be deployed easily via Intune (or other MDM services).
 - [Windows Subscription Activation](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation), to automatically step up devices from Windows 10 Pro to Windows 10 Enterprise.
 
-## Next steps
+**Next steps**
 
 [Windows Autopilot configuration requirements](configuration-requirements.md)
 

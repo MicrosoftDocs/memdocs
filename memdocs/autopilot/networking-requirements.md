@@ -83,7 +83,7 @@ If the Microsoft Store isn't accessible, the Autopilot process will still contin
 
 </table>
 
-## Next steps
+**Next steps**
 
 [Windows Autopilot licensing requirements](licensing-requirements.md)
 

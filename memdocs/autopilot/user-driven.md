@@ -46,8 +46,8 @@ The process flow completed during the user-driven process are as follows:
 3. The user is prompted for Azure Active Directory credentials. This customized user experience shows the Azure AD tenant name, logo, and sign-in text.
 4.  The device joins Azure Active Directory or Active Directory, depending on the Windows Autopilot profile settings.
 5. The device enrolls in Intune (or other configured MDM services). Depending on your organizational needs, this enrollment occurs:
-  - during the Azure Active Directory join process using MDM auto-enrollment
-  - or before the Active Directory join process.
+    - during the Azure Active Directory join process using MDM auto-enrollment
+    - or before the Active Directory join process.
 6. If configured, the [enrollment status page](enrollment-status.md) (ESP) will be displayed.
 7. After the device configuration tasks complete, the user is signed into Windows 10 using the credentials they previously provided. (If the device reboots during the device ESP process, the user must reenter their credentials as these details aren't persisted across reboots.)
 8. After sign-in, the enrollment status page displays for user-targeted configuration tasks.

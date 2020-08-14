@@ -46,6 +46,6 @@ For a walkthrough for some of these and related steps, see this video:
 
 There are no additional hardware requirements to use Windows 10 Autopilot, beyond the [requirements to run Windows 10](https://www.microsoft.com/windows/windows-10-specifications).
 
-## Next steps
+**Next steps**
 
 [Overview of Windows Autopilot](windows-autopilot.md)
