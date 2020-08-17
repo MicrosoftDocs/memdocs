@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,8 @@ Antivirus policies include the same settings that are found in *endpoint protect
 
 **Support for Configuration Manager clients** (*preview*)
 
-*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.
+*This scenario is in preview and requires use of Configuration Manager current branch version 2006 or later*.
+<!--*This scenario is in preview and requires use of Configuration Manager Technical Preview version 2007 or later*.-->
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying antivirus policy to devices managed by Configuration Manager, configure *tenant attach*. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
@@ -93,7 +94,8 @@ The following profiles are supported for devices you manage with Intune:
 
 ### Devices managed by Configuration Manager *(In preview)*
 
-The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:
+The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
+<!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 
 - Platform: **Windows 10 and windows Server**
 

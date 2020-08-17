@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 ms.technology:
 
 # optional metadata
-
+ 
 #ROBOTS:
 #audience:
 #ms.devlang:
@@ -60,7 +60,9 @@ To support using Intune endpoint security policies with Configuration Manager de
 
   - **Configuration Manager** - The following environments are supported:
 
-    - **Configuration Manager technical preview 2007 or later** - Support for Intune antivirus policies was added with this technical preview version.
+    - **Configuration Manager current branch version 2006 or later** - Support for Intune antivirus policies was added with this current branch version.
+    <!--
+    - **Configuration Manager technical preview 2007 or later** - Support for Intune antivirus policies was added with this technical preview version. -->
 
   - **Tenant for Microsoft Defender Advanced Threat Protection** – Your Microsoft Defender ATP tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription).  See [Use Microsoft Defender ATP](advanced-threat-protection.md) in the Intune documentation.
 
@@ -190,7 +192,7 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 2. On the **Cloud Sync** tab, enable the option to **Make this collection available to assign Endpoint security policies from Microsoft Endpoint Manager admin center**.
 
-    You can't select this option if your Configuration Manager hierarchy isn't tenant attached.
+    You can't select this option if your Configuration Manager hierarchy isn't tenant attached. 
   
    ![Configure cloud sync](./media/tenant-attach-intune/cloud-sync.png)
 
