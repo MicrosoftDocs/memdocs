@@ -2,7 +2,7 @@
 title: Checklist for 2006
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2006.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -76,7 +76,11 @@ Microsoft digitally signs the script, and bundles it inside a signed self-extrac
 
 To opt-in to the early update ring:
 
-1. Open Windows PowerShell and **Run as administrator**
+1. Open a Windows PowerShell version 5 session **as administrator**
+
+    > [!IMPORTANT]
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+
 1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
