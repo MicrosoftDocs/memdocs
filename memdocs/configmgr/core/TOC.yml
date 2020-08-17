@@ -750,7 +750,7 @@
     - name: How to manage Linux and UNIX clients
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
     - name: Sync data to Azure Monitor
-      href: https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context
+      href: https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=mem/configmgr/core/context/core-context
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
     - name: Surface device dashboard
