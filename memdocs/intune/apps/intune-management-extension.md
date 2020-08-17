@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use PowerShell scripts on Windows 10 devices in Intune
 
-Use the Microsoft Intune management extension to upload PowerShell scripts in Intune to run on Windows 10 devices. The management extension enhances Windows 10 mobile device management (MDM), and makes it easier to move to modern management.
+Use the Microsoft Intune management extension to upload PowerShell scripts in Intune to run on Windows 10 devices. The management extension enhances Windows device management (MDM), and makes it easier to move to modern management.
 
 This feature applies to:
 

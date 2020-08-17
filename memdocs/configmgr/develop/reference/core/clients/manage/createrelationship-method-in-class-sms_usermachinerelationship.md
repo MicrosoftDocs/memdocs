@@ -50,7 +50,7 @@ sint32 CreateRelationship (
 
  Source object identifier for dependency.  
 
-|||  
+|Value|Source object identifier|  
 |-|-|  
 |Software Catalog|The end user enabled the relationship by selecting the option in the AppCatalog Web page.|  
 |Administrator|An administrator created the relationship manually in the UI.|  

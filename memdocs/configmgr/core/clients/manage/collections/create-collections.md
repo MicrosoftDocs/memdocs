@@ -166,9 +166,8 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results.
 
 ### <a name="bkmk-category"></a> Device category rule
 
@@ -229,6 +228,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 - Integration with Azure AD for [Cloud Management](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - An HTTPS or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md) enabled management point
+- Access to the **All Systems** collection
 
 ### Create a group and set the owner in Azure AD
 
@@ -250,7 +250,7 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 1. In the Configuration Manager console, go to **Assets and Compliance** > **Overview** > **Device Collections**.
 1. Right-click on the collection to sync, then click **Properties**. 
-1. In the **AAD Group Sync** tab, click **Add**.
+1. In the **Cloud Sync** tab, click **Add**.
 1. From the drop-down menu, select the **Tenant** where you created your Azure AD group.
 1. Type in your search criteria in the **Name starts with** field, then click **Search**.
   - If you are prompted to sign in, use the identity you specified as the owner for the Azure AD group.

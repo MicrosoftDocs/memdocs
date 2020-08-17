@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -457,6 +457,8 @@ Microsoft Edge must be installed on the device.
   
   If Windows encryption is turned on while another encryption method is active, the device might become unstable.  
 
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
+
 - **Encrypt storage card (mobile only)**  
   *This setting only applies to Windows 10 mobile.*  
   **Default**: Not configured  
@@ -464,6 +466,7 @@ Microsoft Edge must be installed on the device.
 
   - **Require** to encrypt any removable storage cards used by the device.  
   - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### BitLocker base settings  
 
@@ -647,7 +650,7 @@ These settings apply specifically to operating system data drives.
     **Default**: Not configured  
 
     - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in AAD.  
+    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.  
 
   - **BitLocker recovery Information stored to Azure Active Directory**  
     **Default**: Backup recovery passwords and key packages  
@@ -744,7 +747,7 @@ These settings apply specifically to fixed data drives.
     **Default**: Not configured  
 
     - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in AAD.
+    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.
 
   - **BitLocker recovery Information stored to Azure Active Directory**  
     **Default**: Backup recovery passwords and key packages  

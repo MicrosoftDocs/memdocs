@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,7 +51,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
       2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority.
 
-      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration and authentication only.  SCEP certificate profiles on Android Enterprise dedicated devices are not supported for VPN or app authentication.
+      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices are not supported for app authentication.
 
 4. Select **Create**.
 
@@ -74,6 +74,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
+     > [!NOTE]
+     > On macOS, certificates you provision with SCEP are always placed in the system keychain (System store) of the device.
+ 
    - **Subject name format**:
 
      Select how Intune automatically creates the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
@@ -212,7 +215,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows Phone 8.1, Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to Android, Android enterprise, Windows 8.1 and later, and Windows 10 and later)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
 
@@ -316,6 +319,8 @@ Consider the following before you continue:
 
 > [!NOTE]
 > - On iOS/iPadOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS/iPadOS device having multiple certificates delivered by the SCEP or PKCS certificate request. 
+> 
+>   Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
 > - On iOS 13 and macOS 10.15, there are some [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
 
 

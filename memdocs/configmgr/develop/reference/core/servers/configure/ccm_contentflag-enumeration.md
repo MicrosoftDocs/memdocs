@@ -35,7 +35,7 @@ CCM_CONTENTFLAG;
 
 ## Members  
 
-|||  
+|Content flag|Description|  
 |-|-|  
 |CCM_CONTENTFLAG_LOCAL_ONLY|Local only.|  
 |CCM_CONTENTFLAG_REMOTE_ONLY|Remote only.|  

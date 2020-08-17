@@ -2,7 +2,7 @@
 title: How to use the admin service
 titleSuffix: Configuration Manager
 description: Learn how you can use the administration service in custom scenarios.
-ms.date: 04/01/2020
+ms.date: 07/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -47,7 +47,7 @@ Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-Res
 For example:
 
 ```powershell
-Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials`
+Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials
 ```
 
 This command returns the following output:
@@ -61,7 +61,7 @@ https://SMSProviderFQDN/AdminService/wmi/$metadata#SMS_Site   {@{@odata.etag=FC1
 The following example drills down to more specific values:
 
 ```powershell
-((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials`).value).Version
+((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials).value).Version
 ```
 
 The output of this command is the specific version of the site: `5.00.8968.1000`

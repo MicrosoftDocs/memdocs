@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/user-help/enroll-your-wp81-windows.md",
+            "redirect_url": "https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-mtd-ios.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
             "redirect_document_id": true
@@ -18,6 +23,21 @@
         {
             "source_path": "memdocs/configmgr/apps/deploy-use/update-and-retire-applications.md",
             "redirect_url": "/mem/configmgr/apps/deploy-use/management-tasks-applications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md",
+            "redirect_url": "/mem/autopilot/existing-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-autopilot.md",
+            "redirect_url": "/mem/autopilot/enrollment-autopilot",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/windows-autopilot-hybrid.md",
+            "redirect_url": "/mem/autopilot/windows-autopilot-hybrid",
             "redirect_document_id": false
         },
         {
@@ -58,6 +78,16 @@
         {
             "source_path": "memdocs/configmgr/develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md",
             "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/demonstrate-deployment-on-vm.md",
+            "redirect_url": "https://docs.microsoft.com/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/your-device-is-missing-a-preinstalled-certificate-android.md",
+            "redirect_url": "/mem/intune/user-help/your-device-is-missing-an-IT-required-certificate-android",
             "redirect_document_id": false
         }
     ]

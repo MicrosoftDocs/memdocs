@@ -71,7 +71,7 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
 
  Type of relationship between configuration items. Possible values are:  
 
-|||  
+|Value|Relationship|  
 |-|-|  
 |1|Bundled|  
 |2|Required|  

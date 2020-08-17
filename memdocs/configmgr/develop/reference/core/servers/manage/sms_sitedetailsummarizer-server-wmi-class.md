@@ -103,8 +103,8 @@ Class SMS_SiteDetailSummarizer : SMS_BaseClass
 
  Status value indicating the health of the component. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |
+| ----- | ------ |
 |GREEN(0)|OK. There are no warning or error messages.|  
 |YELLOW(1)|Warning. Warning messages were generated, but error messages were not generated.|  
 |RED(2)|Critical. There are error messages.|  

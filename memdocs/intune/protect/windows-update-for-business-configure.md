@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,7 +65,6 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
   > [!NOTE]
   > **Unsupported versions and editions**:
-  > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Windows Update for Business (WUfB) does not currently support *Long Term Service Channel* releases. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
 - On Windows devices, **Feedback & diagnostics** > **Diagnostic and usage data** must be set to **Basic**, **Enhanced**, or **Full**.
@@ -226,6 +225,8 @@ The following prerequisites must be met to use Windows 10 feature updates in Int
   - Feature updates for the update ring must be *running*. They must not be paused.
 
 - Windows 10 feature update policies cannot be applied during the Autopilot out of box experience (OOBE) and will only apply at the first Windows Update scan after a device has finished provisioning (which is typically a day).
+
+- While Windows 10 feature updates remains in public preview, when co-managing devices with Configuration Manager and Intune, there is a limitation where feature update policies may not immediately take effect, causing devices to update to a later feature update than configured in Intune. This limitation will be removed with a future update to Configuration Manager.
 
 ### Create and assign Windows 10 feature updates
 

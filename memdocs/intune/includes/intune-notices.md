@@ -4,22 +4,19 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Microsoft Intune support for Windows 10 Mobile ending<!--3544938-->
-Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
+### Microsoft Intune ends support for Windows Phone 8.1 and Windows 10 Mobile<!-- 3544938, 3544909 -->
+Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. 
 
-#### How does this affect me?
-If you have Windows 10 Mobile devices deployed in your organization, between now and August 10, 2020 you can enroll new devices, add, or remove policies and apps, or update any management settings. After August 10, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
+Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in the support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune ends support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
 
-#### What do I need to do to prepare for this change?
-You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
-
+As of August 10, enrollments for Windows Phone 8.1 and Windows 10 Mobile devices will fail and Windows Mobile profile types are removed from the Intune UI. Devices already enrolled will no longer check into the Intune service and we will delete device and policy data.
 
 ### End of support for legacy PC management
 
@@ -70,6 +67,9 @@ Devices will not be impacted if they are any of the below:
 - Set **Minimum password length**
 - Set **Number of days until password expires**
 - Set **Number of previous passwords to prevent reuse**
+
+
+![Screencap of Android compliance policy page](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### Additional impacts based on Android OS version
 

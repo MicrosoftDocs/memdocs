@@ -2,7 +2,7 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -39,10 +39,7 @@ Community hub supports the following objects:
       - Windows Server isn't supported, so the Configuration Manager console needs to be installed on a Windows 10 device separate from the site server.
    - The logged-in user account can't be the built-in administrator account
 
-- To download reports, you need to turn on the option **Use Configuration Manager-generated certificates for HTTP site systems** at the site you're importing into. For more information, see [enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Go to **Administration** > **Site Configuration** > **Sites**.
-   1. Select the site and choose **Properties** in the ribbon.
-   1. On the **Communication Security** tab, select the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+- The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
 
 - If your organization restricts network communication with the internet using a firewall or proxy device, you need to allow the Configuration Manager console to access internet endpoints. For more information, see [Internet access requirements](../../plan-design/network/internet-endpoints.md#community-hub).
 
@@ -64,6 +61,38 @@ Community hub supports the following objects:
 
 [![All items downloaded from the community hub](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="bkmk_deeplink"></a> Direct links to Community hub items
+<!--4224406-->
+*(Introduced in version 2006)*
+You can easily navigate to and reference items in the Configuration Manager console Community hub node with a direct link. The intention for this feature is for easier collaboration and being able to share links to Community hub items with your colleagues. These deep links are currently only for items in the Community hub node of the console.
+
+### Prerequisites for direct links
+
+- Configuration Manager console version 2006 or later
+- You can't use the local built-in administrator account when following a Community hub link.
+
+### Sharing and opening direct links
+
+To share an item:
+1. Go the item in the hub and select **Share**.
+1. Paste the copied link and share it with others.
+
+To open a shared link:
+1. Click the link from a machine that has the Configuration Manager console installed.
+   - For example, use this link to share the [Configure Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
+1. Select **Launch the Community hub** when prompted.
+1. The console opens directly to the script in the Community hub.
+
+## <a name="bkmk_known"></a> Known issues
+
+### Unable to access Community hub node when running console as a different user
+<!--7826897-->
+If you're signed in as a user with lower rights and choose **Run as** a different user to open the Configuration Manager console, you may not be able to access the **Community hub** node.
+
+### Downloaded reports don't get removed from your downloads page
+<!--7851305-->
+If you delete a downloaded report from the **Monitoring** > **Reports** node, the report isn't deleted from the **Community hub** > **Your downloads** page and you're unable to download the report again. 
 
 ## Next steps
 

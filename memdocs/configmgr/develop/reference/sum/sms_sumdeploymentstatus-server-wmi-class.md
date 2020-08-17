@@ -140,8 +140,8 @@ Class SMS_SUMDeploymentStatus : SMS_BaseClass
 
  Status type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |1|Success|  
 |2|InProgress|  
 |4|Unknown|  

@@ -4,11 +4,13 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
+ms.date: 08/11/2020
 
 
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+To enable co-management for Configuration Manager version 1902 and earlier, follow the instructions below:
+
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Co-management** node. Click **Configure co-management** in the ribbon to open the **Co-management Configuration Wizard**.
 
 2. On the **Subscription** page of the wizard, select **Sign In**. Sign in to your Intune tenant, and then select **Next**.  
@@ -17,8 +19,7 @@ ms.date: 08/23/2019
 
     This action enables automatic client enrollment in Intune for existing Configuration Manager clients. When you choose **Pilot**, only the Configuration Manager clients that are members of the pilot collection are automatically enrolled to Intune. This option allows you to enable co-management on a subset of clients to initially test co-management, and rollout co-management using a phased approach. 
 
-    > [!Note]  
-    > Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->  
+    Automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->  
 
 4. For internet-based devices that are already enrolled in Intune, copy and save the command line on the **Enablement** page. You can use this command line to install the Configuration Manager client as an app in Intune. If you don't save this command line now, you can review the co-management configuration at any time to get this command line.
 

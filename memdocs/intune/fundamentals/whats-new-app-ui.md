@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: UI updates for Intune end-user apps
+title: UI updates for Intune end-user apps | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Find out what has changed in UI for apps that work on end-user devices with Microsoft Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020 
+ms.date: 08/06/2020 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,6 +37,13 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+## Week of August 10, 2020
+
+### Improvement to Update device settings page in Company Portal app for Android to shows descriptions<!-- 7414768 -->
+
+In the Company Portal app on Android devices, the **Update device settings** page lists the settings that need updated to be compliant. Users expand the issue to see more information, and see the **Resolve** button.
+
+This user experience is improved. The listed settings are expanded by default to show the description, and show the **Resolve** button, when applicable. Previously, the issues were collapsed by default. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
 
 ## Week of June 8, 2020 
 

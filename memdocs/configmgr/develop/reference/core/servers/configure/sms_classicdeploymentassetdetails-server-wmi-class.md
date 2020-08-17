@@ -172,7 +172,7 @@ Class SMS_ClassicDeploymentAssetDetails : SMS_BaseClass
 
  Status type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

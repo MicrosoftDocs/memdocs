@@ -227,7 +227,7 @@ Class SMS_DistributionDPStatus : SMS_BaseClass
 
  Status message severity.  
 
-|||  
+|Value|Status message severity|  
 |-|-|  
 |0x40000000|Success|  
 |0x80000000|Warning|  
@@ -242,7 +242,7 @@ Class SMS_DistributionDPStatus : SMS_BaseClass
 
  Message state.  
 
-|||  
+|Value|Message state|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  
@@ -284,7 +284,7 @@ Class SMS_DistributionDPStatus : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  

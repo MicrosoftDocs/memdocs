@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -126,6 +126,8 @@ There are two ways to add LOB apps to Managed Google Play:
 5. Select **Private apps** (next to the *lock* icon) in the Google Play window. 
 6. Click the **"+"** button at the lower right to add a new app.
 7. Add an app **Title** and click **Upload APK** add the APK app package.
+   > [!NOTE]
+   > Your app's package name must be globally unique in Google Play (not just unique within your enterprise or Google Play Developer account). Otherwise, you will receive the **Upload a new APK file with a different package name** error.
 8. Click **Create**.
 9. Close the Managed Google Play pane if you are done adding apps.
 10. Click **Sync** on the **App app** pane to sync with the Managed Google Play service. 
@@ -177,8 +179,8 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps** > **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
-5. In the **Managed Google Play** pane, choose **Refresh**.  
+3. Select **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
+5. In the **Managed Google Play** pane, choose **Sync**.  
     The page updates the time and status of the last sync.
 6. In the Microsoft Endpoint Manager admin center select  **Apps** > **All apps**.  
     The newly available Managed Google Play app is displayed.

@@ -2,10 +2,10 @@
 title: Service connection tool
 titleSuffix: Configuration Manager
 description: Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
@@ -73,7 +73,7 @@ To modify this behavior, use one of the following parameters to change what file
 - **-downloadsiteversion**: Downloads updates and hotfixes with a later version than the version of your site.
 
     > [!IMPORTANT]
-    > Because of a known issue in Configuration Manager version 2002, the default behavior doesn't work as expected. Use the **-downloadsiteversion** parameter to download the necessary updates for version 2002.<!-- 7594517 -->
+    > Because of a known issue in Configuration Manager version 2002, the default behavior doesn't work as expected. Update to version 2006, or use the **-downloadsiteversion** parameter to download the necessary updates for version 2002.<!-- 7594517 -->
 
 For more information, see [Command-line parameters](#bkmk_cmd).
 

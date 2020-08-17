@@ -5,13 +5,11 @@ description: Learn the methods to manage OS images stored in Windows image (WIM)
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage OS images with Configuration Manager

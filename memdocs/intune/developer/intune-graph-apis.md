@@ -313,7 +313,7 @@ In each example, you'll need to specify an application ID that has at least the 
 
 When testing either example, you may receive HTTP status 403 (Forbidden) errors similar to the following:
 
-``` javascript
+```json
 {
   "error": {
     "code": "Forbidden",
@@ -344,21 +344,20 @@ If this happens, verify that:
 
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
+ > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 1. Start Visual Studio and then create a new Visual C# Console app (.NET Framework) project.
 
 2. Enter a name for your project and provide other details as desired.
 
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3. Use the Solution Explorer to add the Microsoft ADAL NuGet package to the project.
-
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
+3. Use the Solution Explorer to add the Microsoft ADAL NuGet package to the project:
 
     1. Right-click the Solution Explorer.
-    2. Choose **Manage NuGet Packages…** &gt; **Browse**.
-    3. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
+    1. Choose **Manage NuGet Packages…** &gt; **Browse**.
+    1. Select `Microsoft.IdentityModel.Clients.ActiveDirectory` and then choose **Install**.
 
     <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
@@ -452,7 +451,7 @@ namespace IntuneGraphExample
 
 ### Authenticate Azure AD (PowerShell)
 
-The following PowerShell script uses the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
+The following PowerShell script uses the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 In this example, update the value of `$clientID` to match a valid application ID.
 

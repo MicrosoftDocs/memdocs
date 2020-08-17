@@ -160,9 +160,8 @@ public void WriteScfEmbeddedProperty(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`serverName`|Managed: `String`|The Configuration Manager server that the state migration point is running on.|  
 |`siteCode`|Managed: `String`|The Configuration Manager site code.|  

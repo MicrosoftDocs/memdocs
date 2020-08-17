@@ -2,10 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
@@ -134,7 +134,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -239,7 +239,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### Use new Software Center
 
@@ -323,6 +323,11 @@ If clients must install required software updates at the deployment deadline wit
 If you want to give users more time to install required application or software update deployments beyond the deadline, set a value for this option. This grace period is for a computer turned off for an extended time, and the user needs to install many application or update deployments. For example, this setting is helpful if a user returns from vacation, and has to wait for a long time while the client installs overdue application deployments.
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+
+
+### Enable Endpoint analytics data collection
+
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
 
 ## Computer restart
 
@@ -458,41 +463,40 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
 > [!NOTE]  
 > This setting is available only in the default client settings.
 
+## Metered internet connections
 
+Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered internet connection.
 
-## Metered internet connections  
-
-Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered internet connection.  
-
-> [!NOTE]  
-> The configured client setting isn't applied in the following scenarios:  
+> [!NOTE]
+> The configured client setting isn't applied in the following scenarios:
 >
 > - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.  
 > - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
 
 ### Client communication on metered internet connections
 
-Choose one of the following options for this setting:  
+Choose one of the following options for this setting:
 
-- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.  
+- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.
 
-- **Limit**: Only the following client communications are allowed over the metered internet connection:  
+- **Limit**: The client only communicates over the metered internet connection for the following behaviors:
 
-    - Client policy retrieval  
+  - Download client policy
 
-    - Client state messages to send to the site  
+  - Send client state messages
 
-    - Software installation requests from Software Center  
+  - Request software installs from Software Center
 
-    - Required deployments (when the installation deadline is reached)  
+  - Download additional policy and content for required deployments at the installation deadline
 
-    If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+  If the client reaches the data transfer limit for the metered internet connection, the client no longer communicates with the site.
 
-- **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
+- **Block**: When the device is on a metered internet connection, the Configuration Manager client doesn't try to communicate with the site. This option is the default.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
+Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -884,7 +888,7 @@ This setting configures the local port for the HTTP listener to download delta c
 
 ### Enable management of the Office 365 Client Agent
 
-When you set this option to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
@@ -970,9 +974,9 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
-## Windows Analytics
+## Windows Diagnostic Data
 
-> [!Important]  
-> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> This group was previously called **Windows Analytics**. Microsoft retired the Windows Analytics service on January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics is the evolution of Windows Analytics. Use Desktop Analytics to manage Windows diagnostic data settings. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
