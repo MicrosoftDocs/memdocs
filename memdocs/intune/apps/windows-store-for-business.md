@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -109,7 +109,7 @@ To remove an app that is synced from the Microsoft Store for Business, you need 
 ![Screenshot of remove app details](./media/windows-store-for-business/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> Removing an app's visibility in the private store won't keep Intune from syncing the app. You must refund the app to fully remove the app. Apps purchased over 6 months ago cannot be refunded and thus cannot be removed at this time.
+> Removing an app's visibility in the private store won't keep Intune from syncing the app. You must refund the app to fully remove the app. The Microsoft Store for Business site only displays the last six months of order history.
 
 ## Next steps
 
