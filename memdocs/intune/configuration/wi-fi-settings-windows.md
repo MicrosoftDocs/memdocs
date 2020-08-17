@@ -142,7 +142,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       **Disable user prompts for server validation in PEAP phase 1**: When set to **Yes**, in PEAP negotiation phase 1, user prompts asking to authorize new PEAP servers for trusted certification authorities aren't shown. Select **No** to show the prompts. When set to **Not configured**, Intune doesn't change or update this setting.
 
-    - **Require cryptographic binding**: **Yes** prevents connections to PEAP servers that don't use cryptobinding during the PEAP negotiation. Select **No** doesn't require cryptobinding. When set to **Not configured**, Intune doesn't change or update this setting.
+    - **Require cryptographic binding**: **Yes** prevents connections to PEAP servers that don't use cryptobinding during the PEAP negotiation. **No** doesn't require cryptobinding. When set to **Not configured**, Intune doesn't change or update this setting.
 
     **CLIENT AUTHENTICATION**
 
