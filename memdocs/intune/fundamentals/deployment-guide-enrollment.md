@@ -40,7 +40,7 @@ When users enroll, a record is created in Azure AD
 
 Intune includes several "parts": app configuration, app protection, user and device compliance, and device configuration. You can use these parts individually, or together. When users and devices enroll, they can receive these policies during enrollment. Or, they can receive your policies after they enroll. The order depends on your organization's needs.
 
-Many organizations create a baseline of what all users and devices must have. Typically, these policies get deployed during enrollment. For more information on enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md).
+Many organizations create a baseline of what all users and devices must have. Typically, these policies get deployed during enrollment. For example, you might also create VPN connection, install an authentication certificate, and require Windows Hello PIN. For more information on enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md).
 
 When a device is enrolled, it's issued an MDM certificate. This certificate communicates with the Intune service.
 
