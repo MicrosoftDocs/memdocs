@@ -20,13 +20,13 @@ manager: dougeby
 
 The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
-To overcome these challenges, starting in version 2002, Configuration Manager extends its device support with the following methods:
+To overcome these challenges, starting in version 2002, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
 
-- Register on the internal network for a unique token
+ Clients initially register for these tokens using one of the following two methods:
 
-- Create a bulk registration token for internet-based devices
+- Internal network
 
-To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+- Bulk registration
 
 The Configuration Manager client together with the management point manage this token, so there's no OS version dependency. This feature is available for any [supported client OS version](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
@@ -35,15 +35,20 @@ The Configuration Manager client together with the management point manage this 
 >
 > Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
-## Register on the internal network
+## Internal network registration
 
-This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token. The client renews the token once a month, and it's valid for 90 days.
+This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token.
 
 The site enables this behavior by default.
 
-## Create a bulk registration token
+## Bulk registration token
 
 If you can't install and register clients on the internal network, create a bulk registration token. Use this token when the client installs on an internet-based device, and registers through the CMG. The bulk registration token has a short-validity period, and isn't stored on the client or the site. It allows the client to generate a unique token, which paired with its self-signed certificate, lets it authenticate with the CMG.
+
+> [!NOTE]
+> Don't confuse bulk registration tokens with those that Configuration Manager issues to individual clients. The bulk registration token enables the client to initially install and communicate with the site long enough for the site to issue the client its own, unique client authentication token which is then used by the client for all communication with the site while the client is on the Internet. Beyond the initial registration, the bulk registration token isn't used or stored by the client.
+
+To create a bulk registration token for use during client installation on Internet-based devices, complete the following actions.
 
 1. Sign in to the top-level site server in the hierarchy with local administrator privileges.
 
@@ -135,6 +140,12 @@ You can filter or sort on the **Type** column. Identify specific bulk registrati
 2. Expand **Security**, select the **Certificates** node, and select the bulk registration token to block.
 
 3. On the **Home** tab of the ribbon bar or the right-click context menu, select **Block**. To unblock previously blocked bulk registration tokens, select the **Unblock** action.
+
+## Token renewal
+
+The client renews it's unique, Configuration Manager issued token once a month, and it's valid for 90 days. A client doesn't need to connect to the internal network to renew its token. As long as the token is still valid, connecting to the site using a CMG is sufficient. If the token isn't renewed within 90 days, the client must directly connect to a management point on an internal network to receive a new token.
+
+You can't renew a bulk registration token. Once a bulk registration token expires, you must generate a new one for Internet-based device registration using a CMG.
 
 ## See also
 
