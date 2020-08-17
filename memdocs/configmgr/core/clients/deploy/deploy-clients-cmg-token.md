@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -46,9 +46,9 @@ The site enables this behavior by default.
 If you can't install and register clients on the internal network, create a bulk registration token. Use this token when the client installs on an internet-based device, and registers through the CMG. The bulk registration token has a short-validity period, and isn't stored on the client or the site. It allows the client to generate a unique token, which paired with its self-signed certificate, lets it authenticate with the CMG.
 
 > [!NOTE]
-> Don't confuse bulk registration tokens with those that Configuration Manager issues to individual clients. The bulk registration token enables the client to initially install and communicate with the site long enough for the site to issue the client its own, unique client authentication token which is then used by the client for all communication with the site while the client is on the Internet. Beyond the initial registration, the bulk registration token isn't used or stored by the client.
+> Don't confuse bulk registration tokens with those that Configuration Manager issues to individual clients. The bulk registration token enables the client to initially install and communicate with the site. This initial communication is long enough for the site to issue the client its own, unique client authentication token. The client then uses its authentication token for all communication with the site while it's on the internet. Beyond the initial registration, the client doesn't use or store the bulk registration token.
 
-To create a bulk registration token for use during client installation on Internet-based devices, complete the following actions.
+To create a bulk registration token for use during client installation on internet-based devices, complete the following actions:
 
 1. Sign in to the top-level site server in the hierarchy with local administrator privileges.
 
@@ -143,9 +143,9 @@ You can filter or sort on the **Type** column. Identify specific bulk registrati
 
 ## Token renewal
 
-The client renews it's unique, Configuration Manager issued token once a month, and it's valid for 90 days. A client doesn't need to connect to the internal network to renew its token. As long as the token is still valid, connecting to the site using a CMG is sufficient. If the token isn't renewed within 90 days, the client must directly connect to a management point on an internal network to receive a new token.
+The client renews its unique, Configuration Manager-issued token once a month, and it's valid for 90 days. A client doesn't need to connect to the internal network to renew its token. As long as the token is still valid, connecting to the site using a CMG is sufficient. If the token isn't renewed within 90 days, the client must directly connect to a management point on an internal network to receive a new token.
 
-You can't renew a bulk registration token. Once a bulk registration token expires, you must generate a new one for Internet-based device registration using a CMG.
+You can't renew a bulk registration token. Once a bulk registration token expires, generate a new one for internet-based device registration using a CMG.
 
 ## See also
 
