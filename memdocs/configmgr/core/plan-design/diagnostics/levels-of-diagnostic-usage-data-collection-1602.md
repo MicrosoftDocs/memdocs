@@ -5,15 +5,14 @@ description: "Learn about the levels of diagnostics and usage data that Configur
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1602 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -81,7 +80,7 @@ Changes from previous versions are noted with ***[New]*** or ***[Updated]***.
 - ***[New]*** Use of Network Discovery (enabled or disabled)
 - ***[New]*** Admin Console:
 
-  -  Statistics about console connections (opeating system version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
+  -  Statistics about console connections (OS version, language, SKU and architecture, system memory, logical processor count, connect site ID, installed .NET versions, and console language packs)
 
 ##  <a name="bkmk_level2"></a> Level 2 - Enhanced
 The Enhanced level is the default after setup finishes. This level includes data that's collected in the Basic level, feature-specific data (frequency and duration of use), Configuration Manager client settings (component name, state, and certain settings like polling intervals), and basic information about software updates.

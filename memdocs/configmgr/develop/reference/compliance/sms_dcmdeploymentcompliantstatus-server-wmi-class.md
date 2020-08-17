@@ -142,7 +142,7 @@ Class SMS_DCMDeploymentCompliantStatus : SMS_BaseClass
 
  Status of the deployment from the targeted asset. Possible values are:  
 
-|||  
+|Value|Deployment status|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

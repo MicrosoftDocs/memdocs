@@ -65,9 +65,8 @@ public static bool UserHasPermissions(ConnectionManagerBase connectionManager, s
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`objectName`|`String`|Name of the object.|  
 |permissions|Integer|The permissions.|  

@@ -63,7 +63,7 @@ Class SMS_ClientDeploymentStateDetailsView: SMS_BaseClass
 
  The client baseline item type. Possible values are:  
 
-|||  
+|Value|Baseline item type|  
 |-|-|  
 |1|Patch or CU|  
 |2|Language Pack|  

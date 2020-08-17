@@ -93,8 +93,8 @@ Class SMS_SUPSyncStatus : SMS_BaseClass
 
  Replication link status.  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |0|Healthy|  
 |1|Degraded|  
 |2|Error|  

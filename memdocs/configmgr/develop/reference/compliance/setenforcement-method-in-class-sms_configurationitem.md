@@ -1,5 +1,5 @@
 ---
-title: "SetEnforcement Method"
+title: SetEnforcement method in class SMS_ConfigurationItem
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

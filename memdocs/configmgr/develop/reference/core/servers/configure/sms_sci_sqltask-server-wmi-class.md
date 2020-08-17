@@ -60,7 +60,7 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Days of the week on which the SQL task executes. Possible values are listed below. Take the sum of the values for tasks that execute on multiple days. For example, if all days are selected this property would have a value of 127.  
 
-|||  
+|Value|SQL task day|  
 |-|-|  
 |1|SUNDAY|  
 |2|MONDAY|  
@@ -203,7 +203,7 @@ Class SMS_SCI_SQLTask : SMS_SiteControlItem
 
  Task type. Possible values are listed below. The default value is 0.  
 
-|||  
+|Value|Task type|  
 |-|-|  
 |1|BACKUP|  
 |2|PERIOD|  

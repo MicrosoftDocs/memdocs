@@ -53,7 +53,7 @@ Configuration Manager is included in the following plans:
 - EMS E5
 - Microsoft 365 E3
 - Microsoft 365 E5
-- Microsoft 365 F1
+- Microsoft 365 F3 (formerly Microsoft 365 F1)
 
 <!-- Sources:
 https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans

@@ -5,13 +5,11 @@ description: Understand how to manage and monitor phased deployments for softwar
 ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Manage and monitor phased deployments

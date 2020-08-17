@@ -264,8 +264,8 @@ Class SMS_AuthorizationList : SMS_ConfigurationItemBaseClass
 
  Execution context that the configuration item should be evaluated under.  
 
-|||  
-|-|-|  
+| Value | Configuration item |  
+| ----- | ------------------ |  
 |0|System|  
 |1|User|  
 

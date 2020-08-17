@@ -55,7 +55,7 @@ Synchronized software updates are displayed in the Configuration Manager console
 
 - Improves the efficiency of its software update file package, which clients install if the software update is approved for installation. For example, the superseded software update might contain files that are no longer relevant to the fix or to the operating systems now supported by the new software update, so those files aren't included in the superseding software update's file package.  
 
-- Updates newer versions of a product, or in other words, is no longer applicable to older versions or configurations of a product. Software updates can also supersede other software updates if modifications have been made to expand language support. For example, a later revision of a product update for Microsoft Office might remove support for an older operating system, but add additional support for new languages in the initial software update release.  
+- Updates newer versions of a product, or in other words, is no longer applicable to older versions or configurations of a product. Software updates can also supersede other software updates if modifications have been made to expand language support. For example, a later revision of a product update for Microsoft 365 Apps might remove support for an older operating system, but add additional support for new languages in the initial software update release.  
 
   On the Supersedence Rules tab in the Software Update Point Component properties, you can specify how to manage superseded software updates. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 

@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -20,7 +20,7 @@ manager: dougeby
 
 Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. Azure Active Directory joined or workgroup clients are not supported. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 For more information, see [BitLocker overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
@@ -76,6 +76,8 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
   - Configure the management point for HTTPS. This option applies to Configuration Manager versions 1910 or 2002.
 
   For more information, see [Encrypt recovery data](../deploy-use/bitlocker/encrypt-recovery-data.md).
+
+- Although the BitLocker recovery service installs on a management point that uses a database replica, clients can't escrow recovery keys. Then BitLocker won't encrypt the drive. To use the recovery service, you need at least one management point not in a replica configuration. Disable the BitLocker recovery service on any management point with a database replica.<!-- 7813149 -->
 
 - To use the BitLocker management reports, install the reporting services point site system role. For more information, see [Configure reporting](../../core/servers/manage/configuring-reporting.md).
 

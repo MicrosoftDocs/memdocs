@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -166,4 +166,4 @@ This article lists and describes all the email settings available for devices ru
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md), and [Windows Phone 8.1](email-settings-windows-phone-8-1.md) devices.
+Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows 10](email-settings-windows-10.md) devices.

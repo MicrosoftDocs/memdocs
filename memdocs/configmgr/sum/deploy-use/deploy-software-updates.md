@@ -67,7 +67,7 @@ For more information and detailed steps, see [Manually deploy software updates](
 
 > [!Note]
 > - Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
-> - When manually deploying Office 365 client updates, find them in the **Office 365 Updates** node under **Office 365 Client Management** of the **Software Library** workspace. 
+> - When manually deploying Microsoft 365 Apps client updates, find them in the **Office 365 Updates** node under **Office 365 Client Management** of the **Software Library** workspace. 
 
 ## <a name="bkmk_auto"></a> Automatically deploy software updates
 

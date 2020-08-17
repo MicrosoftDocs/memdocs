@@ -69,7 +69,7 @@ Class SMS_UserApplicationRequestHistoryItem :
 
  The state of the request after the change was made. Possible values are:  
 
-|||  
+|Value|State|  
 |-|-|  
 |1|Requested|  
 |2|Canceled|  

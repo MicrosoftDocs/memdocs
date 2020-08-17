@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -29,93 +29,102 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
    - Has been discovered with both [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - This means the user account needs to be a synced user object in Azure AD.
    - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
-
+- If your central administration site has a [remote provider](../core/plan-design/hierarchy/plan-for-the-sms-provider.md), then follow the instructions for the [CAS has a remote provider](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article. <!--7796824-->
 
 ## Internet endpoints
 
-- `https://aka.ms/configmgrgateway`
-- `https://*.manage.microsoft.com` <!--7424742-->
+[!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="bkmk_upload"></a> Enable device upload
+## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
-- If you have co-management enabled currently, [Edit co-management properties](#bkmk_edit) to enable device upload.
-- If you don't have co-management enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload.
-   - You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune.
-- All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection.
+If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload instead.
 
-### <a name="bkmk_edit"></a> Edit co-management properties to enable device upload
-
-If you have co-management enabled currently, edit co-management properties to enable device upload using the instructions below:
+When co-management is already enabled, edit the co-management properties to enable device upload using the instructions below:
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
-1. Right-click your co-management settings and select **Properties**.
-1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
+1. In the ribbon, select **Properties** for your co-management production policy.
+1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 
    [![Upload devices to Microsoft Endpoint Manager admin center](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Sign in with your *Global Administrator* account when prompted.
-1. Click **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
-1. Click **OK** to exit the co-management properties once you've done making changes.
+1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
+1. Choose **OK** to exit the co-management properties once you've done making changes.
 
 
-### <a name="bkmk_config"></a> Use the Configure co-management wizard to enable device upload
-If you don't have co-management enabled, use the **Configure co-management** wizard to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. Enable device upload using the instructions below:
+## <a name="bkmk_config"></a> Enable device upload when co-management isn't enabled
+
+If you don't have co-management enabled, you'll use the **Configure co-management** wizard to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead.
+
+When co-management isn't enabled, use the instructions below to enable device upload:
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
-1. In the ribbon, click **Configure co-management** to open the wizard.
-1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
-1. Click **Sign In**. Use your *Global Administrator* account to sign in.
+1. In the ribbon, select **Configure co-management** to open the wizard.
+1. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
+1. Select **Sign In**. Use your *Global Administrator* account to sign in.
 1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
    - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Click **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
+1. Choose **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
+     - Optionally, you can import a previously created Azure AD application during tenant attach onboarding (starting in version 2006). For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md)
-1. Click **Summary** to review your selection, then click **Next**.
-1. When the wizard is complete, click **Close**.  
-
-
-## <a name="bkmk_review"></a> Review your upload
-
-1. Open **CMGatewaySyncUploadWorker.log** from &lt;ConfigMgr install directory>\Logs.
-1. The next sync time is noted by log entries similar to `Next run time will be at approximately: 02/28/2020 16:35:31`.
-1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of devices uploaded to the cloud. 
-1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Endpoint Manager admin center**.
+1. Select **Summary** to review your selection, then choose **Next**.
+1. When the wizard is complete, select **Close**.  
 
 ## Perform device actions
 
 1. In a browser, navigate to `endpoint.microsoft.com`
 1. Select **Devices** then **All devices** to see the uploaded devices. You'll see **ConfigMgr** in the **Managed by** column for uploaded devices.
    [![All devices in Microsoft Endpoint Manager admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
-1. Click on a device to load its **Overview** page.
-1. Click on any of the following actions:
+1. Select a device to load its **Overview** page.
+1. Choose any of the following actions:
    - **Sync Machine Policy**
    - **Sync User Policy**
    - **App Evaluation Cycle**
 
    [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## Known issues
+## <a name="bkmk_aad_app"></a> Import a previously created Azure AD application (optional)
+<!--6479246-->
+*(Introduced in version 2006)*
 
-### Specific devices don't synchronize
+During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
 
-<!--7099564-->
-It's possible that specific devices, which are Configuration Manager clients, won't be uploaded to the service.
+From the **Tenant onboarding** page in the **Co-management Configuration Wizard**, select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
 
-**Impacted devices:**
-If a device is a distribution point that uses the same PKI certificate for both the distribution point functionality and its client agent, then the device won't be included in the tenant attach device sync.
+- Azure AD tenant name
+- Azure AD tenant ID
+- Application name
+- Client ID
+- Secret key
+- Secret key expiry
+- App ID URI
 
-**Behavior:** When performing tenant attach during the on-boarding phase, a full sync is performed the first time. Subsequent sync cycles are delta synchronizations. Any update to the impacted devices will cause the device to be removed from the sync.
+### Azure AD application permissions and configuration
 
-## Log files
-Use the following logs located on the service connection point:
+Using a previously created application during onboarding to tenant attach requires the following permissions:
 
-- **CMGatewaySyncUploadWorker.log**
-- **CMGatewayNotificationWorker.log**
+- Configuration Manager Microservice permissions:
+   - CmCollectionData.read
+   - CmCollectionData.write
+
+- Microsoft Graph permissions:
+   - Directory.Read.All [Applications permission](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
+   - Directory.Read.All [Delegated directory permission](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+
+- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+
+- The imported application needs to be configured as follows:
+   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   -  Has a valid application ID URI and secret
+
+
 
 ## Next steps
 
-For more information about the tenant attach log files, see [Troubleshoot tenant attach](troubleshoot.md).
+- [Enroll Configuration Manager devices into Endpoint analytics](../../analytics/enroll-configmgr.md#bkmk_cm_enroll)
+- For information about the tenant attach log files, see [Troubleshoot tenant attach](troubleshoot.md).

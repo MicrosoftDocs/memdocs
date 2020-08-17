@@ -42,7 +42,7 @@ SInt32 GetFeatureState (
 
  Feature identifier. Possible values are:  
 
-|||  
+|Value|Feature|  
 |-|-|  
 |1|SleepServer|  
 

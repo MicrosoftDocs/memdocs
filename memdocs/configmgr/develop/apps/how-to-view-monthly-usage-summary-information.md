@@ -194,9 +194,8 @@ public void ViewMonthlySummaryInfo(WqlConnectionManager connection)
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: **WqlConnectionManager**<br />-   VBScript: **SWbemServices**|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  

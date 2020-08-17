@@ -58,7 +58,7 @@ uint32 QueueAppPolicyActivationAction
 
  Activation action. Possible values are:  
 
-|||  
+|Value|Activation action|  
 |-|-|  
 |0|default|  
 |1|By-pass activation.|  

@@ -116,9 +116,8 @@ public void EnableDisableSUMClientAgent(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`|The site code.|  

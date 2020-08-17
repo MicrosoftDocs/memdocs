@@ -112,9 +112,9 @@ Collect the following information about the problem:
 1. Remove the Company Portal app from the device.
 2. Download and install the **Microsoft Intune Company Portal** app from **App Store**.
 3. Re-enroll the device.
- > [!NOTE]
-    > This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow
-    the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
+
+> [!NOTE]
+> This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
 
 ### Device Cap Reached
 
@@ -190,7 +190,7 @@ Renew the APNs certificate, and then re-enroll the device.
 
 When you turn on a ADE-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

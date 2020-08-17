@@ -112,8 +112,8 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 
  Architecture of the boot image. The following values are the possible values. The default value is "".  
 
-|||  
-|-|-|  
+| Value | Architecture |
+| ----- | ------------ |
 |x86|I386 32-bit microprocessor|  
 |ia64|Itanium 64-bit microprocessor|  
 |x64|X86-64 64-bit microprocessor|  
