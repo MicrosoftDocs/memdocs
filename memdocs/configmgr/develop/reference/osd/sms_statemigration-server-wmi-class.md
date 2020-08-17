@@ -65,8 +65,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  Migration behavior. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration behavior |  
+| ----- | ------------------ |  
 |0|CAPTUREANDRESTOREALL|  
 |1|CAPTUREALLRESTORESPECIFIED|  
 |2|CAPTUREANDRESTORESPECIFIED|  
@@ -89,8 +89,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  Migration status. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration status |  
+| ----- | ---------------- |  
 |0|NOTSTARTED|  
 |1|INPROGRESS|  
 |2|COMPLETED|  
@@ -104,8 +104,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  The migration type used to store the user state. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration type |  
+| ----- | -------------- |  
 |1|SIDEBYSIDE|  
 |2|INPLACE|  
 

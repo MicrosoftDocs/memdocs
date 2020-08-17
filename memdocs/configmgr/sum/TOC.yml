@@ -32,7 +32,7 @@
     items:
     - name: Synchronize software updates from a disconnected software update point
       href: get-started/synchronize-software-updates-disconnected.md
-    - name: Synchronize Office 365 updates from a disconnected software update point
+    - name: Synchronize Microsoft 365 Apps updates from a disconnected software update point
       href: get-started/synchronize-office-updates-disconnected.md
 - name: Deploy and use
   items:
@@ -62,7 +62,7 @@
     href: deploy-use/service-a-server-group.md
   - name: Office 365 client management dashboard
     href: deploy-use/office-365-dashboard.md    
-  - name: Manage Office 365 ProPlus updates
+  - name: Manage Microsoft 365 Apps updates
     href: deploy-use/manage-office-365-proplus-updates.md
   - name: Optimize Windows 10 update delivery
     href: deploy-use/optimize-windows-10-update-delivery.md

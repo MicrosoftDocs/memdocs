@@ -57,7 +57,7 @@ Review the following information before you start syncing and assigning apps fro
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 > [!NOTE]
-> If you disable the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
+> If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 
 ## Associate your Microsoft Store for Business account with Intune
 

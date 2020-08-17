@@ -2,10 +2,10 @@
 title: Configure Azure services
 titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
@@ -224,6 +224,17 @@ After specifying the web and native apps on the Apps page, the Azure Services Wi
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
 ## <a name="bkmk_renew"></a> Renew secret key
+
+You need to renew the Azure AD app's secret key before the end of its validity period. If you let the key expire, Configuration Manager can't authenticate with Azure AD, which will cause your connected Azure services to stop working.
+
+Starting in version 2006, the Configuration Manager console displays notifications for the following circumstances:<!--6386392-->
+
+- One or more Azure AD app secret keys will expire soon
+- One or more Azure AD app secret keys have expired
+
+To mitigate both cases, renew the secret key.
+
+For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
 ### Renew key for created app
 

@@ -56,7 +56,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Manage Office 365 ProPlus updates
+          - text: Manage Microsoft 365 Apps updates
             url: deploy-use/manage-office-365-proplus-updates.md
           - text: Enable third-party updates
             url: deploy-use/third-party-software-updates.md

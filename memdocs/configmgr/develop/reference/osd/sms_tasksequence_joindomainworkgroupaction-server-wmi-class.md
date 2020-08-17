@@ -170,8 +170,8 @@ Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
 
  The type of network join action required of the target computer. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Network join type |  
+| ----- | ----------------- |  
 |0|Domain|  
 |1|Workgroup|  
 

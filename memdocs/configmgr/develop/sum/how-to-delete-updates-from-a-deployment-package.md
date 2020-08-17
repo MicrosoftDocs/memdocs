@@ -33,7 +33,7 @@ You remove updates from a software updates deployment package, in Configuration 
 
  Example of the method call in C#:  
 
-```  
+```csharp
 
 // Prework for RemoveUpdatesfromSUMDeploymentPackage.  
 // Define the array of Content IDs to load into the content parameters.  
@@ -51,7 +51,7 @@ RemoveUpdatesfromSUMDeploymentPackage(WMIConnection,
 
 ```  
 
-```c#  
+```csharp
 
 public void RemoveUpdatesfromSUMDeploymentPackage(WqlConnectionManager connection,  
                                                   string existingSUMPackageID,  
@@ -81,9 +81,8 @@ public void RemoveUpdatesfromSUMDeploymentPackage(WqlConnectionManager connectio
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+|Parameter|Type|Description|
+|---------|----|-----------|
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`|The package ID for an existing software updates management package.|  
 |`removecontentParameters`|-   Managed: `dictionary object`|The set of parameters (`ContentIDs`, `bRefreshDPs`) that is passed into the method and used with the `RemoveContent` method call.|  

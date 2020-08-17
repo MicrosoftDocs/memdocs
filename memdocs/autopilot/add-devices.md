@@ -108,6 +108,7 @@ The commands can also be run remotely, as long as WMI permissions are in place a
 Once the hardware IDs have been captured from existing devices, they can be uploaded through a variety of means. See the detailed documentation for each available mechanism.
 
 -   [Microsoft Intune](enrollment-autopilot.md).  This is the preferred mechanism for all customers.
+    - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
 -   [Partner Center](https://msdn.microsoft.com/partner-center/autopilot).  This is used by CSP partners to register devices on behalf of customers.
 -   [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 -   [Microsoft Store for Business](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  You might already be using MSfB to manage your apps and settings.

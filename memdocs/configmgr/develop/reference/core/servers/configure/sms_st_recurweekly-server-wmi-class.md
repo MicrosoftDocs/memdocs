@@ -45,7 +45,7 @@ Class SMS_ST_RecurWeekly : SMS_ScheduleToken
 
  Day of the week when the event is scheduled to occur. Possible values are listed below. The default value is 1.  
 
-|||  
+|Value|Day|  
 |-|-|  
 |1|SUNDAY|  
 |2|MONDAY|  

@@ -78,7 +78,7 @@ If the Delivery Optimization Service is inaccessible, the Autopilot process will
 If diagnostic data cannot be sent, the Autopilot process will still continue, but services that depend on diagnostic data, such as Windows Analytics, will not work.
 <tr><td><b>Network Connection Status Indicator (NCSI)<b><td>Windows must be able to tell that the device is able to access the internet. For more information, see <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">Network Connection Status Indicator (NCSI)</a>.
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> must be resolvable via DNS and accessible via HTTP.
+<code>www.msftconnecttest.com</code> must be resolvable via DNS and accessible via HTTP.
 <tr><td><b>Windows Notification Services (WNS)<b><td>This service is used to enable Windows to receive notifications from apps and services. See <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a> for more information.<br>
 
 If the WNS services are not available, the Autopilot process will still continue without notifications.
@@ -91,7 +91,7 @@ If the Microsoft Store is not accessible, the Autopilot process will still conti
 <tr><td><b>Hybrid AAD join<b><td>The device can be hybrid AAD joined. The computer should be on corporate network for hybrid AAD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
 <tr><td><b>Autopilot Self-Deploying mode and Autopilot White Glove<b><td>Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, do not include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. See <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a> for more details. Make sure that these URLs are accessible for each firmware TPM provider so that certificates can be successfully requested: 
 
-  <br>Intel- https://ekop.intel.com/ekcertservice 
+  <br>Intel- https://www.intel.com/ 
   <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1
   <br>AMD- https://ftpm.amd.com/pki/aia
 

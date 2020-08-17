@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -181,14 +181,17 @@ Supported platforms and profiles:
 ### Microsoft Defender Application Control
 
 - **App locker application control**  
+  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **Not configured** (*default*)
   - **Enforce Components and Store Apps**
   - **Audit Components and Store Apps**
   - **Enforce Components, Store Apps, and Smartlocker**
-  - **Audit Components, Store Apps, and SMartlocker**
+  - **Audit Components, Store Apps, and Smartlocker**
+   
 
 - **Block users from ignoring SmartScreen warnings**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Not configured** (*default*) - Users can ignore SmartScreen warnings for files and malicious apps.
   - **Yes** - SmartScreen is enabled and users cannot bypass warnings for files or malicious apps.

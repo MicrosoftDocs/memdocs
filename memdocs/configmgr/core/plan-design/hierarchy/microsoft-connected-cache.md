@@ -127,7 +127,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
 - If you enable [Windows Update for Business policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows 10 feature and quality updates
 - For [co-management workloads](../../../comanage/workloads.md):
   - Windows Update for Business: Windows 10 feature and quality updates
-  - Office Click-to-Run apps: Office apps and updates
+  - Office Click-to-Run apps: Microsoft 365 Apps and updates
   - Client apps: Microsoft Store apps and updates
   - Endpoint Protection: Windows Defender definition updates
 

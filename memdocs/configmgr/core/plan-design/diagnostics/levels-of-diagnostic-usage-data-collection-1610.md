@@ -5,15 +5,14 @@ description: "Learn about the levels of diagnostics and usage data that Configur
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1610 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -361,7 +360,7 @@ For Configuration Manager version 1610, this level includes the following:
 
 - **Miscellaneous**
 
-    - Count of sites with Wake On Lan (WOL)
+    - Count of sites with Wake on LAN (WOL)
 
     - ***[New]*** Reporting usage and performance statistics  
 

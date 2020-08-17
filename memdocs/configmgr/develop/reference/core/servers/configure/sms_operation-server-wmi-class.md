@@ -42,7 +42,7 @@ Class SMS_Operation :
 
  The bit flag of the operation. Possible values are:  
 
-||||  
+|N|2^N|Operation|  
 |-|-|-|  
 |0|1|Read|  
 |1|2|Modify|  
@@ -84,7 +84,7 @@ Class SMS_Operation :
 
  `true`, if the operation is type wide.  
 
- If the operation is type wide, the user will have the permission against all objects of this type, if the user has this operation against any RBA security category. If the operation is not type wide, then user will has the permission against the objects which are assigned to the related RBA security category.  
+ If the operation is type wide, the user will have the permission against all objects of this type, if the user has this operation against any RBA security category. If the operation is not type wide, then user will have the permission against the objects which are assigned to the related RBA security category.  
 
  `ObjectTypeID`  
  Data type: `UInt32`  

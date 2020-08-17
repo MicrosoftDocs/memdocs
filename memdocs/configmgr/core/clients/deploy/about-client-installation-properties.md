@@ -2,10 +2,10 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
@@ -31,9 +31,9 @@ The CCMSetup.exe command downloads needed files to install the client from a man
 > [!NOTE]
 > You can't directly install client.msi.  
 
-CCMSetup.exe provides command-line *parameters* to customize the installation. Parameters are prefixed with a slash (`/`) and by convention are lower case. You specify the value of a parameter when necessary using a colon (`:`) immediately followed by the value. For more information, see [CCMSetup.exe command-line parameters](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe provides command-line *parameters* to customize the installation. Parameters are prefixed with a slash (`/`) and are generally lower case. You specify the value of a parameter when necessary using a colon (`:`) immediately followed by the value. For more information, see [CCMSetup.exe command-line parameters](#ccmsetupexe-command-line-parameters).
 
-You can also supply *properties* at the CCMSetup.exe command line to modify the behavior of client.msi.Properties by convention are upper case. You specify a value for a property using an equal sign (`=`) immediately followed by the value. For more information, see [Client.msi properties](#clientMsiProps).
+You can also supply *properties* at the CCMSetup.exe command line to modify the behavior of client.msi. Properties by convention are upper case. You specify a value for a property using an equal sign (`=`) immediately followed by the value. For more information, see [Client.msi properties](#clientMsiProps).
 
 > [!IMPORTANT]  
 > Specify CCMSetup parameters before you specify properties for client.msi.  
@@ -71,16 +71,100 @@ Shows available command-line parameters for ccmsetup.exe.
 
 Example: `ccmsetup.exe /?`
 
-### /source
+### /AllowMetered
 
-Specifies the file download location. Use a local or UNC path. The device downloads files using the server message block (SMB) protocol. To use  **/source**, the Windows user account for client installation needs **Read** permissions to the location.
+<!--6976145-->
 
-For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
+Starting in version 2006, use this parameter to control the client's behavior on a metered network. This parameter takes no values. When you allow client communication on a metered network for ccmsetup, it downloads the content, registers with the site, and downloads the initial policy. Any further client communication follows the configuration of the client setting from that policy. For more information, see [About client settings](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections).
 
-> [!TIP]  
-> You can use the **/source** parameter more than once in a command line to specify alternative download locations.  
+If you reinstall the client on an existing device, it uses the following priority to determine its configuration:
 
-Example: `ccmsetup.exe /source:"\\server\share"`
+1. Existing local client policy
+1. The last command line stored in the Windows registry
+1. Parameters on the ccmsetup command line
+
+### /AlwaysExcludeUpgrade
+
+This parameter specifies whether or not a client will auto upgrade when you enable [**Automatic client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+
+Supported values:
+
+- `TRUE`: The client won't automatically upgrade
+- `FALSE`: The client automatically upgrades (default)
+
+For example:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> When using the **/AlwaysExcludeUpgrade** parameter, the auto upgrade still runs. However when CCMSetup runs to perform the upgrade, it will note that **/AlwaysExcludeUpgrade** parameter has been set and will log the following line in the **ccmsetup.log**:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup will then immediately exit and not perform the upgrade.
+
+### /BITSPriority
+
+When the device downloads client installation files over an HTTP connection, use this parameter to specify the download priority. Specify one of the following possible values:
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL` (default)
+
+- `LOW`
+
+Example: `ccmsetup.exe /BITSPriority:HIGH`
+
+### /config
+
+This parameter specifies a text file that lists client installation properties.
+
+- If CCMSetup runs as a service, place this file in the CCMSetup system folder: `%Windir%\Ccmsetup`.
+
+- If you specify the [**/noservice**](#noservice) parameter, place this file in the same folder as CCMSetup.exe.
+
+Example: `CCMSetup.exe /config:"configuration file name.txt"`
+
+To provide the correct file format, use the **mobileclienttemplate.tcf** file in the `\bin\<platform>` folder in the Configuration Manager installation directory on the site server. This file has comments about the sections and how to use them. Specify the client installation properties in the `[Client Install]` section, after the following text: `Install=INSTALL=ALL`.
+
+Example `[Client Install]` section entry: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### /downloadtimeout
+
+If CCMSetup fails to download the client installation files, this parameter specifies the maximum timeout in minutes. After this timeout, CCMSetup stops trying to download the installation files. The default value is **1440** minutes (one day).
+
+Use the [**/retry**](#retry) parameter to specify the interval between retry attempts.
+
+Example: `ccmsetup.exe /downloadtimeout:100`
+
+### /ExcludeFeatures
+
+This parameter specifies that CCMSetup.exe doesn't install the specified feature.
+
+Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Center on the client.  
+
+> [!NOTE]  
+> `ClientUI` is the only value that the **/ExcludeFeatures** parameter supports.
+
+### /forceinstall
+
+Specify that CCMSetup.exe uninstalls any existing client, and installs a new client.  
+
+### /forcereboot
+
+Use this parameter to force the computer to restart if necessary to complete the installation. If you don't specify this parameter, CCMSetup exits when a restart is necessary. It then continues after the next manual restart.
+
+Example: `CCMSetup.exe /forcereboot`
+
+### /logon
+
+If any version of the client is already installed, this parameter specifies that the client installation should stop.  
+
+Example: `ccmsetup.exe /logon`  
 
 ### /mp
 
@@ -118,6 +202,18 @@ Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:htt
 > [!Important]
 > When specifying the URL of a cloud management gateway for the **/mp** parameter, it must start with `https://`.
 
+### /NoCRLCheck
+
+Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+
+Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### /noservice
+
+This parameter prevents CCMSetup from running as a service, which it does by default. When CCMSetup runs as a service, it runs in the context of the Local System account of the computer. This account might not have sufficient rights to access required network resources for the installation. With **/noservice**, CCMSetup.exe runs in the context of the user account that you use to start the installation.
+
+Example: `ccmsetup.exe /noservice`  
+
 ### /regtoken
 
 <!--5686290-->
@@ -141,12 +237,6 @@ If CCMSetup.exe fails to download installation files, use this parameter to spec
 
 Example: `ccmsetup.exe /retry:20`  
 
-### /noservice
-
-This parameter prevents CCMSetup from running as a service, which it does by default. When CCMSetup runs as a service, it runs in the context of the Local System account of the computer. This account might not have sufficient rights to access required network resources for the installation. With **/noservice**, CCMSetup.exe runs in the context of the user account that you use to start the installation.
-
-Example: `ccmsetup.exe /noservice`  
-
 ### /service
 
 Specifies that CCMSetup should run as a service that uses the Local System account.  
@@ -155,77 +245,6 @@ Specifies that CCMSetup should run as a service that uses the Local System accou
 > If you're using a script to run CCMSetup.exe with the **/service** parameter, CCMSetup.exe exits after the service starts. It might not correctly report installation details to the script.
 
 Example: `ccmsetup.exe /service`  
-
-### /uninstall
-
-Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#BKMK_UninstalClient).
-
-Example: `ccmsetup.exe /uninstall`  
-
-### /logon
-
-If any version of the client is already installed, this parameter specifies that the client installation should stop.  
-
-Example: `ccmsetup.exe /logon`  
-
-### /forcereboot
-
-Use this parameter to force the computer to restart if necessary to complete the installation. If you don't specify this parameter, CCMSetup exits when a restart is necessary. It then continues after the next manual restart.
-
-Example: `CCMSetup.exe /forcereboot`
-
-### /BITSPriority
-
-When the device downloads client installation files over an HTTP connection, use this parameter to specify the download priority. Specify one of the following possible values:
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL` (default)
-
-- `LOW`
-
-Example: `ccmsetup.exe /BITSPriority:HIGH`
-
-### /downloadtimeout
-
-If CCMSetup fails to download the client installation files, this parameter specifies the maximum timeout in minutes. After this timeout, CCMSetup stops trying to download the installation files. The default value is **1440** minutes (one day).
-
-Use the [**/retry**](#retry) parameter to specify the interval between retry attempts.
-
-Example: `ccmsetup.exe /downloadtimeout:100`
-
-### /UsePKICert
-
-Specify this parameter for the client to use a PKI client authentication certificate. If you don't include this parameter, or if the client can't find a valid certificate, it uses an HTTP connection with a self-signed certificate.
-
-Example: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
->
-> Also specify this parameter when you install a client for internet-only communication. Use the **CCMALWAYSINF=1** property together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
-### /NoCRLCheck
-
-Specifies that a client shouldn't check the certificate revocation list (CRL) when it communicates over HTTPS with a PKI certificate. When you don't specify this parameter, the client checks the CRL before it establishes an HTTPS connection. For more information about client CRL checking, see [Planning for PKI certificate revocation](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
-
-Example: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### /config
-
-This parameter specifies a text file that lists client installation properties.
-
-- If CCMSetup runs as a service, place this file in the CCMSetup system folder: `%Windir%\Ccmsetup`.
-
-- If you specify the [**/noservice**](#noservice) parameter, place this file in the same folder as CCMSetup.exe.
-
-Example: `CCMSetup.exe /config:"configuration file name.txt"`
-
-To provide the correct file format, use the **mobileclienttemplate.tcf** file in the `\bin\<platform>` folder in the Configuration Manager installation directory on the site server. This file has comments about the sections and how to use them. Specify the client installation properties in the `[Client Install]` section, after the following text: `Install=INSTALL=ALL`.
-
-Example `[Client Install]` section entry: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### /skipprereq
 
@@ -239,40 +258,33 @@ Examples:
 
 For more information on client prerequisites, see [Windows client prerequisites](prerequisites-for-deploying-clients-to-windows-computers.md).
 
-### /forceinstall
+### /source
 
-Specify that CCMSetup.exe uninstalls any existing client, and installs a new client.  
+Specifies the file download location. Use a local or UNC path. The device downloads files using the server message block (SMB) protocol. To use  **/source**, the Windows user account for client installation needs **Read** permissions to the location.
 
-### /ExcludeFeatures
+For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). That article also includes details of ccmsetup behavior if you use both **/mp** and **/source** parameters.
 
-This parameter specifies that CCMSetup.exe doesn't install the specified feature.
+> [!TIP]  
+> You can use the **/source** parameter more than once in a command line to specify alternative download locations.  
 
-Example: `CCMSetup.exe /ExcludeFeatures:ClientUI` doesn't install Software Center on the client.  
+Example: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI` is the only value that the **/ExcludeFeatures** parameter supports.
+### /uninstall
 
-### /AlwaysExcludeUpgrade
+Use this parameter to uninstall the Configuration Manager client. For more information, see [Uninstall the client](../manage/manage-clients.md#BKMK_UninstalClient).
 
-This parameter specifies whether or not a client will auto upgrade when you enable [**Automatic client upgrade**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+Example: `ccmsetup.exe /uninstall`  
 
-Supported values:
+### /UsePKICert
 
-- `TRUE`: The client won't automatically upgrade
-- `FALSE`: The client automatically upgrades (default)
+Specify this parameter for the client to use a PKI client authentication certificate. If you don't include this parameter, or if the client can't find a valid certificate, it uses an HTTP connection with a self-signed certificate.
 
-For example:  
+Example: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-For more information, see [Extended interoperability client](../../understand/interoperability-client.md).
-
-> [!NOTE]  
-> When using the **/AlwaysExcludeUpgrade** parameter, the auto upgrade still runs. However when CCMSetup runs to perform the upgrade, it will note that **/AlwaysExcludeUpgrade** parameter has been set and will log the following line in the **ccmsetup.log**:
+> [!NOTE]
+> In some scenarios, you don't have to specify this parameter, but still use a client certificate. For example, client push and software update–based client installation. Use this parameter when you manually install a client and use the **/mp** parameter with an HTTPS-enabled management point.
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> CCMSetup will then immediately exit and not perform the upgrade.
+> Also specify this parameter when you install a client for internet-only communication. Use the **CCMALWAYSINF=1** property together with the properties for the internet-based management point (**CCMHOSTNAME**) and the site code (**SMSSITECODE**). For more information about internet-based client management, see [Considerations for client communications from the internet or an untrusted forest](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
 ## <a name="ccmsetupReturnCodes"></a> CCMSetup.exe return codes
 

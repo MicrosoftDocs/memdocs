@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -54,7 +54,7 @@ This article lists the supported upgrade paths, and shows you how to create the 
 Before you upgrade devices, be sure you have the following prerequisites:
 
 - A valid product key to install the updated Windows version on all devices that you target with the policy (for Windows 10 Desktop editions). You can use either Multiple Activation Keys (MAK) or Key Management Server (KMS) keys.
-- For Windows 10 Mobile and Windows 10 Holographic editions, you can use a Microsoft license file. The license file includes the licensing information to install the updated edition on all devices that you target with the policy.
+- For Windows 10 Holographic editions, you can use a Microsoft license file. The license file includes the licensing information to install the updated edition on all devices that you target with the policy.
 - The Windows 10 devices you assign the policy are enrolled in Microsoft Intune. You can't use the edition upgrade policy with PCs that run the Intune PC client software.
 
 ## Supported upgrade paths
@@ -74,7 +74,6 @@ The following table lists the supported upgrade paths for the Windows 10 edition
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N edition | Windows 10 Education N edition <br/>Windows 10 Enterprise N edition <br/>Windows 10 Pro Education N edition | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

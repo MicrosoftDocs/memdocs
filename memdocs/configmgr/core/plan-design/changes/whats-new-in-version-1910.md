@@ -96,19 +96,19 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 <!--3197353-->
 We've added some significant optimizations to the CMPivot engine. Now you can push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, you can now sift through gigabytes of client data in real time. 
 
-For more information, see [Optimizations to the CMPivot engine](../../servers/manage/cmpivot.md#bkmk_optimization).
+For more information, see [Optimizations to the CMPivot engine](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
 ### Additional CMPivot entities and enhancements
 <!--5410930-->
 We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
 
-- Windows event logs ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- File content ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- DLLs loaded by processes ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory information ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Endpoint protection status ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows event logs ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- File content ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- DLLs loaded by processes ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory information ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Endpoint protection status ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-This release also includes several [other enhancements](../../servers/manage/cmpivot.md#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](../../servers/manage/cmpivot.md#bkmk_cmpivot1910).
+This release also includes several [other enhancements](../../servers/manage/cmpivot-changes.md#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
 ## <a name="bkmk_content"></a> Content management
 

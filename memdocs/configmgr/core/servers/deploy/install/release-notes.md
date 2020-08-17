@@ -2,10 +2,10 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 05/21/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
@@ -24,10 +24,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [What's new in version 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [What's new in version 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [What's new in version 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
@@ -109,6 +109,20 @@ To work around this issue, create a folder called `scripts` in the `AdminConsole
 
 ## OS deployment
 
+### Client policy error when you deploy a task sequence
+
+<!-- 7970134 -->
+
+*Applies to: Configuration Manager version 2006 early update ring*
+
+When you deploy a task sequence to a client, a required task sequence doesn’t install at the deadline, and an available task sequence doesn’t appear in Software Center. You see status message 10803 with a description similar to the following error message:
+
+*The client failed to download policy. The data transfer service returned "BITS error: 'The server's response was not valid. The server was not following the defined protocol. (-2145386469).*
+
+This issue occurs when you configure the management point for HTTPS, and the device uses Configuration Manager client version 1906 or earlier.
+
+To work around this issue, update the Configuration Manager client on the device to version 1910 or later.
+
 ### Task sequences can't run over CMG
 
 *Applies to: Configuration Manager version 2002*
@@ -117,24 +131,15 @@ There are two instances in which task sequences can't run on a device that commu
 
 - You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
 
-    To work around this issue, configure the management point for HTTPS.
+    To work around this issue, update to version 2006. Alternatively, configure the management point for HTTPS.
 
 - You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
 
-    To work around this issue, use one of the following authentication methods:
+    To work around this issue, update to version 2006. Alternatively, use one of the following authentication methods:
 
   - Pre-register the device on the internal network
   - Configure the device with a client authentication certificate
   - Join the device to Azure AD
-
-### After passive site server is promoted, the default boot image packages still have package source on the previous active server
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Applies to: Configuration Manager version 1810*
-
-If you have a site server in passive mode (server B), when you promote it to active, the content location for the default boot images continues to reference the previously active server (server A). If server A has a hardware failure, you can't update or change the default boot images.
-
-There's no workaround for this issue.
 
 ## Software updates
 
@@ -167,7 +172,7 @@ For more information, see [Create custom security roles](../configure/configure-
 ### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
 
 <!-- 7283186 -->
-_Applies to: Configuration Manager versions 1902, 1906, 1910, and 2002_
+_Applies to: Configuration Manager versions 2002 and earlier_
 
 The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 devices to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 

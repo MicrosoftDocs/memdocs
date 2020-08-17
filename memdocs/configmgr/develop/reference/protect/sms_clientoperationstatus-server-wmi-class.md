@@ -149,8 +149,8 @@ Class SMS_ClientOperationStatus : SMS_BaseClass
 
  Target object type of the primary action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |1|Threat|  
 |8|RequestPolicyNow|  
 
@@ -163,8 +163,8 @@ Class SMS_ClientOperationStatus : SMS_BaseClass
 
  "Action type of the primary action. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Action type |  
+| ----- | ----------- |  
 |1|Full Scan|  
 |2|Quick Scan|  
 |3|Download Definition|  
@@ -200,8 +200,8 @@ Class SMS_ClientOperationStatus : SMS_BaseClass
 
  State of this EndPoint Protection client operation. Possible values are:  
 
-|||  
-|-|-|  
+| Value | State |  
+| ----- | ----- |  
 |0|Action Unknown|  
 |1|Action Not Applicable|  
 |2|Action Failed|  

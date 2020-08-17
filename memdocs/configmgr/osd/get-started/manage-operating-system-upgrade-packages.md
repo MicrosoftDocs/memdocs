@@ -5,13 +5,11 @@ description: Learn how to manage OS upgrade packages in Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage OS upgrade packages with Configuration Manager
