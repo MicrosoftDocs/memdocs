@@ -76,7 +76,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **ID:** Unique device ID used by Windows Update
   - **localId:** A locally defined unique ID for the device. This ID isn't the human-readable device name. Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
-  - **orgId:** Unique GUID representing the Microsoft O365 Tenant
+  - **orgId:** Unique GUID representing the Microsoft 365 Tenant
   
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
