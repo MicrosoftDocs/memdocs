@@ -29,7 +29,6 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Fixed-width font now used in some console areas](includes/2007/7632637.md)]
 [!INCLUDE [Manage task sequence policy size](includes/2007/6888853.md)]
 [!INCLUDE [Improvements to device timeline in the admin center](includes/2007/7141381.md)]
-[!INCLUDE [Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center](includes/2007/4812909.md)]
 
 <!--
 ## General known issues
