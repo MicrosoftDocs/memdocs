@@ -40,7 +40,7 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 
 ### Inconsistent results for some operators with Configuration Manager version 2002
 <!--7784718, 7884272-->
-When using CMPivot from the admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
+When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
 
 - Summarize by
 - Take
