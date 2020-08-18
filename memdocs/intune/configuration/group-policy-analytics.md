@@ -41,7 +41,7 @@ This feature applies to:
 
 - Windows 10 and newer
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. You can also migrate your GPOs to device configuration profiles to assign to your users and devices.
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
 
 ## Export GPOs as an XML file
 
@@ -65,7 +65,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 
-    You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** based on MDM Support/Targeted in AD/Last imported timeline. You can also **Export** this view to a `.csv` file:
+    You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** the output. You can also **Export** this view to a `.csv` file:
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
@@ -81,9 +81,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
       **No** means there isn't a matching setting available to MDM providers, including Intune.
 
-      For more information on device configuration profiles, see [Apply features and settings on your devices using device profiles](device-profiles.md).
-
-      ?? If a setting has MDM support, but not Migration support, the setting will be supported soon as the infrastructure is in place. Example: Yes, No. ??
+      For more information on device configuration profiles, see [Apply features and settings on your devices using device profiles](device-profiles.md).      
 
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
     - **Scope**: Shows if the imported GPO targets users or targets devices.
@@ -97,18 +95,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-## Migrate from GPO to configuration profile
-
-After you review your settings, you can **Migrate** the GPO settings. This migration creates a device configuration profile based on the settings in the GPO. The GPO settings that don't have a matching Intune setting aren't migrated, and aren't included in the new device configuration profile.
-
-The profile isn't applied until you assign it to your users or groups. For more information, see [Assign user and device profiles](device-profile-assign.md).
-
-1. Go to **Devices** > **Group Policy analytics (preview)**.
-2. Select the **Migrate** check box > **Migrate**:
-
-    :::image type="content" source="./media/group-policy-analytics/migrate-imported-gpo.png" alt-text="Migrate your imported GPO in to Microsoft Intune and Endpoint Manager admin center using Group Policy analytics.":::
-
-## Complex GPOs
+## Supported CSPs
 
 Group Policy analytics supports the following CSPs:
 
@@ -117,8 +104,6 @@ Group Policy analytics supports the following CSPs:
 - [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
 - [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
-
-?? If there are settings within your GPO that map to MDM equivalents outside of the supported CSPs for this tool, they're considered "complex" Group Policy objects. ??
 
 ## Group Policy migration readiness report
 
