@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -108,6 +108,20 @@ This error occurs because a `scripts` folder doesn't exist under the `AdminConso
 To work around this issue, create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
 
 ## OS deployment
+
+### Client policy error when you deploy a task sequence
+
+<!-- 7970134 -->
+
+*Applies to: Configuration Manager version 2006 early update ring*
+
+When you deploy a task sequence to a client, a required task sequence doesn’t install at the deadline, and an available task sequence doesn’t appear in Software Center. You see status message 10803 with a description similar to the following error message:
+
+*The client failed to download policy. The data transfer service returned "BITS error: 'The server's response was not valid. The server was not following the defined protocol. (-2145386469).*
+
+This issue occurs when you configure the management point for HTTPS, and the device uses Configuration Manager client version 1906 or earlier.
+
+To work around this issue, update the Configuration Manager client on the device to version 1910 or later.
 
 ### Task sequences can't run over CMG
 
