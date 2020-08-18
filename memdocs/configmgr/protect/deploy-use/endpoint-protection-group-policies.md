@@ -38,7 +38,7 @@ You can manage Endpoint Protection in such devices using Group Policy settings, 
     - [Local device](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## Copy Endpoint Protection policy definitions
 
@@ -71,7 +71,7 @@ If you are using a [Central Store for Group Policy Administrative Templates](htt
     
     where **DC** is the name of your Domain Controller and **contoso.com** is your domain.
 
-3. Open the [Group Policy Management Console](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) and create a new Group Policy Object (GPO) in your domain, for example **Endpoint Protection**.
+3. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) and create a new Group Policy Object (GPO) in your domain, for example **Endpoint Protection**.
 4. Right-click the GPO for Endpoint Protection and click **Edit**.
 5. In the Group Policy Management Editor, go to **Computer Configuration** > **Policies** > **Administrative Templates: Policy definitions** > **Windows Components** > **Endpoint Protection**.
 

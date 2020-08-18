@@ -225,7 +225,7 @@ Disk space required for each DO cache server may vary, based on your organizatio
 
 The DO cache server shouldn't consume much system memory or processor time. After you install the DO cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.
 
-If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## See also
 

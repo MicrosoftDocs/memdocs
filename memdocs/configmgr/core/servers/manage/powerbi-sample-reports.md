@@ -16,7 +16,7 @@ manager: dougeby
 <!--5679791-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 2002, you can integrate [Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) with Configuration Manager reporting. There are sample reports available for download that you can install in Configuration Manager. This article explains how to install the Power BI sample reports in Configuration Manager.
+Starting in version 2002, you can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. There are sample reports available for download that you can install in Configuration Manager. This article explains how to install the Power BI sample reports in Configuration Manager.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Starting in version 2002, you can integrate [Power BI Report Server](https://doc
     > [!IMPORTANT]
     > Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store.
     >
-    > Only use a version of Power BI Desktop that's [Optimized for Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > Only use a version of Power BI Desktop that's [Optimized for Power BI Report Server](/power-bi/report-server/install-powerbi-desktop).
 
 ## Download the sample reports
 

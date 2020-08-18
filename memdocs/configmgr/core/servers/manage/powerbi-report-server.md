@@ -18,13 +18,13 @@ manager: dougeby
 
 <!--3721603-->
 
-Starting in version 2002, you can integrate [Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
+Starting in version 2002, you can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
 
 Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Report Server. This process is similar as with SQL Server Reporting Services report files (.RDL). You can also launch the reports in the browser directly from the Configuration Manager console.
 
 ## Prerequisites
 
-- Power BI Report Server license. For more information, see [Licensing Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
+- Power BI Report Server license. For more information, see [Licensing Power BI Report Server](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270), or later.
 
@@ -35,7 +35,7 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
     > [!IMPORTANT]
     > - Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use a version from the Microsoft Store.
-    > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report Server**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI integration uses the same role-based administration for reporting.
     > [!NOTE]
@@ -50,7 +50,7 @@ This process varies depending upon whether you already have this role in the sit
 
 Only use this process if you already have a reporting services point in the site. Do all steps of this process on the same server:
 
-1. In **Reporting Server Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. In **Reporting Server Configuration Manager**, back up the **Encryption Keys**. For more information, see [SSRS Encryption Keys - Back Up and Restore Encryption Keys](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > If you skip this step, you'll lose access to any custom reports in SQL Server Reporting Services.

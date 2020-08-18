@@ -41,11 +41,11 @@ landingContent:
           - text: Architectural overview
             url: core/understand/architectural-overview.md
           - text: Get started with PowerShell
-            url: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+            url: /powershell/sccm/overview?view=sccm-ps%3fview%3dsccm-ps
       - linkListType: reference
         links:
           - text: Configuration Manager PowerShell cmdlets
-            url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+            url: /powershell/sccm/overview?view=sccm-ps
 
   - title: Top tasks
     linkLists:

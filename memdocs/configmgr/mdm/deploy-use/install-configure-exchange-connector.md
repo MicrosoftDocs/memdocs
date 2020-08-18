@@ -71,7 +71,7 @@ The following Exchange Server management roles include these cmdlets:
 - View-Only Organization Management
 - Server Management
 
-For more information, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) in the Exchange Server 2013 documentation.
+For more information, see [Understanding management role groups](/exchange/understanding-management-role-groups-exchange-2013-help) in the Exchange Server 2013 documentation.
 
 > [!TIP]  
 > If you try to install or use the Exchange Server connector without the required cmdlets, you'll see the following error in the EasDisc.log file on the site server computer: `Invoking cmdlet <cmdlet> failed`.

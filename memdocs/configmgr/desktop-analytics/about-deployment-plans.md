@@ -65,7 +65,7 @@ See the **Windows upgrade decision** for each device in the deployment plan.
 
 The Windows upgrade decision to **Replace device** can be because of one of the following reasons:
 
-- It failed a Windows 10 required processor check. For more information, see [Minimum hardware requirements](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- It failed a Windows 10 required processor check. For more information, see [Minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - It has a BIOS block
 - It doesn't have enough memory
 - A boot critical component on the system has a blocked driver
@@ -127,4 +127,4 @@ After creating a deployment plan, use Configuration Manager to deploy the produc
 
 - [Learn about security and feature updates](about-updates.md)  
 
-- [Create a deployment plan](create-deployment-plans.md)  
+- [Create a deployment plan](create-deployment-plans.md)

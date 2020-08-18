@@ -88,7 +88,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows ADK  
@@ -124,7 +124,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
@@ -209,7 +209,7 @@ Also install a supported version of the .NET Framework version 4.5 or later.
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration  
@@ -265,7 +265,7 @@ Also install a supported version of the .NET Framework version 4.5 or later.
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -307,7 +307,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Native Client
@@ -329,7 +329,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -441,7 +441,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -492,7 +492,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -555,7 +555,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -587,7 +587,7 @@ Install a supported version of the .NET Framework version 4.5 or later. Starting
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### SQL Server Reporting Services  
@@ -616,7 +616,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Visual C++ Redistributable
@@ -646,7 +646,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### Windows Server Update Services  
@@ -685,7 +685,7 @@ Also install a supported version of the .NET Framework version 4.5 or later. Sta
 
 For more information about .NET Framework versions, see the following articles:
 
-- [.NET Framework versions and dependencies](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Lifecycle FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### IIS configuration
@@ -711,4 +711,3 @@ For more information about .NET Framework versions, see the following articles:
 ### SQL Server Native Client
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-
