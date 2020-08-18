@@ -126,11 +126,11 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 - Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily make this change by using the Company Portal app and starting a device compliance check.
 - To validate that things are working correctly after devices have checked-in and synchronized with the service after the change in MDM authority, look for the devices in the new MDM authority.
 - There's an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following profiles remain on the device for up to seven days (or until the device connects with the new MDM authority and receives new settings that overwrite the existing ones):
- - E-mail profile
- - VPN profile
- - Cert profile
- - Wi-Fi profile
- - Configuration profiles
+   - E-mail profile
+   - VPN profile
+   - Cert profile
+   - Wi-Fi profile
+   - Configuration profiles
 - After you change to the new MDM authority, the compliance data in the Microsoft Intune administration console can take up to a week to accurately report. However, the compliance states in Azure Active Directory and on the device will be accurate so the device is still be protected.
 - Make sure the new settings that are intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.  
 
