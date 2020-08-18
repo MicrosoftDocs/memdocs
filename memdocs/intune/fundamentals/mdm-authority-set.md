@@ -40,9 +40,9 @@ Possible configurations are:
 
 - **Intune co-management** - integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Basic Mobility and Security for Office 365** - If you have this configuration activated, you will see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
+- **Basic Mobility and Security for Office 365** - If you have this configuration activated, you'll see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
 
-- **Basic Mobility and Security for Office 365 Coexistence** - You can add Intune to your tenant if you are already using Basic Mobility and Security for Office 365 and set the management authority to either Intune or Basic Mobility and Security for Office 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by Basic Mobility and Security for Office 365. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Office 365, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace Basic Mobility and Security for Office 365 prior to switching users to Intune, otherwise their devices will lose Basic Mobility and Security for Office 365 configuration and will not receive any replacement from Intune.
+- **Basic Mobility and Security for Office 365 Coexistence** - You can add Intune to your tenant if you're already using Basic Mobility and Security for Office 365 and set the management authority to either Intune or Basic Mobility and Security for Office 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by Basic Mobility and Security for Office 365. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Office 365, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace Basic Mobility and Security for Office 365 before switching users to Intune, otherwise their devices will lose Basic Mobility and Security for Office 365 configuration and won't receive any replacement from Intune.
 
 ## Set MDM authority to Intune
 
@@ -72,10 +72,10 @@ In each case, the consent is strictly related to running a mobile device managem
 - [Data Intune sends to Apple](https://aka.ms/data-intune-sends-to-apple)
 
 ## Key Considerations
-After you switch to the new MDM authority, there will likely be transition time (up to eight hours) before the device checks in and synchronizes with the service. You're required to configure settings in the new MDM authority to make sure that enrolled devices will continue to be managed and protected after the change. 
+After you switch to the new MDM authority, there will likely be transition time (up to eight hours) before the device checks in and synchronizes with the service. You're required to configure settings in the new MDM authority to make sure enrolled devices will continue to be managed and protected after the change. 
 - Devices must connect with the service after the change so that the settings from the new MDM authority (Intune standalone) replace the existing settings on the device.
-- After you change the MDM authority, some of the basic settings (such as profiles) from the previous MDM authority will remain on the device for up to seven days or until the device connects to the service for the first time. It's recommended that you configure apps and settings (policies, profiles, apps, etc.) in the new MDM authority as soon as possible and deploy the setting to the user groups that contains users who have existing enrolled devices. As soon as a device connects to the service after the change in MDM authority, it will receive the new settings from the new MDM authority and prevent gaps in management and protection.
-- Devices that don't have associated users (typically when you have iOS/iPadOS Device Enrollment Program or bulk enrollment scenarios) are not migrated to the new MDM authority. For those devices, you need to call support for assistance to move them to the new MDM authority.
+- After you change the MDM authority, some of the basic settings (such as profiles) from the previous MDM authority will remain on the device for up to seven days or until the device connects to the service for the first time. It's recommended that you configure apps and settings (like policies, profiles, and apps) in the new MDM authority as soon as possible and deploy the setting to the user groups that contains users who have existing enrolled devices. As soon as a device connects to the service after the change in MDM authority, it will receive the new settings from the new MDM authority and prevent gaps in management and protection.
+- Devices that don't have associated users (typically when you have iOS/iPadOS Device Enrollment Program or bulk enrollment scenarios) aren't migrated to the new MDM authority. For those devices, you need to call support for assistance to move them to the new MDM authority.
 
 ## Coexistence
 
@@ -109,7 +109,7 @@ After the Intune MDM authority is enabled, coexistence is activated and you can 
 
 ## Mobile device cleanup after MDM certificate expiration
 
-The MDM certificate is renewed automatically when mobile devices are communicating with the Intune service. If mobile devices are wiped, or they fail to communicate with the Intune service for some period of time, the MDM certificate will not get renewed. The device is removed from the Azure portal 180 days after the MDM certificate expires.
+The MDM certificate is renewed automatically when mobile devices are communicating with the Intune service. If mobile devices are wiped, or they fail to communicate with the Intune service for some period of time, the MDM certificate won't get renewed. The device is removed from the Azure portal 180 days after the MDM certificate expires.
 
 ## Remove MDM authority
 
@@ -117,15 +117,15 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 
 ## What to expect after changing the MDM authority
 
-- When the Intune service detects that a tenant's MDM authority has changed, it sends out a notification message to all the enrolled devices to check in and synchronize with the service (this notification is outside of the regularly scheduled check-in). Therefore, after the MDM authority for the tenant has been changed from Intune standalone, all the devices that are powered on and online will connect with the service, receive the new MDM authority, and be managed by the new MDM authority. There is no interruption to the management and protection of these devices.
+- When the Intune service detects that a tenant's MDM authority has changed, it sends out a notification message to all the enrolled devices to check in and synchronize with the service (this notification is outside of the regularly scheduled check-in). Therefore, after the MDM authority for the tenant has been changed from Intune standalone, all the devices that are powered on and online will connect with the service, receive the new MDM authority, and be managed by the new MDM authority. There's no interruption to the management and protection of these devices.
 - Even for devices that are powered on and online during (or shortly after) the change in MDM authority, there will be a delay of up to eight hours (depending on the timing of the next scheduled regular check-in) before devices are registered with the service under the new MDM authority.  
 
  > [!IMPORTANT]  
  > Between the time when you change the MDM authority and when the renewed APNs certificate is uploaded to the new authority, new device enrollments and device check-in for iOS/iPadOS devices fail. Therefore, it's important that you review and upload the APNs certificate to the new authority as soon as possible after the change in MDM authority.
 
-- Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily make this change by using the Company Portal app and initiating a device compliance check.
+- Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily make this change by using the Company Portal app and starting a device compliance check.
 - To validate that things are working correctly after devices have checked-in and synchronized with the service after the change in MDM authority, look for the devices in the new MDM authority.
-- There is an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following profiles remain on the device for up to seven days (or until the device connects with the new MDM authority and receives new settings that overwrite the existing ones):
+- There's an interim period when a device is offline during the change in MDM authority and when that device checks in to the service. To help ensure that the device remains protected and functional during this interim period, the following profiles remain on the device for up to seven days (or until the device connects with the new MDM authority and receives new settings that overwrite the existing ones):
  - E-mail profile
  - VPN profile
  - Cert profile
