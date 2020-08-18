@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,8 +46,7 @@ Use the information in this article to help you add macOS line-of-business apps 
 You must download an external tool, mark the downloaded tool as an executable, and pre-process your *.pkg* files with the tool before you can upload your line-of-business file to Microsoft Intune. The pre-processing of your *.pkg* files must take place on a macOS device. Use the Intune App Wrapping Tool for Mac to enable Mac apps to be managed by Microsoft Intune.
 
 > [!IMPORTANT]
-> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. Conversion of other formats, such as *.dmg* to *.pkg* is not supported.
->
+> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. However, conversion of other formats, such as *.dmg* to *.pkg* is supported. For more information about converting non-pkg application types, see [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Download the [Intune App Wrapping Tool for Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
