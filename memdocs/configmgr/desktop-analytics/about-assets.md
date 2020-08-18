@@ -2,7 +2,7 @@
 title: Assets in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn about devices, drivers, and apps in Desktop Analytics.
-ms.date: 07/06/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -36,6 +36,9 @@ In a deployment plan, there's more detail about devices. For more information, s
 The **Apps** tab shows all installed apps that the service detects on your Windows devices.
 
 **Noteworthy** apps are installed on more than 2% of enrolled devices.
+
+> [!TIP]
+> For a specific deployment plan, you can configure this value. In the properties of a deployment plan, in **Readiness rules**, specify the value to **Define a low install count threshold for your apps**.
 
 The **App versions details** setting is off by default, so this tab combines all versions of apps with the same name and publisher.<!-- 5542186 --> The default behavior helps reduce the total number of apps that you see, which helps reduce your efforts to annotate the apps. The count of apps in the **Noteworthy Apps** tile also reflects this setting. For example, instead of listing hundreds of instances of Microsoft Edge, there's one instance for all versions. You can make decisions once for all versions. If you need to make decisions about specific versions of an app, turn on this setting. You can also configure this setting when working with a deployment plan. For more information, see [Plan assets](about-deployment-plans.md#plan-assets).
 
