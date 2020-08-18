@@ -3,13 +3,17 @@
   topicHref: /
   items:
   - name: Enterprise Mobility + Security
-    tocHref: /
-    topicHref: /enterprise-mobility-security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
     items:
-    - name: Configuration Manager
-      tocHref: /sccm/
-      topicHref: /sccm/
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
       items:
-      - name: Protect data and infrastructure
-        tocHref: /sccm/mdm/deploy-use
-        topicHref: /sccm/protect/understand/protect-data-and-site-infrastructure
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Protect data and infrastructure
+          tocHref: /mem/configmgr/mdm/
+          topicHref: /mem/configmgr/protect/

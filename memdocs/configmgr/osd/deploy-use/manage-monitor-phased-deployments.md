@@ -17,8 +17,8 @@ manager: dougeby
 This article describes how to manage and monitor phased deployments. Management tasks include manually beginning the next phase, and suspend or resume a phase. 
 
 First, you need to create a phased deployment: 
-- [Application](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Software update](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Application](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Software update](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Task sequence](create-phased-deployment-for-task-sequence.md)  
 
 
