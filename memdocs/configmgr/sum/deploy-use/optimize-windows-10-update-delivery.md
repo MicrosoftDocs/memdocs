@@ -63,13 +63,22 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 - **Allow clients to download delta content when available** set to **Yes**.
 - **Port that clients use to receive requests for delta content** set to 8005 (default) or a custom port number.
-
+ 
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](../../core/clients/deploy/about-client-settings.md#delivery-optimization) when changing your [software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) for delta content.
 > - Delivery Optimization can't be used for Microsoft 365 Apps client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Microsoft 365 Apps clients. You can deregister Office COM to allow the use of Delivery Optimization for Microsoft 365 Apps updates. When Office COM is disabled, software updates for Microsoft 365 Apps are managed by the default Office Automatic Updates 2.0 scheduled task. This means that Configuration Manager doesn't dictate or monitor the installation process for Microsoft 365 Apps updates. Configuration Manager will continue to collect information from hardware inventory to populate Office 365 Client Management Dashboard in the console. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
 
+#### Configuration recommendations for clients downloading delta content
+<!--7913814-->
+When the **Allow clients to download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled on clients for software update content, there are limitations in the [distribution point fallback](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) behavior. To ensure these clients can properly download software update content, we recommend the following configurations:
+
+- Ensure that clients are in a boundary group and that there's a reliable distribution point that has the needed content associated with that boundary group.
+- Deploy software updates with fallback to Microsoft Update enabled for clients that are able to download directly from the internet.
+   - The deployment setting for this fallback behavior is **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates** and it's found on the **Download Settings** page. For more information, see [Deploy software updates](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group).
+
+If either of the above options aren't viable, **Allow clients to download delta content when available** can be disabled in the client settings to allow fallbacks functionality. Delivery Optimization peering won't be leveraged in this case since the client won't use the delta channel.
 
 ### Configuration Manager peer cache
 
