@@ -82,6 +82,7 @@ You can now continue, and set up synchronization in the Intune console.
 6. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
 
 ## Synchronize apps
+If you've already associated your Microsoft Store for Business account with your Intune admin credentials, you can manually sync your Microsoft Store for Business apps with Intune using the following steps.
 
 1. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 2. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
