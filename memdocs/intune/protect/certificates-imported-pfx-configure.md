@@ -47,6 +47,7 @@ Intune supports import of PFX certificates for the following platforms:
 - Android - Device Administrator
 - Android Enterprise - Fully Managed
 - Android Enterprise - Work profile
+- Android Enterprise - Corporate-owned work profile
 - iOS/iPadOS
 - macOS
 - Windows 10
@@ -57,7 +58,8 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
 - **PFX Certificate Connector for Microsoft Intune**:
 
-  Each Intune tenant supports a single instance of this connector. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
+  Each Intune tenant supports multiple instance of this connector. Ensure each connector has access to the private key used to encrypt the passwords of the uploaded PFX files.
+  You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
 
   This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
 

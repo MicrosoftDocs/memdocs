@@ -90,8 +90,8 @@ Class SMS_ImageUpdateStatus : SMS_BaseClass
 
  Applicability state for software update.  
 
-|||  
-|-|-|  
+| Value | Update status |  
+| ----- | ------------- |  
 |0|Unknown|  
 |1|Not Required|  
 |2|Installed|  

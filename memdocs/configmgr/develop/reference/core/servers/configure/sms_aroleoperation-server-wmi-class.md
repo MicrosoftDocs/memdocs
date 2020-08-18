@@ -40,7 +40,7 @@ Class SMS_ARoleOperation : SMS_BaseClass
 
  A bit mask representing the granted operations. Possible values are:  
 
-||||  
+|N|2^N|Granted operation|  
 |-|-|-|  
 |0|1|Read|  
 |1|2|Modify|  

@@ -33,7 +33,7 @@ SInt32 DeleteDiscoveryData(
 
  Delete discovered data. Possible values are:  
 
-|||  
+|Value|Delete data|  
 |-|-|  
 |0|Delete all discovered data excluding forest name and forest properties information.|  
 |1|Delete all data including forest name and forest properties information.|  

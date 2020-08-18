@@ -36,8 +36,8 @@ UInt32 SetGlobalLoggingConfiguration(
 
  The level of detail that the log will capture. Possible values are shown below. The default value is 1.  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|Verbose logging|  
 |1|Normal logging|  
 |2|No logging|  

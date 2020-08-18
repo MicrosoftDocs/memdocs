@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -44,7 +44,6 @@ See [Sign in to the Company Portal](https://docs.microsoft.com/mem/intune/user-h
 Company Portal currently supports devices running the following versions of Windows:
 
 * Windows 10 (Home, Pro, Education, S mode, and Enterprise versions)
-* Windows Phone 8.1 and later
 * Windows 8.1 RT
 * Windows 8.1
 

@@ -9,7 +9,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise fully managed security configurations
 
-As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise fully managed mobile users. For more information on each policy setting, see [Android Enterprise device owner settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only).
+As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise fully managed mobile users. For more information on each policy setting, see [Android Enterprise device owner settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
 When choosing your settings, be sure to review and categorize usage scenarios. Then, configure users following the guidance for the chosen security level. You can adjust the suggested settings based on the needs of your organization. Make sure to have your security team evaluate the threat environment, risk appetite, and impact to usability.
 

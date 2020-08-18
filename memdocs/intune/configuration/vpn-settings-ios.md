@@ -35,7 +35,7 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 [Create a device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](https://docs.microsoft.com/mem/intune/configuration/vpn-setting-configure-per-app). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Connection type
 

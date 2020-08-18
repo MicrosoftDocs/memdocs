@@ -62,7 +62,7 @@ Class SMS_Identification : SMS_BaseClass
 
  License type of the installation. Possible values are:  
 
-|||  
+|Value|License type|  
 |-|-|  
 |0|Evaluation|  
 |1|Non-evaluation|  

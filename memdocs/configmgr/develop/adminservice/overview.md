@@ -2,7 +2,7 @@
 title: What is the administration service
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager administration service REST API to interact with the site over an HTTPS OData connection.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -74,6 +74,8 @@ Configure the following prerequisites on the server that hosts the SMS Provider 
 - Enable secure HTTPS communication with a trusted certificate. For more information, see [Enable secure HTTPS communication](set-up.md#bkmk_https).
 
 To access the administration service, your user account needs to be an administrative user in Configuration Manager. If you access the administration service via a cloud management gateway, you need to have an account in Azure Active Directory (Azure AD).
+
+For more information on scalability of the SMS Provider and administration service, see [Size and scale numbers](../../core/plan-design/configs/size-and-scale-numbers.md#sms-provider).
 
 ## Next steps
 

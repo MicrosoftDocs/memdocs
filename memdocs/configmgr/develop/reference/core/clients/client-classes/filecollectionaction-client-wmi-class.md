@@ -56,8 +56,8 @@ Class FileCollectionAction : SMS_FileCollectionAgent_Policy
 
  Type of file collection report. The possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |Full|Report contains all files collected by the associated **CollectableFileItem** queries.|  
 |Delta|Report contains files that have changed since the last report.|  
 |Resync|Report contains files in full report and also contains all files collected, but it is triggered by a site policy resynchronization request.|  
@@ -102,8 +102,8 @@ Class FileCollectionAction : SMS_FileCollectionAgent_Policy
 
  Unique ID for the file collection action. Possible values are:  
 
-|||  
-|-|-|  
+| File Collection Action ID type | Value |
+| ------------------------------ | ----- |
 |Software File Collection|{00000000-0000-0000-0000-000000000010}|  
 |IDMIF Collection|{00000000-0000-0000-0000-000000000012}|  
 

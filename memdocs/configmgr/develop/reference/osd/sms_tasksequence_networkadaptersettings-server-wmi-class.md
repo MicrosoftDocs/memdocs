@@ -221,8 +221,8 @@ Class SMS_TaskSequence_NetworkAdapterSettings
 
  Options for NetBIOS over TCP/IP. Possible values are:  
 
-|||  
-|-|-|  
+| Value | NetBIOS options |  
+| ----- | --------------- |  
 |0|Use NetBIOS settings from DHCP server.|  
 |1|Enable NetBIOS over TCP/IP.|  
 |2|Disable NetBIOS over TCP/IP.|  

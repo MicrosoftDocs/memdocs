@@ -119,7 +119,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 
  SSL state description. Possible values are:  
 
-|||  
+|Value|SSL state|  
 |-|-|  
 |0|HTTP|  
 |1|HTTPS|  

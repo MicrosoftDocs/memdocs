@@ -42,8 +42,8 @@ uint32 CheckSourceFolder
 
  Results of check. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Result |
+| ----- | ------ |
 |0|No error.|  
 |1|The folder is not in UNC format.|  
 |2|Cannot read/write to the folder.|  

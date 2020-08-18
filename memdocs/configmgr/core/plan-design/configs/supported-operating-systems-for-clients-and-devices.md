@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -53,6 +53,16 @@ If you require user policy in this scenario, and accept any potential performanc
 
 > [!Note]  
 > You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
+
+Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
+
+> [!NOTE]
+> If you previously selected the top-level **Windows 10** platform, this action automatically selected all child platforms. This new platform isn't automatically selected. If you want to add **Windows 10 Enterprise multi-session**, manually select it in the list.
+
+For more information, see the following articles:
+
+- [Support for virtualization environments](support-for-virtualization-environments.md)
+- [Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### Supported server OS versions
 
@@ -146,8 +156,8 @@ Manage Windows CE devices with the Configuration Manager mobile device legacy cl
 
 - Windows CE 7.0 (ARM and x86 processors)  
 
-    > [!Note]
-    > Support is deprecated for Windows CE 7.0 in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > Configuration Manager version 2006 drops support for Windows CE 7.0 as a client. Deprecation was announced with [version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 #### Supported languages include
 
@@ -330,9 +340,8 @@ Configuration Manager has built-in capabilities for managing mobile devices that
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Support is deprecated for Windows 10 Mobile and Windows 10 Mobile Enterprise in Configuration Manager. For more information, see [Removed and deprecated items for Configuration Manager clients](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > Configuration Manager version 2006 drops support for Windows 10 Mobile and Windows 10 Mobile Enterprise as a client. Deprecation was announced with [version 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="bkmk_ExSrvConOS"></a> Exchange Server connector  
 

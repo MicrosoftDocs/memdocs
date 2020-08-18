@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,13 +62,11 @@ When the email is sent, Intune includes details about the noncompliant device in
   The following platforms support this action:
   - Android:
     - Android device administrator
-    - Android Enterprise Device Owner
+    - Android Fully Managed, Dedicated, and Corporate-Owned Work Profile
     - Android Enterprise Work Profile
     - Android Enterprise kiosk devices
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
 - **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
 
@@ -79,8 +77,6 @@ When the email is sent, Intune includes details about the noncompliant device in
     - Android Enterprise Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
@@ -151,8 +147,12 @@ To send email to your users, create a notification message template. When a devi
 
 5. Under **Review + create**, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.
 
-> [!NOTE]
-> You can also select an existing notification template you previously created, and **Edit** its information to update the template.
+### View and edit notifications
+
+Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
+
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance
 

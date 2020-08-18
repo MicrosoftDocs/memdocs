@@ -44,8 +44,8 @@ sint32 SetSummarizationSettings(
 
  Types of summarization. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Summarization type |
+| ----- | ------------------ |
 |2|Application Deployment Summarization|  
 |3|Application State Summarization (spans all previous and current deployments)|  
 

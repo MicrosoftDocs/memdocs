@@ -48,7 +48,7 @@ Class SMS_SiteControlDaySchedule
 
  Array containing 24 elements, one for each hour of the day. This property specifies the type of usage for each hour. Possible values are:  
 
-|||  
+|Value|Usage type|  
 |-|-|  
 |1|ALL_PRIORITY|  
 |2|ALL_BUT_LOW|  

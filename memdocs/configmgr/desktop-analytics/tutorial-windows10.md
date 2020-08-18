@@ -52,7 +52,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - Configuration Manager client version 1902 with update rollup (4500571) or later  
 
-- Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
+- Business approval to configure Windows diagnostic data level to **Optional (limited)** on the pilot devices  
 
     For more information, see [Desktop Analytics privacy](privacy.md).
 
@@ -189,7 +189,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
+    - **Windows 10 diagnostic data level**: select at least **Optional (limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   
@@ -232,11 +232,11 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Name**: A unique name for the deployment plan, for example `Windows 10 pilot`  
 
-    - **Products and versions**: Select the **Windows** product, and the latest available recommended version. For example, **Windows 10, version 1809 (recommended)**.  
+    - **Products and versions**: Choose which Windows 10 version to deploy. Microsoft recommends creating deployment plans that use the most recent version.
 
     - **Device groups**: Select one or more groups from the Configuration Manager tab, and then select **Set as Target Groups**. These groups are collections synchronized from Configuration Manager.  
 
-    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **WIndows OS** and configure the following settings:  
+    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **Windows OS** and configure the following settings:  
 
         - **My computers automatically get drivers from Windows Update**: The default setting is **Off**, which is recommended when deploying with Configuration Manager.  
 

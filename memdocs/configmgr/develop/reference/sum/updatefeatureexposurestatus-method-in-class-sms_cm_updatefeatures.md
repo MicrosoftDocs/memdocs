@@ -1,5 +1,5 @@
 ---
-title: "UpdateFeatureExposureStatus Method"
+title: UpdateFeatureExposureStatus method in class SMS_CM_UpdateFeatures
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

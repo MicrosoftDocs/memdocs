@@ -34,8 +34,8 @@ SInt32 SetIgnorePrereqWarning(
 
  Flag to ignore the  pre-requisites  warning flag of the update packages. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Flag |  
+| ----- | ---- |  
 |0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  

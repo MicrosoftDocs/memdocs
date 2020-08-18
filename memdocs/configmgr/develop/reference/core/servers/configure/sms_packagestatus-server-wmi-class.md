@@ -65,7 +65,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  Status personality. Possible values are:  
 
-|||  
+|Value|Personality|  
 |-|-|  
 |0|NONE|  
 |1|MAC|  
@@ -107,7 +107,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  Status. Possible values are:  
 
-|||  
+|Value|Status|  
 |-|-|  
 |0|NONE|  
 |1|SENT|  
@@ -127,7 +127,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  The status type. Possible values are:  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|MASTER|  
 |2|COPY|  

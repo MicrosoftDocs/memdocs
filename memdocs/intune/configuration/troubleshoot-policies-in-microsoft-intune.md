@@ -147,7 +147,7 @@ Depending on the device platform, if you want to change the policy to a less sec
 
 For example, in Windows 8.1, on the desktop, swipe in from right to open the **Charms** bar. Choose **Settings** > **Control Panel** > **User Accounts**. On the left, select **Reset Security Policies** link, and choose **Reset Policies**.
 
-Other platforms, such as Android, iOS/iPadOS, and Windows Phone 8.1, may need to be retired and re-enrolled to apply a less restrictive policy.
+Other platforms, such as Android, and iOS/iPadOS may need to be retired and re-enrolled to apply a less restrictive policy.
 
 [Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md) may be a good resource.
 

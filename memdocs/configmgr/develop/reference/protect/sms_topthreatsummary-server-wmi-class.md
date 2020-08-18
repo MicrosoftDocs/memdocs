@@ -172,8 +172,8 @@ Class SMS_TopThreatSummary : SMS_BaseClass
 
  Threat severity. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Threat severity |  
+| ----- | --------------- |  
 |0|Not Yet Classified|  
 |1|Low|  
 |2|Medium|  

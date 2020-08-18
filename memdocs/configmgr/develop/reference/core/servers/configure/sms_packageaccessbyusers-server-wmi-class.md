@@ -43,7 +43,7 @@ Class SMS_PackageAccessByUsers : SMS_BaseClass
 
  Access rights for the user. Possible values are listed below. The default value is 0x65.  
 
-|||  
+|Value|Access right|  
 |-|-|  
 |0|READ|  
 |1|WRITE|  

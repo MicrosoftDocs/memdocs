@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -44,7 +44,7 @@ The richest and broadest protection capabilities for Office 365 data are availab
 > New web clips (pinned web apps) on iOS devices will open in Edge for iOS and Android instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must re-target these web clips to ensure they open in Edge for iOS and Android rather than the Managed Browser.
 
 ## Apply Conditional Access
-Organizations can use use Azure AD Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require app protection policy for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
 1. Follow [Scenario 2: Browser apps require approved apps with app protection policies](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Office 365 endpoints.
 
@@ -118,7 +118,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app.
+Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy.
 
 > [!IMPORTANT]
 > Edge for Android does not support Chromium settings that are available in Managed Google Play.
@@ -250,12 +250,12 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |    Key    |    Value    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** enables kiosk mode for Edge for Android<br>**false** (default) disables kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar in kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar in kiosk mode    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar when kiosk mode is enabled    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar when kiosk mode is enabled    |
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered through a managed apps App Configuration Policy:
 
 - Manage account synchronization
 - Manage restricted web sites
@@ -324,7 +324,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Matches a single page    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Matches a single page    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/*;`   |    Matches all URLs that begin with `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://www.contoso.com/*`   |    Matches all URLs that begin with `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
     |    `http://*.contoso.com/*`    |    Matches all subdomains under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
     |    `http://*contoso.com/*`    |    Matches all subdomains ending with `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Matches a single folder    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
@@ -440,7 +440,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 2. Type `about:intunehelp` in the address box.
 3. Edge for iOS and Android launches troubleshooting mode.
 
-For a list of the settings stored in the app logs, see [Review app protection logs in the Managed Browser](app-protection-policy-settings-log.md).
+For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md).
 
 To see how to view logs on Android devices, see [Send logs to your IT admin by email](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 

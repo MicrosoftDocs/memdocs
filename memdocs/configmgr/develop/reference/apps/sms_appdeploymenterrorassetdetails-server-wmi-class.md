@@ -295,7 +295,7 @@ Class SMS_AppDeploymentErrorAssetDetails : SMS_BaseClass
 
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

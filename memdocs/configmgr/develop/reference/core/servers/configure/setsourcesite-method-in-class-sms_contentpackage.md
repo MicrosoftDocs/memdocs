@@ -1,5 +1,5 @@
 ---
-title: "SetSourceSite Method"
+title: SetSourceSite method in class SMS_ContentPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

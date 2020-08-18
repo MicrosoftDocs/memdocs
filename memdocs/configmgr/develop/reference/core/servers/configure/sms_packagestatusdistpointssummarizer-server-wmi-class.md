@@ -143,7 +143,7 @@ Class SMS_PackageStatusDistPointsSummarizer : SMS_BaseClass
 
  The state of the source files on the distribution point. Possible values are:  
 
-|||  
+|Value|State|  
 |-|-|  
 |0|INSTALLED|  
 |1|INSTALL_PENDING|  
