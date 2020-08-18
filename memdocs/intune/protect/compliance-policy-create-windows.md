@@ -53,7 +53,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - The device can protect data that's stored on the drive from unauthorized access when the system is off, or hibernates.
   
-  [Device HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/en-us/windows/client-management/mdm/healthattestation-csp)
+  [Device HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Require Secure Boot to be enabled on the device**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -173,7 +173,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
   
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/en-us/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
