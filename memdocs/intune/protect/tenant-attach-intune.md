@@ -188,7 +188,7 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 #### Enable collections for use with endpoint security policies
 
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](includes/make-cm-collection-available.md)]
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](includes/make-cm-collection-available-edr.md)]
 
 ## Next steps
 

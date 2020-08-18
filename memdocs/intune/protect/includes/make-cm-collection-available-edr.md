@@ -11,7 +11,8 @@ ms.date: 08/24/2020
 
 2. On the **Cloud Sync** tab, enable the option to **Make this collection available to assign Endpoint security policies from Microsoft Endpoint Manager admin center**.
 
-    You can't select this option if your Configuration Manager hierarchy isn't tenant attached. 
+   - You can't select this option if your Configuration Manager hierarchy isn't tenant attached.
+   - The collections available for this option are limited by the [collection scope selected for tenant attach upload](../../../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit). <!--CM7423168-->
   
    ![Configure cloud sync](../media/tenant-attach-intune/cloud-sync.png)
 
