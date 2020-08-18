@@ -77,7 +77,7 @@ If the Microsoft Store isn't accessible, the Autopilot process will still contin
 <tr><td><b>Hybrid Azure AD join<b><td>The device can be hybrid Azure AD joined. The computer should be on corporate network for hybrid Azure AD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
 <tr><td><b>Autopilot Self-Deploying mode and Autopilot White Glove<b><td>Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. For more information, see <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a>. For each firmware TPM provider, make sure that these URLs are accessible so that certificates can be successfully requested: 
 
- <br>Intel- https://www.intel.com 
+ <br>Intel- https://ekop.intel.com/ekcertservice
  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1
  <br>AMD- https://ftpm.amd.com/pki/aia
 
