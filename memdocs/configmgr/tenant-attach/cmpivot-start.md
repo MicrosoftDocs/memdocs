@@ -60,6 +60,19 @@ The user account needs the following permissions:
 1. Select **CMPivot (preview)**.
 1. Type your query in the script pane, then select **Run**.
 
+## Known issues
+
+### Inconsistent results for some operators with Configuration Manager version 2002
+<!--7784718, 7884272-->
+When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
+
+- Summarize by
+- Take
+- Order by
+- Top
+- Count
+- Distinct
+
 ## Next steps
 
 - For query examples, see [CMPivot sample scripts](cmpivot-samples-attached.md).
