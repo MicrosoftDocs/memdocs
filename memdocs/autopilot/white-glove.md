@@ -29,9 +29,7 @@ With **Windows Autopilot for white glove deployment**, the provisioning process 
 
  ![OEM](images/wg02.png)
 
-White glove deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both:
-- Azure Active Directory Join
--  Azure Active Directory join
+White glove deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Azure Active Directory joined and Hybrid Azure Active Directory joined devices.
 
 ## Prerequisites
 
