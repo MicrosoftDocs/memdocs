@@ -11,9 +11,9 @@
       topicHref: /mem/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
+        tocHref: /mem/intune/
         topicHref: /mem/configmgr/index
         items:
-        - name: Application management
-          tocHref: /mem/configmgr/osd/
-          topicHref: /mem/configmgr/apps/index
+        - name: Tenant attach
+          tocHref: /mem/intune/protect/
+          topicHref: /mem/configmgr/tenant-attach/index
