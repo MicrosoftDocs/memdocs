@@ -3,13 +3,17 @@
   topicHref: /
   items:
   - name: Enterprise Mobility + Security
-    tocHref: /
-    topicHref: /enterprise-mobility-security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security/
     items:
-    - name: Configuration Manager
-      tocHref: /configmgr/
-      topicHref: /configmgr/
+    - name: Microsoft Endpoint Manager
+      tocHref: /mem/
+      topicHref: /mem/
       items:
-      - name: Mobile device management
-        tocHref: /configmgr/protect/deploy-use
-        topicHref: /configmgr/mdm/index
+      - name: Configuration Manager
+        tocHref: /mem/configmgr/
+        topicHref: /mem/configmgr/index
+        items:
+        - name: Mobile device management
+          tocHref: /mem/configmgr/protect/deploy-use
+          topicHref: /mem/configmgr/mdm/index
