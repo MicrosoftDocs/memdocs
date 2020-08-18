@@ -188,17 +188,7 @@ After you configure collections to sync to Microsoft Endpoint Manager admin cent
 
 #### Enable collections for use with endpoint security policies
 
-1. From a Configuration Manager console connected to your top-level site, right-click on a device collection that you synchronize to Microsoft Endpoint Manager admin center and select **Properties**.
-
-2. On the **Cloud Sync** tab, enable the option to **Make this collection available to assign Endpoint security policies from Microsoft Endpoint Manager admin center**.
-
-    You can't select this option if your Configuration Manager hierarchy isn't tenant attached. 
-  
-   ![Configure cloud sync](./media/tenant-attach-intune/cloud-sync.png)
-
-3. Select **OK** to save the configuration.
-
-   Devices in this collection can now onboard with Microsoft Defender ATP, and support use of Intune endpoint security policies.
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](includes/make-cm-collection-available.md)]
 
 ## Next steps
 
