@@ -29,14 +29,31 @@ ms.custom: intune-enduser
 ms.collection: 
 ---  
 
-# Install Mobile Threat Defense   
+# Install mobile threat defense app  
 
-> [!IMPORTANT]
-> There are a variety of MTD apps available to install from different vendors. It's up to your organization to tell you which one to use. If you're prompted to install an MTD app but aren't given further instructions or a link to the app, contact your IT support person for help.
+> [!TIP]
+> There are a variety of MTD apps available to install from different vendors. It's up to your organization to tell you which one to use. If you're prompted to install an MTD app but aren't given further instructions or a link to the app, contact your IT support person for help.  
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
 If you don't have the required MTD app, you'll be blocked from signing in to protected apps with your work or school account. In this article, you'll learn [how to install an MTD app](set-up-mobile-threat-defense.md#install-app) to get unblocked.  
+
+## App Store listings (iOS)
+Select any of the following MTD apps to open its listing in the App Store.   
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
+
+
+## Google Play listings (Android) 
+Select any of the following MTD apps to open its listing in Google Play.  
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Zimperium mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
 ## Information your organization can see   
@@ -54,7 +71,7 @@ If you haven't done so already, you might also be prompted to register your devi
 For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 
-## Install app - general instructions  
+## Install app - general setup
 When you sign in to a protected app, such as Microsoft Excel, you'll automatically be prompted to install an MTD app. Follow the onscreen steps to complete installation. 
 
 For additional context, refer to the iOS or Android instructions in this section. These steps are not meant to replace:
@@ -91,14 +108,6 @@ These steps begin from the **Get access** screen, which will appear after you si
     * On the **Get access** screen, select **Recheck**.  
     * Go to the MTD app and check for existing threats. Complete the recommended steps to resolve the threat and regain access.  
 
-### Installation failed  
-
-If the installation fails, contact your IT support person. Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.  
-
-You can also send your app logs to your IT support person to provide them with more context about the installation.  
-* Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
-
-* iOS device users: [Retrieve and send your logs](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
 
 ## Resolve a threat  
 If a threat exceeds your organization's defined threat level, your organization will either:  
@@ -109,6 +118,24 @@ If a threat exceeds your organization's defined threat level, your organization 
 To resolve a threat and regain access, open the MTD app on your device. Read through the provided information to learn how the threat could affect your device and how to resolve it. After you follow the steps to resolve the threat, go back to the MTD app and initiate a new scan. It might take a few minutes to regain access to your organization.  
 
 If you encounter any problems with your MTD app and need help, contact your IT support person or the company that distributes your MTD app.  
+
+## Get support
+
+Contact your IT support person to geth help with:
+
+* Identifying which MTD app to use
+* Installation
+* Failed installation
+* Detecting/resolving a threat
+* Uninstalling an MTD app  
+
+ Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.  
+
+You can also send your app logs to your IT support person to provide them with more context about a failed installation.  
+* Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
+
+* iOS device users: [Retrieve and send your logs](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
+
 
 ## Next steps  
 
