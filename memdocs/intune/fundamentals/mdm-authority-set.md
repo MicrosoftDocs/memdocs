@@ -88,10 +88,10 @@ There are three major steps to enable coexistence:
 
 ### Preparation
 
-Before enabling coexistence with Basic Mobility and Security, you should consider the following:
+Before enabling coexistence with Basic Mobility and Security, consider the following points:
 - Make sure you have sufficient Intune-bearing licenses for the users you intend to manage through Intune.
 - Review which users are assigned Intune-bearing licenses. After you enable coexistence, any user already assigned an Intune-bearing license will have their devices switch to Intune. To avoid unexpected device switches, we recommend not assigning any Intune-bearing licenses until you've enabled coexistence.
-- Create and deploy Intune policies to replace device security policies that were originally deployed through the Office 365 Security & Compliance portal. This replacement should be done for any users you expect to move from Basic Mobility and Security to Intune. If there are no Intune policies assigned to those users, enabling co-existence may cause them to lose Basic Mobility and Security settings. These settings will be lost without replacement, like managed email profiles.
+- Create and deploy Intune policies to replace device security policies that were originally deployed through the Office 365 Security & Compliance portal. This replacement should be done for any users you expect to move from Basic Mobility and Security to Intune. If there are no Intune policies assigned to those users, enabling coexistence may cause them to lose Basic Mobility and Security settings. These settings will be lost without replacement, like managed email profiles.
 
 ### Add Intune MDM authority
 
@@ -105,10 +105,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 
 ### Migrating Users and Devices (optional)
 
-After the Intune MDM authority is enabled, coexistence is activated and you can begin manage users through Intune. Optionally, if you want to move devices previously managed by Basic Mobility and Security to be managed by Intune, you simply assign those users an Intune-bearing license. The users' devices will switch to Intune on their next MDM check in. Settings applied to these devices through Basic Mobility and Security will no longer be applied and will be removed from the devices.
-
-
-
+After the Intune MDM authority is enabled, coexistence is activated and you can begin managing users through Intune. Optionally, if you want to move devices previously managed by Basic Mobility and Security to be managed by Intune, assign those users an Intune-bearing license. The users' devices will switch to Intune on their next MDM check-in. Settings applied to these devices through Basic Mobility and Security will no longer be applied and will be removed from the devices.
 
 ## Mobile device cleanup after MDM certificate expiration
 
