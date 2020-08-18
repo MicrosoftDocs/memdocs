@@ -15,5 +15,5 @@
         topicHref: /mem/configmgr/index
         items:
         - name: Mobile device management
-          tocHref: /mem/configmgr/protect/deploy-use
+          tocHref: /mem/configmgr/protect/
           topicHref: /mem/configmgr/mdm/index
