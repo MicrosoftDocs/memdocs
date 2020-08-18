@@ -2,10 +2,10 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
@@ -367,6 +367,13 @@ A read-only variable for whether the **AC power plugged in** check returned true
 *Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter connected** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*Starting in version 2006* <!--6452769-->
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **Computer is in UEFI mode** returned BIOS (`0`) or UEFI (`1`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRWIRED"></a> _TS_CRWIRED
 

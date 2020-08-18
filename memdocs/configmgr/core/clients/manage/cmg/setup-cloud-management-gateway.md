@@ -136,7 +136,7 @@ The CMG connection point is the site system role for communicating with the CMG.
 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## Configure client-facing roles for CMG traffic
+## <a name="bkmk_role"></a> Configure client-facing roles for CMG traffic
 
 Configure the management point and software update point site systems to accept CMG traffic. Do this procedure on the primary site, for all management points and software update points that service internet-based clients.  
 
@@ -153,7 +153,7 @@ Configure the management point and software update point site systems to accept 
 Repeat these steps for additional management points as needed, and for any software update points.
 
 ## Configure boundary groups
-
+ 
 <!--3640932-->
 Starting in version 1902, you can associate a CMG with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships.
 
@@ -202,7 +202,7 @@ To install the Configuration Manager client on systems not currently connected t
 
 For options 1 and 2, when you run **ccmsetup.exe**, use the **/mp** parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
 
-For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### Configure off-premises clients for CMG
 

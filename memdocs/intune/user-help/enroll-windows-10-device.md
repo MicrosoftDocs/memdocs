@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -40,7 +40,7 @@ Windows 10 is supported across various device types including desktop, phone, an
 ## Enroll Windows 10 version 1607 and later device 
 These steps describe how to enroll a device that runs on Windows 10, version 1607 and later.  
 
-1. Go to **Start**. If you are on a Windows 10 Mobile device, continue to the  **All Apps** list.
+1. Go to **Start**. 
 
 2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
 
@@ -75,7 +75,7 @@ Still can't access your work or school email, files, or other data? Learn how to
 ## Enroll Windows 10 version 1511 and earlier device  
 These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
 
-1. Go to **Start**. If you are on a Windows 10 Mobile device, continue to the  **All Apps** list.
+1. Go to **Start**. 
 
 2. Open the **Settings** app. If the app isn't readily available in your apps list, go to the search bar and type "settings."
 

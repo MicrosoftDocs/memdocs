@@ -2,10 +2,10 @@
 title: Set up BitLocker portals
 titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
@@ -26,9 +26,46 @@ To use the following BitLocker management components in Configuration Manager, y
 You can install the portals on an existing site server or site system server with IIS installed, or use a standalone web server to host them.
 
 > [!NOTE]
-> Only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
+> Starting in version 2006, you can install the BitLocker self-service portal and the administration and monitoring website at the central administration site.<!-- 5925693 -->
+>
+> In version 2002 and earlier, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
 
 Before you start, confirm the [prerequisites](../../plan-design/bitlocker-management.md#prerequisites) for these components.
+
+## Run the script
+
+On the target web server, do the following actions:
+
+> [!NOTE]
+> Depending upon your site design, you may need to run the script multiple times. For example, run the script on the management point to install the administration and monitoring website. Then run it again on a standalone web server to install the self-service portal.
+
+1. Copy the following files from `SMSSETUP\BIN\X64` in the Configuration Manager installation folder on the site server to a local folder on the target server:
+
+    - `MBAMWebSite.cab`
+    - `MBAMWebSiteInstaller.ps1`
+
+1. Run PowerShell as an administrator, and then run the script similar to the following command line:
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
+    ```
+
+    For example,
+
+    ``` PowerShell
+    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
+    ```
+
+    > [!IMPORTANT]
+    > This example command line uses all of the possible parameters to show their usage. Adjust your use according to your requirements in your environment.
+
+After installation, access the portals via the following URLs:
+
+- Self-service portal: `https://webserver.contoso.com/SelfService`
+- Administration and monitoring website: `https://webserver.contoso.com/HelpDesk`
+
+> [!NOTE]
+> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## Script usage
 
@@ -66,42 +103,6 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 - `-InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`. Create the custom directory before using this parameter.
 
 - `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
-
-
-## Run the script
-
-On the target web server, do the following actions:
-
-> [!NOTE]
-> Depending upon your site design, you may need to run the script multiple times. For example, run the script on the management point to install the administration and monitoring website. Then run it again on a standalone web server to install the self-service portal.
-
-1. Copy the following files from `SMSSETUP\BIN\X64` in the Configuration Manager installation folder on the site server to a local folder on the target server:
-
-    - `MBAMWebSite.cab`
-    - `MBAMWebSiteInstaller.ps1`
-
-1. Run PowerShell as an administrator, and then run the script similar to the following command line:
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
-    ```
-
-    For example,
-
-    ``` PowerShell
-    .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
-    ```
-
-    > [!IMPORTANT]
-    > This example command line uses all of the possible parameters to show their usage. Adjust your use according to your requirements in your environment.
-
-After installation, access the portals via the following URLs:
-
-- Self-service portal: `https://webserver.contoso.com/SelfService`
-- Administration and monitoring website: `https://webserver.contoso.com/HelpDesk`
-
-> [!NOTE]
-> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## Verify
 

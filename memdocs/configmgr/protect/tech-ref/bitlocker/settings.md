@@ -5,7 +5,7 @@ description: All of the BitLocker management settings available in Configuration
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz

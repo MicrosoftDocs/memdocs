@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -133,6 +133,19 @@ For devices that run Windows, use the Windows Event logs to diagnose enrollment 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
 ![Windows event logs](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## Antivirus exclusions
+
+Consider adding Antivirus exclusions on servers that host NDES or the certificate connector when:
+
+- Certificate requests reach the server or the Intune Certificate Connector, but are not successfully processed 
+- Certificates are issued slowly
+
+The following are examples of locations that you might exclude:
+
+- *%program_files%*\Microsoft Intune\PfxRequest
+- *%program_files%*\Microsoft Intune\CertificateRequestStatus
+- *%program_files%*\Microsoft Intune\CertificateRevocationStatus
 
 ## Common errors
 

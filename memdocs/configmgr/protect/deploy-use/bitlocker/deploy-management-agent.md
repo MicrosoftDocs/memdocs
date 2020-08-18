@@ -5,7 +5,7 @@ description: Deploy the BitLocker management agent to Configuration Manager clie
 ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
