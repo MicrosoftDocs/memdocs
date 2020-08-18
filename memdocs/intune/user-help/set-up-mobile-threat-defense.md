@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 08/18/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,11 +31,12 @@ ms.collection:
 
 # Install Mobile Threat Defense   
 
-As part of your organization's security requirements, you might be required to install a Mobile Threat Defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
+> [!IMPORTANT]
+> There are a variety of MTD apps available to install from different vendors. It's up to your organization to tell you which one to use. If you're prompted to install an MTD app but aren't given further instructions or a link to the app, contact your IT support person for help.
+
+As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
 If you don't have the required MTD app, you'll be blocked from signing in to protected apps with your work or school account. In this article, you'll learn [how to install an MTD app](set-up-mobile-threat-defense.md#install-app) to get unblocked.  
-
-There are a variety of MTD vendor apps available to install, all with different names. Your organization will let you know which one to use. If you're prompted to install the app but aren't given further instructions or a link to get the app, contact your IT support person. 
 
 
 ## Information your organization can see   
@@ -47,15 +48,25 @@ Your organization can't see any data, such as texts, emails, and pictures, in yo
 * App version and short version number: The specific release numbers for an app.  
 * App bundle and dynamic size: The amount of space an app uses on your device. 
 
-
-## Install app    
-When you sign in to a protected app, you'll automatically be prompted to install an MTD app. Follow the onscreen steps to complete installation. Use the steps in this section for additional help.  
- 
-You might also be prompted to register your device. Registration is necessary to confirm your identity and connect your school or work account to your device. If you're not registered, you'll automatically be guided through that setup before you install the MTD app. When you get to the **Get access** screen, you can start the installation steps.  
+## Device registration
+If you haven't done so already, you might also be prompted to register your device. Registration is necessary to confirm your identity and connect your school or work account to your device. If you're not registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
 
 For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
 
+
+## Install app - general instructions  
+When you sign in to a protected app, such as Microsoft Excel, you'll automatically be prompted to install an MTD app. Follow the onscreen steps to complete installation. 
+
+For additional context, refer to the iOS or Android instructions in this section. These steps are not meant to replace:
+
+* The instructions that are shown on screen.  
+* The instructions provided to your from your organization.
+
+ If you're prompted to install an MTD app and don't receive further instructions or a link to the app, contact your IT support person for help.  
+
+
 ### iOS setup  
+These steps begin from the **Get access** screen, which will appear after you sign in to a protected app.
 
 1. On the **Get access** screen, follow the instructions to install the MTD app that's required by your organization.   
 2. Return to the **Get access** screen and select **Open**.  
@@ -68,6 +79,7 @@ For more information about device registration, see [Register your personal devi
     * Go to the MTD app and check for existing threats. Complete the recommended steps to resolve the threat and regain access.    
 
 ### Android setup 
+These steps begin from the **Get access** screen, which will appear after you sign in to a protected app.  
 
 1. On the **Get access** screen, follow the instructions to install the MTD app that's required by your organization.  
 2. Return to the **Get access** screen and select **Open**.  
@@ -95,6 +107,8 @@ If a threat exceeds your organization's defined threat level, your organization 
 * Wipe data: Deletes your work or school data from one or more of your organization's protected apps.  
 
 To resolve a threat and regain access, open the MTD app on your device. Read through the provided information to learn how the threat could affect your device and how to resolve it. After you follow the steps to resolve the threat, go back to the MTD app and initiate a new scan. It might take a few minutes to regain access to your organization.  
+
+If you encounter any problems with your MTD app and need help, contact your IT support person or the company that distributes your MTD app.  
 
 ## Next steps  
 
