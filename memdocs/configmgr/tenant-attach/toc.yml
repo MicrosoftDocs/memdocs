@@ -14,6 +14,16 @@
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
+- name: Endpoint security for tenant attached devices (preview)
+  items:
+  - name: Enable endpoint security for tenant attached devices
+    href: ../../intune/protect/tenant-attach-intune.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Configure endpoint detection and response policies
+    href: ../../intune/protect/endpoint-security-edr-policy.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Create antivirus policy
+    href: ../../intune/protect/endpoint-security-antivirus-policy.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Settings for Microsoft Defender Antivirus policy for tenant attached devices
+    href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json    
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions
