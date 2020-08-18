@@ -103,7 +103,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 4. To switch the MDM authority from *Office 365* to *Intune* and enables coexistence, select **Intune MDM Authority** > **Add**.
   ![Screenshot of Add MDM Authority screen](./media/mdm-authority-set/add-mdm-authority.png)
 
-### Migrating Users and Devices (optional)
+### Migrate users and devices (optional)
 
 After the Intune MDM authority is enabled, coexistence is activated and you can begin managing users through Intune. Optionally, if you want to move devices previously managed by Basic Mobility and Security to be managed by Intune, assign those users an Intune-bearing license. The users' devices will switch to Intune on their next MDM check-in. Settings applied to these devices through Basic Mobility and Security will no longer be applied and will be removed from the devices.
 
