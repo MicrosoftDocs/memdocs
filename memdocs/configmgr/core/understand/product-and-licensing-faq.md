@@ -61,7 +61,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
+> Configuration Manager isn't included in the [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business) plan.
 
 ### <a name="bkmk_mem"></a> What changes with licensing for co-management in Microsoft Endpoint Manager?
 

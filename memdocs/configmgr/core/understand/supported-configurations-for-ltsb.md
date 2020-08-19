@@ -265,7 +265,7 @@ The following versions are supported by using the indicated .tar file.
 -   Exchange Server 2013  
 
 > [!NOTE]
-> The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Office 365).
+> The LTSB does not support the management of devices that connect through an online service, like Exchange Online (Microsoft 365).
 
 
 ## Configuration Manager console

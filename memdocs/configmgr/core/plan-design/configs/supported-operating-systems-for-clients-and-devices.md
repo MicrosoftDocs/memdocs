@@ -349,7 +349,7 @@ Configuration Manager supports limited management of devices that connect to you
 
 ### Supported versions of Exchange Server
 
-- **Exchange Online (Office 365)**: This version includes Business Productivity Online Standard Suite  
+- **Exchange Online (Microsoft 365)**: This version includes Business Productivity Online Standard Suite  
 
 - **Exchange Server 2016**  
 
