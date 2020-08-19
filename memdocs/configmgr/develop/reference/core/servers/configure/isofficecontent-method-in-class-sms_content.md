@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # IsOfficeContent Method in Class SMS_Content
-The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft Office 365 content.  
+The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft 365 content.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -35,7 +35,7 @@ Boolean IsOfficeContent (
  Content ID.  
 
 ## Return Values  
- `True` if content is Microsoft Office 365 content; otherwise, `False`.  
+ `True` if content is Microsoft 365 content; otherwise, `False`.  
 
 ## Requirements  
 

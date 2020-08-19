@@ -55,9 +55,9 @@
           href: apps-add-android-for-work.md
       - name: Office 365 Suite
         items:
-        - name: Office 365 apps for Windows 10
+        - name: Microsoft 365 apps for Windows 10
           href: apps-add-office365.md
-        - name: Office 365 apps for macOS
+        - name: Microsoft 365 apps for macOS
           href: apps-add-office365-macos.md
       - name: Android Enterprise system apps
         href: apps-ae-system.md

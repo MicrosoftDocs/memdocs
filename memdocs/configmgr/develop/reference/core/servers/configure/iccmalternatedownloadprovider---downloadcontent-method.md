@@ -168,7 +168,7 @@ HRESULT DownloadContent(
 
 ## Remarks  
 
-Starting with version 1702, Configuration Manager integrates with Microsoft Office 365 click-to-run, which supports incremental download.  Alternate content providers should be updated to implement byte range download capabilities.  Byte range information is specified in an XML manifest specified in the **szFileManifest** parameter.
+Starting with version 1702, Configuration Manager integrates with Microsoft 365 click-to-run, which supports incremental download.  Alternate content providers should be updated to implement byte range download capabilities.  Byte range information is specified in an XML manifest specified in the **szFileManifest** parameter.
 
 The manifest XML uses the following schema:
 
@@ -221,7 +221,7 @@ When processing the manifest, remember:
 - If a `<file>` element contains `<chunk>` elements, each `<chunk>` specifies the length and byte offset of an incremental download.  
 - If no `<chunk>` elements are specified, the entire file should be downloaded.
 
-Should an alternate content provider fail to support incremental downloads, Configuration Manager automatically uses distribution points to download Office 365 content.  For other download scenarios, however, the alternate content provider works without additional impact.
+Should an alternate content provider fail to support incremental downloads, Configuration Manager automatically uses distribution points to download Microsoft 365 content.  For other download scenarios, however, the alternate content provider works without additional impact.
 
 > [!NOTE]
 >  If the provider cannot handle the request for any reason, it should return an error.  

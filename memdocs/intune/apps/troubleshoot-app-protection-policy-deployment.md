@@ -52,7 +52,7 @@ Although you can use Intune app protection policies independent of any MDM solut
 - The user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app that's used.
 - For Android devices, the Company Portal app is required to receive app protection policies.
 - If you use [Word, Excel, or PowerPoint](https://products.office.com/business/office) apps, the following additional requirements must be met:
-    - The user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to the user's Azure Active Directory (Azure AD) account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Office 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) by following [these instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+    - The user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to the user's Azure Active Directory (Azure AD) account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) by following [these instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
     - The user must have a managed location that's configured by using the granular **Save as** functionality. This command is located under the **Save Copies of Org Data** application protection policy setting. For example, if the managed location is [OneDrive](https://onedrive.live.com/about/), the OneDrive app should be configured in the user's Word, Excel, or PowerPoint app.
     - If the managed location is OneDrive, the app must be targeted by the app protection policy that's deployed to the user.
 
@@ -78,7 +78,7 @@ To check your app protection status, follow these steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
 3. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
-4. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting pane, you can see whether the user is licensed for app protection and has a license for O365. You can also see the app status for all the user's devices.
+4. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting pane, you can see whether the user is licensed for app protection and has a license for Microsoft 365. You can also see the app status for all the user's devices.
 5. Make a note of such important information as the targeted apps, device types, policies, device check-in status, and last sync time.
 
 > [!NOTE]
