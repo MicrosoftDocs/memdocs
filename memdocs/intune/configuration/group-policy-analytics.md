@@ -47,7 +47,10 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 1. On your on-premises computer, open the `Group Policy Management` app (GPMC.msc).
 2. Expand your domain to see all the GPOs.
-3. Right-click any GPO > **Save report**.
+3. Right-click any GPO > **Save report**:
+
+    :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
+
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
 ## Use Group Policy analytics
