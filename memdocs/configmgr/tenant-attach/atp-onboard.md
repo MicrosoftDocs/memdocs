@@ -1,18 +1,18 @@
 ---
-title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender ATP (preview) from the Microsoft Endpoint Manager admin center
+title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender ATP from the Microsoft Endpoint Manager admin center (preview) 
 titleSuffix: Configuration Manager
-description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 08/11/2020
+description: "Deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
+ms.date: 08/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
+ms.assetid: 50f8e206-a2af-469a-9f1b-0f7a87166f48
 manager: dougeby
 author: mestew
 ms.author: mstewart
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP (preview) from the Microsoft Endpoint Manager admin center
+# <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
@@ -33,9 +33,9 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender ATP.
 
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-cm-collection-available-edr.md)]
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
 
-## <a name="bkmk_onboard"></a> Create Microsoft Defender ATP policy for Configuration Manager collections
+## <a name="bkmk_onboard"></a> Create Microsoft Defender ATP Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -66,4 +66,4 @@ When you enable collections of devices to work with endpoint security policies f
 
 ## Next steps
 
-[Deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
+[Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
