@@ -2,7 +2,7 @@
 title: Install Power BI sample reports
 titleSuffix: Configuration Manager
 description: Learn how to install the Power BI sample reports in Configuration Manager
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -59,9 +59,14 @@ To install the sample reports:
 
 1. Specify your Configuration Manager database name and database server name when prompted, then select **Load**.
 
-    When loading or applying the data model, ignore any errors if you come across one.
-
     :::image type="content" source="media/sample-report-database.png" alt-text="Specify the database and database server name" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > When loading or applying the data model, ignore any errors if you come across one. For example, if you see the following error: "Connecting to tables from more than one database isn't supported in DirectQuery mode", select **Close**. Then refresh the data source settings:
+    >
+    > 1. In Power BI Desktop, in the ribbon, select **Edit Queries**, and then select **Data source settings**.
+    > 1. Select **Change Source**, confirm your server and database names, and select **OK**.
+    > 1. Close the data source settings window, and then select **Apply changes**.
 
 1. When the report data is loaded, select **File** > **Save As**, then select **Power BI Report Server**.
 
