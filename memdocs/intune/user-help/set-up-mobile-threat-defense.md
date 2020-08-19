@@ -32,7 +32,7 @@ ms.collection:
 # Install mobile threat defense app  
 
 > [!TIP]
-> There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected or instructed how to do it, contact your IT support person for help.  
+> There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected to set up or install the app, contact your IT support person for help.  
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
@@ -47,7 +47,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 * [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
 
 
-## MTDS apps for Android 
+## MTD apps for Android 
 The following MTD apps are commonly used on Android devices. SSelect an app to open its listing in Google Play.  
 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
@@ -73,7 +73,7 @@ For additional context, refer to the [iOS](set-up-mobile-threat-defense.md#ios-s
 
 If you're prompted to install an MTD app but aren't sure which one to install, contact your IT support person for help.  
 
-### Device registrations
+### Device registration  
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If your device isn't registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
 
 For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  

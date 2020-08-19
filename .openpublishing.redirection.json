@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-mtd-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-mtd-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-zips-ios.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
             "redirect_document_id": true
