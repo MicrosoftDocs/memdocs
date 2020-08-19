@@ -54,7 +54,7 @@ To be ready to try out Windows Autopilot for white glove deployment, make sure t
 
 If these scenarios can't be completed, Windows Autopilot for white glove deployment will also not succeed since it builds on top of these scenarios.
 
-Before starting the white glove process in the provisioning service facility, you must configure an additional Autopilot profile setting by using you rIntune account:
+Before starting the white glove process in the provisioning service facility, you must configure an additional Autopilot profile setting by using your Intune account:
 
  ![allow white glove](images/allow-white-glove-oobe.png)
 
