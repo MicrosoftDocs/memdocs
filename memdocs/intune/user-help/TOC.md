@@ -96,10 +96,10 @@
 #### [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
 
 ### Resolve a threat in MTD app  
-##### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)	
-##### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)	
-##### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)	
-##### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)	
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)	
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)	
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
 
 ## Using your macOS device

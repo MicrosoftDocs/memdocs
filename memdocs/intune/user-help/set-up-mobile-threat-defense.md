@@ -36,7 +36,7 @@ ms.collection:
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
-If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#install-app) and regain access.    
+If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#set-up-device) and regain access.    
 
 ## App Store listings (iOS)
 Select any of the following MTD apps to open its listing in the App Store.   
