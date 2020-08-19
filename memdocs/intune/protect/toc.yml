@@ -60,6 +60,8 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
+    - name: Device compliance partners
+      href: device-compliance-partners.md    
   - name: Endpoint security
     href: endpoint-security.md
     items:
@@ -203,7 +205,7 @@
         href: zimperium-mobile-threat-defense-connector.md
         items:
         - name: Zimperium and Intune integration
-          href: zimperium-mtd-connector-integration.md     
+          href: zimperium-mtd-connector-integration.md 
   - name: Network access control
     href: network-access-control-integrate.md
   - name: Certificates
