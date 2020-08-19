@@ -171,17 +171,17 @@ To configure the **Content Size (KB)** field, do one of the following:
 - When you create an automatic deployment rule, in the Create Automatic Deployment Rule wizard, go to the **Software Updates** page.
 - In the properties for an existing automatic deployment rule, go to the **Software Updates** tab.
 
-## Office 365 Client Management dashboard
-The Office 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
+## Microsoft 365 Client Management dashboard
+The Microsoft 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
 
 The dashboard displays charts for the following:
 
-- Number of Office 365 clients
-- Office 365 client versions
-- Office 365 client languages
-- Office 365 client channels     
+- Number of Microsoft 365 clients
+- Microsoft 365 client versions
+- Microsoft 365 client languages
+- Microsoft 365 client channels
 
-For details, see [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## Task sequence steps to manage BIOS to UEFI conversion
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).

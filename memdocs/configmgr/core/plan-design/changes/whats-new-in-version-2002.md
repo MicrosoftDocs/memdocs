@@ -308,13 +308,13 @@ Configuration Manager now detects if a servicing stack update (SSU) is part of a
 
 For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### Office 365 updates for disconnected software update points
+### Microsoft 365 updates for disconnected software update points
 
 <!-- 4065163 -->
 
-You can use a new tool to import Office 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Office 365 updates. Office 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
+You can use a new tool to import Microsoft 365 updates from an internet-connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Microsoft 365 updates. Microsoft 365 updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
-For more information, see [Synchronize Office 365 updates from a disconnected software update point](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+For more information, see [Synchronize Microsoft 365 updates from a disconnected software update point](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

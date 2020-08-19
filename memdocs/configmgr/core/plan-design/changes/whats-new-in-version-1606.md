@@ -122,10 +122,10 @@ On the properties of an application or package, there is now a link that takes y
 
 ## Software updates
 
-### Client setting to manage the Office 365 client agent
-You can now use a Configuration Manager client setting to manage the Office 365 client agent. After you set this up and deploy Office 365 updates, the Configuration Manager client agent works with the Office 365 client agent to download and install Office 365 updates from a distribution point.
+### Client setting to manage the Microsoft 365 client agent
+You can now use a Configuration Manager client setting to manage the Microsoft 365 client agent. After you set this up and deploy Microsoft 365 updates, the Configuration Manager client agent works with the Microsoft 365 client agent to download and install Microsoft 365 updates from a distribution point.
 
-For details, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For details, see [Manage Microsoft 365 Apps updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Manually switch clients to a new software update point
 You can now enable an option that lets Configuration Manager clients switch to a new software update point when there are issues with the active software update point. Once enabled, the clients will look for another software update point at the next scan.
