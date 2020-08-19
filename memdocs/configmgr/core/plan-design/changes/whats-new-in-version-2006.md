@@ -33,8 +33,9 @@ To take full advantage of new Configuration Manager features, after you update t
 ### <a name="bkmk_atp"></a> Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
 <!--4812909-->
 You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
-- [Set up Configuration Manager to support the EDR policy](../../../../intune/protect/tenant-attach-intune.md)
-- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md).
+- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
+- [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
