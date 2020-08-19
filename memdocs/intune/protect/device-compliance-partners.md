@@ -76,7 +76,7 @@ Enable support for a device compliance partner to use compliance state data from
 
    - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
 
-   Next, select the drop-down for **Platform**, and select the platform. MacOS is not supported with this preview.
+   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported with this preview.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
