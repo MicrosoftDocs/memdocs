@@ -58,6 +58,10 @@ The remainder of this article focuses on creating a default Windows Hello for Bu
 > If you have set both policy types to control the PIN, the Windows Hello for Business policy is applied.
 > To ensure policy conflicts are resolved and that the PIN policy is applied correctly, update your Windows Hello for Business Policy to match the settings in your configuration policy, and ask your users to sync their devices in the Company Portal app.
 
+
+> [!NOTE]
+> [**Interactive logon: Don't display username at sign-in**](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name#potential-impact) and [**Interactive logon: Don't display last signed-in**](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/interactive-logon-do-not-display-last-user-name#potential-impact) will both interfere with the use of other sign-in methods. Both will force the user to sign in with a username and password. From those articles: "Users must always type their usernames and passwords when they log on locally or to the domain."
+
 ## Create a Windows Hello for Business policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
