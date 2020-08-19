@@ -35,11 +35,11 @@ You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory
 
 ## Prerequisites
 
-Successfully configure your [hybrid Azure AD-joined devices](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) by using the Get-MsolDevice cmdlet.
+Successfully configure your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) by using the Get-MsolDevice cmdlet.
 
 The devices to be enrolled must also:
 - Be running Windows 10 v1809 or greater.
-- Have access to the internet [following the documented Windows Autopilot network requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Have access to the internet [following the documented Windows Autopilot network requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
 - Have access to an Active Directory domain controller, so it must be connected to the organization's network (where it can resolve the DNS records for the AD domain and the AD domain controller, and communicate with the domain controller to authenticate the user.
 - Be able to ping the domain controller of the domain you are trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
@@ -108,7 +108,7 @@ The Intune Connector for Active Directory must be installed on a computer that's
 
 The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
-1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
 3. Follow the instructions to download the Connector.
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
@@ -215,7 +215,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
    - **Platform**: Select **Windows 10 and later**.
    - **Profile type**: Select **Domain Join (Preview)**.
 3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
-4. (Optional) Provide an **Organizational unit** (OU) in [DN format](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+4. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
    - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
    - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
