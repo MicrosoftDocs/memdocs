@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,6 +53,8 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
+Be sure the file is less than 4MB. If it's greater than 4MB, then include fewer GPOs when you save your report.
+
 ## Use Group Policy analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
@@ -69,8 +71,8 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
-> [!NOTE]
-> When using the Import functionality for your GPO files, there is a 4 MB cumulative file size limit for all GPOs you select per each Import action.
+    > [!NOTE]
+    > There is a 4 MB cumulative file size limit for all the GPOs you select for each **Import**.
 
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
@@ -115,19 +117,20 @@ Group Policy analytics can parse the following CSPs:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
     
-2. A summary of the GPO and its policies are shown on the **Summary** page. Use this information to determine the status of the policies in your GPO:
+2. In the **Summary** tab, a summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
     - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10 and newer.
 
-3. On the **Reports** > **Migration readiness report** page, select the Migration Readiness, Profile type, and CSP Name filters to refine your report.
+3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
-4. Click **Generate report** (or **Generate again**) to retrieve current data.
-
-    > [!NOTE]
-    > This **Migration readiness** report provides a time stamp of when the report was last generated. 
-
+    - See the number of settings in your GPO that are available in a device configuration profile, if they can be in a custom profile, aren't supported, or are deprecated.
+    - Filter the report output using the **Migration Readiness**, **Profile type**, and **CSP Name** filters.
+    - Select **Generate report** or **Generate again** to get current data.
+    - See the list of settings in your GPO. 
+    - Use the search bar to find specific settings.
+    - Get a time stamp of when the report was last generated.    
 
 ## Got Feedback
 
