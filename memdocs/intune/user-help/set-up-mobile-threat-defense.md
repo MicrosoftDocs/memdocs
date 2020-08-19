@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Mobile Threat Defense on your mobile device
-description: Learn how to install Mobile Threat Defense on your mobile device.
+description: Find out what mobile threat defense apps are and how to set one up. 
 keywords:
 author: lenewsad
 ms.author: lanewsad  
