@@ -32,14 +32,14 @@ ms.collection:
 # Install mobile threat defense app  
 
 > [!TIP]
-> There are a variety of MTD apps on the market and it's up to your organization to tell you which one to use. If you're prompted to install an MTD app but aren't given further instructions or a link to the app, contact your IT support person for help.  
+> There are a variety of MTD apps on the market but your organization should tell you which one to use. If you're prompted to install an MTD app but aren't sure which one to install, contact your IT support person for help.  
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
-If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#set-up-device) and regain access.    
+If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#set-up-mtd-app) and regain access.    
 
-## App Store listings (iOS)
-Select any of the following MTD apps to open its listing in the App Store.   
+## MTD apps for iOS
+The following MTD apps are commonly used on iOS devices. Select an app to open its listing in the App Store.   
 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
 * [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
@@ -47,8 +47,8 @@ Select any of the following MTD apps to open its listing in the App Store.
 * [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
 
 
-## Google Play listings (Android) 
-Select any of the following MTD apps to open its listing in Google Play.  
+## MTDS apps for Android 
+The following MTD apps are commonly used on Android devices. SSelect an app to open its listing in Google Play.  
 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
@@ -66,12 +66,12 @@ Your organization can't see any data, such as texts, emails, and pictures, in yo
 * App bundle and dynamic size: The amount of space an app uses on your device. 
 
 
-## Set up device 
+## Set up MTD app 
 When you sign in to a protected app, you'll be prompted to install an MTD app. Follow the onscreen steps to complete installation and gain access to the protected app. 
 
 For additional context, refer to the [iOS](set-up-mobile-threat-defense.md#ios-setup) or [Android](set-up-mobile-threat-defense.md#android-setup) instructions in this section. These steps are supplemental and not meant to replace the instructions shown on screen. 
 
- If you're prompted to install an MTD app and don't receive further instructions or a link to the app, contact your IT support person for help.  
+If you're prompted to install an MTD app but aren't sure which one to install, contact your IT support person for help.  
 
 ### Device registrations
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If your device isn't registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
@@ -118,17 +118,16 @@ To resolve a threat and regain access to protected apps:
 3. After you follow the steps to resolve the threat, go back to the MTD app and start a new scan. It might take a few minutes to regain access to your organization.  
 
 ## Get support
-Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information. Contact them to get help with:
+Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information. Contact them for help with:
 
 * Identifying which MTD app to use  
 * Installation  
 * Failed installation  
 * Detecting/resolving a threat  
 * Uninstalling an MTD app   
-
  
 
-### Share app logs
+### Share app logs with IT support
 You can also send your app logs to your IT support person to provide them with more context about a failed installation.  
 * Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
 
