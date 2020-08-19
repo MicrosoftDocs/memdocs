@@ -75,9 +75,6 @@ The Windows Company Portal now supports Configuration Manager applications. This
 <!-- ***********************************************-->
 ## Device configuration
 
-### Set device compliance state from third-party MDM partners<!-- 6361689   -->
-Microsoft 365 customers who own third-party MDM solutions will be able to enforce Conditional Access policies for Microsoft 365 apps on iOS and Android via integration with Microsoft Intune Device Compliance service. Third-party MDM vendor will leverage the Intune Device Compliance service to send device compliance data to Intune. Intune will then evaluate to determine if the device is trusted and set the conditional access attributes in Azure AD.  Customers will be required to set Azure AD Conditional Access policies from within the Microsoft Endpoint Manager admin center or the Azure AD portal.
-
 ### Create PKCS certificate profiles for Android Enterprise Fully Managed devices (COBO)<!-- 4839686 -->
 You can create PKCS certificate profiles to deploy certificates to Android Enterprise Device owner and Work profile devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise > Device owner only**, or **Android Enterprise > Work profile only** for platform > **PKCS** for profile).
 
