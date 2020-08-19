@@ -69,6 +69,9 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
+> [!NOTE]
+> When using the Import functionality for your GPO files, there is a 4 MB cumulative file size limit for all GPOs you select per each Import action.
+
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
@@ -122,12 +125,16 @@ Group Policy analytics can parse the following CSPs:
 
 4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
+    > [!NOTE]
+    > This **Migration readiness** report provides a time stamp of when the report was last generated. 
+
+
 ## Got Feedback
 
 The product group wants your comments on Group Policy analytics:
 
 1. Go to **Devices** > **Group Policy analytics (preview)**.
-2. Select **Got feedback**:
+2. Select **Got feedback?**:
 
     :::image type="content" source="./media/group-policy-analytics/got-feedback.png" alt-text="Send feedback to Microsoft when using Group Policy analytics tool to import GPOs in Microsoft Intune and the Endpoint Manager admin center.":::
 
