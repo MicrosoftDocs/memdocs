@@ -49,7 +49,7 @@ You'll need a test tenant with the following subscriptions for this tutorial:
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.
 
 ## Configure your Slack Enterprise Grid plan
-Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
+Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
 
 ## Sign in to Intune
 Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.

@@ -45,7 +45,7 @@ The Data Warehouse provides you access to more information about your mobile env
 - A data model using the OData standard
 
 > [!Note]
-> If you are a using co-managed mobile device management (MDM) with Microsoft Endpoint Configuration Manager and Microsoft Intune, you need to retrieve your data from Configuration Manager. The Intune Data Warehouse only contains Intune data. You can use a Configuration Manager Power BI dashboard for your custom reports. For more information, see "[Announcing the Power BI solution template for Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)" and "[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)."
+> If you are a using co-managed mobile device management (MDM) with Microsoft Endpoint Configuration Manager and Microsoft Intune, you need to retrieve your data from Configuration Manager. The Intune Data Warehouse only contains Intune data. You can use a Configuration Manager Power BI dashboard for your custom reports. For more information, see "[Announcing the Power BI solution template for Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)" and "[Power BI content for Dynamics 365](/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)."
 
 > [!Important]  
 > You can now use the v1.0 version of the Intune Data Warehouse by setting the query parameter `api-version=v1.0`. Updates to collections in the Data Warehouse are additive in nature and do not break existing scenarios.<br><br>

@@ -36,7 +36,7 @@ Using Microsoft Intune, end-users can sign in to these shared devices with a gue
 
 This article lists and describes the settings you use in a Windows 10 (and later) device configuration profile. When the profile is created in Intune, you deploy or assign the profile to device groups in your organization. You can also assign this profile to device groups with mixed device types and OS versions.
 
-For more information on this feature in Intune, see [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md). For more information on the Windows CSP, see [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+For more information on this feature in Intune, see [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md). For more information on the Windows CSP, see [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp).
 
 ## Before your begin
 
@@ -44,7 +44,7 @@ For more information on this feature in Intune, see [Control access, accounts, a
 
 ## Shared multi-user device settings
 
-These settings use the [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp).
 
 - **Shared PC mode**: **Enable** turns on shared PC mode. In this mode, only one user signs in to the device at a time. Another user can't sign in until the first user signs out. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Guest account**: Choose to create a Guest option on the sign-in screen. Guest accounts don't require any user credentials or authentication. This setting creates a new local account each time it's used. Your options:
@@ -96,10 +96,10 @@ These settings use the [SharedPC CSP](https://docs.microsoft.com/windows/client-
   - **Enabled**: Uses the recommended settings for devices used in schools, which are more restrictive.
   - **Disabled**: The default and recommended education policies aren't used.
 
-  For more information on what the education policies do, see [Windows 10 configuration recommendations for education customers](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+  For more information on what the education policies do, see [Windows 10 configuration recommendations for education customers](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Set up a shared or guest PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows 10 feature, including concepts and group policies that can be set in shared mode.
+> [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows 10 feature, including concepts and group policies that can be set in shared mode.
 
 ## Next steps
 
