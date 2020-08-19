@@ -91,13 +91,13 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
-      [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+      For more information on CSPs, see the [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
 ## Supported CSPs
 
-Group Policy analytics supports the following CSPs:
+Group Policy analytics can parse the following CSPs:
 
 - [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)
 - [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)
@@ -105,17 +105,22 @@ Group Policy analytics supports the following CSPs:
 - [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
+
 ## Group Policy migration readiness report
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
-
-2. A summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
+    
+2. A summary of the GPO and its policies are shown on the **Summary** page. Use this information to determine the status of the policies in your GPO:
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
     - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10 and newer.
+
+3. On the **Reports** > **Migration readiness report** page, select the Migration Readiness, Profile type, and CSP Name filters to refine your report.
+
+4. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 ## Got Feedback
 
