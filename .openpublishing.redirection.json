@@ -1,46 +1,6 @@
 {
     "redirections": [
         {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-android.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-zips-ios.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-skycure-android.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-skycure-ios.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-checkpoint-ios.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-checkpoint-android.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-zips-ios.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
             "redirect_document_id": true
@@ -77,11 +37,6 @@
         },
         {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-lookout-for-work-ios.md",
-            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-lookout-for-work-android.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
             "redirect_document_id": true
         },

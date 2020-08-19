@@ -38,11 +38,17 @@
 #### [Fixing common issues with Samsung Knox](samsung-knox-errors-android.md)
 #### [Update your device to install Outlook](update-device-outlook-android.md)
 
-#### Logging
-##### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Upload and email logs](send-logs-to-your-it-admin-by-email-android.md)
-##### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Send errors to Microsoft](send-logs-to-microsoft-android.md)
+### Logging
+#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [Upload and email logs](send-logs-to-your-it-admin-by-email-android.md)
+#### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
+#### [Send errors to Microsoft](send-logs-to-microsoft-android.md)
+
+### Resolve a threat in MTD app  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)	
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ### Operating system questions
 #### [Update your device](you-need-to-update-your-android-device.md)
@@ -88,6 +94,12 @@
 #### [Updating your iOS device](you-need-to-update-your-ios-device.md)
 #### [Update your device to install Outlook](update-device-outlook-ios.md)
 #### [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
+
+### Resolve a threat in MTD app  
+##### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)	
+##### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)	
+##### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)	
+##### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
 
 ## Using your macOS device

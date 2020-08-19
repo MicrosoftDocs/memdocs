@@ -36,7 +36,7 @@ ms.collection:
 
 As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
 
-If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to install an MTD app](set-up-mobile-threat-defense.md#install-app) to get unblocked.  
+If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#install-app) and regain access.    
 
 ## App Store listings (iOS)
 Select any of the following MTD apps to open its listing in the App Store.   
@@ -66,21 +66,17 @@ Your organization can't see any data, such as texts, emails, and pictures, in yo
 * App bundle and dynamic size: The amount of space an app uses on your device. 
 
 
-## General setup instructions  
+## Set up device 
 When you sign in to a protected app, you'll be prompted to install an MTD app. Follow the onscreen steps to complete installation and gain access to the protected app. 
 
-For additional context, refer to the iOS or Android instructions in this section. These steps are supplemental and are not meant to replace:
-
-* The instructions that are shown on screen.  
-* The instructions provided to you from your organization.
+For additional context, refer to the [iOS](set-up-mobile-threat-defense.md#ios-setup) or [Android](set-up-mobile-threat-defense.md#android-setup) instructions in this section. These steps are supplemental and not meant to replace the instructions shown on screen. 
 
  If you're prompted to install an MTD app and don't receive further instructions or a link to the app, contact your IT support person for help.  
 
-### Device registration
+### Device registrations
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If your device isn't registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
 
 For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
-
 
 ### iOS setup  
 These steps begin on the **Get access** screen, which appears after you sign in to a protected app.  
