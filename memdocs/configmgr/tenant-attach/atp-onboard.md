@@ -35,7 +35,7 @@ When you enable collections of devices to work with endpoint security policies f
 
 [!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
 
-## <a name="bkmk_onboard"></a> Create Microsoft Defender ATP Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies
+## <a name="bkmk_onboard"></a> Create Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 

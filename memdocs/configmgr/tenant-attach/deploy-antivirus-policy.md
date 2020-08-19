@@ -29,7 +29,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.
-- At least one Configuration Manager collection that's [available for assigning Endpoint security policies](atp-onbaord.md#bkmk_collections)
+- At least one Configuration Manager collection that's [available for assigning Endpoint security policies](atp-onboard.md#bkmk_collections)
 
 ## Supported Antivirus profile for tenant attached devices
 
@@ -41,7 +41,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10 and Windows Server (ConfigMgr)**.
-1. For the **Profile**, select **Micrososft Defender Antivirus (Preview)** then **Create**.
+1. For the **Profile**, select **Microsoft Defender Antivirus (Preview)** then **Create**.
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available policies, see [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 1. Assign the policy to a Configuration Manager collection on the **Assignments** page.
