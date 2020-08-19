@@ -66,7 +66,7 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 **Configuration Manager** - The following are supported for devices you manage with Configuration Manager:
 
-- Platform: **Windows 10 and windows Server** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
+- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
 - Profile: **Endpoint detection and response (ConfigMgr)**
 
 ## Set up Configuration Manager to support EDR policy
@@ -127,7 +127,7 @@ The following are supported for devices you manage with Intune:
 
 The following are supported for devices you manage with Configuration Manager through the *tenant attach* scenario:
 
-- Platform: **Windows 10 and windows Server** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
+- Platform: **Windows 10 and Windows Server (ConfigMgr)** - Configuration Manager deploys the policy to devices in your Configuration Manager collections.
   - Profile: **Endpoint detection and response (ConfigMgr) (Preview)**
 
 ## Create and deploy EDR policies
@@ -152,7 +152,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
      - Profile: **Endpoint detection and response (MDM)**
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
-     - Platform: **Windows 10 and windows Server**
+     - Platform: **Windows 10 and Windows Server (ConfigMgr)**
      - Profile: **Endpoint detection and response (ConfigMgr)**
 
 4. Select **Create**.
@@ -190,7 +190,7 @@ You can view details about the EDR policies you deploy in the Microsoft Endpoint
 
   The chart for **Devices with ATP sensor** displays only devices that successfully onboard to Microsoft Defender ATP through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender ATP by external means, like Group Policy or PowerShell, are counted as **Devices without the ATP sensor**.
 
-- For policies that target the **Windows 10 and Windows Server** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
+- For policies that target the **Windows 10 and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
 
