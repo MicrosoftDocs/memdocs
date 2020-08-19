@@ -179,7 +179,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
-You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses or uninstall apps. 
+You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. Deleting a token revokes associated app licenses but doesn't uninstall the apps. 
 
 >[!NOTE]
 >Intune cannot revoke app licenses after a token has been deleted. 
