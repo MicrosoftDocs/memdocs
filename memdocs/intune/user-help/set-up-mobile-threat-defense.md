@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -105,8 +105,8 @@ These steps begin on the **Get access** screen, which appears after you sign in 
     * Go to the MTD app and check for existing threats. Complete the recommended steps to resolve the threat and regain access.  
 
 
-## Detecting and resolving a threat
-If a threat exceeds your organization's defined threat level, your organization will either:  
+## Resolving a threat
+If a threat is detected and exceeds your organization's defined threat level, your organization will either:  
    
 * Block access: Blocks you from using your organization's protected apps while signed in to your work or school account.  
 * Wipe data: Deletes your work or school data from one or more of your organization's protected apps.  
@@ -114,8 +114,8 @@ If a threat exceeds your organization's defined threat level, your organization 
 To resolve a threat and regain access to protected apps:  
 
 1. Open the MTD app on your device.     
-2. Read through the onscreen information to learn how the threat could affect your device and how to resolve it. 
-3. After you follow the steps to resolve the threat, go back to the MTD app and start a new scan. It might take a few minutes to regain access to your organization.  
+2. Read through the threat details in the app, which explains how the threat could affect your device if left unresolved, and how to resolve it. 
+3. After you make the required changes on your device, return to the MTD app and start a new scan. Repeat these steps until all threats are resolved. It can take a few minutes for your changes to sync with your organization. Once those changes sync, you'll regain access to the protected app. 
 
 ## Get support
 Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information. Contact them for help with:
@@ -127,7 +127,7 @@ Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=20109
 * Uninstalling an MTD app   
  
 
-### Share app logs with IT support
+### Share app logs with IT support  
 You can also send your app logs to your IT support person to provide them with more context about a failed installation.  
 * Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
 
