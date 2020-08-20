@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,6 +53,8 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
+Be sure the file is less than 4MB. If it's greater than 4MB, then include fewer GPOs when you save your report.
+
 ## Use Group Policy analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
@@ -68,6 +70,9 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
     You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** the output. You can also **Export** this view to a `.csv` file:
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
+
+    > [!NOTE]
+    > There is a 4 MB cumulative file size limit for all the GPOs you select for each **Import**.
 
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
@@ -91,13 +96,13 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
-      [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+      For more information on CSPs, see the [CSP reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
 ## Supported CSPs
 
-Group Policy analytics supports the following CSPs:
+Group Policy analytics can parse the following CSPs:
 
 - [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider)
 - [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)
@@ -105,24 +110,34 @@ Group Policy analytics supports the following CSPs:
 - [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 - [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
+
 ## Group Policy migration readiness report
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
-
-2. A summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
+    
+2. In the **Summary** tab, a summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
     - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10 and newer.
+
+3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
+
+    - See the number of settings in your GPO that are available in a device configuration profile, if they can be in a custom profile, aren't supported, or are deprecated.
+    - Filter the report output using the **Migration Readiness**, **Profile type**, and **CSP Name** filters.
+    - Select **Generate report** or **Generate again** to get current data.
+    - See the list of settings in your GPO. 
+    - Use the search bar to find specific settings.
+    - Get a time stamp of when the report was last generated.    
 
 ## Got Feedback
 
 The product group wants your comments on Group Policy analytics:
 
 1. Go to **Devices** > **Group Policy analytics (preview)**.
-2. Select **Got feedback**:
+2. Select **Got feedback?**:
 
     :::image type="content" source="./media/group-policy-analytics/got-feedback.png" alt-text="Send feedback to Microsoft when using Group Policy analytics tool to import GPOs in Microsoft Intune and the Endpoint Manager admin center.":::
 
