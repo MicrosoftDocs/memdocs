@@ -41,7 +41,7 @@ Microsoft Autopilot provides a simpler initial provisioning experience for Windo
 
 This metric measures the percent of Windows 10 devices that are registered for Autopilot.
 
-The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](../intune/enrollment/enrollment-autopilot.md).
+The recommended remediation action is to register existing devices in Autopilot using [Microsoft Intune](../autopilot/enrollment-autopilot.md).
 
 ## <a name="bkmk_aad"></a> Azure Active Directory
 
@@ -49,7 +49,7 @@ Azure Active Directory (Azure AD) provides users with many productivity benefits
 
 This metric measures the percent of devices enrolled in Azure AD.
 
-Your Microsoft-Intune managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to either [enroll them in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) or [co-manage them](../configmgr/comanage/overview.md). Co-managing devices also improves your cloud management score.
+Your Microsoft-Intune managed devices are already enrolled in Azure AD. The recommended remediation action for devices managed by Configuration Manager is to either [enroll them in Azure AD](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) or [co-manage them](../configmgr/comanage/overview.md). Co-managing devices also improves your cloud management score.
 
 ## <a name="bkmk_intune"></a> Cloud management
 
