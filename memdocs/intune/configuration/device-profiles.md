@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,11 +44,9 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates and Group policy
+## Administrative templates
 
 [Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
-
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs, and shows which policy settings are supported, deprecated, and more.
 
 This feature supports:
 

@@ -51,11 +51,9 @@
       displayName: psk, oma-uri, eap
     - name: Troubleshoot Wi-Fi
       href: troubleshoot-wi-fi-profiles.md
-  - name: Group policy and Administrative templates
-    displayName: admx, gpo
+  - name: Administrative templates
+    displayName: admx, gpo, group policy
     items:
-    - name: Group Policy analytics
-      href: group-policy-analytics.md
     - name: Create administrative templates
       href: administrative-templates-windows.md
     - name: Update Office using administrative templates
