@@ -268,7 +268,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
 
 
 ## devicePropertyHistories

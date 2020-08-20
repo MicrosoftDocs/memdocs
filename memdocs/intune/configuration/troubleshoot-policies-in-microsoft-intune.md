@@ -133,7 +133,7 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 
 **Issue**: You receive the alert **Saving of Access Rules to Exchange has Failed**  in the admin console.
 
-If you create policies in the Exchange On-Premises Policy workspace (Admin console), but are using Office 365, then the configured policy settings aren't enforced by Intune. In the alert, note the policy source. Under the Exchange On-premises Policy workspace, delete the legacy rules. The legacy rules are Global Exchange rules within Intune for on-premises Exchange, and aren't relevant to Office 365. Then, create new policy for Office 365.
+If you create policies in the Exchange On-Premises Policy workspace (Admin console), but are using Microsoft 365, then the configured policy settings aren't enforced by Intune. In the alert, note the policy source. Under the Exchange On-premises Policy workspace, delete the legacy rules. The legacy rules are Global Exchange rules within Intune for on-premises Exchange, and aren't relevant to Microsoft 365. Then, create new policy for Microsoft 365.
 
 [Troubleshoot the Intune on-premises Exchange connector](../protect/troubleshoot-exchange-connector.md) may be a good resource.
 

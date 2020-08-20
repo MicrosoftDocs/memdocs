@@ -140,6 +140,6 @@ There are thousands of settings available in these templates. To make it easier 
 
 The template is created, but may not be doing anything yet. Next, [assign the template (also called a profile)](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-Update [Office 365 using administrative templates](administrative-templates-update-office.md).
+Update [Microsoft 365 using administrative templates](administrative-templates-update-office.md).
 
 [Tutorial: Use the cloud to configure group policy on Windows 10 devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

@@ -136,7 +136,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 ### Looks like the MDM Terms of Use endpoint is not correctly configured.
 
 **Cause:** One of the following conditions is true: 
- - You use both Mobile Device Management (MDM) for Office 365 and Intune on the tenant, and the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license.     
+ - You use both Mobile Device Management (MDM) for Microsoft 365 and Intune on the tenant, and the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license.     
 - The MDM terms and conditions in Azure AD is blank or doesn't contain the correct URL.    
 
 #### Resolution
@@ -144,7 +144,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 To fix this issue, use one of the following methods: 
  
 ##### Assign a valid license to the user
-Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Office 365 license to the user.
+Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Microsoft 365 license to the user.
 
 ##### Correct the MDM terms of use URL
   1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.    

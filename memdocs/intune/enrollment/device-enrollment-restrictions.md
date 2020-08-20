@@ -64,7 +64,7 @@ Ensure the organization supports Android Enterprise fully managed device enrollm
 ## Conditional access policies
 Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content on enrolled Android devices. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require managed devices for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
 
-Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), which ensures that only enrolled mobile devices that are compliant can connect to  Office 365 endpoints.
+Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), which ensures that only enrolled mobile devices that are compliant can connect to  Microsoft 365 endpoints.
 
 ## Next steps
 

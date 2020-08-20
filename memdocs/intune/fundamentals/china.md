@@ -59,13 +59,13 @@ Because the China services are operated by a partner from inside China, there ar
 
 ## You control customer data
 
-In Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you have full control of your data:
+In Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you have full control of your data:
 - You know where customer data is located.
 - You control access to your customer data.
 - You control your customer data if you leave the service.
 - You have options to control the security of your customer data.
 
-With Microsoft Azure, Intune, Office 365, and Power BI operated by 21Vianet, you’re the owner of your data:
+With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you’re the owner of your data:
 - 21Vianet doesn’t use customer data for advertising.
 - You control who has access to your customer data.
 - We use logical isolation to segregate each customer’s data.

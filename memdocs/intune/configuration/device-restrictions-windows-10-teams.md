@@ -47,7 +47,7 @@ These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/clien
 - **Welcome screen background image URL**: Enter the URL of a .png image that you want as a custom background on the **Welcome** screen on Windows 10 Team devices. The image must be in PNG format, and the URL must begin with `https://`.
 - **Auto-launch Connect**: **Block** prevents the Connect app from automatically opening when a projection is started. If blocked, users can manually launch the Connect app from the Hub's settings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Sign-in suggestions**: **Block** disables autofilling the sign-in dialog with invitees from scheduled meetings. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **My meetings and files**: **Block** disables the **My meetings and files** feature in the Start menu. This feature shows the signed-in user's meetings and files from Office 365. When set to **Not configured** (default), Intune doesn't change or update this setting.
+- **My meetings and files**: **Block** disables the **My meetings and files** feature in the Start menu. This feature shows the signed-in user's meetings and files from Microsoft 365. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 ## Azure operational insights
 

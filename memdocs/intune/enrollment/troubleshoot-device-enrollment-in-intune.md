@@ -124,7 +124,7 @@ To avoid hitting device caps, be sure to remove stale device records.
 **Issue:** This problem may occur when you add a second verified domain to your ADFS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
 
-<strong>Resolution:</strong> Microsoft Office 365 Customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
+<strong>Resolution:</strong> Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
 - use single sign-on (SSO) through AD FS 2.0, and
 - have multiple top-level domains for users' UPN suffixes within their organization (for example, @contoso.com or @fabrikam.com).
 
