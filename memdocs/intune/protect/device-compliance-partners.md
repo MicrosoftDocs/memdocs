@@ -35,13 +35,11 @@ By default, Intune is set up to be the Mobile Device Management (MDM) authority 
 
 To enable use data from device compliance partners, complete the following tasks:
 
-1. **Add the device compliance partner to Azure AD** to  establish that partner as a Mobile Device Management (MDM) authority for applicable devices.
+1. **Configure Intune to work with the device compliance partner**, and then configure groups of users whose devices are managed by that compliance partner.
 
-2. **Configure Intune to work with the device compliance partner**, and then configure groups of users whose devices are managed by that compliance partner.
+2. **Configure your compliance partner to send data to Intune**.
 
-3. **Configure your compliance partner to send data to Intune**.
-
-4. **Enroll your iOS or Android devices to that device compliance partner**.
+3. **Enroll your iOS or Android devices to that device compliance partner**.
 
 With these tasks complete, the device compliance partner sends device state details to Intune. Intune then adds this information to Azure AD. For example, devices with a state of non-compliant have that status added to their device record in Azure AD.
 
@@ -51,7 +49,7 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 In public preview:
 
-- VMWare Workspace ONE UEM (formerly AirWatch)
+- VMware Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
 
@@ -61,27 +59,9 @@ In public preview:
 
 - Review documentation for your compliance partner for supported device platforms and additional prerequisites.
 
-## Add support in Azure AD for a device compliance partner
-
-To enable support for devices that are managed by third-party device compliance partners, you must add that partner to *Mobility (MDM and MAM)* in Azure AD. By default, Intune is already registered for *Mobility (MDM and MAM)*.
-
-### Add a device compliance partner to Azure AD
-
-1. Sign in to the [Azure portal](https://aad.portal.azure.com/) and go to **Azure Active Directory** > **Mobility (MDM and MAM)** > **Add Application**. ([Open the *Mobility (MDM and MAM)* blade directly](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Mobility).)
-
-2. On the **Add an application** blade, select the tile for your device compliance partner, and then select **Add**.
-
-   - For *Workspace ONE UEM*, select **AirWatch by VMware**
-
-3. On the *Mobility (MDM and MAM)* blade, select your compliance partner to open the **Configure** blade and configure the available options.  Options include the **MDM user scope**, **MDM terms of use URL**, and **MDM discovery URL**. When the user scope is set to **Some**, you select the Azure AD user groups that can enroll devices with this compliance partner.
-
-   The devices that are targeted through the groups you select will use the partner as their MDM authority.
-
-4. Select **Save** to complete the partner configuration in Azure AD. Next, you’ll add the compliance partner in Intune.
-
 ## Configure Intune to work with a device compliance partner
 
-When Azure AD is configured to support a device compliance partner for *Mobility (MDM and MAM)*, you can configure Intune to also work with that partner. This configuration is required if you want to use compliance state data from that partner with your conditional access policies.
+Enable support for a device compliance partner to use compliance state data from that partner with your conditional access policies.
 
 ### Add a compliance partner to Intune
 
@@ -92,7 +72,11 @@ When Azure AD is configured to support a device compliance partner for *Mobility
    > [!div class="mx-imgBorder"]
    > ![Add a device compliance partner](./media/device-compliance-partners/add-compliance-partner.png)
 
-3. On the **Basics** page, expand the **Compliance partner** drop-down and select the partner you're adding. Next, select the drop-down for **Platform**, and select the platform.
+3. On the **Basics** page, expand the **Compliance partner** drop-down and select the partner you're adding.
+
+   - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
+
+   Next, select the drop-down for **Platform**, and select the platform. macOS is not supported with this preview.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
@@ -114,12 +98,12 @@ Your configuration now appears on the Partner compliance management page.
 
 5. Select **Review + save** and then **Save** to save your edits.
 
-6. *This step only applies when you use VMWare Workspace ONE*:
+6. *This step only applies when you use VMware Workspace ONE*:
 
    From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Endpoint Manager admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
 
    To manually sync from Azure Services:
-   1. Sign in to your VMWare Workspace ONE UEM console.
+   1. Sign in to your VMware Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
    3. For *Sync Azure Services*, click **SYNC**.
 
@@ -137,15 +121,12 @@ Refer to device compliance partners documentation for how to enroll devices with
 
 ## Monitor devices managed by third-party device compliance partners
 
-After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data,  you can view details about the devices in the Microsoft Endpoint Manager admin center.  
+After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data,  you can view details about the devices in the Azure portal.
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **All devices**.  Devices that are managed by a third-party partner MDM authority, display the name of that partner in the **Managed by** column.
-
-> [!NOTE]
-> Not all third-party compliance partners are identified in the admin center. If your devices aren't listed, you can sign in to the [Azure portal](https://portal.azure.com) to access your Intune subscription and view them.
-
-For more information about this view, see [Manage devices](../protect/endpoint-security-manage-devices.md).
+Sign in to the Azure portal and go to **Azure AD** > **Devices** > [**All devices**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
 
 ## Next steps
 
-- [Get started with device compliance policy](../protect/device-compliance-get-started.md)
+Use the documentation from your third-party partner to create compliance policies for devices.
+
+- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
