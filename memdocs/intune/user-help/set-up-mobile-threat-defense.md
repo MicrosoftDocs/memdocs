@@ -27,6 +27,7 @@ ROBOTS:
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
+ms.custom: contperfq1
 ---  
 
 # Install mobile threat defense app  
