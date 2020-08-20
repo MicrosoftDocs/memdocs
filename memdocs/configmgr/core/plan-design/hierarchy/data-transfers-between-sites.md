@@ -22,13 +22,13 @@ Configuration Manager uses *file-based replication* and *database replication* t
 
 ## Types of replication
 
-### <a name="bkmk_fileroute" /> File-based replication
+### <a name="bkmk_fileroute" /></a> File-based replication
 
 Configuration Manager uses file-based replication to transfer file-based data between sites in your hierarchy. This data includes applications and packages that you want to deploy to distribution points in child sites. It also handles unprocessed discovery data records that the site transfers to its parent site and then processes.  
 
 For more information, see [File-based replication](file-based-replication.md).
 
-### <a name="bkmk_dbrep" /> Database replication
+### <a name="bkmk_dbrep" /></a> Database replication
 
 Configuration Manager database replication uses SQL Server to transfer data. It uses this method to merge changes in its site database with the information from the database at other sites in the hierarchy.
 
