@@ -65,6 +65,11 @@ For more information, see the following articles:
 
 To make sure that users only receive notifications from Company Portal, configure Configuration Manager client settings. In the **Software Center** group of device settings, change **Select the user portal** to **Company Portal**.
 
+For more information on client settings, see the following articles:
+
+- [How to configure client settings](../core/clients/deploy/configure-client-settings.md)
+- [About client settings](../core/clients/deploy/about-client-settings.md#software-center)
+
 ### Deploy the Company Portal app
 
 - Users can manually install the Company Portal app from the [Microsoft Store](https://www.microsoft.com/p/company-portal/9wzdncrfj3pz?activetab=pivot:overviewtab).
