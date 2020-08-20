@@ -25,7 +25,7 @@ ROBOTS:
 #ms.reviewer: aanavath  
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: 
 ---  
 
