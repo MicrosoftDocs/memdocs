@@ -137,7 +137,12 @@ The following table provides notification specific configuration details:
 
 ### App sources
 
-You can choose which additional app sources will be shown in Company Portal. The following table provides app source specific configuration details:
+You can choose which additional app sources will be shown in Company Portal.
+
+> [!NOTE]
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
+
+The following table provides app source specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
