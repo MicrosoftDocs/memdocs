@@ -119,15 +119,15 @@ Yes. If you configure the Configuration Manager app to support these additional 
 
 The following features of Software Center aren't currently available in the Company Portal:
 
-- Uninstall or repair apps
 - Some app information, for example if a restart is required or the estimated time to install
+
 - [App groups](../apps/deploy-use/create-app-groups.md)
 
 Other known issues:
 
 - If you deploy the same app from both Configuration Manager and Intune, it appears twice in the Company Portal.
+
 - When you search Company Portal, Intune apps always display before Configuration Manager apps.
-- When you use the option to **Get help** in the Company Portal, logs to assist troubleshooting aren't sent to Microsoft.
 
 ## Next steps
 
