@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 ---
 # Prevent unauthorized access to company data using Microsoft Intune
 
-You can classify, label, and protect Office 365 documents and emails so only authorized users have access to the data. The settings are managed automatically after IT administrators or users set the rules and conditions. Alternatively, the IT team can provide recommended settings for users to follow. Administrators and users can also revoke access to data already shared with others without assistance from another authority. The result of this work is to control who opens or updates protected data, even when the data leaves the company's network. 
+You can classify, label, and protect Microsoft 365 documents and emails so only authorized users have access to the data. The settings are managed automatically after IT administrators or users set the rules and conditions. Alternatively, the IT team can provide recommended settings for users to follow. Administrators and users can also revoke access to data already shared with others without assistance from another authority. The result of this work is to control who opens or updates protected data, even when the data leaves the company's network. 
 
 ## Before you begin
 
 The following action plan can be used when you meet the following requirements:
 * Your company is ready to transition securely to the cloud.
-* Your company uses Office 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
+* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
 * Your company works with devices running Windows 7 Service Pack 1 or later.
 * Your company uses Microsoft 365 Apps with 2016 apps or 2013 apps, Office Professional Plus 2016, Office Professional Plus 2013 with Service Pack 1, or Office Professional Plus 2010.

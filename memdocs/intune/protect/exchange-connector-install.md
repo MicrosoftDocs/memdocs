@@ -159,7 +159,7 @@ Follow these steps to install the Intune Exchange connector. If you have multipl
 
    For a hosted Exchange server, provide the Exchange server address. To find the hosted Exchange server URL:
 
-   1. Open Outlook for Office 365.
+   1. Open Outlook for Microsoft 365.
 
    2. Choose the **?** icon in the upper-left corner, and then select **About**.
 

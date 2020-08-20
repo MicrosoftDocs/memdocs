@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [Intune app protection policies](../apps/app-protection-policy.md) help protect your company data on devices that are enrolled into Intune. You can also use app protection policies on employee owned devices that are not enrolled for management in Intune. In this case, even though your company doesn't manage the device, you still need to make sure that company data and resources are protected.
 
-App-based Conditional Access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Office 365 services.
+App-based Conditional Access and client app management add a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
 
 > [!NOTE]
 > A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
@@ -53,7 +53,7 @@ For more information, see [Enterprise Mobility pricing](https://www.microsoft.co
 
 A list of apps that support app-based Conditional Access can be found in the [Azure Active Directory Conditional Access technical reference documentation.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
 
-App-based Conditional Access [also supports line-of-business (LOB) apps](app-modern-authentication-block.md), but these apps need to use [Office 365 modern authentication](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
+App-based Conditional Access [also supports line-of-business (LOB) apps](app-modern-authentication-block.md), but these apps need to use [Microsoft 365 modern authentication](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
 ## How app-based Conditional Access works
 

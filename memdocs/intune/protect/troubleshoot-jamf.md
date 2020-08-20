@@ -88,7 +88,7 @@ After a device is marked as *Unresponsive* by Jamf Pro, the enrolled user of the
 
 ### Mac devices prompt for keychain sign-in when you open an app  
 
-After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft Office 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
+After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
 
 For example, a prompt with text similar to the following example appears when opening Microsoft Teams:
 
