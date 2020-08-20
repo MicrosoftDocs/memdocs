@@ -74,10 +74,10 @@ MDT requires the following components, which are included in Windows:
 - Microsoft .NET Framework 4.0
 - Windows PowerShell version 3.0
 
-MDT requires the latest [Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install). MDT also requires the **Windows PE add-on** for the Windows ADK.
+MDT requires the latest [Windows ADK for Windows 10](/windows-hardware/get-started/adk-install). MDT also requires the **Windows PE add-on** for the Windows ADK.
 
 > [!Note]  
-> Windows recommends using the Windows ADK that matches the version of Windows you're deploying. For example, use the Windows ADK for Windows 10 version 1809 when deploying Windows 10 version 1809. For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1).
+> Windows recommends using the Windows ADK that matches the version of Windows you're deploying. For example, use the Windows ADK for Windows 10 version 1809 when deploying Windows 10 version 1809. For more information on Windows ADK component supportability, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1).
 
 When integrating MDT with Configuration Manager for ZTI and UDI scenarios, use the latest version of Configuration Manager current branch.
 
@@ -134,4 +134,4 @@ Use one of the following methods to get help with MDT (in prioritized order):
 
 2. Contact Microsoft Support. Open a support case and get some professional help.  
 
-3. If you can consistently reproduce an issue and think it's a product bug, file it in the Windows 10 [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). The product team investigates everything that's reported. When filing feedback, use the **Enterprise Management** category and **OS Deployment** subcategory. This categorization helps classify and route your feedback to the MDT team.  
+3. If you can consistently reproduce an issue and think it's a product bug, file it in the Windows 10 [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). The product team investigates everything that's reported. When filing feedback, use the **Enterprise Management** category and **OS Deployment** subcategory. This categorization helps classify and route your feedback to the MDT team.

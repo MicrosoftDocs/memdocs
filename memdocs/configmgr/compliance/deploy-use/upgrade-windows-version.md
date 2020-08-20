@@ -30,7 +30,7 @@ The devices must run the Configuration Manager client software. Devices managed 
 
 Before you begin to upgrade devices to the latest version, review the following prerequisites:  
 
-- For desktop editions of Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
+- For desktop editions of Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
 
 - For Windows 10 Mobile: An XML license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy. Download the ISO file for **Windows 10 Mobile Enterprise**, which includes the licensing XML.<!-- SCCMDocs#2033 -->
 
@@ -84,16 +84,16 @@ Monitor this deployment from the **Deployments** node of the **Monitoring** work
 
 These errors don't mean that the deployment failed. Verify at the targeted device that the upgrade ran successfully.
 
-Once the client evaluates the targeted policy, it applies the upgrade within two hours. [Some versions of Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades) may require a restart at that time. Make sure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users' working hours.
+Once the client evaluates the targeted policy, it applies the upgrade within two hours. [Some versions of Windows](/windows/deployment/upgrade/windows-10-edition-upgrades) may require a restart at that time. Make sure you inform any users to which you deploy the policy, or schedule the policy to run outside of the users' working hours.
 
-If the following error appears in **DcmWmiProvider.log** on the client, check that you're using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you're using a key management service (KMS) for activation, make sure to use a [KMS client setup key](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->
+If the following error appears in **DcmWmiProvider.log** on the client, check that you're using the proper key for your activation scenario. For more information, see the [Before you start](#before-you-start) section. If you're using a key management service (KMS) for activation, make sure to use a [KMS client setup key](/windows-server/get-started/kmsclientkeys).  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## See also
 
-- [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Windows 10 edition upgrade](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Windows 10 edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](/intune/edition-upgrade-configure-windows-10)

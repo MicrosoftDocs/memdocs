@@ -44,7 +44,7 @@ Client machines are installed within Hyper-V. The lab itself can also be run as 
  When you build this lab, you will have a functional environment to work in. But this environment will not be optimized for factors like system performance, hard disk space management, and SQL Server storage.  
 
 ##  <a name="BKMK_EvalRec"></a> Recommended reading before you build the lab  
- There is a wealth of content available in [Documentation for Configuration Manager](https://docs.microsoft.com/sccm/). We recommend that you read the following topics from this library before you start to build the lab:  
+ There is a wealth of content available in [Documentation for Configuration Manager](/sccm/). We recommend that you read the following topics from this library before you start to build the lab:  
 
 -   Learn core concepts about the Configuration Manager console, end-user portals, and example scenarios in [Introduction to Configuration Manager](../../core/understand/introduction.md).  
 
@@ -56,4 +56,4 @@ Client machines are installed within Hyper-V. The lab itself can also be run as 
 
 -   Learn about content management in [Concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   Learn how to successfully support daily tasks throughout your deployment in [Understand how clients find site resources and services for Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
+-   Learn how to successfully support daily tasks throughout your deployment in [Understand how clients find site resources and services for Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).

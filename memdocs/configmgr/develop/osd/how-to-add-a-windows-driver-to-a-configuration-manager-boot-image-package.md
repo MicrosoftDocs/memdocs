@@ -119,7 +119,7 @@ public void AddDriverToBootImagePackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`driverID`|-   Managed: `String`<br />-   VBScript:  `String`|The Windows driver identifier available in `SMS_Driver.CI_ID`.|  
 |`PackageID`|-   Managed: `String`<br />-   VBScript: `String`|The boot image package identifier available in `SMS_BootImagePackage.PackageID`.|  
 
@@ -150,4 +150,4 @@ public void AddDriverToBootImagePackage(
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
- [How to Remove a Windows Driver from a Boot Image Package](../../develop/osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md)   
+ [How to Remove a Windows Driver from a Boot Image Package](../../develop/osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md)

@@ -92,6 +92,6 @@ Create satisfaction in your organization by creating a better user experience fo
 
 For more information, see the following articles:
 
-[Use Intune to create Windows Autopilot profiles](https://docs.microsoft.com/intune/enrollment-autopilot)
+[Use Intune to create Windows Autopilot profiles](/intune/enrollment-autopilot)
 
 [Windows Autopilot for existing devices](../../autopilot/existing-devices.md)

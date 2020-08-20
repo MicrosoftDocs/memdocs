@@ -25,7 +25,7 @@ ROBOTS:
 #ms.reviewer: aanavath  
 #ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: 
 ---  
 
@@ -48,7 +48,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 
 
 ## MTD apps for Android 
-The following MTD apps are commonly used on Android devices. SSelect an app to open its listing in Google Play.  
+The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)

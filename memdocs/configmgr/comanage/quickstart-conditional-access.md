@@ -105,12 +105,11 @@ Conditional Access is easy to use when you [enable co-management](how-to-enable.
 
 For more information about using Conditional Access, see the following articles: 
 
-- [Conditional Access in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Conditional Access in Azure AD](/azure/active-directory/conditional-access/overview)  
 
-- [Intune device compliance policies](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune device compliance policies](/intune/device-compliance)  
 
-- [App-based Conditional Access with Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [App-based Conditional Access with Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Conditional Access features become available immediately for hybrid Azure AD-joined devices. These features include multi-factor authentication and hybrid Azure AD join access control. This behavior is because they're based on Azure AD properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.  
-
+> Conditional Access features become available immediately for hybrid Azure AD-joined devices. These features include multi-factor authentication and hybrid Azure AD join access control. This behavior is because they're based on Azure AD properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.

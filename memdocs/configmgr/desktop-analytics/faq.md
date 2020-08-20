@@ -68,7 +68,7 @@ Yes. For more information, see [Convert from BIOS to UEFI during an in-place upg
 
 ### Can I use Desktop Analytics with Windows 10 LTSC?
 
-Desktop Analytics doesn't support Windows 10 Long-Term Servicing Channel (LTSC) devices. For more information, see [Windows as a service overview](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Desktop Analytics doesn't support Windows 10 Long-Term Servicing Channel (LTSC) devices. For more information, see [Windows as a service overview](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### Can I reduce the amount of time it takes for data to refresh in my Desktop Analytics portal?
 
@@ -101,7 +101,7 @@ Windows diagnostic data from your computers is encrypted, sent to, and processed
 
 ### Can I use Update Compliance together with Desktop Analytics?
 
-Yes. If you use [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
+Yes. If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started) in the Azure portal today, you can continue to do so now and beyond January 2020.
 
 For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/19/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,7 +74,7 @@ Intune now supports [third-party MDM solutions as a source of device compliance 
 
 The following third-party MDM providers are supported with this release, as a public preview:
 
-- VMWare WorkspaceONE UEM (previously known as AirWatch)
+- VMWare Workspace ONE UEM (previously known as AirWatch)
 
 
 <!-- ########################## -->
