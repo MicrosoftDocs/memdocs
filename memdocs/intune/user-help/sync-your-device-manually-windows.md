@@ -58,7 +58,7 @@ You can also access the sync control outside of the app, from your device's desk
 1. Find the Company Portal app icon in your taskbar or Start menu.  
 2. Right-click the app's icon so its menu (also referred to as a jump list) appears.  
 
-    ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon has been clicked to show a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-device-from-start-menu-1807.png)  
+    ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon was selected and shows a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-device-from-start-menu-1807.png)  
 
 3. Select **Sync this device**. The Company Portal app opens to the **Settings** page and initiates your sync.  
 
@@ -82,23 +82,36 @@ Complete these steps to manually sync your Microsoft HoloLens and Windows 10 des
 
     ![Choosing work access as the account type](./media/win10pc-sync-3-work-access.png)
 
-#### Access work or school steps
+### Microsoft HoloLens  
+These instructions apply to HoloLens devices running the Windows 10 Anniversary Update (also known as RS1).  
 
-1. Click **Access work or school**.
+1. Open the Settings app on your device.  
+
+2. Select **Accounts** > **Work Access**.  
+
+    ![Screenshot HoloLens settings app, accounts link highlighted](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+
+3. Select your connected account > **Sync**.  
+
+    ![Screenshot HoloLens settings app, sync button highlighted](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
+
+#### Access work or school steps  
+
+1. Select **Access work or school**.
 
     ![Screenshot showing Access work or school option](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Select the account that has a briefcase icon next to it. If you don't see this account at all, your company may have configured your settings a different way. Instead, click the account that has a Microsoft logo next to it.
+2. Select the account that has a briefcase icon next to it. If you don't see this account at all, your company may have configured your settings a different way. Instead, select the account that has a Microsoft logo next to it.
 
      ![Choose your account name next to the briefcase or Microsoft logo](./media/win10pc-rs1-sync-info-button.png)
 
-3. Click **Info**. 
+3. Select **Info**. 
 
-4. Click **Sync**. 
+4. Select **Sync**. 
 
 #### Work access steps
 
-1. Click **Work access**.
+1. Select **Work access**.
 
     ![Choosing work access as the account type](./media/win10pc-sync-3-work-access.png)
 
@@ -106,7 +119,7 @@ Complete these steps to manually sync your Microsoft HoloLens and Windows 10 des
 
     ![Choosing the company name for device management](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Click **Sync**. The button remains disabled until the sync is complete.
+3. Select **Sync**. The button remains disabled until the sync is complete.
 
     ![Choosing the Sync button](./media/win10pc-sync-5-tap-sync.png)  
    
