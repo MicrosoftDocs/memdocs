@@ -27,7 +27,7 @@ Task sequences in Configuration Manager are used to automate different kinds of 
 
 - [Setting configuration](../../compliance/understand/ensure-device-compliance.md)
 
-Also consider other Microsoft System Center automation technologies, such as [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) and [Service Management Automation](https://docs.microsoft.com/system-center/sma/).  
+Also consider other Microsoft System Center automation technologies, such as [Orchestrator](/system-center/orchestrator/) and [Service Management Automation](/system-center/sma/).  
 
 The power of task sequences lies in their flexibility and how you use them. They can configure client settings, distribute software, update drivers, edit user states, and do other tasks independent of OS deployment. You can create a custom task sequence to add any number of tasks. The use of custom task sequences for non-OS deployment is supported in Configuration Manager. However, if a task sequence results in unwanted or inconsistent results, look at ways to simplify the operation:
 

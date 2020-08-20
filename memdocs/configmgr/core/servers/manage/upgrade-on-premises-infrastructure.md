@@ -49,9 +49,9 @@ To upgrade a server, use the upgrade procedures provided by the OS you're upgrad
 
 - [Windows Server Upgrade Center](https://aka.ms/upgradecenter)  
 
-- [Upgrade and conversion options for Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [Upgrade and conversion options for Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
 ### <a name="bkmk_2016-2019"></a> Upgrade to Windows Server 2016 or 2019
 
@@ -137,7 +137,7 @@ When you upgrade from either Windows Server 2008 R2 or Windows Server 2012 to Wi
 
 - On Windows Server 2012: Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.  
 
-- On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+- On Windows Server 2008 R2: Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server. You may keep the SUSDB and reattach it once WSUS is reinstalled. For more information, see [Windows Server Update Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 - If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
     - On the sending site, review **sender.log**.
@@ -239,15 +239,15 @@ To identify the SQL Server cardinality estimation compatibility level in use for
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+For more information on SQL CE compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 For more information about upgrading SQL Server, see the following SQL Server articles:  
 
-- [Upgrade to SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [Upgrade to SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgrade to SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Upgrade to SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [Upgrade to SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade to SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### To upgrade SQL Server on the site database server  
 
@@ -258,4 +258,4 @@ For more information about upgrading SQL Server, see the following SQL Server ar
 3. Restart the Configuration Manager services  
 
 > [!NOTE]  
-> When you change the SQL Server edition in use at the central administration site from Standard to either a Datacenter or Enterprise, the database partition doesn't change. This database partition limits the number of clients the hierarchy supports.  
+> When you change the SQL Server edition in use at the central administration site from Standard to either a Datacenter or Enterprise, the database partition doesn't change. This database partition limits the number of clients the hierarchy supports.

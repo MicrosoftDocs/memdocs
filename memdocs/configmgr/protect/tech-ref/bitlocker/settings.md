@@ -114,7 +114,7 @@ If you enable this setting, the user has to protect the OS drive, and BitLocker 
 > [!NOTE]
 > If the drive is already encrypted, and you disable this setting, BitLocker decrypts the drive.  
 
-If you have devices without a [Trusted Platform Module (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), use the option to **Allow BitLocker without a compatible TPM (requires a password)**. This setting allows BitLocker to encrypt the OS drive, even if the device doesn't have a TPM. If you allow this option, Windows prompts the user to specify a BitLocker password.
+If you have devices without a [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), use the option to **Allow BitLocker without a compatible TPM (requires a password)**. This setting allows BitLocker to encrypt the OS drive, even if the device doesn't have a TPM. If you allow this option, Windows prompts the user to specify a BitLocker password.
 
 On devices with a compatible TPM, two types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN). Configure the following settings:
 

@@ -302,8 +302,6 @@
       href: compliance-policy-create-windows.md
     - name: Compliance policy settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
-    - name: Compliance policy settings - Windows Phone 8.1
-      href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
     - name: Antivirus policy settings

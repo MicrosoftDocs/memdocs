@@ -146,7 +146,7 @@ When you configure the pull-distribution point, specify one or more source distr
 > 1. On the source distribution point, set the following registry value: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Restart the source distribution point server.
 >
-> Then the pull distribution point should start downloading content from the source. For more information on this registry key, see [Overview of TLS - SSL (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Then the pull distribution point should start downloading content from the source. For more information on this registry key, see [Overview of TLS - SSL (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
 ## See also  
 

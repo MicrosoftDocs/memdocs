@@ -53,7 +53,7 @@ To configure a Windows app deployment type for this feature, enable the option t
 
 Configuration Manager supports the Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Windows 10 version 1809 or later support these formats.
 
-- For an overview of MSIX, see [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
+- For an overview of MSIX, see [A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - For how to create a new MSIX app, see [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -74,7 +74,7 @@ Convert your existing Windows Installer (.msi) applications to the MSIX format.
 
   - Install the [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) from the Microsoft Store  
 
-  - Install the [MSIX packaging tool driver](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Install the [MSIX packaging tool driver](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Don't install any other apps or services on this device. It's your reference system.
 
@@ -99,8 +99,8 @@ If the process fails, the summary page points to the log file with more informat
 
 To use this MSIX app, you first need to digitally sign it so that clients trust it. For more information on this process, see the following articles:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [How to sign an app package using SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [How to sign an app package using SignTool](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).
 
@@ -177,4 +177,4 @@ When you use this deployment type, consider the following points:
 
 - Per-machine MSI packages are installed for all users of the device.  
 
-- Configuration Manager supports app updates. The MSI product code of each version must be the same.  
+- Configuration Manager supports app updates. The MSI product code of each version must be the same.

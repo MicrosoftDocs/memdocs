@@ -19,7 +19,7 @@ ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
 *Applies to: Configuration Manager (current branch)*
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 Beginning in Configuration Manager version 1802, you can review Microsoft 365 Apps client information from the Office 365 Client Management dashboard. The Office 365 client management dashboard displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
@@ -56,7 +56,7 @@ Your top level site server needs access to the following endpoint to download th
 
 Starting in version 1910, you'll need to enable data collection for Microsoft 365 Apps to populate information in the  **Office 365 ProPlus Pilot and Health Dashboard**. The data is stored in the Configuration Manager site database and not sent to Microsoft.
 
-This data is different from the diagnostic data, which is described in [Diagnostic data sent from Microsoft 365 Apps to Microsoft](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+This data is different from the diagnostic data, which is described in [Diagnostic data sent from Microsoft 365 Apps to Microsoft](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 You can enable data collection either by using Group Policy or by editing the registry.
 
@@ -64,7 +64,7 @@ You can enable data collection either by using Group Policy or by editing the re
 
 1. Download the latest [Administrative Template files from the Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49030).
 2. Enable the **Turn on telemetry data collection** policy setting under `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard`.
-    - Alternatively, apply the policy setting with the [Office cloud policy service](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
+    - Alternatively, apply the policy setting with the [Office cloud policy service](/DeployOffice/overview-office-cloud-policy-service).
     - The policy setting is also used by the Office Telemetry Dashboard, which you don't need to deploy for this data collection.
 
 #### Enable data collection from the registry
@@ -103,7 +103,7 @@ Select a state to drill-through to a device list. This readiness report shows mo
 
 - Enable hardware inventory in client settings. For more information, see the [Prerequisites](#prerequisites) section.  
 
-- The device needs connectivity to the Office content delivery network (CDN) to download an add-in readiness file. For more information, see [Content delivery networks](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). If the device can't download this file, the add-ins state is *Needs review*.  
+- The device needs connectivity to the Office content delivery network (CDN) to download an add-in readiness file. For more information, see [Content delivery networks](/office365/enterprise/content-delivery-networks). If the device can't download this file, the add-ins state is *Needs review*.  
 
     > [!Note]  
     > No data is sent to Microsoft for this feature.  

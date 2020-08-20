@@ -13,20 +13,20 @@ manager: dougeby
 
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
-To handle a Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler. If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is not `null`, an exception has occurred and you use [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) to discover the cause.  
+To handle a Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](/previous-versions/t1yswz5k(v=vs.90)) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](/previous-versions/system-center/developer/cc143778(v=msdn.10)) event handler. If [Error](/previous-versions/t1yswz5k(v=vs.90)) is not `null`, an exception has occurred and you use [Error](/previous-versions/t1yswz5k(v=vs.90)) to discover the cause.  
 
- If [Error](https://msdn.microsoft.com/library/t1yswz5k.aspx) is an [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions you will need to use the System.Management namespace [ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception) object to access them.  
+ If [Error](/previous-versions/t1yswz5k(v=vs.90)) is an [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions you will need to use the System.Management namespace [ManagementException](/dotnet/api/system.management.managementexception) object to access them.  
 
 ### To handle an asynchronous query error  
 
 1.  Create an asynchronous query.  
 
-2.  In the asynchronous query [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler, implement the code in the following example.  
+2.  In the asynchronous query [SmsBackgroundWorker.QueryProcessorCompleted](/previous-versions/system-center/developer/cc143778(v=msdn.10)) event handler, implement the code in the following example.  
 
-3.  Run the asynchronous query. To test the exception handler, pass a badly formed query string such as `Select & from &&&` to the [QueryProcessorBase.ProcessQuery](https://msdn.microsoft.com/library/cc146295.aspx) method.  
+3.  Run the asynchronous query. To test the exception handler, pass a badly formed query string such as `Select & from &&&` to the [QueryProcessorBase.ProcessQuery](/previous-versions/system-center/developer/cc146295(v=msdn.10)) method.  
 
 ## Example  
- The following example implements a [SmsBackgroundWorker.QueryProcessorCompleted](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsbackgroundworker.queryprocessorcompleted.aspx) event handler.  
+ The following example implements a [SmsBackgroundWorker.QueryProcessorCompleted](/previous-versions/system-center/developer/cc143778(v=msdn.10)) event handler.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
