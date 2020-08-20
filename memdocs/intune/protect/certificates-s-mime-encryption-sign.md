@@ -34,7 +34,6 @@ Email certificates, also known as S/MIME certificate, provide extra security to 
 - iOS/iPadOS
 - macOS
 - Windows 10 and later
-- Windows Phone
 
 On iOS/iPadOS devices, you can create an Intune-managed email profile that uses S/MIME and certificates to sign and encrypt incoming and outgoing emails. For other platforms, S/MIME may or may not be supported. If it's supported, install certificates that use S/MIME signing and encryption. Then, an end user enables S/MIME in their email application.
 
