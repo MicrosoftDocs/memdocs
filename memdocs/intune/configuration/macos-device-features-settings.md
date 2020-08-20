@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -344,7 +344,9 @@ This feature applies to:
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
-- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting.
+- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. 
+
+  When set to **Yes**, all existing user accounts are wiped from the devices. To avoid data loss, or prevent a factory reset, make sure you understand how this setting changes your devices.
 
   For more information about shared device mode, see [Overview of shared device mode](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
 
