@@ -303,7 +303,7 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 
 ### Uninstall application on approval revocation
 <!--1357891-->
-The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
+The behavior has changed when you revoke approval for an application. Now when you deny the request for the application, the client uninstalls the application from the user's device. This behavior requires that you enable the [optional feature](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approve application requests for users per device**. 
 
 For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -343,7 +343,7 @@ For more information, see [Phase settings](../../../osd/deploy-use/create-phased
 
 ### Improvements to Windows 10 in-place upgrade task sequence
 <!--1358500-->
-The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
+The default task sequence template for Windows 10 in-place upgrade now includes another new group with recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot. One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful. 
 
 For more information, see [Create a task sequence to upgrade an OS](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -579,7 +579,7 @@ For more information, see [Console improvements in version 1806](../../servers/m
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1806 Release Notes](/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 The following update rollup (4462978) is available in the console starting on 24 October 2018: [Update rollup for Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978).
 

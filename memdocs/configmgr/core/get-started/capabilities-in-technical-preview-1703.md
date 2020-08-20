@@ -81,7 +81,7 @@ With technical preview 1703, only Windows Store for Business (WSfB) is configure
 
 - Use the information in this preview topic to replace the configuration steps found in the [Set up Windows Store for Business synchronization](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) section of the Current Branch topic [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- For more information about web apps, see [Authentication and authorization in Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview), and [Web Apps overview](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- For more information about web apps, see [Authentication and authorization in Azure App Service](/azure/app-service/app-service-authentication-overview), and [Web Apps overview](/azure/app-service-web/app-service-web-overview).
 
 ### Prerequisites and planning
 When you set up a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept. To ensure that this folder is secure and that its content can be deployed to devices, make sure the following permissions are in place:

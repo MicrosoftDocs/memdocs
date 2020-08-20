@@ -17,7 +17,7 @@ To create a Configuration Manager console property sheet, in Configuration Manag
 
 |Class|Description|  
 |-----------|-----------------|  
-|[SmsPageControl](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.smspagecontrol.aspx)|The control displayed on the property page.|  
+|[SmsPageControl](/previous-versions/system-center/developer/cc147309(v=msdn.10))|The control displayed on the property page.|  
 
  The following procedures show you how to create a Configuration Manager property sheet assembly by using Visual Studio. The property sheet displays a property page that contains a button. When it is clicked, the button displays the name of a package selected in the Configuration Manager console **Packages** node.  
 

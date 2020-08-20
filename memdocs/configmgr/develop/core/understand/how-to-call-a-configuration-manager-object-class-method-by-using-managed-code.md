@@ -13,10 +13,10 @@ manager: dougeby
 
 ---
 # How to Call a Configuration Manager Object Class Method by Using Managed Code
-To call a SMS Provider class method, in Configuration Manager, you use the [ExecuteMethod](https://msdn.microsoft.com/library/cc146186.aspx) method. You populate a [Dictionary](https://msdn.microsoft.com/library/aa239680.aspx) object with the method's parameters, and the return value is an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object that contains the result of the method call.  
+To call a SMS Provider class method, in Configuration Manager, you use the [ExecuteMethod](/previous-versions/system-center/developer/cc146186(v=msdn.10)) method. You populate a [Dictionary](/previous-versions/visualstudio/visual-studio-6.0/aa239680(v=vs.60)) object with the method's parameters, and the return value is an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object that contains the result of the method call.  
 
 > [!NOTE]
->  To call a method on an object instance, use the [ExecuteMethod](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.executemethod.aspx) method on the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object instance.  
+>  To call a method on an object instance, use the [ExecuteMethod](/previous-versions/system-center/developer/cc146233(v=msdn.10)) method on the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object instance.  
 
 ### To call a Configuration Manager object class method  
 
@@ -24,7 +24,7 @@ To call a SMS Provider class method, in Configuration Manager, you use the [Exec
 
 2.  Create the input parameters as a **Dictionary** object.  
 
-3.  Using the **WqlConnectionManager** object instance, call [ExecuteMethod](https://msdn.microsoft.com/library/cc146186.aspx) and specify the class name and input parameters.  
+3.  Using the **WqlConnectionManager** object instance, call [ExecuteMethod](/previous-versions/system-center/developer/cc146186(v=msdn.10)) and specify the class name and input parameters.  
 
 4.  Retrieve the method return value from the *ReturnValue* property in the returned **IResultObject** object.  
 
@@ -90,7 +90,7 @@ public void ValidateQueryRule(WqlConnectionManager connection, string wqlQuery)
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [Objects overview](configuration-manager-objects-overview.md)
@@ -99,4 +99,4 @@ public void ValidateQueryRule(WqlConnectionManager connection, string wqlQuery)
  [How to Modify a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md)   
  [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
- [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)   
+ [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)

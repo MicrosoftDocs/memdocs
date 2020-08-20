@@ -213,7 +213,7 @@ You can now use Configuration Manager to manage Microsoft Surface driver updates
 
 #### Prerequisites
 - All software update points must run Windows Server 2016.    
-- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+- This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### To manage Surface driver updates
 
