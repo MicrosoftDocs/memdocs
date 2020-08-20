@@ -344,7 +344,8 @@ This feature applies to:
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
 - **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
-- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting.
+- **Enable shared device mode** (Microsoft Azure AD only): Select **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to macOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. 
+If you enable shared device mode, all existing user accounts will be wiped from the targeted devices. Make sure you understand how this setting will change your devices so that you can avoid data loss or factory reset. 
 
   For more information about shared device mode, see [Overview of shared device mode](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
 
