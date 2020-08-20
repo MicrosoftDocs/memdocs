@@ -340,10 +340,10 @@ The Configuration Manager 1609 Technical Preview introduces a new dashboard. To 
 
 The dashboard displays charts for the following:
 
-- Number of Microsoft 365 clients
-- Microsoft 365 client versions
-- Microsoft 365 client languages
-- Microsoft 365 client channels     
+- Number of Office 365 clients
+- Office 365 client versions
+- Office 365 client languages
+- Office 365 client channels     
 For more information, see [Overview of update channels for Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Automatic deployment rules that have Microsoft 365 Client selected in the set of available products.
 
