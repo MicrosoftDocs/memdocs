@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -126,9 +126,10 @@ Starting in version 1910, when you enable Microsoft Connected Cache on your Conf
 
 ## Diagram for app workloads
 
-![Diagram of co-management app workloads](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="Diagram of co-management app workloads" lightbox="media/co-management-apps.svg":::
 
-[View the diagram at full size](media/co-management-apps.svg)
+> [!TIP]
+> Starting in version 2006, you can configure the Company Portal to also show Configuration Manager apps. If you change this app portal experience, it changes the behaviors described in the above diagram. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 ## Known issues
 
@@ -142,9 +143,11 @@ To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolic
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. Open an elevated command prompt to `ConfigSecurityPolicy.exe`. Typically this executable is in one of the following directories:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security Client
+
 1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## Next steps

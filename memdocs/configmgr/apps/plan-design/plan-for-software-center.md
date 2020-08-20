@@ -2,7 +2,7 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -38,6 +38,8 @@ Update your Configuration Manager sites and clients to version 1906 or later to 
 - Starting in version 1906, you can add up to five custom tabs to Software Center. For more information, see [Software Center client settings](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
 - Users can configure user device affinity in Software Center. For more information, see [Link users and devices with user device affinity](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+- Starting in version 2006, you can configure co-managed devices to use the Company Portal for both Intune and Configuration Manager apps. For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 > [!IMPORTANT]
 > To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -136,4 +138,7 @@ If you're using the application catalog, branding follows these priorities:
 ## See also
 
 - [Software Center user guide](../../core/understand/software-center.md)
+
 - [Plan for and configure application management](plan-for-and-configure-application-management.md)
+
+- [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md)
