@@ -53,4 +53,4 @@ There are four options available for remotely administering devices managed by  
 | Requires device to be co-managed by Configuration Manager and Intune ||||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Requires additional licensing\* |![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)||![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|![Checkmark](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\* Teams requires O365 or M365 licensing. Use of TeamViewer and Intune requires licensing from both TeamViewer and Intune. Remote Control is a feature of Configuration Manager and requires Configuration Manager licensing.
+\* Teams requires Microsoft 365 licensing. Use of TeamViewer and Intune requires licensing from both TeamViewer and Intune. Remote Control is a feature of Configuration Manager and requires Configuration Manager licensing.

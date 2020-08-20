@@ -46,7 +46,7 @@ Select the appropriate option, and you will receive a notification to install th
 
 1. Select __Enroll with Microsoft account__.
 
-   ![An image of the Settings screen of the Datalert app, which offers a phone number field to enroll a device on the top half of the screen and "enroll with Microsoft account" on the bottom, so long as you have a Microsoft Office 365 account and an Intune subscription.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
+   ![An image of the Settings screen of the Datalert app, which offers a phone number field to enroll a device on the top half of the screen and "enroll with Microsoft account" on the bottom, so long as you have a Microsoft 365 account and an Intune subscription.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
 2. You'll receive a notification that __"Datalert" wants to open "Authenticator"__. Select __Open__.
 

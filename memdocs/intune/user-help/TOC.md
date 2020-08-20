@@ -143,7 +143,7 @@
 #### [Send logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md)
 #### [Send logs from device Settings app](send-logs-to-your-it-admin-settings-windows.md)
 #### [My version of Windows isn't supported](your-windows-version-isnt-yet-supported.md)
-#### [Install Office 365 on my Windows 10 device](install-office-windows.md)
+#### [Install Office on my Windows 10 device](install-office-windows.md)
 #### [My device needs to be encrypted](you-need-to-enable-windows-encryption.md)
 #### [My device needs antimalware software](your-device-needs-antimalware-software.md)
 #### [Enable Secure Boot](you-need-to-enable-secure-boot-windows.md)

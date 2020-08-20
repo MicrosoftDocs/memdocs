@@ -49,4 +49,4 @@ Learn more about the following articles:
 * [Password best practices](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Licensing self-service password reset](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 
-Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Want help enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

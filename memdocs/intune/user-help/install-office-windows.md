@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Installing Office 365 on your Windows 10 device | Microsoft Docs
+title: Installing Office on your Windows 10 device | Microsoft Docs
 description:
 keywords:
 author: lenewsad
@@ -30,7 +30,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Installing Office 365 on your Windows 10 device
+# Installing Office on your Windows 10 device
 
 There are many ways you can install the Office suite on to your Windows 10 device. Depending on the size of your company, there may be multiple versions of Office available for download from the Company Portal.
 

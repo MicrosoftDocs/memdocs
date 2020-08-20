@@ -71,7 +71,7 @@ Other versions of Windows, such as [Windows 10 Holographic](https://www.microsof
 * [Update my Windows device](you-need-to-update-your-windows-device.md)
 * [Send logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md)
 * [Send logs from device Settings app](send-logs-to-your-it-admin-settings-windows.md)
-* [Install Office 365 on my Windows 10 device](install-office-windows.md)
+* [Install Office on my Windows 10 device](install-office-windows.md)
 * [My device needs to be encrypted](you-need-to-enable-windows-encryption.md)
 * [Get antimalware software](your-device-needs-antimalware-software.md)
 * [Enable Secure Boot](you-need-to-enable-secure-boot-windows.md)
