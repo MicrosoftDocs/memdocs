@@ -61,7 +61,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ## Week of August 17, 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### app management
+### App management
 
 #### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
 The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal). 
