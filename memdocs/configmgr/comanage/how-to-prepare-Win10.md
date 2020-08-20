@@ -22,7 +22,7 @@ For new Windows 10 devices, you can use the Autopilot service to configure the o
 
 For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
 
-To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
+To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).  
 
 ### Gather information from Configuration Manager
 
@@ -36,7 +36,7 @@ Use Configuration Manager to collect and report the device information required 
 
 4. After saving the file, upload the data to Intune.  
 
-For more information, see [Add devices in Intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
+For more information, see [Add devices in Intune](/intune/enrollment-autopilot#add-devices).
 
 ### Autopilot for existing devices
 <!--1358333-->

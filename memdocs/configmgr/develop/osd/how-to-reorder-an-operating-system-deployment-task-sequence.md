@@ -152,7 +152,7 @@ public void MoveTaskSequenceStepUp(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|A valid task sequence or task sequence group|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|A valid task sequence or task sequence group|  
 |`taskSequenceStepName`<br /><br /> `stepName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the task sequence step to move.|  
 
 ## Compiling the Code  

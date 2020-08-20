@@ -63,6 +63,6 @@ HRESULT GetExcludedFileList(
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
 
 ## See Also  
- [Microsoft.ConfigurationManagement.ApplicationManagement](https://msdn.microsoft.com/library/microsoft.configurationmanagement.applicationmanagement.aspx)]
+ [Microsoft.ConfigurationManagement.ApplicationManagement](/previous-versions/)]
  [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

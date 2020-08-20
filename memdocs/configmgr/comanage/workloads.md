@@ -38,19 +38,19 @@ Co-management supports the following workloads:
 
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by conditional access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of conditional access. Beginning in Configuration Manager version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
-For more information on the Intune feature, see [Device compliance policies](https://docs.microsoft.com/intune/device-compliance-get-started).  
+For more information on the Intune feature, see [Device compliance policies](/intune/device-compliance-get-started).  
 
 ## Windows Update policies
 
 Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business.
 
-For more information on the Intune feature, see [Configure Windows Update for Business deferral policies](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
+For more information on the Intune feature, see [Configure Windows Update for Business deferral policies](/intune/windows-update-for-business-configure).  
 
 ## Resource access policies
 
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.
 
-For more information on the Intune feature, see [Deploy resource access profiles](https://docs.microsoft.com/intune/device-profiles).
+For more information on the Intune feature, see [Deploy resource access profiles](/intune/device-profiles).
 
 > [!Note]  
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
@@ -71,7 +71,7 @@ The Endpoint Protection workload includes the Windows Defender suite of antimalw
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (now known as Microsoft Defender Threat Protection)
 
-For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+For more information on the Intune feature, see [Endpoint Protection for Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
@@ -90,7 +90,7 @@ The device configuration workload includes settings that you manage for devices 
 
 You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.  
 
-For more information on the Intune feature, see [Create a device profile in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+For more information on the Intune feature, see [Create a device profile in Microsoft Intune](/intune/device-profile-create).  
 
 > [!NOTE]
 > When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature, which isn't included in the endpoint protection workload.<!-- 4184095 -->
@@ -107,7 +107,7 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Office 365 deployed via Configuration Manager.  
 
-For more information on the Intune feature, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
+For more information on the Intune feature, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365).
 
 ## Client apps
 
@@ -115,7 +115,7 @@ For more information on the Intune feature, see [Assign Office 365 apps to Windo
 
 Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-For more information on the Intune feature, see [What is Microsoft Intune app management?](https://docs.microsoft.com/intune/app-management).
+For more information on the Intune feature, see [What is Microsoft Intune app management?](/intune/app-management).
 
 > [!Tip]  
 > This feature was first introduced in version 1806 as a [pre-release feature](../core/servers/manage/pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
@@ -149,4 +149,4 @@ To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolic
 
 ## Next steps
 
-[How to switch workloads](how-to-switch-workloads.md)  
+[How to switch workloads](how-to-switch-workloads.md)
