@@ -97,7 +97,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 ## Devices are noncompliant but users are not blocked
 
-- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require AAD Device Registration and Active Directory Federation Services (AD FS) configurations as per [Set up SharePoint Online and Exchange Online for Azure Active Directory Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Azure AD Device Registration and Active Directory Federation Services (AD FS) configurations as per [Set up SharePoint Online and Exchange Online for Azure Active Directory Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - If the device is selectively wiped or retired from Intune, it might continue to have access for several hours after retirement. This is because Exchange caches access rights for six hours. Consider other means of protecting data on retired devices in this scenario.
 
