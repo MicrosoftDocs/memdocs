@@ -761,10 +761,21 @@ If your app integrates with Siri Intents, please make sure to read the comments 
     
 ## Notifications
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
+
 ## Displaying Web Content Within Application
-If your application has the ability to display websites within a web view and the displayed web pages have the ability to navigate to arbitrary sites, the application is responsible for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine.
-Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setUIPolicyIdentity passing in the current identity.
-Single identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setCurrentThreadIdentity passing in nil.
+If your application has the ability to display websites within a web view, you may need to add logic to prevent data leaks, depending on the specific scenario:
+
+### Web views that only display non-corporate content/websites
+If your application does not display any corporate data in the webview, and users have the ability to navigate to arbitrary sites where they could potentially copy/paste managed data from other parts of the application into a public forum, the application is responsible for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine. Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity, passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setUIPolicyIdentity, passing in the current identity. Single identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity, passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setCurrentThreadIdentity, passing in nil. This will ensure that the Intune SDK treats the web view as unmanaged, and does not allow managed data from other parts of the application to be pasted into the web view if policy is configured as such. 
+
+### Web views that only display corporate content/websites
+If your application only displays corporate data in the webview, and users cannot navigate to arbitrary sites, no changes are required.
+
+### Web views that may display both corporate and non-corporate content/websites
+
+For this scenario, only WKWebView is supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application does display corporate content within the WKWebView, and users can also access non-corporate content/websites which may lead to data leaks, the application should implement the isExternalURL: delegate method defined in IntuneMAMPolicyDelegate.h. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data. 
+
+Returning NO in isExternalURL will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
 
 ## iOS best practices
 
