@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2020
+ms.date: 08/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -110,8 +110,6 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 
 When moving devices from group policy, you may want to reset these devices, and enroll them in Intune. Once enrolled, they'll receive the policies and profiles you create.
 
-For more information, see the [Intune device configuration deployment guide](deployment-guide-compliance-configuration.md).
-
 Next, [deploy Intune](#deploy-intune) (in this article).
 
 ## Currently use a third party MDM provider
@@ -175,5 +173,3 @@ In this section, add extra information provided by CSS and PFE teams.
 ## Next steps
 
 [Enrollment deployment guide](deployment-guide-enrollment.md)  
-[Compliance and configuration deployment guide](deployment-guide-compliance-configuration.md)  
-App deployment guide

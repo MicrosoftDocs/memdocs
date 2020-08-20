@@ -101,8 +101,6 @@
         href: deployment-guide-intune-setup.md
       - name: Enroll devices
         href: deployment-guide-enrollment.md
-      - name: Compliance and configuration
-        href: deployment-guide-compliance-configuration.md
     - name: Migration guide
       href: migration-guide.md
       items:

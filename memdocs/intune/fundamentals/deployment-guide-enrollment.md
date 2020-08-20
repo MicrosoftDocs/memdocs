@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,7 +55,7 @@ Azure AD deployment guides: https://docs.microsoft.com/azure/active-directory/fu
 
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
-  - The [MDM Authority](../fundamentals/mdm-authority-set.md) is set to Intune, even when using [co-management](https://docs.microsoft.com/configmgr/comanage/overview) with Intune + Configuration Manager.
+  - The [MDM Authority](../fundamentals/mdm-authority-set.md) is set to Intune, even when using [co-management](/configmgr/comanage/overview) with Intune + Configuration Manager.
   - [Intune licenses are assigned](../fundamentals/licenses-assign.md).
 
   For more information, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
@@ -79,8 +79,6 @@ Azure AD deployment guides: https://docs.microsoft.com/azure/active-directory/fu
 - If you're bulk enrolling devices, consider creating the **Device enrollment manager** (DEM) account. This account is an Intune permission that's applied to an Azure AD user account. The DEM account can enroll up to 1,000 mobile devices. Use this account to enroll and configure the devices before giving them to users.
 
   For more information, see [Enroll devices using a DEM account](../enrollment/device-enrollment-manager-enroll.md).
-
-Azure AD deployment guides: https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-deployment-plans
 
 ## Pilot groups
 
@@ -113,12 +111,111 @@ On the platforms that don't require a factory reset, when these devices enroll i
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android and Android Enterprise devices:
 
-- **Android device administrator**: Use for personal or bring your own devices (BYOD). Google is decreasing support in new Android releases. It's recommended to not use this enrollment method. Instead, use **Android Enterprise work profile** enrollment.
-- **Android Enterprise work profile (profile owner)**: Use for personal or bring your own devices (BYOD).
-- **Android Enterprise dedicated devices**: COSU
-- **Android Enterprise fully managed**: COBO
+- [Android Enterprise work profile (profile owner)](#android-enterprise-work-profile)
+- [Android Enterprise dedicated devices (COSU)](#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed (COBO)](#android-enterprise-fully-managed)
+- [Android device administrator](#android-device-administrator)
 
 This section provides recommendations on the Android and Android Enterprise enrollment methods to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
+
+### Android Enterprise work profile
+
+These devices are personal or BYOD (bring your own device) Android devices that can access work or school email, apps, and other data.
+
+---
+| Feature | Use this enrollment option |
+| --- | --- | 
+| Devices are personal or BYOD. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+|Devices are managed by another MDM provider. | ✔️ |
+| You use the device enrollment manager (DEM) account. | ✔️ |
+| Devices are owned by the organization or school. | ❌ <br/><br/>Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Android Enterprise fully managed. |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> User-less devices should be enrolled using Android Enterprise dedicated devices. |
+
+---
+
+#### Administrator tasks: Android Enterprise work profile
+
+- Be sure your devices are [supported](supported-devices-browsers.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an [enrollment restriction](../enrollment/enrollment-restrictions-set.md), and **allow** devices that support Android Enterprise work profiles. For the specific steps, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
+
+#### End user tasks: Android Enterprise work profile
+
+Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
+
+1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintunecompanyportal).
+2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
+
+    Users may have enter more information. For more specific steps, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
+
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+
+### Android Enterprise dedicated devices
+
+These devices are organization-owned, with a sole purpose of being a kiosk-style. They can be shared devices, and aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more. They're commonly referred to as COSU (corporate-owned, single-use) devices.
+
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| Devices are owned by the organization or school. |  ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
+| Devices are associated with a single user. | ❌ <br/><br/> Not recommended. These devices should be enrolled using Android Enterprise fully managed. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+|Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
+
+---
+
+#### Administrator tasks: Android Enterprise dedicated devices
+
+- Be sure your devices are [supported](supported-devices-browsers.md).
+- Factory reset the devices. This step is required.
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile, and have your dedicated device group(s) ready. For the specific steps, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+- Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise dedicated devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
+
+  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
+
+#### End user tasks: Android Enterprise dedicated devices
+
+It's not recommended for users to enroll Android Enterprise dedicated devices. This task should be completed by administrators.
+
+### Android Enterprise fully managed
+
+These devices are organization-owned, and have one user. They are used exclusively for organization work; not personal use. They're commonly referred to as COBO (corporate-owned, business only) devices.
+
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| Devices are owned by the organization or school. |  ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. |
+|Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+
+---
+
+#### Administrator tasks: Android Enterprise fully managed
+
+- Be sure your devices are [supported](supported-devices-browsers.md).
+- Factory reset the devices. This step is required.
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), enable fully managed user devices. For the specific steps, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
+- Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise fully managed devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
+
+  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
+
+#### End user task: Android Enterprise fully managed
+
+It's not recommended for users to enroll Android Enterprise fully managed devices. This task should be completed by administrators.
 
 ### Android device administrator
 
@@ -147,120 +244,35 @@ Your users must do the following. For more specific steps, see [enroll the devic
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-### Android Enterprise work profile
-
-These devices are personal or BYOD (bring your own device) Android devices that can access work or school email, apps, and other data.
-
-Use this enrollment option when:
-
-- Your devices are personal or BYOD.
-- You have new or existing devices.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
-
-Don't use this enrollment option when:
-
-- Not recommended for organization-owned devices. Organization-owned devices should be enrolled in Intune.
-- You're using user-less devices, such as kiosk or dedicated device. User-less devices should be enrolled in Intune.
-
-#### Administrator tasks: Android Enterprise work profile
-
-- Be sure your devices are [supported](supported-devices-browsers.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an [enrollment restriction](../enrollment/enrollment-restrictions-set.md), and **allow** devices that support Android Enterprise work profiles. For the specific steps, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md).
-
-#### End user tasks: Android Enterprise work profile
-
-Your users must do the following. For the specific user experience, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
-
-1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintunecompanyportal).
-2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
-
-    Users may have enter more information. For more specific steps, see [enroll the device](../user-help/enroll-device-android-work-profile.md).
-
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
-
-### Android Enterprise dedicated devices
-
-These devices are organization-owned, with a sole purpose of being a kiosk-style. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more. They're commonly referred to as COSU (corporate-owned, single-use) devices.
-
-Use this enrollment option when:
-
-- Your devices are owned by the organization.
-- Your devices are shared devices, and aren't associated with a single or specific user.
-- You have new or existing devices.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
-
-Don't use this enrollment option when:
-
-- Your devices are personal or BYOD.
-
-#### Administrator tasks: Android Enterprise dedicated devices
-
-- Be sure your devices are [supported](supported-devices-browsers.md).
-- Factory reset the devices. This step is required.
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile, and have your dedicated device group(s) ready. For the specific steps, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
-- Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise dedicated devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
-
-  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
-
-#### End user tasks: Android Enterprise dedicated devices
-
-It's not recommended for users to enroll Android Enterprise dedicated devices. This task should be completed by administrators.
-
-### Android Enterprise fully managed
-
-These devices are organization-owned, and have one user. They are used exclusively for organization work; not personal use. They're commonly referred to as COBO (corporate-owned, business only) devices.
-
-Use this enrollment option when:
-
-- Your devices are owned by the organization, and are associated with a single user.
-- You have new or existing devices.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
-
-Don't use this enrollment option when:
-
-- Your devices are personal or BYOD.
-
-#### Administrator tasks: Android Enterprise fully managed
-
-- Be sure your devices are [supported](supported-devices-browsers.md).
-- Factory reset the devices. This step is required.
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), enable fully managed user devices. For the specific steps, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
-- Enroll the devices in Intune. For the specific steps, see [Enroll your Android Enterprise fully managed devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).
-
-  On Samsung's Knox devices, you can automatically enroll a large number of Android Enterprise devices using Samsung Knox Mobile Enrollment (KME). For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
-
-#### End user task: Android Enterprise fully managed
-
-It's not recommended for users to enroll Android Enterprise fully managed devices. This task should be completed by administrators.
-
 ## Enroll iOS/iPadOS devices
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling iOS/iPadOS devices:
 
-- **Application management without enrollment (MAMWE)**: Commonly used for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create app configuration policies and app protection policies, and push these policies to the devices.
-- **User and Device enrollment**: Use for personal or bring your own devices (BYOD). 
-- **Automated device enrollment (ADE)**: Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). You create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
-- **Apple Configurator**: Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
+- [Application management without enrollment (MAMWE)](#application-management-without-enrollment-mamwe)
+- [User and Device enrollment](#user-and-device-enrollment)
+- [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
+- [Apple Configurator](#apple-configurator-enrollment)
 
 This section provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll macOS devices](../enrollment/ios-enroll.md).
 
 ### Application management without enrollment (MAMWE)
 
-Use this enrollment option when:
+Commonly used for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create app configuration policies and app protection policies, and push these policies to the devices.
 
-- Your devices are personal or BYOD.
-- Your devices are managed by another MDM provider.
-- You have new or existing devices.
-- You have a small number of devices or a large number of devices.
-- You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams.
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
+| Devices are personal or BYOD. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to manage a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are managed by another MDM provider. | ✔️ |
+| You use the device enrollment manager (DEM) account. | ✔️ |
+| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. If you want extra security for specific apps, then use enrollment and MAM-WE together. |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
-Don't use this enrollment option when:
-
-- Not recommended for organization-owned devices. Organization-owned devices should be enrolled in Intune.
-- You're using user-less devices, such as kiosk. User-less devices should be enrolled in Intune.
+---
 
 For more information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
 
@@ -276,22 +288,24 @@ For more information on MAM-WE, see [Microsoft Intune app management](../apps/ap
 
 - Users may have to download the app from the Apple App Store
 
-
 ### User and Device enrollment
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access work or school email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
-Use this enrollment option when:
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You want to help protect a specific feature on the device, such as per-app VPN. | ✔️ |
+| Devices are personal or BYOD. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are managed by another MDM provider. | ✔️ |
+| You use the device enrollment manager (DEM) account. | ✔️ |
+| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
-- Your devices are personal or BYOD.
-- You have new or existing devices.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
-- You want to help protect a specific feature on the device, such as per-app VPN.
-
-Don't use this enrollment option when:
-
-- Not recommended for organization-owned devices. Organization-owned devices should be enrolled in Intune.
-- You're using user-less devices, such as kiosk. User-less devices should be enrolled in Intune.
+---
 
 When you create the enrollment profile, you're asked to to choose **User enrollment**, **Device enrollment** or **Determine based on user choice**.
 
@@ -350,15 +364,23 @@ Your users must do the following. For the specific user experience, see [enroll 
 
 Previously called Apple Device Enrollment Program (DEP). Use Apple Business Manager (ABM) or Apple School Manager (ASM) to enroll a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools.
 
-Use this enrollment option when:
+Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). You create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
 
-- You need new devices that are owned by the organization or school.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
-- You want supervised mode, which includes deploying software updates, restricting features, allowing and blocking apps, and more.
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You want supervised mode, which includes deploying software updates, restricting features, allowing and blocking apps, and more. | ✔️ |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
+| You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using Apple Configurator. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
-Don't use this enrollment option when:
-
-- Your devices are personal or BYOD.
+---
 
 For more specific information on this enrollment type, see:
 
@@ -417,17 +439,24 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
 ### Apple Configurator enrollment
 
-Enrolls iOS/iPadOS devices by physically connecting these devices to the USB port on a Mac computer. Use this enrollment option when:
+Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
 
-- You need a wired connection, or are having a network issue.
-- Your devices are owned by the organization or school.
-- You're enrolling a few devices.
-- A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM).
-- Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements. The idea of *not* using these portals is to give administrators less control.
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You need a wired connection, or are having a network issue. | ✔️ |
+| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
+| A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using Automatic Device Enrollment. |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new and existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using MAM-WE, or User and Device enrollment. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
-Don't use this enrollment option when:
-
-- You use the device enrollment manager account. Apple Configurator can't use the device enrollment manager account.
+---
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
@@ -464,24 +493,29 @@ For more information on this enrollment option, and its prerequisites, see [Appl
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling macOS devices:
 
-Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. 
-
-- **Device enrollment**: Use for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. This option uses the Company Portal app version in VPP. Create an application configuration profile to configure the Company Portal app, and then push the app and its configuration to macOS devices.
-- **Automated device enrollment (ADE)**: Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). You create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
-- **Apple Configurator**: Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
+- [Device enrollment](#device-enrollment)
+- [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised-1)
+- [Apple Configurator](#apple-configurator-enrollment-1)
 
 This section provides recommendations on the macOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll macOS devices](../enrollment/macos-enroll.md).
 
 ### Device enrollment
 
-Use this enrollment option when:
+Use for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. ??This option uses the Company Portal app version in VPP.?? Create an application configuration profile to configure the Company Portal app, and then push the app and its configuration to macOS devices.
 
-- Your devices are personal or BYOD.
-- You need to enroll a small number of devices or a large number of devices (bulk enrollment).
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| Devices are personal or BYOD. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| You have new and existing devices. | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are managed by another MDM provider. | ✔️ |
+| You use the device enrollment manager (DEM) account. | ✔️ ?? If Co Portal app is from VPP, can't use DEM account. Need to confirm if VPP version is used. https://docs.microsoft.com/en-us/mem/intune/apps/apps-company-portal-macos, doesn't mention VPP. ??|
+| Devices are owned by the organization or school. | ❌ <br/><br/> Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
-Don't use this enrollment option when:
-
-- Not recommended for devices owned by the organization.
+---
 
 #### Administrator tasks: Device enrollment
 
@@ -519,25 +553,34 @@ These tasks depend on how you, the administrator, tell users to install the Comp
 
 Previously called Apple Device Enrollment Program (DEP). Use Apple Business Manager (ABM) or Apple School Manager (ASM) to enroll a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools.
 
+Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). You create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
+
 On macOS devices, ADE is the same as iOS/iPadOS devices. Rather than duplicate the content here, see the [iOS/iPad section](#automated-device-enrollment-ade-supervised) in this article.
 
 For more specific information on this enrollment type, see [Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md).
 
 ### Apple Configurator enrollment
 
-Enrolls iOS/iPadOS devices by physically connecting these devices to the USB port on a Mac computer.
+Enrolls macOS devices by physically connecting these devices to the USB port on a Mac computer.
 
-Use this enrollment option when:
+Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
 
-- You need a wired connection, or are having a network issue.
-- Your devices are owned by the organization or school.
-- You're enrolling a few devices.
-- A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM).
-- Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements. The idea of not using these portals is to give administrators less control.
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You need a wired connection, or are having a network issue. | ✔️ |
+| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
+| A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using Automatic Device Enrollment. |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new and existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using Device enrollment. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use Direct Enrollment to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
-Don't use this enrollment option when:
-
-- You use the device enrollment manager account. Apple Configurator can't use the device enrollment manager account.
+---
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md) and [Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
 
@@ -618,21 +661,19 @@ Administrators get the Company Portal app from their VPP.
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling Windows devices:
 
-- **Windows 10 Automatic enrollment**: Use for personal/BYOD and organization-owned devices running Windows 10 and newer. This option requires Azure AD Premium. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile with your environment settings. When users sign in with their work or school account, they're automatically enrolled.
-
-  You can also use this enrollment method to automatically bulk enroll devices with the Windows Configuration Designer app.
-
-- **User enrollment**: Use for personal/BYOD and organization-owned devices running all supported Windows versions, including Windows 10 and newer. This option doesn't require Azure AD Premium. Users open the account settings on the device, and sign in with their work or school account. They're prompted for specific information that you must give them, including the Intune server name or CNAME record (`EnterpriseEnrollment.contoso.com`).
-
-- **Windows Autopilot**: Use on organization-owned devices running Windows 10 and newer. Windows Autopilot uses the Windows 10 OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic Enrollment, and uses the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile that joins the device to Azure AD. When users sign in with their work or school account, they're automatically enrolled.
-
+- [Windows 10 Automatic enrollment](#windows-10-automatic-enrollment)
+- [User enrollment](#user-enrollment)
+- [Windows Autopilot](#windows-autopilot)
 - **Group policy**: https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy
-
 - **Co-management**: 
 
 This section provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Windows devices](../enrollment/windows-enrollment-methods.md).
 
 ### Windows 10 Automatic enrollment
+
+Use for personal/BYOD and organization-owned devices running Windows 10 and newer. This option requires Azure AD Premium. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile with your environment settings. When users sign in with their work or school account, they're automatically enrolled.
+
+You can also use this enrollment method to automatically bulk enroll devices with the Windows Configuration Designer app.
 
 Use this enrollment option when:
 
@@ -667,6 +708,8 @@ Don't use this option when:
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ### User enrollment
+
+Use for personal/BYOD and organization-owned devices running all supported Windows versions, including Windows 10 and newer. This option doesn't require Azure AD Premium. Users open the account settings on the device, and sign in with their work or school account. They're prompted for specific information that you must give them, including the Intune server name or CNAME record (`EnterpriseEnrollment.contoso.com`).
 
 Use this enrollment option when:
 
@@ -706,6 +749,8 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 ### Windows Autopilot
 
+Use on organization-owned devices running Windows 10 and newer. Windows Autopilot uses the Windows 10 OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic Enrollment, and uses the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile that joins the device to Azure AD. When users sign in with their work or school account, they're automatically enrolled.
+
 Use this enrollment option when:
 
 - You have new or existing devices.
@@ -722,20 +767,20 @@ Don't use this option when:
 
 For more information on Windows Autopilot, see:  
 
-- [Windows Autopilot overview](https://docs.microsoft.com/mem/autopilot/windows-autopilot)
+- [Windows Autopilot overview](/mem/autopilot/windows-autopilot)
 - [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md)
 
 #### Administrator tasks: Windows Autopilot
 
-- Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](https://docs.microsoft.com/mem/autopilot/windows-autopilot-requirements).
+- Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](/mem/autopilot/windows-autopilot-requirements).
 - For 100% cloud devices, you'll:
   - Work with the OEM, reseller, or distributor to register the devices with the [Windows Autopilot deployment service](https://aka.ms/windowsautopilot).
-  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the devices, and create an enrollment profile that joins the devices to Azure AD. The profile also configures the out-of-box deployment user experience, including [user driven](https://docs.microsoft.com/mem/autopilot/user-driven), [white glove](https://docs.microsoft.com/mem/autopilot/white-glove), and more. For more specific information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/mem/autopilot/enrollment-autopilot).
-  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a profile that configures startup behaviors, such as disabling the local administrator, and skipping the EULA. For more specific information, see [Configure Autopilot profiles](https://docs.microsoft.com/mem/autopilot/profiles).
+  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the devices, and create an enrollment profile that joins the devices to Azure AD. The profile also configures the out-of-box deployment user experience, including [user driven](/mem/autopilot/user-driven), [white glove](/mem/autopilot/white-glove), and more. For more specific information, see [Enroll Windows devices in Intune by using Windows Autopilot](/mem/autopilot/enrollment-autopilot).
+  - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a profile that configures startup behaviors, such as disabling the local administrator, and skipping the EULA. For more specific information, see [Configure Autopilot profiles](/mem/autopilot/profiles).
 
 - For hybrid Azure AD joined devices, you'll register the devices, and create profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
 
-  For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](https://docs.microsoft.com/mem/autopilot/windows-autopilot-hybrid).
+  For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid).
 
 #### End user tasks: Windows Autopilot
 
