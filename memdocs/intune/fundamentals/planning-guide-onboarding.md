@@ -41,7 +41,7 @@ The main Intune standalone requirements are:
 
 - Enterprise Mobility + Security (EMS)/Intune subscription
 
-- Office 365 subscription (for Office apps and app-protection-policy managed apps)
+- Microsoft 365 subscription (for Office apps and app-protection-policy managed apps)
 
 - Apple APNs Certificate (to enable iOS/iPadOS device platform management)
 
@@ -64,11 +64,11 @@ As indicated in the Intune requirements section above, you need an EMS or Intune
 
 - Learn more about [how to buy Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### Task 2: Add Office 365 subscription
+### Task 2: Add Microsoft 365 subscription
 
-This step is optional. You need an Office 365 subscription if you plan to use Exchange Online and manage Office mobile apps with app protection policies. If your organization does not have an Office 365 subscription, contact Microsoft or your Microsoft account team regarding your interest in purchasing Office 365.
+This step is optional. You need a Microsoft 365 subscription if you plan to use Exchange Online and manage Office mobile apps with app protection policies. If your organization does not have a Microsoft 365 subscription, contact Microsoft or your Microsoft account team regarding your interest in purchasing Microsoft 365.
 
-- Learn more about [how to buy Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
+- Learn more about [how to buy Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
 ### Task 3: Add users groups in Azure AD
 
@@ -78,9 +78,9 @@ You may need to add users or security groups in Active Directory or Azure Active
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### Task 4: Assign Intune and Office 365 user licenses
+### Task 4: Assign Intune and Microsoft 365 user licenses
 
-All users you target for EMS/Intune and Office 365 rollout need to have a license assigned to them. You can assign EMS/Intune and Office 365 licenses in the Microsoft 365 admin center.
+All users you target for EMS/Intune and Microsoft 365 rollout need to have a license assigned to them. You can assign EMS/Intune and Microsoft 365 licenses in the Microsoft 365 admin center.
 
 - Learn more about [how to assign Intune licenses](licenses-assign.md).
 

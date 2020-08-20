@@ -56,7 +56,7 @@ With Intune, you can manage multiple devices per person, and the different platf
 **[Common scenarios](common-scenarios.md)** is a great resource to see how Intune answers common questions when working with mobile devices. You'll find scenarios about:  
 
 - Protecting email with on-premises Exchange
-- Accessing Office 365 safely and securely
+- Accessing Microsoft 365 safely and securely
 - Using personal devices to access organizational resources
 
 For more information about Intune, see [What is Intune](what-is-intune.md).

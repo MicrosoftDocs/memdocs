@@ -54,7 +54,7 @@ When you use a newly created tenant for Intune, it's possible that *Help and Sup
 
 The error details include a *Session ID*, *Extension* details, and more.
 
-This problem occurs when you have not authenticated your new tenant account through either the **M365 Admin Center** at https://admin.microsoft.com, or the **Office 365  portal** at https://portal.office.com. To resolve this problem, select the link for *M365 Admin Center* in the message, or visit https://portal.office.com, and sign in. Following authentication at either site, *Help and Support* for Intune becomes accessible.
+This problem occurs when you have not authenticated your new tenant account through either the **Microsoft 365 Admin Center** at https://admin.microsoft.com, or the **Office 365 portal** at https://portal.office.com. To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit https://portal.office.com, and sign in. Following authentication at either site, *Help and Support* for Intune becomes accessible.
 
 **Access Help and Support**:
 

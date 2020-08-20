@@ -53,7 +53,7 @@ The following tables list the ports and services that the Intune client accesses
 
 ## US Government customer designated endpoints:
 - Azure portal: https:\//portal.azure.us/ 
-- Office 365: https:\//portal.office365.us/ 
+- Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
 
