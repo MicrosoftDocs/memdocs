@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -130,7 +130,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 1. Create a v2 Certificate Template (with Windows 2003 compatibility) for use as the SCEP certificate template. You can:
 
    - Use the *Certificate Templates* snap-in to create a new custom template.
-   - Copy an existing template (like the User template) and then update the copy to use as the NDES template.
+   - Copy an existing template (like the Web Server template) and then update the copy to use as the NDES template.
 
 2. Configure the following settings on the specified tabs of the template:
 
@@ -375,7 +375,7 @@ The Microsoft Intune Certificate Connector installs on the server that runs your
 
    1. Confirm that .NET 4.5 Framework is installed, as it's required by the Intune Certificate Connector. The .NET 4.5 Framework is automatically included with Windows Server 2012 R2 and newer versions.
 
-   2. Run the installer (**NDESConnectorSetup.exe**). The installer also installs the policy module for NDES and the IIS Certificate Registration Point (CRP) Web Service. The CRP Web Service, *CertificateRegistrationSvc*, runs as an application in IIS.
+   2. Use an account with admin permissions to the server to run the installer (**NDESConnectorSetup.exe**). The installer also installs the policy module for NDES and the IIS Certificate Registration Point (CRP) Web Service. The CRP Web Service, *CertificateRegistrationSvc*, runs as an application in IIS.
 
       When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
 
