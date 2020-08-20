@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -377,7 +377,7 @@ This feature applies to:
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
-  If you're using the Microsoft Azure AD SSO app extension type, these apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in. The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library. The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
+  If you're using the Microsoft Azure AD SSO app extension type, these apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in. The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL). The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
 
   If you're using the Kerberos SSO app extension type, these apps have access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they’re authorized to access.
 
