@@ -127,7 +127,7 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
+| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
