@@ -58,7 +58,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
-## Week of August 24, 2020
+## Week of August 24, 2020 (2008 Service release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
