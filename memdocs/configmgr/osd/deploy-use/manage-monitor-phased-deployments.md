@@ -137,7 +137,6 @@ Use the following Windows PowerShell cmdlets to manage phased deployments:
 
 - [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
 - [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-
 - [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
 - [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
 
@@ -160,12 +159,11 @@ Use the following Windows PowerShell cmdlets to manage phased deployments:
 
 ### Modify existing phased deployments
 
-- [Set-CMApplicationPhasedDeployment](/powershell/sccm-ps/configurationmanager/set-cmapplicationphaseddeployment?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhase](/powershell/sccm-ps/configurationmanager/set-cmsoftwareupdatephase?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/sccm-ps/configurationmanager/set-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Set-CMTaskSequencePhase](/powershell/sccm-ps/configurationmanager/set-cmtasksequencephase?view=sccm-ps)
-- [Set-CMTaskSequencePhasedDeployment](/powershell/sccm-ps/configurationmanager/set-cmtasksequencephaseddeployment?view=sccm-ps)
-
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment?view=sccm-ps)
+- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase?view=sccm-ps)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment?view=sccm-ps)
+- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase?view=sccm-ps)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment?view=sccm-ps)
 - [Remove-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/remove-cmapplicationphaseddeployment?view=sccm-ps)
 - [Remove-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/remove-cmsoftwareupdatephaseddeployment?view=sccm-ps)
 - [Remove-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/remove-cmtasksequencephaseddeployment?view=sccm-ps)
