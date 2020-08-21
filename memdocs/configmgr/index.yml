@@ -203,12 +203,12 @@ additionalContent:
         url: https://aka.ms/cmcbsupport
       - title: System Center 2012 R2 Configuration Manager
         summary: Documentation for the previous version of Configuration Manager
-        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+        url: /previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
    - title: Other content
      items:
         - title: Develop
           links:
-            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview?view=sccm-ps
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)

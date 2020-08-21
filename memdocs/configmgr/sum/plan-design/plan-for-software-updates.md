@@ -217,7 +217,7 @@ This section provides information about the steps to take to successfully plan a
 
 Install the software update point role on a site system that meets the minimum requirements for WSUS and the supported configurations for Configuration Manager site systems.  
 
--   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -232,7 +232,7 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
 
 -   Add the **NT AUTHORITY\SYSTEM** account as a user for the WSUS database (SUSDB). Configure a minimum of the webService database role membership.  
   
-For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](software-updates-best-practices.md#bkmk_shared-susdb).  
 

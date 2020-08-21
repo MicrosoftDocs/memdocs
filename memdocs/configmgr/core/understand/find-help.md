@@ -34,7 +34,7 @@ For help with product accessibility, see [Accessibility features](accessibility-
 
 ##  <a name="bkmk_Info"></a> Product documentation  
 
-To access the most current product documentation, start at the [library index](https://docs.microsoft.com/sccm/).  
+To access the most current product documentation, start at the [library index](/sccm/).  
 
 <a name="BKMK_SearchTips"></a>  
 

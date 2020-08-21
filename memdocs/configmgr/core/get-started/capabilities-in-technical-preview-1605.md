@@ -164,8 +164,8 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 ##  <a name="BKMK_VPP"></a> Enterprise Data Protection (EDP)  
  You can create configuration items that let you deploy your enterprise data protection (EDP) policies, including letting you choose your protected apps, your EDP-protection level, and how to find enterprise data on the network. For more information about EDP, see the following topics:  
 
-- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
 ##  <a name="BKMK_End"></a> End users can install apps from the Company Portal  
@@ -459,4 +459,4 @@ In this technical preview, if the Company Portal is open for more than 15 minute
 
      Click **Next**.  
 
-4. Review the results of the file import. Previously imported IMEI or serial numbers will have their details updated with new details.  Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.  
+4. Review the results of the file import. Previously imported IMEI or serial numbers will have their details updated with new details.  Click **Next** to continue or **Back** to preserve updated details, and then complete the wizard.

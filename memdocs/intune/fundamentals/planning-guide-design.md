@@ -300,8 +300,8 @@ Here's an example how you can document the certificates during the design:
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |   
 |:---:|:---:|:---:|:---:|
-| Root CA | Corporate Root CA | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD  |                                                           
-| SCEP | User Certificate | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD |                                                           
+| Root CA | Corporate Root CA | Android, iOS/iPadOS | Corporate, BYOD  |                                                           
+| SCEP | User Certificate | Android, iOS/iPadOS | Corporate, BYOD |                                                           
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your certificate profile needs.

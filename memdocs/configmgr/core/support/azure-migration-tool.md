@@ -65,7 +65,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+For more information about permissions and assigning roles, see [Manage access to Azure resources using RBAC](/azure/role-based-access-control/role-assignments-portal).
 
 ## Run the tool
 
@@ -102,15 +102,15 @@ For more information about permissions and assigning roles, see [Manage access t
     |**Subnet**|Select the subnet to use. If you need to create a new subnet, use the [Azure portal](https://portal.azure.com).|
     |**Machine name**|Enter the name of the passive site server VM in Azure. It's the same name shown in the [Azure portal](https://portal.azure.com).|
     |**Local admin username**|Enter the name of the local administrative user that the Azure VM creates before it joins the domain.|
-    |**Local admin password**|The password of the local administrative user. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
+    |**Local admin password**|The password of the local administrative user. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain FQDN**|The fully qualified domain name for the Active Directory domain to join. By default, the tool gets this value from your current machine.|
     |**Domain username**|The name of the domain user allowed to join the domain. By default, the tool uses the name of the currently signed in user.|
-    |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
+    |**Domain password**|The password of the domain user to join the domain. The tool verifies it after you select **Start**. To protect the password during Azure deployment, store the password as a secret in [Azure Key Vault](/azure/key-vault/key-vault-overview). Then, use the reference here. If needed, create a new one from the [Azure portal](https://portal.azure.com).|
     |**Domain DNS IP**|Used for joining the domain. By default, the tool uses the current DNS from your current machine.|
     |**Type**|Read only. It shows *Passive Site Server* as the type.|
 
     > [!IMPORTANT]
-    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > By default the virtual machines are set to **No** for **Use existing Windows Server license**. If you want to utilize your on-premises Windows Server licenses with Software Assurance, configure this setting in the [Azure portal](https://portal.azure.com) after the virtual machines are provisioned. For more information, see [Azure Hybrid Benefit for Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. To start provisioning the Azure VM, select **Start**. To monitor the deployment status, switch to the **Deployments in Azure** tab in the tool. To get the latest status, select **Refresh deployment status**.
 

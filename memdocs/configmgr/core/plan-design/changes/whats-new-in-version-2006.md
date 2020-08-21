@@ -2,7 +2,7 @@
 title: What's new in version 2006
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2006 of Configuration Manager current branch.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -22,11 +22,9 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
 > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
@@ -86,6 +84,14 @@ For more information on Configuration Manager's support for Windows Virtual Desk
 Intranet clients can now access a CMG software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
+
+### Use the Company Portal app on co-managed devices
+
+<!--CMADO-3601237,INADO-4297660-->
+
+The Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+
+For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 
 ### Use Microsoft Azure China 21Vianet for co-management
 <!--7133238-->
@@ -319,7 +325,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2006 release notes](/powershell/sccm/2006-release-notes?view=sccm-ps).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

@@ -103,7 +103,7 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: [WqlConnectionManager](../../understand/managed-sms-provider-fundamentals-in-configuration-manager.md#wqlconnectionmanager)<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
+|`connection`|-   Managed: [WqlConnectionManager](../../understand/managed-sms-provider-fundamentals-in-configuration-manager.md#wqlconnectionmanager)<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../../understand/sms-provider-fundamentals.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|A valid Configuration Manager site code.|  
 
 ## Compiling the Code  
@@ -134,4 +134,4 @@ public void ShowSiteTallyIntervals(WqlConnectionManager connection, string siteC
 ## See Also  
  [About status messages](about-configuration-manager-status-messages.md)
  [About Configuration Manager Tally Intervals](../../../../develop/core/servers/manage/about-configuration-manager-tally-intervals.md)   
- [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)   
+ [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)
