@@ -349,7 +349,7 @@ For more information, see [Overview of update channels for Office 365 ProPlus](h
 
 You can take the following actions on the dashboard:
 - At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
-- On the upper-right side of the dashboard, click **Microsoft 365 Installer** to start the Microsoft 365 Client Installation Wizard to deploy Microsoft 365 apps to clients. For details, see [Deploy Microsoft 365 apps to clients](#deploy-office-365-apps-to-clients).
+- On the upper-right side of the dashboard, click **Microsoft 365 Installer** to start the Microsoft 365 Client Installation Wizard to deploy Microsoft 365 apps to clients. For details, see [Deploy Microsoft 365 apps to clients](#deploy-microsoft-365-apps-to-clients).
 - On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Microsoft 365 apps, select **Microsoft 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](../clients/deploy/about-client-settings.md).
 
