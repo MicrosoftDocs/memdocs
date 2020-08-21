@@ -63,7 +63,7 @@ When Microsoft publishes a new Microsoft 365 desktop client update to Windows Se
 
 4. You can verify compliance for Microsoft 365 updates by using in-console monitoring or reports.  
 
-   For detailed steps, see [Manage Microsoft 365 client updates with Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   For detailed steps, see [Manage Office 365 client updates with Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Support for SQL Server AlwaysOn for highly available databases  
  Configuration Manager now supports using a SQL Server AlwaysOn availability groups to host the site database.  When you install a new site, you can direct setup to use the availability group instead of a normal instance of SQL Server.  
