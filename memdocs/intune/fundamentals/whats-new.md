@@ -60,6 +60,11 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- ########################## -->
 ## Week of August 17, 2020
 
+### Intune apps
+
+#### Custom brand image now displayed in the Windows Company Portal profile page<!-- 4280187 -->
+As a Microsoft Intune administrator, you can upload a custom brand image to Intune which will be displayed as a background image on the user's profile page in the Windows Company Portal app. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md#branding).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
@@ -76,6 +81,7 @@ The following third-party MDM providers are supported with this release, as a pu
 
 - VMWare Workspace ONE UEM (previously known as AirWatch)
 
+*This update is rolling out to customers globally. You should see this capability within the next week.*
 
 <!-- ########################## -->
 ## Week of August 10, 2020
