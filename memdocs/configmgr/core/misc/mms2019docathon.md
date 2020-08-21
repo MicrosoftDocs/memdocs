@@ -48,7 +48,7 @@ Create a [GitHub account](https://github.com/join)
 
 - Microsoft employees have a few more required one-time steps, and a slightly different contribution process  
 
-For more information, see [GitHub account setup](https://docs.microsoft.com/contribute/get-started-setup-github) in the docs.microsoft.com Contributor Guide.
+For more information, see [GitHub account setup](/contribute/get-started-setup-github) in the docs.microsoft.com Contributor Guide.
 
 ## Scope
 
@@ -65,7 +65,7 @@ You're also welcome and encouraged to make changes to other docs.microsoft.com c
 Read info on [how to file issues](../understand/use-docs.md#bkmk_docfeedback) and [how to contribute](../understand/use-docs.md#bkmk_contribute). Most basic changes can be done through the GitHub browser experience.  
 
 > [!Note]  
-> If you're interested in the more complex workflow with git and VSCode, see [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools). And/or ask Aaron/Erik for help. The following actions are some of the reasons why to use the more complex workflow:
+> If you're interested in the more complex workflow with git and VSCode, see [Install content authoring tools](/contribute/get-started-setup-tools). And/or ask Aaron/Erik for help. The following actions are some of the reasons why to use the more complex workflow:
 >
 > - Create a new article
 > - Add images
@@ -131,13 +131,13 @@ The following awards are calculated by the number of legitimate contributions to
 
 - [Microsoft Style](https://aka.ms/MicrosoftStyle)
 
-    - [Quick start](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Quick start](/contribute/style-quick-start)
 
-    - [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice)
 
-- [Contributor Guide](https://docs.microsoft.com/contribute)
+- [Contributor Guide](/contribute)
 
-- [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference)
+- [How to use Markdown for writing Docs](/contribute/markdown-reference)
 
 ## Official rules
 
@@ -164,7 +164,7 @@ OFFICIAL RULES
 
 5. HOW TO ENTER
 
-    To create an entry, submit edits to articles in the following GitHub repositories: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. For more information on the submission process, see [How to contribute](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    To create an entry, submit edits to articles in the following GitHub repositories: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. For more information on the submission process, see [How to contribute](/sccm/core/understand/use-docs#bkmk_contribute).
 
     To submit an entry, submit a pull request on GitHub.
 

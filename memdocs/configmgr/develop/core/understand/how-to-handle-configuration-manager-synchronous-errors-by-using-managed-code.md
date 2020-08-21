@@ -13,9 +13,9 @@ manager: dougeby
 
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
-To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) exception in the same catch block.  
+To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exception in the same catch block.  
 
- If the exception that is caught in an SMS_Exception is an [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions, you will need to use the System.Management namespace [ManagementException](https://docs.microsoft.com/dotnet/api/system.management.managementexception) object to access them.  
+ If the exception that is caught in an SMS_Exception is an [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions, you will need to use the System.Management namespace [ManagementException](/dotnet/api/system.management.managementexception) object to access them.  
 
 > [!NOTE]
 >  For clarity, most examples in this documentation simply re-throw exceptions. You can replace them with the following example if you want more informative exception information.  
@@ -24,7 +24,7 @@ To handle a Configuration Manager error that is raised in a synchronous query, y
 
 1.  Write code to access the SMS Provider.  
 
-2.  Use the following example code to catch the [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx) and [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) exceptions.  
+2.  Use the following example code to catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) and [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exceptions.  
 
 ## Example  
  The following C# example function attempts to open a nonexistent `SMS_Package` package. In the exception handler, the code determines what type of error has been raised and displays its information.  

@@ -21,7 +21,7 @@ ms.author: aaroncz
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 > [!NOTE]
-> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](https://docs.microsoft.com/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for Configuration Manager requires some core components to support the installation of Configuration Manager.    
@@ -30,7 +30,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
      You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
+     Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
@@ -42,7 +42,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
     -   **SQL_Latin1_General_CP1_CI_AS** as the **SQL Collation** class.  
 
-    -   **Windows authentication**, [rather than SQL authentication](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15), is required.  
+    -   **Windows authentication**, [rather than SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15), is required.  
 
     -   A dedicated **SQL Server instance** is required.  
 
@@ -58,11 +58,11 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The domain controller uses Windows Server 2008 R2** with Active Directory Domain Services installed. The domain controller also functions as the host for the DHCP and the DNS servers for use with a fully qualified domain name.  
 
-     For more information, see [overview of Active Directory Domain Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
+     For more information, see [overview of Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   **Hyper-V is used with a few virtual machines** to verify that the management steps taken in these exercises are functioning as expected. A minimum of three virtual machines is recommended, with Windows 10 installed.  
 
-     For more information, see [overview of Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
+     For more information, see [overview of Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **Administrator permissions** will be required for all of these components.  
 
@@ -92,7 +92,7 @@ Once you have installed all of these components, there are additional steps you 
 The next steps required to enable Configuration Manager clients to query Active Directory Domain Services to locate site resources are listed over the next procedures.  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
- Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+ Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Ensure that you are logged on as an account that has **Create All Child Objects** permission on the **System** Container in Active Directory Domain Services.  
 
@@ -136,7 +136,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 #### To extend the Active Directory schema using extadsch.exe:  
 
-1.  Create a backup of the schema master domain controller's system state. For more information about backing up master domain controller, see [Windows Server Backup](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
+1.  Create a backup of the schema master domain controller's system state. For more information about backing up master domain controller, see [Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Navigate to **\SMSSETUP\BIN\X64** in the installation media.  
 
@@ -155,7 +155,7 @@ The next steps required to enable Configuration Manager clients to query Active 
 
  **Install .NET and activate Windows Communication Foundation**  
 
- You will need to install two .NET Frameworks: first, .NET 3.5.1 and then .NET 4.5.2+. You will also need to activate Windows Communication Foundation (WCF). WCF is designed to offer a manageable approach to distributed computing, broad interoperability, and direct support for service orientation, and simplifies development of connected applications through a service-oriented programming model. For more information, see [What Is Windows Communication Foundation?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
+ You will need to install two .NET Frameworks: first, .NET 3.5.1 and then .NET 4.5.2+. You will also need to activate Windows Communication Foundation (WCF). WCF is designed to offer a manageable approach to distributed computing, broad interoperability, and direct support for service orientation, and simplifies development of connected applications through a service-oriented programming model. For more information, see [What Is Windows Communication Foundation?](/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### To install .NET and activate Windows Communication Foundation:  
 
@@ -197,13 +197,13 @@ The next steps required to enable Configuration Manager clients to query Active 
 
 **Enable BITS, IIS, and RDC**  
 
-The [Background Intelligent Transfer Service (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) is used for applications that need to transfer files asynchronously between a client and a server. By metering the flow of the transfers in the foreground and background, BITS preserves the responsiveness of other network applications. It will also automatically resume file transfers if a transfer session is interrupted.  
+The [Background Intelligent Transfer Service (BITS)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) is used for applications that need to transfer files asynchronously between a client and a server. By metering the flow of the transfers in the foreground and background, BITS preserves the responsiveness of other network applications. It will also automatically resume file transfers if a transfer session is interrupted.  
 
 You will install BITS for this lab, as this site server will also be used as a management point.  
 
 Internet Information Services (IIS) is a flexible, scalable web server that can be used to host anything on the web. It is used by Configuration Manager for a number of site system roles. For additional information on IIS, review [Websites for site system servers](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
-[Remote Differential Compression (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) is a set of APIs that applications can use to determine if any changes have been made to a set of files. RDC enables the application to replicate only the changed portions of a file, keeping network traffic to a minimum.  
+[Remote Differential Compression (RDC)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) is a set of APIs that applications can use to determine if any changes have been made to a set of files. RDC enables the application to replicate only the changed portions of a file, keeping network traffic to a minimum.  
 
 #### To enable BITS, IIS, and RDC site server roles:  
 

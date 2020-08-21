@@ -23,7 +23,7 @@ Configuration Manager supports different kinds of certificate stores for differe
 Use Configuration Manager to import certificate credentials and then provision PFX files to devices. You can use these files to generate user-specific certificates to support encrypted data exchange.
 
 > [!TIP]  
-> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
+> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
 
 ## Create a profile
 
@@ -65,9 +65,9 @@ Assign the target users as primary users on the Windows 10 devices where you nee
 
 To import a PFX certificate, use the following Configuration Manager PowerShell cmdlets to provision a Create PFX script:
 
-- [Get-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### Example script
 

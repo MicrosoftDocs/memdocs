@@ -121,7 +121,7 @@ Data type: `String`
 
 Access type: Read/write
 
-Specify the default keyboard layout. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Specify the default keyboard layout. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ### `Name`
 
@@ -206,7 +206,7 @@ Data type: `String`
 
 Access type: Read/write
 
-Specify system locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Specify system locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ### `SupportedEnvironment`
 
@@ -246,7 +246,7 @@ Data type: `String`
 
 Access type: Read/write
 
-Specify the Windows UI language. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Specify the Windows UI language. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ### `UILanguageFallback`
 
@@ -254,7 +254,7 @@ Data type: `String`
 
 Access type: Read/write
 
-Specify the fallback language for the Windows UI. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Specify the fallback language for the Windows UI. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ### `UserLocale`
 
@@ -262,7 +262,7 @@ Data type: `String`
 
 Access type: Read/write
 
-Specify the user locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Specify the user locale. For more information on this Windows setup answer file value, see [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 ## Remarks
 

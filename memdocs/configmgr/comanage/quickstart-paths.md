@@ -31,10 +31,10 @@ Taking this path can get your existing Configuration Manager-managed devices qui
 
 Here's what you need to set it up:
 - Hybrid Azure AD
-    - One of the following [Azure AD hybrid identity options](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin):  
-       - [Password hash synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Pass-through authentication](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) with [Seamless Single Sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Federated SSO (with Active Directory Federation Services (AD FS))](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - One of the following [Azure AD hybrid identity options](/azure/active-directory/hybrid/plan-connect-user-signin):  
+       - [Password hash synchronization](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) with [Seamless Single Sign-on (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Pass-through authentication](/azure/active-directory/hybrid/how-to-connect-pta) with [Seamless Single Sign-on (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Federated SSO (with Active Directory Federation Services (AD FS))](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium license
     - Configure hybrid Azure AD-join (choose one option):
@@ -58,4 +58,3 @@ Here's what you need to set it up:
 4. [Use Intune to deploy the Configuration Manager client](how-to-prepare-Win10.md)  
 
 For a tutorial on this path, see [Tutorial: Enable co-management for new internet-based devices](tutorial-co-manage-new-devices.md).
-

@@ -23,7 +23,9 @@ ms.assetid:
 ms.reviewer: laarrizz
 ms.suite: ems
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: 
+   - intune-azure
+   - contperfq1
 ms.collection: M365-identity-device-management
 ---
 
