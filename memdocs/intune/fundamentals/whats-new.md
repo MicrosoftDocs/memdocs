@@ -76,6 +76,7 @@ The following third-party MDM providers are supported with this release, as a pu
 
 - VMWare Workspace ONE UEM (previously known as AirWatch)
 
+*This update is rolling out to customers globally. You should see this capability within the next week.*
 
 <!-- ########################## -->
 ## Week of August 10, 2020
