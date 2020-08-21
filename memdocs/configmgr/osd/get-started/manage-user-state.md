@@ -22,7 +22,7 @@ You can use Configuration Manager task sequences to capture and restore the user
 
 - Update deployments where you want to capture and restore the user state on the same computer.  
 
-Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager uses the User State Migration Tool (USMT) 10.0 to manage the migration of user state data from a source computer to a destination computer after the operating system installation completes. For more information about common migration scenarios for the USMT 10.0, see  [Common Migration Scenarios](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 Use the following sections to help you capture and restore user data.
 
@@ -124,4 +124,4 @@ Create a computer association to define a relationship between a source computer
 
 ## <a name="BKMK_MigrationFails"></a> Restore user state data when an operating system deployment fails
 
-If the operating system deployment fails, use the USMT 10.0 LoadState feature to retrieve the user states data that was captured during the deployment process. This includes data that is stored on a state migration point or data that is saved locally on the destination computer. For more information on this USMT feature, see [LoadState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+If the operating system deployment fails, use the USMT 10.0 LoadState feature to retrieve the user states data that was captured during the deployment process. This includes data that is stored on a state migration point or data that is saved locally on the destination computer. For more information on this USMT feature, see [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).

@@ -19,7 +19,7 @@ manager: dougeby
 > [!Important]
 > This article applies to the technical preview branch for Configuration Manager. For more information see, [Configuration Manager technical preview version 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
 
-Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
+Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-samples-shared.md)]
 

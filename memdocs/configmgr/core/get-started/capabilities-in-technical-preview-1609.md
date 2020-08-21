@@ -87,7 +87,7 @@ The procedure to create and deploy a Configuration Manager application from a pa
 
 We've added many new settings you can use in your configuration items for various device platforms.
 These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager.
-If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](/mem/intune/configuration/device-profiles) and then select the settings subtopic for the platform you want.
+If you need help with any of these settings, open [Manage settings and features on your devices with Microsoft Intune policies](../../../intune/configuration/device-profiles.md) and then select the settings subtopic for the platform you want.
 
 
 ### New settings for Android devices
@@ -344,7 +344,7 @@ The dashboard displays charts for the following:
 - Office 365 client versions
 - Office 365 client languages
 - Office 365 client channels     
-For more information, see [Overview of update channels for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+For more information, see [Overview of update channels for Office 365 ProPlus](/deployoffice/overview-update-channels).
 - Automatic deployment rules that have Office 365 Client selected in the set of available products.
 
 You can take the following actions on the dashboard:

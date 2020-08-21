@@ -70,7 +70,7 @@ Data type: `INT`
 
 Qualifiers: [out]
 
-The value of this variable is a standard [Windows message box return value](https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messagebox#return-value).
+The value of this variable is a standard [Windows message box return value](/windows/win32/api/winuser/nf-winuser-messagebox#return-value).
 
 ## Return values
 
@@ -110,4 +110,4 @@ You can use a script like this in the [Run PowerShell Script](../../../../../osd
 
 - [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
 
-- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
+- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)

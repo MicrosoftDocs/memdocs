@@ -19,7 +19,7 @@ ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
-> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/intune/windows-update-for-business-configure).
 > - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), is still managed by Configuration Manager.  
 
  Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  
@@ -47,7 +47,7 @@ Use the following procedure to identify clients that use WUfB to get Windows 10 
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
-- [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows 10 updates and upgrades.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows 10 updates and upgrades.  
 
 ### To identify clients that use WUfB  
 
@@ -69,7 +69,7 @@ Beginning in Configuration Manager version 1706, you can configure deferral poli
 
 > [!NOTE]
 > Beginning in Configuration Manager version 1802, you can set deferral policies for Windows Insider. <!--507201-->  
-For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
+For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](/windows/deployment/update/waas-windows-insider-for-business).
 
 ### Prerequisites for deferral policies
 

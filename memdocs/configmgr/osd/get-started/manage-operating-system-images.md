@@ -84,7 +84,7 @@ Before you can use an OS image, add it to your Configuration Manager site.
 
 5. Complete the wizard.  
 
-For the PowerShell cmdlet equivalent of this console wizard, see [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+For the PowerShell cmdlet equivalent of this console wizard, see [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Next, distribute the OS image to distribution points.  
 
@@ -117,4 +117,4 @@ Use multicast deployments to allow more than one computer to simultaneously down
 
          If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Select **OK** to save the settings and close the image properties.  
+5. Select **OK** to save the settings and close the image properties.
