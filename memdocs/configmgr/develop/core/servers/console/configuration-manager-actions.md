@@ -14,7 +14,7 @@ manager: dougeby
 # Configuration Manager Actions
 Configuration Manager console actions are tasks or commands that are performed by making context menu or action panel selections. There are a number of standard action types such as cut, paste, and properties. You can also add your own custom actions to perform tasks such as running programs and displaying dialog boxes. You can restrict the availability of actions to such criteria as regular expressions, security permissions, and method call results.  
 
- In the Configuration Manager console, actions are defined in XML by the [ActionDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actiondescription.aspx) element.  
+ In the Configuration Manager console, actions are defined in XML by the [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)) element.  
 
 ## Standard Actions  
  A custom action can be associated with several standard actions. For example, a `ShowDialog` action can be associated with a `Properties` standard action. In this case, a property page is integrated into the properties property sheet for a selected object.  

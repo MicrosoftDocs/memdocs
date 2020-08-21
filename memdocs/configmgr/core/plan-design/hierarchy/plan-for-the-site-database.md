@@ -27,7 +27,7 @@ The site database server is a computer that runs a supported version of Microsof
 
 -  For non-SQL Availability Group usage the Database Recovery Model must be set to SIMPLE  
 
-Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Further information on SQL Recovery Modes can be found in [Recovery Models (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 The following SQL Server configurations can be used to host the site database:  
 
@@ -57,4 +57,4 @@ If you use a remote database server computer, ensure that the intervening networ
 -   You cannot use a clustered SQL Server for the site database server when the site database is co-located with the site server.  
 
 
-Typically, a site system server supports site system roles from only a single Configuration Manager site. You can, however, use different instances of SQL Server, on clustered or non-clustered servers running SQL Server, to host a database from different Configuration Manager sites. To support databases from different sites, you must configure each instance of SQL Server to use unique ports for communication.  
+Typically, a site system server supports site system roles from only a single Configuration Manager site. You can, however, use different instances of SQL Server, on clustered or non-clustered servers running SQL Server, to host a database from different Configuration Manager sites. To support databases from different sites, you must configure each instance of SQL Server to use unique ports for communication.

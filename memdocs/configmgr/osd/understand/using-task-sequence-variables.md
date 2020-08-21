@@ -162,7 +162,7 @@ Your environment has users in multiple countries/regions, so you want to query t
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    For more information on the cmdlet, see [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). For more information on the two-letter ISO language names, see [List of ISO 639-1 codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    For more information on the cmdlet, see [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture). For more information on the two-letter ISO language names, see [List of ISO 639-1 codes](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 1. For the option to **Output to task sequence variable**, specify `CurrentOSLanguage`.
 

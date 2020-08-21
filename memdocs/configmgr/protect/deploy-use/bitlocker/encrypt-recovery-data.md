@@ -198,9 +198,9 @@ If the certificate is valid, the script returns a value of `1`.
 
 For more information on these SQL commands, see the following articles:
 
-- [SQL Server and database encryption keys](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Create certificate](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Backup certificate](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Create master key](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Backup master key](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Grant certificate permissions](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server and database encryption keys](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Create certificate](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Backup certificate](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Create master key](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Backup master key](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Grant certificate permissions](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

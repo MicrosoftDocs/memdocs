@@ -104,7 +104,7 @@ If the admin revokes the approval, or the application is no longer in use, unins
 
 The admin revokes the approval of the application using the Configuration Manager console, a PowerShell script, or WMI. Even if the application was already approved, the admin can use the Deny option. Revoking the approval prevents the user from installing the application on their device. The same action also causes uninstallation of the application on the user's device if the application was previously installed.
 
-Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
+Learn more about the [Deny-CMApprovalRequest](/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
 
 ### Prerequisites to revoke app approvals
 
@@ -115,7 +115,7 @@ Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powersh
 
  You can use the `CreateApprovedRequest` API to create a pre-approved request for a device with no user required. This action allows you to install and uninstall applications in real time.  Currently this functionality is only available in the SDK. For machine-based pre-approved requests to work, you must also enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
-Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
+Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
 
 ```powershell
 New-CMApplicationDeployment -CollectionName "All Systems" -Name "Test app" -DeployAction Install -DeployPurpose Available -ApprovalRequired $true -DistributionPointName 'DistributionPoint.domain.com" -DistributeContent

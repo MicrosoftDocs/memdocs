@@ -105,7 +105,7 @@ The co-management license lets Configuration Manager customers with Software Ass
 For more information, see the following articles:
 
 - [Co-management prerequisites](../../comanage/overview.md#prerequisites)
-- [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 - [Desktop analytics prerequisites](../../desktop-analytics/overview.md#prerequisites)
 - [Tenant attach prerequisites](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)

@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Delete a Configuration Manager Object by Using Managed Code
-To delete a Configuration Manager object by using the managed SMS Provider, use the [IResultObject.Delete](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.delete.aspx) method. You can get a [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for a Configuration Manager object in numerous ways. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)  
+To delete a Configuration Manager object by using the managed SMS Provider, use the [IResultObject.Delete](/previous-versions/system-center/developer/cc146496(v=msdn.10)) method. You can get a [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object for a Configuration Manager object in numerous ways. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)  
 
 ### To delete a Configuration Manager object  
 
@@ -21,10 +21,10 @@ To delete a Configuration Manager object by using the managed SMS Provider, use 
 
 2.  Using the `WqlConnectionManager` object you obtain in step one, call  the `GetInstance` method to get the `IResultObject` object for the Configuration Manager object.  
 
-3.  Call the [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object [Delete](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.delete.aspx) method to delete the Configuration Manager object.  
+3.  Call the [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object [Delete](/previous-versions/system-center/developer/cc146496(v=msdn.10)) method to delete the Configuration Manager object.  
 
 ## Example  
- The following example deletes a package by using the supplied package identifier. This example uses the **WqlConnectionManager** class **GetInstance** method to get an [IResultObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.iresultobject.aspx) object for the Configuration Manager package and then deletes the package.  
+ The following example deletes a package by using the supplied package identifier. This example uses the **WqlConnectionManager** class **GetInstance** method to get an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object for the Configuration Manager package and then deletes the package.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -71,7 +71,7 @@ public void DeletePackage(WqlConnectionManager connection, string packageID)
  adminui.wqlqueryengine  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## See Also  
  [Objects overview](configuration-manager-objects-overview.md)
@@ -82,4 +82,4 @@ public void DeletePackage(WqlConnectionManager connection, string packageID)
  [How to Perform an Asynchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)   
  [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)   
- [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)   
+ [How to Read Lazy Properties by Using Managed Code](../../../develop/core/understand/how-to-read-lazy-properties-by-using-managed-code.md)
