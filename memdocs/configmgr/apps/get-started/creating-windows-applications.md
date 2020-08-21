@@ -123,6 +123,11 @@ You can only add a non-OS deployment task sequence as a deployment type on an ap
 
 When you add this deployment type to an app, configure its properties on the **Task Sequence** page. For more information, see [Deployment type **Task Sequence** options](../deploy-use/create-applications.md#bkmk_dt-ts).
 
+Starting in version 2006, use the following Windows PowerShell cmdlets to add and configure a task sequence deployment type:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/sccm-ps/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/sccm-ps/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
+
 ### Prerequisites for a task sequence deployment type
 
 Create a custom task sequence:
