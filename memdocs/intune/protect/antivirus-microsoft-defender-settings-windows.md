@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,6 +34,12 @@ View the Endpoint security antivirus policy settings you can configure for the M
 
 ## Cloud protection
 
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
+
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
@@ -55,9 +61,16 @@ View the Endpoint security antivirus policy settings you can configure for the M
 - **Defender cloud extended timeout in seconds**  
   CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 additional seconds to this timeout.
+  Defender Antivirus automatically blocks suspicious files for 10 seconds while it scans them in the cloud to make sure they're safe. You can add up to 50 additional seconds to this timeout.
 
 ## Microsoft Defender Antivirus Exclusions
+
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus Exclusions
+
+**Settings**:
 
 For each setting in this group, you can expand the setting, select **Add**, and then specify a value for the exclusion.
 
@@ -77,6 +90,12 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   Specify a list of files and directory paths to ignore during a scan.
 
 ## Real-time protection
+
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
 
 - **Turn on real-time protection**  
   CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
@@ -159,10 +178,16 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
 ## Remediation
 
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
+
 - **Number of days (0-90) to keep quarantined malware**  
   CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
-  Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and does not automatically remove them.
+  Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and doesn't automatically remove them.
 
 - **Submit samples consent**  
 
@@ -205,12 +230,18 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
 ## Scan
 
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
+
 - **Scan archive files**  
   CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configure Defender to scan archive files, like ZIP or CAB files.
 
-  - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable this.
+  - **Not configured** (*default*) - The setting returns to the client default, which is to scan archived files, however the user may disable setting.
 Learn more
   - **No** - File archives aren't scanned. Device users can't change this setting.
   - **Yes** - Enable scans of archive files. Device users can't change this setting.
@@ -230,7 +261,7 @@ Learn more
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up scans for full scans, however the user can turn them off.
   - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **Disable catchup quick scan**  
   CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
@@ -239,7 +270,7 @@ Learn more
 
   - **Not configured** (*default*) - The setting is returned to client default, which is to enable catch-up quick scans, however the user can turn them off.
   - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **CPU usage limit per scan**  
   CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
@@ -252,14 +283,14 @@ Learn more
   Configure Defender to scan mapped network drives.
 
   - **Not configured** (*default*) - The setting is restored to the system default, which disables scanning on mapped network drives.
-  - **No** - The setting is disabled. Device users can't change this setting.
+  - **No** - The setting is disabled. Device users can't change the setting.
   - **Yes** - Enable scans of mapped network drives. Device users can't change this setting.
 
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Select the time of day that Defender quick scans run.
-  By default, this is **Not configured**
+  By default, this setting is **Not configured**
 
 - **Scan type**  
   CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
@@ -283,6 +314,12 @@ Learn more
 
 ## Updates
 
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
+
 - **Enter how often (0-24 hours) to check for security intelligence updates**  
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
@@ -301,6 +338,12 @@ Learn more
   Specify in which order to contact source locations you've specified, to get definition updates. After definition updates have successfully downloaded from one specified source, the remaining sources in the list won't be contacted.
 
 ## User experience
+
+These settings are available in the following profiles:
+
+- Microsoft Defender Antivirus
+
+**Settings**:
 
 - **Allow user access to Microsoft Defender app**  
   CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
