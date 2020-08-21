@@ -117,8 +117,4 @@ Evaluate the performance of your solutions with health and metrics reports throu
 
 Make sure your desktop applications are compatible now, and stay compatible with Windows 10 in the future. For more information, see [Application compatibility for developers](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-<<<<<<< HEAD
 If you develop solutions for Microsoft 365 Apps for enterprise, see [Development best practices for COM, VSTO, and VBA add-ins in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
-=======
-If you develop solutions for Office 365 ProPlus, see [Development best practices for COM, VSTO, and VBA add-ins in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
->>>>>>> 0d54769211449c05e7cbe71f1e68ba8b56ec9093
