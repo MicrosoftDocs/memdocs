@@ -2,7 +2,7 @@
 title: What's new in Desktop Analytics
 titleSuffix: Configuration Manager
 description: A summary of the new features in the latest monthly release of the Desktop Analytics cloud service.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -34,6 +34,12 @@ The **Importance** configuration of an app is essential for Desktop Analytics to
 Now for any app that you deploy with Configuration Manager, Desktop Analytics automatically configures it as important by default. This behavior lets you configure the apps in your environment more quickly, to progress faster towards a production deployment.
 
 For more information, see [Assets - Apps](about-assets.md#apps).
+
+<!-- 6049643 -->
+
+### Improved processing of diagnostic data during snapshot generation
+
+Microsoft improved how they collect and process Windows diagnostic data from devices enrolled in Desktop Analytics. These improvements increase the reliability of the daily snapshot generation, and prepares for new features in development. As a result of this work, Microsoft temporarily disabled the count of **Devices launched this app in the last 30 days** in deployment plans. For more information, see [Assets - Apps](about-assets.md#usage).
 
 ## July 2020
 
