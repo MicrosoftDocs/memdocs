@@ -35,6 +35,12 @@ Now for any app that you deploy with Configuration Manager, Desktop Analytics au
 
 For more information, see [Assets - Apps](about-assets.md#apps).
 
+<!-- 6049643 -->
+
+### Improved processing of diagnostic data during snapshot generation
+
+We’ve made  under the hood improvements to how we collect and process Windows diagnostic data from devices enrolled in Desktop Analytics to increase the reliability of our daily snapshot generation and in preparation for upcoming features. As a result of this work, we've temporarily disabled the count of **[Devices launched this app in the last 30 days]**(about-assets.md#usage) from deployment plans.
+
 ## July 2020
 
 ### Windows 10, version 2004, now available in Desktop Analytics
