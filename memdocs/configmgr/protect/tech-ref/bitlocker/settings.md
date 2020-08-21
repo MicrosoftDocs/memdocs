@@ -458,4 +458,4 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 ## Next steps
 
-If you use Windows PowerShell to create these policy objects, then use the [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) cmdet. This cmdlet creates a BitLocker management policy settings object that contains all of the specified policies. To deploy the policy settings to a collection, use the [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) cmdlet.
+If you use Windows PowerShell to create these policy objects, then use the [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) cmdlet. This cmdlet creates a BitLocker management policy settings object that contains all of the specified policies. To deploy the policy settings to a collection, use the [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) cmdlet.
