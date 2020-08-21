@@ -63,7 +63,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 
-### Associated licenses revoked before deletion of Apple VPP token<!--6195322 idready wnready-->
+#### Associated licenses revoked before deletion of Apple VPP token<!--6195322 idready wnready-->
 When you delete an Apple VPP token in Microsoft Endpoint Manager, all Intune-assigned licenses associated with that token are automatically revoked before the deletion.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
