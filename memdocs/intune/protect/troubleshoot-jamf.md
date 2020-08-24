@@ -41,7 +41,7 @@ Before you start troubleshooting, collect some basic information to clarify the 
 - Review the prerequisites from the following articles, depending on how you configure Jamf Pro integration with Intune:
   - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
   - [Integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md#prerequisites)
-- All users must have Microsoft Intune and Microsoft AAD Premium P1 licenses
+- All users must have Microsoft Intune and Microsoft Azure AD Premium P1 licenses
 - You must have a user account that has Microsoft Intune Integration permissions in the Jamf Pro console.
 - You must have a user account that has Global Admin permissions in Azure.
 

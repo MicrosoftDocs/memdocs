@@ -4,7 +4,7 @@
 title: Prevent unauthorized access to company data
 titleSuffix: Microsoft Intune
 description: Prevent unauthorized access to your company data when it is shared outside the company network using Microsoft Intune. 
-keywords: Office 365 O365 Azure Information Protection data protect outside network company data 
+keywords: Microsoft 365 M365 Azure Information Protection data protect outside network company data 
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -43,7 +43,7 @@ The following action plan can be used when you meet the following requirements:
 
 ## Action plan
 
-Complete the [quick start tutorial for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/infoprotect-quick-start-tutorial).  
+Complete the [quickstart tutorial for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/infoprotect-quick-start-tutorial).  
 
 ## What to tell employees and students
 

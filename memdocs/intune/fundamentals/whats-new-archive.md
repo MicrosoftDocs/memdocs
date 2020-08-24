@@ -146,7 +146,7 @@ As we move closer to the retirement of the Intune Managed Browser, we made chang
 - Microsoft Edge
 - Unmanaged browser 
 
-When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their AAD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
+When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their Azure AD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
 
 #### Configure app notification content for organization accounts<!-- 2576686  -->
 Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app. This feature requires support from applications and may not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
@@ -1058,10 +1058,10 @@ You can access the Android Device Policy application from the Managed Home Scree
 #### iOS Company Portal updates<!-- 3902931 -->
 Your company name on iOS app management prompts will replace the current "i.manage.microsoft.com" text. For instance, users will see their company name instead of "i.manage.microsoft.com" when users attempt to install an iOS app from the Company Portal or when users allow management of the app. This will be rolled out to all customers over the next few days.
 
-#### AAD and APP on Android Enterprise devices<!-- 3574267 -->
-When onboarding fully managed Android Enterprise devices, users will now register with Azure Active Directory (AAD) during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start AAD registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
+#### Azure AD and APP on Android Enterprise devices<!-- 3574267 -->
+When onboarding fully managed Android Enterprise devices, users will now register with Azure Active Directory (Azure AD) during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start Azure AD registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
 
-In addition to the AAD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+In addition to the Azure AD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -2406,8 +2406,8 @@ Applies to: iOS
 Previously, you couldn't remove an email profile from a device *if* it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
 See [Add email settings to devices using Intune](../configuration/email-settings-configure.md) for details.
 
-#### PowerShell scripts and AAD<!-- 2309469 -->
-PowerShell scripts in Intune can be targeted to AAD device security groups.
+#### PowerShell scripts and Azure AD<!-- 2309469 -->
+PowerShell scripts in Intune can be targeted to Azure AD device security groups.
 
 #### New "Required password type" default setting for Android, Android enterprise<!-- 2649963 -->
 When you create a new compliance policy (**Intune** > **Device compliance** > **Policies** > **Create policy** > **Android** or **Android enterprise** for Platform > System Security), the default value for **Required password type** changes:
@@ -3606,7 +3606,7 @@ Each NDES connector pulls certificate requests from Intune.  If one NDES connect
 
 #### Customer subject name can use AAD_DEVICE_ID variable <!-- 1468599 -->
 
-When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the AAD device ID of the device making the certificate request.
+When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the Azure AD device ID of the device making the certificate request.
 
 #### Manage Jamf-enrolled macOS devices with Intune's device compliance engine<!-- 1592747 -->
 You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state as well as other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Azure AD, including Microsoft 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).

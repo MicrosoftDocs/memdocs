@@ -64,7 +64,7 @@ There are three ways to remove personal data from Intune management:
 
 ### Delete a user from Intune
 
-To delete an end user's personal data from Intune, an admin must [delete the user from Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from AAD (hard deleted), Intune receives the delete signal from AAD and then automatically begins purging all of that user's personal data from the Intune service. The user's information will be deleted from Intune service within 30 days of the removal action.
+To delete an end user's personal data from Intune, an admin must [delete the user from Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from Azure AD (hard deleted), Intune receives the delete signal from Azure AD and then automatically begins purging all of that user's personal data from the Intune service. The user's information will be deleted from Intune service within 30 days of the removal action.
 
 ### Reset device to factory settings
 Resetting to factory settings restores all company and personal data and settings to the original factory settings. It is useful for providing a device to the next employee. User files,user installed applications, and non-default settings are removed and this data is deleted from the Intune service within 30 days of the removal action.
@@ -77,7 +77,7 @@ The **Retire** action removes Intune provisioned data like company applications,
 
 ### Delete a tenant from Microsoft Intune
 
-If an Intune tenant customer cancels their Intune account, all tenant data is deleted within 180 days after the customer closes the Intune account. If the AAD tenant is associated with other Microsoft enterprise subscriptions (Azure, Microsoft 365), then only the Intune Customer Data is deleted. The AAD tenant resource is maintained for use by the other subscriptions. If the Intune account is the only subscription associated with the AAD tenant, then the tenant will be deleted and all resources and Customer Data will also be deleted.
+If an Intune tenant customer cancels their Intune account, all tenant data is deleted within 180 days after the customer closes the Intune account. If the Azure AD tenant is associated with other Microsoft enterprise subscriptions (Azure, Microsoft 365), then only the Intune Customer Data is deleted. The Azure AD tenant resource is maintained for use by the other subscriptions. If the Intune account is the only subscription associated with the Azure AD tenant, then the tenant will be deleted and all resources and Customer Data will also be deleted.
 
 ## Next steps
 
