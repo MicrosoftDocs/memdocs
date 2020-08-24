@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,9 +46,7 @@ This article gives an overview of the different types of profiles you can create
 
 ## Administrative templates
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs.
-
-These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group-policy, but they're 100% cloud-based.
 
 This feature supports:
 
