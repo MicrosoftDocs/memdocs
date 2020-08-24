@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,19 +59,6 @@ Be sure you have the correct role to assign profiles. For more information, see 
 
 5. Select **Review + Save**. This step doesn't assign your profile.
 6. Select **Save**. When you save, your profile is assigned. Your groups will receive your profile settings when the devices check in with the Intune service.
-
-<!-- MandiA 8.20.20: Commenting out this section, as it may not be in the fullscreen changes. Working with engineering/PM to confirm.
-
-### Evaluate how many users are targeted
-
-When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In the admin center, select **Devices** > **Configuration profiles**.
-2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
-
-If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
-
--->
 
 ## Use scope tags or applicability rules
 
