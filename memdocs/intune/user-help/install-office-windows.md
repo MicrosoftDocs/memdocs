@@ -2,7 +2,7 @@
 # required metadata
 
 title: Installing Office on your Windows 10 device | Microsoft Docs
-description:
+description: Learn about the ways you can install the Office suite on your Windows 10 device. See additional available support options for your company.
 keywords:
 author: lenewsad
 ms.author: lanewsad
