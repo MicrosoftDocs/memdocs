@@ -66,6 +66,11 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 #### Associated licenses revoked before deletion of Apple VPP token<!--6195322  -->
 When you delete an Apple VPP token in Microsoft Endpoint Manager, all Intune-assigned licenses associated with that token are automatically revoked before the deletion.
 
+#### Improvement to Update device settings page in Company Portal app for Android to shows descriptions <!-- 7414768 wnstaged -->
+In the Company Portal app on Android devices, the **Update device settings** page lists the settings that need updated to be compliant. Users expand the issue to see more information, and see the **Resolve** button.
+
+This user experience is improved. The listed settings are expanded by default to show the description, and show the **Resolve** button, when applicable. Previously, the issues were collapsed by default. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
 
