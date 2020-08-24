@@ -38,7 +38,7 @@ _Released August 2020_
 
 ### v1.0 changes
 
-The following table lists the added property to the [devices](../developer/reports-ref-devices.md#devices) entity in the Intune Data Warehouse.
+The following table lists the added property to the [devices](../developer/intune-data-warehouse-collections.md#devices) entity in the Intune Data Warehouse.
 
 |    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
