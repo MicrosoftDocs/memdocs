@@ -33,16 +33,6 @@ ms.collection: M365-identity-device-management
 
 Keep current on updates to the Intune Data Warehouse.
 
-## 2008 
-_Released August 2020_
-
-### v1.0 changes
-
-The following table lists the added property to the [devices](../developer/intune-data-warehouse-collections.md#devices) entity in the Intune Data Warehouse.
-
-|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
-|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    windowsOsEdition     |    Added    |    The OS edition of Windows devices.                                                                                                                                                                                                                                                                     |
 ## 2007 
 _Released July 2020_
 
@@ -64,6 +54,14 @@ The following table lists the added property to the [devicePropertyHistories](..
 
 ## 2004 
 _Released April 2020_
+
+### v1.0 changes
+
+The following table lists the added property to the [devices](../developer/intune-data-warehouse-collections.md#devices) entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Added    |    The OS edition of Windows devices.                                                                                                                                                                                                                                                                     |
 
 ### Beta changes
 
