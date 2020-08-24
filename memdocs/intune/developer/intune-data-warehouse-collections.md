@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -255,8 +255,9 @@ The **device** entity lists all enrolled devices under management and their corr
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| CellularTechnology         | Cellular technology of the   device.                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
+| windowsOsEdition             | The OS edition of Windows devices.                                                                                                                                                                              |
 
 
 ## deviceTypes

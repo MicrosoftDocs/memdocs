@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -33,6 +33,16 @@ ms.collection: M365-identity-device-management
 
 Keep current on updates to the Intune Data Warehouse.
 
+## 2008 
+_Released August 2020_
+
+### v1.0 changes
+
+The following table lists the added property to the [devices](../developer/reports-ref-devices.md#devices) entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Added    |    The OS edition of Windows devices.                                                                                                                                                                                                                                                                     |
 ## 2007 
 _Released July 2020_
 
