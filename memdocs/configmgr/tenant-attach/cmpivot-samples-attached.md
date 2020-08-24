@@ -21,7 +21,7 @@ manager: dougeby
 
 Run [CMPivot](cmpivot-start.md) queries from Microsoft Endpoint Manager admin center. Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
 
-Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).
+Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-samples-shared.md)]
 
@@ -29,6 +29,3 @@ Below are a few common query needs and how CMPivot can be used to meet them. CMP
 
 For more information, see [Launch CMPivot (preview) from the admin center](cmpivot-start.md)
 For more information on entities for your queries, see [Microsoft Endpoint Manager tenant attach: CMPivot usage overview](cmpivot-overview-attached.md).
-
-
-

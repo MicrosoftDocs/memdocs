@@ -19,7 +19,7 @@ ms.author: mstewart
 Starting in Configuration Manager version 2002, you can use a tool to import Microsoft 365 Apps updates from an internet connected WSUS server into a disconnected Configuration Manager environment. Previously when you exported and imported metadata for software updated in disconnected environments, you were unable to deploy Microsoft 365 Apps updates. Microsoft 365 Apps updates require additional metadata downloaded from an Office API and the Office CDN, which isn't possible for disconnected environments.
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ Starting in Configuration Manager version 2002, you can use a tool to import Mic
 1. When the synchronization completes, decline any Microsoft 365 Apps updates that you don't want to deploy with Configuration Manager. You don't need to approve Microsoft 365 Apps updates in order for them to be downloaded.  
    - Declining unwanted Microsoft 365 Apps updates in WSUS doesn't stop them from being exported during a WsusUtil.exe export, but it does stop the OfflineUpdateExporter tool from downloading the content for them.
    - The OfflineUpdateExporter tool does the download of Microsoft 365 Apps updates for you. Other products will still need to be approved for download if you're exporting updates for them.
-    - Create a [new update view in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) to easily see and decline unneeded Microsoft 365 Apps updates in WSUS.
+    - Create a [new update view in WSUS](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) to easily see and decline unneeded Microsoft 365 Apps updates in WSUS.
 1. If you're approving other product updates for download and export, wait for the content download to complete before running WsusUtil.exe export and copying the contents of the WSUSContent folder. For more information, see [Synchronize software updates from a disconnected software update point](synchronize-software-updates-disconnected.md)
 
 ## Exporting the Microsoft 365 Apps updates

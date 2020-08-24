@@ -58,7 +58,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 7. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 8. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   

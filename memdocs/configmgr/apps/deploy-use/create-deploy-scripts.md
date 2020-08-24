@@ -202,7 +202,7 @@ The validation section of the **Script Parameter Properties** dialog contains th
 
 A regular expression is a compact form of programming for checking a string of characters against an encoded validation. For example, you could check for the absence of a capital alphabetic character in the *FirstName* field by placing `[^A-Z]` in the *RegEx* field.
 
-The regular expression processing for this dialog is supported by the .NET Framework. For guidance on using regular expressions, see [.NET Regular Expression](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) and [Regular Expression Language](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+The regular expression processing for this dialog is supported by the .NET Framework. For guidance on using regular expressions, see [.NET Regular Expression](/dotnet/standard/base-types/regular-expressions) and [Regular Expression Language](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## Script examples
@@ -291,7 +291,7 @@ After you have initiated running a script on a collection of devices, use the fo
 
 ## Script output
 
-Client's return script output using JSON formatting by piping the script's results to the [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
+Client's return script output using JSON formatting by piping the script's results to the [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
 
 - Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
 - Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
@@ -299,7 +299,7 @@ Client's return script output using JSON formatting by piping the script's resul
 
    ![Convert enum object to a sting value](./media/run-scripts/enum-tostring-JSON.png)
 
-You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text or the output can be converted to JSON using the [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
+You can view detailed script output in raw or structured JSON format. This formatting makes the output easier to read and analyze. If the script returns valid JSON-formatted text or the output can be converted to JSON using the [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell cmdlet, then view the detailed output as either **JSON Output** or **Raw Output**. Otherwise the only option is **Script Output**.
 
 ### Example: Script output is convertible to valid JSON
 

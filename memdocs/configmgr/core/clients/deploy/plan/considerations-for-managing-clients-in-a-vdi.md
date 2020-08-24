@@ -36,7 +36,7 @@ For more information, see [Support for virtualization environments](../../../pla
 
 You don't install the Configuration Manager client for individual Remote Desktop sessions. Install it once on the server that hosts Remote Desktop Services. You can use all Configuration Manager client features on the Remote Desktop Services server.
 
-For more information, see [Welcome to Remote Desktop Services](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds).
+For more information, see [Welcome to Remote Desktop Services](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
 ## Pooled VMs
 

@@ -117,12 +117,12 @@ With this release, you can now use asynchronous commit replicas in the SQL Serve
 
 - This release does not support failover to use the asynchronous commit replica as your site database.
   > [!CAUTION]  
-  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
 
 - You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
 ### Configure an asynchronous commit replica
-To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) For more information, see [Add a secondary replica to an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+To add an asynchronous replica to an [availability group you use with Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), you do not need to run the configuration scripts required to configure a synchronous replica. (This is because there is no support to use that asynchronous replica as the site database.) For more information, see [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -242,7 +242,7 @@ At this point, you have connected your Configuration Manager site to Azure AD.
 Before you start, ensure that the client installation source files are stored locally on the device to which you want to install the client.
 Then, use the instructions in [How to deploy clients to Windows computers](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) using the following installation command line (replace the values in the example with your own values):
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<code>https://contososerver</code>**
 
 - **/NoCrlCheck**: If your management point or cloud management gateway uses a non-public server certificate, then the client might not be able to reach the CRL location.
 - **/Source**: Local folder:   Location of the client installation files.
@@ -250,7 +250,7 @@ Then, use the instructions in [How to deploy clients to Windows computers](../cl
 - **SMSMP**: The name of your lookup management point – this can be on your intranet.
 - **SMSSiteCode**: The site code of your Configuration Manager site.
 - **AADTENANTID**, **AADTENANTNAME**: The ID and name of the Azure AD tenant you linked to Configuration Manager. You can find this by running dsregcmd.exe /status from a command prompt on an Azure AD joined device.
-- **AADCLIENTAPPID**: The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+- **AADCLIENTAPPID**: The Azure AD client app ID. For help finding this, see [Use portal to create an Azure Active Directory application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **AADResourceUri**: The identifier URI of the onboarded Azure AD server app.
 
 ## Use Azure Services Wizard to configure a connection to OMS
@@ -261,7 +261,7 @@ Beginning with the 1705 technical preview release, you use the **Azure Services 
 -   Configuration Manager connects to OMS for features like Log Analytics or Upgrade Readiness.
 
 ### Prerequisites for the OMS Connector
-Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). That information is repeated here:  
+Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/azure/azure-monitor/platform/collect-sccm). That information is repeated here:  
 
 -   Providing Configuration Manager permission to OMS.
 

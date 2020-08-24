@@ -128,7 +128,7 @@ To successfully replicate data between a central administration site and a prima
 
 After you expand the site, you need to reconfigure the following Azure services with Configuration Manager:
 
-- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Cloud management gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 

@@ -16,13 +16,13 @@ manager: dougeby
 To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is connected, **WqlConnectionManager.Connect** has methods to query, create, delete, and otherwise use Configuration Manager Windows Management Instrumentation (WMI) objects.  
 
 > [!NOTE]
->  **WqlConnectionManager.Connect** is a WMI-specific derivation of [ConnectionManagerBase](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.connectionmanagerbase.aspx).  
+>  **WqlConnectionManager.Connect** is a WMI-specific derivation of [ConnectionManagerBase](/previous-versions/system-center/developer/cc147366(v=msdn.10)).  
 
  If you are connecting to a local SMS Provider, you do not supply user credentials. If you are connecting to a remote SMS Provider, you do not need to supply user credentials if the if the current user/computer context has permissions on the remote SMS Provider.  
 
  If you do not have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
 
- **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object. This can be used to store cached information such as the computer name.  
+ **WQLConnectionManager.Connection** requires a [SmsNamedValuesDictionary](/previous-versions/system-center/developer/cc147435(v=msdn.10)) object. This can be used to store cached information such as the computer name.  
 
  It is pre-populated with a number of values that can be used in your application.  
 
@@ -38,11 +38,11 @@ To connect to a SMS Provider, use **WqlConnectionManager.Connect**. After it is 
 |BuildNumber|The Configuration Manager installation build number. For example, 5830.|  
 
 > [!NOTE]
->  The [SmsNamedValuesDictionary](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx) object is not the context qualifier information passed to the provider. For more information, see [How to Add a Configuration Manager Context Qualifier by Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md).  
+>  The [SmsNamedValuesDictionary](/previous-versions/system-center/developer/cc147435(v=msdn.10)) object is not the context qualifier information passed to the provider. For more information, see [How to Add a Configuration Manager Context Qualifier by Using Managed Code](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md).  
 
 ### To connect to the SMS Provider  
 
-1.  Create a [SmsNamedValuesDictionaryObject](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsnamedvaluesdictionary.aspx).  
+1.  Create a [SmsNamedValuesDictionaryObject](/previous-versions/system-center/developer/cc147435(v=msdn.10)).  
 
 2.  Create an instance of the **WqlConnectionManager** class and call the *[Connect]* method passing the server name, and if the server name is remote, the user name and password.  
 
@@ -111,10 +111,10 @@ public WqlConnectionManager Connect(string serverName, string userName, string u
  Microsoft.ManagementConsole  
 
 ## Robust Programming  
- The Configuration Manager exceptions that can be raised are [SmsConnectionException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsconnectionexception.aspx) and [SmsQueryException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsqueryexception.aspx). These can be caught together with [SmsException](https://msdn.microsoft.com/library/microsoft.configurationmanagement.managementprovider.smsexception.aspx).  
+ The Configuration Manager exceptions that can be raised are [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) and [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)). These can be caught together with [SmsException](/previous-versions/system-center/developer/cc147433(v=msdn.10)).  
 
 ## .NET Framework Security  
- [UnauthorizedAccessException](https://msdn.microsoft.com/library/system.unauthorizedaccessexception.aspx) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
+ [UnauthorizedAccessException](/dotnet/api/system.unauthorizedaccessexception?view=netcore-3.1) is raised when the wrong credentials are passed to **WqlConnectionManager.Connect**.  
 
 ## See Also  
  [SMS Provider fundamentals](sms-provider-fundamentals.md)

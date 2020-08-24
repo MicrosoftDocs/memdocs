@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,13 +215,15 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows Phone 8.1, Windows 8.1 and later, and Windows 10 and later)*
+     *(Applies to Android, Android enterprise, Windows 8.1 and later, and Windows 10 and later)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
 
    - **Root Certificate**:
 
      Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. If you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the Issuing Certification Authority.
+     > [!NOTE]
+     > On iOS/iPadOS devices, if you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that validates the root Certification Authority. 
 
    - **Extended key usage**:
 

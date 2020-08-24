@@ -422,7 +422,7 @@ Starting with this version, the following features are no longer [pre-release](.
 - [CMPivot standalone](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 2002 release notes](/powershell/sccm/2002-release-notes?view=sccm-ps).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_2002).
 

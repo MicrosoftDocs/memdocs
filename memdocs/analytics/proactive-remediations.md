@@ -60,9 +60,9 @@ Proactive remediations also requires the [licensing for Endpoint analytics](enro
 
 - For Proactive remediations, the user needs permissions appropriate to their role under the **Device configurations** category. Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Proactive remediations.
 
-- An [Intune Service Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
+- An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
 
-- The PowerShell execution policy on the device can't be set to **Restricted** or **AllSigned**. For more information, see [PowerShell execution policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
+- The PowerShell execution policy on the device can't be set to **Restricted** or **AllSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
 
 
 ### Script requirements
@@ -70,7 +70,7 @@ Proactive remediations also requires the [licensing for Endpoint analytics](enro
 If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
 - Encoded in UTF-8 not UTF-8 BOM
 - Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
+   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
    - Currently, the encoding and line breaks are a known issue.
 
 
