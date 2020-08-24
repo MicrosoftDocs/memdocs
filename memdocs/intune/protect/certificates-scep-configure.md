@@ -333,18 +333,29 @@ The following procedures can help you configure the Network Device Enrollment Se
 In the NDES server, there are 2 certificates that are required by the configuration.
 These certificates are **Client authentication certificate** and **Server authentication certificate** as mentioned in [Certificates and templates](#certificates-and-templates) section.
 
-- **Client authentication certificate** – This certificate is used during the Intune Certificate Connector instalation.
+> [!TIP]
+> In the following procedure, you can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses.
+> Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
+
+- **Client authentication certificate** 
+
+   This certificate is used during the Intune Certificate Connector instalation.
 
    Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
+   
    The certificate must meet the following requirements:
 
    - **Enhanced Key Usage**: This value must include **Client Authentication**.
    - **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
 
-- **Server authentication certificate** - This certificate used in IIS. It's a simple Web server certificate that allows the client to trust NDES URL.
+- **Server authentication certificate**
+
+   This certificate is used in IIS. It's a simple Web server certificate that allows the client to trust NDES URL.
    
    1. Request a **server authentication** certificate from your internal CA or public CA, and then install the certificate on the server.
+      
       Depending how you expose your NDES to the internet, there are different requirements. 
+      
       A good configuration is: 
    
       - A **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
@@ -363,9 +374,6 @@ These certificates are **Client authentication certificate** and **Server authen
    
       1. For **SSL certificate**, specify the server authentication certificate.
 
-> [!TIP]
-> In the following procedure, you can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses described above.
-> Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
 
 ## Install the Intune Certificate Connector
 
