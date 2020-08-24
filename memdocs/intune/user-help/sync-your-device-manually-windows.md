@@ -122,6 +122,7 @@ These instructions apply to HoloLens devices running the Windows 10 Anniversary 
 3. Select **Sync**. The button remains disabled until the sync is complete.
 
     ![Choosing the Sync button](./media/win10pc-sync-5-tap-sync.png)  
-   
+    
+## Next steps  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
