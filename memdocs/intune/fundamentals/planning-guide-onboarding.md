@@ -134,7 +134,7 @@ Intune supports Conditional Access for Exchange Online, Exchange on-premises, Sh
 
 ### Task 13: Enroll devices
 
-Intune supports iOS/iPadOS, Mac OS, Android, and Windows desktop device platforms. Enroll mobile device platforms as appropriate based on your Intune deployment use cases and requirements.
+Intune supports iOS/iPadOS, macOS, Android, and Windows desktop device platforms. Enroll mobile device platforms as appropriate based on your Intune deployment use cases and requirements.
 
 - Learn more about [how to enroll devices](../enrollment/device-enrollment.md).
 

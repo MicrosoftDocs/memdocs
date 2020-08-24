@@ -58,10 +58,10 @@ The following tables list the ports and services that the Intune client accesses
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
 
 ## Partner service endpoints that Intune depends on:
-- AAD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
 - Evo STS: https:\//login.microsoftonline.us
 - Directory Proxy: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
+- Azure AD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 

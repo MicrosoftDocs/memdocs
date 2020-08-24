@@ -36,7 +36,7 @@ After you assess your environment, it's time to set up Microsoft Intune.
 
 ### Identity
 
-Intune requires Azure Active Directory (AAD) as the identity and user grouping provider. Learn more about:
+Intune requires Azure Active Directory (Azure AD) as the identity and user grouping provider. Learn more about:
 
 - [Identity requirements](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
