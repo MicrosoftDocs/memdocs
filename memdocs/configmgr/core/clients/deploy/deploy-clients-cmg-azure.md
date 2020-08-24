@@ -35,7 +35,7 @@ Setting up Azure AD may be easier for some customers than setting up a public ke
 
   - The signed in user must be an Azure AD identity.
 
-  - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+  - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Azure AD user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
 
@@ -65,13 +65,13 @@ These client settings help configure Windows 10 devices to be hybrid-joined. The
     - **Automatically register new Windows 10 domain joined devices with Azure Active Directory**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows 10, version 1709.
 
         > [!TIP]
-        > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+        > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
 
     - **Enable clients to use a cloud management gateway**: Set to **Yes** (default), or **No**.  
 
 2. Deploy the client settings to the required collection of devices. Don't deploy these settings to user collections.
 
-To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## Install and register the client using Azure AD identity
 

@@ -19,7 +19,7 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 *Applies to: Configuration Manager (current branch)*
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 
@@ -37,7 +37,7 @@ Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 To review Microsoft 365 Apps client information and start some of these Microsoft 365 Apps management actions, use the [Office 365 Client Management dashboard](office-365-dashboard.md).
 
 ## <a name="bkmk_deploy"></a> Deploy Microsoft 365 Apps
-Start the Microsoft 365 Apps Installer from the Office 365 Client Management dashboard for the initial Microsoft 365 Apps installation. The wizard lets you configure Microsoft 365 Apps installation settings, download files from the Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Microsoft 365 Apps is installed on clients and the [Microsoft 365 Apps automatic updates task](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps) runs, Microsoft 365 Apps updates aren't applicable. For testing purposes, you can run the update task manually.
+Start the Microsoft 365 Apps Installer from the Office 365 Client Management dashboard for the initial Microsoft 365 Apps installation. The wizard lets you configure Microsoft 365 Apps installation settings, download files from the Office Content Delivery Networks (CDNs), and create and deploy a script application for the files. Until Microsoft 365 Apps is installed on clients and the [Microsoft 365 Apps automatic updates task](/deployoffice/overview-update-process-microsoft-365-apps) runs, Microsoft 365 Apps updates aren't applicable. For testing purposes, you can run the update task manually.
 
 For previous Configuration Manager versions, you must take the following steps to install Microsoft 365 Apps for the first time on clients:
 - Download Office Deployment Tool (ODT)
@@ -73,7 +73,7 @@ Starting in Configuration Manager 1806, the Office Customization Tool is integra
 
     When you have an existing configuration file, enter the location for the file and skip to step 7. You must specify the location in the form &#92;&#92;*server*&#92;*share*&#92;*filename*.XML.
     > [!IMPORTANT]    
-    > The XML configuration file must contain only [languages supported by Office 2016](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
+    > The XML configuration file must contain only [languages supported by Office 2016](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. On the **Client Products** page, select the Microsoft 365 Apps suite that you use. Select the applications that you want to include. Select any additional products that should be included, and then click **Next**.
 6. On the **Client Settings** page, choose the settings to include, and then click **Next**.
@@ -124,7 +124,7 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 
 > [!NOTE]  
 >
-> If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
+> If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
 >
 > If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
 
@@ -149,7 +149,7 @@ When you deploy an update to an Microsoft 365 Apps client, the restart behavior 
 >- If the user installs an Microsoft 365 Apps update before the deadline, Configuration Manager verifies that the update is installed when the deadline is reached. If the update is not detected on the device, the update is installed. 
 >- The in-app notification bar does not display on an app that is running before the update is downloaded. After the update is downloaded, the in-app notification displays only for newly opened apps.
 >- For Microsoft 365 Apps updates triggered by a service window or scheduled for non-business hours, it's possible that running Office apps might be forced to close to install the update without notifications. 
->- For more information, see [End-user update notifications for Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps)
+>- For more information, see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps)
 
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
@@ -243,12 +243,12 @@ For update packages released on and after June 9, the title will begin with "Mic
 |Current Channel (Preview)|Monthly Channel (Targeted)|
 |Beta Channel|Insider|
 
-For more information about how to modify your ADRs, see [Automatically deploy software updates](automatically-deploy-software-updates.md). For more information about the name change, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+For more information about how to modify your ADRs, see [Automatically deploy software updates](automatically-deploy-software-updates.md). For more information about the name change, see [Name change for Office 365 ProPlus](/deployoffice/name-change).
 
 
 ## Change the update channel after you enable Microsoft 365 Apps clients to receive updates from Configuration Manager
 
-After deploying Microsoft 365 Apps, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Microsoft 365 Apps update channel for devices in your organization](https://docs.microsoft.com//deployoffice/change-update-channels).
+After deploying Microsoft 365 Apps, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Microsoft 365 Apps update channel for devices in your organization](//deployoffice/change-update-channels).
 
 
 ## Next steps

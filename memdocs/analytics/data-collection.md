@@ -20,7 +20,7 @@ manager: dougeby
 >
 > For more information about changes to Endpoint analytics, see [What's new in Endpoint analytics](whats-new.md). 
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement).
 
 ## <a name="bkmk_flow"></a>Data flow
 
@@ -79,7 +79,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
   - **orgId:** Unique GUID representing the Microsoft 365 Tenant
   
 > [!Important]  
-> Our data handling policies are described in the [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
+> Our data handling policies are described in the [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
@@ -103,9 +103,9 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 For more information about related privacy aspects, see the following articles:
 
-- [Microsoft Intune Privacy Statement](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement)
-- [Windows 10 and privacy compliance](https://docs.microsoft.com/windows/privacy/windows-10-and-privacy-compliance)
+- [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement)
+- [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
 - [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
-- [Trust Center](https://www.microsoft.com/trustcenter)  
+- [Trust Center](https://www.microsoft.com/trustcenter)

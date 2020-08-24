@@ -35,7 +35,7 @@ Use the following checklist to make sure you have the necessary information and 
 
   - Integration with [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required. To integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Admin**.
 
-  - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - The **Microsoft.ClassicCompute** & **Microsoft.Storage** resource providers must be registered within the Azure subscription. For more information, see [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - A **Subscription Owner** needs to sign in to deploy the CMG.
 
@@ -202,7 +202,7 @@ To install the Configuration Manager client on systems not currently connected t
 
 For options 1 and 2, when you run **ccmsetup.exe**, use the **/mp** parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
 
-For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### Configure off-premises clients for CMG
 

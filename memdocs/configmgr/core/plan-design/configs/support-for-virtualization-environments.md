@@ -32,7 +32,7 @@ For example, you use Microsoft Hyper-V Server 2016 to host a VM that runs Window
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager doesn't support [nested virtualization](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), which is new with Windows Server 2016.
+> Configuration Manager doesn't support [nested virtualization](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), which is new with Windows Server 2016.
 
 ### Virtualization environment support
 
@@ -65,7 +65,7 @@ For more information, see [Configuration Manager on Azure](../../understand/conf
 
 ## Windows Virtual Desktop
 
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure. For more information, see [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+[Windows Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. Starting in version 1906, use Configuration Manager to manage these virtual devices running Windows in Azure. For more information, see [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## Next steps
 

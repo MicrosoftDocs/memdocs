@@ -19,7 +19,7 @@ manager: dougeby
 
 The public key infrastructure (PKI) certificates that you might require for Configuration Manager are listed in the following tables. This information assumes basic knowledge of PKI certificates. For more information, see [Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 Certification Authority](example-deployment-of-pki-certificates.md).
 
-For more about Active Directory Certificate Services, see [Active Directory Certificate Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
+For more about Active Directory Certificate Services, see [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 For information about using Cryptography API: Next Generation (CNG) certificates with Configuration Manager, see [CNG certificates overview](cng-certificates-overview.md).
 

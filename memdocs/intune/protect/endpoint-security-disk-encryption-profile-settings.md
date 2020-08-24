@@ -98,6 +98,9 @@ Supported platforms and profiles:
   - **Not configured** (*default*) - The setting returns to the OS default, which is to not require storage card encryption.
   - **Yes** - Encryption on storage cards is required for mobile devices.
 
+  > [!NOTE]
+  > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
+
 - **Hide prompt about third-party encryption**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)
 

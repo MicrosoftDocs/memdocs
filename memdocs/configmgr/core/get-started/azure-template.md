@@ -61,7 +61,7 @@ This process requires an Azure subscription in which you can create the followin
 
         - **Admin Username**: The name of a user on the VMs with administrative rights. You use this user to sign in to the VMs.  
 
-        - **Admin Password**: The password must meet the Azure complexity requirements. For more information, see [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile).  
+        - **Admin Password**: The password must meet the Azure complexity requirements. For more information, see [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
 
     > [!Important]  
     > The following settings are required by Azure. Use the default values. Don't change these values.  
@@ -81,7 +81,7 @@ Azure validates the settings, and then begins the deployment. Check the status o
 
 To see the status of the configuration scripts, connect to the `<prefix>PS1` server, and view the following file: `%windir%\TEMP\ProvisionScript\PS1.json`. If it shows all steps as complete, the process is done.
 
-To connect to the VMs, first get from the Azure portal the public IP addresses for each VM. When you connect to the VM, the domain name is `contoso.com`. Use the credentials that you specified in the deployment template. For more information, see [How to connect and log on to an Azure virtual machine running Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+To connect to the VMs, first get from the Azure portal the public IP addresses for each VM. When you connect to the VM, the domain name is `contoso.com`. Use the credentials that you specified in the deployment template. For more information, see [How to connect and log on to an Azure virtual machine running Windows](/azure/virtual-machines/windows/connect-logon).
 
 
 

@@ -263,7 +263,7 @@ Now there is a new report to show the count of clients with a specific web brows
 
 ### Report on Windows Autopilot device information
 <!-- 1351442 -->
-Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows Autopilot Device Information**, in the **Hardware - General** reports node. For more information, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) in preparing for co-management.
+Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information with the new report, **Windows Autopilot Device Information**, in the **Hardware - General** reports node. For more information, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) in preparing for co-management.
 
 ### Report on Windows 10 Servicing details for a specific collection
 <!--1357653-->
@@ -283,7 +283,7 @@ The **Windows 10 Servicing details for a specific collection** report displays g
 
 ### Improvements to Configuration Manager Policies for Windows Defender Exploit Guard
 <!-- 1356220 -->
-Additional policy settings for the [Attack Surface Reduction](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) and [Controlled folder access](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
+Additional policy settings for the [Attack Surface Reduction](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) and [Controlled folder access](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) components have been added in Configuration Manager for [Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction).
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->

@@ -36,18 +36,6 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
-## Known issues
-
-### Inconsistent results for some operators with Configuration Manager version 2002
-<!--7784718, 7884272-->
-When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
-
-- Summarize by
-- Take
-- Order by
-- Top
-- Count
-- Distinct
 
 ## Next steps
 
