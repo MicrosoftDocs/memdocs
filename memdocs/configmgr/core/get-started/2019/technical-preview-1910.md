@@ -31,7 +31,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [SEDO](includes/1910/4786915.md)]
 [!INCLUDE [Attach files to feedback](includes/1910/3556011.md)]
 [!INCLUDE [Client diagnostics](includes/1910/4433455.md)]
-[!INCLUDE [Microsoft 365 pilot health dashboard](includes/1910/4488272.md)]
+[!INCLUDE [Office 365 pilot health dashboard](includes/1910/4488272.md)]
 [!INCLUDE [Search](includes/1910/4640570.md)]
 [!INCLUDE [OSD variable](includes/1910/4680263.md)]
 [!INCLUDE [Windows Virtual Desktop](includes/1910/4737447.md)]

@@ -217,7 +217,7 @@ Starting Technical Preview 1606, you can use a Configuration Manager client agen
 
 For more information, see [Manage Microsoft 365 Apps for enterprise updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-### Set the Configuration Manager client setting to manage the Microsoft 365 client agent
+### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.
 2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
