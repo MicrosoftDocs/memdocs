@@ -37,7 +37,7 @@ The information in this article can help you configure your infrastructure to su
 
 ## Prerequisites for using SCEP for certificates
 
-Before you proceed, ensure you've [created and deployed a *trusted certificate* profile](certificates-configure.md#export-the-trusted-root-ca-certificate) to devices that will use SCEP certificate profiles. SCEP certificate profiles directly reference the trusted certificate profile that you use to provision devices with a Trusted Root CA certificate.
+Before you continue, ensure you've [created and deployed a *trusted certificate* profile](certificates-configure.md#export-the-trusted-root-ca-certificate) to devices that will use SCEP certificate profiles. SCEP certificate profiles directly reference the trusted certificate profile that you use to provision devices with a Trusted Root CA certificate.
 
 ### Servers and server roles
 
@@ -218,7 +218,7 @@ It's optional to modify the validity period of the certificate template.
 
 After you [create the SCEP certificate template](#create-the-scep-certificate-template), you can edit the template to review the **Validity period** on the **General** tab.
 
-By default, Intune uses the value configured in the template. However, you can configure the CA to allow the requester to enter a different value, and that value can be set from within the Intune console.
+By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Intune console.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
@@ -330,7 +330,7 @@ The following procedures can help you configure the Network Device Enrollment Se
   
 ### Install and bind certificates on the server that hosts NDES
 
-In the NDES server, there are 2 certificates that are required by the configuration.
+In the NDES server, there are two certificates that are required by the configuration.
 These certificates are **Client authentication certificate** and **Server authentication certificate** as mentioned in [Certificates and templates](#certificates-and-templates) section.
 
 > [!TIP]
@@ -339,7 +339,7 @@ These certificates are **Client authentication certificate** and **Server authen
 
 - **Client authentication certificate** 
 
-   This certificate is used during the Intune Certificate Connector instalation.
+   This certificate is used during the Intune Certificate Connector installation.
 
    Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
    
@@ -356,14 +356,15 @@ These certificates are **Client authentication certificate** and **Server authen
       
       Depending how you expose your NDES to the internet, there are different requirements. 
       
-      A good configuration is: 
+      A good configuration is:
    
       - A **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
       - A **Subject Alternative Name**: Set DNS entries for every URL your NDES is responding to, such as the internal FQDN and the external URLs.
    
       > [!NOTE]
       > If you are using Azure AD App Proxy, the AAD App Proxy connector will translate the requests from the external URL to the internal URL.
-      > As such, NDES is responding to only requests directed to the internal URL, usually the FQDN of the NDES Server.
+      > As such, NDES will only respond to requests directed to the internal URL, usually the FQDN of the NDES Server.
+      >
       > In this situation, the external URL is not required.
    
    2. Bind the server authentication certificate in IIS:
