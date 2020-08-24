@@ -218,7 +218,7 @@ Beginning in this release, when you upgrade the Windows ADK version and then use
 ## Software updates
 
 ### Deploy Microsoft 365 apps to clients
-Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Microsoft 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager. For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
+Beginning in version 1702, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager. For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
 > The Microsoft 365 app that you create and deploy by using the Office 365 Application Wizard in Configuration Manager is not automatically managed by Configuration Manager until you enable the **Enable management of the Office 365 Client Again** software updates client agent setting. For details, see [About client settings](../../clients/deploy/about-client-settings.md).

@@ -333,7 +333,7 @@ Not selected | Selected |   **Normal fallback** - Use distribution points in cur
 
 
 
-## Microsoft 365 Client Management dashboard  
+## Office 365 Client Management dashboard  
 The Configuration Manager 1609 Technical Preview introduces a new dashboard. To view the dashboard, in the Configuration Manager console go to **Software Library** > **Overview** > **Office 365 Client Management**.
 >[!NOTE]
 >In the **What's New** workspace in the Configuration Manager console, the new dashboard is incorrectly named **Office 365 Servicing dashboard**.
@@ -344,13 +344,13 @@ The dashboard displays charts for the following:
 - Office 365 client versions
 - Office 365 client languages
 - Office 365 client channels     
-For more information, see [Overview of update channels for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+For more information, see [Overview of update channels for Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Automatic deployment rules that have Office 365 Client selected in the set of available products.
 
 You can take the following actions on the dashboard:
 - At the top of the dashboard, use the **Collection** drop-down setting to filter the dashboard data by members of a specific collection.
-- On the upper-right side of the dashboard, click **Microsoft 365 Installer** to start the Microsoft 365 Client Installation Wizard to deploy Microsoft 365 apps to clients. For details, see [Deploy Microsoft 365 apps to clients](#deploy-microsoft-365-apps-to-clients).
-- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Microsoft 365 apps, select **Microsoft 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Microsoft 365 apps to clients. For details, see [Deploy Microsoft 365 apps to clients](#deploy-microsoft-365-apps-to-clients).
+- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Microsoft 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](../clients/deploy/about-client-settings.md).
 
 
@@ -358,10 +358,10 @@ You can take the following actions on the dashboard:
 For more information about Microsoft 365 Apps for enterprise updates, see [Manage Microsoft 365 Apps updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## Deploy Microsoft 365 apps to clients
-In this release, from the Microsoft 365 Client Management dashboard, you can start the Microsoft 365 Installer that lets you configure Microsoft 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.
+In this release, from the Office 365 Client Management dashboard, you can start the Office 365 Installer that lets you configure Microsoft 365 installation settings, download files from Office Content Delivery Networks (CDNs), and deploy the files as an application in Configuration Manager.
 
 ### Limitations of Microsoft 365 deployment
-- You might have issues when you try to import existing client settings (XML) in the Microsoft 365 App Install wizard. You can manually configure the client settings without an issue.
+- You might have issues when you try to import existing client settings (XML) in the Office 365 App Install wizard. You can manually configure the client settings without an issue.
 
 #### To deploy Microsoft 365 apps to clients
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.

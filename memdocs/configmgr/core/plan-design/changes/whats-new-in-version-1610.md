@@ -171,15 +171,15 @@ To configure the **Content Size (KB)** field, do one of the following:
 - When you create an automatic deployment rule, in the Create Automatic Deployment Rule wizard, go to the **Software Updates** page.
 - In the properties for an existing automatic deployment rule, go to the **Software Updates** tab.
 
-## Microsoft 365 Client Management dashboard
-The Microsoft 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
+## Office 365 Client Management dashboard
+The Office 365 Client Management dashboard is now available in the Configuration Manager console. To view the dashboard, go to **Software Library** > **Overview** > **Office 365 Client Management**.
 
 The dashboard displays charts for the following:
 
-- Number of Microsoft 365 clients
-- Microsoft 365 client versions
-- Microsoft 365 client languages
-- Microsoft 365 client channels
+- Number of Office 365 clients
+- Office 365 client versions
+- Office 365 client languages
+- Office 365 client channels
 
 For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
