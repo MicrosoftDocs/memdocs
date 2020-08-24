@@ -32,10 +32,10 @@ In MC208118 posted last March, we introduced a new, simple URL for your Microsof
 Android device administrator management was released in Android 2.2 as a way to manage Android devices. Then beginning with Android 5, the more modern management framework of [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) was released (for devices that can reliably connect to Google Mobile Services). Google is encouraging movement off of device administrator management by decreasing its management support in new Android releases.
 
 #### How does this affect me?
-Because of these changes by Google, in the fourth quarter of 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
+Because of these changes by Google, in October 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
 
 > [!NOTE]
-> This date was previously communicated as third quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> This date was previously communicated as fourth quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### Device types that will be impacted
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
@@ -91,14 +91,14 @@ Impacted compliance settings:
 - For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page and the device will be out of compliance, but stricter password requirements will not be enforced in the Settings app.
 
 #### Cause of impact 
-Devices will begin being impacted in the fourth quarter of 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Devices will begin being impacted in October 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 At that point, device administrator-managed devices that are not manufactured by Samsung will be impacted once the user completes both these actions:
 - Updates to Android 10 or later.
 - Updates the Company Portal app to the version that targets API level 29.
 
 #### What do I need to do to prepare for this change?
-To avoid the reduction in functionality coming in the fourth quarter of 2020, we recommend the following:
+To avoid the reduction in functionality coming in October 2020, we recommend the following:
 - **New enrollments**: Onboard new devices into [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management (where available) and/or [app protection policies](../apps/app-protection-policies.md). Avoid onboarding new devices into device administrator management. 
 - **Previously enrolled devices**: If a device administrator-managed device is running Android 10 or later or may update to Android 10 or later (especially if it is not a Samsung device), move it off of device administrator management to [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management and/or [app protection policies](../apps/app-protection-policies.md). You can leverage the streamlined flow to [move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
 
