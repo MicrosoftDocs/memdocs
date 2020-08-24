@@ -61,7 +61,7 @@ The following table lists the added property to the [devices](../developer/intun
 
 |    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    windowsOsEdition     |    Added    |    The OS edition of Windows devices.                                                                                                                                                                                                                                                                     |
+|    windowsOsEdition     |    Added    |    Windows Operating System edition.                                                                                                                                                                                                                                                                     |
 
 ### Beta changes
 

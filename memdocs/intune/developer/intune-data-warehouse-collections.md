@@ -257,7 +257,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Cellular technology of the   device.                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
-| windowsOsEdition             | The OS edition of Windows devices.                                                                                                                                                                              |
+| windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
 
 ## deviceTypes
