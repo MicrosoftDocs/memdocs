@@ -40,10 +40,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
@@ -344,7 +344,7 @@ This release includes the following improvements to search in the Configuration 
 
 ## Other updates
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes?view=sccm-ps).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

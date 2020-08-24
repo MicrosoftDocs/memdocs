@@ -28,7 +28,7 @@ Configuration Manager integrates with Windows Hello for Business. (This feature 
 >
 > For co-managed devices, consider moving the [**Resource access policies** workload](../../comanage/workloads.md#resource-access-policies) to Intune. Then use Intune policies to manage these certificates. For more information, see [How to switch workloads](../../comanage/how-to-switch-workloads.md).
 
-For more information, see [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  

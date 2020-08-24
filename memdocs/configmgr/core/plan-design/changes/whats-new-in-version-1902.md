@@ -347,7 +347,7 @@ For more information, see [About client settings](../../clients/deploy/about-cli
 <!--3556021-->
 Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence.
 
-For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
+For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders).
 
 First, [find your Microsoft 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
@@ -477,7 +477,7 @@ When you install or update a site server, it copies these installation files and
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4498910).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 The following update rollup (4500571) is available in the console starting on 17 June 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 

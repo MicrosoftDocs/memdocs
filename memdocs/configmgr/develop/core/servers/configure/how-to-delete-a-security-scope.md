@@ -59,7 +59,7 @@ public void DeleteSecurityScope(WqlConnectionManager connection, string scopeId)
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeId`|`String`|The identifier of the security scope to delete.|  
 
 ## Compiling the Code  

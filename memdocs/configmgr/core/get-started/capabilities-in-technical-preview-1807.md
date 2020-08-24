@@ -70,7 +70,7 @@ To see more details about an available item, click it in the hub. From the detai
 
 The **Community** workspace also includes the following nodes:
 
-- **Documentation**: Displays the Configuration Manager [documentation library](https://docs.microsoft.com/sccm/)  
+- **Documentation**: Displays the Configuration Manager [documentation library](/sccm/)  
 
 - **Feedback**: Displays the Configuration Manager [UserVoice site](https://configurationmanager.uservoice.com/)  
 
@@ -79,7 +79,7 @@ The **Community** workspace also includes the following nodes:
 
 - Use the Configuration Manager console on a client OS.  
 
-    - Alternatively but not recommended: on a server OS, disable [Internet Explorer: Enhanced Security Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - Alternatively but not recommended: on a server OS, disable [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - The computer with the console requires internet access, and connectivity to the following sites:  
     - `https://aka.ms`  
@@ -118,7 +118,7 @@ Review the **OfflineServicingMgr.log** log file.
 ## <a name="bkmk_comgmt"></a> Co-managed device sync activity from Intune
 <!--1358565-->
 
-Display in the Configuration Manager console whether a co-managed device is active with Microsoft Intune. This state is based on data from the [Intune Data Warehouse](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). The **Client Status** dashboard in the Configuration Manager console shows **Inactive clients using Intune**. This new category is for co-managed devices that are inactive with Configuration Manager, but have synchronized with the Intune service in the past week.
+Display in the Configuration Manager console whether a co-managed device is active with Microsoft Intune. This state is based on data from the [Intune Data Warehouse](/intune/reports-nav-create-intune-reports). The **Client Status** dashboard in the Configuration Manager console shows **Inactive clients using Intune**. This new category is for co-managed devices that are inactive with Configuration Manager, but have synchronized with the Intune service in the past week.
 
 
 ### Try it out!

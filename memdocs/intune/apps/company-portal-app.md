@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -49,7 +49,7 @@ The following table provides the branding customization details for the end-user
 | **Show in header** | Select whether the header in the end-user experiences   should display the **Organization logo and name**, the **Organization logo only**, or the **Organization name only**. The preview boxes below will only show the logos, not the   name.  |
 | **Upload logo for theme color background** | Upload the logo you want to show on top of your selected   theme color. For the best appearance, upload a logo with a transparent   background. You can see how this will look in the preview box below the   setting.<p>Maximum image size: 400 x 400 px<br>Maximum file size:   750KB<br>File type: PNG, JPG, or JPEG |
 | **Upload logo for white or light background** | Upload the logo you want to show on top of white or light-colored backgrounds. For the best appearance, upload a logo with a   transparent background. You can see how this will look on a white background   in the preview box below the setting.<p>Maximum image size: 400 x 400   px<br>Maximum file size: 750KB<br>File type: PNG, JPG, or JPEG |
-| **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
+| **Upload brand image** | Upload an image that reflects   your organization's brand.<p><ul><li>Recommended image   width: Greater than 1125 px (required to be at least 650   px)</li><li>Maximum image size: 1.3 MB</li><li>File   type: PNG, JPG, or JPEG</li><li>It is displayed in these   locations:</li><ul><li>iOS/iPadOS Company Portal: Background image on   the user's profile page.</li><li>Windows Company Portal: Background image on the user's profile page.</li><li>Company Portal website:   Background image on the user's profile page.</li><li>Android   Intune app: In the drawer and as a background image on the user's profile   page.</li></ul></ul> |
 
 > [!NOTE]
 > When a user is installing an iOS/iPadOS application from the Company Portal they will receive a prompt. This occurs when the iOS/iPadOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed.
@@ -94,7 +94,7 @@ You can configure the Company Portal experience specifically for enrollment, pri
 
 ### Enrollment
 
-The following table provides enrollment specific configuration details:
+The following table provides enrollment-specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -120,7 +120,7 @@ The following table provides enrollment specific configuration details:
 
 ### Privacy
 
-The following table provides privacy specific configuration details:
+The following table provides privacy-specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -129,31 +129,36 @@ The following table provides privacy specific configuration details:
 
 ### Device ownership notification
 
-The following table provides notification specific configuration details:
+The following table provides notification-specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​ | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which include the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​ | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which includes the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### App sources
 
-You can choose which additional app sources will be shown in Company Portal. The following table provides app source specific configuration details:
+You can choose which additional app sources will be shown in Company Portal.
+
+> [!NOTE]
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
+
+The following table provides app source specific configuration details:
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD Enterprise Applications | N/A | Select **Hide** or **Show** to display **Azure AD Enterprise applications** in the Company Portal for each end-user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
-| Office Online Applications | N/A | Select **Hide** or **Show** to display **Office Online applications** in the Company Portal for each end-user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
+| Azure AD Enterprise Applications | N/A | Select **Hide** or **Show** to display **Azure AD Enterprise applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online Applications | N/A | Select **Hide** or **Show** to display **Office Online applications** in the Company Portal for each end user. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### App source setting options
 
 > [!NOTE]
 > The Company Portal website will initially support the display of apps from other Microsoft services.
 
-You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end-user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
+You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
 ### Customizing user self-service actions for the Company Portal
 
-You can customize the available self-service device actions that are shown to end-users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **Customization**. 
+You can customize the available self-service device actions that are shown to end users in the Company Portal app and website. To help prevent unintended device actions, you can configure settings for the Company Portal app by selecting **Tenant Administration** > **Customization**.
 
 The following actions are available:
 - Hide **Remove** button on corporate Windows devices.
@@ -162,7 +167,7 @@ The following actions are available:
 - Hide **Reset** button on corporate iOS/iPadOS devices.
 
 > [!NOTE]
-> These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies. 
+> These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies.
 
 ## Opening Web Company Portal applications
 For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 

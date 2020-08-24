@@ -42,7 +42,7 @@ Use the following procedure to create an availability group and then move a copy
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    Availability groups only support the FULL backup model. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+    Availability groups only support the FULL backup model. For more information, see [View or change the recovery model of a database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Use SQL Server to create a full backup of your site database. Choose one of the following options:
 
@@ -52,13 +52,13 @@ Use the following procedure to create an availability group and then move a copy
 
     For more information, see the following articles in the SQL Server documentation:
 
-    - [Create a full database backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [Restore a database backup using SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [Create a full database backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [Restore a database backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > If you plan to move from an availability group to standalone on an existing replica, first remove the database from the availability group.
 
-4. On the server that will host the initial primary replica of the group, use the [New availability group wizard](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) to create the availability group. In the wizard:
+4. On the server that will host the initial primary replica of the group, use the [New availability group wizard](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) to create the availability group. In the wizard:
 
     - On the **Select Database** page, select the database for your Configuration Manager site.  
 
@@ -79,7 +79,7 @@ Use the following procedure to create an availability group and then move a copy
 
     2. Run the [verification script](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) to confirm that the site database on each replica is correctly configured.
 
-    3. If it's necessary to set configurations on secondary replicas, before you continue, manually fail over the primary replica to the secondary replica. You can only configure the database of a primary replica. For more information, see [Perform a planned manual failover of an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
+    3. If it's necessary to set configurations on secondary replicas, before you continue, manually fail over the primary replica to the secondary replica. You can only configure the database of a primary replica. For more information, see [Perform a planned manual failover of an availability group](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) in the SQL Server documentation.
 
 6. After all replicas meet the requirements, the availability group is ready to be used with Configuration Manager.
 
@@ -118,7 +118,7 @@ Starting in version 1906, run Configuration Manager setup to add a new synchrono
 
 1. Add a secondary replica using the SQL Server procedures.
 
-    1. [Add a secondary replica to an Always On Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+    1. [Add a secondary replica to an Always On Availability Group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. Watch the status in SQL Management Studio. Wait for the availability group to return to full health.
 
@@ -134,7 +134,7 @@ For more information on how to do this process manually in version 1902 or earli
 
 Starting in version 1906, you can use Configuration Manager setup to remove a replica member. Use the same process to [Add a new synchronous replica member](#bkmk_sync-add).
 
-For more information on how to do this process manually in version 1902 or earlier, see [Remove a secondary replica from an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
+For more information on how to do this process manually in version 1902 or earlier, see [Remove a secondary replica from an availability group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
 
 
 ## <a name="bkmk_async"></a> Asynchronous replicas
@@ -143,7 +143,7 @@ You can use an asynchronous replica in the availability group that you use with 
 
 ### Configure an asynchronous commit replica
 
-For more information, see [Add a secondary replica to an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+For more information, see [Add a secondary replica to an availability group](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### Use the asynchronous replica to recover your site
 
@@ -160,14 +160,14 @@ Use the following procedure when you no longer want to host your site database i
 
 1. Stop the Configuration Manager site by using the following command: `preinst.exe /stopsite`. For more information, see [Hierarchy maintenance tool](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
-2. Use SQL Server to create a full backup of your site database from the primary replica. For more information, see [Create a full database backup](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+2. Use SQL Server to create a full backup of your site database from the primary replica. For more information, see [Create a full database backup](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-3. Use SQL Server to restore the site database backup to the server that will host the site database. For more information, see [Restore a database backup using SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+3. Use SQL Server to restore the site database backup to the server that will host the site database. For more information, see [Restore a database backup using SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
     > [!Note]  
     > If the primary replica server for the availability group will host the single instance of the site database, skip this step.
 
-4. On the server that will host the site database, change the backup model for the site database from **FULL** to **SIMPLE**. For more information, see [View or change the recovery model of a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+4. On the server that will host the site database, change the backup model for the site database from **FULL** to **SIMPLE**. For more information, see [View or change the recovery model of a database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. Run **Configuration Manager Setup**: `\BIN\X64\setup.exe` from the Configuration Manager site installation folder.
 
@@ -185,4 +185,4 @@ Use the following procedure when you no longer want to host your site database i
 
 9. After you provide the information for the new database location, complete setup with your normal process and configurations. When setup completes, the site restarts, and begins to use the new database location.
 
-10. To clean up the servers that were members of the availability group, follow the guidance in [Remove an availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).
+10. To clean up the servers that were members of the availability group, follow the guidance in [Remove an availability group](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).

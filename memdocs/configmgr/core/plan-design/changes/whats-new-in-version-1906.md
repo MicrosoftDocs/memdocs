@@ -85,7 +85,7 @@ For more information, see [Management insights](../../servers/manage/management-
 
 - Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure SQL Server Always On availability groups](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
+- Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
 - Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
@@ -196,7 +196,7 @@ For more information, see [Delivery Optimization In-Network Cache in Configurati
 ### Support for Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager to manage these virtual devices running Windows in Azure.
+[Windows Virtual Desktop](/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 Similar to a terminal server, these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows Virtual Desktop and terminal servers.
 
@@ -620,7 +620,7 @@ As of this version, the following features are no longer pre-release:
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 

@@ -69,8 +69,8 @@ Yes, when you integrate those services with Configuration Manager. As part of th
 For example, the following cloud services are a part of Microsoft Endpoint Manager:
 
 - [Desktop Analytics data privacy](../../../desktop-analytics/privacy.md)
-- [Privacy and personal data in Intune](https://docs.microsoft.com/intune/protect/privacy-personal-data)
-- [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Privacy and personal data in Intune](/intune/protect/privacy-personal-data)
+- [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
 ## <a name="bkmk_personal"></a> Does Configuration Manager collect any personal data?
 

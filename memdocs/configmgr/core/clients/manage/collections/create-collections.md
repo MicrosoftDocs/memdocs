@@ -274,9 +274,9 @@ The Azure AD synchronization happens every five minutes. It's a one-way process,
 
 You can use PowerShell to create and import collections. For more information, see:
 
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import-CMCollection](/powershell/module/ConfigurationManager/Import-CMCollection)
 
 ## Next steps
 

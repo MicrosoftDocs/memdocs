@@ -201,7 +201,7 @@ public string GetDriverName(IResultObject driver)
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`path`|-   Managed: `String`<br />-   VBScript: `String`|A valid UNC network path to the folder that contains the driver contents. For example, \\\Servers\Driver\VideoDriver.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the .inf file. For example, ATI.inf.|  
 
@@ -233,4 +233,4 @@ public string GetDriverName(IResultObject driver)
 ## See Also  
  [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md)   
  [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md)   
- [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md)   
+ [How to Specify The Supported Platforms for a Driver](../../develop/osd/how-to-specify-the-supported-platforms-for-a-driver.md)

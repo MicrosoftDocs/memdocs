@@ -101,6 +101,6 @@ For more information, see [Upgrade Windows devices with the edition upgrade poli
 
 ## Microsoft Edge Legacy browser profiles
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge Legacy](https://docs.microsoft.com/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
+For customers who use the [Microsoft Edge Legacy](/microsoft-edge/deploy/) web browser on Windows 10 clients, create a Configuration Manager compliance policy to configure the browser settings.
 
 For more information, see [Microsoft Edge Legacy browser profiles](../deploy-use/browser-profiles.md).
