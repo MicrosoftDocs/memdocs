@@ -330,32 +330,42 @@ The following procedures can help you configure the Network Device Enrollment Se
   
 ### Install and bind certificates on the server that hosts NDES
 
-> [!TIP]
-> In the following procedure, you can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. The criteria for each use are described in steps 1 and 3 of the following procedure.
+In the NDES server, there are 2 certificates that are required by the configuration.
+These certificates are **Client authentication certificate** and **Server authentication certificate** as mentioned in [Certificates and templates](#certificates-and-templates) section.
 
-1. Request a **server authentication** certificate from your internal CA or public CA, and then install the certificate on the server.
+- **Client authentication certificate** – This certificate is used during the Intune Certificate Connector instalation.
 
-   If the server uses an external and internal name for a single network address, then the server authentication certificate must have:
-
-   - A **Subject Name** with an external public server name.
-   - A **Subject Alternative Name** that includes the internal server name.
-
-2. Bind the server authentication certificate in IIS:
-
-   1. After installing the server authentication certificate, open **IIS Manager**, and select the **Default Web Site**. In the **Actions** pane, select **Bindings**.
-
-   1. Select **Add**, set **Type** to **https**, and then confirm the port is **443**.
-   
-   1. For **SSL certificate**, specify the server authentication certificate.
-
-3. On your NDES Server, request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
-
-   The client authentication certificate must have the following properties:
+   Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
+   The certificate must meet the following requirements:
 
    - **Enhanced Key Usage**: This value must include **Client Authentication**.
-   - **Subject Name**: The value must be equal to the DNS name of the server where you're installing the certificate (the NDES Server).
+   - **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
 
-4. The server that hosts the NDES service is now ready to support the Intune Certificate Connector.
+- **Server authentication certificate** - This certificate used in IIS. It's a simple Web server certificate that allows the client to trust NDES URL.
+   
+   1. Request a **server authentication** certificate from your internal CA or public CA, and then install the certificate on the server.
+      Depending how you expose your NDES to the internet, there are different requirements. 
+      A good configuration is: 
+   
+      - A **Subject Name**: Set a CN (Common Name) with a value that must be equal to the FQDN of the server where you're installing the certificate (the NDES Server).
+      - A **Subject Alternative Name**: Set DNS entries for every URL your NDES is responding to, such as the internal FQDN and the external URLs.
+   
+      > [!NOTE]
+      > If you are using Azure AD App Proxy, the AAD App Proxy connector will translate the requests from the external URL to the internal URL.
+      > As such, NDES is responding to only requests directed to the internal URL, usually the FQDN of the NDES Server.
+      > In this situation, the external URL is not required.
+   
+   2. Bind the server authentication certificate in IIS:
+
+      1. After installing the server authentication certificate, open **IIS Manager**, and select the **Default Web Site**. In the **Actions** pane, select **Bindings**.
+
+      1. Select **Add**, set **Type** to **https**, and then confirm the port is **443**.
+   
+      1. For **SSL certificate**, specify the server authentication certificate.
+
+> [!TIP]
+> In the following procedure, you can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses described above.
+> Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
 
 ## Install the Intune Certificate Connector
 
