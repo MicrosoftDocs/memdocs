@@ -1,8 +1,8 @@
 ---
 title:  Tenant attached CMPivot usage overview 
 titleSuffix: Configuration Manager
-description: CMPivot overview for Microsoft Endpoint Manager tenant attached devices.
-ms.date: 08/17/2020
+description: CMPivot usage overview for Microsoft Endpoint Manager tenant attached devices.
+ms.date: 09/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
