@@ -136,7 +136,7 @@ To view the reports, in the [Microsoft Endpoint Manager admin center](https://go
 
 On the **Summary** page, you can [create new policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
 
-![Overview page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
+![Summary page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
 
 When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they’re available.
 
@@ -148,7 +148,7 @@ On the **Windows 10 unhealthy endpoints** page, you can view information about t
 
 Only devices with detected issues appear in this view. This view doesn't display details for devices that are identified as clean.
 
-![Overview page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-unhealthy-endpoints.png)
+![Unhealthy endpoints page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-unhealthy-endpoints.png)
 
 ## Next steps
 
