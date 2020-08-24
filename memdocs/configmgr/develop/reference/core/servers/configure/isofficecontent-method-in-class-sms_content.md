@@ -1,7 +1,7 @@
 ---
 title: "IsOfficeContent Method"
 titleSuffix: "Configuration Manager"
-description: Learn about the IsOfficeContent class method. In Configuration Manager, this method specifies wether content is Microsoft 365 content.
+description: Learn about the IsOfficeContent class method. In Configuration Manager, this method specifies whether content is Microsoft 365 content.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
