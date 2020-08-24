@@ -318,7 +318,7 @@ The following properties can modify the installation behavior of client.msi, whi
 
 ### AADCLIENTAPPID
 
-Specifies the Azure Active Directory (Azure AD) client app identifier. You create or import the client app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the **AADCLIENTAPPID** property, this application ID is for the **Native** application type.
+Specifies the Azure Active Directory (Azure AD) client app identifier. You create or import the client app when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. An Azure administrator can get the value for this property from the Azure portal. For more information, see [get application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). For the **AADCLIENTAPPID** property, this application ID is for the **Native** application type.
 
 Example: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -339,7 +339,7 @@ Specifies the Azure AD tenant identifier. Configuration Manager links to this te
 - In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
   > [!Note]
-  > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+  > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -788,4 +788,4 @@ Configuration Manager supports the following attribute values for the PKI certif
 |2.5.4.12|T or Title|Title|  
 |2.5.4.42|G or GN or GivenName|Given name|  
 |2.5.4.43|I or Initials|Initials|  
-|2.5.29.17|(no value)|Subject Alternative Name|  
+|2.5.29.17|(no value)|Subject Alternative Name|

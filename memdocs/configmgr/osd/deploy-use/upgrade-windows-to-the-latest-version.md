@@ -50,7 +50,7 @@ Devices must run one of the following OS versions to target an OS upgrade task s
 - Windows 8.1
 - An earlier version of Windows 10. For example, you can upgrade Windows 10, version 1809 to Windows 10, version 1903.  
 
-For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+For more information, see [Windows 10 upgrade paths](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### Windows Server
 
@@ -59,7 +59,7 @@ For more information, see [Windows 10 upgrade paths](https://docs.microsoft.com/
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 
-For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
+For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](https://aka.ms/upgradecenter).
 
 
 ## <a name="BKMK_Plan"></a> Plan  
@@ -120,4 +120,4 @@ To deploy the OS, use one of the following deployment methods:
 
 ## Monitor  
 
-To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](monitor-operating-system-deployments.md).  
+To monitor the task sequence deployment to upgrade the OS, see [Monitor OS deployments](monitor-operating-system-deployments.md).

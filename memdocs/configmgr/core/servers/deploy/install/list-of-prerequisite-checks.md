@@ -274,7 +274,7 @@ For more information, see the Microsoft Support article on [Problems when instal
 
 The instance for SQL Server is configured to use the **SQL_Latin1_General_CP1_CI_AS** collation.
 
-If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL collation and unicode support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support).
 
 If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](../../../plan-design/hierarchy/international-support.md).
 
@@ -374,7 +374,7 @@ When using SQL Server Always On, availability group replicas are on the default 
 <!-- SCCMDocs-pr#3899 -->
 *Applies to: Site database server*
 
-Starting in version 1906, when using SQL Server Always On, you need to configure availability group replicas with the same [seeding mode](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+Starting in version 1906, when using SQL Server Always On, you need to configure availability group replicas with the same [seeding mode](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### SQL availability group replicas must be healthy
 
@@ -736,7 +736,7 @@ The account that you configured to run the SQL Server service for the site datab
 
 Starting in version 1810, check if the site database has a backlog of SQL change tracking data.<!--SCCMDocs-pr issue 3023-->  
 
-Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
+Manually verify this check by running a diagnostic stored procedure in the site database. First, create a [diagnostic connection](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) to your site database. The easiest method is to use SQL Server Management Studio's Database Engine Query Editor, and connect to `admin:<instance name>`.
 
 In a dedicated administrator connection query window, run the following commands:
 
@@ -799,7 +799,7 @@ Configuration Manager uses SQL Server Native Client on the following site system
 
 SQL Server reserves a minimum of 8 GB of memory for the central administration site and primary site, and a minimum of 4 GB of memory for the secondary site.
 
-For more information, see [How to configure memory options using SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+For more information, see [How to configure memory options using SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > This check isn't applicable to SQL Server Express on a secondary site. This edition is limited to 1 GB of reserved memory.  
@@ -844,7 +844,7 @@ For more information, see [Prepare Active Directory for site publishing](../../.
 
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
-WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### WSUS on site server
 
@@ -852,4 +852,4 @@ WinRM is automatically installed with all currently-supported versions of Window
 
 A supported version of Windows Server Update Services (WSUS) is installed on the site server.
 
-When you use a software update point on a server other than the site server, you must install the WSUS Administration Console on the site server. For more information about WSUS, see [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+When you use a software update point on a server other than the site server, you must install the WSUS Administration Console on the site server. For more information about WSUS, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

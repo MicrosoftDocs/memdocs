@@ -190,11 +190,11 @@ You can choose the account that runs SQL services for the site database:
 
 - When the services run with a domain local user account, manually register the SPN. The SPN allows SQL clients and other site systems to authenticate with Kerberos. Without Kerberos authentication, communication to the database might fail.
 
-For more information about SPNs and Kerberos connections, see [Register a service principal name for Kerberos connections](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
+For more information about SPNs and Kerberos connections, see [Register a service principal name for Kerberos connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
 Register an SPN for the SQL Server service account of the site database server by using the **Setspn** tool. Run Setspn as a Domain Administrator on a computer in the same domain as the SQL Server.
 
-The following procedures are examples of how to manage the SPN for the SQL Server service account. For more information about Setspn, see [Setspn Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
+The following procedures are examples of how to manage the SPN for the SQL Server service account. For more information about Setspn, see [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
 
 ### Manually create a domain user SPN for the SQL Server service account
 
