@@ -147,4 +147,4 @@ The following article can help resolve specific errors:
 
 Seek assistance from support or the Intune community.
 - See [Get Support](../fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
-- Post your issue in the [Microsoft Intune forums](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Post your issue in the [Microsoft Intune forums](https://docs.microsoft.com/answers/products/mem).  
