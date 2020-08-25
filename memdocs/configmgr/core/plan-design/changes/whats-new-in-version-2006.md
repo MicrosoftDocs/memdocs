@@ -34,6 +34,13 @@ Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow
 
 For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
+### <a name="bkmk_atp"></a> Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
+<!--4812909-->
+You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
+- [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
+- [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+
 ### Install applications from the admin center
 <!--7518897, 6024389-->
 You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Manager admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  

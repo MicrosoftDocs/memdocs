@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -54,6 +54,14 @@ The following table lists the added property to the [devicePropertyHistories](..
 
 ## 2004 
 _Released April 2020_
+
+### v1.0 changes
+
+The following table lists the added property to the [devices](../developer/intune-data-warehouse-collections.md#devices) entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Added    |    Windows Operating System edition.                                                                                                                                                                                                                                                                     |
 
 ### Beta changes
 
