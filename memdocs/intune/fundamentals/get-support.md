@@ -9,7 +9,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,8 +87,6 @@ This problem occurs when you have not authenticated your new tenant account thro
 
     > [!div class="mx-imgBorder"]
     > ![Confirm your management type](./media/get-support/confirm-management-selection.png)
-
-  - If you open Help and support from **Troubleshooting + support** > **Help and support**, you won't see the management type you selected listed below *Help and support*.
 
   - If you drill into any other node like *Devices*, *Apps*, or *Users*, and then select *Help and support*, you won't have the opportunity to select a management type nor will the type display below *Help and support*. In this case, *Intune* is assumed. If you don't want the context to be Intune, use the **?** option so you can select a different management type.
 
