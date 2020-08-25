@@ -46,7 +46,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
          - The **Office 365 Client Updates** template provides common settings to use when you deploy updates for Microsoft 365 Apps clients.
              > [!Note]
-             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information on modifying your ADRs for the title change, see [Update channels for Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_channel). For more information about the name change, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. If your ADRs rely on the "Title" property, you'll need to edit it starting June 9, 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` is an example of the new title. For more information on modifying your ADRs for the title change, see [Update channels for Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_channel). For more information about the name change, see [Name change for Office 365 ProPlus](/deployoffice/name-change).
 
          - The **SCEP and Windows Defender Antivirus Updates** template provides common settings to use when you deploy Endpoint Protection definition updates.  
 
@@ -241,7 +241,7 @@ After you create an ADR, add additional deployments to the rule. This action hel
      - Alerts
      - Download Settings  
 
-Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
+Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

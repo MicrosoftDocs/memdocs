@@ -30,7 +30,7 @@ For computers connected via WUfB, Configuration Manager will not be able to repo
 
 -   Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later  
 
--   Computers to be managed via [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
+-   Computers to be managed via [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### Try it out!  
  Try to complete the following task and then use the feedback information near the top of this topic to let us know how it worked:  
@@ -63,7 +63,7 @@ When Microsoft publishes a new Office 365 desktop client update to Windows Serve
 
 4. You can verify compliance for Office 365 updates by using in-console monitoring or reports.  
 
-   For detailed steps, see [Manage Office 365 client updates with Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   For detailed steps, see [Manage Office 365 client updates with Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="BKMK_AlwasyOn"></a> Support for SQL Server AlwaysOn for highly available databases  
  Configuration Manager now supports using a SQL Server AlwaysOn availability groups to host the site database.  When you install a new site, you can direct setup to use the availability group instead of a normal instance of SQL Server.  
@@ -106,7 +106,7 @@ Try to complete the following tasks and then use the feedback information near t
  Use the following procedures to first create and configure the availability group, and then install a new Configuration Manager site that uses the availability group.  
 
 #### To create a SQL Server AlwaysOn availability group  
-The process to [create a SQL Server availability group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
+The process to [create a SQL Server availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
 
 -   A maximum of three members:  
 
@@ -198,4 +198,4 @@ Try to complete the following task and then use the feedback information near th
 
 1.  [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) to the server cluster collection.  
 
-2.  [Monitor the software update deployment](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Monitor the software update deployment](../../sum/deploy-use/monitor-software-updates.md).

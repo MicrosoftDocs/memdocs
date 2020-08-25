@@ -117,6 +117,9 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   - **Yes** (*default*) - Encryption on storage cards is required for mobile devices.
   - **Not configured** - The setting returns to the OS default, which is to not require storage card encryption.
 
+  > [!NOTE]
+  > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
+
 - **Enable full disk encryption for OS and fixed data drives**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 

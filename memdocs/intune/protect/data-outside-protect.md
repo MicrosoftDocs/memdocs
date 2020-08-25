@@ -54,4 +54,4 @@ You can share details of [how and when to protect documents and emails that cont
 As part of next steps, you can learn more about the other ways you can increase the protection of your company's data, including: 
 
 * Learn how to use [Azure Information Protection on iOS/iPadOS and Android devices](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* For Windows Phone and Mac computers, learn about [Microsoft Rights Management Sharing Application](https://technet.microsoft.com/dn451248).
+* For Mac computers, learn about [Microsoft Rights Management Sharing Application](https://technet.microsoft.com/dn451248).
