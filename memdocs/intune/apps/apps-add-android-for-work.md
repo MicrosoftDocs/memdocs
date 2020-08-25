@@ -179,8 +179,8 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps** > **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
-5. In the **Managed Google Play** pane, choose **Refresh**.  
+3. Select **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
+5. In the **Managed Google Play** pane, choose **Sync**.  
     The page updates the time and status of the last sync.
 6. In the Microsoft Endpoint Manager admin center select  **Apps** > **All apps**.  
     The newly available Managed Google Play app is displayed.

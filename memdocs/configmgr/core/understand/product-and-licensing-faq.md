@@ -53,7 +53,7 @@ Configuration Manager is included in the following plans:
 - EMS E5
 - Microsoft 365 E3
 - Microsoft 365 E5
-- Microsoft 365 F1
+- Microsoft 365 F3 (formerly Microsoft 365 F1)
 
 <!-- Sources:
 https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans
@@ -105,7 +105,7 @@ The co-management license lets Configuration Manager customers with Software Ass
 For more information, see the following articles:
 
 - [Co-management prerequisites](../../comanage/overview.md#prerequisites)
-- [Windows Autopilot requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 - [Desktop analytics prerequisites](../../desktop-analytics/overview.md#prerequisites)
 - [Tenant attach prerequisites](../../tenant-attach/device-sync-actions.md#prerequisites)
 - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)

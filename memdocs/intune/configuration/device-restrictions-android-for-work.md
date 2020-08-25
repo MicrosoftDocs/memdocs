@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -439,29 +439,33 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
   - Android 7.0 and newer with the work profile enabled
 
-- **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-- **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+  Also configure:
 
-  On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
+  - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+  - **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+    On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
-- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
-  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-  - **Required**
-  - **At least numeric**: Includes numeric characters, such as `123456789`.
-  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
-  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
-  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
-  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+  - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
-- **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Fingerprint unlock**: **Block** prevents users from using the device fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
-- **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+  - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
+  - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+    - **Device default**
+    - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+    - **Required**
+    - **At least numeric**: Includes numeric characters, such as `123456789`.
+    - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
+    - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
+    - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
+    - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting.
+  - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+  - **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
+  - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+  - **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
+  - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+
+    When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 ### Password
 
@@ -485,7 +489,9 @@ These password settings apply to personal profiles on devices that use a work pr
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Fingerprint unlock**: **Block** prevents users from using the device fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+- **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+- **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
+- **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
 - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.

@@ -28,13 +28,9 @@ landingContent:
       - text: Overview of Windows Autopilot
         url:  windows-autopilot.md
       - text: Requirements
-        url:  windows-autopilot-requirements.md
+        url:  software-requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
-    - linkListType: quickstart
-      links:
-      - text: Demonstrate Autopilot on a VM
-        url: demonstrate-deployment-on-vm.md
 
   # Card (optional)
   - title: Deployment scenarios

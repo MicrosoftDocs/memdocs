@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -78,10 +78,8 @@ Enrollment steps differ for different versions of Windows 10 devices. The follow
     * __1607 or later__: Enroll your device using the [**Settings** > **Access work or school** route](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 or earlier__: Enroll your device using the [**Settings** > **Accounts** route](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## Enroll non Windows 10 devices  
-Use the following articles to enroll other supported Windows devices through the Company Portal website:   
-* [Windows 8.1. or Windows RT 8.1 device](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8.1 device](enroll-your-wp81-windows.md)    
+## Enroll other Windows devices  
+You can enroll [Windows 8.1. or Windows RT 8.1 devices](enroll-your-W81-or-rt81-windows.md) via the Company Portal website. 
 
 ## IT administrator support  
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4469913). This article lists common errors, their causes, and steps to resolve them.  

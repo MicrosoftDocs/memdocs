@@ -4,22 +4,19 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Microsoft Intune support for Windows 10 Mobile ending<!--3544938-->
-Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in this support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune will now end support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
+### Microsoft Intune ends support for Windows Phone 8.1 and Windows 10 Mobile<!-- 3544938, 3544909 -->
+Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. 
 
-#### How does this affect me?
-If you have Windows 10 Mobile devices deployed in your organization, between now and August 10, 2020 you can enroll new devices, add, or remove policies and apps, or update any management settings. After August 10, we will stop new enrollments, and eventually remove Windows 10 Mobile management from the Intune UI. Devices will no longer check into the Intune service and we will delete device and policy data.  
+Microsoft mainstream support for Windows 10 Mobile ended in December 2019. As mentioned in the support statement, Windows 10 Mobile users will no longer be eligible to receive new security updates, non-security hotfixes, free assisted support options or online technical content updates from Microsoft. Based on the all-up Mobile OS support, Microsoft Intune ends support for both the Company Portal for the Windows 10 Mobile app and the Windows 10 Mobile Operating System on August 10, 2020.
 
-#### What do I need to do to prepare for this change?
-You can check your Intune reporting to see what devices or users may be affected. Go to **Devices** > **All devices** and filter by OS. You can add in additional columns to help identify who in your organization has devices running Windows 10 Mobile. Request that your end users upgrade their devices or discontinue using the devices for corporate access.
-
+As of August 10, enrollments for Windows Phone 8.1 and Windows 10 Mobile devices will fail and Windows Mobile profile types are removed from the Intune UI. Devices already enrolled will no longer check into the Intune service and we will delete device and policy data.
 
 ### End of support for legacy PC management
 
@@ -35,10 +32,10 @@ In MC208118 posted last March, we introduced a new, simple URL for your Microsof
 Android device administrator management was released in Android 2.2 as a way to manage Android devices. Then beginning with Android 5, the more modern management framework of [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) was released (for devices that can reliably connect to Google Mobile Services). Google is encouraging movement off of device administrator management by decreasing its management support in new Android releases.
 
 #### How does this affect me?
-Because of these changes by Google, in the fourth quarter of 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
+Because of these changes by Google, in October 2020, you will no longer have as extensive management capabilities on impacted device administrator-managed devices. 
 
 > [!NOTE]
-> This date was previously communicated as third quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> This date was previously communicated as fourth quarter of 2020, but it has been moved out based on the [latest information from Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### Device types that will be impacted
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
@@ -94,14 +91,14 @@ Impacted compliance settings:
 - For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page and the device will be out of compliance, but stricter password requirements will not be enforced in the Settings app.
 
 #### Cause of impact 
-Devices will begin being impacted in the fourth quarter of 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Devices will begin being impacted in October 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 At that point, device administrator-managed devices that are not manufactured by Samsung will be impacted once the user completes both these actions:
 - Updates to Android 10 or later.
 - Updates the Company Portal app to the version that targets API level 29.
 
 #### What do I need to do to prepare for this change?
-To avoid the reduction in functionality coming in the fourth quarter of 2020, we recommend the following:
+To avoid the reduction in functionality coming in October 2020, we recommend the following:
 - **New enrollments**: Onboard new devices into [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management (where available) and/or [app protection policies](../apps/app-protection-policies.md). Avoid onboarding new devices into device administrator management. 
 - **Previously enrolled devices**: If a device administrator-managed device is running Android 10 or later or may update to Android 10 or later (especially if it is not a Samsung device), move it off of device administrator management to [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management and/or [app protection policies](../apps/app-protection-policies.md). You can leverage the streamlined flow to [move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
 

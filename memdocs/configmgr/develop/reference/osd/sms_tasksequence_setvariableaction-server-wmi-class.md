@@ -1,137 +1,171 @@
 ---
-title: "SMS_TaskSequence_SetVariableAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_SetVariableAction class
+titleSuffix: Configuration Manager
+ms.date: 08/11/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0fdecda3-7ed0-486f-a3a5-7a339979cad4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_SetVariableAction Server WMI Class
-The `SMS_TaskSequence_SetVariableAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that sets the value of a task sequence environment variable.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_SetVariableAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_SetVariableAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that sets the value of a task sequence environment variable.
 
-```  
-Class SMS_TaskSequence_SetVariableAction : SMS_TaskSequence_Action  
-{  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      String Name;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-      String VariableName;  
-      String VariableValue;  
-};  
-```  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Methods  
- The `SMS_TaskSequence_SetVariableAction` class does not define any methods.  
+## Syntax
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+```MOF
+Class SMS_TaskSequence_SetVariableAction : SMS_TaskSequence_Action
+{
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean DoNotShowVariableValue;
+      Boolean Enabled;
+      string HiddenVariableValue;
+      String Name;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+      String VariableName;
+      String VariableValue;
+};
+```
 
- Access type: Read/Write  
+## Methods
 
- Qualifiers: None  
+The `SMS_TaskSequence_SetVariableAction` class doesn't define any methods.
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+## Properties
 
- `ContinueOnError`  
- Data type: `Boolean`  
+### `Condition`
 
- Access type: Read/Write  
+Data type: `SMS_TaskSequence_Condition`
 
- Qualifiers: None  
+Access type: Read/Write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: None
 
- `Description`  
- Data type: `String`  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Access type: Read/Write  
+### `ContinueOnError`
 
- Qualifiers: [AllowedLen("0-255")]  
+Data type: `Boolean`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
- `Enabled`  
- Data type: `Boolean`  
+Qualifiers: None
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers: None  
+### `Description`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `String`
 
- `Name`  
- Data type: `String`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: [AllowedLen("0-255")]
 
- Qualifiers: [AllowedLen("1-100")]  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `DoNotShowVariableValue`
 
- `SupportedEnvironment`  
- Data type: `String`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/write
 
- Qualifiers: [Not_Null:ToInstance]  
+Default value `false`. This property corresponds to the setting in the task sequence editor, **Do not display this value**.
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `Enabled`
 
- `Timeout`  
- Data type: `UInt32`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: None  
+Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `VariableName`  
- Data type: `String`  
+### `HiddenVariableValue`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [CommandLineArg(1), Not_Null, AllowedLen("1-256")]  
+Access type: Read/write
 
- Name of the task sequence environment variable to set. The name length must be between 1 and 256 characters.  
+Hidden value of the task sequence environment variable. The value length must be between 0 and 4,001 characters.
 
- `VariableValue`  
- Data type: `String`  
+### `Name`
 
- Access type: Read/Write  
+Data type: `String`
 
- Qualifiers: [CommandLineArg(2), Not_Null, AllowedLen("0-4001")]  
+Access type: Read/Write
 
- Value of the task sequence environment variable. The value length must be between 0 and 4,001 characters.  
+Qualifiers: [AllowedLen("1-100")]
 
-## Remarks  
- Class qualifiers for this class include:  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- [CommandLine("tsenv.exe \\"%1=%2\\""),  
+### `SupportedEnvironment`
 
- ActionCategory{"General,7,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetSequenceVariableControl", "TaskSequenceOptionControl"}]  
+Data type: `String`
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Access type: Read/Write
 
-## Requirements  
+Qualifiers: [Not_Null:ToInstance]
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### `Timeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+### `VariableName`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: [CommandLineArg(1), Not_Null, AllowedLen("1-256")]
+
+Name of the task sequence environment variable to set. The name length must be between 1 and 256 characters.
+
+### `VariableValue`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: [CommandLineArg(2), Not_Null, AllowedLen("0-4001")]
+
+Value of the task sequence environment variable. The value length must be between 0 and 4,001 characters.
+
+## Remarks
+
+Class qualifiers for this class include:
+
+```
+[CommandLine("tsenv.exe \\"%1=%2\\""),  
+
+ActionCategory{"General,7,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetSequenceVariableControl", "TaskSequenceOptionControl"}]  
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+### Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).

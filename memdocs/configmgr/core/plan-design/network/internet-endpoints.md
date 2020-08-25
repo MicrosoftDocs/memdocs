@@ -2,10 +2,10 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
@@ -84,11 +84,11 @@ For more information on this function, see [Configure Azure services for use wit
 
 ## Co-management
 
-If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
 
 ## Microsoft Store for Business
 
-If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## Delivery optimization
 
@@ -98,7 +98,7 @@ Distribution points that support Microsoft Connected Cache also require these en
 
 For more information, see the following articles:
 
-- [Delivery optimization FAQ](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Delivery optimization FAQ](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Fundamental concepts for content management in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
@@ -196,8 +196,6 @@ Allow the active software update point to access the following endpoints so that
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 For more information on software updates, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md).
@@ -219,10 +217,10 @@ You might need to add endpoints to a firewall that's between two site systems in
 
 - `https://<FQDN for software update point on parent site>`  
 
-## Manage Office 365
+## Manage Microsoft 365 Apps
 
 > [!NOTE]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 If you use Configuration Manager to deploy and update Microsoft 365 Apps for enterprise, allow the following endpoints:
 
@@ -270,15 +268,21 @@ If you use the **Geographical View**, allow access to the following endpoint:
 
 ## Desktop Analytics
 
-For more information on the required endpoints for the Desktop Analytics cloud service, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## Tenant attach
 
-For more information on the required endpoints for tenant attach features, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+For more information, see [Enable tenant attach](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## Asset intelligence
 

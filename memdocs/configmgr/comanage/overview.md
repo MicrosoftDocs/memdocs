@@ -98,15 +98,15 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 - Windows 10 devices must be connected to Azure AD. They can be either of the following types:  
 
-  - [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
+  - [Hybrid Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
 
-  - [Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->  
+  - [Azure AD-joined](/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")<!--SCCMDocs issue 605-->  
 
 ### Intune
 
-- [Set up Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [Set up Intune](/intune/setup-steps)  
 
-- [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### Windows 10
 
@@ -125,7 +125,7 @@ Upgrade your devices to Windows 10, version 1709 or later. For more information,
 | Import Azure apps in Configuration Manager | Configuration Manager **Full Administrator**<br>No additional Azure roles needed |
 | Enable co-management in Configuration Manager | An Azure AD user<br>Configuration Manager **Full Administrator** with **All** scope rights.<!--SCCMDoc issue 626--> |
 
-For more information about Azure roles, see [Understand the different roles](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+For more information about Azure roles, see [Understand the different roles](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 For more information about Configuration Manager roles, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -163,4 +163,4 @@ For more information, see [How to monitor co-management](how-to-monitor.md).
 
 - [Learn more about immediate value and getting started with co-management](quickstarts.md)  
 
-- [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md)  
+- [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md)

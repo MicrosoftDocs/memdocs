@@ -13,7 +13,7 @@ manager: dougeby
 
 ---
 # How to Read a Configuration Manager Object by Using WMI
-In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) method to return an object instance that is identified by a key value.  
+In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [Get](/windows/win32/wmisdk/swbemservices-get) method to return an object instance that is identified by a key value.  
 
 > [!NOTE]
 >  To query for multiple objects, use either a synchronous or asynchronous query. For more information, see [How to Perform a Synchronous Configuration Manager Query by Using Managed Code](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md)  
@@ -51,7 +51,7 @@ End Sub
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|[SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|[SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`packageID`|`String`|A package identifier. This can be obtained from the [SMS_Package](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class PackageID property.|  
 
 ## See Also  
@@ -64,4 +64,4 @@ End Sub
  [How to Modify a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md)   
  [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
- [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
+ [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)

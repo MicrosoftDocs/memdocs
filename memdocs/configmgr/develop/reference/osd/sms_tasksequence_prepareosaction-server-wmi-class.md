@@ -1,143 +1,168 @@
 ---
-title: "SMS_TaskSequence_PrepareOSAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_PrepareOSAction class
+titleSuffix: Configuration Manager
+ms.date: 08/11/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8227372d-303d-4c6e-bee5-da20bd443437
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_TaskSequence_PrepareOSAction Server WMI Class
-The `SMS_TaskSequence_PrepareOSAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the Sysprep options to use when capturing Windows settings from the reference computer.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_TaskSequence_PrepareOSAction server WMI class
 
-## Syntax  
+The `SMS_TaskSequence_PrepareOSAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that specifies the Sysprep options to use when capturing Windows settings from the reference computer.
 
-```  
-Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action  
-{  
-      Boolean BuildStorageDriverList;  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      Boolean KeepActivation;  
-      String Name;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-};  
-```  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Methods  
- The `SMS_TaskSequence_PrepareOSAction` class does not define any methods.  
+## Syntax
 
-## Properties  
- `BuildStorageDriverList`  
- Data type: `Boolean`  
+```MOF
+Class SMS_TaskSequence_PrepareOSAction : SMS_TaskSequence_Action
+{
+      Boolean BuildStorageDriverList;
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean Enabled;
+      Boolean KeepActivation;
+      String Name;
+      boolean ShutdownPreparedOs;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+};
+```
 
- Access type: Read/Write  
+## Methods
 
- Qualifiers: [not_null, VariableName("OSDBuildStorageDriverList")]  
+The `SMS_TaskSequence_PrepareOSAction` class doesn't define any methods.
 
- `true` to build a mass-storage device driver list. The default value is `false`.  
+## Properties
 
- The task sequence variable associated with this property is OSDBuildStorageDriverList. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
+### `BuildStorageDriverList`
 
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: None  
+Qualifiers: `[not_null, VariableName("OSDBuildStorageDriverList")]`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Set `true` to build a mass-storage device driver list. The default value is `false`.
 
- `ContinueOnError`  
- Data type: `Boolean`  
+This property is deprecated. It only applies to Windows XP and Windows Server 2003.
 
- Access type: Read/Write  
+### `Condition`
 
- Qualifiers: None  
+Data type: `SMS_TaskSequence_Condition`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
- `Description`  
- Data type: `String`  
+Qualifiers: None
 
- Access type: Read/Write  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- Qualifiers: [AllowedLen("0-255")]  
+### `ContinueOnError`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Data type: `Boolean`
 
- `Enabled`  
- Data type: `Boolean`  
+Access type: Read/Write
 
- Access type: Read/Write  
+Qualifiers: None
 
- Qualifiers: None  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+### `Description`
 
- `KeepActivation`  
- Data type: `Boolean`  
+Data type: `String`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [not_null, VariableName("OSDKeepActivation")]  
+Qualifiers: `[AllowedLen("0-255")]`
 
- `true` to keep the current product activation flag. `false` to reset it. The default value is `false`.  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The task sequence variable associated with this property is OSDKeepActivation. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
+### `Enabled`
 
- `Name`  
- Data type: `String`  
+Data type: `Boolean`
 
- Access type: Read/Write  
+Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SupportedEnvironment`  
- Data type: `String`  
+### `KeepActivation`
 
- Access type: Read/Write  
+Data type: `Boolean`
 
- Qualifiers: [Not_Null:ToInstance]  
+Access type: Read/Write
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Qualifiers: `[not_null, VariableName("OSDKeepActivation")]`
 
- The default value of this property for this task sequence action is FullOS.  
+Set `true` to keep the current product activation flag. Set `false` to reset it. The default value is `false`.
 
- `Timeout`  
- Data type: `UInt32`  
+The task sequence variable associated with this property is [OSDKeepActivation](../../../osd/understand/task-sequence-variables.md#OSDKeepActivation).
 
- Access type: Read/Write  
+### `Name`
 
- Qualifiers: None  
+Data type: `String`
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+Access type: Read/Write
 
-## Remarks  
- Class qualifiers for this class include:  
+Qualifiers: `[AllowedLen("1-100")]`
 
- [CommandLine("osdprepareos.exe /activate:%%OSDKeepActivation%% /bmsd:%%OSDBuildStorageDriverList%%"),  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- ActionCategory{"Images,7,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "WindowsCaptureControl", "TaskSequenceOptionControl"}]  
+### `ShutdownPreparedOs`
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+Data type: `Boolean`
 
-## Requirements  
+Access type: Read/write
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+Corresponds to the following setting in the task sequence editor: **Shutdown the computer after running this action**. The default value is `false`.
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### `SupportedEnvironment`
+
+Data type: `String`
+
+Access type: Read/Write
+
+Qualifiers: `[Not_Null:ToInstance]`
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+The default value of this property for this task sequence action is `FullOS`.
+
+### `Timeout`
+
+Data type: `UInt32`
+
+Access type: Read/Write
+
+Qualifiers: None
+
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
+
+## Remarks
+
+Class qualifiers for this class include:
+
+```
+[CommandLine("osdprepareos.exe /activate:%%OSDKeepActivation%% /bmsd:%%OSDBuildStorageDriverList%%"),
+
+ActionCategory{"Images,7,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "WindowsCaptureControl", "TaskSequenceOptionControl"}]
+```
+
+For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+### Runtime requirements
+
+For more information, see [Configuration Manager server runtime requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../develop/core/reqs/server-development-requirements.md).

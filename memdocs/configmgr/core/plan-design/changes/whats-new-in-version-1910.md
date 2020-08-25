@@ -40,10 +40,10 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 For more information, see the following posts from Brad Anderson, Microsoft corporate vice president for Microsoft 365:
@@ -96,19 +96,19 @@ For more information on the monthly changes to the Desktop Analytics cloud servi
 <!--3197353-->
 We've added some significant optimizations to the CMPivot engine. Now you can push more of the processing to the ConfigMgr client. The optimizations drastically reduce the network and server CPU load needed to run CMPivot queries. With these optimizations, you can now sift through gigabytes of client data in real time. 
 
-For more information, see [Optimizations to the CMPivot engine](../../servers/manage/cmpivot.md#bkmk_optimization).
+For more information, see [Optimizations to the CMPivot engine](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
 ### Additional CMPivot entities and enhancements
 <!--5410930-->
 We've added a number of new CMPivot entities and entity enhancements to aid in troubleshooting and hunting. We've included the following entities to query:
 
-- Windows event logs ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- File content ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- DLLs loaded by processes ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory information ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Endpoint protection status ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows event logs ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- File content ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- DLLs loaded by processes ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory information ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Endpoint protection status ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-This release also includes several [other enhancements](../../servers/manage/cmpivot.md#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](../../servers/manage/cmpivot.md#bkmk_cmpivot1910).
+This release also includes several [other enhancements](../../servers/manage/cmpivot-changes.md#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
 ## <a name="bkmk_content"></a> Content management
 
@@ -344,7 +344,7 @@ This release includes the following improvements to search in the Configuration 
 
 ## Other updates
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes?view=sccm-ps).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

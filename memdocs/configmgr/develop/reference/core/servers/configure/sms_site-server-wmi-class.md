@@ -100,7 +100,7 @@ Class SMS_Site : SMS_BaseClass
 
  Mode of the site. Possible values are:  
 
-|||  
+|Value|Site mode|  
 |-|-|  
 |1|Replication maintenance.|  
 |2|Recovery in progress.|  
@@ -128,7 +128,7 @@ Class SMS_Site : SMS_BaseClass
 
  Value indicating a request for secondary site status. Possible values are listed below. The default value is 1001.  
 
-|||  
+|Value|Requested site status|  
 |-|-|  
 |1001|Create a secondary site; the primary site will send down the installation media.|  
 |1002|Create a secondary site using the installation media already available on the secondary site.|  
@@ -191,7 +191,7 @@ Class SMS_Site : SMS_BaseClass
 
  Current status of the site. Possible values are listed below. The default value is ACTIVE (1).  
 
-|||  
+|Value|Site status|  
 |-|-|  
 |1|ACTIVE|  
 |2|PENDING|  
@@ -221,7 +221,7 @@ Class SMS_Site : SMS_BaseClass
 
  Type of site. Possible values are listed below. The default value is SECONDARY (1).  
 
-|||  
+|Value|Site type|  
 |-|-|  
 |1|SECONDARY|  
 |2|PRIMARY|  

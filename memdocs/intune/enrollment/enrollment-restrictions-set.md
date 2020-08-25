@@ -51,11 +51,10 @@ The specific enrollment restrictions that you can create include:
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, Windows, and Windows Mobile. (Only Windows 10 versions can be used. Leave this blank if Windows 8.1 is allowed.)
+- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, and Windows.
   - Minimum version.
   - Maximum version.
-- Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, Windows, and Windows Mobile only).
+- Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, and Windows).
 
 ## Default restrictions
 
@@ -151,7 +150,7 @@ The following methods qualify as being authorized as a Windows corporate enrollm
 - The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 - The device enrolls through [Windows Autopilot](enrollment-autopilot.md).
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
-- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**. (Not supported for Windows Phone 8.1.)
+- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**.
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

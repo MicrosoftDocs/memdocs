@@ -78,10 +78,10 @@ SCUP continues to support other catalogs and scenarios. The list of catalogs in 
 
     > [!Tip]  
     > The software update point requires HTTPS because it's a requirement for the WSUS APIs used to handle signing certificates. Clients don't need to be HTTPS-enabled as well. For more information on enabling HTTPS on WSUS, see the following articles for assistance:  
-    > - [Secure WSUS with the Secure Sockets Layer Protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS Support blog post](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS Support blog post](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- Sufficient disk space on the software update point, WSUSContent folder, to store the source binary content for third-party software updates. The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment. If you need to move the WSUSContent folder to another drive with more free space, see the WSUS support team blog post [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Enable and deploy the client setting [Enable third party software updates](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) in the **Software Updates** group.  
 
@@ -237,7 +237,7 @@ The Office Customization Tool is now integrated with the Office 365 Installer in
  Try to complete the tasks. Then send [Feedback](capabilities-in-technical-preview-1804.md#bkmk_feedback) letting us know how it worked.
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, and select the **Office 365 Client Management** node.
-2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Click the **Office 365 Installer** tile in the dashboard to launch the Office 365 Client Installation Wizard. For more information, see [Deploy Office 365 apps](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. On the **Office Setting** page, click **Go To Office Web Page**. Use the online Office Customization Tool to specify settings for this deployment. 
 4. Click **Submit** in the upper right corner when complete. Finish the Office 365 Client Installation Wizard.
 
@@ -351,4 +351,4 @@ In [Configuration Manager version 1710](../plan-design/changes/whats-new-in-vers
 
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).

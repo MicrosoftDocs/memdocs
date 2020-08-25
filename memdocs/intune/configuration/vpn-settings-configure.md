@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,9 +40,7 @@ For example, you want to configure all iOS/iPadOS devices with the required sett
 >
 > * Android 4 and later
 > * Enrolled devices that run Windows 8.1 and later
-> * Windows Phone 8.1 and later
 > * Enrolled devices that run Windows 10 desktop
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## VPN connection types
@@ -60,7 +58,6 @@ You can create VPN profiles using the following connection types:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android device administrator
@@ -93,7 +90,6 @@ You can create VPN profiles using the following connection types:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -101,6 +97,10 @@ You can create VPN profiles using the following connection types:
 
 - L2TP
   - Windows 10
+
+- NetMotion Mobility
+  - iOS/iPadOS
+  - macOS
 
 - Palo Alto Networks GlobalProtect
   - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
@@ -118,7 +118,6 @@ You can create VPN profiles using the following connection types:
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android device administrator
@@ -128,7 +127,6 @@ You can create VPN profiles using the following connection types:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
@@ -152,7 +150,6 @@ You can create VPN profiles using the following connection types:
       - **macOS**
       - **Windows 10 and later**
       - **Windows 8.1 and later**
-      - **Windows Phone 8.1**
     - **Profile**: Select **VPN**.
 
 4. Select **Create**.
@@ -170,7 +167,6 @@ You can create VPN profiles using the following connection types:
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (including Windows Holographic for Business)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).

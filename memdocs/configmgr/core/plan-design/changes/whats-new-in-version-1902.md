@@ -119,7 +119,7 @@ For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-c
 <!--3610960-->
 Configuration Manager now supports running CMPivot from the central administration site in a hierarchy. The primary site still handles the communication to the client. When running CMPivot from the central administration site, it communicates with the primary site over the high-speed message subscription channel. This communication doesn't rely upon standard SQL replication between sites.
 
-For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+For more information, see [CMPivot for real-time data](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### Edit or copy PowerShell scripts
 
@@ -347,9 +347,9 @@ For more information, see [About client settings](../../clients/deploy/about-cli
 <!--3556021-->
 Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence.
 
-For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
+For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders).
 
-First, [find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+First, [find your Office 365 tenant ID](/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).  
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
@@ -411,7 +411,7 @@ Based on customer feedback at the Midwest Management Summit (MMS) Desert Edition
 - Views sort by integer values in the **Deployments** node of the **Monitoring** workspace
 - Move the warning for a large number of results
 
-For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md).
 
 ### Configuration Manager console notifications
 
@@ -423,7 +423,7 @@ To keep you better informed so that you can take the appropriate action, the Con
 
 This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
-For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md).
+For more information, see [Configuration Manager console notifications](../../servers/manage/admin-console-notifications.md).
 
 ### Confirmation of console feedback
 
@@ -451,7 +451,7 @@ For more information, see [Using the Configuration Manager console](../../server
 <!--3600878-->
 You can now search for a MAC address in a device view of the Configuration Manager console. This property is useful for OS deployment administrators while troubleshooting PXE-based deployments. When you view a list of devices, add the **MAC Address** column to the view. Use the search field to add the **MAC Address** search criteria.
 
-For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md).
 
 ### Use .NET 4.7 for improved console accessibility
 
@@ -477,7 +477,7 @@ When you install or update a site server, it copies these installation files and
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4498910).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 The following update rollup (4500571) is available in the console starting on 17 June 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 

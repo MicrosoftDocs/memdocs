@@ -51,7 +51,7 @@
       displayName: psk, oma-uri, eap
     - name: Troubleshoot Wi-Fi
       href: troubleshoot-wi-fi-profiles.md
-  - name: Administrative templates on Windows
+  - name: Administrative templates
     displayName: admx, gpo, group policy
     items:
     - name: Create administrative templates

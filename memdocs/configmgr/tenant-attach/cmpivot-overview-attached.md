@@ -2,7 +2,7 @@
 title:  Tenant attached CMPivot overview 
 titleSuffix: Configuration Manager
 description: CMPivot overview for Microsoft Endpoint Manager tenant attached devices.
-ms.date: 07/31/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -35,6 +35,7 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
+
 
 ## Next steps
 

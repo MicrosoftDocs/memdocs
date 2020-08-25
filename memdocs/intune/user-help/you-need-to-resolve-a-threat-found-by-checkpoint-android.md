@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve a threat found by SandBlast Mobile Protect
+# Resolve a threat found by SandBlast Mobile Protect on Android
 
 SandBlast Mobile Protect is a Mobile Threat Defender service that identifies potential threats on your Android devices. It reports threats that you can then view from the Company Portal app. Threats appear to you in the app as unresolved, noncompliant issues. As long as these threats are present, you might not be able to:   
 

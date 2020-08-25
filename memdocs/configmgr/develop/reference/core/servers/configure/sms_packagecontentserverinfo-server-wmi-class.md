@@ -67,7 +67,7 @@ Class SMS_PackageContentServerInfo : SMS_BaseClass
 
  Type of content server.  
 
-|||  
+|Value|Content server type|  
 |-|-|  
 |1|Distribution Point|  
 |2|Distribution Point Group|  
@@ -126,7 +126,7 @@ Class SMS_PackageContentServerInfo : SMS_BaseClass
 
  Secured object class identifier. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |42|SMS_DistributionPointInfo|  
 |43|SMS_DistributionPointGroup|  
