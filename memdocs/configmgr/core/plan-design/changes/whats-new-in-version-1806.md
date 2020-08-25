@@ -230,7 +230,7 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
 
-- **Microsoft 365**<!--1357841-->: Devices don't install Microsoft 365 deployments from Configuration Manager.  
+- **Office 365**<!--1357841-->: Devices don't install Microsoft 365 deployments from Configuration Manager.  
 
 - **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md).  
 
