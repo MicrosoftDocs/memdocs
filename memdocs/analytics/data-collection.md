@@ -24,7 +24,7 @@ This article explains the data flow, data collection, and how to stop gathering 
 
 ## <a name="bkmk_flow"></a>Data flow
 
-The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
+Endpoint analytics is available in all Intune locations in global Azure. The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant. 
 
 [![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
