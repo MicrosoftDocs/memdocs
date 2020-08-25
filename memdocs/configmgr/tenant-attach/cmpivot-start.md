@@ -73,6 +73,8 @@ When using CMPivot from the Microsoft Endpoint Manager admin center with Configu
 - Count
 - Distinct
 
+**Resolution**: Install [KB4578123 - CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123).
+
 ## Next steps
 
 - For query examples, see [CMPivot sample scripts](cmpivot-samples-attached.md).
