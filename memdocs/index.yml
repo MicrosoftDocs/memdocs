@@ -85,7 +85,7 @@ conceptualContent:
         - url: ./autopilot/index.yml
           itemType: concept
           text: Windows Autopilot documentation
-        - url: /mem/intune/enrollment/enrollment-autopilot
+        - url: ./autopilot/enrollment-autopilot.md
           itemType: how-to-guide
           text: "Intune: Enroll Windows devices using Windows Autopilot"
         - url: ./autopilot/existing-devices.md
