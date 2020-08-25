@@ -185,12 +185,12 @@ User experience settings control the end-user experience for device restart and 
   - **Allow** - Allow device users to use Windows Update scan to find and download updates, and install features.
   - **Block** - Prevent device users from accessing the Windows Update scan, downloading updates, and installing features.  
 
-- **Require user's approval to restart outside of work hours**  
+- **Require user approval to dismiss restart notification**  
   **Default**: Not configured  
   Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Not configured**  
-  - **Required** - Require that a user approves a device restart outside of work hours.  
+  - **No** - Automatic Dismissal after 25 seconds.
+  - **Yes** - Require User Dismissal.
    
 - **Remind user prior to required auto-restart with dismissible reminder (hours)**  
   **Default**: 4  
@@ -246,7 +246,7 @@ User experience settings control the end-user experience for device restart and 
     **Default**: *Not configured*
     Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Specifies a minimum number of days after deadline until restarts occur automatically (2-7).
+    Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
 
   - **Auto reboot before deadline**  
     **Default**:  Yes
