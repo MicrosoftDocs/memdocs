@@ -65,6 +65,8 @@ Packages can use some new features of Configuration Manager, including distribut
 
         > [!NOTE]  
         > The computer account of the site server must have read access permissions to the source folder that you specify.  
+        > Source Path should be less that equal to 255 characters OS limit, This applies to Package source as well as application, For naming convention, Please refer to
+          https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file 
 
     - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
