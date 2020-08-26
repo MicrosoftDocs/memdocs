@@ -123,8 +123,8 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. In **Request Handling**, select **Allow private key to be exported**.
     
     > [!NOTE]
-    > On contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
-    > In order to for the Certificate Connector to export the PFX certificate and send it to the device, this is required. 
+    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
+    > It is required that the certificate template allows the private key to be exported, in order to for the Certificate Connector to export the PFX certificate and send it to the device. 
     >
     > However, please note that as the certificates are installed on the device itself, the private key will not be marked as exportable.
     
