@@ -65,7 +65,7 @@ The Zimperium app authorization process follows:
 
 - Allow the Zimperium app to sign in using Azure AD SSO.
 
-For more information about consent and Azure Active Directory applications, see [Request the permissions from a directory admin](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in the Azure Active Directory article *Permissions and consent in the Azure Active Directory v2.0 endpoint*.
+For more information about consent and Azure Active Directory applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in the Azure Active Directory article *Permissions and consent in the Azure Active Directory v2.0 endpoint*.
 
 
 ## To set up Zimperium integration

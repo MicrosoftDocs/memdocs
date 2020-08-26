@@ -51,7 +51,7 @@ You must supply your test device and test user in this guided scenario. Make sur
 
 - Set up a test user account in Azure Active Directory.
 - Create a test device running Windows 10, version 1903 or later.
-- (Optional) [Register the test device with Windows Autopilot](../enrollment/enrollment-autopilot.md#add-devices).
+- (Optional) [Register the test device with Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
 - (Optional) Enable [branding to your organization's Azure Active Directory sign-in page](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## Step 2 - User
@@ -70,7 +70,7 @@ Windows Autopilot automates the configuration of new devices so that users can s
 
 ### Option B – Manual device enrollment
 
-Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## Step 4 - Review + create
 
@@ -90,8 +90,8 @@ The final step allows you to review a summary of the settings you configured. On
         - Set to **All** or,
         - Set to **Some**. Also add the user group created by this guided scenario.
 3. Follow the appropriate steps on the device to join it to Azure AD based on the following:
-    - With Autopilot. For more information, see [Windows Autopilot user-driven mode](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Without Autopilot: For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - With Autopilot. For more information, see [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven).
+    - Without Autopilot: For more information, see [Join a Windows 10 device to Azure AD during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### What happens when I click Deploy?
 The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Azure AD, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows 10 device](../enrollment/quickstart-enroll-windows-device.md).

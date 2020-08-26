@@ -53,14 +53,14 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - The device can protect data that's stored on the drive from unauthorized access when the system is off, or hibernates.
   
-  [Device HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
 - **Require Secure Boot to be enabled on the device**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - The system is forced to boot to a factory trusted state. The core components that are used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies the signature before it lets the machine start. If any files are tampered with, which breaks their signature, the system doesn't boot.
 
   > [!NOTE]
-  > The **Require Secure Boot to be enabled on the device** setting is supported on some TPM 1.2 and 2.0 devices. For devices that don't support TPM 2.0 or later, the policy status in Intune shows as **Not Compliant**. For more information on supported versions, see  [Device Health Attestation](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > The **Require Secure Boot to be enabled on the device** setting is supported on some TPM 1.2 and 2.0 devices. For devices that don't support TPM 2.0 or later, the policy status in Intune shows as **Not Compliant**. For more information on supported versions, see  [Device Health Attestation](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Require code integrity**:  
   Code integrity is a feature that validates the integrity of a driver or system file each time it's loaded into memory.
@@ -69,7 +69,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 More resources:
 
-- For details about how the Health Attestation service works, see [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
+- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## Device Properties
@@ -144,8 +144,8 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
     > [!TIP]
     > The Alphanumeric password policies can be complex. We encourage administrators to read the CSPs for more information:
     >
-    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minimum password length**:  
   Enter the minimum number of digits or characters that the password must have.
@@ -173,7 +173,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
   
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
@@ -184,28 +184,28 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*) - Intune doesn't control the Microsoft Defender Firewall, nor change existing settings.
   - **Require** - Turn on the Microsoft Defender Firewall, and prevent users from turning it off.
 
-  [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
+  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.
   - **Require** - Intune checks the TPM chip version for compliance. The device is compliant if the TPM chip version is greater than **0** (zero). The device isn't compliant if there isn't a TPM version on the device.
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
   - **Not configured** (*default*) - Intune doesn't check for any antivirus solutions installed on the device.
   - **Require** - Check compliance using antivirus solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
 
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
   - **Require** - Check compliance using antispyware solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
 
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### Defender
 
@@ -225,7 +225,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*) - Intune doesn't enforce any requirements.
   - **Require** - Force the Microsoft Defender security intelligence be up-to-date.
 
-  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
   
   For more information, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -233,7 +233,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
   - **Not configured** (*default*) - Intune doesn't control this feature, nor change existing settings.
   - **Require** - Turn on real-time protection, which scans for malware, spyware, and other unwanted software.  
 
-  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## Microsoft Defender ATP
 
@@ -255,7 +255,7 @@ Windows Holographic for Business uses the **Windows 10 and later** platform. Win
 
 - **System Security** > **Encryption** > **Encryption of data storage on device**.
 
-To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](https://docs.microsoft.com/hololens/security-encryption-data-protection).
+To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](/hololens/security-encryption-data-protection).
 
 ## Surface Hub
 

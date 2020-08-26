@@ -325,7 +325,7 @@ After you complete the previous steps, Intune Certificate Connector will issue P
 
 ## Troubleshooting
 
-Intune Certificate Connector service logs are available in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** on the NDES Connector machine. Open the logs in [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) and search for exceptions or error messages.
+Intune Certificate Connector service logs are available in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** on the NDES Connector machine. Open the logs in [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) and search for exceptions or error messages.
 
 | Issue/error message | Resolution steps |
 | --- | --- |

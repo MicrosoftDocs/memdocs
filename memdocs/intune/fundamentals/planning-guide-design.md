@@ -142,11 +142,11 @@ Identity is how we identify the users who belong to your organization and are en
 
 Learn more about the following Intune identity requirements:
 
-- [Identity requirements](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
+- [Identity requirements](/azure/active-directory/understand-azure-identity-solutions).
 
-- [Directory synchronization requirements](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- [Directory synchronization requirements](/azure/active-directory/connect/active-directory-aadconnect).
 
-- [Multi-factor authentication requirements](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+- [Multi-factor authentication requirements](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ### User and device groups
 

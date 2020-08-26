@@ -34,7 +34,7 @@ Additional configuration may be required to grant access to required services in
 - require authentication before internet access can be obtained. 
 
 > [!NOTE]
-> Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 For additional details about each of these services and their specific requirements, review the following details:
 
@@ -49,7 +49,7 @@ For additional details about each of these services and their specific requireme
 
 If Windows Update is inaccessible, the Autopilot process will still continue but critical updates won't be available.
 
-<tr><td><b>Delivery Optimization<b><td>Autopilot contacts the <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">Delivery Optimization</a> service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the Internet.
+<tr><td><b>Delivery Optimization<b><td>Autopilot contacts the <a href="/windows/deployment/update/waas-delivery-optimization">Delivery Optimization</a> service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the Internet.
 - Windows Updates
 - Microsoft Store apps and app updates
 - Office Updates
@@ -68,7 +68,7 @@ If diagnostic data can't be sent, the Autopilot process still continues. However
 <tr><td><b>Windows Notification Services (WNS)<b><td>This service is used to enable Windows to receive notifications from apps and services. For more information, see <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 If the WNS services aren't available, the Autopilot process will still continue without notifications.
-<tr><td><b>Microsoft Store, Microsoft Store for Business<b><td>Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM).  App updates and additional apps may also be needed when the user first logs in. For more information, see <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">Prerequisites for Microsoft Store for Business and Education</a> (also includes Azure AD and Windows Notification Services).<br>
+<tr><td><b>Microsoft Store, Microsoft Store for Business<b><td>Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM).  App updates and additional apps may also be needed when the user first logs in. For more information, see <a href="/microsoft-store/prerequisites-microsoft-store-for-business">Prerequisites for Microsoft Store for Business and Education</a> (also includes Azure AD and Windows Notification Services).<br>
 
 If the Microsoft Store isn't accessible, the Autopilot process will still continue without Microsoft Store apps.
 
@@ -86,4 +86,3 @@ If the Microsoft Store isn't accessible, the Autopilot process will still contin
 **Next steps**
 
 [Windows Autopilot licensing requirements](licensing-requirements.md)
-
