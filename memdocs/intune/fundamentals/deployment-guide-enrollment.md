@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/19/2020
+ms.date: 08/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -132,7 +132,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 |Devices are managed by another MDM provider. | ✔️ |
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. | ❌ <br/><br/>Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Android Enterprise fully managed. |
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> User-less devices should be enrolled using Android Enterprise dedicated devices. |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> User-less or shared devices should be organization-owned. These devices should be enrolled using Android Enterprise dedicated devices. |
 
 ---
 
@@ -163,7 +163,7 @@ These devices are organization-owned, with a sole purpose of being a kiosk-style
 | Devices are owned by the organization or school. |  ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
 | Devices are associated with a single user. | ❌ <br/><br/> Not recommended. These devices should be enrolled using Android Enterprise fully managed. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
@@ -196,8 +196,8 @@ These devices are organization-owned, and have one user. They are used exclusive
 | You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md#device-experience) profile, and assign this profile to this device. |
 | Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using Android Enterprise work profile.|
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. |
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -259,6 +259,8 @@ This section provides recommendations on the iOS/iPadOS enrollment method to use
 
 Commonly used for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create app configuration policies and app protection policies, and push these policies to the devices.
 
+For more information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -270,11 +272,9 @@ Commonly used for personal or bring your own devices (BYOD). Not a traditional "
 | Devices are managed by another MDM provider. | ✔️ |
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. If you want extra security for specific apps, then use enrollment and MAM-WE together. |
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are user-less, such as kiosk, or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
 ---
-
-For more information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
 
 #### Administrator tasks: MAM-WE
 
@@ -292,6 +292,10 @@ For more information on MAM-WE, see [Microsoft Intune app management](../apps/ap
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access work or school email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
+When you create the enrollment profile, you're asked to to choose **User enrollment**, **Device enrollment** or **Determine based on user choice**.
+
+For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).??Need to update the title of this article, is it applies to user enrollment and Device enrollment??
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -303,13 +307,9 @@ These iOS/iPadOS devices are personal or BYOD (bring your own device) devices th
 | Devices are managed by another MDM provider. | ✔️ |
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
 ---
-
-When you create the enrollment profile, you're asked to to choose **User enrollment**, **Device enrollment** or **Determine based on user choice**.
-
-For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User Enrollment](../enrollment/ios-user-enrollment.md).??Need to update the title of this article, is it applies to user enrollment and Device enrollment??
 
 #### Administrator tasks: User and Device enrollment
 
@@ -366,6 +366,13 @@ Previously called Apple Device Enrollment Program (DEP). Use Apple Business Mana
 
 Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). You create an enrollment profile in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
 
+For more specific information on this enrollment type, see:
+
+- [Apple Business Manager enrollment](../enrollment/device-enrollment-program-enroll-ios.md)
+- [Apple School Manager enrollment](../enrollment/apple-school-manager-set-up-ios.md)
+
+  For more information on Apple School Manager, see [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -381,13 +388,6 @@ Use on devices owned by your organization. This option configures settings using
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
-
-For more specific information on this enrollment type, see:
-
-- [Apple Business Manager enrollment](../enrollment/device-enrollment-program-enroll-ios.md)
-- [Apple School Manager enrollment](../enrollment/apple-school-manager-set-up-ios.md)
-
-  For more information on Apple School Manager, see [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
 
 #### Administrator tasks: ADE
 
@@ -441,6 +441,8 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
 Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
 
+For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -448,7 +450,7 @@ Use on devices owned by your organization, and includes [Direct Enrollment](../e
 | Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
 | A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using Automatic Device Enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
-| You have new and existing devices. | ✔️ |
+| You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
@@ -457,8 +459,6 @@ Use on devices owned by your organization, and includes [Direct Enrollment](../e
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
-
-For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 
 #### Administrator tasks: Apple Configurator
 
@@ -508,12 +508,12 @@ Use for personal or bring your own devices (BYOD). Not a traditional "enrollment
 | --- | --- |
 | Devices are personal or BYOD. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
-| You have new and existing devices. | ✔️ |
+| You have new or existing devices. | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are managed by another MDM provider. | ✔️ |
-| You use the device enrollment manager (DEM) account. | ✔️ ?? If Co Portal app is from VPP, can't use DEM account. Need to confirm if VPP version is used. https://docs.microsoft.com/en-us/mem/intune/apps/apps-company-portal-macos, doesn't mention VPP. ??|
+| You use the device enrollment manager (DEM) account. | ✔️ ?? If Co Portal app is from VPP, can't use DEM account. Need to confirm if VPP version is used. https://docs.microsoft.com/mem/intune/apps/apps-company-portal-macos, doesn't mention VPP. ??|
 | Devices are owned by the organization or school. | ❌ <br/><br/> Not recommended for organization-owned devices. Organization-owned devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
-| Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/> These devices are organization-owned. User-less devices should be enrolled using Automated Device Enrollment or Apple Configurator. |
 
 ---
 
@@ -565,6 +565,8 @@ Enrolls macOS devices by physically connecting these devices to the USB port on 
 
 Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
 
+For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md) and [Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
+
 ---
 | Feature | Use this enrollment option |
 | --- | --- |
@@ -572,17 +574,15 @@ Use on devices owned by your organization, and includes [Direct Enrollment](../e
 | Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
 | A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using Automatic Device Enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
-| You have new and existing devices. | ✔️ |
+| You have new or existing devices. | ✔️ |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
 | Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated or shared. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using Device enrollment. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use Direct Enrollment to manage specifics apps on the device. Since these devices are organization-owned, it's recommended to enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
-
-For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md) and [Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
 
 #### Administrator tasks: Apple Configurator macOS
 
@@ -664,7 +664,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 - [Windows 10 Automatic enrollment](#windows-10-automatic-enrollment)
 - [User enrollment](#user-enrollment)
 - [Windows Autopilot](#windows-autopilot)
-- **Group policy**: https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy
+- [Group policy](#group-policy)
 - **Co-management**: 
 
 This section provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Windows devices](../enrollment/windows-enrollment-methods.md).
@@ -675,17 +675,21 @@ Use for personal/BYOD and organization-owned devices running Windows 10 and newe
 
 You can also use this enrollment method to automatically bulk enroll devices with the Windows Configuration Designer app.
 
-Use this enrollment option when:
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You have Azure AD Premium | ✔️ <br/><br/> This enrollment method requires Azure AD Premium. If you don't have Azure AD Premium, or aren't planning to get it, then use User enrollment. |
+| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md). | ✔️ On Windows 10 1803 and newer, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
+| Devices are personal or BYOD. | ✔️ |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is available for organization-owned devices, not personal/BYOD.|
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated. or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their work or school account. An organization administrator can sign-in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also created a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Automatic enrollment. If you, the administrator, will enroll and prepare devices before giving them to users, then you can use a DEM account. |
 
-- Your devices are personal/BYOD or organization-owned devices.
-- You have existing or new devices.
-- You need to enroll a small number of devices, or a large number of devices (bulk enrollment). Bulk enrollment is available for organization-owned devices, not personal/BYOD.
-- Your users know their domain username and password.
-
-Don't use this option when:
-
-- You don't have Azure AD Premium, or aren't planning to get it.
-- You'll use Conditional Access on devices bulk-enrolled. Bulk-enrolled devices don't support conditional access.
+---
 
 #### Administrator tasks: Automatic enrollment
 
@@ -711,18 +715,21 @@ Don't use this option when:
 
 Use for personal/BYOD and organization-owned devices running all supported Windows versions, including Windows 10 and newer. This option doesn't require Azure AD Premium. Users open the account settings on the device, and sign in with their work or school account. They're prompted for specific information that you must give them, including the Intune server name or CNAME record (`EnterpriseEnrollment.contoso.com`).
 
-Use this enrollment option when:
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| Devices are personal or BYOD. | ✔️ |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated, or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their work or school account. An organization administrator can sign-in, and enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also created a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| You have Azure AD Premium. | ❌ <br/><br/> Not recommended. If you have Azure AD Premium, use Windows 10 Automatic enrollment. It's a better end user experience. |
+| You require features only available in Azure AD Premium, such as Conditional Access. | ❌ <br/><br/> If you have Azure AD Premium, use Windows 10 Automatic enrollment. It's a better end user experience. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to User enrollment. If the administrator will enroll and prepare devices before giving them to users, then you can use a DEM account. |
 
-- Your devices are personal/BYOD or organization-owned devices.
-- You have existing or new devices.
-- You need to enroll a small number of devices, or a large number of devices.
-- Your users know their domain username and password.
-- You're not using Azure AD Premium, or aren't planning to get it.
-
-Don't use this option when:
-
-- You have Azure AD Premium. If you have Azure AD Premium, use Windows 10 Automatic enrollment. It's a better end user experience.
-- You require features only available in Azure AD Premium, such as Conditional Access.
+---
 
 #### Administrator tasks: User enrollment
 
@@ -751,24 +758,25 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 Use on organization-owned devices running Windows 10 and newer. Windows Autopilot uses the Windows 10 OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic Enrollment, and uses the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile that joins the device to Azure AD. When users sign in with their work or school account, they're automatically enrolled.
 
-Use this enrollment option when:
+For more information on Windows Autopilot, see [Windows Autopilot overview](/mem/autopilot/windows-autopilot) or [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md).
 
-- You have new or existing devices.
-- Your devices are owned by the organization or school.
-- You need to enroll a small number of devices, or a large number of devices.
-- Devices are hybrid Azure AD joined. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune.
-- You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program.
-- You have remote workers, and want to send devices directly to these users.
+---
+| Feature | Use this enrollment option |
+| --- | --- |
+| You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program. | ✔️ |
+| Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
+| You have remote workers, and want to send devices directly to these users. | ✔️ |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new or existing devices. | ✔️ <br/><br/> You can update existing desktops running older Windows versions to Windows 10. This option also uses Microsoft Endpoint Configuration Manager. |
+| Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
+| You have Azure AD Premium. | ✔️ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Azure AD Premium. |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their work or school account. An organization administrator can sign-in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also created a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| Devices are personal or BYOD. | ❌ <br/><br/> Windows Autopilot is only for organization-owned devices. For BYOD or personal devices, use Automatic enrollment or User enrollment. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Windows Autopilot. If you, the administrator, will enroll and prepare devices before giving them to users, then you can use a DEM account. |
 
-Don't use this option when:
-
-- Your devices are personal or BYOD. Windows Autopilot is only for organization-owned devices.
-- You don't have Azure AD Premium, or aren't planning to get it. Azure AD Premium is required by Automatic enrollment. Windows Autopilot uses Automatic enrollment.
-
-For more information on Windows Autopilot, see:  
-
-- [Windows Autopilot overview](/mem/autopilot/windows-autopilot)
-- [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md)
+---
 
 #### Administrator tasks: Windows Autopilot
 
@@ -784,6 +792,48 @@ For more information on Windows Autopilot, see:
 
 #### End user tasks: Windows Autopilot
 
+The end user experience depends on the Windows Autopilot deployment option you chose, such as [user driven](/mem/autopilot/user-driven) or [white glove](/mem/autopilot/white-glove).
+
+- **Self-Deploying mode**: No actions. This option doesn't associate a user with the device. Users just turn on the device, and the enrollment automatically starts.
+
+  For more specific information, see [self deployment](/mem/autopilot/self-deploying).
+
+- **White glove**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts.
+
+  For more specific information, see [white glove deployment](/mem/autopilot/white-glove).
+
+- **Existing devices**: Your users must do the following:
+
+  1. Open the Software Center app, and select **Operating systems**.
+  2. Select **Autopilot for existing devices** > **Install**. Content downloads, the drives are formatted, and Windows 10 installs.
+
+      This can take some time, so users must wait.
+
+  3. Autopilot runs, and users sign in with their organization or school account. The enrollment can automatically start.
+
+  For more specific information, see [existing devices deployment](/mem/autopilot/existing-devices).
+
+- **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts.
+
+  For more specific information, see [user-driven deployment](/mem/autopilot/user-driven).
+
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+
+### Group policy
+
+On hybrid Azure AD joined devices, you can automatically enroll Windows 10 devices into Microsoft Intune. Hybrid Azure AD joined devices are joined to local Active Directory and Azure AD.
+
+The enrollment into Intune is triggered by a group policy created on your local AD and happens without any user interaction. This means you can automatically mass-enroll a large number of domain-joined corporate devices into Microsoft Intune. The enrollment process starts in the background once you sign in to the device with your Azure AD account.
+
+For more specific information, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+
+#### Group policy administrator tasks
+
+- Be sure your Windows 10 devices are [supported in Intune](supported-devices-browsers.md), and [supported for group policy enrollment](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+- Register your AD into Azure AD. For more specific information, see [Azure AD integration with MDM](https://docs.microsoft.com/windows/client-management/mdm/azure-active-directory-integration-with-mdm).
+
+
+#### Group policy end user tasks
 
 
 ## Common issues and resolutions
