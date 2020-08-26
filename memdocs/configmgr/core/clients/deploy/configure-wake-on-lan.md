@@ -23,7 +23,7 @@ Specify Wake on LAN settings for Configuration Manager when you want to bring co
 <!--3607710-->
 Starting in Configuration Manager 1810, there's a new way to wake up sleeping machines. You can wake up clients from the Configuration Manager console, even if the client isn't on the same subnet as the site server. If you need to do maintenance or query devices, you're not limited by remote clients that are asleep. The site server uses the client notification channel to identify other clients that are awake on the same remote subnet, then uses those clients to send a wake on LAN request (magic packet). Using the client notification channel helps avoid MAC flaps, which could cause the port to be shut down by the router. The new version of Wake on LAN can be enabled at the same time as the [older version](#bkmk_wol-previous).
 
-### Limitations
+### Prerequisites and limitations
 <!--7323898, 7363492-->
 - At least one client in the target subnet must be awake.
 - This feature doesn't support the following network technologies:
@@ -34,6 +34,8 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
 - Machines only wake when you notify them through the **Wake Up** client notification.
     - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
     -  If the older version isn't enabled, client wake up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.  
+- DHCP lease durations can't be set to infinite. <!--8018584-->
+   - You may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite.  
 
 ### Security role permissions
 
