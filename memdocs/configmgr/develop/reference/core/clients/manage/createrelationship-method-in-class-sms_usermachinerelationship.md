@@ -1,6 +1,7 @@
 ---
 title: CreateRelationship method
 titleSuffix: Configuration Manager
+description: Use this WMI class method to add a user device affinity.
 ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

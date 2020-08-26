@@ -1,6 +1,7 @@
 ---
 title: SMS_UserMachineRelationship class
 titleSuffix: Configuration Manager
+description: Use this server WMI class to manage user device affinity.
 ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
