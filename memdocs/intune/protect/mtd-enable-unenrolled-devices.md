@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 08/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,9 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android,iOS/iPadOS)
-> - Lookout for Work (Android,iOS/iPadOS)
+> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+> - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
 

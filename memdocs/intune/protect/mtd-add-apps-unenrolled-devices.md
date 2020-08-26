@@ -41,7 +41,9 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android,iOS/iPadOS)
-> - Lookout for Work (Android,iOS/iPadOS)
+> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+> - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
 

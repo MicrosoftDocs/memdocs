@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,16 @@ When you delete an Apple VPP token in Microsoft Endpoint Manager, all Intune-ass
 In the Company Portal app on Android devices, the **Update device settings** page lists the settings that need updated to be compliant. Users expand the issue to see more information, and see the **Resolve** button.
 
 This user experience is improved. The listed settings are expanded by default to show the description, and show the **Resolve** button, when applicable. Previously, the issues were collapsed by default. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
+
+#### App protection policy support on Android and iOS/iPadOS for additional partners<!-- 4452423, 4731168  -->
+In October of 2019, Intune app protection policy added the capability to use data from our Microsoft Threat Defense partners.
+
+With this update, were expanding this support to the following two partners for using an app protection policy to block or selectively wipe a user’s corporate data based on the health of the device:
+
+- **Check Point Sandblast** on Android, iOS and iPadOS
+- **Symantec Endpoint Security** on Android, iOS and iPadOS
+
+For more information, see [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
