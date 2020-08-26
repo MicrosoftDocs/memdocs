@@ -44,7 +44,7 @@ To help keep the apps more secure and up to date once installed, the Company Por
 > The Company Portal app can only be installed automatically on devices using Intune that are already enrolled using direct enrolment or Automated Device Enrolment. For personal device or manual enrolment, the Company Portal app must be downloaded and installed to initiate enrollment. See [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal).
 ## Instruct users to download and install Company Portal
 
-You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 ##	Install Company Portal for macOS as a macOS LOB app
 
@@ -70,5 +70,5 @@ Company Portal for macOS can be downloaded and installed using the [macOS Shell 
 > The script will require Internet access when it runs to download the current version of the Company Portal for macOS. 
 ## Next steps
 - To learn more about assigning apps, see [Assign apps to groups](apps-deploy.md).
-- To learn more about configuring Automated Device Enrollment, see [Device Enrollment Program - Enroll macOS](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos).
-- To learn more about configuring Microsoft AutoUpdate settings on macOS, see [Mac Updates](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates).
+- To learn more about configuring Automated Device Enrollment, see [Device Enrollment Program - Enroll macOS](../enrollment/device-enrollment-program-enroll-macos.md).
+- To learn more about configuring Microsoft AutoUpdate settings on macOS, see [Mac Updates](/windows/security/threat-protection/microsoft-defender-atp/mac-updates).

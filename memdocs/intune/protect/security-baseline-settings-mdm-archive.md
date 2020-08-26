@@ -48,7 +48,7 @@ When a baseline version is no longer supported for use, it will then be removed 
 
 ### Above Lock  
 
-For more information, see [Policy CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) in the Windows documentation.  
+For more information, see [Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock) in the Windows documentation.  
 
 - **Block display of toast notifications**  
   This policy setting allows you to prevent app notifications from appearing on the lock screen. If you enable this policy setting, no app notifications are displayed on the lock screen. If you disable or don't configure this policy setting, users can choose which apps display notifications on the lock screen.
@@ -57,7 +57,7 @@ For more information, see [Policy CSP - AboveLock](https://docs.microsoft.com/wi
 
 ### App Runtime  
 
-For more information, see [Policy CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+For more information, see [Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime
 ) in the Windows documentation.  
 
 - **Microsoft accounts optional for Windows Store apps**  
@@ -67,7 +67,7 @@ For more information, see [Policy CSP - AppRuntime](https://docs.microsoft.com/w
 
 ### Application Management  
 
-For more information, see [Policy CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.  
+For more information, see [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.  
 
 - **Block game DVR (desktop only)**  
   Configures whether recording and broadcasting of games is allowed.
@@ -76,7 +76,7 @@ For more information, see [Policy CSP - ApplicationManagement](https://docs.micr
 
 ### Auto Play  
 
-For more information, see [Policy CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) in the Windows documentation.  
+For more information, see [Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay) in the Windows documentation.  
 
 - **Auto play default auto run behavior**  
   This setting affects the default behavior for Autorun commands. Autorun commands are stored in autorun.inf files and can launch installation programs or other routines. When *Enabled*, Administrators can change the default autorun behavior on a device that runs Windows Vista or later. Behavior can be set to: a) completely disable autorun commands, or b) revert back to pre-Windows Vista behavior of automatically executing the autorun command. When set to *Disabled* or *Not Configured*, devices that run Windows Vista or later prompt the user as to whether an autorun command should run.
@@ -95,7 +95,7 @@ For more information, see [Policy CSP - Autoplay](https://docs.microsoft.com/win
 
 ### Bitlocker  
 
-For more information, see [Policy CSP - Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+For more information, see [Policy CSP - Bitlocker](/windows/client-management/mdm/policy-csp-bitlocker
 ) in the Windows documentation.  
 
 - **Bit locker removable drive policy**  
@@ -125,7 +125,7 @@ For more information, see [Policy CSP - Bitlocker](https://docs.microsoft.com/wi
 
 ### Browser  
 
-For more information, see [Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) in the Windows documentation.  
+For more information, see [Policy CSP - Browser](/windows/client-management/mdm/policy-csp-browser) in the Windows documentation.  
 
 - **Require SmartScreen for Microsoft Edge**  
 
@@ -156,7 +156,7 @@ For more information, see [Policy CSP - Browser](https://docs.microsoft.com/wind
 
 ### Connectivity  
 
-For more information, see [Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) in the Windows documentation.  
+For more information, see [Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity) in the Windows documentation.  
 
 - **Block Internet download for web publishing and online ordering wizards**  
   This policy setting specifies whether Windows should download a list of providers for the web publishing and online ordering wizards. These wizards allow users to select from a list of companies that provide services such as online storage and photographic printing. By default, Windows displays providers downloaded from a Windows website in addition to providers specified in the registry. If you enable this policy setting, Windows doesn't download providers, and only the service providers that are cached in the local registry display. If you disable or don't configure this policy setting, a list of providers downloads when the user uses the web publishing or online ordering wizards. For more information that includes details on specifying service providers in the registry, see the documentation for the web publishing and online ordering wizards.  
@@ -170,7 +170,7 @@ For more information, see [Policy CSP - Connectivity](https://docs.microsoft.com
 
 ### Credentials Delegation  
 
-For more information, see [Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+For more information, see [Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation
 ) in the Windows documentation.  
 
 - **Remote host delegation of non-exportable credentials**  
@@ -181,7 +181,7 @@ For more information, see [Policy CSP - CredentialsDelegation](https://docs.micr
 
 ### Credentials UI  
 
-For more information, see [Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) in the Windows documentation.  
+For more information, see [Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) in the Windows documentation.  
 
 - **Enumerate administrators** 
   This policy setting controls whether administrator accounts display when a user attempts to elevate a running application. By default, administrator accounts aren't displayed when the user attempts to elevate a running application. If you enable this policy setting, all local administrator accounts on the PC display so the user can choose one and enter the correct password. If you disable this policy setting, users will always be required to type a user name and password to elevate.  
@@ -191,7 +191,7 @@ For more information, see [Policy CSP - CredentialsUI](https://docs.microsoft.co
 
 ### Data Protection  
 
-For more information, see [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+For more information, see [Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection
 ) in the Windows documentation.  
 
 - **Block direct memory access**  
@@ -202,7 +202,7 @@ For more information, see [Policy CSP - DataProtection](https://docs.microsoft.c
 
 ### Device Guard  
 
-For more information, see [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+For more information, see [Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard
 ) in the Windows documentation.  
 
 - **Credential Guard**  
@@ -220,7 +220,7 @@ For more information, see [Policy CSP - DeviceGuard](https://docs.microsoft.com/
 
 ### Device Installation  
 
-For more information, see [Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.  
+For more information, see [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.  
 
 - **Hardware device installation by device identifiers**  
   This policy setting allows you to specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting, Windows is prevented from installing a device whose hardware ID or compatible ID appears in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you disable or don't configure this policy setting, devices can install and update as allowed or prevented by other policy settings.
@@ -257,7 +257,7 @@ For more information, see [Policy CSP - DeviceInstallation](https://docs.microso
 
 ### Device Lock  
 
-For more information, see [Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.  
+For more information, see [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) in the Windows documentation.  
 
 - **Prevent use of camera**  
   Disables the lock screen camera toggle switch in PC Settings and prevents a camera from being invoked on the lock screen. By default, users can enable invocation of an available camera on the lock screen. If you enable this setting, users will no longer be able to enable or disable lock screen camera access in PC Settings, and the camera can't be invoked on the lock screen. 
@@ -320,7 +320,7 @@ For more information, see [Policy CSP - DeviceLock](https://docs.microsoft.com/w
 
 ### Event Log Service  
 
-For more information, see [Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) in the Windows documentation.  
+For more information, see [Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) in the Windows documentation.  
 
 - **Security log maximum file size in KB**  
   This policy setting specifies the maximum size of the log file in kilobytes. If you enable this policy setting, you can configure the maximum log file size to be between 1 megabyte (1024 kilobytes) and 2 terabytes (2147483647 kilobytes) in kilobyte increments. If you disable or don't configure this policy setting, the maximum size of the log file is set to the locally configured value. This value can be changed by the local administrator using the Log Properties dialog and it defaults to 20 megabytes.
@@ -339,7 +339,7 @@ For more information, see [Policy CSP - EventLogService](https://docs.microsoft.
 
 ### Experience  
 
-For more information, see [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) in the Windows documentation.  
+For more information, see [Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience) in the Windows documentation.  
 
 - **Block Windows Spotlight**  
   Allows IT admins to turn off all Windows Spotlight Features - Window spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features.
@@ -360,7 +360,7 @@ For more information, see [Policy CSP - Experience](https://docs.microsoft.com/w
 
 ### Exploit Guard  
 
-For more information, see [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.  
+For more information, see [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) in the Windows documentation.  
 
 - **Exploit protection XML**  
   Enables the IT admin to push out a configuration that represents the desired system and application mitigation options to all the devices in the organization. The configuration is represented by an XML. Exploit protection helps protect devices from malware that use exploits to spread and infect. You use the Windows Security app or PowerShell to create a set of mitigations (known as a configuration). You can then export this configuration as an XML file and share it with multiple machines on your network so they all have the same set of mitigation settings. You can also convert and import an existing EMET configuration XML file into an exploit protection configuration XML.
@@ -369,7 +369,7 @@ For more information, see [Policy CSP - ExploitGuard](https://docs.microsoft.com
  
 ### File Explorer  
 
-For more information, see [Policy CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  
+For more information, see [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) in the Windows documentation.  
 
 - **Block data execution prevention**  
   Disabling data execution prevention can allow certain legacy plug-in applications to function without terminating Explorer.
@@ -384,7 +384,7 @@ For more information, see [Policy CSP - FileExplorer](https://docs.microsoft.com
 
 ### Internet Explorer  
 
-For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) in the Windows documentation.  
+For more information, see [Policy CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer) in the Windows documentation.  
 
 - **Internet Explorer internet zone access to data sources**  
   This policy setting allows you to manage whether Internet Explorer can access data from another security zone using the Microsoft XML Parser (MSXML) or ActiveX Data Objects (ADO). If you enable this policy setting, users can load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you select Prompt in the drop-down box, users are queried to choose whether to allow a page to load in the zone that uses MSXML or ADO to access data from another site in the zone. If you disable this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone. If you don't configure this policy setting, users can't load a page in the zone that uses MSXML or ADO to access data from another site in the zone.
@@ -962,7 +962,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disabled  
   
 ### Local Policies Security Options
-For more information, see [Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in the Windows documentation. 
+For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) in the Windows documentation. 
 
 - **Restrict anonymous access to named pipes and shares**  
   When enabled, this security setting restricts anonymous access to shares and pipes to the settings for: (1) Named pipes that can be accessed anonymously (2) Shares that can be accessed anonymously
@@ -1107,7 +1107,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](https://do
 
 ### MS Security Guide  
 
-For more information, see [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) in the Windows documentation.  
+For more information, see [Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) in the Windows documentation.  
 
 - **Apply UAC restrictions to local accounts on network logon**  
   **Default**: Enabled
@@ -1126,7 +1126,7 @@ For more information, see [Policy CSP - MSSecurityGuide](https://docs.microsoft.
   
 ### MSS Legacy  
 
-For more information, see [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) in the Windows documentation.  
+For more information, see [Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) in the Windows documentation.  
 
 - **Network IP source routing protection level**  
   **Default**: Highest protection  
@@ -1142,7 +1142,7 @@ For more information, see [Policy CSP - MSSLegacy](https://docs.microsoft.com/wi
   
 ### Power  
 
-For more information, see [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) in the Windows documentation.  
+For more information, see [Policy CSP - Power](/windows/client-management/mdm/policy-csp-power) in the Windows documentation.  
 
 - **Require password on wake while plugged in**  
   This policy setting specifies if the user is prompted for a password when the system resumes from sleep. If you enable or don't configure this policy setting, the user is prompted for a password when the system resumes from sleep. If you disable this policy setting, the user isn't prompted for a password when the system resumes from sleep.
@@ -1166,7 +1166,7 @@ For more information, see [Policy CSP - Power](https://docs.microsoft.com/window
   
 ### Remote Desktop Services  
 
-For more information, see [Policy CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) in the Windows documentation.  
+For more information, see [Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) in the Windows documentation.  
 
 - **Block password saving**  
   Controls whether passwords can be saved on this computer from Remote Desktop Connection. If you enable this setting the password saving checkbox in Remote Desktop Connection is disabled and users won't be able to save passwords. When a user opens an RDP file using Remote Desktop Connection and saves their settings, any password that previously existed in the RDP file are deleted. If you disable this setting or leave it not configured, the user can save passwords using Remote Desktop Connection.
@@ -1200,7 +1200,7 @@ For more information, see [Policy CSP - RemoteDesktopServices](https://docs.micr
   
 ### Remote Management  
 
-For more information, see [Policy CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) in the Windows documentation.  
+For more information, see [Policy CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) in the Windows documentation.  
 
 - **Block storing run as credentials**  
   Client basic authentication
@@ -1235,7 +1235,7 @@ For more information, see [Policy CSP - RemoteManagement](https://docs.microsoft
 
 ### Remote Procedure Call  
 
-For more information, see [Policy CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) in the Windows documentation.  
+For more information, see [Policy CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) in the Windows documentation.  
 
 - **RPC unauthenticated client options**  
   This policy setting controls how the RPC server runtime handles unauthenticated RPC clients connecting to RPC servers. This policy setting impacts all RPC applications. In a domain environment, use this policy setting with caution as it can impact a wide range of functionality including group policy processing itself. Reverting a change to this policy setting can require manual intervention on each affected machine. This policy setting should never be applied to a domain controller. If you disable this policy setting, the RPC server runtime uses the value of "Authenticated" on Windows Client, and the value of "None" on Windows Server versions that support this policy setting. If you don't configure this policy setting, it remains disabled. The RPC server runtime behaves as though it was enabled with the value of "Authenticated" used for Windows Client and the value of "None" used for Server SKUs that support this policy setting. If you enable this policy setting, it directs the RPC server runtime to restrict unauthenticated RPC clients connecting to RPC servers running on a machine. A client is considered an authenticated client if it uses a named pipe to communicate with the server or if it uses RPC Security. RPC Interfaces that have specifically requested to be accessible by unauthenticated clients may be exempt from this restriction, depending on the selected value for this policy setting.  
@@ -1247,7 +1247,7 @@ For more information, see [Policy CSP - RemoteProcedureCall](https://docs.micros
 
 ### Search  
 
-For more information, see [Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) in the Windows documentation.  
+For more information, see [Policy CSP - Search](/windows/client-management/mdm/policy-csp-search) in the Windows documentation.  
 
 - **Disable indexing encrypted items**  
   Allows or disallows the indexing of items. This switch is for the Windows Search Indexer, which controls whether it will index items that are encrypted, such as the Windows Information Protection (WIP) protected files. When the policy is enabled, WIP protected items are indexed and the metadata about them are stored in an unencrypted location. The metadata includes things like file path and date modified. When the policy is disabled, the WIP protected items aren't indexed and don't show up in the results in Cortana or file explorer. There may also be a performance impact on photos and Groove apps if there are many WIP protected media files on the device.
@@ -1256,7 +1256,7 @@ For more information, see [Policy CSP - Search](https://docs.microsoft.com/windo
   
 ### Smart Screen  
 
-For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.  
+For more information, see [Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) in the Windows documentation.  
 
 - **Block execution of unverified files**  
   Block user from running unverified files. 
@@ -1277,7 +1277,7 @@ For more information, see [Policy CSP - SmartScreen](https://docs.microsoft.com/
   
 ### System  
 
-For more information, see [Policy CSP - System](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) in the Windows documentation.  
+For more information, see [Policy CSP - System](/windows/client-management/mdm/policy-csp-system) in the Windows documentation.  
 
 - **System boot start driver initialization**  
   This policy setting allows you to specify which boot-start drivers are initialized based on a classification determined by an Early Launch Antimalware boot-start driver. The Early Launch Antimalware boot-start driver can return the following classifications for each boot-start driver: 
@@ -1293,7 +1293,7 @@ For more information, see [Policy CSP - System](https://docs.microsoft.com/windo
 
 ### Wi-Fi  
 
-For more information, see [Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) in the Windows documentation.  
+For more information, see [Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi) in the Windows documentation.  
 
 - **Block Internet sharing**  
   Specifies whether internet sharing is possible on the device.  
@@ -1307,7 +1307,7 @@ For more information, see [Policy CSP - Wifi](https://docs.microsoft.com/windows
   
 ### Windows Connection Manager  
 
-For more information, see [Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in the Windows documentation.  
+For more information, see [Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) in the Windows documentation.  
 
 - **Block connection to non-domain networks**  
   This policy setting prevents computers from connecting to both a domain-based network and a non-domain based network at the same time. If this policy setting is enabled, the computer responds to automatic and manual network connection attempts based on the following circumstances: 
@@ -1320,7 +1320,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](https://docs.m
   
 ### Windows Defender  
 
-For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.  
+For more information, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.  
 
 - **Scan incoming mail messages**  
   Allows or disallows scanning of email.
@@ -1434,7 +1434,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
 
 ### Windows Ink Workspace  
 
-For more information, see [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) in the Windows documentation.  
+For more information, see [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) in the Windows documentation.  
 
 - **Ink Workspace**  
   Specifies whether to allow the user to access the ink workspace. 
@@ -1446,7 +1446,7 @@ For more information, see [Policy CSP - WindowsInkWorkspace](https://docs.micros
  
 ### Windows PowerShell  
 
-For more information, see [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) in the Windows documentation.  
+For more information, see [Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) in the Windows documentation.  
 
 - **Power shell shell script block logging**  
   This policy setting enables logging of all PowerShell script input to the Microsoft-Windows-PowerShell/Operational event log. If you enable this policy setting, Windows PowerShell will log the processing of commands, script blocks, functions, and scripts - whether invoked interactively, or through automation. If you disable this policy setting, logging of PowerShell script input is disabled. If you enable the Script Block Invocation Logging, PowerShell additionally logs events when invocation of a command, script block, function, or script starts or stops. Enabling Invocation Logging generates a high volume of event logs. Note: This policy setting exists under both Computer Configuration and User Configuration in the Group Policy Editor. The Computer Configuration policy setting takes precedence over the User Configuration policy setting.

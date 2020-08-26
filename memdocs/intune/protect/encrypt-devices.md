@@ -157,7 +157,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
 ### Rotate BitLocker recovery keys
 

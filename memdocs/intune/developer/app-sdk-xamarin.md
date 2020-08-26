@@ -61,7 +61,7 @@ Xamarin apps built with the Intune App SDK Xamarin Bindings can now receive Intu
 
 Review the [license terms](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
 
-The Intune SDK relies on [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+The Intune SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis). 
 
 If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory, ensure the steps to give your Xamarin app permissions to the Intune Mobile Application Management (MAM) service are followed. Use the instructions in the "[Give your app access to the Intune app protection service](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" section of the [getting started with the Intune SDK guide](app-sdk-get-started.md).
 
@@ -74,7 +74,7 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
   * [MS Intune App SDK NuGet Profile](https://www.nuget.org/profiles/msintuneappsdk)
   * [Intune App SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * Configure your NuGet config for your project to trust signed, unmodified NuGet packages.
-See [installing signed packages](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages)
+See [installing signed packages](/nuget/consume-packages/installing-signed-packages)
 for more information.
 * Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
@@ -218,10 +218,10 @@ Once the Remapper is added to your project you will need to perform the MAM equi
 ```
 
 If the replacements are not made then you may encounter the following compilation errors until you make the replacements:
-* [Compiler Error CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). This error is commonly seen in this form
+* [Compiler Error CS0239](/dotnet/csharp/misc/cs0239). This error is commonly seen in this form
 ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 This is expected because when the Remapper modifies the inheritance of Xamarin classes, certain functions will be made `sealed` and a new MAM variant is added to override instead.
-* [Compiler Error CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): This error is commonly seen in this form ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. When the Remapper changes the inheritance of some of the Xamarin classes, certain member functions will be changed to `public`. If you override any of these functions, you will need to change those the access modifiers for those overrides to be `public` as well.
+* [Compiler Error CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): This error is commonly seen in this form ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. When the Remapper changes the inheritance of some of the Xamarin classes, certain member functions will be changed to `public`. If you override any of these functions, you will need to change those the access modifiers for those overrides to be `public` as well.
 
 > [!NOTE]
 > The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you may need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
@@ -242,4 +242,4 @@ For app protection without device enrollment, the user is _**not**_ required to 
 Sample applications highlighting MAM functionality in Xamarin.Android and Xamarin.Forms apps are available on [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## Support
-If your organization is an existing Intune customer, please work with your Microsoft support representative to open a support ticket and create an issue [on the GitHub issues page](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). We will help as soon as we can. 
+If your organization is an existing Intune customer, please work with your Microsoft support representative to open a support ticket and create an issue [on the GitHub issues page](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues). We will help as soon as we can.
