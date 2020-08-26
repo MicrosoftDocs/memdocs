@@ -34,7 +34,7 @@ This article describes how to configure Delivery Optimization settings as part o
 
 To view a list of the Delivery Optimization settings that Intune supports, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).  
 
-To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
+To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
 
 ## Create the profile
 

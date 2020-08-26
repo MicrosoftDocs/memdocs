@@ -76,7 +76,7 @@ If you're prompted to install an MTD app but aren't sure which one to install, c
 ### Device registration  
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If your device isn't registered, you'll automatically be guided through those steps on screen, before you install the MTD app.   
 
-For more information about device registration, see [Register your personal device on your organization's network](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
+For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### iOS setup  
 These steps begin on the **Get access** screen, which appears after you sign in to a protected app.  

@@ -34,7 +34,7 @@ This article describes how to troubleshoot issues related to the Intune Exchange
 
 > [!IMPORTANT]
 >
-> Beginning in July of 2020, support for the Exchange Connector is deprecated, and replaces with Exchange [hybrid modern authentication](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA), and the ability to add an Exchange Connector to Intune is removed.
+> Beginning in July of 2020, support for the Exchange Connector is deprecated, and replaces with Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA), and the ability to add an Exchange Connector to Intune is removed.
 >
 > Customers who previously configured and use the Exchange Connector as have continued support for the connector.
 
@@ -69,7 +69,7 @@ Review the [on-premises Exchange connector requirements](exchange-connector-inst
 
 - The computer that hosts the Intune Exchange Connector and the Exchange Client Access Server (CAS) should be domain-joined and on same LAN. Make sure that the required permissions are added for the account that's used by the Intune Exchange connector.
 
-- The notification account is used to retrieve *Autodiscover* settings. For more information about Autodisover in Exchange, see [Autodiscover service in Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- The notification account is used to retrieve *Autodiscover* settings. For more information about Autodisover in Exchange, see [Autodiscover service in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
 - The Intune Exchange Connector sends a request to the EWS URL by using the notification account credentials to send notification email messages together with the *Get Started* link (to enroll in Intune). Use of the *Get Started* link to enroll is a requirement for Android non-Knox devices. Otherwise, these devices will be blocked by Conditional Access.
 
@@ -89,4 +89,4 @@ The following articles can help resolve common problems and specific errors:
 Seek assistance from support or the Intune community:
 
 - See [Get Support](../fundamentals/get-support.md) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft. 
-- Post your issue in the [Microsoft Intune forums](https://docs.microsoft.com/answers/products/mem).  
+- Post your issue in the [Microsoft Intune forums](/answers/products/mem).  

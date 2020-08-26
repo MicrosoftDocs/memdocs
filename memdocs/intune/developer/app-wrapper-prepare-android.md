@@ -103,7 +103,7 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 | **&lt;CommonParameters&gt;** | (Optional) The command supports common PowerShell parameters like verbose and debug. |
 
 
-- For a list of common parameters, see the [Microsoft Script Center](https://technet.microsoft.com/library/hh847884.aspx).
+- For a list of common parameters, see the [Microsoft Script Center](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 - To see detailed usage information for the tool, enter the command:
 

@@ -57,9 +57,9 @@ To use this feature, you need:
 
 Depending on where you want to route the audit log data, you need one of the following services:
 
-* An [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-account-overview) with *ListKeys* permissions. We recommend that you use a general storage account, and not a blob storage account. For storage pricing information, see the [Azure Storage pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=storage). 
-* An [Azure event hubs namespace](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) to integrate with third-party solutions.
-* An [Azure log analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) to send logs to Log Analytics.
+* An [Azure storage account](/azure/storage/common/storage-account-overview) with *ListKeys* permissions. We recommend that you use a general storage account, and not a blob storage account. For storage pricing information, see the [Azure Storage pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* An [Azure event hubs namespace](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) to integrate with third-party solutions.
+* An [Azure log analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) to send logs to Log Analytics.
 
 ## Send logs to Azure monitor
 
@@ -87,7 +87,7 @@ Depending on where you want to route the audit log data, you need one of the fol
         1. Select this option > **Configure**. 
         2. Create a new workspace, and enter the workspace details. Or, choose an existing workspace from the list > **OK**.
 
-            [Azure log analytics workspace](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) provides more details on these settings.
+            [Azure log analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) provides more details on these settings.
 
     - **LOG** > **AuditLogs**: Choose this option to send the [Intune audit logs](monitor-audit-logs.md) to your storage account, event hub, or log analytics. The audit logs show the history of every task that generates a change in Intune, including who did it and when.
 
@@ -191,7 +191,7 @@ The following table contains estimated costs per month for a basic event hub in 
 
 ### Log Analytics cost considerations
 
-To review costs related to managing the Log Analytics workspace, see [Manage cost by controlling data volume and retention in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+To review costs related to managing the Log Analytics workspace, see [Manage cost by controlling data volume and retention in Log Analytics](/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## Frequently asked questions
 
@@ -203,7 +203,7 @@ Audit logs and operational (preview) logs are both available for routing using t
 
 ### After an action, when do the corresponding logs show up in the event hub?
 
-The logs typically show up in your event hub within several minutes after the action is performed. [What is Azure Event Hubs?](https://docs.microsoft.com/azure/event-hubs/) provides more information.
+The logs typically show up in your event hub within several minutes after the action is performed. [What is Azure Event Hubs?](/azure/event-hubs/) provides more information.
 
 ### After an action, when do the corresponding logs show up in the storage account?
 
@@ -223,22 +223,22 @@ The streaming costs depend on the number of messages you receive per minute. For
 
 ### How do I integrate Intune audit logs with my SIEM system?
 
-Use Azure Monitor with Event Hubs to stream logs to your SIEM system. First, [stream the logs to an event hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Then, [set up your SIEM tool](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) with the configured event hub. 
+Use Azure Monitor with Event Hubs to stream logs to your SIEM system. First, [stream the logs to an event hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Then, [set up your SIEM tool](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) with the configured event hub. 
 
 ### What SIEM tools are currently supported?
 
-Currently, Azure Monitor is supported by [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar, and [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (opens a new website). For more information about how the connectors work, see [Stream Azure monitoring data to an event hub for consumption by an external tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Currently, Azure Monitor is supported by [Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar, and [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (opens a new website). For more information about how the connectors work, see [Stream Azure monitoring data to an event hub for consumption by an external tool](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### Can I access the data from an event hub without using an external SIEM tool?
 
-Yes. To access the logs from your custom application, you can use the [Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Yes. To access the logs from your custom application, you can use the [Event Hubs API](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### What data is stored?
 
-Intune doesn't store any data sent through the pipeline. Intune routes data to the Azure Monitor pipeline, at the authority of the tenant. For more information, see [Azure Monitor overview](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune doesn't store any data sent through the pipeline. Intune routes data to the Azure Monitor pipeline, at the authority of the tenant. For more information, see [Azure Monitor overview](/azure/azure-monitor/overview).
 
 ## Next steps
 
-* [Archive activity logs to a storage account](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Route activity logs to an event hub](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integrate activity logs with Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Archive activity logs to a storage account](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Route activity logs to an event hub](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integrate activity logs with Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

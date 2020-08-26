@@ -51,8 +51,8 @@ If you decide to set up a device management system, you can. This type of app pr
 
 You have used app-based Conditional Access to increase the security of company data. As part of next steps, you can learn more about the other ways you can increase the protection of your company's data, including: 
 
-* Setting up [Conditional Access based on device compliance, device risk, location, and user attributes in Active Directory and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
+* Setting up [Conditional Access based on device compliance, device risk, location, and user attributes in Active Directory and Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Setting up app protection policies to help you protect your company data against intentional or unintentional data leaks. 
 * Leveraging Azure Information Protection to protect company data outside your network. 
 
-Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program). 
+Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

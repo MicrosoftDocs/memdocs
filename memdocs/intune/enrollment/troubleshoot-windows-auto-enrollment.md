@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot Windows 10 group policy-based auto-enrollment in Intune
 
-You can use group policy to trigger auto-enrollment to MDM for Active Directory (AD) domain-joined devices. For more information on this feature, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+You can use group policy to trigger auto-enrollment to MDM for Active Directory (AD) domain-joined devices. For more information on this feature, see [Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ## Verify the configuration
 
@@ -41,7 +41,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![Verify Intune license](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Verify auto-enrollment](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -110,7 +110,7 @@ Event ID 75 isn't logged in the following situations:
 
   To verify this error, look for Event ID 76 (Event message: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x8018002b)). This event indicates a failed auto-enrollment.
 
-  For a resolution to this error, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
+  For a resolution to this error, see [Troubleshooting Windows device enrollment problems in Microsoft Intune](/intune/troubleshoot-windows-enrollment-errors).
 
 - The enrollment wasn't triggered at all. In this case, event ID 75 and event ID 76 aren't logged.
   

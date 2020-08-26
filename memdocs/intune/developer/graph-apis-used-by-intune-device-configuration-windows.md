@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Graph APIs and matching Windows 10 CSPs used in Intune
 
-Microsoft Intune uses the [Graph API entities](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune** > **Device configuration**) running Windows 10 and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
+Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune** > **Device configuration**) running Windows 10 and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
 
 This list applies to:
 
@@ -41,13 +41,13 @@ This information is useful for a variety of scenarios. For example, see what's u
 
 ## Windows 10 CSPs
 
-For more information on Windows 10 configuration service providers, see the [configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
+For more information on Windows 10 configuration service providers, see the [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 
 ## Graph API properties to CSP mapping
 
 The following list shows the majority of Graph API entities used by Microsoft Intune for Windows 10 device configuration. It also shows the corresponding Windows 10 CSP and offset URI.
 
-To see the Windows 10 versions the following APIs apply, use the Windows 10 [configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
+To see the Windows 10 versions the following APIs apply, use the Windows 10 [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 
 ### EditionUpgradeConfiguration.License 
 **CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
@@ -3006,4 +3006,4 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 ## Next steps
 
 - [Device configuration overview](../configuration/device-profiles.md)
-- [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site)
+- [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site)

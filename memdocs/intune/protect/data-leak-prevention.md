@@ -58,7 +58,7 @@ For iOS/iPadOS and Android devices:
 
 For Windows 10 devices:
 
-1. Learn [how Windows Information Protection (WIP) works](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
+1. Learn [how Windows Information Protection (WIP) works](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
 2. Get ready to configure [app protection policies for Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Create and deploy WIP app protection policies with Intune](../apps/windows-information-protection-policy-create.md).
 
@@ -71,4 +71,4 @@ As appropriate, share the following links to provide additional information:
 
 ## Next steps
 
-Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Want help enabling this or other EMS or Office 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Azure Active Directory Premium, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

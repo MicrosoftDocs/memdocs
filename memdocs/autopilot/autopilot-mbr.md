@@ -69,7 +69,7 @@ To deregister an Autopilot device from Intune, an IT Admin would:
 
 The deregistration process will take about 15 minutes.  You can accelerate the process by clicking the “Sync” button, then “Refresh” the display until the device is no longer present.
 
-More details on deregistering devices from Intune can be found [here](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group).
+More details on deregistering devices from Intune can be found [here](/intune/enrollment-autopilot#create-an-autopilot-device-group).
 
 ### Deregister from MPC
 
@@ -118,9 +118,9 @@ Repair and key replacement processes vary between facilities.  Sometimes repair 
 
 Repair technicians must sign in to the repaired device to capture the new device ID.  Assuming the repair technician does NOT have access to the customer’s login credentials, they will have to reimage the device in order to gain access, per the following steps:
 
-1. The repair technician creates a [WinPE bootable USB drive](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
+1. The repair technician creates a [WinPE bootable USB drive](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
 2. The repair technician boots the device to WinPE.
-3. The repair technician [applies a new Windows image to the device](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images).
+3. The repair technician [applies a new Windows image to the device](/windows-hardware/manufacture/desktop/work-with-windows-images).
 
     **NOTE**: Ideally, the same version of Windows should be reimaged onto the device that was originally on the device, so some coordination will be required between the repair facility and customer to capture this information at the time the device arrives for repair.  This might include the customer sending the repair facility a customized image (.ppk file) via a USB stick, for example.
  
@@ -190,7 +190,7 @@ On the device, go to Settings > Update & Security > Recovery and click on Get st
 
 ![reset](images/reset.png)
 
-However, it’s likely the repair facility won’t have access to Windows because they lack the user credentials to sign in, in which case they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+However, it’s likely the repair facility won’t have access to Windows because they lack the user credentials to sign in, in which case they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## Return the repaired device to the customer
 
