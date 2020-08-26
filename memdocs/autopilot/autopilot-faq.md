@@ -83,7 +83,7 @@ A [glossary](#glossary) of abbreviations used in this article is provided at the
 | Question | Answer |
 | --- | --- |
 | Any specific requirement to SMBIOS UUID?    | It must be unique as specified in the Windows 10 hardware requirements.    |
-| What is the requirement on the SMBIOS table to meet the Windows Autopilot hardware hash need?    | It must meet all the Windows 10 hardware requirements.  Additional details may be found [here](https://msdn.microsoft.com/library/jj128256(v=vs.85).aspx).    |
+| What is the requirement on the SMBIOS table to meet the Windows Autopilot hardware hash need?    | It must meet all the Windows 10 hardware requirements.  Additional details may be found [here](/previous-versions/windows/hardware/cert-program/windows-hardware-certification-requirements-for-client-and-server-systems).    |
 | If the SMBIOS supports UUID and Serial Number, is it enough for the OA3 tool to generate the hardware hash?    | No.  At a minimum, the following SMBIOS fields need to be populated with unique values: ProductKeyID SmbiosSystemManufacturer SmbiosSystemProductName SmbiosSystemSerialNumber SmbiosSkuNumber SmbiosSystemFamily MacAddress SmbiosUuid DiskSerialNumber TPM EkPub |
 
 ## Technical interface

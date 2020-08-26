@@ -31,7 +31,7 @@ This topic describes how to convert Windows 7 or Windows 8.1 domain-joined compu
 
 - A currently supported version of Microsoft Endpoint Configuration Manager current branch or technical preview branch. 
 - The [Windows ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 or later
-    - For more information on Configuration Manager support, see [Support for Windows 10 ADK](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+    - For more information on Configuration Manager support, see [Support for Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 - Assigned Microsoft Intune Licenses
 - Azure Active Directory Premium
 - Windows 10 version 1809 or later imported into Configuration Manager as an Operating System Image
@@ -46,8 +46,8 @@ If desired, you can set up an [enrollment status page](enrollment-status.md) for
 To enable and configure the enrollment and status page:
 
 1. Open [Intune in the Azure portal](https://aka.ms/intuneportal).
-2. Access **Intune > Device enrollment > Windows enrollment** and [Set up an enrollment status page](https://docs.microsoft.com/intune/windows-enrollment-status). 
-3. Access **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [Configure automatic MDM enrollment](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) and configure the MDM user scope for some or all users. 
+2. Access **Intune > Device enrollment > Windows enrollment** and [Set up an enrollment status page](/intune/windows-enrollment-status). 
+3. Access **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [Configure automatic MDM enrollment](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) and configure the MDM user scope for some or all users. 
 
 See the following examples.
 
@@ -321,4 +321,4 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 ## Speeding up the deployment process
 
-To remove around 20 minutes from the deployment process, see Michael Niehaus's blog with instructions for [Speeding up Windows Autopilot for existing devices](https://blogs.technet.microsoft.com/mniehaus/2018/10/25/speeding-up-windows-autopilot-for-existing-devices/).
+To remove around 20 minutes from the deployment process, see Michael Niehaus's blog with instructions for [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).

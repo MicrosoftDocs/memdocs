@@ -51,7 +51,7 @@ Additional requirements and configuration details apply with each scenario; see 
 
 **Applies to: Windows 10, version 1709 and above**
 
-The Intune Service Administrator role is required to perform this task.  For more information, see [Add users and grant administrative permission to Intune](https://docs.microsoft.com/intune/users-add).
+The Intune Service Administrator role is required to perform this task.  For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
 
 IT admins can perform a local Windows Autopilot Reset to quickly remove personal files, apps, and settings, and reset Windows 10 devices from the lock screen any time and apply original settings and management enrollment (Azure Active Directory and device management) so the devices are ready to use. With a local Autopilot Reset, devices are returned to a fully configured or known IT-approved state.
 
@@ -62,7 +62,7 @@ To enable local Autopilot Reset in Windows 10:
 
 ### Enable local Windows Autopilot Reset
 
-To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. By default, local Windows Autopilot is disabled. This ensures that a local Autopilot Reset is not triggered by accident.
+To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. By default, local Windows Autopilot is disabled. This ensures that a local Autopilot Reset is not triggered by accident.
 
 You can set the policy using one of these methods:
 
@@ -73,7 +73,7 @@ You can set the policy using one of these methods:
 
 - Windows Configuration Designer
 
-    You can [use Windows Configuration Designer](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package) to set the **Runtime settings > Policies > CredentialProviders > DisableAutomaticReDeploymentCredentials** setting to 0 and then create a provisioning package.
+    You can [use Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-create-package) to set the **Runtime settings > Policies > CredentialProviders > DisableAutomaticReDeploymentCredentials** setting to 0 and then create a provisioning package.
 
 - Set up School PCs app
 
@@ -127,9 +127,9 @@ Once the reset is complete, the device is again ready for use.
 
 ## Troubleshooting
 
-Windows Autopilot Reset requires that the [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. If it is not configured and enabled, an error such as `Error code: ERROR_NOT_SUPPORTED (0x80070032)` will be reported.
+Windows Autopilot Reset requires that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. If it is not configured and enabled, an error such as `Error code: ERROR_NOT_SUPPORTED (0x80070032)` will be reported.
 
-To make sure WinRE is enabled, use the [REAgentC.exe tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options) to run the following command:
+To make sure WinRE is enabled, use the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) to run the following command:
 
 ```
 reagentc /enable

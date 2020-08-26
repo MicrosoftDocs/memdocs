@@ -49,7 +49,7 @@ Windows Autopilot does not require delegated administrator permissions when esta
 
 If an existing device is already running a supported version of Windows 10 semi-annual channel and enrolled in an MDM service such an Intune, that MDM service can ask the device for the hardware ID (also known as a hardware hash).  Once it has that, it can automatically register the device with Windows Autopilot.
 
-For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
+For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
 
 Also note that when using the [Windows Autopilot for existing devices](existing-devices.md) scenario, it is not necessary to pre-register the devices with Windows Autopilot.  Instead, a configuration file (AutopilotConfigurationFile.json) containing all the Windows Autopilot profile settings is used; the device can be registered with Windows Autopilot after the fact using the same "Convert all targeted devices to Autopilot" setting.
 
@@ -70,10 +70,10 @@ Note that the hardware hash also contains details about when it was generated, s
 
 ### Collecting the hardware ID from existing devices using Microsoft Endpoint Configuration Manager
 
-Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](https://docs.microsoft.com/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
+Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows 10 devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
 > [!Note]
-> Before uploading the CSV file on Intune, please make sure that the first row contains the device serial number, Windows product ID, hardware hash, group tag, and assigned user. If there is header information on the top of CSV file, please delete that header information. See details at [Enroll Windows devices in Intune](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot).
+> Before uploading the CSV file on Intune, please make sure that the first row contains the device serial number, Windows product ID, hardware hash, group tag, and assigned user. If there is header information on the top of CSV file, please delete that header information. See details at [Enroll Windows devices in Intune](/intune/enrollment/enrollment-autopilot).
 
 ### Collecting the hardware ID from existing devices using PowerShell
 
@@ -111,7 +111,7 @@ Once the hardware IDs have been captured from existing devices, they can be uplo
     - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
 -   [Partner Center](https://msdn.microsoft.com/partner-center/autopilot).  This is used by CSP partners to register devices on behalf of customers.
 -   [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
--   [Microsoft Store for Business](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  You might already be using MSfB to manage your apps and settings.
+-   [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  You might already be using MSfB to manage your apps and settings.
 
 A summary of each platform's capabilities is provided below.<br>
 <br>
@@ -169,7 +169,7 @@ A summary of each platform's capabilities is provided below.<br>
 Also see the following topics for more information about device IDs:
 - [Device identification](#device-identification)
 - [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
-- [Add devices to a customer account](https://docs.microsoft.com/partner-center/autopilot)
+- [Add devices to a customer account](/partner-center/autopilot)
 
 
 ## Summary
