@@ -126,7 +126,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > On contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
     > In order to for the Certificate Connector to export the PFX certificate and send it to the device, this is required. 
     >
-    > However, please note that as the certificates are installed on the device itself, the private key not marked as exportable.
+    > However, please note that as the certificates are installed on the device itself, the private key will not be marked as exportable.
     
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
