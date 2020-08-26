@@ -97,6 +97,7 @@ The co-management license lets Configuration Manager customers with Software Ass
 |Software update management|Yes|Yes|
 |Inventory|Yes|Yes|
 |App management|Yes|Yes|
+|Remote Full/Selective wipe|Yes|Yes|
 |Remote assistance<br>(TeamViewer license required)|Yes|Yes|
 |Desktop analytics<br>(Windows subscription licenses required|Yes|N/A|
 |Tenant attach|Yes|N/A|
