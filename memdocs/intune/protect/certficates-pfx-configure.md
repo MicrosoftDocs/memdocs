@@ -121,6 +121,13 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
 6. In **Request Handling**, select **Allow private key to be exported**.
+    
+    > [!NOTE]
+    > On contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed. 
+    > Due to that, in order for the Certificate Connector to be able to export the private key with the certificate and send it to the device, this is required. 
+    >
+    > However, please note that as the certificates are installed on the device itself, the private key is not allowed to be exported.
+    
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
