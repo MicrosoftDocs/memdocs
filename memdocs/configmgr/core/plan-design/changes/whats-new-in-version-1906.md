@@ -466,7 +466,7 @@ For more information, see [Software updates maintenance](../../../sum/deploy-use
 You can now specify the maximum amount of time a software update installation has to complete. You can specify the following items in the **Maximum Run Time** tab on the Software Update Point:
 
 - **Maximum run time for Windows feature updates (minutes)**
-- **Maximum run time for Microsoft 365 updates and non-feature updates for Windows (minutes)**
+- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
 
 For more information, see [Plan for software updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime).
 
