@@ -105,7 +105,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
 
-   ![Microsoft Intune Connector download](./media/certficates-pfx-configure/download-connector.png)
+   ![Microsoft Intune Connector download](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
    - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
