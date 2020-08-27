@@ -72,7 +72,7 @@ Before integrating third-party certification authorities with Intune, confirm th
 
 To allow a third-party SCEP server to run custom challenge validation with Intune, create an app in Azure AD. This app gives delegated rights to Intune to validate SCEP requests.
 
-Be sure you have the required permissions to register an Azure AD app. See [Required permissions](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions), in the Azure AD documentation.
+Be sure you have the required permissions to register an Azure AD app. See [Required permissions](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions), in the Azure AD documentation.
 
 #### Create an application in Azure Active Directory  
 

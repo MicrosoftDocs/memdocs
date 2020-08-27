@@ -62,7 +62,7 @@ Depending on the size of your company, you might see multiple versions of Office
 ## Share apps  
 Share and recommend apps to your work or school contacts. The following steps describe how to share a link directly from Company Portal.
 
-1. In Company Portal, right-click or press and hold on any app to open its [context menu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+1. In Company Portal, right-click or press and hold on any app to open its [context menu](//windows/uwp/design/controls-and-patterns/menus).  
 
     ![The Company Portal app for Windows 10, front page, showing a list of Apps and devices. The clickable "Share" context menu is visible on top of the example app's icon. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -101,4 +101,4 @@ To get to this page, go to the navigation menu and select **Installed apps**.
 
 Use **Sort by** to rearrange the apps assignment type, publisher, alphabetically by name, or chronologically by publish date. Use **Filter by** to limit the apps you see by installation status.  If no apps are available, you'll see a message that no company apps were installed.  
 
-Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

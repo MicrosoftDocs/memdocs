@@ -23,7 +23,7 @@ ms.topic: article
 
 ## Scenarios
 
-Windows Autopilot includes support for a growing list of scenarios, designed to support common organization needs. These needs can vary based on the type of organization, and their progress moving to Windows 10 and [transitioning to modern management](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows Autopilot includes support for a growing list of scenarios, designed to support common organization needs. These needs can vary based on the type of organization, and their progress moving to Windows 10 and [transitioning to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 The following Windows Autopilot scenarios are described in this guide:
 
@@ -45,7 +45,7 @@ These scenarios are summarized in the following video.
 
 ### Windows Autopilot is self-updating during OOBE
 
-Starting with the Windows 10, version 1903, Autopilot functional and critical updates will begin downloading automatically during OOBE after a device is connected to a network, and the [critical driver and Windows zero-day patch (ZDP) updates](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe) have completed. The user or IT admin cannot opt out of these Autopilot updates because they are required for Windows Autopilot deployment to operate properly.  Windows will alert the user that the device is checking for, downloading, and installing the updates.
+Starting with the Windows 10, version 1903, Autopilot functional and critical updates will begin downloading automatically during OOBE after a device is connected to a network, and the [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) have completed. The user or IT admin cannot opt out of these Autopilot updates because they are required for Windows Autopilot deployment to operate properly.  Windows will alert the user that the device is checking for, downloading, and installing the updates.
 
 See [Windows Autopilot update](autopilot-update.md) for more information.
 
@@ -65,7 +65,7 @@ The key value is a DWORD with  **0** = disabled and **1** = enabled.
 | 1 | Cortana voiceover is enabled |
 | No value | Device will fall back to default behavior of the edition |
 
-To change this key value, use WCD tool to create as PPKG as documented [here](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce).
+To change this key value, use WCD tool to create as PPKG as documented [here](/windows/configuration/wcd/wcd-oobe#nforce).
 
 ### BitLocker encryption
 

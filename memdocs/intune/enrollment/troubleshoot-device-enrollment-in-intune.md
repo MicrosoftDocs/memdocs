@@ -50,8 +50,8 @@ You can also make sure that the time and date on the user's device are set corre
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
-- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Send Android enrollment errors to your IT admin](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Send iOS/iPadOS errors to your IT admin](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## General enrollment issues
@@ -124,12 +124,12 @@ To avoid hitting device caps, be sure to remove stale device records.
 **Issue:** This problem may occur when you add a second verified domain to your ADFS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
 
-<strong>Resolution:</strong> Microsoft Office 365 Customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
+<strong>Resolution:</strong> Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
 - use single sign-on (SSO) through AD FS 2.0, and
 - have multiple top-level domains for users' UPN suffixes within their organization (for example, @contoso.com or @fabrikam.com).
 
 
-A [rollup for AD FS 2.0](https://support.microsoft.com/kb/2607496) works in conjunction with the <strong>SupportMultipleDomain</strong> switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers. For more information, see [this blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+A [rollup for AD FS 2.0](https://support.microsoft.com/kb/2607496) works in conjunction with the <strong>SupportMultipleDomain</strong> switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers. For more information, see [this blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## Android issues
@@ -219,7 +219,7 @@ The user might be able to retrieve the missing certificate by following the inst
 
 After entering their corporate credentials and getting redirected for federated login, users might still see the missing certificate error. In this case, the error may mean that an intermediate certificate is missing from your Active Directory Federation Services (AD FS) server
 
-The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](https://technet.microsoft.com/library/cc783349.aspx). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
+The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
 
 To fix the issue, import the certificates into the Computers Personal Certificates on the AD FS server or proxies as follows:
 
@@ -298,9 +298,9 @@ Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed en
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-For more information, see [Get-AdfsEndpoint documentation](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+For more information, see [Get-AdfsEndpoint documentation](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-For more information, see [Best practices for securing Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). For help in determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
+For more information, see [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help in determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
 - contact Microsoft Support if you use ADFS
 - contact your third party identity vendor.
 
