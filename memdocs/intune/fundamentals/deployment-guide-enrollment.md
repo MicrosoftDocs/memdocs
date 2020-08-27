@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/26/2020
+ms.date: 08/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -665,7 +665,8 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 - [User enrollment](#user-enrollment)
 - [Windows Autopilot](#windows-autopilot)
 - [Group policy](#group-policy)
-- **Co-management**: 
+- [Co-management](#co-management-enrollment)
+- [Windows IoT Core devices](#windows-iot-core-devices)
 
 This section provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll Windows devices](../enrollment/windows-enrollment-methods.md).
 
@@ -863,7 +864,7 @@ For more specific information on this enrollment method, see [Enroll a Windows 1
 
 If you use Configuration Manager, and want to continue to use Configuration Manager, then co-management enrollment is for you. Co-management manages Windows 10 devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Endpoint Manager. This enrollment option runs some workloads in Configuration Manager, and other workloads in Endpoint Manager.
 
-For more specific information on co-management, see [What is co-management?](../configmgr/comanage/overview.md).
+For more specific information on co-management, see [What is co-management?](./configmgr/comanage/overview.md).
 
 ---
 | Feature | Use this enrollment option |
@@ -871,11 +872,11 @@ For more specific information on co-management, see [What is co-management?](../
 | You use Configuration Manager. | ✔️ |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
 | Devices are enrolled in Intune. | ✔️ <br/><br/> You have devices you want to bring to co-management. Devices may have been enrolled using Windows Autopilot, or are direct from your hardware OEM. |
-| You have Azure AD Premium. | ✔️ <br/><br/>  Azure AD Premium may be required depending on your co-management configuration. For more specific information, see [Paths to co-management](../configmgr/comanage/quickstart-paths.md). |
+| You have Azure AD Premium. | ✔️ <br/><br/>  Azure AD Premium may be required depending on your co-management configuration. For more specific information, see [Paths to co-management](./configmgr/comanage/quickstart-paths.md). |
 | You have remote workers. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
-| You have new or existing devices. | ✔️ <br/><br/> For devices that aren't running Windows 10 and newer, such as Windows 7, you'll need to upgrade. For more specific information, see [Upgrade Windows 10 for co-management](../configmgr/comanage/quickstart-upgrade-win10.md). |
+| You have new or existing devices. | ✔️ <br/><br/> For devices that aren't running Windows 10 and newer, such as Windows 7, you'll need to upgrade. For more specific information, see [Upgrade Windows 10 for co-management](./configmgr/comanage/quickstart-upgrade-win10.md). |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their work or school account. An organization administrator can sign-in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also created a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
@@ -886,11 +887,11 @@ For more specific information on co-management, see [What is co-management?](../
 
 #### Co-management administrator tasks
 
-The administrator tasks and requirements depend on the co-management option you choose. For more specific information, see [Paths to co-management](../configmgr/comanage/quickstart-paths.md).
+The administrator tasks and requirements depend on the co-management option you choose. For more specific information, see [Paths to co-management](./configmgr/comanage/quickstart-paths.md).
 
 When setting up co-management, you choose to:
 
-- Automatically enroll existing Configuration Manager-managed devices to Intune. This option requires hybrid Azure AD joined devices. For more specific information, see [Tutorial: Enable co-management for existing Configuration Manager clients](../configmgr/comanage/tutorial-co-manage-clients.md).
+- Automatically enroll existing Configuration Manager-managed devices to Intune. This option requires hybrid Azure AD joined devices. For more specific information, see [Tutorial: Enable co-management for existing Configuration Manager clients](./configmgr/comanage/tutorial-co-manage-clients.md).
 
   - Add some info??
 
@@ -898,13 +899,17 @@ When setting up co-management, you choose to:
 
   - Add some info??
 
-  For more specific information, see [Tutorial: Enable co-management for new internet-based devices](../configmgr/comanage/tutorial-co-manage-new-devices.md).
+  For more specific information, see [Tutorial: Enable co-management for new internet-based devices](./configmgr/comanage/tutorial-co-manage-new-devices.md).
 
 #### Co-management end user tasks
 
 Both options use Automatic enrollment. With Automatic enrollment, users sign in with their work or school account (`user@contoso.com`), and then are automatically enrolled. They can also open the **Settings** app > **Accounts** > **Access work or school** > **Connect**, and sign in with work or school email address and password.
 
 Configuration Manager may randomizes the enrollment, so it may not occur immediately. When enrollment completes, it's ready to receive the policies and profiles you create.
+
+### Windows IoT Core devices
+
+For more specific information, see[Managing Windows IoT Core Devices](/windows/iot-core/manage-your-device/devicemanagement)
 
 ## Common issues and resolutions
 
