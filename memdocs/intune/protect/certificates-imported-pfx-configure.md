@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 08/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,6 +99,14 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 3. Follow the guidance to download the *PFX Certificate Connector for Microsoft Intune* to a location that's accessible from the server where you're going to install the connector.
 
+4. 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
+
+3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
+
+   ![Microsoft Intune Connector download](./media/certficates-pfx-configure/download-connector.png)
+
 4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
    - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
    - The connector service runs under the local system account. If a proxy is required for internet access, confirm that the local service account can access the proxy settings on the server.
@@ -111,6 +119,14 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 6. Close the window.
 
 7. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
+
+
+
+
+
+
+
+
 
 ## Import PFX Certificates to Intune
 

@@ -62,7 +62,7 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 
 **To install the PFX Certificate connector**:
 
-For guidance installation of this connector, see [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md).
+For guidance installation of this connector, see [Download, install, and configure the PFX Certificate Connector](certificates-pfx-configure.md).
 
 ### Microsoft Intune Connector
 

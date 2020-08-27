@@ -339,7 +339,7 @@ These certificates are **Client authentication certificate** and **Server authen
 
 - **Client authentication certificate** 
 
-   This certificate is used during the IMicrosoft Intune Connector installation.
+   This certificate is used during the Microsoft Intune Connector installation.
 
    Request and install a **client authentication** certificate from your internal CA, or a public certificate authority.
    
