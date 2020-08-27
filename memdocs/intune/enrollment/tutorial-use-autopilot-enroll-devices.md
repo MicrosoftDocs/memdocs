@@ -44,12 +44,12 @@ In this tutorial, you'll learn how to:
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
-For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## Prerequisites
 - [Set up Windows automatic enrollment](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium subscription](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## Add devices
@@ -132,5 +132,3 @@ You can find more information about other options available for Windows Autopilo
 
 > [!div class="nextstepaction"]
 > [In-depth Autopilot enrollment article](../../autopilot/enrollment-autopilot.md)
-
-

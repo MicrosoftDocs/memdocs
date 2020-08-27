@@ -42,7 +42,7 @@ Applies to:
 
 ## Prerequisites
 
-Be sure to [enable Microsoft 365 Apps Automatic Updates](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can do this using group policy, or the Intune Office 2016 ADMX template:
+Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can do this using group policy, or the Intune Office 2016 ADMX template:
 
 > [!div class="mx-imgBorder"]
 > ![In Intune Administrative Template, set the Enable Automatic Updates setting for Office](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -60,7 +60,7 @@ Be sure to [enable Microsoft 365 Apps Automatic Updates](https://docs.microsoft.
 2. Be sure to [assign the policy](device-profile-assign.md) to your Windows 10 devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## Check the Intune registry keys
 
@@ -83,7 +83,7 @@ After you assign the policy and the device syncs, you can confirm the policy is 
     > ![Administrative template L_Updatebranch registry key example](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Manage Microsoft 365 Apps with Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
+    > [Manage Microsoft 365 Apps with Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
     >
     >- Monthly Channel                - value="Current"
     >- Monthly Channel (Targeted)     - value="Current"
@@ -103,7 +103,7 @@ At this point, the Intune policy is successfully applied to the device.
     - `UpdateChannel`: A dynamic key that changes, depending on the configured settings.
     - `CDNBaseUrl`: Set when Microsoft 365 installs on the device.
 
-3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they're set to.
+3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they're set to.
 
     Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is **monthly**:
 
@@ -146,7 +146,7 @@ If you want to do more, you can force Office to get the latest version update. T
 
 ### Step 1: Force the Office version to update
 
-1. Confirm the Office version supports the update channel you're choosing. [Update history for Microsoft 365 Apps](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) lists the build numbers that support the different update channels.
+1. Confirm the Office version supports the update channel you're choosing. [Update history for Microsoft 365 Apps](/officeupdates/update-history-office365-proplus-by-date) lists the build numbers that support the different update channels.
 
 2. In your [Intune administrative template](administrative-templates-windows.md#create-the-template), go to the **Target Version** setting, and enter the version you want.
 
@@ -187,6 +187,6 @@ Consider using these steps to test your policy before deploying the policy to al
 
 [Update channel values for Microsoft 365 clients](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Overview of the Office cloud policy service for Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 
 [Use Windows 10 templates to configure group policy settings (ADMX templates) in Microsoft Intune](administrative-templates-windows.md)

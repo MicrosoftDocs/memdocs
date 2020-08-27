@@ -72,7 +72,7 @@ Audit logs and operational logs can also be routed to Azure Monitor. In **Audit 
 
 ## Use Graph API to retrieve audit events
 
-For details on using the graph API to get up to one year of audit events, see [List auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: BitLocker settings reference
 titleSuffix: Configuration Manager
 description: All of the BitLocker management settings available in Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
@@ -51,6 +51,8 @@ For Windows 8.1 devices, enable the option for **Drive encryption method and cip
 - AES 128-bit (default)
 - AES 256-bit
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps).
+
 #### Windows 10 devices
 
 For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select one of the following encryption methods for OS drives, fixed data drives, and removable data drives:
@@ -64,6 +66,8 @@ For Windows 10 devices, enable the option for **Drive encryption method and ciph
 > BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
 >
 > If you need to use a removable drive on devices that don't run Windows 10, use AES-CBC.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps).
 
 #### General usage notes for drive encryption and cipher strength
 
@@ -83,6 +87,8 @@ Configure this policy to improve restart performance without overwriting BitLock
 
 When you don't configure this policy, BitLocker removes its secrets from memory when the computer restarts.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps).
+
 ### Validate smart card certificate usage rule compliance
 
 *Suggested configuration*: **Not configured**
@@ -90,6 +96,8 @@ When you don't configure this policy, BitLocker removes its secrets from memory 
 Configure this policy to use smartcard certificate-based BitLocker protection. Then specify the certificate **Object identifier**.
 
 When you don't configure this policy, BitLocker uses the default object identifier `1.3.6.1.4.1.311.67.1.1` to specify a certificate.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps).
 
 ### Organization unique identifiers
 
@@ -100,6 +108,8 @@ Configure this policy to use a certificate-based data recovery agent or the BitL
 When you don't configure this policy, BitLocker doesn't use the **Identification** field.
 
 If your organization requires higher security measurements, configure the **Identification** field. Set this field on all targeted USB devices, and align it with this setting.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps).
 
 ## OS drive
 
@@ -129,6 +139,8 @@ On devices with a compatible TPM, two types of authentication methods can be use
 >
 > - Allow Standby States (S1-S3) When Sleeping (On Battery)
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps).
+
 ### Allow enhanced PINs for startup
 
 *Suggested configuration*: **Not configured**
@@ -144,6 +156,8 @@ If you enable this setting, all new BitLocker startup PINs allow the user to cre
 
 If you disable or don't configure this policy setting, BitLocker doesn't use enhanced PINs.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps).
+
 ### Operating system drive password policy
 
 *Suggested configuration*: **Not configured**
@@ -157,6 +171,8 @@ Use these settings to set the constraints for passwords to unlock BitLocker-prot
 - **Require ASCII-only passwords for removable OS drives**
 
 If you enable this policy setting, users can configure a password that meets the requirements that you define.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps).
 
 #### General usage notes for OS drive password policy
 
@@ -175,6 +191,8 @@ Control whether Windows refreshes platform validation data when it starts after 
 If you enable or don't configure this setting, Windows refreshes platform validation data in this situation.
 
 If you disable this policy setting, Windows doesn't refresh platform validation data in this situation.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps).
 
 ### Pre-boot recovery message and URL
 
@@ -197,6 +215,8 @@ When you enable this setting, select one of the following options for the pre-bo
 > [!NOTE]
 > Not all characters and languages are supported in pre-boot. First test your custom message or URL to make sure it appears correctly on the pre-boot BitLocker recovery screen.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps).
+
 ### Encryption policy enforcement settings (OS drive)
 
 *Suggested configuration*: **Enabled**
@@ -210,6 +230,8 @@ If BitLocker doesn't require user interaction to add a protector, after the grac
 If you disable or don't configure this setting, Configuration Manager doesn't require users to comply with BitLocker policies.
 
 To enforce the policy immediately, set a grace period of `0`.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps).
 
 ## Fixed drive
 
@@ -229,6 +251,8 @@ If you don't configure this setting, BitLocker doesn't require users to put fixe
 
 If you disable this setting, users can't put their fixed data drives under BitLocker protection. If you disable this policy after BitLocker encrypts fixed data drives, BitLocker decrypts the fixed data drives.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps).
+
 ### Deny write access to fixed drives not protected by BitLocker
 
 *Suggested configuration*: **Not configured**
@@ -243,7 +267,7 @@ When you enable this setting:
 
 When you don't configure this setting, Windows mounts all fixed data drives with read and write access.
 
-<!-- ### Allow access to BitLocker-protected fixed drives from earlier versions of Windows -->
+For more information on how to create this policy with Windows PowerShell, see [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### Fixed data drive password policy
 
@@ -264,6 +288,8 @@ For higher security, enable this setting, and then configure the following setti
 If you disable this setting, users can't configure a password.
 
 When the policy isn't configured, BitLocker supports passwords with the default settings. The default settings don't include password complexity requirements, and require only eight characters.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps).
 
 #### General usage notes for fixed data drive password policy
 
@@ -286,6 +312,8 @@ If BitLocker doesn't require user interaction to add a protector, after the grac
 If you disable or don't configure this setting, Configuration Manager doesn't require users to comply with BitLocker policies.
 
 To enforce the policy immediately, set a grace period of `0`.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps).
 
 ## Removable drive
 
@@ -315,6 +343,8 @@ When you enable this setting:
 
 If you disable this setting, users can't use BitLocker on removable drives.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps).
+
 ### Deny write access to removable drives not protected by BitLocker
 
 *Suggested configuration*: **Not configured**
@@ -334,7 +364,7 @@ When you disable or don't configure this setting, Windows mounts all removable d
 > [!NOTE]
 > You can override this setting with the group policy settings in **System** > **Removable Storage Access**. If you enable the group policy setting **Removable disks: Deny write access**, then BitLocker ignores this Configuration Manager setting.
 
-<!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
+For more information on how to create this policy with Windows PowerShell, see [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### Removable data drive password policy
 
@@ -355,6 +385,8 @@ For higher security, enable this setting, and then configure the following setti
 If you disable this setting, users can't configure a password.
 
 When the policy isn't configured, BitLocker supports passwords with the default settings. The default settings don't include password complexity requirements, and require only eight characters.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps).
 
 #### General usage notes for removable data drive password policy
 
@@ -379,6 +411,11 @@ When you enable this setting, Configuration Manager automatically and silently b
 - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate for SQL Server, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
 - **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client updates its BitLocker recovery information every 90 minutes.
+
+For more information on how to create these policies with Windows PowerShell, see:
+
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
 
 ### User exemption policy
 
@@ -405,6 +442,8 @@ If you disable or don't configure this setting, Windows doesn't display the exem
 > [!NOTE]
 > BitLocker manages exemptions per user, not per computer. If multiple users sign in to the same computer, and any one user isn't exempt, BitLocker encrypts the computer.
 
+For more information on how to create this policy with Windows PowerShell, see [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps).
+
 ### URL for the security policy link
 
 *Suggested configuration*: **Enabled**
@@ -414,3 +453,9 @@ Specify a URL to display to users as the **Company Security Policy** in Windows.
 If you enable this setting, configure the **security policy link URL**.
 
 If you disable or don't configure this setting, BitLocker doesn't show the security policy link.
+
+For more information on how to create this policy with Windows PowerShell, see [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps).
+
+## Next steps
+
+If you use Windows PowerShell to create these policy objects, then use the [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) cmdlet. This cmdlet creates a BitLocker management policy settings object that contains all of the specified policies. To deploy the policy settings to a collection, use the [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) cmdlet.
