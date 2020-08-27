@@ -44,6 +44,8 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 
 > [!TIP]
 > Prior to the August update for this connector, PKCS #12 certificate requests were handled by the *Intune Certificate Connector*. With the August update, the functionality for all PKCS certificate requests was consolidated in the *PFX Certificate Connector*, which supports auto-update of the connector to new versions, and requires use of .NET Framework version 4.7.2.
+>
+> The functionality of the Microsoft Intune Connector is not deprecated and it can continue to be used with PKCS certificate profiles. However, if you do not use SCEP or otherwise require use of NDES, you can switch to the PFX Certificate Connector and remove NDES from your servers. 
 
 **The PFX Certificate Connector**:
 

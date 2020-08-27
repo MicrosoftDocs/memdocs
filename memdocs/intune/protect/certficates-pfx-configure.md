@@ -63,7 +63,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   For information about the PFX Certificate connector, including prerequisistes and release versions, see [Certificate connectors](certificate-connectors.md).
 
   > [!IMPORTANT]
-  > Beginning with the release of the PFX Certificate Connector, version 6.2008.60.607, the Microsoft Intune Connector is no longer used for PKCS certificate profiles.
+  > Beginning with the release of the PFX Certificate Connector, version 6.2008.60.607, the Microsoft Intune Connector is no longer required for PKCS certificate profiles. 
   
 ## Export the root certificate from the Enterprise CA
 
