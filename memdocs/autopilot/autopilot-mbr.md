@@ -229,7 +229,7 @@ In the following table:<br>
 - Supported = **Yes**: the device can be reenabled for Autopilot
 - Supported = **No**: the device can't be reenabled for Autopilot
 
-<table border="1">
+<table>
 <th>Scenario<th>Supported<th>Microsoft Recommendation
 <tr><td>Motherboard Replacement (MBR) in general<td>Yes<td>The recommended course of action for MBR scenarios is:
 
