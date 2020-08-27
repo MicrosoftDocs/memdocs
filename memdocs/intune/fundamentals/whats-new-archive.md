@@ -1352,7 +1352,7 @@ Admins will see these four apps automatically added to their Intune apps list at
 ### Device configuration
 
 #### Updated PFX Certificate Connector for Microsoft Intune<!-- 1533038 -->
-We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) that addresses an issue where existing PFX certificates continue to be reprocessed, which causes the connector to stop processing new requests.
+We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) that addresses an issue where existing PFX certificates continue to be reprocessed, which causes the connector to stop processing new requests.
 
 #### Intune security tasks for Defender ATP (In public preview)<!-- 3208597 -->
 In public preview, you can use Intune to manage [security tasks for Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). This integration with ATP and adds a risk-based approach to discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations, while reducing the time between discovery to mitigation.
@@ -1406,7 +1406,7 @@ To see the available setting, go to [Configure VPN settings on iOS devices](../c
 Applies to: iOS
 
 #### Updated PFX Certificate Connector for Microsoft Intune<!-- doc-vso 1521237  -->  
-We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) that drops the polling interval from 5 minutes to 30 seconds.
+We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) that drops the polling interval from 5 minutes to 30 seconds.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1493,7 +1493,7 @@ The Intune app protection policy (APP) support for the **Third Party Keyboards**
 ### Device configuration
 
 #### Updated certificate connectors<!-- ICM 113304612 -->
-We've released updates for both the [Intune Certificate Connector and the PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors). The new releases fix several known issues.
+We've released updates for both the [Intune Certificate Connector and the PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors). The new releases fix several known issues.
 
 #### Set login settings and control restart options on macOS devices<!-- 1210083  -->
 On macOS devices, you can create a device configuration profile (**Device configuration** > **Profiles** > **Create profile** > choose **macOS** for platform > **Device features** for profile type). This update includes new login window settings, such as showing a custom banner, choose how users sign in, show or hide the power settings, and more.

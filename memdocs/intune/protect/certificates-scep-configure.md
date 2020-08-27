@@ -53,7 +53,7 @@ The following on-premises infrastructure must run on servers that are domain-joi
 
   To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
 
-- **Microsoft Intune Connector** – The Microsoft Intune Connector is required to use SCEP certificate profiles with Intune. This article will guide you through [installing this connector](#install-the-intune-certificate-connector).
+- **Microsoft Intune Connector** – The Microsoft Intune Connector is required to use SCEP certificate profiles with Intune. This article will guide you through [installing this connector](#install-the-microsoft-intune-connector).
 
   The connector supports Federal Information Processing Standard (FIPS) mode. FIPS isn't required, but when it's enabled, you can issue and revoke certificates.
   - The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
@@ -374,7 +374,6 @@ These certificates are **Client authentication certificate** and **Server authen
       1. Select **Add**, set **Type** to **https**, and then confirm the port is **443**.
    
       1. For **SSL certificate**, specify the server authentication certificate.
-
 
 ## Install the Microsoft Intune Connector
 

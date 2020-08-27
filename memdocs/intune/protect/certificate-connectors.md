@@ -49,7 +49,7 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 
 - Supports multiple instances of this connector for each Intune tenant. Each instance of the connector must install on a Windows Server and have access to the private key used to encrypt the passwords of the uploaded PFX files.
 - Can install on the same server that hosts an instance of the *Microsoft Intune Connector*.
-- Supports [automatic updates](#automatic-updates) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
+- Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
 - Has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices)
 
