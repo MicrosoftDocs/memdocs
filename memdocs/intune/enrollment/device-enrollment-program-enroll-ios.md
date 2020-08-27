@@ -75,7 +75,7 @@ Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPa
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000
 - Maximum Automated Device Enrollment devices per token: The limit on the first sync is 75,000-80,000 devices. Intune will continue to sync with ABM or ASM with every 12 hour check-in to add more devices every time. A manual sync (which can be triggered once every 15 minutes) will also add another device batch over to Intune. Syncs will continue to occur and devices will keep getting synced from ABM/ASM over to Intune in large quantities. 
 
-## Get an Apple ADE token
+## Get an Apple Automated Device Enrollment token
 
 Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) file from Apple. This token lets Intune sync information about ADE devices that your corporation owns. It also permits Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
@@ -158,7 +158,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 4. Select **Next: Device Management Settings**.
 
 5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints) [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) is required.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) is required.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this option for devices that don't access local user data. To enable an end user to sign in to the iOS Company Portal and establish themself as the primary user of the device, send the `IntuneUDAUserlessDevice` key to iOS Company Portal in an app configuration policy for managed devices. Note that only the first user signing in is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
@@ -329,31 +329,36 @@ You have enabled management and syncing between Apple and Intune, and assigned a
 
 See [Enroll your iOS/iPadOS device in Intune with the Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
-## Renew an ADE token  
+## Renew an Automated Device Enrollment token  
 
 > [!NOTE]
 > In addition to renewing your ADE token yearly, you'll need to renew your enrollment program token within Intune and Apple Business Manager when the Managed Apple ID password changes for the user who set up the token in Apple business Manager or that user leaves your Apple Business Manager organization.
 
-1. Go to business.apple.com.  
-2. Under **Manage Servers**, choose your MDM server associated with the token file that you want to renew.
-3. Choose **Generate New Token**.
+1. Go to business.apple.com.
+2. Click on **Settings** (Bottom Left)
+3. Under **MDM Servers**, choose your MDM server associated with the ADE/DEP token that you want to renew.
+4. Click on **Download token**.
 
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Choose **Your Server Token**.  
-5. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose the token.
+5. At the prompt select "Download Server Token"
+> [!NOTE]
+> Do not click **"Download server token"** if you do not intent to renew the token, as mentioned in the prompt, doing so will invalidate the token currently being used by Intune (or any other MDM solution for that matter). If you already downloaded the token, makes sure you continue with the next steps until the token is renewed.
+
+6. Then after downloading the token, In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens** > choose the token.
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Choose **Renew token** and enter the Apple ID used to create the original token.  
+7. Choose **Renew token** and enter the Apple ID used to create the original token (if not automatically populated).  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
+8. Upload the newly downloaded token.
 
-8. Select **Next** and upload the newly downloaded token.  
-9. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
+9. Select **Next** to go to the **Scope tags** page and assign scope tags if you want.
+
+10. Choose **Renew token**. You'll see the confirmation that the token was renewed.   
     ![Screenshot of confirmation.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## Delete an ADE token from Intune
+## Delete an Automated Device Enrollment token from Intune
 
 You can delete enrollment profile tokens from Intune as long as
 - no devices are assigned to the token

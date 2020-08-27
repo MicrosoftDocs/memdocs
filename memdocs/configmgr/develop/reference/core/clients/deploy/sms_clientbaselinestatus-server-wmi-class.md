@@ -49,7 +49,7 @@ Class SMS_ClientBaselineStatus: SMS_BaseClass
 
  The client baseline type. Possible values are:  
 
-|||  
+|Value|Client baseline type|  
 |-|-|  
 |1|Production|  
 |2|Staging|  
@@ -99,7 +99,7 @@ Class SMS_ClientBaselineStatus: SMS_BaseClass
 
  The status of the client against the client baseline. Possible values are:  
 
-|||  
+|Value|Client status|  
 |-|-|  
 |1|Compliant|  
 |2|InProgress|  

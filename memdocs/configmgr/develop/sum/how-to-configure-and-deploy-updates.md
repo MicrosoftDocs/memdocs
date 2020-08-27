@@ -149,10 +149,9 @@ public void ConfigureAndDeploySUMUpdates(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|Parameter|Type|Description|
+|---------|----|-----------|
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newApplyToSubTargets`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Determines whether the deployment applies to subtargets.<br /><br /> -   True<br />-   False|  
 |`newArrayAssignedCIs`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the assigned configuration items (CI_IDs). The update content for these CI_IDs must have already been downloaded and added to an updates deployment package.|  
 |`newAssignmentAction`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The new assignment action.|  

@@ -141,8 +141,7 @@ The count of total steps doesn't include the following items in the task sequenc
 
 - Steps that you explicitly disable. A disabled step doesn't run during the task sequence.
 
-    > [!NOTE]
-    > Enabled steps in a disabled group are still included in the total count.
+- Starting in version 2006, it doesn't count enabled steps in a disabled group.<!--6448412--> In version 2002, enabled steps in a disabled group are still included in the total count.
 
 ## Task sequence error
 

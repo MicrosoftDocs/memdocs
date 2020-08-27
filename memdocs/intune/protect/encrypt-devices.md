@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -157,7 +157,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
 ### Rotate BitLocker recovery keys
 
@@ -169,11 +169,11 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 - Devices must run Windows 10 version 1909 or later
 
-- Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled:
+- Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled via BitLocker policy configuration:
 
-  - **Client-driven recovery password rotation**
-
-  This setting is under *Windows Encryption* as part of a device configuration policy for Windows 10 Endpoint Protection.
+  - **Client-driven recovery password rotation** to *Enable rotation on Azure AD-joined devices* or *Enable rotation on Azure AD and Hybrid-joined devices*
+  - **Save BitLocker recovery information to Azure Active Directory** to *Enabled*
+  - **Store recovery information in Azure Active Directory before enabling BitLocker** to *Required*
 
 #### To rotate the BitLocker recovery key
 

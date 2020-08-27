@@ -17,7 +17,7 @@ ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
 #audience:
 
 #ms.reviewer: ilwu
@@ -29,6 +29,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Reset the passcode on Windows devices using Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 You can reset the passcode for Windows devices. The reset passcode feature uses the Microsoft Pin Reset Service to generate a new passcode for devices that run Windows 10 Mobile. 
 

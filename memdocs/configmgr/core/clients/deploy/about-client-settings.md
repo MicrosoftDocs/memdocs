@@ -2,10 +2,10 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 04/21/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
@@ -134,7 +134,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications on Azure AD-joined devices](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Deploy user-available applications](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. In this scenario, users can still see, request, and install applications from an internet-based application catalog. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -162,7 +162,7 @@ Set this option to **Yes** for clients to obtain content from a cloud distributi
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 
-When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
@@ -239,7 +239,7 @@ For more information about this setting, see [Certificates for Microsoft Silverl
 
 ### Organization name displayed in Software Center
 
-Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Type the name that users see in Software Center. This branding information helps users to identify this application as a trusted source. For more information about the priority of this setting, see [Branding Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### Use new Software Center
 
@@ -324,6 +324,11 @@ If you want to give users more time to install required application or software 
 
 Set a grace period of 0 to 120 hours. Use this setting along with the deployment property **Delay enforcement of this deployment according to user preferences**. For more information, see [Deploy applications](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
+
+### Enable Endpoint analytics data collection
+
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+
 ## Computer restart
 
 For more information about these settings, see [Device restart notifications](device-restart-notifications.md).<!-- 7182335 -->
@@ -331,11 +336,11 @@ For more information about these settings, see [Device restart notifications](de
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!Note]
 > - Delivery Optimization is only available on Windows 10 clients.
-> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
@@ -458,41 +463,40 @@ For a MIF file to be collected by hardware inventory, it must be in the correct 
 > [!NOTE]  
 > This setting is available only in the default client settings.
 
+## Metered internet connections
 
+Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you're on a metered internet connection.
 
-## Metered internet connections  
-
-Manage how Windows 8 and later computers use metered internet connections to communicate with Configuration Manager. Internet providers sometimes charge by the amount of data that you send and receive when you are on a metered internet connection.  
-
-> [!NOTE]  
-> The configured client setting isn't applied in the following scenarios:  
+> [!NOTE]
+> The configured client setting isn't applied in the following scenarios:
 >
 > - If the computer is on a roaming data connection, the Configuration Manager client doesn't perform any tasks that require data to be transferred to Configuration Manager sites.  
 > - If the Windows network connection properties are configured as non-metered, the Configuration Manager client behaves as if the connection is non-metered, and so transfers data to the site.  
 
 ### Client communication on metered internet connections
 
-Choose one of the following options for this setting:  
+Choose one of the following options for this setting:
 
-- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.  
+- **Allow**: All client communications are allowed over the metered internet connection, unless the client device is using a roaming data connection.
 
-- **Limit**: Only the following client communications are allowed over the metered internet connection:  
+- **Limit**: The client only communicates over the metered internet connection for the following behaviors:
 
-    - Client policy retrieval  
+  - Download client policy
 
-    - Client state messages to send to the site  
+  - Send client state messages
 
-    - Software installation requests from Software Center  
+  - Request software installs from Software Center
 
-    - Required deployments (when the installation deadline is reached)  
+  - Download additional policy and content for required deployments at the installation deadline
 
-    If the client reaches the data transfer limit for the metered internet connection, the client no longer tries to communicate with Configuration Manager sites.  
+  If the client reaches the data transfer limit for the metered internet connection, the client no longer communicates with the site.
 
-- **Block**: The Configuration Manager client doesn't try to communicate with Configuration Manager sites when it's on a metered internet connection. This option is the default.  
+- **Block**: When the device is on a metered internet connection, the Configuration Manager client doesn't try to communicate with the site. This option is the default.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
+Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -631,6 +635,17 @@ Set this option to **Yes** to use network-level authentication (NLA) to establis
 
 
 ## Software Center
+
+### Select the user portal
+
+<!--CMADO-3601237,INADO-4297660-->
+Starting in version 2006, if you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that users only receive notifications from Company Portal.
+
+If you install the Company Portal on a co-managed device, but configure this setting to **Software Center**, then users will see notifications from both portals. This experience may be confusing for users.
+
+If you change the client setting for Company Portal, when a user selects a Configuration Manager notification, it launches the Company Portal. If the notification is for a scenario the Company Portal doesn't support, selecting the notification launches Software Center.
+
+The behavior of the Company Portal depends upon your co-management workload configuration. For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 
 ### Select these new settings to specify company information
 
@@ -884,7 +899,7 @@ This setting configures the local port for the HTTP listener to download delta c
 
 ### Enable management of the Office 365 Client Agent
 
-When you set this option to **Yes**, it enables the configuration of Office 365 installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 
@@ -918,11 +933,11 @@ This client setting provides the following options:
 
 - **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
 
-    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
 
-    - Removes the `/Priority` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
+    - Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 
 
 ### Enable third party software updates
@@ -931,7 +946,7 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 
 ### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
 <!--4062619-->
-Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10.
@@ -970,9 +985,9 @@ Choose **Yes** to create automatic user device affinity based on the usage infor
 <!--3485366-->
 When this setting is **Yes**, users can identify their own primary devices in Software Center. For more information, see the [Software Center user guide](../../understand/software-center.md#work-information).
 
-## Windows Analytics
+## Windows Diagnostic Data
 
-> [!Important]  
-> The Windows Analytics service is retired as of January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> This group was previously called **Windows Analytics**. Microsoft retired the Windows Analytics service on January 31, 2020. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics is the evolution of Windows Analytics. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics is the evolution of Windows Analytics. Use Desktop Analytics to manage Windows diagnostic data settings. For more information, see [What is Desktop Analytics](../../../desktop-analytics/overview.md).

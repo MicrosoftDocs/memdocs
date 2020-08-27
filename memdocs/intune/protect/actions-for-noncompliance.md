@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ For devices that don't meet your compliance policies or rules, you can add **Act
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
@@ -62,13 +62,11 @@ When the email is sent, Intune includes details about the noncompliant device in
   The following platforms support this action:
   - Android:
     - Android device administrator
-    - Android Enterprise Device Owner
+    - Android Fully Managed, Dedicated, and Corporate-Owned Work Profile
     - Android Enterprise Work Profile
     - Android Enterprise kiosk devices
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
 - **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management. To prevent accidental wipe of a device, this action supports a minimum schedule of **30** days.
 
@@ -79,8 +77,6 @@ When the email is sent, Intune includes details about the noncompliant device in
     - Android Enterprise Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 and later
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
@@ -115,7 +111,7 @@ When the email is sent, Intune includes details about the noncompliant device in
 
 You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add additional actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
 
-To use device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. See [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md) for guidance.
+To use device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. See [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md) for guidance.
 
 To create a device compliance policy, see the following platform-specific guidance:
 
@@ -151,8 +147,12 @@ To send email to your users, create a notification message template. When a devi
 
 5. Under **Review + create**, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.
 
-> [!NOTE]
-> You can also select an existing notification template you previously created, and **Edit** its information to update the template.
+### View and edit notifications
+
+Notifications that have been created are available in the *Compliance policies* > *Notifications* page. From the page you can select a notification to view its configuration and:
+
+- Select **Send preview email** to send a preview of the notification email to the account you've used to sign in to Intune. 
+- Select **Edit** for *Basics* or *Scope tags* to make a change.
 
 ## Add actions for noncompliance
 

@@ -112,8 +112,8 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 
  Architecture of the boot image. The following values are the possible values. The default value is "".  
 
-|||  
-|-|-|  
+| Value | Architecture |
+| ----- | ------------ |
 |x86|I386 32-bit microprocessor|  
 |ia64|Itanium 64-bit microprocessor|  
 |x64|X86-64 64-bit microprocessor|  
@@ -576,7 +576,7 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
 |256|  
 |512|  
 
- For additional information see [DISM Windows PE servicing command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-windows-pe-servicing-command-line-options).  
+ For additional information see [DISM Windows PE servicing command-line options](/windows-hardware/manufacture/desktop/dism-windows-pe-servicing-command-line-options).  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -685,4 +685,4 @@ Class SMS_BootImagePackage : SMS_PackageBaseclass
  For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
 
 ### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

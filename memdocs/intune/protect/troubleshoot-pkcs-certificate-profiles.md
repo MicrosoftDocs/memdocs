@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,7 @@ The most common source of problems for PKCS certificate profiles has been with t
 - **Certification Authority**: The internal FQDN of the Certificate Authority computer. For example, server1.domain.local.
 - **Certification Authority Name**: The Certificate Authority Name as displayed in the certification authority MMC. Look under **Certification Authority (Local)**
 
-You can use the [certutil command-line program](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) on the CA to confirm the correct name for the Certification Authority and Certification Authority Name.
+You can use the [certutil command-line program](/windows-server/administration/windows-commands/certutil) on the CA to confirm the correct name for the Certification Authority and Certification Authority Name.
 
 ## PKCS communication overview
 
@@ -80,7 +80,7 @@ Log files for these roles include Windows Event Viewer, Certificate consoles, an
 
 - **NDESConnector_date_time.svclog**:
 
-  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
   Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ Log files for these roles include Windows Event Viewer, Certificate consoles, an
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
   Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -133,6 +133,19 @@ For devices that run Windows, use the Windows Event logs to diagnose enrollment 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
 ![Windows event logs](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## Antivirus exclusions
+
+Consider adding Antivirus exclusions on servers that host NDES or the certificate connector when:
+
+- Certificate requests reach the server or the Intune Certificate Connector, but are not successfully processed 
+- Certificates are issued slowly
+
+The following are examples of locations that you might exclude:
+
+- *%program_files%*\Microsoft Intune\PfxRequest
+- *%program_files%*\Microsoft Intune\CertificateRequestStatus
+- *%program_files%*\Microsoft Intune\CertificateRevocationStatus
 
 ## Common errors
 
@@ -208,7 +221,7 @@ This issue occurs if the computer that hosts the Intune NDES Connector can't loc
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet.
 
 ### The submission is pending
 

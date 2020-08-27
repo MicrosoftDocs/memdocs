@@ -29,7 +29,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# What is device enrollment?
+# What is device enrollment in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune lets you manage your workforce's devices and apps and how they access your company data. To use this mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
@@ -64,18 +64,20 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
 |**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Yes |Yes |No | [More information](enrollment-autopilot.md)
+|**Autopilot** |Yes |Yes |No | [More information](../../autopilot/enrollment-autopilot.md)
 |**Bulk enroll** |No |No |No | [More information](windows-bulk-enroll.md) |
-|**Co-management** |No |Yes |No | [More information](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |No |Yes |No | [More information](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Co-management** |No |Yes |No | [More information](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |No |Yes |No | [More information](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## Android enrollment methods
 
 | **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
+
+&nbsp;
 
 | **Corporate** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -84,7 +86,7 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 |**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
 |**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Android Enterprise Corporate-owned with Work Profile** | **NFC, Token, QR code, Zero Touch** | Yes | Yes | Configurable via policy | [More information](android-corporate-owned-work-profile-enroll.md)|
 
 ## Bring your own device
 Bring your own devices (BYOD) include personally-owned phones, tablets, and PCs. Users install and run the Company Portal app to enroll BYODs. This program lets users access company resources like email.

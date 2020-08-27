@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -56,7 +56,7 @@ App protection policies can be configured for apps that run on devices that are:
 - **Not enrolled in any mobile device management solution:** These devices are typically employee owned devices that aren't managed or enrolled in Intune or other MDM solutions.
 
 > [!IMPORTANT]
-> You can create mobile app management policies for Office mobile apps that connect to Office 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, make sure you meet the [Outlook for iOS/iPadOS and Android requirements](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services.
+> You can create mobile app management policies for Office mobile apps that connect to Office 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, make sure you meet the [Outlook for iOS/iPadOS and Android requirements](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019). App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services.
 
 ## Benefits of using App protection policies
 
@@ -153,7 +153,7 @@ Any app that has been integrated with the [Intune SDK](../developer/app-sdk.md) 
 
 The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
-The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authentication capabilities from the[Azure Active Directory Authentication Libraries](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) for both the 1st party and the 3rd party versions of the SDK. As such, [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) does not work well with many of our core scenarios such as authentication into the Intune App Protection service and conditional launch. Given that the overall guidance from Microsoft's Identity team is to switch to MSAL for all of the Microsoft Office apps, the [Intune SDK](../developer/app-sdk.md) will eventually need to support it, but there are no plans today.
+The [Intune SDK](../developer/app-sdk.md) uses some advanced modern authentication capabilities from the[Azure Active Directory Authentication Libraries](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) for both the 1st party and the 3rd party versions of the SDK. As such, [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) (MSAL) does not work well with many of our core scenarios such as authentication into the Intune App Protection service and conditional launch. Given that the overall guidance from Microsoft's Identity team is to switch to MSAL for all of the Microsoft Office apps, the [Intune SDK](../developer/app-sdk.md) will eventually need to support it, but there are no plans today.
 
 ## End-user requirements to use app protection policies
 
@@ -178,7 +178,7 @@ The additional requirements to use the [Outlook mobile app](https://products.off
 - The end user must have an [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Azure Active Directory account.
 
   >[!NOTE]
-  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) and does not support Exchange in Office 365 Dedicated.
+  > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) and does not support Exchange in Office 365 Dedicated.
 
 ### Word, Excel, and PowerPoint
 The additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps include the following:
@@ -329,6 +329,11 @@ The intent of this process is to continue keeping your organization's data withi
   
 ### iOS share extension
 You can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **managed apps only** or **no apps**. Intune app protection policy cannot control the iOS/iPadOS share extension without managing the device. Therefore, Intune _**encrypts "corporate" data before it is shared outside the app**_. You can validate this encryption behavior by attempting to open a "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
+
+### Universal Links support
+By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/). 
+
+Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to user Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
 
 ### Multiple Intune app protection access settings for same set of apps and users
 Intune app protection policies for access will be applied in a specific order on end-user devices as they try to access a targeted app from their corporate account. In general, a wipe would take precedence, followed by a block, then a dismissible warning. For example, if applicable to the specific user/app, a minimum iOS/iPadOS operating system setting that warns a user to update their iOS/iPadOS version will be applied after the minimum iOS/iPadOS operating system setting that blocks the user from access. So, in the scenario where the IT admin configures the min iOS operating system to 11.0.0.0 and the min iOS operating system (Warning only) to 11.1.0.0, while the device trying to access the app was on iOS 10, the end user would be blocked based on the more restrictive setting for min iOS operating system version that results in blocked access.

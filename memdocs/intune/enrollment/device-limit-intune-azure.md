@@ -43,7 +43,7 @@ Intune device limit restrictions set the maximum number of devices that a user c
 
 ## Azure device limit restriction
 
-Azure device limit restrictions set the maximum number of devices that either Azure AD joins or Azure AD registers. To set the **Maximum number of devices per user**, go to the Azure portal > **Azure Active Directory** > **Devices**. For more information, see [Configure device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Azure device limit restrictions set the maximum number of devices that either Azure AD joins or Azure AD registers. To set the **Maximum number of devices per user**, go to the Azure portal > **Azure Active Directory** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
 
 ## Settings applied based on user affinity
 
@@ -118,6 +118,6 @@ For the device limit restriction in Azure, the **Maximum number of devices per u
 
 ## Next steps
 
-- [Create a device limit restriction in Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Create a device limit restriction in Azure.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Configure device settings in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Learn more about registration and domain joined.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Learn more about registration and domain joined.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

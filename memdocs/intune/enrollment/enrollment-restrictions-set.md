@@ -51,11 +51,10 @@ The specific enrollment restrictions that you can create include:
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, Windows, and Windows Mobile. (Only Windows 10 versions can be used. Leave this blank if Windows 8.1 is allowed.)
+- Platform operating system version for iOS/iPadOS, Android device administrator, Android Enterprise work profile, and Windows.
   - Minimum version.
   - Maximum version.
-- Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, Windows, and Windows Mobile only).
+- Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, and Windows).
 
 ## Default restrictions
 
@@ -127,7 +126,7 @@ During BYOD enrollments, users see a notification that tells them when they've m
 > - Device Enrollment Manager enrollments
 >
 > Device limit restrictions are not enforced for these enrollment types because they're considered shared device scenarios.
-> You can set hard limits for these enrollment types [in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
+> You can set hard limits for these enrollment types [in Azure Active Directory](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 
 ## Change enrollment restrictions
@@ -149,26 +148,26 @@ If you block personally owned Windows devices from enrollment, Intune checks to 
 
 The following methods qualify as being authorized as a Windows corporate enrollment:
 - The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
-- The device enrolls through [Windows Autopilot](enrollment-autopilot.md).
+- The device enrolls through [Windows Autopilot](../../autopilot/enrollment-autopilot.md).
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
-- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**. (Not supported for Windows Phone 8.1.)
+- The device's IMEI number is listed in **Device enrollment** > **[Corporate device identifiers](corporate-identifiers-add.md)**.
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
-- The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
+- The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
  
 The following enrollments are marked as corporate by Intune. But since they don't offer the Intune administrator per-device control, they'll be blocked:
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join during Windows setup](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join from Windows Settings](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
 The following personal enrollment methods will also be blocked:
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Add Work Account from Windows Settings](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
-- [MDM enrollment only]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-10-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
+- [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
 
 \* These won't be blocked if registered with Autopilot.
 
 
 ## Blocking personal iOS/iPadOS devices
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- Registered with a serial number or IMEI.
+- [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
 
 
@@ -179,6 +178,10 @@ Priority is used when a user exists in multiple groups that are assigned restric
 When you create a restriction, it's added to the list just above the default.
 
 Device enrollment includes default restrictions for both device type and device limit restrictions. These two restrictions apply to all users unless they're overridden by higher-priority restrictions.
+
+>[!NOTE]
+>Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
+
 
 You can change the priority of any non-default restriction.
 

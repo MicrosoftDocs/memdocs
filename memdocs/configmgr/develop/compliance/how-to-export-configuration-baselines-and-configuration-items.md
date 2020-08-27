@@ -119,10 +119,9 @@ public void DCMExportBaselineOrCI(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |-   pathToOutputFile<br />-   pathToFile|-   Managed: `String`<br />-   VBScript: `String`|Path to the output file.|  
 |`configurationItemId`|-   Managed: `String`<br />-   VBScript: `String`|Identifier of a configuration item to export.|  
 

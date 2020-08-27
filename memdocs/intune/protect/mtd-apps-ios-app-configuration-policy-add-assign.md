@@ -49,7 +49,7 @@ Complete the following steps in Intune. Make sure you're familiar with the proce
 
 ## Configure Microsoft Authenticator for iOS
 
-For iOS devices, you need the [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Azure AD. Additionally, you need an iOS app configuration policy that sets the MTD iOS app you use with Intune.
+For iOS devices, you need the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Azure AD. Additionally, you need an iOS app configuration policy that sets the MTD iOS app you use with Intune.
 
 See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Microsoft Authenticator app store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when you configure **App information**.
 
@@ -201,7 +201,7 @@ Choose the section that corresponds to your MTD provider:
     5. Add **Delegated Permissions** to your app.
 
     > [!NOTE]
-    > See [configure a native client application with Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application) for more details.
+    > See [configure a native client application with Azure AD](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application) for more details.
 
   - **Add the Lookout for Work ipa file.**
 

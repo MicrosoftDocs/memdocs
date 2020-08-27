@@ -125,9 +125,9 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 ## Policy troubleshooting resources
 
 - [Troubleshooting iOS/iPadOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
-- [Troubleshooting Windows 10 Intune policy failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (opens a blog)
+- [Troubleshooting Windows 10 Intune policy failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (opens a blog)
 - [Troubleshoot CSP custom settings for Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opens another Microsoft site)
-- [Windows 10 Group Policy vs Intune MDM policy](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opens another Microsoft site)
+- [Windows 10 Group Policy vs Intune MDM policy](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (opens another Microsoft site)
 
 ## Alert: Saving of Access Rules to Exchange has Failed
 
@@ -147,7 +147,7 @@ Depending on the device platform, if you want to change the policy to a less sec
 
 For example, in Windows 8.1, on the desktop, swipe in from right to open the **Charms** bar. Choose **Settings** > **Control Panel** > **User Accounts**. On the left, select **Reset Security Policies** link, and choose **Reset Policies**.
 
-Other platforms, such as Android, iOS/iPadOS, and Windows Phone 8.1, may need to be retired and re-enrolled to apply a less restrictive policy.
+Other platforms, such as Android, and iOS/iPadOS may need to be retired and re-enrolled to apply a less restrictive policy.
 
 [Troubleshoot device enrollment](../enrollment/troubleshoot-device-enrollment-in-intune.md) may be a good resource.
 

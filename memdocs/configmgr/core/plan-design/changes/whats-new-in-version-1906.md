@@ -85,14 +85,14 @@ For more information, see [Management insights](../../servers/manage/management-
 
 - Add a new synchronous replica from setup<!--3127336-->: You can now add a new secondary replica node to an existing SQL Always On availability group. Instead of a manual process, use Configuration Manager setup to make this change. For more information, see [Configure SQL Server Always On availability groups](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
+- Multi-subnet failover<!-- SCCMDocs-pr#3734 -->: You can now enable the [MultiSubnetFailover connection string keyword](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. You also need to manually configure the site server. For more information, see the [Multi-subnet failover](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) prerequisite.
 
 - Support for distributed views<!-- SCCMDocs-pr#3792 -->: The site database can be hosted on a SQL Server Always On availability group, and you can enable database replication links to use [distributed views](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
     > [!Note]  
     > This change doesn't apply to SQL Server clusters.
 
-- Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
 - New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
 
@@ -147,7 +147,7 @@ For more information, see [Logs collector](../../../desktop-analytics/log-collec
 
 For CMPivot, you now have additional arithmetic operators, aggregators, and the ability to add query joins such as using Registry and File together.
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### CMPivot standalone
 
@@ -169,7 +169,7 @@ The following permissions have been added to Configuration Manager's built-in [*
 - Run CMPivot on Collection
 - Read on Inventory Report
 
-For more information, see [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="bkmk_content"></a> Content management
@@ -196,7 +196,7 @@ For more information, see [Delivery Optimization In-Network Cache in Configurati
 ### Support for Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager to manage these virtual devices running Windows in Azure.
+[Windows Virtual Desktop](/azure/virtual-desktop/) is a preview feature of Microsoft Azure and Microsoft 365. You can now use Configuration Manager to manage these virtual devices running Windows in Azure.
 
 Similar to a terminal server, these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows Virtual Desktop and terminal servers.
 
@@ -503,7 +503,7 @@ The **View Required** hyperlink is available in the following locations:
    - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
-For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Office 365 ProPlus updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+For more information, see [Monitor software updates](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates), and [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="bkmk_o365"></a> Office management
@@ -512,7 +512,7 @@ For more information, see [Monitor software updates](../../../sum/deploy-use/mon
 
 <!--4021125-->
 
-To help you determine which devices are ready to upgrade to Office 365 ProPlus, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
+To help you determine which devices are ready to upgrade to Microsoft 365 Apps for enterprise, there's a new readiness dashboard. It includes the **Office 365 ProPlus upgrade readiness** tile that released in Configuration Manager current branch version 1902. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**, and select the **Office 365 ProPlus Upgrade Readiness** node.
 
 For more information on the dashboard, prerequisites, and using this data, see [Integration for Office 365 ProPlus readiness](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
@@ -536,7 +536,7 @@ For more information, see [Create and deploy Windows Defender Application Guard 
 
 You can now set security scopes on folders. If you have access to an object in the folder but don't have access to the folder, you'll be unable to see the object. Similarly, if you have access to a folder but not an object within it, you won't see that object. Right-click a folder, choose **Set Security Scopes**, then choose the security scopes you want to apply.
 
-For more information, see [Using the Configuration Manager console](../../servers/manage/admin-console.md#tips) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+For more information, see [Configuration Manager console tips](../../servers/manage/admin-console-tips.md) and [Configure role-based administration](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### Add SMBIOS GUID column to device and device collection nodes
 
@@ -620,7 +620,7 @@ As of this version, the following features are no longer pre-release:
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4514258).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1906 release notes](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 

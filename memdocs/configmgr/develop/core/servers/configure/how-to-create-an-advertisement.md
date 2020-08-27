@@ -96,7 +96,7 @@ public void CreateSWDAdvertisement(WqlConnectionManager connection, string exist
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/desktop/WmiSdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/desktop/WmiSdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingCollectionID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of an existing collection with which to associate the advertisement.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of an existing package with which to associate the advertisement.|  
 |`existingProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the program associated with the advertisement.|  

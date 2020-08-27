@@ -89,8 +89,8 @@ Class SMS_CertificateInfo : SMS_BaseClass
 
  The public key type for the certificate. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Key type |  
+| ----- | -------- |  
 |1|self-sign|  
 |2|issued|  
 
@@ -130,8 +130,8 @@ Class SMS_CertificateInfo : SMS_BaseClass
 
  The type of certificate. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Certificate type |  
+| ----- | ---------------- |  
 |1|Boot Media|  
 |2|PXE|  
 |3|ISVProxy|  

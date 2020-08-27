@@ -32,7 +32,7 @@ typedef enum
 
 ## Members  
 
-|||  
+|Priority flag|Description|  
 |-|-|  
 |CCM_DTS_PRIORITY_FOREGROUND|The highest priority.|  
 |CCM_DTS_PRIORITY_HIGH|High priority.|  

@@ -2,7 +2,7 @@
 title: Use boundaries and boundary groups
 titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations and accessible site systems for devices you manage.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,8 +10,6 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ---
 
 # Define site boundaries and boundary groups
@@ -26,6 +24,7 @@ A hierarchy can include any number of boundary groups. Each boundary group can c
 - Active Directory site name  
 - IPv6 prefix  
 - IP address range  
+- VPN (starting in version 2006)
 
 Clients on the intranet evaluate their current network location and then use that information to identify boundary groups to which they belong.  
 

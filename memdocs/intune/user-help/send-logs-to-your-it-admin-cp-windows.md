@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Send logs to your company support for Windows 10 devices | Microsoft Docs
+title: Send logs using the Company Portal app for Windows
 description: Email error and log details to help company support fix app problems
 keywords:
 author: lenewsad

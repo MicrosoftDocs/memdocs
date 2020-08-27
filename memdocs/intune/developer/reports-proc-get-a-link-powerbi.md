@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -43,6 +43,9 @@ You can use the Power BI Compliance app to load interactive, dynamically generat
 
 There are also trends highlighted for the enrollment, compliance, device configuration profile, and software updates. Sample charts and reports apply user-friendly filters to the canvas. To use advanced filters, check out the **Filter** pane in Power BI Desktop.
 
+> [!NOTE]
+> Power BI template apps enable Power BI partners to build Power BI apps with little or no coding, and deploy them to any Power BI customer. For example, you can use the Power BI compliance report template in V2.0. V2.0 includes an improved design, as well as changes to the calculations and data that is being surfaced as part of the template. For more information, see [Update a template app](/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune Compliance (Data Warehouse) app](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd), and [What are Power BI template apps?](/power-bi/service-template-apps-overview)
+
 The following steps show you how to download the Power BI file and how to use the OData link with Power BI.
 
 [!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
@@ -54,6 +57,9 @@ Install the latest version of [Power BI Desktop](https://aka.ms/intune/datawareh
 ## Load the data and reports using the Power BI Intune Compliance Data Warehouse App
 
 The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app contains information for your tenant and a set of prebuilt reports based on the Data Warehouse data model.
+
+> [!NOTE]
+> The Power BI Intune Compliance Data Warehouse app is not supported for Azure Government cloud environments.
 
 1. Navigate to the **AppSource** page of the [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) app to begin the installation process.
 2. Click the **Get It Now** button, and then click **Continue**.

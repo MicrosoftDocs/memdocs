@@ -5,7 +5,7 @@ description: Learn about the specific data that Configuration Manager collects a
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
@@ -171,7 +171,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of distinct branding for application catalog  
 
-- Count of Office 365 applications created using dashboard  
+- Count of Microsoft 365 applications created using dashboard  
 
 - Count of packages by type  
 
@@ -221,7 +221,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Aggregated statistics on the use of application groups
 
-- Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Office 365 ProPlus
+- Aggregated statistics on Office add-ins, usage of the Office Readiness Toolkit, and counts of clients with Microsoft 365 Apps for enterprise
 
 - Aggregated statistics on Office add-in health
 
@@ -475,7 +475,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Configurations that are used for active Windows 10 servicing plans  
 
-- Count of deployed Office 365 updates  
+- Count of deployed Microsoft 365 updates  
 
 - Count of Microsoft Surface drivers synced  
 

@@ -28,7 +28,7 @@ In this tutorial, you learn how to:
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free) before you begin. When configured properly, use of Desktop Analytics doesn't incur any Azure cost.
 
-Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Desktop Analytics uses a *Log Analytics workspace* in your Azure subscription. A workspace is essentially a container that includes account information and simple configuration information for the account. For more information, see [Manage workspaces](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
@@ -52,7 +52,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
     - Configuration Manager client version 1902 with update rollup (4500571) or later  
 
-- Business approval to configure Windows diagnostic data level to **Enhanced (Limited)** on the pilot devices  
+- Business approval to configure Windows diagnostic data level to **Optional (limited)** on the pilot devices  
 
     For more information, see [Desktop Analytics privacy](privacy.md).
 
@@ -98,7 +98,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.  
 
-        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure Active Directory to create and manage workspaces and deployment plans. 
 
@@ -189,7 +189,7 @@ Install the Configuration Manager version 1902 update rollup (4500571) to suppor
 
     - **Commercial ID**: this value should automatically populate with your organization's ID  
 
-    - **Windows 10 diagnostic data level**: select at least **Enhanced (Limited)**  
+    - **Windows 10 diagnostic data level**: select at least **Optional (limited)**  
 
     - **Allow Device Name in diagnostic data**: select **Enable**  
   
@@ -232,11 +232,11 @@ Use this procedure to create a deployment plan in Desktop Analytics.
 
     - **Name**: A unique name for the deployment plan, for example `Windows 10 pilot`  
 
-    - **Products and versions**: Select the **Windows** product, and the latest available recommended version. For example, **Windows 10, version 1809 (recommended)**.  
+    - **Products and versions**: Choose which Windows 10 version to deploy. Microsoft recommends creating deployment plans that use the most recent version.
 
     - **Device groups**: Select one or more groups from the Configuration Manager tab, and then select **Set as Target Groups**. These groups are collections synchronized from Configuration Manager.  
 
-    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **WIndows OS** and configure the following settings:  
+    - **Readiness rules**: These rules help to determine which devices qualify for upgrade. Select **Windows OS** and configure the following settings:  
 
         - **My computers automatically get drivers from Windows Update**: The default setting is **Off**, which is recommended when deploying with Configuration Manager.  
 
@@ -335,7 +335,7 @@ Next, distribute the OS upgrade package to distribution points.
     - **Product key**: Specify the Windows product key for the OS to install. Specify encoded volume license keys or standard product keys. If you use a standard product key, separate each group of five characters by a dash (-). For example: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. When the upgrade is for a volume license edition, the product key may not be required.  
 
         > [!Note]  
-        > This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
+        > This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
 
 6. On the **Include Updates** page, select **Next** to not install any software updates.  
 

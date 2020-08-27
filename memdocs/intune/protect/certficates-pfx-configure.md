@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,12 +42,12 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **Active Directory domain**:  
   All servers listed in this section must be joined to your Active Directory domain.
 
-  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 - **Certification Authority**:  
    An Enterprise Certification Authority (CA).
 
-  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393).
+  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)).
 
   > [!WARNING]  
   > Intune requires you to run AD CS with an Enterprise Certification Authority (CA), not a Standalone CA.
@@ -61,7 +61,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **Microsoft Intune Certificate Connector** (also called the *NDES Certificate Connector*):  
   In the Intune portal, go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install the connector for PKCS #12*. Use the download link in the portal to start download of the certificate connector installer **NDESConnectorSetup.exe**.  
 
-  Intune supports up to 100 instances of this connector per tenant. Each instance of the connecter must be on a separate Windows server. You can install an instance of this connector on the same server as an instance of the PFX Certificate Connector for Microsoft Intune. When you use multiple connectors, the connector infrastructure supports high availability and load balancing as any available connector instance can process your PKCS certificate requests. 
+  Intune supports up to 100 instances of this connector per tenant. Each instance of the connecter must be on a separate Windows server. You can install an instance of this connector on the same server as an instance of the PFX Certificate Connector for Microsoft Intune. When you use multiple connectors, the connector infrastructure supports redundancy and load balancing as any available connector instance can process your PKCS certificate requests. 
 
   This connector processes PKCS certificate requests used for authentication or S/MIME email signing.
 
@@ -70,9 +70,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **PFX Certificate Connector for Microsoft Intune**:  
   If you plan to use S/MIME email encryption, use the Intune portal to download the *PFX Certificate Connector* that supports import of PFX certificates.  Go to **Device configuration** > **Certificate Connectors** > **Add**, and follow the *Steps to install connector for Imported PFX certificates*. Use the download link in the portal to start download of the installer **PfxCertificateConnectorBootstrapper.exe**.
 
-  Each Intune tenant supports a single instance of this connector. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector.
-
-  This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.  
+  This connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. You can install this connector on the same server as an instance of the Microsoft Intune Certificate connector. 
 
   This connector can automatically update itself when new versions become available. To use the update capability, you must:
   - Install the PFX Certificate Connector for Microsoft Intune on your server.  
@@ -86,7 +84,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Microsoft Intune Certificate Connector - for authentication and S/MIME email signing scenarios
   - PFX Certificate Connector for Microsoft Intune - for S/MIME email encryption scenarios.
 
-  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *PFX Certificate Connector* on the same server as the *Microsoft Intune Certificate Connector*.
   
@@ -123,6 +121,13 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
 6. In **Request Handling**, select **Allow private key to be exported**.
+    
+    > [!NOTE]
+    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
+    > It is required that the certificate template allows the private key to be exported, so that the Certificate Connector is able to export the PFX certificate and send it to the device. 
+    >
+    > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
+    
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
@@ -164,7 +169,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. On the **Advanced** tab, it's recommended to leave **Use this computer's SYSTEM account (default)** selected.
 7. **Apply** > **Close**
 8. Go back to the Intune portal (**Intune** > **Device Configuration** > **Certification Connectors**). After a few moments, a green check mark is shown, and the **Connection status** is **Active**. Your connector server can now communicate with Intune.
-9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
+9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
     - Android Enterprise (*Work Profile*)
     - iOS
     - macOS
@@ -223,7 +228,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices. Your options:
      - Android device administrator
-     - Android Enterprise > Device owner only
+     - Android Enterprise > Fully Managed, Dedicated, and Corporate-Owned Work Profile
      - Android Enterprise > Work profile only
      - iOS/iPadOS
      - macOS
@@ -266,7 +271,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
    Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile.For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
@@ -300,16 +305,16 @@ Platforms:
   - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
   - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
 
   - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
 
   By using a combination of one or many of these variables and static strings, you can create a custom subject name format, such as:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
+  That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
 - **Device certificate type**  
   Format options for the Subject name format include the following variables: 

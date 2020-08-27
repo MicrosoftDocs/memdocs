@@ -17,7 +17,7 @@ ms.reviewer: acabello
 
 Desktop Analytics is fully committed to customer data privacy, centering on these tenets:
 
-- **Transparency:** We fully document the Windows diagnostic events. Review them with your company's security and compliance teams. The Windows Diagnostic Data Viewer lets you see diagnostic data sent from a given device. For more information, see [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Transparency:** We fully document the Windows diagnostic events. Review them with your company's security and compliance teams. The Windows Diagnostic Data Viewer lets you see diagnostic data sent from a given device. For more information, see [Diagnostic Data Viewer Overview](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Control:** You control the level of diagnostic data to share with Microsoft. Windows 10, version 1709, adds a new policy to limit enhanced diagnostic data to the minimum required by Desktop Analytics.  
 
@@ -25,7 +25,7 @@ Desktop Analytics is fully committed to customer data privacy, centering on thes
 
 - **Trust:** Desktop Analytics supports the Microsoft [Privacy Statement](https://privacy.microsoft.com/privacystatement) and [Online Service Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
-For more information, see [Windows services where Microsoft is the processor under the GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
+For more information, see [Windows services where Microsoft is the processor under the GDPR](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## Data flow
 
@@ -52,7 +52,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 3. Devices send diagnostic data to the Microsoft Diagnostic Data Management service for Windows. All diagnostic data is encrypted over HTTPS and uses certificate pinning during transfer from the device to this service. The Microsoft Data Management Service is hosted in the United States.
 
-      - Application faults, kernel faults, unresponsive applications, and other application specific problems use the Windows Error Reporting API to send application-specific problem reports to Microsoft. See [Using WER](https://docs.microsoft.com/windows/win32/wer/using-wer) for specific details about this dataflow.
+      - Application faults, kernel faults, unresponsive applications, and other application specific problems use the Windows Error Reporting API to send application-specific problem reports to Microsoft. See [Using WER](/windows/win32/wer/using-wer) for specific details about this dataflow.
       
 4. Each day, Microsoft produces a snapshot of IT-focused insights. This snapshot combines the diagnostic data from Windows with your input for the enrolled devices. This process happens in transient storage, which is only used by Desktop Analytics. The transient storage is hosted in Microsoft data centers in the United States. All data is sent over an SSL (HTTPS) encrypted channel. The snapshots are segregated by commercial ID.  
 
@@ -66,30 +66,28 @@ For privacy-related frequently asked questions for Desktop Analytics, see [Priva
 
 For more information about related privacy aspects, see the following articles:
 
-- [Windows 10 and the GDPR for IT Decision Makers](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 and the GDPR for IT Decision Makers](/windows/privacy/gdpr-it-guidance)  
 
-- [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Windows 7, Windows 8, and Windows 8.1 appraiser diagnostic data events and fields](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Windows 7, Windows 8, and Windows 8.1 appraiser diagnostic data events and fields](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Windows 10, version 1809 basic level Windows diagnostic events and fields](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10, version 1809 basic level Windows diagnostic events and fields](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Windows 10, version 1709 enhanced diagnostic data events and fields used by Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Windows 10, version 1709 enhanced diagnostic data events and fields used by Desktop Analytics](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Windows Setup error reporting](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Windows Setup error reporting](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Diagnostic Data Viewer Overview](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Diagnostic Data Viewer Overview](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Log Analytics data security](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Log Analytics data security](/azure/azure-monitor/platform/data-security)
 
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [Trust Center](https://www.microsoft.com/trustcenter)  
-
-- [Privacy Shield](https://www.privacyshield.gov/)  
 
 Separate from Desktop Analytics, Configuration Manager sends diagnostic and usage data to Microsoft. Microsoft uses this data to improve the installation experience, quality, and security of future releases of Configuration Manager. For more information, see [Diagnostics and usage data for Configuration Manager](../core/plan-design/diagnostics/diagnostics-and-usage-data.md).

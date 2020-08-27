@@ -86,7 +86,7 @@ Deployment and operation of the cloud distribution point includes the following 
 ### Azure Resource Manager
 
 <!--1322209-->
-Starting in version 1806, create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+Starting in version 1806, create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
 
 > [!Note]  
 > This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -241,9 +241,9 @@ A cloud distribution point uses the following Azure components, which incur char
 
 - Cloud distribution points use the following standard blob storage depending upon the deployment model:  
 
-    - An Azure Resource Manager deployment use Azure locally redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+    - An Azure Resource Manager deployment use Azure locally redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally redundant storage](/azure/storage/common/storage-redundancy-lrs).  
 
-    - A classic deployment with Configuration Manager version 1810 or earlier uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+    - A classic deployment with Configuration Manager version 1810 or earlier uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](/azure/storage/common/storage-redundancy-grs).  
 
 #### Other costs
 
@@ -372,11 +372,11 @@ If your organization uses ExpressRoute, isolate the Azure subscription for the c
 
 ### Do I need to maintain the Azure virtual machines?
 
-No maintenance is required. The design of the cloud distribution point uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary VMs, storage, and networking. Azure secures and updates the virtual machines. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud distribution point is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Security advantages of a PaaS cloud service model](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+No maintenance is required. The design of the cloud distribution point uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary VMs, storage, and networking. Azure secures and updates the virtual machines. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud distribution point is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Security advantages of a PaaS cloud service model](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
 
 ### Does the cloud distribution point use Azure CDN?
 
-The Azure Content Delivery Network (CDN) is a global solution for rapidly delivering high-bandwidth content by caching the content at strategically placed physical nodes across the world. For more information, see [What is Azure CDN?](https://docs.microsoft.com/azure/cdn/cdn-overview).
+The Azure Content Delivery Network (CDN) is a global solution for rapidly delivering high-bandwidth content by caching the content at strategically placed physical nodes across the world. For more information, see [What is Azure CDN?](/azure/cdn/cdn-overview).
 
 The Configuration Manager cloud distribution point currently doesn't support Azure CDN.
 

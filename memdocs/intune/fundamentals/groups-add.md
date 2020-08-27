@@ -74,8 +74,8 @@ Use the following steps to create a new group.
 
     For more information on these membership types, and creating dynamic expressions, see:
 
-    - [Create a basic group and add members using Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Dynamic membership rules for groups in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Create a basic group and add members using Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > In this admin center, when you create users or groups, you might not see the **Azure Active Directory** branding. But, that's what you're using.
@@ -110,4 +110,4 @@ For configuration profile recommendations and guidance, see [Assign policies to 
 ## See also
 
 - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-- [Manage access to resources with Azure AD groups](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Manage access to resources with Azure AD groups](/azure/active-directory/active-directory-manage-groups)

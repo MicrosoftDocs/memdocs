@@ -172,7 +172,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Enforce preference. Possible values are:   
 
-|||  
+|Value|Enforce preference|  
 |-|-|  
 |0|Immediate|  
 |1|NonBusinessHours|  

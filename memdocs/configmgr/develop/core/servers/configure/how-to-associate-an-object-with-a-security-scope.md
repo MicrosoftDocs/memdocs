@@ -68,10 +68,9 @@ public void AddObjectScope(WqlConnectionManager connection, string scopeId, stri
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeId`|`String`|The identifier of the security scope.|  
 |objectKey|`String`|The key property value of the object to assign a scope to.|  
 |objectTypeId|`Integer`|The type identifier of the object referenced in the `objectKey` parameter.|  

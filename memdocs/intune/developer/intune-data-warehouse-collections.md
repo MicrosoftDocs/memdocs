@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -195,6 +195,8 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | JailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
 | DeviceCategoryKey          | Key of device category attribute for this device.                                                                                                                                    |
+| physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                    |
+| totalStorageSpaceInBytes      | Total storage capacity in bytes.                                                                                                                                    |
 
 
 ## deviceRegistrationStates
@@ -226,6 +228,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | DeviceRegistrationState    | Key   of the client registration state attribute for this device.                                                                                                                      |
 | OwnerTypeKey               | Key   of the owner type attribute for this device: corporate, personal, or unknown.                                                                                                    |
 | EnrolledDateTime           | Date   and time that this device was enrolled.                                                                                                                                         |
+| ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                         |
 | LastSyncDateTime           | Last known device check-in with   Intune.                                                                                                                                              |
 | ManagementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | ManagementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
@@ -234,6 +237,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | DeviceCategoryKey          | Key of the category associated   with this device.                                                                                                                                     |
 | DeviceEnrollmentType       | Key of the enrollment type   associated with this device, indicating method of enrollment.                                                                                             |
 | ComplianceStateKey         | Key of the Compliance state   associated with this device.                                                                                                                             |
+| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
 | OSVersion                  | Operating system version of the device.                                                                                                                                                |
 | EasDeviceId                | Exchange ActiveSync ID of the device.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -251,8 +255,9 @@ The **device** entity lists all enrolled devices under management and their corr
 | SubscriberCarrier          | Subscriber carrier of the device                                                                                                                                                       |
 | PhoneNumber                | Phone number of the device                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Cellular technology of the   device                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| CellularTechnology         | Cellular technology of the   device.                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
+| windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
 
 ## deviceTypes
@@ -592,7 +597,7 @@ The **ownerType** entity indicates whether a device is corporate, personally own
 | ownerTypeName | Represents the owner type of the devices:  Corporate  -   Device is enterprise owned.  Personal -   Device is personally owned (BYOD).   Unknown  -   No information on this device. | Corporate   Personal Unknown |
 
 > [!Note]  
-> For the `ownerTypeName` filter in AzureAD when creating Dynamic Groups for devices, you need to set the value `deviceOwnership` as `Company`. For more information, see [Rules for devices](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> For the `ownerTypeName` filter in AzureAD when creating Dynamic Groups for devices, you need to set the value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## policies
 The **Policy** entity lists device configuration profiles, app configuration profiles, and compliance policies. You can assign the policies with Mobile Device Management (MDM) to a group in your enterprise.

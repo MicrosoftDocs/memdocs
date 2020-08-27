@@ -43,15 +43,15 @@ The following action plan can be used when you meet the following requirements:
 
 ## Action plan
 
-Complete the [quick start tutorial for Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/infoprotect-quick-start-tutorial).  
+Complete the [quick start tutorial for Azure Information Protection](/information-protection/get-started/infoprotect-quick-start-tutorial).  
 
 ## What to tell employees and students
 
-You can share details of [how and when to protect documents and emails that contain sensitive information](https://docs.microsoft.com/information-protection/deploy-use/help-users).
+You can share details of [how and when to protect documents and emails that contain sensitive information](/information-protection/deploy-use/help-users).
 
 ## Next steps
 
 As part of next steps, you can learn more about the other ways you can increase the protection of your company's data, including: 
 
-* Learn how to use [Azure Information Protection on iOS/iPadOS and Android devices](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* For Windows Phone and Mac computers, learn about [Microsoft Rights Management Sharing Application](https://technet.microsoft.com/dn451248).
+* Learn how to use [Azure Information Protection on iOS/iPadOS and Android devices](/information-protection/rms-client/mobile-app-faq).
+* For Mac computers, learn about [Microsoft Rights Management Sharing Application](/previous-versions/msdn10/dn451248(v=msdn.10)).

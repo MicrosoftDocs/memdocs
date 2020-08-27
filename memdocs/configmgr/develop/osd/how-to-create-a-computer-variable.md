@@ -132,10 +132,9 @@ public void CreateComputerVariable(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code of the source site.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable to be created.|  
 |`value`|-   Managed: `String`<br />-   VBScript: `String`|The value of the variable.|  

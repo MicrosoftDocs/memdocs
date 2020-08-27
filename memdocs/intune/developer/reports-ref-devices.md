@@ -172,7 +172,7 @@ The **enrollmentType** entity indicates whether a device is corporate, personall
 | ownerTypeName |Represents the owner type of the devices:  <br>Corporate - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Corporate Personal Unknown |
 
 > [!Note]  
-> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## managementStates
 
@@ -290,4 +290,3 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | deviceCategoryKey          | Key of device category attribute for this device. 
 | physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |
-
