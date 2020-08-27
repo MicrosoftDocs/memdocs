@@ -62,7 +62,7 @@ To learn more about enrollment, see [What happens when I install the Company Por
 
 ## Prerequisties  
 
-* Go to the App store to download and install the [Intune Company Portal app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) on your device. 
+* Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
 

@@ -6,7 +6,7 @@
 
 ## [Device password requirements](password-does-not-meet-it-administrator-requirements.md)
 
-## [How to sign in to Company Portal](sign-in-to-the-company-portal.md)  
+## [How to access Company Portal](sign-in-to-the-company-portal.md)  
 
 ## [Install mobile threat defense app](set-up-mobile-threat-defense.md)  
 
