@@ -48,7 +48,7 @@ The **Devices** workload gives you insights into the devices you manage, and let
 
      Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, and more.
 
-   - **Azure AD devices** shows a list of the devices registered or joined with Azure Active Directory (Azure AD). Learn more about [Azure AD device management](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+   - **Azure AD devices** shows a list of the devices registered or joined with Azure Active Directory (Azure AD). Learn more about [Azure AD device management](/azure/active-directory/device-management-introduction).
    - **Device actions** includes a history of the remote actions ran on different devices, including the action, its status, who started the action, and the time.
 
      ![Screenshot of monitor device actions](./media/device-management/monitor-device-actions.png)
@@ -62,7 +62,7 @@ The actions available depend on the device platform, and the configuration of th
 
 - [View device inventory](device-inventory.md)
 - Run the remote device actions:
-  - [Autopilot reset](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
@@ -77,7 +77,7 @@ The actions available depend on the device platform, and the configuration of th
   - [Reset passcode](device-passcode-reset.md)
   - [Restart](device-restart.md) (Windows only)
   - [Retire](devices-wipe.md#retire)
-  - [Update Windows Defender Security Intelligence](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN reset](device-windows-pin-reset.md)
   - [Wipe](devices-wipe.md#wipe)
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)

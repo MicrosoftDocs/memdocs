@@ -122,7 +122,7 @@ Autopilot profile settings received from the Autopilot deployment service are st
 
 ### Windows 10 semi-annual channel supported versions
 
-On devices running a [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel, you can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/).
+On devices running a [supported version](/windows/release-information/) of Windows 10 semi-annual channel, you can use ETW tracing to get detailed information from Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [the advanced troubleshooting blog](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 ## Troubleshooting Azure AD Join issues
 
@@ -140,7 +140,7 @@ See [this knowledge base article](https://support.microsoft.com/help/4089533/tro
 
 Error code 80180018 will typically be reported on an error page titled "Something went wrong". This error means that the MDM enrollment failed.
 
-If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
+If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
 
 ## Profile download
 
@@ -158,9 +158,9 @@ If you need to reboot a computer during OOBE:
 - Press Shift-F10 to open a command prompt.
 - Enter **shutdown /r /t 0** to restart immediately, or **shutdown /s /t 0** to shut down immediately.
 
-For more information, see [Windows Setup Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ## Related topics
 
 [Windows Autopilot - known issues](known-issues.md)<br>
-[Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

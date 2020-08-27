@@ -59,7 +59,7 @@ Although you can use Intune app protection policies independent of any MDM solut
   > [!NOTE]
   > The Office mobile apps currently support only SharePoint Online and not SharePoint on-premises.
 
-- If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication (HMA) for Skype for Business and Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- If you use Intune app protection policies together with on-premises resources (Microsoft Skype for Business and Microsoft Exchange Server), you must enable [Hybrid Modern Authentication (HMA) for Skype for Business and Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
 Intune app protection policies require that the identity of the user is consistent between the app and [Intune App SDK](../developer/app-sdk-get-started.md). The only way to guarantee this consistency is through modern authentication. There are scenarios in which apps may work in an on-premises configuration without modern authentication. However, the outcomes are not consistent or guaranteed.
 
@@ -90,9 +90,9 @@ For more information, see [How to validate your app protection policy setup in M
 
 In most scenarios, users log in to their accounts by using their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Azure AD. When this issue occurs, app protection policies aren't applied as expected.
 
-Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### Verify that the user is targeted
 
@@ -110,7 +110,7 @@ When you assign the policy to a user group, make sure that the user is in the us
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups > All groups**, and then search for and select the group that's used for your app protection policy assignment.
 3. Under the **Manage** section, select **Members**.
-4. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
+4. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
 5. Make sure that the affected user isn't in any of the excluded groups for the policy.
 
 > [!IMPORTANT]

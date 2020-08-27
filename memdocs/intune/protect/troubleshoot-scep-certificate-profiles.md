@@ -84,7 +84,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
 - **NDESConnector_date_time.svclog**:
 
-  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
   Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -92,7 +92,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
+  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
   Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -152,4 +152,4 @@ On the device, open **Event Viewer** > **Applications and Services Logs** > **Mi
 
 ## Next steps
 
-Review [deployment of SCEP certificate profiles](troubleshoot-scep-certificate-profile-deployment.md) 
+Review [deployment of SCEP certificate profiles](troubleshoot-scep-certificate-profile-deployment.md)

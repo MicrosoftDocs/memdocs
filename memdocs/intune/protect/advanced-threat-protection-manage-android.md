@@ -34,7 +34,7 @@ Before preceding, you must successfully [Configure Microsoft Defender ATP in Int
 
 ## Configure web protection on devices that run Android
 
-By default, Microsoft Defender ATP for Android includes and enables the web protection feature. [Web protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
+By default, Microsoft Defender ATP for Android includes and enables the web protection feature. [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
 
 While enabled by default, there are valid reasons to disable this protection on some Android devices. For example, you might choose to use only the Microsoft Defender ATP app scan feature, or to prevent web protection from using your VPN while it scans for harmful URLs.
 
@@ -130,5 +130,5 @@ To configure web protection on devices, use the following procedures to create a
 
 Learn more from the Microsoft Defender ATP documentation:
 
-- [Microsoft Defender ATP Conditional Access](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP risk dashboard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

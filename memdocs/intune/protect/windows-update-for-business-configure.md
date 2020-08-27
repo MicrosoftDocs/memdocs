@@ -43,7 +43,7 @@ Intune provides the following policy types to manage updates:
 
 You assign policies for Windows 10 update rings and Windows 10 feature updates to groups of devices. You can use both policy types in the same Intune environment to manage software updates for your Windows 10 devices and to create an update strategy that mirrors your business needs.
 
-For more information, see [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).
 
 ## Prerequisites
 
@@ -187,7 +187,7 @@ Consider the following when you use Uninstall:
 
   For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
 
-For more information about Windows Update policies, see [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) in the Windows client management documentation.
+For more information about Windows Update policies, see [Update CSP](/windows/client-management/mdm/update-csp) in the Windows client management documentation.
 
 ##### To uninstall the latest Windows 10 update
 
@@ -252,7 +252,7 @@ From this pane, you can:
 
 ## Validation and reporting for Windows 10 updates
 
-For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
 
 ## Next steps
 
