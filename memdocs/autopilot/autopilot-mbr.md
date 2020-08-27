@@ -211,8 +211,7 @@ The repaired device can now be returned to the customer. It will be auto-enrolle
 
 > [IMPORTANT]
 > If the repair facility did NOT reimage the device, they could be sending it back in a potentially broken state. For example, there’s no way to log into the device because it’s been dissociated from the only known user account. So, they should tell the organization that they need to fix the registration and OS themselves.
-
-**IMPORTANT**: A device can be “registered” for Autopilot before being powered-on. But the device isn’t actually “deployed” to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
+> A device can be “registered” for Autopilot before being powered-on. But the device isn’t actually “deployed” to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
 
 ## Specific repair scenarios
 
