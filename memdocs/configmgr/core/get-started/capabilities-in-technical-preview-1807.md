@@ -39,14 +39,14 @@ Steps to workaround, if any.
 
 ## Known issues 
 
-### <a name="ki_o365"></a> Issues with Office 365 software updates
+### <a name="ki_o365"></a> Issues with Microsoft 365 software updates
 <!--521365-->
-If you manage Office 365 updates using technical preview branch versions 1806 and 1806.2, they may fail to install on clients. 
+If you manage Microsoft 365 updates using technical preview branch versions 1806 and 1806.2, they may fail to install on clients. 
 
 #### Workaround
-- Delete existing deployment packages and software update groups for Office 365.  
+- Delete existing deployment packages and software update groups for Microsoft 365.  
 
-- Starting on July 31, 2018, sync Office 365 software updates and deploy only the latest updates.  
+- Starting on July 31, 2018, sync Microsoft 365 software updates and deploy only the latest updates.  
 
 
 

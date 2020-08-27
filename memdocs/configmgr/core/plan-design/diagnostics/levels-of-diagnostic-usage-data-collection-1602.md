@@ -233,7 +233,7 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
   -   Cluster patching statistics
 
-  -   Count of deployed Office 365 updates
+  -   Count of deployed Microsoft 365 updates
 
   -   ***[New]*** Classifications that are synced by Software Update Point
 

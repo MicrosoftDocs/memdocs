@@ -82,4 +82,4 @@ landingContent:
       - linkListType: reference
         links:  
           - text: Intune Graph API reference
-            url: https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta
+            url: /graph/api/resources/intune-graph-overview?view=graph-rest-beta

@@ -39,7 +39,7 @@ When any of the following Apple services are enabled on a device, Microsoft Intu
 
 - [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM Push certificate (APNs)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 Before Microsoft Intune can establish a connection, you must create an Apple account for each of the Apple services.
@@ -114,5 +114,3 @@ The following table lists the data that an Apple device sends to Intune. [Intune
 
 
 To stop using Apple services with Microsoft Intune and delete the data, you must both disable the Microsoft Intune Apple token and also delete your Apple account. Refer to Apple account how to perform account management.
-
-

@@ -123,8 +123,8 @@ Following are key considerations for each supported partner.  Become familiar wi
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise fully managed devices](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS and iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android Enterprise fully managed devices](../user-help/enroll-android-device-disa-purebred.md)
 
 **Key requirements include**:
 
@@ -142,7 +142,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS and iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Android Enterprise fully managed devices](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Key requirements include**:
@@ -160,7 +160,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS and iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Android Enterprise fully managed devices](../user-help/enroll-android-device-intercede.md)
 
 **Key requirements include**:
