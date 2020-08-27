@@ -159,12 +159,6 @@ When you create a Device Restrictions profiles on iOS/iPadOS and macOS devices, 
 - The existing **Defer software updates** setting is combined with this new setting. Using the new setting, you can defer OS software updates, and non-OS software updates. You continue to use the **Delay visibility of software updates** setting to set the number of days, which will apply to both settings that defer software updates.
 - The behavior of existing policies isn't changed, affected, or deleted. Existing policies will automatically migrate to the new setting with your same configuration.
 
-### Updated end-user experience for Android device administrator Wi-Fi profiles<!-- 7662680  -->
-Due to a change made by Google, the end-user experience for new Wi-Fi profiles is significantly different starting in the October release of the Company Portal app. Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.
-
-Applies to:
-- Android device administrator, Android 10 and later
-
 ### Disable MAC address randomization on Wi-Fi networks on iOS/iPadOS devices<!-- 7758689  -->
 Starting with iOS/iPadOS 14, by default, devices present a randomized MAC address when connecting to a network instead of the physical MAC address. This behavior is recommended for privacy, as it's harder to track a device by its MAC address. This feature also breaks functionality that relies on a static MAC address, including network access control (NAC). 
 
@@ -354,7 +348,7 @@ We’re adding new details for devices that are available to view as part of a d
 ### Android 11 deprecates deployment of trusted root certificates to device administrator enrolled devices<!--7662775  -->
 With Android 11, trusted root certificates can no longer be deployed to devices that are enrolled as *Android device administrator*. This change doesn’t affect Samsung Knox devices because of Intune’s integration with the Knox platform. For non-Samsung devices, users must manually install the trusted root certificate on the device. 
 
-With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a *trusted certificate* policy to the device, and link that policy to the *SCEP certificate* profile.
+With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a *trusted certificate* policy to the device and link that policy to the *SCEP certificate* profile.
 
 - If the trusted root certificate is on the device, then the SCEP certificate profile will install successfully. 
 - If the trusted certificate cannot be found, the SCEP certificate profile will fail.
