@@ -62,7 +62,7 @@ The **PFX Certificate Connector** supports certificate deployment for PCKS #12 c
 
 **To install the PFX Certificate connector**:
 
-For guidance installation of this connector, see [Download, install, and configure the PFX Certificate Connector](certificates-pfx-configure.md).
+For guidance installation of this connector, see [Download, install, and configure the PFX Certificate Connector](certficates-pfx-configure.md).
 
 ### Microsoft Intune Connector
 
@@ -136,7 +136,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated prerequisites when installing a newer version of a connector:
    - SCEP: [Configure infrastructure to support SCEP with Intune](certificates-scep-configure.md)
-   - PKCS: [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](certificates-pfx-configure.md)
+   - PKCS: [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](certficates-pfx-configure.md)
 
 ## Connector status and version
 

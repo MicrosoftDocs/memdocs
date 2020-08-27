@@ -95,7 +95,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
-   ![PFX Certificate Connector for Microsoft Intune download](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+   ![PFX Certificate Connector for Microsoft Intune download](./media/certificates-imported-pfx-configure/download-imported-pfx-connector.png)
 
 3. Follow the guidance to download the *PFX Certificate Connector for Microsoft Intune* to a location that's accessible from the server where you're going to install the connector.
 
