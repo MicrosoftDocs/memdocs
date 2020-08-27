@@ -71,15 +71,6 @@ Devices will not be impacted if they are any of the below:
 
 ![Screencap of Android compliance policy page](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### Additional impacts based on Android OS version
-
-**Android 10**: For all device administrator-managed devices (including Samsung) running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:
-- Network access control for VPN will no longer work
-- Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned
-- The IMEI and serial number will no longer be visible to IT admins in Intune
-
-**Android 11**: We are currently testing Android 11 support on the latest developer beta release to evaluate if it will cause impact on device administrator-managed devices.
-
 #### User experience of impacted settings on impacted devices
 
 Impacted configuration settings:
