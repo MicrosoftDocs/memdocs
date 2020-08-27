@@ -92,7 +92,7 @@ For more information, see [Management insights](../../servers/manage/management-
     > [!Note]  
     > This change doesn't apply to SQL Server clusters.
 
-- Site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
 - New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
 
