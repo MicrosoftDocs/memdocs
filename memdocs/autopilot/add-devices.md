@@ -126,19 +126,11 @@ For more information about running the script, see the [Get-WindowsAutoPilotInfo
 
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 
-<<<<<<< HEAD
 - [Microsoft Intune](enrollment-autopilot.md) is the preferred mechanism for all customers.
  - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
 - [Partner Center](https://msdn.microsoft.com/partner-center/autopilot) is used by CSP partners to register devices for customers.
 - [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
-=======
--   [Microsoft Intune](enrollment-autopilot.md).  This is the preferred mechanism for all customers.
-    - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
--   [Partner Center](https://msdn.microsoft.com/partner-center/autopilot).  This is used by CSP partners to register devices on behalf of customers.
--   [Microsoft 365 Business Premium](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business Premium.
--   [Microsoft Store for Business](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  You might already be using MSfB to manage your apps and settings.
->>>>>>> 078401311631e6927efc4e3195cbbe4ca374cbac
 
 A summary of each platform's capabilities is provided below.<br>
 <br>
