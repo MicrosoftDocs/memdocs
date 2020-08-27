@@ -30,7 +30,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Installing Office on your Windows 10 device
+# Install Office on your Windows 10 device
 
 There are many ways you can install the Office suite on to your Windows 10 device. Depending on the size of your company, there may be multiple versions of Office available for download from the Company Portal.
 

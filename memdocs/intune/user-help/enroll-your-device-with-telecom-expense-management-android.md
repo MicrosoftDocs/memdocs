@@ -45,7 +45,7 @@ Tap the __next__ arrow at the top right corner of the screen to proceed. Your co
 
 1. Select __Enroll with Microsoft account__.
 
-   ![An image of the Settings screen of the Datalert app, which offers a phone number field to enroll a device on the top half of the screen and "enroll with Microsoft account" on the bottom, so long as you have a Microsoft 365 account and an Intune subscription.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
+   ![An image of the Settings screen of the Datalert app, which offers a phone number field to enroll a device on the top half of the screen and "enroll with Microsoft account" on the bottom, so long as you have a Microsoft Office 365 account and an Intune subscription.](./media/and-enroll-12a-tem-datalert-enroll-msft-account.png)
 
 2. Choose your work or school account from the available accounts. If your account is not listed, you can sign in to it using the **Add account** button.
 
