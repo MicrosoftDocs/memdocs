@@ -52,7 +52,7 @@ Once deployed, you can manage Windows 10 devices with:
 With Windows Autopilot, you can quickly prepare a device for a new user with Windows Autopilot Reset. You can also use Reset in break/fix scenarios to quickly bring a device back to a business-ready state.
 
 Windows Autopilot enables you to:
-* Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join). For more information about the differences between these two join options, see [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+* Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join). For more information about the differences between these two join options, see [Introduction to device management in Azure Active Directory](/azure/active-directory/device-management-introduction).
 * Auto-enroll devices into MDM services, such as Microsoft Intune ([*Requires an Azure AD Premium subscription for configuration*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
 * Restrict the Administrator account creation.
 * Create and auto-assign devices to configuration groups based on a device's profile.
@@ -68,9 +68,9 @@ From the IT pro's perspective, the only interaction required from the end user i
 
 ## Requirements
 
-A [supported version](https://docs.microsoft.com/windows/release-information/) of Windows 10 semi-annual channel is required to use Windows Autopilot. Windows 10 Enterprise LTSC 2019 is also supported. For more information, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
+A [supported version](/windows/release-information/) of Windows 10 semi-annual channel is required to use Windows Autopilot. Windows 10 Enterprise LTSC 2019 is also supported. For more information, see [Windows Autopilot software](software-requirements.md), [networking](networking-requirements.md), [configuration](configuration-requirements.md), and [licensing](licensing-requirements.md) requirements.
 
 ## Related topics
 
-[Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)<br>
+[Enroll Windows devices in Intune by using Windows Autopilot](/intune/enrollment-autopilot)<br>
 [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md)

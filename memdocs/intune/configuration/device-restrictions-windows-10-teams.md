@@ -37,7 +37,7 @@ This article shows you the Microsoft Intune device restrictions settings that yo
 
 ## Apps and experience
 
-These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp).
 
 - **Wake screen when someone in room**: **Block** prevents the screen from waking automatically when its sensor detects someone in the room. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Meeting information displayed on welcome screen**: Choose the information that's shown on the Meetings tile of the Welcome screen. Your options:
@@ -57,7 +57,7 @@ These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/clien
 
 ## Maintenance
 
-These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp).
 
 - **Maintenance window for updates**: **Enable** creates a maintenance window when updates can be installed. Enter the maintenance window **Start time**, and the **Duration in hours**, from 1-5 hours.
 
@@ -65,7 +65,7 @@ These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/clien
 
 ## Session
 
-These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp).
 
 - **Volume**: Enter the default volume value for a new session, from 0-100. When left blank, Intune doesn't change or update this setting. By default, the OS might set the volume to 45.
 - **Screen timeout**: Enter the number of minutes until the Hub screen turns off.
@@ -75,7 +75,7 @@ These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/clien
 
 ## Wireless projection
 
-These settings use the [SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp).
 
 - **PIN for wireless projection**: **Require** forces users to enter a PIN before using the wireless projection features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Miracast wireless projection**: **Block** prevents using Miracast-enabled devices to project. When set to **Not configured** (default), Intune doesn't change or update this setting.

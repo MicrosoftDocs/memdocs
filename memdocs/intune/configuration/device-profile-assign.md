@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ You create a profile, and it includes all the settings you entered. The next ste
 This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
 
 > [!NOTE]  
-> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
 >
@@ -59,19 +59,6 @@ Be sure you have the correct role to assign profiles. For more information, see 
 
 5. Select **Review + Save**. This step doesn't assign your profile.
 6. Select **Save**. When you save, your profile is assigned. Your groups will receive your profile settings when the devices check in with the Intune service.
-
-<!-- MandiA 8.20.20: Commenting out this section, as it may not be in the fullscreen changes. Working with engineering/PM to confirm.
-
-### Evaluate how many users are targeted
-
-When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In the admin center, select **Devices** > **Configuration profiles**.
-2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
-
-If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
-
--->
 
 ## Use scope tags or applicability rules
 

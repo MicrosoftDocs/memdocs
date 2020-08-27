@@ -125,9 +125,9 @@ Check the [Tenant Status](../fundamentals/tenant-status.md) and confirm the subs
 ## Policy troubleshooting resources
 
 - [Troubleshooting iOS/iPadOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
-- [Troubleshooting Windows 10 Intune policy failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (opens a blog)
+- [Troubleshooting Windows 10 Intune policy failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (opens a blog)
 - [Troubleshoot CSP custom settings for Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (opens another Microsoft site)
-- [Windows 10 Group Policy vs Intune MDM policy](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (opens another Microsoft site)
+- [Windows 10 Group Policy vs Intune MDM policy](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (opens another Microsoft site)
 
 ## Alert: Saving of Access Rules to Exchange has Failed
 

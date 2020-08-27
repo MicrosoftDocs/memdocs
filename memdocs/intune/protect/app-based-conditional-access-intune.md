@@ -51,7 +51,7 @@ For more information, see [Enterprise Mobility pricing](https://www.microsoft.co
 
 ## Supported apps
 
-A list of apps that support app-based Conditional Access can be found in the [Azure Active Directory Conditional Access technical reference documentation.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
+A list of apps that support app-based Conditional Access can be found in the [Azure Active Directory Conditional Access technical reference documentation.](/azure/active-directory/active-directory-conditional-access-technical-reference)
 
 App-based Conditional Access [also supports line-of-business (LOB) apps](app-modern-authentication-block.md), but these apps need to use [Office 365 modern authentication](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 

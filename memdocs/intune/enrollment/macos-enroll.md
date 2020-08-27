@@ -55,7 +55,7 @@ You can let users enroll their own personal devices into Intune management. This
 - Going to the [Company Portal website](https://portal.manage.microsoft.com) or
 - Downloading the Mac Company Portal app at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+You can also send your users a link to online enrollment steps: [Enroll your macOS device in Intune](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 For information about other end-user tasks, see these articles:
 
@@ -86,7 +86,7 @@ For VMware Fusion, you need to [edit the .vmx file](https://kb.vmware.com/s/arti
 
 User Approved MDM enrollment is a type of macOS enrollment that you can use to manage certain security-sensitive settings. For more information, see [Apple's support documentation](https://support.apple.com/HT208019).  
  
-As of June 2020, all new macOS MDM enrollments in Intune, including those not done through Automated Device Enrollment (ADE), are considered user approved. The end-user must manually install the management profile in **System Preferences** > **Profiles**, and thus provide approval of the management profile. System Preferences is launched automatically from the Company Portal app for BYOD macOS users. [Instructions to install the management profile](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) are provided in the Company Portal app.     
+As of June 2020, all new macOS MDM enrollments in Intune, including those not done through Automated Device Enrollment (ADE), are considered user approved. The end-user must manually install the management profile in **System Preferences** > **Profiles**, and thus provide approval of the management profile. System Preferences is launched automatically from the Company Portal app for BYOD macOS users. [Instructions to install the management profile](../user-help/enroll-your-device-in-intune-macos-cp.md) are provided in the Company Portal app.     
 
 BYOD macOS MDM enrollments prior to June 2020 may not be user approved if the end-user did not manually provide approval of the management profile in **System Preferences** > **Profiles**. For BYOD enrollments after June 2020, the Company Portal app launches **System Preferences** for the user and the user will need to select Install. If the user did not approve the management profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve** to approve the profile at a later point in time.
 

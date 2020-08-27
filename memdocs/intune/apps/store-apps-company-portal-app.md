@@ -71,7 +71,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 11. Assign the Company Portal app as a required app to your selected set of user or device groups.  
 
-For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  
+For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm).  
 
 ## Frequently asked questions 
 ### How do I update the Company Portal app on my users' devices if they have already installed the older apps from the store?
@@ -114,4 +114,3 @@ When the script has finished running, it outputs the signed version of the Windo
 ## Next steps
 
 - [Assign apps to groups](apps-deploy.md)
-

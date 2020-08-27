@@ -53,9 +53,9 @@ Some of the Intune groups capabilities you previously might have used are not av
 ## How to get started?
 
 - Read the following topics to learn about Azure AD security groups and how they work:
-  - [Managing access to resources with Azure Active Directory groups](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Managing groups in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Using attributes to create advanced rules](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Managing access to resources with Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Managing groups in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 - Ensure that admins who need to create groups are added to the **Intune Service Administrator** Azure AD role. The Azure AD Service Admin role does not have **Manage Group** permissions.
 - If your Intune groups used the **Exclude specific members**  option, decide whether you can redesign these groups without exclusions, or if you need advanced rules to meet business needs.
 
