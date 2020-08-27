@@ -120,7 +120,7 @@ To avoid the reduction in functionality coming in October 2020, we recommend the
 - **Configure Password Complexity**: For impacted devices running Android 10 and later, a future setting called Password Complexity lets you continue enforcing password restrictions and compliance. Password Complexity is a measure of password strength that factors in password type, length, and quality.
 
 #### What if I have non-Samsung devices that cannot move to Android Enterprise? 
-Some devices can’t move from device administrator to Android Enterprise management. For example, [Google hasn’t made Android Enterprise available in some markets](https://support.google.com/work/android/answer/6270910?hl=en). You can still use Intune to manage non-Samsung devices with device administrator, but the changes to functionality mentioned in this post will apply. For guidance on managing devices when Android Enterprise isn’t available, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms). 
+Some devices can’t move from device administrator to Android Enterprise management. For example, [Google hasn’t made Android Enterprise available in some markets](https://support.google.com/work/android/answer/6270910?hl=en). You can still use Intune to manage non-Samsung devices with device administrator, but the changes to functionality mentioned in this post will apply. For guidance on managing devices when Android Enterprise isn’t available, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
 
 
 #### Additional information
