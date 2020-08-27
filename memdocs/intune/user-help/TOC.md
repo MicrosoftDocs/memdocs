@@ -2,11 +2,11 @@
 
 ## [What is device enrollment?](use-managed-devices-to-get-work-done.md)
 
-## [What information can my company see with Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [What information can my org see?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Device password requirements](password-does-not-meet-it-administrator-requirements.md)
 
-## [Sign in to the Company Portal](sign-in-to-the-company-portal.md)  
+## [How to sign in to Company Portal](sign-in-to-the-company-portal.md)  
 
 ## [Install mobile threat defense app](set-up-mobile-threat-defense.md)  
 
@@ -64,7 +64,6 @@
 
 ## [Using your iOS device](using-your-iOS-device-with-intune.md)
 ### [Effects of iOS device reset](effects-of-device-reset-company-portal-ios.md)
-### [Install and sign in to the Company Portal](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Enroll your device
 #### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
 #### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
