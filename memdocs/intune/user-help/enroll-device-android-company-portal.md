@@ -43,17 +43,13 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 
 1. Tap **Home** > **Play Store**.
 
-2. In the **Search** box, type **Intune company portal**.  
-
-3. Tap **Intune Company Portal**.
+2. Search for **Intune company portal**. Then tap the app to open it. 
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
 4. Tap **INSTALL**.
 
-    ![android-install-company-portal](./media/and-cpinstall-2-install.png)
-
-5. Tap **ACCEPT**.
+5. When prompted about app permissions, tap **ACCEPT**.  
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

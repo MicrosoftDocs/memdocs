@@ -36,19 +36,19 @@ Company Portal is available for Windows 10, Android, iOS, and macOS devices from
 * [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
 * [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
-* [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will download the Company Portal for macOS installer package on to your device. If you additional guidance, see [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md#install-company-portal-app)  
+* [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will immediately download the Company Portal installer package on your device.  
 
-There are three ways to sign in to the Company Portal app:
+There are three ways to sign in to the Company Portal app.
 
 * Sign in with your school or work email address and password.  
 * Sign in with certificate-based authentication.  
 * Sign in from another device.   
 
-Use the method that your organization recommends or requires. If you're unsure, the most common way is to sign in with your school or work account. 
+This article describes how to sign-in with each of these methods. For the best experience, use the method that your organization recommends or requires. 
 
 
 ## Sign in with school or work account    
-Complete the following steps to sign in to Company Portal with your school or work account. The screenshots in this section are from Company Portal for iOS. Although the style may vary, the sign-in experience is the same in Company Portal for Android, Windows 10, and macOS.  
+Complete the following steps to sign in to Company Portal with your school or work account. 
 
 1. Open the app and tap **Sign In**.  
 
@@ -68,12 +68,12 @@ You'll only see this sign-in option if your organization allows certificate-base
 
 3. Tap **Sign in with a certificate**.  
 
-4. Tap **Continue** to use the certificate. 
+4. Tap **Continue** to use the certificate.  
 5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
 ## Sign in via another device    
 
-If you have to insert a smart card to access your device, you'll need to authenticate by signing in on another device first.  
+If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
 
 1. Open Company Portal on the device you'll be using to access your work resources.  
 

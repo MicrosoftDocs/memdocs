@@ -44,6 +44,8 @@ On a desktop device:
 2. Select **Change a password**.
 3. Follow the on-screen prompts to set a new password.  
 
-Still need help?  
-* See the Microsoft Support article for Windows 10 sign-in options and account protection for more details about each sign-in option.  
-* Contact your IT support person for help with password requirements, Company Portal, or network access issues. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  s
+For additional help: 
+ 
+* Contact your IT support person for help with password requirements, Company Portal, or network access issues. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* For more information about the other sign-in options in Windows 10, see [Windows 10 sign-in options and account protection](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy).  
+
