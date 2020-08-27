@@ -70,13 +70,12 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 To authenticate a device with VPN, WiFi, or other resources, a device needs a root or intermediate CA certificate. The following steps explain how to get the required certificate from your Enterprise CA.
 
 **Use a command line**:  
+
 1. Log into the Root Certification Authority server with Administrator Account.
- 
-2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt. 
-    
+
+2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt.
+
 3. Specify **certutil -ca.cert ca_name.cer** to export the Root certificate as a file named *ca_name.cer*.
-
-
 
 ## Configure certificate templates on the CA
 
@@ -98,13 +97,13 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
 6. In **Request Handling**, select **Allow private key to be exported**.
-    
+
     > [!NOTE]
     > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
     > It is required that the certificate template allows the private key to be exported, so that the certificate connector is able to export the PFX certificate and send it to the device. 
     >
     > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
-    
+
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
