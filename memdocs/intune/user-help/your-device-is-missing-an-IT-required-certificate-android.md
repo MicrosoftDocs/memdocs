@@ -35,7 +35,7 @@ If your device isn't enrolled in Intune, and it's missing a required certificate
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
-This article describes how to enable browser eaccess in the Company Portal app so that you can download the required certificate and get your device enrolled. 
+This article describes how to enable browser access in the Company Portal app so that you can download the required certificate and get your device enrolled. 
 
 
 ## Enable browser access
