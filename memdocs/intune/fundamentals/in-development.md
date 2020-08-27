@@ -196,10 +196,10 @@ Applies to:
 <!-- ***********************************************-->
 ## Device enrollment
 
-### Deprecating support for iOS 11<!--7327321 -->
+### Ending support for iOS 11<!--7327321 -->
 After iOS 14 releases, Intune enrollment and the Company Portal app will support iOS versions 12 and later. Older versions won't be supported but will continue to receive policies.
 
-### Deprecating support for macOS 10.12<!--7327321 -->
+### Ending support for macOS 10.12<!--7327321 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
 
@@ -255,7 +255,7 @@ Admins will be able to update the Power BI compliance report template version fr
 
 
 ### New and improved Microsoft Defender Antivirus reporting for Windows 10 and newer<!-- 6018169  -->
-Were adding four new reports Microsoft Defender Antivirus on Windows 10, under **Endpoint Security** > **Antivirus**.
+We're adding four new reports Microsoft Defender Antivirus on Windows 10, under **Endpoint Security** > **Antivirus**.
 - Two operational reports, *Devices with detected malware* and *Agent status*.
 - Two organizational reports, *Detected malware* and *Agent status*.
 
