@@ -93,7 +93,7 @@ Support for 4096-bit keys will be for the following platforms:
 - MacOS 11 and later    
 
 ### New setting for Password complexity for Android 10 and later<!-- 7992114  -->
-To support new options for Android 10 and later, were adding a new setting called **Password complexity** to both *Device compliance* policy and *Device restriction* policy. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**)  With this setting you'll be able to manage a measure of password strength that factors in password type, length, and quality. 
+To support new options for Android 10 and later, we're adding a new setting called **Password complexity** to both *Device compliance* policy and *Device restriction* policy. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**)  With this setting you'll be able to manage a measure of password strength that factors in password type, length, and quality. 
 
 The following complexity levels will be supported:
 - **None** - No password
@@ -137,16 +137,13 @@ Applies to:
 - macOS Big Sur (macOS 11)
 
 ### COPE preview update: New settings to configure the personal profile for Android Enterprise corporate-owned devices with a work profile<!-- 7086356  -->
-On Android Enterprise corporate-owned personally enabled devices (COPE), there are new settings you can configure that only apply to the personal profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work profile** > **Device restrictions** for profile > **Personal profile**):
+For Android Enterprise corporate-owned devices with a work profile, there are new settings you can configure that only apply to the personal profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work profile** > **Device restrictions** for profile > **Personal profile**):
 
 - **Camera**: Use this setting to block access to the camera during personal usage.
 - **Screen capture**: Use this setting to block screen captures during personal usage.
 - **Allow users to enable app installation from unknown sources in the personal profile**: Use this setting to allow users to install apps from unknown sources in the personal profile. 
 
 To see the current settings you can configure, go to [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-- Android Enterprise corporate-owned, personally enabled devices (COPE)
 
 ### Block App Clips on iOS/iPadOS, and Defer non-OS software updates on macOS devices<!-- 7518422  -->
 When you create a Device Restrictions profiles on iOS/iPadOS and macOS devices, there are some new settings:
@@ -266,13 +263,13 @@ Admins will be able to update the Power BI compliance report template version fr
 ### New and improved Microsoft Defender Antivirus reporting for Windows 10 and newer<!-- 6018169  -->
 Were adding four new reports Microsoft Defender Antivirus on Windows 10, under **Endpoint Security** > **Antivirus**.
 - Two operational reports, *Devices with detected malware* and *Agent status*.
-- Two organizational reports, *Detected Malware* and *Agent status*.
+- Two organizational reports, *Detected malware* and *Agent status*.
 
 As an example, the operational report *Agent status* will show at a glance the device name, user name, user email and UPN, and if real-time protection and network protection are enabled. We’ll share more details when these reports are available for use.
 
 For more information on Endpoint security in Intune, see [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md).
 
-### Analyze your on-premises GPOs using Group Policy analytics - preview<!--7200950 -->
+### Analyze your on-premises GPOs using Group Policy analytics (preview)<!--7200950 -->
 In **Devices** > **Group Policy analytics (preview)**, you can import your group policy objects (GPOs) in the Endpoint Manager admin center. When you import, Intune automatically analyzes the GPO, and shows the policies that have equivalent settings in Intune. It also shows GPOs that are deprecated, or aren't supported anymore.
 
 Applies to:
@@ -313,7 +310,7 @@ For example, where a setting currently offers **Not configured** and **Yes**, if
 ### New Security baseline for Office<!-- 3150261  -->
 We're adding a new security baseline (**Endpoint security** > **Security baselines**) to manage settings for *Microsoft Office O365*. Settings in the baseline will include configurations for Office apps like *Add-on Management*,  *MIME handling*, and more.
 
-### Improved Status details in security baseline reports<!-- 7221051    -->
+### Improved status details in security baseline reports<!-- 7221051    -->
 We’re improving the status details you’ll see when viewing the results of your deployed security baselines. (**Endpoint security** > **Security baselines** >  *select a security baseline type,  like* **Windows 10 Security Baselines** > **Profiles** > *select an instance of that profile to view status* > *select a profile report, like* **Device status**)
 
 The improvements will revise the common labels and definitions we use for status to better fit the intent of the status. For example:
@@ -337,7 +334,7 @@ Expanded permissions include the following:
 ### Updates for Security Baselines<!-- 7102146, 7103916  -->
 We’ll soon release updates to the following security baselines (**Endpoint security** > **Security baselines**):
 - **MDM Security baseline** (Windows 10 Security)
-- **Microsoft Defender ATP baseline**\
+- **Microsoft Defender ATP baseline**
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
