@@ -159,7 +159,7 @@ In Intune, use these settings to configure an SSO app extension created by your 
 
 - The redirect type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Azure AD SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
 
-  > ![IMPORTANT]
+  > [!IMPORTANT]
   > The Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. Don't use **Microsoft Azure AD** for the SSO app extension type.
 
 - The credential type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.

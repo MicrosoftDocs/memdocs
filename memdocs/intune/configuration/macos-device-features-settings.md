@@ -273,7 +273,7 @@ This feature applies to:
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
   - **Microsoft Azure AD**: 
 
-    > ![IMPORTANT]
+    > [!IMPORTANT]
     > The Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. Don't use **Microsoft Azure AD** for the SSO app extension type.
 
     Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple’s Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
