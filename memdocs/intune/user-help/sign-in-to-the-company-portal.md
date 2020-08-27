@@ -44,7 +44,7 @@ There are three ways to sign in to the Company Portal app.
 * Sign in with certificate-based authentication.  
 * Sign in from another device.   
 
-This article describes how to sign-in with each of these methods. For the best experience, use the method that your organization recommends or requires. 
+This article describes how to sign in using each of these methods. For the best experience, use the method that your organization recommends or requires. 
 
 
 ## Sign in with school or work account    
