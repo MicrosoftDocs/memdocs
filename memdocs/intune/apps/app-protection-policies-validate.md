@@ -43,20 +43,20 @@ Users are unlikely to report issues since app protection is a data protection to
 If testing shows that your app protection policy behavior isn't functioning as expected, check these items:
 
 - Are the users licensed for app protection?
-- Are the users licensed for O365?
+- Are the users licensed for Microsoft 365?
 - Is the status of each of the users' app protection apps as expected. The possible statuses for the apps are **Checked in** and **Not checked in**.
 
 ### User app protection status
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps** > **Monitor** >  **App protection status**, and then select the **Assigned users** tile. 
 4. On the **App reporting** page, select **Select user** to bring up a list of users and groups. 
-5. Search for and select a user from the list, then choose **Select user**. At the top of the **App reporting** pane, you can see whether the user is licensed for app protection. You can also see whether the user has a license for O365 and the app status for all of the user's devices.
+5. Search for and select a user from the list, then choose **Select user**. At the top of the **App reporting** pane, you can see whether the user is licensed for app protection. You can also see whether the user has a license for Microsoft 365 and the app status for all of the user's devices.
 
 ## What to do
 Here are the actions to take based on the user status:
 
 - If the user isn't licensed for app protection, assign an [Intune license](../fundamentals/licenses.md) to the user.
-- If the user isn't licensed for O365, get a [license](../fundamentals/licenses.md) for the user.
+- If the user isn't licensed for Microsoft 365, get a [license](../fundamentals/licenses.md) for the user.
 - If a user's app is listed as **Not checked in**, check if you've correctly configured an [app protection policy](app-protection-policies-validate.md) for that app.
 - Ensure that these conditions apply across all users to which you want [app protection policies](app-protection-policies-monitor.md) to apply.
 

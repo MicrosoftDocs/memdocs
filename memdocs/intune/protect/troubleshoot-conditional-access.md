@@ -32,7 +32,8 @@ ms.collection: M365-identity-device-management
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
 With Intune and Conditional Access, you can protect access to services like:
-- Office 365 services like Exchange Online, SharePoint Online, and Skype for Business Online
+
+- Microsoft 365 services like Exchange Online, SharePoint Online, and Skype for Business Online
 - Exchange on-premises
 - Various other services
 
@@ -80,11 +81,11 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 - An Android device that's enrolled and compliant might still be blocked and receive a quarantine notice when first trying to access corporate resources. If this occurs, make sure the Company Portal app isn't running, then select the **Get Started Now** link in the quarantine email to trigger evaluation. This should only need to be done when conditional access is first enabled.
 
-- An Android device that is enrolled might prompt the user with "No certificates found" and not be granted access to O365 resources. The user must enable the *Enable Browser Access* option on the enrolled device as follows:
+- An Android device that is enrolled might prompt the user with "No certificates found" and not be granted access to Microsoft 365 resources. The user must enable the *Enable Browser Access* option on the enrolled device as follows:
   1. Open the Company Portal app.
   2. Go to the Settings page from the triple dots (...) or the hardware menu button.
   3. Select the *Enable Browser Access* button.
-  4. In the Chrome browser, sign out of Office 365 and restart Chrome.  
+  4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.  
 
 
 ## Devices are blocked and no quarantine email is received

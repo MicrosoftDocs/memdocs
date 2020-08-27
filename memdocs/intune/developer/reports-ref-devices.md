@@ -67,7 +67,7 @@ The **deviceTypes** entity represents the device type referenced by other data w
 | 10 |IPod |iPod device |
 | 11 |Android |Android device-managed using Device Administrator |
 | 12 |ISocConsumer |iSoc Consumer device |
-| 14 |MacMDM |Mac OS X device managed with the built-in MDM agent |
+| 14 |MacMDM |OS X device managed with the built-in MDM agent |
 | 15 |HoloLens |HoloLens device |
 | 16 |SurfaceHub |Surface Hub device |
 | 17 |AndroidForWork |Android device-managed using Android Profile Owner |
@@ -268,7 +268,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Office 365 that is installed on the device.                                                                                                                             |
+| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
 
 
 ## devicePropertyHistories

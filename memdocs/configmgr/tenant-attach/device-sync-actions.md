@@ -35,8 +35,6 @@ Starting in Configuration Manager version 2002, you can upload your Configuratio
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-The service connection point makes a long standing outgoing connection to these endpoints. Verify the proxy used for the service connection point doesn't time out outgoing connections too quickly. We recommend 3 minutes for outgoing connections to these internet endpoints. <!--7820969-->
-
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
 If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Configure co-management** wizard](#bkmk_config) to enable device upload instead.
