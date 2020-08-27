@@ -50,7 +50,7 @@ Intune also uses techniques such as RBAC and JiT security for support incidents 
 
 ### Data breach reporting
 
-When a Customer-Reportable Security Incident (CRSI) is identified, customers are notified. This process includes working with the Microsoft O365 team to communicate breach notification for any Microsoft O365 customers using Intune.
+When a Customer-Reportable Security Incident (CRSI) is identified, customers are notified. This process includes working with the Microsoft 365 team to communicate breach notification for any Microsoft 365 customers using Intune.
 
 ## Data sharing
 
