@@ -142,7 +142,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
     ![Image showing adding the iOS/iPadOS app to Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. Sign in using the Azure Active Directory credentials for the Office 365 account that manages the directory.
+7. Sign in using the Azure Active Directory credentials for the Microsoft 365 account that manages the directory.
 
 8. Choose the **Accept** button to add the SEP Mobile iOS/iPadOS app to Azure Active Directory.
 

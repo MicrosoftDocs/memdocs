@@ -68,7 +68,7 @@ Here are a few more examples that can be used in the "Requirements" column:
   - Email (Windows 10 mobile)
 
 - **Apps**
-  - Office 365 with app protection policies
+  - Microsoft 365 with app protection policies
   - Line of business (LOB) with app protection policies
 
 ## Next steps

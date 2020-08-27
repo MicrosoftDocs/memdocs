@@ -40,11 +40,11 @@ The information in this article can help you understand how to use the Intune mo
 
 ## Device-based Conditional Access
 
-Intune and Azure Active Directory work together to make sure only managed and compliant devices can access email, Office 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure Active Directory to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Office 365 services.
+Intune and Azure Active Directory work together to make sure only managed and compliant devices can access email, Microsoft 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure Active Directory to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Microsoft 365 services.
 
 Intune provides device compliance policy capabilities that evaluate the compliance status of the devices. The compliance status is reported to Azure Active Directory that uses it to enforce the Conditional Access policy created in Azure Active Directory when the user tries to access company resources.
 
-Device-based Conditional Access policies for Exchange online and other Office 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
+Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
 
 - Learn more about [Require managed devices with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
@@ -57,7 +57,7 @@ Device-based Conditional Access policies for Exchange online and other Office 36
 > 1. Launch the **Company Portal app**.
 > 2. Go to the **Settings** page from the triple dots (...) or the hardware menu button.
 > 3. Press the **Enable Browser Access** button. 
-> 4. In the Chrome browser, sign out of Office 365 and restart Chrome.
+> 4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
 ### Conditional access based on network access control
 
@@ -97,7 +97,7 @@ Learn more about [Device Management in Azure Active Directory](/azure/active-dir
 
 ## App-based conditional access
 
-Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Office 365 services.
+Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
 
 - Learn more about [app-based conditional access with Intune](app-based-conditional-access-intune.md).
 
