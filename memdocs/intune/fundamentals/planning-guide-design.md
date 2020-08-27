@@ -138,7 +138,7 @@ In the following, we explore these common external dependencies in more detail.
 
 ### Identity
 
-Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Office 365, it's important for Intune to use the same Azure AD environment.
+Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Microsoft 365, it's important for Intune to use the same Azure AD environment.
 
 Learn more about the following Intune identity requirements:
 

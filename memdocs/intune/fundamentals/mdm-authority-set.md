@@ -40,9 +40,9 @@ Possible configurations are:
 
 - **Intune co-management** - integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Basic Mobility and Security for Office 365** - If you have this configuration activated, you'll see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
+- **Basic Mobility and Security for Microsoft 365** - If you have this configuration activated, you'll see the MDM authority set to "Office 365". If you want to start using Intune, you'll need purchase Intune licenses.
 
-- **Basic Mobility and Security for Office 365 [coexistence](#coexistence)** - You can add Intune to your tenant if you're already using Basic Mobility and Security for Office 365 and set the management authority to either Intune or Basic Mobility and Security for Office 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by Basic Mobility and Security for Office 365. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Office 365, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace Basic Mobility and Security for Office 365 before switching users to Intune, otherwise their devices will lose Basic Mobility and Security for Office 365 configuration and won't receive any replacement from Intune.
+- **Basic Mobility and Security for Microsoft 365 [coexistence](#coexistence)** - You can add Intune to your tenant if you're already using Basic Mobility and Security for Microsoft 365 and set the management authority to either Intune or Basic Mobility and Security for Microsoft 365 for each user to dictate which service will be used to manage their MDM-enrolled devices. Each user's management authority is defined based on the license assigned to the user: If the user has only a license for Microsoft 365 Basic or Standard, their devices will be managed by Basic Mobility and Security for Microsoft 365. If the user has a license entitling Intune, their devices will be managed by Intune. If you add a license entitling Intune to a user previously managed by Basic Mobility and Security for Microsoft 365, their devices will be switched to Intune management. Be sure to have Intune configurations assigned to users to replace Basic Mobility and Security for Microsoft 365 before switching users to Intune, otherwise their devices will lose Basic Mobility and Security for Microsoft 365 configuration and won't receive any replacement from Intune.
 
 ## Set MDM authority to Intune
 
@@ -113,7 +113,7 @@ The MDM certificate is renewed automatically when mobile devices are communicati
 
 ## Remove MDM authority
 
-The MDM authority can't be changed back to Unknown. The MDM authority is used by the service to determine which portal enrolled devices report to (Microsoft Intune or Basic Mobility and Security for Office 365).
+The MDM authority can't be changed back to Unknown. The MDM authority is used by the service to determine which portal enrolled devices report to (Microsoft Intune or Basic Mobility and Security for Microsoft 365).
 
 ## What to expect after changing the MDM authority
 
