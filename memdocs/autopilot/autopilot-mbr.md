@@ -142,13 +142,13 @@ Instead, the [WindowsAutoPilotInfo PowerShell script](https://www.powershellgall
 1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) or from the command line (command-line installation is shown below).
 2. Navigate to the script directory and run it on the device when the device is either in Full OS or Audit Mode. See the following example.
 
- ```powershell
- md c:\HWID
- Set-Location c:\HWID
- Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force
- Install-Script -Name Get-WindowsAutopilotInfo -Force
- Get-WindowsAutopilotInfo.ps1 -OutputFile AutopilotHWID.csv
- ```
+   ```powershell
+   md c:\HWID
+   Set-Location c:\HWID
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force
+   Install-Script -Name Get-WindowsAutopilotInfo -Force
+   Get-WindowsAutopilotInfo.ps1 -OutputFile AutopilotHWID.csv
+   ```
 
   - If you are prompted to install the NuGet package, choose **Yes**.<br>
   - If, after installing the script you get an error that Get-WindowsAutopilotInfo.ps1 isn't found, verify that C:\Program Files\WindowsPowerShell\Scripts is present in your PATH variable.<br>
@@ -156,7 +156,7 @@ Instead, the [WindowsAutoPilotInfo PowerShell script](https://www.powershellgall
 
 The script creates a .csv file that contains the device information, including the complete 4K HH. Save this file so that you can access it later. The service facility will use this 4K HH to reregister device as described below. Be sure to use the -OutputFile parameter when saving the file, which ensures that file formatting is correct. don't attempt to pipe the command output to a file manually.
 
-> [NOTE]
+> [!NOTE]
 > If the repair facility can't run the OA3 tool or PowerShell script to capture the new 4K HH, then the CSP (or OEM) partners must do it for them. Without some entity capturing the new 4K HH, there's no way to reregister this device as an Autopilot device.
 
 
@@ -209,7 +209,7 @@ However, it’s likely the repair facility won’t have access to Windows becaus
 
 The repaired device can now be returned to the customer. It will be auto-enrolled into the Autopilot program on first boot-up during OOBE.
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > If the repair facility did NOT reimage the device, they could be sending it back in a potentially broken state. For example, there’s no way to log into the device because it’s been dissociated from the only known user account. So, they should tell the organization that they need to fix the registration and OS themselves.
 > A device can be “registered” for Autopilot before being powered-on. But the device isn’t actually “deployed” to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
 
@@ -321,8 +321,7 @@ In the following table:<br>
 9. Go through Autopilot OOBE (customer)
 10. Autopilot successfully enabled
 
-> [NOTE]
-> The repaired device can also be used successfully as a normal, non-Autopilot device.
+The repaired device can also be used successfully as a normal, non-Autopilot device.
 
 <tr><td>BIOS info excluded from MBR device<td>No<td>Repair facility doesn't have BIOS tool to write device info into BIOS after MBR.
 
