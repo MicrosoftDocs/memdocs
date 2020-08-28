@@ -53,7 +53,7 @@ The following tables list the ports and services that the Intune client accesses
 
 ## Intune customer designated endpoints in China
 - Azure portal: https:\//portal.azure.cn/
-- Office 365: https:\//portal.partner.microsoftonline.cn/
+- Microsoft 365: https:\//portal.partner.microsoftonline.cn/
 - Intune Company Portal: https:\//portal.manage.microsoftonline.cn/
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoftonline.cn/
 

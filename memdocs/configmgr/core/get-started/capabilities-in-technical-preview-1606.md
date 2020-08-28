@@ -211,11 +211,11 @@ After the service and roles are completely configured, internal clients will get
 
 After clients have the new location information for Cloud Proxy Service, try checking the status of clients that are no longer on the internal private network but have Internet access. You can also monitor traffic on Cloud Proxy Service by going to **Administration > Cloud Services > Cloud Proxy Service**, selecting the service in the list pane, and viewing the traffic information in the details pane.   
 
-## <a name="manage_o365"></a>Manage the Office 365 client agent in Configuration Manager  
+## <a name="manage_o365"></a>Manage the Microsoft 365 client agent in Configuration Manager  
 
-Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Office 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
+Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Microsoft 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Microsoft 365 updates, the Configuration Manager client agent communicates with the Microsoft 365 client agent to download Microsoft 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
 
-For more information, see [Manage Office 365 ProPlus updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For more information, see [Manage Microsoft 365 Apps for enterprise updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.

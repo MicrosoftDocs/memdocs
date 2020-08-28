@@ -336,7 +336,7 @@ For Configuration Manager version 1702, this level includes the following:
 
     - Configurations that are used for active Windows 10 servicing plans  
 
-    - Count of deployed Office 365 updates  
+    - Count of deployed Microsoft 365 updates  
 
     - Count of update groups and assignments  
 
