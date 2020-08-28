@@ -155,6 +155,20 @@ The changes are:
 
 - **Policy merge** – Intune now merges the list of exclusions you’ve defined in separate profiles into a single list of exclusions to apply to each device or user. For example, if you target a user with three separate policies, the exclusion lists from those three policies merge into a single superset of *Microsoft Defender Antivirus exclusions*, that then apply to that user.
 
+#### Import and export lists of address ranges for Windows firewall rules<!-- pending  -->
+
+We've added support to **Import** or **Export** a list of address ranges using .csv files to the Microsoft Defender Firewall rules profile in the Firewall policy for Endpoint security. The following Windows firewall rule settings now support import and export:
+
+- **Local address ranges**
+- **Remote address ranges**
+
+We've also improved validation of both local and remote address range entry to help prevent duplicate or invalid entries.
+
+For more information about these settings, see the settings for [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules).
+
+
+
+
 
 <!-- ########################## -->
 ## Week of August 17, 2020
@@ -389,7 +403,7 @@ For more information, see [Microsoft Intune Data Warehouse API](../developer/rep
 ### App management
 
 #### Update to device icons in Company Portal and Intune apps on Android<!-- 6057023 -->
-We have updated the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+We have updated the device icons in the Company Portal and Intune apps on Android devices to create a more modern look and feel and to align with the Microsoft Fluent Design System. For related information, see [Update to icons in Company Portal app for iOS/iPadOS and macOS](whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
@@ -839,7 +853,7 @@ For more information about this support, see [Sensitivity labeling and protectio
 ### Monitor and troubleshoot
 
 #### Device reports UI update<!-- 6269408 -->
-The reports overview pane will now provide a **Summary** and a **Reports** tab. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports**, then select the **Reports** tab to see the available report types. For related information, see [Intune reports](../fundamentals/reports.md).
+The reports overview pane will now provide a **Summary** and a **Reports** tab. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports**, then select the **Reports** tab to see the available report types. For related information, see [Intune reports](reports.md).
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1216,7 +1230,7 @@ The following properties are now exposed via the [devicePropertyHistory](../deve
 For more information, see [Microsoft Intune Data Warehouse API](../developer/reports-nav-intune-data-warehouse.md).
 
 #### Help and support workflow update to support additional services<!-- 5654170   -->
-We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](../fundamentals/get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
+We've updated the Help and support page in the Microsoft Endpoint Manager admin center where you now [choose the management type you use](get-support.md#options-to-access-help-and-support). With this change you'll be able to select from the following management types:
 
 - Configuration Manager (includes Desktop Analytics)
 - Intune
