@@ -193,6 +193,15 @@ For more information on VPN profiles in Intune, see [Create VPN profiles to conn
 Applies to:
 - Android Enterprise work profile
 
+### Changes for Password settings in Device restriction profiles for Android device administrator<!-- 7662279  --> 
+We’re introducing a few changes for password settings for *Device restriction* and *compliance* policies for *Android device administrator*. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**) These changes help Intune accommodate changes in Android version 10 and later, to ensure settings for passwords continue to apply to devices as expected.
+ 
+Changes include:
+- Removal of the lop-level option for **Password**.  
+- Settings will be reorganized into sections that are based on which devices they apply to.
+- The **Minimum password length** will be disabled for use unless **Password type** is configured to a value where the password length applies.
+- Additional updates to labels and example text.
+
 <!-- ***********************************************-->
 ## Device enrollment
 
