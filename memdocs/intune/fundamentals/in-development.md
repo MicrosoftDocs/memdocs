@@ -88,7 +88,7 @@ Intune will soon support use of a key size of 4096 bits for SCEP certificate pro
 
 Support for 4096-bit keys will be for the following platforms: 
 - iOS 14 and later
-- MacOS 11 and later    
+- macOS 11 and later    
 
 ### New setting for Password complexity for Android 10 and later<!-- 7992114  -->
 To support new options for Android 10 and later, we're adding a new setting called **Password complexity** to both *Device compliance* policy and *Device restriction* policy. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**)  With this setting you'll be able to manage a measure of password strength that factors in password type, length, and quality. 
