@@ -23,9 +23,9 @@ ms.topic: article
 
 - Windows 10, version 1903
 
-Windows Autopilot update installs the lastest Autopilot features and fixes to your organization's Autopilot devices. The devices aren't moved to latest Windows OS version. With Autopilot update, you can keep the devices' current OS version and still benefit from new Autopilot features and bug fixes.
- 
-During the Autopilot deployment process, Windows Autopilot update has been added as a new node after the critical [Windows Zero Day Patch (ZDP) update](/windows-hardware/customize/desktop/windows-updates-during-oobe) check. During the update process, Windows Autopilot devices contact Windows Update to check for a new Autopilot update. If there's an Autopilot update available, the device will download and install the update, then restart automatically. See the following example.
+Windows Autopilot update installs the latest Autopilot features and fixes to your organization's Autopilot devices. The devices aren't moved to latest Windows OS version. With Autopilot update, you can keep the devices' current OS version and still benefit from new Autopilot features and bug fixes.
+
+The Windows Autopilot update process occurs after the critical [Windows Zero Day Patch (ZDP) update](/windows-hardware/customize/desktop/windows-updates-during-oobe) check. During the update process, the devices check Windows Update for a new Autopilot update. If there's an Autopilot update available, the device  downloads and installs the update, then restart automatically. See the following example.
 
  ![Autopilot update 1](images/update1.png)<br>
  ![Autopilot update 2](images/update2.png)<br>
