@@ -26,7 +26,7 @@ Configuring Windows Server Update Services (WSUS) servers and their correspondin
 In this tutorial, you will:
 > [!div class="checklist"]
 > * Obtain the PKI certificate, if needed
-> * blah
+> * Bind the certificate in IIS
 > * blah
 > * blah
 > * blah
@@ -36,19 +36,30 @@ In this tutorial, you will:
 - A WSUS server with the software update point role installed
 - One of the two following options:
    - An appropriate PKI certificate already in the WSUS server's **Personal** certificate store.
-   - The ability to request and enroll an appropriate PKI certificate for the WSUS server
+   - The ability to request and enroll an appropriate PKI certificate for the WSUS server using an Active Directory Enrollment Policy. 
       - By default, most certificate templates including the WebServer certificate template will only issue to Domain Admins. If the logged in user isn't a domain admin, their user account will need to be granted the **Enroll** permission on the certificate template.
 
 For more information about the certificate requirements, see [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements#BKMK_PKIcertificates_for_servers).
 
-## <a name="bkmk_pki"></a> Obtain the PKI certificate if needed
-If you already have an appropriate PKI certificate in the WSUS server's **Personal** certificate store, skip this section and start with the [Bind the certificate](#bkmk_bind) section.
+## <a name="bkmk_pki"></a> Obtain the certificate from the CA if needed
+If you already have an appropriate PKI certificate in the WSUS server's **Personal** certificate store, skip this section and start with the [Bind the certificate](#bkmk_bind) section. If you need to send a certificate request to an enrollment server to install a new certificate, follow the instructions in this section.
  
+1. From the WSUS server, open an administrative command prompt and run `certlm.msc`. Your user account needs to be a local administrator to manage certificates for the local computer.
+
+   The Certificate Manager tool for the local device appears.
+
+1. Expand **Personal**, then right-click on **Certificates**.
+1. Select **All Tasks** then **Request New Certificate**. 
+1. Choose **Next** to begin certificate enrollment. 
+
+### Open the Certificate snap-in
 1. From the WSUS server, open the Microsoft Management Console (mmc.exe).
 1. Select **File** then **Add/Remove Sanp-in...**.
 1. Select the **Certificates** snap-in, then **Add**.
-1. Choose the **Computer account** when prompted to select the account to manage the certificates for and select **Next**.
-1. 
+1. Specify the following options for the snap-in:
+   1. Choose the **Computer account** when prompted to select the account to manage the certificates for and select **Next**.
+   1. In the **Select Computer** window, choose the **Local computer: (the computer this console is running on)** option and then **Finish**.
+1. Select **OK** to load the **Certificates (Local Computer)** snap-in.
 1. 
 
 
