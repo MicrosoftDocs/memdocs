@@ -28,7 +28,7 @@ When a user signs into an MDM-managed device for the first time, the Enrollment 
 The ESP will track the installation of applications, security policies, certificates, and network connections. An administrator can deploy ESP profiles to a licensed Intune user and configure specific settings within the ESP profile. A few of these settings are:
 - force the installation of specified applications
 - allow users to collect troubleshooting logs
-- specify what a user can do if device setup fails.
+- specify what a user can do if device setup fails
 
 For more information, see how to set up the [Enrollment Status Page in Intune](/intune/windows-enrollment-status).  
  
