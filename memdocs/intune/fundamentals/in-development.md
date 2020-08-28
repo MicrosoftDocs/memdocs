@@ -320,12 +320,13 @@ The improvements will revise the common labels and definitions we use for status
 - **Matches baseline**  will update to **Matches default settings**, which better describes the intent to identify when a devices configuration matches the default (unmodified) baseline configuration.
 - **Misconfigured** will be broken into more specific details, like **Error**, **Conflict**, and **Pending**. The new states will bring consistency to other areas of the console.
 
-### Expanded RBAC permissions for the Endpoint Security role<!--7312374  -->
-The **Endpoint Security Manager** role for Intune is receiving addition role-based access control (RBAC) permissions. This role grants access to the Microsoft Endpoint Manager admin center and can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender Advanced Threat Protection.
+### Expanded RBAC permissions for the Endpoint Security role<!--7312374 IDReady idstaged -->
+The **Endpoint Security Manager** role for Intune is receiving addition role-based access control (RBAC) permissions for remote tasks.This role grants access to the Microsoft Endpoint Manager admin center and can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender Advanced Threat Protection.
 
 To view the permission for an Intune RBAC role, go to (**Tenant admin** > **Intune roles** > *select a role* > **Permissions**).
 
-Expanded permissions include the following:
+Expanded permissions for remote tasks include the following:
+
 - Reboot now
 - Remote lock
 - Rotate BitLockerKeys (Preview)
