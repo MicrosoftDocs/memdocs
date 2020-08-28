@@ -202,6 +202,8 @@ Changes include:
 - The **Minimum password length** will be disabled for use unless **Password type** is configured to a value where the password length applies.
 - Additional updates to labels and example text.
 
+These changes apply to the UI for settings, and won’t affect existing profiles. 
+
 <!-- ***********************************************-->
 ## Device enrollment
 
