@@ -155,7 +155,7 @@ The changes are:
 
 - **Policy merge** – Intune now merges the list of exclusions you’ve defined in separate profiles into a single list of exclusions to apply to each device or user. For example, if you target a user with three separate policies, the exclusion lists from those three policies merge into a single superset of *Microsoft Defender Antivirus exclusions*, that then apply to that user.
 
-#### Import and export lists of address ranges for Windows firewall rules<!-- pending  -->
+#### Import and export lists of address ranges for Windows firewall rules<!-- 8125400  -->
 
 We've added support to **Import** or **Export** a list of address ranges using .csv files to the Microsoft Defender Firewall rules profile in the Firewall policy for Endpoint security. The following Windows firewall rule settings now support import and export:
 
