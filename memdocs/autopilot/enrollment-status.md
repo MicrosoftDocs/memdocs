@@ -23,7 +23,7 @@ ms.topic: article
 
 -  Windows 10, version 1803 and later 
 
-When a user signs into an MDM-managed device for the first time, the Enrollment Status Page (ESP) displays the progress of the device's configuration. The ESP helps users understand the progress of device provisioning and ensures the device has met the organization's expected state before the user can access the desktop for the first time.
+When a user signs into an MDM-managed device for the first time, the Enrollment Status Page (ESP) displays the device's configuration progress. The ESP also makes sure the device has met the organization's expected state before the user can access the desktop for the first time.
 
 The ESP will track the installation of applications, security policies, certificates, and network connections. An administrator can deploy ESP profiles to a licensed Intune user and configure specific settings within the ESP profile. A few of these settings are:
 - force the installation of specified applications
