@@ -77,7 +77,7 @@ The **Retire** action removes Intune provisioned data like company applications,
 
 ### Delete a tenant from Microsoft Intune
 
-If an Intune tenant customer cancels their Intune account, all tenant data is deleted within 180 days after the customer closes the Intune account. If the AAD tenant is associated with other Microsoft enterprise subscriptions (Azure, Office 365), then only the Intune Customer Data is deleted. The AAD tenant resource is maintained for use by the other subscriptions. If the Intune account is the only subscription associated with the AAD tenant, then the tenant will be deleted and all resources and Customer Data will also be deleted.
+If an Intune tenant customer cancels their Intune account, all tenant data is deleted within 180 days after the customer closes the Intune account. If the Azure AD tenant is associated with other Microsoft enterprise subscriptions (Azure, Microsoft 365), then only the Intune Customer Data is deleted. The Azure AD tenant resource is maintained for use by the other subscriptions. If the Intune account is the only subscription associated with the Azure AD tenant, then the tenant will be deleted and all resources and Customer Data will also be deleted.
 
 ## Next steps
 

@@ -146,7 +146,7 @@ As we move closer to the retirement of the Intune Managed Browser, we made chang
 - Microsoft Edge
 - Unmanaged browser 
 
-When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their AAD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
+When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their Azure AD accounts, if they have not already done so.  This will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. This means your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers leveraging managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
 
 #### Configure app notification content for organization accounts<!-- 2576686  -->
 Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app. This feature requires support from applications and may not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
@@ -165,7 +165,7 @@ As part of an app protection policy, you can specify the setting [**Approved key
 You can use ADMX templates in Microsoft Intune to control and manage settings for Microsoft Edge, Office, and Windows. Administrative Templates in Intune made the following policy setting updates:
 
 - Added support for Microsoft Edge versions 78 and 79.
-- Includes the November 11, 2019 ADMX files in [Administrative Template files (ADMX/ADML) and Office Customization Tool for Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- Includes the November 11, 2019 ADMX files in [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 
 For more information on ADMX templates in Intune, see [Use Windows 10 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
 
@@ -1058,10 +1058,10 @@ You can access the Android Device Policy application from the Managed Home Scree
 #### iOS Company Portal updates<!-- 3902931 -->
 Your company name on iOS app management prompts will replace the current "i.manage.microsoft.com" text. For instance, users will see their company name instead of "i.manage.microsoft.com" when users attempt to install an iOS app from the Company Portal or when users allow management of the app. This will be rolled out to all customers over the next few days.
 
-#### AAD and APP on Android Enterprise devices<!-- 3574267 -->
-When onboarding fully managed Android Enterprise devices, users will now register with Azure Active Directory (AAD) during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start AAD registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
+#### Azure AD and APP on Android Enterprise devices<!-- 3574267 -->
+When onboarding fully managed Android Enterprise devices, users will now register with Azure Active Directory (Azure AD) during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start Azure AD registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
 
-In addition to the AAD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+In addition to the Azure AD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -1563,7 +1563,7 @@ To learn more about this preview, see our blog, [Microsoft Intune - Preview 2 fo
 
 #### Use Compliance Manager to create assessments for Microsoft Intune<!-- 4404750 -->
 
-[Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) (opens another Microsoft site) is a workflow-based risk assessment tool in the Microsoft Service Trust Portal. It enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft services. You can create your own compliance assessment with Office 365, Azure, Dynamics, Professional Services, and Intune. Intune has two assessments available - FFIEC and GDPR.
+[Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) (opens another Microsoft site) is a workflow-based risk assessment tool in the Microsoft Service Trust Portal. It enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft services. You can create your own compliance assessment with Microsoft 365, Azure, Dynamics, Professional Services, and Intune. Intune has two assessments available - FFIEC and GDPR.
 
 Compliance Manager helps you focus your efforts by breaking down controls - controls managed by Microsoft, and controls managed by your organization. You can complete the assessments, and then export and print the assessments.
 
@@ -1624,7 +1624,7 @@ You can now add scope tags to Apple VPP tokens. Only users assigned with the sam
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### App management
 #### Deploy Microsoft Visio and Microsoft Project<!-- 3725386  -->
-You can now deploy Microsoft Visio Pro for Office 365 and Microsoft Project Online Desktop Client as independent apps to Windows 10 devices using Microsoft Intune, if you own licenses for these apps. From Intune, select **Client apps** > **Apps** > **Add** to display the **Add app** blade. On the **Add app** blade, select **Windows 10** as the **App type**. Then, select **Configure App Suite** to select apps to install. For more information about Office 365 apps for Windows 10 devices, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
+You can now deploy Microsoft Visio Pro for Microsoft 365 and Microsoft Project Online Desktop Client as independent apps to Windows 10 devices using Microsoft Intune, if you own licenses for these apps. From Intune, select **Client apps** > **Apps** > **Add** to display the **Add app** blade. On the **Add app** blade, select **Windows 10** as the **App type**. Then, select **Configure App Suite** to select apps to install. For more information about Microsoft 365 apps for Windows 10 devices, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
 
 #### Microsoft Visio Pro for Office 365 product name change<!-- 3593653  -->
 **Microsoft Visio Pro for Office 365** will now be known as **Microsoft Visio Online Plan 2**.  For more information about Microsoft Visio, see [Visio Online Plan 2](https://products.office.com/visio/visio-online-plan-2). For more information about Office 365 apps for Windows 10 devices, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
@@ -1632,8 +1632,8 @@ You can now deploy Microsoft Visio Pro for Office 365 and Microsoft Project Onli
 #### Intune app protection policy (APP) character limit setting<!-- 3291302  -->
 Intune admins can specify an exception to the Intune APP  **Restrict cut, copy, and paste with other apps** policy setting.  As the admin, you can specify the number of characters that may be cut or copied from a managed app. This setting will allow sharing of the specified number of characters to any app, regardless of the "Restrict cut, copy, and paste with other apps" setting. Note that the Intune Company Portal app version for Android requires version 5.0.4364.0 or later. For more information, see [iOS data protection](../apps/app-protection-policy-settings-ios.md#data-protection), [Android data protection](../apps/app-protection-policy-settings-android.md#data-protection), and [Review client app protection logs](../apps/app-protection-policy-settings-log.md).
 
-#### Office Deployment Tool (ODT) XML for Office ProPlus deployment<!-- 3192477   -->
-You will be able to provide Office Deployment Tool (ODT) XML when creating an instance of Office Pro Plus in the Intune admin console. This will allow greater customizability if the existing Intune UI options do not meet your needs. For more information, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md) and [Configuration options for the Office Deployment Tool](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+#### Office Deployment Tool (ODT) XML for Microsoft 365 Apps for enterprise deployment<!-- 3192477   -->
+You will be able to provide Office Deployment Tool (ODT) XML when creating an instance of Microsoft 365 Apps for enterprise deployment in the Intune admin console. This will allow greater customizability if the existing Intune UI options do not meet your needs. For more information, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md) and [Configuration options for the Office Deployment Tool](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 #### App icons will now be displayed with an automatically generated background<!-- 1429026  -->
 In the Windows Company Portal app, app icons will now be displayed with an automatically generated background based on the dominant color of the icon (if it can be detected). When applicable, this background will replace the gray border that was previously visible on app tiles. Users will see this change in versions of Company Portal later than 10.3.3451.0.
@@ -1642,7 +1642,7 @@ In the Windows Company Portal app, app icons will now be displayed with an autom
 Windows devices that enrolled into Intune using [Windows bulk enrollment](../enrollment/windows-bulk-enroll.md) (provisioning packages) will be able to use the Company Portal app to install available apps. For more information about the Company Portal app, see [Manually add the Windows 10 Company Portal](../apps/store-apps-company-portal-app.md) and [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
 
 #### The Microsoft Teams app can be selected as part of the Office app suite<!-- 3828932  -->
-The Microsoft Teams app can be included or excluded as part of the Office Pro Plus app suite installation. This feature works for Office Pro Plus build number 16.0.11328.20116+. The user must sign out and then sign in to the device for the installation to complete. In Intune, select **Client apps** > **Apps** > **Add**. Select one of the **Office 365 Suite** app types and then select **Configure  App Suite**.
+The Microsoft Teams app can be included or excluded as part of the Microsoft 365 Apps for enterprise deployment app suite installation. This feature works for Microsoft 365 Apps for enterprise deployment build number 16.0.11328.20116+. The user must sign out and then sign in to the device for the installation to complete. In Intune, select **Client apps** > **Apps** > **Add**. Select one of the **Office 365 Suite** app types and then select **Configure  App Suite**.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -1923,7 +1923,7 @@ The default settings and number of settings remain the same, but this change all
 You can now configure the following additional settings for Outlook for iOS and Android using Intune:
 
 - Only allow work or school accounts to be used in Outlook in iOS and Android
-- Deploy modern authentication for Office 365 and hybrid modern authentication on-premises accounts
+- Deploy modern authentication for Microsoft 365 and hybrid modern authentication on-premises accounts
 - Use `SAMAccountName` for the username field in the email profile when basic authentication is selected
 - Allow contacts to be saved
 - Configure external recipients MailTips
@@ -2147,7 +2147,7 @@ You can create scope tags to limit access for roles and apps. You can add a scop
 
 #### Updates for Application Transport Security<!-- 748318 -->
 
-Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in-class encryption, to ensure Intune is more secure by default, and to align with other Microsoft services such as Microsoft Office 365. In order to meet this requirement, the iOS and macOS company portals will enforce Apple's updated Application Transport Security (ATS) requirements, which also require TLS 1.2+. ATS is used to enforce stricter security on all app communications over HTTPS. This change impacts Intune customers using the iOS and macOS Company Portal apps. For more information, see the [Intune support blog](https://aka.ms/compportalats).
+Microsoft Intune supports Transport Layer Security (TLS) 1.2+ to provide best-in-class encryption, to ensure Intune is more secure by default, and to align with other Microsoft services such as Microsoft 365. In order to meet this requirement, the iOS and macOS company portals will enforce Apple's updated Application Transport Security (ATS) requirements, which also require TLS 1.2+. ATS is used to enforce stricter security on all app communications over HTTPS. This change impacts Intune customers using the iOS and macOS Company Portal apps. For more information, see the [Intune support blog](https://aka.ms/compportalats).
 
 #### The Intune App SDK will support 256-bit encryption keys<!-- 1832174 -->
 The Intune App SDK for Android now uses 256-bit encryption keys when encryption is enabled by App Protection Policies. The SDK will continue to provide support of 128-bit keys for compatibility with content and apps that use older SDK versions.
@@ -2288,8 +2288,8 @@ As the Microsoft Intune admin, you can control which user accounts are added to 
 #### Outlook iOS and Android app configuration policy<!--1828527 -->
 You can now create an Outlook iOS and Android app configuration policy for iOS and Android for on-premises users that leverage Basic authentication with the ActiveSync protocol. Additional configuration settings will be added as they are enabled for the Outlook for iOS and Android.
 
-#### Office 365 Pro Plus language packs<!-- 1833450 -->
-As the Intune admin, you will be able to deploy additional languages for Office 365 Pro Plus apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Client apps** > **Apps** > **Add**. In the **App type** list of the **Add app** blade, select **Windows 10** under **Office 365 Suite**. Select **Languages** in the **App Suite Settings** blade.
+#### Microsoft 365 Apps for enterprise language packs<!-- 1833450 -->
+As the Intune admin, you will be able to deploy additional languages for Microsoft 365 Apps for enterprise apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the Azure portal, select **Microsoft Intune** > **Client apps** > **Apps** > **Add**. In the **App type** list of the **Add app** blade, select **Windows 10** under **Office 365 Suite**. Select **Languages** in the **App Suite Settings** blade.
 
 #### Windows line-of-business (LOB) apps file extensions<!-- 1884873 -->
 The file extensions for Windows LOB apps will now include *.msi*, *.appx*, *.appxbundle*, *.msix*, and *.msixbundle*. You can add an app in Microsoft Intune by selecting **Client apps** > **Apps** > **Add**. The **Add app** pane is displayed which allows you to select the **App type**. For Windows LOB apps, select **Line-of-business** app as the app type, select the **App package file**, and then enter an installation file with the appropriate extension.
@@ -2406,8 +2406,8 @@ Applies to: iOS
 Previously, you couldn't remove an email profile from a device *if* it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
 See [Add email settings to devices using Intune](../configuration/email-settings-configure.md) for details.
 
-#### PowerShell scripts and AAD<!-- 2309469 -->
-PowerShell scripts in Intune can be targeted to AAD device security groups.
+#### PowerShell scripts and Azure AD<!-- 2309469 -->
+PowerShell scripts in Intune can be targeted to Azure AD device security groups.
 
 #### New "Required password type" default setting for Android, Android enterprise<!-- 2649963 -->
 When you create a new compliance policy (**Intune** > **Device compliance** > **Policies** > **Create policy** > **Android** or **Android enterprise** for Platform > System Security), the default value for **Required password type** changes:
@@ -2486,7 +2486,7 @@ Intune increased the maximum package size to 8 GB for Line-of-business (LOB) app
 As the Microsoft Intune admin, you can upload a custom brand image which will be displayed as a background image on the user's profile page in the iOS Company Portal app. For more information about configuring the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
 
 #### Intune will maintain the Office localized language when updating Office on end users machines<!-- 2971030 -->
-When Intune installs Office on your end user's machines, end users automatically get the same language packs that they had with previous .MSI Office installations. For more information, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
+When Intune installs Office on your end user's machines, end users automatically get the same language packs that they had with previous .MSI Office installations. For more information, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](../apps/apps-add-office365.md).
 
 ### Monitor and troubleshoot
 
@@ -2551,8 +2551,8 @@ If you are not sure which value to use, consult your VPN provider's documentatio
 In Intune > **Software Updates** > **Update policies for iOS**, you can configure the days and times when you don't want devices to install any updates. In a future update, you'll be able to delay when a software update is visibly shown on the device, from 1-90 days. 
 [Configure iOS update policies in Microsoft Intune](../protect/software-updates-ios.md) lists the current settings.
 
-#### Office 365 ProPlus version<!-- 2213968 -->
-When assigning the Office 365 ProPlus apps to Windows 10 devices using Intune, you will be able to select the version of Office. In the Azure portal, select **Microsoft Intune** > **Apps** > **Add App**. Then, select **Office 365 ProPlus Suite (Windows 10)** from the **Type** dropdown list. Select **App Suite Settings** to display the associated blade. Set the **Update Channel** to a value, such as **Monthly**. Optionally, remove other version of Office (msi) from end user devices by selecting **Yes**. Select **Specific** to install a specific version of Office for the selected channel on end user devices. At this point, you can select the **Specific version** of Office to use. The available versions will change over time. Therefore, when creating a new deployment, the versions available may be newer and not have certain older versions available. Current deployments will continue to deploy the older version, but the version list will be continually updated per channel. For more information, see [Overview of update channels for Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+#### Microsoft 365 Apps for enterprise version<!-- 2213968 -->
+When assigning the Microsoft 365 Apps for enterprise apps to Windows 10 devices using Intune, you will be able to select the version of Office. In the Azure portal, select **Microsoft Intune** > **Apps** > **Add App**. Then, select **Office 365 ProPlus Suite (Windows 10)** from the **Type** dropdown list. Select **App Suite Settings** to display the associated blade. Set the **Update Channel** to a value, such as **Monthly**. Optionally, remove other version of Office (msi) from end user devices by selecting **Yes**. Select **Specific** to install a specific version of Office for the selected channel on end user devices. At this point, you can select the **Specific version** of Office to use. The available versions will change over time. Therefore, when creating a new deployment, the versions available may be newer and not have certain older versions available. Current deployments will continue to deploy the older version, but the version list will be continually updated per channel. For more information, see [Overview of update channels for Microsoft 365 Apps](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 #### Support for Register DNS setting for Windows 10 VPN<!-- 2282852 -->
 With this update, you can configure Windows 10 VPN profiles to dynamically register the IP addresses assigned to the VPN interface with the internal DNS, without needing to use custom profiles.
@@ -2699,8 +2699,8 @@ Microsoft Intune allows macOS LOB apps to be deployed as **Required** or **Avail
 #### iOS built-in app support for kiosk mode<!-- 2051098 -->
 In addition to Store Apps and Managed Apps, you can now select a Built-In App (such as Safari) that runs in kiosk mode on an iOS device.
 
-#### Edit your Office 365 Pro Plus app deployments<!-- 2150145 -->
-As the Microsoft Intune admin, you have greater ability to edit your Office 365 Pro Plus app deployments. Additionally, you no longer have to delete your deployments to change any of the suite's properties. In the Azure portal, select **Microsoft Intune** > **Client apps** > **Apps**. From the list of apps, select your Office 365 Pro Plus Suite.  
+#### Edit your Microsoft 365 Apps for enterprise app deployments<!-- 2150145 -->
+As the Microsoft Intune admin, you have greater ability to edit your Microsoft 365 Apps for enterprise app deployments. Additionally, you no longer have to delete your deployments to change any of the suite's properties. In the Azure portal, select **Microsoft Intune** > **Client apps** > **Apps**. From the list of apps, select your Microsoft 365 Apps for enterprise suite.  
 
 #### Updated Intune App SDK for Android is now available<!-- 2744271-->
 An updated version of the Intune App SDK for Android is available to support the Android P release. If you are an app developer and use the Intune SDK for Android, you must install the updated version of the Intune app SDK to ensure that Intune functionality within your Android apps continue to work as expected on Android P devices. This version of the Intune App SDK provides a built-in plugin that performs the SDK updates. You do not need to rewrite any existing code that's integrated. For details, see [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android). If you are using the old badging style for Intune, we recommend that you use the briefcase icon. For branding details, see [this GitHub repository](https://github.com/msintuneappsdk/intune-app-partner-badge).
@@ -3532,8 +3532,8 @@ You can revoke the license of all iOS Volume Purchasing Program (VPP) apps for a
 #### Revoking iOS Volume-Purchase Program apps <!-- 820863 -->
 For a given device that has one or more iOS Volume-Purchase Program (VPP) apps, you can revoke the associated device-based app license for the device. Revoking an app license will not uninstall the related VPP app from the device. To uninstall a VPP app, you must change the assignment action to **Uninstall**. For more information, see [How to manage iOS apps purchased through a volume-purchase program with Microsoft Intune](../apps/vpp-apps-ios.md).
 
-#### Assign Office 365 mobile apps to iOS and Android devices using built-in app type<!-- 1332318 -->
-The **Built-in** app type makes it easier for you to create and assign Office 365 apps to the iOS and Android devices that you manage. These apps include 0365 apps such as Word, Excel, PowerPoint, and OneDrive. You can assign specific apps to the app type and edit the app information configuration.
+#### Assign Microsoft 365 mobile apps to iOS and Android devices using built-in app type<!-- 1332318 -->
+The **Built-in** app type makes it easier for you to create and assign Microsoft 365 apps to the iOS and Android devices that you manage. These apps include Microsoft 365 apps such as Word, Excel, PowerPoint, and OneDrive. You can assign specific apps to the app type and edit the app information configuration.
 
 #### Including and excluding app assignment based on groups<!-- 1406920 -->
 
@@ -3606,10 +3606,10 @@ Each NDES connector pulls certificate requests from Intune.  If one NDES connect
 
 #### Customer subject name can use AAD_DEVICE_ID variable <!-- 1468599 -->
 
-When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the AAD device ID of the device making the certificate request.
+When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the Azure AD device ID of the device making the certificate request.
 
 #### Manage Jamf-enrolled macOS devices with Intune's device compliance engine<!-- 1592747 -->
-You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state as well as other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Azure AD, including Office 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
+You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state as well as other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Azure AD, including Microsoft 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
 
 #### New iOS device action  <!-- 1424701 -->
 
@@ -4376,9 +4376,9 @@ Previously, Intune contained a number of built-in apps that you could quickly as
 However, if you have already assigned any built-in apps, these will still be visible in the list of apps. You can continue to assign these apps as required.
 In a later release, we plan to add an easier method to select and assign built-in apps from the Azure portal.
 
-#### Easier installation of Office 365 apps<!-- 1121362 -->
-The new **Office 365 ProPlus** app type makes it easy for you to assign Office 365 ProPlus 2016 apps to devices that you manage which run the latest version of Windows 10. Additionally, you can also install Microsoft Project, and Microsoft Visio, if you own licenses for them. The apps you want are bundled together and appear as one app in the list of apps in the Intune console.
-For more information, see [How to add Office 365 apps for Windows 10](../apps/apps-add-office365.md).
+#### Easier installation of Microsoft 365 apps<!-- 1121362 -->
+The new **Microsoft 365 Apps for Enterprise** app type makes it easy for you to assign Microsoft 365 Apps for enterprise apps to devices that you manage which run the latest version of Windows 10. Additionally, you can also install Microsoft Project, and Microsoft Visio, if you own licenses for them. The apps you want are bundled together and appear as one app in the list of apps in the Intune console.
+For more information, see [How to add Microsoft 365 apps for Windows 10](../apps/apps-add-office365.md).
 
 
 #### Support for offline apps from the Microsoft Store for Business<!-- 777044 -->

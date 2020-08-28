@@ -108,7 +108,7 @@ Microsoft Endpoint Manager is a solution platform that unifies several technolog
 
 If you currently use Configuration Manager, you also get Microsoft Intune to co-manage your Windows devices. For other platforms, such as iOS/iPadOS and Android, then you'll need a separate Intune license.
 
-In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager, and Office 365. For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoint Manager and Office. For more information, see [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## Next steps
 
