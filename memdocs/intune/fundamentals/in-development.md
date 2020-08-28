@@ -278,6 +278,12 @@ In **Devices** > **Group Policy analytics (preview)**, you can import your group
 Applies to:
 - Windows 10 and newer
 
+#### New Windows 10 feature update report<!-- 6473121   -->
+The **Feature update failures** report will provide failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Devices** > **Monitor** > **Feature update failures** to view this report."
+
+#### New Windows 10 feature update report<!-- 6473128  -->
+The **Windows feature updates** report will provide an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Reports** > **Windows updates (Preview)** > **Feature update failures** to view the summary for this report. To see reports for specific policies, select the **Reports** tab and open the **Windows Feature Update Report**. 
+
 <!-- ***********************************************-->
 <!--
 ## Role-based access control
@@ -320,7 +326,7 @@ The improvements will revise the common labels and definitions we use for status
 - **Matches baseline**  will update to **Matches default settings**, which better describes the intent to identify when a devices configuration matches the default (unmodified) baseline configuration.
 - **Misconfigured** will be broken into more specific details, like **Error**, **Conflict**, and **Pending**. The new states will bring consistency to other areas of the console.
 
-### Expanded RBAC permissions for the Endpoint Security role<!--7312374 IDReady idstaged -->
+### Expanded RBAC permissions for the Endpoint Security role<!--7312374  idstaged -->
 The **Endpoint Security Manager** role for Intune is receiving addition role-based access control (RBAC) permissions for remote tasks.This role grants access to the Microsoft Endpoint Manager admin center and can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender Advanced Threat Protection.
 
 To view the permission for an Intune RBAC role, go to (**Tenant admin** > **Intune roles** > *select a role* > **Permissions**).
@@ -342,7 +348,7 @@ We’ll soon release updates to the following security baselines (**Endpoint sec
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
-### Use Endpoint security configuration details to identify the source of policy conflicts for devices<!-- 7567503 IDready idstaged  -->
+### Use Endpoint security configuration details to identify the source of policy conflicts for devices<!-- 7567503  idstaged  -->
 To aid in conflict resolution, you’ll soon be able to drill-in through a security baseline profile to view the *Endpoint security configuration* for a selected device. From there, you can select settings that show a *Conflict* or *Error* and continue to drill-in further to view a list of details that includes the profiles and policies that are part of the conflict. If you then select a policy that is a source of a conflict, Intune opens that policies Overview pane from where you can review or modify the policies configuration. (**Endpoint security** > **Security baselines** > *selected baseline* > **Profiles**> *selected profile* > **Device status** > **Endpoint security configuration** > *settings that show conflicts or errors*) or {**Devices** > *select a device* > **Endpoint security configuration** > *select a profile or baseline* > *Select a setting from the list of settings applied to the device*).
 
 The following policy types can be identified as a source of conflict when you drill in through a security baseline:
