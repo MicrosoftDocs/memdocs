@@ -60,9 +60,9 @@ If after enrollment your organization enforces a new security requirement, such 
 
 To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## Prerequisties  
+## Prerequisites    
 
-* Go to the App store to download and install the [Intune Company Portal app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) on your device. 
+* Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
 
