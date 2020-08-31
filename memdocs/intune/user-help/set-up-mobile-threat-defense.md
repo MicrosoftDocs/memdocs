@@ -129,9 +129,9 @@ Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=20109
 
 ### Share app logs with IT support  
 You can also send your app logs to your IT support person to provide them with more context about a failed installation.  
-* Android users: [Upload and email your logs](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) from Company Portal.   
+* Android users: [Upload and email your logs](./send-logs-to-your-it-admin-by-email-android.md) from Company Portal.   
 
-* iOS device users: [Retrieve and send your logs](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
+* iOS device users: [Retrieve and send your logs](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) from Microsoft Edge for iOS.  
 
 
 ## Next steps  
@@ -142,4 +142,3 @@ See the following articles to learn more about how managed apps work, how to get
 * [Use managed apps on your iOS device](use-managed-apps-on-your-device-ios.md)  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
-
