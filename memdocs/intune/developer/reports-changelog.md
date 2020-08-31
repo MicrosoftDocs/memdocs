@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -43,7 +43,7 @@ The following table lists the added property to the [device](../developer/intune
 |    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Added    |    The unique network identifier of this device.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Added    |    The version of Office 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Added    |    The version of Microsoft 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
 
 The following table lists the added property to the [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) entity in the Intune Data Warehouse.
 
@@ -54,6 +54,14 @@ The following table lists the added property to the [devicePropertyHistories](..
 
 ## 2004 
 _Released April 2020_
+
+### v1.0 changes
+
+The following table lists the added property to the [devices](../developer/intune-data-warehouse-collections.md#devices) entity in the Intune Data Warehouse.
+
+|    Collection                          |    Change     |    Description information                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Added    |    Windows Operating System edition.                                                                                                                                                                                                                                                                     |
 
 ### Beta changes
 
@@ -74,7 +82,7 @@ The following table lists the added properties to the **device** entity in the I
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Added    |    The unique network identifier of this device.                                                                                                                                                                                                                                                                     |
 |    model    |    Added    |    The device model.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Added    |    The version of Office 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Added    |    The version of Microsoft 365 that is installed on the device.                                                                                                                                                                                                                                                                     |
 
 The following table lists the added properties to the **devicePropertyHistory** entity in the Intune Data Warehouse.
 

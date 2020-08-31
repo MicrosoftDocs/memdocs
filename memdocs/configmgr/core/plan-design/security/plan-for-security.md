@@ -388,7 +388,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Co-management](../../../comanage/overview.md)  
 
-- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)  
+- [Deploy user-available apps](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)
 
 - [Microsoft Store for Business online apps](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 
@@ -401,7 +401,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Community Hub](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -413,7 +413,7 @@ Configuration Manager integrates with Azure Active Directory (Azure AD) to enabl
 For more information on connecting your site to Azure AD, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md).
 
 
-For more information about Azure AD, see [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).
+For more information about Azure AD, see [Azure Active Directory documentation](/azure/active-directory/).
 
 
 
@@ -445,5 +445,4 @@ For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-
 
 - [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
 
-- [PKI certificate requirements](../network/pki-certificate-requirements.md)  
-
+- [PKI certificate requirements](../network/pki-certificate-requirements.md)

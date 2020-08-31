@@ -179,15 +179,15 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps** > **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
-5. In the **Managed Google Play** pane, choose **Refresh**.  
+3. Select **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
+5. In the **Managed Google Play** pane, choose **Sync**.  
     The page updates the time and status of the last sync.
 6. In the Microsoft Endpoint Manager admin center select  **Apps** > **All apps**.  
     The newly available Managed Google Play app is displayed.
 
 ## Assigning a Managed Google Play app to Android Enterprise work profile and corporate-owned work profile devices
 
-When the app is displayed in the **App licenses** node of the **Apps** workload pane, you can [assign it just as you would assign any other app](/mem/intune/apps/apps-deploy) by assigning the app to groups of users.
+When the app is displayed in the **App licenses** node of the **Apps** workload pane, you can [assign it just as you would assign any other app](./apps-deploy.md) by assigning the app to groups of users.
 
 After you assign the app, it is installed (or available for install) on the devices of the users that you've targeted. The user of the device is not asked to approve the installation. For more information about Android Enterprise work profile devices, see [Set up enrollment of Android Enterprise work profile devices](../enrollment/android-work-profile-enroll.md). 
 

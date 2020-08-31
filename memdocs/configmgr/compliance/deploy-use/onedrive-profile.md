@@ -16,13 +16,13 @@ manager: dougeby
 
 # OneDrive for Business Profiles
 
-Starting in Configuration Manager version 1902, you can create OneDrive for Business Profiles for moving Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. In each profile, you can specify settings for moving the Windows known folders. For more information on OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+Starting in Configuration Manager version 1902, you can create OneDrive for Business Profiles for moving Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. In each profile, you can specify settings for moving the Windows known folders. For more information on OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders). <!--3556021-->
 
 ## Prerequisites
 
-- [Find your Office 365 tenant ID](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Find your Microsoft 365 tenant ID](/onedrive/find-your-office-365-tenant-id)  
 
-- Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).  
 
 ## <a name="bkmk_odfb"></a> Move Windows known folders to OneDrive
 <!--3556021-->
@@ -41,7 +41,7 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 5. On the **Settings** page:
 
-    1. Specify your Office 365 tenant ID.  
+    1. Specify your Microsoft 365 tenant ID.  
 
     2. Select one of the following options to move the known folders to OneDrive:  
 

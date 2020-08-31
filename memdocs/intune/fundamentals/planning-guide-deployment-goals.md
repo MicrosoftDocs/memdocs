@@ -37,9 +37,9 @@ Having a good deployment plan begins with first identifying your organization's 
 
 Deployment goals are the long-term achievements you intend to gain by deploying Intune in your organization. Listed below are some examples of such goals along with the description and business value for each.
 
-- **Integrate with Office 365 and support the use of Office mobile apps**
+- **Integrate with Microsoft 365 and support the use of Office mobile apps**
 
-  - **Description:** Provide tight integration with Office 365 and the use of Office mobile apps with app protection.
+  - **Description:** Provide tight integration with Microsoft 365 and the use of Office mobile apps with app protection.
 
   - **Business value:** Secure and improved user experience by allowing users to use apps they are familiar with and prefer.
 

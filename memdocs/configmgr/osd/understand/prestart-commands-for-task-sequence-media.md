@@ -5,14 +5,13 @@ description: "Create a script to use for the prestart command, distribute the co
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
+
 # Prestart commands for task sequence media in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*

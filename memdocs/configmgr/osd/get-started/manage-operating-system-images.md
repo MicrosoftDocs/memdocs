@@ -5,13 +5,11 @@ description: Learn the methods to manage OS images stored in Windows image (WIM)
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Manage OS images with Configuration Manager
@@ -86,7 +84,7 @@ Before you can use an OS image, add it to your Configuration Manager site.
 
 5. Complete the wizard.  
 
-For the PowerShell cmdlet equivalent of this console wizard, see [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+For the PowerShell cmdlet equivalent of this console wizard, see [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Next, distribute the OS image to distribution points.  
 
@@ -119,4 +117,4 @@ Use multicast deployments to allow more than one computer to simultaneously down
 
          If you select **Transfer this package only via multicast**, you must also specify the task sequence deployment option to **Download content locally when needed by the running task sequence**. For more information, see [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Select **OK** to save the settings and close the image properties.  
+5. Select **OK** to save the settings and close the image properties.

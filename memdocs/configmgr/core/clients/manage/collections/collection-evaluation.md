@@ -21,7 +21,7 @@ It's important to understand collection evaluation behavior so you can make appr
 
 ## Evaluation process
 
-The [colleval.log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) records when the collection evaluator creates, changes, and deletes collections.
+The [colleval.log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) records when the collection evaluator creates, changes, and deletes collections.
 
 At a high level, each individual collection evaluation and update follows these steps:
 
@@ -99,5 +99,5 @@ In the following example, installing DNS on the existing server makes it a membe
 ## Next steps
 - [How to create collections](create-collections.md)
 - [Best practices for collections](best-practices-for-collections.md)
-- [Collection Evaluation Viewer](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia

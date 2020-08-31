@@ -50,8 +50,8 @@ You can also make sure that the time and date on the user's device are set corre
 
 Your managed device users can collect enrollment and diagnostic logs for you to review. User instructions for collecting logs are provided in:
 
-- [Send Android enrollment errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Send iOS/iPadOS errors to your IT admin](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Send Android enrollment errors to your IT admin](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Send iOS/iPadOS errors to your IT admin](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## General enrollment issues
@@ -70,7 +70,7 @@ Check to see that the user isn't assigned more than the maximum number of device
 
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices.
 
-3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll any more until:
+3. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
     - [Existing devices are removed](../remote-actions/devices-wipe.md), or
     - You increase the device limit by [setting device restrictions](enrollment-restrictions-set.md).
 
@@ -124,12 +124,12 @@ To avoid hitting device caps, be sure to remove stale device records.
 **Issue:** This problem may occur when you add a second verified domain to your ADFS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
 
-<strong>Resolution:</strong> Microsoft Office 365 Customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
+<strong>Resolution:</strong> Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
 - use single sign-on (SSO) through AD FS 2.0, and
 - have multiple top-level domains for users' UPN suffixes within their organization (for example, @contoso.com or @fabrikam.com).
 
 
-A [rollup for AD FS 2.0](https://support.microsoft.com/kb/2607496) works in conjunction with the <strong>SupportMultipleDomain</strong> switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers. For more information, see [this blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+A [rollup for AD FS 2.0](https://support.microsoft.com/kb/2607496) works in conjunction with the <strong>SupportMultipleDomain</strong> switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers. For more information, see [this blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## Android issues
@@ -219,7 +219,7 @@ The user might be able to retrieve the missing certificate by following the inst
 
 After entering their corporate credentials and getting redirected for federated login, users might still see the missing certificate error. In this case, the error may mean that an intermediate certificate is missing from your Active Directory Federation Services (AD FS) server
 
-The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](https://technet.microsoft.com/library/cc783349.aspx). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
+The certificate error occurs because Android devices require intermediate certificates to be included in an [SSL Server hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Currently, a default AD FS server or WAP - AD FS Proxy server installation sends only the AD FS service SSL certificate in the SSL server hello response to an SSL Client hello.
 
 To fix the issue, import the certificates into the Computers Personal Certificates on the AD FS server or proxies as follows:
 
@@ -229,7 +229,7 @@ To fix the issue, import the certificates into the Computers Personal Certificat
 4. Choose the **Certification Path** tab to see the certificate's parent certificate/s.
 5. On each parent certificate, choose **View Certificate**.
 6. Choose **Details** > **Copy to file…**.
-7. Follow the wizard prompts to export or save the public key of the parent certificate to the a file location of your choice.
+7. Follow the wizard prompts to export or save the public key of the parent certificate to the file location of your choice.
 8. Right-click **Certificates** > **All Tasks** > **Import**.
 9. Follow the wizard prompts to import the parent certificate(s) to **Local Computer\Personal\Certificates**.
 10. Restart the AD FS servers.
@@ -294,11 +294,13 @@ Once enrolled, the devices return to a healthy state and regain access to compan
 
 Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
-For more information, see [Get-AdfsEndpoint documentation](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+For more information, see [Get-AdfsEndpoint documentation](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-For more information, see [Best practices for securing Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). For help in determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
+For more information, see [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help in determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
 - contact Microsoft Support if you use ADFS
 - contact your third party identity vendor.
 
@@ -426,7 +428,7 @@ The account certificate of the previous account is still present on the computer
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |The clock on the client computer isn't set to the correct time.|Make sure that the clock and the time zone on the client computer are set to the correct time and time zone.|
 |0x80240438, 0x80CF0438, 0x80CF402C|can't connect to the Intune service. Check the client proxy settings.|Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
-|0x80240438, 0x80CF0438|Proxy settings in Internet Explorer and Local System aren't configured.|can't connect to the Intune service. Check the client proxy settings.Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
+|0x80240438, 0x80CF0438|Proxy settings in Internet Explorer and Local System aren't configured.|can't connect to the Intune service. Check the client proxy settings. Verify that Intune supports the proxy configuration on the client computer. Verify that the client computer has Internet access.|
 |0x80043001, 0x80CF3001, 0x80043004, 0x80CF3004|Enrollment package is out of date.|Download and install the current client software package from the Administration workspace.|
 |0x80043002, 0x80CF3002|Account is in maintenance mode.|You can't enroll new client computers when the account is in maintenance mode. To view your account settings, sign in to your account.|
 |0x80043003, 0x80CF3003|Account is deleted.|Verify that your account and subscription to Intune is still active. To view your account settings, sign in to your account.|

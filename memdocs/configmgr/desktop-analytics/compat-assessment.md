@@ -175,13 +175,13 @@ When you update the Configuration Manager site and clients to version 1906, clie
 
 #### 16-bit apps
 
-Remove all 16-bit components from applications, and replace with 32-bit or 64-bit equivalents. For more information, see [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+Remove all 16-bit components from applications, and replace with 32-bit or 64-bit equivalents. For more information, see [The Windows Vista and Windows Server 2008 Developer Story: Application Compatibility Cookbook](/previous-versions/aa480152\(v=msdn.10\)).
 
 The other option is to enable NT Virtual DOS Machine (NTVDM) for support on Windows 10.
 
 #### Requires admin privileges
 
-The app requires the user to have administrative access to the device. Use an app manifest for these apps that require administrator permissions. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+The app requires the user to have administrative access to the device. Use an app manifest for these apps that require administrator permissions. For more information, see [Create and embed an application manifest](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
@@ -191,7 +191,7 @@ Many Java applications rely on a separately installed Java Runtime Environment (
 
 #### Not-DPI aware
 
-The app may have display issues with advanced screen resolutions on Windows 10. Use an app manifest to avoid any issues with high DPI resolutions. For more information, see [Application manifests](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+The app may have display issues with advanced screen resolutions on Windows 10. Use an app manifest to avoid any issues with high DPI resolutions. For more information, see [Application manifests](/windows/desktop/SbsCs/application-manifests).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
@@ -215,13 +215,13 @@ The .NET Framework version 1.0 isn't supported on Windows 10. Version 1.1 isn't 
 
 #### .NET Framework 2.0/3.0
 
-.NET 2.0 and 3.5 frameworks are supported on Windows 10. You may need to enable the Windows feature. For more information, see [Install the .NET Framework 3.5 on Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+.NET 2.0 and 3.5 frameworks are supported on Windows 10. You may need to enable the Windows feature. For more information, see [Install the .NET Framework 3.5 on Windows 10](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### UI access
 
 Applications with UI access can bypass user interface control levels to drive input to higher privilege windows on the desktop. Only use this setting for user interface assistive technology applications.
 
-If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+If you're not using accessibility features in your app, set the UI access flag in the app manifest to false. For more information, see [Create and embed an application manifest](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics recommends the app for pilot testing to discover any regressions.
 
@@ -240,4 +240,4 @@ You can find the assessment on the driver in Desktop Analytics. In the list of d
 
 ## See also
 
-The FastTrack Center Benefit for Windows 10 provides access to **Desktop App Assure**. This benefit is a new service designed to address issues with Windows 10 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+The FastTrack Center Benefit for Windows 10 provides access to **Desktop App Assure**. This benefit is a new service designed to address issues with Windows 10 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](/fasttrack/win-10-app-assure).

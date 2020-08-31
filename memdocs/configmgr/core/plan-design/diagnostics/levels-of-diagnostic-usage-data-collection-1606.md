@@ -11,9 +11,8 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1606 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -320,7 +319,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
     -   Classifications that are synced by Software Update Point
 
@@ -346,7 +345,7 @@ Beginning with Configuration Manager version 1606, this level includes the follo
 
 - ***[New]*** **Miscellaneous**
 
-    - ***[New]*** Count of sites with Wake On Lan (WOL)
+    - ***[New]*** Count of sites with Wake on LAN (WOL)
 
 
 

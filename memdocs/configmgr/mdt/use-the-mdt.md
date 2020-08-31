@@ -326,7 +326,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 - **UFD.** In this method, the required encryption keys are stored on a UFD, which must be present in the computer when the computer starts. This is the preferred method if the target computer does not support TPM.  
 
-  For more information on BitLocker, see [BitLocker Drive Encryption Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).  
+  For more information on BitLocker, see [BitLocker Drive Encryption Overview](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).  
 
 ###  <a name="EvaluatingTargetComputerReadiness"></a> Evaluating Target Computer Readiness  
  As part of the planning process, evaluate target computer readiness for the deployment of the target operating system, device drivers, applications, and other components. Evaluate target computer readiness using automated hardware and software inventory tools, such as Configuration Manager or the Microsoft Assessment and Planning (MAP) Toolkit.  
@@ -408,18 +408,18 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
  Review the following resources to identify performance and power-management configuration settings to include when performing your target computer deployments:  
 
--   [Windows Performance Analysis Tools](https://docs.microsoft.com/windows-hardware/test/wpt/)  
+-   [Windows Performance Analysis Tools](/windows-hardware/test/wpt/)  
 
--   [Sustainable Computing: Enforce Power Management Settings in your Organization with Group Policy](https://technet.microsoft.com/magazine/dd252731.aspx)  
+-   [Sustainable Computing: Enforce Power Management Settings in your Organization with Group Policy](/previous-versions/technet-magazine/dd252731(v=msdn.10))  
 
--   [Mobile Battery Life Solutions for Windows 7](https://msdn.microsoft.com/windows/hardware/gg487547)  
+-   [Mobile Battery Life Solutions for Windows 7](/previous-versions/windows/hardware/design/dn641606(v=vs.85))  
 
--   [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/windows/hardware/gg463243.aspx)  
+-   [Power Policy Configuration and Deployment in Windows](/previous-versions/windows/hardware/design/dn642106(v=vs.85))  
 
 ###  <a name="PlanningTargetComputerSecurity"></a> Planning Target Computer Security  
  When planning the configuration of the Windows operating systems for target computers, ensure that the target computers are deployed in compliance with the requirements in your organization. Microsoft has developed Security Solution Accelerators that can help you deploy your target computers in a secured configuration.  
 
- The Security Solution Accelerators include guidance and tools to help you secure Windows. For more information about deploying target computers in a secured configuration using these solution accelerators, see [Security Solution Accelerators](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
+ The Security Solution Accelerators include guidance and tools to help you secure Windows. For more information about deploying target computers in a secured configuration using these solution accelerators, see [Security Solution Accelerators](/previous-versions/tn-archive/cc936627(v=technet.10)).  
 
 ###  <a name="ChoosingLTIZTIorUDIDeployments"></a> Choosing LTI, ZTI, or UDI Deployments  
  LTI, ZTI, and UDI deployments use the same common set of scripts and configuration files (such as CustomSettings.ini) for deploying target computers. Table 6 compares LTI, ZTI, and UDI deployments.  
@@ -615,7 +615,7 @@ Table 4 lists the advantages and disadvantages of the thick, thin, and hybrid im
 
 -   Deployment will fail on computers configured for a language other than English when the Windows Media® Player Network Sharing Service is run. As a workaround, stop the Windows Media Player Network Sharing Service until after deployment is complete.  
 
--   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq) in the Microsoft Download Center.  
+-   You can use AD DS to back up BitLocker and TPM data. Recovery information includes the recovery password for each encrypted value, the TPM owner password, and the information necessary to associate recovery information with computers and volumes. Another option is to save a package containing the keys used to encrypt data in addition to the recovery password required to access those keys. For more information, see [BitLocker FAQ for AD DS](/windows/security/information-protection/bitlocker/bitlocker-and-adds-faq) in the Microsoft Download Center.  
 
 -   When enabling BitLocker, key files are generated as hidden, read-only system files. To see them, set the Windows Explorer option to show hidden and system files.  
 
@@ -2918,7 +2918,7 @@ Table 52 lists the task sequence templates in MDT.
    |**General Settings** |- In **Task sequence ID**, type ***task_sequence_id*** (where *task_sequence_id* is a unique identifier for the task sequence you are creating).<br /><br /> Although you can change a task sequence's name and comments later, you cannot change a task sequence's ID. Before creating task sequences, create a naming scheme to use in creating task sequence IDs that will provide meaningful information about each task sequence. An example naming scheme is *Version-Edition-Level-Label*, where *Version* is the operating system version (Win8, Win2012), *Edition* is the operating system edition (Enterprise, Standard, Ultimate), *Level* is the service pack level (SP1, SP2), and *Label* is a descriptive label that identifies the customizations.<br /><br /> - In **Task sequence name**, type ***task_sequence_name*** (where *task_sequence_name* is a descriptive name for the task sequence you are creating).<br /><br /> - In **Task sequence comments**, type ***task_sequence_comment*** (where *task_sequence_comment* is text that describes the purpose or usage of the task sequence).<br /><br /> - Click **Next**.|  
    |**Select Template** |In **The following task sequence templates are available. Select the one you would like to use as a starting point**, select ***task_sequence***, and then click **Next**.|  
    |**Select OS** |In **The following operating system images are available to be deployed with this task sequence. Select one to use**, select ***operating_system*** (where *operating_system* is the operating system in the Operating Systems node in the Deployment Workbench that you want to deploy to the resource or target computer), and then click **Next**.|  
-   |**Specify Product Key** |a. Click one of the following options based on the requirements of your organization:<br /><br /> - **Do not specify a product key at this time**. Select this option when a product key is not required when deploying Windows; when the product key will be provided in the Deployment Wizard; or when using volume licenses that are activated using KMS.<br /><br /> -                                          **Specify a multiple activation key (MAK) for activating this operating system**. Select this option when deploying Windows using MAK product keys in the deployment. MAK product keys are used by Microsoft Volume Licensing customers.<br /><br /> -                                          **Specify the product key for this operating system**. Select this option when deploying retail product key.<br /><br /> For more information about Volume Activation and product keys in MDT, see [Volume Activation Overview](https://technet.microsoft.com/library/hh831612.aspx).<br /><br /> b. Click **Next**.|  
+   |**Specify Product Key** |a. Click one of the following options based on the requirements of your organization:<br /><br /> - **Do not specify a product key at this time**. Select this option when a product key is not required when deploying Windows; when the product key will be provided in the Deployment Wizard; or when using volume licenses that are activated using KMS.<br /><br /> -                                          **Specify a multiple activation key (MAK) for activating this operating system**. Select this option when deploying Windows using MAK product keys in the deployment. MAK product keys are used by Microsoft Volume Licensing customers.<br /><br /> -                                          **Specify the product key for this operating system**. Select this option when deploying retail product key.<br /><br /> For more information about Volume Activation and product keys in MDT, see [Volume Activation Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612(v=ws.11)).<br /><br /> b. Click **Next**.|  
    |**OS Settings** |- In **Full Name**, type ***user_full_name*** (where *user_full_name* is the name of the user of the target computer).<br /><br /> - In **Organization**, type ***organization_name*** (where *organization_name* is the name of the organization).<br /><br /> - In **Internet Explorer Home Page**, type ***home_url*** (where *home_url* is the Uniform Resource Locator [URL] of the website to be the default site when starting Internet Explorer).<br /><br /> - Click **Next**.|  
    |**Admin Password** |In **Administrator Password** and **Please confirm Administrator Password**, type ***password*** (where *password* is the password to be assigned to the built-in Administrator account on the reference or target computer), and then click **Next**.|  
    |**Summary** |Click **Next**.|  
@@ -4260,7 +4260,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 4.  In the **Task Sequence OS Condition** dialog box, in the **Condition box**, click ***condition*** (where *condition* is the logical operation to use in the condition), and then click **OK**.  
 
 #####  <a name="AddWMIQueriestoTaskSequenceStepConditions"></a> Add WMI Queries to Task Sequence Step Conditions  
- You can use WMI queries in a task sequence condition. WMI is the primary management technology for Windows operating systems and enables consistent and uniform management, control, and monitoring of systems throughout the enterprise. Based on industry standards, WMI allows you to query, change, and monitor configuration settings on desktop and server systems, applications, networks, and other enterprise components. You can also write scripts that use the WMI scripting library to work with WMI and create a wide range of systems management and monitoring scripts. For more information about WMI, see the [WMI Scripting Primer](https://technet.microsoft.com/library/ee156560.aspx).  
+ You can use WMI queries in a task sequence condition. WMI is the primary management technology for Windows operating systems and enables consistent and uniform management, control, and monitoring of systems throughout the enterprise. Based on industry standards, WMI allows you to query, change, and monitor configuration settings on desktop and server systems, applications, networks, and other enterprise components. You can also write scripts that use the WMI scripting library to work with WMI and create a wide range of systems management and monitoring scripts. For more information about WMI, see the [WMI Scripting Primer](/previous-versions/tn-archive/ee156560(v=technet.10)).  
 
  To configure a condition based on a WMI condition, provide the following information in the **Task Sequence WMI Condition** dialog box:  
 
@@ -4487,7 +4487,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
   -   SkipBitLocker=YES  
 
-  For more information about enabling BitLocker, see [BitLocker Frequently Asked Questions](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  
+  For more information about enabling BitLocker, see [BitLocker Frequently Asked Questions](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  
 
 ####  <a name="ConfigureNetworkTaskSequenceSteps"></a> Configure Network Task Sequence Steps  
  You can customize task sequences in the Deployment Workbench to configure the network settings on the target computer. To configure task sequence steps that perform network-related functions, perform the following steps:  
@@ -7570,7 +7570,7 @@ Table 63 lists the default selection profiles in the Deployment Workbench.
 
 -   Applying security and compliance configuration settings using Group Policy Object Packs as described in [Applying Group Policy Object Packs](#ApplyingGroupPolicyObjectPacks)  
 
--   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
+-   Enabling participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement)(CEIP) and [Windows Error Reporting](/windows/win32/wer/windows-error-reporting) (WER) as described in [Enabling Participation in CEIP and WER](#EnablingParticipationinCEIPandWER)  
 
 -   Configuring the task sequence steps that configure Windows roles and features on the target computer as described in [Configuring Roles and Features Task Sequence Steps](#ConfiguringRolesandFeaturesTaskSequenceSteps)  
 
@@ -8288,7 +8288,7 @@ OverRideProductKey=11111-22222-33333-44444-55555
 
 - **Clear OSDDiskIndexVariable**. This step clears the **OSDDiskIndexVariable** task sequence variable that was set during the **Create VHD Disk** task sequence step. Clearing the **OSDDiskIndexVariable** task sequence variable allows other disks to be partitioned and formatted as a part of the task sequence.  
 
-  For more information about VHDs with native boot, see [Understanding Virtual Hard Disks with Native Boot](https://technet.microsoft.com/library/hh825689.aspx).  
+  For more information about VHDs with native boot, see [Understanding Virtual Hard Disks with Native Boot](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825689(v=win.10)).  
 
 ####  <a name="ConfiguretheCreateVHDDiskTaskSequenceStepType"></a> Configure the Create VHD Disk Task Sequence Step Type  
  The **Create VHD Disk** task sequence step type creates a .vhd file in preparation to performing a deployment to a VHD with native boot support. Table 160 describes how to configure the **Create VHD Disk** task sequence step type.  
@@ -8319,7 +8319,7 @@ OverRideProductKey=11111-22222-33333-44444-55555
 
  For more information, see the following resources:  
 
--   [UEFI Support and Requirements for Windows Operating Systems](https://msdn.microsoft.com/windows/hardware/gg463144.aspx)  
+-   [UEFI Support and Requirements for Windows Operating Systems](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10))  
 
 -   [Recommended UEFI-Based Disk-Partition Configurations](https://technet.microsoft.com/library/dd744301\(WS.10\).aspx)  
 
@@ -8461,7 +8461,7 @@ OSDMigrateConfigFiles=MigApp.xml,MigUser.xml
 
 - You may be able to use an offline migration to recover files and settings if a computer no longer starts properly.  
 
-  The disadvantage of performing an offline user state migration is that some user settings are not captured but rather can only be captured while running USMT in the target operating system. For a list of the settings that are not captured when performing an offline user state capture, see [What Does USMT Migrate?](https://technet.microsoft.com/library/hh825238.aspx)  
+  The disadvantage of performing an offline user state migration is that some user settings are not captured but rather can only be captured while running USMT in the target operating system. For a list of the settings that are not captured when performing an offline user state capture, see [What Does USMT Migrate?](/previous-versions/windows/hh825238(v=win.10))  
 
   You can perform USMT offline user state migration in the MDT:  
 
@@ -8893,9 +8893,9 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 
  Review the following resources to help you resolve device driver signing issues:  
 
--   [Driver Signing Requirements for Windows](https://msdn.microsoft.com/windows/hardware/gg487317.aspx)  
+-   [Driver Signing Requirements for Windows](/previous-versions/windows/hardware/design/dn653563(v=vs.85))  
 
--   [Device Management and Installation Step-by-Step Guide: Signing and Staging Device Drivers in Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/dd919230.aspx)  
+-   [Device Management and Installation Step-by-Step Guide: Signing and Staging Device Drivers in Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd919230(v=ws.10))  
 
 ###  <a name="RunningOrchestratorRunbooks"></a> Running Orchestrator Runbooks  
  System Center 2012 Orchestrator can tie disparate tasks and procedures together by using the Runbook Designer graphical user interface to create reliable, flexible, and efficient end-to-end solutions in the IT environment.  
@@ -9048,7 +9048,7 @@ DriverSelectionProfile =%MAKE%-%MODEL%-Win8-%ARCHITECTURE%
 >  The appropriate GPO pack is selected based on the operating system being deployed. If no matching GPO pack can be found, then no GPO pack will be applied.  
 
 ###  <a name="EnablingParticipationinCEIPandWER"></a> Enabling Participation in CEIP and WER  
- MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
+ MDT includes a new task sequence step that automates the configuration of participation in [Windows Customer Experience Improvement Program](https://privacy.microsoft.com/privacystatement) (CEIP) and [Windows Error Reporting](/windows/win32/wer/windows-error-reporting) (WER). The **Opt In to CEIP and WER** task sequence step is used to automate this participation.  
 
 > [!NOTE]
 >  Although you can use MDT task sequences to enable CEIP and WER for Windows operating systems (only when the corresponding task sequence step is enabled), this is separate from the CEIP information gathered when you opt in to the MDT CEIP program. For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).  
@@ -9243,7 +9243,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 8. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
-   For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, see [Dcpromo](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerasaReplicainanExistingDomain"></a> Deploy a New Domain Controller as a Replica in an Existing Domain  
  Using this option, deploy an existing domain controller as a new domain controller by replicating it into an existing environment. Use this option when deploying a new domain controller into an existing environment if replication will obtain the existing domain information from AD DS.  
@@ -9282,7 +9282,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 9. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
-   For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, see [Dcpromo](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerinaNewDomainTreeinanExistingForest"></a> Deploy a New Domain Controller in a New Domain Tree in an Existing Forest  
  Using this option, deploy a domain controller that contains a new tree into an existing forest environment. Use this option when deploying a child domain into an existing forest environment.  
@@ -9325,7 +9325,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 11. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
-    For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+    For more information about **DCPROMO** command-line options, see [Dcpromo](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployaNewDomainControllerinaNewDomaininanExistingForest"></a> Deploy a New Domain Controller in a New Domain in an Existing Forest  
  Using this option, deploy a domain controller that contains a new domain into an existing forest environment. Use this option when deploying a new child domain into an existing forest environment.  
@@ -9368,7 +9368,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 11. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
-    For more information about **DCPROMO** command-line options, see [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+    For more information about **DCPROMO** command-line options, see [Dcpromo](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="DeployanRODCinanExistingDomain"></a> Deploy an RODC in an Existing Domain  
  Using this option, deploy a domain controller that contains a read-only replica of the existing domain into an existing forest environment. Use this option to deploy a domain controller that contains an un-editable replica of a domain structure into an existing forest environment.  
@@ -9407,7 +9407,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 9. In the **Advanced Properties** section, complete the task configuration as described in [Configure AD DS Advanced Properties](#ConfigureADDSAdvancedProperties), and then click **OK**.  
 
-   For more information about **DCPROMO** command-line options, go to [Dcpromo](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
+   For more information about **DCPROMO** command-line options, go to [Dcpromo](/windows-server/identity/ad-ds/deploy/install-active-directory-domain-services--level-100-#BKMK_PS).  
 
 #####  <a name="ConfigureADDSAdvancedProperties"></a> Configure AD DS Advanced Properties  
  To configure AD DS advanced properties, perform the following steps:  
@@ -9559,7 +9559,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 4.  Click **OK**.  
 
 #####  <a name="ConfigureDHCPScopesfortheDHCPServerRole"></a> Configure DHCP Scopes for the DHCP Server Role  
- Using this option, configure the DHCP scopes that contain the rules and active scopes used on the DHCP server. For more information about DHCP scope configuration options and for guidance on using each configuration option, see [Chapter 6 - Dynamic Host Configuration Protocol](https://technet.microsoft.com/library/bb727003.aspx) in TCP/IP Fundamentals for Microsoft Windows.  
+ Using this option, configure the DHCP scopes that contain the rules and active scopes used on the DHCP server. For more information about DHCP scope configuration options and for guidance on using each configuration option, see [Chapter 6 - Dynamic Host Configuration Protocol](/previous-versions//bb727003(v=technet.10)) in TCP/IP Fundamentals for Microsoft Windows.  
 
 ###### To configure and deploy DHCP scopes  
 
@@ -9662,7 +9662,7 @@ cscript.exe %SCRIPTROOT%\ZTIOptIn.wsf /CEIP:YES /WER:YES
 
 8.  Click **046 WINS/NBT Node Type**, and then type one of the following codes: **44**, **46**, or **47**.  
 
-     For more information about how to determine the correct option for the environment, see [Managing DHCP Options](https://technet.microsoft.com/library/cc958929.aspx).  
+     For more information about how to determine the correct option for the environment, see [Managing DHCP Options](/previous-versions/windows/it-pro/windows-2000-server/cc958929(v=technet.10)).  
 
 9. Click **060 PXE Client**; then, in the **String Value** box, type the PXE client string (typically, PXEClient).  
 
@@ -10054,7 +10054,7 @@ Import-Module MyCustomModule
 
 -   Progress is shown as a percentage of total completion for the current script and any messages that are being displayed.  
 
--   Progress is updated using the standard [Write-Progress](https://technet.microsoft.com/library/dd347663.aspx) cmdlet.  
+-   Progress is updated using the standard [Write-Progress](/previous-versions//dd347663(v=technet.10)) cmdlet.  
 
 > [!NOTE]
 >  Unlike some of the other scripts in MDT, a separate log file is not generated for the task sequence step running the Windows PowerShell script. Logging is only performed in the BDD.LOG file.  
@@ -10230,7 +10230,7 @@ Import-Module MyCustomModule
 |Modify the configuration information stored in the MDT DB|db_datawrite database role in the MDT DB or rights to the individual tables and view in the MDT DB|  
 |View the configuration information stored in the MDT DB|db_datareader database role in the MDT DB or rights to the individual tables and views in the MDT DB|  
 
- For more information on how to assign these permissions see [Identity and Access Control (Database Engine)](https://technet.microsoft.com/library/bb510418).  
+ For more information on how to assign these permissions see [Identity and Access Control (Database Engine)](/previous-versions/sql/sql-server-2008-r2/bb510418(v=sql.105)).  
 
 ###  <a name="SelectingtheMethodsforApplyingConfigurationSettings"></a> Selecting the Methods for Applying Configuration Settings  
  After preparing the MDT DB, select the method for applying MDT configuration settings using the MDT DB. You can manage the configuration settings stored in the MDT DB using the nodes beneath the Database node in a Deployment Workbench deployment share.  
@@ -11160,7 +11160,7 @@ Parameters=DefaultGateway
 -   ZTI and UDI support DaRT in boot images as described in [Supporting DaRT in ZTI and UDI Boot Images](#SupportingDaRTinZTIandUDIBootImages).  
 
 ###  <a name="SupportingWindowsREandDaRTinLTI"></a> Supporting Windows RE and DaRT in LTI  
- MDT supports the ability to deploy Windows RE partitions to computers. In addition, if your organization is licensed for the [Microsoft Desktop Optimization Package](https://technet.microsoft.com/windows/mdop.aspx) (MDOP), you can include DaRT in the Windows RE partitions.  
+ MDT supports the ability to deploy Windows RE partitions to computers. In addition, if your organization is licensed for the [Microsoft Desktop Optimization Package](/microsoft-desktop-optimization-pack/) (MDOP), you can include DaRT in the Windows RE partitions.  
 
 > [!NOTE]
 >  MDT does not support Windows RE in Windows 7 when using the Windows ADK.  
@@ -11188,7 +11188,7 @@ Parameters=DefaultGateway
   The **Add Windows Recovery (WinRE)** task sequence step runs when the **PrepareWinRE** property is set to a value of **YES**. For more information about the **PrepareWinRE** property, see the "PrepareWinRE" property in the MDT document *Toolkit Reference*.  
 
 ####  <a name="EnableDaRTSupportinLTI"></a> Enable DaRT Support in LTI  
- DaRT is included as a part of the [Microsoft Desktop Optimization Package](https://technet.microsoft.com/windows/mdop.aspx), which is provided as a part of Microsoft Software Assurance. You can include DaRT in the Windows RE partitions.  
+ DaRT is included as a part of the [Microsoft Desktop Optimization Package](/microsoft-desktop-optimization-pack/), which is provided as a part of Microsoft Software Assurance. You can include DaRT in the Windows RE partitions.  
 
  The following is a summary of the DaRT features:  
 
@@ -11309,7 +11309,7 @@ Parameters=DefaultGateway
 
      For more information about how to create a new DaRT recovery image for:  
 
-    -   DaRT 7, see [How to create & test Diagnostics & Recovery Toolkit (DaRT 7) Recovery Image–Part I](https://blogs.technet.microsoft.com/aviraj/2011/10/01/how-to-create-test-diagnostics-recovery-toolkit-dart-7-recovery-imagepart-i/).  
+    -   DaRT 7, see [How to create & test Diagnostics & Recovery Toolkit (DaRT 7) Recovery Image–Part I](/archive/blogs/aviraj/how-to-create-test-diagnostics-recovery-toolkit-dart-7-recovery-imagepart-i).  
 
     -   DaRT 8, see the section, "Create the DaRT 8 Recovery Image," in the *Microsoft Diagnostics and Recovery Toolset Administrator's Guide*, which is included with DaRT 8.  
 

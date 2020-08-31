@@ -5,15 +5,14 @@ description: "Learn about the levels of diagnostics and usage data that Configur
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
 ---
+
 # Levels of diagnostic usage data collection for version 1511 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -217,7 +216,7 @@ Beginning with Configuration Manager version 1511, this level includes the follo
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
 -   **SQL/performance data:**  
 

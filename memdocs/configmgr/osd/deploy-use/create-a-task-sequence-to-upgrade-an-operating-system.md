@@ -5,7 +5,7 @@ description: Use a task sequence to automatically upgrade from Windows 7 or late
 ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
@@ -61,7 +61,7 @@ To upgrade the OS on clients, create a task sequence and select **Upgrade an ope
     - **Product key**: Specify the Windows product key for the OS to install. Specify encoded volume license keys or standard product keys. If you use a standard product key, separate each group of five characters by a dash (`-`). For example: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. When the upgrade is for a volume license edition, the product key may not be required.  
 
         > [!Note]  
-        > This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
+        > This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide.
 
     - **Ignore any dismissable compatibility messages**: Select this setting if you're upgrading to Windows Server 2016. If you don't select this setting, the task sequence fails to complete because Windows Setup is waiting for the user to select **Confirm** on a Windows app compatibility dialog.  
 
@@ -212,7 +212,7 @@ To gather logs from the client, add steps in this group.
 
 To run additional diagnostic tools, add steps in this group. Automate these tools for collecting additional information from the system right after the failure.  
 
-One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful.  
+One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful.  
 
 - In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.  
 
@@ -220,13 +220,13 @@ One such tool is Windows [SetupDiag](https://docs.microsoft.com/windows/deployme
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Always use the most recent version of SetupDiag for the latest functionality and fixes to known issues. For more information, see [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> Always use the most recent version of SetupDiag for the latest functionality and fixes to known issues. For more information, see [SetupDiag](/windows/deployment/upgrade/setupdiag).
 
 ## Additional recommendations
 
 ### Windows documentation
 
-Review Windows documentation to [Resolve Windows 10 upgrade errors](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.  
+Review Windows documentation to [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.  
 
 ### Check minimum disk space
 
@@ -267,12 +267,12 @@ If you want to change the device from BIOS to UEFI during this task sequence, se
 ### Manage BitLocker
 
 <!--SCCMDocs issue #494-->
-If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements necessitate keeping active disk encryption at all times, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### Remove default apps
 
 <!--SCCMDocs issue #526-->
-Some customers remove default provisioned apps in Windows 10. For example, the Bing Weather app, or the Microsoft Solitaire Collection. In some situations, these apps return after updating Windows 10. For more information, see [How to keep apps removed from Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Some customers remove default provisioned apps in Windows 10. For example, the Bing Weather app, or the Microsoft Solitaire Collection. In some situations, these apps return after updating Windows 10. For more information, see [How to keep apps removed from Windows 10](/windows/application-management/remove-provisioned-apps-during-update).
 
 Add a **Run Command Line** step to the task sequence in the **Prepare for Upgrade** group. Specify a command line similar to the following example:
 

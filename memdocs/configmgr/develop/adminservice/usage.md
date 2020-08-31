@@ -42,7 +42,7 @@ You can use a web browser to easily query the administration service. When you s
 
 ### PowerShell
 
-Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 For example:
 
@@ -61,7 +61,7 @@ https://SMSProviderFQDN/AdminService/wmi/$metadata#SMS_Site   {@{@odata.etag=FC1
 The following example drills down to more specific values:
 
 ```powershell
-((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials`).value).Version
+((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials).value).Version
 ```
 
 The output of this command is the specific version of the site: `5.00.8968.1000`
@@ -74,7 +74,7 @@ For more information, see [Task sequence steps - Run PowerShell Script](../../os
 
 ## Power BI Desktop
 
-You can use Power BI Desktop to query data in Configuration Manager via the administration service. For more information, see [What is Power BI Desktop?](https://docs.microsoft.com/power-bi/desktop-what-is-desktop)
+You can use Power BI Desktop to query data in Configuration Manager via the administration service. For more information, see [What is Power BI Desktop?](/power-bi/desktop-what-is-desktop)
 
 1. In Power BI Desktop, in the ribbon, select **Get Data**, and select **OData feed**.
 

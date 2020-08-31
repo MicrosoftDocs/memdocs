@@ -71,8 +71,8 @@ Class SMS_TaskSequencePackageReference : SMS_BaseClass
 
  Reference object type.  
 
-|||  
-|-|-|  
+| Value | Object type |
+| ----- | ----------- |  
 |0|PKG_TYPE_REGULAR|  
 |3|PKG_TYPE_DRIVER|  
 |5|PKG_TYPE_SWUPDATES|  

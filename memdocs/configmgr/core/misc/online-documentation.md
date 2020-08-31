@@ -23,7 +23,7 @@ Welcome to the Configuration Manager documentation library. Find the documentati
 
 ### Online documentation
 
-View the online documentation for the current branch of Configuration Manager at [docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr):  
+View the online documentation for the current branch of Configuration Manager at [docs.microsoft.com/configmgr](/configmgr):  
 
 - [Introduction to Configuration Manager](../understand/introduction.md)  
 
@@ -73,34 +73,34 @@ For the following releases:
 
 View the online documentation in the following locations:  
 
-- [Getting Started with System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [Getting Started with System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [Site Administration for System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [Site Administration for System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [Migrating Hierarchies in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [Migrating Hierarchies in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [Deploying Clients for System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [Deploying Clients for System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [Deploying Software and Operating Systems in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [Deploying Software and Operating Systems in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [Assets and Compliance in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [Assets and Compliance in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [Security and Privacy in System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [Security and Privacy in System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [Scenarios and Solutions Using System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [Scenarios and Solutions Using System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### Release notes and technical publications
 
 The release notes and technical publications supplement the Configuration Manager guides. The release notes contain information that isn't available in the product documentation and that's required to successfully install Configuration Manager. Technical publications provide additional information that supports Configuration Manager.  
 
-- [Release Notes for System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [Release Notes for System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [Technical Publications for System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [Technical Publications for System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### Accessibility
 
-For more information about the features, products, and services that make Configuration Manager more accessible for people with disabilities, see [Accessibility Features of Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
+For more information about the features, products, and services that make Configuration Manager more accessible for people with disabilities, see [Accessibility Features of Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
 
 ### Downloadable documentation
 
-Download a copy of the System Center 2012 R2 Configuration Manager technical documentation from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29901).
+Download a copy of the System Center 2012 R2 Configuration Manager technical documentation from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29256).

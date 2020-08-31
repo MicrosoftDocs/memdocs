@@ -35,7 +35,7 @@ You create a software updates deployment package, in Configuration Manager, by c
 
  Example of the subroutine call in Visual Basic:  
 
-```  
+```vbscript
 
 Call CreateSUMDeploymentPackage(swbemServices,                  _  
                                 "New SUM Deployment Package",   _  
@@ -47,7 +47,7 @@ Call CreateSUMDeploymentPackage(swbemServices,                  _
 
  Example of the method call in C#:  
 
-```  
+```csharp
 
 SUMSnippets.CreateSUMDeploymentPackage(WMIConnection,  
                                        "New SUM Deployment Package",  
@@ -56,7 +56,7 @@ SUMSnippets.CreateSUMDeploymentPackage(WMIConnection,
                                        "\\\\ServerOne\\SUM_TestPackageSource");  
 ```  
 
-```vbs  
+```vbscript  
 
 Sub CreateSUMDeploymentPackage(connection,                 _  
                                newPackageName,             _  
@@ -83,7 +83,7 @@ Sub CreateSUMDeploymentPackage(connection,                 _
 
 ```  
 
-```c#  
+```csharp  
 
 public void CreateSUMDeploymentPackage(WqlConnectionManager connection,  
                                        string newPackageName,  
@@ -121,10 +121,9 @@ public void CreateSUMDeploymentPackage(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|Parameter|Type|Description|
+|---------|----|-----------|
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newDeploymentPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package name.|  
 |`newDeploymentPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new deployment package.|  
 |`newPackageSourceFlag`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The new package source flag.|  

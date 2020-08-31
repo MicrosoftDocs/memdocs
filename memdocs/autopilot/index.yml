@@ -28,13 +28,9 @@ landingContent:
       - text: Overview of Windows Autopilot
         url:  windows-autopilot.md
       - text: Requirements
-        url:  windows-autopilot-requirements.md
+        url:  software-requirements.md
       - text: What's new
         url:  windows-autopilot-whats-new.md
-    - linkListType: quickstart
-      links:
-      - text: Demonstrate Autopilot on a VM
-        url: demonstrate-deployment-on-vm.md
 
   # Card (optional)
   - title: Deployment scenarios
@@ -122,8 +118,6 @@ landingContent:
       - text: Windows Autopilot @ Windows IT Pro Blog
         url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog/label-name/Windows%20Autopilot
       - text: Windows Autopilot and Surface devices
-        url: https://docs.microsoft.com/surface/windows-autopilot-and-surface-devices
+        url: /surface/windows-autopilot-and-surface-devices
       - text: Out of Office Hours blog
         url: https://oofhours.com/
-
-

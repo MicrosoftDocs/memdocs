@@ -45,7 +45,7 @@ Wandera's mobile app seamlessly installs using Microsoft Intune. This app captur
 
 The compliance policy in Intune includes a rule for MTD  based on Wandera's risk assessment. When this rule is enabled, Intune evaluates device compliance with the policy that you enabled.
 
-For devices that are noncompliant, access to resources like Office 365 can be blocked. Users on blocked devices receive guidance from the Wandera app to resolve the issue and regain access.
+For devices that are noncompliant, access to resources like Microsoft 365 can be blocked. Users on blocked devices receive guidance from the Wandera app to resolve the issue and regain access.
 
 Wandera will update Intune with each device’s latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously re-calculated by the Wandera Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
 
