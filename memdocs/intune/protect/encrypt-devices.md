@@ -98,7 +98,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 and later
    2. **Profile type**: Endpoint protection
 
-   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Select the profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Select **Settings** > **Windows Encryption**.
 
