@@ -70,7 +70,9 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the device groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+Note: Different groups can be used if there is a need to join devices to different domains or OUs
 
     Select **Next**.
 
