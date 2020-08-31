@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,7 +72,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
 10. In **Assignments**, select the device groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
-Note: Different groups can be used if there is a need to join devices to different domains or OUs
+    If you need to join devices to different domains or organizational units (OU), then create different device groups.
 
     Select **Next**.
 
