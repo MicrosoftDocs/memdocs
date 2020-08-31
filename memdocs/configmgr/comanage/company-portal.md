@@ -47,6 +47,8 @@ For more information, see the following articles:
 
 - Configuration Manager current branch version 2006 or later
 
+- Company Portal app version 11.0.8980.0 or later
+
 - Windows 10, version 1803 or later:
 
   - Enrolled to [co-management](how-to-enable.md)

@@ -140,7 +140,7 @@ The following table provides notification-specific configuration details:
 You can choose which additional app sources will be shown in Company Portal.
 
 > [!NOTE]
-> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 The following table provides app source specific configuration details:
 

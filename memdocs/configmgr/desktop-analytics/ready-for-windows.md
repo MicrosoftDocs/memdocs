@@ -44,7 +44,7 @@ Many customers have challenges with getting and staying current with Windows 10 
 
 The *Ready for modern desktop* directory listed software solutions that are supported and in-use on commercial devices running Windows 10 and Microsoft 365 Apps for enterprise. The directory helps IT managers who are considering the latest versions of Windows 10 and Microsoft 365 for their deployments.
 
-Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Microsoft 365 Apps readiness features](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Microsoft 365 Apps for enterprise upgrade projects. 
+Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Microsoft 365 Apps readiness features](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Microsoft 365 Apps for enterprise upgrade projects. 
 
 > [!Note]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
@@ -117,4 +117,4 @@ Evaluate the performance of your solutions with health and metrics reports throu
 
 Make sure your desktop applications are compatible now, and stay compatible with Windows 10 in the future. For more information, see [Application compatibility for developers](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-If you develop solutions for Microsoft 365 Apps for enterprise, see [Development best practices for COM, VSTO, and VBA add-ins in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+If you develop solutions for Microsoft 365 Apps for enterprise, see [Development best practices for COM, VSTO, and VBA add-ins in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
