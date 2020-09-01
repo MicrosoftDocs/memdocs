@@ -208,7 +208,7 @@ These changes apply to the UI for settings, and won’t affect existing profiles
 ### Ending support for iOS 11<!--7327321 -->
 After iOS 14 releases, Intune enrollment and the Company Portal app will support iOS versions 12 and later. Older versions won't be supported but will continue to receive policies.
 
-### Ending support for macOS 10.12<!--7327321 -->
+### Ending support for macOS 10.12<!--7327326 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
 
