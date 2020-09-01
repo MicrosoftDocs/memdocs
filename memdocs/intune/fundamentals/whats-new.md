@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -99,7 +99,7 @@ Applies to:
 #### Configure the macOS Microsoft Enterprise SSO plug-in<!-- 5627576  idstaged -->
 
 > [!IMPORTANT]
-> The Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. Don't use **Microsoft Azure AD** for the SSO app extension type.
+> On macOS, the Microsoft Azure AD SSO extension is still being developed. It's listed in the Intune user interface, but doesn't work as expected. On macOS, don't use **Microsoft Azure AD** for the SSO app extension type.
 
 The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension to allow macOS 10.15+ users to gain access to Microsoft apps, organization apps, and websites that support Apple's SSO feature and authenticate using Azure AD, with one sign-on. With the Microsoft Enterprise SSO plug-in release, you can configure the SSO extension with the new Microsoft Azure AD app extension type (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile >  **Single sign-on app extension** > SSO app extension type > **Microsoft Azure AD**).
 
