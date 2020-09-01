@@ -76,7 +76,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 
 On Android, the **Omadmlog.log** file details the activities of the Wi-Fi profile when it's installed on the device. You might have up to five Omadmlog log files. Be sure to get the timestamp of the last sync, as it will help you find the related log entries.
 
-In the following example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
+In the following example, use [CMTrace](/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi connection shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -205,7 +205,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > For more information, see [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+  > For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 
 - On Android devices, if the Trusted Root and SCEP profiles aren't installed on the device, you see the following entry in the Company Portal app Omadmlog file:
 
@@ -240,7 +240,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Confirm that all required certificates in the complete certificate chain are on the Android device. Otherwise, the Wi-Fi profile can't be installed on the device. For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (opens Android's web site).
   - Filter Omadmlog with keywords to look for information, such as which certificate is used in the Wi-Fi profile, and if the profile successfully applied.
 
-    For example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
+    For example, use [CMTrace](/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![Filter CMTrace to look for WiFiMgr configuration profiles on Android devices](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

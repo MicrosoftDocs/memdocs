@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,24 +98,30 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
-3. On the list of VPP tokens pane, select **Create**.
-4. On the **Create VPP token** pane, specify the following information:
-    - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
-    - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
-    - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
-    - **Token Name** - An administrative field for setting the token name.
-    - **Country/Region** - Select the VPP country/region store.  Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
+3. On the list of VPP tokens pane, select **Create**. The **Create VPP token** process is displayed. There are four pages used when creating a VPP token. The first is **Basics**.
+4. On the **Basics** page, specify the following information:
+   - **Token Name** - An administrative field for setting the token name.
+   - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
+   - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
+5. Click **Next** to display the **Settings** page.
+6. On the **Settings** page, specify the following information:
+   - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
+   - **Country/Region** - Select the VPP country/region store.  Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
+
         > [!WARNING]  
         > Changing the country/region will update the apps metadata and App Store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
-    - **Type of VPP account** - Choose from **Business** or **Education**.
-    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
+   - **Type of VPP account** - Choose from **Business** or **Education**.
+   - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
-5. When you are done, select **Create**. The token is displayed in the list of tokens pane.
+7. Click **Next** to display the **Scope tags** page.
+8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the VPP token.
+10. When you are done, click **Create**. The token is displayed in the list of tokens pane.
 
 ## Synchronize a VPP token
 
@@ -173,7 +179,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
-You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses or uninstall apps. 
+You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. Deleting a token revokes associated app licenses but doesn't uninstall the apps.  
 
 >[!NOTE]
 >Intune cannot revoke app licenses after a token has been deleted. 

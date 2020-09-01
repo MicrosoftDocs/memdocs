@@ -156,7 +156,7 @@ After you have synced UUP updates into your environment, find them in the Config
 
 ### Updates available during preview
 
-For more information on all Windows 10 updates released by Microsoft, see [Windows 10 release information](https://docs.microsoft.com/windows/release-information/).
+For more information on all Windows 10 updates released by Microsoft, see [Windows 10 release information](/windows/release-information/).
 
 #### Cumulative updates to test
 

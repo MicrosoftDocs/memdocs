@@ -11,7 +11,7 @@ ms.collection: M365-identity-device-management
 ---
 
 > [!IMPORTANT]
-> [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) support has ended. Windows 10 Mobile and Windows Phone 8.1 enrollments will fail. These profile types are being removed from the Intune UI. Devices currently enrolled will stop syncing with the Intune service.
+> [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) support has ended. Windows 10 Mobile and Windows Phone 8.1 enrollments will fail and related apps can no longer be added to Intune. These profile types are being removed from the Intune UI. Devices currently enrolled will stop syncing with the Intune service.
 >
 > Existing policies and profiles on these platforms are becoming read-only, and can't be changed. You can remove assignments, and then delete the policies and profiles.
 > 

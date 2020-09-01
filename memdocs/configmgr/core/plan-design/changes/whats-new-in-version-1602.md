@@ -38,9 +38,9 @@ Update 1602 for Configuration Manager is only available as an in-console update 
 > [!WARNING]  
 >  Before you upgrade to Windows Server 2012 R2, you must uninstall WSUS 3.2 from the server.  
 >   
->  For more information about this critical step, see the "New and changed functionality" section in [Windows Server Update Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+>  For more information about this critical step, see the "New and changed functionality" section in [Windows Server Update Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- To upgrade a server, use the Windows Server 2012 R2 upgrade procedures. You do not need to run a Configuration Manager site server restore after the upgrade. For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in the Windows Server documentation.  
+ To upgrade a server, use the Windows Server 2012 R2 upgrade procedures. You do not need to run a Configuration Manager site server restore after the upgrade. For upgrade procedures, see [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) in the Windows Server documentation.  
 
 ###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn availability groups  
  Use SQL Server AlwaysOn availability groups to host the site database at primary sites, and the central administration site as a high-availability and disaster-recovery solution.  
@@ -94,8 +94,8 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
 ## Software updates  
 
-### Manage Office 365 client updates  
- Configuration Manager has the ability to manage Office 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
+### Manage Microsoft 365 client updates  
+ Configuration Manager has the ability to manage Microsoft 365 client updates by using the software update management workflow. For more information, see [Manage Office 365 Apps updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## Compliance settings  
 
@@ -115,7 +115,7 @@ You will find these apps in the **Applications** node of the Configuration Manag
 
 
 ### Restricting access based on the health of devices  
- You can now restrict access to email and Office 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
+ You can now restrict access to email and Microsoft 365 services based on the health of the devices, as reported by the Health Attestation Service. Additionally, devices managed by Intune are included in the device health reports.  
 
  The Configuration Manager console features a new compliance rule that allows you to specify if the devices should be allowed or blocked access based on their health status. For details about Health Attestation Service and how the health of devices is reported in Intune, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 
@@ -205,4 +205,4 @@ Configuration Manager can request the Activation Lock status of both supervised 
 
 -   **Noncompliant**: Users have accepted a version of the terms and conditions, but not the latest version.  
 
--   **Unknown**: Users have never accepted the terms and conditions, including those without an enrolled device.  
+-   **Unknown**: Users have never accepted the terms and conditions, including those without an enrolled device.

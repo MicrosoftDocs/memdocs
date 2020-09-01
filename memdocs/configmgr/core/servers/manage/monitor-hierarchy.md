@@ -98,11 +98,7 @@ For more information, see [Monitor software updates](../../../sum/deploy-use/mon
 
 ## <a name="BKMK_SH_Node"></a> Monitor the site hierarchy
 
-The **Site Hierarchy** node of the **Monitoring** workspace provides you with an overview of your Configuration Manager hierarchy and intersite links. You can use two views:  
-
-- **Hierarchy Diagram**: Displays your hierarchy as a simplified topology map that shows only vital information. For more information, see [Hierarchy diagram](#hierarchy-diagram).  
-
-- **Geographical View**: Displays your sites on a geographical map showing site locations that you configure. For more information, see [Geographical view](#geographical-view).  
+The **Site Hierarchy** node of the **Monitoring** workspace provides you with an overview of your Configuration Manager hierarchy and intersite links. 
 
 Use the **Site Hierarchy** node to monitor the health of each site. Also monitor the intersite replication links and their relationship to external factors, such as a geographical location.  
 
@@ -120,13 +116,16 @@ The following options modify the hierarchy diagram:
 
 #### Groups
 
-Configure the number of primary sites and secondary sites that trigger a change in the hierarchy diagram. This change in the display combines the sites into a single object. Then you see the total number of sites and a high-level rollup of status messages and site status. Group configurations don't affect the geographical view.  
+Configure the number of primary sites and secondary sites that trigger a change in the hierarchy diagram. This change in the display combines the sites into a single object. Then you see the total number of sites and a high-level rollup of status messages and site status.
 
 #### Favorite sites
 
 Specify individual sites to be a favorite site. A star icon identifies a favorite site in the hierarchy diagram. Favorite sites aren't combined with others sites when you use groups. They're always displayed individually.  
 
 ### Geographical view
+
+> [!IMPORTANT]
+> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
 
 The geographical view displays the location of each site on a geographical map. It only displays sites that you configure with a location. When you select a site in this view, it shows replication links to parent or child sites. Unlike the hierarchy diagram view, you can't display site status message or replication link details in this view.  
 

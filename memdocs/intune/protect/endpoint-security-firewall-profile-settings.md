@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -203,22 +203,22 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Not configured**
 
 - **Package family name**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
 
 - **File path**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe` or `%WINDIR%\Notepad.exe`
 
 - **Service name**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
 
 - **Protocol**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Specify the protocol for this port rule.
   - Transport layer protocols like *TCP(6)* and *UDP(17)* allow you to specify ports or port ranges.
@@ -233,7 +233,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Not configured**
 
 - **Authorized users**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
 
@@ -242,9 +242,14 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Yes** - Support any local address and don't configure an address range.
 
 - **Local address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid entries (tokens) include the following options:
+  Manage local address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as local address ranges.
+  - **Export** your current list of local address ranges as a .csv file.
+
+  Valid entries (tokens) include the following options:
   - **An asterisk** - An asterisk (\*) indicates any local address. If present, the asterisk must be the only token included.
   - **A subnet** - Specify subnets by using the subnet mask or network prefix notation. If a subnet mask or network prefix isn't specified, the subnet mask defaults to 255.255.255.255.​​
   - **A valid IPv6 address**
@@ -258,9 +263,14 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   - **Yes** - Support any remote address and don't configure an address range.
 
 - **Remote address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Valid entries (tokens) include the following and aren't case-sensitive:
+  Manage remote address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as remote address ranges.
+  - **Export** your current list of remote address ranges as a .csv file.
+
+  Valid entries (tokens) include the following and aren't case-sensitive:
   - **An asterisk** - An asterisk (\*) indicates any remote address. If present, the asterisk must be the only token included.
   - **Defaultgateway**
   - **DHCP**

@@ -40,14 +40,14 @@ The possible categories are:
 
 ### What happened to the Ready for Windows website?
 
-Many customers have challenges with getting and staying current with Windows 10 and Office 365 ProPlus. The primary challenge is testing applications, because this process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications, and then remediate any issues that arise.
+Many customers have challenges with getting and staying current with Windows 10 and Microsoft 365 Apps for enterprise. The primary challenge is testing applications, because this process is typically manual. It's time-consuming for IT administrators and application owners to continually analyze existing applications, and then remediate any issues that arise.
 
-The *Ready for modern desktop* directory listed software solutions that are supported and in-use on commercial devices running Windows 10 and Office 365 ProPlus. The directory helps IT managers who are considering the latest versions of Windows 10 and Office 365 for their deployments.
+The *Ready for modern desktop* directory listed software solutions that are supported and in-use on commercial devices running Windows 10 and Microsoft 365 Apps for enterprise. The directory helps IT managers who are considering the latest versions of Windows 10 and Microsoft 365 for their deployments.
 
-Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Office 365 ProPlus readiness features](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Office 365 ProPlus upgrade projects. 
+Feedback from IT managers is that they want these insights integrated with the tools they already use to plan their deployment plans. Use [Desktop Analytics](https://aka.ms/dadocs) and [Microsoft 365 Apps readiness features](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager to plan and manage your Windows 10 and Microsoft 365 Apps for enterprise upgrade projects. 
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 ### What is Desktop Analytics?
 
@@ -95,11 +95,11 @@ Desktop Analytics provides an inventory of the [devices and their installed apps
 
 ### Can I still list my software solution in Desktop Analytics?
 
-Publish a support statement that your product works with 32-bit or 64-bit Windows 10 or Office 365 ProPlus. To showcase your solutions in Desktop Analytics, talk to your Microsoft contact.
+Publish a support statement that your product works with 32-bit or 64-bit Windows 10 or Microsoft 365 Apps for enterprise. To showcase your solutions in Desktop Analytics, talk to your Microsoft contact.
 
 ### How can listing my solutions benefit me?
 
-Thousands of IT administrators manage millions of devices with Configuration Manager and Desktop Analytics. They use these tools to confidently plan and upgrade their organizations to the latest version of Windows 10 and Office 365 ProPlus. They also use them to make purchase decisions for software solutions.
+Thousands of IT administrators manage millions of devices with Configuration Manager and Desktop Analytics. They use these tools to confidently plan and upgrade their organizations to the latest version of Windows 10 and Microsoft 365 Apps for enterprise. They also use them to make purchase decisions for software solutions.
 
 Microsoft integrates support statements from software vendors with the adoption information they receive from commercial devices. Organizations around the world then use this data in Desktop Analytics and Office readiness tools. 
 
@@ -109,12 +109,12 @@ If your support statements aren't correctly associated with assets, talk to your
 
 Evaluate the performance of your solutions with health and metrics reports through the developer center: 
 
-- [Windows Store](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [Desktop](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Office Add-ins](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows Store](/windows/uwp/publish/health-report)
+- [Desktop](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Office Add-ins](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### How can I develop compatible assets for Windows 10 and Office 365 ProPlus?
+### How can I develop compatible assets for Windows 10 and Microsoft 365 Apps for enterprise?
 
 Make sure your desktop applications are compatible now, and stay compatible with Windows 10 in the future. For more information, see [Application compatibility for developers](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-If you develop solutions for Office 365 ProPlus, see [Development best practices for COM, VSTO, and VBA add-ins in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+If you develop solutions for Microsoft 365 Apps for enterprise, see [Development best practices for COM, VSTO, and VBA add-ins in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

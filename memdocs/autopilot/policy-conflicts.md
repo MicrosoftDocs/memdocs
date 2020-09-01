@@ -31,7 +31,7 @@ There are a significant number of policy settings available for Windows 10, both
 <tr><td width="50%">Device restriction / <a href="https://docs.microsoft.com/windows/client-management/mdm/devicelock-csp">Password Policy</a></td>
 <td>When certain <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock">DeviceLock policies</a>, such as minimum password length and password complexity, or any similar group policy settings (including any that disable autologon) are applied to a device, and that device reboots during the device Enrollment Status Page (ESP), the out-of-box experience (OOBE) or user desktop autologon can fail unexpectantly.  This is especially true for kiosk scenarios where passwords are automatically generated.</td>
 
-<tr><td width="50%">Windows 10 Security Baseline / <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">Administrator elevation prompt behavior</a>
+<tr><td width="50%">Windows 10 Security Baseline / <a href="/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">Administrator elevation prompt behavior</a>
 <br>Windows 10 Security Baseline / <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions">Require admin approval mode for administrators</a></td>
 <td>When modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP), additional UAC prompts may result, especially if the device reboots after these policies are applied, enabling them to take effect.  To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process.</td>
 

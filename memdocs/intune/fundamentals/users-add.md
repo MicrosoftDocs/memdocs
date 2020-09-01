@@ -40,7 +40,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 ### Add Intune users in the Microsoft 365 admin center
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with a global administrator or user management administrator account.
-2. In the Office 365 menu, select **Admin**.
+2. In the Microsoft 365 menu, select **Admin**.
 3. In the Admin center, select **Add a user**.
 
    ![Screenshot of the Add user section](./media/users-add/office-add-user.png)
@@ -82,10 +82,10 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 
 After you've added users to your Intune subscription, we recommend that you grant a few users administrative permission.  To grant admin permissions, follow these steps:
 
-### Give admin permissions in Office 365
+### Give admin permissions in Microsoft 365
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with a global administrator account.
-2. In the Office 365 menu, select **Admin**.
+2. In the Microsoft 365 menu, select **Admin**.
 3. In the Admin center, choose **Active users** and then choose the user to give admin permissions.
 
 4. In the **Roles** column, choose **Edit**.
@@ -108,11 +108,11 @@ After you've added users to your Intune subscription, we recommend that you gran
 
 Assign users one or more administrator permissions. These permissions define the administrative scope for users and the tasks they can manage. Administrator permissions are common between the different Microsoft cloud services, and some services might not support some permissions. Both the Azure portal and Microsoft 365 admin center list limited administrator roles that are not used by Intune. Intune administrator permissions include the following options:
 
-- **Global administrator** - (Office 365 and Intune) Accesses all administrative features in Intune. By default the person who signs up for Intune becomes a Global admin. Global admins are the only admins who can assign other admin roles. You can have more than one global admin in your organization. As a best practice, we recommend that only a few people in your company have this role to reduce the risk to your business.
-- **Password administrator** - (Office 365 and Intune) Resets passwords, manages service requests, and monitors service health. Password admins are limited to resetting passwords for users.
-- **Service administrator** - (Office 365 and Intune) Opens support requests with Microsoft, and views the service dashboard and message center. They have "view only" permissions except for opening support tickets and reading them.
-- **Billing administrator** - (Office 365 and Intune) Makes purchases, manages subscriptions, manages support tickets, and monitors service health.
-- **User administrator** - (Office 365 and Intune) Resets passwords, monitors service health, adds and deletes user accounts, and manages service requests. The user management admin can't delete a global admin, create other admin roles, or reset passwords for other admins.
+- **Global administrator** - (Microsoft 365 and Intune) Accesses all administrative features in Intune. By default the person who signs up for Intune becomes a Global admin. Global admins are the only admins who can assign other admin roles. You can have more than one global admin in your organization. As a best practice, we recommend that only a few people in your company have this role to reduce the risk to your business.
+- **Password administrator** - (Microsoft 365 and Intune) Resets passwords, manages service requests, and monitors service health. Password admins are limited to resetting passwords for users.
+- **Service administrator** - (Microsoft 365 and Intune) Opens support requests with Microsoft, and views the service dashboard and message center. They have "view only" permissions except for opening support tickets and reading them.
+- **Billing administrator** - (Microsoft 365 and Intune) Makes purchases, manages subscriptions, manages support tickets, and monitors service health.
+- **User administrator** - (Microsoft 365 and Intune) Resets passwords, monitors service health, adds and deletes user accounts, and manages service requests. The user management admin can't delete a global admin, create other admin roles, or reset passwords for other admins.
 - **Intune Service administrator** - All Intune Global administrator permissions except permission to create administrators with **Directory Role** options.
 
 The account you use to create your Microsoft Intune subscription is a global administrator. As a best practice, do not use a global administrator for day-to-day management tasks. While an administrator does not require an Intune license to access the Intune on Azure portal, in order to perform certain management tasks, such as setting up the Exchange service Connector,  an Intune license is required.
@@ -121,11 +121,11 @@ To access the Microsoft 365 admin center, your account must have a **Sign-in all
 
 ## Sync Active Directory and add users to Intune
 
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. By linking the same [Azure AD tenant](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. By linking the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
 
 ### How to sync on-premises users with Azure AD
 
 The only tool that you need to synchronize your user accounts with Azure AD is the [Azure AD Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Azure AD Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the Azure AD PowerShell module.
 
 > [!TIP]
-> Azure AD Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](https://technet.microsoft.com/library/jj573653.aspx). To learn about syncing user accounts from a local directory to Azure AD, see [Similarities between Active Directory and Azure AD](https://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Azure AD, see [Similarities between Active Directory and Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).

@@ -34,7 +34,7 @@ This article describes how to configure Delivery Optimization settings as part o
 
 To view a list of the Delivery Optimization settings that Intune supports, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).  
 
-To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
+To learn about Delivery Optimization on Windows 10, see [Delivery Optimization updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation.  
 
 ## Create the profile
 
@@ -58,7 +58,7 @@ To learn about Delivery Optimization on Windows 10, see [Delivery Optimization u
 
 7. On the **Configuration settings** page, define how you want updates and apps to download. For information about available settings, see [Delivery Optimization settings for Intune](delivery-optimization-settings.md).
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 8. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   

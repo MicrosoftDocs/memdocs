@@ -58,11 +58,11 @@ After your device is enrolled, the Company Portal app will continue to make sure
 ### Setting notifications  
 If after enrollment your organization enforces a new security requirement, such as multi-factor authentication, the Company Portal app will notify you. You'll have the chance to adjust your settings so that you can continue to work from your device.  
 
-To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## Prerequisties  
+## Prerequisites    
 
-* Go to the App store to download and install the [Intune Company Portal app](install-and-sign-in-to-the-intune-company-portal-app-ios.md) on your device. 
+* Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
 
@@ -192,4 +192,4 @@ If you're an IT administrator and run in to problems while enrolling devices, se
 ## Next steps  
 Find apps that will help you at work or school. Learn [how apps are made available](use-managed-apps-on-your-device-ios.md) to you through Company Portal.  
 
-Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

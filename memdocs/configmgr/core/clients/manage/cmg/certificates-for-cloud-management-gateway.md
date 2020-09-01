@@ -253,8 +253,8 @@ Configure an on-premises management point with the following client connection m
 
 - *Workgroup*: The device isn't joined to a domain or Azure AD, but has a [client authentication certificate](#bkmk_clientauth).
 - *AD domain-joined*: You join the device to an on-premises Active Directory domain.
-- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure AD tenant. For more information, see [Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Azure AD. For more information, see [Hybrid Azure AD joined devices](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Azure AD-joined*: Also known as cloud domain-joined, you join the device to an Azure AD tenant. For more information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybrid-joined*: You join the device to your on-premises Active Directory and register it with your Azure AD. For more information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: On the management point properties, you set the client connections to **HTTP**.
 - *HTTPS*: On the management point properties, you set the client connections to **HTTPS**.
 - *E-HTTP*: On the site properties, **Communication Security** tab, you set the site system settings to **HTTPS or HTTP**, and you enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**. You configure the management point for HTTP, the HTTP management point is ready for both HTTP and HTTPS communication (token auth scenarios).
@@ -277,9 +277,9 @@ To create the CMG in Azure, the Configuration Manager service connection point n
 
 For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
 
-- [Cloud services and management certificates](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Cloud services and management certificates](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Upload an Azure Service Management Certificate](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Upload an Azure Service Management Certificate](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Make sure to copy the subscription ID associated with the management certificate. You use it for creating the CMG in the Configuration Manager console.
@@ -290,4 +290,4 @@ For more information and instructions for how to upload a management certificate
 
 - [Frequently asked questions about the cloud management gateway](cloud-management-gateway-faq.md)  
 
-- [Security and privacy for cloud management gateway](security-and-privacy-for-cloud-management-gateway.md)  
+- [Security and privacy for cloud management gateway](security-and-privacy-for-cloud-management-gateway.md)

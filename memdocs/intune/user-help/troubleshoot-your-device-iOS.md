@@ -41,5 +41,5 @@ Use the links in this article to find answers to common iOS enrollment questions
 - [How do I find the serial number on my device?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [I need to update my iOS device](you-need-to-update-your-ios-device.md)
 - [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
-- [I need to install a Mobile Threat Defense app on my iOS device](set-up-mobile-threat-defense.md)
-- [I need to resolve a threat that a Mobile Threat Defense app found on my iOS device](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [I need to install a mobile threat defense app on my iOS device](set-up-mobile-threat-defense.md)
+- [I need to resolve a threat that a mobile threat defense app found on my iOS device](set-up-mobile-threat-defense.md#resolving-a-threat)

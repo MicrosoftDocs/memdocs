@@ -67,7 +67,7 @@ This issue is resolved in the Configuration Manager version 2002 update rollup (
 
 ### OS Version is not appearing for some devices
 
-Some devices may not show a value for OS Version in the [**All devices** blade of the Microsoft Endpoint Manager admin console](/mem/configmgr/tenant-attach/device-sync-actions#perform-device-actions). 
+Some devices may not show a value for OS Version in the [**All devices** blade of the Microsoft Endpoint Manager admin console](../configmgr/tenant-attach/device-sync-actions.md#perform-device-actions). 
 
 **Impacted devices:**
 Devices enrolled via Configuration Manager that contained null values for certain OS version properties at the time of onboarded are impacted.
@@ -100,7 +100,7 @@ Rollback transaction: XXXX
 If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
 - Encoded in UTF-8 not UTF-8 BOM
 - Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](https://docs.microsoft.com/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
+   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019).
    - Currently, the encoding and line breaks are a known issue.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
@@ -155,7 +155,7 @@ Configure devices to use the signed-in user's context for proxy authentication. 
 - Make sure that the users have proxy permission to reach the data sharing endpoints. This option requires that the devices have console users with proxy permissions, so you can't use this method with headless devices.
 
 > [!IMPORTANT]
-> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> The user proxy authentication approach is incompatible with the use of Microsoft Defender Advanced Threat Protection. This behavior is because this authentication relies on the **DisableEnterpriseAuthProxy** registry key set to `0`, while Microsoft Defender ATP requires it to be set to `1`. For more information, see [Configure machine proxy and internet connectivity settings in Microsoft Defender ATP](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### Device proxy authentication
 

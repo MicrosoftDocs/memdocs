@@ -7,8 +7,6 @@
   items:
   - name: Windows Autopilot overview
     href: windows-autopilot.md
-  - name: Requirements
-    href: windows-autopilot-requirements.md
 
 - name: Concepts
   items:
@@ -28,6 +26,16 @@
       href: white-glove.md
     - name: Support for existing devices
       href: existing-devices.md
+    - name: Requirements
+      items:
+      - name: Software requirements
+        href: software-requirements.md
+      - name: Networking requirements
+        href: networking-requirements.md
+      - name: Licensing requirements
+        href: licensing-requirements.md
+      - name: Configuration requirements
+        href: configuration-requirements.md
 
 - name: How-to guides
   items:

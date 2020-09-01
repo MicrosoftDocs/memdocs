@@ -42,12 +42,12 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
 - **Active Directory domain**:  
   All servers listed in this section must be joined to your Active Directory domain.
 
-  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  For more information about installing and configuring Active Directory Domain Services (AD DS), see [AD DS Design and Planning](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 - **Certification Authority**:  
    An Enterprise Certification Authority (CA).
 
-  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393).
+  For information on installing and configuring Active Directory Certificate Services (AD CS), see [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)).
 
   > [!WARNING]  
   > Intune requires you to run AD CS with an Enterprise Certification Authority (CA), not a Standalone CA.
@@ -84,7 +84,7 @@ To use PKCS certificates with Intune, you'll need the following infrastructure:
   - Microsoft Intune Certificate Connector - for authentication and S/MIME email signing scenarios
   - PFX Certificate Connector for Microsoft Intune - for S/MIME email encryption scenarios.
 
-  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connectors require access to the same ports as detailed for managed devices, as found in our [device endpoint content](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *PFX Certificate Connector* on the same server as the *Microsoft Intune Certificate Connector*.
   
@@ -121,6 +121,13 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
 6. In **Request Handling**, select **Allow private key to be exported**.
+    
+    > [!NOTE]
+    > In contrary to SCEP, with PKCS the certificate private key is generated on the server where the connector is installed and not on the device. 
+    > It is required that the certificate template allows the private key to be exported, so that the Certificate Connector is able to export the PFX certificate and send it to the device. 
+    >
+    > However, please note that the certificates are installed on the device itself with the private key marked as not exportable.
+    
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 8. In **Subject Name**, choose **Supply in the request**.
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
@@ -162,7 +169,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. On the **Advanced** tab, it's recommended to leave **Use this computer's SYSTEM account (default)** selected.
 7. **Apply** > **Close**
 8. Go back to the Intune portal (**Intune** > **Device Configuration** > **Certification Connectors**). After a few moments, a green check mark is shown, and the **Connection status** is **Active**. Your connector server can now communicate with Intune.
-9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
+9. If you have a web proxy in your networking environment, you might need additional configurations to enable the connector to work. For more information, see [Work with existing on-premises proxy servers](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) in the Azure Active Directory documentation.
     - Android Enterprise (*Work Profile*)
     - iOS
     - macOS
@@ -298,16 +305,16 @@ Platforms:
   - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
   - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
 
   - **CN={{onPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
-    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+    To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
 
   By using a combination of one or many of these variables and static strings, you can create a custom subject name format, such as:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) describes this function, and its supported strings.
+  That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
 - **Device certificate type**  
   Format options for the Subject name format include the following variables: 

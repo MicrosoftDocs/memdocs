@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,6 @@ To use device compliance policies, be sure you:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Enroll devices in Intune (required to see the compliance status)
 
@@ -74,7 +73,6 @@ To use device compliance policies, be sure you:
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 and later*
    - *Windows 10 and later*
 
@@ -93,7 +91,7 @@ To use device compliance policies, be sure you:
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10 and later](compliance-policy-create-windows.md)  
 
 6. On the **Locations** tab, you can force compliance based on the location of the device. Choose from existing locations. If you don't have an available location yet, see [Use Locations (network fence)](use-network-locations.md) for guidance.
@@ -119,19 +117,6 @@ To use device compliance policies, be sure you:
 10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
     The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
-
-<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
-
-### Evaluate how many users are targeted
-
-When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
-
-2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
-
-If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
--->
 
 ## Refresh cycle times
 

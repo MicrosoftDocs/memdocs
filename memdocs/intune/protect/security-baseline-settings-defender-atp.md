@@ -61,12 +61,12 @@ The details in this article apply to version 3 of the Microsoft Defender ATP bas
 
 The Microsoft Defender Advanced Threat Protection baseline is available when your environment meets the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
-This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+This baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 
 ## Application Guard
 
-For more information, see [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
+For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
 
@@ -95,7 +95,7 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
     - **Allow copy and paste between PC and browser** - No block for content exists.
 
 - **Windows network isolation policy**  
-  CSP: [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [Policy CSP - NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Specify a list of *Network domains*, which are Enterprise resources that are hosted in the cloud that Application Guard treats as enterprise sites
   - **Configure** (*default*)
@@ -108,7 +108,7 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
 
 ## BitLocker
 
-For more information, [BitLocker Group Policy settings](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
+For more information, [BitLocker Group Policy settings](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
 
 - **Require storage cards to be encrypted (mobile only)**  
   CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -116,6 +116,9 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
   This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
   - **Yes** (*default*) - Encryption on storage cards is required for mobile devices.
   - **Not configured** - The setting returns to the OS default, which is to not require storage card encryption.
+
+  > [!NOTE]
+  > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
 - **Enable full disk encryption for OS and fixed data drives**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
@@ -293,7 +296,7 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 ## DMA Guard
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   This policy can provide additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices incompatible with DMA Remapping/device memory isolation and sandboxing.
   
@@ -305,10 +308,10 @@ For more information, [BitLocker Group Policy settings](https://docs.microsoft.c
 
 ## Endpoint Detection and Response
 
-For more information about the following settings, see [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in the Windows documentation.
+For more information about the following settings, see [WindowsAdvancedThreatProtection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP in the Windows documentation.
 
 - **Sample sharing for all files**  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Returns or sets the Microsoft Defender Advanced Threat Protection Sample Sharing configuration parameter.  
   
@@ -316,7 +319,7 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
   - **Not configured**
 
 - **Expedite telemetry reporting frequency**  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Expedite Microsoft Defender Advanced Threat Protection telemetry reporting frequency.  
 
@@ -325,7 +328,7 @@ For more information about the following settings, see [WindowsAdvancedThreatPro
 
 ## Firewall
 
-For more information, see [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) in the Windows documentation.
+For more information, see [Firewall CSP](/windows/client-management/mdm/firewall-csp) in the Windows documentation.
 
 - **Disable stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -593,7 +596,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   By default, this is set to **2 AM**.
 
 - **Configure low CPU priority for scheduled scans**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Yes** (*default*)
   - **Not configured**
@@ -633,7 +636,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Configure the number of days items should be kept in the quarantine folder before being removed. The default is zero (**0**), which results in quarantined files never being removed.
 
 - **Defender system scan schedule**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Schedule on which day Defender scans devices. By default the scan is **User defined** but can be set to *Everyday*, any day of the week, or to have *No scheduled scan*.
 
@@ -758,7 +761,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Not configured** - The client returns to its default, which disables scanning of network files.
   
 - **Defender potentially unwanted app action**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
   - **Device default**
@@ -766,7 +769,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Turn on cloud-delivered protection**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
@@ -883,7 +886,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## Windows Hello for Business
 
-For more information, see [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
+For more information, see [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
 
 - **Block Windows Hello for Business**  
 

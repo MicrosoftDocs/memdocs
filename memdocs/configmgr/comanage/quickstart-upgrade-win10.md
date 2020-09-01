@@ -16,7 +16,7 @@ manager: dougeby
 
 # Upgrade Windows 10 for co-management
 
-As you work towards onboarding your organization to co-management, getting current is a significant hurdle for some customers. Co-management requires [Windows 10 version 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) or later. Once you update Windows and configure auto-enrollment, your clients are automatically enrolled to co-management.
+As you work towards onboarding your organization to co-management, getting current is a significant hurdle for some customers. Co-management requires [Windows 10 version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later. Once you update Windows and configure auto-enrollment, your clients are automatically enrolled to co-management.
 
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo upgrading to Windows 10 for co-management:
 
@@ -28,7 +28,7 @@ In the following video, senior program manager Rob York and product marketing ma
 
 Among other platform advancements, Windows 10 version 1709 and later supports auto-enrollment. This behavior makes a device automatically enroll to Intune when it joined Azure Active Directory (Azure AD). 
 
-For more information, see [Enable Windows 10 automatic enrollment](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+For more information, see [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## How to do it
@@ -58,5 +58,4 @@ A large European software manufacturer successfully uses an early adopter group.
 
 If you need assistance with your Windows 10 upgrade at any point in the process, go to [Microsoft FastTrack](https://Microsoft.com/FastTrack/), sign in, and request assistance. 
 
-For more information, see [Get help from FastTrack](quickstart-fasttrack.md). 
-
+For more information, see [Get help from FastTrack](quickstart-fasttrack.md).
