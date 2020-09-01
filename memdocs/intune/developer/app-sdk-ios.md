@@ -756,7 +756,7 @@ By default, apps are considered single identity. The SDK sets the process identi
 
     Note that this method is called from a background thread. The app should not return a value until all data for the user has been removed (with the exception of files if the app returns FALSE).
 
-## Siri intents
+## Siri Intents
 
 If your app integrates with Siri Intents, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
     
