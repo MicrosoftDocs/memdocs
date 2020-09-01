@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,9 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the device groups that will receive your profile. For more information about assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+
+    If you need to join devices to different domains or OUs, create different device groups.
 
     Select **Next**.
 
@@ -82,4 +84,4 @@ It's now ready for you to [deploy hybrid Azure AD-joined devices by using Intune
 
 After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-[deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+[Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).

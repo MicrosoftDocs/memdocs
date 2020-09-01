@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -78,6 +78,7 @@ Office for iOS and Android supports app settings that allow unified endpoint man
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Office for iOS and Android supports the following configuration scenarios:
 
 - Only allow work or school accounts
+- General app configuration
 - Data protection settings
 
 > [!IMPORTANT]
@@ -100,6 +101,26 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 > [!NOTE]
 > At this time, only Office for Android supports org allowed accounts mode.
+
+## General app configuration scenarios
+
+Office for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Office for iOS and Android has an Intune App Protection Policy applied.
+
+> [!NOTE]
+> If an App Protection Policy is targeted to the users, the recommendation is to deploy the general app configuration settings in a **Managed Apps** enrollment model. This ensures the App Configuration Policy is deployed to both enrolled devices and unenrolled devices. 
+
+Office supports the following settings for configuration:
+
+- Manage the creation of Sticky Notes
+
+### Manage the creation of Sticky Notes
+
+By default, Office for iOS and Android enables users to create Sticky Notes. For users with Exchange Online mailboxes, the notes are synchronized into the user's mailbox. For users with on-premises mailboxes, these notes are only stored on the local device.
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    **true** (default) enables Sticky Notes creation for the work or school account<br>**false** disables Sticky Notes creation for the work or school account    |
+
 
 ## Data protection app configuration scenarios
 

@@ -344,7 +344,7 @@ The dashboard displays charts for the following:
 - Office 365 client versions
 - Office 365 client languages
 - Office 365 client channels     
-For more information, see [Overview of update channels for Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/overview-update-channels).
+For more information, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels).
 - Automatic deployment rules that have Office 365 Client selected in the set of available products.
 
 You can take the following actions on the dashboard:

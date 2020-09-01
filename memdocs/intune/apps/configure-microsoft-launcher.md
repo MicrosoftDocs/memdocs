@@ -223,7 +223,7 @@ The following is an example JSON script with all the available configuration key
         }, 
         {
             "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueBool": "http://www.contoso.com/wallpaper.png"
+            "valueString": "http://www.contoso.com/wallpaper.png"
         }, 
         {
             "key": "com.microsoft.launcher.HomeScreen.GridSize", 
