@@ -1172,7 +1172,7 @@ Authority may be specified if necessary.
 
 You must register your app with Azure AD and give your app access to the app protection policy service:
 * See [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) for information about registering an application with Azure AD.
-* Ensure the steps to give your Android app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](../app-sdk-get-started#next-steps-after-integration.md) under "Give your app access to the Intune app protection service (optional)". 
+* Ensure the steps to give your Android app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](../app-sdk-get-started.md#next-steps-after-integration) under "Give your app access to the Intune app protection service (optional)". 
 
 Also see the requirements for [Conditional Access](#conditional-access) below.
 
