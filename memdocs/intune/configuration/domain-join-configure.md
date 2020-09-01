@@ -84,4 +84,4 @@ It's now ready for you to [deploy hybrid Azure AD-joined devices by using Intune
 
 After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-[deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+[Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
