@@ -17,7 +17,7 @@ ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUP) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. To ensure that the best security protocols are in place, we recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. This article walks you through the steps required to configure each of your WSUS servers and the software update point to use HTTPS.
+Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUP) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. This article walks you through the steps required to configure each of your WSUS servers and the software update point to use HTTPS.
 
 In this tutorial, you will:
 > [!div class="checklist"]
@@ -71,7 +71,8 @@ If you already have an appropriate certificate in the WSUS server's **Personal**
 1. Select **Enroll** then **Finish** to complete the enrollment.
 1. Open the certificate if you want to see details about it such as the certificate's thumbprint.
 
-> [!TIP] If your WSUS server is internet facing, you'll need the external FQDN in the Subject or Subject Alternative Name (SAN) in your certificate.
+> [!TIP]
+> If your WSUS server is internet facing, you'll need the external FQDN in the Subject or Subject Alternative Name (SAN) in your certificate.
 
 ## <a name="bkmk_bind"></a> Bind the certificate to the WSUS Administration site
 
@@ -108,7 +109,8 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 
 Don't set the SSL settings at the top-level WSUS Administration site since certain functions, such as content, need to use HTTP.
 
-> [!TIP] If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`
+> [!TIP] 
+> If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
 
 ## <a name="bkmk_wsusutil"></a> Configure the WSUS application to use SSL
 
@@ -126,7 +128,8 @@ Once the web services are set to require SSL, the WSUS application needs to be n
 
    :::image type="content" source="media/wsusutil.png" alt-text="The wsusutil configuressl command returning the HTTPS URL for WSUS":::
 
-> [!TIP] If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
+> [!TIP] 
+> If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
 
 ## <a name="bkmk_wsus_console"></a> Verify the WSUS console can connect using SSL
 The WSUS console uses the ApiRemoting30 web service for connection. The Configuration Manager software update point (SUP) also uses this same web service to direct WSUS to take certain actions such as:
@@ -153,10 +156,70 @@ Once WSUS is setup to use TLS/SSL, you'll need to update the corresponding Confi
 - Verify it can configure the WSUS server for the software update point
 - Direct clients to use the SSL port when they're told to scan against this WSUS server.
 
-1. Open the Configuration Manager console and connect to either the site server or your central administration site.
+To configure the software update point to require SSL communication to the WSUS server, do the following steps: 
+
+1. Open the Configuration Manager console and connect to either your central administration site or the primary site server for the software update point you need to edit.
 1. Go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**.
-1. Select the site system server, then the software update point site system role for the 
-1.  then select **Properties** from the ribbon. ....
-1. **Require SSL communication to the WSUS server**
+1. Select the site system server where WSUS is installed, then select the software update point site system role.
+1. From the ribbon, choose **Properties**.
+1. Enable the **Require SSL communication to the WSUS server** option.
 
    :::image type="content" source="media/sup-properties.png" alt-text="SUP properties showing the option for Require SSL communication to the WSUS server":::
+1. In the [**WCM.log**](../../core/plan-design/hierarchy/log-files#BKMK_SUPLog) for the site, you'll see the following entries when you apply the change:
+
+   ```
+   SCF change notification triggered.
+   Populating config from SCF
+   Setting new configuration state to 1 (WSUS_CONFIG_PENDING)
+   ...
+   Attempting connection to local WSUS server
+   Successfully connected to local WSUS server
+   ...
+   Setting new configuration state to 2 (WSUS_CONFIG_SUCCESS)
+   ```
+
+## <a name="bkmk_cm_verify"></a> Verify functionality with Configuration Manager
+
+### Verify the site server can sync updates
+
+1. Connect the Configuration Manager console to the top-level site.
+1. Go to **Software Library** > **Overview** > **Software Updates** > **All Software Updates**.
+1. From the ribbon, select **Synchronize Software Updates**.
+1. Select **Yes** to the notification asking if you want to initiate a site-wide synchronization for software updates.
+   - Since the WSUS configuration changed, a full software updates synchronization will occur rather than a delta synchronization.
+1. Open the **wsyncmgr.log** for the site. If you are monitoring a child primary site, you'll need to wait for the central administration site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
+
+   ```
+   Starting Sync
+   ...
+   Full sync required due to changes in main WSUS server location.
+   ...
+   Found active SUP SERVER.CONTOSO.COM from SCF File.
+   ...
+   https://SERVER.CONTOSO.COM:8531
+   ...
+   Done synchronizing WSUS Server r61274683.r61274683dom.net
+   ...
+   sync: Starting SMS database synchronization
+   ...
+   Done synchronizing SMS with WSUS Server r61274683.r61274683dom.net
+   ```
+  
+
+### Verify a client can scan for updates
+
+
+**LocationServices.log**
+```
+WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
+...
+<LocationRecord WSUSURL="https://SERVER.CONTOSO.COM:8531" ServerName="SERVER.CONTOSO.COM"
+...
+</WSUSLocationReply>
+```
+**WUAHandler.log**
+```
+Enabling WUA Managed server policy to use server: https://SERVER.CONTOSO.COM:8531
+...
+Successfully completed scan.
+```
