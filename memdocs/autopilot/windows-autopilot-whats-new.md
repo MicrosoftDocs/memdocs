@@ -21,7 +21,7 @@ ms.topic: article
 
 **Applies to**
 
--   Windows 10
+- Windows 10
 
 ## Windows Autopilot update history
 
