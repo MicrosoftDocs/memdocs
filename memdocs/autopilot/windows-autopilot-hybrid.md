@@ -37,10 +37,12 @@ You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory
 
 Successfully configure your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) by using the Get-MsolDevice cmdlet.
 
-The devices to be enrolled must also:
+The device to be enrolled must comply with these requirements:
 - Use Windows 10 v1809 or greater.
-- Have access to the internet [following the documented Windows Autopilot network requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
-- Have access to an Active Directory domain controller, so it must be connected to the organization's network (where it can resolve the DNS records for the AD domain and the AD domain controller, and communicate with the domain controller to authenticate the user.
+- Have access to the internet [following Windows Autopilot network requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
+  - resolve the DNS records for the AD domain and the AD domain controller
+  - communicate with the domain controller to authenticate the user
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
@@ -60,7 +62,7 @@ The devices to be enrolled must also:
 
 The Intune Connector for your Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain. 
 
-In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights need to be delegated to computers that host the Intune Connector on the organizational unit where hybrid Azure AD-joined devices are created.
+In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where hybrid Azure AD-joined devices are created.
 
 The organizational unit that's granted the rights to create computers must match:
 - The organizational unit that's entered in the Domain Join profile.
@@ -68,13 +70,13 @@ The organizational unit that's granted the rights to create computers must match
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
 
-1. Right-click the organizational unit that you'll use to create hybrid Azure AD-joined computers, and then select **Delegate Control**.
+1. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
 
  ![The Delegate Control command](./media/windows-autopilot-hybrid/delegate-control.png)
 
 1. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 
-1. In the **Object Types** pane, select the **Computers** check box, and then select **OK**.
+1. In the **Object Types** pane, select the **Computers** > **OK**.
 
  ![The Object Types pane](./media/windows-autopilot-hybrid/object-types-computers.png)
 
@@ -82,22 +84,23 @@ The organizational unit that's granted the rights to create computers must match
 
  ![The Select Users, Computers, or Groups pane](./media/windows-autopilot-hybrid/enter-object-names.png)
 
-1. Select **Check Names** to validate your entry, select **OK**, and then select **Next**.
+1. Select **Check Names** to validate your entry > **OK** > **Next**.
 
 1. Select **Create a custom task to delegate** > **Next**.
 
-1. Select **Only the following objects in the folder**, and then select **Computer objects**, **Create selected objects in this folder**, and **Delete selected objects in this folder**.
+1. Select **Only the following objects in the folder** > **Computer objects**.
+
+1. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
  ![The Active Directory Object Type pane](./media/windows-autopilot-hybrid/only-following-objects.png)
  
 1. Select **Next**.
 
-1. Under **Permissions**, select the **Full Control** check box. 
- This action selects all the other options.
+1. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 
  ![The Permissions pane](./media/windows-autopilot-hybrid/full-control.png)
 
-1. Select **Next**, and then select **Finish**.
+1. Select **Next** > **Finish**.
 
 ## Install the Intune Connector
 
@@ -137,14 +140,14 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
  c. Select a **Membership type**.
 
-1. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members** and then, in the **Advanced rule** box, enter one of the following code lines:
+1. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
+
+1. In the **Advanced rule** box, enter one of the following code lines:
  - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
- - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), you must type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+ - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
  - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
  
-1. Select **Save**.
-
-1. Select **Create**. 
+1. Select **Save** > **Create**. 
 
 ## Register your Autopilot devices
 
@@ -165,7 +168,7 @@ If your devices aren't yet enrolled, you can register them yourself. For more in
 
 If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](add-devices.md#oem-registration).
 
-When your Autopilot devices are *registered*, before they're enrolled into Intune, they're displayed in three places (with names set to their serial numbers):
+Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
 - The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
 - The **Azure AD All Devices** pane in Azure Active Directory in the Azure portal by selecting **Devices** > **All Devices**.
