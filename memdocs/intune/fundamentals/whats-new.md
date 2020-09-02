@@ -64,7 +64,7 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 #### New version of the PFX Certificate Connector and changes for PKCS certificate profile support <!--  4839686  -->
 
-We’ve released a new version of the PFX Certificate Connector, version 6.2008.60.607. This new connector version:
+We’ve released a new version of the PFX Certificate Connector, version **6.2008.60.607**. This new connector version:
 
 - Supports PKCS certificate profiles on all supported platforms except Windows 8.1
  
