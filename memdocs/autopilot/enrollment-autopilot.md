@@ -189,7 +189,7 @@ This report is in preview. Device deployment records are currently triggered onl
 
 ## Assign a user to a specific Autopilot device
 
-You can assign a licensed Intuen user to a specific Autopilot device. This assignment:
+You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
