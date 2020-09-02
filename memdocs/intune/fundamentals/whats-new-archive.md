@@ -482,7 +482,7 @@ We've updated the UI experience for [creating](../protect/software-updates-ios.m
 #### Engaged restart settings are removed from Windows Update rings<!--  4464404      -->
 As previously announced, Intune's Windows 10 Update rings now [support settings for deadlines](../protect/windows-update-settings.md) and no longer support *Engaged restart*. Settings for *Engaged restart* are no longer available when you configure or manage Update rings in Intune.  
 
-This change aligns with recent [Windows servicing changes](//windows/whats-new/whats-new-windows-10-version-1903#servicing) and on devices that run Windows 10 1903 or later, *deadlines* supersede configurations for *engaged restart*.
+This change aligns with recent [Windows servicing changes](/windows/whats-new/whats-new-windows-10-version-1903#servicing) and on devices that run Windows 10 1903 or later, *deadlines* supersede configurations for *engaged restart*.
 
 #### Prevent installation of apps from Unknown Sources on Android Enterprise work profile devices<!-- 4760025   -->
 On Android Enterprise work profile devices, users can't ever install apps from unknown sources. In this update, there's a new setting - **Prevent app installations from unknown sources in the personal profile**. By default, this setting prevents users from side-loading apps from unknown sources into the personal profile on the device.
