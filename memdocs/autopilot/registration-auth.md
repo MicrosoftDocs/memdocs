@@ -21,7 +21,10 @@ ms.topic: article
 
 **Applies to: Windows 10**
 
-This article describes how a cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller) or an OEM can get customer authorization to register Windows Autopilot devices on the customer’s behalf.
+You can request customer authorization to register Windows Autopilot devices on the customer’s behalf. To make such a request, you must be one of the following:
+
+- Cloud service provider (CSP) partners (direct bill, indirect provider, or indirect reseller)
+- OEM
 
 ## CSP authorization
 
@@ -54,12 +57,12 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
  The image above is what the customer will see if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
- ![Screencap of Accept agreement and authorize partner page - delegated admin rights](images/csp3b.png) 
+ ![Screencap of Accept agreement and authorize partner page](images/csp3b.png) 
 
  > [!NOTE]
  > A user without global admin privileges who clicks the link will see a message similar to the following:
 
- ![Not global admin](images/csp4.png)
+ ![Screencap of permission page](images/csp4.png)
 
 3. Customer selects the **Yes** checkbox, followed by the **Accept** button. Authorization happens instantaneously.
 4. To check that the authorization request is complete, the CSP can check the **Customers** list in their MPC account. If the customer is in the list, the request is complete. For example:
@@ -78,7 +81,7 @@ Each OEM has a unique link to provide to their respective customers, which the O
  > [!NOTE]
  > A user without global admin privileges who clicks the link will see a message similar to the following:
 
- ![Not global admin](images/csp7.png)
+ ![Screencap of MSfB permission required page](images/csp7.png)
 3. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they’re done. Authorization happens instantaneously.
 
  > [!NOTE]
