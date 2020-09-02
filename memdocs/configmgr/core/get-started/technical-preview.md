@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -112,19 +112,26 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2008
+### Technical preview version 2009
 
-- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [See task sequence size in the console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Delete Aged Collected Diagnostic Files task](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Import objects to current folder](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [3555923](2020/technical-preview-2009.md) <!--3555923-->
+- [3601040](2020/technical-preview-2009.md) <!--3601040-->
+- [3608121](2020/technical-preview-2009.md) <!--3608121-->
+- [3734819](2020/technical-preview-2009.md) <!--3734819-->
+- [4575930](2020/technical-preview-2009.md) <!--4575930-->
+- [6254995](2020/technical-preview-2009.md) <!--6254995-->
+- [6503383](2020/technical-preview-2009.md) <!--6503383-->
+- [7308096](2020/technical-preview-2009.md) <!--7308096-->
+- [7410221](2020/technical-preview-2009.md) <!--7410221-->
+- [7520646](2020/technical-preview-2009.md) <!--7520646-->
+- [7699511](2020/technical-preview-2009.md) <!--7699511-->
+- [7774961](2020/technical-preview-2009.md) <!--7774961-->
+- [7821529](2020/technical-preview-2009.md) <!--7821529-->
+- [7979972](2020/technical-preview-2009.md) <!--7979972-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -141,6 +148,16 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2008
+
+- [Collection query preview](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analyze SetupDiag errors for feature updates](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Monitor scenario health](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Collection evaluation view](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [See task sequence size in the console](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Delete Aged Collected Diagnostic Files task](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Import objects to current folder](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### Technical preview version 2007
 
