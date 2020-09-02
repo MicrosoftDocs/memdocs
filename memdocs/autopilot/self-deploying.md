@@ -37,7 +37,9 @@ Self-deploying mode lets you deploy a Windows 10 device as a kiosk, digital sign
 
 You can use the [Kiosk Browser](https://www.microsoft.com/p/kiosk-browser/9ngb5s5xg2kp?rtc=1&activetab=pivot:overviewtab) when setting up a kiosk device. This app is built on Microsoft Edge and can be used to create a tailored, MDM-managed browsing experience.
 
-You can completely automate device configuration by combining self-deploing mode with MDM policies. Use the MDM policies to create a local account configured to automatically log on. For more information, see [simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691) and [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
+You can completely automate device configuration by combining self-deploing mode with MDM policies. Use the MDM policies to create a local account configured to automatically log on. For more information, see:
+- [Simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691)
+- [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
 
 >[!NOTE]
 >Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
