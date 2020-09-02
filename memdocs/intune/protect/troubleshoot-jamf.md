@@ -41,7 +41,7 @@ Before you start troubleshooting, collect some basic information to clarify the 
 - Review the prerequisites from the following articles, depending on how you configure Jamf Pro integration with Intune:
   - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
   - [Integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md#prerequisites)
-- All users must have Microsoft Intune and Microsoft AAD Premium P1 licenses
+- All users must have Microsoft Intune and Microsoft Azure AD Premium P1 licenses
 - You must have a user account that has Microsoft Intune Integration permissions in the Jamf Pro console.
 - You must have a user account that has Global Admin permissions in Azure.
 
@@ -88,7 +88,7 @@ After a device is marked as *Unresponsive* by Jamf Pro, the enrolled user of the
 
 ### Mac devices prompt for keychain sign-in when you open an app  
 
-After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft Office 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
+After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
 
 For example, a prompt with text similar to the following example appears when opening Microsoft Teams:
 

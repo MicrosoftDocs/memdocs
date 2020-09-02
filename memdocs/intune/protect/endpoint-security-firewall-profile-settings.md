@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -244,7 +244,12 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 - **Local address ranges**  
   CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid entries (tokens) include the following options:
+  Manage local address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as local address ranges.
+  - **Export** your current list of local address ranges as a .csv file.
+
+  Valid entries (tokens) include the following options:
   - **An asterisk** - An asterisk (\*) indicates any local address. If present, the asterisk must be the only token included.
   - **A subnet** - Specify subnets by using the subnet mask or network prefix notation. If a subnet mask or network prefix isn't specified, the subnet mask defaults to 255.255.255.255.​​
   - **A valid IPv6 address**
@@ -260,7 +265,12 @@ The following settings are configured as [Endpoint Security policy for Windows 1
 - **Remote address ranges**  
   CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Valid entries (tokens) include the following and aren't case-sensitive:
+  Manage remote address ranges for this rule. You can:
+  - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.
+  - **Import** a .csv file that contains a list of addresses to use as remote address ranges.
+  - **Export** your current list of remote address ranges as a .csv file.
+
+  Valid entries (tokens) include the following and aren't case-sensitive:
   - **An asterisk** - An asterisk (\*) indicates any remote address. If present, the asterisk must be the only token included.
   - **Defaultgateway**
   - **DHCP**

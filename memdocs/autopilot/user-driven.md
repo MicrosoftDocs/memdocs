@@ -86,10 +86,11 @@ Windows Autopilot requires that devices be Azure Active Directory joined. If you
 
 To perform a user-driven hybrid Azure AD joined deployment using Windows Autopilot:
 
+- The device must be running Windows 10, version 1809 or later. 
 - A Windows Autopilot profile for user-driven mode must be created and 
  - **Hybrid Azure AD joined** must be specified as the selected option under **Join to Azure AD as** in the Autopilot profile.
 - If using Intune, a device group in Azure Active Directory must exist with the Windows Autopilot profile assigned to that group.
-- The device must be running Windows 10, version 1809 or later.
+- If using intune, create and assign a Domain Join profile. A Domain Join configuration profile includes on-premises Active Directory domain information
 - The device must have access to an Active Directory domain controller. It must be connected to the organization's network. It must be able to resolve the DNS records for the AD domain and the AD domain controller. It must be able to communicate with the domain controller to authenticate the user.
 - The device must be able to access the Internet, following the [documented Windows Autopilot network requirements](networking-requirements.md).
 - The Intune Connector for Active Directory must be installed.

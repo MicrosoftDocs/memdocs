@@ -45,7 +45,7 @@ We recommend that you document the following:
 
 If a design component does not exist in at least one test criteria that aligns to a requirement or scenario, consider whether the design component is required or not. In addition, make sure to have the following items:
 
-- **Accounts:** Test accounts that are licensed for EMS and Office 365 to test all use-case scenarios.
+- **Accounts:** Test accounts that are licensed for EMS and Microsoft 365 to test all use-case scenarios.
 
 - **Devices:** Test devices that can be wiped or reset to factory defaults.
 

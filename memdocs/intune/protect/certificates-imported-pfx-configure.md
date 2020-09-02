@@ -108,7 +108,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions.
 
    > [!WARNING]
-   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
+   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Microsoft 365.
 
 6. Close the window.
 
@@ -216,7 +216,7 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.	As a best practice to clean up the AAD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
+9.	As a best practice to clean up the Azure AD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
 
 For more information about other available commands, see the readme file at [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

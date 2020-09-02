@@ -248,7 +248,7 @@ For more information about how to modify your ADRs, see [Automatically deploy so
 
 ## Change the update channel after you enable Microsoft 365 Apps clients to receive updates from Configuration Manager
 
-After deploying Microsoft 365 Apps, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Microsoft 365 Apps update channel for devices in your organization](https://docs.microsoft.com/deployoffice/change-update-channels).
+After deploying Microsoft 365 Apps, you can change the update channel with Group Policy or the Office Deployment Tool (ODT). For example, you can move a device from Semi-Annual Channel to Semi-Annual Channel (Targeted). When changing the channel, Office is updated automatically without having to reinstall or download the full version. For more information, see [Change the Microsoft 365 Apps update channel for devices in your organization](/deployoffice/change-update-channels).
 
 ## Next steps
 

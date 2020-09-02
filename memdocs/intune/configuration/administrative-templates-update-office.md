@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Update Office 365 using administrative templates in Microsoft Intune - Azure | Microsoft Docs
-description: Use Administrative templates in Microsoft Intune to update Office 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
+title: Update Microsoft 365 using administrative templates in Microsoft Intune - Azure | Microsoft Docs
+description: Use Administrative templates in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,18 +27,18 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Update Channel and Target Version settings to update Office 365 with Microsoft Intune Administrative Templates
+# Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates
 
-In Intune, you can use [Windows 10 templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Office 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
+In Intune, you can use [Windows 10 templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
 
-In this scenario, you create an administrative template in Intune that updates Office 365 on your devices.
+In this scenario, you create an administrative template in Intune that updates Microsoft 365 on your devices.
 
 For more information on administrative templates, see [Windows 10 templates to configure group policy settings](administrative-templates-windows.md).
 
 Applies to:
 
 - Windows 10 and later
-- Office 365
+- Microsoft 365
 
 ## Prerequisites
 
@@ -101,7 +101,7 @@ At this point, the Intune policy is successfully applied to the device.
     You see the following registry keys:
 
     - `UpdateChannel`: A dynamic key that changes, depending on the configured settings.
-    - `CDNBaseUrl`: Set when Office 365 installs on the device.
+    - `CDNBaseUrl`: Set when Microsoft 365 installs on the device.
 
 3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) lists the values, and what they're set to.
 
@@ -138,7 +138,7 @@ To test your policy, you can force the policy settings on the device. The follow
 
     It should be updated with the value set in the policy. In our example, the value should be set to `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`.
 
-At this point, the Office update channel is successfully changed on the device. You can open an Office 365 app for a user that receives this update to check status.
+At this point, the Office update channel is successfully changed on the device. You can open a Microsoft 365 app for a user that receives this update to check status.
 
 ## Force the Office synchronization to update account information  
 
@@ -185,7 +185,7 @@ Consider using these steps to test your policy before deploying the policy to al
 
 ## Next steps
 
-[Update channel values for Office 365 clients](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Update channel values for Microsoft 365 clients](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 
