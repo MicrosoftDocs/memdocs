@@ -30,12 +30,12 @@ CSP partners can get customer authorization to register Windows Autopilot device
 <table>
 <tr><td>Direct CSP<td>Gets direct authorization from the customer to register devices.
 <tr><td>Indirect CSP Provider<td>Gets implicit permission to register devices through the relationship their CSP Reseller partner has with the customer. Indirect CSP Providers register devices through Microsoft Partner Center.
-<tr><td>Indirect CSP Reseller<td>Gets direct authorization from the customer to register devices. At the same time, their indirect CSP Provider partner also gets authorization, which mean that either the Indirect Provider or the Indirect Reseller can register devices for the customer. However, the Indirect CSP Reseller must register devices through the MPC UI (manually uploading CSV file), whereas the Indirect CSP Provider has the option to register devices using the MPC APIs.
+<tr><td>Indirect CSP Reseller<td>Gets direct authorization from the customer to register devices. At the same time, their indirect CSP Provider partner also gets authorization, which means that either the Indirect Provider or the Indirect Reseller can register devices for the customer. However, the Indirect CSP Reseller must register devices through the MPC UI (manually uploading CSV file). The Indirect CSP Provider can register devices using the MPC APIs.
 </table>
 
 ### Steps
 
-For a CSP to register Windows Autopilot devices on behalf of a customer, the customer must first grant that CSP partner permission using the following process:
+For a CSP to register Windows Autopilot devices for a customer, the customer must first grant that CSP partner permission using the following process:
 
 1. CSP sends link to customer requesting authorization/consent to register/manage devices on their behalf. To do so:
  - CSP logs into Microsoft Partner Center
@@ -45,15 +45,16 @@ For a CSP to register Windows Autopilot devices on behalf of a customer, the cus
  ![Request a reseller relationship](images/csp1.png)
  - Select the checkbox indicating whether or not you want delegated admin rights:
  ![Delegated rights](images/csp2.png)
- - NOTE: Depending on your partner, they might request Delegated Admin Permissions (DAP) when requesting this consent. You should ask them to use the newer DAP-free process (shown in this document) if possible. If not, you can easily remove their DAP status either from Microsoft Admin Center or the Microsoft 365 admin portal: https://docs.microsoft.com/partner-center/customers_revoke_admin_privileges
+  > [!NOTE]
+  > Depending on your partner, they might request Delegated Admin Permissions (DAP) when requesting this consent. If possible, it's better to use the newer DAP-free process (shown in this document). If not, you can easily remove their DAP status either from Microsoft Admin Center or the Microsoft 365 admin portal: https://docs.microsoft.com/partner-center/customers_revoke_admin_privileges
  - Send the template above to the customer via email.
 2. Customer with global administrator privileges in Microsoft Admin Center clicks the link in the body of the email once they receive it from the CSP, which takes them directly to the following Microsoft 365 admin center page:
 
- ![Global admin](images/csp3a.png)
+ ![Screencap of Accept agreement and authorize partner page - delegated admin rights](images/csp3a.png)
 
- The image above is what the customer will see if they requested delegated admin rights (DAP). Note that the page says what Admin roles are being requested. If the customer did not request delegated admin rights they would see the following page:
+ The image above is what the customer will see if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
- ![Global admin](images/csp3b.png) 
+ ![Screencap of Accept agreement and authorize partner page - delegated admin rights](images/csp3b.png) 
 
  > [!NOTE]
  > A user without global admin privileges who clicks the link will see a message similar to the following:
@@ -72,7 +73,7 @@ Each OEM has a unique link to provide to their respective customers, which the O
 1. OEM emails link to their customer.
 2. Customer with global administrator privileges in Microsoft Store for Business (MSfB) clicks the link once they receive it from the OEM, which takes them directly to the following MSfB page:
 
- ![Global admin](images/csp6.png)
+ ![Screencap of Accept partner invitation page](images/csp6.png)
 
  > [!NOTE]
  > A user without global admin privileges who clicks the link will see a message similar to the following:
@@ -83,7 +84,7 @@ Each OEM has a unique link to provide to their respective customers, which the O
  > [!NOTE]
  > Once this process has completed, it is not currently possible for an administrator to remove an OEM. To remove an OEM or revoke their permissions, send a request to msoemops@microsoft.com
 
-4. The OEM can use the Validate Device Submission Data API to verify the consent has completed. This API is discussed in the latest version of the API Whitepaper, p. 14ff [https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx). **Note**: this link is only accessible by Microsoft Device Partners. As discussed in this whitepaper, it’s a best practice recommendation for OEM partners to run the API check to confirm they’ve received customer consent before attempting to register devices, thus avoiding errors in the registration process.
+4. The OEM can use the Validate Device Submission Data API to verify the consent has completed. This API is discussed in the latest version of the API Whitepaper, p. 14ff [https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx). **Note**: this link is only accessible by Microsoft Device Partners. As discussed in this article, it’s a best practice recommendation for OEM partners to run the API check to confirm they’ve received customer consent before attempting to register devices. This check cna help avoid errors in the registration process.
 
  > [!NOTE]
  > During the OEM authorization registration process, no delegated admin permissions are granted to the OEM.
