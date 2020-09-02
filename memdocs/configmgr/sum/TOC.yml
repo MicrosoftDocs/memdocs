@@ -22,14 +22,14 @@
     href: get-started/prepare-for-software-updates-management.md
   - name: Install a software update point
     href: get-started/install-a-software-update-point.md
-  - name: Configure a software update point to use SSL
-    href: get-started/software-update-point-ssl.md
   - name: Synchronize software updates
     href: get-started/synchronize-software-updates.md
   - name: Configure classifications and products
     href: get-started/configure-classifications-and-products.md
   - name: Manage settings for software updates
     href: get-started/manage-settings-for-software-updates.md
+  - name: Configure a software update point to use SSL
+    href: get-started/software-update-point-ssl.md
   - name: Synchronize software updates in disconnected environments
     items:
     - name: Synchronize software updates from a disconnected software update point
