@@ -132,6 +132,7 @@ Once the web services are set to require SSL, the WSUS application needs to be n
 > If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
 
 ## <a name="bkmk_wsus_console"></a> Verify the WSUS console can connect using SSL
+
 The WSUS console uses the ApiRemoting30 web service for connection. The Configuration Manager software update point (SUP) also uses this same web service to direct WSUS to take certain actions such as:
 
 - Initiating a software update synchronization
@@ -139,7 +140,7 @@ The WSUS console uses the ApiRemoting30 web service for connection. The Configur
 - Adding or removing products and classifications for synchronization from the hierarchy's top-level WSUS server.
 - Removing expired updates
 
-Open the WSUS console to verify you can use an SSL connection to the WSUS server's ApiRemoting30 web service. We'll test the other web services later.
+Open the WSUS console to verify you can use an SSL connection to the WSUS server's ApiRemoting30 web service. We'll test some of the other web services later.
 
 1. Open the WSUS console and select **Action** > **Connect to Server**.
 1. Enter the FQDN of the WSUS server for the **Server name** option.
@@ -178,6 +179,8 @@ To configure the software update point to require SSL communication to the WSUS 
    Setting new configuration state to 2 (WSUS_CONFIG_SUCCESS)
    ```
 
+Log file examples have been edited to remove unneeded information for this scenario.  
+
 ## <a name="bkmk_cm_verify"></a> Verify functionality with Configuration Manager
 
 ### Verify the site server can sync updates
@@ -187,7 +190,7 @@ To configure the software update point to require SSL communication to the WSUS 
 1. From the ribbon, select **Synchronize Software Updates**.
 1. Select **Yes** to the notification asking if you want to initiate a site-wide synchronization for software updates.
    - Since the WSUS configuration changed, a full software updates synchronization will occur rather than a delta synchronization.
-1. Open the **wsyncmgr.log** for the site. If you are monitoring a child primary site, you'll need to wait for the central administration site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
+1. Open the **wsyncmgr.log** for the site. If you are monitoring a child site, you'll need to wait for the parent site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
 
    ```
    Starting Sync
@@ -198,28 +201,48 @@ To configure the software update point to require SSL communication to the WSUS 
    ...
    https://SERVER.CONTOSO.COM:8531
    ...
-   Done synchronizing WSUS Server r61274683.r61274683dom.net
+   Done synchronizing WSUS Server SERVER.CONTOSO.COM
    ...
    sync: Starting SMS database synchronization
    ...
-   Done synchronizing SMS with WSUS Server r61274683.r61274683dom.net
+   Done synchronizing SMS with WSUS Server SERVER.CONTOSO.COM
    ```
-  
 
 ### Verify a client can scan for updates
 
+When you change the software update point to require SSL, Configuration Manager clients receive the updated WSUS URL when it makes a location request for a software update point. By testing a client, we can:
+-  Determine if the client trusts the WSUS server's certificate. 
+- If the SimpleAuthWebService and the ClientWebService for WSUS are functional.
+-  That the WSUS content virtual directory is functional, if the client happened to get a EULA during the scan
 
+1. Identify a client that scans against the software update point recently changed to use TLS/SSL. Use [Run scripts](../..//apps/deploy-use/create-deploy-scripts.md)  with the below PowerShell script if you need help identifying a client:
+
+   ```powershell
+   $Last = (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").LastSuccessScanPath
+   $Current= Write-Output (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").CurrentScanPath 
+   Write-Host "LastGoodSUP- $last"
+   Write-Host "CurrentSUP- $current"
+   ```
+
+1. Run a software update scan cycle on your test client.
+1. Review the **LocationServices.log** to verify that the client sees the correct WSUS URL.
 **LocationServices.log**
-```
-WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
-...
-<LocationRecord WSUSURL="https://SERVER.CONTOSO.COM:8531" ServerName="SERVER.CONTOSO.COM"
-...
-</WSUSLocationReply>
-```
-**WUAHandler.log**
-```
-Enabling WUA Managed server policy to use server: https://SERVER.CONTOSO.COM:8531
-...
-Successfully completed scan.
-```
+   ```
+   WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
+   ...
+   <LocationRecord WSUSURL="https://SERVER.CONTOSO.COM:8531" ServerName="SERVER.CONTOSO.COM"
+   ...
+   </WSUSLocationReply>
+   ```
+
+1. Review the **WUAHandler.log** to verify that the client can successfully scan. 
+
+   ```
+   Enabling WUA Managed server policy to use server: https://SERVER.CONTOSO.COM:8531
+   ...
+   Successfully completed scan.
+   ```
+
+## Next steps
+
+[Deploy software updates](../deploy-use/deploy-software-updates.md)
