@@ -24,12 +24,16 @@ Windows Autopilot self-deploying mode lets you deploy a device with little to no
 - Choose the language, locale, and keyboard
 - Make a network connection 
 
-Self-deploying mode joins the device into Azure Active Directory, enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment, and ensures that all policies, applications, certificates, and networking profiles are provisioned on the device, using the enrollment status page to prevent access to the desktop until the device is fully provisioned. 
+Self-deploying mode provides all the following features:
+- joins the device into Azure Active Directory
+- enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment
+- makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device
+- uses the Enrollment Status Page to prevent access  until the device is fully provisioned
 
 >[!NOTE]
 >Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
 
-Self-deploying mode is designed to deploy Windows 10 as a kiosk, digital signage device, or a shared device. When setting up a kiosk, you can use the new Kiosk Browser, an app built on Microsoft Edge that can be used to create a tailored, MDM-managed browsing experience. When combined with MDM policies to create a local account and configure it to automatically log on, the complete configuration of the device can be automated. Find out more about these options by reading simplifying kiosk management for IT with Windows 10. For more information, [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
+Self-deploying mode is designed to deploy Windows 10 as a kiosk, digital signage device, or a shared device. When setting up a kiosk, you can use the [Kiosk Browser](https://www.microsoft.com/p/kiosk-browser/9ngb5s5xg2kp?rtc=1&activetab=pivot:overviewtab). This app is built on Microsoft Edge and can be used to create a tailored, MDM-managed browsing experience. You can completely automate device configuration by combining self-deploing mode with MDM policies. Just use the MDM policies to create a local account configured to automatically log on. Find out more about these options by reading [simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691). For more information, [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
 
 >[!NOTE]
 >Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
@@ -38,12 +42,12 @@ Self-deploying mode is designed to deploy Windows 10 as a kiosk, digital signage
 
 ## Requirements
 
-Because self-deploying mode uses a device’s TPM 2.0 hardware to authenticate the device into an organization’s Azure AD tenant, devices without TPM 2.0 can't be used with this mode. The devices must also support TPM device attestation. All new Windows devices should meet these requirements.
+Self-deploying mode uses a device’s TPM 2.0 hardware to authenticate the device into an organization’s Azure AD tenant. For this reason, devices without TPM 2.0 can't be used with this mode. The devices must also support TPM device attestation. All new Windows devices should meet these requirements.
 
 >[!IMPORTANT]
 >If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC. See [Windows Autopilot known issues](known-issues.md) to review other known errors and solutions.
 
-To display an organization-specific logo and organization name during the Autopilot process, Azure Active Directory Company Branding needs to be configured with the images and text that should be displayed. See [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding) for more details. 
+You can display an organization-specific logo and organization name during the Autopilot process. To do so, Azure AD Company Branding must be configured with the images and text you want displayed. See [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding) for more details. 
 
 ## Step by step
 
@@ -58,7 +62,7 @@ To deploy in self-deploying mode Windows Autopilot, the following preparation st
 When using Windows Autopilot to deploy in self-deploying mode, the following end-user experience should be observed:
 
 -  Once connected to a network, the Autopilot profile will be downloaded.
--  If the Autopilot profile has been configured to automatically configure the language, locale, and keyboard layout, these OOBE screens should be skipped as long as Ethernet connectivity is available. Otherwise, manual steps are required:
+- If connected to the Ethernet, and the Autopilot profile is configured to skip them, the following pages won't be displayed: language, locale, and keyboard layout. Otherwise, manual steps are required:
   -  If multiple languages are preinstalled in Windows 10, the user must pick a language.
   -  The user must pick a locale and a keyboard layout, and optionally a second keyboard layout.
 -  If connected via Ethernet, no network prompt is expected. If no Ethernet connection is available and Wi-fi is built in, the user needs to connect to a wireless network.
