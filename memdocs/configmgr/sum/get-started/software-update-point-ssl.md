@@ -45,7 +45,7 @@ When configuring WSUS servers and their software update points to use TLS/SSL, y
 
 ## Prerequisites
 
-This tutorial covers the most common method to obtain a certificate for use with IIS. Whichever method your organization uses, ensure that the certificate meets the [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md) for a Configuration Manager software update point. As with any certificate, the certificate authority must be trusted by devices communicating with the WSUS server. 
+This tutorial covers the most common method to obtain a certificate for use with Internet Information Services (IIS). Whichever method your organization uses, ensure that the certificate meets the [PKI certificate requirements](../../core/plan-design/network/pki-certificate-requirements.md) for a Configuration Manager software update point. As with any certificate, the certificate authority must be trusted by devices communicating with the WSUS server.
 
 - A WSUS server with the software update point role installed
 - One of the two following options:
@@ -80,10 +80,10 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 
 1. On the WSUS server, open Internet Information Services (IIS) Manager.
 1. Go to **Sites** > **WSUS Administration**.
-1. Select **Bindings** from either the action menu or by right clicking on the site.
+1. Select **Bindings** from either the action menu or by right-clicking on the site.
 1. In the **Site Bindings** window, select the line for **https**, then select **Edit...**.
    - Don't remove the HTTP site binding. WSUS uses HTTP for the update content files.
-1. Under the **SSL certificate** option, choose the certificate to bind to the WSUS Administration site. The certificate's friendly name is shown in the drop down menu. If a friendly name wasn't specified, then the certificate's `IssuedTo` field is shown. If you're not sure which certificate to use, select **View** and verify the thumbprint matches the one you obtained.  
+1. Under the **SSL certificate** option, choose the certificate to bind to the WSUS Administration site. The certificate's friendly name is shown in the drop-down menu. If a friendly name wasn't specified, then the certificate's `IssuedTo` field is shown. If you're not sure which certificate to use, select **View** and verify the thumbprint matches the one you obtained.  
    :::image type="content" source="media/edit-site-binding.png" alt-text="Edit Site Binding window with SSL certificate selection":::
 1. Select **OK** when you're done, then **Close** to exit the site bindings. Keep Internet Information Services (IIS) Manager open for the next steps.
 
@@ -104,7 +104,7 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 
       1. Select **SSL Settings**.
       1. Enable the **Require SSL** option.
-      1. Verify the **Client certificates** is set to **Ignore**.
+      1. Verify the **Client certificates** option is set to **Ignore**.
       1. Select **Apply**.
 
 Don't set the SSL settings at the top-level WSUS Administration site since certain functions, such as content, need to use HTTP.
@@ -136,7 +136,7 @@ Once the web services are set to require SSL, the WSUS application needs to be n
 The WSUS console uses the ApiRemoting30 web service for connection. The Configuration Manager software update point (SUP) also uses this same web service to direct WSUS to take certain actions such as:
 
 - Initiating a software update synchronization
-- Setting the proper upstream server for WSUS, which is dependant on where the SUP's site resides in your Configuration Manager hierarchy
+- Setting the proper upstream server for WSUS, which is dependent on where the SUP's site resides in your Configuration Manager hierarchy
 - Adding or removing products and classifications for synchronization from the hierarchy's top-level WSUS server.
 - Removing expired updates
 
@@ -152,7 +152,7 @@ Open the WSUS console to verify you can use an SSL connection to the WSUS server
 
 ## <a name="bkmk_cm_sup"></a> Configure the software update point to require SSL communication to the WSUS server
 
-Once WSUS is setup to use TLS/SSL, you'll need to update the corresponding Configuration Manager software update point to require SSL too. When you make this change, Configuration Manager will:
+Once WSUS is set up to use TLS/SSL, you'll need to update the corresponding Configuration Manager software update point to require SSL too. When you make this change, Configuration Manager will:
 
 - Verify it can configure the WSUS server for the software update point
 - Direct clients to use the SSL port when they're told to scan against this WSUS server.
@@ -166,7 +166,7 @@ To configure the software update point to require SSL communication to the WSUS 
 1. Enable the **Require SSL communication to the WSUS server** option.
 
    :::image type="content" source="media/sup-properties.png" alt-text="SUP properties showing the option for Require SSL communication to the WSUS server":::
-1. In the [**WCM.log**](../../core/plan-design/hierarchy/log-files#BKMK_SUPLog) for the site, you'll see the following entries when you apply the change:
+1. In the [**WCM.log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) for the site, you'll see the following entries when you apply the change:
 
    ```
    SCF change notification triggered.
@@ -190,7 +190,7 @@ Log file examples have been edited to remove unneeded information for this scena
 1. From the ribbon, select **Synchronize Software Updates**.
 1. Select **Yes** to the notification asking if you want to initiate a site-wide synchronization for software updates.
    - Since the WSUS configuration changed, a full software updates synchronization will occur rather than a delta synchronization.
-1. Open the **wsyncmgr.log** for the site. If you are monitoring a child site, you'll need to wait for the parent site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
+1. Open the **wsyncmgr.log** for the site. If you're monitoring a child site, you'll need to wait for the parent site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
 
    ```
    Starting Sync
@@ -215,7 +215,7 @@ When you change the software update point to require SSL, Configuration Manager 
 - If the SimpleAuthWebService and the ClientWebService for WSUS are functional.
 -  That the WSUS content virtual directory is functional, if the client happened to get a EULA during the scan
 
-1. Identify a client that scans against the software update point recently changed to use TLS/SSL. Use [Run scripts](../..//apps/deploy-use/create-deploy-scripts.md)  with the below PowerShell script if you need help identifying a client:
+1. Identify a client that scans against the software update point recently changed to use TLS/SSL. Use [Run scripts](../..//apps/deploy-use/create-deploy-scripts.md)  with the below PowerShell script if you need help with identifying a client:
 
    ```powershell
    $Last = (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").LastSuccessScanPath
