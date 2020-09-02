@@ -24,7 +24,7 @@ ms.custom:
 
 **Applies to: Windows 10**
 
-Windows Autopilot depends on specific capabilities available in Windows 10, Azure Active Directory, and MDM services such as Microsoft Intune.  In order to use Windows Autopilot and leverage these capabilities, some requirements must be met.
+Windows Autopilot depends on specific capabilities available in Windows 10, Azure Active Directory, and MDM services such as Microsoft Intune. In order to use Windows Autopilot and leverage these capabilities, some requirements must be met.
 
 **Note**: For a list of OEMs that currently support Windows Autopilot, see the Participant device manufacturers section at [Windows Autopilot](https://aka.ms/windowsAutopilot).
 
@@ -32,12 +32,12 @@ Windows Autopilot depends on specific capabilities available in Windows 10, Azur
 
 - A [supported version](/windows/release-information/) of Windows 10 Semi-Annual Channel is required. Windows 10 Enterprise 2019 long-term servicing channel (LTSC) is also supported.
 - The following editions are supported:
-  - Windows 10 Pro
-  - Windows 10 Pro Education
-  - Windows 10 Pro for Workstations
-  - Windows 10 Enterprise
-  - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+ - Windows 10 Pro
+ - Windows 10 Pro Education
+ - Windows 10 Pro for Workstations
+ - Windows 10 Enterprise
+ - Windows 10 Education
+ - Windows 10 Enterprise 2019 LTSC
 
 >[!NOTE]
 >Procedures for deploying Windows Autopilot might refer to specific products and versions. The inclusion of these products in this content doesn't imply an extension of support for a version that is beyond its support lifecycle. Windows Autopilot does not support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).
@@ -57,7 +57,7 @@ In environments that have more restrictive Internet access, or for those that re
 For additional details about each of these services and their specific requirements, review the following details:
 
 <table><th>Service<th>Information
-<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service.  With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com. <br>
+<tr><td><b>Windows Autopilot Deployment Service<b><td>After a network connection is in place, each Windows 10 device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used: https://ztd.dds.microsoft.com, https://cs.dds.microsoft.com. <br>
 
 <tr><td><b>Windows Activation<b><td>Windows Autopilot also requires Windows Activation services. See <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows activation or validation fails with error code 0x8004FE33</a> for details about the URLs that need to be accessible for the activation services.<br>
 
@@ -91,9 +91,9 @@ If the Microsoft Store is not accessible, the Autopilot process will still conti
 <tr><td><b>Hybrid AAD join<b><td>The device can be hybrid AAD joined. The computer should be on corporate network for hybrid AAD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
 <tr><td><b>Autopilot Self-Deploying mode and Autopilot White Glove<b><td>Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, do not include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. See <a href="/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a> for more details. Make sure that these URLs are accessible for each firmware TPM provider so that certificates can be successfully requested: 
 
-  <br>Intel- https://www.intel.com/ 
-  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1
-  <br>AMD- https://ftpm.amd.com/pki/aia
+ <br>Intel- https://www.intel.com/ 
+ <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1
+ <br>AMD- https://ftpm.amd.com/pki/aia
 
 </table>
 
@@ -119,16 +119,16 @@ Additionally, the following are also recommended (but not required):
 
 ## Configuration requirements
 
-Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios.  
+Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios. 
 
-- Configure Azure Active Directory automatic enrollment.  For Microsoft Intune, see [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment) for details.  If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
-- Configure Azure Active Directory custom branding.  In order to display an organization-specific logon page during the Autopilot process, Azure Active Directory needs to be configured with the images and text that should be displayed.  See [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding) for more details.  Note that the "square logo" and "sign-in page text" are the key elements for Autopilot, as well as the Azure Active Directory tenant name (configured separately in the Azure AD tenant properties).
+- Configure Azure Active Directory automatic enrollment. For Microsoft Intune, see [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment) for details. If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
+- Configure Azure Active Directory custom branding. In order to display an organization-specific logon page during the Autopilot process, Azure Active Directory needs to be configured with the images and text that should be displayed. See [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding) for more details. Note that the "square logo" and "sign-in page text" are the key elements for Autopilot, as well as the Azure Active Directory tenant name (configured separately in the Azure AD tenant properties).
 - Enable [Windows Subscription Activation](/windows/deployment/windows-10-enterprise-subscription-activation) if desired, in order to automatically step up from Windows 10 Pro to Windows 10 Enterprise.
 
-Specific scenarios will then have additional requirements.  Generally, there are two specific tasks:
+Specific scenarios will then have additional requirements. Generally, there are two specific tasks:
 
-- Device registration.  Devices need to be added to Windows Autopilot to support most Windows Autopilot scenarios.  See [Adding devices to Windows Autopilot](add-devices.md) for more details.
-- Profile configuration.  Once devices have been added to Windows Autopilot, a profile of settings needs to be applied to each device.  See [Configure Autopilot profiles](profiles.md) for details.  Note that Microsoft Intune can automate this profile assignment; see [Create an Autopilot device group](/intune/enrollment-Autopilot#create-an-Autopilot-device-group) and [Assign an Autopilot deployment profile to a device group](/intune/enrollment-Autopilot#assign-an-Autopilot-deployment-profile-to-a-device-group) for more information.
+- Device registration. Devices need to be added to Windows Autopilot to support most Windows Autopilot scenarios. See [Adding devices to Windows Autopilot](add-devices.md) for more details.
+- Profile configuration. Once devices have been added to Windows Autopilot, a profile of settings needs to be applied to each device. See [Configure Autopilot profiles](profiles.md) for details. Note that Microsoft Intune can automate this profile assignment; see [Create an Autopilot device group](/intune/enrollment-Autopilot#create-an-Autopilot-device-group) and [Assign an Autopilot deployment profile to a device group](/intune/enrollment-Autopilot#assign-an-Autopilot-deployment-profile-to-a-device-group) for more information.
 
 See [Windows Autopilot Scenarios](windows-Autopilot-scenarios.md) for additional details.
 
