@@ -99,9 +99,15 @@ Only use this process if you don't already have a reporting services point in th
 
 1. When the report is ready to save, go to the **File** menu, select **Save as**, then choose **Power BI Report Server**.
 
-1. In the **Power BI Report Server Selection** window, enter the URL for the reporting services point as the **New report server address**. For example, `https://rsp.contoso.com/Reports`.
+1. In the **Power BI Report Server Selection** window, enter the URL for the reporting services point as the **New report server address**. For example, `https://rsp.contoso.com/Reports`. Click OK.
 
-In the Configuration Manager console, you see the new report in the list of Power BI Reports.
+1. In the **Save report** window, select the folder `ConfigMgr_<SiteCode>`, for example: `ConfigMgr_PS1` where `PS1` is the ConfigMgr site code. You can optionally choose or create (from the report server) a sub folder to store in.
+    > [!TIP]
+    > Reports and report folders with Power BI reports must be located in the `ConfigMgr_<SiteCode>` on the report server or they will not appear in the ConfigMgr console.
+
+1. In `File name:` field, enter a name for the report.
+
+In the Configuration Manager console, you see the new report in the list of Power BI Reports. If you don't see your reports, verify that you saved the reports to the `ConfigMgr_<SiteCode>` folder.
 
 ## Next steps
 
