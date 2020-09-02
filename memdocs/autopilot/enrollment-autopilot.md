@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Enroll Windows devices in Intune by using Windows Autopilot
 
-Windows Autopilot simplifies enrolling devices in Intune. Building and maintaining customized operating system images is a time-consuming process. You might also spend time applying these custom operating system images to new devices to prepare them for use before giving them to your end users. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images to the devices. When you use Intune to manage Autopilot devices, you can manage policies, profiles, apps, and more after they're enrolled. For an overview of benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](windows-autopilot.md).
+Windows Autopilot simplifies enrolling devices in Intune. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images to the devices. You can use Intune manage policies, profiles, apps, and more after they're enrolled. For an overview of benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](windows-autopilot.md).
 
 There are four types of Autopilot deployment:
 
@@ -95,7 +95,7 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
  Autopilot devices that aren't yet enrolled are devices where the name equals the serial number of the device.
 4. If you chose **Dynamic Devices** for **Membership type** above, then in the **Group** blade, choose **Dynamic device members** and type any of the following code in the **Advanced rule** box. These rules only gather Autopilot devices because they target only Autopilot device attributes. Creating a group based off non-autopilot attributes won't guarantee that devices included in the group are registered to Autopilot.
  - If you want to create a group that includes all of your Autopilot devices, type: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
- - Intune's group tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific group tag (the Azure AD device OrderID), you must type: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+ - Intune's group tag field maps to the OrderID attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device OrderID), type: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
  - If you want to create a group that includes all of your Autopilot devices with a specific Purchase Order ID, type: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
  
  After adding the **Advanced rule** code, choose **Save**.
@@ -165,7 +165,10 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
 2. Select the device you want to edit.
-3. In the pane on the right of the screen, you can edit the device name, group tag, or User Friendly Name (if you've assigned a user).
+3. In the pane on the right of the screen, you can edit:
+  - device name
+  - group tag
+  - User Friendly Name (if you've assigned a user)
 4. Select **Save**.
 
 > [!NOTE]
@@ -182,11 +185,14 @@ You can see details on each device deployed through Windows Autopilot.
 To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 The data is available for 30 days after deployment.
 
-This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Any deployment that doesn't trigger a new Intune enrollment won't be picked up by this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot White glove.
+This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot White glove.
 
 ## Assign a user to a specific Autopilot device
 
-You can assign a user to a specific Autopilot device. This assignment pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup. It also lets you set a custom greeting name. It doesn't pre-fill or modify Windows sign-in. Only licensed Intune users can be assigned in this manner.
+You can assign a licensed Intuen user to a specific Autopilot device. This assignment:
+- Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
+- Lets you set a custom greeting name.
+- Doesn't pre-fill or modify Windows sign-in.
 
 Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
 
