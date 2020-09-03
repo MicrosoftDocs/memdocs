@@ -28,7 +28,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-## Device timeline in the admin center
+### Device timeline in the admin center
 <!--7220536, CM7141381-->
 When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Device timeline in the admin center](../../../tenant-attach/timeline.md).
 
