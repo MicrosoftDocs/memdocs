@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -68,13 +68,13 @@ These settings are added to a device configuration profile in Intune, and then a
   - iPadOS 13.0 and newer
 
 - **Remote screen observation by Classroom app**: **Block** prevents the Classroom app from remotely viewing the screen on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the Apple Classroom app to view the screen.
-Requires a supervised device until iOS 13.0. Available to device enrollment and automated device enrollment for iOS 13.0 and later. 
 
   To use this setting, set the **Screen capture** setting to **Block**.
 
   This feature applies to:  
-  - iOS 9.3 and newer
-  - iPadOS 13.0 and newer
+  - iOS 9.3 - iOS 12.x: Requires supervised devices
+  - iOS 13.0 and newer: Doesn't require supervised devices
+  - iPadOS 13.0 and newer: Devices must be enrolled using Device Enrollment or Automated Device Enrollment (ADE)
 
 - **Unprompted screen observation by Classroom app**: **Allow** lets teachers silently observe students' iOS/iPadOS screens using the Classroom app without the students knowing. Student devices enrolled in a class using the Classroom app automatically give permission to that course's teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent this feature.
 
