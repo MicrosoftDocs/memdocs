@@ -109,9 +109,6 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 
 Don't set the SSL settings at the top-level WSUS Administration site since certain functions, such as content, need to use HTTP.
 
-> [!TIP] 
-> If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
-
 ## <a name="bkmk_wsusutil"></a> Configure the WSUS application to use SSL
 
 Once the web services are set to require SSL, the WSUS application needs to be notified so it can do some additional configuration to support the change.
