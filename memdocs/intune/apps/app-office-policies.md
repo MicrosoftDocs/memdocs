@@ -1,0 +1,63 @@
+---
+# required metadata
+
+title: Policies for Office apps
+titleSuffix: Microsoft Intune
+description: Understand the policies available for Office apps.
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 09/03/2020
+ms.topic: how-to
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology:
+ms.assetid: 
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: mghadial
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: 
+ms.collection: M365-identity-device-management
+---
+
+# Policies for Office apps
+
+Intune provides policies specifically for Microsoft Office apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, you must meet the requirements for using the Office cloud policy service. App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
+
+## Prerequisites
+
+You must meet the requirements to use policies for Office apps. For more information, see [Requirements for using the Office cloud policy service](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service).
+
+## To add an Office app policy
+
+After you set up Intune for your organization, you can create an Office app policy.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **Policies for Office apps** > **Create**.
+3. Add the following values:
+    - **Name:** Type a name (required) for your new policy.
+    - **Description:** (Optional) Type a description.
+    - **Select type:** Select how this policy configuration will be applied.
+    - **Select group:** Select the group for this policy configuration.
+    - **Configure policies:** Select the Office policy that you want to apply. You can sort the provided list based on policy, platform, application, recommendation, and status.
+4. Select **Create**. The policy is created and appears in the table on the **Policy configurations** pane.
+
+   > [!TIP]
+   > The **Policy configurations** pane provides the **Health status** for each policy.
+
+## Additional information
+
+- [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+
+## Next steps
+
+- [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
