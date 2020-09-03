@@ -212,16 +212,33 @@ When you change the software update point to require SSL, Configuration Manager 
 - If the SimpleAuthWebService and the ClientWebService for WSUS are functional.
 -  That the WSUS content virtual directory is functional, if the client happened to get a EULA during the scan
 
-1. Identify a client that scans against the software update point recently changed to use TLS/SSL. Use [Run scripts](../..//apps/deploy-use/create-deploy-scripts.md)  with the below PowerShell script if you need help with identifying a client:
+1. Identify a client that scans against the software update point recently changed to use TLS/SSL. Use [Run scripts](../..//apps/deploy-use/create-deploy-scripts.md) with the below PowerShell script if you need help with identifying a client:
 
    ```powershell
    $Last = (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").LastSuccessScanPath
-   $Current= Write-Output (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").CurrentScanPath 
+   $Current= Write-Output (Get-CIMInstance -Namespace "root\CCM\Scanagent" -Class "CCM_SUPLocationList").CurrentScanPath
    Write-Host "LastGoodSUP- $last"
    Write-Host "CurrentSUP- $current"
    ```
 
-1. Run a software update scan cycle on your test client.
+1. Run a software update scan cycle on your test client. You can force a scan with the following PowerShell script:
+
+   ```powershell
+   Invoke-WMIMethod -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
+   ```
+
+1. Review the client's **ScanAgent.log** to verify the message to scan against the software update point was received.
+
+   ```
+   Message received: '<?xml version='1.0' ?>
+   <UpdateSourceMessage MessageType='ScanByUpdateSource'>
+	  <ForceScan>TRUE</ForceScan>
+	  <UpdateSourceIDs>
+			<ID>{A1B2C3D4-1234-1234-A1B2-A1B2C3D41234}</ID>
+	  </UpdateSourceIDs>
+	</UpdateSourceMessage>'
+   ```
+
 1. Review the **LocationServices.log** to verify that the client sees the correct WSUS URL.
 **LocationServices.log**
    ```
@@ -232,7 +249,7 @@ When you change the software update point to require SSL, Configuration Manager 
    </WSUSLocationReply>
    ```
 
-1. Review the **WUAHandler.log** to verify that the client can successfully scan. 
+1. Review the **WUAHandler.log** to verify that the client can successfully scan.
 
    ```
    Enabling WUA Managed server policy to use server: https://SERVER.CONTOSO.COM:8531
