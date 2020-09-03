@@ -73,7 +73,7 @@ The following actions aren't supported for stand-alone media:
 >
 > Alternatively, use a custom [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run Command Line** step runs the following WMIC command to enable the software distribution agent before the first Install Package step:  
 >
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 ### Distribute all content associated with the task sequence
 
@@ -135,7 +135,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
 
 5. On the **Security** page, specify the following options:
 
@@ -146,7 +146,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         >
         > On stand-alone media, it only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
-    - **Select date range for this stand-alone media to be valid**: Set optional start and expiration dates on the media. This setting is disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media doesn't start. These options are also available by using the [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet.  
+    - **Select date range for this stand-alone media to be valid**: Set optional start and expiration dates on the media. This setting is disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media doesn't start. These options are also available by using the [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet.  
 
 6. On the **Stand-Alone CD/DVD** page, select the task sequence that deploys the OS. You can only select those task sequences that are associated with a boot image. Verify the list of content referenced by the task sequence.  
 

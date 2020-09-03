@@ -60,6 +60,8 @@
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
       href: compliance-policy-monitor.md
+    - name: Device compliance partners
+      href: device-compliance-partners.md    
   - name: Endpoint security
     href: endpoint-security.md
     items:
@@ -101,6 +103,8 @@
         href: advanced-threat-protection-monitor.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
+    - name: Tenant attach
+      href: tenant-attach-intune.md
     - name: Encrypt disks
       items:
       - name: Manage BitLocker policy
@@ -203,13 +207,15 @@
         href: zimperium-mobile-threat-defense-connector.md
         items:
         - name: Zimperium and Intune integration
-          href: zimperium-mtd-connector-integration.md     
+          href: zimperium-mtd-connector-integration.md 
   - name: Network access control
     href: network-access-control-integrate.md
   - name: Certificates
     items: 
     - name: Use certificates for authentication
       href: certificates-configure.md
+    - name: Certificate connectors
+      href: certificate-connectors.md
     - name: SCEP  
       items:
       - name: SCEP infrastructure
@@ -300,16 +306,16 @@
       href: compliance-policy-create-windows.md
     - name: Compliance policy settings - Windows 8.1
       href: compliance-policy-create-windows-8-1.md
-    - name: Compliance policy settings - Windows Phone 8.1
-      href: compliance-policy-create-windows-8-1.md
   - name: Endpoint security policy settings
     items:
     - name: Antivirus policy settings
       items:
       - name: macOS Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-macos.md
-      - name: Windows 10 Microsoft Defender Antivirus settings
+      - name: Windows 10 Defender Antivirus settings
         href: antivirus-microsoft-defender-settings-windows.md
+      - name: Tenant attach Defender Antivirus settings 
+        href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
       - name: Windows Security experience settings
         href: antivirus-security-experience-windows-settings.md
     - name: Disk encryption profile settings

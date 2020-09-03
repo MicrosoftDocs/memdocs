@@ -661,7 +661,7 @@ Intune administrators can target and deploy configuration data via the Intune Az
 
 * Call the appropriate selector on `IntuneMAMAppConfig` object. For example, if your application's key is a string, you'd want to use `stringValueForKey` or `allStringsForKey`. See `IntuneMAMAppConfig.h` for a detailed description on return values and error conditions.
 
-For more information about the capabilities of the Graph API, see [Graph API Reference](https://developer.microsoft.com/graph/docs/concepts/overview).
+For more information about the capabilities of the Graph API, see [Graph API Reference](/graph/overview).
 
 For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
@@ -757,14 +757,30 @@ By default, apps are considered single identity. The SDK sets the process identi
     Note that this method is called from a background thread. The app should not return a value until all data for the user has been removed (with the exception of files if the app returns FALSE).
 
 ## Siri Intents
+
 If your app integrates with Siri Intents, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
     
 ## Notifications
+
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
-## Displaying Web Content Within Application
-If your application has the ability to display websites within a web view and the displayed web pages have the ability to navigate to arbitrary sites, the application is responsible for setting the current identity so that managed data cannot be leaked through the web view. Examples of this are 'Suggest a Feature' or 'Feedback' web pages that have either direct or indirect links to a search engine.
-Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setUIPolicyIdentity passing in the current identity.
-Single identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity passing in the empty string prior to displaying the web view. After the web view is dismissed, the application should call setCurrentThreadIdentity passing in nil.
+
+## Displaying web content within an application
+
+If your application has the ability to display websites within a webview, you might need to add logic to prevent data leaks, depending on the specific scenario.
+
+### Webviews that display only non-corporate content/websites
+
+If your application doesn't display any corporate data in the webview and users have the ability to browse to arbitrary sites where they might potentially copy and paste managed data from other parts of the application into a public forum, the application is responsible for setting the current identity so that managed data can't be leaked through the webview. Examples of this are Suggest a Feature or Feedback webpages that have either direct or indirect links to a search engine. Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call setUIPolicyIdentity, passing in the current identity. Single-identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call setCurrentThreadIdentity, passing in nil. This ensures that the Intune SDK treats the webview as unmanaged, and that it doesn't allow managed data from other parts of the application to be pasted into the webview if policy is configured as such. 
+
+### Webviews that display only corporate content/websites
+
+If your application displays only corporate data in the webview and users can't browse to arbitrary sites, no changes are required.
+
+### Webviews that might display both corporate and non-corporate content/websites
+
+For this scenario, only WKWebView is supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application does display corporate content within the WKWebView, and users can also access non-corporate content/websites which may lead to data leaks, the application should implement the isExternalURL: delegate method defined in IntuneMAMPolicyDelegate.h. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data. 
+
+Returning NO in isExternalURL will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
 
 ## iOS best practices
 

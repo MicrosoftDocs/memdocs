@@ -54,7 +54,7 @@ Active Directory site boundaries don't work for pure Azure Active Directory (Azu
 > [!TIP]
 > Use the following Windows command to see a device's current Active Directory site: `nltest /dsgetsite`.
 >
-> To determine if a client is cloud domain-joined, use the following Windows command: `dsregcmd /status`. For more information, see [dsregcmd command - device state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+> To determine if a client is cloud domain-joined, use the following Windows command: `dsregcmd /status`. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ### IPv6 prefix
 

@@ -86,7 +86,7 @@ Starting in version 2002,<!--5954175--> the **All Windows 10 (ARM64)** platform 
 
 Starting in Configuration Manager version 1906, you can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, the support for it is best effort. Configuration Manager might not issue a hotfix for this functionality if it ceases to function.  
 
-To provide feedback on Windows Insider, use the [Feedback Hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback).
+To provide feedback on Windows Insider, use the [Feedback Hub](/windows-insider/at-work-pro/wip-4-biz-feedback).
 
 ## Windows 10 ADK
 
@@ -94,7 +94,7 @@ When you deploy operating systems with Configuration Manager, the Windows ADK is
 
 - [Infrastructure requirements for OS deployment](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Download the Windows ADK for Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Download the Windows ADK for Windows 10](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Starting with Windows 10 version 1809, Windows PE is a separate installer. Otherwise there's no functional difference.
@@ -113,7 +113,7 @@ The following table lists the versions of the Windows 10 ADK that you can use wi
 
 |Key|
 |--|
-| ![Supported](media/green_check.png) = **Supported** <br/> This table only shows Windows ADK supportability in relation to the version of Configuration Manager. Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows 10 version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 8.1.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Supported](media/green_check.png) = **Supported** <br/> This table only shows Windows ADK supportability in relation to the version of Configuration Manager. Microsoft recommends using the Windows ADK that matches the version of Windows you're deploying. Use the latest Windows ADK version when deploying the latest Windows 10 version. The latest Windows ADK version may support deployment of older OS versions, such as Windows 8.1.<!-- SCCMDocs issue 1229 --> For more information on Windows ADK component supportability, see [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) and [USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Backwards compatible](media/blue_compat.png)  = **Backward compatible** <br/> This combination isn't tested but should work. We'll document any known issues or caveats. |
 | ![Not supported](media/Red_X.png) = **Not supported** |
 

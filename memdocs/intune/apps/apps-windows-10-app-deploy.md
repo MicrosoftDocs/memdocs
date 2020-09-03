@@ -73,7 +73,7 @@ You can sign and upload Windows 10 LOB apps to the Intune admin console. These c
 
 ## Microsoft Store for Business apps
 
-Microsoft Store for Business apps are modern apps, purchased from the Microsoft Store for Business admin portal. They are then synced over to Microsoft Intune for management. The apps can either be online licensed or offline licensed. The Microsoft Store directly manages updates, with no additional action required by the admin. You can also prevent updates to specific apps by using a custom Uniform Resource Identifier (URI). For more information, see [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). The user can also disable updates for all Microsoft Store for Business apps on the device. 
+Microsoft Store for Business apps are modern apps, purchased from the Microsoft Store for Business admin portal. They are then synced over to Microsoft Intune for management. The apps can either be online licensed or offline licensed. The Microsoft Store directly manages updates, with no additional action required by the admin. You can also prevent updates to specific apps by using a custom Uniform Resource Identifier (URI). For more information, see [Enterprise app management - Prevent app from automatic updates](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). The user can also disable updates for all Microsoft Store for Business apps on the device. 
 
 ### Categorize Microsoft Store for Business apps 
 To categorize Microsoft Store for Business apps: 
@@ -110,7 +110,7 @@ Windows LOB apps (specifically APPX and MSIX) and Microsoft Store for Business a
   - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> When used in combination with an Autopilot white glove provisioning scenario, there is no requirement for LOB apps and Microsoft Store for Business apps deployed in device context to target a device group. For more information, see [Windows Autopilot white glove deployment](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context. 

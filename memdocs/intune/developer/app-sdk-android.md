@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,7 +24,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic, has-adal-ref
+ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ---
 
@@ -86,7 +86,7 @@ An example of how to integrate with the Intune App SDK properly is available on 
 
 The Intune App SDK is a standard Android library with no external dependencies. **Microsoft.Intune.MAM.SDK.aar** contains both the interfaces necessary for an app protection policy enablement and the code necessary to interoperate with the Microsoft Intune Company Portal app.
 
-**Microsoft.Intune.MAM.SDK.aar** must be specified as an Android library reference. To do this, open your app project in Android Studio and go to **File > New > New module** and select **Import .JAR/.AAR Package**. Then select our Android archive package Microsoft.Intune.MAM.SDK.aar to create a module for the .AAR. Right click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency** > Select the MAM SDK AAR module you just created > **OK**. This will ensure that your module compiles with the MAM SDK when you build your project.
+**Microsoft.Intune.MAM.SDK.aar** must be specified as an Android library reference. To do this, open your app project in Android Studio and go to **File > New > New module** and select **Import .JAR/.AAR Package**. Then select our Android archive package Microsoft.Intune.MAM.SDK.aar to create a module for the *.AAR* file type. Right-click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency** > Select the MAM SDK AAR module you just created > **OK**. This will ensure that your module compiles with the MAM SDK when you build your project.
 
 Additionally, the **Microsoft.Intune.MAM.SDK.Support.XXX.jar**
 libraries contain Intune variants of the corresponding
@@ -96,14 +96,11 @@ the support libraries.
 
 #### ProGuard
 
-If [ProGuard](https://www.guardsquare.com/en/products/proguard) (or any other shrinking/obfuscation mechanism) is used as a build step, 
-the SDK has additional configuration rules which must be included. When including the .AAR in your build, our rules are 
+If [ProGuard](http://proguard.sourceforge.net/) (or any other shrinking/obfuscation mechanism) is used as a build step, 
+the SDK has additional configuration rules which must be included. When including the *.AAR* in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
-The [Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+The Azure Active Directory Authentication Libraries (ADAL) may have its own ProGuard restrictions. If your app integrates ADAL, you must follow the ADAL documentation on these restrictions.
 
 ### Policy enforcement
 The Intune App SDK is an Android library which allows your app to
@@ -133,8 +130,9 @@ replacements](#class-and-method-replacements)
 only. They do not perform any more complex SDK integrations such as
 [Save-As Policy](#enable-features-that-require-app-participation),
 [Multi-Identity](#multi-identity-optional), [App-WE
-registration](#app-protection-policy-without-device-enrollment), or 
-[AndroidManifest modifications](#manifest-replacements),
+registration](#app-protection-policy-without-device-enrollment),
+[AndroidManifest modifications](#manifest-replacements) or [ADAL
+configuration](#configure-azure-active-directory-authentication-library-adal)
 so these must be completed before your app is fully Intune
 enabled. Please carefully review the rest of this documentation for
 integration points relevant to your app.
@@ -311,9 +309,9 @@ detailed above, but can be integrated into custom or non-Gradle build
 systems. As it is more generic, it is more complex to invoke, so the
 Gradle plugin should be used when it is possible to do so.
 
-#### Using the Command Line Tool
+#### Using the Command-Line Tool
 
-The command line tool can be invoked by using the provided helper scripts
+The command-line tool can be invoked by using the provided helper scripts
 located in the `BuildTool\bin` directory.
 
 The tool expects the following parameters.
@@ -322,7 +320,7 @@ The tool expects the following parameters.
 | -- | -- |
 | `--input` | A semi-colon delimited list of jar files and directories of class files to modify. This should include all jars/directories that you intend to rewrite. |
 | `--output` | A semi-colon delimited list of jar files and directories to store the modified classes to. There should be one output entry per input entry, and they should be listed in order. |
-| `--classpath` | The build classpath. This may contains both jars and class directories. |
+| `--classpath` | The build classpath. This may contain both jars and class directories. |
 | `--excludeClasses`| A semi-colon delimited list containing the names of the classes that should be excluded from rewriting. |
 
 All parameters are required except for `--excludeClasses` which is optional.
@@ -330,7 +328,7 @@ All parameters are required except for `--excludeClasses` which is optional.
 > [!NOTE]
 > On Unix-like systems semi-colon is a command separator. To avoid the shell from splitting commands, make sure to escape each semi-colon with '\' or wrap the full parameter in quotation marks.
 
-#### Example Command Line Tool invocation
+#### Example Command-Line Tool invocation
 
 ``` batch
 > BuildTool\bin\BuildTool.bat --input build\product-foo-project;libs\bar.jar --output mam-build\product-foo-project;mam-build\libs\bar.jar --classpath build\zap.jar;libs\Microsoft.Intune.MAM.SDK\classes.jar;%ANDROID_SDK_ROOT%\platforms\android-27\android.jar --excludeClasses com.contoso.SplashActivity
@@ -535,7 +533,7 @@ Then, fix the resulting compile-time errors by replacing all references to MAM c
 `com.microsoft.intune.mam.client.support.v7` and `com.microsoft.intune.mam.client.support.v4`
 packages with their AndroidX equivalents. For example, references to `MAMAppCompatActivity` should be changed to
 AndroidX's `AppCompatActivity`. As discussed above, the MAM build plugin/tool will automatically rewrite classes
-in the AndroidX libraries with the appropriate MAM equivalents at compile-time.
+in the AndroidX libraries with the appropriate MAM equivalents at compile time.
 
 ## SDK permissions
 
@@ -548,9 +546,6 @@ The Intune App SDK requires three [Android system permissions](https://developer
 * `android.permission.USE_CREDENTIALS`
 
 The Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) requires these permissions to perform brokered authentication. If these permissions are not granted to the app or are revoked by the user, authentication flows that require the broker (the Company Portal app) will be disabled.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ## Logging
 
@@ -600,7 +595,7 @@ of MAM APIs or MAM-restricted platform APIs. It is loosely patterned
 after Android's StrictMode, and runs a set of checks which raise
 errors when they fail. It is not intended to be left enabled in
 production builds, but you are *strongly encouraged* to use it in your
-app's internal development, debug, and/or testing builds.
+app's internal development, debug, and/or dogfood builds.
 
 To enable, call
 
@@ -1114,9 +1109,6 @@ Once your app's receiver returns, it will no longer have access to encryption ke
 
 ## Configure Azure Active Directory Authentication Library (ADAL)
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
 First, please read the ADAL integration guidelines found in the [ADAL repository on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 The SDK relies on [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). The configuration values are communicated to the SDK via AndroidManifest metadata.
@@ -1179,8 +1171,8 @@ ADAL metadata **must not** be present in the manifest.
 Authority may be specified if necessary.
 
 You must register your app with Azure AD and give your app access to the app protection policy service:
-* See [here](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) for information about registering an application with Azure AD.
-* Ensure the steps to give your Android app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) under "Give your app access to the Intune app protection service (optional)". 
+* See [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) for information about registering an application with Azure AD.
+* Ensure the steps to give your Android app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](../developer/app-sdk-get-started.md#next-steps-after-integration) under "Give your app access to the Intune app protection service (optional)". 
 
 Also see the requirements for [Conditional Access](#conditional-access) below.
 
@@ -1199,7 +1191,7 @@ Authority and NonBrokerRedirectURI may be specified if necessary.
 Conditional Access (CA) is an Azure Active Directory
 [feature](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer)
 which can be used to control access to AAD resources. [Intune
-administrators can define CA rules](https://docs.microsoft.com/intune/conditional-access)
+administrators can define CA rules](../protect/conditional-access.md)
 which allow resource access only from devices or apps which are
 managed by Intune. In order to ensure that your app is able to access
 resources when appropriate, it is necessary to follow the steps
@@ -1211,11 +1203,11 @@ only resources which cannot be CA-protected, you may skip these steps.
 2. [Register your application with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
    The redirect URI can be found in the ADAL integration guidelines above.
 3. Set the manifest meta-data parameters per [Common ADAL configurations](#common-adal-configurations), item 2, above.
-4. Test that everything is configured properly by enabling [device-based CA](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
-    - That sign-in to your app prompts for installation and enrollment of the Intune Company Portal
-    - That after enrollment, sign-in to your app completes successfully.
+4. Test that everything is configured properly by enabling [device-based CA](../protect/conditional-access-intune-common-ways-use.md) from the [Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) and confirming
+    - That sign in to your app prompts for installation and enrollment of the Intune Company Portal
+    - That after enrollment, sign in to your app completes successfully.
 5. Once your app has shipped Intune APP SDK integration, contact msintuneappsdk@microsoft.com to be added to the list of approved apps for [app-based Conditional Access](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
-6. Once your app has been added to the approved list, validate by [Configuring app-based CA](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) and ensuring that sign-in to your app completes successfully.
+6. Once your app has been added to the approved list, validate by [Configuring app-based CA](../protect/app-based-conditional-access-intune-create.md) and ensuring that sign-in to your app completes successfully.
 
 ## App protection policy without device enrollment
 
@@ -1232,9 +1224,6 @@ When an app creates a new user account, it should register the account for manag
 The app can also query the Intune App SDK for the status of a registered user to determine if the user should be blocked from accessing corporate content. Multiple accounts may be registered for management, but currently only one account can be actively enrolled with the APP-WE service at a time. This means only one account on the app can receive app protection policy at a time.
 
 The app is required to provide a callback to acquire the appropriate access token from the Azure Active Directory Authentication Library (ADAL) on behalf of the SDK. It is assumed that the app already uses ADAL for user authentication and to acquire its own access tokens.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 When the app removes an account completely, it should unregister that account to indicate that the app should no longer apply policy for that user. If the user was enrolled in the MAM service, the user will be unenrolled and the app will be wiped.
 
@@ -1311,9 +1300,6 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. The app must implement the `MAMServiceAuthenticationCallback` interface to allow the SDK to request an ADAL token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its `registerAuthenticationCallback()` method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the ideal place to register the callback is in the `onMAMCreate()` method of the app's `MAMApplication` subclass.
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
 2. The `acquireToken()` method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
 
     > [!NOTE]
@@ -1346,12 +1332,9 @@ Result getRegisteredAccountStatus(String upn);
 
 1. To register an account for management, the app should call `registerAccountForMAM()`. A user account is identified by both its UPN and its AAD user ID. The tenant ID is also required to associate enrollment data with the user's AAD tenant. The user's authority may also be provided to allow enrollment against specific sovereign clouds; for more information see [Sovereign Cloud Registration](#sovereign-cloud-registration).  The SDK may attempt to enroll the app for the given user in the MAM service; if enrollment fails, it will periodically retry enrollment until the account is unregistered. The retry period will typically be 12-24 hours. The SDK provides the status of enrollment attempts asynchronously via notifications.
 
-2. Because AAD authentication is required, the best time to register the user account is after the user has signed into the app and is successfully authenticated using ADAL.The user's AAD ID and tenant ID are returned from the ADAL authentication call as part of the [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) object.
+2. Because AAD authentication is required, the best time to register the user account is after the user has signed into the app and is successfully authenticated using ADAL. The user's AAD ID and tenant ID are returned from the ADAL authentication call as part of the [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) object.
     * The tenant ID comes from the `AuthenticationResult.getTenantID()` method.
     * Information about the user is found in a sub-object of type `UserInfo` that comes from `AuthenticationResult.getUserInfo()`, and the AAD user ID is retrieved from that object by calling `UserInfo.getUserId()`.
-
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 3. To unregister an account from Intune management, the app should call `unregisterAccountForMAM()`. If the account has been successfully enrolled and is managed, the SDK will unenroll the account and wipe its data. Periodic enrollment retries for the account will be stopped. The SDK provides the status of unenrollment request asynchronously via notification.
 
@@ -1392,9 +1375,6 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### Authentication
 
 * When the app calls `registerAccountForMAM()`, it may receive a callback on its `MAMServiceAuthenticationCallback` interface shortly thereafter, on a different thread. Ideally, the app acquired its own token from ADAL prior to registering the account to expedite the acquisition of the requested token. If the app returns a valid token from the callback, enrollment will proceed and the app will get the final result via a notification.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 * If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`. If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the user and resource previously requested from `acquireToken()` and calling the `updateToken()` method to initiate the enrollment process again.
 
@@ -1462,9 +1442,6 @@ The ADAL library has a new error code informing the app that the failure to acqu
 
 > [!NOTE]
 > This new error code and other support for APP CA with Policy Assurance require version 1.15.0 (or greater) of the ADAL library.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### MAMComplianceManager
 
@@ -1539,7 +1516,7 @@ The `getComplianceStatus()` method returns the result of the compliance remediat
 | PENDING | The attempt to remediate compliance failed because the status response had not yet been received from the service when the time limit was exceeded. The app should try its token acquisition again later. |
 | COMPANY_PORTAL_REQUIRED | The Company Portal must be installed on the device in order for compliance remediation to succeed.  If the Company Portal is already installed on the device, the app needs to be restarted.  In this case, a dialog will be shown asking the user to restart the app. |
 
-If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re-initiate its original token acquisition (for its own resource). If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods will return localized strings that the app can display to the end user if it chooses.  Most of the error cases aren't remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.  If a failure is persistent, the MAM logs may help determine the cause.  The end user can submit the logs using the directions found [here](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Email logs to your company support").
+If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re-initiate its original token acquisition (for its own resource). If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods will return localized strings that the app can display to the end user if it chooses.  Most of the error cases aren't remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.  If a failure is persistent, the MAM logs may help determine the cause.  The end user can submit the logs. For more information, see [Upload and email logs](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 Since `MAMComplianceNotification` extends `MAMUserNotification`, the identity of the user for whom the remediation was attempted is also available.
 
@@ -1652,7 +1629,7 @@ BackupAgentHelper is easier to implement than BackupAgent both in terms of nativ
 |FileBackupHelper | MAMFileBackupHelper
 |SharedPreferencesBackupHelper| MAMSharedPreferencesBackupHelper|
 
-Following these guidelines will lead to a successful multi-identity backup and restore.
+Following these guidelines will lead to a successful multi-identity back up and restore.
 
 ### BackupAgent
 
@@ -1695,7 +1672,7 @@ Once the user enrolls the device or the app, the SDK registers this identity and
 > [!NOTE]
 > Currently, only one Intune managed identity is supported per device.
 
-An identity is defined as a string. Identities are **case-insensitive**, and requests to the SDK for an identity may not return the same casing that was originally used when setting the identity.
+An identity is defined as a string. Identities are case-insensitive, and request to the SDK for an identity may not return the same casing that was originally used when setting the identity.
 
 The app *must* inform the SDK when it intends to change the active
 identity. In some cases, the SDK will also notify the app when an
@@ -2248,8 +2225,8 @@ app manually to prevent the user from accessing in-memory data after a wipe occu
 
 ## Enabling MAM targeted configuration for your Android applications (optional)
 Application-specific key-value pairs may be configured in the Intune
-console for [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app)
-and [Android Enterprise](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+console for [MAM-WE](../apps/app-configuration-policies-managed-app.md)
+and [Android Enterprise](../apps/app-configuration-policies-use-android.md).
 These key-value pairs are not interpreted by Intune at all,
 but are passed on to the app. Applications that want to
 receive such configuration can use the `MAMAppConfigManager` and
@@ -2371,7 +2348,7 @@ App config adds a new notification type:
 * **REFRESH_APP_CONFIG**: This notification is sent in a `MAMUserNotification` and informs the app that new app config data is available.
 
 ### Further Reading
-For more information about how to create a MAM targeted app configuration policy in Android, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-managed-app).
+For more information about how to create a MAM targeted app configuration policy in Android, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-managed-app.md).
 
 App config can also be configured using the Graph API. For information, see the [Graph API docs for MAM Targeted Config](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
 
@@ -2441,9 +2418,6 @@ Enable default enrollment with the following steps:
 1. If your app integrates ADAL or you need to enable SSO, 
    [configure ADAL](#configure-azure-active-directory-authentication-library-adal)
    following [common ADAL configuration](#common-adal-configurations) #2. If not, you may skip this step.
-
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
    
 2. Enable default enrollment by adding the following value in the manifest under the `<application>` tag:
 
@@ -2531,11 +2505,11 @@ Interacting with an established bound service may throw a `SecurityException` du
 The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs system-generated data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personal data.
 
 > [!NOTE]
-> If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+> If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## Recommended Android best practices
 
-* All library projects should share the same android:package where possible. This will not sporadically fail in run-time; this is purely a build-time problem. Newer versions of the Intune App SDK will remove some of the redundancy.
+* All library projects should share the same `android:package` where possible. This will not sporadically fail in run-time; this is purely a build-time problem. Newer versions of the Intune App SDK will remove some of the redundancy.
 
 * Use the newest Android SDK build tools.
 

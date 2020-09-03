@@ -66,7 +66,7 @@ The following list provides the general workflow for manual deployment of softwa
 For more information and detailed steps, see [Manually deploy software updates](manually-deploy-software-updates.md).
 
 > [!Note]
-> - Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> - Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 > - When manually deploying Microsoft 365 Apps client updates, find them in the **Office 365 Updates** node under **Office 365 Client Management** of the **Software Library** workspace. 
 
 ## <a name="bkmk_auto"></a> Automatically deploy software updates
@@ -112,5 +112,5 @@ For more information and detailed steps, see [Automatically deploy software upda
 <!--1358146-->
 Starting in version 1810, create phased deployments for software updates. Phased deployments allow you to orchestrate a coordinated, sequenced rollout of software based on customizable criteria and groups.
 
-For more information, see [Create phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+For more information, see [Create phased deployments](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

@@ -30,7 +30,7 @@ You want your users to securely access your organization's resources. Protect bo
   - Microsoft Defender Application Control
 
   > [!TIP]
-  > To manage endpoint protection on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information, see [Endpoint protection for Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > To manage endpoint protection on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information, see [Endpoint protection for Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 - Protect data stored on on-premises Windows clients with BitLocker Drive Encryption (BDE). Configuration Manager provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM). For more information, see [Plan for BitLocker management](../plan-design/bitlocker-management.md).
 
@@ -40,4 +40,4 @@ You want your users to securely access your organization's resources. Protect bo
 
 - Wi-fi profiles provide a set of tools and resources to help you manage wireless network settings on devices in your organization. By deploying these settings, you minimize the effort that end users require to connect to wireless networks. For more information, see [Wi-fi profiles](../deploy-use/create-wifi-profiles.md).  
 
-- Provision devices with the certificates that users need to connect to resources. For more information, see [Certificate profiles](../deploy-use/introduction-to-certificate-profiles.md).  
+- Provision devices with the certificates that users need to connect to resources. For more information, see [Certificate profiles](../deploy-use/introduction-to-certificate-profiles.md).

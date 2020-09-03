@@ -65,7 +65,7 @@ After installation, access the portals via the following URLs:
 - Administration and monitoring website: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
+> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## Script usage
 

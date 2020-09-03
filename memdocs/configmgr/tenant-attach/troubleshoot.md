@@ -121,6 +121,8 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 
 Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](device-sync-actions.md#prerequisites).
 
+
+
 ## Known issues
 
 ### Specific devices don't synchronize
@@ -133,6 +135,7 @@ If a device is a distribution point that uses the same PKI certificate for both 
 
 **Behavior:** When performing tenant attach during the on-boarding phase, a full sync is performed the first time. Subsequent sync cycles are delta synchronizations. Any update to the impacted devices will cause the device to be removed from the sync.
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## Next steps
 
