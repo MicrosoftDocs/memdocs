@@ -56,7 +56,7 @@ Additional requirements and configuration details apply with each scenario.
 
 **Applies to: Windows 10, version 1709 and above**
 
-The Intune Service Administrator role is required to perform this task. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
+The Intune Service Administrator role is required for this task. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
 
 IT admins can use a local Windows Autopilot Reset to:
 - quickly remove personal files, apps, and settings
@@ -94,7 +94,7 @@ You can set the policy using one of these methods:
 
 ### Trigger local Windows Autopilot Reset
 
-Performing a local Windows Autopilot Reset is a two-step process: trigger it and then authenticate. Once you've done these two steps, you can let the process execute and once it is done, the device is again ready for use. 
+A local Windows Autopilot Reset is a two-step process: trigger it and then authenticate. Once you've done these two steps, you can let the process execute and once it is done, the device is again ready for use. 
 
 **To trigger a local Autopilot Reset**
 
@@ -116,7 +116,7 @@ Performing a local Windows Autopilot Reset is a two-step process: trigger it and
 
 **Applies to: Windows 10, version 1809 or later**
 
-When using remote Windows Autopilot Reset, you can use an MDM service such a Microsoft Intune to start the reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
+You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
 To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD. This feature isn't supported on devices that were enrolled using [Autopilot self deploying mode](self-deploying.md).
 
