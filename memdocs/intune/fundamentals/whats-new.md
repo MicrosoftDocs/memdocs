@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,26 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## Week of August 31, 2020
+
+### Device configuration
+
+#### New version of the PFX Certificate Connector and changes for PKCS certificate profile support <!--  4839686  -->
+
+We’ve released a new version of the PFX Certificate Connector, version **6.2008.60.607**. This new connector version:
+
+- Supports PKCS certificate profiles on all supported platforms except Windows 8.1
+ 
+  We’ve consolidated all of the PCKS support in the PFX Certificate Connector.  This means if you don’t use SCEP in your environment, and don’t use NDES for other intents, you can remove the Microsoft Certificate Connector and uninstall NDES from your environment. 
+ 
+- Because the Microsoft Certificate Connector hasn’t had functionality removed, you can continue to use them to support PKCS certificate profiles.
+- Supports certificate revocation for Outlook S/MIME
+- Requires .NET Framework 4.7.2
+
+For more information about certificate connectors, including a list of connector release for both certificate connectors, see [Certificate connectors](../protect/certificate-connectors.md)
+
 
 <!-- ########################## -->
 ## Week of August 24, 2020 (2008 Service release)
