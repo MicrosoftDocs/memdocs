@@ -79,4 +79,4 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## Next steps
 
-[Troubleshoot the device timeline](troubleshoot-timeline.md) 
+[Troubleshoot the device timeline](troubleshoot-timeline.md)
