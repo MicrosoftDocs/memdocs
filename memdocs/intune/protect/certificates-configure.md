@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,8 +49,8 @@ Each individual certificate profile you create supports a single platform. For e
 When you use a Microsoft Certification Authority (CA):
 
 - To use SCEP certificate profiles:
-- [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-- [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
+  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
 
 - To use PKCS certificate profiles:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.
