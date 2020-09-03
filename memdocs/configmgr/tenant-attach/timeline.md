@@ -2,7 +2,7 @@
 title: Tenant attach - Device timeline (preview)
 titleSuffix: Configuration Manager
 description: "View the timeline for Configuration Manager devices from the admin center."
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -79,4 +79,4 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## Next steps
 
-[Install an application from the admin center](applications.md)
+[Troubleshoot the device timeline](troubleshoot-timeline.md) 
