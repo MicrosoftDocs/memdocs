@@ -47,9 +47,9 @@ The following illustration shows how required functional data flows from individ
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [identified](../intune/protect/privacy-data-collect.md#identified-data) and [pseudonymized](../intune/protect/privacy-data-collect.md#pseudonymized-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
+Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [required](../intune/protect/privacy-data-collect.md#required-data) and [optional](../intune/protect/privacy-data-collect.md#optional-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
 
-### Identified data
+### Required Data
 
 - Hardware inventory information
   - **make:** Device manufacturer
@@ -59,9 +59,6 @@ Currently, the basic functionality of Endpoint analytics collects information as
 - Application inventory, like
   - **name:** Windows
   - **ver:** The version of the current OS.
-  
-### Pseudonymized data
-
 - Diagnostic, performance, and usage data tied to a user and/or device
   - **logOnId**
   - **bootId:** The system boot ID
