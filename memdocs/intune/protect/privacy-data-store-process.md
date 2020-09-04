@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 ### Storing Customer Data
 
-After Intune [collects the data](privacy-data-collect.md), Intune follows the Data Handling Standard policy for Microsoft 365 that specifies how customer data is stored and processed. See [Where your Microsoft 365 customer data is stored](~/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide.md). Personal data is processed within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
+After Intune [collects the data](privacy-data-collect.md), Intune follows the Data Handling Standard policy for Microsoft 365 that specifies how customer data is stored and processed. See [Where your Microsoft 365 customer data is stored](~/microsoft-365/enterprise/o365-data-locations.md). Personal data is processed within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 ### Storage locations
 
