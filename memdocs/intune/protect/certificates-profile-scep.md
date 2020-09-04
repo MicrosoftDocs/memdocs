@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -211,7 +211,11 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
    - **Key size (bits)**:
 
-     Select the number of bits contained in the key.
+     Select the number of bits contained in the key:
+     - Not configured
+     - 1024
+     - 2048
+     - 4096 *(supported with iOS/iPadOS 14 and later, and MacOS 11 and later)*
 
    - **Hash algorithm**:
 
