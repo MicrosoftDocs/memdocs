@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1021,6 +1021,9 @@ Choose additional apps that either need to be audited by, or can be trusted to r
   - **Not Configured** - Application Control is not added to devices. However, settings that were previously added continue to be enforced on assigned devices. 
  
   - **Audit only** - Applications aren't blocked. All events are logged in the local client's logs.  
+
+    > [!NOTE]
+    > If you use this setting, AppLocker CSP behaviour currently prompts end user to reboot their machine when a policy is deployed.
 
 ## Microsoft Defender Credential Guard  
 
