@@ -8,7 +8,7 @@ keywords: privacy, personal data, GDPR
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 When users enroll their corporate or personal devices using Intune, Intune collects, processes, and shares some personal data to support business operations, conduct business with the customer and to support the service. Intune collects personal data from the following sources:
 
-- The adminimstrators use of the Intune in the Microsoft Endpoint Manager admin center.
+- The administrators use of the Intune in the Microsoft Endpoint Manager admin center.
 - End-user devices (when devices are enrolled for Intune management and during usage).
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
@@ -52,6 +52,7 @@ Required data collected by Intune may include, but is not limited to:
 - User information
   - Owner name/user display (the Azure-registered name of the user as identified by AzureUserID)
   - User Principal Name or email address
+  - Phone number
   - Third-party user identifies (like AppleID)
 - Hardware inventory information
   - Device name
@@ -62,7 +63,6 @@ Required data collected by Intune may include, but is not limited to:
   - IP address
   - Wi-Fi MacAddress
   - ICCID
-  - Phone number
 - Audit log information, including data about the following activities
   - Manage
   - Create
