@@ -63,9 +63,9 @@ The following on-premises infrastructure must run on servers that are domain-joi
 
 #### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use either an *Azure AD Application Proxy*, a *Web ApplicationProxy Server*. You can also use another reverse proxy of your choice.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use either an *Azure AD Application Proxy* or a *Web ApplicationProxy Server*. You can also use another reverse proxy of your choice.
 
-- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This allows both intranet and internet facing devices to get certificates. For more information, see [[Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
+- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
 - **Web Application Proxy Server** - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet.  This allows both intranet and internet facing devices to get certificates.
 
