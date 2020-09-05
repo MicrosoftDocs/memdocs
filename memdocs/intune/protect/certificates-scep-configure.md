@@ -61,13 +61,13 @@ The following on-premises infrastructure must run on servers that are domain-joi
   - The .NET 4.5 Framework is required by the connector and is automatically included with Windows Server 2012 R2.
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Microsoft Intune Connector.
 
-The following on-premises infrastructure is optional:
+#### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you need to publish your NDES URL external to your corporate network. You can use either the Azure AD Application Proxy, the Web Application Proxy Server, or another reverse proxy.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use either an *Azure AD Application Proxy* or a *Web ApplicationProxy Server*. You can also use another reverse proxy of your choice.
 
-- **Azure AD Application Proxy** (optional) – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This allows both intranet and internet facing devices to get certificates. For more information, see [How to provide secure remote access to on-premises applications](/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
-- **Web Application Proxy Server** (optional) - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet.  This allows both intranet and internet facing devices to get certificates.
+- **Web Application Proxy Server** - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet.  This allows both intranet and internet facing devices to get certificates.
 
   The server that hosts WAP [must install an update](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) that enables support for the long URLs that are used by the Network Device Enrollment Service. This update is included with the [December 2014 update rollup](https://support.microsoft.com/kb/3013769), or individually from [KB3011135](https://support.microsoft.com/kb/3011135).
 
