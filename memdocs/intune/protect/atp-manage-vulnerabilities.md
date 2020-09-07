@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 When you integrate Intune with Microsoft Defender Advanced Threat Protection (ATP), you can take advantage of ATPs Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## How integration works
 
@@ -112,4 +112,4 @@ Learn more about Intune and [Microsoft Defender ATP](advanced-threat-protection.
 
 Review Intune [Mobile Threat Defense](mobile-threat-defense.md).
 
-Review the [Threat & Vulnerability Management dashboard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.
+Review the [Threat & Vulnerability Management dashboard](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.

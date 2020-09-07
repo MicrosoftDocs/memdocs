@@ -90,7 +90,7 @@ Collect the following information about the problem:
 **Cause:** The user who is trying to enroll the device does not have a Microsoft Intune license.
 
 #### Resolution
-1. Go to the [Office 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
+1. Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
 2. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses > Edit**.
 3. Switch the toggle to the **On** position for the license that you want to assign to this user, and then choose **Save**.
 4. Re-enroll the device.
@@ -184,7 +184,7 @@ Renew the APNs certificate, and then re-enroll the device.
 > Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- To renew the APNs certificate in Microsoft 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid
 

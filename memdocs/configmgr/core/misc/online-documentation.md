@@ -103,4 +103,4 @@ For more information about the features, products, and services that make Config
 
 ### Downloadable documentation
 
-Download a copy of the System Center 2012 R2 Configuration Manager technical documentation from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29901).
+Download a copy of the System Center 2012 R2 Configuration Manager technical documentation from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29256).

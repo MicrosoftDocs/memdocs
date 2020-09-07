@@ -207,4 +207,4 @@ Since MDM has been removed from the Intune Classic Portal, the following link ha
 
 - [Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)
 - [app-based Conditional Access with Intune](app-based-conditional-access-intune.md)
-- [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ Email certificates, also known as S/MIME certificate, provide extra security to 
 
 On iOS/iPadOS devices, you can create an Intune-managed email profile that uses S/MIME and certificates to sign and encrypt incoming and outgoing emails. For other platforms, S/MIME may or may not be supported. If it's supported, install certificates that use S/MIME signing and encryption. Then, an end user enables S/MIME in their email application.
 
-For more information about S/MIME email signing and encryption with Exchange, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+For more information about S/MIME email signing and encryption with Exchange, see [S/MIME for message signing and encryption](/Exchange/policy-and-compliance/smime).
 
 This article provides an overview of using S/MIME certificates to sign and encrypt emails on your devices.
 
@@ -45,11 +45,15 @@ This article provides an overview of using S/MIME certificates to sign and encry
 
 Certificates used for signing allow the client email app to communicate securely with the email server.
 
-To use signing certificates, create a template on your certificate authority (CA) that focuses on signing. On Microsoft Active Directory Certification Authority, [Configure the server certificate template](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) lists the steps to create certificate templates.
+To use signing certificates, create a template on your certificate authority (CA) that focuses on signing. On Microsoft Active Directory Certification Authority, [Configure the server certificate template](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) lists the steps to create certificate templates.
 
 Signing certificates in Intune use PKCS certificates. [Configure and use PKCS certificates](certficates-pfx-configure.md) describes how to deploy and use PKCS certificate in your Intune environment. These steps include:
 
-- Download and install the Microsoft Intune Certificate Connector to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Download and install the PFX Certificate Connector to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  > [!IMPORTANT]
+  > Beginning with the PFX Certificate Connector version 6.2008.60.607 (released in August of 2020), this connector supports certificate deployment for PCKS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. You no longer need to use the Microsoft Intune Connector when you use PKCS certificate profiles.
+  > 
+  > For more information, see [Certificate connectors](certificate-connectors.md)
 - Create a trusted root certificate profile for your devices. This step includes using trusted root and intermediate certificates for your certification authority, and then deploying the profile to devices.
 - Create a PKCS certificate profile using the certificate template you created. This profile issues signing certificates to devices, and deploys the PKCS certificate profile to devices.
 
