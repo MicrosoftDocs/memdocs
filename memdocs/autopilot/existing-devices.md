@@ -35,7 +35,7 @@ Using Windows Autopilot, you can convert Windows 7 or Windows 8.1 domain-joined 
 - Assigned Microsoft Intune Licenses
 - Azure Active Directory Premium
 - Windows 10 version 1809 or later imported into Configuration Manager as an Operating System Image
-  - **Important**: See [Known issues](known-issues.md) if  you're using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
+  - **Important**: See [Known issues](known-issues.md) if you're using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
 
 ## Procedures
 
@@ -265,7 +265,7 @@ Next, ensure that all content required for the task sequence is deployed to dist
 2. Click **Next**, **Review the content to distribute**, and then click **Next**.
 3. On the Specify the content distribution page, click **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 4. On the Add Distribution Points or Add Distribution Point Groups wizard, specify content destinations that let the task sequence retrieve the JSON file.
-5. When  you're finished specifying content distribution, click **Next** twice then click **Close**.
+5. When you're finished specifying content distribution, click **Next** twice then click **Close**.
 
 ### Deploy the OS with Autopilot Task Sequence
 
