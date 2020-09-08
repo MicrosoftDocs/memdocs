@@ -70,7 +70,7 @@ See the following examples.
     Install-Module WindowsAutopilotIntune -Force
     Install-Module Microsoft.Graph.Intune -Force
     ```
-    
+   
 3. Enter the following lines and provide Intune administrative credentials
    - Be sure that the user account you specify has sufficient administrative rights.
 
@@ -98,33 +98,33 @@ See the following examples.
     <pre style="overflow-y: visible">
     PS C:\> Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
     {
-        "CloudAssignedTenantId":  "1537de22-988c-4e93-b8a5-83890f34a69b",
-        "CloudAssignedForcedEnrollment":  1,
-        "Version":  2049,
-        "Comment_File":  "Profile Autopilot Profile",
-        "CloudAssignedAadServerData":  "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
-        "CloudAssignedTenantDomain":  "M365x373186.onmicrosoft.com",
-        "CloudAssignedDomainJoinMethod":  0,
-        "CloudAssignedOobeConfig":  28,
-        "ZtdCorrelationId":  "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
+        "CloudAssignedTenantId": "1537de22-988c-4e93-b8a5-83890f34a69b",
+        "CloudAssignedForcedEnrollment": 1,
+        "Version": 2049,
+        "Comment_File": "Profile Autopilot Profile",
+        "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
+        "CloudAssignedTenantDomain": "M365x373186.onmicrosoft.com",
+        "CloudAssignedDomainJoinMethod": 0,
+        "CloudAssignedOobeConfig": 28,
+        "ZtdCorrelationId": "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
     }</pre>
 
-    Each profile is encapsulated within braces **{ }**. In the previous example, a single profile is displayed.     
+    Each profile is encapsulated within braces **{ }**. In the previous example, a single profile is displayed.
 
     See the following table for a description of properties used in the JSON file.
 
 
    |                          Property                          |                                                                                                                                                                        Description                                                                                                                                                                         |
    |------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                 Version (number, optional)                 |                                                                                                                 The version number that identifies the format of the JSON file.  For Windows 10 1809, the version specified must be 2049.                                                                                                                  |
-   |           CloudAssignedTenantId (guid, required)           |                                                                                      The Azure Active Directory tenant ID that should be used.  This is the GUID for the tenant, and can be found in properties of the tenant.  The value should not include braces.                                                                                       |
+   |                 Version (number, optional)                 |                                                                                                                 The version number that identifies the format of the JSON file. For Windows 10 1809, the version specified must be 2049.                                                                                                                  |
+   |           CloudAssignedTenantId (guid, required)           |                                                                                      The Azure Active Directory tenant ID that should be used. This is the GUID for the tenant, and can be found in properties of the tenant. The value should not include braces.                                                                                       |
    |        CloudAssignedTenantDomain (string, required)        |                                                                                                                                  The Azure Active Directory tenant name that should be used, for example: tenant.onmicrosoft.com.                                                                                                                                  |
    |         CloudAssignedOobeConfig (number, required)         |                                                                           This is a bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
-   |      CloudAssignedDomainJoinMethod (number, required)      |                                                                                                                                    This property specifies whether the device should join Azure Active Directory or Active Directory (Hybrid Azure AD Join).  Values include: Active AD Join = 0, Hybrid Azure AD Join = 1                                                        |
-   |      CloudAssignedForcedEnrollment (number, required)      |                                                                                                                         Specifies that the device should require AAD Join and MDM enrollment.  <br>0 = not required, 1 = required.                                                                                                                         |
+   |      CloudAssignedDomainJoinMethod (number, required)      |                                                                                                                                    This property specifies whether the device should join Azure Active Directory or Active Directory (Hybrid Azure AD Join). Values include: Active AD Join = 0, Hybrid Azure AD Join = 1                                                        |
+   |      CloudAssignedForcedEnrollment (number, required)      |                                                                                                                         Specifies that the device should require AAD Join and MDM enrollment. <br>0 = not required, 1 = required.                                                                                                                         |
    |             ZtdCorrelationId (guid, required)              | A unique GUID (without braces) that will be provided to Intune as part of the registration process. ZtdCorrelationId will be included in enrollment message as “OfflineAutoPilotEnrollmentCorrelator”. This attribute will be present only if the enrollment is taking place on a device registered with Zero Touch Provisioning via offline registration. |
-   | CloudAssignedAadServerData (encoded JSON string, required) |                                                  An embedded JSON string used for branding. It requires AAD corp branding enabled. <br> Example value: "CloudAssignedAadServerData":  "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}"                                                   |
-   |         CloudAssignedDeviceName (string, optional)         |                                                                          The name automatically assigned to the computer.  This follows the naming pattern convention that can be configured in Intune as part of the Autopilot profile, or can specify an explicit name to use.                                                                           |
+   | CloudAssignedAadServerData (encoded JSON string, required) |                                                  An embedded JSON string used for branding. It requires AAD corp branding enabled. <br> Example value: "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}"                                                   |
+   |         CloudAssignedDeviceName (string, optional)         |                                                                          The name automatically assigned to the computer. This follows the naming pattern convention that can be configured in Intune as part of the Autopilot profile, or can specify an explicit name to use.                                                                           |
 
 
 5. The Autopilot profile must be saved as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format, so if you attempt to redirect output of the commands to a file, you must also specify the file format. For example, to save the file in ASCII format using Windows PowerShell, you can create a directory (ex: c:\Autopilot) and save the profile as shown below: (use the horizontal scroll bar at the bottom if needed to view the entire command string)
@@ -218,7 +218,7 @@ See the following examples.
    - Click **Next**.
 
      >[!NOTE]
-     >Because the Autopilot for existing devices task sequence completes while in Windows PE, User State Migration Toolkit (USMT) data migration is not supported as there is no way to restore the user state into the new OS.  Also, the User State Migration Toolkit (USMT) does not support Azure AD-joined devices.
+     >Because the Autopilot for existing devices task sequence completes while in Windows PE, User State Migration Toolkit (USMT) data migration is not supported as there is no way to restore the user state into the new OS. Also, the User State Migration Toolkit (USMT) does not support Azure AD-joined devices.
 
 7. On the Include Updates page, choose one of the three available options. This selection is optional.
 8. On the Install applications page, add applications if desired. This is optional.
@@ -233,7 +233,7 @@ See the following examples.
     ```
     cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
     ```
-    -  **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package created earlier.
+    - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package created earlier.
 
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** checkbox and then click **Browse**.
 18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.
@@ -268,7 +268,7 @@ Next, ensure that all content required for the task sequence is deployed to dist
 
 1. Right click on the **Autopilot for existing devices** task sequence and then click **Deploy**.
 2. In the Deploy Software Wizard enter the following **General** and **Deployment Settings** details:
-    - <u>Task Sequence</u>:  **Autopilot for existing devices**.
+    - <u>Task Sequence</u>: **Autopilot for existing devices**.
     - <u>Collection</u>: Click **Browse** and then select **Autopilot for existing devices collection** (or another collection you prefer).
     - Click **Next** to specify **Deployment Settings**.
     - <u>Action</u>: **Install**.
@@ -311,7 +311,7 @@ The Task Sequence will download content, reboot, format the drives and install W
 ![refresh-3](images/up-3.png)
 
 >[!NOTE]
->If joining devices to Active Directory (Hybrid Azure AD Join), it is necessary to create a Domain Join device configuration profile that is targeted to "All Devices" (since there is no Azure Active Directory device object for the computer to do group-based targeting).  See [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join) for more information.
+>If joining devices to Active Directory (Hybrid Azure AD Join), it is necessary to create a Domain Join device configuration profile that is targeted to "All Devices" (since there is no Azure Active Directory device object for the computer to do group-based targeting). See [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join) for more information.
 
 ### Register the device for Windows Autopilot
 
