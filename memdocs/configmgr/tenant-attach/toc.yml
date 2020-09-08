@@ -8,6 +8,8 @@
     href: client-details.md
   - name: Install applications (preview)
     href: applications.md
+  - name: Resource explorer (preview)
+    href: resource-explorer.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: CMPivot overview
@@ -30,3 +32,5 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: Resource explorer (preview)
+    href: troubleshoot-resource-explorer.md
