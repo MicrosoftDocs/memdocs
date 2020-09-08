@@ -12,7 +12,7 @@ ms.author: mstewart
 manager: dougeby
 ---
 
-# <a name="bkmk_cmpivot"></a> Launch CMPivot (preview) from the admin center
+# <a name="bkmk_cmpivot"></a> Launch CMPivot from the admin center (preview)
 
 *Applies to: Configuration Manager (current branch)* 
 
