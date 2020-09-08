@@ -37,7 +37,7 @@ In this topic, we examine the simple use case of enabling BYOD access to corpora
 * Your email accounts are hosted in Exchange Online
 
 ## Common reasons to manage the device (MDM)
-You can easily drive users to enroll their devices into device management by deploying a [Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) policy on Exchange Online. Here are the reasons you might want to manage personal devices:
+You can easily drive users to enroll their devices into device management by deploying a [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) policy on Exchange Online. Here are the reasons you might want to manage personal devices:
 
 **WiFi/VPN** – If your users need a corporate connectivity profile to be productive, this can be seamlessly configured.
 

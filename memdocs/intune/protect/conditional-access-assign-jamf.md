@@ -128,5 +128,5 @@ Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](ht
 
 ## Next steps
 
-- [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Get started with Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Get started with Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

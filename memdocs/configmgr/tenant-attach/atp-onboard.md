@@ -17,19 +17,19 @@ ms.author: mstewart
 *Applies to: Configuration Manager (current branch)*
 
 > [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. 
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
 ## Prerequisites
 
 - Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-- An E5 license for [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- An E5 license for [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - An environment that's [tenant attached with uploaded devices](device-sync-actions.md).
 - A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.
 
-## <a name="bkmk_collections"></a> Make Configuration Manager collections available to assign Microsoft Defender ATP policies
+## <a name="bkmk_collections"></a> Make Configuration Manager collections available to assign Endpoint security policies
 
 When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender ATP.
 

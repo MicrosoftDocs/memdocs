@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -300,7 +300,7 @@ End of comment -->
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
   > [!NOTE]
-  > Fully managed, dedicated, and corporate-owned work profile devices will not be prompted to set a password. The settings will be enforced and you will need to set the password manually. The policy enforcing this will report as failed until you set the password that meets your requirements.
+  > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 
 ### Power settings
 

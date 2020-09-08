@@ -105,9 +105,9 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - Office updates may take around 24 hours to show up on client unless the devices are restarted  
 
-- There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Office 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Office 365 deployed via Configuration Manager.  
+- There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager.  
 
-For more information on the Intune feature, see [Assign Office 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365).
+For more information on the Intune feature, see [Assign Microsoft 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365).
 
 ## Client apps
 

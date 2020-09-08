@@ -349,27 +349,27 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders).
 
-First, [find your Office 365 tenant ID](/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).  
+First, [find your Microsoft 365 tenant ID](/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).  
 
 To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 
 For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](../../../compliance/deploy-use/onedrive-profile.md) article.
 
-### Integration for Office 365 ProPlus readiness
+### Integration for Microsoft 365 Apps for enterprise readiness
 
 <!--3735402-->
-Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Office 365 ProPlus. The integration provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices.
+Use Configuration Manager to identify devices with high confidence that are ready to upgrade to Microsoft 365 Apps for enterprise. The integration provides insights into any potential compatibility issues with Office add-ins and macros used in your environment. Then use Configuration Manager to deploy Office to ready devices.
 
-The existing Office 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
+The existing Microsoft 365 client management dashboard now includes a new tile, **Office 365 ProPlus Upgrade Readiness**.
 
-For more information, see [Office 365 client management dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
+For more information, see [Microsoft 365 client management dashboard](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
 
-### Additional languages for Office 365 updates
+### Additional languages for Microsoft 365 updates
 
 <!--3555955-->
-Configuration Manager now supports all supported languages for Office 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**.
+Configuration Manager now supports all supported languages for Microsoft 365 client updates. The update workflow now separates the 38 languages for **Windows Update** from the numerous languages for **Office 365 Client Update**.
 
-For more information, see [Manage Office 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
+For more information, see [Manage Microsoft 365 updates](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
 
 ### Office products on lifecycle dashboard
 

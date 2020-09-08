@@ -11,6 +11,12 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Updated end-user experience for Android device administrator Wi-Fi profiles<!-- 7662680  -->
+Due to a change made by Google, the end-user experience for new Wi-Fi profiles is significantly different starting in the October release of the Company Portal app. Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.
+
+Applies to:
+- Android device administrator, Android 10 and later
+
 ### Microsoft Intune ends support for Windows Phone 8.1 and Windows 10 Mobile<!-- 3544938, 3544909 -->
 Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. 
 
@@ -71,15 +77,6 @@ Devices will not be impacted if they are any of the below:
 
 ![Screencap of Android compliance policy page](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### Additional impacts based on Android OS version
-
-**Android 10**: For all device administrator-managed devices (including Samsung) running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later:
-- Network access control for VPN will no longer work
-- Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned
-- The IMEI and serial number will no longer be visible to IT admins in Intune
-
-**Android 11**: We are currently testing Android 11 support on the latest developer beta release to evaluate if it will cause impact on device administrator-managed devices.
-
 #### User experience of impacted settings on impacted devices
 
 Impacted configuration settings:
@@ -90,6 +87,9 @@ Impacted compliance settings:
 - For already enrolled devices that already had the settings applied, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page, the device will be out of compliance, and the password requirements will still be enforced in the Settings app.
 - For newly enrolled devices, newly assigned settings, and updated settings, the impacted compliance settings will still show as reasons for noncompliance on the “Update device settings” page and the device will be out of compliance, but stricter password requirements will not be enforced in the Settings app.
 
+Additional user experience change for Wi-Fi profiles
+- Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.  
+
 #### Cause of impact 
 Devices will begin being impacted in October 2020. At that time, there will be a Company Portal app update that will increase the Company Portal API targeting from level 28 to level 29 ([as required by Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
@@ -97,10 +97,28 @@ At that point, device administrator-managed devices that are not manufactured by
 - Updates to Android 10 or later.
 - Updates the Company Portal app to the version that targets API level 29.
 
+#### Additional impacts based on Android OS version 
+**Android 10**: For all device administrator managed devices (including Samsung) running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device is updated to Android 10 or later: 
+- Network access control for VPN will no longer work 
+- Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned 
+- The IMEI and serial number will no longer be visible to IT admins in Intune 
+
+**Android 11**: We continue to test the latest Android 11 beta release to evaluate the impact on device administrator managed devices. Here’s what we have found: 
+- For device administrator devices (excluding Samsung) running Android 11 and later, Google has removed the ability for management agents like Company Portal to enforce blocking Camera, even before the October update to the Company Portal app. Policies blocking camera that are applied to devices before they update to Android 11 will continue to apply.  
+- With Android 11, trusted root certificates can no longer be deployed to devices enrolled with device administrator (except on Samsung devices). Users must manually install the trusted root certificate on the device. With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a trusted certificate policy to the device, and link that policy to the SCEP certificate profile. 
+    - If the trusted root certificate is on the device, then the SCEP certificate profile will install successfully.  
+    - If the trusted certificate cannot be found, the SCEP certificate profile will fail. 
+
+
 #### What do I need to do to prepare for this change?
 To avoid the reduction in functionality coming in October 2020, we recommend the following:
 - **New enrollments**: Onboard new devices into [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management (where available) and/or [app protection policies](../apps/app-protection-policies.md). Avoid onboarding new devices into device administrator management. 
 - **Previously enrolled devices**: If a device administrator-managed device is running Android 10 or later or may update to Android 10 or later (especially if it is not a Samsung device), move it off of device administrator management to [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) management and/or [app protection policies](../apps/app-protection-policies.md). You can leverage the streamlined flow to [move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).
+- **Configure Password Complexity**: For impacted devices running Android 10 and later, a future setting called Password Complexity lets you continue enforcing password restrictions and compliance. Password Complexity is a measure of password strength that factors in password type, length, and quality.
+
+#### What if I have non-Samsung devices that cannot move to Android Enterprise? 
+Some devices can’t move from device administrator to Android Enterprise management. For example, [Google hasn’t made Android Enterprise available in some markets](https://support.google.com/work/android/answer/6270910?hl=en). You can still use Intune to manage non-Samsung devices with device administrator, but the changes to functionality mentioned in this post will apply. For guidance on managing devices when Android Enterprise isn’t available, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
+
 
 #### Additional information
 - [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md)

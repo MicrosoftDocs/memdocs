@@ -86,6 +86,9 @@ For more information, see [Endpoint Protection](../../../protect/deploy-use/endp
 
 ## Site Hierarchy – Geographical View with Bing Maps
 
+> [!IMPORTANT]
+> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
+
 In the Configuration Manager console, go to the **Monitoring** workspace, select the **Site Hierarchy** node, and switch to the **Geographical View**. This view lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
 
 Microsoft uses the information to operate and improve Microsoft Bing Maps and other Microsoft sites and services. For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).

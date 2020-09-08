@@ -230,7 +230,7 @@ The following workloads are now able to transition from Configuration Manager to
 
 - **Device configuration**<!--1357903-->: This workload lets you use Intune to deploy MDM policies, while continuing to use Configuration Manager for deploying applications.  
 
-- **Office 365**<!--1357841-->: Devices don't install Office 365 deployments from Configuration Manager.  
+- **Office 365**<!--1357841-->: Devices don't install Microsoft 365 deployments from Configuration Manager.  
 
 - **Mobile apps**<!--1357892-->: Any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md).  
 
@@ -289,9 +289,9 @@ For more information, see [Create Windows applications](../../../apps/get-starte
 
 ### Office Customization Tool integration with the Office 365 Installer
 <!--1358149-->
-The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Office 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Office 365. This integration allows you to take advantage of new manageability settings in Office 365 as soon as they're available. 
+The Office Customization Tool is now integrated with the Office 365 Installer in the Configuration Manager console. When creating a deployment for Microsoft 365, dynamically configure the latest Office manageability settings. Microsoft updates the Office Customization Tool when they release new builds of Microsoft 365. This integration allows you to take advantage of new manageability settings in Microsoft 365 as soon as they're available. 
 
-For more information, see [Deploy Office 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For more information, see [Deploy Microsoft 365 apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### Support for new Windows app package formats

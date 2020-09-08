@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,6 +37,9 @@ To manage devices and install apps, your users can install the Company Portal ap
 
  > [!IMPORTANT]
  > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](/mem/configmgr/comanage/company-portal).
 
 ## Configure settings to show offline apps
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account.
@@ -71,7 +74,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 11. Assign the Company Portal app as a required app to your selected set of user or device groups.  
 
-For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  
+For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm).  
 
 ## Frequently asked questions 
 ### How do I update the Company Portal app on my users' devices if they have already installed the older apps from the store?
@@ -114,4 +117,3 @@ When the script has finished running, it outputs the signed version of the Windo
 ## Next steps
 
 - [Assign apps to groups](apps-deploy.md)
-

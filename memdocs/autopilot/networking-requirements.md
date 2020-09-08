@@ -34,7 +34,7 @@ Additional configuration may be required to grant access to required services in
 - require authentication before internet access can be obtained. 
 
 > [!NOTE]
-> Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Smart card and certificate based authentication isn't supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 For additional details about each of these services and their specific requirements, review the following details:
 
@@ -49,7 +49,7 @@ For additional details about each of these services and their specific requireme
 
 If Windows Update is inaccessible, the Autopilot process will still continue but critical updates won't be available.
 
-<tr><td><b>Delivery Optimization<b><td>Autopilot contacts the <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">Delivery Optimization</a> service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the Internet.
+<tr><td><b>Delivery Optimization<b><td>Autopilot contacts the <a href="/windows/deployment/update/waas-delivery-optimization">Delivery Optimization</a> service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the Internet.
 - Windows Updates
 - Microsoft Store apps and app updates
 - Office Updates
@@ -68,11 +68,11 @@ If diagnostic data can't be sent, the Autopilot process still continues. However
 <tr><td><b>Windows Notification Services (WNS)<b><td>This service is used to enable Windows to receive notifications from apps and services. For more information, see <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 If the WNS services aren't available, the Autopilot process will still continue without notifications.
-<tr><td><b>Microsoft Store, Microsoft Store for Business<b><td>Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM).  App updates and additional apps may also be needed when the user first logs in. For more information, see <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">Prerequisites for Microsoft Store for Business and Education</a> (also includes Azure AD and Windows Notification Services).<br>
+<tr><td><b>Microsoft Store, Microsoft Store for Business<b><td>Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM).  App updates and additional apps may also be needed when the user first logs in. For more information, see <a href="/microsoft-store/prerequisites-microsoft-store-for-business">Prerequisites for Microsoft Store for Business and Education</a> (also includes Azure AD and Windows Notification Services).<br>
 
 If the Microsoft Store isn't accessible, the Autopilot process will still continue without Microsoft Store apps.
 
-<tr><td><b>Office 365<b><td>As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 URLs and IP address ranges</a>. This article includes all Office services, DNS names, IP addresses. It also includes Azure AD and other services that may overlap with the services listed above.
+<tr><td><b>Microsoft 365<b><td>As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 URLs and IP address ranges</a>. This article includes all Office services, DNS names, IP addresses. It also includes Azure AD and other services that may overlap with the services listed above.
 <tr><td><b>Certificate revocation lists (CRLs)<b><td>Some of these services will also need to check certificate revocation lists (CRLs) for certificates used in the services.  For a full list, see <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">Office 365 URLs and IP address ranges</a> and <a href="https://aka.ms/o365chains">Office 365 Certificate Chains</a>.
 <tr><td><b>Hybrid Azure AD join<b><td>The device can be hybrid Azure AD joined. The computer should be on corporate network for hybrid Azure AD join to work. See details at <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">Windows Autopilot user-driven mode</a>
 <tr><td><b>Autopilot Self-Deploying mode and Autopilot White Glove<b><td>Firmware TPM devices, which are only provided by Intel, AMD, or Qualcomm, don't include all needed certificates at boot time and must be able to retrieve them from the manufacturer on first use. Devices with discrete TPM chips (including devices from any other manufacturer) come with these certificates preinstalled. For more information, see <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM recommendations</a>. For each firmware TPM provider, make sure that these URLs are accessible so that certificates can be successfully requested: 
@@ -86,4 +86,3 @@ If the Microsoft Store isn't accessible, the Autopilot process will still contin
 **Next steps**
 
 [Windows Autopilot licensing requirements](licensing-requirements.md)
-

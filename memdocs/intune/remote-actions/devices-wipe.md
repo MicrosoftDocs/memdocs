@@ -173,7 +173,7 @@ You can configure Intune to automatically delete devices that appear to be inact
 4. Choose **Save**.
 
 > [!NOTE]
-> Device cleanup rules aren't available for Android Enterprise scenarios like [Fully Managed](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [Dedicated](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll), and [Corporate-Owned with Work Profile](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Device cleanup rules aren't available for Android Enterprise scenarios like [Fully Managed](../enrollment/android-fully-managed-enroll.md), [Dedicated](../enrollment/android-kiosk-enroll.md), and [Corporate-Owned with Work Profile](../enrollment/android-corporate-owned-work-profile-enroll.md). 
 
 ## Delete devices from the Azure Active Directory portal
 
@@ -211,4 +211,3 @@ Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-st
 ## Next steps
 
 If you want to reenroll a deleted device, see [Enrollment options](../enrollment/enrollment-options.md).
-

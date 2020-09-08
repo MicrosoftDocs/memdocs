@@ -85,7 +85,7 @@ On the computer(s) on which the client software is going to be installed, go to 
 
 3. Use Group Policy to deploy the software to computers on your network.
 
-    For more information about how to use Group Policy to automatically deploy software, see [Group Policy for Beginners](https://technet.microsoft.com/library/hh147307.aspx).
+    For more information about how to use Group Policy to automatically deploy software, see [Group Policy for Beginners](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
 ## Deploy the client software as part of an image
 You can deploy the Intune client software to computers as part of an operating system image by using the following procedure as a guide:
