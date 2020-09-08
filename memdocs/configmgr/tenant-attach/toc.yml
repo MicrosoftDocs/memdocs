@@ -32,3 +32,5 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: CMPivot (preview)
+    href: troubleshoot-cmpivot.md
