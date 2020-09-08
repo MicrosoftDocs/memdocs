@@ -13994,7 +13994,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:  
 
-- [Windows Presentation Foundation](/dotnet/framework/wpf/) version 4.0  
+- [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0  
 
 - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 

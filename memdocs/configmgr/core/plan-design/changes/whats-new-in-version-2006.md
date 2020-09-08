@@ -28,16 +28,26 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-### Device timeline in the admin center
+### <a name="bkmk_timeline"></a> Device timeline in the admin center
 <!--7220536, CM7141381-->
 When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Device timeline in the admin center](../../../tenant-attach/timeline.md).
+
+### <a name="bkmk_hinv"></a> Resource explorer in the admin center
+<!--6479284-->
+From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../../tenant-attach/resource-explorer.md).
+
+### <a name="bkmk_cmpivot"></a> CMPivot from the admin center
+<!--6024392-->
+Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+
+For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
 ### <a name="bkmk_atp"></a> Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
 <!--4812909-->
 You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender ATP from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->

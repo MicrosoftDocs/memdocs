@@ -83,7 +83,7 @@ Unexpected errors are typically caused by either [service connection point](../c
 **Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
 **Possible causes:**
-- This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
+- This error typically occurs when newly onboarding to tenant attach. Wait up to an hour for the information to synchronize.
 - This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
 
 ### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment

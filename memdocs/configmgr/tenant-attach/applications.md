@@ -33,7 +33,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 Additionally, you'll need the following for installing [user targeted applications](#bkmk_user):<!--7518897-->
 
-- Configuration Manager version 2006 and the corresponding version of the console installed.
+- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
 
 
 ## Permissions
