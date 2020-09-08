@@ -61,7 +61,7 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
 **Error message:** Not authorized to view query results. Verify that you've been given permissions for CMPivot in Configuration Manager
 
-**Possible causes:** Verify the user account has permissions for CMPivot. For more information see [Permissions for CMPivot](cmpivot-start.md#permisssions).
+**Possible causes:** Verify the user account has permissions for CMPivot. For more information see [Permissions for CMPivot](cmpivot-start.md#permissions).
 
 #### <a name="bkmk_other"></a> Other possible causes of unexpected errors
 
