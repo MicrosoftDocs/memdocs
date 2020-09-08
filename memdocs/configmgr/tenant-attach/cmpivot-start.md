@@ -54,20 +54,11 @@ The user account needs the following permissions:
 1. Select **CMPivot (preview)**.
 1. Type your query in the script pane, then select **Run**.
 
-## Known issues
+## Close CMPivot
 
-### Inconsistent results for some operators with Configuration Manager version 2002
-<!--7784718, 7884272-->
-When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
+To close CMPivot and return the the device information, use the `X` icon in the top right of CMPivot.
 
-- Summarize by
-- Take
-- Order by
-- Top
-- Count
-- Distinct
 
-**Resolution**: Install [KB4578123 - CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123).
 
 ## Next steps
 
