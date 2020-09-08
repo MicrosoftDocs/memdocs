@@ -2,7 +2,7 @@
 title: What's new in version 2006
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2006 of Configuration Manager current branch.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

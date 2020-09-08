@@ -13,7 +13,7 @@ ms.author: mstewart
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center (preview)
-<!--CM7141381, IN7552762 pubpreview -->
+<!--CM7141381, IN7552762 pubpreview Sept 8, 2020-->
 *Applies to: Configuration Manager (current branch)*
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
