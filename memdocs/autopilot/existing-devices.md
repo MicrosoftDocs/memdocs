@@ -71,7 +71,7 @@ See the following examples.
     Install-Module Microsoft.Graph.Intune -Force
     ```
    
-3. Enter the following lines and provide Intune administrative credentials
+3. Enter the following lines and provide Intune administrative credentials:
    - Be sure that the user account you specify has sufficient administrative rights.
 
      ```powershell
@@ -121,9 +121,9 @@ See the following examples.
    |        CloudAssignedTenantDomain (string, required)        |                                                                                                                                  The Azure Active Directory tenant name that should be used, for example: tenant.onmicrosoft.com.                                                                                                                                  |
    |         CloudAssignedOobeConfig (number, required)         |                                                                           This is a bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
    |      CloudAssignedDomainJoinMethod (number, required)      |                                                                                                                                    This property specifies whether the device should join Azure Active Directory or Active Directory (Hybrid Azure AD Join). Values include: Active AD Join = 0, Hybrid Azure AD Join = 1                                                        |
-   |      CloudAssignedForcedEnrollment (number, required)      |                                                                                                                         Specifies that the device should require AAD Join and MDM enrollment. <br>0 = not required, 1 = required.                                                                                                                         |
+   |      CloudAssignedForcedEnrollment (number, required)      |                                                                                                                         Specifies that the device should require Azure AD Join and MDM enrollment. <br>0 = not required, 1 = required.                                                                                                                         |
    |             ZtdCorrelationId (guid, required)              | A unique GUID (without braces) that will be provided to Intune as part of the registration process. ZtdCorrelationId will be included in enrollment message as “OfflineAutoPilotEnrollmentCorrelator”. This attribute will be present only if the enrollment is taking place on a device registered with Zero Touch Provisioning via offline registration. |
-   | CloudAssignedAadServerData (encoded JSON string, required) |                                                  An embedded JSON string used for branding. It requires AAD corp branding enabled. <br> Example value: "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}"                                                   |
+   | CloudAssignedAadServerData (encoded JSON string, required) |                                                  An embedded JSON string used for branding. It requires Azure AD corp branding enabled. <br> Example value: "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}"                                                   |
    |         CloudAssignedDeviceName (string, optional)         |                                                                          The name automatically assigned to the computer. This follows the naming pattern convention that can be configured in Intune as part of the Autopilot profile, or can specify an explicit name to use.                                                                           |
 
 
@@ -150,7 +150,7 @@ See the following examples.
 2. On the ribbon, click **Create Package**
 3. In the **Create Package and Program Wizard** enter the following **Package** and **Program Type** details:<br>
     - <u>Name</u>: **Autopilot for existing devices config**
-    - Select the **This package contains source files** checkbox
+    - Select **This package contains source files**.
     - <u>Source folder</u>: Click **Browse** and specify a UNC path containing the AutopilotConfigurationFile.json file. 
     - Click **OK** and then click **Next**.
     - <u>Program Type</u>: **Do not create a program**
@@ -174,7 +174,7 @@ See the following examples.
      >You can optionally choose to use an alternative collection for the limiting collection. The device to be upgraded must be running the ConfigMgr agent in the collection that you select.
 
 4. Click **Next**, then enter the following **Membership Rules** details:
-   - Click **Add Rule** and specify either a direct or query based collection rule to add the target test Windows 7 devices to the new collection.
+   - Click **Add Rule** and specify either a direct or query-based collection rule to add the target test Windows 7 devices to the new collection.
    - For example, if the hostname of the computer to be wiped and reloaded is PC-01 and you wish to use Name as the attribute, click **Add Rule > Direct Rule > (wizard opens) > Next** and then enter **PC-01** next to **Value**. Click **Next**, and then choose **PC-01** under **Resources**. See the following examples.
 
      ![Locate resources dialog box](images/pc-01a.png)
@@ -235,12 +235,12 @@ See the following examples.
     ```
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package created earlier.
 
-17. In the **Apply Autopilot for existing devices config file** step, select the **Package** checkbox and then click **Browse**.
+17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
 18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.
 19. Under the **Setup Operating System** group, click the **Setup Windows and Configuration Manager** task.
 20. Click **Add** and then click **New Group**.
 21. Change **Name** from **New Group** to **Prepare Device for Autopilot**
-22. Verify that the **Prepare Device for Autopilot** group is the very last step in the task sequence. Use the **Move Down** button if necessary.
+22. Verify that the **Prepare Device for Autopilot** group is the last step in the task sequence. Use the **Move Down** button if necessary.
 23. With the **Prepare device for Autopilot** group selected, click **Add**, point to **Images** and then click **Prepare ConfigMgr Client for Capture**.
 24. Add a second step by clicking **Add**, pointing to **Images**, and clicking **Prepare Windows for Capture**. Use the following settings in this step:
     - <u>Automatically build mass storage driver list</u>: **Not selected**
@@ -252,7 +252,7 @@ See the following examples.
 25. Click **OK** to close the Task Sequence Editor.
 
 > [!NOTE]
-> On Windows 10 1903 and 1909, the **AutopilotConfigurationFile.json** is deleted by the **Prepare Windows for Capture** step. See [Windows Autopilot - known issues](known-issues.md) for more information and a workaround.
+> On Windows 10 1903 and 1909, the **AutopilotConfigurationFile.json** is deleted by the **Prepare Windows for Capture** step. For more information and a workaround, see [Windows Autopilot - known issues](known-issues.md).
 
 ### Deploy Content to Distribution Points
 
@@ -260,8 +260,8 @@ Next, ensure that all content required for the task sequence is deployed to dist
 
 1. Right click on the **Autopilot for existing devices** task sequence and click **Distribute Content**.
 2. Click **Next**, **Review the content to distribute**, and then click **Next**.
-3. On the Specify the content distribution page click **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
-4. On the Add Distribution Points or Add Distribution Point Groups wizard specify content destinations that will allow the JSON file to be retrieved when the task sequence is run.
+3. On the Specify the content distribution page, click **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
+4. On the Add Distribution Points or Add Distribution Point Groups wizard, specify content destinations that will allow the JSON file to be retrieved when the task sequence is run.
 5. When  you're finished specifying content distribution, click **Next** twice then click **Close**.
 
 ### Deploy the OS with Autopilot Task Sequence
@@ -272,7 +272,7 @@ Next, ensure that all content required for the task sequence is deployed to dist
     - <u>Collection</u>: Click **Browse** and then select **Autopilot for existing devices collection** (or another collection you prefer).
     - Click **Next** to specify **Deployment Settings**.
     - <u>Action</u>: **Install**.
-    - <u>Purpose</u>: **Available**. You can optionally select **Required** instead of **Available**. This isn't recommended during the test owing to the potential impact of inadvertent configurations.
+    - <u>Purpose</u>: **Available**. You can optionally select **Required** instead of **Available**. This setting isn't recommended during the test owing to the potential impact of inadvertent configurations.
     - <u>Make available to the following</u>: **Only Configuration Manager Clients**. Note: Choose the option here that is relevant for the context of your test. If the target client does not have the Configuration Manager agent or Windows installed, you'll need to select an option that includes PXE or Boot Media.
     - Click **Next** to specify **Scheduling** details.
     - <u>Schedule when this deployment will become available</u>: Optional
@@ -280,20 +280,20 @@ Next, ensure that all content required for the task sequence is deployed to dist
     - Click **Next** to specify **User Experience** details.
     - <u>Show Task Sequence progress</u>: Selected.
     - <u>Software Installation</u>: Not selected.
-    - <u>System restart (if required to complete the installation)</u>: Not selected.
+    - <u>System restart (if necessary to complete the installation)</u>: Not selected.
     - <u>Commit changed at deadline or during a maintenance windows (requires restart)</u>: Optional.
     - <u>Allow task sequence to be run for client on the Internet</u>: Optional
     - Click **Next** to specify **Alerts** details.
     - <u>Create a deployment alert when the threshold is higher than the following</u>: Optional.
     - Click **Next** to specify **Distribution Points** details.
     - <u>Deployment options</u>: **Download content locally when needed by the running task sequence**.
-    - <u>When no local distribution point is available use a remote distribution point</u>: Optional.
+    - <u>When no local distribution point is available, use a remote distribution point</u>: Optional.
     - <u>Allow clients to use distribution points from the default site boundary group</u>: Optional.
     - Click **Next**, confirm settings, click **Next**, and then click **Close**.
 
 ### Complete the client installation process
 
-1. Open the Software Center on the target Windows 7 or Windows 8.1 client computer. You can do this by clicking Start and then typing **software** in the search box, or by typing the following at a Windows PowerShell or command prompt:
+1. On the target Windows 7 or Windows 8.1 client computer, open the Software Center by clicking Start and then typing **software** in the search box, or by typing the following address at a Windows PowerShell or command prompt:
 
     ```
     C:\Windows\CCM\SCClient.exe
@@ -304,7 +304,7 @@ Next, ensure that all content required for the task sequence is deployed to dist
     ![Autopilot for existing devices page](images/sc.png)
     ![Confirmation dialog box](images/sc1.png)
 
-The Task Sequence will download content, reboot, format the drives, install Windows 10, and prepare for Autopilot. After the task sequence has completed the device will boot into OOBE and provide an Autopilot experience.
+The Task Sequence will download content, reboot, format the drives, install Windows 10, and prepare for Autopilot. After the task sequence has completed, the device will boot into OOBE and provide an Autopilot experience.
 
 ![refresh-1](images/up-1.png)
 ![refresh-2](images/up-2.png)
