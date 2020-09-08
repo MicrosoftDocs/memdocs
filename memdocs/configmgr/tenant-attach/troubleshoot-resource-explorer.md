@@ -51,7 +51,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to an hour after you attach the site to your Azure tenant.
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. 
 
 **Possible causes:**
 - This error typically occurs when newly onboarding to tenant attach. Wait an hour for the information to synchronize.

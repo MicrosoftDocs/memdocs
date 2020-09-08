@@ -28,7 +28,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-### <a name="bkmk_hinv"></a> Resource explorer the admin center
+### <a name="bkmk_hinv"></a> Resource explorer in the admin center
 <!--6479284-->
 From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../../tenant-attach/resource-explorer.md).
 
