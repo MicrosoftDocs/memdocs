@@ -29,9 +29,9 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
 **Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
 
-### <a name="bkmk_noinfo"></a> Unable to get CMPivot information
+### <a name="bkmk_noinfo"></a> Unable to get device information
 
-**Error message 1:** Unable to get CMPivot information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+**Error message 1:** Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
 **Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
