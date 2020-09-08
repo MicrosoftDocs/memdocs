@@ -195,7 +195,7 @@ Applies to:
 We’re introducing a few changes for password settings for *Device restriction* and *compliance* policies for *Android device administrator*. (**Devices** > **Configuration profiles** > **Create profile** > **Device restrictions** and **Devices** > **Compliance policies** > **Create Policy**) These changes help Intune accommodate changes in Android version 10 and later, to ensure settings for passwords continue to apply to devices as expected.
  
 Changes include:
-- Removal of the lop-level option for **Password**.  
+- Removal of the top-level option for **Password**.  
 - Settings will be reorganized into sections that are based on which devices they apply to.
 - The **Minimum password length** will be disabled for use unless **Password type** is configured to a value where the password length applies.
 - Additional updates to labels and example text.
@@ -208,7 +208,7 @@ These changes apply to the UI for settings, and won’t affect existing profiles
 ### Ending support for iOS 11<!--7327321 -->
 After iOS 14 releases, Intune enrollment and the Company Portal app will support iOS versions 12 and later. Older versions won't be supported but will continue to receive policies.
 
-### Ending support for macOS 10.12<!--7327321 -->
+### Ending support for macOS 10.12<!--7327326 -->
 After macOS 11 releases, Intune enrollment and the Company Portal will support macOS versions 10.13 and later. Older versions won't be supported.
 
 

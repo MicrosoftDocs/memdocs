@@ -450,7 +450,7 @@ Intune now provides guided scenarios to help you complete a specific task or set
 For more information, see [Intune guided scenarios overview](guided-scenarios-overview.md).
 
 #### Additional app configuration variable available<!-- 4969237   -->
-When creating an app configuration policy, you can include the `AAD Device ID` configuration variable as part of your configuration settings. In Intune, select **Client apps** > **App configuration policies** > **Add**. Enter your configuration policy details and select **Configuration settings** to view the **Configuration settings** blade. For more information, see [App configuration policies for managed Android Enterprise devices - Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+When creating an app configuration policy, you can include the `AAD_Device_ID` configuration variable as part of your configuration settings. In Intune, select **Client apps** > **App configuration policies** > **Add**. Enter your configuration policy details and select **Configuration settings** to view the **Configuration settings** blade. For more information, see [App configuration policies for managed Android Enterprise devices - Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### Create groups of management objects called policy sets<!-- 3762880  -->
 Policy sets allow you to create a bundle of references to already existing management entities that need to be identified, targeted, and monitored as a single conceptual unit. Policy sets do not replace existing concepts or objects. You can continue to assign individual objects in Intune and you can reference individual objects as part of a policy set. Therefore, any changes to those individual objects will be reflected in the Policy set. ​ In Intune, you will select **Policy sets** > **Create** to create a new Policy set.
@@ -482,7 +482,7 @@ We've updated the UI experience for [creating](../protect/software-updates-ios.m
 #### Engaged restart settings are removed from Windows Update rings<!--  4464404      -->
 As previously announced, Intune's Windows 10 Update rings now [support settings for deadlines](../protect/windows-update-settings.md) and no longer support *Engaged restart*. Settings for *Engaged restart* are no longer available when you configure or manage Update rings in Intune.  
 
-This change aligns with recent [Windows servicing changes](//windows/whats-new/whats-new-windows-10-version-1903#servicing) and on devices that run Windows 10 1903 or later, *deadlines* supersede configurations for *engaged restart*.
+This change aligns with recent [Windows servicing changes](/windows/whats-new/whats-new-windows-10-version-1903#servicing) and on devices that run Windows 10 1903 or later, *deadlines* supersede configurations for *engaged restart*.
 
 #### Prevent installation of apps from Unknown Sources on Android Enterprise work profile devices<!-- 4760025   -->
 On Android Enterprise work profile devices, users can't ever install apps from unknown sources. In this update, there's a new setting - **Prevent app installations from unknown sources in the personal profile**. By default, this setting prevents users from side-loading apps from unknown sources into the personal profile on the device.
@@ -1352,7 +1352,7 @@ Admins will see these four apps automatically added to their Intune apps list at
 ### Device configuration
 
 #### Updated PFX Certificate Connector for Microsoft Intune<!-- 1533038 -->
-We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) that addresses an issue where existing PFX certificates continue to be reprocessed, which causes the connector to stop processing new requests.
+We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) that addresses an issue where existing PFX certificates continue to be reprocessed, which causes the connector to stop processing new requests.
 
 #### Intune security tasks for Defender ATP (In public preview)<!-- 3208597 -->
 In public preview, you can use Intune to manage [security tasks for Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). This integration with ATP and adds a risk-based approach to discover, prioritize, and remediate endpoint vulnerabilities and misconfigurations, while reducing the time between discovery to mitigation.
@@ -1406,7 +1406,7 @@ To see the available setting, go to [Configure VPN settings on iOS devices](../c
 Applies to: iOS
 
 #### Updated PFX Certificate Connector for Microsoft Intune<!-- doc-vso 1521237  -->  
-We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) that drops the polling interval from 5 minutes to 30 seconds.
+We've released an update for the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) that drops the polling interval from 5 minutes to 30 seconds.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1493,7 +1493,7 @@ The Intune app protection policy (APP) support for the **Third Party Keyboards**
 ### Device configuration
 
 #### Updated certificate connectors<!-- ICM 113304612 -->
-We've released updates for both the [Intune Certificate Connector and the PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors). The new releases fix several known issues.
+We've released updates for both the [Intune Certificate Connector and the PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors). The new releases fix several known issues.
 
 #### Set login settings and control restart options on macOS devices<!-- 1210083  -->
 On macOS devices, you can create a device configuration profile (**Device configuration** > **Profiles** > **Create profile** > choose **macOS** for platform > **Device features** for profile type). This update includes new login window settings, such as showing a custom banner, choose how users sign in, show or hide the power settings, and more.
