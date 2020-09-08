@@ -663,6 +663,9 @@ When you [configure a notification message template](../protect/actions-for-nonc
 You can now set a tenant-wide toggle that removes the Intune license requirement for admins to access the MEM admin console and query graph APIs. Once you remove the license requirement, you can never reinstate it. 
 
 
+> [!Note]
+> Some actions, including the Teamviewer Connector flow, still require an Intune license to complete.
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripts 
