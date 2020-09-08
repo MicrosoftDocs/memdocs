@@ -59,7 +59,28 @@ Verify the account has the following permissions:
 
 **Possible resolution:** Wait for approximately 15 minutes and the issue should be resolved automatically.
 
+### <a name="bkmk_500"></a> Unexpected error occurred
+
+**Error code**: 500
+
+**Error message:** Unexpected error occurred
+
+**Possible causes:**
+
+- Verify you have a minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
+- If there are a large number of events (more than 10,000, approximately), and multiple searches are requested rapidly, then it's possible to receive an unexpected error. You may also see your search results [timeout](#bmkm_timeout).
+
+### <a name="bkmk_timeout"></a> Getting results timed out
+
+**Error message:** Getting results timed out. Make sure that the Configuration Manager service connection point is operational and has a connection to the cloud.
+
+**Possible cause:** If there are a large number of events (more than 10,000, approximately), and multiple searches are requested rapidly, then it's possible to see a timeout. You may also see an [unexpected error](#bkmk_500).
+
 ## Known issues
+
+### Boundary group ID is used rather than the name
+
+**Scenario:** If you are running Configuration Manager version 2002 and a device changes boundary groups, you may see the event message shows the boundary group ID rather than the name.
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
