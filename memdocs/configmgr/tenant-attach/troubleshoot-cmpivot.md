@@ -79,6 +79,19 @@ When using CMPivot from the Microsoft Endpoint Manager admin center with Configu
 
 **Resolution**: Install [KB4578123 - CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123).
 
+### <a name="bkmk_dblhop"></a> When the SMS provider is remote from the CAS, you may encounter an internal server error from the admin console
+
+**Error message:** On-prem error code: 500 internal server error
+
+**Scenario 1:** When running Configuration Manager version 2002 and there is a remote provider for the CAS, then you may encounter an internal server error from the admin console.
+
+**Scenario 2:** When running Configuration Manager version 2006, you may also encounter this error if the service connection point fails to connect to the provider on the primary site and falls back to the provider for the CAS. 
+
+**Scenario 3:** If the CAS has been upgraded to version 2006 but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
+
+**Workaround:** Follow the instructions for the [CAS has a remote provider](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
+
+
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## Next steps
