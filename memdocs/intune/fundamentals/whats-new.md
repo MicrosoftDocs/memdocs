@@ -58,6 +58,15 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 ### Scripts
 
 <!-- ########################## -->
+## Week of September 7, 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+### <a name="bkmk_hinv"></a> Tenant attach: View hardware inventory with resource explorer in Microsoft Endpoint Manager admin center
+<!--IN7220536, CM6479284 -->
+From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: View hardware inventory with resource explorer in Microsoft Endpoint Manager admin center](../../configmgr/tenant-attach/resource-explorer.md).
+
 ## Week of August 31, 2020
 
 ### Device configuration
