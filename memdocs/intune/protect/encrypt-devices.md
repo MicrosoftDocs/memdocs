@@ -98,7 +98,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 and later
    2. **Profile type**: Endpoint protection
 
-   ![Select the profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Select **Settings** > **Windows Encryption**.
 
@@ -150,6 +150,8 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 2. Select **Devices** > **All devices**.
 
 3. Select a device from the list, and then under *Monitor*, select **Recovery keys**.
+
+4. Hit **Show Recovery Key**. Selecting this will generate an audit log entry under 'KeyManagement' activity.
   
    When keys are available in Azure AD, the following information is available:
    - BitLocker Key ID
@@ -159,6 +161,8 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+
+For more information on Audit Log entries, see [Azure Portal audit logs](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 
