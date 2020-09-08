@@ -35,13 +35,13 @@ This topic describes how to convert Windows 7 or Windows 8.1 domain-joined compu
 - Assigned Microsoft Intune Licenses
 - Azure Active Directory Premium
 - Windows 10 version 1809 or later imported into Configuration Manager as an Operating System Image
-  - **Important**: See [Known issues](known-issues.md) if you are using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
+  - **Important**: See [Known issues](known-issues.md) if  you're using Windows 10 1903 with Configuration Manager’s built-in **Windows Autopilot existing device** task sequence template. Currently, one of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
 
 ## Procedures
 
 ### Configure the Enrollment Status Page (optional)
 
-If desired, you can set up an [enrollment status page](enrollment-status.md) for Autopilot using Intune.
+If you want, you can set up an [enrollment status page](enrollment-status.md) for Autopilot using Intune.
 
 To enable and configure the enrollment and status page:
 
@@ -117,7 +117,7 @@ See the following examples.
    |                          Property                          |                                                                                                                                                                        Description                                                                                                                                                                         |
    |------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |                 Version (number, optional)                 |                                                                                                                 The version number that identifies the format of the JSON file. For Windows 10 1809, the version specified must be 2049.                                                                                                                  |
-   |           CloudAssignedTenantId (guid, required)           |                                                                                      The Azure Active Directory tenant ID that should be used. This is the GUID for the tenant, and can be found in properties of the tenant. The value should not include braces.                                                                                       |
+   |           CloudAssignedTenantId (guid, required)           |                                                                                      The Azure Active Directory tenant ID that should be used. This is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.                                                                                       |
    |        CloudAssignedTenantDomain (string, required)        |                                                                                                                                  The Azure Active Directory tenant name that should be used, for example: tenant.onmicrosoft.com.                                                                                                                                  |
    |         CloudAssignedOobeConfig (number, required)         |                                                                           This is a bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
    |      CloudAssignedDomainJoinMethod (number, required)      |                                                                                                                                    This property specifies whether the device should join Azure Active Directory or Active Directory (Hybrid Azure AD Join). Values include: Active AD Join = 0, Hybrid Azure AD Join = 1                                                        |
@@ -132,7 +132,7 @@ See the following examples.
     ```powershell
     Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON | Out-File c:\Autopilot\AutopilotConfigurationFile.json -Encoding ASCII
     ```
-    **IMPORTANT**: The file name must be named **AutopilotConfigurationFile.json** in addition to being encoded as ASCII/ANSI. 
+    **IMPORTANT**: The file name must be named **AutopilotConfigurationFile.json** and be encoded as ASCII/ANSI. 
 
     If preferred, you can save the profile to a text file and edit in Notepad. In Notepad, when you choose **Save as** you must select Save as type: **All Files** and choose ANSI from the drop-down list next to **Encoding**. See the following example.
 
@@ -218,10 +218,10 @@ See the following examples.
    - Click **Next**.
 
      >[!NOTE]
-     >Because the Autopilot for existing devices task sequence completes while in Windows PE, User State Migration Toolkit (USMT) data migration is not supported as there is no way to restore the user state into the new OS. Also, the User State Migration Toolkit (USMT) does not support Azure AD-joined devices.
+     >Because the Autopilot for existing devices task sequence completes while in Windows PE, User State Migration Toolkit (USMT) data migration isn't supported as there is no way to restore the user state into the new OS. Also, the User State Migration Toolkit (USMT) does not support Azure AD-joined devices.
 
 7. On the Include Updates page, choose one of the three available options. This selection is optional.
-8. On the Install applications page, add applications if desired. This is optional.
+8. On the Install applications page, you can add applications. This is optional.
 9. Click **Next**, confirm settings, click **Next**, and then click **Close**.
 10. Right click on the Autopilot for existing devices task sequence and click **Edit**.
 11. In the Task Sequence Editor under the **Install Operating System** group, click the **Apply Windows Settings** action.
@@ -262,7 +262,7 @@ Next, ensure that all content required for the task sequence is deployed to dist
 2. Click **Next**, **Review the content to distribute**, and then click **Next**.
 3. On the Specify the content distribution page click **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 4. On the Add Distribution Points or Add Distribution Point Groups wizard specify content destinations that will allow the JSON file to be retrieved when the task sequence is run.
-5. When you are finished specifying content distribution, click **Next** twice then click **Close**.
+5. When  you're finished specifying content distribution, click **Next** twice then click **Close**.
 
 ### Deploy the OS with Autopilot Task Sequence
 
@@ -272,8 +272,8 @@ Next, ensure that all content required for the task sequence is deployed to dist
     - <u>Collection</u>: Click **Browse** and then select **Autopilot for existing devices collection** (or another collection you prefer).
     - Click **Next** to specify **Deployment Settings**.
     - <u>Action</u>: **Install**.
-    - <u>Purpose</u>: **Available**. You can optionally select **Required** instead of **Available**. This is not recommended during the test owing to the potential impact of inadvertent configurations.
-    - <u>Make available to the following</u>: **Only Configuration Manager Clients**. Note: Choose the option here that is relevant for the context of your test. If the target client does not have the Configuration Manager agent or Windows installed, you will need to select an option that includes PXE or Boot Media.
+    - <u>Purpose</u>: **Available**. You can optionally select **Required** instead of **Available**. This isn't recommended during the test owing to the potential impact of inadvertent configurations.
+    - <u>Make available to the following</u>: **Only Configuration Manager Clients**. Note: Choose the option here that is relevant for the context of your test. If the target client does not have the Configuration Manager agent or Windows installed, you'll need to select an option that includes PXE or Boot Media.
     - Click **Next** to specify **Scheduling** details.
     - <u>Schedule when this deployment will become available</u>: Optional
     - <u>Schedule when this deployment will expire</u>: Optional
@@ -301,10 +301,10 @@ Next, ensure that all content required for the task sequence is deployed to dist
 
 2. In the software library, select **Autopilot for existing devices** and click **Install**. See the following example:
 
-    ![Named resource2](images/sc.png)
-    ![Named resource2](images/sc1.png)
+    ![Autopilot for existing devices page](images/sc.png)
+    ![Confirmation dialog box](images/sc1.png)
 
-The Task Sequence will download content, reboot, format the drives and install Windows 10. The device will then proceed to be prepared for Autopilot. Once the task sequence has completed the device will boot into OOBE and provide an Autopilot experience.
+The Task Sequence will download content, reboot, format the drives, install Windows 10, and prepare for Autopilot. After the task sequence has completed the device will boot into OOBE and provide an Autopilot experience.
 
 ![refresh-1](images/up-1.png)
 ![refresh-2](images/up-2.png)
@@ -315,7 +315,8 @@ The Task Sequence will download content, reboot, format the drives and install W
 
 ### Register the device for Windows Autopilot
 
-Devices provisioned through Autopilot will only receive the guided OOBE Autopilot experience on first boot. Once updated to Windows 10, the device should be registered to ensure a continued Autopilot experience in the event of PC reset. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+Devices provisioned through Autopilot will only receive the guided OOBE Autopilot experience on first boot. 
+After updating to Windows 10, the device should be registered to ensure a continued Autopilot experience in case the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 

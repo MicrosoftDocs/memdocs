@@ -98,7 +98,7 @@ After the customer or IT Admin has targeted all the apps and settings they want 
 
 If the pre-provisioning process completes successfully:
 - A green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
- ![white-glove-result](images/white-glove-result.png)
+ ![Green configuration screen](images/white-glove-result.png)
 - Click **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
 >[!NOTE]
