@@ -47,7 +47,6 @@ The user account needs the following permissions:
 - Configuration Manager permissions for CMPivot:
   - **Read** permission on the **SMS Scripts** object
   - **Run CMPivot** permission on the **Collection**
-  - **Read** permission on **Inventory Reports**
 
 ## <a name="bkmk_launch"></a> Launch CMPivot
 
