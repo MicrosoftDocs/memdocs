@@ -10,7 +10,6 @@
     href: applications.md
   - name: Resource explorer (preview)
     href: resource-explorer.md
-- name: CMPivot for tenant attached devices (preview)
 - name: CMPivot (preview) for tenant attached devices
   items:
   - name: Launch CMPivot (preview)
