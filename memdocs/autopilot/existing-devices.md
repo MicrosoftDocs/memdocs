@@ -177,8 +177,8 @@ See the following examples.
    - Click **Add Rule** and specify either a direct or query based collection rule to add the target test Windows 7 devices to the new collection.
    - For example, if the hostname of the computer to be wiped and reloaded is PC-01 and you wish to use Name as the attribute, click **Add Rule > Direct Rule > (wizard opens) > Next** and then enter **PC-01** next to **Value**. Click **Next**, and then choose **PC-01** under **Resources**. See the following examples.
 
-     ![Named resource1](images/pc-01a.png)
-     ![Named resource2](images/pc-01b.png)
+     ![Locate resources dialog box](images/pc-01a.png)
+     ![Select resources dialog box](images/pc-01b.png)
 
 5. Continue creating the device collection with the default settings:
     - Use incremental updates for this collection: not selected
