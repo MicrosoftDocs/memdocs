@@ -181,7 +181,7 @@ Supported platforms and profiles:
 ### Microsoft Defender Application Control
 
 - **App locker application control**  
-  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **Not configured** (*default*)
   - **Enforce Components and Store Apps**
@@ -401,7 +401,7 @@ Supported platforms and profiles:
   - **Yes** - block direct memory access (DMA) for all hot pluggable PCI downstream ports until a user logs into Windows. After a user logs in, Windows enumerates the PCI devices connected to the host plug PCI ports. Every time the user locks the machine, DMA is blocked on hot plug PCI ports with no children devices until the user logs in again. Devices which were already enumerated when the machine was unlocked will continue to function until unplugged.
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   This policy can provide additional security against external DMA capable devices. It allows for more control over the enumeration of external DMA capable devices incompatible with DMA Remapping/device memory isolation and sandboxing.
 
@@ -412,41 +412,41 @@ Supported platforms and profiles:
   - **Allow all**
 
 - **Block bluetooth connections**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Not configured** (*default*)
   - **Yes** - Block bluetooth connections to and from the device.
 
 - **Block bluetooth discoverability**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Not configured** (*default*)
   - **Yes** - Prevents the device from being discoverable by other Bluetooth-enabled devices.
 
 - **Block bluetooth pre-pairing**  
-  CSP: [Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP: [Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **Not configured** (*default*)
   - **Yes** - Prevents specific Bluetooth devices from automatically pairing with the host device.
 
 - **Block bluetooth advertising**  
-  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Not configured** (*default*)
   - **Yes** - Prevents the device from sending out Bluetooth advertisements.  
 
 - **Block bluetooth proximal connections**  
-  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 Block users from using Swift Pair and other proximity-based scenarios
 
   - **Not configured** (*default*)
   - **Yes** - Prevents a device user from using Swift Pair and other proximity-based scenarios.  
 
-  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth allowed services**  
-  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
-  For more information on the service list, see [ServicesAllowedList usage guide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  For more information on the service list, see [ServicesAllowedList usage guide](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
 
   - **Add** - Specify allowed Bluetooth services and profiles as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
   - **Import** - Import a .csv file that contains a list of bluetooth services and profiles, as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`

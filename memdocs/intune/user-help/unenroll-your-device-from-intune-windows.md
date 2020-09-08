@@ -59,7 +59,7 @@ Complete the following steps to remove a Windows 10 device from management.
 
     ![Example screenshot of the Company Portal app for Windows, Home page, highlighting the My Devices section.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Right-click or press and hold a device to open its [context menu](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Right-click or press and hold a device to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
 
 3. Select **Remove**.  
 

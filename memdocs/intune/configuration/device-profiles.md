@@ -143,7 +143,7 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -162,7 +162,7 @@ This feature supports:
 
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. And, configure the firewall, gateway, and other resources on macOS devices.
 
-To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+To onboard Microsoft Defender Advanced Threat Protection (WDATP) with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 

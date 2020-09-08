@@ -75,7 +75,7 @@ Selecting **Managed apps** as the **Device Enrollment Type** specifically refers
 ![Device enrollment type](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> For multi-identity apps, such as Microsoft Outlook, user preferences may be considered. Focused Inbox, for example, will respect the user setting and not change the configuration. Other parameters do let you control whether a user can or cannot change the setting. For more information, see [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> For multi-identity apps, such as Microsoft Outlook, user preferences may be considered. Focused Inbox, for example, will respect the user setting and not change the configuration. Other parameters do let you control whether a user can or cannot change the setting. For more information, see [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## Android app configuration policies
 
@@ -180,7 +180,7 @@ To collect logs from an Android device, you or the end user must download the lo
     
 ## Graph API support for app configuration
 
-You can use Graph API to accomplish app configuration tasks. For details, see [Graph API Reference MAM Targeted Config](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). For more information about Intune and Graph, see [Working with Intune in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
+You can use Graph API to accomplish app configuration tasks. For details, see [Graph API Reference MAM Targeted Config](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). For more information about Intune and Graph, see [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## Troubleshooting
 

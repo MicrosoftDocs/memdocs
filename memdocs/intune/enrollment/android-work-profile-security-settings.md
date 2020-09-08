@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -94,7 +94,9 @@ Level 1 is the recommended minimum security configuration for personal devices w
 | Work profile settings | Password expiration (days) | Not configured | Organizations may need to update this setting to match their password policy. |
 | Work profile settings | Required password type | Numeric complex ||
 | Work profile settings | Prevent reuse of previous passwords | Not configured | Organizations may need to update this setting to match their password policy.|
+| Work profile settings | Face unlock | Not configured ||
 | Work profile settings | Fingerprint unlock | Not configured ||
+| Work profile settings | Iris unlock | Not configured ||
 | Work profile settings | Smart Lock and other trust agents | Not configured |||
 | Device password | Minimum password length | 6 | Organizations may need to update this setting to match their password policy. |
 | Device password | Maximum minutes of inactivity until screen locks | 5 | Organizations may need to update this setting to match their password policy. |

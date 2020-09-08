@@ -132,7 +132,7 @@ For Configuration Manager version 1706, this level includes the following:
 
    - ***[New]*** Count of distinct branding for application catalog
 
-   - ***[New]*** Count of Office 365 applications created using dashboard
+   - ***[New]*** Count of Microsoft 365 applications created using dashboard
 
    - Count of packages by type  
 
@@ -366,7 +366,7 @@ For Configuration Manager version 1706, this level includes the following:
 
     - Configurations that are used for active Windows 10 servicing plans  
 
-    - Count of deployed Office 365 updates  
+    - Count of deployed Microsoft 365 updates  
 
     - ***[New]*** Count of Microsoft Surface drivers synced
 

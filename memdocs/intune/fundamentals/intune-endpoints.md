@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,10 +73,6 @@ The following tables list the ports and services that the Intune client accesses
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|fef.amsua0102.manage.microsoft.com|52.242.211.0|
-|fef.amsua0702.manage.microsoft.com|52.232.225.75|
-|fef.amsub0502.manage.microsoft.com|40.67.219.144|
-|fef.msud01.manage.microsoft.com|20.40.178.139|
 |Admin.manage.microsoft.com|52.224.221.227<br>52.161.162.117<br>52.178.44.195<br>52.138.206.56<br>52.230.21.208<br>13.75.125.10|
 |wip.mam.manage.microsoft.com|52.187.76.84<br>13.76.5.121<br>52.165.160.237<br>40.86.82.163<br>52.233.168.142<br>168.63.101.57<br>52.187.196.98<br>52.237.196.51|
 |mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180<br>52.187.196.173<br>52.156.162.48|
@@ -95,7 +91,7 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 
 ## Windows Push Notification Services (WNS)  
 
-For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## Delivery Optimization port requirements  
 
@@ -106,7 +102,7 @@ For client-service communication, it uses HTTP or HTTPS over port 80/443.
 
 ### Proxy requirements  
 
-To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+To use Delivery Optimization, you must allow Byte Range requests. For more information, see [Proxy requirements for Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
 ### Firewall requirements  
 
@@ -130,11 +126,11 @@ For more information, see Apple's [TCP and UDP ports used by Apple software prod
 
 ## Android port information
 
-Depending on how choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+Depending on how choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../enrollment/android-enroll.md). 
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
-Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### Google Android Enterprise 
 
@@ -146,4 +142,4 @@ Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to 
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).

@@ -61,7 +61,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager isn't included in the [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) plan.
+> Configuration Manager isn't included in the [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business) plan.
 
 ### <a name="bkmk_mem"></a> What changes with licensing for co-management in Microsoft Endpoint Manager?
 
@@ -97,6 +97,7 @@ The co-management license lets Configuration Manager customers with Software Ass
 |Software update management|Yes|Yes|
 |Inventory|Yes|Yes|
 |App management|Yes|Yes|
+|Remote Full/Selective wipe|Yes|Yes|
 |Remote assistance<br>(TeamViewer license required)|Yes|Yes|
 |Desktop analytics<br>(Windows subscription licenses required|Yes|N/A|
 |Tenant attach|Yes|N/A|

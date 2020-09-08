@@ -2,11 +2,11 @@
 
 ## [What is device enrollment?](use-managed-devices-to-get-work-done.md)
 
-## [What information can my company see with Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [What information can my org see?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Device password requirements](password-does-not-meet-it-administrator-requirements.md)
 
-## [Sign in to the Company Portal](sign-in-to-the-company-portal.md)  
+## [How to access Company Portal](sign-in-to-the-company-portal.md)  
 
 ## [Install mobile threat defense app](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### Enroll with derived credentials
 ##### [Enroll with Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-android-device-intercede.md)
-##### [Enroll with Disa Purebred](enroll-android-device-disa-purebred.md)
+##### [Enroll with DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Move to new device management setup](move-to-new-device-management-setup.md)
 ### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
 ### [Encrypt your device](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [Using your iOS device](using-your-iOS-device-with-intune.md)
 ### [Effects of iOS device reset](effects-of-device-reset-company-portal-ios.md)
-### [Install and sign in to the Company Portal](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Enroll your device
 #### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
 #### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Send logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md)
 #### [Send logs from device Settings app](send-logs-to-your-it-admin-settings-windows.md)
 #### [My version of Windows isn't supported](your-windows-version-isnt-yet-supported.md)
-#### [Install Office 365 on my Windows 10 device](install-office-windows.md)
+#### [Install Office on my Windows 10 device](install-office-windows.md)
 #### [My device needs to be encrypted](you-need-to-enable-windows-encryption.md)
 #### [My device needs antimalware software](your-device-needs-antimalware-software.md)
 #### [Enable Secure Boot](you-need-to-enable-secure-boot-windows.md)

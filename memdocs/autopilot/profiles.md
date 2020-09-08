@@ -33,7 +33,7 @@ The following profile settings are available:
 
 -   **Automatically set up for work or school**. All devices registered with Autopilot are automatically considered work or school devices, so this question will not appear during the OOBE process.
 
--   **Sign in experience with company branding**. Instead of presenting a generic Azure Active Directory sign-in page, all devices registered with Autopilot will present a customized sign-in page with the organization’s name, logo, and additional help text, as configured in Azure Active Directory. See [Add company branding to your directory](https://docs.microsoft.com/azure/active-directory/customize-branding#add-company-branding-to-your-directory) to customize these settings.
+-   **Sign in experience with company branding**. Instead of presenting a generic Azure Active Directory sign-in page, all devices registered with Autopilot will present a customized sign-in page with the organization’s name, logo, and additional help text, as configured in Azure Active Directory. See [Add company branding to your directory](/azure/active-directory/customize-branding#add-company-branding-to-your-directory) to customize these settings.
 
 -   **Skip privacy settings**. This optional Autopilot profile setting enables organizations to not ask about privacy settings during the OOBE process. This is typically desirable so that the organization can configure these settings via Intune or other management tool.
 
@@ -41,7 +41,7 @@ The following profile settings are available:
 
 -   **Skip End User License Agreement (EULA)**. In Windows 10 version 1709 and later, organizations can decide to skip the EULA page presented during the OOBE process. This means that organizations accept the EULA terms on behalf of their users.
 
--   **Disable Windows consumer features**. In Windows 10 version 1803 and later, organizations can disable Windows consumer features so that the device does not automatically install any additional Microsoft Store apps when the user first signs into the device. For more information, see the [MDM documentation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
+-   **Disable Windows consumer features**. In Windows 10 version 1803 and later, organizations can disable Windows consumer features so that the device does not automatically install any additional Microsoft Store apps when the user first signs into the device. For more information, see the [MDM documentation](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
 
 ## Related topics
 

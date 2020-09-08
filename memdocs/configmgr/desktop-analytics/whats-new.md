@@ -67,7 +67,7 @@ The Desktop Analytics portal now can display notification banners. These notific
 
 ### Improvement to prerequisites
 
-Desktop Analytics no longer requires that you deploy an Office 365 service in your Azure Active Directory (Azure AD) tenant. The **Office 365 client admin** app in Azure AD is now the **Desktop Analytics** app, to enable Configuration Manager retrieval of information and status from the service.
+Desktop Analytics no longer requires that you deploy a Microsoft 365 service in your Azure Active Directory (Azure AD) tenant. The **Office 365 client admin** app in Azure AD is now the **Desktop Analytics** app, to enable Configuration Manager retrieval of information and status from the service.
 
 ## May 2020
 

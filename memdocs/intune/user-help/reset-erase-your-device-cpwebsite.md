@@ -36,7 +36,7 @@ Reset a used, lost, or stolen device to factory default settings from the Compan
 
 After you reset a device, it no longer appears in the Company Portal. Previously existing apps and files are erased and the device is restored to its factory default settings. 
 
-Device reset in the Company Portal isn't available for all iOS devices. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](https://docs.microsoft.com/intune/devices-wipe).  
+Device reset in the Company Portal isn't available for all iOS devices. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/devices-wipe).  
 
 > [!Note]
 > You can also perform these steps from another device that you've enrolled. Open the Company Portal app and complete the steps for a similar reset experience. 

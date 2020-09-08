@@ -85,5 +85,5 @@ This issue happens because Windows 10, version 1903 and 1909 deletes the Autopil
 
 ## Related topics
 
-[Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
 [Troubleshooting Windows Autopilot](troubleshooting.md)

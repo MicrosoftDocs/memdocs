@@ -37,7 +37,7 @@ This section describes the tasks and information specific to the Company Portal 
 ## How to get Company Portal
 Company Portal is available in website version and also as an app download. To [access the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980), sign in with your work or school credentials.  
 
-See [Sign in to the Company Portal](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal) for detailed steps and screenshots.
+See [Sign in to the Company Portal](./sign-in-to-the-company-portal.md) for detailed steps and screenshots.
 
 ## Supported versions
 
@@ -71,7 +71,7 @@ Other versions of Windows, such as [Windows 10 Holographic](https://www.microsof
 * [Update my Windows device](you-need-to-update-your-windows-device.md)
 * [Send logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md)
 * [Send logs from device Settings app](send-logs-to-your-it-admin-settings-windows.md)
-* [Install Office 365 on my Windows 10 device](install-office-windows.md)
+* [Install Office on my Windows 10 device](install-office-windows.md)
 * [My device needs to be encrypted](you-need-to-enable-windows-encryption.md)
 * [Get antimalware software](your-device-needs-antimalware-software.md)
 * [Enable Secure Boot](you-need-to-enable-secure-boot-windows.md)
