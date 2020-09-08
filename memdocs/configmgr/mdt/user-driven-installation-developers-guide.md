@@ -55,7 +55,7 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
 - **Custom wizard page editors**. You use wizard page editors to configure the behavior of your custom wizard page. The custom wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. You create wizard page editors using:  
 
-  - [WPF](/dotnet/framework/wpf/) version 4.0  
+  - [WPF](/dotnet/desktop-wpf/) version 4.0  
 
   - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
@@ -540,7 +540,7 @@ Figure 2. Folder structure for UDI development
  Mode=TwoWay}"/>  
 ```  
 
- For more information, see [How to: Make Data Available for Binding in XAML](/dotnet/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml).  
+ For more information, see [How to: Make Data Available for Binding in XAML](/dotnet/desktop/wpf/data/how-to-make-data-available-for-binding-in-xaml?view=netframeworkdesktop-4.8).  
 
  Use the **Views:CollectionTControl.ColumnCollectionView** element in the XAML to edit the list of available locations in the grid view. You use the [CollectionTControl](#CollectionTControl) control to display the grid view and bind the grid view to the [Data](#Data) element with the name **Location** in the UDI configuration file.  
 

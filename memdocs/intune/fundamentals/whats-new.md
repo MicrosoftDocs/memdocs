@@ -67,6 +67,12 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 <!--IN7220536, CM6479284 -->
 From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../configmgr/tenant-attach/resource-explorer.md).
 
+### Tenant attach: CMPivot from the admin center
+<!--IN7220536, CM6024392-->
+Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+
+For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../configmgr/tenant-attach/cmpivot-start.md), [CMPivot overview](../../configmgr/tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
+
 ## Week of August 31, 2020
 
 ### Device configuration
@@ -671,6 +677,9 @@ When you [configure a notification message template](../protect/actions-for-nonc
 #### Admins no longer require an Intune license to access Microsoft Endpoint Manager admin console<!--1335430 -->
 You can now set a tenant-wide toggle that removes the Intune license requirement for admins to access the MEM admin console and query graph APIs. Once you remove the license requirement, you can never reinstate it. 
 
+
+> [!Note]
+> Some actions, including the Teamviewer Connector flow, still require an Intune license to complete.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
