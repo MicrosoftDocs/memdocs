@@ -22,7 +22,12 @@ ms.topic: article
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows 10 to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
 
-Using Windows Autopilot, you can convert Windows 7 or Windows 8.1 domain-joined computers to Windows 10 devices joined to either Azure Active Directory or Active Directory (Hybrid Azure AD Join).
+Using Windows Autopilot, you can convert Windows devices as showin in the following table:
+
+| Original OS version | Can be converted to either |
+| *** | *** |
+| Windows 7 domain-joined <br> Windows 8.1 domain-joined | Azure Active Directory <br> Azure Active Directory (Hybrid Azure AD Join) |
+
 
 >[!NOTE]
 >Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying profiles are not supported.
@@ -321,8 +326,8 @@ After the task sequence has completed, the device will boot into OOBE and provid
 
 ### Register the device for Windows Autopilot
 
-Devices provisioned through Autopilot will only receive the guided OOBE Autopilot experience on first boot. 
-After updating to Windows 10, the device should be registered to ensure a continued Autopilot experience in case the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
+After updating to Windows 10, make sure to register the device so it continues to have an Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 
