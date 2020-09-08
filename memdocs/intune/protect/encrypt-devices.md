@@ -98,7 +98,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 and later
    2. **Profile type**: Endpoint protection
 
-   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Select **Settings** > **Windows Encryption**.
 
@@ -161,7 +161,7 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
 
-For more information on Audit Log entries, see [Azure Portal audit logs](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+For more information on Audit Log entries, see [Azure Portal audit logs](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 
