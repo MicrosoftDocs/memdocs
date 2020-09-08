@@ -33,13 +33,13 @@ ms.collection: M365-identity-device-management
 
 ### Storing Customer Data
 
-After Intune [collects the data](privacy-data-collect.md), Intune follows the Data Handling Standard policy for Microsoft 365 that specifies how customer data is stored and processed. See [Where your Microsoft 365 customer data is stored](~/microsoft-365/enterprise/o365-data-locations.md). Personal data is processed within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
+After Intune [collects the data](privacy-data-collect.md), Intune follows the Data Handling Standard policy for Microsoft 365 that specifies how customer data is stored and processed. See [Where your Microsoft 365 customer data is stored](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations.md). Personal data is processed within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 ### Storage locations
 
 Microsoft offers and operates Intune services in many regions worldwide. Intune respects the storage location elections made by the administrator for Customer Data.
 
-For more information, see [Data Center Locations](~/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations.md)
+For more information, see [Data Center Locations](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations.md)
 
 ### Personal data retention
 
@@ -48,7 +48,7 @@ Microsoft 365 Data Handling Standard policy specifies how long customer data is 
 -**Active Deletion**: The tenant has an active subscription and a user or administrator deletes data, or administrators delete a user.
 -**Passive Deletion**: The tenant subscription ends.
 
-For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](~/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide.md).  
+For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide.md).  
 
 In general, personal data collected by Intune is removed within 30 days after deletion. Audit logs are retained for up to one year for security purposes. 
 
