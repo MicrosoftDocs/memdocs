@@ -531,7 +531,7 @@ You can now set a tenant-wide toggle that removes the Intune license requirement
 
 
 > [!Note]
-> Some actions, for instance the Teamviewer Connector flow, still require an Intune license to complete
+> Some actions, including the Teamviewer Connector flow, still require an Intune license to complete.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
