@@ -1,7 +1,7 @@
 ---
-title: Tenant attach - Resource explorer (preview) in the admin center
+title: Tenant attach - Resource explorer the admin center (preview)
 titleSuffix: Configuration Manager
-description: "View hardware inventory for uploaded Configuration Manager devices from resource explorer in the admin center."
+description: "View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center."
 ms.date: 09/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# <a name="bkmk_hinv"></a> Tenant attach: View hardware inventory with resource explorer in Microsoft Endpoint Manager admin center (preview)
+# <a name="bkmk_hinv"></a> Tenant attach: Resource explorer in the admin center (preview)
 <!--cm 6479284 in 7220536 pubpreview Sept 8, 2020-->
 *Applies to: Configuration Manager (current branch)*
 

@@ -28,9 +28,9 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-### <a name="bkmk_hinv"></a> Tenant attach: View hardware inventory with resource explorer in Microsoft Endpoint Manager admin center
+### <a name="bkmk_hinv"></a> Resource explorer the admin center
 <!--6479284-->
-From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: View hardware inventory with resource explorer in Microsoft Endpoint Manager admin center](../../../tenant-attach/resource-explorer.md).
+From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../../tenant-attach/resource-explorer.md).
 
 ### <a name="bkmk_atp"></a> Tenant attach: Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
 <!--4812909-->
