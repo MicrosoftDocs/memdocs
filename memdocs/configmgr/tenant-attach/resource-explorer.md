@@ -50,6 +50,12 @@ The user account needs the following permissions:
 
    :::image type="content" source="media/6479284-resource-explorer-details.png" alt-text="Resource explorer with the motherboard class selected" lightbox="media/6479284-resource-explorer-details.png":::
 
+## Close resource explorer
+
+To close resource explorer and return to the device information, use the `X` icon in the top right of resource explorer.
+
+   :::image type="content" source="media/6479284-close-resource-explorer.png" alt-text="Close resource explorer with the x icon in Microsoft Endpoint Manager admin center" lightbox="media/6479284-close-resource-explorer.png":::
+
 ## Next steps
 
 [Troubleshoot resource explorer](troubleshoot-resource-explorer.md)
