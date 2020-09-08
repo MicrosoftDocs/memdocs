@@ -5,6 +5,7 @@ ms.reviewer:
 manager: laurawi
 ms.audience: itpro
 keywords: upgrade, in-place, configuration, deploy
+ms.prod: 
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
