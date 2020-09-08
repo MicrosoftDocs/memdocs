@@ -278,11 +278,11 @@ In **Devices** > **Group Policy analytics (preview)**, you can import your group
 Applies to:
 - Windows 10 and newer
 
-#### New Windows 10 feature update report<!-- 6473121   -->
-The **Feature update failures** report will provide failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Devices** > **Monitor** > **Feature update failures** to view this report."
-
 #### New Windows 10 feature update report<!-- 6473128  -->
 The **Windows feature updates** report will provide an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Reports** > **Windows updates (Preview)** > **Feature update failures** to view the summary for this report. To see reports for specific policies, select the **Reports** tab and open the **Windows Feature Update Report**. 
+
+#### New Windows 10 feature failures update report<!-- 6473121   -->
+The **Feature update failures** report will provide failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Devices** > **Monitor** > **Feature update failures** to view this report."
 
 <!-- ***********************************************-->
 <!--
