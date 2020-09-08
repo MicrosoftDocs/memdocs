@@ -49,13 +49,6 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
     If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
-### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
-
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
-
-**Possible causes:**
-- This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
-- This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
 
 ### <a name="bkmk_rbac"></a> Not authorized to view query results
 

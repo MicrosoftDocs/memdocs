@@ -2,7 +2,7 @@
 title:  Launch tenant attached CMPivot (preview)
 titleSuffix: Configuration Manager
 description: Launch CMPivot for Microsoft Endpoint Manager tenant attached devices.
-ms.date: 09/21/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

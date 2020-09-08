@@ -16,7 +16,7 @@ ms.date: 08/14/2020
 
 **Scenario 2:** When running Configuration Manager version 2006, you may also encounter this error if the service connection point fails to connect to the provider on the primary site and falls back to the provider for the CAS. 
 
-**Scenario 3:** If the CAS has been upgraded to version 2006 but the primary server hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
+**Scenario 3:** If the CAS has been upgraded to version 2006 but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
 
 **Workaround:** Follow the instructions for the [CAS has a remote provider](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
 
