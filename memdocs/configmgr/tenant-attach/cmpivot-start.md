@@ -78,4 +78,5 @@ When using CMPivot from the Microsoft Endpoint Manager admin center with Configu
 ## Next steps
 
 - For query examples, see [CMPivot sample scripts](cmpivot-samples-attached.md).
--  For information about CMPivot entities, operators, and functions, see [CMPivot usage overview](cmpivot-overview-attached.md).
+- For information about CMPivot entities, operators, and functions, see [CMPivot usage overview](cmpivot-overview-attached.md).
+- [Troubleshoot CMPivot](troubleshoot-cmpivot.md) for devices uploaded to the admin center.
