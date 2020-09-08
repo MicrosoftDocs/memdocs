@@ -26,7 +26,7 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 Using Windows Autopilot, you can convert Windows devices as shown in the following table:
 
 | Original OS version | Can be converted to either |
-| *** | *** |
+| --- | --- |
 | Windows 7 domain-joined <br> Windows 8.1 domain-joined | Azure Active Directory <br> Azure Active Directory (Hybrid Azure AD Join) |
 
 
