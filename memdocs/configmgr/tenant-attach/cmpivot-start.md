@@ -41,12 +41,10 @@ The following items are required to use CMPivot from the admin center:
 The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
+- The **Run CMPivot** permission on the **Collection** in Configuration Manager
 - The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
   - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
 
-- Configuration Manager permissions for CMPivot:
-  - **Read** permission on the **SMS Scripts** object
-  - **Run CMPivot** permission on the **Collection**
 
 ## <a name="bkmk_launch"></a> Launch CMPivot
 
