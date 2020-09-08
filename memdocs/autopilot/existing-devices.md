@@ -5,6 +5,7 @@ keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd,
 ms.reviewer: mniehaus
 manager: laurawi
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library

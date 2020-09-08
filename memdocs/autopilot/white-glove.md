@@ -3,6 +3,7 @@ title: Windows Autopilot for white glove deployment
 description: Windows Autopilot for white glove deployment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, pre-provisioning
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
