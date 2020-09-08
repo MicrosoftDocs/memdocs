@@ -68,7 +68,7 @@ Verify the account has the following permissions:
 **Possible causes:**
 
 - Verify you have a minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
-- If there are a large number of events (more than 10,000, approximately), and multiple searches are requested rapidly, then it's possible to receive an unexpected error. You may also see your search results [timeout](#bmkm_timeout).
+- If there are a large number of events (more than 10,000, approximately), and multiple searches are requested rapidly, then it's possible to receive an unexpected error. You may also see your search results [timeout](#bkmk_timeout).
 
 ### <a name="bkmk_timeout"></a> Getting results timed out
 
