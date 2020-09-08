@@ -22,7 +22,7 @@ ms.topic: article
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows 10 to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
 
-Using Windows Autopilot, you can convert Windows devices as showin in the following table:
+Using Windows Autopilot, you can convert Windows devices as shown in the following table:
 
 | Original OS version | Can be converted to either |
 | *** | *** |
@@ -235,8 +235,8 @@ See the following examples.
 11. In the Task Sequence Editor under the **Install Operating System** group, click the **Apply Windows Settings** action.
 12. Click **Add** then click **New Group**.
 13. Change the group **Name** from **New Group** to **Autopilot for existing devices config**.
-14. Click **Add**, point to **General**, then click **Run Command Line**.
-15. Verify that the **Run Command Line** step is nested under the **Autopilot for existing devices config** group.
+14. Click **Add**, point to **General**, then click **Run Command-line**.
+15. Verify that the **Run Command-line** step is nested under the **Autopilot for existing devices config** group.
 16. Change the **Name** to **Apply Autopilot for existing devices config file**, paste the following into the **Command line** text box > **Apply**:
     ```
     cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
@@ -327,7 +327,7 @@ After the task sequence has completed, the device will boot into OOBE and provid
 ### Register the device for Windows Autopilot
 
 Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
-After updating to Windows 10, make sure to register the device so it continues to have an Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+After updating to Windows 10, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 
