@@ -57,6 +57,12 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 - This error typically occurs when newly onboarding to tenant attach. Wait 15 minutes for the information to synchronize.
 - This error may also appear if the central administration site has been upgraded to a new Configuration Manager version but some child primary sites haven't been upgraded yet.
 
+### <a name="bkmk_rbac"></a> Not authorized to view query results
+
+**Error message:** Not authorized to view query results. Verify that you've been given permissions for CMPivot in Configuration Manager
+
+**Possible causes:** Verify the user account has permissions for CMPivot. For more information see [Permissions for CMPivot](cmpivot-start.md#permisssions).
+
 #### <a name="bkmk_other"></a> Other possible causes of unexpected errors
 
 Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../develop/adminservice/overview.md), or connectivity issues.
