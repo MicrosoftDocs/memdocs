@@ -97,10 +97,21 @@
         href: planning-guide-resources.md
     - name: NEW deployment guides
       items:
-      - name: Intune setup
+      - name: Set up Intune
         href: deployment-guide-intune-setup.md
       - name: Enroll devices
         href: deployment-guide-enrollment.md
+        items:
+        - name: MAM-WE 
+          href: deployment-guide-enrollment-mamwe.md
+        - name: Android, Android Enterprise
+          href: deployment-guide-enrollment-android.md
+        - name: iOS, iPadOS
+          href: deployment-guide-enrollment-ios-ipados.md
+        - name: macOS
+          href: deployment-guide-enrollment-macos.md
+        - name: Windows
+          href: deployment-guide-enrollment-windows.md
     - name: Migration guide
       href: migration-guide.md
       items:
