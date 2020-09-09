@@ -22,10 +22,7 @@ ms.topic: article
 
 **Applies to: Windows 10**
 
-You can request customer authorization to register Windows Autopilot devices on the customer’s behalf. To make such a request, you must be one of the following entities:
-
-- Cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller)
-- OEM
+This article describes how a cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller) or an OEM can get customer authorization to register Windows Autopilot devices on the customer’s behalf.
 
 ## CSP authorization
 
