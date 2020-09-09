@@ -597,15 +597,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Yes** (*default*)
     - **Not configured**
 
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-  - **Stealth mode required**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Yes** (*default*)
-    - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -686,15 +677,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-  - **Stealth mode required**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **Yes** (*default*)
-    - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -801,11 +784,13 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
+
   - **Stealth mode blocked**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Yes** (*default*)
     - **Not configured**
+
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
