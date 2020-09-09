@@ -55,7 +55,7 @@ The following steps provide guidance to help you add a Windows app to Intune.
 
 4. Click **Select**. The **Add app** steps are displayed.
 
-## Step 1 - App information
+## Step 1: App information
 
 ### Select the app package file
 
@@ -249,13 +249,13 @@ If you choose not to **Automatically install** a dependency, the Win32 app insta
 
 Each dependency will adhere to Intune Win32 app retry logic (try to install 3 times after waiting for 5 minutes) and the global re-evaluation schedule.​ Also, dependencies are only applicable at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must click on the ellipses (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
 
-## Step 6 - Select scope tags (optional)
+## Step 6: Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app. 
 2. Click **Next** to display the **Assignments** page.
 
-## Step 7 - Assignments
+## Step 7: Assignments
 
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
@@ -270,7 +270,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
 6. In the **App settings** section, select the **Delivery optimization priority** for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment. 
 7. Once you have completed setting the assignments for the apps, click **Next** to display the **Review + create** page.
 
-## Step 8 - Review + create
+## Step 8: Review and create
 
 1. Review the values and settings you entered for the app. Verify that you configured the app information correctly.
 2. When you are done, click **Create** to add the app to Intune.
