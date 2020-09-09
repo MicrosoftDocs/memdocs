@@ -623,15 +623,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **Yes** (*default*)
-    - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -662,6 +654,18 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Firewall profile public**  
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
@@ -714,15 +718,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **Yes** (*default*)
-    - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -748,6 +744,18 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Yes** (*default*)
     - **Not configured**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 - **Firewall profile domain**  
   CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
 
@@ -771,15 +779,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-  - **Stealth mode blocked**  
-    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **Yes** (*default*)
-    - **Not configured**
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -798,6 +798,16 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+  - **Stealth mode blocked**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Yes** (*default*)
+    - **Not configured**
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 ## Microsoft Defender
 
