@@ -29,12 +29,12 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 - One of the following browsers:
   - Microsoft Edge, version 77 and later
   - Google Chrome
-- The user account accessing tenant attach features within the **Microsoft Endpoint Manager admin console** must have been discovered with both [Azure Active Directory (Azure AD) user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- The user account accessing tenant attach features within the **Microsoft Endpoint Manager admin center** must have been discovered with both [Azure Active Directory (Azure AD) user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
   - Meaning the user account needs to be a synced user object in Azure.
 
 ## Permissions
 
-The user account accessing tenant attach features within the Microsoft Endpoint Manager admin console needs the following permissions:
+The user account accessing tenant attach features within the Microsoft Endpoint Manager admin center needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
