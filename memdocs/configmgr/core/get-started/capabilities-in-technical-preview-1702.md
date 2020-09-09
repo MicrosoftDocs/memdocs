@@ -185,11 +185,11 @@ Use the following procedure to set a task sequence as high-impact.
 
    Let's say you configure the following custom notification in properties.
 
-   ![Custom notification for a task sequence](./media/user-notification.png)
+   ![Custom notification for a task sequence properties](./media/user-notification.png)
 
    The following notification message will be displayed when the end-user opens the installation from Software Center.
 
-   ![Custom notification for a task sequence](./media/user-notification-enduser.png)
+   ![Custom notification for a task sequence - Software Center](./media/user-notification-enduser.png)
 
 ### Configure Software Center properties
 Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  

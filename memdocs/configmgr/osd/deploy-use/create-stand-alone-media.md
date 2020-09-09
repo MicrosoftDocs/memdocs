@@ -146,7 +146,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         >
         > On stand-alone media, it only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
-    - **Select date range for this stand-alone media to be valid**: Set optional start and expiration dates on the media. This setting is disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media doesn't start. These options are also available by using the [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell cmdlet.  
+    - **Select date range for this stand-alone media to be valid**: Set optional start and expiration dates on the media. This setting is disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media doesn't start. These options are also available by using the [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) PowerShell cmdlet.  
 
 6. On the **Stand-Alone CD/DVD** page, select the task sequence that deploys the OS. You can only select those task sequences that are associated with a boot image. Verify the list of content referenced by the task sequence.  
 

@@ -13994,7 +13994,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
 
  If your requirements go beyond the built-in UDI wizard pages and corresponding wizard page editors, you can write custom UDI wizard pages and wizard page editors. UDI wizard page editors are implemented as DLLs that the UDI Wizard Designer reads. Create wizard page editors using:  
 
-- [Windows Presentation Foundation](/dotnet/framework/wpf/) version 4.0  
+- [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0  
 
 - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
 
@@ -14450,7 +14450,7 @@ Update-MDTMedia -Path "DS001:\Media\MEDIA001"
  Use this validator to require text in a field. The **Message** box allows you to enter a message that is displayed if the text field is empty.  
 
 #####  <a name="RegEx"></a> RegEx  
- This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp?view=vs-2019).  
+ This validator allows you ensure that the text matches a regular expression that you specify as a part of the validator. The **Message** box allows you to enter a message that is displayed if the text field does not match the regular expression. The **Regular Expression** box allows you to enter the regular expression used for the validation. For more information about how to build regular expressions for this validator, see [TR1 Regular Expressions](/cpp/standard-library/regular-expressions-cpp).  
 
 ###  <a name="UDIWizardPageReference"></a> UDI Wizard Page Reference  
  You add a UDI [wizard page](#WizardPage) to stages from the [Page Library](#PageLibrary) in the [UDI Wizard Designer](#UDIWizardDesigner). UDI wizard pages are displayed in the [UDI Wizard](#UDIWizard).  
