@@ -69,7 +69,7 @@ To deploy in self-deploying mode Windows Autopilot, the following preparation st
 When using Windows Autopilot to deploy in self-deploying mode, the following end-user experience should be observed:
 
 -  Once connected to a network, the Autopilot profile will be downloaded.
-- If connected to the Ethernet, and the Autopilot profile is configured to skip them, the following pages won't be displayed: language, locale, and keyboard layout. Otherwise, manual steps are required:
+- If connected to Ethernet, and the Autopilot profile is configured to skip them, the following pages won't be displayed: language, locale, and keyboard layout. Otherwise, manual steps are required:
   -  If multiple languages are preinstalled in Windows 10, the user must pick a language.
   -  The user must pick a locale and a keyboard layout, and optionally a second keyboard layout.
 -  If connected via Ethernet, no network prompt is expected. If no Ethernet connection is available and Wi-fi is built in, the user needs to connect to a wireless network.
