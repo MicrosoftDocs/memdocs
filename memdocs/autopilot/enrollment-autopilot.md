@@ -31,11 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Enroll Windows devices in Intune by using Windows Autopilot
 
-<<<<<<< HEAD
-Windows Autopilot simplifies enrolling devices in Intune. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images to the devices. You can use Intune manage policies, profiles, apps, and more after they're enrolled. For an overview of benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](windows-autopilot.md).
-=======
 Windows Autopilot simplifies enrolling devices in Intune. Building and maintaining customized operating system images is a time-consuming process. You might also spend time applying these custom operating system images to new devices to prepare them for use before giving them to your end users. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images to the devices. When you use Intune to manage Autopilot devices, you can manage policies, profiles, apps, and more after they're enrolled. For an overview of benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](windows-autopilot.md).
->>>>>>> 7ea4ffb92cab3017d06e680069714d473a0483c0
 
 There are four types of Autopilot deployment:
 
