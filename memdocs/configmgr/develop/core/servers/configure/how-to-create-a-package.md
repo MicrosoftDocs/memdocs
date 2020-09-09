@@ -126,4 +126,4 @@ public void CreatePackage(WqlConnectionManager connection, string newPackageName
 ## See Also  
  [Software distribution overview](software-distribution-overview.md)
  [SMS_Package Server WMI Class](../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)   
- [PowerShell Cmdlet: New-CMPackage](/powershell/module/configurationmanager/new-cmpackage?view=sccm-ps)
+ [PowerShell Cmdlet: New-CMPackage](/powershell/module/configurationmanager/new-cmpackage)

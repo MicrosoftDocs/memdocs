@@ -16,7 +16,7 @@ manager: dougeby
 You add a new computer directly to the Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by Configuration Manager.  
 
 > [!TIP]
-> You can also use the [Import-CMComputerInformation](/powershell/module/configurationmanager/import-cmcomputerinformation?view=sccm-ps) PowerShell cmdlet.<!-- SCCMDocs#663 -->
+> You can also use the [Import-CMComputerInformation](/powershell/module/configurationmanager/import-cmcomputerinformation) PowerShell cmdlet.<!-- SCCMDocs#663 -->
 
 
  You must provide the following information:  

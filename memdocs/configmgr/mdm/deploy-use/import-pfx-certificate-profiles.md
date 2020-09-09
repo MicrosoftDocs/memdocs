@@ -65,9 +65,9 @@ Assign the target users as primary users on the Windows 10 devices where you nee
 
 To import a PFX certificate, use the following Configuration Manager PowerShell cmdlets to provision a Create PFX script:
 
-- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### Example script
 
