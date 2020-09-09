@@ -2274,7 +2274,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](/windows/clien
     **Default**: Not allowed
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,
+::: zone pivot="mdm-sept-2020"
 
   - **Lowercase letters in PIN**:  
     If required, user PIN must include at least one lowercase letter.
@@ -2324,9 +2324,9 @@ For more information, see [Policy CSP - WindowsPowerShell](/windows/client-manag
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-<!-- Deprecated content section.Use the Compare feature instead >>>>
-
 ## What's changed in the new template
+
+<!-- This section is deprecated from future baseline updates. Use the Compare feature to identify changes -->
 
 The *MDM Security Baseline for May 2019* template has the following changes from the *preview* template.
 
@@ -2419,7 +2419,7 @@ The following settings are either:
 - **Minimum PIN length**
 - **Require uppercase letters in PIN**
 
-END OF DEPRECATED SECTION -->
+<!-- END OF DEPRECATED SECTION -->
 
 ::: zone-end
 
