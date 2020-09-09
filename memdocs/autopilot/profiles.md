@@ -41,7 +41,7 @@ The following profile settings are available:
 
 -  **Skip End User License Agreement (EULA)**. In Windows 10 version 1709 and later, organizations can decide to skip the EULA page presented during the OOBE process. Skipping the EULA page means that organizations accept the EULA terms for their users.
 
--  **Disable Windows consumer features**. In Windows 10 version 1803 and later, organizations can disable Windows consumer features. If so disabled, the device doesn't automatically install any additional Microsoft Store apps when the user first signs into the device. For more information, see the [MDM documentation](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
+-  **Disable Windows consumer features**. In Windows 10 version 1803 and later, organizations can disable Windows consumer features. When Windows consumer features are disabled, the device doesn't automatically install any additional Microsoft Store apps when the user first signs into the device. For more information, see the [MDM documentation](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures).
 
 ## Related topics
 
