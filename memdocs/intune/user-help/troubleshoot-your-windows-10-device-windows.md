@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Troubleshoot your Windows 10 device enrollment | Microsoft Docs
+title: Troubleshoot Windows 10 device enrollment | Microsoft Docs
 description:
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,41 +30,35 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Troubleshoot your Windows 10 device enrollment
-If you've enrolled your device, but still can't access your work or school email and files, try these troubleshooting steps.  
+# Troubleshoot Windows 10 device enrollment
+This article describes how to resolve access issues for an enrolled Windows 10 device. 
 
-1. Look at the next two screens, and find the one that looks like what you see on your device. Follow the steps that go with the screen you see on your device.
+A connection to Wi-Fi is required to access work or school resources. Once you've verified that the issue isn't Wi-Fi related, continue with the steps in this article. 
 
-    If you see this screen, follow the steps in [Troubleshooting steps to follow if you see Access work or school](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+1. Open the **Settings** app. 
+2. Select **Accounts**.
+3. This next step varies depending on the version of Windows 10 you're using. Select the option that appears to you in the menu on screen.
+    * Select **Access work or school** or
+    * Select **Work access**
+4. Select the **Connect** plus sign button to add your account. 
+3. Sign in with your work or school credentials. 
+4. Follow the onscreen prompts to set up your device. 
+5. When complete, your account will be added as a connection. You'll have access to any resources your organization makes available.   
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## Account already connected
+If you see your work or school account listed, your device and account are connected to your organization. Contact your IT support person for further help with access problems.   
 
-    If you see this screen, follow the steps in [Troubleshooting steps to follow if you see Your account](#troubleshooting-steps-to-follow-if-you-see-your-account).
+## Error messages  
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+### We couldn't auto-discover a management endpoint matching the username entered. Please check your username and try again. If you know the URL to your management endpoint, please enter it.
 
-## Troubleshooting steps to follow if you see "Access work or school"
+**Cause**: Your account couldn't be verified alongside the provided URL (also referred to as the management endpoint).  
 
-1. If you followed the steps above, but you still can't access your work or school email and files, go back to **Access work or school**.
+#### Resolution
+1. Re-enter your username and password. 
+2. If it still doesn't work, contact your IT support person to get the correct URL (example: www.yourcompany.onmicrosoft.com). 
+3. When prompted, enter the provided URL.  
 
-2. Do one of the following:
+## Next steps  
 
-   - If you see a connection that looks similar to the image below, tap it, and then check that you see the Manage, Info and Disconnect options. If you see these options, you're now enrolled and connected.
-
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
-
-   - If you don't see the connection information shown above, or you do see it, but it's missing some of the options, tap **Connect**. Then sign in with your work or school credentials to connect.  
-
-## Troubleshooting steps to follow if you see "Your account"
-
-If you followed the steps above, but still can't access your work or school email, files, and other data, go back to **Accounts**, and tap **Work access**.
-
-- If you see your work or school account listed, you're connected.  
-
-- If you don't see your work or school account, tap **Connect**, and then sign in with your work or school credentials.
-
-## Troubleshooting steps to follow if you see "Set up a work or school account"
-
-If you see a message that says <strong>We couldn't auto-discover a management endpoint matching the username entered. Please check your username and try again. If you know the URL to your management endpoint, please enter it.</strong>, then you should try to re-enter your username and password. If it still doesn't work, you should check with your company support for the website that you need to provide in the <strong>Management endpoint</strong> text box. This is a website that probably looks like <strong>www.yourcompany.onmicrosoft.com</strong>.
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
