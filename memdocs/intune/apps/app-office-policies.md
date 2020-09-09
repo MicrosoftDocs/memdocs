@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,6 +69,10 @@ After you set up Intune for your organization, you can create an Office app poli
 ## Additional information
 
 - [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+- [Use policy settings to manage privacy controls for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls)
+- [Use preferences to manage privacy controls for Office for Mac](https://docs.microsoft.com/deployoffice/privacy/mac-privacy-preferences)
+- [Use preferences to manage privacy controls for Office on iOS devices](https://docs.microsoft.com/deployoffice/privacy/ios-privacy-preferences)
+- [Use policy settings to manage privacy controls for Office on Android devices](https://docs.microsoft.com/deployoffice/privacy/android-privacy-controls)
 
 ## Next steps
 
