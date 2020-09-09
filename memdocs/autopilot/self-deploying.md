@@ -25,11 +25,11 @@ Windows Autopilot self-deploying mode lets you deploy a device with little to no
 - Choose the language, locale, and keyboard
 - Make a network connection 
 
-Self-deploying mode provides all the following features:
-- joins the device into Azure Active Directory
+Self-deploying mode provides all the following:
+- joins the device to Azure Active Directory
 - enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment
 - makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device
-- uses the Enrollment Status Page to prevent access  until the device is fully provisioned
+- uses the Enrollment Status Page to prevent access until the device is fully provisioned
 
 >[!NOTE]
 >Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
