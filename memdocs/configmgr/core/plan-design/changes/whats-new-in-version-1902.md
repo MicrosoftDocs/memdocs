@@ -477,7 +477,7 @@ When you install or update a site server, it copies these installation files and
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4498910).
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](/powershell/sccm/1902-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1902 release notes](/powershell/sccm/1902-release-notes).
 
 The following update rollup (4500571) is available in the console starting on 17 June 2019: [Update rollup for Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4500571).
 

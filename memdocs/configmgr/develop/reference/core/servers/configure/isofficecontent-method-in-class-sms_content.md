@@ -5,7 +5,7 @@ description: Learn about the IsOfficeContent class method. In Configuration Mana
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 037e759f-b8ea-4f6b-b33d-b59056efc02f
 author: aczechowski
 ms.author: aaroncz

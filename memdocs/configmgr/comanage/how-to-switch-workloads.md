@@ -38,7 +38,7 @@ Starting in version 1906, you can configure different pilot collections for each
 
 4. Go to the **Staging** tab and change the **Pilot collection** for any of the workloads if needed.
   
-   ![Screenshot of Workloads tab on co-management properties page](media/3555750-co-management-staging-tab.png)
+   ![Screenshot of Staging tab on co-management properties page](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Before you switch any workloads, make sure you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices.
@@ -55,7 +55,7 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 3. Switch to the **Workloads** tab. By default, all workloads are set to the **Configuration Manager** setting. To switch a workload, move the slider control for that workload to the desired setting.  
 
-    ![Screenshot of Workloads tab on co-management properties page](media/properties-workloads.png)
+    ![Screenshot of Workloads tab on co-management properties page, version 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager continues to manage this workload.  
 
