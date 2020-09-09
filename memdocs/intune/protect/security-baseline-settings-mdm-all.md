@@ -463,7 +463,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 ::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Virtualization based security**:  
-  Turns on virtualizationbased security (VBS) at the next reboot. Virtualization based security uses the Windows Hypervisor to provide support for security services.
+  Turns on virtualization-based security (VBS) at the next reboot. Virtualization based security uses the Windows Hypervisor to provide support for security services.
 
   **Default**: Enable VBS with secure boot
 
@@ -1813,7 +1813,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Block Office applications from injecting code into other processes**:  
   [Protect devices from exploits](https://go.microsoft.com/fwlink/?linkid=872974)
 
-  When set to Yes, Office applications will be blocked from injecting code into other processes. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This Attack Surface Reducition (ASR) rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  When set to Yes, Office applications will be blocked from injecting code into other processes. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This Attack Surface Reduction (ASR) rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Default**:  Block
 
