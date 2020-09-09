@@ -145,7 +145,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials will be used to perform certificate revocation on the Certificate Authority. 
 
-    **Apply*** your changes.
+    **Apply** your changes.
 
 7. Close the window.
 
