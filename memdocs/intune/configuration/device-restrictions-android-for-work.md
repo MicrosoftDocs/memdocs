@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,13 +39,13 @@ This article lists and describes the different settings you can control on Andro
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates which enrollment types can use that setting.
+Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates the enrollment types that can use the setting.
 
-![Setting headers.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
 
 Some settings only apply at the work profile level for corporate-owned devices with a work profile. These settings still apply device-wide for fully managed and dedicated devices. These settings are marked with *(work profile-level)* descriptor in the user interface.
 
-![Setting headers.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise Applications settings that apply at the work profile level in Microsoft Intune and Endpoint Manager.":::
 
 
 ### General
