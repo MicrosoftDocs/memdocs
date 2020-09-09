@@ -89,17 +89,17 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
 2. In the **Group** blade:
- 1. For **Group type**, choose **Security**.
- 2. Type a **Group name** and **Group description**.
- 3. For **Membership type**, choose either **Assigned** or **Dynamic Device**.
+    1. For **Group type**, choose **Security**.
+    2. Type a **Group name** and **Group description**.
+    3. For **Membership type**, choose either **Assigned** or **Dynamic Device**.
 3. If you chose **Assigned** for **Membership type** in the previous step, then in the **Group** blade, choose **Members** and add Autopilot devices to the group.
  Autopilot devices that aren't yet enrolled are devices where the name equals the serial number of the device.
 4. If you chose **Dynamic Devices** for **Membership type** above, then in the **Group** blade, choose **Dynamic device members** and type any of the following code in the **Advanced rule** box. These rules only gather Autopilot devices because they target only Autopilot device attributes. Creating a group based off non-autopilot attributes won't guarantee that devices included in the group are registered to Autopilot.
- - If you want to create a group that includes all of your Autopilot devices, type: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
- - Intune's group tag field maps to the OrderID attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device OrderID), type: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
- - If you want to create a group that includes all of your Autopilot devices with a specific Purchase Order ID, type: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
+    - If you want to create a group that includes all of your Autopilot devices, type: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
+    - Intune's group tag field maps to the OrderID attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device OrderID), type: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+    - If you want to create a group that includes all of your Autopilot devices with a specific Purchase Order ID, type: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
  
- After adding the **Advanced rule** code, choose **Save**.
+    After adding the **Advanced rule** code, choose **Save**.
 5. Choose **Create**. 
 
 ## Create an Autopilot deployment profile
@@ -112,40 +112,40 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](enrollment-autopilot.md#delete-autopilot-devices).
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose one of these two options:
- - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
- - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
+    - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
+    - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
 
- ![Screenshot of OOBE page](media/enrollment-autopilot/create-profile-out-of-box.png)
+    ![Screenshot of OOBE page](media/enrollment-autopilot/create-profile-out-of-box.png)
 
- > [!NOTE]
- > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
+    > [!NOTE]
+    > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
 
 6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
 7. Configure the following options:
- - **End-user license agreement (EULA)**: (Windows 10, version 1709 or later) Choose if you want to show the EULA to users.
- - **Privacy settings**: Choose if you want to show privacy settings to users.
- >[!IMPORTANT]
- >The default value for the Diagnostic Data setting varies between Windows versions. For devices running Windows 10, version 1903, the default value is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data) <br>
+    - **End-user license agreement (EULA)**: (Windows 10, version 1709 or later) Choose if you want to show the EULA to users.
+    - **Privacy settings**: Choose if you want to show privacy settings to users.
+    >[!IMPORTANT]
+    >The default value for the Diagnostic Data setting varies between Windows versions. For devices running Windows 10, version 1903, the default value is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data) <br>
  
- - **Hide change account options (requires Windows 10, version 1809 or later)**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
- - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
- - **Allow White Glove OOBE** (requires Windows 10, version 1903 or later; [additional physical requirements](white-glove.md#prerequisites)): Choose **Yes** to allow white glove support.
- - **Apply device name template** (requires Windows 10, version 1809 or later, and Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
- - **Language (Region)**\*: Choose the language to use for the device. This option is only available if you chose **Self-deploying** for **Deployment mode**.
- - **Automatically configure keyboard**\*: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is only available if you chose **Self-deploying** for **Deployment mode**.
+    - **Hide change account options (requires Windows 10, version 1809 or later)**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
+    - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
+    - **Allow White Glove OOBE** (requires Windows 10, version 1903 or later; [additional physical requirements](white-glove.md#prerequisites)): Choose **Yes** to allow white glove support.
+    - **Apply device name template** (requires Windows 10, version 1809 or later, and Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
+    - **Language (Region)**\*: Choose the language to use for the device. This option is only available if you chose **Self-deploying** for **Deployment mode**.
+    - **Automatically configure keyboard**\*: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is only available if you chose **Self-deploying** for **Deployment mode**.
 8. Select **Next**.
 9. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).
 10. Select **Next**.
 11. On the **Assignments** page, choose **Selected groups** for **Assign to**.
 
- ![Screenshot of Assignments page](./media/enrollment-autopilot/create-profile-assignments.png)
+    ![Screenshot of Assignments page](./media/enrollment-autopilot/create-profile-assignments.png)
 
 12. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 13. If you want to exclude any groups, choose **Select groups to exclude**, and choose the groups you want to exclude.
 14. Select **Next**.
 15. On the **Review + Create** page, choose **Create** to create the profile.
 
- ![Screenshot of Review page](./media/enrollment-autopilot/create-profile-review.png)
+    ![Screenshot of Review page](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
 > Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. This process can take several minutes to complete. Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
@@ -158,8 +158,8 @@ After you've created an Autopilot deployment profile, you can edit certain parts
 3. Select **Properties** on the left to change the name or description of the deployment profile. Click **Save** after you make changes.
 5. Click **Settings** to make changes to the OOBE settings. Click **Save** after you make changes.
 
-> [!NOTE]
-> Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and reenrolled.
+    > [!NOTE]
+    > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and reenrolled.
 
 ## Edit Autopilot device attributes
 After you've uploaded an Autopilot device, you can edit certain attributes of the device.
@@ -167,9 +167,9 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
 2. Select the device you want to edit.
 3. In the pane on the right of the screen, you can edit:
-  - device name
-  - group tag
-  - User Friendly Name (if you've assigned a user)
+    - device name
+    - group tag
+    - User Friendly Name (if you've assigned a user)
 4. Select **Save**.
 
 > [!NOTE]
@@ -202,15 +202,15 @@ Prerequisites: Azure Active Directory Company Portal has been configured and Win
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
 
- ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
+    ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
 
 2. Choose an Azure user licensed to use Intune and choose **Select**.
 
- ![Screenshot of select user](./media/enrollment-autopilot/select-user.png)
+    ![Screenshot of select user](./media/enrollment-autopilot/select-user.png)
 
 3. In the **User Friendly Name** box, type a friendly name or just accept the default. This string is the friendly name that displays when the user signs in during Windows setup.
 
- ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
+    ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
 
 4. Choose **Ok**.
 
