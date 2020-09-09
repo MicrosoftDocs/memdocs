@@ -5,7 +5,7 @@ description: Use the steps in this article to set up the administration service 
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 829eb4a4-8791-4746-a777-1fb0382b6d7c
 author: aczechowski
 ms.author: aaroncz

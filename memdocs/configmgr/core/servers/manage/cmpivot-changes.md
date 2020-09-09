@@ -354,7 +354,7 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL server service with port and instance.
       1. Make sure these changes align with your company security policy!
-1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) for the CAS SQL listener name and each primary SQL listener name.
+1. Make sure the [SPN is published](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) for the CAS SQL listener name and each primary SQL listener name.
 1. Restart the primary SQL servers.
 1. Restart the CAS site server and the CAS SQL servers.
 

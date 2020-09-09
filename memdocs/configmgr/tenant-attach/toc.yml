@@ -8,9 +8,15 @@
     href: client-details.md
   - name: Install applications (preview)
     href: applications.md
+  - name: Device timeline (preview)
+    href: timeline.md
+  - name: Resource explorer (preview)
+    href: resource-explorer.md
 - name: CMPivot for tenant attached devices (preview)
   items:
-  - name: CMPivot overview
+  - name: Launch CMPivot (preview)
+    href: cmpivot-start.md
+  - name: CMPivot usage overview
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
     href: troubleshoot-client-details.md
   - name: Application installation (preview)
     href: troubleshoot-applications.md
+  - name: Timeline (preview)
+    href: troubleshoot-timeline.md
+  - name: Resource explorer (preview)
+    href: troubleshoot-resource-explorer.md
+  - name: CMPivot (preview)
+    href: troubleshoot-cmpivot.md

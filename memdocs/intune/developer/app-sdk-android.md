@@ -1109,6 +1109,11 @@ Once your app's receiver returns, it will no longer have access to encryption ke
 
 ## Configure Azure Active Directory Authentication Library (ADAL)
 
+> [!NOTE]
+> Starting June 30th 2020, we will not longer add new features to Active Directory Authentication Library (ADAL). We will continue to provide technical support and security updates but we will not longer provide feature update. Applications will need to be upgraded to Microsoft Authentication Library (MSAL) and Microsoft Graph. 
+> Additional information can be found in the [ADAL to MSAL migration guide for Android](https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal) document
+
+
 First, please read the ADAL integration guidelines found in the [ADAL repository on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 The SDK relies on [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) for its [authentication](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). The configuration values are communicated to the SDK via AndroidManifest metadata.
