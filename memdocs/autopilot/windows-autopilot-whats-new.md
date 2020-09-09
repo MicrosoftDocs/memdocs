@@ -33,7 +33,7 @@ No updates are available yet. Check back here later for more information.
 
 With this release, you can configure Windows Autopilot [user-driven](user-driven.md) Hybrid Azure Active Directory join with VPN support. This support is also backported to Windows 10, version 1909 and 1903.
 
-You can configure the Autopilot profile language settings to skip the language, locale, and keyboard pages during deployment. These pages will be skipped if the target device is connected to the Ethernet. The pages will be skipped in all scenarios. In previous versions, skipping these pages was only supported with self-deploying profiles. 
+If you configure the language settings in the Autopilot profile and the device is connected to Ethernet, all scenarios will now skip the language, locale, and keyboard pages. In previous versions, this was only supported with self-deploying profiles.
 
 ## New in Windows 10, version 1903
 
@@ -53,10 +53,7 @@ Also new in this version of Windows:
 
 Windows Autopilot [self-deploying mode](self-deploying.md) is a zero touch device provisioning process. Simply power on the device, plug it into the Ethernet, and Autopilot automatically configures the device. End users don't have to press the “Next” button during the deployment process. 
 
-You can use Windows Autopilot self-deploying mode complete the following tasks with no user authentication or interaction requires:
-- register the device to an Azure AD tenant
-- enroll in your organization’s MDM provider
-- provision policies and applications 
+Rewrite.
 
 >[!NOTE]
 >Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809.
