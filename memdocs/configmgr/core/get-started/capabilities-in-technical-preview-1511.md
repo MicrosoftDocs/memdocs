@@ -106,7 +106,7 @@ Try to complete the following tasks and then use the feedback information near t
  Use the following procedures to first create and configure the availability group, and then install a new Configuration Manager site that uses the availability group.  
 
 #### To create a SQL Server AlwaysOn availability group  
-The process to [create a SQL Server availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
+The process to [create a SQL Server availability group](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) is documented in the SQL Server documentation library.  When you create the availability group, ensure the following requirements for use with Configuration Manager are met:  
 
 -   A maximum of three members:  
 

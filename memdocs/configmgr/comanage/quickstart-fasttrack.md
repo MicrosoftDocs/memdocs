@@ -22,7 +22,7 @@ In the following video, senior program manager Patrick McSweeney and product mar
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-To make a request for assistance from FastTrack, first go to [FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security). Select **Sign In**, and enter your org ID. After you authenticate, go to the dashboard, and follow the prompts to find the **Request for Assistance** form.
+To make a request for assistance from FastTrack, first go to [FastTrack for Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security). Select **Sign In**, and enter your org ID. After you authenticate, go to the dashboard, and follow the prompts to find the **Request for Assistance** form.
 
 Your submission is reviewed and routed to the appropriate FastTrack team. They'll address your eligibility and specific needs. 
 
@@ -31,7 +31,7 @@ The FastTrack for Microsoft 365 site also includes expert-created documentation,
 
 ### Make a FastTrack request:
 
-1. Sign in to [FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) using your org ID and password.  
+1. Sign in to [FastTrack for Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) using your org ID and password.  
 
 2. Under the Welcome to FastTrack section, select **Request FastTrack Assistance**.  
 

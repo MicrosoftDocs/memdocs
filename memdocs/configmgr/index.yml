@@ -208,7 +208,7 @@ additionalContent:
      items:
         - title: Develop
           links:
-            - url: /powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)
