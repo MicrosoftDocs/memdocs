@@ -4,6 +4,7 @@ ms.reviewer:
 manager: laurawi
 description: Gives an overview of the Enrollment Status Page capabilities, configuration
 keywords: Autopilot Plug and Forget, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
