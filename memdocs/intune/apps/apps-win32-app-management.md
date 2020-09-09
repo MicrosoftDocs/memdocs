@@ -17,7 +17,7 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: contperfq1
 ms.collection: M365-identity-device-management
 ---
 
