@@ -33,11 +33,11 @@ When troubleshooting Win32 apps used in Microsoft Intune, you have a number of m
 
 ## App troubleshooting details
 
-You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details in the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](troubleshoot-app-installmd#app-troubleshooting-details).
+You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details in the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](troubleshoot-app-install.md#app-troubleshooting-details).
 
 ## Troubleshoot app issues using logs
 
-Viewing the details of logs can help you determine the cause of the issue you are seeing.
+Viewing the details of logs can help you determine the cause of the issue you are seeing and help resolve them. You can choose to view the [logs displayed in Intune](apps-win32-troubleshoot.md#logs-displayed-in-intune), or view the [logs displayed using CMTrace](apps-win32-troubleshoot.md#logs-displayed-using-cmtrace). 
 
 ### Logs displayed in Intune
 

@@ -44,11 +44,11 @@ To use Win32 app management, be sure you meet the following criteria:
 
 ## Prepare the Win32 app content for upload
 
-Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to pre-process Windows Classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](apps-win32-prepare.md). 
+Before you can add a Win32 app to Microsoft Intune, you must prepare the app using the Microsoft Win32 Content Prep Tool. You use the Microsoft Win32 Content Prep Tool pre-process Windows Classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](apps-win32-prepare.md). 
 
 ## Add, assign, and monitor a Win32 app
 
-After you have [prepared a Win32 app to be upload to Intune](apps-win32-prepare.md) using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md).
+After you have [prepared a Win32 app to be upload to Intune](apps-win32-prepare.md) using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md).
 
 ## Delivery Optimization
 
