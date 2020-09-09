@@ -4,6 +4,7 @@ ms.reviewer:
 manager: laurawi
 description: With Windows Autopilot Deployment and Intune, you can manage UEFI (BIOS) settings after they're enrolled by using the Device Firmware Configuration Interface (DFCI) 
 keywords: Autopilot, DFCI, UEFI, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
