@@ -64,23 +64,24 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
 
- ![Screenshot of Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device.png)
+    ![Screenshot of Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device.png)
 
 2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list:
-  - serial numbers
-  - Windows product IDs
-  - hardware hashes
-  - optional group tags
-  - optional assigned user.
-  You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](add-devices.md#device-identification). Use the header and line format shown below:
+    - serial numbers
+    - Windows product IDs
+    - hardware hashes
+    - optional group tags
+    - optional assigned user.
+  
+    You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](add-devices.md#device-identification). Use the header and line format shown below:
 
- `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
- `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
+   `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
+   `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
- ![Screenshot of Adding Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device-2.png)
+   ![Screenshot of Adding Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device-2.png)
 
- >[!IMPORTANT]
- > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
+   >[!IMPORTANT]
+   > When you use CSV upload to assign a user, make sure that you assign valid UPNs. If you assign an invalid UPN (incorrect username), your device may be inaccessible until you remove the invalid assignment. During CSV upload the only validation we perform on the **Assigned User** column is to check that the domain name is valid. We're unable to perform individual UPN validation to ensure that you're assigning an existing or correct user.
 
 3. Choose **Import** to start importing the device information. Importing can take several minutes.
 
