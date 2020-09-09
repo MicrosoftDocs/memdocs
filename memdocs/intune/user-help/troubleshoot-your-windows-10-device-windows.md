@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Troubleshoot Windows 10 device access to school or work | Microsoft Docs
-description:
+title: Troubleshoot Windows 10 device access to school or work | Microsoft Intune
+description: Resolve access or account connection issues for an enrolled Windows 10 device. 
 keywords:
 author: lenewsad
 
@@ -37,7 +37,7 @@ This article describes how to resolve access issues for an enrolled Windows 10 d
 
 A connection to Wi-Fi is required to access work or school resources. Verify that you're connected to Wi-Fi and then try accessing the resources again.  
 
-## Add work or school account in settings app  
+## Add work or school account in Settings app  
 These steps are the same you'd use to enroll your device. However, if your account isn't appearing in the **Settings** app, you many need to run through these steps again.  
 
 1. Open the **Settings** app. 
