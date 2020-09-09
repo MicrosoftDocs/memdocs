@@ -1107,11 +1107,6 @@ When MAM calls the app's `MANAGEMENT_REMOVED` receiver, the following will be tr
 
 Once your app's receiver returns, it will no longer have access to encryption keys.
 
-## Configure Microsoft Authentication Library (MSAL)
-
-Starting June 30th 2020, we will not longer add new features to Active Directory Authentication Library (ADAL), the support will continue but we will not longer feature updates
-
-
 ## Configure Azure Active Directory Authentication Library (ADAL)
 
 > [!NOTE]
