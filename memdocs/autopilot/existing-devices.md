@@ -23,12 +23,7 @@ ms.topic: article
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows 10 to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
 
-Using Windows Autopilot, you can convert Windows devices as shown in the following table:
-
-| Original OS version | Can be converted to either |
-| --- | --- |
-| Windows 7 domain-joined <br> Windows 8.1 domain-joined | Azure Active Directory <br> Azure Active Directory (Hybrid Azure AD Join) |
-
+This topic describes how to convert Windows 7 or Windows 8.1 domain-joined computers to Windows 10 devices joined to either Azure Active Directory or Active Directory (Hybrid Azure AD Join) by using Windows Autopilot.
 
 >[!NOTE]
 >Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying profiles are not supported.
