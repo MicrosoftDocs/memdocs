@@ -4,6 +4,7 @@ description: Learn how to configure device profiles for Windows Autopilot deploy
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
