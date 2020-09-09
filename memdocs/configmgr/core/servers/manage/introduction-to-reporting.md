@@ -34,7 +34,7 @@ Configuration Manager uses SQL Server Reporting Services as its primary reportin
 
 - Exports reports in different kinds of popular formats.  
 
-For more information, see [What is SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+For more information, see [What is SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
 ## Power BI Report Server
 
