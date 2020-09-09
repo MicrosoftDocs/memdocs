@@ -174,7 +174,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Audit mode** - Windows events are raised instead of blocking.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 ## Application Guard
 
@@ -217,6 +217,9 @@ While using Microsoft Edge, Microsoft Defender Application Guard protects your e
 
   - **Network domains**  
     Select **Add** and specify domains, IP address ranges, and network boundaries. By default, *securitycenter.windows.com* is configured.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 ## BitLocker
 
@@ -310,7 +313,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
       - **Not configured** *(default)*
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
   - **Configure encryption method for Operating System drives**  
     CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -323,9 +326,6 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     - **AES 256bit CBC**
     - **AES 128bit XTS**
     - **AES 256bit XTS**
-
-::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **BitLocker fixed drive policy**  
   [BitLocker Group Policy settings](https://go.microsoft.com/fwlink/?linkid=2067018)
@@ -596,9 +596,9 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
     - **Yes** (*default*)
     - **Not configured**
+
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
-
   - **Stealth mode required**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
@@ -606,7 +606,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -626,7 +625,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
-
   - **Stealth mode blocked**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
@@ -634,7 +632,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -687,7 +684,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
-
   - **Stealth mode required**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
@@ -695,7 +691,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-
   - **Outbound connections required**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
@@ -721,7 +716,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
-
   - **Stealth mode blocked**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
@@ -729,7 +723,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -780,7 +773,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
-
   - **Stealth mode blocked**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
@@ -788,7 +780,6 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
     - **Not configured**
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
-
   - **Firewall enabled**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
