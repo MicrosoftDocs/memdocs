@@ -23,7 +23,7 @@ ms.topic: article
 
 - Windows 10
 
-With Windows Autopilot Deployment and Intune, you can manage Unified Extensible Firmware Interface (UEFI) settings after they're enrolled by using the Device Firmware Configuration Interface (DFCI). DFCI [enables Windows to pass management commands](/windows/client-management/mdm/uefi-csp) from Intune to UEFI to Autopilot deployed devices. This management lets you limit end user's control over BIOS settings. For example, you can lock down boot options to prevent users from booting up another OS. You might lock down an OS that doesn't have the same security features.
+With Windows Autopilot Deployment and Intune, you can manage Unified Extensible Firmware Interface (UEFI) settings after they're enrolled by using the Device Firmware Configuration Interface (DFCI). DFCI [enables Windows to pass management commands](/windows/client-management/mdm/uefi-csp) from Intune to UEFI for Autopilot deployed devices. This capability allows you to limit end user's control over BIOS settings. For example, you can lock down the boot options to prevent users from booting up another OS, such as one that doesn't have the same security features.
 
 If a user reinstalls a previous Windows version, install a separate OS, or format the hard drive, they can't override DFCI management. This feature can also prevent malware from communicating with OS processes, including elevated OS processes. DFCI’s trust chain uses public key cryptography, and doesn't depend on local UEFI password security. This layer of security blocks local users from accessing managed settings from the device’s UEFI menus.
 
