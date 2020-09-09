@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -183,7 +183,8 @@ The CMPivot window contains the following elements:
 
    - The total number of rows in the results pane. For example, `1 objects`  
 
-
+> [!TIP]
+> To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**.
 
 ## Example scenarios
 
