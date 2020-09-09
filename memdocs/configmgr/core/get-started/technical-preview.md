@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -163,8 +163,6 @@ The following features were released with previous versions of the Configuration
 | Feature        | Technical preview version |
 |----------------|---------------------------|
 | Improvements to available apps via CMG <!--7033501--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Tenant attach: Device timeline in the admin center <!--7141381--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Tenant attach: CMPivot from the admin center <!--6024392--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Tenant attach: Run Scripts from the admin center <!--6234688--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Improvements to cloud management gateway cmdlets <!--6978300--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Report setup and upgrade failures to Microsoft <!--5622909--> | [Tech preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
