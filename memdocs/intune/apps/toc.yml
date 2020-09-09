@@ -201,7 +201,9 @@
         - name: Manage data transfer between iOS apps
           href: data-transfer-between-apps-manage-ios.md
       - name: Review app protection logs
-        href: app-protection-policy-settings-log.md          
+        href: app-protection-policy-settings-log.md
+    - name: Policies for Office apps
+      href: app-office-policies.md        
     - name: Troubleshoot
       items:
       - name: Help users troubleshoot problems
