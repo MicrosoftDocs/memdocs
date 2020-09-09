@@ -122,7 +122,7 @@ When you subscribe to a third-party catalog in the Configuration Manager console
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Software Updates** and select the **Third-Party Software Update Catalogs** node.  
 2. Select the catalog to subscribe and click **Subscribe to Catalog** in the ribbon. 
-    ![Third-party updates add custom catalog](media/third-party-updates-subscribe.png)
+    ![Third-party updates subscribe to catalog](media/third-party-updates-subscribe.png)
 3. Review and approve the catalog certificate.  
    > [!NOTE]
    > 
