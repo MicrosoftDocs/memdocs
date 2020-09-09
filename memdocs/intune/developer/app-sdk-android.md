@@ -1107,7 +1107,17 @@ When MAM calls the app's `MANAGEMENT_REMOVED` receiver, the following will be tr
 
 Once your app's receiver returns, it will no longer have access to encryption keys.
 
+## Configure Microsoft Authentication Library (MSAL)
+
+Starting June 30th 2020, we will not longer add new features to Active Directory Authentication Library (ADAL), the support will continue but we will not longer feature updates
+
+
 ## Configure Azure Active Directory Authentication Library (ADAL)
+
+> [!NOTE]
+> Starting June 30th 2020, we will not longer add new features to Active Directory Authentication Library (ADAL). We will continue to provide technical support and security updates but we will not longer provide feature update. Applications will need to be upgraded to Microsoft Authentication Library (MSAL) and Microsoft Graph. 
+> Additional information can be found in the [ADAL to MSAL migration guide for Android](https://docs.microsoft.com/en-ca/azure/active-directory/develop/migrate-android-adal-msal) document
+
 
 First, please read the ADAL integration guidelines found in the [ADAL repository on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
