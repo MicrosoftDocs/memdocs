@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -105,6 +105,24 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
   > [!NOTE]
   > If an encryption policy is enforced, Samsung Knox devices require users to set a 6-character complex password as the device passcode.
+
+- **Password complexity**  
+  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
+
+  Specify the required password complexity.
+
+  - **None** *(default)* - No password required.
+  - **Low** - The password satisfies one of the following conditions:
+    - Pattern
+    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+  - **Medium** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Alphabetic, with a minimum length of 4.
+    - Alphanumeric, with a minimum length of 4.
+  - **High** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Alphabetic, with a minimum length of 6.
+    - Alphanumeric, with a minimum length of 6.
 
 ## Google Play Store
 

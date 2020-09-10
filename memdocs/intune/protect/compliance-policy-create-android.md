@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 059/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -165,6 +165,24 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   - **Number of previous passwords to prevent reuse**  
     Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords. (Supported for Android 4.0 and above, or KNOX 4.0 and above.)
+
+- **Password complexity**  
+  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
+
+  Specify the required password complexity.
+
+  - **None** *(default)* - No password required.
+  - **Low** - The password satisfies one of the following conditions:
+    - Pattern
+    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+  - **Medium** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Alphabetic, with a minimum length of 4.
+    - Alphanumeric, with a minimum length of 4.
+  - **High** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Alphabetic, with a minimum length of 6.
+    - Alphanumeric, with a minimum length of 6.
 
 ### Encryption
 
