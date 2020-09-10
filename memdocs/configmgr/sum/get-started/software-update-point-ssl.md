@@ -65,7 +65,7 @@ If you already have an appropriate certificate in the WSUS server's **Personal**
 1. Expand **Personal**, then right-click on **Certificates**.
 1. Select **All Tasks** then **Request New Certificate**.
 1. Choose **Next** to begin certificate enrollment.
-1. Choose the type of certificate to enroll. You may be prompted for additional information to enroll the certificate. Typically, you'll specify the following information at minimum:
+1. Choose the type of certificate to enroll. The certificate purpose is **Server Authentication** and the Microsoft certificate template to use is **Web Server** or a custom template that has **Server Authentication** specified as **Enhanced Key Usage**. You may be prompted for additional information to enroll the certificate. Typically, you'll specify the following information at minimum:
    - **Common name:** Found on the **Subject** tab, set the value to the WSUS server's FQDN.
    - **Friendly name:** Found on the **General** tab, set the value to a descriptive name to help you identify the certificate later.
 :::image type="content" source="media/certificate-properties.png" alt-text="Certificate properties window to specify more information for enrollment":::
