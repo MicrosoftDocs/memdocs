@@ -61,43 +61,6 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 ## Password
 
-- **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
-
-    > [!NOTE]
-    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
-
-- **Minimum password length**: Enter the minimum number of characters required, from 4-16. For example, enter `6` to require at least six numbers or characters in the password length.
-- **Maximum minutes of inactivity until screen locks**: Enter the length of time a device must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
-
-  On a device, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
-
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before devices are wiped, from 4-11. `0` (zero) might disable device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
-- **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
-- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
-  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-  - **At least numeric**: Includes numeric characters, such as `123456789`.
-  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
-
-    When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
-
-    - If the Company Portal app is running a version earlier than 1704, no PIN policy applies to devices, and an error shows in the Microsoft Endpoint Manager admin center.
-    - If the Company Portal app runs the 1704 version or later, only a simple PIN can be applied. Android version earlier than 5.0 don't support this setting. No error is shown in the Microsoft Endpoint Manager admin center.
-
-  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
-  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
-  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
-
-- **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-- **Fingerprint unlock (Samsung Knox only)**: **Block** prevents using a fingerprint to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting.By default, the OS might allow users to unlock devices using a fingerprint.
-- **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings. If the device is in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, use this feature when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
-
-  When set to **Not configured** (default), Intune doesn't change or update this setting.
-
-  This setting applies to:
-
-  - Samsung KNOX Standard 5.0+
-
 - **Encryption**: Choose **Require** so that files on the device are encrypted. Not all devices support encryption. When set to **Not configured** (default), Intune doesn't change or update this setting. To configure this setting, and correctly report compliance, also configure:
   1. **Password**: Set to **Require**.
   2. **Required password type**: Set to **At least numeric**.
@@ -105,6 +68,22 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
   > [!NOTE]
   > If an encryption policy is enforced, Samsung Knox devices require users to set a 6-character complex password as the device passcode.
+
+### All Android devices
+
+*The following settings are supported on Android 4.0 or later, and Knox 4.0 and later.*
+
+- **Maximum minutes of inactivity until screen locks**: Enter the length of time a device must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+
+  On a device, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
+
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before devices are wiped, from 4-11. `0` (zero) might disable device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+
+
+### Android 10 and later
+
+*The following settings are supported on Android 10 or later, but not on Knox.*
+
 
 - **Password complexity**  
   *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
@@ -123,6 +102,46 @@ This article shows you all the Microsoft Intune device restrictions settings tha
     - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
+
+### Android 9 and earlier or Samsung Knox
+
+*The following settings are supported on Android 9.0 and earlier, and any version of Samsung Knox.*
+
+- **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
+
+    > [!NOTE]
+    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
+
+- **Minimum password length**: Enter the minimum number of characters required, from 4-16. For example, enter `6` to require at least six numbers or characters in the password length.
+
+- **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
+
+- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+  - **Device default**
+  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **At least numeric**: Includes numeric characters, such as `123456789`.
+  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
+
+    When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
+
+    - If the Company Portal app is running a version earlier than 1704, no PIN policy applies to devices, and an error shows in the Microsoft Endpoint Manager admin center.
+    - If the Company Portal app runs the 1704 version or later, only a simple PIN can be applied. Android version earlier than 5.0 don't support this setting. No error is shown in the Microsoft Endpoint Manager admin center.
+
+  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
+  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
+  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
+- **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+
+- **Fingerprint unlock (Samsung Knox only)**: **Block** prevents using a fingerprint to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting.By default, the OS might allow users to unlock devices using a fingerprint.
+
+- **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings. If the device is in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, use this feature when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. You can use this setting to prevent users from configuring Smart Lock.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  This setting applies to:
+
+  - Samsung KNOX Standard 5.0+
 
 ## Google Play Store
 

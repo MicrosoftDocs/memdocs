@@ -123,67 +123,6 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## System Security
 
-### Password
-
-- **Require a password to unlock mobile devices**  
-  *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
-
-  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: Require  
-
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** - Users must enter a password before they can access their device.
-
-- **Required password type**  
-  *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
-
-  Choose if a password should include only numeric characters, or a mix of numerals and other characters.
-
-  - **Device Default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.
-  - **Low security biometric**
-  - **At least numeric**
-  - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.
-  - **At least alphabetic**
-  - **At least alphanumeric**
-  - **At least alphanumeric with symbols**
-
-  Based on the configuration of this setting, one or more of the following options are available:
-
-  - **Minimum password length**  
-    *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
-
-    Enter the minimum number of digits or characters that the user's password must have.
-
-  - **Maximum minutes of inactivity before password is required**  
-    *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
-
-    Enter the idle time before the user must reenter their password. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.
-
-  - **Number of days until password expires**  
-  *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
-
-  Select the number of days before the password expires and the user must create a new password.
-
-  - **Number of previous passwords to prevent reuse**  
-    Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords. (Supported for Android 4.0 and above, or KNOX 4.0 and above.)
-
-- **Password complexity**  
-  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
-
-  Specify the required password complexity.
-
-  - **None** *(default)* - No password required.
-  - **Low** - The password satisfies one of the following conditions:
-    - Pattern
-    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
-  - **Medium** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
-    - Alphabetic, with a minimum length of 4.
-    - Alphanumeric, with a minimum length of 4.
-  - **High** - The password satisfies one of the following conditions:
-    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
-    - Alphabetic, with a minimum length of 6.
-    - Alphanumeric, with a minimum length of 6.
-
 ### Encryption
 
 - **Encryption of data storage on a device**  
@@ -229,6 +168,77 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Restricted apps**  
   Enter the **App name** and **App bundle ID** for apps that should be restricted, and then select **Add**. A device with at least one restricted app installed is marked as non-compliant.
+
+### Password
+
+The available settings for passwords vary by the version of Android on the device.
+
+#### All Android devices
+
+*The following settings are supported on Android 4.0 or later, and Knox 4.0 and later.*
+
+- **Maximum minutes of inactivity before password is required**  
+  This setting specifies the length of time without user input after which the mobile device screen is locked. Options range from *1 Minute* to *8 Hours*. The recommended value is *15 Minutes*.
+
+  - **Not configured** *(default)*
+
+#### Android 10 and later
+
+*The following settings are supported on Android 10 or later, but not on Knox.*
+
+- **Password complexity**  
+  Specify the required password complexity.
+
+  - **None** *(default)* - No password required.
+  - **Low** - The password satisfies one of the following conditions:
+    - Pattern
+    - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
+  - **Medium** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
+    - Alphabetic, with a minimum length of 4.
+    - Alphanumeric, with a minimum length of 4.
+  - **High** - The password satisfies one of the following conditions:
+    - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
+    - Alphabetic, with a minimum length of 6.
+    - Alphanumeric, with a minimum length of 6.
+
+#### Android 9 and earlier or Samsung Knox
+
+*The following settings are supported on Android 9.0 and earlier, and any version of Samsung Knox.*
+
+- **Require a password to unlock mobile devices**  
+  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: Require  
+
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+  - **Require** - Users must enter a password before they can access their device.
+  
+  When set to *Require*, the following setting can be configured:
+
+  **Required password type**  
+  Choose if a password should include only numeric characters, or a mix of numerals and other characters.
+
+  - **Device Default** - To evaluate password compliance, be sure to select a password strength other than **Device default**.
+  - **Low security biometric**
+  - **At least numeric**
+  - **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.
+  - **At least alphabetic**
+  - **At least alphanumeric**
+  - **At least alphanumeric with symbols**
+
+  Based on the configuration of this setting, one or more of the following options are available:
+
+  - **Minimum password length**  
+    Enter the minimum number of digits or characters that the user's password must have.
+
+  - **Maximum minutes of inactivity before password is required**  
+    Enter the idle time before the user must reenter their password. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.
+
+  - **Number of days until password expires**  
+    Select the number of days before the password expires and the user must create a new password.
+
+  - **Number of previous passwords to prevent reuse**  
+    Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
+
 
 ## Next steps
 
