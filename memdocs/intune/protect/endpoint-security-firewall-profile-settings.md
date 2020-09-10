@@ -141,7 +141,7 @@ The following settings are configured as [Endpoint Security policy for Windows 1
   CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)
 
   - **Not configured** (*default*)
-  - **Dsiabled**
+  - **Disabled**
   - **Enabled** - Keying modules ignore unsupported authentication suites.
 
 - **Packet queuing**  
