@@ -2,12 +2,12 @@
 # required metadata
 
 title: Device enrollment guide for Microsoft Intune - Azure | Microsoft Docs
-description: Enroll Android, iOS, iPadOS, macOS, and Windows devices In Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
+description: Enroll Android, Android Enterprise, iOS, iPadOS, macOS, and Windows devices In Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/08/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Deployment guide: Enroll devices in Microsoft Intune
+# Deployment guidance: Enroll devices in Microsoft Intune
 
 > [!WARNING]
 > THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
@@ -94,7 +94,8 @@ Depending on the platform, a factory reset may be required before enrolling in I
 | Android device administrator | No |
 | Android Enterprise dedicated devices (COSU) | Yes |
 | Android Enterprise fully managed (COBO) | Yes |
-| Android Enterprise work profile (profile owner) | No |
+| Android Enterprise personal with work profile (profile owner) | No |
+| Android Enterprise corporate with personal profile (COPE) | Yes |
 | iOS/iPadOS | Yes |
 | macOS | Yes |
 | Windows | No |
@@ -105,9 +106,9 @@ On the platforms that don't require a factory reset, when these devices enroll i
 
 ## Choose your platform enrollment guide
 
-There's an enrollment guide for every platform. Choose your platform, and get started:
+There's an enrollment guide for every platform. Choose your scenario, and get started:
 
-- [MAM-WE](deployment-guide-enrollment-mamwe.md)
+- [Application management without enrollment (MAM-WE)](deployment-guide-enrollment-mamwe.md)
 - [Android](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md)
 - [macOS](deployment-guide-enrollment-macos.md)

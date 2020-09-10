@@ -37,16 +37,20 @@ Personal and organization-owned devices can be enrolled in Intune. On macOS devi
 You have the following options when enrolling macOS devices:
 
 - [Device enrollment](#device-enrollment)
-- [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised-1)
-- [Apple Configurator](#apple-configurator-enrollment-1)
+- [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
+- [Apple Configurator](#apple-configurator-enrollment)
 
-This section:
+This article:
 
 - Describes your Company Portal app options for each enrollment method.
 - Provides recommendations on the macOS enrollment method to use.
 - Includes an overview of the administrator and user tasks for each enrollment type.
 
 For more specific information, see [Enroll macOS devices](../enrollment/macos-enroll.md).
+
+## Before you begin
+
+For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
 ## Device enrollment
 

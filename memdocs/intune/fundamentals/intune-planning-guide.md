@@ -2,12 +2,12 @@
 # required metadata
 
 title: Planning guide to move to Microsoft Intune - Azure | Microsoft Docs
-description: This article is an introduction to all Microsoft Intune plan, design, and implementation sections. Tools to help you determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans.
+description: Plan, design, and implementat Microsoft Intune. Get guidance and advice to help you determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals

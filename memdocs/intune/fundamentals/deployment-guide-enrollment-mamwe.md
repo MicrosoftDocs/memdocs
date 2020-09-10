@@ -2,12 +2,12 @@
 # required metadata
 
 title: MAM-WE device enrollment guide for  Microsoft Intune - Azure | Microsoft Docs
-description: Use application management without enrollment to protect organization app data. Get an overview of the administrator and end user tasks to for this enrollment option.
+description: Use mobile application management without enrollment to deploy apps, and protect organization data within the apps. Get an overview of the administrator and end user tasks for this enrollment option.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/08/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,16 +32,25 @@ ms.collection: M365-identity-device-management
 > [!WARNING]
 > THIS GUIDE IS STILL BEING WRITTEN, AND MAY CONTAIN INCORRECT INFORMATION.
 
-MAM-WE isn't a traditional "enrollment" method, as it uses app protection policies to protect data within an app. Devices aren't enrolled. It's commonly used for personal or bring your own devices (BYOD), or for managed devices that need extra security. MAM-WE is also an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.
+MAM-WE isn't a traditional "enrollment" method, as it uses app configuration profile to deploy apps to devices. Devices aren't enrolled. When combined with app protection policies, you can protect data within an app.
+
+MAM-WE is commonly used for personal or bring your own devices (BYOD), or for managed devices that need extra security. MAM-WE is also an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.
 
 MAM-WE is available on the following platforms:
 
 - Android
 - iOS/iPadOS
-- macOS
 - Windows
 
-This section provides recommendations on when to use MAM-WE. It also includes an overview of the administrator and user tasks. For more specific information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
+This article provides recommendations on when to use MAM-WE. It also includes an overview of the administrator and user tasks. For more specific information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
+
+## Before you begin
+
+For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+
+## MAM-WE enrollment
+
+Use for personal or bring your own devices (BYOD). Or, use on organization-owned devices that need specific app configuration, or additional app security.
 
 ---
 | Feature | Use this enrollment option |
