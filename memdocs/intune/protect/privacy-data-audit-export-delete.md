@@ -4,11 +4,11 @@
 title: Audit, export, or delete personal data
 titleSuffix: Microsoft Intune
 description: Learn how to audit, export, or delete personal data.
-keywords:
+keywords: GDPR, personal data, privacy
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -81,4 +81,4 @@ If an Intune tenant customer cancels their Intune account, all tenant data is de
 
 ## Next steps
 
-Find out how to [audit, export, or delete](privacy-data-audit-export-delete.md) personal data in Intune.
+Find out how to [view and correct personal data](privacy-data-view_correct.md) personal data in Intune.
