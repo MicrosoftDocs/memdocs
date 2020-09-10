@@ -73,6 +73,10 @@ The [Manage devices with Microsoft Endpoint Manager](https://mslearn.cloudguides
 <iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
+<a href="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" target="popup">
+    <img alt="Interactive Guide - Manage devices with Microsoft Endpoint Manager" src="./media/what-is-intune/managing-mobile-apps.png">
+</a>
+
 ## Manage apps
 
 Mobile application management (MAM) in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices, and personal devices.
