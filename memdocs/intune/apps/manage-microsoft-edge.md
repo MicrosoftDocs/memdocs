@@ -278,7 +278,7 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (default) allows Edge sync<br>**false** disables Edge sync          |
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**false** (default) allows Edge sync<br>**true** disables Edge sync          |
 
 ### Manage restricted web sites
 
