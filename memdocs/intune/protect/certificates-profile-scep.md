@@ -34,8 +34,8 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
-> 
-> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](#trusted-certificate-profiles-for-android-device-administrator).
+>
+> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## Create a SCEP certificate profile
 
