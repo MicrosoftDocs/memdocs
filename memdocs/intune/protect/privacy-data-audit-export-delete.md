@@ -81,4 +81,4 @@ If an Intune tenant customer cancels their Intune account, all tenant data is de
 
 ## Next steps
 
-Find out how to [view and correct personal data](privacy-data-view_correct.md) personal data in Intune.
+Find out how to [view and correct personal data](privacy-data-view-correct.md) personal data in Intune.
