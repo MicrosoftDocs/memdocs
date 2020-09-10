@@ -130,7 +130,7 @@ Examples of the optional diagnostic data may include application usage data, err
 
 Intune does not collect nor allow an Admin to see an end users’ calling or web browsing history, personal email, text messages, contacts, passwords to personal accounts, calendar events or photos, including those in a photo app or camera. See [Getting started enrolling devices](../enrollment/device-enrollment.md).
 
-See [How Microsoft categorizes data for online services](https://www.microsoft.com/en-us/trust-center/privacy/customer-data-definitions) for more information on the data types and definition. 
+See [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions) for more information on the data types and definition. 
 
 ## Next steps
 
