@@ -79,11 +79,19 @@
         - name: Sideload Windows LOB apps
           href: app-sideload-windows.md
         - name: macOS LOB apps
-          href: lob-apps-macos.md     
+          href: lob-apps-macos.md
         - name: Win32 app management
-          href: apps-win32-app-management.md
-        - name: Win32 app S mode devices
-          href: apps-win32-s-mode.md
+          items:
+          - name: Win32 app management overview
+            href: apps-win32-app-management.md
+          - name: Prepare a Win32 app
+            href: apps-win32-prepare.md
+          - name: Add a Win32 app
+            href: apps-win32-add.md
+          - name: Troubleshoot a Win32 app
+            href: apps-win32-troubleshoot.md
+          - name: Win32 app S mode devices
+            href: apps-win32-s-mode.md
       - name: Add specific apps
         items:
         - name: Company Portal app - Autopilot
