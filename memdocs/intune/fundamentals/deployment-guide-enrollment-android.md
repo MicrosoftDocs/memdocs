@@ -213,7 +213,7 @@ These Android devices are personal or BYOD (bring your own device) devices that 
 
 Google is reducing device administrator support in new Android releases. To avoid reduced functionality, Microsoft recommends:
 
-- Enroll new devices using [Android Enterprise work profiles](#android-enterprise-work-profile) (in this article). Don't enroll new devices using Android device administrator.
+- Enroll new devices using [Android Enterprise work profiles](#android-enterprise-personal-with-work-profile) (in this article). Don't enroll new devices using Android device administrator.
 - Create a device enrollment restriction to block device administrator enrollment. Android devices may try to enroll using device administrator before trying other enrollment methods. So, create the restriction to prevent this behavior. For more information, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 - If devices will update to Android 10, then migrate devices off device administrator management.
 - Move existing Android device administrator devices to Android Enterprise work profiles. For more information, see [Move Android devices from device administrator to work profile management](../enrollment/android-move-device-admin-work-profile.md).

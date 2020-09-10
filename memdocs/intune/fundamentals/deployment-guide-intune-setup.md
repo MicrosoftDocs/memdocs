@@ -94,12 +94,12 @@ This option is more work for administrators, but can create a more seamless expe
 
 This option applies to
 
-1. [Deploy Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise?view=o365-worldwide), including creating users and groups.
+1. [Deploy Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
 
     Helpful links:
 
-    - [Microsoft 365 Enterprise deployment guide](https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure?view=o365-worldwide)
-    - Set up [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/set-up?view=o365-worldwide)
+    - [Microsoft 365 Enterprise deployment guide](https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure)
+    - Set up [Microsoft 365 Business](https://docs.microsoft.com/microsoft-365/business/set-up)
 
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
 3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](https://docs.microsoft.com/configmgr/core/clients/manage/manage-clients#BKMK_UninstalClient).
