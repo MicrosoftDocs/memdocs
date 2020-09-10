@@ -64,10 +64,10 @@ There are three ways to remove personal data from Intune management:
 
 ### Delete a user from Intune
 
-To delete an end user's personal data from Intune, an admin must [delete the user from Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from AAD (hard deleted), Intune receives the delete signal from AAD and then automatically begins purging all of that user's personal data from the Intune service. The user's information will be deleted from Intune service within 30 days of the removal action.
+To delete an end user's personal data from Intune, an admin must [delete the user from Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). When the user is deleted from Azure AD (hard deleted), Intune receives the delete signal from Azure AD and then automatically begins purging all of that user's personal data from the Intune service. The user's information will be deleted from Intune service within 30 days of the removal action.
 
 ### Reset device to factory settings
-Resetting to factory settings restores all company and personal data and settings to the original factory settings. It is useful for providing a device to the next employee. User files,user installed applications, and non-default settings are removed and this data is deleted from the Intune service within 30 days of the removal action.
+Resetting to factory settings restores all company and personal data and settings to the original factory settings. It is useful for providing a device to the next employee. User files, user installed applications, and non-default settings are removed and this data is deleted from the Intune service within 30 days of the removal action.
 
 ### User self-removal from Intune management
 Users can remove their [Android, Apple, or Windows](../user-help/unenroll-your-device-from-intune-android.md) personal device from Intune management without admin assistance.   
