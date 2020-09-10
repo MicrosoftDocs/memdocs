@@ -119,6 +119,16 @@ The [Manage and protect mobile and desktop applications with Microsoft Endpoint 
 <iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
 </div>
 
+<!-- Test><-->
+
+[![Image](./media/app-management/apps-workload.png)](<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>)
+
+<p>
+
+[![Image](./media/app-management/apps-workload.png)](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)
+
 ## Additional information
 The following items within the console provide app related functionality:
 - **Microsoft Store for Business**: Set up integration to the Microsoft Store for Business. Afterward, you can synchronize purchased applications to Intune, assign them, and track your license usage. For more information, see [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
