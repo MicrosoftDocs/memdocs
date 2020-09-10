@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,7 +64,7 @@ For example, you can use the following values in **Add or edit OMA-URI Setting**
 
 - **Setting Name**: Windows Analytics Commercial ID
 - **Setting Description**: Configuring commercial ID for Windows Analytics solutions
-- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
 - **Data Type**: String
 - **Value**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 

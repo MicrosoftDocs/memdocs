@@ -49,7 +49,7 @@ Windows Autopilot depends on a variety of internet-based services. Access to the
 - Ensure DNS name resolution for internet DNS names
 - Allow access to all hosts via port 80 (HTTP), 443 (HTTPS), and 123 (UDP/NTP)
 
-In environments that have more restrictive Internet access, or for those that require authentication before internet access can be obtained, additional configuration may be required to whitelist access to the required services. 
+In environments that have more restrictive Internet access, or for those that require authentication before internet access can be obtained, additional configuration may be required to allow access to the required services. 
 
 > [!NOTE]
 > Smart card and certificate based authentication is not supported during OOBE. For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).

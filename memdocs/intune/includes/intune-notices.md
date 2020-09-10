@@ -47,7 +47,7 @@ Because of these changes by Google, in October 2020, you will no longer have as 
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
 - Enrolled in device administrator management.
 - Running Android 10 or later.
-- Not a Samsung device.
+- All Android manufacturers, except Samsung.
 
 Devices will not be impacted if they are any of the below:
 - Not enrolled with device administrator management.

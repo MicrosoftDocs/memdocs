@@ -88,7 +88,7 @@ Microsoft Endpoint Configuration Manager automatically collects the hardware has
 
 ### Collecting the hardware hash from existing devices using PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
 - download it from the PowerShell Gallery and run it on each computer.

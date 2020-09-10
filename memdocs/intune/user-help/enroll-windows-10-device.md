@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -68,10 +68,6 @@ These steps describe how to enroll a device that runs on Windows 10, version 160
 8. To double-check your connection, go back to **Settings** > **Accounts** > **Access work or school**.  Your account should now be listed.  
 
 
-    ![Validate that the connection was set up correctly](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-Still can't access your work or school email, files, or other data? Learn how to [troubleshoot account problems](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
-
 ## Enroll Windows 10 version 1511 and earlier device  
 These steps describe how to enroll a device that runs on Windows 10, version 1511 and earlier.  
 
@@ -94,7 +90,10 @@ These steps describe how to enroll a device that runs on Windows 10, version 151
 
     ![Sign in](./media/W10-enroll-4-sign-in.png)  
 
-Still can't access your work or school email, files, or other data? Learn how to [troubleshoot account-related problems](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) during enrollment.  
+
+## Troubleshooting 
+For a non-exhaustive list of error messages and other connection remedies, see [Troubleshoot Windows 10 device access](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## IT administrator support   
 
