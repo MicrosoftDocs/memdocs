@@ -121,13 +121,9 @@ The [Manage and protect mobile and desktop applications with Microsoft Endpoint 
 
 <!-- Test><-->
 
-[![Image](./media/app-management/apps-workload.png)](<div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
-</div>)
-
 <p>
 
-[![Image](./media/app-management/apps-workload.png)](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)
+[![Interactive Guide - Manage and protect mobile and desktop applications with Microsoft Endpoint Manager](./media/app-management/apps-workload.png)](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager#lightbox)
 
 ## Additional information
 The following items within the console provide app related functionality:
