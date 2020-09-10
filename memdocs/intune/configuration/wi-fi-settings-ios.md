@@ -66,7 +66,7 @@ This article describes these settings.
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
-- **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
+- **Hidden network**: Choose **Enable** if the SSID of the network isn't broadcasted. Choose **Disable** if the SSID of the network is broadcasted and visible.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
   - **WPA - Enterprise**
   - **WPA/WPA2 - Enterprise**
