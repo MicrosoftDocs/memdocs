@@ -187,6 +187,8 @@ The available settings for passwords vary by the version of Android on the devic
 *The following settings are supported on Android 10 or later, but not on Knox.*
 
 - **Password complexity**  
+ *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
+  
   Specify the required password complexity.
 
   - **None** *(default)* - No password required.
