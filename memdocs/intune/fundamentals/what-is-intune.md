@@ -69,13 +69,11 @@ When devices are enrolled and managed in Intune, administrators can:
 ### Try the interactive guide
 The [Manage devices with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage and protect mobile and desktop applications.</br></br>
 
-<div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
-</div>
-
-<a href="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" target="popup">
-    <img alt="Interactive Guide - Manage devices with Microsoft Endpoint Manager" src="./media/what-is-intune/managing-mobile-apps.png">
-</a>
+<iframe name="InteractiveGuideiFrame" allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy" importance="low"/>
+    <a href="https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" target="InteractiveGuideiFrame">
+        <img alt="Interactive Guide - Manage devices with Microsoft Endpoint Manager" src="./media/what-is-intune/managing-mobile-apps.png">
+    </a>
+</iframe>
 
 ## Manage apps
 
