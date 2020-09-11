@@ -308,7 +308,7 @@ Work profile password settings are listed below. For detailed information, see t
 - **Required password type**
 - **Number of days until password expires**
 - **Number of passwords required before user can reuse a password**
-- **Number of sign-in failures before wiping device**
+- **Number of sign-in failures before wiping device** 
 
 ### Power settings
 
