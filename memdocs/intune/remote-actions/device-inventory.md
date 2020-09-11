@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -110,7 +110,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
+> Phone number is not inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.
