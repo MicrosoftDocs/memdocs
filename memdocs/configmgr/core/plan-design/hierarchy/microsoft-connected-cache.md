@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--3555764-->
 
-Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature, but you can help to protect WAN links.
+Starting in version 1906, you can install a Microsoft Connected Cache server on your distribution points. By caching this content on-premises, your clients can benefit from the Delivery Optimization feature that can help to protect WAN links.
 
 > [!NOTE]
 > Starting in version 1910, this feature is now called **Microsoft Connected Cache**. It was previously known as Delivery Optimization In-Network Cache.
