@@ -37,7 +37,7 @@ You can view installation issues, such as when the app was created, modified, ta
 
 ## Troubleshooting app issues by using logs
 
-Viewing the details of logs can help you determine the cause of the issues that you're seeing and help resolve them. You can choose to view the [logs displayed in Intune](apps-win32-troubleshoot.md#logs-displayed-in-intune), or view the [logs displayed through CMTrace](apps-win32-troubleshoot.md#logs-displayed-using-cmtrace). 
+Viewing the details of logs can help you determine the cause of the issues that you're seeing and help resolve them. You can choose to view the [logs displayed in Intune](apps-win32-troubleshoot.md#logs-displayed-in-intune), or view the [logs displayed through CMTrace](apps-win32-troubleshoot.md#logs-displayed-through-cmtrace). 
 
 ### Logs displayed in Intune
 
