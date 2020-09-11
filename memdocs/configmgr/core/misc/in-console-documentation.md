@@ -105,11 +105,11 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 Support articles that are new or updated between July 18 and September 11, 2020.
 
--[KB 4578830 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830)
--[KB 4576791 Update for Microsoft Endpoint Configuration Manager version 2006, early update ring](https://support.microsoft.com/help/4576791)
--[KB 4578123 CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123)
--[KB 4576785 Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782)
--[KB 4575774 New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002](https://support.microsoft.com/help/4575774)
--[KB 4575339 Devices appear twice in Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4575339)
+- [KB 4578830 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830)
+- [KB 4576791 Update for Microsoft Endpoint Configuration Manager version 2006, early update ring](https://support.microsoft.com/help/4576791)
+- [KB 4578123 CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123)
+- [KB 4576785 Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782)
+- [KB 4575774 New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002](https://support.microsoft.com/help/4575774)
+- [KB 4575339 Devices appear twice in Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4575339)
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
