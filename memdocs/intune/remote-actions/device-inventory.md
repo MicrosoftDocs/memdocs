@@ -89,6 +89,10 @@ Depending on the carrier used by the devices, not all details might be collected
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
+| PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
+| Battery Charge Cycles Consumed | Number of full charge cycles consumed. | Android |
+| Last Battery Check-in | Date of last check-in for battery last found in the device. | Android |
+| Battery Serial Number | Serial number of the battery pack last found in the device. | Android |
 |IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
