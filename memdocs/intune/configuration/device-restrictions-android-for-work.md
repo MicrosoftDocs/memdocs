@@ -266,7 +266,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
-### Password
+### Device password
 
 - **Disable lock screen**: Choose **Disable** to prevent users from using Keyguard lock screen feature on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use the Keyguard features.
 - **Disabled lock screen features**: When keyguard is enabled on the device, choose which features to disable. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
@@ -301,6 +301,14 @@ End of comment -->
 
   > [!NOTE]
   > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+
+### Work profile password
+
+Work profile password settings are listed below. For detailed information, see the same entry under **Device password** above.
+- **Required password type**
+- **Number of days until password expires**
+- **Number of passwords required before user can reuse a password**
+- **Number of sign-in failures before wiping device**
 
 ### Power settings
 
