@@ -1,23 +1,24 @@
 ---
-title: "SMS_Admin Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_Admin server WMI class
+titleSuffix: Configuration Manager
+description: Details of the SMS_Admin server WMI class
+ms.date: 09/11/2020
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
-# SMS_Admin Server WMI Class
-The `SMS_Admin` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the role-based administration user.  
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+# SMS_Admin server WMI class
 
-## Syntax  
+The `SMS_Admin` WMI class is an SMS provider server class in Configuration Manager that represents the role-based administration (RBA) user.
+
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
+
+## Syntax
 
 ```  
 Class SMS_Admin : SMS_BaseClass  
@@ -47,14 +48,14 @@ Class SMS_Admin : SMS_BaseClass
 };  
 ```  
 
-## Methods  
- The following table lists the methods in the `SMS_Admin`  class.  
+## Methods
 
-|Method|Description|  
-|------------|-----------------|  
-|[GetAdminExtendedData Method in Class SMS_Admin](../../../../../develop/reference/core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md)|Returns extended data the current user and its groups have for a given type.|  
+The `SMS_Admin` class includes the following methods:
 
-## Properties  
+- [GetAdminExtendedData method in class SMS_Admin](getadminextendeddata-method-in-class-sms_admin.md): Returns extended data the current user and its groups have for a given type.
+
+## Properties
+
  `AccountType`  
  Data type: `UInt32`  
 
@@ -235,9 +236,9 @@ Class SMS_Admin : SMS_BaseClass
 
  The list of role names associated with the current user.  
 
- Below is a list of the built-in role identifiers and names.  
+ The following table lists the built-in role identifiers and names:
 
-|Role Identifier|Role Name|  
+|Role identifier|Role name|  
 |---------------------|---------------|  
 |SMS0001R|Full Administrator|  
 |SMS0002R|Read-only Analyst|  
@@ -252,7 +253,8 @@ Class SMS_Admin : SMS_BaseClass
 |SMS000CR|Software Update Manager|  
 |SMS000ER|Operations Administrator|  
 |SMS000FR|Security Administrator|  
-|SMS000GR|EndPoint Protection Manager|  
+|SMS000GR|EndPoint Protection Manager|
+|SMS000HR|Company Resource Access Manager|
 
  `Roles`  
  Data type: `String` Array  
@@ -263,24 +265,7 @@ Class SMS_Admin : SMS_BaseClass
 
  The ID of roles associated with the current user.  
 
- Below is a list of the built-in role identifiers and names.  
-
-|Role Identifier|Role Name|  
-|---------------------|---------------|  
-|SMS0001R|Full Administrator|  
-|SMS0002R|Read-only Analyst|  
-|SMS0003R|Remote Tools Operator|  
-|SMS0004R|Asset Manager|  
-|SMS0006R|Compliance Settings Manager|  
-|SMS0007R|Application Deployment Manager|  
-|SMS0008R|Application Author|  
-|SMS0009R|Application Administrator|  
-|SMS000AR|Operating System Deployment Manager|  
-|SMS000BR|Infrastructure Manager|  
-|SMS000CR|Software Update Manager|  
-|SMS000ER|Operations Administrator|  
-|SMS000FR|Security Administrator|  
-|SMS000GR|EndPoint Protection Manager|  
+ For a list of the the built-in role identifiers and names, see the `RoleNames` property.
 
  `SKey`  
  Data type: `String`  
@@ -300,10 +285,12 @@ Class SMS_Admin : SMS_BaseClass
 
  The site where the account was created.  
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development requirements
+
+For more information, see [Configuration Manager server development requirements](../../../../../develop/core/reqs/server-development-requirements.md).
