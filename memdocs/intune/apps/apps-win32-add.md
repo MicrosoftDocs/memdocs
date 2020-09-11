@@ -52,7 +52,7 @@ The following steps help you add a Windows app to Intune:
     > [!IMPORTANT]
     > Be sure to use the latest version of the Microsoft Win32 Content Prep Tool. If you don't use the latest version, you'll see a warning that says the app was packaged using an older version of the tool. 
 
-4. Click **Select**. The **Add app** steps are displayed.
+4. Click **Select**. The **Add app** steps appear.
 
 ## Step 1: App information
 
