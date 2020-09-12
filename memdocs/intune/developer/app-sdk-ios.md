@@ -74,6 +74,7 @@ The following header files include the APIs, data types, and protocols which the
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager.h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -81,12 +82,15 @@ The following header files include the APIs, data types, and protocols which the
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile.h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings.h
+-  IntuneMAMUIHelper.h
 -  IntuneMAMVersionInfo.h
 
 Developers can make the contents of all the previous headers available by just importing IntuneMAM.h
@@ -218,19 +222,19 @@ If your app already uses MSAL, the following configurations are required:
 
 3. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
 
-Additionally, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMPolicyManager` instance.
+Additionally, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
 4. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
-> The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMPolicyManager` properties take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
+> The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMSettings` class properties at runtime take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
 
 ### If your app does not use MSAL
 
 As previously mentioned, the Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios. If **your app does not use MSAL for its own authentication mechanism**, then you may need to configure custom AAD settings:
 
 * Developers need to create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
-* Developers should set the `ADALClientID` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMPolicyManager` instance. 
+* Developers should set the `ADALClientID` and `ADALRedirectUri` settings previously mentioned, or the equivalent `aadClientIdOverride` and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class. 
 * Developers should also ensure they follow step 4 in the previous section, to give their app registration access to the Intune app protection service.
 
 ### Special considerations when using MSAL 
@@ -770,7 +774,7 @@ If your application has the ability to display websites within a webview, you mi
 
 ### Webviews that display only non-corporate content/websites
 
-If your application doesn't display any corporate data in the webview and users have the ability to browse to arbitrary sites where they might potentially copy and paste managed data from other parts of the application into a public forum, the application is responsible for setting the current identity so that managed data can't be leaked through the webview. Examples of this are Suggest a Feature or Feedback webpages that have either direct or indirect links to a search engine. Multi-identity applications should call IntuneMAMPolicyManager setUIPolicyIdentity, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call setUIPolicyIdentity, passing in the current identity. Single-identity applications should call IntuneMAMPolicyManager setCurrentThreadIdentity, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call setCurrentThreadIdentity, passing in nil. This ensures that the Intune SDK treats the webview as unmanaged, and that it doesn't allow managed data from other parts of the application to be pasted into the webview if policy is configured as such. 
+If your application doesn't display any corporate data in the webview and users have the ability to browse to arbitrary sites where they might potentially copy and paste managed data from other parts of the application into a public forum, the application is responsible for setting the current identity so that managed data can't be leaked through the webview. Examples of this are Suggest a Feature or Feedback webpages that have either direct or indirect links to a search engine. Multi-identity applications should call `setUIPolicyIdentity` on the `IntuneMAMPolicyManager` instance, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call `setUIPolicyIdentity`, passing in the current identity. Single-identity applications should call `setCurrentThreadIdentity` on the `IntuneMAMPolicyManager` instance, passing in the empty string prior to displaying the webview. After the webview is dismissed, the application should call `setCurrentThreadIdentity`, passing in nil. This ensures that the Intune SDK treats the webview as unmanaged, and that it doesn't allow managed data from other parts of the application to be pasted into the webview if policy is configured as such. 
 
 ### Webviews that display only corporate content/websites
 
@@ -778,9 +782,9 @@ If your application displays only corporate data in the webview and users can't 
 
 ### Webviews that might display both corporate and non-corporate content/websites
 
-For this scenario, only WKWebView is supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application does display corporate content within the WKWebView, and users can also access non-corporate content/websites which may lead to data leaks, the application should implement the isExternalURL: delegate method defined in IntuneMAMPolicyDelegate.h. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data. 
+For this scenario, only WKWebView is supported. Applications which use the legacy UIWebView should transition to WKWebView. If your application does display corporate content within the WKWebView, and users can also access non-corporate content/websites which may lead to data leaks, the application should implement the `isExternalURL:` delegate method defined in `IntuneMAMPolicyDelegate.h`. Applications should determine if the URL passed to the delegate method represents a corporate website where managed data can be pasted in or a non-corporate website that could leak corporate data. 
 
-Returning NO in isExternalURL will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
+Returning NO in `isExternalURL` will tell the Intune SDK that the website being loaded is a corporate location where managed data can be shared. If YES is returned, the Intune SDK will open the URL in Edge rather than the WKWebView if current policy settings require it. This will ensure that no managed data from within the app can be leaked to the external website.
 
 ## iOS best practices
 
@@ -831,7 +835,7 @@ Yes, the IT admin can send a selective wipe command to the application. This wil
 
 ### Is there a sample app that demonstrates how to integrate the SDK?
 
-Yes! We just recently revamped our open-source sample app [Wagr for iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Wagr is now enabled for app protection policy using the Intune App SDK.
+Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
 ### How can I troubleshoot my app?
 
