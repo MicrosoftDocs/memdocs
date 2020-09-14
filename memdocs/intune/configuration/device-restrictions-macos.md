@@ -3,12 +3,12 @@
 
 title: macOS device settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add, configure, or create settings on macOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
+description: Add, configure, or create settings on macOS devices to restrict features in Microsoft Intune. Set password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 09/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,7 +38,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a macOS device restrictions configuration profile](device-restrictions-configure.md).
+Create a [macOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
@@ -103,24 +103,30 @@ These settings are added to a device configuration profile in Intune, and then a
   This feature applies to:  
   - macOS 10.13 and newer
 
-- **Defer software updates**: **Yes** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show updates on devices as Apple releases them. For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date. Seed build updates are allowed without delay.  
+- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. When the delay expires, users get a notification to update to the earliest version of the OS available when the delay was triggered.
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+
+- **Defer software updates**: **Yes** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting. You can delay OS updates, and non-OS updates.
+
+  By default, the OS might show updates on devices as Apple releases them. Software updates aren't delayed. For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date. Seed build updates are allowed without delay.  
+
+  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. When the delay expires, users get a notification to update to the earliest version of the OS available when the delay was triggered.
 
     For example, if a macOS update is available on **January 1**, and **Delay visibility** is set to **5 days**, then the update isn't shown as an available update. On the **sixth day** following the release, that update is available, and users can install it.
 
     This feature applies to:  
     - macOS 10.13.4 and newer
 
-- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
+### Settings apply to: Automated device enrollment
 
-  - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
+- **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
 
-    To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
+  To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
 
-  - **Allow Classroom app to perform AirPlay and view screen without prompting**: **Yes** lets teachers see their students' screens without requiring students to agree. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students to agree before teachers can see the screens.
+- **Allow Classroom app to perform AirPlay and view screen without prompting**: **Yes** lets teachers see their students' screens without requiring students to agree. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students to agree before teachers can see the screens.
 
-    To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
+  To use this setting, set the **Block screenshots and screen recording** setting to **Not configured** (screenshots are allowed).
 
 - **Require teacher permission to leave Classroom app unmanaged classes**: **Yes** forces students enrolled in an unmanaged Classroom course to get teacher approval to leave the course. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow students to leave the course whenever the student chooses.
 
@@ -312,7 +318,7 @@ This feature applies to:
   - **Apple events**: This setting allows apps to send a restricted Apple event to another app or process. Select **Add** to add a receiving app or process. Enter the following information of the receiving app or process:
 
     - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
-    
+
     - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
 
     - **Code requirement**: Enter the code signature for the receiving application or process.

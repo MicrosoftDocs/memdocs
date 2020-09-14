@@ -2,12 +2,12 @@
 # required metadata
 title: iOS/iPadOS device settings in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix:
-description: Add, configure, or create settings on iOS/iPadOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
+description: Add, configure, or create settings on iOS/iPadOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a device restrictions configuration profile](device-restrictions-configure.md).
+Create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
@@ -56,6 +56,17 @@ These settings are added to a device configuration profile in Intune, and then a
 - **Block over-the-air PKI updates**: **Block** prevents your users from receiving software updates unless devices are connected to a computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a device to receive software updates without being connected to a computer.
 - **Limit ad tracking**: **Limit** disables the device advertising identifier. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might keep it enabled.
 - **Enterprise app trust**: **Block** removes the **Trust Enterprise Developer** button in Settings > General > Profiles & Device Management on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose to trust apps that aren't downloaded from the app store.
+- **Block App Clips**: **Yes** blocks App Clips on managed devices. Specifically, setting to **Yes**:
+
+  - Prevents users from adding App Clips on devices.
+  - Prevents users from removing existing App Clips on devices.
+  - Removes existing App Clips on devices.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and removing App Clips on devices.
+
+  This feature applies to:  
+  - iOS 14.0 and newer
+  - iPadOS 14.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -137,7 +148,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
     For example, if iOS 12.a is available on **January 1**, and **Delay visibility** is set to **5 days**, then iOS 12.a isn't shown as an available update on user devices. On the **sixth day** following the release, that update is available, and users can install it.
 
-    This setting applies to:  
+    This feature applies to:  
     - iOS 11.3 and newer
     - iPadOS 13.0 and newer
 
@@ -181,7 +192,7 @@ These settings are added to a device configuration profile in Intune, and then a
   
 - **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long devices stay idle before users must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter.
 
-  This setting applies to:  
+  This feature applies to:  
   - iOS 8.0+
   - iPadOS 13.0+
 
@@ -624,13 +635,13 @@ To add apps, you can:
 
 ## Autonomous single app mode (ASAM)
 
-Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When this mode is configured, and users start one of the configured apps, the device is locked to that app. App/task switching is disabled until users exit the allowed app.
+Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When ASAP is configured, and users start one of the configured apps, then the device is locked to that app. App/task switching is disabled until users exit the allowed app.
 
 For the ASAM configuration to apply, users must manually open the specific app. This task also applies to the Company Portal app.
 
 - For example, in a school or university environment, add an app that lets users take a test on the device. Or, lock the device into the Company Portal app until the user authenticates. When the apps actions are completed by users, or you remove this policy, the device returns to its normal state.
 
-- Not all apps support autonomous single app mode. To put an app in autonomous single app mode, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
+- Not all apps support autonomous single app mode. To put an app in ASAM, a bundle ID or a key value pair delivered by an app config policy are typically required. For more information, see the [`autonomousSingleAppModePermittedAppIDs` restriction](https://developer.apple.com/documentation/devicemanagement/restrictions) in Apple's MDM documentation. For more information on the specific settings required for the app you're configuring, see the vendor documentation.
 
   For example, to configure Zoom Rooms in autonomous single app mode, Zoom says to use the `us.zoom.zpcontroller` bundle ID. In this instance, you also make a change in the Zoom web portal. For more information, see the [Zoom help center](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
@@ -665,7 +676,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Mono audio**: **Require** the Mono audio accessibility setting be on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not run or enable this feature in kiosk mode.
 - **Voice control**: **Require** enables voice control on devices, and allows users to fully control the OS using Siri commands. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable voice control.
 
-  This setting applies to:  
+  This feature applies to:  
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
   
@@ -685,7 +696,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Speak on selected text**: **Allow** the Speak Selection accessibility settings be on devices. This feature reads text out loud that users select. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 - **Voice control modification**: **Allow** users to change the state of voice control on their devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might block users from changing the state of voice control on their devices.
 
-  This setting applies to:  
+  This feature applies to:  
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
 
@@ -708,7 +719,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Safari password autofill domains** > **Domain URL**: Add one or more URLs to the list. Users can only save web passwords from URLs in this list. This setting applies only to the Safari browser, and devices in supervised mode. If you don't enter any URLs, then passwords can be saved from all web sites.
 
-  This setting applies to:  
+  This feature applies to:  
   - iOS 9.3 and newer
   - iPadOS 13.0 and newer
 
