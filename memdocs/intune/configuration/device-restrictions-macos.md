@@ -107,11 +107,13 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
 
-- **Defer software updates**: **Yes** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting. You can delay OS updates, and non-OS updates.
+- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
 
   By default, the OS might show updates on devices as Apple releases them. Software updates aren't delayed. For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date. Seed build updates are allowed without delay.  
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. When the delay expires, users get a notification to update to the earliest version of the OS available when the delay was triggered.
+  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. This value applies to the **Defer software updates** options you select. If you only select **Operating system updates**, then only OS updates are delayed for 30 days. If you select **Operating system updates** and **Non operating system updates**, then both are delayed for 30 days.
+
+    When the delay expires, users get a notification to update to the earliest version available when the delay was triggered.
 
     For example, if a macOS update is available on **January 1**, and **Delay visibility** is set to **5 days**, then the update isn't shown as an available update. On the **sixth day** following the release, that update is available, and users can install it.
 

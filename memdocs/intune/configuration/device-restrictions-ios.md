@@ -59,7 +59,6 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 - **Block App Clips**: **Yes** blocks App Clips on managed devices. Specifically, setting to **Yes**:
 
   - Prevents users from adding App Clips on devices.
-  - Prevents users from removing existing App Clips on devices.
   - Removes existing App Clips on devices.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and removing App Clips on devices.
