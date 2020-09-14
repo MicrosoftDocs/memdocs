@@ -4,6 +4,7 @@ description: Learn how a cloud service provider (CSP) partner or an OEM can get 
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -21,10 +22,7 @@ ms.topic: article
 
 **Applies to: Windows 10**
 
-You can request customer authorization to register Windows Autopilot devices on the customer’s behalf. To make such a request, you must be one of the following entities:
-
-- Cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller)
-- OEM
+This article describes how a cloud service provider (CSP) partner (direct bill, indirect provider, or indirect reseller) or an OEM can get customer authorization to register Windows Autopilot devices on the customer’s behalf.
 
 ## CSP authorization
 

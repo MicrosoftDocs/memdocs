@@ -4,6 +4,7 @@ description: Self-deploying mode allows a device to be deployed with little to n
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -24,11 +25,11 @@ Windows Autopilot self-deploying mode lets you deploy a device with little to no
 - Choose the language, locale, and keyboard
 - Make a network connection 
 
-Self-deploying mode provides all the following features:
-- joins the device into Azure Active Directory
+Self-deploying mode provides all the following:
+- joins the device to Azure Active Directory
 - enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment
 - makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device
-- uses the Enrollment Status Page to prevent access  until the device is fully provisioned
+- uses the Enrollment Status Page to prevent access until the device is fully provisioned
 
 >[!NOTE]
 >Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
@@ -48,7 +49,7 @@ You can completely automate device configuration by combining self-deploing mode
 
 ## Requirements
 
-Self-deploying mode uses a device’s TPM 2.0 hardware to authenticate the device into an organization’s Azure AD tenant. For this reason, devices without TPM 2.0 can't be used with this mode. The devices must also support TPM device attestation. All new Windows devices should meet these requirements.
+Self-deploying mode uses a device’s TPM 2.0 hardware to authenticate the device into an organization’s Azure AD tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements.
 
 >[!IMPORTANT]
 >If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC. See [Windows Autopilot known issues](known-issues.md) to review other known errors and solutions.
@@ -68,7 +69,7 @@ To deploy in self-deploying mode Windows Autopilot, the following preparation st
 When using Windows Autopilot to deploy in self-deploying mode, the following end-user experience should be observed:
 
 -  Once connected to a network, the Autopilot profile will be downloaded.
-- If connected to the Ethernet, and the Autopilot profile is configured to skip them, the following pages won't be displayed: language, locale, and keyboard layout. Otherwise, manual steps are required:
+- If connected to Ethernet, and the Autopilot profile is configured to skip them, the following pages won't be displayed: language, locale, and keyboard layout. Otherwise, manual steps are required:
   -  If multiple languages are preinstalled in Windows 10, the user must pick a language.
   -  The user must pick a locale and a keyboard layout, and optionally a second keyboard layout.
 -  If connected via Ethernet, no network prompt is expected. If no Ethernet connection is available and Wi-fi is built in, the user needs to connect to a wireless network.
