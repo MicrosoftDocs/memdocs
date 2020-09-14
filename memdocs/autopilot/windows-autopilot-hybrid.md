@@ -219,7 +219,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 4. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
     - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
     - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
-    - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+    - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
  
     Here are some valid examples:
       - OU=Level 1,OU=Level2,DC=contoso,DC=com

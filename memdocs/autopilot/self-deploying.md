@@ -60,9 +60,9 @@ You can display an organization-specific logo and organization name during the A
 
 To deploy in self-deploying mode Windows Autopilot, the following preparation steps need to be completed:
 
--  Create an Autopilot profile for self-deploying mode with the settings you want. In Microsoft Intune, this mode is explicitly chosen when creating the profile. It isn't possible to create a profile in the Microsoft Store for Business or Partner Center for self-deploying mode.
--  If using Intune, create a device group in Azure Active Directory and assign the Autopilot profile to that group. Ensure that the profile has been assigned to the device before attempting to deploy that device.
--  Boot the device, connecting it to Wi-fi if necessary, then wait for the provisioning process to complete.
+1. Create an Autopilot profile for self-deploying mode with the settings you want. In Microsoft Intune, this mode is explicitly chosen when creating the profile. It isn't possible to create a profile in the Microsoft Store for Business or Partner Center for self-deploying mode.
+2. If using Intune, create a device group in Azure Active Directory and assign the Autopilot profile to that group. Ensure that the profile has been assigned to the device before attempting to deploy that device.
+3. Boot the device, connecting it to Wi-fi if necessary, then wait for the provisioning process to complete.
 
 ## Validation
 
