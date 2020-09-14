@@ -752,8 +752,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
 
   - **Yes** (*default*) - During a full scan, removable drives (like USB flash drives) are scanned.
-  - **Not configured** - The setting returns to client default, which scans removable drives, however the user
-  -  can disable this scan.
+  - **Not configured** - The setting returns to client default, which scans removable drives, however the user can disable this scan.
   
 - **Scan network files**  
   CSP: [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
