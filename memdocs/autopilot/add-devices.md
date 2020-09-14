@@ -88,7 +88,7 @@ Microsoft Endpoint Configuration Manager automatically collects the hardware has
 
 ### Collecting the hardware hash from existing devices using PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows 10 semi-annual channel. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful to quickly see which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
 - download it from the PowerShell Gallery and run it on each computer.
@@ -126,10 +126,10 @@ For more information about running the script, see the [Get-WindowsAutoPilotInfo
 
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 
-- [Microsoft Intune](enrollment-autopilot.md) is the preferred mechanism for all customers.
- - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
-- [Partner Center](https://msdn.microsoft.com/partner-center/autopilot) is used by CSP partners to register devices for customers.
-- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
+- [Microsoft Intune](enrollment-autopilot.md). This is the preferred mechanism for all customers.
+  - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
+- [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
+- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
 
 A summary of each platform's capabilities is provided below.<br>

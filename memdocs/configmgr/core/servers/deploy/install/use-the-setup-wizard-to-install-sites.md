@@ -9,8 +9,7 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Use the Configuration Manager setup wizard to install a new site.
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites

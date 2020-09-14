@@ -11,6 +11,12 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Updated end-user experience for Android device administrator Wi-Fi profiles<!-- 7662680  -->
+Due to a change made by Google, the end-user experience for new Wi-Fi profiles is significantly different starting in the October release of the Company Portal app. Users will need to accept additional permissions, and explicitly accept Wi-Fi configurations when they're deployed. Wi-Fi configurations will not appear in the known Wi-Fi networks list, but will automatically connect when in range. There are no changes in behavior for existing Wi-Fi profiles. There are also no changes to the admin experience in the Endpoint Manager admin center.
+
+Applies to:
+- Android device administrator, Android 10 and later
+
 ### Microsoft Intune ends support for Windows Phone 8.1 and Windows 10 Mobile<!-- 3544938, 3544909 -->
 Microsoft mainstream support for Windows Phone 8.1 ended in July 2017 and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Additionally, Microsoft Intune has ended support on February 20, 2020 for Windows Phone 8.1. 
 
@@ -41,7 +47,7 @@ Because of these changes by Google, in October 2020, you will no longer have as 
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
 - Enrolled in device administrator management.
 - Running Android 10 or later.
-- Not a Samsung device.
+- All Android manufacturers, except Samsung.
 
 Devices will not be impacted if they are any of the below:
 - Not enrolled with device administrator management.
@@ -97,7 +103,7 @@ At that point, device administrator-managed devices that are not manufactured by
 - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned 
 - The IMEI and serial number will no longer be visible to IT admins in Intune 
 
-**Android 11**: We continue to test the latest Android 11 beta release to evaluate the impact on device administrator managed devices. Here’s what we have found: 
+**Android 11**: These are the changes that will impact device administrator managed device when they update to Android 11: 
 - For device administrator devices (excluding Samsung) running Android 11 and later, Google has removed the ability for management agents like Company Portal to enforce blocking Camera, even before the October update to the Company Portal app. Policies blocking camera that are applied to devices before they update to Android 11 will continue to apply.  
 - With Android 11, trusted root certificates can no longer be deployed to devices enrolled with device administrator (except on Samsung devices). Users must manually install the trusted root certificate on the device. With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a trusted certificate policy to the device, and link that policy to the SCEP certificate profile. 
     - If the trusted root certificate is on the device, then the SCEP certificate profile will install successfully.  

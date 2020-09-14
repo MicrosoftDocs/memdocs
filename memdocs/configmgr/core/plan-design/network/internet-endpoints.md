@@ -260,12 +260,6 @@ For more information on this feature, see [Community hub](../../servers/manage/c
 
 - `https://communityhub.microsoft.com`
 
-### Monitoring workspace, Site Hierarchy node
-
-If you use the **Geographical View**, allow access to the following endpoint:
-
-- `http://maps.bing.com`
-
 ## Desktop Analytics
 
 For more information, see [Enable data sharing](../../../desktop-analytics/enable-data-sharing.md#endpoints).

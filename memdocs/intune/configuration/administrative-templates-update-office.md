@@ -185,7 +185,7 @@ Consider using these steps to test your policy before deploying the policy to al
 
 ## Next steps
 
-[Update channel values for Microsoft 365 clients](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Update channel values for Microsoft 365 clients](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 
