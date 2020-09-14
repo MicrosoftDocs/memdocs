@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # US government endpoints for Microsoft Intune
 
-This page lists the US government endpoints needed for proxy settings in your Intune deployments.
+This page lists the US Government, US Government Community (GCC) High, and Department of Defense (DoD) endpoints needed for proxy settings in your Intune deployments.
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
