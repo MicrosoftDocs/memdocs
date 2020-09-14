@@ -28,6 +28,8 @@ groups:
   title: ATP baseline versions
   prompt: Choose a version
   pivots:
+    - id: atp-sept-2020
+      title: September 2020
     - id: atp-april-2020 
       title: April 2020
     - id: atp-march-2020
