@@ -54,7 +54,7 @@ The device to be enrolled must follow these requirements:
 
 2. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
- ![The Mobility (MDM and MAM) Configure pane](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
+    ![The Mobility (MDM and MAM) Configure pane](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
 
 3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
@@ -70,37 +70,37 @@ The organizational unit that's granted the rights to create computers must match
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
 
-1. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
+2. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
 
  ![The Delegate Control command](./media/windows-autopilot-hybrid/delegate-control.png)
 
-1. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
+3. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 
-1. In the **Object Types** pane, select the **Computers** > **OK**.
+4. In the **Object Types** pane, select the **Computers** > **OK**.
 
- ![The Object Types pane](./media/windows-autopilot-hybrid/object-types-computers.png)
+    ![The Object Types pane](./media/windows-autopilot-hybrid/object-types-computers.png)
 
-1. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
+5. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
 
- ![The Select Users, Computers, or Groups pane](./media/windows-autopilot-hybrid/enter-object-names.png)
+    ![The Select Users, Computers, or Groups pane](./media/windows-autopilot-hybrid/enter-object-names.png)
 
-1. Select **Check Names** to validate your entry > **OK** > **Next**.
+6. Select **Check Names** to validate your entry > **OK** > **Next**.
 
-1. Select **Create a custom task to delegate** > **Next**.
+7. Select **Create a custom task to delegate** > **Next**.
 
-1. Select **Only the following objects in the folder** > **Computer objects**.
+8. Select **Only the following objects in the folder** > **Computer objects**.
 
-1. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
+9. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
- ![The Active Directory Object Type pane](./media/windows-autopilot-hybrid/only-following-objects.png)
+    ![The Active Directory Object Type pane](./media/windows-autopilot-hybrid/only-following-objects.png)
  
-1. Select **Next**.
+10. Select **Next**.
 
-1. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
+11. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 
- ![The Permissions pane](./media/windows-autopilot-hybrid/full-control.png)
+    ![The Permissions pane](./media/windows-autopilot-hybrid/full-control.png)
 
-1. Select **Next** > **Finish**.
+12. Select **Next** > **Finish**.
 
 ## Install the Intune Connector
 
@@ -134,20 +134,18 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 1. In the **Group** pane, choose the following options:
 
- a. For **Group type**, select **Security**.
+    1. For **Group type**, select **Security**.
+    2. Enter a **Group name** and **Group description**.
+    3. Select a **Membership type**.
 
- b. Enter a **Group name** and **Group description**.
+4. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
 
- c. Select a **Membership type**.
-
-1. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
-
-1. In the **Advanced rule** box, enter one of the following code lines:
- - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
- - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
- - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
+5. In the **Advanced rule** box, enter one of the following code lines:
+    - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
+    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
  
-1. Select **Save** > **Create**. 
+6. Select **Save** > **Create**. 
 
 ## Register your Autopilot devices
 
@@ -204,37 +202,37 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 ## (Optional) Turn on the enrollment status page
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-1. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
-1. In the **Show app and profile installation progress** box, select **Yes**.
-1. Configure the other options as needed.
-1. Select **Save**.
+2. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
+3. In the **Show app and profile installation progress** box, select **Yes**.
+4. Configure the other options as needed.
+5. Select **Save**.
 
 ## Create and assign a Domain Join profile
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
 2. Enter the following properties:
- - **Name**: Enter a descriptive name for the new profile.
- - **Description**: Enter a description for the profile.
- - **Platform**: Select **Windows 10 and later**.
- - **Profile type**: Select **Domain Join (Preview)**.
+    - **Name**: Enter a descriptive name for the new profile.
+    - **Description**: Enter a description for the profile.
+    - **Platform**: Select **Windows 10 and later**.
+    - **Profile type**: Select **Domain Join (Preview)**.
 3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
 4. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
- - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
- - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
- - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
+    - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
+    - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
  
- Here are some valid examples:
- - OU=Level 1,OU=Level2,DC=contoso,DC=com
- - OU=Mine,DC=contoso,DC=com
+    Here are some valid examples:
+      - OU=Level 1,OU=Level2,DC=contoso,DC=com
+      - OU=Mine,DC=contoso,DC=com
  
- Here are some examples that aren't valid:
- - CN=Computers,DC=contoso,DC=com (you can't specify a container, instead leave the value blank to use the default for the domain)
- - OU=Mine (you must specify the domain via the DC= attributes)
+    Here are some examples that aren't valid:
+      - CN=Computers,DC=contoso,DC=com (you can't specify a container, instead leave the value blank to use the default for the domain)
+      - OU=Mine (you must specify the domain via the DC= attributes)
  
- > [!NOTE]
- > Don't use quotation marks around the value in **Organizational unit**.
-5. Select **OK** > **Create**. 
- The profile is created and displayed in the list.
+    > [!NOTE]
+    > Don't use quotation marks around the value in **Organizational unit**.
+
+5. Select **OK** > **Create**. The profile is created and displayed in the list.
 6. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
