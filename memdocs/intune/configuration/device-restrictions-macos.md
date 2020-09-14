@@ -107,7 +107,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
 
-- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
+- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
 
   By default, the OS might show updates on devices as Apple releases them. Software updates aren't delayed. For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows up on devices around the release date. Seed build updates are allowed without delay.  
 
