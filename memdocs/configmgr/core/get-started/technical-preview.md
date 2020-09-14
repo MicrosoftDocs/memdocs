@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/10/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,20 +118,15 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2009
 
-- [3555923](2020/technical-preview-2009.md) <!--3555923-->
-- [3601040](2020/technical-preview-2009.md) <!--3601040-->
-- [3608121](2020/technical-preview-2009.md) <!--3608121-->
-- [3734819](2020/technical-preview-2009.md) <!--3734819-->
-- [4575930](2020/technical-preview-2009.md) <!--4575930-->
-- [6254995](2020/technical-preview-2009.md) <!--6254995-->
-- [6503383](2020/technical-preview-2009.md) <!--6503383-->
-- [7308096](2020/technical-preview-2009.md) <!--7308096-->
-- [7410221](2020/technical-preview-2009.md) <!--7410221-->
-- [7520646](2020/technical-preview-2009.md) <!--7520646-->
-- [7699511](2020/technical-preview-2009.md) <!--7699511-->
-- [7774961](2020/technical-preview-2009.md) <!--7774961-->
-- [7821529](2020/technical-preview-2009.md) <!--7821529-->
-- [7979972](2020/technical-preview-2009.md) <!--7979972-->
+- [Cloud management gateway with virtual machine scale set](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Improvements to remote control](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Deploy an OS over CMG using boot media](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [View collection relationships](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Wake machine at deployment deadline using peer wakeup](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Improvements to in-console notifications](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Notifications for devices no longer receiving updates](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Improved Windows Server restart experience for non-administrator accounts](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Improvements to OS deployment](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
