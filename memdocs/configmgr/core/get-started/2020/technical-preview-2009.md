@@ -32,7 +32,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to in-console notifications](includes/2009/7410221.md)]
 [!INCLUDE [Notifications for devices no longer receiving updates](includes/2009/7520646.md)]
 [!INCLUDE [Improved Windows Server restart experience for non-administrator accounts](includes/2009/7821529.md)]
-[!INCLUDE [Improvements to OS deployment](includes/2009/7799892.md)] <!--7799892,7068388-->
+
+[!INCLUDE [Improvements to OS deployment](includes/2009/7799892.md)]
+<!--7799892,7068388--> 
 
 <!--
 ## General known issues
