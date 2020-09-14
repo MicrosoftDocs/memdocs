@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
+ms.author: mstewart
 
 
 ---
@@ -32,7 +32,7 @@ Configuration Manager creates a security group on clients, **Remote PC Connect**
 
 ### External dependencies  
 
-- If you want to enable users to connect from the internet, install and configure a Remote Desktop Gateway server. For more information about how to install and configure a Remote Desktop Gateway server, see [Remote Desktop Services - Access from anywhere](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
+- If you want to enable users to connect from the internet, install and configure a Remote Desktop Gateway server. For more information about how to install and configure a Remote Desktop Gateway server, see [Remote Desktop Services - Access from anywhere](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
 - If clients run a host-based firewall, it must enable the mstsc.exe program. When you configure a remote connection profile, enable the setting to **Allow Windows Firewall exception for connections on Windows domains and on private networks**. This setting allows Configuration Manager to automatically configure Windows Firewall.
 
@@ -80,7 +80,7 @@ When a user remotely connects to a work computer, they download a .wsrdp file. T
         - Aside from periods (`.`) between segments, and a colon (`:`) before the port, the only special characters are dash (`–`) and underscore (`_`).
         - Configuration Manager doesn't support the use of an internationalized domain name for this value.
 
-    - **Allow connections only from computers that run Remote Desktop with Network Level Authentication**: Enabled by default, this setting adds an additional level of security for the connection. For more information, see [Grant Remote Desktop access](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
+    - **Allow connections only from computers that run Remote Desktop with Network Level Authentication**: Enabled by default, this setting adds an additional level of security for the connection. For more information, see [Grant Remote Desktop access](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
 
     - Enable the following connection settings:
 
@@ -159,4 +159,4 @@ Configuration Manager includes built-in reports that you can use to monitor info
 > [!IMPORTANT]  
 > Use the wildcard character (`%`) when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
 
-For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
+For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).

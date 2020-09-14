@@ -5,9 +5,7 @@ description: Add custom organization-specific information to the BitLocker manag
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
-
-
+ms.topic: how-to
 ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
@@ -125,7 +123,7 @@ The self-service portal displays the notice text based on the following rules:
 
 1. Create a `<language>` folder for each supported language in the `Self Service Website` application path. For example, `es-es` for Spanish (Spain). By default, the full path is `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es`.
 
-    For a list of the valid language codes you can use, see [National Language Support (NLS) API Reference](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
+    For a list of the valid language codes you can use, see [National Language Support (NLS) API Reference](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
 
     > [!TIP]
     > The name of the language folder can also be the language neutral name. For example, **es** for Spanish, instead of **es-es** for Spanish (Spain) and **es-ar** for Spanish (Argentina). If the user sets their browser to **es-es**, and that language folder doesn't exist, the web server recursively checks the parent locale folder (**es**). (The parent locales are defined in .NET.) For example,`Self Service Website\es\Notice.txt`. This recursive fallback mimics the .NET resource loading rules.

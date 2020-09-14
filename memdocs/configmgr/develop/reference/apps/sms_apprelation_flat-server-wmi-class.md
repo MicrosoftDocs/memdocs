@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b6f86f0b-6593-4f58-8e6b-3934529408cd
 author: aczechowski
 ms.author: aaroncz
@@ -71,7 +71,7 @@ Class SMS_AppRelation_Flat : SMS_BaseClass
 
  Type of relationship between configuration items. Possible values are:  
 
-|||  
+|Value|Relationship|  
 |-|-|  
 |1|Bundled|  
 |2|Required|  

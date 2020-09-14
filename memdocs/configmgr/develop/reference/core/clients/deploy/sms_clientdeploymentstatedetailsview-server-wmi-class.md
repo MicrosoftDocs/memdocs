@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6f8ad726-3bb7-4d01-98b9-f3b08459edef
 author: aczechowski
 ms.author: aaroncz
@@ -63,7 +63,7 @@ Class SMS_ClientDeploymentStateDetailsView: SMS_BaseClass
 
  The client baseline item type. Possible values are:  
 
-|||  
+|Value|Baseline item type|  
 |-|-|  
 |1|Patch or CU|  
 |2|Language Pack|  

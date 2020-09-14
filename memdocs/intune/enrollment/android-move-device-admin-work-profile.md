@@ -44,7 +44,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - Set up Android work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to Android work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into work profile management.
-  - [Configure Azure Active Directory device settings](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
+  - [Configure Azure Active Directory device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
 ## Create device compliance policy
@@ -76,10 +76,10 @@ When users see that they're out of compliance for this reason, they can tap **Re
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
-    > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
-    > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
+      > [!NOTE]
+      > - Of course, you can use user-friendly hyper-text for the links in your communication with users. However, don't use URL-shorteners because the links may not work if changed that way.
+      > - If the Android Company Portal is open and in the background, when a user taps the link they might go to the last page they had open instead.
+      > - Users must tap the link on an Android device. If they instead paste it into a browser, it will not launch the Android Company Portal. 
 
     Choose **Next**.
 

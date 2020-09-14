@@ -754,7 +754,7 @@ When a SQL Server hosts a database from more than one site, each database must u
 
 If you enable a host-based firewall on the SQL server, configure it to allow the correct ports. Also configure network firewalls in between computers that communicate with the SQL server.  
 
-For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+For an example of how to configure SQL Server to use a specific port, see [Configure a server to listen on a specific TCP port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ### <a name="bkmk_discovery"> </a> Discovery and publishing
 

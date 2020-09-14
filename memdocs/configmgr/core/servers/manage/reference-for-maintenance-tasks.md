@@ -2,7 +2,7 @@
 title: Reference for maintenance tasks
 titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -28,8 +28,8 @@ For more information, see [Set up maintenance tasks](maintenance-tasks.md#set-up
 
 Use this task to create a backup of your critical information to restore a site and the Configuration Manager database. For more information, see [Back up a Configuration Manager site](backup-and-recovery.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Not enabled|
 |Secondary site|Not available|
@@ -38,8 +38,8 @@ Use this task to create a backup of your critical information to restore a site 
 
 Use this task to maintain consistency of software titles between software inventory and the Asset Intelligence catalog. For more information, see [Introduction to Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |Primary site|Not available|
 |Secondary site|Not available|
@@ -51,8 +51,8 @@ Use this task to maintain consistency of software titles between software invent
 
 Use this task to remove the installed flag for clients that don't submit a Heartbeat Discovery record during the **Client Rediscovery** period. The installed flag prevents automatic client push installation to a computer that might have an active Configuration Manager client.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
 |Secondary site|Not available|
@@ -61,8 +61,8 @@ Use this task to remove the installed flag for clients that don't submit a Heart
 
 Use this task to delete aged application requests from the database. For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -71,8 +71,8 @@ Use this task to delete aged application requests from the database. For more in
 
 Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -81,8 +81,8 @@ Use this task to delete application revisions that are no longer referenced. For
 
 Use this task to delete historical data about the download source used by clients. The site uses download source information to populate the [Client Data Sources dashboard](../deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -93,9 +93,10 @@ Use this task to delete from the site database all aged data for client operatio
 
 - Aged or expired client notifications, like download requests for machine or user policy
 - Endpoint Protection, like requests by an administrative user for clients to run a scan or download updated definitions
+- Run Scripts status results
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -104,8 +105,8 @@ Use this task to delete from the site database all aged data for client operatio
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 Use this task to delete history information about the online status of clients recorded by client notification. It deletes information for clients with status that's older than the specified time. For more information, see [How to monitor clients](../../clients/manage/monitor-clients.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -120,8 +121,8 @@ Use this task to delete from the site database all aged data about the traffic t
 - Number of failed requests
 - Maximum number of concurrent requests
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -130,8 +131,8 @@ Use this task to delete from the site database all aged data about the traffic t
 
 Use this task to delete from the site database aged information from clients in CMPivot queries. For more information, see [CMPivot for real-time data](cmpivot.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -140,8 +141,8 @@ Use this task to delete from the site database aged information from clients in 
 
 Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -150,8 +151,8 @@ Use this task to delete from the database aged information about collected files
 
 Use this task to delete from the database aged OS deployment computer association data. This information is used when restoring user state during a task sequence. For more information, see [Manage user state](../../../osd/get-started/manage-user-state.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -160,8 +161,8 @@ Use this task to delete from the database aged OS deployment computer associatio
 
 This task deletes data from the site database about console connections to the site.<!-- SCCMDocs#528 -->
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -170,8 +171,8 @@ This task deletes data from the site database about console connections to the s
 
 Use this task to delete aged data from the database that has been created by extraction views. It deletes old data change information used by external systems extracting data from the database.<!--SCCMDocs#1590--><!--By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.-->
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -180,8 +181,8 @@ Use this task to delete aged data from the database that has been created by ext
 
 Use this task to delete from the database aged data about mobile device wipe actions. For more information, see [Protect data with remote wipe, lock, or passcode reset](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -196,8 +197,8 @@ Use this task to delete aged discovery data from the database. This data can inc
 
 This task also removes aged devices marked as decommissioned. When this task runs at a site, data associated with that site is deleted, and those changes replicate to other sites. For more information, see [Run discovery](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -206,8 +207,8 @@ This task also removes aged devices marked as decommissioned. When this task run
 
 Use this task to delete from the database aged data for distribution points that has been stored longer than a specified time.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -218,8 +219,8 @@ Use this task to delete from the site database the aged data about mobile device
 
 This task applies to devices that are enrolled with Configuration Manager [on-premises MDM](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md). For more information on these devices, see [Supported operating systems for clients and devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
 |Secondary site|Not available|
@@ -228,8 +229,8 @@ This task applies to devices that are enrolled with Configuration Manager [on-pr
 
 Use this task to delete from the database aged status information for Endpoint Protection (EP). For more information, see [How to monitor Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -241,8 +242,8 @@ Use this task to delete from the database aged status information for Endpoint P
 
 Use this task to delete aged data about mobile devices managed by the Exchange Server connector. The site deletes this data according to the **Ignore mobile devices that are inactive for more than (days)** setting on the **Discovery** tab of the Exchange Server connector properties. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -251,8 +252,8 @@ Use this task to delete aged data about mobile devices managed by the Exchange S
 
 Use this task to delete from the database inventory data that has been stored longer than a specified time. For more information, see [How to use Resource Explorer to view hardware inventory](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -264,8 +265,8 @@ Use this task to delete from the database aged log data used for troubleshooting
 > [!IMPORTANT]  
 > By default, this task runs daily at each site. At a central administration site and primary sites, the task deletes data that's older than 30 days. When you use SQL Server Express at a secondary site, make sure that this task runs daily and deletes data that's inactive for seven days.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
@@ -274,8 +275,8 @@ Use this task to delete from the database aged log data used for troubleshooting
 
 Use this task to delete from the database aged data for software metering that has been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -284,8 +285,8 @@ Use this task to delete from the database aged data for software metering that h
 
 Use this task to delete from the database aged summary data for software metering that's been stored longer than a specified time. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -294,8 +295,8 @@ Use this task to delete from the database aged summary data for software meterin
 
 This task deletes aged client presence history.
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -304,8 +305,8 @@ This task deletes aged client presence history.
 
 Use this task to delete from the site database information about client notification tasks. This task applies to data that hasn't been updated for a specified time. For more information, see [Client notifications](../../clients/manage/client-notification.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -314,8 +315,8 @@ Use this task to delete from the site database information about client notifica
 
 Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -324,8 +325,8 @@ Use this task at the top-level site of your hierarchy to delete aged Passcode Re
 
 Use this task to delete from the database aged data about database replication between Configuration Manager sites. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see [Monitor database replication](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
@@ -334,8 +335,8 @@ Use this task to delete from the database aged data about database replication b
 
 Use this task to delete from the site database aged replication summary data when it hasn't been updated for a specified time. For more information, see [Monitor database replication](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |**Secondary site**|Enabled|
@@ -344,8 +345,8 @@ Use this task to delete from the site database aged replication summary data whe
 
 Use this task to delete from the database aged status message data as configured in status filter rules. For more information, see [Monitor the status system of Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -354,8 +355,8 @@ Use this task to delete from the database aged status message data as configured
 
 Use this task to delete from the database aged Endpoint Protection threat data that's been stored longer than a specified time. For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -364,8 +365,8 @@ Use this task to delete from the database aged Endpoint Protection threat data t
 
 Use this task to delete information about unknown computers from the site database when it hasn't been updated for a specified time. For more information, see [Prepare for unknown computer deployments](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -374,8 +375,8 @@ Use this task to delete information about unknown computers from the site databa
 
 Use this task to delete aged User Device Affinity data from the database. For more information, see [Link users and devices with user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -384,8 +385,8 @@ Use this task to delete aged User Device Affinity data from the database. For mo
 
 Use this task to delete from the site database any duplicate records generated by system discovery.<!-- SCCMDocs#1339 -->
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |Primary site|Not available|
 |Secondary site|Not available|
@@ -394,8 +395,8 @@ Use this task to delete from the site database any duplicate records generated b
 
 Use this task to delete old Bulk Enrollment certificates and corresponding profiles after the enrollment certificate has expired. For more information, see [Create certificate profiles](../../../protect/deploy-use/create-certificate-profiles.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -409,8 +410,8 @@ This task operates only on resources that are Configuration Manager clients. It'
 > [!IMPORTANT]  
 > When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This configuration enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
 |Secondary site|Not available|
@@ -419,8 +420,8 @@ This task operates only on resources that are Configuration Manager clients. It'
 
 Use this task to delete from the database expired alerts that have been stored longer than a specified time. For more information, see [Use alerts and the status system](use-alerts-and-the-status-system.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -432,8 +433,8 @@ Use this task to delete obsolete client records from the database. A record that
 > [!IMPORTANT]  
 > When it's enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This configuration enables the client to send a Heartbeat Discovery record that correctly sets the obsolete status.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Not enabled|
 |Secondary site|Not available|
@@ -442,8 +443,8 @@ Use this task to delete obsolete client records from the database. A record that
 
 Use this task to delete data about Active Directory sites, subnets, and domains. It removes data that the site hasn't discovered by the Active Directory Forest Discovery method in the last 30 days. This task removes the discovery data, but doesn't affect boundaries that you create from this discovery data. For more information, see [Run discovery](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -452,8 +453,8 @@ Use this task to delete data about Active Directory sites, subnets, and domains.
 
 Use this task to periodically purge the table that contains client deployment state information. This task cleans up records associated with obsolete or decommissioned devices.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -462,8 +463,8 @@ Use this task to periodically purge the table that contains client deployment st
 
 You configure the Collection Membership Evaluation as a site component. For more information, see [Site components](../deploy/configure/site-components.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -472,8 +473,8 @@ You configure the Collection Membership Evaluation as a site component. For more
 
 Use this task to monitor the integrity of the Configuration Manager database primary keys. A primary key is a column or a combination of columns that uniquely identifies one row. The key distinguishes the row from any other row in a Microsoft SQL Server database table.
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Enabled|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -488,8 +489,8 @@ To improve performance, the Configuration Manager database indexes are frequentl
 - Drops indexes on columns that are less than 50 percent unique
 - Rebuilds all existing indexes that meet the data uniqueness criteria
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |**Central administration site**|Not enabled|
 |**Primary site**|Not enabled|
 |**Secondary site**|Not enabled|
@@ -500,8 +501,8 @@ Use this task to summarize the data from multiple records for software metering 
 
 To summarize software metering data and to conserve disk space in the database, use this task with the **Summarize Software Metering Monthly Usage Data** task. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -510,8 +511,8 @@ To summarize software metering data and to conserve disk space in the database, 
 
 Use this task to summarize the data from collected asset intelligence software information through the hardware inventory to merge multiple records into one general record. Data summarization can compress the amount of data that's stored in the Configuration Manager database. For more information, see [Configure Asset Intelligence maintenance tasks](../../clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_ConfigureMaintenanceTasks).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -522,8 +523,8 @@ Use this task to summarize the data from multiple records for software metering 
 
 To summarize software metering data and to conserve space in the database, use this task with the **Summarize Software Metering File Usage Data** task. For more information, see [Software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -534,8 +535,8 @@ Use this task to have Configuration Manager recalculate the mapping of policy an
 
 These mappings are stored in a table for quick reference. When a collections membership changes, the site updates these stored mappings to reflect those changes. However, it's possible for these mappings to fall out of sync. For example, if the site fails to properly process a notification file, that change might not be reflected in a change to the mappings. This task refreshes that mapping based on current collection membership.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|
@@ -544,8 +545,8 @@ These mappings are stored in a table for quick reference. When a collections mem
 
 Use this task to synchronize the Application Catalog website database cache with the latest application information. When you change the configuration of this maintenance task, it applies to all primary sites in the hierarchy.  
 
-|||
-|---------|---------|
+| Site type | Status |
+| --------- | ------ |
 |Central administration site|Not available|
 |**Primary site**|Enabled|
 |Secondary site|Not available|

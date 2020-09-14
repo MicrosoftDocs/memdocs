@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 When you integrate Intune with Microsoft Defender Advanced Threat Protection (ATP), you can take advantage of ATPs Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM. This integration brings a risk-based approach to the discovery and prioritization of vulnerabilities that can improve remediation response time across your environment.
 
-[Threat & Vulnerability Management](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## How integration works
 
@@ -79,7 +79,7 @@ An example workflow:
 - Configure a service to service connection with Microsoft Defender ATP.
 - Deploy a device configuration policy with a profile type of **Microsoft Defender ATP (Windows 10 Desktop)** to devices that will have risk assessed by ATP.
 
-  For information about how to set up Intune to work with ATP, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  For information about how to set up Intune to work with ATP, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## Work with security tasks
 
@@ -107,8 +107,9 @@ An example workflow:
 After remediation is successful, the risk exposure score in ATP can drop, based on new information from the remediated devices.
 
 ## Next Steps
+
 Learn more about Intune and [Microsoft Defender ATP](advanced-threat-protection.md).
 
 Review Intune [Mobile Threat Defense](mobile-threat-defense.md).
 
-Review the [Threat & Vulnerability Management dashboard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.
+Review the [Threat & Vulnerability Management dashboard](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender ATP.

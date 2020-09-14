@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c8c0f370-89b4-4fcf-9057-0867d1f6dc3d
 author: aczechowski
 ms.author: aaroncz
@@ -60,8 +60,8 @@ Class SMS_FullCollectionMembership : SMS_BaseClass
 
  Client certificate type. Possible values are:  
 
-|Self-signed Certificate|  
-|PKI Certificate|  
+- Self-signed Certificate  
+- PKI Certificate  
 
  `ClientType`  
  Data type: `UInt32`  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e843aaf1-f278-447d-82b1-642f4286b65d
 author: aczechowski
 ms.author: aaroncz
@@ -13,13 +13,13 @@ manager: dougeby
 
 ---
 # How to Delete a Configuration Manager Object by Using WMI
-To delete a Configuration Manager object, in Configuration Manager, call the [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject) object [Delete_](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject-delete-) method.  
+To delete a Configuration Manager object, in Configuration Manager, call the [SWbemObject](/windows/win32/wmisdk/swbemobject) object [Delete_](/windows/win32/wmisdk/swbemobject-delete-) method.  
 
 ### To delete a Configuration Manager object  
 
 1.  Set up a connection to the SMS Provider. For more information, see [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md).  
 
-2.  Using the [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices-get) method and specify the class and key information for the object you want to delete. `Get` returns a `SWbemObject` that represents the object.  
+2.  Using the [SWbemServices](/windows/win32/wmisdk/swbemservices) object you obtain from step one, call the [Get](/windows/win32/wmisdk/swbemservices-get) method and specify the class and key information for the object you want to delete. `Get` returns a `SWbemObject` that represents the object.  
 
 3.  Using the `SWbemObject`, call `Delete` to delete the object.  
 
@@ -61,7 +61,7 @@ End Sub
 |`packageID`|`String`|The package identifier. This is obtained from the `SMS_Package` class `PackageID`.|  
 
 ## See Also  
- [Windows Management Instrumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)   
+ [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page)   
  [Objects overview](configuration-manager-objects-overview.md)
  [How to Call a Configuration Manager Object Class Method by Using WMI](../../../develop/core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md)   
  [How to Connect to an SMS Provider in Configuration Manager by Using WMI](../../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
@@ -70,4 +70,4 @@ End Sub
  [How to Perform an Asynchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Perform a Synchronous Configuration Manager Query by Using WMI](../../../develop/core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md)   
  [How to Read a Configuration Manager Object by Using WMI](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md)   
- [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)   
+ [How to Read Lazy Properties by Using WMI](../../../develop/core/understand/how-to-read-lazy-properties-by-using-wmi.md)

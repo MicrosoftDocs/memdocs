@@ -1,7 +1,8 @@
 ---
 title: Application approval process
 titleSuffix: Configuration Manager
-ms.date: 04/15/2020
+description: Learn about the application approval process. See scenarios with code examples and view known issues.
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -104,7 +105,7 @@ If the admin revokes the approval, or the application is no longer in use, unins
 
 The admin revokes the approval of the application using the Configuration Manager console, a PowerShell script, or WMI. Even if the application was already approved, the admin can use the Deny option. Revoking the approval prevents the user from installing the application on their device. The same action also causes uninstallation of the application on the user's device if the application was previously installed.
 
-Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
+Learn more about the [Deny-CMApprovalRequest](/powershell/module/configurationmanager/Deny-CMApprovalRequest) cmdlet.
 
 ### Prerequisites to revoke app approvals
 
@@ -115,7 +116,7 @@ Learn more about the [Deny-CMApprovalRequest](https://docs.microsoft.com/powersh
 
  You can use the `CreateApprovedRequest` API to create a pre-approved request for a device with no user required. This action allows you to install and uninstall applications in real time.  Currently this functionality is only available in the SDK. For machine-based pre-approved requests to work, you must also enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
-Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
+Administrators can create a machine-available deployment that requires approval using the [New-CMApplicationDeployment](/powershell/module/configurationmanager/new-cmapplicationdeployment) cmdlet. Here's an example:
 
 ```powershell
 New-CMApplicationDeployment -CollectionName "All Systems" -Name "Test app" -DeployAction Install -DeployPurpose Available -ApprovalRequired $true -DistributionPointName 'DistributionPoint.domain.com" -DistributeContent
@@ -190,7 +191,7 @@ Administrators can configure email notifications for application approval reques
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration** -> **Sites**.
 1. Select the top-level site in your hierarchy and select **Configure Site Components** in the ribbon.
 1. Select **Email Notification** to open the **Properties** dialog.
-1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Office 365, you can use the [Office 365 SMTP server](https://docs.microsoft.com/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-3#option-3-configure-a-connector-to-send-mail-using-office-365-smtp-relay).
+1. Check **Enable email notification for alerts** and specify the port of your SMTP server. If you're using Microsoft 365, you can use the [Microsoft 365 SMTP server](/Exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
 1. Enter the FQDN or IP address of the SMTP server.
 1. Select to **Specify an account**, select **Set**, then select **New Account**.
 1. Provide a username and password for the new account and click **OK**.

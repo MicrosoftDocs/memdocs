@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -76,7 +76,7 @@ This scenario uses a Nokia 6.1 device. Before the Wi-Fi profile is installed on 
 
 On Android, the **Omadmlog.log** file details the activities of the Wi-Fi profile when it's installed on the device. You might have up to five Omadmlog log files. Be sure to get the timestamp of the last sync, as it will help you find the related log entries.
 
-In the following example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
+In the following example, use [CMTrace](/configmgr/core/support/cmtrace) to read the logs, and search for "wifimgr":
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi connection shows as a saved network](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## Common issues
 
-### Issue 1: The Wi-Fi profile isn't deployed to the device
+### The Wi-Fi profile isn't deployed to the device
 
 - Confirm the Wi-Fi profile is assigned to the correct group:
 
@@ -205,7 +205,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > For more information, see [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+  > For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 
 - On Android devices, if the Trusted Root and SCEP profiles aren't installed on the device, you see the following entry in the Company Portal app Omadmlog file:
 
@@ -240,7 +240,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Confirm that all required certificates in the complete certificate chain are on the Android device. Otherwise, the Wi-Fi profile can't be installed on the device. For more information, see [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (opens Android's web site).
   - Filter Omadmlog with keywords to look for information, such as which certificate is used in the Wi-Fi profile, and if the profile successfully applied.
 
-    For example, use [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
+    For example, use [CMTrace](/configmgr/core/support/cmtrace) to read the logs. Use the search string to filter "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![Filter CMTrace to look for WiFiMgr configuration profiles on Android devices](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
@@ -252,7 +252,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     If you see an error in the log, copy the time stamp of the error and unfilter the log. Then, use the "find" option with the time stamp to see what happened right before the error.
 
-### Issue 2: The Wi-Fi profile is deployed to the device, but the device can't connect to the network
+### The Wi-Fi profile is deployed to the device, but the device can't connect to the network
 
 Typically, this issue is caused by something outside of Intune. The following tasks may help you understand and troubleshoot connectivity issues:
 
@@ -260,6 +260,22 @@ Typically, this issue is caused by something outside of Intune. The following ta
 
   If you can connect, look at the certificate properties in the manual connection. Then, update the Intune Wi-Fi profile with the same certificate properties.
 - Connectivity errors are usually logged in the Radius server log. For example, it should show if the device tried to connect with the Wi-Fi profile.
+
+### Users don't get new profile after changing password on existing profile
+
+You create a corporate Wi-Fi profile, deploy the profile to a group, change the password, and save the profile. When the profile changes, some users may not get the new profile.
+
+To mitigate this issue, set up guest Wi-Fi. If the corporate Wi-Fi fails, users can connect to the guest Wi-Fi. Be sure to enable any automatically connect settings. Deploy the guest Wi-Fi profile to all users.
+
+Some additional recommendations:  
+
+- If the Wi-Fi network you're connecting to uses a password or passphrase, make sure you can connect to the Wi-Fi router directly. You can test with an iOS/iPadOS device.
+- After you successfully connect to the Wi-Fi endpoint (Wi-Fi router), note the SSID and the credential used (this value is the password or passphrase).
+- Enter the SSID and credential (password or passphrase) in the Pre-Shared Key field. 
+- Deploy to a test group that has limited number of users, preferably only the IT team. 
+- Sync your iOS/iPadOS device to Intune. Enroll if you haven't already enrolled. 
+- Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
+- Roll out to larger groups and eventually to all expected users in your organization. 
 
 ## Need more help
 

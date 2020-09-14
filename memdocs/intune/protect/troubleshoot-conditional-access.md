@@ -10,6 +10,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 07/23/2019
 ms.topic: troubleshooting
+ms.subservice: protect
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology:
@@ -31,7 +32,8 @@ ms.collection: M365-identity-device-management
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
 With Intune and Conditional Access, you can protect access to services like:
-- Office 365 services like Exchange Online, SharePoint Online, and Skype for Business Online
+
+- Microsoft 365 services like Exchange Online, SharePoint Online, and Skype for Business Online
 - Exchange on-premises
 - Various other services
 
@@ -47,11 +49,11 @@ The following requirements must be met for Conditional Access to work:
 
 - By default, the user must be assigned a device compliance policy. This can depend on the configuration of the setting **Mark devices with no compliance policy assigned as** which is under **Device Compliance** > **Compliance Policy Settings** in the Intune admin portal.
 
-- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS/iPadOS, Windows Phone, and Android Knox devices.
+- Exchange ActiveSync must be activated on the device if the user is using the device's native mail client rather than Outlook. This happens automatically for iOS/iPadOS and Android Knox devices.
 
 - For on-premise Exchange, your Intune Exchange Connector must be properly configured. For more information, see [Troubleshooting the Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- For on-premise Skype, you must configure Hybrid Modern Authentication. See [Hybrid Modern Auth Overview](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- For on-premise Skype, you must configure Hybrid Modern Authentication. See [Hybrid Modern Auth Overview](/office365/enterprise/hybrid-modern-auth-overview).
 
 You can view these conditions for each device in the Azure portal and in the device inventory report.
 
@@ -75,15 +77,15 @@ You can view these conditions for each device in the Azure portal and in the dev
 - Certain Android devices might appear to be encrypted, however the Company Portal app recognizes these devices as not encrypted and marks them as noncompliant. In this scenario, the user will see a notification in the Company Portal app asking them to set a start-up passcode for the device. After tapping the notification and confirming the existing PIN or password, choose the **Require PIN to start device** option on the **Secure start-up** screen, then tap the **Check Compliance** button for the device from the Company Portal app. The device should now be detected as encrypted. 
 
   > [!NOTE]
-  > Some device manufacturers encrypt their devices bu using a default PIN instead of a PIN set by the user. Intune views encryption that uses a default PIN as insecure and marks those devices as noncompliant until the user creates a new, non-default PIN.
+  > Some device manufacturers encrypt their devices by using a default PIN instead of a PIN set by the user. Intune views encryption that uses a default PIN as insecure and marks those devices as noncompliant until the user creates a new, non-default PIN.
 
 - An Android device that's enrolled and compliant might still be blocked and receive a quarantine notice when first trying to access corporate resources. If this occurs, make sure the Company Portal app isn't running, then select the **Get Started Now** link in the quarantine email to trigger evaluation. This should only need to be done when conditional access is first enabled.
 
-- An Android device that is enrolled might prompt the user with "No certificates found" and not be granted access to O365 resources. The user must enable the *Enable Browser Access* option on the enrolled device as follows:
+- An Android device that is enrolled might prompt the user with "No certificates found" and not be granted access to Microsoft 365 resources. The user must enable the *Enable Browser Access* option on the enrolled device as follows:
   1. Open the Company Portal app.
   2. Go to the Settings page from the triple dots (...) or the hardware menu button.
   3. Select the *Enable Browser Access* button.
-  4. In the Chrome browser, sign out of Office 365 and restart Chrome.  
+  4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.  
 
 
 ## Devices are blocked and no quarantine email is received
@@ -96,7 +98,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 ## Devices are noncompliant but users are not blocked
 
-- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require AAD Device Registration and Active Directory Federation Services (AD FS) configurations as per [Set up SharePoint Online and Exchange Online for Azure Active Directory Conditional Access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Azure AD Device Registration and Active Directory Federation Services (AD FS) configurations as per [Set up SharePoint Online and Exchange Online for Azure Active Directory Conditional Access](/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - If the device is selectively wiped or retired from Intune, it might continue to have access for several hours after retirement. This is because Exchange caches access rights for six hours. Consider other means of protecting data on retired devices in this scenario.
 

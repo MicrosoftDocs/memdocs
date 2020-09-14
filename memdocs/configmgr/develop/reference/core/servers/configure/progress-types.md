@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 671f44e2-a86d-494f-a81e-235400f6db8d
 author: aczechowski
 ms.author: aaroncz
@@ -33,7 +33,7 @@ static const WCHAR S_DTS_PROGRESS_DOWNLOADING_DATA[]        = L"DownloadingData"
 
 ## Types  
 
-|||  
+|Progress type|Description|  
 |-|-|  
 |S_DTS_PROGRESS_DOWNLOADING_MANIFEST|Determining list of files to download.|  
 |S_DTS_PROGRESS_PROCESSING_MANIFEST|Processing list of files.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "04/30/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 32952cd0-65f7-4106-9e58-8392d9ef0c6b
 author: aczechowski
 ms.author: aaroncz
@@ -86,7 +86,7 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  Application status type. Possible values are:  
 
-|||  
+|Value|Application status|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  
@@ -148,7 +148,7 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  Intended purpose of the deployment, regardless of the Action (Install or Uninstall) specified. Possible values are:  
 
-|||  
+|Value|Intended purpose|  
 |-|-|  
 |1|Required|  
 |2|Available|  
@@ -199,7 +199,7 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  The enforcement state. Possible values are:  
 
-|||  
+|Value|Enforcement state|  
 |-|-|  
 |0|Enforcement State Unknown|  
 |1|Enforcement started|  
@@ -244,7 +244,7 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  Installed state. Possible values are:  
 
-|||  
+|Value|Installed state|  
 |-|-|  
 |1|Uninstall|  
 |2|Install|  
@@ -331,7 +331,7 @@ Class SMS_AppDeploymentAssetDetails : SMS_BaseClass
 
  Status type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

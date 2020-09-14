@@ -79,9 +79,6 @@ With the publication selected, choose **Export** from the **Home** tab of the ri
 
 You also have the option to export (include) dependent software updates as part of the export.
 
-## Rename a publication
-To rename a publication, select the publication the **Publications Workspace**, and then choose **Edit** from the **Publication** tab of the ribbon.
-
 ## Delete a publication
 To delete a publication, select the publication the **Publications Workspace**, and then choose **Delete** from the **Publication** tab of the ribbon.
 

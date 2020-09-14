@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 18ca108c-5c3c-4022-b72b-b3a62ce53549
 author: aczechowski
 ms.author: aaroncz
@@ -121,8 +121,8 @@ Class SMS_CM_UpdatePackages : SMS_BaseClass
 
  Bit to indicate impact. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0x01|Site server|  
 |0x02|Console|  
 |0x04|Client|  
@@ -201,8 +201,8 @@ Class SMS_CM_UpdatePackages : SMS_BaseClass
 
  Flag for pre-requisites. Valid values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0x1|Prereq only|  
 |0x2|CONTINUE_ON_PREREQ_WARNING|  
 
@@ -251,8 +251,8 @@ Class SMS_CM_UpdatePackages : SMS_BaseClass
 
  Package type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0|Regular Update|  
 |1|Weave|  
 |2|QFE|  
@@ -266,8 +266,8 @@ Class SMS_CM_UpdatePackages : SMS_BaseClass
 
  Warning flag. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0|Bypass warning|  
 |1|Do not bypass warning|  
 

@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ Before you start troubleshooting, collect some basic information to clarify the 
 - Review the prerequisites from the following articles, depending on how you configure Jamf Pro integration with Intune:
   - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
   - [Integrate Jamf Pro with Intune](conditional-access-integrate-jamf.md#prerequisites)
-- All users must have Microsoft Intune and Microsoft AAD Premium P1 licenses
+- All users must have Microsoft Intune and Microsoft Azure AD Premium P1 licenses
 - You must have a user account that has Microsoft Intune Integration permissions in the Jamf Pro console.
 - You must have a user account that has Global Admin permissions in Azure.
 
@@ -88,7 +88,7 @@ After a device is marked as *Unresponsive* by Jamf Pro, the enrolled user of the
 
 ### Mac devices prompt for keychain sign-in when you open an app  
 
-After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft Office 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
+After you configure Intune and Jamf Pro integration and deploy conditional access policies, users of devices managed with Jamf Pro receive prompts for a password when opening Microsoft 365 applications, like Teams, Outlook, and other apps that require Azure AD authentication. 
 
 For example, a prompt with text similar to the following example appears when opening Microsoft Teams:
 
@@ -160,7 +160,7 @@ In the Company Portal app, the user might see **`Not registered`**, and an entry
 
 **Resolution**  
 To change the registration source from Intune to Jamf:
-1. [Unenroll the macOS device from Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). To avoid further complications for devices that aren't fully removed from Intune, see [*Cause 6*](#cause-6) in this list of causes.  
+1. [Unenroll the macOS device from Intune](../user-help/unenroll-your-device-from-intune-macos.md). To avoid further complications for devices that aren't fully removed from Intune, see [*Cause 6*](#cause-6) in this list of causes.  
 
 2. On the device, use Jamf Self Service to open the Company Portal app, and then enroll the device with Intune. This task requires you to have [used Jamf to deploy the Company Portal app for macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro), and to have [created a policy in Jamf Pro that registers the users device with Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
@@ -208,14 +208,13 @@ If a device is unenrolled from Jamf but not correctly removed from Intune, or se
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net

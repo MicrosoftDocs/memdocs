@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d11a4300-8477-4d7b-a405-eb4e6f81e28e
 author: aczechowski
 ms.author: aaroncz
@@ -65,7 +65,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  Status personality. Possible values are:  
 
-|||  
+|Value|Personality|  
 |-|-|  
 |0|NONE|  
 |1|MAC|  
@@ -107,7 +107,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  Status. Possible values are:  
 
-|||  
+|Value|Status|  
 |-|-|  
 |0|NONE|  
 |1|SENT|  
@@ -127,7 +127,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  The status type. Possible values are:  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|MASTER|  
 |2|COPY|  

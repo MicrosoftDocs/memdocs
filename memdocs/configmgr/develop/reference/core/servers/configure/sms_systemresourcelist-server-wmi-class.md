@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f43f66b7-5ec4-4a47-91f2-cdbd61654147
 author: aczechowski
 ms.author: aaroncz
@@ -119,7 +119,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 
  SSL state description. Possible values are:  
 
-|||  
+|Value|SSL state|  
 |-|-|  
 |0|HTTP|  
 |1|HTTPS|  

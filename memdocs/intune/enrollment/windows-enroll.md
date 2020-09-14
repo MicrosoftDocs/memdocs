@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) with their work or school account.  
+This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](../user-help/windows-enrollment-company-portal.md) with their work or school account.  
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
@@ -43,7 +43,7 @@ As an Intune admin, you can simplify enrollment in the following ways:
 
 Two factors determine how you can simplify Windows device enrollment:
 
-- **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
+- **Do you use Azure Active Directory Premium?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
 - **What versions of Windows clients will users enroll?** <br>Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
 
 ||**Azure AD Premium**|**Other AD**|
@@ -127,10 +127,10 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
+| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 hour|
 
 For more information about device registration, see
-[Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+[Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
 
 ## Windows 10 auto enrollment and device registration
 

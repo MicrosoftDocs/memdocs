@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -74,7 +75,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 5. Click **Next: Device management**.<br>
    The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](../configuration/device-profiles.md) and [device compliance policies](../protect/device-compliance-get-started.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
 6. Click **Next: Device enrollment**.<br>
-   The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [device type restrictions](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot deployment profiles](../enrollment/enrollment-autopilot.md), and [enrollment status page profiles](../enrollment/windows-enrollment-status.md).
+   The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [device type restrictions](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot deployment profiles](../../autopilot/enrollment-autopilot.md), and [enrollment status page profiles](../enrollment/windows-enrollment-status.md).
 7. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy set to users and devices. It is important to note that you can assign a policy set to a device whether or not the device is managed by Intune.
 8. Click **Next: Review + create** to review the values you entered for the profile.

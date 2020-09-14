@@ -5,11 +5,12 @@ description: Learn about the specific data that Configuration Manager collects a
 ms.date: 05/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Diagnostic and usage data for version 1810
@@ -145,7 +146,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Count of distinct branding for application catalog  
 
-- Count of Office 365 applications created using dashboard  
+- Count of Microsoft 365 applications created using dashboard  
 
 - Count of packages by type  
 
@@ -301,7 +302,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Windows Hello for Business policy (created, deployed)  
 
-- Count of deployed Microsoft Edge browser policies  
+- Count of deployed Microsoft Edge Legacy browser policies  
 
 
 ### Content  
@@ -426,7 +427,7 @@ For Configuration Manager version 1810, this level includes the following data:
 
 - Configurations that are used for active Windows 10 servicing plans  
 
-- Count of deployed Office 365 updates  
+- Count of deployed Microsoft 365 updates  
 
 - Count of Microsoft Surface drivers synced  
 

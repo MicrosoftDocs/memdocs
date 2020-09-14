@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 04/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -98,6 +99,6 @@ The app you've created is displayed in the apps list, where you can assign it to
 > Currently, Apple does not provide a way for Intune to uninstall Microsoft Edge on macOS devices.
 
 ## Next steps
-- To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+- To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](/deployedge/configure-microsoft-edge-on-mac).
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 - [Assign apps to groups](apps-deploy.md)

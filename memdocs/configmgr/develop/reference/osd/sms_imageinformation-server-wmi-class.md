@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 90235fe7-fbcd-4fd0-a76c-fa7b389bd5b8
 author: aczechowski
 ms.author: aaroncz
@@ -157,8 +157,8 @@ Class SMS_ImageInformation : SMS_BaseClass
 
  Secured object type.  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |14|SMS_OperatingSystemInstallPackage|  
 |18|SMS_ImagePackage|  
 |19|SMS_BootImagePackage|  
@@ -190,8 +190,8 @@ Class SMS_ImageInformation : SMS_BaseClass
 
  Image package type.  
 
-|||  
-|-|-|  
+| Value | Package type |  
+| ----- | ------------ |  
 |257|PKG_TYPE_IMAGE|  
 |258|PKG_TYPE_BOOTIMAGE|  
 |259|PKG_TYPE_OSINSTALLIMAGE|  

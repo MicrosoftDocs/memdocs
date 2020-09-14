@@ -11,6 +11,7 @@ manager: dougeby
 ms.date: 05/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -38,7 +39,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 - Deploy kernel extension in Intune. See more information, see [Add macOS kernel extensions in Intune](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> The kernel extension can be automatically approved only if it is present on the device before the Microsoft Defender ATP app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> The kernel extension can be automatically approved only if it is present on the device before the Microsoft Defender ATP app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender ATP for Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## Add Microsoft Defender ATP to Intune
 You can add Microsoft Defender ATP to Intune using the following steps:
@@ -83,4 +84,3 @@ The app you've created is displayed in the apps list, where you can assign it to
 - To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../protect/endpoint-security-antivirus-policy.md) 
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 - To learn how to assign apps to groups in Intune, see [Assign apps to groups](apps-deploy.md).
-

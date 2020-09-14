@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7519ce9f-c724-4985-808f-24268cfeb60b
 author: aczechowski
 ms.author: aaroncz
@@ -163,7 +163,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 
  Type is used to indicate if this setting is 'Device', 'User' or 'Default'. For `SMS_ClientSettingsDefault`, it is 0 meaning 'Default'.  
 
-|||  
+|Value|Setting type|  
 |-|-|  
 |0|Default|  
 |1|Device|  

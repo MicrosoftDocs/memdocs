@@ -43,7 +43,7 @@ For general help and support for Intune, see [Get support for Intune](get-suppor
 
 ## Provide doc feedback
 
-The Feedback section is at the bottom of each article. Click the **Feedback** link in the upper right of any article to go to this section. Feedback is integrated with GitHub Issues. For more information about the integration with GitHub Issues, see this [docs platform blog post](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+The Feedback section is at the bottom of each article. Click the **Feedback** link in the upper right of any article to go to this section. Feedback is integrated with GitHub Issues. For more information about the integration with GitHub Issues, see this [docs platform blog post](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 To share feedback about the Intune service (not docs), click **Product feedback**.
 
@@ -63,13 +63,13 @@ Use GitHub Issues to submit the following types of feedback:
 - Localization: Feedback about content translation.
 - Search engine optimization (SEO): Feedback about problems searching for content. Include the search engine, keywords, and target article in the comments.
 
-If issues are raised for non-doc-related topics, such as [product feedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [product questions](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod), or [support requests](get-support.md), these issues will be closed and the user redirected to the proper feedback channel.
+If issues are raised for non-doc-related topics, such as [product feedback](https://microsoftintune.uservoice.com/forums/291681-ideas), [product questions](/answers/products/mem), or [support requests](get-support.md), these issues will be closed and the user redirected to the proper feedback channel.
 
 To share feedback on the docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
 
 ## Contribute to docs
 
-The Intune docs, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](https://docs.microsoft.com/contribute). Creating a [GitHub account](https://github.com/join) is the only prerequisite.
+The Intune docs, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](/contribute). Creating a [GitHub account](https://github.com/join) is the only prerequisite.
 
 ### Basic steps to contribute to docs
 
@@ -77,7 +77,7 @@ The Intune docs, like most content on docs.microsoft.com, is open-sourced on Git
 
 2. To edit the source file, click the pencil icon.  
 
-3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
+3. Make changes in the markdown source. For more information, see [How to use Markdown for writing Docs](/contribute/contribute-how-to-write-use-markdown).  
 
 4. In the Propose file change section, enter the public commit comment describing *what* you changed. Then click **Propose file change**.  
 
@@ -104,7 +104,7 @@ Follow these general guidelines when contributing to Intune docs:
 
 - Don't surprise us with large pull requests. Instead, [file an issue](#provide-doc-feedback) and start a discussion. Then we can agree on a direction before you invest a large amount of time.  
 
-- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Read the [Microsoft style guide](https://aka.ms/MicrosoftStyle). Know the [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice).  
 
 - Follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).  
 
@@ -112,7 +112,7 @@ Follow these general guidelines when contributing to Intune docs:
 
 ## Consolidation of documentation for Microsoft Endpoint Manager
 
-To better support combined scenarios for Intune and Configuration Manager, the Intune and Configuration Manager documentation have been consolidated on the Microsoft Endpoint Manager site. The Intune documentation is now at [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) and the Configuration Manager documentation library is available at [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). All links will automatically redirect if you are using an old URL, so you don't need to make any changes for reading this content.
+To better support combined scenarios for Intune and Configuration Manager, the Intune and Configuration Manager documentation have been consolidated on the Microsoft Endpoint Manager site. The Intune documentation is now at [../index.yml](../index.yml) and the Configuration Manager documentation library is available at [../../configmgr/index.yml](../../configmgr/index.yml). All links will automatically redirect if you are using an old URL, so you don't need to make any changes for reading this content.
 
 If you provide feedback or contribute to articles, some changes are necessary:
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73
 author: aczechowski
 ms.author: aaroncz
@@ -115,7 +115,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  The type of the configuration item. Possible values are:  
 
-|||  
+|Value|Configuration item type|  
 |-|-|  
 |1|SoftwareUpdate|  
 |2|Baseline|  
@@ -207,7 +207,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Possible values are:  
 
-|||  
+|Value|License terms acceptance|  
 |-|-|  
 |0|Declined|  
 |1|Accepted|  
@@ -249,7 +249,7 @@ Class SMS_ConfigurationItemLatestBaseClass : SMS_BaseClass
 
  Execution context that the configuration item should be evaluated under.  
 
-|||  
+|Value|Execution context|  
 |-|-|  
 |0|System|  
 |1|User|  

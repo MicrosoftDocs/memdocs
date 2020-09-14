@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 11ec1d68-c5ee-4822-a519-b92011909d1d
 author: aczechowski
 ms.author: aaroncz
@@ -28,9 +28,9 @@ You can refer to the following posts for additional details about creating appli
 
 - **Saving the World One Line of Code at a Time**  
 
-    [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](https://docs.microsoft.com/archive/blogs/one_line_of_code_at_a_time/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk)  
+    [How to Create a Basic App using the Configuration Manager 2012 Beta 2 SDK](/archive/blogs/one_line_of_code_at_a_time/how-to-create-a-basic-app-using-the-configuration-manager-2012-beta-2-sdk)  
 
-- [Adam Meltzer's Configuration Manager blog](https://docs.microsoft.com/archive/blogs/ameltzer/)
+- [Adam Meltzer's Configuration Manager blog](/archive/blogs/ameltzer/)
 
 - **SDK Sample: AppSupersedence**  
 

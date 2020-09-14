@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3f694e79-24c2-4c18-b4b9-095fa12df1e8
 author: aczechowski
 ms.author: aaroncz
@@ -74,7 +74,7 @@ Class SMS_DCMDeploymentCompliantAssetDetails : SMS_BaseClass
 
  Type of the asset. Possible values are:  
 
-|||  
+|Value|Asset type|  
 |-|-|  
 |0|USER|  
 |1|MACHINE|  
@@ -151,7 +151,7 @@ Class SMS_DCMDeploymentCompliantAssetDetails : SMS_BaseClass
 
  Type of client. Possible values are:  
 
-|||  
+|Value|Client type|  
 |-|-|  
 |1|WINDOWS_CLIENT|  
 |2|WINDOWS_MOBILE|  
@@ -201,7 +201,7 @@ Class SMS_DCMDeploymentCompliantAssetDetails : SMS_BaseClass
 
  Status of the deployment to the targeted asset. Possible values are:  
 
-|||  
+|Value|Deployment status|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1d6955c4-1a76-4d90-b6d3-5b9a8f25eb84
 author: aczechowski
 ms.author: aaroncz
@@ -90,8 +90,8 @@ Class SMS_ImageUpdateStatus : SMS_BaseClass
 
  Applicability state for software update.  
 
-|||  
-|-|-|  
+| Value | Update status |  
+| ----- | ------------- |  
 |0|Unknown|  
 |1|Not Required|  
 |2|Installed|  

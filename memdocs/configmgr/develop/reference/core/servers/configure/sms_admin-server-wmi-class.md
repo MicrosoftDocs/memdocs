@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
 author: aczechowski
 ms.author: aaroncz
@@ -64,7 +64,7 @@ Class SMS_Admin : SMS_BaseClass
 
  The type of account. The possible values are:  
 
-|||  
+|Value|Account type|  
 |-|-|  
 |0|User|  
 |1|Group|  

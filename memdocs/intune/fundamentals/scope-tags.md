@@ -86,14 +86,11 @@ When working with scope tags, remember these details:
 - You can assign scope tags to an Intune object type if the tenant can have multiple versions of that object (such as role assignments or apps).
   The following Intune objects are exceptions to this rule and don't currently support scope tags:
     - Windows ESP profiles
-    - Device Categories
-    - Enrollment Restrictions
     - Corp Device Identifiers
     - Autopilot Devices
     - Device compliance locations
     - Jamf devices
 - VPP apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
-- Device Enrollment Program (DEP) devices and DEP profiles associated with the DEP token inherit the scope tags assigned to the associated DEP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin will be automatically assigned to the new object.
 - Intune RBAC doesn't apply to Azure Active Directory roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.

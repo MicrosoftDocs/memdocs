@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
+ms.author: mstewart
 
 
 ---
@@ -80,7 +80,7 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 <!--3608345-->
 *(Introduced in version 1910)*
 
-Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Office 365 resources. For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
+Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Microsoft 365 Apps resources. For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 

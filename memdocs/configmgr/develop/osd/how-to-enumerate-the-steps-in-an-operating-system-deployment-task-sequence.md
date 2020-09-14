@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438a
 author: aczechowski
 ms.author: aaroncz
@@ -102,7 +102,7 @@ public void RecurseTaskSequenceSteps(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemservices)|A valid task sequence (`SMS_TaskSequence`). The group is added to this task sequence.|  
 |`indent`|-   Managed: `Integer`<br />-   VBScript: `Integer`|Indent is used to space console output for child groups.|  
 
 ## Compiling the Code  

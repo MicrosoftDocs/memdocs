@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cd15f059-a89a-4990-8048-b8976237128a
 author: aczechowski
 ms.author: aaroncz
@@ -163,7 +163,7 @@ Class SMS_SoftwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  The reporting details. Possible values are:  
 
-|||  
+|Value|Report options|  
 |-|-|  
 |1|Product Only|  
 |2|File Only|  

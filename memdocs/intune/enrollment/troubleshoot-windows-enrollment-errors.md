@@ -136,7 +136,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 ### Looks like the MDM Terms of Use endpoint is not correctly configured.
 
 **Cause:** One of the following conditions is true: 
- - You use both Mobile Device Management (MDM) for Office 365 and Intune on the tenant, and the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license.     
+ - You use both Mobile Device Management (MDM) for Microsoft 365 and Intune on the tenant, and the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license.     
 - The MDM terms and conditions in Azure AD is blank or doesn't contain the correct URL.    
 
 #### Resolution
@@ -144,7 +144,7 @@ Assign a valid Intune license to the user, and then enroll the device.
 To fix this issue, use one of the following methods: 
  
 ##### Assign a valid license to the user
-Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Office 365 license to the user.
+Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Microsoft 365 license to the user.
 
 ##### Correct the MDM terms of use URL
   1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.    
@@ -219,9 +219,9 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
    If you choose **Selected**, click **Selected**, and then click **Add Members** to add all users who can join their devices to Azure AD. Make sure that all Azure AD accounts for the provisioning package are added.
  
-For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
+For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package).
 
-For more information about the Set up School PCs app, see [Use the Set up School PCs app](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
+For more information about the Set up School PCs app, see [Use the Set up School PCs app](/education/windows/use-set-up-school-pcs-app).
 
 
 ### Auto MDM Enroll: Failed 
@@ -279,8 +279,14 @@ Make sure that the naming format meets the following requirements:
 **Cause:** This issue occurs if there's a proxy, firewall, or other network device that's blocking access to the Identity Provider (IdP).
 
 #### Resolution
-Make sure that the required access to internet-based services for Autopilot isn't blocked. For more information, see [Windows Autopilot networking requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+Make sure that the required access to internet-based services for Autopilot isn't blocked. For more information, see [Windows Autopilot networking requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
+### Autopilot device enrollment failed with error HRESULT = 0x80180022
+
+**Cause:** The device being provisioned is running Windows Home Edition
+
+#### Resolution
+Update the device to Pro edition or higher
 
 ### Registering your device for mobile management (Failed:3, 0x801C03EA).
 
@@ -291,7 +297,7 @@ Upgrade the TPM chip to version 2.0.
 
 If the issue persists, check whether the same device is in two assigned groups, with each group being assigned a different Autopilot profile. If it is in two groups, determine which Autopilot profile should be applied to the device, and then remove the other profile's assignment.
 
-For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### Securing your hardware (Failed: 0x800705b4).
@@ -314,7 +320,7 @@ Registering your device for mobile management (Previous step failed)
 #### Resolution
 Make sure that the targeted device meets both requirements that are described in the **Cause** section.
 
-For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+For more information about how to deploy a Windows device in kiosk mode with Autopilot, see [Deploying a kiosk using Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### Something went wrong. Error Code 80070774.
@@ -362,7 +368,7 @@ Description:
 }
 ```
 
-This issue is usually caused by incorrectly delegating permissions to the organizational unit where the Windows Autopilot devices are created. For more information, see [Increase the computer account limit in the Organizational Unit](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+This issue is usually caused by incorrectly delegating permissions to the organizational unit where the Windows Autopilot devices are created. For more information, see [Increase the computer account limit in the Organizational Unit](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
 2. Right-click the organizational unit that you will use to create hybrid Azure AD-joined computers > **Delegate Control**.
@@ -395,4 +401,4 @@ Try either of the following:
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Get support for Microsoft Intune](../fundamentals/get-support.md)
-- [Find co-management enrollment errors](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [Find co-management enrollment errors](/configmgr/comanage/how-to-monitor#enrollment-errors)

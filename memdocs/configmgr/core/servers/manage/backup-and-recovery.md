@@ -44,7 +44,7 @@ The sections in this article can help you back up your sites. To recover a site,
 ####  Using Data Protection Manager to back up your site database
 You can use System Center Data Protection Manager (DPM) to back up your Configuration Manager site database.
 
-Create a new protection group in DPM for the site database computer. On the **Select Group Members** page of the Create New Protection Group Wizard, you select the SMS Writer service from the data source list. Then select the site database as an appropriate member. For more information about using DPM, see the [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) documentation library.  
+Create a new protection group in DPM for the site database computer. On the **Select Group Members** page of the Create New Protection Group Wizard, you select the SMS Writer service from the data source list. Then select the site database as an appropriate member. For more information about using DPM, see the [Data Protection Manager](/system-center/dpm) documentation library.  
 
 > [!IMPORTANT]  
 >  Configuration Manager doesn't support DPM backup for a SQL Server cluster that uses a named instance. It does support DPM backup on a SQL Server cluster that uses the default instance of SQL Server.  
@@ -141,7 +141,7 @@ The AfterBackup.bat file lets you archive the backup snapshot at the end of ever
 If the AfterBackup.bat file isn't present, the backup task skips it without effect on the backup operation. To verify that the backup task successfully ran this script, go to the **Component Status** node in the **Monitoring** workspace, and review the status messages for **SMS_SITE_BACKUP**. When the task successfully starts the AfterBackup.bat command file, you see message ID **5040**.  
 
 > [!TIP]  
->  To archive your site server backup files with AfterBackup.bat, you must use a copy command tool in the batch file. One such tool is [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) in Windows Server. For example, create the AfterBackup.bat file with the following command: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  To archive your site server backup files with AfterBackup.bat, you must use a copy command tool in the batch file. One such tool is [Robocopy](/windows-server/administration/windows-commands/robocopy) in Windows Server. For example, create the AfterBackup.bat file with the following command: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
 Although the intended use of the AfterBackup.bat is to archive backup snapshots, you can create an AfterBackup.bat file to run additional tasks at the end of every backup operation.  
 
@@ -162,7 +162,7 @@ If you modify predefined or created custom reports in SQL Server Reporting Servi
 > [!IMPORTANT]  
 >  When Configuration Manager updates to a newer version, the predefined reports might be overwritten by new reports. If you modify a predefined report, make sure to back up the report and then restore it in Reporting Services.  
 
-For more information about backing up your custom reports in Reporting Services, see [Backup and Restore Operations for Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
+For more information about backing up your custom reports in Reporting Services, see [Backup and Restore Operations for Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
 
 ### Back up content files  
 The content library in Configuration Manager is the location where all content files are stored for all software deployments. The content library is located on the site server and on each distribution point. The Backup Site Server maintenance task doesn't back up the content library or package source files. When a site server fails, the information about the content library is restored to the site database, but you must restore the content library and package source files.  
@@ -231,9 +231,9 @@ The writer ID for the SMS Writer is **03ba67dd-dc6d-4729-a038-251f7018463b**.
 The SMS Writer service must run under the Local System account.  
 
 ### Volume Shadow Copy service  
-The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
+The VSS is a set of COM APIs that implements a framework to allow volume backups to be performed while applications on a system continue to write to the volumes. The VSS provides a consistent interface that allows coordination between user applications that update data on disk (the SMS Writer service) and those that back up applications (the Backup Manager service). For more information, see the [Volume Shadow Copy Service](/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 
 ## Next steps
-After you create a backup, practice [site recovery](recover-sites.md) with that backup. This practice can help you become familiar with the recovery process before you need to rely on it. It can also help confirm the backup was successful for its intended purpose.  
+After you create a backup, practice [site recovery](recover-sites.md) with that backup. This practice can help you become familiar with the recovery process before you need to rely on it. It can also help confirm the backup was successful for its intended purpose.

@@ -2,7 +2,7 @@
 title: Configure boundary groups
 titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations called boundaries
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -149,8 +149,16 @@ If you configure the content to distribute on-demand, and it isn't available on 
 
 ### <a name="bkmk_ccmsetup"></a> Client installation
 
+The Configuration Manager client installer, ccmsetup, can get installation content from a local source or via a management point. Its initial behavior depends upon the command-line parameters you use to install the client:<!-- MEMDocs#286 -->
+
+- If you don't use either **/mp** or **/source** parameters, ccmsetup tries to get a list of management points from Active Directory or DNS.
+- If you only specify **/source**, it forces the installation from the specified path. It doesn't discover management points. If it can't find ccmsetup.cab at the specified path, ccmsetup fails.
+- If you specify both **/mp** and **/source**, it checks the specified management points, and any it discovers. If it can't locate a valid management point, it falls back to the specified source path.
+
+For more information on these ccmsetup parameters, see [Client installation parameters and properties](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-When installing the Configuration Manager client, the ccmsetup process contacts the management point to locate the necessary content. The management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
+When ccmsetup contacts the management point to locate the necessary content, the management point returns distribution points based on boundary group configuration. If you define relationships on the boundary group, the management point returns distribution points in the following order:
 
 1. Current boundary group  
 2. Neighbor boundary groups  
@@ -299,7 +307,7 @@ In version 1902, this setting is now titled **Prefer cloud based sources over on
 - Cloud distribution points
 - Microsoft Update (added in version 1902)
 
-## Software update points
+## <a name="bkmk_sup"></a> Software update points 
 
 Clients use boundary groups to find a new software update point. To control which servers a client can find, add individual software update points to different boundary groups.
 
@@ -352,6 +360,13 @@ When you switch to a new server, the devices use fallback to find that new serve
 Review your boundary group configurations. Before you start this change, make sure that your software update points are in the correct boundary groups.
 
 For more information, see [Manually switch clients to a new software update point](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
+
+### <a name="bkmk_cmg-sup"></a> Intranet clients can use a CMG software update point
+<!--7102873-->
+Starting in version 2006, intranet clients can  access a CMG software update point when it's assigned to a boundary group and the [**Allow Configuration Manager cloud management gateway traffic** option is enabled](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) on the software update point. You can allow intranet devices to scan against a CMG software update point in the following scenarios:
+
+- When an internet machine connects to the VPN, it will continue scanning against the CMG software update point over the internet.
+- If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
 
 ## Management points
 

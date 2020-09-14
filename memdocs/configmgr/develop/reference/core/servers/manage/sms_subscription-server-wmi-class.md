@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: fea685d0-28f0-43e1-81e0-f51d4aaf67ab
 author: aczechowski
 ms.author: aaroncz
@@ -145,8 +145,8 @@ Class SMS_Subscription : SMS_BaseClass
 
  Type of subscription. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Type |
+| ----- | ---- |
 |1|Alert subscriptions.|  
 
  The default value is 1.  

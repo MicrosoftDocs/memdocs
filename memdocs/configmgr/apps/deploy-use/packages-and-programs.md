@@ -64,7 +64,9 @@ Packages can use some new features of Configuration Manager, including distribut
     - **Source folder**: If the package contains source files, choose **Browse** to open the **Set Source Folder** dialog box, and then specify the location of the source files for the package.  
 
         > [!NOTE]  
-        > The computer account of the site server must have read access permissions to the source folder that you specify.  
+        > The computer account of the site server must have read access permissions to the source folder that you specify.
+        >
+        > Windows limits the source path to 256 characters or less. This limit applies to package source as well as applications. For more information, see [Naming Files, Paths, and Namespaces](/windows/win32/fileio/naming-a-file).
 
     - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 

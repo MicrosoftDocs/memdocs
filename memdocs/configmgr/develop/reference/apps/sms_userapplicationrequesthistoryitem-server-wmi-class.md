@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 4d140550-c95a-4367-8d24-b0704de33c0a
 author: aczechowski
 ms.author: aaroncz
@@ -69,7 +69,7 @@ Class SMS_UserApplicationRequestHistoryItem :
 
  The state of the request after the change was made. Possible values are:  
 
-|||  
+|Value|State|  
 |-|-|  
 |1|Requested|  
 |2|Canceled|  

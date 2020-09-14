@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 6b72a1e3-42c3-4481-ab79-f1199d187a28
 author: aczechowski
 ms.author: aaroncz
@@ -42,8 +42,8 @@ uint32 CheckSourceFolder
 
  Results of check. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Result |
+| ----- | ------ |
 |0|No error.|  
 |1|The folder is not in UNC format.|  
 |2|Cannot read/write to the folder.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ff6b4c0d-9482-4169-9035-2af757c50450
 author: aczechowski
 ms.author: aaroncz
@@ -68,8 +68,8 @@ sint32 TestSmtpConnection(
 
  Authentication type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Authentication type |
+| ----- | ------------------- |
 |0|Anonymous access.|  
 |1|Use the computer account of the site server.|  
 |2|Use the specified user name and password.|  

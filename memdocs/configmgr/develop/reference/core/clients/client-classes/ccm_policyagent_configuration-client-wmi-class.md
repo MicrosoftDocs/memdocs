@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 72e377e9-0494-4ec6-a7b6-4361df7112e2
 author: aczechowski
 ms.author: aaroncz
@@ -77,8 +77,8 @@ Class CCM_PolicyAgent_Configuration : CCM_Policy
 
  Method used by the Policy Agent to download policy files. Possible values are listed below. This value can only be NULL if `PolicyRequestTarget` is NULL. This value should not be changed.  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |FILECOPY|Copy policy files using standard file copy operations. Policy paths must be local or Universal Naming Convention (UNC) file paths. This value is intended for testing only.|  
 |HTTP|Download policy files synchronously by using direct HTTP. Policy paths must be HTTP URLs.|  
 |BITS|Drizzle policy files asynchronously by using the Data Transfer Service. Policy paths must be HTTP URLs.|  

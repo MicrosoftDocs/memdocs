@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 80356bbf-d4d3-420f-b1ec-305e25257ae2
 author: aczechowski
 ms.author: aaroncz
@@ -113,8 +113,8 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  Policy type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Policy type |  
+| ----- | ----------- |  
 |1|Default AM Policy|  
 |2|Customized AM Policy|  
 
@@ -145,8 +145,8 @@ Class SMS_G_SYSTEM_AmPolicyStatus : SMS_G_System
 
  The state of this policy on this computer.  
 
-|||  
-|-|-|  
+| Value | Policy state |  
+| ----- | ------------ |  
 |1|Success|  
 |2|Failure|  
 

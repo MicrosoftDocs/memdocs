@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eee2fd3a-3840-4201-8bf9-5b775234aa07
 author: aczechowski
 ms.author: aaroncz
@@ -35,8 +35,8 @@ SInt32 UpdatePrereqAndStateFlags(
 
  Pre-requisites  flag for an update package. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |  
+| ----- | ----------- |  
 |0|NOT_CONTINUE_ON_PREREQ_WARNING. During installation, stop the upgrade if there is a prerequisite warning.|  
 |1|PREREQ_ONLY. Run only the prerequisite.|  
 |2|CONTINUE_ON_PREREQ_WARNING. During installation, ignore the prerequisite warning.|  
@@ -48,8 +48,8 @@ SInt32 UpdatePrereqAndStateFlags(
 
  Installation state of an update package. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Installation state |  
+| ----- | ------------------ |  
 |0x2|ENABLED|  
 |0x00040001|DOWNLOAD_IN_PROGRESS|  
 |0x00040002|DOWNLOAD_SUCCESS|  

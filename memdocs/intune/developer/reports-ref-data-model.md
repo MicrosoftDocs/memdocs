@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -62,6 +62,9 @@ A star-schema model is optimized for flexibility and data analysis so that you c
 ## Time: Daily snapshots
 
 The warehouse is downstream from your Intune data. Intune takes a daily snapshot at Midnight UTC and stores the snapshot in the warehouse. The duration of held snapshots vary from fact table to fact table. Some may hold seven days, others 30 days, and some even longer durations.
+
+> [!NOTE]
+> The Data Warehouse does not sync Jamf devices. For more information about Jamf, see [Troubleshooting Jamf Pro integration with Microsoft Intune](..\protect\troubleshoot-jamf.md) and [Data Jamf Pro sends to Intune](..\protect\data-jamf-sends-to-intune.md).
 
 ## Next steps
 

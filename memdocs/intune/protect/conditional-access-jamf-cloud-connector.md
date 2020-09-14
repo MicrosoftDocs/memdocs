@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -160,13 +160,15 @@ If you currently have a manually configured integration between Intune and Jamf 
 
    ![Select Cloud Connector in the Jamf Pro console](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft.
+6. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft. If you're replacing your previous integration with the Jamf Cloud Connector, you can skip this step if the location has been specified.
 
 7. Select one of the following landing page options for computers that are not recognized by Microsoft Azure:
    - **The Default Jamf Pro Device Registration page** - Depending on the state of the macOS device, this option redirects users to either the Jamf Pro device enrollment portal (to enroll with Jamf Pro) or the Intune Company Portal app (to register with Azure AD).
    - **The Access Denied page**
    - **Custom URL**
-
+  
+   If you're replacing your previous integration with the Jamf Cloud Connector, you can skip this step if the landing page has been specified.
+  
 8. Select **Connect**. You are redirected to register the Jamf Pro applications in Azure.
 
    When prompted, specify your Microsoft Azure credentials and follow the onscreen instructions to grant the requested permissions. You'll grant permissions for the **Cloud Connector**, and then again for the **Cloud Connector user registration app**. Both apps are registered in Azure as Enterprise Applications.
@@ -286,6 +288,10 @@ Yes. You can change the connection type back to manual and follow the steps for 
 ### Permissions were modified on one or both required apps (*Cloud Connector* and *Cloud Connector user registration app*) and registration is not working, is this supported?
 
 Modifying the permissions on the apps is not supported.
+
+### Is there a log file in Jamf Pro that shows if the Connection Type has been changed?
+
+Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Change Management logs, log in to Jamf Pro, go to **Settings** > **System Settings** > **Change Management** > **Logs**, search **Object type** for **Conditional Access**, and then click **Details** to view the changes.
 
 ## Next steps
 

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
 ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: Configuration Manager-core
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
@@ -548,7 +548,7 @@ If you have Configuration Manager 2007 distribution points or secondary sites wi
 > [!NOTE]  
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
-For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Source site database account  
@@ -564,7 +564,7 @@ If you use the Configuration Manager (current branch) computer account, make sur
 > [!NOTE]  
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
-For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Task sequence domain join account 

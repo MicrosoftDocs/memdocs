@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 5b0c3b0c-bb1c-4e2d-a1ff-5a7d06c23c72
 author: aczechowski
 ms.author: aaroncz
@@ -193,7 +193,7 @@ Class SMS_DCMDeploymentErrorAssetDetails : SMS_BaseClass
 
  Error type. Possible values are:  
 
-|||  
+|Value|Error type|  
 |-|-|  
 |1|INFRASTRUCTURAL|  
 |2|DISCOVERY|  
@@ -272,7 +272,7 @@ Class SMS_DCMDeploymentErrorAssetDetails : SMS_BaseClass
 
  Object type. Possible values are:  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |1|CI|  
 |2|SETTING|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7dba381c-b2b2-461b-8e7c-fd6aadd8739a
 author: aczechowski
 ms.author: aaroncz
@@ -75,8 +75,8 @@ Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass
 
  The type of reference or dependent object. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |0|Classic Package|  
 |3|Driver Package|  
 |5|Software Update Package|  
@@ -121,8 +121,8 @@ Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass
 
  The type of reference or dependent object. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Object type |  
+| ----- | ----------- |  
 |0|Classic Package|  
 |3|Driver Package|  
 |5|Software Update Package|  

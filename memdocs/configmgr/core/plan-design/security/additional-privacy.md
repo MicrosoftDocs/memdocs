@@ -44,7 +44,7 @@ For more information about usage data levels and settings, see [Diagnostics and 
 
 The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Azure Active Directory client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data. 
 
-For more information about the information that Log Analytics collects, see [Log analytics data security](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security).
+For more information about the information that Log Analytics collects, see [Log analytics data security](/azure/log-analytics/log-analytics-data-security).
 
 
 
@@ -85,6 +85,9 @@ For more information, see [Endpoint Protection](../../../protect/deploy-use/endp
 
 
 ## Site Hierarchy – Geographical View with Bing Maps
+
+> [!IMPORTANT]
+> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
 
 In the Configuration Manager console, go to the **Monitoring** workspace, select the **Site Hierarchy** node, and switch to the **Geographical View**. This view lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
 

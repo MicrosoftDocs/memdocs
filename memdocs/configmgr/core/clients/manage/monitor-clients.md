@@ -50,8 +50,8 @@ Configuration Manager provides the following types of information as client stat
 
     The icons at the beginning of each row indicate the online status of the device:  
 
-    |||  
-    |-|-|  
+    | Icon | Description |
+    | ---- | ----------- |  
     |![online status icon for clients](../../../core/clients/manage/media/online-status-icon.png)|Device is online|  
     |![offline status icon for clients](../../../core/clients/manage/media/offline-status-icon.png)|Device is offline|  
     |![unknown status icon for clients](../../../core/clients/manage/media/unknown-status-icon.png)|Online status is unknown|  

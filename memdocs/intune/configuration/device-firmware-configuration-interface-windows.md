@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 05/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology:
 
@@ -30,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled, using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
-DFCI [enables Windows](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface).
+DFCI [enables Windows](/windows/client-management/mdm/uefi-csp) to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface).
 
 In Intune, use this feature to control BIOS settings. Typically, firmware is more resilient to malicious attacks. It limits end users control over the BIOS, which is good in a compromised situation.
 
@@ -48,11 +49,11 @@ This feature applies to:
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
-  Devices manually registered for Autopilot, such as [imported from a csv file](../enrollment/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
+  Devices manually registered for Autopilot, such as [imported from a csv file](../../autopilot/enrollment-autopilot.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
 
   Once your device is registered, its serial number is shown in the list of Windows Autopilot devices.
 
-  For more information on Autopilot, including any requirements, see [Enroll Windows devices in Intune by using the Windows Autopilot](../enrollment/enrollment-autopilot.md).
+  For more information on Autopilot, including any requirements, see [Enroll Windows devices in Intune by using the Windows Autopilot](../../autopilot/enrollment-autopilot.md).
 
 ## Create your Azure AD security groups
 
@@ -69,7 +70,7 @@ To use DFCI, create the following profiles, and assign them to your group.
 
 ### Create an Autopilot deployment profile
 
-This profile sets up and pre-configures new devices. [Autopilot deployment profile](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) lists the steps to create the profile.
+This profile sets up and pre-configures new devices. [Autopilot deployment profile](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) lists the steps to create the profile.
 
 ### Create an Enrollment State Page profile
 

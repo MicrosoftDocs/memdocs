@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04fc39cc-e229-4bd1-8382-9d5b78af2867
 author: aczechowski
 ms.author: aaroncz
@@ -65,8 +65,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  Migration behavior. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration behavior |  
+| ----- | ------------------ |  
 |0|CAPTUREANDRESTOREALL|  
 |1|CAPTUREALLRESTORESPECIFIED|  
 |2|CAPTUREANDRESTORESPECIFIED|  
@@ -89,8 +89,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  Migration status. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration status |  
+| ----- | ---------------- |  
 |0|NOTSTARTED|  
 |1|INPROGRESS|  
 |2|COMPLETED|  
@@ -104,8 +104,8 @@ Class SMS_StateMigration : SMS_BaseClass
 
  The migration type used to store the user state. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Migration type |  
+| ----- | -------------- |  
 |1|SIDEBYSIDE|  
 |2|INPLACE|  
 

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f639d294-8617-43a8-adad-6fb2a4590a5e
 author: aczechowski
 ms.author: aaroncz
@@ -137,7 +137,7 @@ Qualifiers: [enumeration, read]
 
 Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |2|SMS_Package|  
 |14|SMS_OperatingSystemInstallPackage|  
@@ -260,7 +260,7 @@ Qualifiers: [read, enumeration]
 
 Current status of the package on the distribution point. Possible values are listed below. For more information, see [Remarks](#remarks).  
 
-|||  
+|Value|DP package status|  
 |-|-|  
 |0|NONE|  
 |1|UPDATED|  

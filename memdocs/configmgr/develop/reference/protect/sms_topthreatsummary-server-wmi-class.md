@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8803e2a7-f4f2-4748-acc2-bcaeb777be7d
 author: aczechowski
 ms.author: aaroncz
@@ -172,8 +172,8 @@ Class SMS_TopThreatSummary : SMS_BaseClass
 
  Threat severity. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Threat severity |  
+| ----- | --------------- |  
 |0|Not Yet Classified|  
 |1|Low|  
 |2|Medium|  

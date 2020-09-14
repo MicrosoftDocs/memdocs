@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a2242e16-4556-4e51-b2d8-f56b3c1014f5
 author: aczechowski
 ms.author: aaroncz
@@ -89,7 +89,7 @@ Class SMS_G_System_CI_ComplianceState : SMS_G_System
 
  The readable name of the compliance state. Possible values are:  
 
-|||  
+|Value|Compliance state|  
 |-|-|  
 |0|Compliance State Unknown|  
 |1|Compliant|  

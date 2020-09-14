@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ce4ca4df-660b-426d-a362-d9025d2b28ef
 author: aczechowski
 ms.author: aaroncz
@@ -83,7 +83,7 @@ Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Priority of the Settings Management evaluation job. Possible values are:  
 
-|||  
+|Value|Settings scan priority|  
 |-|-|  
 |priIdle|Idle|  
 |priNormal|Normal (recommended)|  

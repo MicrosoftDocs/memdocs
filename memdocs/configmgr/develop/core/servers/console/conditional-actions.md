@@ -85,7 +85,7 @@ Configuration Manager actions can be displayed according to specified conditions
 ```  
 
 ### Permission Values  
- The permission values for the [RequiredPermissions](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.actionsecuritydescription.requiredpermissions.aspx) attribute are the same as for the [SecurityFlagsDetailDescription](https://msdn.microsoft.com/library/microsoft.configurationmanagement.adminconsole.schema.securityflagsdetaildescription.aspx) class and are as follows:  
+ The permission values for the [RequiredPermissions](/previous-versions/system-center/developer/cc146816(v=msdn.10)) attribute are the same as for the [SecurityFlagsDetailDescription](/previous-versions/system-center/developer/cc147286(v=msdn.10)) class and are as follows:  
 
 |Permission|Values|Depends on|  
 |----------------|------------|----------------|  

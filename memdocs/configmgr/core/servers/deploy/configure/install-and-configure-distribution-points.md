@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -304,12 +304,16 @@ The following settings are on the **Distribution point** page of the Create Site
     - Configuration Manager version 1806 with update rollup (4462978), or later  
 
         - Windows Server, version 1709 or later
-        - Windows Server 2016 with updates KB4132216 and KB4284833
+        - Windows Server 2016 with the following updates:
+           - Cumulative update KB4132216, released June 21, 2018, or a later cumulative update.
+           - Servicing stack update KB4284833, released May 18, 2018, or a later servicing stack update.
 
     - Configuration Manager version 1810 or later:
 
         - Windows Server, version 1709 or later
-        - Windows Server 2016 with updates KB4132216 and KB4284833
+        - Windows Server 2016 with the following updates:
+           - Cumulative update KB4132216, released June 21, 2018, or a later cumulative update.
+           - Servicing stack update KB4284833, released May 18, 2018, or a later servicing stack update.
         - Windows Server 2019  
 
 - **Enable this distribution point for prestaged content**: This setting enables you to add content to the server before you distribute software. Because the content files are already in the content library, they don't transfer over the network when you distribute the software. For more information, see [Prestaged content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  

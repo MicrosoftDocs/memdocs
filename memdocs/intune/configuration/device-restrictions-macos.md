@@ -179,7 +179,7 @@ This feature applies to:
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
-  - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft Office 365`.
+  - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft 365`.
   
   - **Identifier type**: Your options:
     - **Bundle ID**: Select this option for apps.
@@ -193,7 +193,7 @@ This feature applies to:
 
   - **Code requirement**: Enter the code signature for the application or process.
 
-    A code signature is created when an app or binary is signed by a developer certificate. To find the designation, run the `codesign` command manually in the Terminal app: `codesign --display -r -/path/to/app/binary`. The code signature is everything that appears after `=>`.
+    A code signature is created when an app or binary is signed by a developer certificate. To find the designation, run the `codesign` command manually in the Terminal app: `codesign --display -r - /path/to/app/binary`. The code signature is everything that appears after `=>`.
 
   - **Enable static code validation**: Choose **Yes** for the app or process to statically validate the code requirement. When set to **Not configured**, Intune doesn't change or update this setting.
 

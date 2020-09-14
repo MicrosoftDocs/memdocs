@@ -2,7 +2,7 @@
 title: Size and scale
 titleSuffix: Configuration Manager
 description: Determine the number of site system roles and sites that you'll need to support the devices in your environment.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -131,6 +131,9 @@ For more information, see CMG [Performance and scale](../../clients/manage/cmg/p
 
 For information about the number of clients and devices that a management point can support, see the [Management points](#bkmk_mp) section.  
 
+> [!NOTE]
+> If you enable the management point to support a [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), it services internet-based client requests per normal. Sizing guidance for a management point doesn't change whether it services on-premises or internet-based clients.
+
 ### Software update point  
 
 Use the following recommendations as a baseline. This baseline helps you determine the information for the software updates capacity planning that is appropriate to your organization. The actual capacity requirements might vary from the recommendations listed in this article depending on the following criteria:
@@ -139,6 +142,9 @@ Use the following recommendations as a baseline. This baseline helps you determi
 - The hardware that you use to host the software update point site system
 - The number of managed clients
 - The other site system roles installed on the server  
+
+> [!NOTE]
+> If you enable the software update point to support a [cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md), it services internet-based client requests per normal. Sizing guidance for a software update point doesn't change whether it services on-premises or internet-based clients.
 
 #### <a name="BKMK_SUMCapacity"></a> Capacity planning for the software update point  
 
@@ -173,6 +179,8 @@ Limit the number of security scopes on automatic deployment rules (ADRs) to less
 Each instance of the SMS Provider supports simultaneous connections from multiple requests. The only limitations on these connections are the number of server connections that are available to Windows, and the available resources on the server to service the connection requests.
 
 For more information, see [Plan for the SMS Provider](../hierarchy/plan-for-the-sms-provider.md).
+
+The administration service is a REST API on every instance of the SMS Provider. It supports up to 5,000 requests per second, and 200 requests per client IP address.
 
 ## <a name="bkmk_clientnumbers"></a> Client numbers for sites and hierarchies
 
