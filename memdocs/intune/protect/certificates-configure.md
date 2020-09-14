@@ -53,7 +53,7 @@ When you use a Microsoft Certification Authority (CA):
   - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
 
 - To use PKCS certificate profiles:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.
+  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure).
   
 - To use PKCS imported certificates:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
