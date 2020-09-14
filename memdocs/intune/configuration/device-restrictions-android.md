@@ -61,7 +61,7 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 ## Password
 
-- **Encryption**: Choose **Require** so that files on the device are encrypted. Not all devices support encryption. When set to **Not configured** (default), Intune doesn't change or update this setting. To configure this setting, and correctly report compliance, also configure:
+- **Encryption**: Select **Require** so that files on the device are encrypted. Not all devices support encryption. When set to **Not configured** (default), Intune doesn't change or update this setting. To configure this setting, and correctly report compliance, also configure:
   1. **Password**: Set to **Require**.
   2. **Required password type**: Set to **At least numeric**.
   3. **Minimum password length**: Set to at least `4`.
@@ -71,7 +71,9 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 ### All Android devices
 
-*The following settings are supported on Android 4.0 or later, and Knox 4.0 and later.*
+These settings apply to:  
+- Android 4.0 and newer
+- Knox 4.0 and newer
 
 - **Maximum minutes of inactivity until screen locks**: Enter the length of time a device must be idle before the screen is automatically locked. For example, enter `5` to lock devices after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -82,30 +84,31 @@ This article shows you all the Microsoft Intune device restrictions settings tha
 
 ### Android 10 and later
 
-*The following settings are supported on Android 10 or later, but not on Knox.*
+- **Password complexity**: Enter the required password complexity. Your options:
 
-
-- **Password complexity**  
-  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
-
-  Specify the required password complexity.
-
-  - **None** *(default)* - No password required.
-  - **Low** - The password satisfies one of the following conditions:
+  - **None** (default): No password required.
+  - **Low**: The password satisfies one of the following conditions:
     - Pattern
     - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
-  - **Medium** - The password satisfies one of the following conditions:
+  - **Medium**: The password satisfies one of the following conditions:
     - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 4.
     - Alphabetic, with a minimum length of 4.
     - Alphanumeric, with a minimum length of 4.
-  - **High** - The password satisfies one of the following conditions:
+  - **High**: The password satisfies one of the following conditions:
     - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
+  This setting applies to:  
+  - Android 10.0 and newer not running Samsung Knox
+
+  On devices running Android 9 and earlier, or running Samsung Knox, the password length and type settings override this setting.
+
 ### Android 9 and earlier or Samsung Knox
 
-*The following settings are supported on Android 9.0 and earlier, and any version of Samsung Knox.*
+These settings apply to:  
+- Android 9.0 and earlier
+- Any version of Samsung Knox
 
 - **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
 
