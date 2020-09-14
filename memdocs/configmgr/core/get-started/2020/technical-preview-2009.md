@@ -39,6 +39,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [7821529](includes/2009/7821529.md)]
 [!INCLUDE [7979972](includes/2009/7979972.md)]
 
+[!INCLUDE [7799892](includes/2009/7799892.md)]
+<!--7799892,7068388-->
+
 <!--
 ## General known issues
 
