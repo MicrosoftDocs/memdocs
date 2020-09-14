@@ -2,7 +2,7 @@
 title: Technical preview 2009
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2009.
-ms.date: 09/10/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
