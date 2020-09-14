@@ -39,14 +39,14 @@ CSP partners can get customer authorization to register Windows Autopilot device
 For a CSP to register Windows Autopilot devices for a customer, the customer must first grant that CSP partner permission using the following process:
 
 1. CSP sends link to customer requesting authorization/consent to register/manage devices on their behalf. To do so:
-    - CSP logs into Microsoft Partner Center
-    - Click **Dashboard** on the top menu
-    - Click **Customer** on the side menu
-    - Click the **Request a reseller relationship** link:
+  1. CSP logs into Microsoft Partner Center
+  2. Click **Dashboard** on the top menu
+  3. Click **Customer** on the side menu
+  4. Click the **Request a reseller relationship** link:
 
     ![Request a reseller relationship](images/csp1.png)
  
-    - Select the checkbox indicating if you want delegated admin rights:
+  5. Select the checkbox indicating if you want delegated admin rights:
  
     ![Delegated rights](images/csp2.png)
 
