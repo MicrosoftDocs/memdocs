@@ -128,8 +128,8 @@ For device preparation, the enrollment status page tracks:
 The Enrollment Status Page tracks the following device setup items:
 
 - Security policies
-  - One configuration service provider (CSP) for all enrollments.
-  - Actual CSPs configured by Intune aren't tracked here.
+  - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
+  - Other policies are not tracked.
 - Applications
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
@@ -144,8 +144,8 @@ The Enrollment Status Page tracks the following device setup items:
 For account setup, the Enrollment Status Page tracks the following items if they're assigned to the current logged in user:
 
 - Security policies
-  - One CSP for all enrollments.
-  - Actual CSPs configured by Intune aren't tracked here.
+  - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
+  - Other policies are not tracked.
 - Applications
   - Per user LoB MSI apps that are assigned to All Devices, All Users, or a user group in which the user enrolling the device is a member.
   - Per machine LoB MSI apps that are assigned to All Users or a user group in which the user enrolling device is a member.

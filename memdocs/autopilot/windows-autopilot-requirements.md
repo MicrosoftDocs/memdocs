@@ -37,7 +37,7 @@ Windows Autopilot depends on specific capabilities available in Windows 10, Azur
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+  - Windows 10 Enterprise 2019 LTSC (does not support self-deploying mode)
 
 >[!NOTE]
 >Procedures for deploying Windows Autopilot might refer to specific products and versions. The inclusion of these products in this content doesn't imply an extension of support for a version that is beyond its support lifecycle. Windows Autopilot does not support products that are beyond their support lifecycle. For more information, see [Microsoft Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=208270).
