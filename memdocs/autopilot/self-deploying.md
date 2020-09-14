@@ -22,14 +22,14 @@ ms.topic: article
 **Applies to: Windows 10, version 1903 or later**
 
 Windows Autopilot self-deploying mode lets you deploy a device with little to no user interaction. For devices with an Ethernet connection, no user interaction is required. For devices connected via Wi-fi, the user must only:
-- Choose the language, locale, and keyboard
-- Make a network connection 
+- Choose the language, locale, and keyboard.
+- Make a network connection. 
 
 Self-deploying mode provides all the following:
-- joins the device to Azure Active Directory
-- enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment
-- makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device
-- uses the Enrollment Status Page to prevent access until the device is fully provisioned
+- Joins the device to Azure Active Directory.
+- Enrolls the device in Intune (or another MDM service) using Azure AD for automatic MDM enrollment.
+- Makes sure that all policies, applications, certificates, and networking profiles are provisioned on the device.
+- Uses the Enrollment Status Page to prevent access until the device is fully provisioned.
 
 >[!NOTE]
 >Self-deploying mode does not support Active Directory Join or Hybrid Azure AD Join. All devices will be joined to Azure Active Directory.
@@ -39,7 +39,7 @@ Self-deploying mode lets you deploy a Windows 10 device as a kiosk, digital sign
 You can use the [Kiosk Browser](https://www.microsoft.com/p/kiosk-browser/9ngb5s5xg2kp?rtc=1&activetab=pivot:overviewtab) when setting up a kiosk device. This app is built on Microsoft Edge and can be used to create a tailored, MDM-managed browsing experience.
 
 You can completely automate device configuration by combining self-deploing mode with MDM policies. Use the MDM policies to create a local account configured to automatically log on. For more information, see:
-- [Simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691)
+- [Simplifying kiosk management for IT with Windows 10](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/simplifying-kiosk-management-for-it-with-windows-10/ba-p/187691).
 - [Set up a kiosk or digital sign in Intune or other MDM service](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service).
 
 >[!NOTE]

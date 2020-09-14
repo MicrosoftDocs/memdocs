@@ -24,10 +24,10 @@ ms.topic: article
 - Applies to: Windows 10, version 1809 and later (remote reset)
 
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. Specifically, Windows Autopilot Reset:
-- removes personal files, apps, and settings
-- reapplies a device’s original settings
-- maintains the device's identity connection to Azure AD
-- maintains the device's management connection to Intune  
+- Removes personal files, apps, and settings.
+- Reapplies a device’s original settings.
+- Maintains the device's identity connection to Azure AD.
+- Maintains the device's management connection to Intune.
 
 The Windows Autopilot Reset process automatically keeps information from the existing device:
  
@@ -60,9 +60,9 @@ Additional requirements and configuration details apply with each scenario.
 The Intune Service Administrator role is required for this task. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
 
 IT admins can use a local Windows Autopilot Reset to:
-- quickly remove personal files, apps, and settings
-- reset Windows 10 devices from the lock screen
-- apply original settings and management enrollment (Azure Active Directory and device management)
+- Quickly remove personal files, apps, and settings.
+- Reset Windows 10 devices from the lock screen.
+- Apply original settings and management enrollment (Azure Active Directory and device management)
 The device is then ready to use. With a local Autopilot Reset, devices are returned to a fully configured or known IT-approved state.
 
 To enable local Autopilot Reset in Windows 10:
@@ -101,13 +101,13 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
 1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**. 
 
- ![Enter CTRL+Windows key+R on the Windows lock screen](images/autopilot-reset-lockscreen.png)
+    ![Enter CTRL+Windows key+R on the Windows lock screen](images/autopilot-reset-lockscreen.png)
 
- These keystrokes will open up a custom login screen for the local Autopilot Reset. The screen serves two purposes:
- 1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
- 2. Notify the user in case a provisioning package, created using Windows Configuration Designer, will be used as part of the process.
+    These keystrokes will open up a custom login screen for the local Autopilot Reset. The screen serves two purposes:
+    1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
+    2. Notify the user in case a provisioning package, created using Windows Configuration Designer, will be used as part of the process.
 
- ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
+        ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
 
 2. Sign in with the admin account credentials. If you created a provisioning package, plug in the USB drive and trigger the local Autopilot Reset.
 
@@ -125,9 +125,9 @@ To enable a device for a remote Windows Autopilot Reset, the device must be MDM 
 
 To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
  
-- Navigate to **Devices** tab in the Intune console. 
-- In the **All devices** view, select the targeted reset devices and then click **More** to view device actions. 
-- Select **Autopilot Reset** to start the reset task. 
+1. Navigate to **Devices** tab in the Intune console. 
+2. In the **All devices** view, select the targeted reset devices and then click **More** to view device actions. 
+3. Select **Autopilot Reset** to start the reset task. 
 
 >[!NOTE]
 >The Autopilot Reset option will not be enabled in Microsoft Intune for devices not running Windows 10 build 17672 or higher.

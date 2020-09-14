@@ -41,8 +41,8 @@ The device to be enrolled must follow these requirements:
 - Use Windows 10 v1809 or greater.
 - Have access to the internet [following Windows Autopilot network requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
 - Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
-  - resolve the DNS records for the AD domain and the AD domain controller
-  - communicate with the domain controller to authenticate the user
+  - Resolve the DNS records for the AD domain and the AD domain controller.
+  - Communicate with the domain controller to authenticate the user.
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
@@ -72,7 +72,7 @@ The organizational unit that's granted the rights to create computers must match
 
 2. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
 
- ![The Delegate Control command](./media/windows-autopilot-hybrid/delegate-control.png)
+    ![The Delegate Control command](./media/windows-autopilot-hybrid/delegate-control.png)
 
 3. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 

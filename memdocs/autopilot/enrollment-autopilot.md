@@ -63,11 +63,11 @@ You can add Windows Autopilot devices by importing a CSV file with their informa
     ![Screenshot of Windows Autopilot devices](media/enrollment-autopilot/autopilot-import-device.png)
 
 2. Under **Add Windows Autopilot devices**, browse to a CSV file listing the devices that you want to add. The CSV file should list:
-    - serial numbers
-    - Windows product IDs
-    - hardware hashes
-    - optional group tags
-    - optional assigned user.
+    - Serial numbers.
+    - Windows product IDs.
+    - Hardware hashes.
+    - Optional group tags.
+    - Optional assigned user.
   
     You can have up to 500 rows in the list. For information about how to get device information, see [Adding devices to Windows Autopilot](add-devices.md#device-identification). Use the header and line format shown below:
 
@@ -170,9 +170,9 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431),select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**.
 2. Select the device you want to edit.
 3. In the pane on the right of the screen, you can edit:
-    - device name
-    - group tag
-    - User Friendly Name (if you've assigned a user)
+    - Device name.
+    - Group tag.
+    - User Friendly Name (if you've assigned a user).
 4. Select **Save**.
 
 > [!NOTE]
@@ -235,11 +235,11 @@ Completely removing a device from your tenant requires you to delete the Intune 
 ## Using Autopilot in other portals
 If you aren't interested in mobile device management, you can use Autopilot in other portals. While using other portals is an option, we recommend you only use Intune to manage your Autopilot deployments. When you use Intune and another portal, Intune isn't able to: 
 
-- Display changes to profiles created in Intune, but edited in another portal
-- Synchronize profiles created in another portal
-- Display changes to profile assignments done in another portal
-- Synchronize profile assignments done in another portal
-- Display changes to the device list that were made in another portal
+- Display changes to profiles created in Intune, but edited in another portal.
+- Synchronize profiles created in another portal.
+- Display changes to profile assignments done in another portal.
+- Synchronize profile assignments done in another portal.
+- Display changes to the device list that were made in another portal.
 
 ## Windows Autopilot for existing devices
 
