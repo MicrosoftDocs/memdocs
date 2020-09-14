@@ -38,7 +38,7 @@ Therefore, to avoid such reduced functionality, we advise against enrolling new 
 For the same reasons, we also recommend that you migrate devices off of device administrator management if the devices are going to update to Android 10. 
 
 > [!IMPORTANT]
-> In areas where Android Enterprise is available, Google is encouraging movement off device administrator (DA) management by decreasing its management support in new Android releases. However, where Android Enterprise or GMS are unavailable, you'll want to use device administrator and familiarize yourself with these changes. For more information, see [Is Android Enterprise availabe in my country](https://support.google.com/work/android/answer/6270910)?
+> In areas where Android Enterprise is available, Google is encouraging movement off device administrator (DA) management by decreasing its management support in new Android releases. However, where Android Enterprise or GMS are unavailable, you'll want to use device administrator and familiarize yourself with these changes. For more information, see [Is Android Enterprise available in my country](https://support.google.com/work/android/answer/6270910)?
 
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.  
 
