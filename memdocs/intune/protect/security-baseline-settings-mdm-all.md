@@ -543,38 +543,38 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
     The Maximum password age policy setting determines how long (in days) that a password can be used before the system requires the user to change it. You can set passwords to expire after a number of days between 1 and 999, or you can specify that passwords never expire by setting the number of days to 0. If Maximum password age is between 1 and 999 days, the minimum password age must be less than the maximum password age. If Maximum password age is set to 0, Minimum password age can be any value between 0 and 998 days.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067028)
 
-    **Default**: 41
+    **Default**: 60
 
   - **Password minimum character set count**:  
     The number of complex element types (uppercase and lowercase letters, numbers, and punctuation) required for a strong PIN or password. PIN enforces the following behavior for desktop and mobile devices: 1 - Digits only 2 - Digits and lowercase letters are required 3 - Digits, lowercase letters, and uppercase letters are required. Not supported in desktop Microsoft accounts and domain accounts. 4 - Digits, lowercase letters, uppercase letters, and special characters are required. Not supported in desktop.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067055)
 
-    **Default**: *none*
+    **Default**: 3
 
   - **Prevent reuse of previous passwords**:  
     Specifies how many passwords are stored in the history that can't be used. The value includes the user's current password. For example, with a setting of *1* the user can't reuse their current password when choosing a new password. A setting of *5* means that a user can't set their new password to their current password or any of their previous four passwords.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2066795)
 
-    **Default**: *none*
+    **Default**: 24
 
   - **Minimum password length**:  
     The Minimum password length policy setting determines the least number of characters that can make up a password for a user account. You can set a value of between 1 and 14 characters, or you can establish that no password is required by setting the number of characters to 0.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067024)
 
-    **Default**: 4
+    **Default**: 8
 
 
   - **Number of sign-in failures before wiping device**:  
     The number of authentication failures allowed before the device is wiped. A value of 0 disables device wipe functionality.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067030)
 
-    **Default**: 4
+    **Default**: 10
 
   - **Block simple passwords**:  
     Specifies whether PINs or passwords such as "1111" or "1234" are allowed. For the desktop, it also controls the use of picture passwords.  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=2067127)
 
-    **Default**: Not configured  
+    **Default**: Yes  
     *A setting of Yes prevents use of simple passwords.*
 
 - **Password minimum age in days**:  
@@ -1917,7 +1917,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   When set to Yes, Defender will block JavaScript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## MS Security Guide
 
