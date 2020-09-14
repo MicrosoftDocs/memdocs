@@ -44,9 +44,9 @@ Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?lin
 
 You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) from GitHub as a .zip file. The zipped file contains a folder named *Microsoft-Win32-Content-Prep-Tool-master*. The folder contains the prep tool, the license, a readme, and the release notes. 
 
-### Process flow to create an .intunewin file
+### Process flow to create a .intunewin file
 
-   <img alt="Flow chart of the process to create an .intunewin file." src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
+   <img alt="Flow chart of the process to create a .intunewin file." src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### Running the Microsoft Win32 Content Prep Tool
 
