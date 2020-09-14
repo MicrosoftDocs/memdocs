@@ -291,26 +291,26 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
       This setting is available when *Startup authentication required* is set to *Yes*.
 
-      - **Blocked** *(default)* - Block the use of a PIN. 
+      - **Blocked** - Block the use of a PIN. 
       - **Required** - Require BitLocker have a PIN and TPM present to return success. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that PIN is disabled where silent enablement of BitLocker is required.
-      - **Allowed** - Enable BitLocker using the TPM if present, and allow a startup PIN be configured by the user.
+      - **Allowed** *(default)* - Enable BitLocker using the TPM if present, and allow a startup PIN be configured by the user.
       - **Not configured**
 
-    - **Compatible TPM startup key** 
+    - **Compatible TPM startup key**  
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
       This setting is available when *Startup authentication required* is set to *Yes*.
 
       - **Blocked** - Block the use of startup keys.
-      - **Required** - Require BitLocker have a startup key and TPM present to enable BitLocker. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that startup keys be disabled where silent enablement of BitLocker is required.
+      - **Required** *(default)* - Require BitLocker have a startup key and TPM present to enable BitLocker. For silent enable scenarios (including Autopilot) this setting can't be successful, as user interaction is required. It's recommended that startup keys be disabled where silent enablement of BitLocker is required.
       - **Allowed** - Enable BitLocker using the TPM if present, and allow a startup key (such as a USB drive) be present to unlock the drives.
       - **Not configured** *(default)*
 
-    - **Disable BitLocker on devices where TPM is incompatible** 
+    - **Disable BitLocker on devices where TPM is incompatible**  
       CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
       This setting is available when *Startup authentication required* is set to *Yes*.
 
-      - **Yes** - Disable BitLocker from being configured without a compatible TPM chip. This setting may be helpful for testing, but it isn't suggested to enable BitLocker without a TPM. If no TPM is present, BitLocker will require a password or USB drive for startup. This setting only applies when first enabling BitLocker. If BitLocker is already enabled before applying this setting, it will have no effect.
-      - **Not configured** *(default)*
+      - **Yes** *(default)* - Disable BitLocker from being configured without a compatible TPM chip. This setting may be helpful for testing, but it isn't suggested to enable BitLocker without a TPM. If no TPM is present, BitLocker will require a password or USB drive for startup. This setting only applies when first enabling BitLocker. If BitLocker is already enabled before applying this setting, it will have no effect.
+      - **Not configured**
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
@@ -339,8 +339,8 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
     This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
-    - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
-    - **Yes** - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
+    - **Not configured** - Data can be written to non-encrypted fixed drives.
+    - **Yes** (*default*) - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
   - **Configure encryption method for fixed data-drives**  
     CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -348,10 +348,10 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
     Configure the encryption method and cipher strength for fixed data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
-    - **Not configured** (*default*)
+    - **Not configured**
     - **AES 128bit CBC**
     - **AES 256bit CBC**
-    - **AES 128bit XTS**
+    - **AES 128bit XTS** (*default*)
     - **AES 256bit XTS**
 
 - **BitLocker removable drive policy**  
@@ -369,8 +369,8 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
     Configure the encryption method and cipher strength for removable data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
     - **Not configured**
-    - **AES 128bit CBC**
-    - **AES 256bit CBC** (*default*)
+    - **AES 128bit CBC** (*default*)
+    - **AES 256bit CBC**
     - **AES 128bit XTS**
     - **AES 256bit XTS**
 
@@ -448,8 +448,8 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   - **Remove matching hardware devices**
 
     This setting is available only when *Hardware device installation by device identifiers* is set to *Block hardware device installation*.
-    - **Yes**
-    - **Not configured** *(default)*
+    - **Yes** *(default)*
+    - **Not configured**
 
   - **Hardware device identifiers that are blocked**  
 
