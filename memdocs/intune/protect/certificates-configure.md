@@ -50,10 +50,10 @@ When you use a Microsoft Certification Authority (CA):
 
 - To use SCEP certificate profiles:
   - [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - To use PKCS certificate profiles:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.
+  - [Install the PFX Certificate Connector for Microsoft Intune](certficates-pfx-configure.md).
   
 - To use PKCS imported certificates:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
