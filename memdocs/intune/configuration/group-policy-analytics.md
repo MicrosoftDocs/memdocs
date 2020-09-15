@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,10 +47,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 1. On your on-premises computer, open the `Group Policy Management` app (GPMC.msc).
 2. Expand your domain to see all the GPOs.
-3. Right-click any GPO > **Save report**:
-
-    :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
-
+3. Right-click any GPO > **Save report**.
 4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
 
 Be sure the file is less than 4 MB. If it's greater than 4 MB, then include fewer GPOs when you save your report.
@@ -133,22 +130,6 @@ Group Policy analytics can parse the following CSPs:
     - See the list of settings in your GPO.
     - Use the search bar to find specific settings.
     - Get a time stamp of when the report was last generated.
-
-## Got Feedback
-
-The product group wants your comments on Group Policy analytics:
-
-1. Go to **Devices** > **Group Policy analytics (preview)**.
-2. Select **Got feedback?**:
-
-    :::image type="content" source="./media/group-policy-analytics/got-feedback.png" alt-text="Send feedback to Microsoft when using Group Policy analytics tool to import GPOs in Microsoft Intune and the Endpoint Manager admin center.":::
-
-For example, consider answering the following questions:
-
-- Overall, how easy was it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
-- Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
-
-To get information on the customer experience, the feedback is aggregated, and sent to Microsoft.
 
 ## Privacy and security
 
