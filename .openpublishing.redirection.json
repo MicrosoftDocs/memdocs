@@ -151,7 +151,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "mem/autopilot/windows-autopilot-requirements.md",
+            "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
             "redirect_url": "/mem/autopilot/software-requirements",
             "redirect_document_id": false
         }
