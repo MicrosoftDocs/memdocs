@@ -2,10 +2,10 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 04/01/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
@@ -113,6 +113,8 @@ To change the settings of an existing policy, choose it in the list, and select 
 
 When you create more than one policy, you can configure their relative priority. If you deploy multiple policies to a client, it uses the priority value to determine its settings.
 
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
+
 ## Deploy a policy
 
 1. Choose an existing policy in the **BitLocker Management** node. In the ribbon, select **Deploy**.
@@ -126,6 +128,11 @@ When you create more than one policy, you can configure their relative priority.
 1. Select **OK** to deploy the policy.
 
 You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
+
+> [!IMPORTANT]
+> The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
+
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## Monitor
 
@@ -174,7 +181,13 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 - The BitLocker management settings are fully compatible with MBAM group policy settings. If devices receive both group policy settings and Configuration Manager policies, configure them to match.
 
+  > [!NOTE]
+  > If a group policy setting exists for standalone MBAM, it will override the equivalent setting attempted by Configuration Manager. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
+
 - Configuration Manager doesn't implement all MBAM group policy settings. If you configure additional settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
+
+  > [!IMPORTANT]
+  > Don't set a group policy for a setting that Configuration Manager BitLocker management already specifies. Only set group policies for settings that don't currently exist in Configuration Manager BitLocker management. Configuration Manager version 2002 has feature parity with standalone MBAM. With Configuration Manager version 2002 and later, in most instances there should be no reason to set domain group policies to configure BitLocker policies. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
 
 ### TPM password hash
 
@@ -196,7 +209,8 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-When you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption) .
+> [!NOTE]
+> Switching encryption management authorities while maintaining the desired encryption algorithm doesn't require any additional actions on the client. However, if you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption).
 
 For more information about managing BitLocker with Intune, see the following articles:
 

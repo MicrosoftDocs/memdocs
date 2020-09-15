@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b991ecb2-3061-45b0-b18a-424425983917
 author: aczechowski
 ms.author: aaroncz
@@ -217,7 +217,7 @@ Class SMS_DPGroupDistributionStatusDetails : SMS_BaseClass
 
  Severity of the status message.  
 
-|||  
+|Value|Status message severity|  
 |-|-|  
 |0x40000000|Success|  
 |0x80000000|Warning|  
@@ -232,7 +232,7 @@ Class SMS_DPGroupDistributionStatusDetails : SMS_BaseClass
 
  State of the message.  
 
-|||  
+|Value|Message state|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  
@@ -256,7 +256,7 @@ Class SMS_DPGroupDistributionStatusDetails : SMS_BaseClass
 
  Object type.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |0|PKG_TYPE_REGULAR|  
@@ -279,7 +279,7 @@ Class SMS_DPGroupDistributionStatusDetails : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |Value|Description|  
 |2|SMS_Package|  

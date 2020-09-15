@@ -6,7 +6,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -70,25 +70,6 @@ Collect the following information about the problem:
 5. Select **Configure platforms**, select **Allow** for personally owned iOS/iPadOS devices, and then click **OK**.
 6. Re-enroll the device.
 
-**Cause:** The necessary CNAME records in DNS don't exist.
-
-#### Resolution
-Create CNAME DNS resource records for your company's domain. For example, if your company's domain is contoso.com, create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com.
-
-Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
-
-If there's more than one verified domain, create a CNAME record for each domain. The CNAME resource records must contain the following information:
-
-|TYPE|Host name|Points to|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 Hr|
-
-If your company uses multiple domains for user credentials, create CNAME records for each domain.
-
-> [!NOTE]
-> Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
-
 **Cause:** You enroll a device that was previously enrolled with a different user account, and the previous user was not appropriately removed from Intune.
 
 #### Resolution
@@ -109,7 +90,7 @@ If your company uses multiple domains for user credentials, create CNAME records
 **Cause:** The user who is trying to enroll the device does not have a Microsoft Intune license.
 
 #### Resolution
-1. Go to the [Office 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
+1. Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then choose **Users > Active Users**.
 2. Select the user account that you want to assign an Intune user license to, and then choose **Product licenses > Edit**.
 3. Switch the toggle to the **On** position for the license that you want to assign to this user, and then choose **Save**.
 4. Re-enroll the device.
@@ -131,9 +112,9 @@ If your company uses multiple domains for user credentials, create CNAME records
 1. Remove the Company Portal app from the device.
 2. Download and install the **Microsoft Intune Company Portal** app from **App Store**.
 3. Re-enroll the device.
- > [!NOTE]
-    > This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow
-    the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
+
+> [!NOTE]
+> This error can also occur if the user is attempting to enroll more devices than device enrollment is configured to allow. Follow the resolutions steps for **Device Cap Reached** below if these steps do not resolve the issue.
 
 ### Device Cap Reached
 
@@ -203,13 +184,13 @@ Renew the APNs certificate, and then re-enroll the device.
 > Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- To renew the APNs certificate in Office 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- To renew the APNs certificate in Microsoft 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid
 
 When you turn on a ADE-managed device that is assigned an enrollment profile, enrollment fails, and you receive the following error message:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection
@@ -243,6 +224,16 @@ When you turn on a ADE-managed device that is assigned an enrollment profile, th
 #### Resolution
 Disable MFA, and then re-enroll the device.
 
+### Authentication doesn’t redirect to the government cloud 
+
+Government users signing in from another device are redirected to the public cloud for authentication rather than the government cloud. 
+
+**Cause:** Azure AD does not yet support redirecting to the government cloud when signing in from another device. 
+
+#### Resolution 
+Use the iOS Company Portal **Cloud** setting in the **Settings** app to redirect government users’ authentication towards the government cloud. By default, the **Cloud** setting is set to **Automatic** and Company Portal directs authentication towards the cloud that is automatically detected by the device (such as Public or Government). Government users who are signing in from another device will need to manually select the government cloud for authentication. 
+
+Open the **Settings** app and select Company Portal. In the Company Portal settings, select **Cloud**. Set the **Cloud** to Government.  
 
 ## Next steps
 

@@ -32,6 +32,6 @@ manager: dougeby
 
 -   On the Configuration Manager site server, stop the **SMS_Executive** service.  
 
--   For more information on how to move a user database, see [Move User Databases](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
+-   For more information on how to move a user database, see [Move User Databases](/sql/relational-databases/databases/move-user-databases).  
 
--   After you complete the database file move, restart the **SMS_Executive** service on the Configuration Manager site server.  
+-   After you complete the database file move, restart the **SMS_Executive** service on the Configuration Manager site server.

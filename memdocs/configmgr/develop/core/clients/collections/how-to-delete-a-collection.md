@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: 12/06/2016
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8
 author: aczechowski
 ms.author: aaroncz
@@ -114,7 +114,7 @@ public void DeleteCollection(WqlConnectionManager connection, string collectionI
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`collectionIDToDelete`|-   Managed: `String`<br />-   VBScript: `String`|Unique auto-generated ID containing eight characters. For more information, see the `CollectionID` property of [SMS_Collection Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md).|  
 
 ## Compiling the Code  

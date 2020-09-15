@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -50,8 +50,8 @@ Location tokens are also known as Volume Purchase Program (VPP) tokens. These to
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
 
-|  | Device Licensing | User Licensing |
-|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Action | Device Licensing | User Licensing |
+|------- | -----------------| ---------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
 | Device   configuration blocking access to App Store | Apps can be installed and updated using Company Portal. | The invitation to join Apple VPP requires access to App   Store. If you have set a policy to disable App Store, user licensing for VPP   apps will not work. |
 | Automatic   app update | As configured by the Intune admin in Apple VPP token settings.<p>If the assignment type is available   for enrolled devices, available app updates can also be installed from the Company Portal by selecting the **Update** action on the app details page. | As configured by end user in personal App Store settings. This cannot be managed by the Intune admin. |
@@ -98,24 +98,30 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
-3. On the list of VPP tokens pane, select **Create**.
-4. On the **Create VPP token** pane, specify the following information:
-    - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
-    - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
-    - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
-    - **Token Name** - An administrative field for setting the token name.
-    - **Country/Region** - Select the VPP country/region store.  Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
+3. On the list of VPP tokens pane, select **Create**. The **Create VPP token** process is displayed. There are four pages used when creating a VPP token. The first is **Basics**.
+4. On the **Basics** page, specify the following information:
+   - **Token Name** - An administrative field for setting the token name.
+   - **Apple ID** - Enter the Managed Apple ID of the account associated with the uploaded token.
+   - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple VPP token for your account and select it here.
+5. Click **Next** to display the **Settings** page.
+6. On the **Settings** page, specify the following information:
+   - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
+   - **Country/Region** - Select the VPP country/region store.  Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
+
         > [!WARNING]  
         > Changing the country/region will update the apps metadata and App Store URL on next sync with the Apple service for apps created with this token. The app will not be updated if it does not exist in the new country/region store.
 
-    - **Type of VPP account** - Choose from **Business** or **Education**.
-    - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
+   - **Type of VPP account** - Choose from **Business** or **Education**.
+   - **Automatic app updates** - Choose from **On** or **Off** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
-5. When you are done, select **Create**. The token is displayed in the list of tokens pane.
+7. Click **Next** to display the **Scope tags** page.
+8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the VPP token.
+10. When you are done, click **Create**. The token is displayed in the list of tokens pane.
 
 ## Synchronize a VPP token
 
@@ -138,7 +144,6 @@ You can synchronize the app names, metadata and license information for your pur
 > [!NOTE]  
 > Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
 > 
-> [Apple MDM Protocol Reference, page 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## End-User Prompts for VPP
 
@@ -162,8 +167,8 @@ The end-user will receive prompts for VPP app installation in a number of scenar
 
 You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) app licenses based on a given device, user, or app.  But there are some differences between iOS/iPadOS and macOS platforms. 
 
-|  | iOS/iPadOS | macOS |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Action | iOS/iPadOS | macOS |
+|------- | ---------- | ----- |
 | Remove app assignment | When you remove an app that was assigned to a user,   Intune reclaims the user or device license and uninstalls the app from the   device. | When you remove an app that was assigned to a user,   Intune reclaims the user or device license. The app is not uninstalled from   the device. |
 | Revoke app license | Revoking an app license reclaims the app license from   the user or device. You must change the assignment to **Uninstall** to remove the app from the device. | Revoking an app license reclaims the app license from   the user or device. The macOS app with revoked license remains usable on the   device, but cannot be updated until a license is reassigned to the user or   device. According to Apple, such apps are removed after a 30-day grace   period. However, Apple does not provide a means for Intune to remove the app   using Uninstall assignment action. |
 
@@ -174,7 +179,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
-You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. However, deleting a token does not revoke app licenses or uninstall apps. 
+You can delete an Apple Volume Purchasing Program (VPP) token using the console. This may be necessary when you have duplicate instances of a VPP token. Deleting a token will also delete any associated apps and assignment. Deleting a token revokes associated app licenses but doesn't uninstall the apps.  
 
 >[!NOTE]
 >Intune cannot revoke app licenses after a token has been deleted. 
@@ -182,7 +187,7 @@ You can delete an Apple Volume Purchasing Program (VPP) token using the console.
 <!-- 820870 -->  
 To revoke the license of all VPP apps for a given VPP token, you must first revoke all app licenses associated with the token, then delete the token.
 
-## Renewing app licenses
+## Renewing VPP tokens
 
 You can renew an Apple VPP token by downloading a new token from [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/) and updating the existing token in Intune. 
 
@@ -191,6 +196,9 @@ To renew an Apple VPP token, use the following steps:
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
 2. Download the new token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**. Then, manually upload the token.
+
+>[!NOTE]
+>You must download a new Apple VPP or location token from Apple Business Manager and update the existing token within Intune when the user, who set up the token in Apple Business Manager, changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
 ## Deleting a VPP app
 
@@ -208,6 +216,8 @@ Access to Apple VPP tokens and VPP apps can be controlled independently using pe
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
 
 If **Assigned to external MDM** is indicated in the Intune portal, then you (the Admin) must remove the VPP token from the 3rd party MDM before using the VPP token in Intune.
+
+If status is **Duplicate** for a token, then multiple tokens with the same **Token Location** have been uploaded. Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased may not be reflected once a token is marked as duplicate.
 
 ## Frequently asked questions
 

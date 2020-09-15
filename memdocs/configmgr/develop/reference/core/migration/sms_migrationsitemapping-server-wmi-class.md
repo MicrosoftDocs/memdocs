@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ac9084b4-13fd-4c95-a183-86508a2e1e07
 author: aczechowski
 ms.author: aaroncz
@@ -281,7 +281,7 @@ Class SMS_MigrationSiteMapping : SMS_BaseClass
 
  Site mapping synchronization status.  
 
-|||  
+|Value|Site mapping status|  
 |-|-|  
 |0|Have not gathered data|  
 |1|Ready for next data gathering process|  

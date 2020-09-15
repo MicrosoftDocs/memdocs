@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,11 +48,13 @@ Each individual certificate profile you create supports a single platform. For e
 
 When you use a Microsoft Certification Authority (CA):
 
-- To use SCEP certificate profiles, you must [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-- To use the following certificate profile types, you must [install the Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - SCEP certification profile
-  - PKCS certificate profile
+- To use SCEP certificate profiles:
+  - [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
+  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
+- To use PKCS certificate profiles:
+  - [Install the PFX Certificate Connector for Microsoft Intune](certficates-pfx-configure.md).
+  
 - To use PKCS imported certificates:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -84,12 +86,12 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | Platform              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
 |--|--|--|--|---|
 | Android device administrator | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) |   | ![Supported](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  |   | ![Supported](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)|
+| Android Enterprise <br> - Corporate-Owned Work Profile   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - Work Profile    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![Supported](./media/certificates-configure/green-check.png)  |  | ![Supported](./media/certificates-configure/green-check.png)| ![Supported](./media/certificates-configure/green-check.png) |
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
 | Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 
@@ -108,6 +110,14 @@ Create and deploy a trusted certificate profile before you create a SCEP, PKCS, 
 SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy will fail.
 
 Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
+
+> [!IMPORTANT]
+> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*. 
+>
+> This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10 and later.
+
+> [!NOTE]
+> The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Intune portal. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
 
 ### To create a trusted certificate profile
 
@@ -168,3 +178,5 @@ Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you w
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
 - [Configure and manage PKCS certificates with Intune](certficates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Learn about [Certificate connectors](certificate-connectors.md)

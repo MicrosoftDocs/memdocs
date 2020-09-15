@@ -51,7 +51,7 @@ Configuration Manager uses the **site system installation account** to install r
 1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).
 
 ## <a name="bkmk_createnew"></a> Install roles on a new site system server
 
@@ -71,7 +71,7 @@ Configuration Manager uses the **site system installation account** to install r
 1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).
 
 ## Next steps
 

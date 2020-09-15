@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
 author: aczechowski
 ms.author: aaroncz
@@ -119,7 +119,7 @@ public void RemoveDriverCategory(WqlConnectionManager connection,
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed:`WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`driver`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|The Windows driver. It is an instance of [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md).|  
 |`categoryName`|-   Managed: `String`<br />-   VBScript:  `String`|The name of an existing category. This matches the [SMS_CategoryInstance Server WMI Class](../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)e `LocalizedCategoryInstanceName` property.|  
 

@@ -5,15 +5,13 @@ description: The Preprovision BitLocker task in Configuration Manager enables Bi
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
-
 ---
+
 # Preprovision BitLocker in Windows PE with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*

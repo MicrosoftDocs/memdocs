@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f2a6e60e-a0df-4c13-9c46-485bd6061da1
 author: aczechowski
 ms.author: aaroncz
@@ -160,7 +160,7 @@ Class SMS_SCI_SysResUse : SMS_SiteControlItem
 
  SSL state description. Possible values are:  
 
-|||  
+|Value|SSL state|  
 |-|-|  
 |0|HTTP|  
 |1|HTTPS|  
@@ -177,7 +177,7 @@ Class SMS_SCI_SysResUse : SMS_SiteControlItem
 
  Returns the site server type if the site system role is colocated on the site server.  Possible values are:  
 
-|||  
+|Value|Site server type|  
 |-|-|  
 |1|The site system role is colocated on the secondary site server.|  
 |2|The site system role is colocated on the primary site server.|  

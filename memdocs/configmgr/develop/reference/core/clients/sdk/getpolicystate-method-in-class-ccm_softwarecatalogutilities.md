@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8f5ac399-40bb-4133-9d87-da7f5f3ec46d
 author: aczechowski
 ms.author: aaroncz
@@ -50,7 +50,7 @@ uint32 GetPolicyState
 
  Current state of the policy object. Possible values are:  
 
-|||  
+|Value|State|  
 |-|-|  
 |NULL|The policy object is inactive and has not been downloaded. This is the default value.|  
 |DownloadPending|The evaluator has determined that the policy object needs to be applied and should be downloaded. This is a temporary state used during the evaluation process.|  

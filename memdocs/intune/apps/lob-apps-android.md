@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,13 +32,13 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device. 
+A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device. This applies only to devices managed by Device Admin.
 
 > [!Note]
 > For more information about LOB apps and the Google Play Developer Console, see [Managed Google Play private (LOB) app publishing using the Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
 
 > [!Note]
-> For Android for Work devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md). 
+> For Android Enterprise devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md). 
 
 ## Select the app type
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 648585e5-c6e8-465b-aefe-d3f9cf7091a9
 author: aczechowski
 ms.author: aaroncz
@@ -67,9 +67,8 @@ public bool CheckUserPermissions(ConnectionManagerBase connectionManager, string
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`resourceID`|`String`|Unique ID, supplied by Configuration Manager, for the resource.|  
 

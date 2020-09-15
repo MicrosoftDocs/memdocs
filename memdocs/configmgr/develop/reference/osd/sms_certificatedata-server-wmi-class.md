@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f562bbf6-0c47-4dba-abfa-6f684075578d
 author: aczechowski
 ms.author: aaroncz
@@ -56,8 +56,8 @@ Class SMS_CertificateData : SMS_BaseClass
 
  Certificate type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Certificate type |  
+| ----- | ---------------- |  
 |1|Windows Intune Subscription|  
 
  `Description`  

@@ -3,19 +3,19 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
+ms.date: 07/13/2020
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## Queries
 
-Queries can be used to search terms, identify trends, analyze patterns, and provide many other insights based on your data. CMPivot uses a subset of the [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) data flow model for the tabular expression statement. The typical structure of a tabular expression statement is a composition of client entities and tabular data operators (such as filters and projections). The composition is represented by the pipe character (|), giving the statement a regular form that visually represents the flow of tabular data from left to right. Each operator accepts a tabular data set "from the pipe", and additional inputs (including other tabular data sets) from the body of the operator, then emits a tabular data set to the next operator that follows:
+Queries can be used to search terms, identify trends, analyze patterns, and provide many other insights based on your data. CMPivot uses a subset of the [Azure Log Analytics](/azure/kusto/query) data flow model for the tabular expression statement. The typical structure of a tabular expression statement is a composition of client entities and tabular data operators (such as filters and projections). The composition is represented by the pipe character (|), giving the statement a regular form that visually represents the flow of tabular data from left to right. Each operator accepts a tabular data set "from the pipe", and additional inputs (including other tabular data sets) from the body of the operator, then emits a tabular data set to the next operator that follows:
 `entity | operator1 | operator2 | ...`
 
 In the following example, the entity is `CCMRecentlyUsedApplications` (a reference to the recently used applications), and the operator is where (which filter out records from its input according to some per-record predicate):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## Entities

@@ -10,6 +10,7 @@ ms.assetid: e482b46f-fa52-4db4-b516-b3de75094c4a
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 2002
@@ -25,7 +26,7 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/2002/1234567.md)] -->
 
 [!INCLUDE [Evaluate software updates after a servicing stack update](includes/2002/4639943.md)]
-[!INCLUDE [Office 365 updates for disconnected software update points](includes/2002/4065163.md)]
+[!INCLUDE [Microsoft 365 updates for disconnected software update points](includes/2002/4065163.md)]
 [!INCLUDE [Improvements to Orchestration Groups](includes/2002/3098816.md)]
 [!INCLUDE [Improvements to Microsoft Edge management](includes/2002/4561024.md)]
 [!INCLUDE [Proxy support for Azure AD discovery and group sync](includes/2002/5913817.md)]

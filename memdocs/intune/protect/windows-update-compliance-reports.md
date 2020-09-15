@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,15 +44,15 @@ To review a policy report on the deployment status for the Windows 10 update rin
 
    In the **Monitor** section, choose from the following reports to view more detailed information about the update ring:
 
-   - **Device status**- This will show the device configuration status, for details see [Update deviceConfigurationDeviceStatus]( https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
+   - **Device status**- This will show the device configuration status, for details see [Update deviceConfigurationDeviceStatus]( /graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-update?view=graph-rest-1.0).
 
-   - **User status**- This will show the user name, status, and last report date, for details see [List deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
+   - **User status**- This will show the user name, status, and last report date, for details see [List deviceConfigurationUserStatuses](/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
 
-   - **End-user update status**- This will show the Windows device update state, for details see [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
+   - **End-user update status**- This will show the Windows device update state, for details see [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## Use Update Compliance
 
-You can monitor Windows 10 update rollouts by using [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+You can monitor Windows 10 update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-monitor). Update Compliance is offered through the Azure portal and is available free for devices that meet its [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 When you use this solution, you deploy a commercial ID to any of your Intune managed Windows 10 devices for which you want to report update compliance.  
 
@@ -64,12 +64,12 @@ For example, you can use the following values in **Add or edit OMA-URI Setting**
 
 - **Setting Name**: Windows Analytics Commercial ID
 - **Setting Description**: Configuring commercial ID for Windows Analytics solutions
-- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+- **OMA-URI** (case sensitive): *./Vendor/MSFT/DMClient/Provider/ProviderID/CommercialID*
 - **Data Type**: String
 - **Value**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 
 > [!NOTE]
-> For more information about MS DM Server, see [DMClient configuration service provider (CSP)]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
+> For more information about MS DM Server, see [DMClient configuration service provider (CSP)]( /windows/client-management/mdm/dmclient-csp).
 
 ## Next steps
 

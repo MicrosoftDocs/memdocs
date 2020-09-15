@@ -3,7 +3,7 @@
 
 title: Tutorial - Protect Exchange Online email on unmanaged devices
 titleSuffix: Microsoft Intune
-description: Learn to secure Office 365 Exchange Online with Intune app protection policies and Azure AD Conditional Access.
+description: Learn to secure Microsoft 365 Exchange Online with Intune app protection policies and Azure AD Conditional Access.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -124,7 +124,7 @@ Now we'll create two Conditional Access policies to cover all device platforms.
 
 4. Under **Assignments**, select **Users and groups**. On the **Include** tab, select **All users**, and then select **Done**.
 
-5. Under **Assignments**, select **Cloud apps or actions**. Because we want to protect Office 365 Exchange Online email, we'll select it by following these steps:
+5. Under **Assignments**, select **Cloud apps or actions**. Because we want to protect Microsoft 365 Exchange Online email, we'll select it by following these steps:
 
    1. On the **Include** tab, choose **Select apps**.
    2. Choose **Select**.
@@ -174,7 +174,7 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
 
 4. Under **Assignments**, select **Users and groups**. On the *Include* tab, select **All users**, and then select **Done**.
 
-5. Under **Assignments**, select **Cloud apps or actions**. Select Office 365 Exchange Online email with these steps:
+5. Under **Assignments**, select **Cloud apps or actions**. Select Microsoft 365 Exchange Online email with these steps:
 
    1. On the *Include* tab, choose **Select apps**.
    2. Choose **Select**.
@@ -209,7 +209,7 @@ Your app protection policies and Conditional Access are now in place and ready t
 
 ## Try it out
 
-With the policies you've created, devices will need to enroll in Intune and use the Outlook mobile app to access Office 365 email. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant.
+With the policies you've created, devices will need to enroll in Intune and use the Outlook mobile app to access Microsoft 365 email. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant.
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 

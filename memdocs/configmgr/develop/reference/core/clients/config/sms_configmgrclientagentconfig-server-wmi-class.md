@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8f42cb66-ac17-444c-a93c-bd8af273437d
 author: aczechowski
 ms.author: aaroncz
@@ -114,7 +114,7 @@ Class SMS_ConfigMgrClientAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Indicates whether [Windows 10 Device Health Attestation](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) is enabled.  
+ Indicates whether [Windows 10 Device Health Attestation](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) is enabled.  
 
  `EnableThirdPartyOrchestration`  
  Data type: `UInt32`  

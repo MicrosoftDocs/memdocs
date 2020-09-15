@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ba718ec2-df70-426d-a6df-997a8e98483d
 author: aczechowski
 ms.author: aaroncz
@@ -100,8 +100,8 @@ Class CCM_Policy_Policy : CCM_Policy_Config
 
  Current state of the policy object. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |NULL|The policy object is inactive and has not been downloaded. This is the default value.|  
 |DownloadPending|The evaluator has determined that the policy object needs to be applied and should be downloaded. This is a temporary state used during the evaluation process.|  
 |DownloadStarted|The policy object has been requested from the management point and is in the process of being downloaded.|  

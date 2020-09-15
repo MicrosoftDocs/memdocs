@@ -74,7 +74,7 @@ conceptualContent:
         - text: Set up Desktop Analytics
           url: ./desktop-analytics/set-up.md
           itemType: how-to-guide
-        - text: Office 365 dashboard
+        - text: Microsoft 365 dashboard
           url: ./sum/deploy-use/office-365-dashboard.md
           itemType: learn
       footerLink:
@@ -147,7 +147,7 @@ conceptualContent:
         - text: Optimize Windows 10 updates
           url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
           itemType: learn
-        - text: Update Office 365
+        - text: Update Microsoft 365
           url: ./sum/deploy-use/manage-office-365-proplus-updates.md
           itemType: how-to-guide
       footerLink:
@@ -169,11 +169,11 @@ conceptualContent:
         url: ./compliance/index.yml
     - title: Protect
       links:
-        - text: Windows Defender
+        - text: Endpoint protection
           url: ./protect/deploy-use/endpoint-protection.md
           itemType: overview
-        - text: WDATP
-          url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+        - text: Microsoft Defender Advanced Threat Protection
+          url: ./protect/deploy-use/defender-advanced-threat-protection.md
           itemType: how-to-guide
         - text: BitLocker management
           url: ./protect/plan-design/bitlocker-management.md
@@ -203,12 +203,12 @@ additionalContent:
         url: https://aka.ms/cmcbsupport
       - title: System Center 2012 R2 Configuration Manager
         summary: Documentation for the previous version of Configuration Manager
-        url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+        url: /previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
    - title: Other content
      items:
         - title: Develop
           links:
-            - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+            - url: /powershell/sccm/overview
               text: PowerShell
             - url: ./develop/index.yml
               text: Software development kit (SDK)

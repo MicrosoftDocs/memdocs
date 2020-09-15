@@ -7,11 +7,9 @@ ms.technology: configmgr-comanage
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/06/2019
-ms.topic: conceptual
+ms.date: 09/15/2020
+ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-
-
 ---
 
 # How to switch Configuration Manager workloads to Intune
@@ -40,11 +38,11 @@ Starting in version 1906, you can configure different pilot collections for each
 
 4. Go to the **Staging** tab and change the **Pilot collection** for any of the workloads if needed.
   
-   ![Screenshot of Workloads tab on co-management properties page](media/3555750-co-management-staging-tab.png)
+   ![Screenshot of Staging tab on co-management properties page](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Before you switch any workloads, make sure you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices.
-> - Starting in Configuration Manager version 1806, when you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from client notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval). <!--1357377-->
+> - Starting in Configuration Manager version 1806, when you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. <!--7087526-->
 
 ## Switch workloads in version 1902 and earlier
 
@@ -57,7 +55,7 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 3. Switch to the **Workloads** tab. By default, all workloads are set to the **Configuration Manager** setting. To switch a workload, move the slider control for that workload to the desired setting.  
 
-    ![Screenshot of Workloads tab on co-management properties page](media/properties-workloads.png)
+    ![Screenshot of Workloads tab on co-management properties page, version 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager continues to manage this workload.  
 
@@ -71,7 +69,7 @@ You can switch workloads when you enable co-management, or later when you're rea
 
 > [!Important]  
 > - Before you switch any workloads, make sure you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices. 
-> - Starting in Configuration Manager version 1806, when you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. This sync also happens when you initiate the **Download Computer Policy** action from client notifications in the Configuration Manager console. For more information, see [Initiate client policy retrieval using client notification](../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval). <!--1357377-->
+> - Starting in Configuration Manager version 1806, when you switch a co-management workload, the co-managed devices automatically synchronize MDM policy from Microsoft Intune. <!--7087526-->
 
 ## Next steps
 

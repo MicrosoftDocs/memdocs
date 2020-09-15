@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -53,10 +53,10 @@ This article shows you how to view all your devices, and their properties in the
       - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
       - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
       - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
-      - Update Windows Defender security intelligence
-      - [BitLocker key rotation](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Update Windows Defender security intelligence](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [BitLocker key rotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [Rename device](device-rename.md)
-      - [New Remote Assistance Session](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [New Remote Assistance Session](./teamviewer-support.md)
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
@@ -110,7 +110,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
+> Phone number is not inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

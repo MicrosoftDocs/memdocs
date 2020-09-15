@@ -27,7 +27,7 @@ ms.collection: M365-identity-device-management
 
 # Use WDAC and Windows PowerShell to allow or blocks apps on HoloLens 2 devices with Microsoft Intune
 
-Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp), which replaces the [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
+Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp), which replaces the [AppLocker CSP](/windows/client-management/mdm/applocker-csp).
 
 Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you may want to allow or prevent the Cortana app from opening on HoloLens 2 devices in your organization.
 
@@ -35,7 +35,7 @@ This feature applies to:
 
 - HoloLens 2 devices running Windows Holographic for Business
 
-The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
+The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
 This article shows you how to:
 
@@ -161,7 +161,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     Set-RuleOption -o 15 .\mergedPolicy.xml
     ```
 
-    For more information on these rules, see [Understand WDAC policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
+    For more information on these rules, see [Understand WDAC policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
 9. Convert **mergedPolicy.xml** to binary format. This step creates **compiledPolicy.bin**. You'll add this **compiledPolicy.bin** binary file to Intune.
 

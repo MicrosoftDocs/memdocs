@@ -76,9 +76,9 @@ Similar options have been added to the software updates deployment wizard, autom
 
 Device Guard is a Windows 10 feature that uses hardware and software features to strictly control what is allowed to run on the device.
 
-For more information, see [Introduction to Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+For more information, see [Introduction to Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
+In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
 
 At present, this capability is not configurable from the Configuration Manager console. To configure the policy requires you to configure a registry key on each client, and configure Windows services on the client.
 Once this is done, configure the AppLocker policy file. After you configure the policy file, you can deploy it to any compatible client device.
@@ -91,9 +91,9 @@ Like all AppLocker policies, policies with Managed Installer rules can run in tw
 
 For more information, see the following articles:
 
-- [Device Guard introduction](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Device Guard introduction](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Planning and getting started on the Windows Defender Application Control deployment process](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Planning and getting started on the Windows Defender Application Control deployment process](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
   With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fallback to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
@@ -166,8 +166,8 @@ The easiest way to get export the root of the client certificates used on the ne
 #### Upload the management certificate to Azure
 
 An Azure management certificate is required for Configuration Manager to access the Azure API and configure Cloud Proxy Service. For more information and instructions for how to upload a management certificate, see the following articles in the Azure documentation:
-- [Certificates overview for Azure Cloud Services](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Upload an Azure Management API Management Certificate](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Certificates overview for Azure Cloud Services](/azure/cloud-services/cloud-services-certs-create)
+- [Upload an Azure Management API Management Certificate](/previous-versions/azure/azure-api-management-certs).
 
 Make sure to copy the subscription ID associated with the management certificate. You will need it for configuring Cloud Proxy Service in the Configuration Manager console.
 
@@ -211,11 +211,11 @@ After the service and roles are completely configured, internal clients will get
 
 After clients have the new location information for Cloud Proxy Service, try checking the status of clients that are no longer on the internal private network but have Internet access. You can also monitor traffic on Cloud Proxy Service by going to **Administration > Cloud Services > Cloud Proxy Service**, selecting the service in the list pane, and viewing the traffic information in the details pane.   
 
-## <a name="manage_o365"></a>Manage the Office 365 client agent in Configuration Manager  
+## <a name="manage_o365"></a>Manage the Microsoft 365 client agent in Configuration Manager  
 
-Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Office 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Office 365 updates, the Configuration Manager client agent communicates with the Office 365 client agent to download Office 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
+Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Microsoft 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Microsoft 365 updates, the Configuration Manager client agent communicates with the Microsoft 365 client agent to download Microsoft 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
 
-For more information, see [Manage Office 365 ProPlus updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For more information, see [Manage Microsoft 365 Apps for enterprise updates](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.

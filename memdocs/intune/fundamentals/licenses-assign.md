@@ -51,7 +51,7 @@ You can use the [Microsoft Endpoint Manager admin center](https://go.microsoft.c
 
 ## Assign an Intune license by using Azure Active Directory
 
-You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
+You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
@@ -80,40 +80,50 @@ How you purchased Intune determines your subscription information:
 - If you purchased Intune with a CC# or Invoice, then your licenses will be user-based.
 
 ## Use PowerShell to selectively manage EMS user licenses
-Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](https://msdn.microsoft.com/library/jj151815.aspx).
+Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
-To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
+To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
 
 You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
 
-    (Get-MsolAccountSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
+```powershell
+(Get-MsolAccountSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
+```
 
 You can run the following command to exclude the Intune service plan. You can use the same method to expand to an entire security group or you can use more granular filters.
 
 **Example 1**<br>
 Create a new user on the command line and assign an EMS license without enabling the Intune portion of the license:
 
-    Connect-MsolService
+```powershell
+Connect-MsolService
 
-    New-MsolUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
+New-MsolUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
 
-    $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
-    Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
+$CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
+```
 
 Verify with:
 
-    (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+```powershell
+(Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+```
 
 **Example 2**<br>
 Disable the Intune portion of EMS license for a user that is already assigned with a license:
 
-    Connect-MsolService
+```powershell
+Connect-MsolService
 
-    $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
-    Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
+$CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
+```
 
 Verify with:
 
-    (Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+```powershell
+(Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+```
 
 ![PoSH-AddLic-Verify](./media/licenses-assign/posh-addlic-verify.png)

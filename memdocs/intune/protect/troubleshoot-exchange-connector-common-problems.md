@@ -7,7 +7,7 @@ description: Troubleshoot and resolve common problems for the on-premises Micros
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,7 @@ Review the following sections to troubleshoot email notification issues.
 
 ### Check the notification account that retrieves Autodiscover settings
 
-1. Make sure the Autodiscover service and EWS are configured on the Exchange Client Access services. For more information, see [Client Access services](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) and [Autodiscover service in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Make sure the Autodiscover service and EWS are configured on the Exchange Client Access services. For more information, see [Client Access services](/Exchange/architecture/client-access/client-access) and [Autodiscover service in Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 2. Verify that your notification account meets the following requirements:
 
@@ -74,14 +74,14 @@ Review the following sections to troubleshoot email notification issues.
       ![Nslookup results](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
 )
 
-   You can also test the Autodiscover service from the internet at https://testconnectivity.microsoft.com. Or test it from a local domain by using the Microsoft Connectivity Analyzer tool. For more information, see [Microsoft Connectivity Analyzer tool](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   You can also test the Autodiscover service from the internet at https://testconnectivity.microsoft.com. Or test it from a local domain by using the Microsoft Connectivity Analyzer tool. For more information, see [Microsoft Connectivity Analyzer tool](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### Check Autodiscovery
+### Check Autodiscover
 
 If Autodiscover fails, try the following steps:
 
-1. [Configure a valid Autodiscover DNS record](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Configure a valid Autodiscover DNS record](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Hard-code the EWS URL in the Intune Exchange connector configuration file:
 

@@ -93,17 +93,17 @@ This release adds support for Windows Defender Exploit Guard. You can configure 
 
 Compliance data for Exploit Guard policy deployment is available from within the Configuration Manager console.
 
-For more information about Exploit Guard and specific components and rules, see [Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in the Windows documentation library.
+For more information about Exploit Guard and specific components and rules, see [Windows Defender Exploit Guard](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) in the Windows documentation library.
 
 ### Prerequisites
 Managed devices must run Windows 10 1709 Fall Creators Update or later and satisfy the following requirements depending on the components and rules configured:
 
 |Exploit Guard component |Additional prerequisites|
 |------------------------|------------------------|
-| Attack Surface Reduction  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
-| Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
+| Attack Surface Reduction  | Devices must have [Windows Defender AV real-time protection]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
+| Controlled folder access  | Devices must have [Windows Defender AV real-time protection]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.   |
 | Exploit protection  | None  |
-| Network protection  |  Devices must have [Windows Defender AV real-time protection]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
+| Network protection  |  Devices must have [Windows Defender AV real-time protection]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) enabled.  |
 
 ### Create an Exploit Guard policy  <!--1355468 -->
 1. In the Configuration Manager console, go to **Assets and compliance** > **Endpoint Protection**, and then click **Windows Defender Exploit Guard**.
@@ -121,7 +121,7 @@ After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wiz
 
 ## Limited support for CNG certificates
 <!-- 1356191 -->
-Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) certificate templates for the following scenarios:
+Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](/windows/win32/seccng/cng-features) certificate templates for the following scenarios:
 
 - Client registration and communication with an HTTPS management point.   
 - Software distribution and application deployment with an HTTPS distribution point.   
@@ -206,7 +206,7 @@ To create a policy, and to browse the available settings:
     > [!NOTE]
     > Windows 10 PCs store only one network isolation list on the client. In this release, you can create two different kinds of network isolation lists (one from Windows Information Protection, and one from Windows Defender Application Guard), and deploy them to the client. If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail.
 
-    You can find more information about how to specify network definitions in the [Windows Information Protection documentation]- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    You can find more information about how to specify network definitions in the [Windows Information Protection documentation]- [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. When you are finished, complete the wizard, and deploy the policy to one or more Windows 10 devices.
 
@@ -215,4 +215,4 @@ To create a policy, and to browse the available settings:
 To read more about Windows Defender Application Guard, see [this blog post](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Additionally, to learn more about Windows Defender Application Guard Standalone mode, see [this blog post](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).

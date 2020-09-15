@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 01ad5660-fcae-4e18-bafd-453caa15bc30
 author: aczechowski
 ms.author: aaroncz
@@ -95,7 +95,7 @@ SInt32 GetAutoUpgradeConfigs(
 
  Download options in slow network. Possible values are:  
 
-|||  
+|Value|Download option|  
 |-|-|  
 |0|Do not download.|  
 |1|Download from distribution point and run locally.|  

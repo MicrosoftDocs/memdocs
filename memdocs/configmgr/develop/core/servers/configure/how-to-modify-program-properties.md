@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7e4018e2-f4df-426a-b3f1-b6837aee7fa8
 author: aczechowski
 ms.author: aaroncz
@@ -84,7 +84,7 @@ public void ModifyProgram(WqlConnectionManager connection, string existingPackag
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of an existing package with which to associate the program.|  
 |`existingProgramNameToModify`|-   Managed: `String`<br />-   VBScript: `String`|The name for the program to modify.|  
 |`newProgramDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new program.|  

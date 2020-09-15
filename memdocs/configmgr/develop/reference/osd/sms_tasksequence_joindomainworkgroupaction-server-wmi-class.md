@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 43d47e35-4093-4aa8-9d8e-5c02fd209373
 author: aczechowski
 ms.author: aaroncz
@@ -170,8 +170,8 @@ Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
 
  The type of network join action required of the target computer. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Network join type |  
+| ----- | ----------------- |  
 |0|Domain|  
 |1|Workgroup|  
 

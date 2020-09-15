@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c249e680-0275-4d8a-a3f5-39643b40a8b7
 author: aczechowski
 ms.author: aaroncz
@@ -65,9 +65,8 @@ public static bool UserHasPermissions(ConnectionManagerBase connectionManager, s
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
 |`objectName`|`String`|Name of the object.|  
 |permissions|Integer|The permissions.|  

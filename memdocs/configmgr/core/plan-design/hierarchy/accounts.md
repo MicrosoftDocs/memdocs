@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL objects used in Configuration Manager.
 ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: Configuration Manager-core
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
@@ -331,7 +331,7 @@ You can specify more than one client push installation account. Configuration Ma
 > 4. Then remove the old account from Configuration Manager and Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Don't grant this account the right to sign in locally.  
+> Use domain or local group policy to assign the Windows user right to **Deny log on locally**. As a member of the Administrators group, this account will have the right to sign in locally, which isn't needed. For better security, explicitly deny the right for this account. The deny right supersedes the allow right.<!--MEMDocs#744-->
 
 For more information, see [Client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
@@ -548,7 +548,7 @@ If you have Configuration Manager 2007 distribution points or secondary sites wi
 > [!NOTE]  
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
-For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Source site database account  
@@ -564,7 +564,7 @@ If you use the Configuration Manager (current branch) computer account, make sur
 > [!NOTE]  
 > Both the source site account and the [source site database account](#source-site-database-account) are identified as **Migration Manager** in the **Accounts** node of the **Administration** workspace in the Configuration Manager console.  
 
-For more information, see [Migrate data between hierarchies](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+For more information, see [Migrate data between hierarchies](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### Task sequence domain join account 

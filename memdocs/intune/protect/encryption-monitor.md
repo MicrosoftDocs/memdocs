@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,7 +62,7 @@ The Encryption report pane displays a list of the devices you manage with high
     - Version 1709 or later, of *Business*, *Enterprise*, *Education*, or version 1809 or later of *Pro*
     - The device must have a TPM chip
 
-    For more information, see the [BitLocker configuration service provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
+    For more information, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
   - **Not ready**: The device doesn't have full encryption capabilities, but still supports encryption. For example, a Windows device might be encrypted manually by a user, or through Group Policy that can be set to allow encrypting without a TPM.
   - **Not applicable**: There isn't enough information to classify this device.
@@ -121,7 +121,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The device is already encrypted. Device user must decrypt the device to continue.
 
-    *Consider: Intune can't set up FileVault on a device that is already encrypted. Instead, the user needs to manually decrypt their device before it can be managed by a device configuration policy and Intune*.
+    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternately, but not recommended as the following can leave a device unencrypted for a time, the user can manually decrypt their device before so it can then be encrypted by Intune policy.*
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
@@ -177,7 +177,7 @@ This report can be of use in identifying problems for groups of devices. For exa
 For details on managing recovery keys, see the following in the Intune documentation:
 
 macOS FileVault:
-- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Rotate recovery keys](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Recover recovery keys](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

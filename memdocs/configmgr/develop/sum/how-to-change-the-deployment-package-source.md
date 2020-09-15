@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
 author: aczechowski
 ms.author: aaroncz
@@ -38,7 +38,7 @@ You change the deployment package source for a software updates deployment packa
 
  Example of the subroutine call in Visual Basic:  
 
-```  
+```vbscript
 
 ' PREWORK FOR ChangeDeploymentPackageSource  
 
@@ -53,7 +53,7 @@ Call ChangeDeploymentPackageSource(swbemServices,             _
 
  Example of the method call in C#:  
 
-```  
+```csharp
 
 //PREWORK FOR ChangeDeploymentPackageSource.  
 
@@ -72,7 +72,7 @@ SUMSnippets.ChangeDeploymentPackageSource(WMIConnection,
 
 ```  
 
-```vbs  
+```vbscript  
 
 Sub ChangeDeploymentPackageSource(connection,                   _  
                                   existingSUMPackageID,         _  
@@ -111,7 +111,7 @@ Sub ChangeDeploymentPackageSource(connection,                   _
 
 ```  
 
-```c#  
+```csharp 
 
 public void ChangeDeploymentPackageSource(WqlConnectionManager connection,  
                                           string existingSUMPackageId,  
@@ -152,10 +152,9 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|Parameter|Type|Description|
+|---------|----|-----------| 
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing software updates deployment package.|  
 |`validateNewPackageSource`|-   Managed: `dictionary` object|The `validateNewPackageSource` is a dictionary object containing the parameters that the `ValidateNewPackageSource` method requires.<br /><br /> `PackageSource`|  
 |`newPackageSourceLocation`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package source location. The source path must be a Universal Naming Convention (UNC) path. All of the updates available in the old package source must be available in the new package source.|  

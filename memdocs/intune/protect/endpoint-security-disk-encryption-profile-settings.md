@@ -72,6 +72,11 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable the prompt to enable FileVault that appears at sign-out.
 
+  - **Hide recovery key**  
+     Hide the personal recovery key from the user of the macOS device during encryption. After the disk is encrypted, a user can use any device to view their personal recovery key through the Intune Company Portal website, or company portal app on a supported platform.
+    - **Not configured** (*default*)
+    - **Yes** - Hide the personal recovery key during device encryption.
+
 ## BitLocker
 
 ### BitLocker – Base Settings
@@ -92,6 +97,9 @@ Supported platforms and profiles:
   This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
   - **Not configured** (*default*) - The setting returns to the OS default, which is to not require storage card encryption.
   - **Yes** - Encryption on storage cards is required for mobile devices.
+
+  > [!NOTE]
+  > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
 - **Hide prompt about third-party encryption**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bb58b677-85f9-4888-8d6d-5e5e8379b05e
 author: aczechowski
 ms.author: aaroncz
@@ -137,8 +137,8 @@ Class CCM_Scheduler_ScheduledMessage : CCM_Policy
 
   Defines the system resource conditions to fire this schedule. The default value is 1. Possible values are a combination of the following:  
 
-|||  
-|-|-|  
+| Value | Launch Condition type |
+| ----- | --------------------- |
 |0|eTaskCondition_None|  
 |1|eTaskCondition_AboveCriticalBattery|  
 |2|eTaskCondition_AboveLowBattery|  

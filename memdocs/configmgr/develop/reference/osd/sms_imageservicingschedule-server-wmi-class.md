@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9f1bbe06-85f4-4d62-b073-0ca5c9e45c7a
 author: aczechowski
 ms.author: aaroncz
@@ -47,8 +47,8 @@ Class SMS_ImageServicingSchedule : SMS_BaseClass
 
  Action for software update.  
 
-|||  
-|-|-|  
+| Value | Update action |  
+| ----- | ------------- |  
 |0|None.|  
 |1|Install software update immediately.|  
 |2|Cancel software update installation.|  
@@ -118,8 +118,8 @@ Class SMS_ImageServicingSchedule : SMS_BaseClass
 
  State for software update installation at this scheduled time.  
 
-|||  
-|-|-|  
+| Value | Installation state |  
+| ----- | ------------------ |  
 |0|None|  
 |1|Scheduled|  
 |2|Running|  

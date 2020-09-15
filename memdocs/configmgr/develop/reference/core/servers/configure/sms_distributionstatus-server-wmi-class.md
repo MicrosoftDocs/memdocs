@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 25f4054e-d371-498f-8feb-c1f1cc8688c0
 author: aczechowski
 ms.author: aaroncz
@@ -81,7 +81,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 
  Secured object class ID.  
 
-|||  
+|Value|Object type|  
 |-|-|  
 |2|SMS_DistributionStatus|  
 |14|SMS_OperatingSystemInstallPackage|  
@@ -110,7 +110,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 
  Status Type.  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

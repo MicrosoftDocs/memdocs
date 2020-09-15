@@ -22,7 +22,7 @@ For more information on how to use this feature, see [Monitor the health of upda
 ![Screenshot of the Monitor Health page of Desktop Analytics](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics only collects health data from devices that provide usage data it can use as a denominator. This means it doesn't include devices running Windows 7 and Windows 10 that aren't set to share diagnostic data at the Enhanced (Limited) level. If more than 10% of devices running Windows 10 are set to share diagnostic data at levels other than Enhanced (Limited), the **Monitor health** page displays a warning in the banner area.  
+> Desktop Analytics only collects health data from devices that provide usage data it can use as a denominator. This means it doesn't include devices running Windows 7 and Windows 10 that aren't set to share diagnostic data at the Optional (limited) level. If more than 10% of devices running Windows 10 are set to share diagnostic data at levels other than Optional (limited), the **Monitor health** page displays a warning in the banner area.  
 
 To view more information about a specific app, select it in the list.
 

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "12/14/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7b900446-4a60-4343-9f8b-2d6ecc7ac951
 author: aczechowski
 ms.author: aaroncz
@@ -117,8 +117,8 @@ Class SMS_Collection : SMS_BaseClass
 
  The type of the collection. When creating or modifying collections, the collection type must be the same for all included, excluded, and LimitTo collections. Mismatched collection types are not allowed. <!--SMS442380-->
 
-|||  
-|-|-|  
+| Value | Collection type |
+| ----- | --------------- |
 |0|OTHER|  
 |1|USER|  
 |2|DEVICE|  
@@ -150,8 +150,8 @@ Class SMS_Collection : SMS_BaseClass
 
  Current status of the collection. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Current status |
+| ----- | -------------- |
 |0|NONE|  
 |1|READY|  
 |2|REFRESHING|  
@@ -353,8 +353,8 @@ Class SMS_Collection : SMS_BaseClass
 
  Refresh type indicating how Configuration Manager refreshes the collection. Possible values are listed below. The default value is MANUAL (1).  
 
-|||  
-|-|-|  
+| Value | Refresh type |
+| ----- | ------------ |
 |1|MANUAL|  
 |2|PERIODIC|  
 |4|CONSTANT_UPDATE|  

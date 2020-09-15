@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,6 +72,8 @@ The following sections provide details about the different log files available t
 
   - [Discovery](#BKMK_DiscoveryLog)  
 
+  - [Endpoint analytics](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Extensions](#BKMK_Extensions)  
@@ -166,7 +168,10 @@ The following table lists the log files located on the Configuration Manager cli
 |SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|Records the historical activity in Software Center for the specified user on the client computer.|  
 |Scheduler.log|Records activities of scheduled tasks for all client operations.|  
 |SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|Records the activity for notifying users about software for the specified user.|  
-|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|Records the historical information for notifying users about software for the specified user.|
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|
 |setuppolicyevaluator.log|Records configuration and inventory policy creation in WMI.|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|The main log file for wake-up proxy.|  
 |smscliui.log|Records use of the Configuration Manager client in Control Panel.|  
@@ -321,6 +326,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. In version 1910 and earlier, it also included synchronization of collection membership results to Azure AD.| Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
+|SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
 |SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
@@ -339,7 +345,8 @@ The following table lists the log files that are on the Configuration Manager si
 |srsrpsetup.log|Records results of the reporting point installation process.|Site system server|  
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
-|swmproc.log|Records the processing of metering files and settings.|Site server|  
+|swmproc.log|Records the processing of metering files and settings.|Site server|
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 
@@ -422,6 +429,7 @@ The following table lists the log files that contain information related to the 
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
 |PolicyPV.log|Records policy generation of all policies.|Site server|  
 |outgoingcontentmanager.log|Records content uploaded to Microsoft Intune.|Computer with the  service connection point|  
+|ServiceConnectionTool.log|Records details about use of the [service connection tool](../../servers/manage/use-the-service-connection-tool.md) based on the parameter you use. Each time you run the tool, it replaces any existing log file.|Same location as the tool|
 |Sitecomp.log|Records details of service connection point installation.|Site server|  
 |SmsAdminUI.log|Records Configuration Manager console activity.|Computer that runs the Configuration Manager console|  
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
@@ -639,6 +647,15 @@ The following table lists the log files that contain information related to disc
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|  
 |netdisc.log|Records Network Discovery actions.|Site server|  
 
+### <a name="bkmk_analytics"></a> Endpoint analytics
+
+|Log name|Description|Computer with log file|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
+|SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
+|SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
+
 ### <a name="BKMK_EPLog"></a> Endpoint Protection
 
 The following table lists the log files that contain information related to Endpoint Protection.  
@@ -762,7 +779,7 @@ The following table lists the log files that contain information related to OS d
 |MP_ClientIDManager.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
-|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Records details about Windows Sysprep and setup logs.|Client|  
 |Setuperr.log|Records details about Windows Sysprep and setup logs.|Client|  
 |smpisapi.log|Records details about the client state capture and restore actions, and threshold information.|Client|  
@@ -872,7 +889,7 @@ Servicing uses the same infrastructure and process as software updates. For othe
 |DISM.log|Records all actions using DISM. If necessary, DISM.log will point to CBS.log for more details.|Client|
 |setupact.log|Primary log file for most errors that occur during the Windows installation process. The log file is located in the %windir%\$Windows.~BT\sources\panther folder.|Client|
 
-For more information, see [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+For more information, see [Online Servicing-Related Log Files](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
 ### <a name="BKMK_WULog"></a> Windows Update Agent
 
@@ -882,7 +899,7 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Records details about when the Windows Update Agent connects to the WSUS server and retrieves the software updates for compliance assessment, and whether there are updates to the agent components.|Client|  
 
-For more information, see [Windows Update log files](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+For more information, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ### <a name="BKMK_WSUSLog"></a> WSUS server
 

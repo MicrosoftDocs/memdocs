@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 2ed724a6-b660-4d71-9580-901814bec745
 author: aczechowski
 ms.author: aaroncz
@@ -93,8 +93,8 @@ Class SMS_SUPSyncStatus : SMS_BaseClass
 
  Replication link status.  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |0|Healthy|  
 |1|Degraded|  
 |2|Error|  

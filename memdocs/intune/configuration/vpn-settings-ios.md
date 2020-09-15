@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 [Create a device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 
 ## Connection type
 
@@ -54,6 +54,7 @@ Select the VPN connection type from the following list of vendors:
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**: To use Conditional Access, or allow users to bypass the Zscaler sign in screen, then you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+- **NetMotion Mobility**
 - **IKEv2**: [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
 - **Custom VPN**
 
@@ -108,7 +109,7 @@ The settings shown in the following list are determined by the VPN connection ty
 
   - To remove this setting, recreate the profile, and don't select **I agree**. Then, reassign the profile.
 
-## IKEv2 settings
+### IKEv2 settings
 
 These settings apply when you choose **Connection type** > **IKEv2**.
 

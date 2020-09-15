@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ff58c3a0-203e-476b-b803-e449444f4fb1
 author: aczechowski
 ms.author: aaroncz
@@ -38,7 +38,7 @@ sint32 GetClientBaselineStatusSummary(
 
  The client baseline type. Possible values are:  
 
-|||  
+|Value|Client baseline type|  
 |-|-|  
 |1|Production|  
 |2|Staging|  

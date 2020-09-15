@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ef766ce5-3137-43b7-8029-26e0606391d4
 author: aczechowski
 ms.author: aaroncz
@@ -56,7 +56,7 @@ Class SMS_ADForestDiscoveryStatus : SMS_BaseClass
 
  Discovery status. Possible values are:  
 
-|||  
+|Value|Discovery status|  
 |-|-|  
 |0|SUCCEEDED|  
 |1|COMPLETED|  
@@ -109,7 +109,7 @@ Class SMS_ADForestDiscoveryStatus : SMS_BaseClass
 
  Publishing status. Possible values are:  
 
-|||  
+|Value|Publishing status|  
 |-|-|  
 |0|UNKNOWN|  
 |1|SUCCEEDED|  

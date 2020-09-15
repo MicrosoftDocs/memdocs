@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -219,7 +219,7 @@ This feature applies to:
 
 - **Lock screen footnote**: If devices are lost or stolen, enter a note that might help get the device returned. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
-  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceName` or any other device-specific value.
+  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `DEVICENAME` or any other device-specific value.
 
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix. 
@@ -305,13 +305,13 @@ This feature applies to:
 
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS will not use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
 
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that previously used brokered authentication with the Microsoft Authenticator app continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that used the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
@@ -322,7 +322,11 @@ This feature applies to:
 
 - **Shared device mode** (Microsoft Azure AD only): Choose **Enable** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
-  For more information about shared device mode and how to enable it, see [Overview of shared device mode](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+  For more information about shared device mode and how to enable it, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).  
+
+  This feature applies to:
+  
+  - iOS/iPadOS 13.5 and newer
 
 - **Extension ID** (Redirect and Credential): Enter the bundle identifier that identifies your SSO app extension, such as `com.apple.extensiblesso`.
 
@@ -343,7 +347,7 @@ This feature applies to:
   - The URLs must begin with `http://` or `https://`.
 
 - **Additional configuration** (Microsoft Azure AD, Redirect, and Credential): Enter additional extension-specific data to pass to the SSO app extension:
-  - **Key**: Enter the name of the item you want to add, such as `user name`.
+  - **Key**: Enter the name of the item you want to add, such as `user name`. `AppAllowList` is case sensitive. Be sure to exactly enter 'AppAllowList'. 
   - **Type**: Enter the type of data. Your options:
 
     - String
@@ -371,7 +375,12 @@ This feature applies to:
 
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
-- **App bundle IDs** (Kerberos only): **Add** the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they're authorized to access.
+- **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
+
+  If you're using the Microsoft Azure AD SSO app extension type, these apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in. The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL). The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
+
+  If you're using the Kerberos SSO app extension type, these apps have access to the Kerberos Ticket Granting Ticket, the authentication ticket, and authenticate users to services they’re authorized to access.
+
 - **Domain realm mapping** (Kerberos only): **Add** the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certficates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 

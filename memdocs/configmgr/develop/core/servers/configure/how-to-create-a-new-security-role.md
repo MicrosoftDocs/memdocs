@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a97841c0-5cab-4a84-a480-3a2eb60d706a
 author: aczechowski
 ms.author: aaroncz
@@ -61,9 +61,8 @@ public void CreateRole(WqlConnectionManager connection, string roleName, string 
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |roleName|-   Managed: `String`|A name for the new role.|  
 |`originalRoleID`|-   Managed: `String`|The identifier of the original security role.|  

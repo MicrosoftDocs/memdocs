@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a443f6b9-5dcf-4eb5-9083-4d78799ebc7b
 author: aczechowski
 ms.author: aaroncz
@@ -61,8 +61,8 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 
  Client certificate type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client certificate type |
+| ----- | ----------------------- |
 |1|Self-signed certificate|  
 |2|Certificate issued by a certification authority.|  
 
@@ -75,8 +75,8 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 
  Type of client. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Client type |
+| ----- | ----------- |
 |1|Client|  
 |3|Device|  
 
@@ -107,8 +107,8 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 
  Owner of the device.  
 
-|||  
-|-|-|  
+| Value | Device owner |
+| ----- | ------------ |
 |1|Company|  
 |2|Personal|  
 
@@ -148,8 +148,8 @@ Class SMS_CollectionMember_a : SMS_BaseAssociation
 
  Whether the resource is approved. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Approval type |
+| ----- | ------------- |
 |0|Not approved|  
 |1|Approved|  
 |2|Not applicable|  

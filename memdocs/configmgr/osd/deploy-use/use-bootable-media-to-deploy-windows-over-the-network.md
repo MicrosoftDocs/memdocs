@@ -1,46 +1,76 @@
 ---
 title: Use bootable media to deploy Windows over the network
 titleSuffix: Configuration Manager
-description: Use bootable media deployments in Configuration Manager to deploy the operating system when the destination computer starts.
-ms.date: 06/16/2017
+description: Use bootable media deployments in Configuration Manager to deploy the OS when the destination computer starts.
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
-
 ---
+
 # Use bootable media to deploy Windows over the network with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You may deploy the operating system when the destination computer starts using a bootable media deployment. The media contains a pointer to the task sequence, the operating system image, and other required content from the network. When the destination computer starts, the computer retrieves the items referenced in the pointer. With the bootable media free of content, you can update the target without having to replace it on the media.
+Bootable media only includes the boot image and a pointer to the task sequence. It downloads the OS image and other referenced content from the network. Since the bootable media doesn't contain much content, you can update the task sequence and most content without having to replace the media.
 
-You may deploy operating systems over the network by using multicast in the following operating system deployment scenarios:
+Deploy operating systems over the network with boot media in the following scenarios:
 
--   [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
+- [Refresh an existing computer with a new version of Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
--   [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Install a new version of Windows on a new computer (bare metal)](install-new-windows-version-new-computer-bare-metal.md)
 
--   [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)  
+- [Replace an existing computer and transfer settings](replace-an-existing-computer-and-transfer-settings.md)
 
-Complete the steps in one of the operating system deployment scenarios and then use the following sections to use bootable media to deploy the operating system.  
+Complete the steps in one of the OS deployment scenarios and then use the following sections to use bootable media to deploy the OS.
 
-## Configure deployment settings  
-When you use bootable media to start the operating system deployment process, configure the deployment to make the operating system available to the media. You may set this option on the **Deployment Settings** page of the Deploy Software Wizard or in the **Deployment Settings** tab in the properties for the deployment. For the **Make available to the following** setting, configure one of the following:
+## Configure deployment settings
 
--   Configuration Manager clients, media, and PXE
+When you use bootable media to start the OS deployment process, configure the task sequence deployment to make the OS available to the media. Set this option on the **Deployment Settings** page of the deployment. For the **Make available to the following** setting, select one of the following options:
 
--   Only media and PXE
+- Configuration Manager clients, media, and PXE
 
--   Only media and PXE (hidden)
+- Only media and PXE
+
+- Only media and PXE (hidden)
+
+For more information, see [Deploy a task sequence](deploy-a-task-sequence.md).
 
 ## Create the bootable media
-You may specify whether the bootable media is a USB flash drive or CD/DVD set. The computer that starts the media must support the option that you choose as a bootable drive. For more information, see [Create bootable media](create-bootable-media.md).  
 
-##  <a name="BKMK_Deploy"></a> Install the operating system from  bootable media  
-Insert the bootable media in a bootable drive on the computer, and then power it on to install the operating system.
+When you create bootable media, specify whether it's a USB flash drive or CD/DVD set. The computer that starts the media must support the option that you choose as a bootable drive. For more information, see [Create bootable media](create-bootable-media.md).
+
+## <a name="BKMK_Deploy"></a> Install the OS from bootable media
+
+To install the OS, insert the bootable media, and then power on the computer.
+
+## Support for cloud-based content
+
+<!--6209223-->
+
+Starting in version 2006, bootable media can download cloud-based content. For example, you send a USB key to a user at a remote office to reimage their device. Or an office that has a local PXE server, but you want devices to prioritize cloud services as much as possible. Instead of further taxing the WAN to download large OS deployment content, boot media and PXE deployments can now get content from cloud-based sources. For example, a cloud management gateway (CMG) that you enable to share content.
+
+> [!NOTE]
+> The device still needs an intranet connection to the management point.
+
+When the task sequence runs, it downloads content from the cloud-based sources. Review **smsts.log** on the client.
+
+### Prerequisites
+
+- Enable the following client setting in the **Cloud Services** group: **Allow access to cloud distribution point**. Make sure the client setting is deployed to the target clients. For more information, see [About client settings - Cloud services](../../core/clients/deploy/about-client-settings.md#cloud-services).
+
+- For the boundary group that the client is in:
+
+  - Associate the content-enabled CMG or cloud distribution point site systems. For more information, see [Configure a boundary group](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_config).
+
+  - Enable the following option: **Prefer cloud based sources over on-premise sources**. For more information, see [Boundary group options for peer downloads](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+
+- Distribute the content referenced by the task sequence to the content-enabled CMG or cloud distribution point.
+
+## Next steps
+
+[User experiences for OS deployment](../understand/user-experience.md#task-sequence-wizard)

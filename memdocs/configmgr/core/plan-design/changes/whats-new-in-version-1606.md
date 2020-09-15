@@ -82,7 +82,7 @@ To navigate between the different nodes of a workspace, you can now enter the fi
 The following are changes to Administration in the Configuration Manager console:
 ### OMS Connector
 
-You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+You can now connect Configuration Manager as collections from Configuration Manager to the [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). This makes data such as collections from your Configuration Manager deployment visible in OMS. Find more information, see [syncing data from Configuration Manager to the Microsoft Operations Management Suite here](/azure/azure-monitor/platform/collect-sccm).
 
 The OMS Connector is a pre-release feature. To enable it, see [Use pre-release features from updates](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 
@@ -122,10 +122,10 @@ On the properties of an application or package, there is now a link that takes y
 
 ## Software updates
 
-### Client setting to manage the Office 365 client agent
-You can now use a Configuration Manager client setting to manage the Office 365 client agent. After you set this up and deploy Office 365 updates, the Configuration Manager client agent works with the Office 365 client agent to download and install Office 365 updates from a distribution point.
+### Client setting to manage the Microsoft 365 client agent
+You can now use a Configuration Manager client setting to manage the Microsoft 365 client agent. After you set this up and deploy Microsoft 365 updates, the Configuration Manager client agent works with the Microsoft 365 client agent to download and install Microsoft 365 updates from a distribution point.
 
-For details, see [Manage Office 365 ProPlus updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+For details, see [Manage Microsoft 365 Apps updates with Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### Manually switch clients to a new software update point
 You can now enable an option that lets Configuration Manager clients switch to a new software update point when there are issues with the active software update point. Once enabled, the clients will look for another software update point at the next scan.
@@ -194,7 +194,7 @@ Configuration Manager can help you manage Activation Lock in two ways:
 
 Endpoint Protection can help manage and monitor Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP is a new service that will help enterprises to detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor managed computers running Windows 10, version 1607 (build 14328) or later.
 
-For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+For details, see [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### Device categories
 You can create device categories, which can be used to place devices in device collections automatically when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. Additionally, you can change the category of a device from the Configuration Manager console.

@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 06/08/2020
+ms.date: 09/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 
 # Microsoft Endpoint Configuration Manager documentation
 
-*Last update: June 8, 2020*
+*Last update: September 11, 2020*
 
 This content can assist you in learning and supporting Configuration Manager.
 
@@ -37,35 +37,36 @@ For more information, see the following articles:
 
 A curated list of important articles.
 
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)
-- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview)
-- [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview)  
+- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
+- [Endpoint analytics](https://docs.microsoft.com/mem/analytics/)
+- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
+- [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/)  
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [Plan for BitLocker management](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Microsoft Edge management](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
-- [Manage Office 365 ProPlus updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
 - [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
 - [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
 
 ## Trending
 
-The most popular articles between May 1 and May 31, 2020.
+The most popular articles between August 1 and August 31, 2020.
 
 | Page views | Title |
 |------------|-------|
-| 22624 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 18451 | [What's new in version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 17763 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 16718 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16004 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 13965 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 13398 | [Updates and servicing](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 13279 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13260 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 21996 | [How to enable Transport Layer Security (TLS) 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 19388 | [Enable Transport Layer Security (TLS) 1.2 overview](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 16940 | [Log file reference](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16687 | [What is Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 15658 | [Plan for cloud management gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 14430 | [Software Center user guide](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 13922 | [Ports used for connections](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 12258 | [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 10444 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 10353 | [Enable Transport Layer Security (TLS) 1.2 on the site servers and remote site systems](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-server) |
 
-The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr/) received 34,986 page views in this time period.
+The [Configuration Manager hub page](https://docs.microsoft.com/mem/configmgr) received 32,142 page views in this time period.
 
 ## Recently updated
 
@@ -73,16 +74,16 @@ Articles with a recent and significant update.
 
 | Last reviewed | Title |
 |---------------|-------|
-| 5/29/2020 | [Technical preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
-| 5/27/2020 | [Support for Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
-| 5/26/2020 | [CMPivot overview](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
-| 5/26/2020 | [Tenant attached CMPivot overview](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
-| 5/26/2020 | [Tenant attached CMPivot sample scripts](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
-| 5/26/2020 | [What's new in version 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 5/21/2020 | [Release notes](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 5/14/2020 | [Recommended hardware](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
-| 5/11/2020 | [Assets in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
-| 5/11/2020 | [What's new in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 8/31/2020 | [What's new in version 2006](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006) |
+| 8/24/2020 | [Tenant attach - Onboard Configuration Manager clients to Microsoft Defender ATP from the Microsoft Endpoint Manager admin center (preview)](https://docs.microsoft.com/mem/configmgr/tenant-attach/atp-onboard) |
+| 8/21/2020 | [BitLocker settings reference](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/settings) |
+| 8/21/2020 | [What's new in Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
+| 8/20/2020 | [Apps in Company Portal](https://docs.microsoft.com/mem/configmgr/comanage/company-portal) |
+| 8/18/2020 | [Install Power BI sample reports](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
+| 8/17/2020 | [Release notes](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 8/11/2020 | [Internet access requirements](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints) |
+| 8/11/2020 | [IProgressUI::ShowMessageEx method](https://docs.microsoft.com/mem/configmgr/develop/reference/core/clients/client-classes/iprogressui--showmessageex-method) |
+| 8/7/2020 | [Technical preview 2008](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2008) |
 
 ## Troubleshooting articles
 
@@ -102,12 +103,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 ## New and updated support articles
 
-Support articles that are new or updated between March 20 and May 15, 2020.
+Support articles that are new or updated between July 18 and September 11, 2020.
 
-- [KB 4561494 Microsoft Edge application creation fails in Configuration Manager](https://support.microsoft.com/help/4561494)
-- [KB 4551059 Remote Configuration Manager console hangs for 20 seconds every 10 minutes](https://support.microsoft.com/help/4551059)
-- [KB 4556203 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4556203)
-- [KB 4553501 Update for Microsoft Endpoint Configuration Manager version 2002, early update ring](https://support.microsoft.com/help/4553501)
-- [KB 4561945 "The underlying connection was closed" error when the service connection tool downloads the ConfigMgr.AdminUIContent.cab file](https://support.microsoft.com/help/4561945)
+- [KB 4578830 Summary of changes in Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830)
+- [KB 4576791 Update for Microsoft Endpoint Configuration Manager version 2006, early update ring](https://support.microsoft.com/help/4576791)
+- [KB 4578123 CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123)
+- [KB 4576785 Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782)
+- [KB 4575774 New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002](https://support.microsoft.com/help/4575774)
+- [KB 4575339 Devices appear twice in Microsoft Endpoint Configuration Manager admin center](https://support.microsoft.com/help/4575339)
 
-To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.  
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 08/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -64,7 +64,7 @@ Common end-user issues are broken down in the following categories:
 Platform | Scenario | Explanation |
 ---| --- | --- |
 iOS | The end-user can use the iOS/iPadOS share extension to open work or school data in unmanaged apps, even with the data transfer policy set to **Managed apps only** or **No apps.** Doesn't this leak data? | Intune app protection policy cannot control the iOS/iPadOS share extension without managing the device. Therefore, **Intune encrypts "corporate" data before sharing it outside the app**. You can validate this by attempting to open the "corporate" file outside of the managed app. The file should be encrypted and unable to be opened outside the managed app.
-iOS | Why is the end-user **prompted to install the Microsoft Authenticator app** | This is needed when App Based Conditional Access is applied, see [Require approved client app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Why is the end-user **prompted to install the Microsoft Authenticator app** | This is needed when App Based Conditional Access is applied, see [Require approved client app](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Why does the end-user **need to install the Company Portal app**, even if I'm using MAM app protection without device enrollment?  | On Android, much of app protection functionality is built into the Company Portal app. **Device enrollment is not required even though the Company Portal app is always required**. For app protection without enrollment, the end-user just needs to have the Company Portal app installed on the device.
 iOS/Android | App Protection policy not applied on draft email in the Outlook app | Since Outlook supports both corporate and personal context, it does not enforce MAM on draft email.
 iOS/Android | App Protection policy not applied on new documents in WXP (Word,Excel,PowerPoint) | Since WXP supports both corporate and personal context, it does not enforce MAM on new documents until they are saved in an identified corporate location like OneDrive.
@@ -107,7 +107,7 @@ Dialog/Error message | Cause | Remediation |
 -- | --- | --- |
 **App not set up**: This app has not been set up for you to use. Contact your IT administrator for help. | Failure to detect a required app protection policy for the app. |Make sure an Android app protection policy is deployed to the user's security group and targets this app.
 **Failed app launch**: There was an issue launching your app. Try updating the app or the Intune Company Portal app. If you need help, contact your IT administrator. | Intune detected valid app protection policy for the app, but the app is crashing during MAM initialization. | Make sure the app version is up-to-date. <br><br> Make sure the Intune Company Portal app is installed and up-to-date on the device. <br><br> If the error persists, use the Company Portal app to send logs to Intune or create a [support ticket](../fundamentals/get-support.md#create-an-online-support-ticket).
-**No apps found**: There are no apps on this device that your organization allows to open this content. Contact your IT administrator for help. | The user tried to open work or school data with another app, but Intune cannot find any other managed apps that are allowed to open the data. | Make sure an Android app protection policy is deployed to the user's security and targets at least one other MAM-enabled app that can open the data in question.
+**No apps found**: There are no apps on this device that your organization allows to open this content. Contact your IT administrator for help. | The user tried to open work or school data with another app, but Intune cannot find any other managed apps that are allowed to open the data. | Make sure an Android app protection policy is deployed to the user's security group and targets at least one other MAM-enabled app that can open the data in question.
 **Sign-in failed**: Try to sign in again. If this problem persists, contact your IT administrator for help. | Failure to authenticate the account with which the user attempted to sign in. | Make sure the user signs in with the work or school account that is already enrolled with the Intune MAM service (the first work or school account that was successfully signed into in this app). <br><br> Clear the app's data. <br><br> Make sure the app version is up-to-date. <br><br> Make sure the Company Portal version is up-to-date.
 **Internet connection required**: You must be connected to the Internet to verify that you can use this app. | The device is not connected to the Internet. | Connect the device to a WiFi or Data network.
 **Device noncompliant**: This app can't be used because you are using a rooted device. Contact your IT administrator for help. | Intune detected the user is on a rooted device. | Reset the device to default factory settings.

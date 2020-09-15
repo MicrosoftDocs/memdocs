@@ -91,7 +91,7 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshooting steps to follow if you see Access work or school](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshoot Windows 10 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## Confirm your device enrollment in Intune
 

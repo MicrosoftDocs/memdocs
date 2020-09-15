@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3a2d4d06-074f-4174-9398-e3df3d230414
 author: aczechowski
 ms.author: aaroncz
@@ -33,8 +33,8 @@ UInt32 RequestMachinePolicy(
 
  Flags identifying the policy. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Description |
+| ----- | ----------- |
 |0|A machine policy retrieval cycle is initiated.|  
 |1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies are not in agreement, then a resynchronization is initiated.|  
 

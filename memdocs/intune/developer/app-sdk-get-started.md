@@ -24,7 +24,7 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune
+ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
 ---
 
@@ -98,9 +98,9 @@ You will need one of the following developer guides to help you integrate the In
 
 In addition to enabling your app for app protection policy, the following is required for your app to properly function with Azure ActiveDirectory (AAD) app based Conditional Access:
 
-* App is built with the [Azure ActiveDirectory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
+* App is built with the [Azure ActiveDirectory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
 
-* The [AAD Client ID](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
+* The [AAD Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
 
 ## Configure Telemetry for your app
 
@@ -112,7 +112,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we do not collect any personally identifiable information (PII). 
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## Line-of-business app version numbers
 

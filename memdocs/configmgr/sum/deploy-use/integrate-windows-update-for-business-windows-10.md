@@ -19,7 +19,7 @@ ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
-> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/intune/windows-update-for-business-configure).
 > - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), is still managed by Configuration Manager.  
 
  Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  
@@ -33,7 +33,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 - Overall Endpoint Protection reporting for Defender based on update compliance status won't return accurate results because of the missing scan data.  
 
-- Configuration Manager won't be able to deploy Microsoft updates, such as Office, IE, and Visual Studio to clients that are connected to WUfB to receive updates.  
+- Configuration Manager won't be able to deploy Microsoft updates, such as Microsoft 365 Apps, IE, and Visual Studio to clients that are connected to WUfB to receive updates.  
 
 - Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to WUfB to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to WUfB, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
 
@@ -47,7 +47,7 @@ Use the following procedure to identify clients that use WUfB to get Windows 10 
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
-- [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows 10 updates and upgrades.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows 10 updates and upgrades.  
 
 ### To identify clients that use WUfB  
 
@@ -69,7 +69,7 @@ Beginning in Configuration Manager version 1706, you can configure deferral poli
 
 > [!NOTE]
 > Beginning in Configuration Manager version 1802, you can set deferral policies for Windows Insider. <!--507201-->  
-For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
+For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](/windows/deployment/update/waas-windows-insider-for-business).
 
 ### Prerequisites for deferral policies
 
@@ -85,9 +85,9 @@ For more information about the Windows Insider program, see [Getting started wit
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates. Choose either Semi-Annual Channel (Targeted), Semi-Annual Channel, or a Windows Insider build.
 
         > [!NOTE]
-        > Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1809 or earlier*.
+        > Deploy policies for **Semi-Annual Channel** to Windows 10, *version 1903 or later*. Deploy policies for **Semi-Annual Channel (Targeted)** to Windows 10, *version 1809 or earlier*.
         >
-        > If you deploy a policy for **Semi-Annual Channel** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
+        > If you deploy a policy for **Semi-Annual Channel (Targeted)** to Windows 10, version 1903 or later, the deployment fails with the error **0x8004100c**.<!-- 5593139 -->
 
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for up to 365 days from their release.
     - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -57,7 +57,7 @@ Review the following information before you start syncing and assigning apps fro
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 > [!NOTE]
-> If you disable the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
+> If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 
 ## Associate your Microsoft Store for Business account with Intune
 
@@ -82,6 +82,7 @@ You can now continue, and set up synchronization in the Intune console.
 6. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.
 
 ## Synchronize apps
+If you've already associated your Microsoft Store for Business account with your Intune admin credentials, you can manually sync your Microsoft Store for Business apps with Intune using the following steps.
 
 1. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 2. Click **Sync** to get the apps you've purchased from the Microsoft Store into Intune.

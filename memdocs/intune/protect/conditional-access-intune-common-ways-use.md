@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,9 +31,6 @@ ms.collection: M365-identity-device-management
 
 # What are common ways to use Conditional Access with Intune?
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-
 There are two types of conditional access with Intune: device-based conditional access and app-based conditional access. You need to configure the related compliance policies to drive conditional access compliance at your organization. Conditional access is commonly used to do things like allow or block access to Exchange, control access to the network, or integrate with a Mobile Threat Defense solution.
  
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities. 
@@ -43,24 +40,24 @@ The information in this article can help you understand how to use the Intune mo
 
 ## Device-based Conditional Access
 
-Intune and Azure Active Directory work together to make sure only managed and compliant devices can access email, Office 365 services, Software as a service (SaaS) apps, and [on-premises apps](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure Active Directory to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Office 365 services.
+Intune and Azure Active Directory work together to make sure only managed and compliant devices can access email, Microsoft 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure Active Directory to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Microsoft 365 services.
 
 Intune provides device compliance policy capabilities that evaluate the compliance status of the devices. The compliance status is reported to Azure Active Directory that uses it to enforce the Conditional Access policy created in Azure Active Directory when the user tries to access company resources.
 
-Device-based Conditional Access policies for Exchange online and other Office 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
+Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Azure portal](../fundamentals/what-is-intune.md).
 
-- Learn more about [Require managed devices with Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
+- Learn more about [Require managed devices with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
 - Learn more about [Intune device compliance](device-compliance-get-started.md).
 
-- Learn more about [Supported browsers with Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers).
+- Learn more about [Supported browsers with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
 > On Android devices, when you enable Device Based Access for SharePoint Online or browser-based access to Exchange Online, users must enable the **Enable Browser Access** option on the enrolled device as follows:
 > 1. Launch the **Company Portal app**.
 > 2. Go to the **Settings** page from the triple dots (...) or the hardware menu button.
 > 3. Press the **Enable Browser Access** button. 
-> 4. In the Chrome browser, sign out of Office 365 and restart Chrome.
+> 4. In the Chrome browser, sign out of Microsoft 365 and restart Chrome.
 
 ### Conditional access based on network access control
 
@@ -96,11 +93,11 @@ Conditional access for PCs provides capabilities similar to those available for 
 
 - **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate conditional access criteria.
 
-Learn more about [Device Management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).
+Learn more about [Device Management in Azure Active Directory](/azure/active-directory/devices/overview).
 
 ## App-based conditional access
 
-Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Office 365 services.
+Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
 
 - Learn more about [app-based conditional access with Intune](app-based-conditional-access-intune.md).
 
@@ -117,6 +114,16 @@ You can configure advanced settings in conditional access for more granular cont
 Any device used to access Exchange on-premises is checked for compliance when device compliance and conditional access policies are applied.
 
 When devices don't meet the conditions set, the end user is guided through the process of enrolling the device to fix the issue that is making the device noncompliant.
+
+> [!NOTE]
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+>
+> If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. See [Install Exchange on-premises connector](../protect/exchange-connector-install.md) for more information. You can continue to use the connector or configure HMA and then uninstall your connector.
+>
+> Hybrid Modern Authentication provides functionality that was previously provided by the Exchange Connector for Intune: Mapping of a device identity to its Exchange record.  This mapping now happens outside of a configuration you make in Intune or the requirement of the Intune connector to bridge Intune and Exchange. With HMA, the requirement to use the ‘Intune' specific configuration (the connector) has been removed.
+
+
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
 #### How conditional access for Exchange on-premises works
 
@@ -145,7 +152,7 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
 
 10. Exchange server sends the notification to EAS client so the user can access e-mail.
-
+-->
 
 #### What's the Intune role?
 
@@ -160,10 +167,8 @@ Exchange server provides API and infrastructure to move devices to quarantine.
 
 ## Next steps
 
-[How to configure Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[How to configure Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Set up app-based conditional access policies](app-based-conditional-access-intune-create.md)
-
-[How to install on-premises Exchange connector with Intune](exchange-connector-install.md).
 
 [How to create a Conditional Access policy for Exchange on-premises](conditional-access-exchange-create.md)

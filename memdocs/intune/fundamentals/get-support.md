@@ -9,7 +9,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft provides global technical, pre-sales, billing, and subscription support for Microsoft Intune. Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
-As an Intune admin, you can use the **Help and Support** option to file an on-line support ticket for Intune from the Azure portal. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+As an Intune admin, you can use the **Help and Support** option to file an on-line support ticket for Intune from the Azure portal. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > For technical support with third-party products that work with Intune (like Saaswedo, Cisco, or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
@@ -46,9 +46,6 @@ The Help and support experience for Intune is available from the [Microsoft Endp
 
 The *Help and support* experience is similar to the experience seen in the [Microsoft 365 admin center](https://admin.microsoft.com/), and replaces the previous *Help + support*, which remains in place for other services in Azure.
 
-> [!TIP]
-> Starting November 18, 2019, an updated and streamlined in-console experience for getting help and support is rolling out to tenants. If this new experience isn't available for you yet, it will be soon.
-
 ### Options to access Help and support
 
 When you use a newly created tenant for Intune, it's possible that *Help and Support* fails to open and the following message is returned:
@@ -57,7 +54,7 @@ When you use a newly created tenant for Intune, it's possible that *Help and Sup
 
 The error details include a *Session ID*, *Extension* details, and more.
 
-This problem occurs when you have not authenticated your new tenant account through either the **M365 Admin Center** at https://admin.microsoft.com, or the **Office 365  portal** at https://portal.office.com. To resolve this problem, select the link for *M365 Admin Center* in the message, or visit https://portal.office.com, and sign in. Following authentication at either site, *Help and Support* for Intune becomes accessible.
+This problem occurs when you have not authenticated your new tenant account through either the **Microsoft 365 Admin Center** at https://admin.microsoft.com, or the **Office 365 portal** at https://portal.office.com. To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit https://portal.office.com, and sign in. Following authentication at either site, *Help and Support* for Intune becomes accessible.
 
 **Access Help and Support**:
 
@@ -70,23 +67,26 @@ This problem occurs when you have not authenticated your new tenant account thro
 
 - **From the Microsoft Endpoint Manager admin center**
 
-  - From any node in the Microsoft Endpoint Manager admin center, select the **?** icon in the upper-right corner of the portal, and then use the drop-down to select the management type you want help with. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
+  - From any node in the Microsoft Endpoint Manager admin center, select the **?** icon in the upper-right corner of the portal to open the **Help** pane. Select **Help + support** to open the **Select a management type** page.
 
-    - Configuration Manager (includes Desktop Analytics)
+    > [!div class="mx-imgBorder"]
+    > ![Open the management type selection page](./media/get-support/management-types.png)
+
+    Use the drop-down to select the management type you want help with, which opens the applicable Help and Support page. The Microsoft Endpoint Manager admin center supports the following management types, and you must select the one you want assistance for, like Intune:
+
+    - Configuration Manager
     - Intune
-    - Co-management  
+    - Co-management
 
     > [!div class="mx-imgBorder"]
     > ![Select your management type](./media/get-support/select-management-type.png)
 
-    After you select a management type, the *Help and support* page opens where you can then specify details to [find solutions](#find-solutions) for a specific problem. Details are filtered based on the type of management you select.
+    After you select a management type, the applicable *Help and support* page opens where you can then specify details to [find solutions](#find-solutions) for a specific problem. Details are filtered based on the type of management you select.
 
-     If the right management type wasn't selected **(1)**, click on *Select a management type* **(2)** to return to the management type selection drop-down:
+     If the correct management type wasn't selected **(1)**, click on *Select a management type* **(2)** to return to the management type selection drop-down:
 
     > [!div class="mx-imgBorder"]
     > ![Confirm your management type](./media/get-support/confirm-management-selection.png)
-
-  - If you open Help and support from **Troubleshooting + support** > **Help and support**, you won't see the management type you selected listed below *Help and support*.
 
   - If you drill into any other node like *Devices*, *Apps*, or *Users*, and then select *Help and support*, you won't have the opportunity to select a management type nor will the type display below *Help and support*. In this case, *Intune* is assumed. If you don't want the context to be Intune, use the **?** option so you can select a different management type.
 

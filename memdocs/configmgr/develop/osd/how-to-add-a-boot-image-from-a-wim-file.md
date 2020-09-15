@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c995b2e6-c364-4d59-8bc7-d8ef3596a0fd
 author: aczechowski
 ms.author: aaroncz
@@ -85,10 +85,9 @@ public void AddBootImage(
 
  The sample method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`name`|-   Managed: `String`<br />-   VBScript: `String`|Name for the new boot image package.|  
 |`description`|-   Managed: `String`<br />-   VBScript: `String`|Description for the boot image package.|  
 |`pathToWIM`|-   Managed: `Integer`<br />-   VBScript: `Integer`|UNC path to the image.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a40a11e4-80b8-40d3-b64b-576b4c6ff6e5
 author: aczechowski
 ms.author: aaroncz
@@ -204,7 +204,7 @@ Class SMS_DPStatusDetails : SMS_BaseClass
 
  Severity of the status message.  
 
-|||  
+|Value|Status message severity|  
 |-|-|  
 |0x40000000|Success|  
 |0x80000000|Warning|  
@@ -219,7 +219,7 @@ Class SMS_DPStatusDetails : SMS_BaseClass
 
  State of the message.  
 
-|||  
+|Value|Message state|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

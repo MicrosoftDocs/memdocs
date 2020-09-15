@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 60d90c19-2810-4f10-860f-aa3087f35b03
 author: aczechowski
 ms.author: aaroncz
@@ -86,7 +86,7 @@ public void ConfigurePackageProperties(WqlConnectionManager connection, string e
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the existing package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new package.|  
 

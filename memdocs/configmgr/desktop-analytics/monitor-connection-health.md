@@ -212,7 +212,7 @@ Otherwise, it might display one of the following errors:
 
 - Can't configure device app compatibility data collection (SetRequestAllAppraiserVersions). Check the logs for the exception details  
 
-- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
+- Can't write the RequestAllAppraiserVersions to registry key `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`. Check permissions  
 
 Check the permissions on this registry key. Make sure that the local System account can access this key for the Configuration Manager client to set.  
 
@@ -329,7 +329,7 @@ For more information, review M365AHandler.log on the client.
 <!--1004-->
 If this check isn't successful, a user selected a lower Windows diagnostic data on the device. It can also be caused by a conflicting group policy object. For more information, see [Windows settings](enroll-devices.md#windows-settings).
 
-Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+Depending upon your business requirements, you can disable user choice via group policy. Use the setting to **Configure telemetry opt-in setting user interface**. For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### Check user proxy
 
@@ -338,7 +338,7 @@ The DisableEnterpriseAuthProxy setting is enabled by default for Windows 7. For 
 
 This property may display the following errors:
 
-- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Authentication proxy is enabled. Set DisableEnterpriseAuthProxy to 0 in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Can't check for the Authentication proxy status. Check the logs for the exception details
 
@@ -450,7 +450,7 @@ Desktop Analytics uses the Microsoft Account service for a more reliable device 
 
 Make sure the **Microsoft Account Sign-In Assistant** service isn't disabled. The startup type should be **Manual (Trigger Start)**.
 
-To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+To disable end-user Microsoft account access, use policy settings instead of blocking this endpoint. For more information, see [The Microsoft account in the enterprise](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### Windows diagnostic data opt-in
 

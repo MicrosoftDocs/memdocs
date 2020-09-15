@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4b57f922-9029-4617-8c21-6c75ccebbb5d
 author: aczechowski
 ms.author: aaroncz
@@ -38,9 +38,8 @@ An example MOF file.================================[ SMS_Report (TRUE),  SMS_Gr
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
 |`siteCode`|-   Managed: `String`|The site code.|  
 |`fileName`|-   Managed: `String`|The name of the MOF file to import.|  
 |`inventoryReportID`|-   Managed: `String`|Inventory report identifier.|  

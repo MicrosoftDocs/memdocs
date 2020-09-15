@@ -137,14 +137,14 @@ You can only wipe kiosk devices. You can't retire Android kiosk devices.
 
 ### Windows
 
-|Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows Phone 8.1 and Windows Phone 8|Windows 10|
+|Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps originally installed through the Company Portal are uninstalled. Company app data is removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
-|Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|Removed.|Not supported.|Removed.|
-|Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Not supported.|Certificates are removed and revoked.|
-|Email|Removes email that's EFS-enabled. This includes emails and attachments in the Mail app for Windows.|Not supported.|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|Removes email that's EFS-enabled. This includes emails and attachments in the Mail app for Windows. Removes mail accounts that were provisioned by Intune.|
-|Azure AD unjoin|No.|No.|The Azure AD record is removed.|The Azure AD record is removed.|
+|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps will not be uninstalled on unenrolled devices. Admins can leverage assignment exclusion to not offer Win32 apps to BYOD Devices.|
+|Settings|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|Configurations that were set by Intune policy are no longer enforced. Users can change the settings.|
+|Wi-Fi and VPN profile settings|Removed.|Removed.|Removed.|
+|Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Certificates are removed and revoked.|
+|Email|Removes email that's EFS-enabled. This includes emails and attachments in the Mail app for Windows.|Not supported.|Removes email that's EFS-enabled. This includes emails and attachments in the Mail app for Windows. Removes mail accounts that were provisioned by Intune.|
+|Azure AD unjoin|No.|No.|The Azure AD record is removed.|
 
 > [!NOTE]
 > For Windows 10 devices that join Azure AD during initial Setup (OOBE), the retire command will remove all Azure AD accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data. 
@@ -166,19 +166,20 @@ If you want to remove devices from the Intune portal, you can delete them from t
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 ### Automatically delete devices with cleanup rules
-You can configure Intune to automatically delete devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management.
+You can configure Intune to automatically delete devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-
+> [!NOTE]
+> Device cleanup rules aren't available for Jamf-managed devices and Android Enterprise scenarios like [Fully Managed](../enrollment/android-fully-managed-enroll.md), [Dedicated](../enrollment/android-kiosk-enroll.md), and [Corporate-Owned with Work Profile](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## Delete devices from the Azure Active Directory portal
 
 You might need to delete devices from Azure AD due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
 
-1. Sign in to [Azure Active Directory in the Azure portal](https://aka.ms/accessaad) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
+1. Sign in to [Azure Active Directory in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
 2. Create an Azure subscription if you don't have one. This shouldn't require a credit card or payment if you have a paid account (select the **Register your free Azure Active Directory** subscription link).
 3. Select **Azure Active Directory**, and then select your organization.
 4. Select the **Users** tab.
@@ -210,4 +211,3 @@ Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-st
 ## Next steps
 
 If you want to reenroll a deleted device, see [Enrollment options](../enrollment/enrollment-options.md).
-

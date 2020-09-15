@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0d142253-1065-4b18-be64-d0513c7a3044
 author: aczechowski
 ms.author: aaroncz
@@ -112,7 +112,7 @@ public void RemoveDriverFromBootImagePackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`driverID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The Windows driver identifier available in `SMS_Driver.CI_ID`.|  
 |`PackageID`|-   Managed: `String`<br />-   VBScript: `String`|The boot image package identifier available in `SMS_BootImagePackage.PackageID`.|  
 
@@ -143,4 +143,4 @@ public void RemoveDriverFromBootImagePackage(
 
 ## See Also  
  [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md)   
- [How to Add a Windows Driver to a Configuration Manager Boot Image Package](../../develop/osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md)   
+ [How to Add a Windows Driver to a Configuration Manager Boot Image Package](../../develop/osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md)

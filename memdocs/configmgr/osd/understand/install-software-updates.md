@@ -5,13 +5,11 @@ description: Recommendations for using the task sequence step Install Software U
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
 ---
 
 # Install Software Updates
@@ -101,10 +99,10 @@ For more information, see [Apply software updates to an image](../get-started/ma
 
 - Manual selection of updates
 - Increased time to distribute the image to distribution points
-- Only supports CBS-based updates. It can't apply Office updates
+- Only supports CBS-based updates. It can't apply Microsoft 365 Apps updates
 
 > [!Tip]  
-> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet to create the offline servicing schedule. The following example shows one method to automate this action:
+> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) cmdlet to create the offline servicing schedule. The following example shows one method to automate this action:
 >
 > ```PowerShell
 > # Get the OS image

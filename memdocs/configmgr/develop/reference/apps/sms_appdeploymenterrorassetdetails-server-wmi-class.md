@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 196e4faf-3c29-4184-933f-c240212ad519
 author: aczechowski
 ms.author: aaroncz
@@ -295,7 +295,7 @@ Class SMS_AppDeploymentErrorAssetDetails : SMS_BaseClass
 
  See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
 
-|||  
+|Value|Status type|  
 |-|-|  
 |1|Success|  
 |2|InProgress|  

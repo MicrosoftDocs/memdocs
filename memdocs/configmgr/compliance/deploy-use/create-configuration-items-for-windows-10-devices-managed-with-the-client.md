@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
+ms.author: mstewart
 
 
 ---
@@ -137,9 +137,9 @@ Configuration Manager Windows Information Protection configuration items manage 
   
 For information about how to configure WIP with Configuration Manager, see:
 
-- [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Limitations while using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Limitations while using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## See also  
 [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

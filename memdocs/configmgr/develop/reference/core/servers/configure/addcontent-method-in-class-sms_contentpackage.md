@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 09bf18d9-4e97-42ee-bb5c-a87d2556449d
 author: aczechowski
 ms.author: aaroncz
@@ -59,7 +59,7 @@ sint32 AddContent (
 
  This specifies additional attributes for the content instance.  
 
-|||  
+|Value|Content flag|  
 |-|-|  
 |8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|  
 |12|DOWNLOAD_FROM_LOCAL_DISPPOINT|  

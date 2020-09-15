@@ -5,22 +5,20 @@ description: Learn how to provision Windows To Go in Configuration Manager to cr
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
-
 ---
+
 # Deploy Windows To Go with Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
 This topic provides the steps to provision Windows To Go in Configuration Manager. Windows To Go is an enterprise feature of Windows 8 that enables the creation of a Windows To Go workspace that can be booted from a USB-connected external drive on computers that meet the Windows 7 or Windows 8 certification requirements, regardless of the operating system running on the computer. Windows To Go workspaces can use the same image enterprises use for their desktops and laptops and can be managed the same way.  
 
- For more information about Windows To Go, see [Windows To Go feature overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ For more information about Windows To Go, see [Windows To Go feature overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## Provision Windows To Go  
  Windows To Go is an operating system stored on a USB-connected external drive. You can provision the Windows To Go drive much like you provision other operating system deployments. However, because Windows To Go is designed to be a user-centric and highly mobile solution, you must take a slightly different approach to provisioning these drives.  
@@ -458,4 +456,4 @@ This topic provides the steps to provision Windows To Go in Configuration Manage
  After the computer restarts to the Windows To Go drive, the drive will boot into Windows PE and connect to the management point to get the policy to complete the operating system deployment. Configuration Manager configures and stages the drive. After Configuration Manager stages the drive, the user can restart the computer to finalize the provisioning process (such as to join a domain or install apps). This process is the same for any prestaged media.  
 
 ###  <a name="BKMK_UserLogsIn"></a> User logs in to Windows 8  
- After Configuration Manager completes the provisioning process and the Windows 8 lock screen is displayed, the user can login to the operating system.  
+ After Configuration Manager completes the provisioning process and the Windows 8 lock screen is displayed, the user can login to the operating system.

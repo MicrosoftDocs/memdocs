@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: faa80d51-ac31-4802-b778-c26bc003ddb3
 author: aczechowski
 ms.author: aaroncz
@@ -80,10 +80,9 @@ public void AddOSImagePackage(
 
  The example method has the following parameters:  
 
-||||  
-|-|-|-|  
-|Parameter|Type|Description|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newImagePackageName`|-   Managed: `String`<br />-   VBScript: `String`|The new image package name.|  
 |`newImagePackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The new image package description|  
 |`newImagePackageSourcePath`|-   Managed: `String`<br />-   VBScript: `String`|The UNC path to the WIM file.|  

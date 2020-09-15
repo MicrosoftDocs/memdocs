@@ -1,10 +1,10 @@
 ---
-title: "UpdateFeatureExposureStatus Method"
+title: UpdateFeatureExposureStatus method in class SMS_CM_UpdateFeatures
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262
 author: aczechowski
 ms.author: aaroncz

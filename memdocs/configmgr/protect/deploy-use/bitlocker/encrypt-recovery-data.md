@@ -2,10 +2,10 @@
 title: Encrypt recovery data
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes across the network and in the Configuration Manager database.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
@@ -31,7 +31,7 @@ Given the sensitive nature of this information, you need to protect it in the fo
     > [!NOTE]
     > It currently doesn't support Enhanced HTTP.
 
-- Consider also encrypting this data when stored in the site database. You can use SQL Server cell-level encryption with your own certificate.
+- Consider also encrypting this data when stored in the site database. If you install a SQL certificate, Configuration Manager encrypts your data in SQL.
 
     If you don't want to create a BitLocker management encryption certificate, opt-in to plain-text storage of the recovery data. When you create a BitLocker management policy, enable the option to **Allow recovery information to be stored in plain text**.
 
@@ -72,7 +72,7 @@ On the client, use the **BitLockerManagementHandler.log** to troubleshoot this c
 
 ### SQL encryption certificate
 
-Use this certificate to enable SQL Server cell-level encryption of BitLocker recovery data. You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
+Use this SQL certificate for Configuration Manager to encrypt BitLocker recovery data in the site database. You can use your own process to create and deploy the BitLocker management encryption certificate, as long as it meets the following requirements:
 
 - The name of the BitLocker management encryption certificate must be `BitLockerManagement_CERT`.
 
@@ -198,9 +198,9 @@ If the certificate is valid, the script returns a value of `1`.
 
 For more information on these SQL commands, see the following articles:
 
-- [SQL Server and database encryption keys](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Create certificate](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Backup certificate](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Create master key](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Backup master key](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Grant certificate permissions](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server and database encryption keys](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Create certificate](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Backup certificate](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Create master key](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Backup master key](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Grant certificate permissions](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

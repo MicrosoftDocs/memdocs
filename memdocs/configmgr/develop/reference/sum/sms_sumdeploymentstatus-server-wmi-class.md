@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f263eddd-b038-429c-b052-b69c18351d79
 author: aczechowski
 ms.author: aaroncz
@@ -140,8 +140,8 @@ Class SMS_SUMDeploymentStatus : SMS_BaseClass
 
  Status type. Possible values are:  
 
-|||  
-|-|-|  
+| Value | Status |  
+| ----- | ------ |  
 |1|Success|  
 |2|InProgress|  
 |4|Unknown|  

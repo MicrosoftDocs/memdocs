@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,18 +24,18 @@ ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
 ---
 
 # Assign user and device profiles in Microsoft Intune
 
-You create a profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your Azure Active Directory (Azure AD) user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
+You create a profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
 
 This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
 
 > [!NOTE]  
-> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
 >
@@ -43,27 +43,22 @@ This article shows you how to assign a profile, and includes some information on
 
 ## Before you begin
 
-Be sure you have the appropriate role to assign profiles. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+Be sure you have the correct role to assign profiles. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Assign a device profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
-3. Select the profile you want to assign > **Assignments**.
-4. Choose to **Include** groups or **Exclude** groups, and then select your groups. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
+3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot of options to include or exclude groups from a profile assignment in Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Select assignments to deploy the profile to users and groups in Microsoft Intune and Endpoint Manager":::
 
-5. **Save** your changes.
+4. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-### Evaluate how many users are targeted
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Include or exclude users and groups when assigning or deploying a profile in Microsoft Intune and Endpoint Manager.":::
 
-When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In the admin center, select **Devices** > **Configuration profiles**.
-2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
-
-If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
+5. Select **Review + Save**. This step doesn't assign your profile.
+6. Select **Save**. When you save, your profile is assigned. Your groups will receive your profile settings when the devices check in with the Intune service.
 
 ## Use scope tags or applicability rules
 
@@ -89,11 +84,13 @@ For example:
 
 - On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create an [Administrative Template in Intune](administrative-templates-windows.md), add these device settings, and then assign this profile to the devices group.
 
-To summarize, use device groups when you don't care who's signed in on the device, or if anyone is signed in. You want your settings to always be on the device.
+To summarize, use device groups when you don't care who's signed in on the device, or if anyone signs in. You want your settings to always be on the device.
 
 ### User groups
 
 Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It's normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
+
+Follow this general rule: If a feature belongs to a user, such as email or user certificates, then assign to user groups.
 
 For example:
 

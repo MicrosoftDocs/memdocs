@@ -39,11 +39,11 @@ Use the following table to help compare these management technologies:
 
 For more information, see the following articles:
 
-- [What is Azure Stack?](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [What is Windows Admin Center?](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [What is Virtual Machine Manager?](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure management products](https://docs.microsoft.com/azure/)
-- [What is Windows Virtual Desktop?](https://docs.microsoft.com/azure/virtual-desktop/overview)
+- [What is Azure Stack?](/azure-stack/operator/azure-stack-overview)
+- [What is Windows Admin Center?](/windows-server/manage/windows-admin-center/understand/what-is)
+- [What is Virtual Machine Manager?](/system-center/vmm/overview)
+- [Azure management products](/azure/)
+- [What is Windows Virtual Desktop?](/azure/virtual-desktop/overview)
 
 For more information on the Configuration Manager and Intune solutions, continue to the next section.
 
@@ -103,9 +103,9 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 For a complete list of supported platforms, see the following articles:
 
 - [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune supported configurations](https://docs.microsoft.com/intune/supported-devices-browsers)
+- [Intune supported configurations](/intune/supported-devices-browsers)
 
-Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](https://docs.microsoft.com/intune/what-is-intune).
+Microsoft recommends using Intune to manage Android, iOS, and Windows 10 mobile devices. For more information, see [What is Microsoft Intune?](/intune/what-is-intune).
 
 ### <a name="bkmk_comp2"></a> Compare solutions by management functionality  
 

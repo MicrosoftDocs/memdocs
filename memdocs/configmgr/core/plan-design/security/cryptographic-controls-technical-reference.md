@@ -65,7 +65,7 @@ Not all devices can support content hashing. The exceptions include:
  For every operating system deployment package, you can enable encryption when the package is transferred to computers by using multicast. The encryption uses Advanced Encryption Standard (AES). If you enable encryption, no additional certificate configuration is required. The multicast-enabled distribution point automatically generates symmetric keys for encrypting the package. Each package has a different encryption key. The key is stored on the multicast-enabled distribution point by using standard Windows APIs. When the client connects to the multicast session, the key exchange occurs over a channel encrypted with either the PKI-issued client authentication certificate (when the client uses HTTPS) or the self-signed certificate (when the client uses HTTP). The client stores the key in memory only for the duration of the multicast session.  
 
 ### Encryption for media to deploy operating systems  
- When you use media to deploy operating systems and specify a password to protect the media, the environment variables are encrypted by using Advanced Encryption Standard (AES). Other data on the media, including packages and content for applications, is not encrypted.  
+ When you use media to deploy operating systems and specify a password to protect the media, the environment variables are encrypted by using Advanced Encryption Standard (AES) with a 128-bit key size. Other data on the media, including packages and content for applications, is not encrypted.  
 
 ### Encryption for content that is hosted on cloud-based distribution points  
  Beginning with System Center 2012 Configuration Manager SP1, when you use cloud-based distribution points, the content that you upload to these distribution points is encrypted by using Advanced Encryption Standard (AES) with a 256-bit key size. The content is re-encrypted whenever you update it. When clients download the content, it is encrypted and protected by the HTTPS connection.  
@@ -255,5 +255,4 @@ To improve the security of your Configuration Manager clients and servers, do th
 - Disable SSL 3.0, TLS 1.0, and TLS 1.1 
 - Reorder the TLS-related cipher suites 
 
-For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/) and [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). These procedures do not affect Configuration Manager functionality.
-
+For more information, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/help/245030/) and [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites). These procedures do not affect Configuration Manager functionality.

@@ -83,6 +83,16 @@ If you choose to deploy a CMG, and use PKI certificates for HTTPS communication 
 
 If you use Enhanced HTTP, you don't need to configure this setting. Clients continue to use HTTP when communicating directly to the CMG-enabled management point. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
+### What are the differences with client authentication between Azure AD and certificates?
+<!-- MEMDocs#277 -->
+You can use Azure AD or a [client authentication certificate](certificates-for-cloud-management-gateway.md#bkmk_clientauth) for devices to authenticate to the CMG service.
+
+If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include Windows 8.1 and Windows 10. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or with version 2002 or later, use token authentication.
+
+You can also manage Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
+
+Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network. For more information, see [Install and register the client using Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
+
 ## Next steps
 
 - [Plan for cloud management gateway](plan-cloud-management-gateway.md)

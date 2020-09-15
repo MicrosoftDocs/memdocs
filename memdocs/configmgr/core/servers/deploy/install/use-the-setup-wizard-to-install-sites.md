@@ -9,8 +9,7 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+description: Use the Configuration Manager setup wizard to install a new site.
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites
@@ -34,7 +33,7 @@ Install a secondary site from within the Configuration Manager console. Secondar
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Clients for UNIX and Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Release notes**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Read documentation**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Read documentation**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Obtain installation assistance**: [TechNet Forums: Configuration Manager (Current Branch) – Site and Client Deployment](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager community**: [System Center Community: How to Participate](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager home**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
@@ -415,4 +414,4 @@ Use the Configuration Manager console to install a secondary site.
 2. Select the secondary site that you're installing, and then choose **Show Install Status** in the ribbon.  
 
     > [!TIP]  
-    > When you install more than one secondary site at a time, the Prerequisite Checker runs against a single site at a time. It must finish a site before it starts to check the next site.  
+    > When you install more than one secondary site at a time, the Prerequisite Checker runs against a single site at a time. It must finish a site before it starts to check the next site.

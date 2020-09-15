@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,25 +28,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune
+# Common questions and answers with device policies and profiles in Microsoft Intune
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
-
-## Why doesn't a user get a new profile when changing a password or passphrase on an existing Wi-Fi profile?
-
-You create a corporate Wi-Fi profile, deploy the profile to a group, change the password, and save the profile. When the profile changes, some users may not get the new profile.
-
-To mitigate this issue, set up guest Wi-Fi. If the corporate Wi-Fi fails, users can connect to the guest Wi-Fi. Be sure to enable any automatically connect settings. Deploy the guest Wi-Fi profile to all users.
-
-Some additional recommendations:  
-
-- If the Wi-Fi network you're connecting to uses a password or passphrase, make sure you can connect to the Wi-Fi router directly. You can test with an iOS/iPadOS device.
-- After you successfully connect to the Wi-Fi endpoint (Wi-Fi router), note the SSID and the credential used (this value is the password or passphrase).
-- Enter the SSID and credential (password or passphrase) in the Pre-Shared Key field. 
-- Deploy to a test group that has limited number of users, preferably only the IT team. 
-- Sync your iOS/iPadOS device to Intune. Enroll if you haven't already enrolled. 
-- Test connecting to the same Wi-Fi endpoint (as mentioned in the first step) again.
-- Roll out to larger groups and eventually to all expected users in your organization. 
 
 ## How long does it take for devices to get a policy, profile, or app after they are assigned?
 
@@ -169,7 +153,7 @@ Some settings on Windows 10 devices may show as "Not Applicable". When this happ
 - The setting is only available for newer versions of Windows, and not the current operating system (OS) version on the device.
 - The setting is only available for specific Windows editions or specific SKUs, such as Home, Professional, Enterprise, and Education.
 
-To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## Next steps
 
