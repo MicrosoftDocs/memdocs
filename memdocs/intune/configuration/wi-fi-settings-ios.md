@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -147,6 +147,18 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
   - **None**: No proxy settings are configured.
   - **Manual**: Enter the **Proxy server address** as an IP address, and its **Port number**.
   - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** (for example `http://proxy.contoso.com`) that contains the configuration file.
+
+- **Disable MAC address randomization**: Starting with iOS/iPadOS 14, devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. Randomized MAC addresses also break functionality that relies on a static MAC address, including network access control (NAC).
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, when connecting to a network, devices may present a randomized MAC address instead of the physical MAC address.
+  - **Yes**: Forces devices to present their actual Wi-Fi MAC address instead of a random MAC address. **Yes** allows devices to be tracked by their MAC address. Only disable MAC address randomization when necessary, such as for network access control (NAC) support.
+  - **No**: Enables MAC address randomization on devices. Users can't turn it off. When connecting to a network, devices present a randomized MAC address, instead of the physical MAC address.
+
+  This setting applies to:  
+  - iOS 14.0 and newer
+  - iPadOS 14.0 and newer
 
 ## Next steps
 
