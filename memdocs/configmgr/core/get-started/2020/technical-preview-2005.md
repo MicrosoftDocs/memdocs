@@ -10,6 +10,7 @@ ms.assetid: cde78b6d-2e0e-4a14-a196-4592e0063953
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 2005
