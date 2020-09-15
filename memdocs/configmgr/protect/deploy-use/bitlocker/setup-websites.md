@@ -102,11 +102,9 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 
 - `-InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`. Create the custom directory before using this parameter.
 
-- `-DomainName`: Optional. NetBIOS Domain Name of the server with the Help Desk or Self-Service Portal role. Only necessary if the NetBIOS domain name does not match the DNS Domain Name. Added in version 2002 to support disjointed domains.
+- `-DomainName` *applies to version 2002 and later*: Specify the NetBIOS domain name of the server with the help desk or self-service web portal role. Only necessary if the NetBIOS domain name doesn't match the DNS domain name. This configuration is also known as a disjointed domain namespace. For example, `-DomainName fabrikham` where the DNS domain name is `contoso.com`.<!-- MEMDocs #759 -->
 
 - `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
-
-- `-DomainName` *applies to version 2002 and later*: Only necessary if the NetBIOS domain name doesn't match the DNS domain name. This configuration is also known as a disjointed namespace. Specify the NetBIOS domain name of the server with the help desk or self-service web portal role. For example, `-DomainName fabrikham` where the DNS domain name is `contoso.com`.<!-- MEMDocs #759 -->
 
 ## Verify
 
