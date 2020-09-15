@@ -230,8 +230,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 14. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
-15. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
-
+15. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. Device name template includes support for the iPhone, the iPad, and the iPod Touch. 
 16. Choose **Next: Setup Assistant Customization**.
 
 17. On the **Setup Assistant customization** page, configure the following profile settings:
