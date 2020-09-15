@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -18,12 +18,12 @@ manager: dougeby
 
 <!-- 3601034 -->
 
-Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. Azure Active Directory joined or workgroup clients are not supported. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
+Starting in version 1910, use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-premises Windows clients, which are joined to Active Directory. It provides full BitLocker lifecycle management that can replace the use of Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-For more information, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
+For more general information on BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > To manage encryption on co-managed Windows 10 devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -66,6 +66,8 @@ Allow other personas in your organization outside of the Configuration Manager c
 Let users help themselves with a single-use key for unlocking a BitLocker encrypted device. Once this key is used, it generates a new key for the device.
 
 ## Prerequisites
+
+- Azure Active Directory-joined, workgroup clients, or clients in untrusted domains aren't supported. The client currently needs to be joined to on-premises Active Directory. This configuration is to authenticate with the recovery service to escrow keys.
 
 - To create a BitLocker management policy, you need the **Full Administrator** role in Configuration Manager.
 
