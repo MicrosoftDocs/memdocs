@@ -2,7 +2,7 @@
 title: Set up BitLocker portals
 titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -105,6 +105,8 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 - `-DomainName`: Optional. NetBIOS Domain Name of the server with the Help Desk or Self-Service Portal role. Only necessary if the NetBIOS domain name does not match the DNS Domain Name. Added in version 2002 to support disjointed domains.
 
 - `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
+
+- `-DomainName` *applies to version 2002 and later*: Only necessary if the NetBIOS domain name doesn't match the DNS domain name. This configuration is also known as a disjointed namespace. Specify the NetBIOS domain name of the server with the help desk or self-service web portal role. For example, `-DomainName fabrikham` where the DNS domain name is `contoso.com`.<!-- MEMDocs #759 -->
 
 ## Verify
 
