@@ -149,6 +149,11 @@
             "source_path": "memdocs/intune/user-help/your-device-is-missing-a-preinstalled-certificate-android.md",
             "redirect_url": "/mem/intune/user-help/your-device-is-missing-an-IT-required-certificate-android",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
+            "redirect_url": "/mem/autopilot/software-requirements",
+            "redirect_document_id": false
         }
     ]
 }

@@ -102,7 +102,7 @@ For more information, see [Apply software updates to an image](../get-started/ma
 - Only supports CBS-based updates. It can't apply Microsoft 365 Apps updates
 
 > [!Tip]  
-> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) cmdlet to create the offline servicing schedule. The following example shows one method to automate this action:
+> You can automate the selection of software updates using PowerShell. Use the [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) cmdlet to get a list of updates. Then use the [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) cmdlet to create the offline servicing schedule. The following example shows one method to automate this action:
 >
 > ```PowerShell
 > # Get the OS image

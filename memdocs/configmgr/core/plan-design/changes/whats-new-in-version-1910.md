@@ -344,7 +344,7 @@ This release includes the following improvements to search in the Configuration 
 
 ## Other updates
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes?view=sccm-ps).
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell version 1910 release notes](/powershell/sccm/1910-release-notes).
 
 For more information on changes to the administration service REST API, see [Administration service release notes](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

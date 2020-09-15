@@ -47,7 +47,7 @@ Because of these changes by Google, in October 2020, you will no longer have as 
 Devices that will be impacted by the decreasing device administrator support are those for which all three conditions below apply:
 - Enrolled in device administrator management.
 - Running Android 10 or later.
-- Not a Samsung device.
+- All Android manufacturers, except Samsung.
 
 Devices will not be impacted if they are any of the below:
 - Not enrolled with device administrator management.
@@ -103,7 +103,7 @@ At that point, device administrator-managed devices that are not manufactured by
 - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned 
 - The IMEI and serial number will no longer be visible to IT admins in Intune 
 
-**Android 11**: We continue to test the latest Android 11 beta release to evaluate the impact on device administrator managed devices. Here’s what we have found: 
+**Android 11**: These are the changes that will impact device administrator managed device when they update to Android 11: 
 - For device administrator devices (excluding Samsung) running Android 11 and later, Google has removed the ability for management agents like Company Portal to enforce blocking Camera, even before the October update to the Company Portal app. Policies blocking camera that are applied to devices before they update to Android 11 will continue to apply.  
 - With Android 11, trusted root certificates can no longer be deployed to devices enrolled with device administrator (except on Samsung devices). Users must manually install the trusted root certificate on the device. With the trusted root certificate manually installed on a device, you can then use SCEP to provision certificates to the device. In this scenario you must still create and deploy a trusted certificate policy to the device, and link that policy to the SCEP certificate profile. 
     - If the trusted root certificate is on the device, then the SCEP certificate profile will install successfully.  

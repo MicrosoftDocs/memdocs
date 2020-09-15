@@ -32,19 +32,19 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 
 To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
 
+  - **Platform**: Select **Windows 10 and later**
+  
+  - **Profile**: Select **Windows Health monitoring**
+  
   - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
    
   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
     
-  - **Platform**: Select **Windows 10 and later**
+  - In **Configuration Settings**:
    
-  - **Profile type**: Select **Windows Health monitoring**
-   
-  - Configure the **Settings**:
-   
-       - **Health Monitoring**: Select **Enable** to collect event information from Windows 10 devices
+       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 devices
     
-    - **Scope**: Select **Boot performance**
+       - **Scope**: Select **Boot performance**. Basic scope is not used by endpoint analytics.
 
   - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 

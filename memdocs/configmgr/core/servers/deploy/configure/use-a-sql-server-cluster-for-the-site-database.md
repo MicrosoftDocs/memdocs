@@ -58,7 +58,7 @@ Be aware of the following prerequisites:
 - To support Kerberos authentication, enable the **TCP/IP** network communication protocol for the network connection of each SQL Server cluster node. The **Named pipes** protocol isn't required, but can be used to troubleshoot Kerberos authentication issues. The network protocol settings are configured in **SQL Server Configuration Manager**, under **SQL Server Network Configuration**.  
 
 - There are specific certificate requirements when you use a SQL Server cluster for the site database. For more information, see the following articles:
-  - [Install a certificate in a SQL failover cluster configuration](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Install a certificate in a SQL failover cluster configuration](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -96,7 +96,7 @@ Configuration Manager doesn't support Data Protection Manager (DPM) backup for a
 
 Here are the main tasks to complete to prepare your site database:
 
-- Create the virtual SQL Server cluster to host the site database on an existing Windows Server cluster environment. For specific steps to install and set up a SQL Server cluster, see the documentation specific to your version of SQL Server. For more information, see [Create a new SQL Server Failover Cluster](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Create the virtual SQL Server cluster to host the site database on an existing Windows Server cluster environment. For specific steps to install and set up a SQL Server cluster, see the documentation specific to your version of SQL Server. For more information, see [Create a new SQL Server Failover Cluster](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup).  
 
 - On each computer in the SQL Server cluster, place a file in the root folder of each drive where you don't want Configuration Manager to install site components. Name the file `NO_SMS_ON_DRIVE.SMS`. By default, Configuration Manager installs some components on each physical node, to support operations such as backup.  
 

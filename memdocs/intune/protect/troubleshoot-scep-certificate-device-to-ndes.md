@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -195,6 +195,7 @@ When you browse to the SCEP server URL, you receive the following Network Device
   ```
 
   If the installation fails, remove the Microsoft Intune Connector and then reinstall it.
+  If the installation was successful and you continue to recieve the Genreal NDES message, run the **iisreset** command to restart IIS.
 
 #### HTTP Error 503
 

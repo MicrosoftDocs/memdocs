@@ -331,7 +331,7 @@ You can specify more than one client push installation account. Configuration Ma
 > 4. Then remove the old account from Configuration Manager and Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Don't grant this account the right to sign in locally.  
+> Use domain or local group policy to assign the Windows user right to **Deny log on locally**. As a member of the Administrators group, this account will have the right to sign in locally, which isn't needed. For better security, explicitly deny the right for this account. The deny right supersedes the allow right.<!--MEMDocs#744-->
 
 For more information, see [Client push installation](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
