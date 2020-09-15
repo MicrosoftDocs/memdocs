@@ -23,7 +23,10 @@ ms.topic: article
 
 ## Scenarios
 
-Windows Autopilot supports a growing list of scenarios that organizations commonly need. Such needs can vary based on the type of organization and their progress moving to Windows 10 and [transitioning to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows Autopilot supports a growing list of scenarios that organizations commonly need. These needs vary based on:
+- Organization type.
+- Progress moving to Windows 10.
+- How far they've [transitioned to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 The following Windows Autopilot scenarios are described in this guide:
 
