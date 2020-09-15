@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -164,7 +164,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
 - **Allow messages to be moved to other email accounts**: **Enable** (default) allows users to move email messages between different accounts the users configured on their devices.
 - **Allow email to be sent from third-party applications**: **Enable** (default) allows users to select this profile as the default account for sending email. It allows third-party applications to open email in the native email app, such as attaching files to email.
 - **Synchronize recently used email addresses**: **Enable** (default) allows users to synchronize the list of email addresses that have been recently used on the device with the server.
-- **VPN profile for per account VPN**: Starting in iOS/iPadOS 14, email traffic for the native Mail app can be routed through a VPN based on the account the user is using. When set to **None**, Intune doesn't change or update this setting. By default, the OS might not route email traffic this way.
+- **VPN profile for per account VPN**: Starting in iOS/iPadOS 14, email traffic for the native Mail app can be routed through a VPN based on the account the user is using. When set to **None**, Intune doesn't enable per-account VPN for this e-mail profile.
 
   Per-app VPN connections you create are shown in this list. If you select a VPN profile from the list, any email that's sent to and from this account in the Mail app uses the VPN tunnel. The per-app VPN connection automatically turns on when users use their organization account in the Mail app.
 
