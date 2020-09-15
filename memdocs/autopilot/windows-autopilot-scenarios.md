@@ -29,7 +29,7 @@ The following Windows Autopilot scenarios are described in this guide:
 
 | Scenario | More information |
 | --- | --- |
-| Deploy devices to be set up by a member of the organization and configured for that person | [Windows Autopilot user-driven mode](user-driven.md) |
+| Deploy and configure devices so that an end user can set it up for themselves | [Windows Autopilot user-driven mode](user-driven.md) |
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
 | Preprovision a device with up-to-date applications, policies, and settings.| [White glove](white-glove.md) |
@@ -45,11 +45,11 @@ These scenarios are summarized in the following video.
 
 ### Windows Autopilot is self-updating during OOBE
 
-Starting with the Windows 10, version 1903, Autopilot functional and critical updates are downloaded automatically during OOBE after both:
+For Windows 10, version 1903 and later devices, Autopilot functional and critical updates  automatically download during OOBE after both:
 - The device is connected to a network.
 - The [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) complete.
 
-The user or IT admin can't opt out of these Autopilot updates because they're required for Windows Autopilot deployment to operate properly. Windows alerts the user that the device is checking for, downloading, and installing the updates.
+You can't opt out of these Autopilot updates because they're required for Windows Autopilot deployment. Windows alerts the user that the device is checking for, downloading, and installing the updates.
 
 For more information, see [Windows Autopilot update](autopilot-update.md).
 
