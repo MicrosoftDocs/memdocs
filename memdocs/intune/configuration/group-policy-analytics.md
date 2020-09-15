@@ -74,9 +74,6 @@ Be sure the file is less than 4 MB. If it's greater than 4 MB, then include fewe
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
-    > [!NOTE]
-    > There is a 4 MB cumulative file size limit for all the GPOs you select for each **Import**.
-
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
@@ -132,7 +129,9 @@ Group Policy analytics can parse the following CSPs:
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
     - Use the search bar to find specific settings.
-    - Get a time stamp of when the report was last generated.
+    - Get a time stamp of when the report was last generated. 
+    
+    [!NOTE] Migration Readiness reporting data may have a delay of up to 20 minutes after you have made additions/deletions to your imported Group Policy Objects (GPOs).
 
 ## Privacy and security
 
