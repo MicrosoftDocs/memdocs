@@ -349,6 +349,8 @@ This feature applies to:
 - **Additional configuration** (Microsoft Azure AD, Redirect, and Credential): Enter additional extension-specific data to pass to the SSO app extension:
   - **Key**: Enter the name of the item you want to add, such as `user name`.
   - **Type**: Enter the type of data. Your options:
+  
+When using AppAllowList for the additional configuration key, please note that it is case sensitive. It has to be exactly 'AppAllowList'. 
 
     - String
     - Boolean: In **Configuration value**, enter `True` or `False`.
