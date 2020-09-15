@@ -5,7 +5,7 @@ description: "Tutorial - Configure Windows Server Update Services (WSUS) servers
 author: mestew 
 ms.author: mstewart
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/16/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -17,7 +17,7 @@ ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUP) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. This article walks you through the steps required to configure each of your WSUS servers and the software update point to use HTTPS.
+Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUP) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help secure your software update infrastructure. This article walks you through the steps required to configure each of your WSUS servers and the software update point to use HTTPS. For more information about securing WSUS, see the [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) article in the WSUS documentation.
 
 In this tutorial, you will:
 > [!div class="checklist"]
