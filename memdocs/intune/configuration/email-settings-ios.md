@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,16 +34,18 @@ This article lists and describes all the email settings available for devices ru
 
 ## Before you begin
 
-[Create a device configuration profile](email-settings-configure.md).
+Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+>
+> These settings use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
 
 ## Exchange ActiveSync account settings
 
 - **Email server**: Enter the host name of your Exchange server.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (AAD). Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory. Intune dynamically generates the username that's used by this profile. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
@@ -79,7 +81,8 @@ This article lists and describes all the email settings available for devices ru
     The default action is to add an application using the [Application Access Panel](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Add App** feature **without business approval**. For more information, see [assign users to applications](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
-  > When you enable OAuth, the following happens:  
+  > When you enable OAuth, the following happens:
+  >
   > 1. Devices that are already targeted are issued a new profile.
   > 2. End users are prompted to enter their credentials again.
 
@@ -161,6 +164,13 @@ This article lists and describes all the email settings available for devices ru
 - **Allow messages to be moved to other email accounts**: **Enable** (default) allows users to move email messages between different accounts the users configured on their devices.
 - **Allow email to be sent from third-party applications**: **Enable** (default) allows users to select this profile as the default account for sending email. It allows third-party applications to open email in the native email app, such as attaching files to email.
 - **Synchronize recently used email addresses**: **Enable** (default) allows users to synchronize the list of email addresses that have been recently used on the device with the server.
+- **VPN profile for per account VPN**: Starting in iOS/iPadOS 14, email traffic for the native Mail app can be routed through a VPN based on the account the user is using. When set to **None**, Intune doesn't change or update this setting. By default, the OS might not route email traffic this way.
+
+  Per-app VPN connections you create are shown in this list. If you select a VPN profile from the list, any email that's sent to and from this account in the Mail app uses the VPN tunnel. The per-app VPN connection automatically turns on when users use their organization account in the Mail app.
+
+  This feature applies to:  
+  - iOS 14 and newer
+  - iPadOS 14 and newer
 
 ## Next steps
 
