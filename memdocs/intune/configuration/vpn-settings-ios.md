@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,10 +32,12 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md).
+Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+>
+> These settings use the [Apple VPN payload](https://developer.apple.com/documentation/devicemanagement/vpn) (opens Apple's web site).
 
 ## Connection type
 
@@ -143,6 +145,8 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
+- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate’s identity. The IKEv2 server may require the values to match so it can validate the client’s identity.
+
 - **Client Authentication type**: Choose how the VPN client authenticates to the VPN. Your options:
   - **User authentication** (default): User credentials authenticate to the VPN.
   - **Machine authentication**: Device credentials authenticate to the VPN.
@@ -169,16 +173,22 @@ These settings apply when you choose **Connection type** > **IKEv2**.
   - **Medium** (default): Sends a keepalive message every 10 minutes.
   - **High**: Sends a keepalive message every 60 seconds.
 
-- **TLS version range minimum**: Enter the minimum TLS version to use. Enter `1.0`, `1.1`, or `1.2`. If left blank, the default value of `1.0` is used.
-- **TLS version range maximum**: Enter the maximum TLS version to use. Enter `1.0`, `1.1`, or `1.2`. If left blank, the default value of `1.2` is used.
-
-> [!NOTE]
-> TLS version range minimum and maximum must be set when using user authentication and certificates.
-
+- **TLS version range minimum**: Enter the minimum TLS version to use. Enter `1.0`, `1.1`, or `1.2`. If left blank, the default value of `1.0` is used. When using user authentication and certificates, you must configure this setting.
+- **TLS version range maximum**: Enter the maximum TLS version to use. Enter `1.0`, `1.1`, or `1.2`. If left blank, the default value of `1.2` is used. When using user authentication and certificates, you must configure this setting.
 - **Perfect forward secrecy**: Select **Enable** to turn on perfect forward secrecy (PFS). PFS is an IP security feature that reduces the impact if a session key is compromised. **Disable** (default) doesn't use PFS.
 - **Certificate revocation check**: Select **Enable** to make sure the certificates aren't revoked before allowing the VPN connection to succeed. This check is best-effort. If the VPN server times out before determining if the certificate is revoked, access is granted. **Disable** (default) doesn't check for revoked certificates.
 
-- **Configure security association parameters**: **Not configured** (default) uses the iOS/iPadOS system default. Select **Enable** to enter the parameters used when creating security associations with the VPN server:
+- **Use IPv4/IPv6 internal subnet attributes**: Some IKEv2 servers use the `INTERNAL_IP4_SUBNET` or `INTERNAL_IP6_SUBNET` attributes. **Enable** forces the VPN connection to use these attributes. **Disable** (default) doesn't force the VPN connection to use these subnet attributes.
+- **Mobility and multihoming (MOBIKE)**: MOBIKE allows VPN clients to change their IP address without recreating a security association with the VPN server. **Enable** (default) turns on MOBIKE, which can improve VPN connections when traveling between networks. **Disable** turns off MOBIKE.
+- **Redirect**: **Enable** (default) redirects the IKEv2 connection if a redirect request is received from the VPN server.​ **Disable** prevents the IKEv2 connection from redirecting if a redirect request is received from the VPN server.​
+
+- **Maximum transmission unit**: Enter the maximum transmission unit (MTU) in bytes, from 1-65536. When set to **Not configured** or left blank, Intune doesn't change or update this setting. By default, Apple may set this value to 1280.
+
+  This setting applies to:  
+  - iOS/iPadOS 14 and newer
+
+- **Security association parameters**: Enter the parameters to use when creating security associations with the VPN server:
+
   - **Encryption algorithm**: Select the algorithm you want:
     - DES
     - 3DES
@@ -193,11 +203,10 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - SHA2-384
     - SHA2-512
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
-  - **Lifetime** (minutes): Choose how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
+  - **Lifetime** (minutes): Enter how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
-- **Configure a separate set of parameters for child security associations**: iOS/iPadOS allows you to configure separate parameters for the IKE connection, and any child connections. 
+- **Child security association parameters**: iOS/iPadOS allows you to configure separate parameters for the IKE connection, and any child connections. Enter the parameters used when creating *child* security associations with the VPN server:
 
-  **Not configured** (default) uses the values you enter in the previous **Configure security association parameters** setting. Select **Enable** to enter the parameters used when creating *child* security associations with the VPN server:
   - **Encryption algorithm**: Select the algorithm you want:
     - DES
     - 3DES
@@ -212,7 +221,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - SHA2-384
     - SHA2-512
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
-  - **Lifetime** (minutes): Choose how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
+  - **Lifetime** (minutes): Enter how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
 ## Automatic VPN settings
 
