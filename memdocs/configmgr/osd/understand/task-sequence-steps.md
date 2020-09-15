@@ -2410,11 +2410,13 @@ This step performs the following actions:
 
 1. After Windows mini-setup finishes, the task sequence resumes by using setupcomplete.cmd. For more information, see [Run a script after setup is complete (SetupComplete.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
 
-2. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
+2. During mini-setup, Shift F10 is disabled.  This is intentional.  Just before the reboot while in WinPE, two files are created in c:\windows\setup\scripts, SetupComplete.cmd and DisableCMDRequest.TAG.  DisableCMDRequest.TAG is the flag to tell setup to disable Shift F10.
 
-3. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](provisioning-mode.md).  
+3. Enable or disable the local Administrator account, based on the option selected in the **Apply Windows Settings** step.  
 
-4. Wait for the client to be fully operational.  
+4. Install the Configuration Manager client by using the previously downloaded package, and installation properties specified in this step. The client installs in "provisioning mode". This mode prevents the client from processing new policy requests until the task sequence completes. For more information, see [Provisioning mode](provisioning-mode.md).  
+
+5. Wait for the client to be fully operational.  
 
 #### The step completes
 
