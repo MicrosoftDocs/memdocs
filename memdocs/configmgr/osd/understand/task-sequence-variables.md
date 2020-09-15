@@ -575,6 +575,12 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
 
+### <a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+
+Specify the PIN for BitLocker encryption. This variable is only valid if the BitLocker mode is **TPM and PIN**.
+
 ### <a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
