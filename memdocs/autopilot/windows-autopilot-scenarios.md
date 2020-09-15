@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot scenarios and capabilities
-description: Follow along with several typical  Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
+description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
@@ -45,7 +45,7 @@ These scenarios are summarized in the following video.
 
 ### Windows Autopilot is self-updating during OOBE
 
-Starting with the Windows 10, version 1903, Autopilot functional and critical updates will begin downloading automatically during OOBE after a device is connected to a network, and the [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) have completed. The user or IT admin cannot opt out of these Autopilot updates because they are required for Windows Autopilot deployment to operate properly.  Windows will alert the user that the device is checking for, downloading, and installing the updates.
+Starting with the Windows 10, version 1903, Autopilot functional and critical updates will begin downloading automatically during OOBE after a device is connected to a network, and the [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) have completed. The user or IT admin cannot opt out of these Autopilot updates because they are required for Windows Autopilot deployment to operate properly. Windows will alert the user that the device is checking for, downloading, and installing the updates.
 
 See [Windows Autopilot update](autopilot-update.md) for more information.
 
@@ -57,7 +57,7 @@ You can also enable Cortana voiceover and speech recognition during OOBE by crea
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-The key value is a DWORD with  **0** = disabled and **1** = enabled.
+The key value is a DWORD with **0** = disabled and **1** = enabled.
 
 | Value | Description |
 | --- | --- |
