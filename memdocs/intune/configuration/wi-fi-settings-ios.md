@@ -50,7 +50,7 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
 - **Wi-Fi type**: Select **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. This value is the name that users see when they browse the list of available connections on their device.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
-- **Connect automatically**: **Enable** automatically connects to this network when the device is in range. **Disable** prevent devicess from automatically connecting.
+- **Connect automatically**: **Enable** automatically connects to this network when the device is in range. **Disable** prevents devices from automatically connecting.
 - **Hidden network**: **Enable** matches this device setting with the setting on the router Wi-Fi configuration. So if the network is set to hidden, then it's also hidden in the Wi-Fi profile. Select **Disable** if the network SSID is broadcasted and visible.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
@@ -79,7 +79,7 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
 
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
-- **Connect automatically**: **Enable** automatically connects to this network when the device is in range. **Disable** prevent devicess from automatically connecting.
+- **Connect automatically**: **Enable** automatically connects to this network when the device is in range. **Disable** prevents devices from automatically connecting.
 - **Hidden network**: **Enable** matches this device setting with the setting on the router Wi-Fi configuration. So if the network is set to hidden, then it's also hidden in the Wi-Fi profile. Select **Disable** if the network SSID is broadcasted and visible.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
   - **WPA - Enterprise**
