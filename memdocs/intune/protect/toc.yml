@@ -24,7 +24,7 @@
     href: privacy-personal-data.md
     items:
     - name: Optional diagnostic data in client apps
-      href: client-apps-optoinal-data.md
+      href: client-apps-optional-data.md
     - name: Data collection
       href: privacy-data-collect.md
     - name: Data storage and processing
