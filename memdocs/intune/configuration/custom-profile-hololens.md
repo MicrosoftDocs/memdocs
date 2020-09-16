@@ -126,35 +126,6 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
     $rule += New-CIPolicyRule -Package $package<2..n>  -Deny
     ```
 
-> [!IMPORTANT]
-> You can manually edit newPolicy.xml and add rules for applications which are only installed on HoloLens with their package family names.
-
-Here is a list of commonly used and In-Box apps for HoloLens 2 devices.
-
-| App Name                   | Package Family Name                                |
-|----------------------------|----------------------------------------------------|
-| 3D Viewer                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
-| Calendar                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
-| Camera1, 2                 | HoloCamera_cw5n1h2txyewy                           |
-| Cortana3                   | Microsoft.549981C3F5F10_8wekyb3d8bbwe              |
-| Dynamics 365 Guides        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
-| Dynamics 365 Remote Assist | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
-| Feedback Hub               | Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe         |
-| File Explorer              | c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy |
-| Mail                       | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
-| Microsoft Store            | Microsoft.WindowsStore_8wekyb3d8bbwe               |
-| Movies & TV                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
-| OneDrive                   | microsoft.microsoftskydrive_8wekyb3d8bbwe          |
-| Photos                     | Microsoft.Windows.Photos_8wekyb3d8bbwe             |
-| Settings                   | HolographicSystemSettings_cw5n1h2txyewy            |
-| Tips                       | Microsoft.HoloLensTips_8wekyb3d8bbwe               |
-
-If an app is not on this list then a user may use Device Portal, connected to a HoloLens 2 that has installed the app wished to be blocked, to determine the PackageRelativeID and from there get the PackageFamilyName.
-
-Once Device Portal is connected, navigate to Views then Apps. Within the Installed Apps panel use the dropdown to select the installed app. Locate the PackageRelativeID. Copy app characters before the !, this will be your PackageFamilyName.
-
-More more details instructions read more about [setup and use of device portal here](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal). 
-
 5. Convert the WDAC policy to **newPolicy.xml**:
 
     ```powershell
