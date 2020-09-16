@@ -125,7 +125,7 @@ You can view the **Antivirus agent status** report using the following steps:
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**.
 
 ## Detected malware report (Organizational)
-The **Detected malware** report provides the malware state of your organization's devices. This report hows the number of devices with detected malware, as well as malware details. The data found in these reports is timely, calls out the device name and severity, as well as other malware related details. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
+The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in these reports is timely, calls out the device name and severity, as well as other malware related details. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
 
 You can view the **Detected malware** report using the following steps:
 
@@ -158,13 +158,13 @@ You can create and view custom reports using the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](reports.md#diagnostic-settings).
 
-    ![Intune Reports summary](./media/intune-reports/intune-reports-04.png)
+    ![Intune Reports - Add diagnostic setting](./media/intune-reports/intune-reports-04.png)
 
 3. Click **Add diagnostic setting** to display the **Diagnostic settings** pane. 
 4. Add a **Name** for the diagnostic settings. 
 5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
 
-    ![Intune Reports summary](./media/intune-reports/intune-reports-04a.png)
+    ![Intune Reports - Diagnostic settings](./media/intune-reports/intune-reports-04a.png)
 
 6. Click **Save**.
 7. Next, select **Log analytics** to create and run a new log query using [Log Analytics](reports.md#log-analytics).
