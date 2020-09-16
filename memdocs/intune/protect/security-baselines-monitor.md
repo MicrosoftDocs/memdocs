@@ -132,6 +132,7 @@ You can reach information about settings in conflict or error through two paths 
 
 On the **Endpoint security configuration** view of a device, Intune displays each baseline profile and policy from endpoint security that’s assigned to that device. This view also identifies the associated User Principal Name for each entry, and the status of the baseline profile or policy. A profile or policy can appear multiple times on a device, once for each different User Principal Name associated with it. 
 
+<!-- pending
 The **Baseline status** represents the worst available status from any applicable setting in that profile or policy. For example, if on the device a single setting from a profile is found to be in conflict while the rest of the baselines’ settings are successful, the *Baseline status* is set to *Conflict*. 
 
 The available status from best to worst:
@@ -139,6 +140,7 @@ The available status from best to worst:
 - **Success** - The setting on the device matches the value as configured in the profile, and there are no conflicting configurations. This is either a default and recommended value, or a custom value specified by an administrator when the profile was configured.
 - **Error** - The profile and settings failed to apply.
 - **Conflict** - The setting conflicts with another instance of the setting from another policy, has an error, or is pending an update. This setting isn’t sent to the device until the conflict is resolved.
+--> 
 
 ### Drill in to identify and resolve conflicts
 
