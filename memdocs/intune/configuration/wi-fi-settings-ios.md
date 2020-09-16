@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,7 @@ This article describes these settings.
 - **Network name**: Enter a name for this Wi-Fi connection. This value is the name that users see when they browse the list of available connections on their device.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
-- **Hidden network**: Choose **Enable** if the SSID of the network isn't broadcasted. Choose **Disable** if the SSID of the network is broadcasted and visible.
+- **Hidden network**: **Enable** matches this device setting with the setting on the router Wi-Fi configuration. So if the network is set to hidden, then it's also hidden in the Wi-Fi profile. Select **Disable** if the network SSID is broadcasted and visible.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
@@ -66,7 +66,7 @@ This article describes these settings.
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Choose **Enable** to automatically connect to this network when the device is in range. Choose **Disable** to prevent devices from automatically connecting.
-- **Hidden network**: Choose **Enable** if the SSID of the network isn't broadcasted. Choose **Disable** if the SSID of the network is broadcasted and visible.
+- **Hidden network**: **Enable** matches this device setting with the setting on the router Wi-Fi configuration. So if the network is set to hidden, then it's also hidden in the Wi-Fi profile. Select **Disable** if the network SSID is broadcasted and visible.
 - **Security type**: Select the security protocol to authenticate to the Wi-Fi network. Your options:
   - **WPA - Enterprise**
   - **WPA/WPA2 - Enterprise**
