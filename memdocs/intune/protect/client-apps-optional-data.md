@@ -4,7 +4,7 @@
 title: Optional diagnostic data from Intune Client apps
 titleSuffix: Microsoft Intune
 description: Learn about the optional diagnostic data that Intune Client apps collect.
-keywords: privacy, GDPR, personal data
+keywords: privacy, personal data
 author: erikjeMS
 ms.author: erikje
 manager: dougeby
