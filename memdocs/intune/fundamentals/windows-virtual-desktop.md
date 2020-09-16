@@ -58,7 +58,7 @@ There are some limitations to keep in mind when managing Windows 10 Enterprise r
 All VM limitations listed in [Using Windows 10 virtual machines](windows-10-virtual-machines.md) also apply to Windows Virtual Desktop VMs.
 
 Also, the following profiles aren't currently supported:
-- [Domain Join](../configuration/device-profiles#domain-join.md)
+- [Domain Join](../configuration/device-profiles.md#domain-join)
 - [Wi-Fi](../configuration/device-profiles.md#wi-fi)
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy]https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
