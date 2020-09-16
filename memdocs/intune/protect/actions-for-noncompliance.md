@@ -49,7 +49,7 @@ Following are the available actions for noncompliance:
 
   When you change the default schedule, you provide a grace period in which a user can remediate issues or become compliant without being marked as non-compliant.
 
-  This action is supported on all platform supported by Intune.
+  This action is supported on all platforms supported by Intune.
 
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
@@ -59,7 +59,7 @@ When you enable this action:
 
   When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
-  This action is supported on all platform supported by Intune.
+  This action is supported on all platforms supported by Intune.
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
