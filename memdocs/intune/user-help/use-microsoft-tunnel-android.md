@@ -32,11 +32,11 @@ ms.collection:
 
 # Using Microsoft Tunnel for Android
 
-The Microsoft Tunnel creates a secure VPN connection so that you can securely and privately access your corporate network from anywhere. 
+The Microsoft Tunnel app creates a secure VPN connection so that you can securely and privately access your corporate network from anywhere. 
 
 ## Install Microsoft Tunnel  
 
-The Microsoft Tunnel app is available in Google Play. Before heading there, check your device to see if it's already installed.   
+Microsoft Tunnel is available in the Google Play store. Before heading there, check your device to see if it's already installed.   
 
 If you can’t find Microsoft Tunnel in the Play store, contact your IT support person for help.  
 
