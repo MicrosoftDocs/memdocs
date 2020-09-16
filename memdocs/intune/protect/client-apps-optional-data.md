@@ -32,31 +32,33 @@ ms.collection: M365-identity-device-management
 
 # Optional diagnostic data from Intune Client apps
 
-Intune collects various optional data to detect, diagnose, and fix problems from users through various Intune client apps. Intune client apps includes:
+Intune collects various optional data to detect, diagnose, and fix problems from users through various Intune client apps. Intune client apps include:
 - iOS/iPadOS Company Portal
-- MacOS Company Portal
+- macOS Company Portal
 - Windows Company Portal
 - Android Company Portal
 - Android Intune app
-- MacOS sidecar
+- macOS sidecar
 - Windows sidecar
 - Android Mobile App Management (MAM)
 
-The optional data collected from clients aren't required to successful run Intune services. The data collected helps us make product improvements and provide enhanced information to help us detect, diagnose, and fix issues.
+The optional data collected from clients aren't required to successful run Intune services. The data collected helps:
+- Us make product improvements.
+- Provides enhanced information to help us detect, diagnose, and fix issues.
 
 ## Data collected
 
 Optional diagnostic data collected by Intune client apps may cover the following areas:
 
-- Microsoft generated user information
-    - AAD User ID
+- Microsoft-generated user information
+    - Azure AD User ID
     - Device ID
     - Correlation ID
     - App Session GUID
     - SDK User ID
 - Admin and account information
     - Tenant ID
-    - AAD tenant ID
+    - Azure AD tenant ID
 - Hardware and software information
     - Device OS version
     - Device Model
@@ -71,7 +73,7 @@ Optional diagnostic data collected by Intune client apps may cover the following
         - Runtime failure
         - Task schedule failure
         - Enrollment failure
-        - AAD authentication failure
+        - Azure AD authentication failure
     - Crash report
     - Consent state
     - Compliance status
@@ -86,7 +88,10 @@ Optional diagnostic data collected by Intune client apps may cover the following
     - Response time
  
 ## Data not collected
-The data doesn't include any customer information, like device name, phone number, or contents to the user’s files or photo.
+The data doesn't include any customer information, like:
+- Device name.
+- Phone number.
+- Contents to the user’s files or photo.
 
 ## Turn off data collection
 Users can [turn off usage data collection](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) for their individual devices from the Settings app.
