@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a VPN configuration profile on iOS/iPadOS devices using virtual private network (VPN) configuration settings. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port in Microsoft Intune.
+description: Add or create a VPN configuration profile on iOS/iPadOS devices using virtual private network (VPN) configuration settings in Microsoft Intune. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -225,26 +225,63 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN settings
 
-- **Per-app VPN**: Enables per-app VPN. Allows the VPN connection to trigger automatically when certain apps are opened. Also associate the apps with this VPN profile. Per-app VPN isn't supported on IKEv2. For more information, see [instructions for setting up per-app VPN for iOS/iPadOS](vpn-setting-configure-per-app.md). 
+- **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching IP address or domain name. If there's a match, then the action you choose runs.
+
+  For example, create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
+
+  - **Add**: Select this option to add a rule.
+
+  - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action. Your options:
+
+    - Establish VPN
+    - Disconnect VPN
+    - Evaluate each connection attempt
+    - Ignore
+
+  - **I want to restrict to**: Select the condition that the rule must meet. Your options:
+
+    - **Specific SSIDs**: Enter one or more wireless network names that the rule will apply. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
+    - **Specific DNS domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
+    - **All domains**: Select this option to apply your rule to all domains in your organization.
+
+  - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+
+    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
+
+- **Prevent users from disabling automatic VPN**: Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+  - **No**: Allows users to turn off automatic VPN.
+
+  This setting applies to:  
+  - iOS 14 and newer
+  - iPadOS 14 and newer
+
+- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with an iOS/iPadOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+
+  Per-app VPN isn't supported on IKEv2. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+
   - **Provider Type**: Only available for Pulse Secure and Custom VPN.
   - When using iOS/iPadOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
+
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
 
-- **On-demand VPN**: Configure conditional rules that control when the VPN connection is started. For example, create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, create a condition. For example, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
+  - **Associated Domains**: Enter associated domains in the VPN profile that automatically start the VPN connection. For example, enter `contoso.com`. Devices in the `contoso.com` domain automatically start the VPN connection.
 
-  - **SSIDs or DNS search domains**: Select whether this condition uses wireless network **SSIDs**, or **DNS search domains**. Choose **Add** to configure one or more SSIDs or search domains.
-  - **URL string probe**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+    For more information, see [associated domains](device-features-configure.md#associated-domains).
 
-    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
+  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Devices in the `contoso.com` domain won't start or use the per-app VPN connection. Devices in the `contoso.com` domain will use the public Internet.
 
-  - **Domain action**: Choose one of the following items:
-    - Connect if needed
-    - Never connect
-  - **Action**: Choose one of the following items:
-    - Connect
-    - Evaluate connection
-    - Ignore
-    - Disconnect
+  - **Prevent users from disabling automatic VPN**: Your options:
+
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+    - **No**: Allows users to turn off automatic VPN.
+
+    This setting applies to:  
+    - iOS 14 and newer
+    - iPadOS 14 and newer
 
 ## Proxy settings
 
@@ -256,6 +293,6 @@ If you're using a proxy, configure the following settings. Proxy settings aren't
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but may not doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.
