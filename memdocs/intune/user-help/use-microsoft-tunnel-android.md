@@ -57,21 +57,21 @@ If the option is stuck in the off position, select **Help** > **Send logs** and 
 
 When you connect to the VPN, the following information is visible on the **Connect** screen:  
 
-**Uptime**: How long the VPN connection has been running. 
+* **Uptime**: How long the VPN connection has been running. 
 
-**Data received**: How much data has been received through the VPN connection. 
+* **Data received**: How much data has been received through the VPN connection. 
 
-**Data sent**: How much data has been sent through the VPN connection.  
+* **Data sent**: How much data has been sent through the VPN connection.  
 
 Tap **Details** to see the following information:  
 
-Address: The server address for your VPN connection. 
+* **Address**: The server address for your VPN connection. 
 
-Device-wide connection: When turned on, all network traffic to and from your device goes through the VPN connection.  
+* **Device-wide connection**: When turned on, all network traffic to and from your device goes through the VPN connection.  
 
-Apps that use Tunnel: If apps are listed, then only network traffic to and from the apps listed go through the VPN connection.  
+* **Apps that use Tunnel**: If apps are listed, then only network traffic to and from the apps listed go through the VPN connection.  
 
-Always-on: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.   
+* **Always-on**: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.      
 
 ## Settings  
 
