@@ -50,7 +50,7 @@ If you can’t find Microsoft Tunnel in the Play store, contact your IT support 
 
 Your organization might require you to always connect through a VPN. This is known as an *always-on* connection. If this is the case, you won't have the option to disconnect from the VPN while on their network.  
 
-If the option is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#get-help) section in this article. 
+If the option is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article. 
 
 
 ## Connection details    
