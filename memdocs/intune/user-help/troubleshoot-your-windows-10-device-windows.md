@@ -61,7 +61,7 @@ If you see your work or school account listed in the Settings app, your device a
 
 #### Resolution
 1. Re-enter your username and password. 
-2. If it still doesn't work, contact your IT support person to get the correct URL (example: www.yourcompany.onmicrosoft.com). 
+2. If it still doesn't work, contact your IT support person to get the correct URL (example: <code>www.yourcompany.onmicrosoft.com</code>). 
 3. When prompted, enter the provided URL. 
 
 ### It looks like you're not connected. Make sure you're connected to the network.
