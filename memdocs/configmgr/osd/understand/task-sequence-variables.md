@@ -1646,7 +1646,9 @@ Use this variable to temporarily persist content in the task sequence cache. Thi
 
 ### <a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifies a command that's run after the task sequence completes. For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
+Specifies a command that's run after the task sequence completes. Just before exiting the task sequence, the TSManager process spawns the specified post action. It doesn't wait or record any status, just exits after calling that command.<!-- MEMDocs #719 -->
+
+For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
 
 ### <a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 
