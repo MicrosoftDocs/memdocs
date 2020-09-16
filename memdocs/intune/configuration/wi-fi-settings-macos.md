@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ This article describes these settings.
 
 ## Before you begin
 
-[Create a device profile](wi-fi-settings-configure.md).
+Create a [macOS Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
