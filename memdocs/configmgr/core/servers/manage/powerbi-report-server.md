@@ -67,6 +67,9 @@ Only use this process if you already have a reporting services point in the site
 
     1. Use **Reporting Server Configuration Manager** to restore the **Encryption Keys**.
 
+    > [!TIP]
+    > Before you add the reporting services point role in Configuration Manager, use SQL Server Reporting Services Configuration Manager to test and verify the configuration. For more information, see [Verify SQL Server Reporting Services installation](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
+
 1. Add the reporting services point role in Configuration Manager.
 
 ### You don't have a reporting services point
