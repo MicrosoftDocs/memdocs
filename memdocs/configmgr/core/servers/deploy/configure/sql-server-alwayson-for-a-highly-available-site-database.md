@@ -386,6 +386,9 @@ If at least one node of the availability group is still functional, use the site
 
 Starting in version 1906, site recovery can recreate the database on a SQL Always On group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
+> [!TIP]
+> When you run the setup/recovery wizard, the **New Availability Group Database** page only applies to manual seeding configurations. With automatic seeding, there's no shared database backup, so that page of the wizard isn't shown.<!-- SCCMDocs #2242 -->
+
 In version 1902 or earlier, when you lose all nodes of an availability group, before you can recover the site, first recreate the availability group. Configuration Manager can't rebuild or restore the availability node. Recreate the group, restore the backup, and reconfigure SQL. Then use the site recovery option to **Skip database recovery (Use this option if the site database was unaffected)**.
 
 For more information, see [Backup and recovery](../../manage/backup-and-recovery.md).
