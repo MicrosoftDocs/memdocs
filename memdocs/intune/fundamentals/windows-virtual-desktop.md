@@ -65,7 +65,7 @@ Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy]htt
 
 ### Remote actions
 
-The following Windows 10 desktop device remote actions are not supported/recommended for Windows Virtual Desktop VMs:
+The following Windows 10 desktop device remote actions aren't supported/recommended for Windows Virtual Desktop VMs:
 
 - Autopilot reset
 - BitLocker key rotation
