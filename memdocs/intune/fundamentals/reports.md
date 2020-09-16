@@ -52,7 +52,7 @@ Users with the following permissions can review logs:
 - Administrators assigned to an Intune role with **Read** permissions
 
 ## Non-compliant devices report (Operational)
-The Non-compliant devices report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in these reports is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+The Non-compliant devices report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 You can view the **Noncompliant devices** report using the following steps:
 
@@ -65,7 +65,7 @@ You can view the **Noncompliant devices** report using the following steps:
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device compliance** > **Noncompliant devices**.
 
 ## Windows 10 unhealthy endpoints report (Operational)
-The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in these reports is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of a number of settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of a number of settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Windows 10 unhealthy endpoints** report using the following steps:
 
@@ -73,7 +73,7 @@ You can view the **Windows 10 unhealthy endpoints** report using the following s
 2. Select **Endpoint security** > **Antivirus** > **Windows 10 unhealthy endpoints**.
 
 ## Windows 10 detected malware report (Operational)
-The **Windows 10 detected malware** report provides data to identify devices with malware problems and help remediate issues. The data found in these reports is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Windows 10 detected malware** report provides data to identify devices with malware problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Windows 10 detected malware** report using the following steps:
 
@@ -87,6 +87,14 @@ The **Windows 10 detected malware** report provides bulk actions that are applic
 - **Full scan** - This action performs a Windows Defender full scan of the selected devices. 
 
 For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+
+## Feature update failures report (Operational)
+The **Feature update failures** operational report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting. 
+
+You can view the **Feature update failures** report using the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > **Feature update failures**.
 
 ## Device compliance report (Organizational)
 
@@ -117,7 +125,7 @@ The device compliance report is available as the summary report in the **Reports
     ![Intune Reports summary](./media/intune-reports/intune-reports-01.png)
 
 ## Antivirus agent status report (Organizational)
-The **Antivirus agent status** report provides the agent status of your organization's devices. This report shows which devices have real-time or network protection, as well as their state. The data found in these reports is timely, calls out the unhealthy device, the user name, and severity. The report is available from the primary **Microsoft Defender Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Antivirus agent status** report provides the agent status of your organization's devices. This report shows which devices have real-time or network protection, as well as their state. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available from the primary **Microsoft Defender Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
 You can view the **Antivirus agent status** report using the following steps:
 
@@ -125,7 +133,7 @@ You can view the **Antivirus agent status** report using the following steps:
 2. Select **Reports** > **Microsoft Defender Antivirus** > **Antivirus agent status**.
 
 ## Detected malware report (Organizational)
-The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in these reports is timely, calls out the device name and severity, as well as other malware related details. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
+The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting. 
 
 You can view the **Detected malware** report using the following steps:
 
