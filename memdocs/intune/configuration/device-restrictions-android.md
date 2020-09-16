@@ -104,11 +104,6 @@ These settings apply to:
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
-  This setting applies to:  
-  - Android 10.0 and newer not running Samsung Knox
-
-  On devices running Android 9 and earlier, or running Samsung Knox, the password length and type settings override this setting.
-
 ### Android 9 and earlier or Samsung Knox
 
 These settings apply to:  
