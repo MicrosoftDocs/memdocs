@@ -43,6 +43,10 @@ For more information about the feature, see [Security baselines in Intune](secur
 
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. The *Overview* pane displays the **Security baseline posture** chart for that baseline, which includes a high-level status for the baseline instance your viewing. <!-- The following image shows an instance of MDM Security baseline that hasn’t been assigned to any devices yet: -->
 
+<!-- Not available yet:
+For each baseline, you’ll see the number of devices assigned the baseline, and the following information about them: 
+-->
+
 When you drill-in past the *Security baseline posture* view for a baseline, you can view the following details for the setting status and the device status list views:
 
 - **Succeeded**: Policy is applied.
