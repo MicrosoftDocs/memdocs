@@ -38,7 +38,7 @@ ms.collection: M365-identity-device-management
 Currently, Intune supports Windows Virtual Desktop VMs that are: 
 
 - Running Windows 10 Enterprise, version 1809 or later.
-- [Hybrid Azure AD-joined ](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+- [Hybrid Azure AD-joined](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 - Set up as [personal remote desktops](https://docs.microsoft.com/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
 - Enrolled in Intune in one of the following methods: 
     - Configure [Active Directory group policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
