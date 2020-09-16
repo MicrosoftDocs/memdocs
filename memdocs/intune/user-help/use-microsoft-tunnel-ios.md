@@ -36,14 +36,18 @@ The Microsoft Tunnel creates a secure VPN connection so that you can securely an
 
 ## Install Microsoft Tunnel  
 
-1. Install the Microsoft Tunnel app from the App Store. 
-    * Your organization may have already installed it on your device. If not, continue to the App Store.    
-    * If you can’t find it in the App Store, contact your IT support person for help.  
+The Microsoft Tunnel app is available in the App Store. Before heading there, check your device to see if it's already installed.   
 
-2. Open Microsoft Tunnel. 
-3. If prompted to, sign in with your work account.  
+If you can’t find Microsoft Tunnel in the App Store, contact your IT support person for help.  
 
-## Connect and disconnect from VPN     
+
+## Connect and disconnect from VPN    
+
+1. Open Microsoft Tunnel. 
+2. If prompted to, sign in with your work account. 
+3. Select **Connect** to see the status of your VPN connection. 
+4. Turn the **Status** on or off to connect or disconnect from the VPN. 
+ 
 Select **Connect** to see the status of your VPN connection. Turn the **Status** on or off to connect or disconnect from the VPN. 
 
 Your organization can require you to always connect to their network through the VPN. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive and you won't be able to disconnect from the VPN as long as you're connected to the corporate network. 

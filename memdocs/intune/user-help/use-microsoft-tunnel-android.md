@@ -36,17 +36,20 @@ The Microsoft Tunnel creates a secure VPN connection so that you can securely an
 
 ## Install Microsoft Tunnel  
 
-1. Install the Microsoft Tunnel app from Google Play. 
-    * Your organization may have already installed it on your device. If not, continue to Google Play.   
-    * If you can’t find it in the Play store, contact your IT support person for help.  
+The Microsoft Tunnel app is available in Google Play. Before heading there, check your device to see if it's already installed.   
 
-2. Open Microsoft Tunnel. 
-3. If prompted to, sign in with your work account.  
+If you can’t find Microsoft Tunnel in the Play store, contact your IT support person for help.  
+
+ 
 
 ## Connect and disconnect from VPN     
-Select **Connect** to see the status of your VPN connection. Turn the **Status** on or off to connect or disconnect from the VPN. 
 
-Your organization can require you to always connect to their network through the VPN. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive and you won't be able to disconnect from the VPN as long as you're connected to the corporate network. 
+1. Open Microsoft Tunnel. 
+2. If prompted to, sign in with your work account. 
+3. Select **Connect** to see the status of your VPN connection. 
+4. Turn the **Status** on or off to connect or disconnect from the VPN. 
+
+Your organization might require you to always connect through a VPN. This is known as an *always-on* connection. If this is the case, you won't have the option to disconnect from the VPN while on their network.  
 
 If the option is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#get-help) section in this article. 
 
