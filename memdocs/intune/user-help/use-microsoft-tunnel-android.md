@@ -46,8 +46,7 @@ If you can’t find Microsoft Tunnel in the Play store, contact your IT support 
 
 1. Open Microsoft Tunnel. 
 2. If prompted to, sign in with your work account. 
-3. Select **Connect** to see the status of your VPN connection. 
-4. Turn the **Status** on or off to connect or disconnect from the VPN. 
+3. On the **Connect** screen, flip the switch next to **Status** on or off to connect or disconnect from the VPN. 
 
 Your organization might require you to always connect through a VPN. This is known as an *always-on* connection. If this is the case, you won't have the option to disconnect from the VPN while on their network.  
 
@@ -74,6 +73,13 @@ Apps that use Tunnel: If apps are listed, then only network traffic to and from 
 
 Always-on: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.   
 
+## Settings  
+
+From the **Connect** screen, select the **Settings** gear icon to:
+
+* Allow/block Microsoft from collecting usage and performance data. 
+* Enable/disable verbose logging.  
+
 ## Get help in the app  
 Select **Help** from the bottom menu to:  
 
@@ -91,41 +97,8 @@ Send your app logs to your IT support person to get help with an app or connecti
 5. Describe the problem you experienced so that the support team has an idea of what to look for. 
 6. Send the email.  
 
-## Settings  
-
-From the **Connect** screen, select the **Settings** gear icon to:
-
-* Allow/block Microsoft from collecting usage and performance data. 
-* Enable/disable verbose logging. 
 
 ## Next steps  
 Need additional help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ![Example image of Company Portal menu, highlighting Get Apps link.](./media/updated-drawer-android-2005.png) 
-
-
-
-## Next steps  
-
-Now that your device is enrolled, you can install school or work apps on your device. Go to the managed Google Play store to find and install these apps. 
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

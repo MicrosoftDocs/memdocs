@@ -50,6 +50,8 @@ If you can’t find Microsoft Tunnel in the App Store, contact your IT support p
  
 Select **Connect** to see the status of your VPN connection. Turn the **Status** on or off to connect or disconnect from the VPN. 
 
+An absent **Status** switch means that Tunnel is configured to connect automatically when certain apps are in use. To turn off the automatic connection, go to Details section and switch the “Connect on demand” toggle off.  
+
 Your organization can require you to always connect to their network through the VPN. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive and you won't be able to disconnect from the VPN as long as you're connected to the corporate network. 
 
 If the option is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#get-help) section in this article. 
@@ -59,26 +61,26 @@ If the option is stuck in the off position, select **Help** > **Send logs** and 
 
 When you connect to the VPN, the following information is visible on the **Connect** screen:  
 
-**Uptime**: How long the VPN connection has been running. 
+* **Uptime**: How long the VPN connection has been running. 
 
-**Data received**: How much data has been received through the VPN connection. 
+* **Data received**: How much data has been received through the VPN connection. 
 
-**Data sent**: How much data has been sent through the VPN connection.  
+* **Data sent**: How much data has been sent through the VPN connection.  
 
 Tap **Details** to see the following information:  
 
-Address: The server address for your VPN connection. 
+* **Address**: The server address for your VPN connection. 
 
-Device-wide connection: When turned on, all network traffic to and from your device goes through the VPN connection.  
+* **Device-wide connection**: When turned on, all network traffic to and from your device goes through the VPN connection.  
 
-Apps that use Tunnel: If apps are listed, then only network traffic to and from the apps listed go through the VPN connection.  
+* **Apps that use Tunnel**: If apps are listed, then only network traffic to and from the apps listed go through the VPN connection.  
 
-Always-on: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.   
+* **Always-on**: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.   
 
 ## Get help in the app  
 Select **Help** from the bottom menu to:  
 
-* Access this article. 
+* Access documentation (directs you to this article). 
 * Send logs to IT support to report a problem.
 
 ### Send logs   
