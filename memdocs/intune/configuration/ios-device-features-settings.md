@@ -347,7 +347,7 @@ This feature applies to:
   - The URLs must begin with `http://` or `https://`.
 
 - **Additional configuration** (Microsoft Azure AD, Redirect, and Credential): Enter additional extension-specific data to pass to the SSO app extension:
-  - **Key**: Enter the name of the item you want to add, such as `user name`. `AppAllowList` is case sensitive. Be sure to exactly enter 'AppAllowList'. 
+  - **Key**: Enter the name of the item you want to add, such as `user name` or 'AppAllowList'.  
   - **Type**: Enter the type of data. Your options:
 
     - String
