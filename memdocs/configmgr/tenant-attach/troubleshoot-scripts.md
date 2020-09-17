@@ -23,6 +23,58 @@ Use the following to troubleshoot scripts in the Microsoft Endpoint Manager admi
 
 ## Common issues
 
+### <a name="bkmk_aad"></a> The necessary configuration is missing in Azure Active Directory
+
+**Error message:** The necessary configuration is missing in Azure Active Directory. Make sure to attach the Configuration Manager site to your Azure tenant, and assign the proper user role in Azure AD.
+
+**Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
+
+### <a name="bkmk_403"></a> Unable to get Scripts information
+
+**Error message:** Unable to get Scripts information. Make sure Azure AD and AD user discovery are configured and the user account accessing tenant attach features from the Microsoft Endpoint Manager admin center is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+
+**Possible causes:** Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
+
+1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
+1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
+1. Verify the account has **Read Resource** permission for the device's **Collection** in Configuration Manager.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+
+    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+
+1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
+
+    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
+    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
+
+    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+
+
+### <a name="bkmk_noinfo"></a> Unable to get device information
+
+**Error message:** Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
+
+**Possible cause:** Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+
+    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+
+1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
+
+    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
+    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
+    - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
+
+    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+
+
+### <a name="bkmk_1603"></a> Unexpected error occurred
+
+**Error message:** Unexpected error occurred
+
+**Possible cause:** Verify the account has **Read Resource** permission for the device's **Collection** in Configuration Manager.
+
+
 ### <a name="bkmk_version"></a> Configuration Manager doesn't meet the minimum version prerequisite
 
 **Error message:** Configuration Manager doesn't meet the minimum version prerequisite.

@@ -16,10 +16,13 @@ ms.author: mstewart
 <!--CM6234688, IN7220536-->
 *Applies to: Configuration Manager (current branch)*
 
-Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
-
 > [!Important]
 > - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
+
+:::image type="content" source="./media/6234688-scripts.png" alt-text="Screenshot of script list in the admin center" lightbox="./media/6234688-scripts.png":::
+
 
 ## Prerequisites
 
@@ -51,7 +54,7 @@ The user account needs the following permissions:
 1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Select **Scripts**, then select one of your scripts. If needed, you can search by script name.
+1. Select **Scripts** and search for your script by script name. If the script has already been run on the device, it will be listed 
 1. Click **Run script** from the page that appears on the right.
    - You'll be notified your script has started. The **Run script** button will be disabled until it's complete.
    - The **State** column is only valid while you're on the page. The state is reset to `Ready` if you navigate to another page.
