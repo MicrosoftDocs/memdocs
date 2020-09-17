@@ -145,11 +145,19 @@ There are three main parameters you can submit in your request body to define th
 
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
-| `reportName` parameter values |
-|-|
-| DeviceCompliance |
-| DeviceNonCompliance |
-| Devices |
+|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+|-|-|
+|         DeviceCompliance  |            Device   Compliance Org        |
+|         DeviceNonCompliance  |            Non-compliant   devices        |
+|         Devices  |            All   devices list        |
+|         DetectedAppsAggregate  |            Detected   Apps report        |
+|         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
+|         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
+|         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
+|         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
+|         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
+|         ActiveMalware  |            Under   **Endpoint Security** > **Antivirus** > **Win10 detected   malware**        |
+|         Malware  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Detected   malware**        |
 
 Each of the listed reports is described below.
 
@@ -157,31 +165,31 @@ Each of the listed reports is described below.
 
 The following table contains the possible output when calling the `DeviceCompliance` report:
 
-| Return value | Description |
-|-|-|
-|         DeviceId  | Unique identifier of the device. |
-|            IntuneDeviceId   | Intune device ID. |
-| AadDeviceId   | Azure AD device ID. |
-| DeviceName   | Name of the device. |
-| DeviceType   | Type of the device. |
-| OSDescription   | OS description. |
-|            OSVersion   | OS version. |
-| OwnerType   | Type of device owner. |
-| LastContact   | Latest sync DateTime. |
-| InGracePeriodUntil   | Remaining amount of grace period. |
-| IMEI   | International mobile equipment identifier (IMEI) of the device. |
-|            SerialNumber   | Serial number of the device. |
-| ManagementAgents   | Management agents  associated with   the device. |
-| PrimaryUser   | Primary user of the device. |
-| UserId   | User's ID. |
-| UPN   | User Principal Name. |
-|            UserEmail   | User's email address. |
-| UserName   | User's name. |
-| DeviceHealthThreatLevel   | Device health threat level. |
-| RetireAfterDatetime   | DateTime value for retirement. |
-| PartnerDeviceId   | Partner device ID. |
-|            ComplianceState   | Compliance state. |
-| OS        | OS of the device. |
+| Available properties |
+|-|
+| DeviceId |
+| IntuneDeviceId |
+| AadDeviceId |
+| DeviceName |
+| DeviceType |
+| OSDescription |
+| OSVersion |
+| OwnerType |
+| LastContact |
+| InGracePeriodUntil |
+| IMEI |
+| SerialNumber |
+| ManagementAgents |
+| PrimaryUser |
+| UserId |
+| UPN |
+| UserEmail |
+| UserName |
+| DeviceHealthThreatLevel |
+| RetireAfterDatetime |
+| PartnerDeviceId |
+| ComplianceState |
+| OS |
 
 You can choose to filter the `DeviceCompliance` report's output based on the following columns:
 - `ComplianceState`
@@ -193,31 +201,31 @@ You can choose to filter the `DeviceCompliance` report's output based on the fol
 
 The following table contains the possible output when calling the `DeviceNonCompliance` report:
 
-| Return value | Description |
-|-|-|
-|         DeviceId  | Unique identifier of the device. |
-|            IntuneDeviceId   | Intune device ID. |
-| AadDeviceId   | Azure AD device ID. |
-| DeviceName   | Name of the device. |
-| DeviceType   | Type of the device. |
-| OSDescription   | OS description. |
-|            OSVersion   | OS version. |
-| OwnerType   | Type of device owner. |
-| LastContact   | Latest sync DateTime. |
-| InGracePeriodUntil   | Remaining amount of grace period. |
-| IMEI   | International mobile equipment identifier (IMEI) of the device. |
-|            SerialNumber   | Serial number of the device. |
-| ManagementAgents   | Management agents  associated with   the device. |
-| PrimaryUser   | Primary user of the device. |
-| UserId   | User's ID. |
-| UPN   | User Principal Name. |
-|            UserEmail   | User's email address. |
-| UserName   | User's name. |
-| DeviceHealthThreatLevel   | Device health threat level. |
-| RetireAfterDatetime   | DateTime value for retirement. |
-| PartnerDeviceId   | Partner device ID. |
-|            ComplianceState   | Compliance state. |
-| OS        | OS of the device. |
+|     Available properties  |
+|-|
+|     DeviceId  |
+|            IntuneDeviceId   |
+| AadDeviceId   |
+| DeviceName   |
+| DeviceType   |
+| OSDescription   |
+|            OSVersion   |
+| OwnerType   |
+| LastContact   |
+| InGracePeriodUntil   |
+| IMEI   |
+|            SerialNumber   |
+| ManagementAgents   |
+| PrimaryUser   |
+| UserId     |
+| UPN   |
+|            UserEmail   |
+| UserName   |
+| DeviceHealthThreatLevel   |
+| RetireAfterDatetime   |
+| PartnerDeviceId   |
+|            ComplianceState         |
+| OS |
 
 You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
 - `OS` 
@@ -230,76 +238,76 @@ You can choose to filter the `DeviceNonCompliance` report's output based on the 
 
 The following table contains the possible output when calling the `Devices` report:
 
-| Return value | Description |
-|-|-|
-|         DeviceId  | Unique identifier of the device. |
-| DeviceName  | Name of the device. |
-| DeviceType  | Type of the device. |
-| ClientRegistrationStatus  | Registatrion status of the client device. |
-|            OwnerType  | Type of device owner. |
-| CreatedDate  | Report date created. |
-| LastContact  | Latest sync DateTime. |
-| ManagementAgents  | Management agents  associated with   the device. |
-| ManagementState  | Management state  associated with   the device. |
-|            ReferenceId  | Report reference ID. |
-| CategoryId  | Report category ID. |
-| EnrollmentType  | Enrollment type of the device. |
-| CertExpirationDate  | Expiration date of the cert. |
-| MDMStatus  | Status of device management. |
-|            OSVersion  | OS version of the device. |
-| GraphDeviceIsManaged  | Management state  associated with   the device. |
-| EasID  | Exchange Active Sync ID. |
-| SerialNumber  | Serial number of the device. |
-| EnrolledByUser  | Enrolled by user. |
-|            Manufacturer  | Device manufacturer. |
-| Model  | Device model. |
-| OSDescription  | OS description. |
-| IsManaged  | Management state of the device. |
-| EasActivationStatus  | Exchange Active Sync activation status. |
-|            IMEI  | International mobile equipment identifier (IMEI) of the device. |
-| EasLastSyncSuccessUtc  | Exchange Active Sync successful sync. |
-| EasStateReason  | Exchange Active Sync state and reason. |
-| EasAccessState  | Exchange Active Sync access state. |
-| EncryptionStatus  | Encryption status. |
-|            SupervisedStatus  | Supervised status. |
-| PhoneNumberE164Format  | Phone number. |
-| InGracePeriodUntil  | Remaining amount of grace period. |
-| AndroidPatchLevel  | Android patch level. |
-| WifiMacAddress  | Wifi mac address. |
-|            SCCMCoManagementFeatures  | Configuratiom Mgr management features. |
-| MEID  | Mobile equipment ID. |
-| SubscriberCarrierNetwork  | Subscriber carrier network. |
-| StorageTotal  | Total storage. |
-| StorageFree  | Free storage. |
-|            ManagedDeviceName  | Managed device name. |
-| LastLoggedOnUserUPN  | Last  UPN. |
-| MDMWinsOverGPStartTime  | MDM start time. |
-| StagedDeviceType  | Staged device type. |
-| UserApprovedEnrollment  | User approved enrollment. |
-|            ExtendedProperties  | Extended properties. |
-| EntitySource  | Entity source. |
-| PrimaryUser  | Primary user. |
-| CategoryName  | Category name. |
-| UserId  | User id. |
-|            UPN  |  |
-| UserEmail  | User user email. |
-| UserName  | User user name. |
-| RetireAfterDatetime  | Retire after datetime. |
-| PartnerDeviceId  | Partner device id. |
-|            HasUnlockToken  | Has unlock token. |
-| CompliantState  | Compliant compliant state. |
-| ManagedBy  | Managed managed by. |
-| Ownership  | User Principal Name. |
-| DeviceState  | Device state. |
-|            DeviceRegistrationState  | Device registration state. |
-| SupervisedStatusString  | Supervised status string. |
-| EncryptionStatusString  | Encryption status string. |
-| OS  | Operating system. |
-| SkuFamily  | SKU family. |
-|            JoinType  | Join type. |
-| PhoneNumber  | Phone number. |
-| JailBroken  | Jail broken device. |
-| EasActivationStatusString        | Exchange Active Sync status string. |
+|     Available properties |
+|-|
+|     DeviceId  |
+| DeviceName  |
+| DeviceType  |
+| ClientRegistrationStatus  |
+|            OwnerType  |
+| CreatedDate  |
+| LastContact  |
+| ManagementAgents  |
+| ManagementState  |
+|            ReferenceId  |
+| CategoryId  |
+| EnrollmentType  |
+| CertExpirationDate  |
+| MDMStatus  |
+|            OSVersion  |
+| GraphDeviceIsManaged  |
+| EasID  |
+| SerialNumber  |
+| EnrolledByUser  |
+|            Manufacturer  |
+| Model  |
+| OSDescription  |
+| IsManaged  |
+| EasActivationStatus  |
+|            IMEI  |
+| EasLastSyncSuccessUtc  |
+| EasStateReason  |
+| EasAccessState  |
+| EncryptionStatus  |
+|            SupervisedStatus  |
+| PhoneNumberE164Format  |
+| InGracePeriodUntil  |
+| AndroidPatchLevel  |
+| WifiMacAddress  |
+|            SCCMCoManagementFeatures  |
+| MEID  |
+| SubscriberCarrierNetwork  |
+| StorageTotal  |
+| StorageFree  |
+|            ManagedDeviceName  |
+| LastLoggedOnUserUPN  |
+| MDMWinsOverGPStartTime  |
+| StagedDeviceType  |
+| UserApprovedEnrollment  |
+|            ExtendedProperties  |
+| EntitySource  |
+| PrimaryUser  |
+| CategoryName  |
+| UserId  |
+|            UPN  |
+| UserEmail  |
+| UserName  |
+| RetireAfterDatetime  |
+| PartnerDeviceId  |
+|            HasUnlockToken  |
+| CompliantState  |
+| ManagedBy  |
+| Ownership  |
+| DeviceState  |
+|            DeviceRegistrationState  |
+| SupervisedStatusString  |
+| EncryptionStatusString  |
+| OS  |
+| SkuFamily  |
+|            JoinType  |
+| PhoneNumber  |
+| JailBroken  |
+| EasActivationStatusString        |
 
 You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
 - `OwnerType`
@@ -312,6 +320,176 @@ You can choose to filter the `DeviceNonCompliance` report's output based on the 
 - `LastContact` 
 - `CreatedDate` 
 - `EnrollmentType` 
+
+### DetectedAppsAggregate report
+
+The following table contains the possible output when calling the `DetectedAppsAggregate` report:
+
+|     Available properties  |
+|-|
+|     ApplicationKey  |
+| ApplicationName  |
+|            ApplicationVersion  |
+| DeviceCount  |
+| BundleSize  |
+
+You can choose to filter the `DetectedAppsAggregate` report's output based on the following column:
+- `ApplicationName`
+
+### FeatureUpdatePolicyFailuresAggregate report
+
+The following table contains the possible output when calling the `FeatureUpdatePolicyFailuresAggregate` report:
+
+| Available properties  |
+|-|
+|     PolicyId  |
+|     PolicyName  |
+|     FeatureUpdateVersion  |
+|     NumberOfDevicesWithErrors     |
+
+You cannot filter this report.
+
+### DeviceFailuresByFeatureUpdatePolicy report
+
+The following table contains the possible output when calling the `DeviceFailuresByFeatureUpdatePolicy` report:
+
+| Available properties  |
+|-|
+|     PolicyId  |
+|     PolicyName  |
+|     FeatureUpdateVersion  |
+|     DeviceId  |
+|     AADDeviceId  |
+|     AlertId  |
+|     EventDateTimeUTC  |
+|     LastUpdatedAlertStatusDateTimeUTC  |
+|     AlertType  |
+|     AlertStatus  |
+|     AlertClassification  |
+|     WindowsUpdateVersion  |
+|     Build  |
+|     AlertMessage  |
+|     AlertMessageDescription  |
+|     AlertMessageData  |
+|     Win32ErrorCode  |
+|     RecommendedAction  |
+|     ExtendedRecommendedAction  |
+|     StartDateTimeUTC  |
+|     ResolvedDateTimeUTC  |
+|     DeviceName  |
+|     UPN     |
+
+You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's output based on the following columns:
+- `PolicyId` **(Required)** 
+- `AlertMessage` 
+- `RecommendedAction` 
+- `WindowsUpdateVersion` 
+
+### FeatureUpdateDeviceState report
+
+The following table contains the possible output when calling the `FeatureUpdateDeviceState` report:
+
+| Available properties  |
+|-|
+|     PolicyId  |
+|     PolicyName  |
+|     FeatureUpdateVersion  |
+|     DeviceId  |
+|     AADDeviceId  |
+|     PartnerPolicyId  |
+|     EventDateTimeUTC  |
+|     LastSuccessfulDeviceUpdateStatus  |
+|     LastSuccessfulDeviceUpdateSubstatus  |
+|     LastSuccessfulDeviceUpdateStatusEventDateTimeUTC  |
+|     CurrentDeviceUpdateStatus  |
+|     CurrentDeviceUpdateSubstatus  |
+|     CurrentDeviceUpdateStatusEventDateTimeUTC  |
+|     LatestAlertMessage  |
+|     LatestAlertMessageDescription  |
+|     LatestAlertRecommendedAction  |
+|     LatestAlertExtendedRecommendedAction  |
+|     UpdateCategory  |
+|     WindowsUpdateVersion  |
+|     LastWUScanTimeUTC  |
+|     Build  |
+|     DeviceName  |
+|     OwnerType  |
+|     UPN  |
+|     AggregateState     |
+
+You can choose to filter the `FeatureUpdateDeviceState` report's output based on the following columns:
+- `PolicyId` **(Required)**
+- `AggregateState`
+- `LatestAlertMessage`
+- `OwnerType`
+
+### UnhealthyDefenderAgents and DefenderAgents reports
+
+The `UnhealthyDefenderAgents` and `DefenderAgents` reports are two distinct reports that have the same set of properties and filters. The following table contains the possible output when calling the `UnhealthyDefenderAgents` or `DefenderAgents` reports:
+
+| Available   Columns  |
+|-|
+|     DeviceId  |
+|     DeviceName  |
+|     DeviceState  |
+|     PendingFullScan  |
+|     PendingReboot  |
+|     PendingManualSteps  |
+|     PendingOfflineScan  |
+|     CriticalFailure  |
+|     MalwareProtectionEnabled  |
+|     RealTimeProtectionEnabled  |
+|     NetworkInspectionSystemEnabled  |
+|     SignatureUpdateOverdue  |
+|     QuickScanOverdue  |
+|     FullScanOverdue  |
+|     RebootRequired  |
+|     FullScanRequired  |
+|     EngineVersion  |
+|     SignatureVersion  |
+|     AntiMalwareVersion  |
+|     LastQuickScanDateTime  |
+|     LastFullScanDateTime  |
+|     LastQuickScanSignatureVersion  |
+|     LastFullScanSignatureVersion  |
+|     LastReportedDateTime  |
+|     UPN  |
+|     UserEmail  |
+|     UserName     |
+
+You can choose to filter the `UnhealthyDefenderAgents` and `DefenderAgents` report's output based on the following columns:
+- `DeviceState` 
+- `SignatureUpdateOverdue` 
+- `MalwareProtectionEnabled`
+- `RealTimeProtectionEnabled` 
+- `NetworkInspectionSystemEnabled`
+
+### ActiveMalware and Malware reports
+
+The `ActiveMalware` and `Malware` reports are two distinct reports that have the same set of properties and filters. The following table contains the possible output when calling the `ActiveMalware` or `Malware` reports:
+
+| Available   Columns  |
+|-|
+|     DeviceId  |
+|     DeviceName  |
+|     MalwareId  |
+|     MalwareName  |
+|     AdditionalInformationUrl  |
+|     Severity  |
+|     MalwareCategory  |
+|     ExecutionState  |
+|     State  |
+|     InitialDetectionDateTime  |
+|     LastStateChangeDateTime  |
+|     DetectionCount  |
+|     UPN  |
+|     UserEmail  |
+|     UserName     |
+
+You can choose to filter the `ActiveMalware` and `Malware` report's output based on the following columns:
+- `Severity` 
+- `ExecutionState` 
+- `State` 
 
 ## Next steps
 
