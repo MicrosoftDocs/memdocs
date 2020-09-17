@@ -24,8 +24,6 @@ landingContent:
         links:
           - text: Enable tenant attach
             url: device-sync-actions.md
-          - text: View ConfigMgr client details (preview)
-            url: client-details.md
       - linkListType: reference
         links:
           - text: Troubleshoot tenant attach and device actions
@@ -49,3 +47,14 @@ landingContent:
             url: cmpivot-overview-attached.md
           - text: CMPivot sample scripts
             url: cmpivot-samples-attached.md
+ # Card
+  - title: Get information about your devices
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: View ConfigMgr client details (preview)
+            url: client-details.md
+          - text: Device timeline (preview)
+            url: timeline.md
+          - text: Resource explorer (preview)
+            url: resource-explorer.md
