@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,10 @@ This article lists and describes the different settings you can control on Andro
 
 ## Before you begin
 
-[Create a device restrictions profile](device-restrictions-configure.md).
+Create an [Android Enterprise device restrictions profile](device-restrictions-configure.md):
+
+- Fully managed, dedicated, and corporate-owned work profile
+- Work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure VPN settings to macOS devices in Microsoft Intune - Azure | Microsoft Docs
-description: Add or create a virtual private network (VPN) configuration profile, including the connection details, split tunneling, custom VPN settings with the identifier, key and value pairs, proxy settings with a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running macOS.
+description: Add or create a virtual private network (VPN) configuration profile in Microsoft Intune. Add the connection details, split tunneling, custom VPN settings with the identifier, key and value pairs, proxy settings with a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running macOS.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md).
+Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
 > These settings are available for all enrollment types. For more information on the enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
@@ -61,7 +61,58 @@ Depending on the settings you choose, not all values in the following list are c
 
 - **Split tunneling**: **Enable** or **Disable** this option that lets devices decide which connection to use depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but use the hotel's standard network for regular web browsing.
 
-<!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS/iPadOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
+## Automatic VPN
+
+- **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching IP address or domain name. If there's a match, then the action you choose runs.
+
+  For example, create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
+
+  - **Add**: Select this option to add a rule.
+
+  - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action. Your options:
+
+    - Establish VPN
+    - Disconnect VPN
+    - Evaluate each connection attempt
+    - Ignore
+
+  - **I want to restrict to**: Select the condition that the rule must meet. Your options:
+
+    - **Specific SSIDs**: Enter one or more wireless network names that the rule will apply. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
+    - **Specific DNS domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
+    - **All domains**: Select this option to apply your rule to all domains in your organization.
+
+  - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+
+    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
+
+- **Prevent users from disabling automatic VPN**: Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+  - **No**: Allows users to turn off automatic VPN.
+
+  This setting applies to:  
+  - macOS 11 and newer (Big Sur)
+
+- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a macOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+
+  - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
+
+  - **Associated Domains**: Enter associated domains in the VPN profile that automatically start the VPN connection. For example, enter `contoso.com`. Devices in the `contoso.com` domain automatically start the VPN connection.
+
+    For more information, see [associated domains](device-features-configure.md#associated-domains).
+
+  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Devices in the `contoso.com` domain won't start or use the per-app VPN connection. Devices in the `contoso.com` domain will use the public Internet.
+
+  - **Prevent users from disabling automatic VPN**: Your options:
+
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+    - **No**: Allows users to turn off automatic VPN.
+
+    This setting applies to:  
+    - macOS 11 and newer (Big Sur)
 
 ## Proxy settings
 
