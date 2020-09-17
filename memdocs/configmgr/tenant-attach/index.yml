@@ -31,6 +31,17 @@ landingContent:
           - text: Troubleshoot ConfigMgr client details (preview)
             url: troubleshoot-client-details.md
  # Card
+  - title: Get information about your devices
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: View ConfigMgr client details (preview)
+            url: client-details.md
+          - text: Device timeline (preview)
+            url: timeline.md
+          - text: Resource explorer (preview)
+            url: resource-explorer.md
+ # Card
   - title: Top tasks
     linkLists:
       - linkListType: how-to-guide
@@ -47,14 +58,3 @@ landingContent:
             url: cmpivot-overview-attached.md
           - text: CMPivot sample scripts
             url: cmpivot-samples-attached.md
- # Card
-  - title: Get information about your devices
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: View ConfigMgr client details (preview)
-            url: client-details.md
-          - text: Device timeline (preview)
-            url: timeline.md
-          - text: Resource explorer (preview)
-            url: resource-explorer.md
