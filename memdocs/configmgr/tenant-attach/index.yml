@@ -32,3 +32,20 @@ landingContent:
             url: troubleshoot.md
           - text: Troubleshoot ConfigMgr client details (preview)
             url: troubleshoot-client-details.md
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run scripts
+            url: scripts.md
+          - text: Install applications
+            url: applications.md
+          - text: Launch CMPivot
+            url: cmpivot-start.md
+      - linkListType: concept
+        links:
+          - text: CMPivot usage overview
+            url: cmpivot-overview-attached.md
+          - text: CMPivot sample scripts
+            url: cmpivot-samples-attached.md
