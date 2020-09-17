@@ -34,7 +34,8 @@ View the Windows Security experience settings you can manage with the **Windows 
 
 The profile is available when you configure [Intune Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md). This profile supports devices you manage with Configuration Manager after configuring the [tenant attach](../protect/tenant-attach-intune.md) scenario for Intune.
 
-**Windows Security**
+**Windows Security**  
+
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
   [Learn about Tamper Protection](hhttps://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection)  
 
