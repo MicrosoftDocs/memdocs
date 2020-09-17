@@ -177,11 +177,13 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
     2. When you create the profile, enter the following settings:
 
-      - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
+      - **OMA-URI**: Enter `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy`. Replace `<PolicyGUID>` with the PolicyTypeID node in the **mergedPolicy.xml** file you created in step 6.
 
-        Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076`.
+        Using our example, enter `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy`.
 
         The policy GUID **must match** the PolicyTypeID node in the **mergedPolicy.xml** file (created in step 6).
+
+        The OMA-URI uses the [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp). For more information on the nodes in this CSP, go to [ApplicationControl CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp).
 
       - **Data type**: Set to **Base64 file**. It automatically converts the file from bin to base64.
       - **Certificate file**: Upload the **compiledPolicy.bin** binary file (created in step 9).
