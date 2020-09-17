@@ -54,13 +54,18 @@ The user account needs the following permissions:
 1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Select **Scripts** and search for your script by script name. If the script has already been run on the device, it will be listed 
-1. Click **Run script** from the page that appears on the right.
+1. Select **Scripts** and search for your script by script name.
+   
+   Scripts that were recently run that directly targeted the device will already be listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts targeting collections won't be shown, only scripts that targeted the single device.
+
+   :::image type="content" source="./media/6234688-run-script.png" alt-text="Script output in the admin center" lightbox="./media/6234688-run-script.png":::
+
+1. Choose **Run script** from the page that appears on the right.
    - You'll be notified your script has started. The **Run script** button will be disabled until it's complete.
    - The **State** column is only valid while you're on the page. The state is reset to `Ready` if you navigate to another page.
-1. When the script completes, the results will show in the **Output** pane. You can copy the text of the script output.
+1. When the script completes, the results will show in the **Output** pane. You can copy the text of the script output. Select **Re-run script** if you want the script to run again.
 
-:::image type="content" source="./media/6234688-script-output.png" alt-text="Script output in the admin center" lightbox="./media/6234688-script-output.png":::
+   :::image type="content" source="./media/6234688-script-output.png" alt-text="Script output in the admin center" lightbox="./media/6234688-script-output.png":::
 
 ## Next steps
 
