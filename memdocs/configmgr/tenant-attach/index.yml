@@ -20,7 +20,7 @@ metadata:
 landingContent:
   - title: About tenant attach
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: Enable tenant attach
             url: device-sync-actions.md
@@ -32,7 +32,7 @@ landingContent:
             url: troubleshoot.md
           - text: Troubleshoot ConfigMgr client details (preview)
             url: troubleshoot-client-details.md
-  # Card
+ # Card
   - title: Top tasks
     linkLists:
       - linkListType: how-to-guide
