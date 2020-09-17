@@ -102,7 +102,7 @@ These settings apply to:
     - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
-
+ 
 ### Android 9 and earlier or Samsung Knox
 
 These settings apply to:  
