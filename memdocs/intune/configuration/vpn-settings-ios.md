@@ -267,17 +267,17 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
 
-  - **Associated Domains**: Enter associated domains in the VPN profile that automatically start the VPN connection. For example, enter `contoso.com`. Devices in the `contoso.com` domain automatically start the VPN connection.
+  - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection. 
 
     For more information, see [associated domains](device-features-configure.md#associated-domains).
 
-  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Devices in the `contoso.com` domain won't start or use the per-app VPN connection. Devices in the `contoso.com` domain will use the public Internet.
+  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain will use the public Internet even if the VPN is connected.
 
   - **Prevent users from disabling automatic VPN**: Your options:
 
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
-    - **No**: Allows users to turn off automatic VPN.
+    - **Yes**: Prevents users from turning off the Connect On Demand toggle within the VPN profile settings. It forces users to keep per-app VPN or on-demand rules enabled and running.
+    - **No**: Allows users to turn off the Connect On Demand toggle, which disables per-app VPN and on-demand rules.
 
     This setting applies to:  
     - iOS 14 and newer
