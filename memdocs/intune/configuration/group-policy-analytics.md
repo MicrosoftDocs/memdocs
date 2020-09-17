@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -131,7 +131,8 @@ Group Policy analytics can parse the following CSPs:
     - Use the search bar to find specific settings.
     - Get a time stamp of when the report was last generated. 
     
-    [!NOTE] Migration Readiness reporting data may have a delay of up to 20 minutes after you have made additions/deletions to your imported Group Policy Objects (GPOs).
+    > [!NOTE]
+    > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
 
 ## Privacy and security
 
