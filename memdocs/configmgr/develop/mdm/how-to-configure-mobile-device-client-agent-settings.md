@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bb2e1e0a-095f-4b7d-92ba-29a89c8d8f69
 author: aczechowski
 ms.author: aaroncz
@@ -234,7 +234,7 @@ public void ConfigureMobileDeviceClientAgentSettings(WqlConnectionManager connec
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |`newPollInterval`|-   Managed: `String`<br />-   VBScript: `String`|The interval that the client tries to contact the server.<br /><br /> The format of the string must be:<br /><br /> Years-months-days hours:minutes:seconds<br /><br /> "0000-00-00 00:00:00"|  

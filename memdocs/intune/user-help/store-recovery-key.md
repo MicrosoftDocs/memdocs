@@ -85,7 +85,7 @@ For more information about the messages you may see during this process, see [Co
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
+If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md).  
 
 ## Next steps
 
@@ -93,4 +93,4 @@ You can always retrieve your key from the Company Portal website, the Intune app
 
 Find out what else you can do in the Company Portal website. See [Using the Intune Company Portal website](using-the-intune-company-portal-website.md) for a list of actions.  
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

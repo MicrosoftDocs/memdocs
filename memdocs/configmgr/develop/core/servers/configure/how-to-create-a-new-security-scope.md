@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ccf65b5f-d1bc-4deb-babd-93dc48a9517b
 author: aczechowski
 ms.author: aaroncz
@@ -64,7 +64,7 @@ public void CreateSecurityScope(WqlConnectionManager connection, string scopeNam
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`scopeName`|`String`|The name of security scope.|  
 |`scopeDescription`|`String`|The description of security scope.|  
 

@@ -98,7 +98,7 @@ Use one of the following procedures to create the policy type you prefer.
    1. **Platform**: Windows 10 and later
    2. **Profile type**: Endpoint protection
 
-   ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Select **Settings** > **Windows Encryption**.
 
@@ -124,7 +124,8 @@ You can configure a BitLocker policy that automatically and silently enables Bit
 
 A device must meet the following conditions to be eligible for silently enabling BitLocker:
 
-- The device must run Windows 10 version 1809 or later
+- If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later.
+- If end users log in to the the devices as Standard Users, the device must run Windows 10 version 1809 or later.
 - The device must be Azure AD Joined  
 
 **BitLocker policy configuration**:
@@ -149,6 +150,8 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 2. Select **Devices** > **All devices**.
 
 3. Select a device from the list, and then under *Monitor*, select **Recovery keys**.
+
+4. Hit **Show Recovery Key**. Selecting this will generate an audit log entry under 'KeyManagement' activity.
   
    When keys are available in Azure AD, the following information is available:
    - BitLocker Key ID
@@ -157,7 +160,9 @@ Intune provides access to the Azure AD blade for BitLocker so you can view BitLo
 
    When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, and for Windows 10 Pro version 1809 and later.
+
+For more information on Audit Log entries, see [Azure Portal audit logs](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### Rotate BitLocker recovery keys
 

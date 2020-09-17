@@ -138,15 +138,15 @@ In the following, we explore these common external dependencies in more detail.
 
 ### Identity
 
-Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Office 365, it's important for Intune to use the same Azure AD environment.
+Identity is how we identify the users who belong to your organization and are enrolling a device. Intune requires Azure Active Directory (Azure AD) as the user identity provider. If you already use this service, you can use your existing identity already in the cloud. In addition, Azure AD Connect is the recommended tool to synchronize your on-premises user identities with Microsoft cloud services. If your organization is already using Microsoft 365, it's important for Intune to use the same Azure AD environment.
 
 Learn more about the following Intune identity requirements:
 
-- [Identity requirements](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
+- [Identity requirements](/azure/active-directory/understand-azure-identity-solutions).
 
-- [Directory synchronization requirements](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- [Directory synchronization requirements](/azure/active-directory/connect/active-directory-aadconnect).
 
-- [Multi-factor authentication requirements](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+- [Multi-factor authentication requirements](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
 
 ### User and device groups
 
@@ -300,8 +300,8 @@ Here's an example how you can document the certificates during the design:
 
 | **Type** | **Profile name** | **Device platform** | **Use cases** |   
 |:---:|:---:|:---:|:---:|
-| Root CA | Corporate Root CA | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD  |                                                           
-| SCEP | User Certificate | Android, iOS/iPadOS, Windows mobile | Corporate, BYOD |                                                           
+| Root CA | Corporate Root CA | Android, iOS/iPadOS | Corporate, BYOD  |                                                           
+| SCEP | User Certificate | Android, iOS/iPadOS | Corporate, BYOD |                                                           
 
 
 You can [download a template of the above table](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) to identify your certificate profile needs.

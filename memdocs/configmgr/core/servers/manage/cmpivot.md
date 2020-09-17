@@ -2,7 +2,7 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -85,7 +85,7 @@ The following permissions are needed for CMPivot:
 
      - Click one of the **Entities** to add it to the query string.  
 
-     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+     - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](/azure/kusto/query/).  
 
 3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.
    - If the query has been sent, then clients still send a state message response to the server.  
@@ -118,7 +118,7 @@ The CMPivot window contains the following elements:
 
 5. The query pane is where you build or type a query to run on clients in the collection.  
 
-    - CMPivot uses a subset of the [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).  
 
     - Cut, copy, or paste content in the query pane.  
     <!-- markdownlint-disable MD038 -->
@@ -183,7 +183,8 @@ The CMPivot window contains the following elements:
 
    - The total number of rows in the results pane. For example, `1 objects`  
 
-
+> [!TIP]
+> To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**.
 
 ## Example scenarios
 
@@ -267,5 +268,3 @@ For more information, see [Log files](../../plan-design/hierarchy/log-files.md) 
 - [Changes to CMPivot](cmpivot-changes.md)
 - [Troubleshooting CMPivot](cmpivot-tsg.md)
 - [Create and run PowerShell scripts](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

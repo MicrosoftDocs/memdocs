@@ -158,7 +158,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 4. Select **Next: Device Management Settings**.
 
 5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
-    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](https://technet.microsoft.com/library/adfs2-help-endpoints) [Learn more](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) is required.
+    - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the Company Portal for services like installing apps. If you're using ADFS and you're using Setup Assistant to authenticate, [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) is required.
 
     - **Enroll without User Affinity** - Choose this option for device unaffiliated with a single user. Use this option for devices that don't access local user data. To enable an end user to sign in to the iOS Company Portal and establish themself as the primary user of the device, send the `IntuneUDAUserlessDevice` key to iOS Company Portal in an app configuration policy for managed devices. Note that only the first user signing in is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS DEP devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
@@ -230,8 +230,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 14. If you chose **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator Certificate to import.
 
-15. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. 
-
+15. You can specify a naming format for devices that is automatically applied when they enroll and upon each successive checkin. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names using this profile. You can specify a template format that includes the device type and serial number. Device name template includes support for the iPhone, the iPad, and the iPod Touch. 
 16. Choose **Next: Setup Assistant Customization**.
 
 17. On the **Setup Assistant customization** page, configure the following profile settings:

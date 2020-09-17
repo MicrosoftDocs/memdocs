@@ -33,7 +33,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 Additionally, you'll need the following for installing [user targeted applications](#bkmk_user):<!--7518897-->
 
-- Configuration Manager version 2006 and the corresponding version of the console installed.
+- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
 
 
 ## Permissions
@@ -46,7 +46,7 @@ The user account needs the following permissions:
 - The **Admin User** role for the Configuration Manager Microservice application in Azure AD. 
   - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
    > [!TIP]
-   > The [Application Administrator role in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
+   > The [Application Administrator role in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) has sufficient permissions to add a user to the application's **Admin User** role.
 
 ## <a name="bkmk_deploy"></a> Deploy an application to a device
 

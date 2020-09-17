@@ -575,6 +575,12 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
 
+### <a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+
+Specify the PIN for BitLocker encryption. This variable is only valid if the BitLocker mode is **TPM and PIN**.
+
 ### <a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
 *Applies to the [Disable BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) step.*
@@ -798,7 +804,7 @@ Specifies additional options to add to the DISM command line when applying a dri
 
 To use this variable, enable the setting, **Install driver package via running DISM with recurse option**, on the **Apply Driver Package** step.
 
-For more information, see [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
@@ -1640,7 +1646,9 @@ Use this variable to temporarily persist content in the task sequence cache. Thi
 
 ### <a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifies a command that's run after the task sequence completes. For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
+Specifies a command that's run after the task sequence completes. Just before exiting the task sequence, the TSManager process spawns the specified post action. It doesn't wait or record any status, just exits after calling that command.<!-- MEMDocs #719 -->
+
+For example, specify `shutdown.exe /r /t 30 /f` to restart the computer 30 seconds after the task sequence completes.
 
 ### <a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

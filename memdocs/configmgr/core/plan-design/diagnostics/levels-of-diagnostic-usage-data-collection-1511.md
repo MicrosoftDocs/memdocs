@@ -216,7 +216,7 @@ Beginning with Configuration Manager version 1511, this level includes the follo
 
     -   Cluster patching statistics  
 
-    -   Count of deployed Office 365 updates  
+    -   Count of deployed Microsoft 365 updates  
 
 -   **SQL/performance data:**  
 

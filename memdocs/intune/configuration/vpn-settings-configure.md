@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,6 +97,10 @@ You can create VPN profiles using the following connection types:
 
 - L2TP
   - Windows 10
+
+- NetMotion Mobility
+  - iOS/iPadOS
+  - macOS
 
 - Palo Alto Networks GlobalProtect
   - Android Enterprise work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)

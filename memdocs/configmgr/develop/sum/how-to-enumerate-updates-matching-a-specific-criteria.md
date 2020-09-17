@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5a37eb14-bc75-4ecd-a48f-9dde3b901a02
 author: aczechowski
 ms.author: aaroncz
@@ -229,7 +229,7 @@ public void EnumerateUpdatesMatchingCriteria(WqlConnectionManager connection)
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 
 ## Compiling the Code  
  This C# example requires:  

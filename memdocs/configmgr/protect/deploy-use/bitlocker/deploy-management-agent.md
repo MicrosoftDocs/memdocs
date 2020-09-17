@@ -2,7 +2,7 @@
 title: Deploy BitLocker management
 titleSuffix: Configuration Manager
 description: Deploy the BitLocker management agent to Configuration Manager clients and the recovery service to management points
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -113,6 +113,8 @@ To change the settings of an existing policy, choose it in the list, and select 
 
 When you create more than one policy, you can configure their relative priority. If you deploy multiple policies to a client, it uses the priority value to determine its settings.
 
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
+
 ## Deploy a policy
 
 1. Choose an existing policy in the **BitLocker Management** node. In the ribbon, select **Deploy**.
@@ -130,6 +132,7 @@ You can create multiple deployments of the same policy. To view additional infor
 > [!IMPORTANT]
 > The MBAM Client does not start BitLocker Drive Encryption actions if a remote desktop protocol connection is active. All remote console connections must be closed and a user must be logged on to a physical console session before BitLocker Drive Encryption begins.
 
+Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## Monitor
 
@@ -206,7 +209,8 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-When you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption) .
+> [!NOTE]
+> Switching encryption management authorities while maintaining the desired encryption algorithm doesn't require any additional actions on the client. However, if you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption).
 
 For more information about managing BitLocker with Intune, see the following articles:
 

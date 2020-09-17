@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -130,9 +130,9 @@ For more information, see [Data transfer policy exceptions for apps](app-protect
 
 
 ## Conditional launch
-Configure conditional launch settings to set sign-in security requirements for your access protection policy. 
+Configure conditional launch settings to set sign-in security requirements for your app protection policy. 
 
-By default, several settings are provided with pre-configured values and actions. You can delete some of settings, like the *Min OS version*. You can also select additional settings from the **Select one** dropdown. 
+By default, several settings are provided with pre-configured values and actions. You can delete some settings, like the *Min OS version*. You can also select additional settings from the **Select one** dropdown. 
 
 | Setting | How to use |  
 |---------|------------| 

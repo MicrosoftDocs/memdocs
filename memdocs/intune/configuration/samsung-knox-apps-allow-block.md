@@ -42,7 +42,7 @@ These settings can only be used by devices that run Samsung Knox Standard.
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows phone custom profile**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Android custom profile**.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
     - **Platform**: Select **Android**.
     - **Profile type**: Select **Custom**.

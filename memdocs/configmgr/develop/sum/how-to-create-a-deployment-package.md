@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e32f4162-ec92-475f-8b39-f283de85d9e0
 author: aczechowski
 ms.author: aaroncz
@@ -123,7 +123,7 @@ public void CreateSUMDeploymentPackage(WqlConnectionManager connection,
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`newDeploymentPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package name.|  
 |`newDeploymentPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|The description for the new deployment package.|  
 |`newPackageSourceFlag`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The new package source flag.|  

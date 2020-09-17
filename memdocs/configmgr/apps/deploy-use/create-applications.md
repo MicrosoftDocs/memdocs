@@ -683,7 +683,7 @@ Use the following procedure to import an application into Configuration Manager:
 The new application appears in the **Applications** node.  
 
 > [!TIP]  
-> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> The Windows PowerShell cmdlet **Import-CMApplication** has the same function as this procedure. For more information, see [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication).  
 
 For more information about how to export an application, see [Management tasks for applications](management-tasks-applications.md).
 

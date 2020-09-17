@@ -2,7 +2,7 @@
 title: Set up BitLocker portals
 titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -65,7 +65,7 @@ After installation, access the portals via the following URLs:
 - Administration and monitoring website: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
+> Microsoft recommends but doesn't require the use of HTTPS. For more information, see [How to set up SSL on IIS](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## Script usage
 
@@ -101,6 +101,8 @@ This process uses a PowerShell script, MBAMWebSiteInstaller.ps1, to install thes
 - `-IISWebSite`: The website where the script installs the MBAM web applications. By default, it uses the IIS default website. Create the custom website before using this parameter.
 
 - `-InstallDirectory`: The path where the script installs the web application files. By default, this path is `C:\inetpub`. Create the custom directory before using this parameter.
+
+- `-DomainName` *applies to version 2002 and later*: Specify the NetBIOS domain name of the server with the help desk or self-service web portal role. Only necessary if the NetBIOS domain name doesn't match the DNS domain name. This configuration is also known as a disjointed domain namespace. For example, `-DomainName fabrikham` where the DNS domain name is `contoso.com`.<!-- MEMDocs #759 -->
 
 - `-Uninstall`: Uninstalls the BitLocker Management Help Desk/Self-Service web portal sites on a web server where they have been previously installed.
 

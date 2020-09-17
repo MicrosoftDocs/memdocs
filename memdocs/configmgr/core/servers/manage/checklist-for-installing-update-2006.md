@@ -2,7 +2,7 @@
 title: Checklist for 2006
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2006.
-ms.date: 08/11/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -63,11 +63,12 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of August 31, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
+<!--
 At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
@@ -76,7 +77,11 @@ Microsoft digitally signs the script, and bundles it inside a signed self-extrac
 
 To opt-in to the early update ring:
 
-1. Open Windows PowerShell and **Run as administrator**
+1. Open a Windows PowerShell version 5 session **as administrator**
+
+    > [!IMPORTANT]
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+
 1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
@@ -89,6 +94,7 @@ The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## Checklist
 

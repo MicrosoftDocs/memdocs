@@ -72,7 +72,7 @@ To use Azure AD with Configuration Manager, you'll need the following:
 - A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
 - Configuration Manager clients that run in the same Azure AD environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/create-instance).
 
 ### Discover resources
 After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
@@ -99,7 +99,7 @@ Azure AD does not have an OU that stores groups. Instead, use the same general s
 
 See the following for more information about Azure AD:  
 - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
-- [Active Directory Domain Services Documentation](https://docs.microsoft.com/azure/active-directory-domain-services) on docs.microsoft.com.
+- [Active Directory Domain Services Documentation](/azure/active-directory-domain-services) on docs.microsoft.com.
 
 ## Conditional access device compliance policy improvements
 
@@ -185,11 +185,11 @@ Use the following procedure to set a task sequence as high-impact.
 
    Let's say you configure the following custom notification in properties.
 
-   ![Custom notification for a task sequence](./media/user-notification.png)
+   ![Custom notification for a task sequence properties](./media/user-notification.png)
 
    The following notification message will be displayed when the end-user opens the installation from Software Center.
 
-   ![Custom notification for a task sequence](./media/user-notification-enduser.png)
+   ![Custom notification for a task sequence - Software Center](./media/user-notification-enduser.png)
 
 ### Configure Software Center properties
 Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
@@ -225,12 +225,12 @@ Additionally, you can now specify multiple certification authorities (CAs) on mu
 
 For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it.
 
-For more information about certificates in Configuration Manager, see [Introduction to certificate profiles]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+For more information about certificates in Configuration Manager, see [Introduction to certificate profiles]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## New compliance settings for iOS devices
 
-We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-ios).
+We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](../../../intune/configuration/device-restrictions-ios.md).
 
 - **Sync data from managed apps to iCloud**
 - **Handoff to continue activities on other device**
@@ -346,7 +346,7 @@ To try this, create a configuration item through the standard workflow, choose *
 #### Perform selective wipe
 Devices enrolled as Android for Work can only be selectively wiped because you only manage the work profile. This protects the personal profile from being wiped. Performing a selective wipe on an Android for Work device removes the work profile, including all apps and data, and unenrolls the device.
 
-To selectively wipe an Android for Work device, use the normal [selective wipe process](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in the Configuration Manager console.
+To selectively wipe an Android for Work device, use the normal [selective wipe process](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in the Configuration Manager console.
 
 #### Known issues for Android for Work
 **Configuring sync schedule in Android for Work email profiles causes them to fail to deploy**

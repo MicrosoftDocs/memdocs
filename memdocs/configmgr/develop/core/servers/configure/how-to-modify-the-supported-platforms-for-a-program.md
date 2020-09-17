@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12
 author: aczechowski
 ms.author: aaroncz
@@ -187,7 +187,7 @@ public void ModifyProgramSupportedPlatforms(WqlConnectionManager connection,
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing package.|  
 |`existingProgramName`|-   Managed: `String`<br />-   VBScript: `String`|The program name for an existing program.|  
 |`newMaxVersion`|-   Managed: `String`<br />-   VBScript: `String`|The maximum supported version.|  

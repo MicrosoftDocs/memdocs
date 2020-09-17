@@ -46,6 +46,6 @@ If your device is only set up to access work or school email:
 
 - Your work or school email account will be deleted. Unsaved emails will be deleted.   
 
-The device reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](https://docs.microsoft.com/intune/devices-wipe).  
+The device reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/devices-wipe).  
 
 If you have questions, contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

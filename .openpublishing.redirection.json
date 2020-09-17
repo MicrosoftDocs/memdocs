@@ -1,6 +1,66 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/user-help/install-company-portal-app-android.md",
+            "redirect_url": "/mem/intune/user-help/enroll-device-android-company-portal",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/install-and-sign-in-to-the-intune-company-portal-app-ios.md",
+            "redirect_url": "/mem/intune/user-help/sign-in-to-the-company-portal",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-mtd-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-resolve-a-threat-found-by-mtd-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-zips-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-zips-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-skycure-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-skycure-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-sandblast-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-sandblast-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-lookout-for-work-android.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-lookout-for-work-ios.md",
+            "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "memdocs/intune/user-help/enroll-your-wp81-windows.md",
             "redirect_url": "https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq",
             "redirect_document_id": false
@@ -8,7 +68,7 @@
         {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-mtd-ios.md",
             "redirect_url": "/mem/intune/user-help/set-up-mobile-threat-defense",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "memdocs/intune/user-help/you-are-prompted-to-install-mtd-android.md",
@@ -62,32 +122,37 @@
         },
         {
             "source_path": "memdocs/configmgr/core/plan-design/security/privacy-statement-cmdlet-library.md",
-            "redirect_url": "https://docs.microsoft.com/powershell/sccm/privacy-statement?view=sccm-ps",
+            "redirect_url": "/powershell/sccm/privacy-statement?view=sccm-ps",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/configmgr/develop/core/understand/getting-started-with-configuration-manager-and-windows-powershell.md",
-            "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
+            "redirect_url": "/powershell/sccm/overview?view=sccm-ps",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/configmgr/develop/core/understand/windows-powershell-basics.md",
-            "redirect_url": "https://docs.microsoft.com/powershell/scripting/learn/ps101/00-introduction?view=powershell-7",
+            "redirect_url": "/powershell/scripting/learn/ps101/00-introduction?view=powershell-7",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/configmgr/develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md",
-            "redirect_url": "https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps",
+            "redirect_url": "/powershell/sccm/overview?view=sccm-ps",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/autopilot/demonstrate-deployment-on-vm.md",
-            "redirect_url": "https://docs.microsoft.com/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
+            "redirect_url": "/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/intune/user-help/your-device-is-missing-a-preinstalled-certificate-android.md",
             "redirect_url": "/mem/intune/user-help/your-device-is-missing-an-IT-required-certificate-android",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/windows-autopilot-requirements.md",
+            "redirect_url": "/mem/autopilot/software-requirements",
             "redirect_document_id": false
         }
     ]

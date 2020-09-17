@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/11/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -162,7 +162,7 @@ Set this option to **Yes** for clients to obtain content from a cloud distributi
 
 ### Automatically register new Windows 10 domain joined devices with Azure Active Directory
 
-When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+When you configure Azure Active Directory to support hybrid join, Configuration Manager configures Windows 10 devices for this functionality. For more information, see [How to configure hybrid Azure Active Directory joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
@@ -336,11 +336,11 @@ For more information about these settings, see [Device restart notifications](de
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers.
 
 > [!Note]
 > - Delivery Optimization is only available on Windows 10 clients.
-> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
 ### Use Configuration Manager Boundary Groups for Delivery Optimization Group ID
@@ -636,6 +636,15 @@ Set this option to **Yes** to use network-level authentication (NLA) to establis
 
 ## Software Center
 
+### Select the user portal
+
+<!--CMADO-3601237,INADO-4297660-->
+Starting in version 2006, if you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
+
+If you install the Company Portal on a co-managed device, but configure this setting to **Software Center**, then notifications from Configuration Manager launch Software Center. Notifications from Intune launch the Company Portal. This behavior may be confusing to users to interact with different portals.
+
+The behavior of the Company Portal depends upon your co-management workload configuration. For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
+
 ### Select these new settings to specify company information
 
 Set this option to **Yes**, and then specify the following settings to brand Software Center for your organization:
@@ -922,11 +931,11 @@ This client setting provides the following options:
 
 - **Normal**: Windows Setup uses more system resources and updates faster. It uses more processor time, so the total installation time is shorter, but the user's outage is longer.  
 
-    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Configures the setupconfig.ini file on the device with the `/Priority Normal` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Low**: You can continue to work on the device while it downloads and updates in the background. The total installation time is longer, but the user's outage is shorter. You may need to increase the update max run time to avoid a time-out when you use this option.  
 
-    - Removes the `/Priority` [Windows setup command-line option](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
+    - Removes the `/Priority` [Windows setup command-line option](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) from the setupconfig.ini file.
 
 
 ### Enable third party software updates
@@ -935,7 +944,7 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 
 ### <a name="bkmk_du"></a>Enable Dynamic Update for feature updates
 <!--4062619-->
-Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
+Starting in Configuration Manager version 1906, you can configure [Dynamic Update for Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10.

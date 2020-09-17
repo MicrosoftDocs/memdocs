@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager 
 ms.technology: configmgr-sum
@@ -217,7 +217,7 @@ This section provides information about the steps to take to successfully plan a
 
 Install the software update point role on a site system that meets the minimum requirements for WSUS and the supported configurations for Configuration Manager site systems.  
 
--   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   For more information about the minimum requirements for the WSUS server role in Windows Server, see [Review considerations and system requirements](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   For more information about the supported configurations for Configuration Manager site systems, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
@@ -232,7 +232,7 @@ When you use WSUS on Windows Server 2012 or later, configure additional permissi
 
 -   Add the **NT AUTHORITY\SYSTEM** account as a user for the WSUS database (SUSDB). Configure a minimum of the webService database role membership.  
   
-For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+For more information about how to install WSUS on Windows Server, see [Install the WSUS Server Role](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 When you install more than one software update point at a primary site, use the same WSUS database for each software update point in the same Active Directory forest. Sharing the same database improves performance when clients switch to a new software update point. For more information, see [Use a shared WSUS database for software update points](software-updates-best-practices.md#bkmk_shared-susdb).  
 
@@ -257,10 +257,10 @@ When a WSUS server is configured as a software update point, you're no longer ab
 When you add the software update point role on a primary site server, you can't use a WSUS server that's configured as a replica. When the WSUS server is configured as a replica, Configuration Manager fails to configure the WSUS server, and the WSUS synchronization fails. The first software update point that you install at a primary site is the default software update point. Additional software update points at the site are configured as replicas of the default software update point.  
 
 ####  <a name="BKMK_WSUSandSSL"></a> Decide whether to configure WSUS to use SSL  
-Use the SSL protocol to help secure the software update point. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point. For more information, see the [Configure SSL on the WSUS server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) article in the documentation for WSUS. 
 
-When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL.  
+Using the SSL protocol to help secure the software update point is highly recommended. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt software update metadata. When you choose to secure WSUS with SSL, prepare the WSUS server before you install the software update point.
 
+When you install and configure the software update point, select the option to **Enable SSL communications for the WSUS Server**. Otherwise, Configuration Manager configures WSUS not to use SSL. When you enable SSL on a software update point, also configure any software update points at child sites to use SSL. For more information, see the [Configure a software update point to use TLS/SSL with a PKI certificate tutorial](../get-started/software-update-point-ssl.md).
 
 ###  <a name="BKMK_ConfigureFirewalls"></a> Configure firewalls  
 

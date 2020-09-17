@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4137849f-7cd8-4c97-bba8-747b59795af3
 author: aczechowski
 ms.author: aaroncz
@@ -199,7 +199,7 @@ public void ConfigureRemoteControlClientAgentSettings(WqlConnectionManager conne
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`<br /><br /> `swbemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`swbemContext`|-   VBScript: `SWbemContext`|A valid context object. For more information, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).|  
 |`siteCode`|-   Managed: `String`<br />-   VBScript: `String`|The site code.|  
 |-   Managed: `enableDisableRemoteControlClientAgent`<br />-   VBScript: `enableDisableClientAgent`|-   Managed: `String`<br />-   VBScript: `String`|Determines whether the Remote Tools Client Agent is enabled or disabled.<br /><br /> 0 - disabled<br /><br /> 1 - enabled|  

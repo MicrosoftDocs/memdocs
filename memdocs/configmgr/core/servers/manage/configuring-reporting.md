@@ -34,7 +34,7 @@ SQL Server Reporting Services is a server-based reporting platform that provides
 
 When you run a report, the Reporting Services component connects to the Configuration Manager site database to retrieve data.  
 
-Before you can install the reporting services point in a Configuration Manager site, install and configure SQL Server Reporting Services on the target site system. For more information, see [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Before you can install the reporting services point in a Configuration Manager site, install and configure SQL Server Reporting Services on the target site system. For more information, see [Install SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### Verify SQL Server Reporting Services installation
 
@@ -236,7 +236,7 @@ Step through this log file starting from the time that the reporting services po
 There are many options for you to author reports in SQL Server Reporting Services. When you create or edit reports in the Configuration Manager console, Configuration Manager opens Report Builder to use as the authoring environment. Regardless of how you author your Configuration Manager reports, you need a self-signed certificate for server authentication to the site database server.
 
 > [!NOTE]  
-> For more information about authoring reports with SQL Server Reporting Services, see [Report Builder authoring environment](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> For more information about authoring reports with SQL Server Reporting Services, see [Report Builder authoring environment](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Configuration Manager automatically installs the certificate on the site server and any SMS Provider roles. You can create or edit reports from the Configuration Manager console when you run it from one of these servers.
 

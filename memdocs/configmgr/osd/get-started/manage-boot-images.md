@@ -16,7 +16,7 @@ manager: dougeby
 
 *Applies to: Configuration Manager (current branch)*
 
-A boot image in Configuration Manager is a [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) image that's used during an OS deployment. Boot images are used to start a computer in WinPE. This minimal OS contains limited components and services. Configuration Manager uses WinPE to prepare the destination computer for Windows installation.
+A boot image in Configuration Manager is a [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) image that's used during an OS deployment. Boot images are used to start a computer in WinPE. This minimal OS contains limited components and services. Configuration Manager uses WinPE to prepare the destination computer for Windows installation.
 
 ## <a name="BKMK_BootImageDefault"></a> Default boot images
 
@@ -89,7 +89,7 @@ For example, use the Configuration Manager console to customize boot images base
 
 - [Customize boot images](customize-boot-images.md)
 - [Support for Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -201,11 +201,11 @@ On the **Customization** tab, select any of the following settings:
 - **Set default keyboard layout in WinPE**: <!--4910348-->Starting in version 1910, configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
 > [!Tip]
-> Use the [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet to configure these settings from a script.
+> Use the [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) PowerShell cmdlet to configure these settings from a script.
 
 #### Optional Components
 
-On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 The following components are required by Configuration Manager and always added to boot images:
 
@@ -298,4 +298,4 @@ Use the following procedure to set the WinPE language for PXE or media-initiated
 
 1. Before you update the boot image, verify that the appropriate task sequence resource file (tsres.dll) is in the corresponding language folder on the site server. For example, the English resource file is in the following location: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. As part of your prestart command, set the **SMSTSLanguageFolder** environment variable to the appropriate language ID. The language ID must be specified by using decimal and not hexadecimal format. For example, to set the language ID to English, specify the decimal value **1033**, not the hexadecimal value 00000409 of the folder name.  
+2. As part of your prestart command, set the **SMSTSLanguageFolder** environment variable to the appropriate language ID. The language ID must be specified by using decimal and not hexadecimal format. For example, to set the language ID to English, specify the decimal value **1033**, not the hexadecimal value 00000409 of the folder name.

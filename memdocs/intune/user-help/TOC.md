@@ -2,13 +2,13 @@
 
 ## [What is device enrollment?](use-managed-devices-to-get-work-done.md)
 
-## [What information can my company see with Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [What information can my org see?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Device password requirements](password-does-not-meet-it-administrator-requirements.md)
 
-## [Sign in to the Company Portal](sign-in-to-the-company-portal.md)  
+## [How to access Company Portal](sign-in-to-the-company-portal.md)  
 
-## [Install Mobile Threat Defense app](set-up-mobile-threat-defense.md)  
+## [Install mobile threat defense app](set-up-mobile-threat-defense.md)  
 
 ## Using your Android device
 ### [Why enroll your Android device](why-enroll-android-device.md)
@@ -20,7 +20,7 @@
 #### Enroll with derived credentials
 ##### [Enroll with Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Enroll with Intercede](enroll-android-device-intercede.md)
-##### [Enroll with Disa Purebred](enroll-android-device-disa-purebred.md)
+##### [Enroll with DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Move to new device management setup](move-to-new-device-management-setup.md)
 ### [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
 ### [Encrypt your device](encrypt-your-device-android.md)
@@ -38,11 +38,17 @@
 #### [Fixing common issues with Samsung Knox](samsung-knox-errors-android.md)
 #### [Update your device to install Outlook](update-device-outlook-android.md)
 
-#### Logging
-##### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Upload and email logs](send-logs-to-your-it-admin-by-email-android.md)
-##### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Send errors to Microsoft](send-logs-to-microsoft-android.md)
+### Logging
+#### [Turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
+#### [Upload and email logs](send-logs-to-your-it-admin-by-email-android.md)
+#### [Send logs using a USB cable](send-logs-to-your-it-admin-using-cable-android.md)
+#### [Send errors to Microsoft](send-logs-to-microsoft-android.md)
+
+### Resolve a threat in MTD app  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)	
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)	
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ### Operating system questions
 #### [Update your device](you-need-to-update-your-android-device.md)
@@ -55,20 +61,9 @@
 #### [Unsupported security patch](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Devices with encryption errors](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense apps 
-#### [Install Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-#### [Install Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-#### [Install SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-#### [Install Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
-#### [Resolve a threat](you-need-to-resolve-a-threat-found-by-mtd-android.md)
-##### [Using Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
-##### [Using Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
-##### [Using SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
-##### [Using Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Using your iOS device](using-your-iOS-device-with-intune.md)
 ### [Effects of iOS device reset](effects-of-device-reset-company-portal-ios.md)
-### [Install and sign in to the Company Portal](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Enroll your device
 #### [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
 #### [Enroll organization-provided iOS device](enroll-your-device-dep-ios.md)
@@ -99,16 +94,12 @@
 #### [Update your device to install Outlook](update-device-outlook-ios.md)
 #### [My version of iOS isn't yet supported](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense apps
-#### [Install Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-#### [Install Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-#### [Install SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-#### [Install Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
-#### [Resolve a threat](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
-##### [Using Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
-##### [Using Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
-##### [Using SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
-##### [Using Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+### Resolve a threat in MTD app  
+#### [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)	
+#### [Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)	
+#### [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)	
+#### [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
+
 
 ## Using your macOS device
 ### [What happens when you enroll a macOS device?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
@@ -151,7 +142,7 @@
 #### [Send logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md)
 #### [Send logs from device Settings app](send-logs-to-your-it-admin-settings-windows.md)
 #### [My version of Windows isn't supported](your-windows-version-isnt-yet-supported.md)
-#### [Install Office 365 on my Windows 10 device](install-office-windows.md)
+#### [Install Office on my Windows 10 device](install-office-windows.md)
 #### [My device needs to be encrypted](you-need-to-enable-windows-encryption.md)
 #### [My device needs antimalware software](your-device-needs-antimalware-software.md)
 #### [Enable Secure Boot](you-need-to-enable-secure-boot-windows.md)

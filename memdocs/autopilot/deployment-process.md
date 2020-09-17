@@ -6,11 +6,13 @@ manager: laurawi
 ms.audience: itpro
 keywords: upgrade, in-place, configuration, deploy
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.topic: article
 ---
 
@@ -23,4 +25,4 @@ Windows Autopilot deployment processes are summarized in the poster below. The p
 
 [![Deploy Windows 10 with Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 
-**Note**: The Windows Autopilot for existing devices process is included in the [Microsoft Endpoint Configuration Manager deployment poster](https://docs.microsoft.com/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager). 
+**Note**: The Windows Autopilot for existing devices process is included in the [Microsoft Endpoint Configuration Manager deployment poster](/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager).

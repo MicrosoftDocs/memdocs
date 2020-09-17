@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
 author: aczechowski
 ms.author: aaroncz
@@ -154,7 +154,7 @@ public void ChangeDeploymentPackageSource(WqlConnectionManager connection,
 
 |Parameter|Type|Description|
 |---------|----|-----------| 
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`existingSUMPackageID`|-   Managed: `String`<br />-   VBScript: `String`|The package ID for an existing software updates deployment package.|  
 |`validateNewPackageSource`|-   Managed: `dictionary` object|The `validateNewPackageSource` is a dictionary object containing the parameters that the `ValidateNewPackageSource` method requires.<br /><br /> `PackageSource`|  
 |`newPackageSourceLocation`|-   Managed: `String`<br />-   VBScript: `String`|The new deployment package source location. The source path must be a Universal Naming Convention (UNC) path. All of the updates available in the old package source must be available in the new package source.|  

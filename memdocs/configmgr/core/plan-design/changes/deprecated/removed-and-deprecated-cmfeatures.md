@@ -2,7 +2,7 @@
 title: Deprecated features
 titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,6 +26,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Support&nbsp;removed|
 |-----------|---|--------------|
+|The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|TBD|
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. You won't be able to create a traditional cloud distribution point in the future.|February 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Classic service deployment to Azure for cloud management gateway and cloud distribution point. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 
@@ -75,7 +76,7 @@ With Configuration Manager, native support for AMT-based computers from within t
 
 Configuration Manager has removed support for Network Access Protection. The feature has been deprecated in Windows Server 2012 R2, and is removed from Windows 10.  
 
-For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
+For network access protection alternatives, see the *Deprecated functionality* section of [Network Policy and Access Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
 
 ## See also
 

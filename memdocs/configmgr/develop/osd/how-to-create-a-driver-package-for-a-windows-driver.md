@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c4e64b28-2159-4286-b1ef-4935c7e07e14
 author: aczechowski
 ms.author: aaroncz
@@ -179,7 +179,7 @@ public void CreateDriverPackage(
 
 |Parameter|Type|Description|  
 |---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`driverId`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The driver identifier (`SMS_Driver.CI_ID`).|  
 |`newPackageName`|-   Managed: `String`<br />-   VBScript: `String`|The name for the package.|  
 |`newPackageDescription`|-   Managed: `String`<br />-   VBScript: `String`|A description for the new package.|  

@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 47653e95-da5f-40c8-b4a7-11a90ad71452
 author: aczechowski
 ms.author: aaroncz
@@ -99,7 +99,7 @@ public void AddTaskSequenceVariable(
 
 |Parameter|Type|Description|
 |-|-|-|
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
 |`taskSequence`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|-   The task sequence the variable is added to.|  
 |`variableName`|-   Managed: `String`<br />-   VBScript: `String`|The name of the variable.|  
 |`variableValue`|-   Managed: `String`<br />-   VBScript: `String`|The value for the variable.|  

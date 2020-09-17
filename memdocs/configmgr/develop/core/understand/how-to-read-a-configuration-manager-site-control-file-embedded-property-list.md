@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694
 author: aczechowski
 ms.author: aaroncz
@@ -99,7 +99,7 @@ public bool GetScfEmbeddedPropertyList(
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](https://docs.microsoft.com/windows/win32/wmisdk/swbemobject)|The site control file resource that contains the embedded property.|  
+|`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|The site control file resource that contains the embedded property.|  
 |`propertyListName`|-   Managed: `String`<br />-   VBScript: `String`|The embedded property list to be read.|  
 |`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The `SMS_EmbeddedProperty` class Values property. An array of string values.|  
 

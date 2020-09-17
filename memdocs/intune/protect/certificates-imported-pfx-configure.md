@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,7 +71,7 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   You use a Windows Server to host the PFX Certificate Connector for Microsoft Intune.  The connector is used to process requests for certificates imported to Intune.
   
-  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  The connector requires access to the same ports as detailed for managed devices, as found in our [device endpoint content](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supports install of the *Microsoft Intune Certificate Connector* on the same server as the *PFX Certificate Connector for Microsoft Intune*.
 
@@ -91,13 +91,15 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 ## Download, install, and configure the PFX Certificate Connector for Microsoft Intune
 
+Before you begin, [review requirements for the connector](certificate-connectors.md) and ensure your environment and your Windows server is ready to support the connector.
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
+2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
 
-   ![PFX Certificate Connector for Microsoft Intune download](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
 
-3. Follow the guidance to download the *PFX Certificate Connector for Microsoft Intune* to a location that's accessible from the server where you're going to install the connector.
+   ![Microsoft Intune Connector download](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
    - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
@@ -106,7 +108,7 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions.
 
    > [!WARNING]
-   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
+   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Microsoft 365.
 
 6. Close the window.
 
@@ -114,9 +116,9 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 
 ## Import PFX Certificates to Intune
 
-You use [Microsoft Graph](https://docs.microsoft.com/graph) to import your users PFX certificates into Intune. The helper [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) provides you with cmdlets to do the operations with ease.
+You use [Microsoft Graph](/graph) to import your users PFX certificates into Intune. The helper [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell) provides you with cmdlets to do the operations with ease.
 
-If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](https://docs.microsoft.com/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
+If you prefer to use your own custom solution using Graph, use the [userPFXCertificate resource type](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta).
 
 ### Build 'PFXImport PowerShell Project' cmdlets
 
@@ -214,7 +216,7 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.	As a best practice to clean up the AAD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
+9.	As a best practice to clean up the Azure AD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
 
 For more information about other available commands, see the readme file at [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

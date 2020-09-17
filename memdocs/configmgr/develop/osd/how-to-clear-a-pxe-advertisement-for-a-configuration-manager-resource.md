@@ -4,7 +4,7 @@ titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
 author: aczechowski
 ms.author: aaroncz
@@ -89,7 +89,7 @@ public void ClearPxeAdvertisementResource(WqlConnectionManager connection, int r
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](https://docs.microsoft.com/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
 |`resourceID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The resource identifier. You can obtain this from the [SMS_Resource](../../develop/reference/core/clients/manage/sms_resource-server-wmi-class.md) class `ResourceId` property.|  
 
 ## Compiling the Code  
