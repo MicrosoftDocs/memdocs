@@ -86,12 +86,8 @@ These settings apply to:
 
 - **Password complexity**: Enter the required password complexity. Your options:
 
-  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
-
-  Specify the required password complexity.
-
-  - **None** *(default)* - No password required.
-  - **Low** - The password satisfies one of the following conditions:
+  - **None** (default): No password required.
+  - **Low**: The password satisfies one of the following conditions:
     - Pattern
     - PIN has a repeating (4444) or ordered (1234, 4321, 2468) sequence.
   - **Medium**: The password satisfies one of the following conditions:
@@ -102,6 +98,10 @@ These settings apply to:
     - PIN doesn’t have a repeating (4444) or ordered (1234, 4321, 2468) sequence, and has minimum length of 8.
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
+
+  This setting applies to:  
+  - Android 10 and newer, but not on Samsung Knox
+  - On Android 9 and earlier, or on Samsung Knox, settings for the password length and password type override this setting.
 
 ### Android 9 and earlier or Samsung Knox
 
@@ -141,8 +141,7 @@ These settings apply to:
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  This setting applies to:
-
+  This setting applies to:  
   - Samsung KNOX Standard 5.0+
 
 ## Google Play Store
