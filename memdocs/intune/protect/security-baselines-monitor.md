@@ -41,13 +41,23 @@ For more information about the feature, see [Security baselines in Intune](secur
 
 ## Monitor the baseline and your devices
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. The *Overview* pane displays the **Security baseline posture** chart for that baseline, which includes a high-level status for the baseline instance your viewing. <!-- The following image shows an instance of MDM Security baseline that hasn’t been assigned to any devices yet: -->
+When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. 
 
-<!-- Not available yet:
-For each baseline, you’ll see the number of devices assigned the baseline, and the following information about them: 
--->
+The *Overview* pane displays two status views for the selected baseline:
 
-When you drill-in past the *Security baseline posture* view for a baseline, you can view the following details for the setting status and the device status list views:
+- **Security baseline posture** chart - This chart displays high-level details about device status for the baseline version. The available details:
+  - **Matches default baseline** – This status identifies when a devices configuration matches the default (unmodified) baseline configuration.
+  - **Matches custom settings** – This status identifies when a devices configuration matches the customized version of the baseline that you've deployed. 
+  - **Misconfigured** – This status is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, like the *Security baseline posture by category*, a list view that appears below this chart.
+  - **Not applicable** - This status represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
+
+- **Security baseline posture by category** - A list view that displays device status by category. In this list view, the same details as the *Security baseline posture* chart are available. However, in place of *Misconfigured* you’ll see three columns for the status states that make up Misconfigured:
+
+  - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
+  - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
+  - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
+ 
+When you drill-in to the two preceding views, you can view the following details for the setting status and the device status list views:
 
 - **Succeeded**: Policy is applied.
 - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
@@ -55,7 +65,18 @@ When you drill-in past the *Security baseline posture* view for a baseline, you 
 - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
 - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting.
 
-It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
+From the *Version* view, you can select **Device Status**. The Device Status view displays a list of the devices that recieve this baseline and includes the following details:
+- *USER PRINCIPAL NAME* - This displays the user profile assoicated with the baseline on the device. 
+- *SECURITY BASELINE POSTURE* - This column displays the devices state:
+  - **Succeeded**: Policy is applied.
+  - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
+  - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
+  - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
+  - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting
+- *Last CHECK-IN* - When status was last received from the device.
+
+> [!TIP]  
+> It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
 
 ## Monitor the profile
 
@@ -136,3 +157,5 @@ On Windows 10 devices, there's a built-in MDM diagnostic information report. Thi
 - [Monitor device profiles](../configuration/device-profile-monitor.md) 
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
 - [Troubleshoot policies and profiles in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+
+
