@@ -65,8 +65,8 @@ When you drill-in to the two preceding views, you can view the following details
 - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
 - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting.
 
-From the *Version* view, you can select **Device Status**. The Device Status view displays a list of the devices that recieve this baseline and includes the following details:
-- *USER PRINCIPAL NAME* - This displays the user profile assoicated with the baseline on the device. 
+From the *Version* view, you can select **Device Status**. The Device Status view displays a list of the devices that receive this baseline and includes the following details:
+- *USER PRINCIPAL NAME* - This displays the user profile associated with the baseline on the device. 
 - *SECURITY BASELINE POSTURE* - This column displays the devices state:
   - **Succeeded**: Policy is applied.
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
