@@ -2,7 +2,7 @@
 title: Troubleshoot scripts for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: "Troubleshooting scripts for Configuration Manager tenant attach"
-ms.date: 09/08/2020
+ms.date: 09/18/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,11 +12,11 @@ author: mestew
 ms.author: mstewart
 ---
 
-# Troubleshoot scripts (preview) for devices uploaded to the admin center
+# Troubleshoot Scripts (preview) for devices uploaded to the admin center
 <!--6024392-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot scripts in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot Scripts in the Microsoft Endpoint Manager admin center:
 
 > [!Important]
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -72,7 +72,22 @@ Use the following to troubleshoot scripts in the Microsoft Endpoint Manager admi
 
 **Error message:** Unexpected error occurred
 
-**Possible cause:** Verify the account has **Read Resource** permission for the device's **Collection** in Configuration Manager.
+#### Possible cause
+
+Verify the account has **Read Resource** permission for the device's **Collection** in Configuration Manager.
+
+#### Error code 500 with an unexpected error occurred message
+
+If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+
+
+#### Other possible causes of unexpected errors
+
+Unexpected errors are typically caused by either [service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../develop/adminservice/overview.md), or connectivity issues.
+
+1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
+1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
+1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
 
 
 ### <a name="bkmk_version"></a> Configuration Manager doesn't meet the minimum version prerequisite

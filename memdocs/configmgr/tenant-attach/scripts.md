@@ -1,8 +1,8 @@
 ---
-title: Tenant attach - Run scripts (preview) from the admin center
+title: Tenant attach - Run Scripts (preview) from the admin center
 titleSuffix: Configuration Manager
 description: "Run scripts for Configuration Manager devices from the admin center."
-ms.date: 08/24/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,7 +12,7 @@ author: mestew
 ms.author: mstewart
 ---
 
-# <a name="bkmk_scripts"></a> Tenant attach: Run scripts (preview) from the admin center
+# <a name="bkmk_scripts"></a> Tenant attach: Run Scripts (preview) from the admin center
 <!--CM6234688, IN7220536-->
 *Applies to: Configuration Manager (current branch)*
 
@@ -26,7 +26,7 @@ Bring the power of the Configuration Manager on-premises Run Scripts feature to 
 
 ## Prerequisites
 
-Run scripts from the admin center requires the following items:
+Running Scripts from the admin center requires the following items:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
 - A minimum of Configuration Manager version 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed.
@@ -65,3 +65,4 @@ The user account needs the following permissions:
 ## Next steps
 
 [Install an application from the admin center](applications.md)
+[Learn more about PowerShell script security](../apps/deploy-use/learn-script-security.md)

@@ -59,14 +59,13 @@ Learn what's new each week in Microsoft Intune in [Microsoft Endpoint Manager ad
 
 
 <!-- ########################## -->
-## Week of ????
-
+## Week of September 14, 2020
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 ### Tenant attach: Run scripts from the admin center
 <!--7220536, CM6234688-->
-Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
 <!-- ########################## -->
 ## Week of September 7, 2020

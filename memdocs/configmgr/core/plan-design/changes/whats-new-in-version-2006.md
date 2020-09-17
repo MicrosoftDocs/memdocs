@@ -28,9 +28,9 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
-### Run scripts from the admin center
+### Scripts from the admin center
 <!--IN7220536, CM6234688  -->
-Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run scripts from the admin center](../../../tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
 
 ### <a name="bkmk_timeline"></a> Device timeline in the admin center
 <!--7220536, CM7141381-->
