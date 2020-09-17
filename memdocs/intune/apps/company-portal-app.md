@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -155,7 +155,7 @@ The following table provides app source specific configuration details:
 #### App source setting options
 
 > [!NOTE]
-> The Company Portal website will initially support the display of apps from other Microsoft services.
+> The display of apps from other Microsoft services is only supported in the Windows Company Portal and the Company Portal website.
 
 You can hide or show **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Azure portal](https://portal.azure.com). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
