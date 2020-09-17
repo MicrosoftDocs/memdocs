@@ -35,7 +35,7 @@ All reports that have been migrated to the Intune reporting infrastructure will 
 > [!NOTE]
 > For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](https://docs.microsoft.com/graph/use-the-api).
 
-Microsoft Intune Reports use the following Microsoft Graph API endpoint:
+Microsoft Endpoint Manager exports reports based on the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
@@ -135,10 +135,7 @@ You can then directly download the compressed CSV from the `url` field.
 There are three main parameters you can submit in your request body to define the export request: 
 
 - `reportName`: Required. This is the name of the report you want to specify.  
-- `filter`: Not required for most reports. Reports that do require a filter are listed here: 
-    - `DeviceInstallStatus`: Required filter is `ApplicationId`.
-    - `UserInstallStatus`: Required filter is `ApplicationId`.
-    - `OrgDeviceInstallStatus`: Required filter is `ApplicationId`.
+- `filter`: Not required for most reports. 
 - `select`: Not required. If you don't specify a `select` value you will receive a default set of columns, which for most reports is the entire dataset. 
 
 ## Available reports
