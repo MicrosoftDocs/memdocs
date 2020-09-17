@@ -31,7 +31,7 @@ landingContent:
           - text: Troubleshoot ConfigMgr client details (preview)
             url: troubleshoot-client-details.md
  # Card
-  - title: Get information about your devices
+  - title: Get information about uploaded devices
     linkLists:
       - linkListType: how-to-guide
         links:
