@@ -40,6 +40,8 @@ Customers may purchase devices from resellers, distributors, or other partners. 
 
 As with OEMs, CSP partners must be granted permission to register devices for an organization. You can use the process described on the [Customer consent page](registration-auth.md#csp-authorization). The CSP partner requests a relationship with the organization. That organization's global administrator approves the request. After the approval, CSP partners add devices using [Partner Center](https://partner.microsoft.com/pcv/dashboard/overview), either directly through the web site or via available APIs that can automate the same tasks.
 
+For Surface devices, Microsoft Support can help with device registration.  For more information, see [Surface Registration Support for Windows Autopilot](https://docs.microsoft.com/surface/surface-autopilot-registration-support).
+
 Windows Autopilot doesn't require delegated administrator permissions when establishing the relationship between the CSP partner and the organization. As part of the global administrator's approval process, they can choose to uncheck the "Include delegated administration permissions" checkbox.
 
 > [!Note]
@@ -48,10 +50,11 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 ## Automatic registration of existing devices
 
 You can automatically register an existing device if it's:
-- running a supported version of Windows 10 semi-annual channel
+- running a supported version of Windows 10 semi-annual channel.
 - enrolled in an MDM service such an Intune.
 
 For devices that meet both these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
+
 For instructions on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) documentation describing the "Convert all targeted devices to Autopilot" setting. 
 
 You can automatically convert such devices to Windows using Intune's **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 

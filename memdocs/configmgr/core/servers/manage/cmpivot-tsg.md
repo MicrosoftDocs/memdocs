@@ -46,7 +46,7 @@ Look in `smsprov.log` for these lines:
 
 Next, find the ID in the CMPivot window. This ID is the `ClientOperationID`.
 
-![CMPivot window with ClientOperationID highlighted](media/cmpivot-client-operationid-1902.png)
+![CMPivot window with ClientOperationID highlighted, version 1902](media/cmpivot-client-operationid-1902.png)
 
 Find the `TaskID` from the ClientAction table. The `TaskID` corresponds to the `UniqueID` in the ClientAction table.
 

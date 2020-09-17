@@ -221,15 +221,6 @@ PowerShell scripts will support Azure AD registered devices in Intune. For more 
 ### Log Analytics will include device details log<!--6014987  -->
 Intune device detail logs will be available in **Reports** > **Log analytics**. You can correlate device details to build custom queries and Azure workbooks.
 
-### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381 -->
-When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline).  
-
-### Tenant attach: Install an application from the admin center<!-- 7220536, CM6024389 -->
-You'll be able to initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Management admin center. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps).
-
-### Tenant attach: CMPivot from the admin center<!--7220536, CM6024392 -->
-You'll be able to bring the power of [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot). 
-
 ### Tenant attach: Run Scripts from the admin center<!--7220536, CM6234688 -->
 You'll be able to bring the power of the Configuration Manager on-premises [Run Scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
 
@@ -278,11 +269,11 @@ In **Devices** > **Group Policy analytics (preview)**, you can import your group
 Applies to:
 - Windows 10 and newer
 
-#### New Windows 10 feature update report<!-- 6473121   -->
-The **Feature update failures** report will provide failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Devices** > **Monitor** > **Feature update failures** to view this report."
-
 #### New Windows 10 feature update report<!-- 6473128  -->
 The **Windows feature updates** report will provide an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Reports** > **Windows updates (Preview)** > **Feature update failures** to view the summary for this report. To see reports for specific policies, select the **Reports** tab and open the **Windows Feature Update Report**. 
+
+#### New Windows 10 feature failures update report<!-- 6473121   -->
+The **Feature update failures** report will provide failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Devices** > **Monitor** > **Feature update failures** to view this report."
 
 <!-- ***********************************************-->
 <!--

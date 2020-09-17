@@ -6,11 +6,13 @@ manager: laurawi
 ms.audience: itpro
 keywords: upgrade, in-place, configuration, deploy
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.topic: article
 ---
 

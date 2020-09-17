@@ -4,6 +4,7 @@ description: Learn how to handle issues as they arise during the Windows Autopil
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -38,9 +39,9 @@ For troubleshooting, key activities to perform are:
 
 - Configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
 - Network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
-- Autopilot out-of-box (OOBE) behavior: Were only the expected out-of-box experience screens displayed? Was the Azure AD credentials page customized with organization-specific details as expected?
-- Azure AD join issues: Was the device able to join Azure Active Directory?
-- MDM enrollment issues: Was the device able to enroll in Microsoft Intune (or an equivalent MDM service)?
+- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](#troubleshooting-autopilot-oobe-issues) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
+- Azure AD join issues: Is the device able to [join Azure Active Directory](#troubleshooting-azure-ad-join-issues)?
+- MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](#troubleshooting-intune-enrollment-issues) (or an equivalent MDM service)?
 
 ## Troubleshooting Autopilot Device Import
 

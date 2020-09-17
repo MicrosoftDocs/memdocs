@@ -3,6 +3,7 @@ title: Windows Autopilot for white glove deployment
 description: Windows Autopilot for white glove deployment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, pre-provisioning
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,6 +12,7 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
 ---
@@ -21,13 +23,13 @@ ms.topic: article
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This lets end users get their devices business-ready by using a simple process.
 
- ![OEM](images/wg01.png)
+ ![OEM process](images/wg01.png)
 
 Windows Autopilot can also provide a <I>white glove</I> service that helps partners or IT staff pre-provision a fully configured and business-ready Windows 10 PC. From the end user’s perspective, the Windows Autopilot user-driven experience is unchanged, but getting their device to a fully provisioned state is faster.
 
 With **Windows Autopilot for white glove deployment**, the provisioning process is split. The time-consuming portions are done by IT, partners, or OEMs. The end user simply completes a few necessary settings and policies and then they can begin using their device.
 
- ![OEM](images/wg02.png)
+ ![OEM process with partner](images/wg02.png)
 
 White glove deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Azure Active Directory joined and Hybrid Azure Active Directory joined devices.
 
@@ -38,7 +40,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Windows 10, version 1903 or later.
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The white glove provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required.
-- Physical devices with Ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device.
+- Physical devices with Ethernet connectivity are required to perform pre-provisiong. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 >[!IMPORTANT]
 >Because the OEM or vendor performs the white glove process, this <u>doesn’t require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
@@ -81,7 +83,7 @@ After the customer or IT Admin has targeted all the apps and settings they want 
 - Boot the device (running Windows 10 Pro, Enterprise, or Education SKUs, version 1903 or later).
 - From the first OOBE screen (which could be a language selection or locale selection screen), don't click **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then click **Continue**.
 
- ![choice](images/choice.png)
+ ![Windows Autopilot provisioning option](images/choice.png)
 
 - On the **Windows Autopilot Configuration** screen, information will be displayed about the device:
  - The Autopilot profile assigned to the device.
@@ -91,13 +93,13 @@ After the customer or IT Admin has targeted all the apps and settings they want 
  - **Note**: The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 - Validate the information displayed. If any changes are needed, make the changes and then click **Refresh** to re-download the updated Autopilot profile details.
 
- ![landing](images/landing.png)
+ ![Windows Autopilot configuration screen](images/landing.png)
 
 - Click **Provision** to begin the provisioning process.
 
 If the pre-provisioning process completes successfully:
 - A green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
- ![white-glove-result](images/white-glove-result.png)
+ ![Green configuration screen](images/white-glove-result.png)
 - Click **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
 >[!NOTE]

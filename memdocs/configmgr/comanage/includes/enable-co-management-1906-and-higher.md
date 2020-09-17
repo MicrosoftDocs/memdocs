@@ -55,6 +55,6 @@ When enabling co-management, you can use the Azure Public Cloud, Azure US Govern
 
 1. On the **Staging** page, specify the pilot collection for each of the workloads that are set to **Pilot Intune**.
 
-   ![Specify Intune auto enrollment collection ](../media/3555750-co-management-onboarding-staging.png)
+   ![Co-management configuration wizard, Staging page, specify pilot collections](../media/3555750-co-management-onboarding-staging.png)
 
 1. To enable co-management, complete the wizard.
