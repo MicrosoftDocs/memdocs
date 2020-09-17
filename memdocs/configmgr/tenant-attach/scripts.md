@@ -71,4 +71,5 @@ The user account needs the following permissions:
 ## Next steps
 
 [Install an application from the admin center](applications.md)
+
 [Learn more about PowerShell script security](../apps/deploy-use/learn-script-security.md)
