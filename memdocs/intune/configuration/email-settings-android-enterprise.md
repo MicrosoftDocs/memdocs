@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,8 @@ To learn more about email profiles in Intune, see [configure email settings](ema
 
 ## Before you begin
 
-Create a [device configuration profile](email-settings-configure.md) (choose the work profile), or create an [app configuration policy](../apps/app-configuration-policies-use-android.md).
+- Create an [Android Enterprise Email device configuration profile](email-settings-configure.md) > **Work profile**.
+- Or, create an [app configuration policy](../apps/app-configuration-policies-use-android.md).
 
 ## Android Enterprise
 

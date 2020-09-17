@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,10 +50,10 @@ When you use a Microsoft Certification Authority (CA):
 
 - To use SCEP certificate profiles:
   - [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Install the Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - To use PKCS certificate profiles:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.
+  - [Install the PFX Certificate Connector for Microsoft Intune](certficates-pfx-configure.md).
   
 - To use PKCS imported certificates:
   - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
@@ -85,7 +85,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 | Platform              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
 |--|--|--|--|---|
-| Android device administrator | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
+| Android device administrator | ![Supported](./media/certificates-configure/green-check.png) <br>*(see **Note 1**)*| ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)|
 | Android Enterprise <br> - Corporate-Owned Work Profile   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  |
@@ -94,6 +94,8 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
 | Windows 10 and later  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
+
+- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox. For more information see [Trusted certificate profiles for Android device administrator](#trusted-certificate-profiles-for-android-device-administrator).
 
 ## Export the trusted root CA certificate
 
@@ -112,12 +114,25 @@ SCEP certificate profiles directly reference a trusted certificate profile. PKCS
 Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
 
 > [!IMPORTANT]
-> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*. 
+> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*.
 >
 > This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10 and later.
 
 > [!NOTE]
 > The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Intune portal. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
+
+### Trusted certificate profiles for Android device administrator
+
+Beginning with Android 11, you can no longer use a trusted certificate profile to deploy a trusted root certificate to devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
+
+Because SCEP certificate profiles require both the trusted root certificate be installed on a device, and must reference a trusted certificate profile that in turn references that certificate, use the following steps to work around this limitation:
+
+1. Manually provision the device with the trusted root certificate.
+2. Deploy to the device, a trusted root certificate profile that references the trusted root certificate that you’ve installed on the device.
+3. Deploy a SCEP certificate profile to the device that references the trusted root certificate profile.
+This issue isn’t limited to SCEP certificate profiles. Therefore, plan to manually install the trusted root certificate on applicable devices should your use of PKCS certificate profiles, or PKCS Imported certificate profiles require it.
+
+Learn more about [decreasing support for Android device administrator](https://techcommunity.microsoft.com/t5/intune-customer-success/decreasing-support-for-android-device-administrator/ba-p/1441935) from techcommunity.microsoft.com.
 
 ### To create a trusted certificate profile
 
@@ -139,7 +154,7 @@ Create a separate trusted certificate profile for each device platform you want 
 
 6. Select **Next**.
 
-7. In **Configuration settings**, specify the .cer file for the trusted Root CA Certificate you previously exported. 
+7. In **Configuration settings**, specify the .cer file for the trusted Root CA Certificate you previously exported.
 
    For Windows 8.1 and Windows 10 devices only, select the **Destination Store** for the trusted certificate from:
 

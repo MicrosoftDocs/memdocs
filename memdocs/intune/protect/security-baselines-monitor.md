@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -120,6 +120,43 @@ Monitoring the profile gives insight into the deployment state of your devices, 
 4. In **Monitor**, you can see the deployment status of the profile on individual devices, the status for each user, and the status for each setting in the baseline:
 
    ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
+
+## Resolve conflicts for security baselines
+
+To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the **Endpoint security configuration** of a device.  This device-based view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error. 
+
+You can reach information about settings in conflict or error through two paths from within Microsoft Endpoint Manager admin center:
+
+- **Endpoint security** > **Security baselines** > *select a baseline type* > **Profiles** > *select a baseline instance* > **Device Status** > **Endpoint security configuration** > *settings that show a Conflict or Errors*.
+- **Devices** > *select a device* > **Endpoint security configuration** > *select a profile or baseline* > *select a setting from the list of settings that shows a Conflict or Errors*.
+
+On the **Endpoint security configuration** view of a device, Intune displays each baseline profile and policy from endpoint security that’s assigned to that device. This view also identifies the associated User Principal Name for each entry, and the status of the baseline profile or policy. A profile or policy can appear multiple times on a device, once for each different User Principal Name associated with it. 
+
+<!-- pending
+The **Baseline status** represents the worst available status from any applicable setting in that profile or policy. For example, if on the device a single setting from a profile is found to be in conflict while the rest of the baselines’ settings are successful, the *Baseline status* is set to *Conflict*. 
+
+The available status from best to worst:
+
+- **Success** - The setting on the device matches the value as configured in the profile, and there are no conflicting configurations. This is either a default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Error** - The profile and settings failed to apply.
+- **Conflict** - The setting conflicts with another instance of the setting from another policy, has an error, or is pending an update. This setting isn’t sent to the device until the conflict is resolved.
+--> 
+
+### Drill in to identify and resolve conflicts
+
+1. While viewing the Endpoint security configuration of a device, select a profile to drill-in to learn more about the issue that results in a conflict or error status.
+
+   When you drill-in, Intune displays a list of settings for that profile that includes each setting that wasn’t set as *Not configured*, and the status of that setting. The display can be organized by Category, Setting name, or State. If you filter on the State you can quickly focus on only settings that have an error or conflict.  
+
+2. To view details about a specific setting, select it to open the **Settings details** pane. In this pane you’ll see:
+   - Setting – The name of the setting.
+   - State – The status of the setting on the device. 
+   - Source Profile – This is a list of each Endpoint security profile or security baseline that configures the same setting but with a different value.
+
+   > [!TIP]  
+   > Unlike device configuration profiles, Endpoint security profiles won’t provide error codes or related details.
+
+3. To reconfigure conflicting profiles, select a record from the **Source Profile** list to open a view of that profiles configuration. From the profile’s configuration view, you can review and edit settings in that profile to remove the conflict.
 
 ## View settings from profiles that apply to a device
 

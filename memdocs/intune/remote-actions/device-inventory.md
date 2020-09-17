@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -89,6 +89,10 @@ Depending on the carrier used by the devices, not all details might be collected
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
+| PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
+| Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
+| Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
+| Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 |IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android|
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android|
 |Manufacturer|The manufacturer of the device.|Windows, iOS/iPadOS, Android|
@@ -110,7 +114,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Phone number is not inventoried on Android Enterprise Dedicated or Fully Managed devices.
+> Phone number is not inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.
 
 ## Next steps
 See what else you can do to [manage your devices](device-management.md) with Intune.

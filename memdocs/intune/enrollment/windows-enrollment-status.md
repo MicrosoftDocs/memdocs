@@ -128,8 +128,8 @@ For device preparation, the enrollment status page tracks:
 The Enrollment Status Page tracks the following device setup items:
 
 - Security policies
-  - One configuration service provider (CSP) for all enrollments.
-  - Actual CSPs configured by Intune aren't tracked here.
+  - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
+  - Other policies are not tracked.
 - Applications
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
@@ -144,8 +144,8 @@ The Enrollment Status Page tracks the following device setup items:
 For account setup, the Enrollment Status Page tracks the following items if they're assigned to the current logged in user:
 
 - Security policies
-  - One CSP for all enrollments.
-  - Actual CSPs configured by Intune aren't tracked here.
+  - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
+  - Other policies are not tracked.
 - Applications
   - Per user LoB MSI apps that are assigned to All Devices, All Users, or a user group in which the user enrolling the device is a member.
   - Per machine LoB MSI apps that are assigned to All Users or a user group in which the user enrolling device is a member.
@@ -158,53 +158,6 @@ For account setup, the Enrollment Status Page tracks the following items if they
   - VPN or Wi-Fi profiles that are assigned to All Users or a user group in which the user enrolling the device is a member.
 - Certificates
   - Certificate profiles that are assigned to All Users or a user group in which the user enrolling the device is a member.
-
-### Troubleshooting
-
-The following are common questions for troubleshooting issues related to the Enrollment Status Page.
-
-- Why were my applications not installed and tracked using the Enrollment Status Page?
-  - To guarantee applications are installed and tracked using the Enrollment Status Page, ensure that:
-      - The apps are assigned to an Azure AD group containing the device (for device-targeted apps) or the user (for user-targeted apps), using a "required" assignment.  (Device-targeted apps are tracked during the device phase of ESP, while user-targeted apps are tracked during the user phase of ESP.)
-      - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
-      - The apps install in device context and have no user-context applicability rules.
-
-- Why is the Enrollment Status Page showing for non-Autopilot deployments, for example when a user logs in for the first time on a Configuration Manager co-management enrolled device?  
-  - The Enrollment Status Page lists installation status for all enrollment methods, including
-      - Autopilot
-      - Configuration Manager co-management
-      - when any new user logs into the device that has Enrollment Status Page policy applied for the first time
-      - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the Enrollment Status Page
-
-- How can I disable the Enrollment Status Page if it has been configured on the device?
-  - Enrollment status page policy is set on a device at the time of enrollment. To disable the Enrollment Status Page, you must disable user and device Enrollment Status Page sections. You disable the sections by creating custom OMA-URI settings with the following configurations.
-
-      Disable user Enrollment Status Page:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Disable device Enrollment Status Page:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- How can I collect log files?
-  - There are two ways Enrollment Status Page log files can be collected:
-      - Enable the ability for users to collect logs in the ESP policy. When a timeout occurs in the Enrollment Status Page, the end user can choose the option to **Collect logs**. By inserting a USB drive, the log files can be copied to the drive
-      - Open a command prompt by entering Shift-F10 key sequence, then enter the following commandline to generate the log files: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### Known issues
 
@@ -225,4 +178,6 @@ The following are known issues related to the Enrollment Status Page.
 
 ## Next steps
 
-After you set up Windows enrollment pages, learn how to manage Windows devices. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)
+After you set up Windows enrollment pages, learn how to [manage Windows devices](../remote-actions/device-management.md).
+
+[Troubleshoot the Windows Enrollment Status page](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

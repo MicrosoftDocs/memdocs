@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +36,7 @@ To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-conf
 
 ## Before you begin
 
-[Create a device configuration profile](vpn-settings-configure.md), and choose **Android device administrator**.
+Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
 
 ## Base VPN
 

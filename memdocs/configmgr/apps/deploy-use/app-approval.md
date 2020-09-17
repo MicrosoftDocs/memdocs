@@ -44,7 +44,7 @@ After you've approved an application for installation, you can **Deny** the requ
 
 Starting in version 1906, if you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  <!-- 4224910 -->
 
-Automate the approval process with the [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
+Automate the approval process with the [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) PowerShell cmdlet. Starting in version 1902, this cmdlet includes the **InstallActionBehavior** parameter. Use this parameter to specify whether to install the application right away or during non-business hours.<!-- SCCMDocs-pr issue #3418 -->
 
 Starting in 1906, you can see which deployments require approval. Select an app in the **Applications** node. In the details pane, switch to the **Deployments** tab. There's a new column displayed by default, **Requires Approval**.
 
