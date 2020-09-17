@@ -66,13 +66,13 @@ You can use Intune policy to manage tamper protection on Windows devices. This i
 Prerequisites to support tamper protection for devices managed by Intune:
 
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
- 
+
 Profiles for *Antivirus* policy that support tamper protection for [devices managed by Intune](#devices-managed-by-intune):
 
 - Platform: **Windows 10 later**
   - Profile: **Windows Security experience**  
 
-You can also use the [Endpoint protection](../configuration/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
+You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
 
 ### Configuration Manager clients managed through the tenant attach scenario 
 
