@@ -261,6 +261,26 @@ We’ve improved our support for using [S/MIME certificates for Outlook](../prot
 
 To deploy S/MIME certificates to supported Android devices, use a [PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md) or [SCEP certificate profile](../protect/certificates-profile-scep.md) for Device configuration. Create a profile for **Android Enterprise** and then select **PKCS imported certificate** from the category for *Fully Managed, Dedicated, and Corporate-Owned Work Profile*.
 
+### Improved Status details in security baseline reports<!-- 7221051 WNReady    -->
+We’ve begun improving many of the [status details for Security baseline](../protect/security-baselines-monitor.md). You’ll now see more meaningful and detailed status when viewing information about the baseline Versions you’ve deployed.
+ 
+Specifically, when you select a baseline, select *Version*, and the select an instance of that baseline, the initial Overview displays the following:
+ 
+- **Security baseline posture** chart - This chart now displays the following status details:
+  - **Matches default baseline** – This status replaces *Matches baseline* and identifies when a devices configuration matches the default (unmodified) baseline configuration.
+  - **Matches custom settings** – This identifies when a devices configuration matches the baseline that you’ve configured (customized) and deployed.
+  - **Misconfigured** – This is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, as detailed below.
+  - **Not applicable** - This represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
+- **Security baseline posture by category** - This is a list view that displays device status by category. The available columns mirror much of the *Security baseline posture* chart, but in place of *Misconfigured* you’ll see three columns for the status that make up Misconfigured:
+  - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
+  - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
+  - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
+ 
+We’ve also updated the **Device Status** view, which you can select from the *Version* view of a security baseline. When you view Device status, the **Security Baseline Posture** column now displays the three new status details of *Error*, *Pending*, and *Conflict*, in place of *Misconfigured*. 
+
+
+
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
