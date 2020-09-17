@@ -58,7 +58,7 @@ The user account needs the following permissions:
    
    Scripts that were recently run that directly targeted the device will already be listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts targeting collections won't be shown, only scripts that targeted the single device.
 
-   :::image type="content" source="./media/6234688-run-script.png" alt-text="Script output in the admin center" lightbox="./media/6234688-run-script.png":::
+   :::image type="content" source="./media/6234688-run-script.png" alt-text="Running the script from the admin center" lightbox="./media/6234688-run-script.png":::
 
 1. Choose **Run script** from the page that appears on the right.
    - You'll be notified your script has started. The **Run script** button will be disabled until it's complete.
