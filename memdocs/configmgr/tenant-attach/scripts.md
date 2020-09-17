@@ -61,8 +61,9 @@ The user account needs the following permissions:
    :::image type="content" source="./media/6234688-run-script.png" alt-text="Running the script from the admin center" lightbox="./media/6234688-run-script.png":::
 
 1. Choose **Run script** from the page that appears on the right.
-   - You'll be notified your script has started. The **Run script** button will be disabled until it's complete.
-   - The **State** column is only valid while you're on the page. The state is reset to `Ready` if you navigate to another page.
+   - You'll be notified your script has started. You don't have to wait for the script to finish before sending another to the device.
+   - Select **Refresh** to update the list with latest script state, and last run time.
+
 1. When the script completes, the results will show in the **Output** pane. You can copy the text of the script output. Select **Re-run script** if you want the script to run again.
 
    :::image type="content" source="./media/6234688-script-output.png" alt-text="Script output in the admin center" lightbox="./media/6234688-script-output.png":::

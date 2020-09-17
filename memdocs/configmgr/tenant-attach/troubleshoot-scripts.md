@@ -29,6 +29,15 @@ Use the following to troubleshoot Scripts in the Microsoft Endpoint Manager admi
 
 **Possible cause:** The user account is likely missing the **Admin User** role for the Configuration Manager Microservice application in Azure AD. Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium. Changes to this permission can take up to an hour to take effect.
 
+### <a name="bkmk_version"></a> Configuration Manager doesn't meet the minimum version prerequisite
+
+**Error message:** Configuration Manager doesn't meet the minimum version prerequisite.
+
+**Possible causes:** Your Configuration Manager sites are not running the minimum version of Configuration Manager 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed. Verify the following:
+ - Configuration Manager version 2006 or higher is installed.
+ - That [KB4580678](https://support.microsoft.com/help/4580678) on sites running Configuration Manager version 2006.
+ - That every site in the hierarchy meets the minimums listed above.
+
 ### <a name="bkmk_403"></a> Unable to get Scripts information
 
 **Error message:** Unable to get Scripts information. Make sure Azure AD and AD user discovery are configured and the user account accessing tenant attach features from the Microsoft Endpoint Manager admin center is discovered by both. Verify that the user has proper permissions in Configuration Manager.
@@ -88,16 +97,6 @@ Unexpected errors are typically caused by either [service connection point](../c
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on the central site.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
-
-
-### <a name="bkmk_version"></a> Configuration Manager doesn't meet the minimum version prerequisite
-
-**Error message:** Configuration Manager doesn't meet the minimum version prerequisite.
-
-**Possible causes:** Your Configuration Manager sites are not running the minimum version of Configuration Manager 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed. Verify the following:
- - Configuration Manager version 2006 or higher is installed.
- - That [KB4580678](https://support.microsoft.com/help/4580678) on sites running Configuration Manager version 2006.
- - That every site in the hierarchy meets the minimums listed above.
 
 ## Known issues
 
