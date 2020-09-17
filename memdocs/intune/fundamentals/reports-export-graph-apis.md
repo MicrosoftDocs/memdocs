@@ -67,7 +67,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     "ColumnName": "ui" 
 } 
 ```
-### Reponse example
+### Response example
 
 Based on the above POST request, Graph returns a response message. The response message is the data that you requested or the result of the operation.
 
@@ -493,5 +493,5 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 
 ## Next steps
 
-- [Microsoft Graph documenation](https://docs.microsoft.com/graph/)
+- [Microsoft Graph documentation](https://docs.microsoft.com/graph/)
 - [Intune reports](https://docs.microsoft.com/mem/intune/fundamentals/reports)
