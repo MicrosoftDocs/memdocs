@@ -32,13 +32,13 @@ ms.collection:
 
 # Using Microsoft Tunnel for Android
 
-The Microsoft Tunnel app creates a secure VPN connection so that you can securely and privately access your corporate network from anywhere. 
+Microsoft Tunnel creates a VPN connection so that you can securely and privately access your corporate network from anywhere. 
 
 ## Install Microsoft Tunnel  
 
-Microsoft Tunnel is available in the Google Play store. Before heading there, check your device to see if it's already installed.   
+Tunnel is available in the Google Play store. Before heading there, check your device to see if it's already installed.   
 
-If you can’t find Microsoft Tunnel in the Play store, contact your IT support person for help.  
+If you can’t find Tunnel in the Play store, contact your IT support person for help.  
 
  
 
@@ -46,16 +46,16 @@ If you can’t find Microsoft Tunnel in the Play store, contact your IT support 
 
 1. Open Microsoft Tunnel. 
 2. If prompted to, sign in with your work account. 
-3. On the **Connect** screen, flip the switch next to **Status** on or off to connect or disconnect from the VPN. 
+3. On the **Connect** screen, turn the **Status** switch on or orff to connect or disconnect from the VPN. 
 
-Your organization might require you to always connect through a VPN. This is known as an *always-on* connection. If this is the case, you won't have the option to disconnect from the VPN while on their network.  
+Your organization might require you to stay connected to Tunnel. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive and you won't be able to disconnect from the VPN as long as you're connected to the internet. 
 
-If the option is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article. 
+If the switch is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article. 
 
 
 ## Connection details    
 
-When you connect to the VPN, the following information is visible on the **Connect** screen:  
+The following information appears on the **Connect** screen when Microsoft Tunnel is connected.  
 
 * **Uptime**: How long the VPN connection has been running. 
 
@@ -69,11 +69,11 @@ Tap **Details** to see the following information:
 
 * **Device-wide connection**: When turned on, all network traffic to and from your device goes through the VPN connection.  
 
-* **Apps that use Tunnel**: If apps are listed, then only network traffic to and from the apps listed go through the VPN connection.  
+* **Apps that use Tunnel**: If apps are listed, only network traffic to and from these apps go through the VPN connection.   
 
-* **Always-on**: When enabled, Microsoft Tunnel will always attempt to send device network traffic or traffic from certain applications through the VPN connection, depending on the configuration.      
+* **Always-on**: When enabled, Microsoft Tunnel will continuously try to establish a connection.       
 
-## Settings  
+## App settings  
 
 From the **Connect** screen, select the **Settings** gear icon to:
 
