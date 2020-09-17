@@ -20,3 +20,18 @@ Use the following to troubleshoot scripts in the Microsoft Endpoint Manager admi
 
 > [!Important]
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+## Common issues
+
+### <a name="bkmk_version"></a> Configuration Manager doesn't meet the minimum version prerequisite
+
+**Error message:** Configuration Manager doesn't meet the minimum version prerequisite.
+
+**Possible causes:** Your Configuration Manager sites are not running the minimum version of Configuration Manager 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed. Verify the following:
+ - Configuration Manager version 2006 or higher is installed.
+ - That [KB4580678](https://support.microsoft.com/help/4580678) on sites running Configuration Manager version 2006.
+ - That every site in the hierarchy meets the minimums listed above.
+
+## Known issues
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]

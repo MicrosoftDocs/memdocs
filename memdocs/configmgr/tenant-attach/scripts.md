@@ -26,7 +26,8 @@ Bring the power of the Configuration Manager on-premises Run Scripts feature to 
 Run scripts from the admin center requires the following items:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
-- Configuration Manager version 2006 or later
+- A minimum of Configuration Manager version 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed.
+   - All sites in the hierarchy must meet the minimum Configuration Manager version requirement.
 - Configuration Manager clients must be running the latest version client.
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later.
    - If a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that later version of PowerShell.
@@ -39,6 +40,7 @@ Run scripts from the admin center requires the following items:
 The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
+- The **Read Resource** permission for the device's **Collection** in Configuration Manager.
 - The **Admin User** role for the Configuration Manager Microservice application in Azure AD.
   - Add the role in Azure AD from **Enterprise applications** > **Configuration Manager Microservice** > **Users and groups** > **Add user**. Groups are supported if you have Azure AD premium.
 - To use scripts, you must be a member of the appropriate Configuration Manager security role. For more information, see [Security scopes for run scripts](../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).
