@@ -44,9 +44,8 @@ If you can’t find Tunnel in the App Store, contact your IT support person for 
 ## Connect and disconnect VPN      
 
 1. Open Microsoft Tunnel. 
-2. If prompted to, sign in with your work account. 
-3. On the **Connect** screen, turn the **Status** switch on or orff to connect or disconnect from the VPN.  
-
+2. Sign in with your work account if prompted.
+3. On the **Connect** screen, flip the **Status** to connect or disconnect from the VPN. 
  
 An absent **Status** switch means that Tunnel is configured to connect automatically when certain apps are in use. To turn this functionality off, go to **Details** and turn off **Connect on demand**.    
 
@@ -71,7 +70,7 @@ Tap **Details** to see the following information:
 
 * **Device-wide connection**: When turned on, all network traffic to and from your device goes through the VPN connection.  
 
-* **Connect on demand**: When turned on, Microsoft Tunnel automatically connects when certain apps are in use (see **Apps that use Tunnel**).   
+* **Connect on demand**: When turned on, Microsoft Tunnel automatically connects when certain apps (listed under **Apps that use Tunnel**) are in use.   
 
 * **Apps that use Tunnel**: If apps are listed, only network traffic to and from these apps go through the VPN connection.  
 
@@ -98,6 +97,9 @@ Send app logs to IT support to get help with an app or connection problem.
 3. Select **Email administrator**. 
 5. In the body of the email, describe the problem you experienced so that the support team has an idea of what to look for. 
 6. Send the email.  
+
+# About Microsoft Tunnel
+Select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.  
 
 
 

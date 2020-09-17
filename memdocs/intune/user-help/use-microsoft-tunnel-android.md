@@ -43,8 +43,8 @@ If you can’t find Tunnel in the Play store, contact your IT support person for
  ## Connect and disconnect from VPN  
 
 1. Open Microsoft Tunnel. 
-2. If prompted to, sign in with your work account. 
-3. On the **Connect** screen, turn the **Status** switch on or orff to connect or disconnect from the VPN. 
+3. Sign in with your work account if prompted.  
+3. On the **Connect** screen, flip the **Status** to connect or disconnect from the VPN. 
 
 Your organization might require you to stay connected to Tunnel. This is known as an *always-on* connection. If this is the case, the status switch will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet. 
 
@@ -69,7 +69,7 @@ Tap **Details** to see the following information:
 
 * **Apps that use Tunnel**: If apps are listed, only network traffic to and from these apps go through the VPN connection.   
 
-* **Always-on**: When enabled, Microsoft Tunnel will continuously try to establish a connection.       
+* **Always-on**: When turned on, Microsoft Tunnel will continuously try to establish a connection.       
 
 ## App settings  
 
@@ -94,6 +94,9 @@ Send app logs to IT support to get help with an app or connection problem.
 4. On the Share screen, select your mail app. 
 5. In the body of the email, describe the problem you experienced so that the support team has an idea of what to look for. 
 6. Send the email.  
+
+## About Microsoft Tunnel
+Select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.   
 
 
 ## Next steps  
