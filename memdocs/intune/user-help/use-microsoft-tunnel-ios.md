@@ -2,7 +2,7 @@
 # required metadata
 
 title: Use the Microsoft Tunnel app for iOS  | Microsoft Intune
-description: Use the Microsoft Tunnel app for a secure VPN connection to your corporate network.
+description: Learn how to connect over VPN using Microsoft Tunnel for iOS.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -32,7 +32,7 @@ ms.collection:
 
 # Using Microsoft Tunnel for iOS  
 
-Microsoft Tunnel creates a VPN connection so that you can securely and privately access your corporate network from anywhere. 
+The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they've already configured a VPN connection for your work account. All you need to do to connect is install the app and sign in.   
 
 ## Install Microsoft Tunnel  
 
@@ -55,7 +55,7 @@ If the switch is stuck in the off position, select **Help** > **Send logs** and 
 
 ## Connection details    
 
-The following information appears on the **Connect** screen when Microsoft Tunnel is connected.  
+The following information appears on the **Connect** screen when Tunnel is connected.  
 
 * **Uptime**: How long the VPN connection has been running. 
 
@@ -77,26 +77,26 @@ Tap **Details** to see the following information:
 
 ## App settings  
 
-To configure how your app collects and logs data, open the **Settings** app on your device. Select **Microsoft Tunnel** to:  
+To configure how Tunnel collects and logs data, open the **Settings** app on your device. Select **Microsoft Tunnel** to:  
 
 * Allow/block Microsoft from collecting usage and performance data. 
 * Enable/disable verbose logging. 
 
 
 ## Get help in the app  
-Select **Help** from the bottom menu to:  
+Select **Help** from the menu at the bottom of the screen to:  
 
 * Access documentation (directs you to this article). 
 * Send logs to IT support to report a problem.  
 
-### Send logs   
+### Send logs  
 
-Send your app logs to your IT support person to get help with an app or connection problem.  
+Send app logs to IT support to get help with an app or connection problem.
 
 1. Select **Help** > **Send logs**.
 2. Select **Send logs** again. Your logs will be sent to a Microsoft database, from which your organization can access. 
 3. Select **Email administrator**. 
-5. In the email, describe the problem you experienced so that the support team has an idea of what to look for. 
+5. In the body of the email, describe the problem you experienced so that the support team has an idea of what to look for. 
 6. Send the email.  
 
 
