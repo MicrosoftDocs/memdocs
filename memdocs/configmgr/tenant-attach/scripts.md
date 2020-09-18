@@ -19,7 +19,7 @@ ms.author: mstewart
 > [!Important]
 > - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
+Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
 
 :::image type="content" source="./media/6234688-scripts.png" alt-text="Screenshot of script list in the admin center" lightbox="./media/6234688-scripts.png":::
 
@@ -54,17 +54,21 @@ The user account needs the following permissions:
 1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Select **Scripts** and search for your script by script name.
+1. Select **Scripts**.
    
-   Scripts that were recently run that directly targeted the device will already be listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts targeting collections won't be shown, only scripts that targeted the single device.
+   Scripts that were recently run that directly targeted the device will already be listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts initiated from the on-premises console, against collections containing the device won't be shown, unless the scripts were also initiated specifically for the single device.
 
    :::image type="content" source="./media/6234688-run-script.png" alt-text="Running the script from the admin center" lightbox="./media/6234688-run-script.png":::
 
-1. Choose **Run script** from the page that appears on the right.
-   - You'll be notified your script has started. You don't have to wait for the script to finish before sending another to the device.
-   - Select **Refresh** to update the list with latest script state, and last run time.
+1. Choose **Run script**.
+   
+   Scripts that are available to the admin based on the scopes assigned in Configuration Manager will be listed.
+1. Select **Run** to run the script.
 
-1. When the script completes, the results will show in the **Output** pane. You can copy the text of the script output. Select **Re-run script** if you want the script to run again.
+1. You'll be notified your script has started. You don't have to wait for the script to finish before sending another to the device.
+1. Select **Refresh** on the main page to update the list with latest script state, and last run time.
+
+1. When the script completes, you can select the script to display the results in the **Output** pane. You can copy the text of the script output. Select **Re-run script** if you want the script to run again.
 
    :::image type="content" source="./media/6234688-script-output.png" alt-text="Script output in the admin center" lightbox="./media/6234688-script-output.png":::
 
