@@ -17,14 +17,6 @@ ms.custom: contperfq1
 
 *Applies to: Configuration Manager (current branch)*
 
-
-
-> [!NOTE] <!-- move to setup -->
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-
-
-
-
 This article provides information about the cloud management gateway (CMG) to design how it fits in your environment and plan your implementation.
 
 For more foundational knowledge of CMG scenarios and use cases, see [Overview of CMG](overview.md).
@@ -156,7 +148,9 @@ For more information, see the following FAQ: [Do the user accounts have to be in
 
     When you use the site option to **Use Configuration Manager-generated certificates for HTTP site systems**, the management point can be HTTP. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
 
-- Clients must use **IPv4**.  
+- Clients must use **IPv4**.
+
+- Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
 ## Performance and scale
 
