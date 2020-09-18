@@ -101,7 +101,7 @@ These settings apply to:
 
   This setting applies to:  
   - Android 10 and newer, but not on Samsung Knox.
-
+ 
 ### Android 9 and earlier or Samsung Knox
 
 These settings apply to:  
