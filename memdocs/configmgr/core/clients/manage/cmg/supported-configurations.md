@@ -85,3 +85,10 @@ In version 2002 and earlier, for domain-joined devices to apply endpoint protect
 - Use co-management and switch the [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) to Intune, and manage [Microsoft Defender Antivirus](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) from the cloud.
 
 - Use [configuration items](../../../../compliance/deploy-use/create-configuration-items.md) instead of the native [antimalware polices](../../../../protect/deploy-use/endpoint-antimalware-policies.md) feature to apply endpoint protection policy.
+
+## Next steps
+
+Next, understand the costs associated with operating an Azure service for the CMG:
+  
+> [!div class="nextstepaction"]
+> [Cost of cloud management gateway](cost.md)
