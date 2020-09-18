@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,7 +42,7 @@ Depending on the settings you choose, not all values may be configurable.
 
 ## Before you begin
 
-[Create a VPN device configuration profile](vpn-settings-configure.md).
+Create a [Windows 10 VPN device configuration profile](vpn-settings-configure.md).
 
 ## Base VPN settings
 

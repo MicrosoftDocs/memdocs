@@ -66,9 +66,12 @@ If you already have an appropriate certificate in the WSUS server's **Personal**
 1. Select **All Tasks** then **Request New Certificate**.
 1. Choose **Next** to begin certificate enrollment.
 1. Choose the type of certificate to enroll. The certificate purpose is **Server Authentication** and the Microsoft certificate template to use is **Web Server** or a custom template that has **Server Authentication** specified as **Enhanced Key Usage**. You may be prompted for additional information to enroll the certificate. Typically, you'll specify the following information at minimum:
+
    - **Common name:** Found on the **Subject** tab, set the value to the WSUS server's FQDN.
    - **Friendly name:** Found on the **General** tab, set the value to a descriptive name to help you identify the certificate later.
-:::image type="content" source="media/certificate-properties.png" alt-text="Certificate properties window to specify more information for enrollment":::
+   
+   :::image type="content" source="media/certificate-properties.png" alt-text="Certificate properties window to specify more information for enrollment":::
+
 1. Select **Enroll** then **Finish** to complete the enrollment.
 1. Open the certificate if you want to see details about it such as the certificate's thumbprint.
 
@@ -83,9 +86,13 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 1. Go to **Sites** > **WSUS Administration**.
 1. Select **Bindings** from either the action menu or by right-clicking on the site.
 1. In the **Site Bindings** window, select the line for **https**, then select **Edit...**.
+
    - Don't remove the HTTP site binding. WSUS uses HTTP for the update content files.
-1. Under the **SSL certificate** option, choose the certificate to bind to the WSUS Administration site. The certificate's friendly name is shown in the drop-down menu. If a friendly name wasn't specified, then the certificate's `IssuedTo` field is shown. If you're not sure which certificate to use, select **View** and verify the thumbprint matches the one you obtained.  
+   
+1. Under the **SSL certificate** option, choose the certificate to bind to the WSUS Administration site. The certificate's friendly name is shown in the drop-down menu. If a friendly name wasn't specified, then the certificate's `IssuedTo` field is shown. If you're not sure which certificate to use, select **View** and verify the thumbprint matches the one you obtained.
+
    :::image type="content" source="media/edit-site-binding.png" alt-text="Edit Site Binding window with SSL certificate selection":::
+
 1. Select **OK** when you're done, then **Close** to exit the site bindings. Keep Internet Information Services (IIS) Manager open for the next steps.
 
 
@@ -102,11 +109,11 @@ Once you have the certificate in the WSUS server's personal certificate store, b
    - SimpleAuthWebService
 
    Make the following changes:
-
-      1. Select **SSL Settings**.
-      1. Enable the **Require SSL** option.
-      1. Verify the **Client certificates** option is set to **Ignore**.
-      1. Select **Apply**.
+   
+   1. Select **SSL Settings**.
+   1. Enable the **Require SSL** option.
+   1. Verify the **Client certificates** option is set to **Ignore**.
+   1. Select **Apply**.
 
 Don't set the SSL settings at the top-level WSUS Administration site since certain functions, such as content, need to use HTTP.
 
@@ -115,13 +122,16 @@ Don't set the SSL settings at the top-level WSUS Administration site since certa
 Once the web services are set to require SSL, the WSUS application needs to be notified so it can do some additional configuration to support the change.
 
 1. Open an admin command prompt on the WSUS server. The user account running this command must be a member of either the WSUS Administrators group or the local Administrators group.
-1. Change directory to the tools folder for WSUS:  
+1. Change directory to the tools folder for WSUS:
+
    `cd "c:\Program Files\Update Services\Tools"`
+   
 1. Configure WSUS to use SSL with the following command:
 
     `WsusUtil.exe configuressl server.contoso.com`
    
    Where *server.contoso.com* is the FQDN of the WSUS server.
+   
 1. WsusUtil returns the URL of the WSUS server with the port number specified at the end. The port will be either 8531 (default) or 443. Verify the URL returned is what you expected. If something was mistyped, you can run the command again.
 
    :::image type="content" source="media/wsusutil.png" alt-text="The wsusutil configuressl command returning the HTTPS URL for WSUS":::
@@ -143,8 +153,11 @@ Open the WSUS console to verify you can use an SSL connection to the WSUS server
 1. Open the WSUS console and select **Action** > **Connect to Server**.
 1. Enter the FQDN of the WSUS server for the **Server name** option.
 1. Choose the **Port number** returned in the URL from WSUSutil.
+
 1. The **Use Secure Sockets Layer (SSL) to connect to this server** option automatically enables when either 8531 (default) or 443 are chosen.
+
        :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
+       
 1. If your Configuration Manager site server is remote from the software update point, launch the WSUS console from the site server and verify the WSUS console can connect over SSL.
    - If the remote WSUS console can't connect, it likely indicates a problem with either trusting the certificate, name resolution, or the port being blocked.
 
@@ -164,6 +177,7 @@ To configure the software update point to require SSL communication to the WSUS 
 1. Enable the **Require SSL communication to the WSUS server** option.
 
    :::image type="content" source="media/sup-properties.png" alt-text="SUP properties showing the option for Require SSL communication to the WSUS server":::
+   
 1. In the [**WCM.log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) for the site, you'll see the following entries when you apply the change:
 
    ```
@@ -187,7 +201,9 @@ Log file examples have been edited to remove unneeded information for this scena
 1. Go to **Software Library** > **Overview** > **Software Updates** > **All Software Updates**.
 1. From the ribbon, select **Synchronize Software Updates**.
 1. Select **Yes** to the notification asking if you want to initiate a site-wide synchronization for software updates.
+
    - Since the WSUS configuration changed, a full software updates synchronization will occur rather than a delta synchronization.
+   
 1. Open the **wsyncmgr.log** for the site. If you're monitoring a child site, you'll need to wait for the parent site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
 
    ```
@@ -242,6 +258,7 @@ When you change the software update point to require SSL, Configuration Manager 
 
 1. Review the **LocationServices.log** to verify that the client sees the correct WSUS URL.
 **LocationServices.log**
+
    ```
    WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
    ...
