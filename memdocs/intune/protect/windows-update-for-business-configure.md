@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -253,6 +253,8 @@ From this pane, you can:
 ## Validation and reporting for Windows 10 updates
 
 For both Windows 10 update rings and Windows 10 feature updates, use [Intune compliance reports for updates](windows-update-compliance-reports.md) to monitor update status of devices. This solution uses [Update Compliance](/windows/deployment/update/update-compliance-monitor) with your Azure subscription.
+
+To monitor Windows 10 feature update failures, use the **Feature update failures** report. This report provides failure details for devices that are targeted with a **Windows 10 feature updates** policy and have attempted an update. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can select **Devices** > **Monitor** > **Feature update failures** to view this report. For more information, see [Intune reports](../fundamentals/reports.md).
 
 ## Next steps
 
