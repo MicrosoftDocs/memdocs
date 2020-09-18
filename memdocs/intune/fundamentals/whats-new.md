@@ -293,27 +293,6 @@ Specifically, when you select a baseline, select *Version*, and the select an in
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
   - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
   - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
- 
-We’ve also updated the **Device Status** view, which you can select from the *Version* view of a security baseline. When you view Device status, the **Security Baseline Posture** column now displays the three new status details of *Error*, *Pending*, and *Conflict*, in place of *Misconfigured*. 
-
-(../protect/compliance-policy-create-android.md#password) policy and [*Device restriction*](../intune/configuration/device-restrictions-android.md#password) policy.  You use this new setting to manage a *measure* of the password strength that factors in the password type, length, and quality. 
- 
-Password Complexity doesn’t apply to Samsung Knox devices. On these devices, password length and type settings override Password complexity.
-
-Password complexity supports the following options:
-
-- **None** - No password
-- **Low** - The password satisfies one of the following:
-  - Pattern
-  - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences
-- **Medium** - The password satisfies one of the following:
-  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 4
-  - Alphabetic, length at least 4
-  - Alphanumeric, length at least 4
-- **High** - The Password satisfies one of the following:
-  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
-  - Alphabetic, length at least 6
-  - Alphanumeric, length at least 6
 
 #### New setting for Password complexity for Android 10 and later for device administrator enrolled devices<!-- 7992114 -->
 
