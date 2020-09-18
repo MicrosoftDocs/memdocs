@@ -315,7 +315,27 @@ Password complexity supports the following options:
   - Alphabetic, length at least 6
   - Alphanumeric, length at least 6
 
+#### New setting for Password complexity for Android 10 and later for device administrator enrolled devices<!-- 7992114 -->
 
+To support new options for Android 10 and later on devices enrolled as Android device administrator, we’ve added a new setting called **Password complexity** to both [*Device compliance*](../protect/compliance-policy-create-android.md#password) policy and [*Device restriction*](../intune/configuration/device-restrictions-android.md#password) policy.  You use this new setting to manage a *measure* of the password strength that factors in the password type, length, and quality. 
+ 
+Password Complexity doesn’t apply to Samsung Knox devices. On these devices, password length and type settings override Password complexity.
+
+Password complexity supports the following options:
+
+- **None** - No password
+- **Low** - The password satisfies one of the following:
+  - Pattern
+  - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences
+- **Medium** - The password satisfies one of the following:
+  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 4
+  - Alphabetic, length at least 4
+  - Alphanumeric, length at least 4
+- **High** - The Password satisfies one of the following:
+  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
+  - Alphabetic, length at least 6
+  - Alphanumeric, length at least 6
+ 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
