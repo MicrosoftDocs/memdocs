@@ -19,11 +19,13 @@ The startup performance score helps IT get users from power-on to productivity q
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-Startup performance insights are only available for:
+For devices enrolled via Intune, Startup performance insights are only available for:
 - Devices running version 1903 or later of Windows 10 Enterprise or Windows 10 Education
    - Windows 10 long-term servicing channel (LTSC), Home, and Pro editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
+
+For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
 ## <a name="bkmk_score"></a> Startup score
 

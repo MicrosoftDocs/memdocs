@@ -12,6 +12,8 @@
     href: timeline.md
   - name: Resource explorer (preview)
     href: resource-explorer.md
+  - name: Run scripts (preview)
+    href: scripts.md
 - name: CMPivot for tenant attached devices (preview)
   items:
   - name: Launch CMPivot (preview)
@@ -44,5 +46,7 @@
     href: troubleshoot-timeline.md
   - name: Resource explorer (preview)
     href: troubleshoot-resource-explorer.md
+  - name: Run scripts (preview)
+    href: troubleshoot-scripts.md
   - name: CMPivot (preview)
     href: troubleshoot-cmpivot.md
