@@ -76,7 +76,6 @@ Use of intents and content providers are affected by these policies.
     - Sharing content between your app and managed apps is allowed.
     - Sharing from your app to non-managed apps (for example, Chrome) is blocked.
 
-
 #### Restrict receiving data from other apps
 
 1. Set **Send org data to other apps** to **All apps**.
