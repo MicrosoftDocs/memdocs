@@ -55,6 +55,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   
   [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
+  
 - **Require Secure Boot to be enabled on the device**:  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - The system is forced to boot to a factory trusted state. The core components that are used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies the signature before it lets the machine start. If any files are tampered with, which breaks their signature, the system doesn't boot.
@@ -176,7 +177,7 @@ Applies only to co-managed devices running Windows 10 and later. Intune-only dev
    [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
+  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level.
 
 ### Device Security  
 
