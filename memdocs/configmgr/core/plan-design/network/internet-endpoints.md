@@ -108,7 +108,7 @@ For more information, see the following articles:
 
 For more information on the cloud management gateway (CMG), see [Plan for CMG](../../clients/manage/cmg/data-flow.md).
 
-[!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud services.md)]
+[!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud-services.md)]
 
 ## <a name="bkmk_sum"></a> Software updates
 
