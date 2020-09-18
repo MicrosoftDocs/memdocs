@@ -34,6 +34,18 @@ The overall CMG setup process is divided into the following five main parts:
 
 The other articles in this section step through each part of the process.
 
+## Terminology
+
+The following terms are used in the context of setting up a CMG. They're defined here for clarity.
+
+- Azure AD _tenant_: The directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+
+- Azure AD _subscription_: A subscription separates billing, resources, and services. It's associated with a single tenant.
+
+- CMG _service name_: The common name of the CMG server authentication certificate. Clients and the CMG connection point site system role communicate with this service name. For example, `GraniteFalls.Contoso.Com`.
+
+- CMG _deployment name_: The first part of the service name plus the Azure location for the cloud service deployment. For example, `GraniteFalls.CloudApp.Net`. The cloud service manager component of the service connection point uses this name when it deploys the CMG in Azure.
+
 ## Checklist
 
 Use the following checklist to make sure you have the necessary information and prerequisites to create a CMG:  
