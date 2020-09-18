@@ -1,6 +1,6 @@
 ---
 title: Use the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
-description: Install and configure the Microsoft Tunnel VPN server on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+description: Learn about the configure the Microsoft Tunnel VPN server on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -227,7 +227,7 @@ The mst-readiness tool has a dependency on **jq**, a command-lie JSON processor.
 To use the readiness tool:
 
 1. Get the readiness tool by using one of the following methods:
-   - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunnelready.  This downloads a file named **mst-readiness**.
+   - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunnelready to download a file named **mst-readiness**.
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
 

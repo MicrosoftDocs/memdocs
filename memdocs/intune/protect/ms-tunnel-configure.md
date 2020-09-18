@@ -1,0 +1,219 @@
+---
+title: Install and configure the Microsoft Tunnel VPN solution for Microsoft Intune - Azure | Microsoft Docs
+description: Install and configure the Microsoft Tunnel VPN server on Linux. With the Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure. 
+keywords:
+author: brenduns
+ms.author: brenduns
+manager: dougeby
+ms.date: 09/23/2020
+ms.topic: how-to
+ms.service: microsoft-intune
+ms.subservice: protect
+ms.localizationpriority: high
+ms.technology:
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: lacranda
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+---
+
+# Configure Microsoft Tunnel for Intune
+
+This article can help you install the Microsoft Tunnel VPN gateway for Microsoft Intune. You install the tunnel software on a Linux server, and then use Microsoft Endpoint Manager admin center to configure the tunnel for use with your infrastructure. You also configure Intune VPN profiles to deploy the tunnel configuration to supported devices, and must provision devices with the Microsoft Tunnel app.
+
+*Microsoft Tunnel is in public preview*.
+
+To use Microsoft Tunnel, you’ll need at least one Linux server with Docker installed, which runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
+
+Before you start installation be sure to complete the following tasks:
+
+- Review and [Configure prerequisites for Microsoft Tunnel](../protect/ms-tunnel-configure.md).
+- Run the Microsoft Tunnel [readiness tool](../protect/ms-tunnel-configure.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
+
+After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
+
+When you install a tunnel server, it pulls down information about the tunnel Sites you’ve defined for your tenant. This information includes the Server configurations for those Sites. Therefore, you must configure at least one Site and one Server configuration before you install the tunnel gateway server on a Linux server.
+
+## Create a Server configuration
+
+Use of a *Server configuration* lets you set up a configuration one time and have that configuration used by multiple servers. The configuration includes IP address ranges, DNS servers, and split-tunneling rules. Later, you’ll assign a Server configuration to a Site, which automatically applies that configuration to each server that joins that Site.
+
+### To create a Server configuration
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Server configurations** *tab* > **Create new**.
+
+2. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
+
+3. On the **Settings** tab, configure the following items:
+   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway.
+   - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
+   - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
+   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway.
+
+     Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
+
+   - **Server port**: Enter the port that the server listens to for connections.
+
+4. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
+
+## Create a Site
+
+Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign a Server configuration to each Site you create. That configuration is applied to each server that joins the Site.
+
+### To create a Site configuration
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Sites** *tab* > **Create**.
+
+2. On the **Create a site** pane, specify the following properties:
+
+   - **Name**: Enter a name for this Site.
+   - **Description** *(optional)*
+   - **Public IP address or FQDN**:  Specify a public IP address or FQDN, which is the connection point for devices that use the tunnel. This IP address can be an individual server or the IP or FQDN of a load-balancing server. The IP address must be publicly routable and the FQDN must be resolvable in public DNS.
+   - **Server configuration**: Use the drop-down to select a server configuration to associate with this Site.
+
+3. Select **Create** to save the Site.
+
+## Install Microsoft Tunnel
+
+Before installing the Microsoft Tunnel on a Linux server, configure your tenant with at least one [Server configuration](#create-a-server-configuration), and then create a [Site](create-a-tunnel-site). Later, you’ll specify the Site that a server joins when you install the tunnel on that server.
+
+### Use the script to install Microsoft Tunnel
+
+1. Download the Microsoft Tunnel installation script by using one of the following methods:
+
+   - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunneldownload to download the file **mstunnel-setup**.
+
+   - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
+
+     ![Screen capture for download of installation script](./media/ms-tunnel-configure/download-installation-script.png)
+
+   - Use a Linux command to get the readiness tool directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunneldownload.
+
+2. To start the server installation, run the script as **root** with the following command line: `./mstunnel-setup`
+
+   > [!TIP]  
+   > If you stop the installation and script, you can restart it by running the command line again. Installation continues from where you left off.
+
+   When you start the script, it downloads container images from Docker, and creates necessary folders and files on the server.
+
+   During setup, the script will prompt you to complete several admin tasks.
+
+3. When prompted by the script, accept the license agreement (EULA).
+
+4. Review and configure variables in the following files to support your environment.
+
+   - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](../protect/ms-tunnel-reference.md#environment-variables) in the reference for Microsoft Tunnel article.
+
+5. When prompted, copy the full chain of your TLS certificate file to the Linux server. The script displays the correct location to use on the Linux server.
+
+   The TLS certificate secures the connection between the devices that use the tunnel and the Tunnel Gateway endpoint. The certificate must have the IP address or FQDN of the Tunnel Gateway server in its SAN.
+
+   Install the TLS certificate and private key. Use the following guidance that matches your file format:
+
+   - **PFX**:
+     - Copy the certificate file to **/etc/mstunnel/private/site.pfx**.
+   - **PEM**:
+     - Copy the full chain certificate into **/etc/mstunnel/certs/site.crt**. For example: `cp [full path to cert] /etc/mstunnel/certs/site.crt`
+
+       Alternatively, create a link to the full chain cert in **/etc/mstunnel/certs/site.crt**. For example: `ln -s [full path to cert] /etc/mstunnel/certs/site.crt`
+
+     - Copy the private key file into **/etc/mstunnel/private/site.key**. For example: `cp [full path to key] /etc/mstunnel/private/site.key`
+
+       Alternatively, create a link to the private key file in **/etc/mstunnel/private/site.key**. For example: `ln -s [full path to key file] /etc/mstunnel/private/site.key` This key shouldn't be encrypted with a password.
+
+6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. Use your Intune admin or Global Admin credentials. The account you use to complete the authentication must have an Intune license, or you must turn off the requirement for admin accounts to need licenses.
+
+   > [!TIP]  
+   > To turn off the requirement for admin licenses, in the Microsoft Endpoint Manager admin center navigate to **Tenant Administration** > **Roles** > **Administrator Licensing** and disable administrator licensing.
+
+   This authentication registers a connector to join the Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
+
+   1. Use a separate device with a web browser. Navigate to https://Microsoft.com/devicelogin and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
+
+   2. After the connector registers, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
+
+   3. After you select a Site, setup pulls down the Server configuration for that Site and applies it to your new tunnel server to complete the server installation.
+
+7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
+
+## Deploy the Microsoft Tunnel App
+
+To use the Microsoft Tunnel, devices need access to the Microsoft Tunnel app. You can deploy the app to devices by assigning it to users. The following apps are available:
+
+- For Android, download the **Microsoft Tunnel** app from the **Google Play** store. See Add  Android store apps to Microsoft Intune.
+- For iOS/iPadOS, download the **Microsoft Tunnel** app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
+
+For more information on deploying apps with Intune, see  Add apps to Microsoft Intune.
+
+## Create a VPN profile
+
+After the Microsoft Tunnel installs on a server, and devices have installed the Microsoft Tunnel app, you can deploy VPN profiles to direct devices to use the tunnel. To do so, you’ll create VPN profiles with a connection type of Microsoft Tunnel.
+
+### Android
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
+
+2. For *Platform*, select **Android Enterprise**, and then for *Profile* select **VPN** from for either *Device Owner Only* or *Work Profile Only*, and then select **Create**.
+
+3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
+
+4. For *Connection type* select **Microsoft Tunnel**, and then configure the following details:
+   - **Base VPN**:  
+     - For *Connection name*, specify a name that will display to users.
+     - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
+   - **Per-app VPN**:  
+     - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
+     - To enable a per-app VPN, select **Add** and then browse to apps you’ve imported to Intune. These can be custom or public apps.
+   - **Always-on VPN**:  
+     - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected.
+   - **Proxy**:  
+     - Configure proxy server details for your environment.  
+
+   For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
+
+5. On the **Assignments** tab, configure groups that will receive this profile.
+
+6. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
+
+### iOS
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Device Configuration** > **Create profile**.
+
+2. For *Platform*, select **iOS/iPadOS**, and then for *Profile* select **VPN**, and then **Create**.
+
+3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
+
+4. For *Connection type* select **Microsoft Tunnel**, and then Configure the following items:
+   - **Base VPN**:  
+     - For *Connection name*, specify a name that will display to users.
+     - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.  
+   - **Per-app VPN**:  
+     - To enable a per-app VPN, select **Enable**. Additional configuration steps are required for iOS per-app VPNs. For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
+     - **Proxy**:  
+       - Configure proxy server details for your environment.  
+
+## Upgrade Microsoft Tunnel
+
+When there are updates for Microsoft Tunnel, the upgrade of your existing tunnel servers is managed automatically by Intune in a rolling upgrade:
+
+- Intune upgrades the tunnel servers in a Site one server at a time.
+
+- After a successful upgrade of a server, Intune waits a short period of time before starting the upgrade of the next server.
+
+- This process continues until all servers in a Site have updated to the new version.  
+
+## Uninstall the Microsoft Tunnel
+
+To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
+
+## Next steps
+
+[Monitor Microsoft Tunnel](ms-tunnel-monitor.md)
