@@ -22,10 +22,10 @@ This quickstart outlines prerequisites and instructions for enrolling Configurat
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-### Configuration Manager requirements
+### Configuration Manager requirements 
 
-- Configuration Manager version 2002 or newer
-- Clients upgraded to version 2002 or newer
+- Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
+Clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
 > [!Important]  

@@ -50,38 +50,6 @@ This issue impacts some Windows Server devices that are managed by Configuration
 **Mitigation:**
 This issue is being fixed on the back end, and no action is required. We do not recommend removing Windows Server devices from your target collection for tenant attach, as this will affect all Microsoft Endpoint Manager services.
 
-### Startup processes data not available for some devices
-
-Startup processes data, which power the "time to responsive desktop" insights, may not be available for some devices that are enrolled via Configuration Manager.
-
-**Impacted devices:** 
-If a device is enrolled in Endpoint analytics via Configuration Manager and machine local time is set to a time zone "behind" UTC (such as UTC-7), startup processes will not be available for that device. Co-managed devices and devices enrolled via Intune are not impacted by this issue.
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### Device suddenly stops showing boot or logon events
-
-Devices enrolled via Configuration Manager may stop sending boot and logon events to Endpoint analytics if the device's event log is cleared. This can occur when a user manually triggers the action or after certain events, such as a Windows feature update.
-
-**Impacted devices:** 
-Only devices enrolled via Configuration Manager are impacted. 
-
-**Mitigation:**
-This issue is resolved in the Configuration Manager version 2002 update rollup (available around mid-July).
-
-### OS Version is not appearing for some devices
-
-Some devices may not show a value for OS Version in the [**All devices** blade of the Microsoft Endpoint Manager admin console](../configmgr/tenant-attach/device-sync-actions.md#perform-device-actions). 
-
-**Impacted devices:**
-Devices enrolled via Configuration Manager that contained null values for certain OS version properties at the time of onboarded are impacted.
-
-**Mitigation:**
-While some devices may not show OS Version data in the **All devices** view, up-to-date OS version information is available for any individual device in the **User experience** blade for that device. This is accessible from the **Startup performance** report in Endpoint Analytics by selecting the **Device performance** tab and then clicking on any device name.
-
-The fix for this issue is available in the Configuration Manager version 2002 update rollup (available around mid-July).
-
 ### Error code -2016281112 (Remediation failed)
 
 There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. We're actively investigating this issue.
