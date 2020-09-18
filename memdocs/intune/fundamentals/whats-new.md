@@ -92,7 +92,7 @@ Applies to:
 
 To see all the settings you can configure, go to [Android Enterprise device settings to allow or restrict features](../configuration/device-restrictions-android-for-work.md).
 
-#### Analyze your on-premises GPOs using Group Policy analytics - preview<!--7200950   -->
+#### Analyze your on-premises GPOs using Group Policy analytics<!--7200950   -->
 In **Devices** > **Group Policy analytics (preview)**, you can import your group policy objects (GPOs) in the Endpoint Manager admin center. When you import, Intune automatically analyzes the GPO, and shows the policies that have equivalent settings in Intune. It also shows GPOs that are deprecated, or aren't supported anymore. For a deeper drill down, go to **Reports** >  **Group policy analytics (preview)** > Migration readiness report.
 
 For more information on this feature, see [Group Policy analytics](../configuration/group-policy-analytics.md).
@@ -160,6 +160,24 @@ To see this setting, and the others you can configure, go to [Add Wi-Fi settings
 Applies to:
 - iOS/iPadOS 14 and newer
 
+#### New settings for Device control profiles <!-- 8368028 -->
+We’ve added a pair of settings to the [*Device control* profile](../protect/endpoint-security-asr-profile-settings.md#device-control-profile) for the *Attack surface reduction* policy for devices that run Windows 10 or later:
+
+- **Removable storage**
+- **USB connections (HoloLens only)**
+ 
+*Attack surface reduction* policy is part of [Endpoint security](../protect/endpoint-security-policy.md) in Intune.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device enrollment
+
+#### Enrollment Status Page shows critical kiosk policies<!--7021540 -->
+You'll now be able to see the following policies tracked on the Enrollment Status Page
+- Assigned access
+- Kiosk browser settings
+- Edge browser settings
+
+All other kiosk policies aren't currently tracked.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -210,7 +228,7 @@ To view the full set of permission for any Intune RBAC role, go to (**Tenant adm
 #### Updates for Security Baselines<!-- 7102146, 7103916     -->
 We have new versions available for the following [security baselines](../protect/security-baselines.md):  
  
-- **[MDM Security baseline** (Windows 10 Security)](../protect/security-baseline-settings-mdm-all.md?pivots-mdm-sept-2020)
+- **[MDM Security baseline (Windows 10 Security)](../protect/security-baseline-settings-mdm-all.md?pivots-mdm-sept-2020)**
 - **[Microsoft Defender ATP baseline](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)**
  
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
@@ -261,7 +279,7 @@ We’ve improved our support for using [S/MIME certificates for Outlook](../prot
 
 To deploy S/MIME certificates to supported Android devices, use a [PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md) or [SCEP certificate profile](../protect/certificates-profile-scep.md) for Device configuration. Create a profile for **Android Enterprise** and then select **PKCS imported certificate** from the category for *Fully Managed, Dedicated, and Corporate-Owned Work Profile*.
 
-### Improved Status details in security baseline reports<!-- 7221051 WNReady    -->
+#### Improved Status details in security baseline reports<!-- 7221051 -->
 We’ve begun improving many of the [status details for Security baseline](../protect/security-baselines-monitor.md). You’ll now see more meaningful and detailed status when viewing information about the baseline Versions you’ve deployed.
  
 Specifically, when you select a baseline, select *Version*, and the select an instance of that baseline, the initial Overview displays the following:
@@ -278,7 +296,24 @@ Specifically, when you select a baseline, select *Version*, and the select an in
  
 We’ve also updated the **Device Status** view, which you can select from the *Version* view of a security baseline. When you view Device status, the **Security Baseline Posture** column now displays the three new status details of *Error*, *Pending*, and *Conflict*, in place of *Misconfigured*. 
 
+(../protect/compliance-policy-create-android.md#password) policy and [*Device restriction*](../intune/configuration/device-restrictions-android.md#password) policy.  You use this new setting to manage a *measure* of the password strength that factors in the password type, length, and quality. 
+ 
+Password Complexity doesn’t apply to Samsung Knox devices. On these devices, password length and type settings override Password complexity.
 
+Password complexity supports the following options:
+
+- **None** - No password
+- **Low** - The password satisfies one of the following:
+  - Pattern
+  - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences
+- **Medium** - The password satisfies one of the following:
+  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 4
+  - Alphabetic, length at least 4
+  - Alphanumeric, length at least 4
+- **High** - The Password satisfies one of the following:
+  - PIN with no repeating (4444) or ordered (1234, 4321, 2468) sequences, length at least 8
+  - Alphabetic, length at least 6
+  - Alphanumeric, length at least 6
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -748,7 +783,7 @@ Depending on how your Android device enrolls with Intune, the following options 
 #### Telecommunications data transfer protection for managed apps<!-- 6884491  -->
 When a hyperlinked phone number is detected in a protected app, Intune will check whether a protection policy has been applied that allows the number to be transferred to a dialer app. You can choose how to handle this type of content transfer when it is initiated from a policy managed app. When creating an app protection policy in Microsoft Endpoint Manager, select a managed app option from the **Send org data to other apps**, then select an option from **Transfer telecommunications data to**. For more information about this data protection setting, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md) and [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md). 
 
-#### Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal<!-- 7414033  -->
+#### Unified delivery of Azure AD Enterprise and Office Online applications in the Windows Company Portal<!-- 7414033  -->
 On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows Company Portal expected to follow. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Improvements to the Company Portal for macOS enrollment experience<!-- 6444452  -->
