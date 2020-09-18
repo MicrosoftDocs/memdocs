@@ -85,4 +85,4 @@ Each cloud service has a dynamic IP address. Each distinct CMG uses a new dynami
 Now that you have your CMG design, understand the supported configurations and cost, you're ready to set up the CMG:
   
 > [!div class="nextstepaction"]
-> [Cloud management gateway set up checklist](set-up-checklist.md)
+> [Set up checklist for cloud management gateway](set-up-checklist.md)
