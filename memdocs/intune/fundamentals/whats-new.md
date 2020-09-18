@@ -279,7 +279,7 @@ We’ve improved our support for using [S/MIME certificates for Outlook](../prot
 
 To deploy S/MIME certificates to supported Android devices, use a [PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md) or [SCEP certificate profile](../protect/certificates-profile-scep.md) for Device configuration. Create a profile for **Android Enterprise** and then select **PKCS imported certificate** from the category for *Fully Managed, Dedicated, and Corporate-Owned Work Profile*.
 
-#### Improved Status details in security baseline reports<!-- 7221051 -->
+#### Improved status details in security baseline reports<!-- 7221051 -->
 We’ve begun improving many of the [status details for Security baseline](../protect/security-baselines-monitor.md). You’ll now see more meaningful and detailed status when viewing information about the baseline Versions you’ve deployed.
  
 Specifically, when you select a baseline, select *Version*, and the select an instance of that baseline, the initial Overview displays the following:
