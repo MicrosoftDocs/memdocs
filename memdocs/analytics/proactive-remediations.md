@@ -57,17 +57,14 @@ Proactive remediations also requires the [licensing for Endpoint analytics](enro
 
 - An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using proactive remediations for the first time.
 
-- The PowerShell execution policy on the device can't be set to **Restricted** or **AllSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
-
-
 ### Script requirements
 
-If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are:
-- Encoded in UTF-8 not UTF-8 BOM
-- Scripts have line breaks indicated by `LF` and not `CR LF`, which is the Windows default.
-   - `LF` is the default line break for Unix. For more information, see [Encoding and line endings](/visualstudio/ide/encodings-and-line-breaks?view=vs-2019&preserve-view=true).
-   - Currently, the encoding and line breaks are a known issue.
+- Ensure the scripts are encoded in UTF-8
 
+- If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
+   - Scripts built into Proactive remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
+   - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
+  - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
 
 ## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 
@@ -125,4 +122,5 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
 - View [Recommended software](recommended-software.md).
-- View [Startup performance](startup-performance.md)
+- View [Startup performance](startup-performance.md).
+- Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

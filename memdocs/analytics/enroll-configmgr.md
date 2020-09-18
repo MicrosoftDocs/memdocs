@@ -16,13 +16,13 @@ manager: dougeby
 
 # Quickstart: Enroll Configuration Manager devices into Endpoint analytics
 
-This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](enroll-intune.md#intune-device-requirements), we recommend [using Intune to enroll them into Endpoint analytics](enroll-intune.md) instead of following the instructions in this quickstart. You do not need to move any co-mangement workloads to Intune to enroll a co-managed device to Endpoint analytics via Intune.
+This quickstart outlines prerequisites and instructions for enrolling Configuration Manager managed devices into Endpoint analytics. If your devices are co-managed and meet the [Intune device requirements](enroll-intune.md#intune-device-requirements), we recommend [using Intune to enroll them into Endpoint analytics](enroll-intune.md) instead of following the instructions in this quickstart. You do not need to move any co-management workloads to Intune to enroll a co-managed device to Endpoint analytics via Intune.
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 Before you start this tutorial, make sure you have the following prerequisites:  
 
-### Configuration Manager requirements 
+### Configuration Manager requirements
 
 - Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 Clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
